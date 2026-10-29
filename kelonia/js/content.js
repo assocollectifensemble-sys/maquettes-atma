@@ -11,6 +11,20 @@
 (function () {
   "use strict";
 
+  // ---------- VERSION DÉMO (RDV Kélonia du 30/10/2026) ----------
+  // versionComplete: false → seul le BASSIN 1 est jouable (intro, brief, mini-jeu radio, écran info),
+  //   puis écran « Fin de la démo ». Bassins 2 à 5, dossier de soin, relâcher, diplôme et « Et après ? »
+  //   restent dans le code mais sont inaccessibles (QR, réglages, raccourcis, carnet, ancienne partie).
+  // versionComplete: true  → l'aventure complète (5 bassins) et l'ancien diaporama ?demo=1 reviennent tels quels.
+  const CONFIG = { versionComplete: false };
+  // une ligne « ce qu'on y fera » pour les bassins verrouillés de la démo
+  const apercu = {
+    2: { fr: "Trier la mer au doigt : sac plastique ou méduse ?", en: "Sort the sea: plastic bag or jellyfish?" },
+    3: { fr: "Reconnaître une tortue à ses écailles, comme les scientifiques.", en: "Identify a turtle by its scales, like scientists do." },
+    4: { fr: "Mesurer sa carapace et comprendre pourquoi elle remonte respirer.", en: "Measure her shell and learn why she comes up to breathe." },
+    5: { fr: "Éteindre les lumières de la plage pour guider les bébés tortues.", en: "Switch off beach lights to guide the hatchlings." }
+  };
+
   // ---------- libellés d'interface (boutons, titres courts) ----------
   const UI = {
     commencer: { fr: "Commencer l'enquête", en: "Start the investigation", kr: "Komans lankèt" },
@@ -275,7 +289,7 @@
 
   // ---------- mode démo (RDV) : écrans enchaînés par ◀ ▶ ----------
   // [écran, étape, public imposé (facultatif)]
-  const demo = [
+  const demoComplet = [
     ["ouverture"], ["accueil"], ["intro", "0"], ["intro", "1"], ["hub"],
     ["st1", "brief"], ["st1", "jeu"], ["st2", "jeu"], ["st3", "jeu"], ["st4", "jeu"],
     ["st5", "brief", "soiree"], ["st5", "jeu", "soiree"], ["st5", "info", "soiree"],
@@ -283,5 +297,13 @@
     ["st2", "brief", "classe"], ["fiche"], ["qr"], ["kelonia"]
   ];
 
-  window.Content = { UI, accueil, publics, intro, stations, tri, triMsg, especes, statuts, dossier, relacher, fin, credits, demo };
+  // version démo (CONFIG.versionComplete = false) : le diaporama s'arrête au bassin 1
+  const demoLimitee = [
+    ["projet"], ["accueil"], ["intro", "0"], ["intro", "1"], ["intro", "2"], ["hub"],
+    ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"],
+    ["findemo"], ["fiche"], ["kelonia"]
+  ];
+  const demo = CONFIG.versionComplete ? demoComplet : demoLimitee;
+
+  window.Content = { CONFIG, apercu, UI, accueil, publics, intro, stations, tri, triMsg, especes, statuts, dossier, relacher, fin, credits, demo };
 })();

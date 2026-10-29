@@ -72,8 +72,12 @@
   let audioEl = null;
   function stopVoix() { if (audioEl) { audioEl.pause(); audioEl = null; } if (window.speechSynthesis) speechSynthesis.cancel(); }
   // retourne 'fichier' | 'synthese' | 'aucune'
+  // VOIX COUPÉES (demande de Jonathan, 29/10) : le bouton reste visible mais ne joue rien.
+  // Pour réactiver : VOIX_ACTIVES = true.
+  const VOIX_ACTIVES = false;
   async function parle(id, lang, texte) {
     stopVoix();
+    if (!VOIX_ACTIVES) return "muet";
     if (VOIX_ENREGISTREES.includes(id + "." + lang)) {
       audioEl = new Audio("assets/audio/" + id + "." + lang + ".mp3");
       try { await audioEl.play(); return "fichier"; } catch (e) { /* lecture refusée : on tente la synthèse */ }

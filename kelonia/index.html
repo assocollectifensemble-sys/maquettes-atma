@@ -4,21 +4,29 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#063b4c">
+<meta name="theme-color" content="#031c24">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kawann">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="application-name" content="Kawann">
 <meta name="description" content="Le dossier Kawann : enquête sur téléphone à Kélonia, l'observatoire des tortues marines (prototype)">
 <title>Le dossier Kawann · Kélonia (prototype)</title>
+<!-- fond sombre dès la première image : pas de flash blanc au lancement de l'appli installée -->
+<style>html{background:#031c24}</style>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/icon.svg">
+<link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180.png" sizes="180x180">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body data-theme="lagon">
+<body data-theme="lagon" data-ecran="projet">
 <!-- Filtre « soirée » : tout passe en tons ambrés peu lumineux (cohérent avec « limiter les éclairages ») -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="filtre-ambre" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.36 0.62 0.12 0 0  0.21 0.37 0.07 0 0  0.05 0.09 0.02 0 0  0 0 0 1 0"/></filter></svg>
 <a class="skip" href="#screen">Aller au contenu</a>
 <div id="app">
   <header class="topbar" id="topbar"></header>
-  <main id="screen"></main>
+  <main id="screen"><div class="splash" aria-hidden="true"><img src="assets/icons/icon-192.png" alt="" width="96" height="96"><span>Le dossier Kawann</span></div></main>
 </div>
 <noscript><p style="padding:20px">Cette aventure a besoin de JavaScript.</p></noscript>
 <script src="js/storage.js"></script>

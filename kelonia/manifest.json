@@ -1,16 +1,44 @@
 {
-  "name": "Le dossier Kawann · Kélonia",
+  "id": "./?app=kelonia-kawann",
+  "name": "Kawann · Kélonia",
   "short_name": "Kawann",
-  "description": "Enquête sur téléphone à Kélonia, l'observatoire des tortues marines (prototype)",
+  "description": "Le dossier Kawann : une aventure sur téléphone pour Kélonia, l'observatoire des tortues marines (version démo)",
   "lang": "fr",
-  "start_url": "./index.html",
+  "dir": "ltr",
+  "start_url": "./?station=projet",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#e3f6f5",
-  "theme_color": "#063b4c",
+  "background_color": "#031c24",
+  "theme_color": "#031c24",
+  "categories": [
+    "education",
+    "games"
+  ],
   "icons": [
-    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ]
 }

@@ -1,7 +1,7 @@
 /* ============================================================
    APP.JS — Navigation, écrans et logique de « Le dossier Kawann »
    (prototype pour Kélonia, l'observatoire des tortues marines).
-   Écrans : ouverture (démo) · accueil · intro · hub (bassins) ·
+   Écrans : projet (présentation, 1er écran) · findemo · ouverture (démo) · accueil · intro · hub (bassins) ·
    st1…st5 (brief → jeu → quiz → info) · dossier · relacher · diplome ·
    fin · carnet · fiche (enseignant) · qr (pour l'équipe) · kelonia.
    ============================================================ */
@@ -9,7 +9,12 @@
   "use strict";
   const C = window.Content;
   const $screen = document.getElementById("screen");
-  let route = { n: "accueil", step: null }, jeu = null, demoMode = false, demoIdx = 0;
+  let route = { n: "projet", step: null }, jeu = null, demoMode = false, demoIdx = 0;
+  // VERSION DÉMO : tant que Content.CONFIG.versionComplete est faux, seul le bassin 1 est jouable.
+  // Tous les chemins passent par go() : c'est là que les écrans verrouillés sont refusés.
+  const COMPLET = !!(C.CONFIG && C.CONFIG.versionComplete);
+  const VERROU = n => !COMPLET && (/^st[2-5]$/.test(n) || ["dossier", "relacher", "diplome", "fin"].includes(n));
+  let installPrompt = null; // Android : évènement « beforeinstallprompt » gardé pour le bouton « Installer »
   const BULLES = {}; // textes des bulles affichées (pour changer de langue sans recharger l'écran)
 
   // échappement HTML + typographie française : espace insécable avant ! ? ; : » (jamais de « ! » seul en début de ligne)
@@ -31,13 +36,13 @@
 
   // ---------- thème ----------
   function applyTheme() {
-    const th = nuit() ? "nuit" : Store.get("theme");
+    const th = route.n === "projet" ? "lagon" : nuit() ? "nuit" : Store.get("theme");
     document.body.dataset.theme = th;
     document.documentElement.classList.toggle("nuit", th === "nuit");
     document.documentElement.dataset.taille = Store.get("taille");
     document.documentElement.classList.toggle("facile", !!Store.get("facile"));
     document.documentElement.lang = lang() === "kr" ? "rcf" : lang();
-    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = th === "nuit" ? "#120803" : th === "soleil" ? "#ffffff" : "#063b4c";
+    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = route.n === "projet" ? "#031c24" : th === "nuit" ? "#120803" : th === "soleil" ? "#ffffff" : "#063b4c";
   }
 
   // ---------- briques d'affichage ----------
@@ -98,25 +103,77 @@
   function go(n, step, noScroll) {
     if (jeu) { jeu.destroy(); jeu = null; }
     Audio2.stopVoix(); closeSheets();
+    let refus = false;
+    if (VERROU(n)) { refus = /^st/.test(n); n = !refus && Store.faits()[1] ? "findemo" : "hub"; step = null; } // démo : jamais au-delà du bassin 1
     route = { n, step: step == null ? null : String(step) };
     const u = new URL(location.href); u.searchParams.delete("station");
     const code = /^st\d$/.test(n) ? n.slice(2) : n;
-    if (n !== "accueil") u.searchParams.set("station", code);
+    if (n !== "projet") u.searchParams.set("station", code);
     try { history.replaceState(null, "", u); } catch (e) { /* file:// */ }
     applyTheme(); render();
     if (!noScroll) window.scrollTo(0, 0);
     const h = $screen.querySelector("h1,h2"); if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
     updatePresbar();
+    if (refus) toast("🔒 Ce bassin arrive dans l'application complète");
   }
   function render() {
     topbar();
-    const fn = SCREENS[route.n]; if (!fn) return go("accueil");
+    const fn = SCREENS[route.n]; if (!fn) return go("projet");
     $screen.classList.remove("entre"); void $screen.offsetWidth; $screen.classList.add("entre");
     $screen.innerHTML = fn(route.step);
     document.body.dataset.ecran = route.n;
     const a = AFTER[route.n]; if (a) a(route.step);
   }
   const SCREENS = {}, AFTER = {};
+
+  // ===================== LE PROJET (1er écran : présentation de la version démo) =====================
+  const standalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  const iOS = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  function aideInstall() { // masquée quand l'appli est déjà lancée depuis l'écran d'accueil
+    if (standalone()) return "";
+    const txt = iOS() ? 'Sur iPhone : touchez <b>Partager</b> <span class="pj-partage" aria-hidden="true">⬆</span> puis <b>« Sur l\'écran d\'accueil »</b>.'
+      : installPrompt ? "Une icône Kawann s'ajoute à l'écran d'accueil, comme une application. Elle fonctionne ensuite sans réseau."
+        : 'Android : menu <b>⋮</b> du navigateur → <b>« Installer l\'application »</b>.<br>iPhone : <b>Partager</b> → <b>« Sur l\'écran d\'accueil »</b>.';
+    return '<section class="pj-install" id="pj-install"><h3>📲 Installer sur l\'écran d\'accueil</h3><p>' + typo(txt) + '</p>' +
+      (installPrompt && !iOS() ? btn("Installer l'application", "installer", "pj-btn") : "") + '</section>';
+  }
+  function majInstall() { const b = document.getElementById("pj-install"); if (b) b.outerHTML = aideInstall(); }
+  SCREENS.projet = () => {
+    const complete = [
+      ["🫧", "5 bassins pour toute la visite", "Aujourd'hui, vous vivez le premier.", "large"],
+      ["👨‍👩‍👧", "3 publics", "Famille, soirée « Jours de la Nuit », classe cycle 3"],
+      ["🗣️", "Français, kréol, anglais", "Voix enregistrées, texte toujours affiché"],
+      ["📶", "Hors connexion", "Rien à télécharger, aucun réseau requis"],
+      ["🔳", "Un QR code par bassin", "On scanne, l'enquête s'ouvre"],
+      ["✏️", "Contenus relus par Kélonia", "Et modifiables par votre équipe"],
+      ["📊", "Statistiques anonymes", "Fréquentation, sans donnée personnelle"]
+    ];
+    return '<div class="projet"><div class="pj-tete"><span class="pj-lieu">Kélonia · Saint-Leu</span><span class="pj-badge">Prototype · proposition à co-écrire avec le service éducatif</span></div>' +
+      '<div class="pj-art" aria-hidden="true"><span class="pj-halo"></span>' + Art.kawann("content", "flotte", { pansement: true }) + '</div>' +
+      '<h1>Le dossier Kawann</h1><p class="pj-sous">Une aventure sur téléphone pour Kélonia</p>' +
+      '<p class="pj-idee">' + typo("Les familles et les classes enquêtent <b>bassin par bassin</b> pour aider une tortue soignée à retrouver la mer. On scanne un QR code : <b>rien à télécharger</b>, et ça marche <b>sans réseau</b>.") + '</p>' +
+      '<h2 class="pj-h">Ce que l\'application complète proposera</h2><ul class="pj-grille">' +
+      complete.map(x => '<li class="' + (x[3] || "") + '"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul>' +
+      '<section class="pj-cycle3"><div class="pj-c3-t"><span class="pj-c3-i" aria-hidden="true">🎓</span><div><h3>Version cycle 3</h3><span class="pj-c3-niv">CM1 · CM2 · 6e</span></div></div>' +
+      '<p>' + esc("Consignes scolaires, mots-clés du programme de sciences, débats en équipe et fiche enseignant imprimable.") + '</p>' + btn("Lire la proposition ➜", "go", "pj-btn", { r: "fiche" }) + '</section>' +
+      aideInstall() +
+      '<div class="pj-acces">' + btn("🏛️ Pour Kélonia", "go", "pj-sec", { r: "kelonia" }) + btn("🌙 Version soirée", "saut", "pj-sec", { n: "intro", s: "1", p: "soiree" }) + '</div>' +
+      '<p class="pj-fiction">' + esc("Kawann est un personnage inventé ; son parcours est inspiré des vraies patientes du centre de soins (hameçon avalé, chirurgie, convalescence, relâcher).") + '</p></div>' +
+      dock(btn("▶ Démarrer la démo", "go", "big", { r: "accueil" }));
+  };
+
+  // ===================== FIN DE LA DÉMO =====================
+  SCREENS.findemo = () => '<div class="findemo"><span class="kicker">Version démo · bassin 1 terminé</span><h2>Fin de la démo</h2>' +
+    '<div class="fd-art" aria-hidden="true">' + Art.kawann("content", "flotte", { pansement: true }) + '</div>' +
+    '<p class="fd-lead">' + esc("Vous venez de vivre le bassin 1.") + '</p><p class="fd-txt">' + esc("Dans l'application complète : 4 autres bassins, le dossier de soin, le relâcher de Kawann en mer et le diplôme de soigneur junior.") + '</p>' +
+    '<ul class="fd-suite">' + [
+      ["🗺️", "4 autres bassins", "Tri de la mer, photo-identification, visite de contrôle, plage de nuit"],
+      ["📋", "Le dossier de soin", "Les indices réunis, le tampon « apte au relâcher »"],
+      ["🌊", "Le relâcher en mer", "Kawann retrouve l'océan, sous vos yeux"],
+      ["🏅", "Le diplôme de soigneur junior", "À imprimer ou à garder en image"]
+    ].map(x => '<li><span class="fd-i" aria-hidden="true">' + x[0] + '</span><span class="fd-t"><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></span><span class="fd-badge">Appli complète</span></li>').join("") + '</ul></div>' +
+    dock(btn("✨ Revoir le projet", "go", "big", { r: "projet" }) + '<div class="rang-btn">' + btn("🎓 Proposition cycle 3", "go", "sec", { r: "fiche" }) + btn("🏛️ Pour Kélonia", "go", "sec", { r: "kelonia" }) + '</div>' + btn("🔁 Recommencer", "recommencer", "sec"), "flow");
+  AFTER.findemo = () => { if (!navigator.userActivation || navigator.userActivation.hasBeenActive) Audio2.Sfx.fanfare(); bullesFete(); }; // pas de son sans geste (arrivée directe par lien)
 
   // ===================== OUVERTURE (mode démo) =====================
   SCREENS.ouverture = () => {
@@ -150,6 +207,7 @@
       '<section class="card ligne"><h3>' + esc(L({ fr: "Langue des voix", en: "Voice language", kr: "Lang bann vwa" })) + '</h3><div class="seg">' + lgBtn("fr", "Français") + lgBtn("kr", "Kréol") + lgBtn("en", "English") + '</div></section>' +
       '<section class="card ligne"><h3>' + esc(L({ fr: "Joueurs sur ce téléphone", en: "Players on this phone", kr: "Zouèr si sa téléfone" })) + '</h3><button class="btn sec" data-act="equipe">👥 ' + (eq.length ? eq.map(esc).join(", ") : esc(L({ fr: "1 à 5 enfants : ajouter les prénoms", en: "1 to 5 kids: add names" }))) + '</button></section>' +
       '<p class="small dim center">' + esc(L({ fr: "≈ 30 à 40 min (à mesurer sur place) · aucune donnée envoyée", en: "≈ 30-40 min · no data sent" })) + '</p>' +
+      (COMPLET ? "" : '<p class="center retour-projet"><button class="lien" data-act="go" data-r="projet">← ' + esc(L({ fr: "Présentation du projet", en: "About the project" })) + '</button></p>') +
       dock(btn((n > 0 && n < 5 ? "🐢 " + esc(L(C.UI.continuer)) + " (" + n + "/5)" : "🐢 " + esc(L(C.UI.commencer))), "start", "big"));
   };
   AFTER.accueil = () => { };
@@ -165,15 +223,20 @@
   // ===================== HUB : les 5 bassins =====================
   SCREENS.hub = () => {
     const f = Store.faits(), n = Store.count();
-    const rows = C.stations.map((S, k) => '<li class="st ' + (f[S.id] ? "fait" : "") + '"><button class="station" data-act="station" data-id="' + S.id + '"><span class="num" aria-hidden="true">' + (f[S.id] ? "✓" : S.id) + '</span><span class="st-t"><b>' + S.ico + " " + esc(L(S.titre)) + '</b><small>📍 ' + esc(LF(S.lieu)) + '</small></span><span class="go" aria-hidden="true">' + (f[S.id] ? "★" : "➜") + '</span></button></li>' + (k < 4 ? '<li class="sentier" aria-hidden="true"></li>' : "")).join("");
-    const t = n === 0 ? { qui: "jo", expr: "clin", fr: "Choisis un bassin. Sur place, scanne le QR code du panneau avec l'appareil photo ; ici, touche simplement le bassin.", kr: "Swazi in basin. Si plas, skann lo KR kod ék lapareil foto ; isi, tous zis lo basin.", en: "Pick a pool. On site, scan the sign's QR code with your camera; here, just tap the pool." }
+    const cadenas = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10.5" rx="3" fill="currentColor"/><path d="M8.2 10.5V8a3.8 3.8 0 0 1 7.6 0v2.5" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><circle cx="12" cy="15.3" r="1.6" style="fill:var(--card)"/></svg>';
+    const verrou = (S, k) => '<li class="st verrou"><div class="station" aria-disabled="true"><span class="num">' + cadenas + '<span class="sr-only">Verrouillé</span></span><span class="st-t"><b>' + S.ico + " " + esc(L(S.titre)) + '</b><small>' + esc(LF(C.apercu[S.id])) + '</small><span class="badge-complet">' + esc(L({ fr: "Application complète", en: "Full app" })) + '</span></span></div></li>' + (k < 4 ? '<li class="sentier" aria-hidden="true"></li>' : "");
+    const rows = C.stations.map((S, k) => !COMPLET && S.id > 1 ? verrou(S, k) : '<li class="st ' + (f[S.id] ? "fait" : "") + '"><button class="station" data-act="station" data-id="' + S.id + '"><span class="num" aria-hidden="true">' + (f[S.id] ? "✓" : S.id) + '</span><span class="st-t"><b>' + S.ico + " " + esc(L(S.titre)) + '</b><small>📍 ' + esc(LF(S.lieu)) + '</small></span><span class="go" aria-hidden="true">' + (f[S.id] ? "★" : "➜") + '</span></button></li>' + (k < 4 ? '<li class="sentier" aria-hidden="true"></li>' : "")).join("");
+    const t = !COMPLET ? (f[1] ? { qui: "kawann", expr: "content", fr: "Bravo, le premier indice est trouvé ! La suite de l'enquête arrive dans l'application complète.", en: "Well done, first clue found! The rest of the investigation comes in the full app." }
+      : { qui: "jo", expr: "clin", fr: "Pour cette démo, le bassin 1 est ouvert : touche-le pour commencer. Les 4 autres arrivent dans l'application complète.", en: "For this demo, pool 1 is open: tap it to start. The other 4 come in the full app." })
+      : n === 0 ? { qui: "jo", expr: "clin", fr: "Choisis un bassin. Sur place, scanne le QR code du panneau avec l'appareil photo ; ici, touche simplement le bassin.", kr: "Swazi in basin. Si plas, skann lo KR kod ék lapareil foto ; isi, tous zis lo basin.", en: "Pick a pool. On site, scan the sign's QR code with your camera; here, just tap the pool." }
       : n === 5 ? { qui: "kawann", expr: "fete", fr: "Les 5 indices sont trouvés ! Ouvre mon dossier de soin.", kr: "Lé 5 lindis lé trouvé ! Ouv mon dosié swin.", en: "All 5 clues found! Open my care file." }
         : { qui: "kawann", expr: "content", fr: "Encore " + (5 - n) + " bassin" + (5 - n > 1 ? "s" : "") + " ! L'ordre n'a pas d'importance.", kr: "Ankor " + (5 - n) + " basin ! Lord lé pa inportan.", en: (5 - n) + " pool" + (5 - n > 1 ? "s" : "") + " to go! Any order." };
     return '<span class="kicker">' + esc(L({ fr: "L'enquête", en: "The investigation", kr: "Lankèt" })) + '</span><h2>' + esc(L({ fr: "Les bassins de Kélonia", en: "Kélonia's pools", kr: "Bann basin Kélonia" })) + '</h2>' +
       '<div class="progress" role="img" aria-label="' + n + ' indices sur 5"><i style="width:' + n * 20 + '%"></i><span>' + n + ' / 5 ' + esc(L({ fr: "indices", en: "clues", kr: "lindis" })) + '</span></div>' +
       bulle("hub", t) + '<ul class="stations">' + rows + '</ul>' +
       '<p class="note small">🔗 ' + esc(L({ fr: "Chaque QR code ouvre son bassin :", en: "Each QR code opens its pool:" })) + ' <b>?station=1</b> … <b>?station=5</b></p>' +
-      (n >= 5 ? dock(btn("📋 " + ui("dossier"), "go", "big", { r: "dossier" })) : n > 0 ? dock(btn("📋 " + esc(L({ fr: "Voir le dossier (" + n + "/5)", en: "See the file (" + n + "/5)", kr: "Oir lo dosié" })), "go", "sec", { r: "dossier" })) : "");
+      (!COMPLET ? (f[1] ? dock(btn("🏁 Fin de la démo ➜", "go", "big", { r: "findemo" })) : "")
+        : n >= 5 ? dock(btn("📋 " + ui("dossier"), "go", "big", { r: "dossier" })) : n > 0 ? dock(btn("📋 " + esc(L({ fr: "Voir le dossier (" + n + "/5)", en: "See the file (" + n + "/5)", kr: "Oir lo dosié" })), "go", "sec", { r: "dossier" })) : "");
   };
 
   // ===================== STATIONS =====================
@@ -211,7 +274,8 @@
         bulle("st" + id + "-fin", S.fin) +
         '<section class="card"><h3>💡 ' + esc(L(C.UI.savais)) + '</h3><p>' + esc(LF(S.fait)) + '</p>' + src(S.fait.src) + '</section>' +
         '<button class="carte-gain" data-act="go" data-r="carnet"><span class="cg-art">' + Art.espece(S.espece, E.couleur) + '</span><span><small>' + esc(L(C.UI.carte)) + '</small><b>' + esc(LF(E.nom)) + '</b><i>' + esc(E.latin) + '</i><span class="statut" style="--c:' + st.c + '">' + esc(L({ fr: "Monde", en: "World" })) + ' : ' + esc(LF(st)) + '</span><span class="statut" style="--c:' + C.statuts[E.reg].c + '">' + esc(L({ fr: "La Réunion", en: "Réunion" })) + ' : ' + esc(LF(C.statuts[E.reg])) + '</span></span></button>' +
-        dock(tous ? btn("📋 " + ui("dossier"), "go", "big", { r: "dossier" }) : btn("🗺️ " + ui("retourParcours"), "hub", "big"));
+        dock(!COMPLET ? btn("🏁 Terminer la démo ➜", "go", "big", { r: "findemo" }) + btn("🗺️ " + ui("retourParcours"), "hub", "sec")
+          : tous ? btn("📋 " + ui("dossier"), "go", "big", { r: "dossier" }) : btn("🗺️ " + ui("retourParcours"), "hub", "big"));
     }
     return "";
   }
@@ -311,7 +375,7 @@
           '<h3>' + esc(LF(E.nom)) + '</h3><i>' + esc(E.latin) + '</i><p>' + esc(LF(E.presence)) + '</p><p>' + esc(LF(E.trait)) + '</p><span class="statut" style="--c:' + st.c + '">' + esc(L({ fr: "Monde", en: "World" })) + ' : ' + esc(LF(st)) + '</span><span class="statut" style="--c:' + rg.c + '">' + esc(L({ fr: "La Réunion", en: "Réunion" })) + ' : ' + esc(LF(rg)) + '</span>'
           : '<h3>???</h3><p class="small">' + esc(L({ fr: "Réussis le bassin " + S.id + " pour la débloquer.", en: "Complete pool " + S.id + " to unlock." })) + '</p>') + '</article>';
       }).join("") + '</div><p class="note small">' + esc(L({ fr: "Statuts de la Liste rouge de l'UICN : « Monde » (évaluation mondiale ; tortue verte réévaluée en 2025) et « La Réunion » (Liste rouge régionale, 2010). Une espèce peut aller mieux à l'échelle du monde et rester menacée ici : c'est le cas de la tortue verte.", en: "IUCN Red List status: World (global assessment; green turtle reassessed in 2025) and Réunion (regional list, 2010). A species can do better worldwide yet remain threatened here: that's the case of the green turtle." })) + ' <small class="src-i">[K11]</small></p>' +
-      dock(btn("🗺️ " + ui("retourParcours"), "hub", "sec") + btn("➜ " + ui("fin"), "go", "sec", { r: "fin" }), "flow");
+      dock(btn("🗺️ " + ui("retourParcours"), "hub", "sec") + (COMPLET ? btn("➜ " + ui("fin"), "go", "sec", { r: "fin" }) : btn("🏁 Fin de la démo", "go", "sec", { r: "findemo" })), "flow");
   };
 
   // ===================== FICHE ENSEIGNANT (imprimable) =====================
@@ -331,13 +395,13 @@
     '<h3>Avant la visite</h3><ul><li>Lister ce que les élèves savent des tortues marines ; noter leurs questions.</li><li>Rappeler la différence entre reptile, poisson et mammifère.</li><li>Ressources du service éducatif de Kélonia (« Découvrir les tortues marines », cycles 1 à 3) [K8].</li></ul>' +
     '<h3>Après la visite</h3><ul><li>Construire la chaîne alimentaire de la caouanne et y placer le plastique.</li><li>Réaliser une affiche « Les gestes qui protègent les tortues » ; lien possible avec le parrainage à distance proposé aux classes par Kélonia [K2].</li><li>Enquête à la maison : quelles lumières restent allumées la nuit dans mon quartier ?</li></ul>' +
     '<p class="mini-note">Sources détaillées : SOURCES.md. Personnages et mesures de Kawann fictifs. Document de travail, non validé.</p></article>' +
-    dock(btn("🖨️ Imprimer la fiche", "print", "sec") + btn("🏠 Accueil", "accueil", "sec"), "flow noprint");
+    dock((COMPLET ? "" : btn("← Retour au projet", "go", "", { r: "projet" })) + btn("🖨️ Imprimer la fiche", "print", "sec") + btn("🏠 Accueil", "accueil", "sec"), "flow noprint");
 
   // ===================== QR CODES (pour l'équipe) =====================
   function baseURL() { return Store.get("baseqr") || (location.origin + location.pathname); }
   function qrCartes() {
     const b = baseURL(), sep = b.includes("?") ? "&" : "?";
-    const liste = [{ c: "", t: "Accueil de l'aventure", l: "Entrée / billetterie (à définir)" }].concat(C.stations.map(S => ({ c: String(S.id), t: S.ico + " " + S.id + " · " + S.titre.fr, l: S.lieu.fr }))).concat([{ c: "fiche", t: "Fiche enseignant", l: "Pour les classes" }]);
+    const liste = [{ c: "accueil", t: "Accueil de l'aventure", l: "Entrée / billetterie (à définir)" }].concat(C.stations.map(S => ({ c: String(S.id), t: S.ico + " " + S.id + " · " + S.titre.fr, l: S.lieu.fr }))).concat([{ c: "fiche", t: "Fiche enseignant", l: "Pour les classes" }]);
     return liste.map(x => { const url = b + (x.c ? sep + "station=" + x.c : ""); return '<article class="qrcarte">' + QR.svg(url, { taille: 180 }) + '<h3>' + esc(x.t) + '</h3><p class="small">📍 ' + esc(x.l) + '</p><code>' + esc(url) + '</code></article>'; }).join("");
   }
   SCREENS.qr = () => '<span class="kicker noprint">Pour l\'équipe de Kélonia</span><h2>🔳 QR codes des bassins</h2>' +
@@ -378,10 +442,10 @@
     ].map(x => '<li><span aria-hidden="true">' + x[0] + '</span><span><b>' + esc(x[1]) + '</b><br>' + esc(x[2]) + '</span></li>').join("") + '</ul>' +
     '<section class="card"><h3>✏️ Vos textes, modifiables par votre équipe</h3>' + editeur() + '</section>' +
     '<section class="card"><h3>📊 Tableau de bord de fréquentation</h3>' + graphe() + '</section>' +
-    '<section class="card"><h3>🧭 Raccourcis</h3><div class="rang-btn">' + btn("🔳 QR codes", "go", "sec", { r: "qr" }) + btn("🎓 Fiche enseignant", "go", "sec", { r: "fiche" }) + btn("🌙 Version soirée", "saut", "sec", { n: "st5", s: "brief", p: "soiree" }) + btn("🃏 Carnet", "go", "sec", { r: "carnet" }) + '</div></section>' +
+    '<section class="card"><h3>🧭 Raccourcis</h3><div class="rang-btn">' + btn("🔳 QR codes", "go", "sec", { r: "qr" }) + btn("🎓 Fiche enseignant", "go", "sec", { r: "fiche" }) + (COMPLET ? btn("🌙 Version soirée", "saut", "sec", { n: "st5", s: "brief", p: "soiree" }) : btn("🌙 Version soirée", "saut", "sec", { n: "intro", s: "1", p: "soiree" })) + btn("🃏 Carnet", "go", "sec", { r: "carnet" }) + '</div></section>' +
     '<section class="card"><h3>🏛️ Et ailleurs dans le réseau RMR ?</h3><p>Le même moteur peut accueillir une enquête à Stella Matutina, à la Cité du Volcan ou au MADOI, avec ses propres personnages et contenus.</p></section>' +
     '<section class="card"><h3>🤝 À construire ensemble</h3><ul class="clean"><li>Relecture scientifique et pédagogique de tous les textes</li><li>Vrais noms des bassins et emplacement des QR codes</li><li>Relecture du créole et enregistrement des voix</li><li>Photos du lieu pour des illustrations fidèles</li></ul></section>' +
-    dock(btn("🏠 Accueil", "accueil", "sec") + btn("▶ Jouer", "start", ""), "flow");
+    dock((COMPLET ? "" : btn("← Le projet", "go", "sec", { r: "projet" })) + btn("🏠 Accueil", "accueil", "sec") + btn("▶ Jouer", "start", ""), "flow");
   let edLang = "fr";
   function edCharge() {
     const id = document.getElementById("ed-id"); if (!id) return;
@@ -418,7 +482,7 @@
       '<p class="lab">Taille du texte</p>' + seg("taille", Store.get("taille"), [[1, "A"], [2, "A+"], [3, "A++"]]) +
       '<p class="lab">Lecture facilitée (espacement, pas d\'italique)</p>' + seg("facile", Store.get("facile") ? 1 : 0, [[0, "Non"], [1, "Oui"]]) +
       '<p class="lab">Son et vibrations</p>' + seg("son", Store.get("son") ? 1 : 0, [[1, "🔊 Oui"], [0, "🔇 Non"]]) +
-      '<p class="lab">Pour l\'équipe de Kélonia</p><div class="rang-btn">' + btn("🔳 QR codes", "go", "sec", { r: "qr" }) + btn("🎓 Fiche enseignant", "go", "sec", { r: "fiche" }) + btn("🏛️ Pour Kélonia", "go", "sec", { r: "kelonia" }) + '</div>' +
+      '<p class="lab">Pour l\'équipe de Kélonia</p><div class="rang-btn">' + (COMPLET ? "" : btn("✨ Le projet", "go", "sec", { r: "projet" })) + btn("🔳 QR codes", "go", "sec", { r: "qr" }) + btn("🎓 Fiche enseignant", "go", "sec", { r: "fiche" }) + btn("🏛️ Pour Kélonia", "go", "sec", { r: "kelonia" }) + '</div>' +
       '<div class="rang-btn">' + btn("ℹ️ Crédits", "credits", "sec") + btn("🔁 Remise à zéro", "reset", "sec") + '</div>' +
       btn("Fermer", "fermer", "", { focus: 1 }));
   }
@@ -432,7 +496,7 @@
   }
 
   // ===================== BARRE DE PRÉSENTATION (démo RDV) =====================
-  const NOMS_DEMO = { ouverture: "Ouverture", accueil: "Accueil", intro: "Histoire", hub: "Les bassins", st1: "Bassin 1 · radio", st2: "Bassin 2 · tri", st3: "Bassin 3 · photo-ID", st4: "Bassin 4 · mesure", st5: "Bassin 5 · plage", dossier: "Dossier de soin", relacher: "Relâcher", diplome: "Diplôme", fin: "Et après", carnet: "Carnet", fiche: "Fiche enseignant", qr: "QR codes", kelonia: "Pour Kélonia" };
+  const NOMS_DEMO = { projet: "Le projet", findemo: "Fin de la démo", ouverture: "Ouverture", accueil: "Accueil", intro: "Histoire", hub: "Les bassins", st1: "Bassin 1 · radio", st2: "Bassin 2 · tri", st3: "Bassin 3 · photo-ID", st4: "Bassin 4 · mesure", st5: "Bassin 5 · plage", dossier: "Dossier de soin", relacher: "Relâcher", diplome: "Diplôme", fin: "Et après", carnet: "Carnet", fiche: "Fiche enseignant", qr: "QR codes", kelonia: "Pour Kélonia" };
   function updatePresbar() {
     let p = document.getElementById("presbar");
     if (!demoMode) { if (p) p.remove(); document.body.classList.remove("has-presbar"); return; }
@@ -445,10 +509,11 @@
   function demoGo(d) {
     demoIdx = Math.max(0, Math.min(C.demo.length - 1, demoIdx + d));
     const x = C.demo[demoIdx];
-    if (x[2]) Store.set("public", x[2]); else if (["accueil", "intro", "hub", "ouverture"].includes(x[0])) Store.set("public", "famille");
+    if (x[2]) Store.set("public", x[2]); else if (["accueil", "intro", "hub", "ouverture", "projet"].includes(x[0])) Store.set("public", "famille");
     // en démo, les bassins « déjà présentés » sont validés pour que le dossier et la fin soient cohérents
     C.demo.forEach((y, k) => { if (k < demoIdx && /^st\d$/.test(y[0])) Store.fait(+y[0].slice(2), true); });
-    if (["dossier", "relacher", "diplome", "fin", "carnet"].includes(x[0])) [1, 2, 3, 4, 5].forEach(k => Store.fait(k, true));
+    if (COMPLET && ["dossier", "relacher", "diplome", "fin", "carnet"].includes(x[0])) [1, 2, 3, 4, 5].forEach(k => Store.fait(k, true));
+    if (x[0] === "findemo") Store.fait(1, true);
     go(x[0], x[1]);
   }
 
@@ -490,6 +555,8 @@
       case "edlg": { edLang = b.dataset.v; document.querySelectorAll('[data-act="edlg"]').forEach(x => x.setAttribute("aria-pressed", x === b)); edCharge(); break; }
       case "edsave": { const id = document.getElementById("ed-id").value, ed = Object.assign({}, Store.get("edits")); ed[id] = Object.assign({}, ed[id], { [edLang]: document.getElementById("ed-txt").value }); Store.set("edits", ed); toast("Enregistré ✓ (sur ce téléphone seulement)"); break; }
       case "edreset": { const id = document.getElementById("ed-id").value, ed = Object.assign({}, Store.get("edits")); delete ed[id]; Store.set("edits", ed); edCharge(); toast("Texte d'origine rétabli"); break; }
+      case "recommencer": Store.reset(); go("accueil"); break;
+      case "installer": if (installPrompt) { installPrompt.prompt(); installPrompt.userChoice.finally(() => { installPrompt = null; majInstall(); }); } break;
       case "dprev": demoGo(-1); break;
       case "dnext": demoGo(1); break;
     }
@@ -504,11 +571,15 @@
     if (q.get("public") && C.publics[q.get("public")]) Store.set("public", q.get("public"));
     if (q.get("lang") && ["fr", "kr", "en"].includes(q.get("lang"))) Store.set("lang", q.get("lang"));
     demoMode = q.get("demo") === "1";
+    if (!COMPLET) [2, 3, 4, 5].forEach(k => { if (Store.faits()[k]) Store.fait(k, false); }); // ancienne partie allant plus loin : on repart du hub de la démo
     const s = q.get("station");
     if (/^[1-5]$/.test(s || "")) go("st" + s, "brief");
     else if (s && SCREENS[s] && s !== "ouverture") go(s);
-    else if (demoMode) { demoIdx = 0; Store.reset(); Store.set("public", "famille"); go("ouverture"); }
-    else go("accueil");
+    else if (demoMode) { demoIdx = 0; Store.reset(); Store.set("public", "famille"); go(COMPLET ? "ouverture" : "projet"); }
+    else go("projet");
+    // installation sur l'écran d'accueil (Android/Chrome) : on garde l'invitation pour le bouton de « Le projet »
+    window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installPrompt = e; majInstall(); });
+    window.addEventListener("appinstalled", () => { installPrompt = null; const b = document.getElementById("pj-install"); if (b) b.remove(); });
     if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
       navigator.serviceWorker.register("sw.js").then(() => navigator.serviceWorker.ready).then(() => setTimeout(topbar, 300)).catch(() => { });
       navigator.serviceWorker.addEventListener("controllerchange", topbar);
