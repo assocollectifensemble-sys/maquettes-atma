@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Compos de Marie · Fleuriste à Cambuston, Saint-André</title>
+<meta name="description" content="Les Compos de Marie, fleuriste à Cambuston (Saint-André) : compositions florales à prix modérés, centres de table, chaussure fleurie, commandes de fêtes.">
+<meta property="og:title" content="Les Compos de Marie · Fleuriste à Cambuston">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-compos-de-marie/img/table-eventails.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-compos-de-marie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e8a0b4;--rose-p:#f7e3e8;--bord:#8b1e3f;--bord-f:#5e1229;--vert:#4f7a4a;--creme:#f6f0e7;--ink:#2b1d21;--muted:#6f5a5f;--or:#e9b44c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--creme);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:500;line-height:1.05}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--bord-f);color:#fbeef1;font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{font-weight:600}
+#petales{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.wrap{max-width:1140px;margin:0 auto;padding:0 6vw}
+.kick{display:block;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--bord);font-weight:600}
+.hero{position:relative;min-height:min(100svh,880px);display:grid;align-items:end;overflow:hidden;color:#fff;padding:120px 0 60px}
+.hero .fond{position:absolute;inset:0;background:url(img/table-eventails.jpg) center 35%/cover;animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.17) translate(-2%,-1%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,29,33,.1) 15%,rgba(43,29,33,.78) 86%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .kick{color:#f9dbe3}
+.hero h1{font-size:clamp(50px,10vw,124px);font-style:italic;margin:12px 0 10px;opacity:0;animation:monte 1.4s .3s forwards}
+.hero p{font-size:clamp(18px,2.2vw,22px);max-width:34ch;color:#fbf2f4;opacity:0;animation:monte 1.4s .7s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;opacity:0;animation:monte 1.4s 1s forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.btn.clair{background:var(--creme);color:var(--bord-f)}
+.btn.clair:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.btn.ligne{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.85);color:#fff}
+.btn.ligne:hover{background:rgba(255,255,255,.12)}
+.btn.plein{background:var(--bord);color:#fff;animation:respire 3.6s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 10px rgba(139,30,63,.12)}}
+.btn.plein:hover{background:var(--bord-f)}
+.btn.contour{box-shadow:inset 0 0 0 1.5px #e3d0d5;color:var(--bord-f)}
+.intro{padding:110px 0 90px}
+.intro .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center}
+.intro h2{font-size:clamp(38px,5.4vw,64px);margin:14px 0 22px}
+.intro h2 em{color:var(--bord)}
+.intro p{color:var(--muted);max-width:46ch;margin-bottom:14px}
+.cadre{position:relative}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 18px 18px;box-shadow:0 30px 60px rgba(94,18,41,.18)}
+.cadre figcaption{position:absolute;left:-14px;bottom:28px;background:#fff;padding:12px 16px;border-radius:12px;font-size:14px;box-shadow:0 12px 30px rgba(0,0,0,.12);max-width:240px}
+.cadre figcaption b{display:block;font-family:"Bodoni Moda",serif;font-style:italic;font-weight:500;font-size:19px;color:var(--bord)}
+.galerie{background:var(--rose-p);padding:90px 0 80px;position:relative}
+.galerie:before{content:"";position:absolute;left:0;right:0;top:-1px;height:60px;background:var(--creme);clip-path:ellipse(70% 100% at 50% 0)}
+.galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.galerie h2{font-size:clamp(34px,4.6vw,56px)}
+.galerie .astuce{font-size:14px;color:var(--muted)}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6vw 22px;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;transition:transform .4s}
+.rail figure:hover{transform:translateY(-6px)}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;box-shadow:0 18px 40px rgba(94,18,41,.14)}
+.rail figcaption{font-size:15px;color:var(--muted);padding:10px 4px 0}
+.moments{padding:100px 0}
+.moments .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw}
+.moments h2{font-size:clamp(34px,4.6vw,56px);margin-top:14px;position:sticky;top:90px}
+.moments ol{list-style:none;border-top:1px solid #e3d4d6}
+.moments li{display:grid;grid-template-columns:120px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid #e3d4d6}
+.moments time{font-family:"Bodoni Moda",serif;font-style:italic;color:var(--bord);font-size:18px}
+.moments h3{font-size:24px;margin-bottom:4px}
+.moments p{color:var(--muted);font-size:16px}
+.composer{background:var(--bord-f);color:#fbeef1;padding:100px 0;position:relative;overflow:hidden}
+.composer .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start}
+.composer .kick{color:var(--rose)}
+.composer h2{font-size:clamp(36px,5vw,60px);margin:14px 0 18px;color:#fff}
+.composer h2 em{color:var(--rose)}
+.composer .intro-c{color:#e9cfd6;max-width:40ch}
+.boite{background:#fff;color:var(--ink);border-radius:22px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.etape{margin-bottom:22px}
+.etape > span{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--bord);margin-bottom:10px}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puce{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #e3d0d5;background:#fff;font:inherit;font-size:15px;cursor:pointer;color:var(--ink);display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.puce:hover{border-color:var(--bord)}
+.puce[aria-pressed=true]{background:var(--bord);border-color:var(--bord);color:#fff}
+.puce i{width:14px;height:14px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.boite input{width:100%;min-height:48px;border:1.5px solid #e3d0d5;border-radius:12px;padding:0 14px;font:inherit;font-size:16px;color:var(--ink);background:#fff}
+.apercu{background:var(--rose-p);border-radius:14px;padding:16px;font-size:15px;color:var(--ink);margin:6px 0 18px;white-space:pre-line;min-height:72px}
+.boite .btns{opacity:1;animation:none;margin-top:0}
+.boite .note{font-size:13px;color:var(--muted);margin-top:12px}
+footer{background:#2b1d21;color:#f3e8ea;padding:84px 0 40px}
+footer .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:end}
+footer h2{font-size:clamp(36px,5vw,58px);color:#fff}
+footer h2 em{color:var(--rose)}
+footer ul{list-style:none;font-size:17px}
+footer li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);overflow-wrap:anywhere}
+footer a{text-decoration:none}
+footer a:hover{color:var(--rose)}
+.mini{font-size:13px;color:#b9a3a8;margin-top:56px}
+.rev{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rev.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .intro .wrap,.moments .wrap,.composer .wrap,footer .grid{grid-template-columns:1fr}
+ .intro{padding:80px 0 70px}
+ .cadre figcaption{left:12px}
+ .moments h2{position:static}
+ .moments li{grid-template-columns:1fr;gap:4px}
+ .boite{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1,.hero p,.btns,.rev{opacity:1;transform:none}#petales{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b></div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<header class="hero">
+  <div class="fond" role="img" aria-label="Centre de table fleuri, roses et gypsophile, entouré d’éventails"></div>
+  <div class="wrap">
+    <span class="kick">Fleuriste · Cambuston, Saint-André</span>
+    <h1>Les Compos de Marie</h1>
+    <p>Des compositions florales à prix modérés, pensées pour vos fêtes, vos tables et vos plus beaux jours.</p>
+    <div class="btns">
+      <a class="btn clair" href="#composer">Composer ma demande</a>
+      <a class="btn ligne" href="tel:+262692071663">0692 07 16 63</a>
+    </div>
+  </div>
+</header>
+<section class="intro">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">L’atelier</span>
+      <h2>Chaque fleur trouve <em>sa place</em></h2>
+      <p>Roses, gerberas, protéas, feuillages tropicaux : chez Les Compos de Marie, chaque composition est assemblée pour une occasion précise, du centre de table d’une confirmation au bouquet de fête.</p>
+      <p>Et parfois, la fleur s’installe là où on ne l’attend pas : dans une chaussure, pour une création qui fait sourire toute la table.</p>
+    </div>
+    <figure class="cadre rev">
+      <img src="img/chaussure-fleurie.jpg" alt="Roses rouges et marguerites blanches composées dans une chaussure à talon blanche" loading="lazy">
+      <figcaption><b>La chaussure fleurie</b>une création qui fait sourire</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="galerie">
+  <div class="wrap tete rev">
+    <div><span class="kick">Les créations</span><h2>Un bouquet pour chaque envie</h2></div>
+    <span class="astuce">Faites défiler du doigt →</span>
+  </div>
+  <div class="rail">
+    <figure><img src="img/bouquet-bleu.jpg" alt="Bouquet bleu et blanc, roses et gerberas" loading="lazy"><figcaption>Bleu et blanc, roses et gerberas</figcaption></figure>
+    <figure><img src="img/proteas.jpg" alt="Composition de protéas et roses roses" loading="lazy"><figcaption>Protéas et roses, l’élan tropical</figcaption></figure>
+    <figure><img src="img/roses-soleil.jpg" alt="Roses jaunes, orangées et blanches en vase noir" loading="lazy"><figcaption>Roses soleil en vase noir</figcaption></figure>
+    <figure><img src="img/bouquet-rose.jpg" alt="Bouquet en dôme de roses roses et blanches" loading="lazy"><figcaption>Le dôme tendre, roses et blanc</figcaption></figure>
+    <figure><img src="img/palmes.jpg" alt="Composition de palmes, roses et gerberas" loading="lazy"><figcaption>Palmes, roses et gerberas</figcaption></figure>
+    <figure><img src="img/rouge-bougie.jpg" alt="Composition rouge avec bougie et roses" loading="lazy"><figcaption>Rouge profond, à la lueur d’une bougie</figcaption></figure>
+    <figure><img src="img/multicolore.jpg" alt="Composition multicolore de roses et gerberas" loading="lazy"><figcaption>Toutes les couleurs de la fête</figcaption></figure>
+    <figure><img src="img/tropical.jpg" alt="Grande composition de roses corail" loading="lazy"><figcaption>Grande composition corail</figcaption></figure>
+  </div>
+</section>
+<section class="moments">
+  <div class="wrap">
+    <div class="rev"><span class="kick">Au fil des publications</span><h2>Les moments que l’on fleurit</h2></div>
+    <ol>
+      <li class="rev"><time>Confirmation</time><div><h3>Centres de table, fille et garçon</h3><p>Des compositions pour habiller les tables d’une confirmation, en double version.</p></div></li>
+      <li class="rev"><time>26 janv. 2026</time><div><h3>La chaussure fleurie</h3><p>Une création originale, roses rouges et marguerites, posée dans un escarpin blanc.</p></div></li>
+      <li class="rev"><time>24 déc. 2025</time><div><h3>Les commandes de Noël</h3><p>Des compositions préparées pour le 24 décembre.</p></div></li>
+      <li class="rev"><time>15 nov. 2025</time><div><h3>Compositions champêtres</h3><p>Des bouquets au parfum de jardin, tout en douceur.</p></div></li>
+      <li class="rev"><time>Mai 2025</time><div><h3>Rendez-vous devant la mairie annexe</h3><p>Des matinées de vente en plein air à Cambuston, de 6h30 à 11h30.</p></div></li>
+    </ol>
+  </div>
+</section>
+<section class="composer" id="composer">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">Votre commande</span>
+      <h2>Composez <em>votre demande</em></h2>
+      <p class="intro-c">Choisissez l’occasion, les couleurs et la date : votre message arrive tout prêt sur WhatsApp, il ne reste plus qu’à imaginer la composition ensemble.</p>
+    </div>
+    <div class="boite rev">
+      <div class="etape"><span>1 · L’occasion</span>
+        <div class="puces" data-groupe="occasion">
+          <button class="puce" aria-pressed="false">Confirmation</button>
+          <button class="puce" aria-pressed="false">Mariage</button>
+          <button class="puce" aria-pressed="false">Anniversaire</button>
+          <button class="puce" aria-pressed="false">Fêtes de fin d’année</button>
+          <button class="puce" aria-pressed="false">Centre de table</button>
+          <button class="puce" aria-pressed="false">Pour faire plaisir</button>
+        </div></div>
+      <div class="etape"><span>2 · Les couleurs</span>
+        <div class="puces" data-groupe="couleurs" data-multi>
+          <button class="puce" aria-pressed="false"><i style="background:#e8a0b4"></i>Rose tendre</button>
+          <button class="puce" aria-pressed="false"><i style="background:#8b1e3f"></i>Rouge profond</button>
+          <button class="puce" aria-pressed="false"><i style="background:#fff"></i>Blanc</button>
+          <button class="puce" aria-pressed="false"><i style="background:#e9b44c"></i>Soleil</button>
+          <button class="puce" aria-pressed="false"><i style="background:#4f7a4a"></i>Tropical</button>
+          <button class="puce" aria-pressed="false"><i style="background:#6b8fc9"></i>Bleu</button>
+        </div></div>
+      <div class="etape"><span>3 · Pour quand ?</span><input type="date" id="date" aria-label="Date souhaitée"></div>
+      <div class="apercu" id="apercu" aria-live="polite"></div>
+      <div class="btns">
+        <a class="btn plein" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+        <a class="btn contour" href="tel:+262692071663">Appeler</a>
+      </div>
+      <p class="note">Démonstration : sur la page finale, le message part directement vers votre WhatsApp.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap grid">
+    <h2 class="rev">À très vite<br>à <em>Cambuston</em></h2>
+    <ul class="rev">
+      <li><a href="tel:+262692071663">0692 07 16 63</a></li>
+      <li><a href="mailto:marie.ange.fleur@gmail.com">marie.ange.fleur@gmail.com</a></li>
+      <li>Chemin de l’Étang, Cambuston · 97440 Saint-André</li>
+      <li><a href="https://www.facebook.com/772399952848541" target="_blank" rel="noopener">Suivre sur Facebook →</a></li>
+    </ul>
+  </div>
+  <p class="wrap mini">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications des Compos de Marie.</p>
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll(".rev").forEach(function(el){io.observe(el)});
+var etat={occasion:"",couleurs:[]};
+document.querySelectorAll(".puces").forEach(function(g){
+  var multi=g.hasAttribute("data-multi");
+  g.addEventListener("click",function(ev){var b=ev.target.closest(".puce");if(!b)return;
+    var t=b.textContent.trim();
+    if(multi){var on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);
+      etat.couleurs=on?etat.couleurs.concat(t):etat.couleurs.filter(function(c){return c!==t})}
+    else{g.querySelectorAll(".puce").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");etat.occasion=t}
+    maj()})});
+var d=document.getElementById("date");d.addEventListener("input",maj);
+function maj(){
+  var txt="Bonjour Les Compos de Marie !\nJe souhaite une composition"+(etat.occasion?" pour : "+etat.occasion:"")+".";
+  if(etat.couleurs.length)txt+="\nCouleurs : "+etat.couleurs.join(", ")+".";
+  if(d.value){var p=d.value.split("-");txt+="\nPour le "+p[2]+"/"+p[1]+"/"+p[0]+"."}
+  document.getElementById("apercu").textContent=txt;
+  document.getElementById("wa").href="https://wa.me/262692071663?text="+encodeURIComponent(txt);
+}
+maj();
+var cv=document.getElementById("petales");if(!cv||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var cx=cv.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+var cols=["#e8a0b4","#f4c6d2","#8b1e3f","#f7e3e8","#e9b44c"];
+function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener("resize",size);
+var N=W<600?16:28;
+function nv(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,r:5+Math.random()*7,v:.35+Math.random()*.6,a:Math.random()*6.28,s:.01+Math.random()*.02,o:.25+Math.random()*.35,c:cols[Math.random()*cols.length|0],w:Math.random()*6.28}}
+for(var i=0;i<N;i++)P.push(nv(true));
+function draw(){if(!run)return;cx.clearRect(0,0,W,H);
+  P.forEach(function(p,i){p.y+=p.v;p.w+=.015;p.x+=Math.sin(p.w)*.6;p.a+=p.s;
+    cx.save();cx.translate(p.x,p.y);cx.rotate(p.a);cx.globalAlpha=p.o;cx.fillStyle=p.c;
+    cx.beginPath();cx.ellipse(0,0,p.r,p.r*.55,0,0,6.28);cx.fill();cx.restore();
+    if(p.y>H+20)P[i]=nv(false)});
+  requestAnimationFrame(draw)}
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+</body>
+</html>
