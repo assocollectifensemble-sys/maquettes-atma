@@ -1,0 +1,16 @@
+{
+  "name": "Ti-Fil et la Croix du Sud · Observatoire des Makes",
+  "short_name": "Ti-Fil Makes",
+  "description": "Aventure sur téléphone à l'Observatoire astronomique des Makes (démo)",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#040a22",
+  "theme_color": "#040a22",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
