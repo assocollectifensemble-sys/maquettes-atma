@@ -25,8 +25,9 @@ window.Content = {
     fait: "À La Réunion, on est dans l'hémisphère sud : c'est le pôle SUD céleste qu'on vise. Il est au-dessus de l'horizon sud, à une hauteur égale à la latitude du lieu (environ 21° ici). Et il n'y a pas d'étoile brillante pour le marquer, contrairement à l'étoile Polaire dans le nord !",
     visee: { fr: "Maintenant, vise le pôle sud céleste avec ton téléphone : tourne-toi vers le sud, puis lève un peu le téléphone (environ 21°).", kr: "Get vèr le sid ! Lèv in tikoup.", expr: "pense" },
     apres: "C'est le point autour duquel tourne tout le ciel du sud !",
+    jaiSing: "Comme le grand cadran de pierre de Jai Singh, en Inde (achevé en 1734) : son arête est inclinée exactement de la latitude du lieu. Elle est donc parallèle à l'axe de la Terre et vise le pôle céleste. Aux Makes, cette inclinaison serait de 21°.",
     fin: { fr: "Bravo ! Voilà Acrux, l'étoile du pied de la Croix du Sud. Une de retrouvée !", kr: "Bravo ! In zétoil retrouvé !", expr: "fete" },
-    classe: ["Matérialiser l'axe du Monde : l'élève montre avec le bras la direction du pôle sud céleste (hauteur ≈ latitude).", "Prolongement : pourquoi l'axe du Monde est-il incliné d'un angle égal à la latitude ? (schéma avec la Terre)", "Programme : cycle 3, « Le Soleil, la Terre, la Lune » ; cycle 4, repérage dans l'espace et le temps."]
+    classe: ["Matérialiser l'axe du Monde : l'élève montre avec le bras la direction du pôle sud céleste (hauteur ≈ latitude).", "Prolongement : pourquoi l'axe du Monde est-il incliné d'un angle égal à la latitude ? (schéma avec la Terre)", "Programme : cycle 3, « Le Soleil, la Terre, la Lune » ; cycle 4, repérage dans l'espace et le temps.", "Atelier de l'Observatoire à relier : « Mythologie et histoire du ciel » (instruments anciens, Jai Singh)."]
   },
 
   s2: {
@@ -40,6 +41,8 @@ window.Content = {
       rate: "Pas tout à fait. Regarde l'explication ci-dessous : elle donne la raison."
     },
     pourquoi: "Pourquoi ? L'heure légale de La Réunion (UTC+4) est réglée sur un méridien situé à 60° Est, mais les Makes sont à environ 55,4° Est, donc le Soleil y passe plus tard : environ 18 minutes de décalage dû à la longitude. En plus, l'« équation du temps » (la Terre ne tourne pas à vitesse régulière autour du Soleil) ajoute ou retire jusqu'à une quinzaine de minutes selon la saison. Résultat calculé pour 2026 : le cadran est toujours en retard, de 2 minutes (début novembre) à 32 minutes (mi-février).",
+    ombre: "Ici, dans l'hémisphère sud, l'ombre d'un cadran tourne dans le sens inverse des aiguilles d'une montre : le matin elle est du côté ouest, à midi elle pointe vers le sud, l'après-midi elle passe à l'est. En France métropolitaine, c'est l'inverse !",
+    curseur: "Fais avancer le Soleil et regarde l'ombre tourner :",
     viseSoleil: { fr: "Maintenant, vise le Soleil avec ton téléphone… sans JAMAIS le regarder ! Suis la flèche et ton ombre : elle pointe à l'opposé.", kr: "Pa gard lo soley ! Gard zis lékran.", expr: "wow" },
     viseLune: { fr: "Le Soleil est couché, mais la Lune est levée. Vise la Lune !", kr: "Lo soley la ay, mé la lin i la.", expr: "content" },
     viseNuit: { fr: "Il fait nuit : le Soleil est couché. Vise plutôt la Croix du Sud !", kr: "Lo soley la ay. Rod la Kroi di Sid.", expr: "content" },
@@ -53,36 +56,41 @@ window.Content = {
     brief: { fr: "Station 3 : l'espace Newton et ses télescopes. Certains servent à regarder le ciel en soirée, d'autres à faire de la vraie recherche. Un seul est le T60 : trouve-le !", kr: "Trwazièm stasyon : le télèskop !", expr: "wow" },
     surPlace: "Sur place : demande à ton guide de te présenter les télescopes. Lequel observe pour la recherche ?",
     q: {
-      texte: "Quel instrument sert à la recherche (astéroïdes, surveillance des géocroiseurs) ? Indice : il a le plus grand miroir, donc il capte le plus de lumière.",
+      texte: "Quel instrument sert à la recherche (astéroïdes, surveillance des géocroiseurs) ? Indice : il a le plus grand diamètre, donc il capte le plus de lumière.",
       ok: 3,
-      bravo: "Oui, c'est le T60 ! Son miroir mesure 600 mm de diamètre : le plus grand de ces quatre instruments.",
+      bravo: "Oui, c'est le T60 ! Son miroir mesure 600 mm de diamètre : le plus grand de ces quatre instruments. C'est un télescope « Ritchey-Chrétien », installé sous une coupole.",
       rate: "Ce n'est pas lui. Regarde le diamètre indiqué sur chaque carte : plus il est grand, plus l'instrument capte de lumière."
     },
     cartes: [
-      { id: "lunette", nom: "Telementor", sous: "lunette 63 mm · Soleil", art: "tele" },
+      { id: "lunette", nom: "Telementor", sous: "lunette 63 mm · Soleil en projection", art: "tele" },
       { id: "c8", nom: "C8", sous: "diamètre 203 mm · scolaires", art: "c8" },
-      { id: "c11", nom: "C11", sous: "diamètre 280 mm · soirées", art: "ds16" },
+      { id: "c11", nom: "C11", sous: "diamètre 280 mm · soirées", art: "c11" },
       { id: "t60", nom: "T60", sous: "diamètre 600 mm · recherche", art: "t60" }
     ],
     fait: "Le T60 étudie les astéroïdes et surveille les géocroiseurs, ces astéroïdes qui s'approchent de la Terre. Dans la nuit du 26 au 27 septembre 2022, il a travaillé pour l'ESA : il a suivi en direct les conséquences lumineuses de l'impact de la sonde DART de la NASA sur Dimorphos, petit satellite de l'astéroïde Didymos.",
     fin: { fr: "Bravo ! Voilà Gacrux, l'étoile du sommet de la Croix. Trois de retrouvées !", kr: "Bravo ! Trwa zétoil !", expr: "fete" },
-    classe: ["Comparer les diamètres (203, 280, 600 mm) et discuter : pourquoi un grand miroir voit-il des objets plus faibles ?", "Prolongement : DART, un test de défense planétaire — que cherchait-on à mesurer ?", "Programme : cycle 4, technologie (instruments) et sciences (système solaire)."]
+    classe: ["Comparer les diamètres (203, 280, 600 mm) et discuter : pourquoi un grand miroir voit-il des objets plus faibles ?", "Prolongement : DART, un test de défense planétaire — que cherchait-on à mesurer ?", "Programme : cycle 4, technologie (instruments) et sciences (système solaire).", "Atelier de l'Observatoire à relier : « Système solaire » (astéroïdes, géocroiseurs)."]
   },
 
   bonus: {
     titre: "Soirée : mode nuit rouge", court: "La Croix du Sud", ico: "🌌",
     brief: { fr: "Bonus de soirée ! Regarde : l'écran est devenu rouge. Cela protège ta vision de nuit : tes yeux s'habituent à l'obscurité et tu vois mieux les étoiles.", kr: "Lékran i rouj : zié i vwa mié dan nwar.", expr: "wow" },
-    note: "Démo : si tu joues en plein jour, l'application simule une fin de nuit à 4 h 30 (en novembre, la Croix du Sud se voit surtout avant l'aube ; selon la saison, elle est visible plus tôt ou plus tard dans la nuit). Sur place, c'est le vrai ciel qui compte.",
+    note: "Démo : si tu joues en plein jour, ou si la Croix du Sud est couchée, l'application simule la meilleure heure de la nuit pour la voir (cette nuit : vers {h}). Selon la saison, elle est visible plus tôt ou plus tard dans la nuit. Sur place, c'est le vrai ciel qui compte.",
     visee: { fr: "Vise la Croix du Sud ! Elle est dans le ciel du sud. Baisse la luminosité de ton téléphone au minimum.", kr: "Rod la Kroi di Sid !", expr: "pense" },
-    apres: "Les quatre étoiles de la Croix du Sud sont dessinées à l'écran.",
+    apres: "Les quatre étoiles de la Croix du Sud sont dessinées à l'écran. Et la petite croix jaune ? C'est le pôle sud céleste, que tu as visé à la station 1 !",
     axe: "Astuce pour trouver le sud : prolonge le grand axe de la Croix (de Gacrux vers Acrux) sur environ 4,5 fois sa longueur : tu arrives près du pôle sud céleste. Les deux Pointeurs, α et β du Centaure, aident à confirmer.",
     fin: { fr: "Magnifique ! Voilà Imai, la dernière étoile. La Croix du Sud est complète !", kr: "Mervèyé ! La Kroi di Sid lé konplè !", expr: "fete" },
-    classe: ["Soirée : à l'œil nu, repérer la Croix du Sud puis les Pointeurs ; comparer avec l'écran.", "Prolongement : pourquoi la Croix du Sud tourne-t-elle autour du pôle sud céleste ?"]
+    classe: ["Soirée : à l'œil nu, repérer la Croix du Sud puis les Pointeurs ; comparer avec l'écran.", "Prolongement : pourquoi la Croix du Sud tourne-t-elle autour du pôle sud céleste ?", "Ateliers de l'Observatoire à relier : « LASCAR » (pollution lumineuse, comptage d'étoiles) et « Mythologie et histoire du ciel » (légendes de la Croix du Sud, à écrire avec l'équipe)."]
   },
 
   fin: {
     ok: { fr: "MISSION ACCOMPLIE ! Grâce à toi, la Croix du Sud brille de nouveau au-dessus des Makes. Merci, petit(e) astronome !", kr: "Mission fini ! Mèrsi, astronòm !", expr: "fete" },
-    presque: { fr: "Presque ! Il manque une étoile : Imai, cachée dans le ciel du soir. Reviens la chercher lors d'une soirée d'observation !", kr: "Rèste in zétoil !", expr: "content" }
+    presque: { fr: "Presque ! Il manque une étoile : Imai, cachée dans le ciel du soir. Reviens la chercher lors d'une soirée d'observation !", kr: "Rèste in zétoil !", expr: "content" },
+    // textes français calculés selon les étoiles manquantes (la ligne créole « presque » reste celle ci-dessus, à relire)
+    manque: "Presque ! Il te manque encore {liste}.",
+    manqueImai: "Imai se cache dans le ciel du soir : reviens la chercher lors d'une soirée d'observation !",
+    manqueJour: "Retourne au parcours pour la retrouver !",
+    secret: "Chut… En vrai, une étoile filante n'est pas une étoile ! C'est une petite poussière venue de l'espace qui brûle en entrant dans l'atmosphère de la Terre et laisse une traînée de lumière. Les vraies étoiles, comme celles de la Croix du Sud, sont des soleils très lointains."
   },
 
   credits: [
@@ -90,6 +98,7 @@ window.Content = {
     "Tous les contenus (faits, instruments, textes) sont à faire relire et valider par l'équipe de l'Observatoire avant toute mise en service.",
     "Les textes en créole sont des propositions simples, à faire relire par un locuteur.",
     "Positions du Soleil, de la Lune, des planètes et des étoiles : calculées en direct avec astronomy-engine (licence MIT, copie locale).",
+    "Étoiles brillantes du mini-jeu : les 57 étoiles de navigation (Wikipédia), positions arrondies au degré.",
     "Illustrations et personnage de Ti-Fil : créations originales."
   ],
 

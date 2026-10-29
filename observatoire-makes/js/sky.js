@@ -23,18 +23,41 @@
     hadar:  { nom: "Hadar (β Centauri)", ra: 14 + 3 / 60 + 49.405 / 3600,  dec: -(60 + 22 / 60 + 22.93 / 3600) }
   };
 
+  // Étoiles brillantes pour dessiner un VRAI ciel dans « Vise le ciel » :
+  // les 57 étoiles de navigation (Wikipédia en anglais « List of stars for navigation »,
+  // colonnes SHA et Dec. arrondies au degré ; AD = 360° − SHA). Voir SOURCES.md.
+  // [nom affiché, SHA (°), Dec (°), magnitude]
+  const NAV = [
+    ["Alpheratz", 358, 29, 2.06], ["Ankaa", 354, -42, 2.37], ["Schedar", 350, 56, 2.25], ["Diphda", 349, -18, 2.04],
+    ["Achernar", 336, -57, 0.5], ["Hamal", 328, 23, 2.0], ["Acamar", 316, -40, 3.2], ["Menkar", 315, 4, 2.5],
+    ["Mirfak", 309, 50, 1.82], ["Aldébaran", 291, 16, 0.85], ["Rigel", 282, -8, 0.12], ["Capella", 281, 46, 0.71],
+    ["Bellatrix", 279, 6, 1.64], ["Elnath", 279, 29, 1.68], ["Alnilam", 276, -1, 1.7], ["Bételgeuse", 271, 7, 0.58],
+    ["Canopus", 264, -53, -0.72], ["Sirius", 259, -17, -1.47], ["Adhara", 256, -29, 1.51], ["Procyon", 245, 5, 0.34],
+    ["Pollux", 244, 28, 1.15], ["Avior", 234, -59, 2.4], ["Suhail", 223, -43, 2.23], ["Miaplacidus", 222, -70, 1.7],
+    ["Alphard", 218, -9, 2.0], ["Régulus", 208, 12, 1.35], ["Dubhe", 194, 62, 1.87], ["Denebola", 183, 15, 2.14],
+    ["Gienah", 176, -17, 2.8], ["Alioth", 167, 56, 1.76], ["Spica", 159, -11, 1.04], ["Alkaid", 153, 49, 1.85],
+    ["Menkent", 149, -36, 2.06], ["Arcturus", 146, 19, -0.04], ["Zubenelgenubi", 138, -16, 3.28], ["Kochab", 137, 74, 2.08],
+    ["Alphecca", 127, 27, 2.24], ["Antarès", 113, -26, 1.09], ["Atria", 108, -69, 1.92], ["Sabik", 103, -16, 2.43],
+    ["Shaula", 97, -37, 1.62], ["Rasalhague", 96, 13, 2.1], ["Eltanin", 91, 51, 2.23], ["Kaus Australis", 84, -34, 1.8],
+    ["Véga", 81, 39, 0.03], ["Nunki", 76, -26, 2.06], ["Altaïr", 63, 9, 0.77], ["Peacock", 54, -57, 1.91],
+    ["Deneb", 50, 45, 1.25], ["Enif", 34, 10, 2.4], ["Al Na'ir", 28, -47, 1.74], ["Fomalhaut", 16, -30, 1.16], ["Markab", 14, 15, 2.49]
+  ]; // (Acrux, Gacrux, Hadar et Rigil Kentaurus sont déjà dans STARS, avec des coordonnées plus précises)
+
   // ---------- Heure : réelle ou simulée (pour la démo à l'écran) ----------
+  // sim = "now" | une clé de SIMH | un nombre d'heures locales (ex. 4.67 = 4 h 40)
   let sim = "now";
   const SIMH = { midi: 12, matin: 10.5, soir: 21, nuit: 4.5 };
   function reunionParts(d) { const x = new Date(d.getTime() + 4 * 3600e3); return { y: x.getUTCFullYear(), m: x.getUTCMonth(), d: x.getUTCDate() }; }
+  function heureLocale(real, h) { // date du jour (Réunion) à h heures locales ; UTC = locale − 4 h
+    const p = reunionParts(real); return new Date(Date.UTC(p.y, p.m, p.d, 0, 0, 0) + (h - 4) * 3600e3);
+  }
   function now() {
     const real = new Date();
+    if (typeof sim === "number") return heureLocale(real, sim);
     if (sim === "now" || !SIMH[sim]) return real;
-    const p = reunionParts(real); const h = SIMH[sim];
-    // heure locale Réunion = UTC+4 → UTC = locale − 4 h
-    return new Date(Date.UTC(p.y, p.m, p.d, 0, 0, 0) + (h - 4) * 3600e3);
+    return heureLocale(real, SIMH[sim]);
   }
-  function setSim(s) { sim = s; }
+  function setSim(s) { sim = (typeof s === "string" && /^\d+(\.\d+)?$/.test(s)) ? +s : s; }
   function getSim() { return sim; }
 
   // ---------- Conversions ----------
@@ -94,27 +117,58 @@
     const v = s.map(x => x / n); return vecToAzAlt(v);
   }
   function vecToAzAlt(v) { return { az: ((Math.atan2(v[0], v[1]) / RAD) + 360) % 360, alt: Math.asin(Math.max(-1, Math.min(1, v[2]))) / RAD }; }
+  // ---------- Visibilité : UNE seule règle, UN seul jeu de messages ----------
+  // Seuils : Soleil et Lune > 3° ; planètes et Croix > 5° (il faut un peu de marge au-dessus du relief).
+  // Messages (accordés en genre) : sous l'horizon (h < 0°) · trop bas(se) sur l'horizon (0° ≤ h ≤ seuil) · il fait jour.
+  const SEUIL = { sun: 3, moon: 3, planet: 5, croix: 5 };
+  function visibilite(kind, alt, night, fem) {
+    const s = SEUIL[kind] || 5, bas = fem ? "basse" : "bas", pr = fem ? "Elle" : "Il";
+    if ((kind === "planet" || kind === "croix") && !night) return { visible: false, raison: "Il fait jour : on ne voit pas les étoiles ni les planètes." };
+    if (alt < 0) return { visible: false, raison: pr + " est sous l'horizon en ce moment." };
+    if (alt <= s) return { visible: false, raison: pr + " est trop " + bas + " sur l'horizon (" + Math.round(alt) + "°)." };
+    return { visible: true, raison: "" };
+  }
   function allTargets(date) {
     const out = [];
     const sun = bodyAltAz("Sun", date), moon = bodyAltAz("Moon", date);
-    out.push({ id: "soleil", nom: "le Soleil", icone: "☀️", kind: "sun", ...sun, visible: sun.alt > 3,
-      raison: sun.alt > 3 ? "" : "Il est couché." });
-    out.push({ id: "lune", nom: "la Lune", icone: "🌙", kind: "moon", ...moon, visible: moon.alt > 3,
-      raison: moon.alt > 3 ? "" : "Elle n'est pas levée en ce moment." });
+    out.push({ id: "soleil", nom: "le Soleil", icone: "☀️", kind: "sun", ...sun, ...visibilite("sun", sun.alt, true, false) });
+    out.push({ id: "lune", nom: "la Lune", icone: "🌙", kind: "moon", ...moon, ...visibilite("moon", moon.alt, true, true) });
     const night = sun.alt < -6;
     for (const k of Object.keys(PLAN)) {
       const p = bodyAltAz(k, date);
-      out.push({ id: k.toLowerCase(), nom: PLAN[k], icone: "🪐", kind: "planet", ...p, visible: night && p.alt > 5,
-        raison: !night ? "Il fait jour." : (p.alt > 5 ? "" : "Elle est sous l'horizon.") });
+      out.push({ id: k.toLowerCase(), nom: PLAN[k], icone: "🪐", kind: "planet", ...p, ...visibilite("planet", p.alt, night, true) }); // « Elle » = la planète
     }
     const cx = cruxCenter(date);
-    out.push({ id: "croix", nom: "la Croix du Sud", icone: "✨", kind: "croix", ...cx, visible: night && cx.alt > 5,
-      raison: !night ? "Il fait jour : on ne voit pas les étoiles." : (cx.alt > 5 ? "" : "Elle est trop basse.") });
+    out.push({ id: "croix", nom: "la Croix du Sud", icone: "✨", kind: "croix", ...cx, ...visibilite("croix", cx.alt, night, true) });
     const pp = polePos();
-    out.push({ id: "pole", nom: "le pôle sud céleste", icone: "🧭", kind: "pole", ...pp, visible: true,
-      raison: "" });
+    out.push({ id: "pole", nom: "le pôle sud céleste", icone: "🧭", kind: "pole", ...pp, visible: true, raison: "" });
     return out;
   }
+
+  // Meilleure heure de la nuit (Soleil < −10°) pour voir la Croix du Sud le plus haut possible,
+  // cherchée de 18 h à 6 h (heure locale) par pas de 10 min. Retourne {h (heures locales), alt}.
+  const _best = {};
+  function bestCroixHour(date) {
+    const p = reunionParts(date), key = p.y + "-" + p.m + "-" + p.d; if (_best[key]) return _best[key];
+    let best = null;
+    for (let m = 18 * 60; m <= 30 * 60; m += 10) {
+      const d = new Date(Date.UTC(p.y, p.m, p.d, 0, 0, 0) + (m - 240) * 60e3);
+      if (sunAlt(d) >= -10) continue;
+      const a = cruxCenter(d).alt; if (!best || a > best.alt) best = { h: (m / 60) % 24, alt: a };
+    }
+    return (_best[key] = best || { h: 4.5, alt: cruxCenter(heureLocale(date, 4.5)).alt });
+  }
+
+  // Phase de la Lune (astronomy-engine) : fraction éclairée 0..1 et angle de phase (0 = nouvelle, 180 = pleine)
+  function moonPhase(date) { const t = A.MakeTime(date); return { frac: A.Illumination("Moon", t).phase_fraction, angle: A.MoonPhase(t) }; }
+
+  // Étoiles brillantes (catalogue NAV) en coordonnées locales
+  function brightStars(date) {
+    const t = A.MakeTime(date);
+    return NAV.map(s => { const h = A.Horizon(t, OBS, ((360 - s[1]) % 360) / 15, s[2], "normal"); return { nom: s[0], mag: s[3], az: h.azimuth, alt: h.altitude }; });
+  }
+  // Planètes visibles à l'œil nu (pour le décor du ciel)
+  function planets(date) { return Object.keys(PLAN).map(k => ({ nom: PLAN[k], id: k, ...bodyAltAz(k, date) })); }
   function target(id, date) { return allTargets(date).find(t => t.id === id); }
 
   // Fournit aussi les positions des étoiles à tracer sur la vue
@@ -129,6 +183,18 @@
     return Math.acos(Math.max(-1, Math.min(1, d))) / RAD;
   }
 
-  window.Sky = { LAT, LON, ALT, DECL, STARS, now, setSim, getSim, enu, bodyAltAz, starAltAz, polePos, legalMinutes, solarMinutes, gapMinutes,
-    yearRange, longitudeGap, sunAlt, isNight, allTargets, target, crossStars, sep, vecToAzAlt, reunionParts };
+  // Cadran solaire HORIZONTAL à style polaire, réglé pour la latitude des Makes :
+  // angle de la ligne horaire depuis la ligne de midi : tan(θ) = sin(latitude) × tan(angle horaire).
+  // Aux Makes (hémisphère sud), vu de dessus nord en haut : matin → ombre vers l'OUEST, midi → SUD, soir → EST
+  // ⇒ l'ombre tourne dans le sens inverse des aiguilles d'une montre. Retourne l'azimut de l'ombre (°).
+  function ombreAzimut(solaireMin) {
+    const H = (solaireMin / 60 - 12) * 15 * RAD, s = Math.sin(Math.abs(LAT) * RAD);
+    const th = Math.atan2(s * Math.sin(H), Math.cos(H)) / RAD; // −90 (6 h) … 0 (midi) … +90 (18 h)
+    // midi → 180° (sud) ; matin (H<0, th<0) → au-delà de 180°, vers l'ouest (270°) ; après-midi → vers l'est (90°)
+    return (180 - th + 360) % 360;
+  }
+
+  window.Sky = { LAT, LON, ALT, DECL, STARS, NAV, now, setSim, getSim, enu, bodyAltAz, starAltAz, polePos, legalMinutes, solarMinutes, gapMinutes,
+    yearRange, longitudeGap, sunAlt, isNight, allTargets, target, crossStars, sep, vecToAzAlt, reunionParts, heureLocale,
+    visibilite, bestCroixHour, moonPhase, brightStars, planets, ombreAzimut };
 })();

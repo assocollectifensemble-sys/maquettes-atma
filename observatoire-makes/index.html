@@ -13,10 +13,12 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-theme="ciel">
+<!-- Filtre « nuit rouge » : ne garde que le canal ROUGE (vision nocturne préservée), appliqué à toute la page en mode nuit -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="filtre-nuit" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.44 0.36 0.2 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0"/></filter></svg>
 <a class="skip" href="#screen">Aller au contenu</a>
 <div id="app">
   <header class="topbar" id="topbar"></header>
-  <main id="screen" aria-live="polite"></main>
+  <main id="screen"></main>
 </div>
 <noscript><p style="padding:20px;color:#fff">Cette aventure a besoin de JavaScript.</p></noscript>
 <script src="js/astronomy.min.js"></script>

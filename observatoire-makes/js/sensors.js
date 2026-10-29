@@ -109,10 +109,20 @@
   S.glisse = function () { S.stop(); S.mode = "glisse"; return "glisse"; };
   S.isSensor = () => S.mode === "abs" || S.mode === "rel" || S.mode === "ios";
 
+  // Angle de rotation de l'écran (0 portrait, 90/270 paysage) : les axes « droite » et « haut »
+  // de l'ÉCRAN ne sont plus ceux de l'APPAREIL quand le téléphone est tenu en paysage.
+  function angleEcran() {
+    const a = (screen.orientation && typeof screen.orientation.angle === "number") ? screen.orientation.angle : (typeof window.orientation === "number" ? window.orientation : 0);
+    return ((a % 360) + 360) % 360;
+  }
   // Base courante (capteurs ou glisse)
   S.get = function () {
     if (S.mode === "glisse" || !S.basis) return basisDrag();
-    return S.basis;
+    const th = angleEcran(); if (!th) return S.basis;
+    const c = Math.cos(th * RAD), s = Math.sin(th * RAD), b = S.basis;
+    // écran tourné de θ : droite_écran = r·cosθ − u·sinθ ; haut_écran = r·sinθ + u·cosθ
+    const r = [0, 1, 2].map(i => b.r[i] * c - b.u[i] * s), u = [0, 1, 2].map(i => b.r[i] * s + b.u[i] * c);
+    return { f: b.f, r, u };
   };
   S.setView = function (az, alt) { S.vue.az = ((az % 360) + 360) % 360; S.vue.alt = Math.max(-89, Math.min(89, alt)); };
   S.pointing = function () { const f = S.get().f; return { az: azOf(f), alt: Math.asin(Math.max(-1, Math.min(1, f[2]))) / RAD }; };
