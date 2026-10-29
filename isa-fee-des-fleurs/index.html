@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Isa fée des fleurs · Atelier floral au Tampon</title>
+<meta name="description" content="Isa fée des fleurs, atelier floral au Tampon : bouquets de mariée, cérémonies, arches et centres de table sur mesure.">
+<meta property="og:title" content="Isa fée des fleurs · Atelier floral au Tampon">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/isa-fee-des-fleurs/img/mariee.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/isa-fee-des-fleurs/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;1,400;1,500&family=Mulish:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sauge:#869782;--sauge-f:#5d6d59;--lin:#F5F1E8;--sable:#E8E4DC;--taupe:#7b6b5b;--ink:#2f2a24;--rose:#d9a5a0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Mulish,system-ui,sans-serif;background:var(--lin);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:Cormorant,Georgia,serif;font-weight:500;line-height:1.02}
+img{display:block;max-width:100%}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--sauge-f);color:#fff;font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{font-weight:600}
+#petales{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.wrap{max-width:1140px;margin:0 auto;padding:0 6vw}
+.kick{display:block;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--sauge-f);font-weight:600}
+.hero{position:relative;min-height:min(100svh,900px);display:grid;align-items:end;overflow:hidden;color:#fff;padding:120px 0 64px}
+.hero .fond{position:absolute;inset:0;background:url(img/mariee.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,42,36,.05) 20%,rgba(47,42,36,.72) 88%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero .kick{color:#f2ebdf}
+.hero h1{font-size:clamp(58px,11vw,132px);font-style:italic;margin:10px 0 8px;opacity:0;animation:monte 1.4s .3s forwards}
+.hero p{font-size:clamp(18px,2.2vw,22px);max-width:36ch;color:#f6f1ea;opacity:0;animation:monte 1.4s .7s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s}
+.btn.lin{background:var(--lin);color:var(--sauge-f)}
+.btn.lin:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.btn.ligne{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.8);color:#fff}
+.btn.sauge{background:var(--sauge-f);color:#fff;animation:respire 3.5s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 10px rgba(134,151,130,.18)}}
+.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+section{padding:96px 0;position:relative}
+h2{font-size:clamp(38px,5.4vw,66px);margin:12px 0 20px}
+h2 em{font-style:italic;color:var(--sauge-f)}
+.atelier .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center}
+.citation{font-family:Cormorant,serif;font-size:clamp(24px,2.8vw,32px);font-style:italic;line-height:1.3;color:var(--taupe);border-top:1px solid var(--sable);padding-top:20px;margin-top:22px}
+.atelier p{color:#5f564c;max-width:52ch}
+.atelier figure{position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(47,42,36,.55)}
+.atelier figure img{aspect-ratio:3/4.4;object-fit:cover;width:100%}
+.atouts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.atouts span{background:#fff;border:1px solid var(--sable);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--sauge-f)}
+.vague{display:block;width:100%;height:60px}
+.coquillages{background:var(--sable)}
+.coquillages .intro{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end}
+.coquillages .intro p{color:#5f564c;max-width:46ch}
+.defile{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 6vw 10px;scrollbar-width:none}
+.defile::-webkit-scrollbar{display:none}
+.defile figure{flex:0 0 clamp(220px,28vw,320px);scroll-snap-align:center;border-radius:22px;overflow:hidden;background:#fff;transition:transform .4s}
+.defile figure:hover{transform:translateY(-6px) rotate(-.8deg)}
+.defile img{aspect-ratio:1;object-fit:cover;width:100%}
+.aide{font-size:13px;color:var(--taupe);text-align:center;margin-top:10px}
+.creations .grille{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:34px}
+.creations figure{position:relative;border-radius:22px;overflow:hidden;background:#ddd}
+.creations figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.creations figure:hover img{transform:scale(1.06)}
+.g1{grid-column:span 5;grid-row:span 2}.g2{grid-column:span 7}.g3{grid-column:span 4}.g4{grid-column:span 3}
+.g2 img{aspect-ratio:16/10}.g3 img,.g4 img{aspect-ratio:1}
+figcaption{position:absolute;left:12px;bottom:12px;background:rgba(47,42,36,.72);color:#fff;font-size:13px;padding:5px 12px;border-radius:999px}
+.velo{background:var(--sauge-f);color:#fff}
+.velo .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.velo .kick{color:#e6eadf}
+.velo h2 em{color:#f3e3d6}
+.velo p{color:#eef1ea;max-width:44ch}
+.velo figure{border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.devis .box{background:#fff;border-radius:32px;padding:clamp(26px,5vw,56px);display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;box-shadow:0 30px 70px -50px rgba(47,42,36,.6)}
+.lbl{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sauge-f);margin:22px 0 10px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{min-height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--sable);background:var(--lin);color:var(--ink);font:inherit;font-size:15px;cursor:pointer;transition:.2s}
+.chips button[aria-pressed=true]{background:var(--sauge-f);border-color:var(--sauge-f);color:#fff}
+.teintes button{display:inline-flex;align-items:center;gap:8px}
+.teintes i{width:16px;height:16px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+input[type=date]{min-height:48px;border-radius:12px;border:1px solid var(--sable);background:var(--lin);padding:0 14px;font:inherit;width:100%;color:var(--ink)}
+.recap{background:var(--lin);border-radius:24px;padding:26px;align-self:start;min-width:0}
+.recap h3{font-size:30px;font-style:italic;margin-bottom:10px;color:var(--sauge-f)}
+.recap pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:15px;min-height:150px;color:#4d453c}
+.recap .btn{width:100%;margin-top:18px}
+.recap small{display:block;margin-top:12px;color:var(--taupe);font-size:13px}
+footer{background:#2f2a24;color:#f2ede4;padding:80px 0 40px}
+footer .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5vw;align-items:end}
+footer h2{color:#fff}
+footer h2 em{color:#c9d3c4}
+footer ul{list-style:none;font-size:17px}
+footer li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12);overflow-wrap:anywhere}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:#c9d3c4}
+.mini{margin-top:50px;font-size:13px;color:#a99e90}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s cubic-bezier(.2,.7,.2,1)}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .atelier .wrap,.coquillages .intro,.velo .wrap,.devis .box,footer .grid{grid-template-columns:1fr}
+ .creations .grille{grid-template-columns:1fr 1fr}
+ .g1{grid-column:span 2;grid-row:auto}.g1 img{aspect-ratio:4/5}.g2{grid-column:span 2}.g3,.g4{grid-column:span 1}
+ section{padding:72px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero h1,.hero p{opacity:1;transform:none}#petales{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Isa fée des fleurs</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Bouquet de mariée d’Isa fée des fleurs"></div>
+  <div class="wrap">
+    <span class="kick">Atelier floral · Le Tampon</span>
+    <h1>Isa fée des fleurs</h1>
+    <p>Bouquets de mariée, cérémonies, arches et centres de table, imaginés à partir de votre histoire.</p>
+    <div class="btns">
+      <a class="btn lin" href="#devis">Imaginer mes fleurs</a>
+      <a class="btn ligne" href="#creations">Voir les créations</a>
+    </div>
+  </div>
+</header>
+
+<section class="atelier">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kick">L’atelier</span>
+      <h2>Chaque création, <em>entièrement sur mesure</em></h2>
+      <p>Fleuriste diplômée, avec plus de 14 ans d’expérience, Isa compose dans son atelier du Tampon des fleurs pour les mariages et les événements uniques, et livre sur toute l’île.</p>
+      <p class="citation">« J’imagine des compositions florales qui s’adaptent à votre univers : bouquet de mariée, cérémonie, arche florale, centres de table ou encore décoration de réception. »</p>
+      <div class="atouts"><span>Bouquet de mariée</span><span>Cérémonie</span><span>Arche florale</span><span>Centres de table</span><span>Décoration de réception</span></div>
+    </div>
+    <figure class="reveal"><img src="img/cascade.jpg" alt="Composition florale en cascade" loading="lazy"><figcaption>Composition en cascade</figcaption></figure>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 60 480 0 720 26 S1200 58 1440 22 V60 H0Z" fill="#E8E4DC"/></svg>
+<section class="coquillages" style="padding-top:40px">
+  <div class="wrap intro reveal">
+    <div><span class="kick">Publié le 24 octobre</span><h2>Des orchidées <em>dans des coquillages</em></h2></div>
+    <p>Une cliente a apporté ses propres vases en coquillages, et Isa y a fait éclore des compositions tropicales aux couleurs du soleil couchant. Le sur-mesure, jusque dans le contenant.</p>
+  </div>
+  <div class="defile" tabindex="0" aria-label="Compositions en vases coquillages, faire défiler">
+    <figure><img src="img/coquillage-1.jpg" alt="Composition tropicale en vase coquillage" loading="lazy"></figure>
+    <figure><img src="img/coquillage-2.jpg" alt="Composition tropicale en vase coquillage" loading="lazy"></figure>
+    <figure><img src="img/coquillage-3.jpg" alt="Composition tropicale en vase coquillage" loading="lazy"></figure>
+    <figure><img src="img/coquillage-4.jpg" alt="Composition tropicale en vase coquillage" loading="lazy"></figure>
+    <figure><img src="img/coquillage-6.jpg" alt="Composition tropicale en vase coquillage" loading="lazy"></figure>
+  </div>
+  <p class="aide">Faites glisser pour voir les compositions</p>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#E8E4DC"><path d="M0 26 C300 0 520 58 760 30 S1180 0 1440 34 V60 H0Z" fill="#F5F1E8"/></svg>
+
+<section class="creations" id="creations">
+  <div class="wrap">
+    <div class="reveal"><span class="kick">Créations</span><h2>Du bouquet <em>à la table d’honneur</em></h2></div>
+    <div class="grille">
+      <figure class="g1 reveal"><img src="img/mariee.jpg" alt="Bouquet de mariée" loading="lazy"><figcaption>Bouquet de mariée</figcaption></figure>
+      <figure class="g2 reveal"><img src="img/table.jpg" alt="Table de réception fleurie" loading="lazy"><figcaption>Décoration de réception</figcaption></figure>
+      <figure class="g3 reveal"><img src="img/eclat.jpg" alt="Bouquet rose et vert" loading="lazy"><figcaption>Bouquet sur commande</figcaption></figure>
+      <figure class="g4 reveal"><img src="img/coquillage-5.jpg" alt="Composition d’orchidées" loading="lazy"><figcaption>Orchidées</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="velo">
+  <div class="wrap">
+    <figure class="reveal"><img src="img/velo.jpg" alt="Vélo panier déco fleuri à louer" loading="lazy"></figure>
+    <div class="reveal">
+      <span class="kick">À louer</span>
+      <h2>Le vélo panier <em>déco</em></h2>
+      <p>Pour une entrée de cérémonie, un coin photo ou un vin d’honneur : le vélo fleuri d’Isa se loue et apporte tout de suite une note bohème à la fête.</p>
+      <div class="btns"><a class="btn lin" href="#devis">Le réserver pour ma date</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="devis" id="devis">
+  <div class="wrap">
+    <div class="box reveal">
+      <div>
+        <span class="kick">Votre projet</span>
+        <h2>Imaginons <em>vos fleurs</em></h2>
+        <span class="lbl">L’occasion</span>
+        <div class="chips" data-g="occ"><button aria-pressed="true">Mariage</button><button>Baptême</button><button>Anniversaire</button><button>Événement</button><button>Bouquet à offrir</button></div>
+        <span class="lbl">Ce qui vous ferait rêver</span>
+        <div class="chips multi" data-g="env"><button aria-pressed="true">Bouquet de mariée</button><button>Arche florale</button><button>Centres de table</button><button>Cérémonie</button><button>Vélo panier déco</button></div>
+        <span class="lbl">Vos teintes</span>
+        <div class="chips teintes" data-g="tei"><button aria-pressed="true"><i style="background:#f4f1ea"></i>Blanc et vert</button><button><i style="background:#e9b9b3"></i>Pastel</button><button><i style="background:#7f9cad"></i>Touches de bleu</button><button><i style="background:#e0662f"></i>Tropical</button></div>
+        <span class="lbl">La date</span>
+        <input type="date" id="date" aria-label="Date de l’événement">
+      </div>
+      <div class="recap" aria-live="polite">
+        <h3>Votre demande</h3>
+        <pre id="txt"></pre>
+        <a class="btn sauge" id="envoyer" href="#">Envoyer à Isa</a>
+        <small>Le message s’ouvre tout prêt dans votre messagerie : il reste juste à l’envoyer.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <div><span class="kick" style="color:#c9d3c4">Atelier floral</span><h2>Isa <em>fée des fleurs</em></h2></div>
+    <ul>
+      <li>Atelier au Tampon · livraison sur toute l’île</li>
+      <li><a href="mailto:isafeedesfleurs@gmail.com">isafeedesfleurs@gmail.com</a></li>
+      <li><a href="https://www.facebook.com/p/Isa-f%C3%A9e-des-fleurs-61564783857961/" rel="noopener">Facebook · Messenger</a></li>
+      <li><a href="https://www.instagram.com/isa_fee_des_fleurs/" rel="noopener">Instagram · @isa_fee_des_fleurs</a></li>
+    </ul>
+  </div>
+  <p class="wrap mini">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d’Isa fée des fleurs.</p>
+</footer>
+
+<script>
+(function(){
+var sel={occ:["Mariage"],env:["Bouquet de mariée"],tei:["Blanc et vert"]};
+document.querySelectorAll(".chips").forEach(function(g){
+  var k=g.dataset.g,multi=g.classList.contains("multi");
+  g.querySelectorAll("button").forEach(function(b){b.type="button";if(!b.hasAttribute("aria-pressed"))b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",function(){var v=b.textContent.trim();
+      if(multi){var on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);sel[k]=on?sel[k].concat(v):sel[k].filter(function(x){return x!==v})}
+      else{g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");sel[k]=[v]}
+      maj();});});});
+var d=document.getElementById("date");d.addEventListener("input",maj);
+function maj(){
+  var dt=d.value?new Date(d.value+"T12:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}):"à préciser";
+  var t="Bonjour Isa,\n\nJe prépare : "+sel.occ.join("")+"\nJ\u2019aimerais : "+(sel.env.join(", ")||"vos conseils")+"\nTeintes : "+sel.tei.join("")+"\nDate : "+dt+"\n\nPouvez-vous me faire un devis ? Merci !";
+  document.getElementById("txt").textContent=t;
+  document.getElementById("envoyer").href="mailto:isafeedesfleurs@gmail.com?subject="+encodeURIComponent("Demande de devis : "+sel.occ.join(""))+"&body="+encodeURIComponent(t);
+}
+maj();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var c=document.getElementById("petales"),x=c.getContext("2d"),W,H,P=[],cols=["#f3e6e1","#e9c9c3","#dfe5d8","#ffffff","#c9d6e0"],r=devicePixelRatio||1;
+function rs(){W=c.width=innerWidth*r;H=c.height=innerHeight*r}rs();addEventListener("resize",rs);
+function np(init){return{x:Math.random()*W,y:init?Math.random()*H:-30,s:(6+Math.random()*9)*r,v:.35+Math.random()*.7,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:Math.random()*6.28,c:cols[Math.random()*cols.length|0]}}
+for(var i=0;i<26;i++)P.push(np(true));
+var run=true;document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p,i){p.y+=p.v*r;p.o+=.012;p.x+=Math.sin(p.o)*.6*r;p.a+=p.va;
+    x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=.55;x.fillStyle=p.c;x.beginPath();
+    x.ellipse(0,0,p.s,p.s*.55,0,0,6.28);x.fill();x.restore();if(p.y>H+30)P[i]=np(false)});
+  requestAnimationFrame(f)}
+f();
+})();
+</script>
+</body>
+</html>

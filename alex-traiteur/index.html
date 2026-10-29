@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ALEX Traiteur · Chinois et créole au feu de bois · La Chaloupe Saint-Leu</title>
+<meta name="description" content="ALEX Traiteur, La Chaloupe Saint-Leu : cuisine chinoise et créole au feu de bois, fait maison, pour mariages, communions, baptêmes et anniversaires.">
+<meta property="og:title" content="ALEX Traiteur · Au feu de bois, à La Chaloupe">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/alex-traiteur/img/braises.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/alex-traiteur/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--charbon:#211b16;--bois:#39312a;--brun:#704d36;--noisette:#8f8067;--paille:#efe6d4;--creme:#f8f3ea;--braise:#e2672a;--braise-c:#f6a14a;--muted:#7a6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--creme);color:var(--bois);line-height:1.6;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:.98;font-weight:800;letter-spacing:-.02em}
+img{display:block;max-width:100%}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--charbon);color:#f3e7d6;font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{color:var(--braise-c)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 6vw}
+.kick{display:block;font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--braise)}
+.hero{position:relative;min-height:min(100svh,900px);display:grid;align-items:end;color:#fff;overflow:hidden;padding:120px 0 60px;background:var(--charbon)}
+.hero .fond{position:absolute;inset:0;background:url(img/braises.jpg) center/cover;animation:kb 24s ease-in-out infinite alternate;filter:saturate(1.1)}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.18) translate(2%,-2%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,27,22,.15) 10%,rgba(33,27,22,.9) 85%)}
+#braises{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero h1{font-size:clamp(64px,13vw,150px);margin:12px 0 4px;opacity:0;animation:monte 1.2s .2s forwards}
+.hero h1 span{display:block;font-size:.34em;font-weight:500;letter-spacing:.02em;color:var(--braise-c)}
+.hero p{font-size:clamp(18px,2.2vw,22px);max-width:34ch;color:#f1e6d6;opacity:0;animation:monte 1.2s .6s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:14px;font-weight:600;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn.feu{background:var(--braise);color:#fff;animation:souffle 3.2s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 0 0 9px rgba(226,103,42,.22)}}
+.btn.feu:hover{transform:translateY(-2px)}
+.btn.ligne{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.75);color:#fff}
+.btn:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--braise-c);outline-offset:3px}
+.bandeau{background:var(--braise);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:20px}
+.bandeau div{display:inline-block;animation:defile 26s linear infinite}
+.bandeau span{margin:0 22px}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:92px 0}
+h2{font-size:clamp(40px,6vw,74px);margin:12px 0 20px}
+h2 em{font-style:normal;color:var(--braise)}
+.histoire .wrap{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
+.histoire p{color:var(--muted);max-width:48ch;margin-bottom:12px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.duo figure{position:relative;border-radius:20px;overflow:hidden}
+.duo figure:nth-child(2){margin-top:56px}
+.duo img{aspect-ratio:3/4;object-fit:cover;width:100%}
+figcaption{position:absolute;left:10px;bottom:10px;background:rgba(33,27,22,.78);color:#fff;font-size:13px;padding:5px 12px;border-radius:999px}
+.buffet{background:var(--charbon);color:#f3e7d6}
+.buffet h2{color:#fff}
+.buffet .tete{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:end}
+.buffet .tete p{color:#cbbba6;max-width:46ch}
+.mur{columns:4 220px;column-gap:14px;margin-top:40px}
+.mur figure{position:relative;break-inside:avoid;margin-bottom:14px;border-radius:18px;overflow:hidden;background:#2c241d}
+.mur img{width:100%;transition:transform 1s,filter 1s;filter:saturate(1.05)}
+.mur figure:hover img{transform:scale(1.05);filter:saturate(1.2)}
+.formule .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:6vw;align-items:center}
+.etapes{list-style:none;margin-top:10px;counter-reset:e}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid #e5d9c5;font-size:18px}
+.etapes li:before{content:counter(e);width:44px;height:44px;border-radius:50%;background:var(--paille);display:grid;place-items:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;color:var(--braise)}
+.formule figure{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(33,27,22,.6)}
+.formule figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.devis{background:var(--paille)}
+.box{background:#fff;border-radius:28px;padding:clamp(24px,5vw,54px);display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;box-shadow:0 30px 70px -50px rgba(33,27,22,.6)}
+.lbl{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brun);margin:22px 0 10px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{min-height:44px;padding:0 16px;border-radius:12px;border:1px solid #e3d6c1;background:var(--creme);color:var(--bois);font:inherit;font-size:15px;cursor:pointer;transition:.2s}
+.chips button[aria-pressed=true]{background:var(--charbon);border-color:var(--charbon);color:#fff}
+.compteur{display:flex;align-items:center;gap:14px}
+.compteur button{width:48px;height:48px;border-radius:12px;border:1px solid #e3d6c1;background:var(--creme);font-size:24px;cursor:pointer;color:var(--bois)}
+.compteur output{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:40px;min-width:80px;text-align:center;color:var(--braise)}
+.compteur small{color:var(--muted)}
+input[type=date]{min-height:48px;border-radius:12px;border:1px solid #e3d6c1;background:var(--creme);padding:0 14px;font:inherit;width:100%;color:var(--bois)}
+.recap{background:var(--charbon);color:#f3e7d6;border-radius:22px;padding:26px;align-self:start;min-width:0}
+.recap h3{font-size:30px;margin-bottom:10px;color:#fff}
+.recap pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:15px;min-height:150px;color:#e6d8c4}
+.recap .btn{width:100%;margin-top:12px}
+.recap .btn.clair{background:#f3e7d6;color:var(--charbon)}
+footer{background:#140f0b;color:#efe3d1;padding:80px 0 40px}
+footer .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:5vw;align-items:end}
+footer h2{color:#fff}
+footer ul{list-style:none}
+footer li{padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12);overflow-wrap:anywhere}
+footer a{color:inherit;text-decoration:none}
+footer a:hover{color:var(--braise-c)}
+.mini{margin-top:50px;font-size:13px;color:#a2927d}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .histoire .wrap,.buffet .tete,.formule .wrap,.box,footer .grid{grid-template-columns:1fr}
+ .mur{columns:2 140px}
+ section{padding:70px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero h1,.hero p{opacity:1;transform:none}#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — imaginée avec plaisir pour ALEX Traiteur</div>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Brochettes sur la grille, au feu de bois"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="kick">Traiteur · La Chaloupe Saint-Leu</span>
+    <h1>ALEX<span>Traiteur au feu de bois</span></h1>
+    <p>Cuisine chinoise et créole, faite maison, pour vos mariages, communions, baptêmes et anniversaires.</p>
+    <div class="btns">
+      <a class="btn feu" href="#devis">Préparer ma demande</a>
+      <a class="btn ligne" href="#buffet">Voir les plats</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div><span>Feu de bois</span>·<span>Chinois &amp; créole</span>·<span>Fait maison</span>·<span>Mariage</span>·<span>Baptême</span>·<span>Communion</span>·<span>Anniversaire</span>·<span>Feu de bois</span>·<span>Chinois &amp; créole</span>·<span>Fait maison</span>·<span>Mariage</span>·<span>Baptême</span>·<span>Communion</span>·<span>Anniversaire</span>·</div></div>
+
+<section class="histoire">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kick">Depuis La Chaloupe</span>
+      <h2>Deux cuisines, <em>un même feu</em></h2>
+      <p>Dans les hauts de Saint-Leu, ALEX Traiteur cuisine au feu de bois les saveurs chinoises et créoles, tout fait maison, pour tous vos événements.</p>
+      <p>Et la fête va jusqu’au bout : pour un baptême à l’Étang-Salé, le service s’est terminé à 1h19 du matin, avec le sourire.</p>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/mijote.jpg" alt="Viande mijotée dans le plat de service" loading="lazy"><figcaption>Mijoté</figcaption></figure>
+      <figure><img src="img/carry.jpg" alt="Plat en sauce dans un bac de service" loading="lazy"><figcaption>En sauce</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="buffet" id="buffet">
+  <div class="wrap">
+    <div class="tete reveal">
+      <div><span class="kick">Le buffet</span><h2>Ce qui sort <em>des marmites</em></h2></div>
+      <p>Des plats généreux, servis en bacs pour le buffet ou en barquettes pour la livraison de repas.</p>
+    </div>
+    <div class="mur">
+      <figure class="reveal"><img src="img/assiette.jpg" alt="Assiette de poulet doré" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/gratin.jpg" alt="Gratin" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/dore.jpg" alt="Plat gratiné au four" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/barquettes.jpg" alt="Barquettes prêtes pour la livraison" loading="lazy"><figcaption>En livraison</figcaption></figure>
+      <figure class="reveal"><img src="img/viande.jpg" alt="Viande en sauce" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/duo.jpg" alt="Deux plats côte à côte" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/grains.jpg" alt="Plat sauté" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="formule">
+  <div class="wrap">
+    <figure class="reveal"><img src="img/salle.jpg" alt="Salle de réception dressée" loading="lazy"><figcaption>Tables dressées pour la fête</figcaption></figure>
+    <div class="reveal">
+      <span class="kick">La formule événement</span>
+      <h2>Dès <em>20 personnes</em></h2>
+      <ol class="etapes"><li>4 apéritifs</li><li>2 entrées</li><li>2 plats chauds</li></ol>
+      <p style="color:var(--muted);margin-top:16px">Formules adultes et enfants, ajustées avec Alex selon votre événement.</p>
+    </div>
+  </div>
+</section>
+
+<section class="devis" id="devis">
+  <div class="wrap">
+    <div class="box reveal">
+      <div>
+        <span class="kick">Votre événement</span>
+        <h2>On prépare <em>quoi ?</em></h2>
+        <span class="lbl">L’occasion</span>
+        <div class="chips" data-g="occ"><button aria-pressed="true">Mariage</button><button>Baptême</button><button>Communion</button><button>Anniversaire</button><button>Autre fête</button></div>
+        <span class="lbl">Les saveurs</span>
+        <div class="chips" data-g="sav"><button aria-pressed="true">Chinois et créole</button><button>Plutôt créole</button><button>Plutôt chinois</button></div>
+        <span class="lbl">Nombre d’invités</span>
+        <div class="compteur"><button type="button" id="moins" aria-label="Moins d’invités">−</button><output id="nb">50</output><button type="button" id="plus" aria-label="Plus d’invités">+</button><small>dès 20</small></div>
+        <span class="lbl">La date</span>
+        <input type="date" id="date" aria-label="Date de l’événement">
+      </div>
+      <div class="recap" aria-live="polite">
+        <h3>Votre demande</h3>
+        <pre id="txt"></pre>
+        <a class="btn feu" id="wa" href="#" rel="noopener">Envoyer sur WhatsApp</a>
+        <a class="btn clair" id="mail" href="#">Envoyer par e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <div><span class="kick">Traiteur au feu de bois</span><h2>ALEX Traiteur</h2></div>
+    <ul>
+      <li>Chemin Raymond Bègue, La Chaloupe Saint-Leu</li>
+      <li><a href="tel:+262692499648">0692 49 96 48</a></li>
+      <li><a href="mailto:alexandredumont67@gmail.com">alexandredumont67@gmail.com</a></li>
+      <li><a href="https://www.facebook.com/ALEX-Traiteur-104977611550462/" rel="noopener">Facebook · ALEX Traiteur</a></li>
+    </ul>
+  </div>
+  <p class="wrap mini">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d’ALEX Traiteur.</p>
+</footer>
+
+<script>
+(function(){
+var sel={occ:"Mariage",sav:"Chinois et créole"},n=50;
+document.querySelectorAll(".chips").forEach(function(g){var k=g.dataset.g;
+  g.querySelectorAll("button").forEach(function(b){b.type="button";if(!b.hasAttribute("aria-pressed"))b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",function(){g.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});b.setAttribute("aria-pressed","true");sel[k]=b.textContent.trim();maj()})})});
+document.getElementById("moins").onclick=function(){n=Math.max(20,n-10);maj()};
+document.getElementById("plus").onclick=function(){n=Math.min(500,n+10);maj()};
+var d=document.getElementById("date");d.addEventListener("input",maj);
+function maj(){document.getElementById("nb").textContent=n;
+  var dt=d.value?new Date(d.value+"T12:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}):"à préciser";
+  var t="Bonjour Alex,\n\nÉvénement : "+sel.occ+"\nInvités : environ "+n+"\nSaveurs : "+sel.sav+"\nDate : "+dt+"\n\nPouvez-vous me proposer une formule ? Merci !";
+  document.getElementById("txt").textContent=t;
+  document.getElementById("wa").href="https://wa.me/262692499648?text="+encodeURIComponent(t);
+  document.getElementById("mail").href="mailto:alexandredumont67@gmail.com?subject="+encodeURIComponent("Demande traiteur : "+sel.occ)+"&body="+encodeURIComponent(t);}
+maj();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var c=document.getElementById("braises"),x=c.getContext("2d"),W,H,P=[],r=devicePixelRatio||1;
+function rs(){W=c.width=c.offsetWidth*r;H=c.height=c.offsetHeight*r}rs();addEventListener("resize",rs);
+function np(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,s:(1+Math.random()*2.6)*r,v:(.5+Math.random()*1.3)*r,o:Math.random()*6.28,l:1}}
+for(var i=0;i<60;i++)P.push(np(true));
+var run=true;document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p,i){p.y-=p.v;p.o+=.03;p.x+=Math.sin(p.o)*.7*r;p.l=Math.max(0,p.y/H);
+    x.globalAlpha=.25+.7*p.l;x.fillStyle=p.l>.6?"#ffb347":"#e2672a";x.shadowColor="#ff8a2a";x.shadowBlur=8*r;
+    x.beginPath();x.arc(p.x,p.y,p.s,0,6.28);x.fill();if(p.y<-10)P[i]=np(false)});
+  requestAnimationFrame(f)}
+f();
+})();
+</script>
+</body>
+</html>
