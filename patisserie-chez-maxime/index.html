@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pâtisserie Chez Maxime · Sainte-Suzanne</title>
+<meta name="description" content="Pâtisserie Chez Maxime, boulangerie-pâtisserie artisanale à Quartier Français, Sainte-Suzanne : tartes, entremets, bûches de Noël, pains pétris au laboratoire.">
+<meta property="og:title" content="Pâtisserie Chez Maxime · Sainte-Suzanne">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/patisserie-chez-maxime/img/tarte-figue.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/patisserie-chez-maxime/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{--turq:#c79a3a;--turq-f:#7b1e2b;--terre:#d4af37;--terre-f:#8a5a12;--creme:#fbf6ee;--argile:#f1e6d6;--ink:#3a2a20;--muted:#6e5d50}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",system-ui,sans-serif;background:var(--creme);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.04;letter-spacing:-.01em}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:#e9dccd;font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{color:#fff}
+#tour{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,header,footer,section{position:relative;z-index:2}
+.wrap{max-width:1140px;margin:0 auto;padding:0 6vw}
+.kick{display:block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--terre-f);font-weight:600}
+.hero{padding:118px 0 70px;min-height:min(100svh,860px);display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center;width:100%}
+.hero h1{font-size:clamp(52px,9vw,112px);margin:14px 0 18px;color:var(--ink);opacity:0;animation:monte 1.3s .2s forwards}
+.hero h1 em{font-style:italic;font-weight:400;color:var(--turq-f)}
+.hero p{font-size:clamp(18px,2vw,21px);max-width:34ch;color:var(--muted);opacity:0;animation:monte 1.3s .55s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;opacity:0;animation:monte 1.3s .85s forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:focus-visible{outline:3px solid var(--terre);outline-offset:3px}
+.btn.plein{background:var(--turq-f);color:#fff}
+.btn.plein:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(123,30,43,.3)}
+.btn.contour{box-shadow:inset 0 0 0 1.5px #cbb9a5;color:var(--ink)}
+.btn.contour:hover{background:#fff}
+.arche{position:relative;opacity:0;animation:monte 1.5s .4s forwards}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:0 34px 70px rgba(47,43,40,.2)}
+.arche .tampon{position:absolute;left:-26px;bottom:40px;width:118px;height:118px;border-radius:50%;background:var(--terre);color:#fff;display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;font-style:italic;font-size:17px;line-height:1.15;animation:roule 22s linear infinite;box-shadow:0 14px 30px rgba(156,79,48,.35)}
+@keyframes roule{to{transform:rotate(360deg)}}
+.bandeau{background:var(--turq-f);color:#e5f4f2;overflow:hidden;white-space:nowrap;padding:15px 0;font-family:Fraunces,serif;font-style:italic;font-size:23px}
+.bandeau div{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 26px}
+.bandeau span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--terre);margin-right:26px;vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+.atelier{padding:110px 0 90px}
+.atelier .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.atelier h2{font-size:clamp(38px,5.2vw,64px);margin:14px 0 22px}
+.atelier h2 em{font-style:italic;font-weight:400;color:var(--terre-f)}
+.atelier p{color:var(--muted);max-width:46ch;margin-bottom:14px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;box-shadow:0 22px 46px rgba(47,43,40,.16)}
+.duo img:last-child{margin-top:56px}
+.gestes{background:var(--argile);padding:96px 0 84px;position:relative}
+.gestes:before{content:"";position:absolute;left:0;right:0;top:-1px;height:54px;background:var(--creme);clip-path:ellipse(70% 100% at 50% 0)}
+.gestes h2{font-size:clamp(36px,4.8vw,58px);margin:12px 0 36px;max-width:16ch}
+.quatre{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:g}
+.quatre div{background:var(--creme);border-radius:20px;padding:26px 22px 24px;counter-increment:g;transition:transform .35s}
+.quatre div:hover{transform:translateY(-5px)}
+.quatre div:before{content:"0" counter(g);font-family:Fraunces,serif;font-style:italic;font-size:40px;color:var(--turq);display:block;margin-bottom:10px}
+.quatre h3{font-size:25px;margin-bottom:6px}
+.quatre p{font-size:15px;color:var(--muted)}
+.galerie{padding:96px 0 70px}
+.galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.galerie h2{font-size:clamp(36px,4.8vw,58px)}
+.filtres{display:flex;flex-wrap:wrap;gap:8px}
+.filtre{min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid #d6c6b3;background:transparent;font:inherit;font-size:15px;cursor:pointer;color:var(--ink);transition:all .2s}
+.filtre[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.mosaique{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.mosaique figure.cache{display:none}
+.mosaique img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;transition:transform .8s}
+.mosaique figure:hover img{transform:scale(1.03)}
+.mosaique figcaption{font-size:15px;color:var(--muted);padding:10px 4px 0}
+.cours{background:var(--ink);color:#ece3d8;padding:100px 0;overflow:hidden}
+.cours .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:6vw;align-items:start}
+.cours .kick{color:#e9c46a}
+.cours h2{font-size:clamp(38px,5.2vw,62px);margin:14px 0 18px;color:#fff}
+.cours h2 em{font-style:italic;font-weight:400;color:#e9c46a}
+.cours .intro-c{color:#cfc3b6;max-width:40ch;margin-bottom:22px}
+.cours .marche{width:100%;aspect-ratio:16/11;object-fit:cover;border-radius:18px}
+.cours .legende{font-size:14px;color:#b5a99c;margin-top:10px}
+.boite{background:var(--creme);color:var(--ink);border-radius:22px;padding:28px;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.etape{margin-bottom:22px}
+.etape > span{display:block;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--terre-f);margin-bottom:10px}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puce{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #d6c6b3;background:#fff;font:inherit;font-size:15px;cursor:pointer;color:var(--ink);transition:all .2s}
+.puce:hover{border-color:var(--turq)}
+.puce[aria-pressed=true]{background:var(--turq-f);border-color:var(--turq-f);color:#fff}
+.boite input{width:100%;min-height:48px;border:1.5px solid #d6c6b3;border-radius:12px;padding:0 14px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.apercu{background:var(--argile);border-radius:14px;padding:16px;font-size:15px;margin:6px 0 18px;white-space:pre-line;min-height:72px}
+.boite .btns{opacity:1;animation:none;margin-top:0}
+.boite .note{font-size:13px;color:var(--muted);margin-top:12px}
+footer{background:#221f1c;color:#ece3d8;padding:84px 0 40px}
+footer .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:end}
+footer h2{font-size:clamp(38px,5.2vw,60px);color:#fff}
+footer h2 em{font-style:italic;font-weight:400;color:#e9c46a}
+footer ul{list-style:none}
+footer li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);overflow-wrap:anywhere}
+footer a{text-decoration:none}
+footer a:hover{color:#e9c46a}
+.mini{font-size:13px;color:#a2968a;margin-top:56px}
+.rev{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rev.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero .wrap,.atelier .wrap,.cours .wrap,footer .grid{grid-template-columns:1fr}
+ .hero{padding-top:96px}
+ .arche{max-width:420px}
+ .arche .tampon{left:auto;right:-6px;bottom:24px;width:100px;height:100px;font-size:15px}
+ .quatre{grid-template-columns:1fr 1fr}
+ .mosaique{grid-template-columns:1fr 1fr;gap:12px}
+ .boite{padding:22px}
+}
+@media (max-width:480px){.quatre{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1,.hero p,.btns,.arche,.rev{opacity:1;transform:none}#tour{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b></div>
+<canvas id="tour" aria-hidden="true"></canvas>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kick">Boulangerie-pâtisserie · Quartier Français, Sainte-Suzanne</span>
+      <h1>Chez <em>Maxime</em></h1>
+      <p>Tartes de saison, entremets à la mangue, éclairs et bûches de Noël, avec des pains pétris dans notre laboratoire. Ouvert tous les jours, de 5h30 à 19h.</p>
+      <div class="btns">
+        <a class="btn plein" href="#commande">Réserver un gâteau</a>
+        <a class="btn contour" href="#vitrine">Voir la vitrine</a>
+      </div>
+    </div>
+    <figure class="arche">
+      <img src="img/tarte-figue.jpg" alt="Tarte aux figues et aux fraises">
+      <span class="tampon" aria-hidden="true">artisan<br>boulanger<br>pâtissier</span>
+    </figure>
+  </div>
+</header>
+<div class="bandeau" aria-hidden="true"><div>
+<span>Tartes</span><span>Entremets</span><span>Éclairs</span><span>Petits fours</span><span>Pains spéciaux</span><span>Baguettes</span><span>Bûches de Noël</span>
+<span>Tartes</span><span>Entremets</span><span>Éclairs</span><span>Petits fours</span><span>Pains spéciaux</span><span>Baguettes</span><span>Bûches de Noël</span>
+</div></div>
+<section class="atelier">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">De saison</span>
+      <h2>La saison des mangues <em>est lancée</em></h2>
+      <p>Une petite douceur a fait son apparition en vitrine : l'entremets mangue et chocolat blanc, à côté de la tarte figue et fraise.</p>
+      <p>Et si on commençait par une bonne tarte ? À Quartier Français, la vitrine change au fil des fruits.</p>
+    </div>
+    <div class="duo rev">
+      <img src="img/mangue.jpg" alt="Entremets à la mangue et au chocolat blanc" loading="lazy">
+      <img src="img/tarte-fraises.jpg" alt="Tarte aux fraises" loading="lazy">
+    </div>
+  </div>
+</section>
+<section class="gestes">
+  <div class="wrap">
+    <div class="rev"><span class="kick">Du matin au soir</span><h2>Une journée chez Maxime</h2></div>
+    <div class="quatre">
+      <div class="rev"><h3>Le pain</h3><p>Baguettes et pains spéciaux, pétris dans notre laboratoire.</p></div>
+      <div class="rev"><h3>La vitrine</h3><p>Tartes, entremets, éclairs et petits fours.</p></div>
+      <div class="rev"><h3>Le midi</h3><p>Sandwiches et salades, à emporter.</p></div>
+      <div class="rev"><h3>Les fêtes</h3><p>Bûches prestige et classiques, à réserver en boutique.</p></div>
+    </div>
+  </div>
+</section>
+<section class="galerie" id="vitrine">
+  <div class="wrap">
+    <div class="tete rev">
+      <div><span class="kick">La vitrine</span><h2>Quelques douceurs</h2></div>
+      <div class="filtres" role="group" aria-label="Filtrer la vitrine">
+        <button type="button" class="filtre" data-f="tout" aria-pressed="true">Tout</button>
+        <button type="button" class="filtre" data-f="sucre" aria-pressed="false">Sucré</button>
+        <button type="button" class="filtre" data-f="fete" aria-pressed="false">Gâteaux de fête</button>
+        <button type="button" class="filtre" data-f="sale" aria-pressed="false">Salé</button>
+      </div>
+    </div>
+    <div class="mosaique">
+      <figure data-c="sucre" class="rev"><img src="img/assortiment.jpg" alt="Plateau de la vitrine sur une planche en bois" loading="lazy"><figcaption>Le plateau du jour</figcaption></figure>
+      <figure data-c="sucre" class="rev"><img src="img/eclairs.jpg" alt="Éclairs au chocolat sur une planche en bois" loading="lazy"><figcaption>Les éclairs au chocolat</figcaption></figure>
+      <figure data-c="fete" class="rev"><img src="img/coeur-fruits.jpg" alt="Gâteau en forme de cœur aux fruits rouges" loading="lazy"><figcaption>Le cœur aux fruits rouges</figcaption></figure>
+      <figure data-c="sale" class="rev"><img src="img/sale-1.jpg" alt="Assiette salée, viande grillée et pommes de terre" loading="lazy"><figcaption>Côté salé</figcaption></figure>
+      <figure data-c="sale" class="rev"><img src="img/sale-2.jpg" alt="Bol salé aux herbes fraîches" loading="lazy"><figcaption>Côté salé, aux herbes fraîches</figcaption></figure>
+    </div>
+  </div>
+</section>
+<section class="cours" id="commande">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">Commandes &amp; fêtes</span>
+      <h2>Votre gâteau, <em>réservé</em></h2>
+      <p class="intro-c">Bûches de Noël prestige ou classiques, gâteaux pour une fête, entremets de saison : préparez votre demande ici, et il ne reste plus qu'à passer la chercher à Quartier Français.</p>
+      <img class="marche" src="img/coeur-chocolat.jpg" alt="Gâteau cœur au chocolat, décor doré et fleurs" loading="lazy">
+      <p class="legende">1 rue des Artisans, à côté du Leader Price</p>
+    </div>
+    <div class="boite rev">
+      <div class="etape"><span>1 · Ce qui vous fait envie</span>
+        <div class="puces" id="envies">
+          <button type="button" class="puce" aria-pressed="false">Bûche prestige</button>
+          <button type="button" class="puce" aria-pressed="false">Bûche classique</button>
+          <button type="button" class="puce" aria-pressed="false">Entremets mangue</button>
+          <button type="button" class="puce" aria-pressed="false">Une tarte</button>
+          <button type="button" class="puce" aria-pressed="false">Un gâteau de fête</button>
+        </div></div>
+      <div class="etape"><span>2 · Pour combien de personnes ?</span><input type="number" id="parts" min="2" max="60" value="8" inputmode="numeric"></div>
+      <div class="etape"><span>3 · Votre prénom</span><input type="text" id="prenom" placeholder="Votre prénom" autocomplete="given-name"></div>
+      <div class="apercu" id="apercu" aria-live="polite"></div>
+      <div class="btns"><a class="btn plein" id="envoi" href="#">Envoyer ma demande</a><a class="btn contour" href="tel:+262262923155">Appeler la boutique</a></div>
+      <p class="note">Démonstration : sur la page finale, la demande arrive directement dans votre boîte mail.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap grid">
+    <h2 class="rev">À tout à l'heure<br>à <em>Quartier Français</em></h2>
+    <ul class="rev">
+      <li>Tous les jours · 5h30 – 19h</li>
+      <li>1 rue des Artisans · 97441 Sainte-Suzanne</li>
+      <li><a href="tel:+262262923155">0262 92 31 55</a></li>
+      <li><a href="https://www.facebook.com/chezmaximeboulangerie" target="_blank" rel="noopener">Suivre sur Facebook →</a></li>
+    </ul>
+  </div>
+  <p class="wrap mini">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de la Pâtisserie Chez Maxime.</p>
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".rev").forEach(function(el){io.observe(el)});
+document.querySelectorAll(".filtre").forEach(function(b){b.onclick=function(){
+  document.querySelectorAll(".filtre").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+  var f=b.dataset.f;document.querySelectorAll(".mosaique figure").forEach(function(fi){fi.classList.toggle("cache",f!=="tout"&&fi.dataset.c!==f)})}});
+var choix=[],pr=document.getElementById("prenom"),pa=document.getElementById("parts");
+document.getElementById("envies").addEventListener("click",function(ev){var b=ev.target.closest(".puce");if(!b)return;
+  var t=b.textContent.trim().toLowerCase(),on=b.getAttribute("aria-pressed")!=="true";b.setAttribute("aria-pressed",on);
+  choix=on?choix.concat(t):choix.filter(function(c){return c!==t});maj()});
+pr.addEventListener("input",maj);pa.addEventListener("input",maj);
+function maj(){var txt="Bonjour,\nJe souhaite réserver : "+(choix.length?choix.join(", "):"un gâteau")+", pour "+(pa.value||"…")+" personnes.\nQuand puis-je passer le chercher ?"+(pr.value?"\n"+pr.value:"");
+  document.getElementById("apercu").textContent=txt;
+  document.getElementById("envoi").href="mailto:maxime@imca.re?subject="+encodeURIComponent("Réservation depuis votre page")+"&body="+encodeURIComponent(txt)}
+maj();
+var cv=document.getElementById("tour");if(!cv||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var cx=cv.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener("resize",size);
+function nv(top){return{x:Math.random()*W,y:top?-10:Math.random()*H,r:.8+Math.random()*2.2,v:.25+Math.random()*.55,s:Math.random()*6.28,d:.4+Math.random()*.8,g:Math.random()<.25}}
+for(var i=0;i<(W<600?38:70);i++)P.push(nv(false));
+function draw(){if(!run)return;cx.clearRect(0,0,W,H);
+  P.forEach(function(p,i){p.y+=p.v;p.s+=.012;p.x+=Math.sin(p.s)*p.d*.4;
+    cx.fillStyle=p.g?"rgba(212,175,55,.55)":"rgba(170,140,110,.32)";
+    cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.28);cx.fill();
+    if(p.y>H+10)P[i]=nv(true)});
+  requestAnimationFrame(draw)}
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+</body>
+</html>
