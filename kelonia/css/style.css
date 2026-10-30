@@ -465,6 +465,10 @@ body[data-ecran="projet"] .btn.big { min-height: 64px; font-size: 1.18rem; }
 .st.verrou ~ .sentier { border-left-color: color-mix(in srgb, var(--ink) 18%, transparent); }
 .lien { background: none; border: 0; font: inherit; font-size: .92rem; color: var(--lagon); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; min-height: 48px; padding: 8px 14px; cursor: pointer; }
 .retour-projet { margin: 0; }
+/* flèche « ← » en haut des écrans secondaires (history.back(), cible 48 px) */
+.retour-haut-l { margin: -4px 0 6px -4px; }
+.retour-haut { width: 48px; height: 48px; display: inline-grid; place-items: center; border-radius: 99px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 1.45rem; font-weight: 800; line-height: 1; cursor: pointer; }
+body[data-ecran="projet"] .retour-haut { background: rgba(255,255,255,.07); border-color: rgba(127,240,255,.28); color: #e9fbff; }
 
 /* ---------- fin de la démo ---------- */
 .findemo { text-align: center; }

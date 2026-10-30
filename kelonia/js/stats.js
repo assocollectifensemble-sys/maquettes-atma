@@ -61,7 +61,7 @@
     return '<div class="tb' + (ex ? " rempli" : "") + '">' +
       // ---------- en-tête ----------
       '<section class="tb-tete">' +
-      '<button class="tb-retour" data-act="go" data-r="' + o.retour.r + '">← ' + esc(o.retour.l) + '</button>' +
+      '<button class="tb-retour" data-act="retour" data-r="' + o.retour.r + '">← ' + esc(o.retour.l) + '</button>' +
       '<span class="tb-kick">Aperçu · espace équipe</span><h1>Tableau de bord <span>· Kélonia</span></h1>' +
       '<div class="tb-puces"><span class="tb-periode">📅 Mois en cours</span><span class="tb-apercu">Aperçu — se remplira dès l\'ouverture au public</span></div>' +
       '<p class="tb-rgpd"><span aria-hidden="true">🔒</span> ' + esc("Données anonymes, sans compte, sans donnée personnelle (RGPD)") + '</p>' +

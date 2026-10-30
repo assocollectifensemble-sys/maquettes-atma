@@ -80,7 +80,7 @@
     return '<button class="btn ' + (cls || "") + '" data-act="' + act + '"' + d + '>' + label + '</button>';
   }
   function src(code) { return code ? '<p class="src">' + esc(L(C.UI.source)) + ' : ' + esc(code) + ' (voir SOURCES.md)</p>' : ""; }
-  function toast(t) { const e = document.createElement("div"); e.className = "toast"; e.setAttribute("role", "status"); e.textContent = t; document.body.appendChild(e); setTimeout(() => e.remove(), 3400); }
+  function toast(t, ms) { const e = document.createElement("div"); e.className = "toast"; e.setAttribute("role", "status"); e.textContent = t; document.body.appendChild(e); setTimeout(() => e.remove(), ms || 3400); return e; }
   function bullesFete() {
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const d = document.createElement("div"); d.className = "fete"; d.setAttribute("aria-hidden", "true");
@@ -99,18 +99,65 @@
       '<button class="iconbtn" data-act="reglages" aria-label="Réglages, langue, accessibilité">⚙️</button>';
   }
 
+  // ---------- historique (bouton / geste RETOUR du téléphone) ----------
+  // Chaque écran = une entrée d'historique : state = { kw, n (écran), s (étape), i (profondeur), p ([écran, étape] d'en dessous),
+  // f (sentinelle : 1re entrée, « appuyez encore pour quitter »), sh (modale ouverte), o (origine du tableau de bord) }.
+  // Chrome ignore les entrées ajoutées sans geste : on ne pousse que sur un tap (la sentinelle au 1er tap, voir armer()).
+  const H = () => (history.state && history.state.kw ? history.state : null);
+  const aPrecedent = () => { const h = H(); return !!h && h.i > 1; }; // un écran de l'appli en dessous (hors sentinelle)
+  const etat = x => Object.assign({ kw: 1, n: route.n, s: route.step, o: route.n === "stats" ? statsOrigine : undefined }, x);
+  let quitterAvant = 0; // 1er appui sur retour depuis le 1er écran : l'appui suivant dans les 2 s laisse sortir
+  function armer() { // 1er tap : l'entrée courante devient la sentinelle, on repousse le même écran au-dessus
+    const h = H(); if (!h || h.i !== 0 || h.f) return;
+    try { history.replaceState(Object.assign({}, h, { f: 1, sh: undefined }), "", location.href); history.pushState(Object.assign({}, h, { i: 1, f: undefined, sh: undefined, p: [h.n, h.s] }), "", location.href); } catch (e) { }
+  }
+  function ecrireHistorique(u, mode) {
+    let h = H();
+    try {
+      if (mode === "init") return history.replaceState(etat({ i: h && !h.f ? h.i : 0, p: h && !h.f ? h.p : undefined }), "", u); // rechargement : on garde la profondeur
+      if (mode === "pop" || mode === "replace" || !h) return history.replaceState(etat(h ? { i: h.i, p: h.p, f: mode === "pop" ? h.f : undefined } : { i: 0 }), "", u);
+      const meme = h.n === route.n && (h.s || null) === route.step;
+      if (meme || h.sh) return history.replaceState(etat({ i: h.i, p: h.p, sh: meme ? h.sh : undefined }), "", u); // même écran, ou on quitte une modale : on remplace
+      armer(); h = H();
+      history.pushState(etat({ i: h.i + 1, p: [h.n, h.s] }), "", u);
+    } catch (e) { /* file:// */ }
+  }
+  function retourHistorique(e) {
+    const s = e.state; if (!s || !s.kw) return;
+    if (s.f) { // retour depuis le 1er écran : double appui pour quitter
+      if (Date.now() < quitterAvant) { quitterAvant = 0; history.back(); return; }
+      closeSheets();
+      if (s.n !== route.n || (s.s || null) !== route.step) { if (s.o) statsOrigine = s.o; go(s.n, s.s, false, "pop"); }
+      try { history.pushState(Object.assign({}, s, { f: undefined, i: 1, p: [s.n, s.s] }), "", location.href); } catch (er) { }
+      quitterAvant = Date.now() + 2000;
+      document.querySelectorAll(".toast.quitter").forEach(t => t.remove());
+      toast("Appuyez encore sur retour pour quitter", 2000).classList.add("quitter");
+      return;
+    }
+    closeSheets();
+    if (s.n === route.n && (s.s || null) === route.step) return; // simple fermeture de modale
+    if (s.o) statsOrigine = s.o;
+    go(s.n, s.s, false, "pop");
+  }
+  window.addEventListener("popstate", retourHistorique);
+  document.addEventListener("click", armer, true); // capture : avant l'action du bouton touché
+  document.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") armer(); }, true);
+  // flèche « ← » en haut des écrans secondaires : écran précédent, ou écran parent si l'appli a été ouverte directement ici
+  const flecheRetour = parent => '<div class="retour-haut-l noprint"><button class="retour-haut" data-act="retour" data-r="' + parent + '" aria-label="Retour"><span aria-hidden="true">←</span></button></div>';
+
   // ---------- routeur ----------
-  function go(n, step, noScroll) {
+  // mode : (rien) = action de l'utilisateur → nouvelle entrée d'historique ; "pop" = retour arrière ; "init" = démarrage ; "replace"
+  function go(n, step, noScroll, mode) {
     if (jeu) { jeu.destroy(); jeu = null; }
     Audio2.stopVoix(); closeSheets();
     let refus = false;
     if (VERROU(n)) { refus = /^st/.test(n); n = !refus && Store.faits()[1] ? "findemo" : "hub"; step = null; } // démo : jamais au-delà du bassin 1
-    if (n === "stats" && route.n !== "stats" && ORIGINES[route.n]) statsOrigine = route.n; // bouton retour du tableau de bord
+    if (n === "stats" && route.n !== "stats" && ORIGINES[route.n] && mode !== "pop" && mode !== "init") statsOrigine = route.n; // bouton retour du tableau de bord
     route = { n, step: step == null ? null : String(step) };
     const u = new URL(location.href); u.searchParams.delete("station");
     const code = /^st\d$/.test(n) ? n.slice(2) : n;
     if (n !== "projet") u.searchParams.set("station", code);
-    try { history.replaceState(null, "", u); } catch (e) { /* file:// */ }
+    ecrireHistorique(u, mode);
     applyTheme(); render();
     if (!noScroll) window.scrollTo(0, 0);
     const h = $screen.querySelector("h1,h2"); if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); }
@@ -119,7 +166,7 @@
   }
   function render() {
     topbar();
-    const fn = SCREENS[route.n]; if (!fn) return go("projet");
+    const fn = SCREENS[route.n]; if (!fn) return go("projet", null, false, "replace");
     $screen.classList.remove("entre"); void $screen.offsetWidth; $screen.classList.add("entre");
     $screen.innerHTML = fn(route.step);
     document.body.dataset.ecran = route.n;
@@ -145,11 +192,11 @@
       ["👨‍👩‍👧", "3 publics", "Famille, soirée « Jours de la Nuit », classe cycle 3"],
       ["🗣️", "Français, kréol, anglais", "Voix enregistrées, texte toujours affiché"],
       ["📶", "Hors connexion", "Rien à télécharger, aucun réseau requis"],
-      ["🔳", "Un QR code par bassin", "On scanne, l'enquête s'ouvre"],
+      ["🔳", "Un seul QR code pour démarrer", "L'appli guide ensuite de salle en salle"],
       ["✏️", "Contenus relus par Kélonia", "Et modifiables par votre équipe"],
       ["📊", "Statistiques anonymes", "Ce que font les visiteurs, ce qu'ils retiennent", "stats"]
     ];
-    return '<div class="projet"><div class="pj-tete"><span class="pj-lieu">Kélonia · Saint-Leu</span><span class="pj-badge">Prototype · proposition à co-écrire avec le service éducatif</span></div>' +
+    return (aPrecedent() ? flecheRetour("accueil") : "") + '<div class="projet"><div class="pj-tete"><span class="pj-lieu">Kélonia · Saint-Leu</span><span class="pj-badge">Prototype · proposition à co-écrire avec le service éducatif</span></div>' +
       '<div class="pj-art" aria-hidden="true"><span class="pj-halo"></span>' + Art.kawann("content", "flotte", { pansement: true }) + '</div>' +
       '<h1>Le dossier Kawann</h1><p class="pj-sous">Une aventure sur téléphone pour Kélonia</p>' +
       '<p class="pj-idee">' + typo("Les familles et les classes enquêtent <b>bassin par bassin</b> pour aider une tortue soignée à retrouver la mer. On scanne un QR code : <b>rien à télécharger</b>, et ça marche <b>sans réseau</b>.") + '</p>' +
@@ -184,7 +231,7 @@
       ["🐢", "Une tortue en convalescence demande de l'aide", "Kawann, tortue caouanne (personnage fictif), et Jo, le soigneur de nuit.", "intro", "0"],
       ["🫧", "L'enquête bassin par bassin", "5 stations, 5 mini-jeux tactiles, un dossier de soin à remplir.", "hub"],
       ["🗣️", "Voix en français et en créole", "Bascule FR · KR (+ EN) sur chaque bulle.", "intro", "1"],
-      ["📶", "QR codes, y compris hors connexion", "QR générés sur place, appli installée dans le téléphone.", "qr"],
+      ["📶", "Un QR code, puis hors connexion", "On scanne à l'entrée, l'appli s'installe et marche sans réseau.", "qr"],
       ["🎓", "Version cycle 3 à relire", "Consignes scolaires et fiche enseignant imprimable.", "fiche"]
     ];
     return '<div class="ouverture"><p class="kicker">Prototype · confidentiel</p><h1>Préparé pour <span>Kélonia</span></h1>' +
@@ -369,7 +416,7 @@
   // ===================== CARNET DE COLLECTION =====================
   SCREENS.carnet = () => {
     const f = Store.faits();
-    return '<span class="kicker">' + esc(L({ fr: "Carnet de collection", en: "Collection", kr: "Karné" })) + '</span><h2>🃏 ' + esc(L({ fr: "Les 5 tortues de La Réunion", en: "Réunion's 5 sea turtles", kr: "Lé 5 tortu La Rényon" })) + '</h2>' +
+    return flecheRetour("hub") + '<span class="kicker">' + esc(L({ fr: "Carnet de collection", en: "Collection", kr: "Karné" })) + '</span><h2>🃏 ' + esc(L({ fr: "Les 5 tortues de La Réunion", en: "Réunion's 5 sea turtles", kr: "Lé 5 tortu La Rényon" })) + '</h2>' +
       '<p class="small dim">' + esc(L({ fr: "Cinq espèces dans les eaux de La Réunion : deux fréquentent régulièrement les côtes, trois sont rares et observées au large. Une carte par bassin réussi.", en: "Five species around Réunion: two regularly visit the coast, three are rare offshore. One card per pool." })) + ' <small class="src-i">[K3]</small></p><div class="cartes">' +
       C.stations.map(S => {
         const E = C.especes[S.espece], ok = !!f[S.id], st = C.statuts[E.statut], rg = C.statuts[E.reg];
@@ -381,7 +428,7 @@
   };
 
   // ===================== FICHE ENSEIGNANT (imprimable) =====================
-  SCREENS.fiche = () => '<article class="doc fiche">' +
+  SCREENS.fiche = () => flecheRetour("projet") + '<article class="doc fiche">' +
     '<div class="bandeau-relire">À RELIRE PAR LE SERVICE ÉDUCATIF DE KÉLONIA · version de travail du 30/10/2026</div>' +
     '<h2>Fiche enseignant · « Le dossier Kawann »</h2><p class="doc-sous">Aventure sur téléphone, cycle 3 (CM1, CM2, 6e) · Kélonia, Saint-Leu · 1 téléphone pour 2 à 5 élèves</p>' +
     '<h3>Objectifs</h3><ul><li>Découvrir le travail du centre de soins de Kélonia : radiographie, mesures, convalescence, relâcher.</li><li>Classer la tortue marine parmi les reptiles à partir de caractères partagés (écailles, quatre membres, respiration pulmonaire).</li><li>Situer la tortue caouanne dans une chaîne alimentaire (plancton → méduse → caouanne).</li><li>Identifier des impacts humains (pêche, plastique, lumière, vitesse des bateaux) et des gestes pour les réduire.</li><li>Pratiquer une démarche d\'enquête : observer, compter, comparer, conclure (photo-identification).</li></ul>' +
@@ -406,7 +453,7 @@
     const liste = [{ c: "accueil", t: "Accueil de l'aventure", l: "Entrée / billetterie (à définir)" }].concat(C.stations.map(S => ({ c: String(S.id), t: S.ico + " " + S.id + " · " + S.titre.fr, l: S.lieu.fr }))).concat([{ c: "fiche", t: "Fiche enseignant", l: "Pour les classes" }]);
     return liste.map(x => { const url = b + (x.c ? sep + "station=" + x.c : ""); return '<article class="qrcarte">' + QR.svg(url, { taille: 180 }) + '<h3>' + esc(x.t) + '</h3><p class="small">📍 ' + esc(x.l) + '</p><code>' + esc(url) + '</code></article>'; }).join("");
   }
-  SCREENS.qr = () => '<span class="kicker noprint">Pour l\'équipe de Kélonia</span><h2>🔳 QR codes des bassins</h2>' +
+  SCREENS.qr = () => flecheRetour("kelonia") + '<span class="kicker noprint">Pour l\'équipe de Kélonia</span><h2>🔳 QR codes des bassins</h2>' +
     '<p class="small noprint">Générés <b>sur ce téléphone</b> (aucun service en ligne). À imprimer, plastifier et fixer près de chaque bassin. Le scan avec l\'appareil photo ouvre directement la bonne station ; une fois l\'aventure chargée, tout fonctionne sans réseau.</p>' +
     '<div class="card noprint"><label for="base" class="small"><b>Adresse du site</b> (celle qui sera hébergée)</label><input class="field" id="base" value="' + esc(baseURL()) + '"></div>' +
     '<div class="qrgrille" id="qrg">' + qrCartes() + '</div>' + dock(btn("🖨️ Imprimer les QR codes", "print", "sec") + btn("🏠 Accueil", "accueil", "sec"), "flow noprint");
@@ -420,7 +467,7 @@
       '<textarea class="field" id="ed-txt" rows="4"></textarea><p class="small dim" id="ed-cpt"></p><div class="ed-apercu" id="ed-ap"></div>' +
       '<div class="rang-btn">' + btn("💾 Enregistrer", "edsave", "") + btn("↩️ Texte d'origine", "edreset", "sec") + '</div></div>';
   }
-  SCREENS.kelonia = () => '<span class="kicker">Mode présentation</span><h2>🏛️ Ce que Kélonia obtient</h2>' +
+  SCREENS.kelonia = () => flecheRetour("projet") + '<span class="kicker">Mode présentation</span><h2>🏛️ Ce que Kélonia obtient</h2>' +
     '<ul class="obtient">' + [
       ["🌙", "Une aventure pour vos soirées", "Jo, le soigneur de nuit, joué en direct par Jonathan lors des « Jours de la Nuit » ou de la Nuit des musées ; personnage dessiné et voix le reste de l'année."],
       ["📱", "Un parcours permanent par QR code", "Sans application à télécharger, sans compte, et qui fonctionne sans réseau une fois ouvert."],
@@ -459,15 +506,21 @@
   let statsOrigine = "projet", statsExemple = false;
   // App.go("stats", "exemple") : exemple rempli d'emblée (tests)
   SCREENS.stats = step => (step === "exemple" && (statsExemple = true), "") + Tableau.html({ exemple: statsExemple, retour: { r: statsOrigine, l: ORIGINES[statsOrigine] } }) +
-    dock(btn("← " + esc(ORIGINES[statsOrigine]), "go", "sec", { r: statsOrigine }), "flow");
+    dock(btn("← " + esc(ORIGINES[statsOrigine]), "retour", "sec", { r: statsOrigine }), "flow");
 
   // ===================== RÉGLAGES, ÉQUIPE, CRÉDITS =====================
   function closeSheets() { document.querySelectorAll(".sheet").forEach(s => s.remove()); }
+  function fermerFeuille() { // bouton Fermer, fond, Échap : la modale avait son entrée d'historique, on la retire
+    const ouverte = document.querySelector(".sheet"); closeSheets();
+    const h = H(); if (ouverte && h && h.sh) history.back();
+  }
   function sheet(label, html) {
+    const dejaOuverte = document.querySelector(".sheet");
     closeSheets();
+    if (!dejaOuverte) { armer(); const h = H(); if (h && !h.sh) try { history.pushState(Object.assign({}, h, { sh: 1, f: undefined, i: h.i + 1, p: [h.n, h.s] }), "", location.href); } catch (e) { } } // retour = fermer la modale
     const sh = document.createElement("div"); sh.className = "sheet"; sh.setAttribute("role", "dialog"); sh.setAttribute("aria-modal", "true"); sh.setAttribute("aria-label", label);
     sh.innerHTML = '<div class="sheet-in">' + html + '</div>'; document.body.appendChild(sh);
-    sh.addEventListener("click", e => { if (e.target === sh) closeSheets(); });
+    sh.addEventListener("click", e => { if (e.target === sh) fermerFeuille(); });
     const f = sh.querySelector("[data-focus]") || sh.querySelector("button"); if (f) f.focus();
   }
   const seg = (act, cur, items) => '<div class="seg">' + items.map(i => '<button class="btn mini" data-act="' + act + '" data-v="' + i[0] + '" aria-pressed="' + (String(cur) === String(i[0])) + '">' + i[1] + '</button>').join("") + '</div>';
@@ -536,7 +589,12 @@
       case "intro": Audio2.Sfx.page(); go("intro", b.dataset.i); break;
       case "hub": go("hub"); break;
       case "station": Audio2.Sfx.bulle(); go("st" + b.dataset.id, "brief"); break;
-      case "go": Audio2.Sfx.tap(); go(b.dataset.r, b.dataset.s || null); break;
+      case "go": { // « ← Le projet », « Retour au projet »… : si c'est l'écran juste en dessous, on revient en arrière (pas de doublon)
+        Audio2.Sfx.tap(); const h = H();
+        if (h && h.i > 1 && !h.sh && h.p && h.p[0] === b.dataset.r && (h.p[1] || null) === (b.dataset.s || null)) history.back(); else go(b.dataset.r, b.dataset.s || null);
+        break;
+      }
+      case "retour": Audio2.Sfx.tap(); if (aPrecedent()) history.back(); else go(b.dataset.r || "projet", null, false, "replace"); break;
       case "saut": if (b.dataset.p) Store.set("public", b.dataset.p); go(b.dataset.n, b.dataset.s || null); break;
       case "rep": repondre(+b.dataset.i); break;
       case "resoudre": if (jeu) jeu.solve(); break;
@@ -544,10 +602,10 @@
       case "png": exportPNG(); break;
       case "avis": toast("Lien d'avis à définir avec Kélonia (le même pour tous les visiteurs)."); break;
       case "equipe": equipe(); break;
-      case "eqok": { const v = Array.from(document.querySelectorAll(".eqn")).map(i => i.value.trim()).filter(Boolean).slice(0, 5); Store.set("equipe", v); Store.set("tour", 0); closeSheets(); render(); toast(v.length > 1 ? "Mode équipe : " + v.length + " joueurs ✓" : "Joueurs enregistrés ✓"); break; }
+      case "eqok": { const v = Array.from(document.querySelectorAll(".eqn")).map(i => i.value.trim()).filter(Boolean).slice(0, 5); Store.set("equipe", v); Store.set("tour", 0); fermerFeuille(); render(); toast(v.length > 1 ? "Mode équipe : " + v.length + " joueurs ✓" : "Joueurs enregistrés ✓"); break; }
       case "reset": if (confirm("Recommencer l'aventure depuis le début ?")) { Store.reset(); closeSheets(); go("accueil"); } break;
       case "reglages": reglages(); break;
-      case "fermer": closeSheets(); break;
+      case "fermer": fermerFeuille(); break;
       case "credits": credits(); break;
       case "edlg": { edLang = b.dataset.v; document.querySelectorAll('[data-act="edlg"]').forEach(x => x.setAttribute("aria-pressed", x === b)); edCharge(); break; }
       case "edsave": { const id = document.getElementById("ed-id").value, ed = Object.assign({}, Store.get("edits")); ed[id] = Object.assign({}, ed[id], { [edLang]: document.getElementById("ed-txt").value }); Store.set("edits", ed); toast("Enregistré ✓ (sur ce téléphone seulement)"); break; }
@@ -561,7 +619,7 @@
     }
   });
   window.addEventListener("online", topbar); window.addEventListener("offline", topbar);
-  document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheets(); if (demoMode && !e.target.closest("input,textarea,select")) { if (e.key === "PageDown") demoGo(1); if (e.key === "PageUp") demoGo(-1); } });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") fermerFeuille(); if (demoMode && !e.target.closest("input,textarea,select")) { if (e.key === "PageDown") demoGo(1); if (e.key === "PageUp") demoGo(-1); } });
 
   // ===================== DÉMARRAGE =====================
   function init() {
@@ -571,11 +629,12 @@
     if (q.get("lang") && ["fr", "kr", "en"].includes(q.get("lang"))) Store.set("lang", q.get("lang"));
     demoMode = q.get("demo") === "1";
     if (!COMPLET) [2, 3, 4, 5].forEach(k => { if (Store.faits()[k]) Store.fait(k, false); }); // ancienne partie allant plus loin : on repart du hub de la démo
-    const s = q.get("station");
-    if (/^[1-5]$/.test(s || "")) go("st" + s, "brief");
-    else if (s && SCREENS[s] && s !== "ouverture") go(s);
-    else if (demoMode) { demoIdx = 0; Store.reset(); Store.set("public", "famille"); go(COMPLET ? "ouverture" : "projet"); }
-    else go("projet");
+    const s = q.get("station"), h0 = H();
+    if (h0 && h0.n === "stats" && h0.o && ORIGINES[h0.o]) statsOrigine = h0.o; // rechargement du tableau de bord
+    if (/^[1-5]$/.test(s || "")) go("st" + s, "brief", false, "init");
+    else if (s && SCREENS[s] && s !== "ouverture") go(s, null, false, "init");
+    else if (demoMode) { demoIdx = 0; Store.reset(); Store.set("public", "famille"); go(COMPLET ? "ouverture" : "projet", null, false, "init"); }
+    else go("projet", null, false, "init");
     // installation sur l'écran d'accueil (Android/Chrome) : on garde l'invitation pour le bouton de « Le projet »
     window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); installPrompt = e; majInstall(); });
     window.addEventListener("appinstalled", () => { installPrompt = null; const b = document.getElementById("pj-install"); if (b) b.remove(); });

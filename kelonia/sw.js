@@ -2,7 +2,7 @@
    ⚠️ Incrémenter VERSION à CHAQUE livraison : c'est ce qui force les téléphones
    à retélécharger les fichiers (l'ancien cache est supprimé à l'activation).
    Voix enregistrées : ajouter ici leurs chemins (ex. "assets/audio/intro0.fr.mp3"). */
-const VERSION = "kelonia-kawann-v5"; // v5 : tableau de bord Kélonia (?station=stats, js/stats.js) // v4 : voix coupées // v3 : version démo (écran « Le projet », bassin 1 seul) + icônes PNG
+const VERSION = "kelonia-kawann-v7"; // v6 : bouton RETOUR du téléphone (History API, double appui pour quitter) // v5 : tableau de bord Kélonia (?station=stats, js/stats.js) // v4 : voix coupées // v3 : version démo (écran « Le projet », bassin 1 seul) + icônes PNG
 const FICHIERS = [
   "./", "index.html", "manifest.json", "css/style.css", "assets/icon.svg",
   "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/icons/icon-maskable-512.png", "assets/icons/apple-touch-icon-180.png",
