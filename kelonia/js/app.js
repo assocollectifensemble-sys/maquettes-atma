@@ -3,7 +3,7 @@
    (prototype pour Kélonia, l'observatoire des tortues marines).
    Écrans : projet (présentation, 1er écran) · findemo · ouverture (démo) · accueil · intro · hub (bassins) ·
    st1…st5 (brief → jeu → quiz → info) · dossier · relacher · diplome ·
-   fin · carnet · fiche (enseignant) · qr (pour l'équipe) · kelonia.
+   fin · carnet · fiche (enseignant) · qr (pour l'équipe) · kelonia · stats (tableau de bord, js/stats.js).
    ============================================================ */
 (function () {
   "use strict";
@@ -36,13 +36,13 @@
 
   // ---------- thème ----------
   function applyTheme() {
-    const th = route.n === "projet" ? "lagon" : nuit() ? "nuit" : Store.get("theme");
+    const th = route.n === "projet" || route.n === "stats" ? "lagon" : nuit() ? "nuit" : Store.get("theme");
     document.body.dataset.theme = th;
     document.documentElement.classList.toggle("nuit", th === "nuit");
     document.documentElement.dataset.taille = Store.get("taille");
     document.documentElement.classList.toggle("facile", !!Store.get("facile"));
     document.documentElement.lang = lang() === "kr" ? "rcf" : lang();
-    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = route.n === "projet" ? "#031c24" : th === "nuit" ? "#120803" : th === "soleil" ? "#ffffff" : "#063b4c";
+    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = route.n === "projet" ? "#031c24" : route.n === "stats" ? "#063b4c" : th === "nuit" ? "#120803" : th === "soleil" ? "#ffffff" : "#063b4c";
   }
 
   // ---------- briques d'affichage ----------
@@ -105,6 +105,7 @@
     Audio2.stopVoix(); closeSheets();
     let refus = false;
     if (VERROU(n)) { refus = /^st/.test(n); n = !refus && Store.faits()[1] ? "findemo" : "hub"; step = null; } // démo : jamais au-delà du bassin 1
+    if (n === "stats" && route.n !== "stats" && ORIGINES[route.n]) statsOrigine = route.n; // bouton retour du tableau de bord
     route = { n, step: step == null ? null : String(step) };
     const u = new URL(location.href); u.searchParams.delete("station");
     const code = /^st\d$/.test(n) ? n.slice(2) : n;
@@ -146,14 +147,15 @@
       ["📶", "Hors connexion", "Rien à télécharger, aucun réseau requis"],
       ["🔳", "Un QR code par bassin", "On scanne, l'enquête s'ouvre"],
       ["✏️", "Contenus relus par Kélonia", "Et modifiables par votre équipe"],
-      ["📊", "Statistiques anonymes", "Fréquentation, sans donnée personnelle"]
+      ["📊", "Statistiques anonymes", "Ce que font les visiteurs, ce qu'ils retiennent", "stats"]
     ];
     return '<div class="projet"><div class="pj-tete"><span class="pj-lieu">Kélonia · Saint-Leu</span><span class="pj-badge">Prototype · proposition à co-écrire avec le service éducatif</span></div>' +
       '<div class="pj-art" aria-hidden="true"><span class="pj-halo"></span>' + Art.kawann("content", "flotte", { pansement: true }) + '</div>' +
       '<h1>Le dossier Kawann</h1><p class="pj-sous">Une aventure sur téléphone pour Kélonia</p>' +
       '<p class="pj-idee">' + typo("Les familles et les classes enquêtent <b>bassin par bassin</b> pour aider une tortue soignée à retrouver la mer. On scanne un QR code : <b>rien à télécharger</b>, et ça marche <b>sans réseau</b>.") + '</p>' +
       '<h2 class="pj-h">Ce que l\'application complète proposera</h2><ul class="pj-grille">' +
-      complete.map(x => '<li class="' + (x[3] || "") + '"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul>' +
+      complete.map(x => x[3] === "stats" ? '<li class="pj-lien"><button data-act="go" data-r="stats"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small><span class="pj-voir">Voir l\'aperçu <span aria-hidden="true">›</span></span></button></li>'
+        : '<li class="' + (x[3] || "") + '"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul>' +
       '<section class="pj-cycle3"><div class="pj-c3-t"><span class="pj-c3-i" aria-hidden="true">🎓</span><div><h3>Version cycle 3</h3><span class="pj-c3-niv">CM1 · CM2 · 6e</span></div></div>' +
       '<p>' + esc("Consignes scolaires, mots-clés du programme de sciences, débats en équipe et fiche enseignant imprimable.") + '</p>' + btn("Lire la proposition ➜", "go", "pj-btn", { r: "fiche" }) + '</section>' +
       aideInstall() +
@@ -172,7 +174,7 @@
       ["🌊", "Le relâcher en mer", "Kawann retrouve l'océan, sous vos yeux"],
       ["🏅", "Le diplôme de soigneur junior", "À imprimer ou à garder en image"]
     ].map(x => '<li><span class="fd-i" aria-hidden="true">' + x[0] + '</span><span class="fd-t"><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></span><span class="fd-badge">Appli complète</span></li>').join("") + '</ul></div>' +
-    dock(btn("✨ Revoir le projet", "go", "big", { r: "projet" }) + '<div class="rang-btn">' + btn("🎓 Proposition cycle 3", "go", "sec", { r: "fiche" }) + btn("🏛️ Pour Kélonia", "go", "sec", { r: "kelonia" }) + '</div>' + btn("🔁 Recommencer", "recommencer", "sec"), "flow");
+    dock(btn("✨ Revoir le projet", "go", "big", { r: "projet" }) + '<div class="rang-btn">' + btn("🎓 Proposition cycle 3", "go", "sec", { r: "fiche" }) + btn("🏛️ Pour Kélonia", "go", "sec", { r: "kelonia" }) + btn("📊 Tableau de bord (aperçu)", "go", "sec", { r: "stats" }) + '</div>' + btn("🔁 Recommencer", "recommencer", "sec"), "flow");
   AFTER.findemo = () => { if (!navigator.userActivation || navigator.userActivation.hasBeenActive) Audio2.Sfx.fanfare(); bullesFete(); }; // pas de son sans geste (arrivée directe par lien)
 
   // ===================== OUVERTURE (mode démo) =====================
@@ -411,19 +413,6 @@
   AFTER.qr = () => { const i = document.getElementById("base"); if (i) i.addEventListener("change", () => { Store.set("baseqr", i.value.trim()); document.getElementById("qrg").innerHTML = qrCartes(); toast("QR codes régénérés ✓"); }); };
 
   // ===================== POUR KÉLONIA (mode présentation) =====================
-  function graphe() { // données FICTIVES de démonstration
-    const sem = [42, 58, 51, 77, 64, 96, 88, 120], max = 130, w = 300, h = 120, bw = 26;
-    const barres = sem.map((v, i) => '<rect x="' + (14 + i * 36) + '" y="' + (h - v / max * h) + '" width="' + bw + '" height="' + (v / max * h) + '" rx="5" fill="' + (i === 5 ? "#ff6f59" : "#0f8a96") + '"/><text x="' + (14 + i * 36 + bw / 2) + '" y="' + (h + 16) + '" text-anchor="middle" font-size="11" fill="currentColor">S' + (i + 1) + '</text>').join("");
-    const pubs = [["Famille", 54, "#0f8a96"], ["Soirée", 18, "#e8b04a"], ["Classe", 28, "#ff6f59"]];
-    const lgs = [["FR", 71], ["KR", 17], ["EN", 12]];
-    const fun = [["Accueil", 100], ["Bassin 1", 92], ["Bassin 3", 81], ["Bassin 5", 74], ["Diplôme", 68]];
-    return '<div class="dash"><p class="fictif">DONNÉES FICTIVES DE DÉMONSTRATION</p>' +
-      '<h4>Parties lancées par semaine</h4><svg viewBox="0 -24 310 164" class="graphe" role="img" aria-label="Histogramme fictif">' + barres + '<text x="2" y="-10" font-size="12" fill="#e0553f" font-weight="700">■ S6 = semaine avec une soirée « Jours de la Nuit »</text></svg>' +
-      '<div class="dash2"><div><h4>Publics</h4>' + pubs.map(p => '<div class="barre"><span>' + p[0] + '</span><i style="width:' + p[1] + '%;background:' + p[2] + '"></i><b>' + p[1] + ' %</b></div>').join("") + '</div>' +
-      '<div><h4>Langue des voix</h4>' + lgs.map(p => '<div class="barre"><span>' + p[0] + '</span><i style="width:' + p[1] + '%"></i><b>' + p[1] + ' %</b></div>').join("") + '</div></div>' +
-      '<h4>Jusqu\'où vont les joueurs</h4>' + fun.map(p => '<div class="barre"><span>' + p[0] + '</span><i style="width:' + p[1] + '%"></i><b>' + p[1] + ' %</b></div>').join("") +
-      '<p class="mini-note">Proposition : comptages anonymes uniquement, sans cookie ni donnée personnelle (à valider avec la RMR et son DPO).</p></div>';
-  }
   function editeur() {
     const opts = C.stations.map(S => '<option value="st' + S.id + '-brief">Bassin ' + S.id + ' · ' + esc(S.titre.fr) + ' (consigne de Jo)</option>').join("") + '<option value="intro0">Intro · appel de Kawann</option>';
     return '<div class="editeur"><p class="fictif">MAQUETTE · les modifications restent sur ce téléphone</p><label class="small" for="ed-id"><b>Texte à modifier</b></label><select class="field" id="ed-id">' + opts + '</select>' +
@@ -441,7 +430,8 @@
       ["👥", "1 téléphone pour 1 à 5 enfants", "Mode équipe : l'appli indique à qui passer le téléphone à chaque bassin."]
     ].map(x => '<li><span aria-hidden="true">' + x[0] + '</span><span><b>' + esc(x[1]) + '</b><br>' + esc(x[2]) + '</span></li>').join("") + '</ul>' +
     '<section class="card"><h3>✏️ Vos textes, modifiables par votre équipe</h3>' + editeur() + '</section>' +
-    '<section class="card"><h3>📊 Tableau de bord de fréquentation</h3>' + graphe() + '</section>' +
+    '<section class="card kl-stats"><h3>📊 Tableau de bord Kélonia</h3><p>' + esc("Ce que font réellement les visiteurs, et ce qu'ils ont retenu à chaque bassin : une question précise par notion, pour mesurer ce que votre médiation transmet.") + '</p>' +
+    '<div class="kl-kpis" aria-hidden="true"><span><b>—</b>aventures</span><span><b>— %</b>terminées</span><span><b>— %</b>bonnes réponses</span></div>' + btn("Ouvrir le tableau de bord (aperçu) ➜", "go", "", { r: "stats" }) + '</section>' +
     '<section class="card"><h3>🧭 Raccourcis</h3><div class="rang-btn">' + btn("🔳 QR codes", "go", "sec", { r: "qr" }) + btn("🎓 Fiche enseignant", "go", "sec", { r: "fiche" }) + (COMPLET ? btn("🌙 Version soirée", "saut", "sec", { n: "st5", s: "brief", p: "soiree" }) : btn("🌙 Version soirée", "saut", "sec", { n: "intro", s: "1", p: "soiree" })) + btn("🃏 Carnet", "go", "sec", { r: "carnet" }) + '</div></section>' +
     '<section class="card"><h3>🏛️ Et ailleurs dans le réseau RMR ?</h3><p>Le même moteur peut accueillir une enquête à Stella Matutina, à la Cité du Volcan ou au MADOI, avec ses propres personnages et contenus.</p></section>' +
     '<section class="card"><h3>🤝 À construire ensemble</h3><ul class="clean"><li>Relecture scientifique et pédagogique de tous les textes</li><li>Vrais noms des bassins et emplacement des QR codes</li><li>Relecture du créole et enregistrement des voix</li><li>Photos du lieu pour des illustrations fidèles</li></ul></section>' +
@@ -463,6 +453,13 @@
     const id = document.getElementById("ed-id"), ta = document.getElementById("ed-txt");
     if (id) { id.addEventListener("change", edCharge); ta.addEventListener("input", edApercu); edCharge(); }
   };
+
+  // ===================== TABLEAU DE BORD KÉLONIA (aperçu, js/stats.js) =====================
+  const ORIGINES = { projet: "Le projet", kelonia: "Pour Kélonia", findemo: "Fin de la démo" };
+  let statsOrigine = "projet", statsExemple = false;
+  // App.go("stats", "exemple") : exemple rempli d'emblée (tests)
+  SCREENS.stats = step => (step === "exemple" && (statsExemple = true), "") + Tableau.html({ exemple: statsExemple, retour: { r: statsOrigine, l: ORIGINES[statsOrigine] } }) +
+    dock(btn("← " + esc(ORIGINES[statsOrigine]), "go", "sec", { r: statsOrigine }), "flow");
 
   // ===================== RÉGLAGES, ÉQUIPE, CRÉDITS =====================
   function closeSheets() { document.querySelectorAll(".sheet").forEach(s => s.remove()); }
@@ -496,7 +493,7 @@
   }
 
   // ===================== BARRE DE PRÉSENTATION (démo RDV) =====================
-  const NOMS_DEMO = { projet: "Le projet", findemo: "Fin de la démo", ouverture: "Ouverture", accueil: "Accueil", intro: "Histoire", hub: "Les bassins", st1: "Bassin 1 · radio", st2: "Bassin 2 · tri", st3: "Bassin 3 · photo-ID", st4: "Bassin 4 · mesure", st5: "Bassin 5 · plage", dossier: "Dossier de soin", relacher: "Relâcher", diplome: "Diplôme", fin: "Et après", carnet: "Carnet", fiche: "Fiche enseignant", qr: "QR codes", kelonia: "Pour Kélonia" };
+  const NOMS_DEMO = { projet: "Le projet", findemo: "Fin de la démo", ouverture: "Ouverture", accueil: "Accueil", intro: "Histoire", hub: "Les bassins", st1: "Bassin 1 · radio", st2: "Bassin 2 · tri", st3: "Bassin 3 · photo-ID", st4: "Bassin 4 · mesure", st5: "Bassin 5 · plage", dossier: "Dossier de soin", relacher: "Relâcher", diplome: "Diplôme", fin: "Et après", carnet: "Carnet", fiche: "Fiche enseignant", qr: "QR codes", kelonia: "Pour Kélonia", stats: "Tableau de bord" };
   function updatePresbar() {
     let p = document.getElementById("presbar");
     if (!demoMode) { if (p) p.remove(); document.body.classList.remove("has-presbar"); return; }
@@ -557,6 +554,8 @@
       case "edreset": { const id = document.getElementById("ed-id").value, ed = Object.assign({}, Store.get("edits")); delete ed[id]; Store.set("edits", ed); edCharge(); toast("Texte d'origine rétabli"); break; }
       case "recommencer": Store.reset(); go("accueil"); break;
       case "installer": if (installPrompt) { installPrompt.prompt(); installPrompt.userChoice.finally(() => { installPrompt = null; majInstall(); }); } break;
+      case "stexemple": statsExemple = !statsExemple; Audio2.Sfx.tap(); go("stats", null, true); if (statsExemple) window.scrollTo(0, 0); break;
+      case "stexport": toast("Disponible dans l'application complète"); break;
       case "dprev": demoGo(-1); break;
       case "dnext": demoGo(1); break;
     }

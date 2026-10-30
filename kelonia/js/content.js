@@ -301,7 +301,7 @@
   const demoLimitee = [
     ["projet"], ["accueil"], ["intro", "0"], ["intro", "1"], ["intro", "2"], ["hub"],
     ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"],
-    ["findemo"], ["fiche"], ["kelonia"]
+    ["findemo"], ["fiche"], ["kelonia"], ["stats"]
   ];
   const demo = CONFIG.versionComplete ? demoComplet : demoLimitee;
 
