@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kontoir des créateurs · Boutique de créateurs réunionnais au Tampon</title>
+<meta name="description" content="Kontoir des créateurs, au Tampon : l'espace où l'art et l'artisanat se rencontrent. Créations d'artisans réunionnais, nouveautés et ateliers créatifs.">
+<meta property="og:title" content="Kontoir des créateurs · Un lieu. Des mains. Du cœur.">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/kontoir-des-createurs/img/kimono-crochet.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/kontoir-des-createurs/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sable:#f4ecdf;--sable-f:#e9dcc6;--kraft:#d8c3a5;--ink:#2b2b2b;--muted:#6a6158;--bleu:#2a9bc4;--bleu-f:#1d7699;--jaune:#f2c12e;--vert:#7dc243;--blanc:#fffdf9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--sable);color:var(--ink);line-height:1.7;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+img{display:block;max-width:100%}
+a{color:inherit}
+.hand{font-family:Caveat,cursive;font-weight:700}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ink);color:#f4ecdf;font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{color:var(--jaune)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 6vw}
+.kick{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--bleu-f)}
+.kick:before{content:"";width:22px;height:2px;background:var(--bleu)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1}
+.hero{position:relative;min-height:100svh;padding:96px 0 60px;display:flex;align-items:center;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center;position:relative;z-index:2}
+.logo-card{background:#fff;border-radius:14px;padding:10px 14px;box-shadow:0 10px 30px -18px rgba(43,43,43,.45);width:min(330px,82%);margin-bottom:26px;opacity:0;animation:up .9s .1s forwards}
+.hero h1{font-size:clamp(44px,7.4vw,92px);opacity:0;animation:up 1s .3s forwards}
+.hero h1 em{font-style:normal;color:var(--bleu)}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:30em;margin:20px 0 6px;opacity:0;animation:up 1s .5s forwards}
+.ker{font-size:clamp(30px,4vw,40px);color:var(--bleu-f);transform:rotate(-3deg);display:inline-block;opacity:0;animation:up2 1s .7s forwards}
+.ker i{font-style:normal;color:#d9a81a}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;opacity:0;animation:up 1s .9s forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--ink);transition:transform .25s,background .25s,color .25s}
+.btn.p{background:var(--ink);color:var(--sable)}
+.btn.p:hover{background:var(--bleu-f);border-color:var(--bleu-f)}
+.btn.s:hover{background:var(--ink);color:var(--sable)}
+.btn:hover{transform:translateY(-2px)}
+.collage{position:relative;height:min(560px,62vh);min-height:420px}
+.collage figure{position:absolute;border-radius:16px;overflow:hidden;background:#fff;padding:8px 8px 34px;box-shadow:0 24px 50px -28px rgba(43,43,43,.6);animation:float 7s ease-in-out infinite}
+.collage figure img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.collage figcaption{position:absolute;bottom:4px;left:12px;font-family:Caveat,cursive;font-size:20px;color:var(--muted)}
+.c1{width:52%;height:72%;left:2%;top:4%;rotate:-4deg}
+.c2{width:48%;height:62%;right:0;top:20%;rotate:5deg;animation-delay:-2.3s!important}
+.c3{width:40%;height:42%;left:30%;bottom:0;rotate:-1deg;animation-delay:-4.6s!important}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes up2{from{opacity:0;transform:translateY(18px) rotate(-3deg)}to{opacity:1;transform:rotate(-3deg)}}
+.branch{position:absolute;z-index:1;pointer-events:none;opacity:.5}
+.branch path{fill:none;stroke:#3a3a3a;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 4.5s .2s ease forwards}
+.branch .lf{stroke-width:1.3}
+@keyframes draw{to{stroke-dashoffset:0}}
+.b1{left:-40px;bottom:-30px;width:340px}
+.b2{right:-30px;top:60px;width:260px;transform:scaleX(-1) rotate(10deg)}
+.marq{background:var(--ink);color:var(--sable);overflow:hidden;padding:16px 0;position:relative;z-index:2}
+.marq .track{display:flex;gap:42px;width:max-content;animation:mq 46s linear infinite;font-family:Fraunces,serif;font-size:20px;white-space:nowrap}
+.marq span:after{content:"\2665";color:var(--jaune);margin-left:42px;font-size:14px}
+.marq span:nth-child(3n):after{color:var(--vert)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{position:relative;z-index:2}
+.pad{padding:110px 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.reveal.on{opacity:1;transform:none}
+.mani{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:center}
+.mani h2{font-size:clamp(40px,6vw,72px)}
+.mani h2 span{display:block}
+.mani h2 span:nth-child(2){color:var(--bleu)}
+.mani h2 span:nth-child(3){color:#b08a1a}
+.mani p{color:var(--muted);margin-top:16px;max-width:34em}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags li{list-style:none;padding:7px 14px;border-radius:999px;background:var(--blanc);border:1px solid var(--kraft);font-size:14px;font-weight:600}
+.since{font-size:15px;margin-top:22px;color:var(--ink)!important}
+.since b{color:var(--bleu-f)}
+.etagere{background:var(--sable-f);border-top:1px solid var(--kraft)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.head h2{font-size:clamp(34px,4.6vw,56px);margin-top:10px}
+.head p{color:var(--muted);max-width:26em}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,30%);gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 6vw 26px;margin:0 -6vw;scrollbar-width:thin}
+.card{scroll-snap-align:start;background:var(--blanc);border-radius:18px;padding:10px 10px 18px;box-shadow:0 18px 40px -30px rgba(43,43,43,.55);transition:transform .35s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg)}
+.card .ph{aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--sable)}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.card:hover img{transform:scale(1.05)}
+.card h3{font-size:20px;margin:14px 6px 2px}
+.card p{font-size:14px;color:var(--muted);margin:0 6px}
+.hint{font-size:13px;color:var(--muted)}
+.mains{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:10px}
+.main{background:var(--blanc);border:1px solid var(--kraft);border-radius:14px;padding:18px 18px 16px;font-family:Fraunces,serif;font-size:18px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.main:before{content:"";position:absolute;left:-30px;top:-30px;width:70px;height:70px;border-radius:50%;background:var(--jaune);opacity:.18;transition:transform .5s}
+.main:nth-child(3n+1):before{background:var(--vert)}
+.main:nth-child(3n+2):before{background:var(--bleu)}
+.main:hover{transform:translateY(-3px);border-color:var(--ink)}
+.main:hover:before{transform:scale(2.6)}
+.main small{display:block;font-family:"Nunito Sans";font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.main.new{background:var(--ink);color:var(--sable);border-color:var(--ink)}
+.main.new small{color:var(--jaune);text-transform:none;letter-spacing:0;font-size:14px}
+.main.new a{color:var(--jaune)}
+.atel{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:start}
+.alist{list-style:none;margin-top:22px;display:grid;gap:6px}
+.alist li{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px dashed var(--kraft)}
+.alist .n{font-family:Caveat,cursive;font-size:30px;color:var(--bleu);min-width:34px}
+.alist b{font-family:Fraunces,serif;font-weight:600;font-size:20px;display:block}
+.alist span.d{color:var(--muted);font-size:15px}
+.tool{background:var(--blanc);border-radius:22px;padding:30px;box-shadow:0 30px 60px -40px rgba(43,43,43,.6);border:1px solid var(--kraft)}
+.tool h3{font-size:28px}
+.tool .sub{color:var(--muted);font-size:15px;margin:6px 0 10px}
+.lbl{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted);margin:16px 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--kraft);background:var(--sable);border-radius:999px;padding:9px 15px;min-height:44px;font:600 14px "Nunito Sans";cursor:pointer;transition:all .2s;color:var(--ink)}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--sable);border-color:var(--ink)}
+.tool input{width:100%;min-height:46px;border:1.5px solid var(--kraft);border-radius:12px;padding:10px 14px;font:16px "Nunito Sans";background:var(--sable);color:var(--ink)}
+.tool input:focus,.chip:focus-visible,.btn:focus-visible{outline:3px solid var(--bleu);outline-offset:2px}
+.preview{margin:18px 0;background:var(--sable);border-radius:14px;padding:14px 16px;font-size:15px;min-height:70px;white-space:pre-line}
+.preview:before{content:"Votre message";display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;font-weight:700}
+.tool .btn{width:100%}
+.tool .alt{display:block;text-align:center;font-size:14px;color:var(--muted);margin-top:10px}
+.infos{background:var(--ink);color:var(--sable)}
+.infos .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.infos h2{font-size:clamp(34px,4.6vw,54px);margin-bottom:34px}
+.infos h3{font-family:"Nunito Sans";font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune);margin-bottom:10px}
+.infos p,.infos a{font-size:18px;color:#efe6d6;text-decoration:none}
+.infos a:hover{color:var(--jaune)}
+.infos .btn{border-color:var(--sable);color:var(--sable);margin-top:16px;font-size:15px}
+.infos .btn:hover{background:var(--sable);color:var(--ink)}
+footer{background:#1f1f1f;color:#b9ae9c;font-size:13px;text-align:center;padding:26px 6vw 34px;position:relative;z-index:2}
+@media (max-width:860px){
+ .hero{padding-top:84px;min-height:0}
+ .hero .wrap,.mani,.atel{grid-template-columns:1fr}
+ .collage{height:400px;min-height:0;margin-top:10px}
+ .rail{grid-auto-columns:76%}
+ .infos .grid{grid-template-columns:1fr}
+ .pad{padding:60px 0}
+ .rx{display:none}
+ .collage{height:470px}
+ .c1{width:56%;height:55%;left:0;top:0}
+ .c2{width:46%;height:50%;right:0;left:auto;top:16%}
+ .c3{width:46%;height:36%;left:5%;top:62%;bottom:auto}
+ .b2{display:none}
+ .tool{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal,.hero h1,.lead,.ker,.ctas,.logo-card{opacity:1;transform:none}.branch path{stroke-dashoffset:0}#fx{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> <span class="rx">— créée avec plaisir pour Kontoir des créateurs</span></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<header class="hero">
+ <svg class="branch b1" viewBox="0 0 340 300" aria-hidden="true"><path d="M20 290 C90 230 130 170 170 90 S250 10 320 20"/><path class="lf" d="M70 245 c-30-10-45-35-40-60 c25 5 42 30 40 60z"/><path class="lf" d="M110 200 c5-30 30-48 55-45 c-5 25-28 45-55 45z"/><path class="lf" d="M140 150 c-28-12-40-38-33-62 c24 8 38 34 33 62z"/><path class="lf" d="M190 70 c10-28 38-40 62-30 c-10 24-38 38-62 30z"/><path class="lf" d="M250 32 c-14-24-8-52 14-64 c12 22 6 50-14 64z"/></svg>
+ <svg class="branch b2" viewBox="0 0 340 300" aria-hidden="true"><path d="M20 290 C90 230 130 170 170 90 S250 10 320 20"/><path class="lf" d="M70 245 c-30-10-45-35-40-60 c25 5 42 30 40 60z"/><path class="lf" d="M110 200 c5-30 30-48 55-45 c-5 25-28 45-55 45z"/><path class="lf" d="M190 70 c10-28 38-40 62-30 c-10 24-38 38-62 30z"/></svg>
+ <div class="wrap">
+  <div>
+   <div class="logo-card"><img src="img/logo-kontoir.jpg" alt="Logo Kontoir des créateurs" width="960" height="355"></div>
+   <span class="kick">Le Tampon · Nid Joli</span>
+   <h1>Kontoir des <em>créateurs</em></h1>
+   <p class="lead">L'espace où l'art &amp; l'artisanat se rencontrent : des objets uniques, nés entre les mains de créateurs réunionnais.</p>
+   <span class="hand ker">Fé ek lo <i>Kér</i></span>
+   <div class="ctas"><a class="btn p" href="#demande">Trouver un cadeau</a><a class="btn s" href="#infos">Venir au Kontoir</a></div>
+  </div>
+  <div class="collage" aria-hidden="true">
+   <figure class="c1"><img src="img/kimono-crochet.jpg" alt=""><figcaption>crochet fuchsia</figcaption></figure>
+   <figure class="c2"><img src="img/poncho-lin.jpg" alt=""><figcaption>lin brodé</figcaption></figure>
+   <figure class="c3"><img src="img/sacoche-patchwork.jpg" alt=""><figcaption>patchwork</figcaption></figure>
+  </div>
+ </div>
+</header>
+<div class="marq" aria-label="Les artisans du Kontoir"><div class="track" id="track"></div></div>
+<section class="pad">
+ <div class="wrap mani">
+  <h2 class="reveal"><span>Un lieu.</span><span>Des mains.</span><span>Du cœur.</span></h2>
+  <div class="reveal">
+   <span class="kick">La boutique-collectif</span>
+   <p>Au 190 chemin Nid Joli, le Kontoir rassemble sous un même toit le travail d'une douzaine d'artisans de l'île. On y vient pour flâner entre les étagères, dénicher la pièce qui fera plaisir, et découvrir l'histoire de celles et ceux qui l'ont créée.</p>
+   <ul class="tags"><li>Maroquinerie</li><li>Déco</li><li>Stylisme</li><li>Photographie</li><li>Customs</li><li>Bijoux</li><li>Bougies</li><li>Upcycling</li><li>Prêt-à-porter</li></ul>
+   <p class="since">Portes ouvertes depuis le <b>2 mai 2025</b>, du <b>mardi au samedi</b>.</p>
+  </div>
+ </div>
+</section>
+<section class="pad etagere">
+ <div class="wrap">
+  <div class="head reveal">
+   <div><span class="kick">Nouveautés</span><h2>Sur les étagères</h2></div>
+   <p>Les dernières pièces arrivées au Kontoir, chacune signée par une main de l'île.<br><span class="hint">Faites glisser pour voir la suite →</span></p>
+  </div>
+  <div class="rail">
+   <article class="card"><div class="ph"><img src="img/pochette-cotelee.jpg" alt="Pochette en velours côtelé avec mousqueton" loading="lazy"></div><h3>Pochette en velours côtelé</h3><p>Avec sa sangle et son mousqueton.</p></article>
+   <article class="card"><div class="ph"><img src="img/sac-brode.jpg" alt="Sac en tissu brodé" loading="lazy"></div><h3>Sac brodé</h3><p>Une pièce unique, à porter tous les jours.</p></article>
+   <article class="card"><div class="ph"><img src="img/sac-crochet.jpg" alt="Sac au crochet beige à chaîne dorée" loading="lazy"></div><h3>Sac au crochet</h3><p>Les nouveautés de chez Atanasia : maille beige et chaîne dorée.</p></article>
+  </div>
+ </div>
+</section>
+<section class="pad">
+ <div class="wrap">
+  <div class="head reveal">
+   <div><span class="kick">Nos artisans</span><h2>Les mains du Kontoir</h2></div>
+   <p>Chaque nom, c'est un atelier, un savoir-faire et une histoire à découvrir en boutique.</p>
+  </div>
+  <div class="mains reveal" id="mains"></div>
+ </div>
+</section>
+<section class="pad etagere" id="demande">
+ <div class="wrap atel">
+  <div class="reveal">
+   <span class="kick">Ateliers créatifs</span>
+   <h2 style="font-size:clamp(34px,4.6vw,56px);margin-top:10px">Créer, en famille</h2>
+   <p style="color:var(--muted);margin-top:14px">Le Kontoir, c'est aussi une boutique d'ateliers : on s'installe, on choisit ses couleurs, et on repart avec sa création.</p>
+   <ol class="alist">
+    <li><span class="n">1</span><div><b>Peins ton animal</b><span class="d">Les animaux à peindre et personnaliser de Tigani, à colorier, effacer et recommencer.</span></div></li>
+    <li><span class="n">2</span><div><b>Crée ta Margozette</b><span class="d">Avec Margoz'amer, l'une des créatrices du Kontoir.</span></div></li>
+    <li><span class="n">3</span><div><b>Crée ton porte-clés</b><span class="d">Composé lettre par lettre, à garder ou à offrir.</span></div></li>
+    <li><span class="n">4</span><div><b>Pop-up sur la terrasse</b><span class="d">Comme l'atelier parent-enfant du 1er août 2026.</span></div></li>
+   </ol>
+  </div>
+  <div class="tool reveal" role="form" aria-labelledby="tt">
+   <h3 id="tt">Votre demande en 20 secondes</h3>
+   <p class="sub">Choisissez, le message se prépare tout seul et part sur WhatsApp.</p>
+   <div class="lbl">Je viens pour</div>
+   <div class="chips" data-g="motif">
+    <button class="chip" type="button" aria-pressed="true" data-v="un cadeau">Un cadeau</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="un atelier créatif">Un atelier créatif</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="exposer mes créations au Kontoir">Je suis artisan·e</button>
+   </div>
+   <div class="lbl">Univers</div>
+   <div class="chips" data-g="univers" data-multi="1">
+    <button class="chip" type="button" aria-pressed="false" data-v="bijoux">Bijoux</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="maroquinerie">Maroquinerie</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="déco">Déco</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="bougies">Bougies</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="prêt-à-porter">Prêt-à-porter</button>
+    <button class="chip" type="button" aria-pressed="false" data-v="photographie">Photographie</button>
+   </div>
+   <div class="lbl">Un petit mot (facultatif)</div>
+   <input id="mot" type="text" placeholder="ex. pour l'anniversaire de ma sœur" maxlength="140">
+   <div class="preview" id="pv" aria-live="polite"></div>
+   <a class="btn p" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+   <a class="alt" id="ml" href="#">ou par e-mail</a>
+  </div>
+ </div>
+</section>
+<section class="pad infos" id="infos">
+ <div class="wrap">
+  <h2 class="reveal">Passer la porte du Kontoir</h2>
+  <div class="grid reveal">
+   <div><h3>Adresse</h3><p>190 chemin Nid Joli<br>97430 Le Tampon</p><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Kontoir+des+cr%C3%A9ateurs+Le+Tampon" target="_blank" rel="noopener">Itinéraire</a></div>
+   <div><h3>Ouverture</h3><p>Du mardi au samedi<br>9h30 – 17h</p></div>
+   <div><h3>Contact</h3><p><a href="tel:+262692697377">0692 69 73 77</a><br><a href="mailto:contact.kontoir@gmail.com">contact.kontoir@gmail.com</a><br><a href="https://www.facebook.com/615911911597765" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/kontoir_des_createurs/" target="_blank" rel="noopener">Instagram</a></p></div>
+  </div>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Kontoir des créateurs.</footer>
+<script>
+(function(){
+var A=["Margoz’amer","Peau de Vache","Christine Wong Photo","Piouk Piouk & Kayoux","Créations Run Flow","L’Île aux Bougies","Cilaos Savate","La Maison de Soph Déco","Nirina Crea","Gadyamb Kréation","Cath Savon de la Réunion","Le Rucher de Jacques","Insula Créations","F’Creative","Tigani"];
+function esc(t){return t.replace(/&/g,"&amp;")}
+var t=document.getElementById("track"),h="";A.concat(A).forEach(function(n){h+="<span>"+esc(n)+"</span>"});t.innerHTML=h;
+var m=document.getElementById("mains"),g="";A.forEach(function(n,i){g+="<div class=\"main\">"+esc(n)+"<small>Créateur·rice n°"+(i+1)+"</small></div>"});
+g+="<div class=\"main new\">Votre place ?<small>Le Kontoir recherche son artisan·e cirier·ère : <a href=\"mailto:contact.kontoir@gmail.com\">écrire</a></small></div>";m.innerHTML=g;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+var st={motif:"un cadeau",univers:[]},pv=document.getElementById("pv"),wa=document.getElementById("wa"),ml=document.getElementById("ml"),mot=document.getElementById("mot");
+function msg(){var s="Bonjour le Kontoir ! Je viens pour "+st.motif;
+ if(st.univers.length)s+=(st.motif=="un cadeau"?", plutôt côté ":", univers : ")+st.univers.join(", ");
+ s+=".";if(mot.value.trim())s+="\n"+mot.value.trim();
+ s+=st.motif=="un atelier créatif"?"\nQuelles sont les prochaines dates ?":st.motif=="un cadeau"?"\nQu’avez-vous en ce moment sur les étagères ?":"\nJe peux vous envoyer quelques photos de mon travail.";
+ return s}
+function up(){var s=msg();pv.textContent=s;wa.href="https://wa.me/262692697377?text="+encodeURIComponent(s);ml.href="mailto:contact.kontoir@gmail.com?subject="+encodeURIComponent("Demande depuis la page du Kontoir")+"&body="+encodeURIComponent(s)}
+document.querySelectorAll(".chips").forEach(function(c){var k=c.dataset.g,multi=c.dataset.multi;c.addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;
+ if(multi){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")!="true");st.univers=[].slice.call(c.querySelectorAll("[aria-pressed=true]")).map(function(x){return x.dataset.v})}
+ else{c.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===b)});st[k]=b.dataset.v}up()})});
+mot.addEventListener("input",up);up();
+var cv=document.getElementById("fx");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var x=cv.getContext("2d"),W,H,P=[],dpr=Math.min(window.devicePixelRatio||1,2),run=true;
+function rs(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener("resize",rs);
+var C=["#f2c12e","#7dc243","#2a9bc4"],N=W<700?14:26;
+for(var i=0;i<N;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:5+Math.random()*7,v:.15+Math.random()*.35,a:Math.random()*6.28,r:(Math.random()-.5)*.02,c:C[i%3],k:i%3==1?1:0,o:.18+Math.random()*.3});
+function heart(s){x.beginPath();x.moveTo(0,s*.35);x.bezierCurveTo(-s,-s*.35,-s*.45,-s,0,-s*.45);x.bezierCurveTo(s*.45,-s,s,-s*.35,0,s*.35);x.fill()}
+function leaf(s){x.beginPath();x.moveTo(0,-s);x.quadraticCurveTo(s*.8,0,0,s);x.quadraticCurveTo(-s*.8,0,0,-s);x.fill()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.a+=p.r;p.x+=Math.sin(p.a*3)*.25;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+ x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;p.k?leaf(p.s):heart(p.s);x.restore()});requestAnimationFrame(f)}
+f();document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)f()});
+})();
+</script>
+</body></html>
