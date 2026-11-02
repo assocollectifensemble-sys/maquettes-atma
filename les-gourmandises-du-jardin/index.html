@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Gourmandises du Jardin · Exploitation bio à la Plaine des Cafres</title>
+<meta name="description" content="Les Gourmandises du Jardin : exploitation agricole bio au pied du Piton Hyacinthe, à la Plaine des Cafres. Confitures, nectars, fruits séchés, café Bourbon pointu.">
+<meta property="og:title" content="Les Gourmandises du Jardin · Plaine des Cafres">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-gourmandises-du-jardin/img/confiture-goyave.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-gourmandises-du-jardin/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&amp;family=Karla:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--foret:#1d3527;--foret2:#284a36;--mousse:#6f8f4e;--goyave:#c2405a;--goyave-c:#f2c4c9;--miel:#d9a441;--papier:#f6efe2;--papier2:#efe4cf;--ink:#22201b;--muted:#6b6455}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--papier);color:var(--ink);line-height:1.65;font-size:17px;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.05;letter-spacing:-.01em}
+em{font-style:italic;color:var(--goyave)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--foret);color:var(--goyave-c);font-size:12px;text-align:center;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ribbon b{color:#fff;font-weight:700}
+#brume{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+.wrap{max-width:1160px;margin:0 auto;padding:0 6vw}
+.kick{display:block;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--mousse);font-weight:700;margin-bottom:14px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;transition:transform .25s,background .25s,box-shadow .25s;cursor:pointer;border:0;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.puce:focus-visible,.qte button:focus-visible{outline:3px solid var(--miel);outline-offset:3px}
+.btn.plein{background:var(--goyave);color:#fff;box-shadow:0 10px 26px -10px rgba(194,64,90,.7)}
+.btn.ligne{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn.wa{background:#1f7a4d;color:#fff}
+.btn.contour{border:1.5px solid var(--foret);color:var(--foret)}
+/* HERO */
+.hero{background:var(--foret);color:#fff;padding:120px 0 90px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:auto -10% -40% -10%;height:70%;background:radial-gradient(60% 60% at 50% 50%,rgba(242,196,201,.12),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center;position:relative}
+.hero .kick{color:var(--goyave-c)}
+.hero h1{font-size:clamp(46px,7.4vw,96px);font-weight:500;animation:monte 1.1s .15s both}
+.hero h1 em{color:var(--goyave-c)}
+.hero p{font-size:19px;max-width:30em;color:rgba(255,255,255,.86);margin-top:22px;animation:monte 1.1s .4s both}
+.hero .btns{animation:monte 1.1s .6s both}
+.collage{position:relative;aspect-ratio:1/1.05}
+.collage figure{position:absolute;overflow:hidden;border-radius:14px;box-shadow:0 30px 60px -25px rgba(0,0,0,.6)}
+.collage .c1{inset:0 18% 22% 0;transform:rotate(-2.5deg);animation:flotte 9s ease-in-out infinite}
+.collage .c2{inset:40% 0 0 36%;transform:rotate(3deg);border:6px solid var(--papier);animation:flotte 11s 1s ease-in-out infinite reverse}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage figcaption{position:absolute;left:12px;bottom:10px;background:rgba(29,53,39,.82);color:#fff;font-size:12px;padding:4px 10px;border-radius:99px}
+.sceau{position:absolute;right:5%;top:5%;z-index:2;width:112px;height:112px;border-radius:50%;background:var(--miel);color:var(--foret);display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;font-size:14px;line-height:1.15;animation:tourne 26s linear infinite;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+.sceau span{animation:tourne 26s linear infinite reverse;display:block}
+@keyframes monte{from{transform:translateY(18px)}to{transform:none}}
+@keyframes flotte{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes tourne{to{rotate:360deg}}
+/* BANDEAU */
+.bandeau{background:var(--goyave);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:Fraunces,serif;font-style:italic;font-size:21px}
+.bandeau div{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 26px}.bandeau span::after{content:"✿";margin-left:52px;font-style:normal;color:var(--goyave-c);font-size:15px}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:96px 0}
+h2{font-size:clamp(34px,4.6vw,58px)}
+.intro{max-width:36em;color:var(--muted);margin-top:16px;font-size:18px}
+/* DU CHAMP AU BOCAL */
+.etapes{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:22px;margin-top:48px;align-items:end}
+.etape{position:relative}
+.etape img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.etape:first-child img{aspect-ratio:4/4.4}
+.etape .num{font-family:Fraunces,serif;font-size:64px;color:var(--goyave);line-height:1;margin:18px 0 4px}
+.etape h3{font-size:26px}
+.etape p{color:var(--muted);margin-top:6px}
+/* GARDE-MANGER */
+.garde{background:var(--papier2)}
+.etag{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;margin-top:46px}
+.pot{background:#fffaf1;border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -28px rgba(40,30,10,.45);display:flex;flex-direction:column}
+.pot img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform 1.2s}
+.pot:hover img{transform:scale(1.05)}
+.pot .txt{padding:20px 22px 24px}
+.pot h3{font-size:24px}.pot p{color:var(--muted);font-size:15.5px;margin-top:6px}
+.p1{grid-column:span 5}.p2{grid-column:span 4}.p3{grid-column:span 3}
+.liste{grid-column:span 12;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.carte-t{background:var(--foret);color:#fff;border-radius:14px;padding:30px 30px 32px;position:relative;overflow:hidden}
+.carte-t h3{font-size:28px;color:var(--goyave-c)}
+.carte-t ul{list-style:none;margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.carte-t li{border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 14px;font-size:15px}
+.carte-t.miel{background:var(--miel);color:var(--foret)}.carte-t.miel h3{color:var(--foret)}.carte-t.miel li{border-color:rgba(29,53,39,.35)}
+.carte-t p{margin-top:10px;opacity:.9}
+/* GALERIE */
+.tete{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.astuce{color:var(--muted);font-size:14px}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:36px 6vw 10px;scrollbar-width:thin}
+.rail figure{flex:0 0 auto;width:min(300px,72vw);scroll-snap-align:start}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.rail figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+/* COMMANDE */
+.commande{background:var(--foret);color:#fff}
+.commande .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:6vw;align-items:start}
+.commande .kick{color:var(--goyave-c)}
+.commande .intro{color:rgba(255,255,255,.8)}
+.lieu{margin-top:26px;border-top:1px solid rgba(255,255,255,.2);padding-top:20px;color:rgba(255,255,255,.85)}
+.lieu b{display:block;font-family:Fraunces,serif;font-size:22px;color:#fff;font-weight:500}
+.boite{background:var(--papier);color:var(--ink);border-radius:16px;padding:28px}
+.ligne-p{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px dashed #d8ccb4}
+.ligne-p span{font-weight:500}
+.qte{display:flex;align-items:center;gap:6px}
+.qte button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--foret);background:transparent;font-size:20px;cursor:pointer;color:var(--foret)}
+.qte output{min-width:24px;text-align:center;font-weight:700}
+.retrait{margin-top:18px}
+.retrait p{font-size:14px;color:var(--muted);margin-bottom:8px}
+.puces{display:flex;flex-wrap:wrap;gap:8px}
+.puce{min-height:44px;padding:0 16px;border-radius:99px;border:1.5px solid var(--foret);background:transparent;cursor:pointer;font-family:inherit;font-size:15px;color:var(--foret)}
+.puce[aria-pressed=true]{background:var(--foret);color:#fff}
+.apercu{white-space:pre-line;background:#fff;border-radius:10px;padding:14px 16px;margin-top:18px;font-size:15px;color:#3d3a33;min-height:70px;border:1px solid #e6dcc6}
+.note{font-size:13px;color:var(--muted);margin-top:12px}
+footer{background:#14261b;color:rgba(255,255,255,.85);padding:80px 0 40px}
+footer .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+footer h2{color:#fff}footer h2 em{color:var(--goyave-c)}
+footer ul{list-style:none;display:grid;gap:10px}
+footer a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25)}
+.mini{font-size:13px;color:rgba(255,255,255,.5);margin-top:50px}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rev.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero{padding:100px 0 70px}
+ .hero .wrap,.commande .wrap,footer .grid{grid-template-columns:minmax(0,1fr)}
+ .hero .wrap>*{min-width:0}
+ .collage{max-width:460px;width:100%;margin-top:10px}
+ .sceau{width:84px;height:84px;font-size:11px;right:6%;top:4%}
+ .etapes{grid-template-columns:1fr;gap:34px}
+ .etape img,.etape:first-child img{aspect-ratio:4/3}
+ .p1,.p2,.p3{grid-column:span 12}
+ .liste{grid-template-columns:1fr}
+ section{padding:72px 0}
+ .boite{padding:20px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero h1,.hero p,.hero .btns,.rev{opacity:1;transform:none}#brume{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> · imaginée avec plaisir pour Les Gourmandises du Jardin</div>
+<canvas id="brume" aria-hidden="true"></canvas>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kick">Exploitation agricole bio · Plaine des Cafres</span>
+      <h1>Les Gourmandises <em>du Jardin</em></h1>
+      <p>Au pied du Piton Hyacinthe, Elsa et Fred cultivent leurs fruits et leurs légumes, puis les transforment eux-mêmes : confitures, nectars, fruits séchés et café Bourbon pointu.</p>
+      <div class="btns">
+        <a class="btn plein" href="#commande">Préparer ma commande</a>
+        <a class="btn ligne" href="#garde-manger">Découvrir les produits</a>
+      </div>
+    </div>
+    <div class="collage" aria-label="Produits de l’exploitation">
+      <figure class="c1"><img src="img/confiture-goyave.jpg" alt="Pots de confiture extra artisanale à la goyave"><figcaption>Confiture de goyave</figcaption></figure>
+      <figure class="c2"><img src="img/fraises.jpg" alt="Fraisiers en pleine production, fruits rouges et fleurs blanches"><figcaption>Fraises du jardin</figcaption></figure>
+      <div class="sceau"><span>Bio<br>& péi<br>depuis<br>le champ</span></div>
+    </div>
+  </div>
+</header>
+<div class="bandeau" aria-hidden="true"><div>
+<span>Goyave</span><span>Banane mignonne</span><span>Tangor</span><span>Citron</span><span>Café Bourbon pointu</span><span>Pêche</span><span>Fraise</span>
+<span>Goyave</span><span>Banane mignonne</span><span>Tangor</span><span>Citron</span><span>Café Bourbon pointu</span><span>Pêche</span><span>Fraise</span>
+</div></div>
+
+<section class="champ">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">Notre façon de faire</span>
+      <h2>Du champ <em>au bocal</em></h2>
+      <p class="intro">Une exploitation familiale : chaque fruit est cultivé, cueilli puis transformé sur place, du coupage au séchage.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape rev"><img src="img/champ.jpg" alt="Parcelles cultivées de l’exploitation à la Plaine des Cafres" loading="lazy"><div class="num">01</div><h3>Cultiver</h3><p>Fruits et maraîchage en agriculture biologique, dans l’air frais des Hauts.</p></div>
+      <div class="etape rev"><img src="img/recolte.jpg" alt="Caisses de pommes de terre violettes et blanches fraîchement récoltées" loading="lazy"><div class="num">02</div><h3>Récolter</h3><p>Des fruits et légumes de saison, cueillis à maturité.</p></div>
+      <div class="etape rev"><img src="img/peches-sirop.jpg" alt="Bocaux de pêches au sirop sur un plateau en osier" loading="lazy"><div class="num">03</div><h3>Transformer</h3><p>Confitures, sirops, nectars et fruits séchés, préparés à la ferme.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="garde" id="garde-manger">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">Le garde-manger</span>
+      <h2>Les gourmandises <em>de saison</em></h2>
+    </div>
+    <div class="etag">
+      <article class="pot p1 rev"><img src="img/confiture-goyave.jpg" alt="Confiture extra artisanale bio à la goyave" loading="lazy"><div class="txt"><h3>Confiture de goyave</h3><p>La goyave des Hauts, en confiture extra artisanale.</p></div></article>
+      <article class="pot p2 rev"><img src="img/peche-geranium.jpg" alt="Pot de confiture pêche et géranium" loading="lazy"><div class="txt"><h3>Pêche & géranium</h3><p>Une alliance parfumée, signée du jardin.</p></div></article>
+      <article class="pot p3 rev"><img src="img/peches-sirop.jpg" alt="Pêches au sirop en bocaux" loading="lazy"><div class="txt"><h3>Pêches au sirop</h3><p>Pêches, eau, citron et sucre de canne.</p></div></article>
+      <div class="liste">
+        <div class="carte-t rev"><h3>Fruits séchés</h3><ul><li>Goyaves</li><li>Bananes</li><li>Tangors</li><li>Citrons</li></ul><p>Séchés sur l’exploitation, pour garder toute la saveur du fruit.</p></div>
+        <div class="carte-t miel rev"><h3>Nectars & café</h3><ul><li>Nectar de goyave</li><li>Café Bourbon pointu bio</li><li>Fruits frais de saison</li></ul><p>Le café emblématique de l’île, cultivé en bio.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap tete rev">
+    <div><span class="kick">La vie au jardin</span><h2>Au fil <em>des saisons</em></h2></div>
+    <span class="astuce">Faites défiler du doigt →</span>
+  </div>
+  <div class="rail">
+    <figure><img src="img/fraises.jpg" alt="Fraisiers chargés de fruits" loading="lazy"><figcaption>Les fraises, en octobre</figcaption></figure>
+    <figure><img src="img/agrumes.jpg" alt="Végétation et fleurs orangées au jardin" loading="lazy"><figcaption>Couleurs du jardin</figcaption></figure>
+    <figure><img src="img/racines.jpg" alt="Légumes racines fraîchement sortis de terre" loading="lazy"><figcaption>Tout juste sortis de terre</figcaption></figure>
+    <figure><img src="img/jardin-fleuri.jpg" alt="Massif fleuri jaune et orange" loading="lazy"><figcaption>Le jardin en fleurs</figcaption></figure>
+    <figure><img src="img/bouquet.jpg" alt="Bouquet de fleurs bleues dans un vase blanc" loading="lazy"><figcaption>Un bouquet cueilli sur place</figcaption></figure>
+    <figure><img src="img/allee.jpg" alt="Allée verdoyante vers une porte bleue" loading="lazy"><figcaption>Une allée sous la verdure</figcaption></figure>
+    <figure><img src="img/arbuste.jpg" alt="Arbuste aux feuilles rouges dans la verdure" loading="lazy"><figcaption>Touches de rouge</figcaption></figure>
+    <figure><img src="img/couchant.jpg" alt="Coucher de soleil orangé sur l’horizon" loading="lazy"><figcaption>Le soir sur la Plaine</figcaption></figure>
+  </div>
+</section>
+
+<section class="commande" id="commande">
+  <div class="wrap">
+    <div class="rev">
+      <span class="kick">Commander</span>
+      <h2>Votre panier <em>du jardin</em></h2>
+      <p class="intro">Choisissez vos gourmandises : la demande arrive toute prête sur WhatsApp, et nous vous répondons pour le retrait.</p>
+      <div class="lieu"><b>Vente directe à la ferme</b>Au pied du Piton Hyacinthe · La Plaine des Cafres</div>
+    </div>
+    <div class="boite rev">
+      <div id="produits"></div>
+      <div class="retrait"><p>Retrait souhaité</p>
+        <div class="puces">
+          <button type="button" class="puce" aria-pressed="true">À la ferme</button>
+          <button type="button" class="puce" aria-pressed="false">On en parle</button>
+        </div>
+      </div>
+      <div class="apercu" id="apercu" aria-live="polite"></div>
+      <div class="btns">
+        <a class="btn wa" id="wa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+        <a class="btn contour" href="mailto:lesgourmandisesdujardin974@gmail.com">Écrire un mail</a>
+      </div>
+      <p class="note">Démonstration : sur la page finale, le message part directement vers votre WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <h2 class="rev">À bientôt<br>à la <em>Plaine des Cafres</em></h2>
+    <ul class="rev">
+      <li><a href="tel:+262692526124">0692 52 61 24</a></li>
+      <li><a href="mailto:lesgourmandisesdujardin974@gmail.com">lesgourmandisesdujardin974@gmail.com</a></li>
+      <li>Piton Hyacinthe · La Plaine des Cafres</li>
+      <li><a href="https://www.facebook.com/profile.php?id=112393685230492" target="_blank" rel="noopener">Suivre sur Facebook →</a></li>
+      <li><a href="https://www.instagram.com/le_monde_d_elsa_et_fred/" target="_blank" rel="noopener">Suivre sur Instagram →</a></li>
+    </ul>
+  </div>
+  <p class="wrap mini">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications des Gourmandises du Jardin.</p>
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".rev").forEach(function(el){io.observe(el)});
+var noms=["Confiture de goyave","Confiture pêche & géranium","Pêches au sirop","Nectar de goyave","Fruits séchés","Café Bourbon pointu bio"],q={},box=document.getElementById("produits");
+noms.forEach(function(n,i){q[n]=0;var d=document.createElement("div");d.className="ligne-p";
+ d.innerHTML='<span>'+n+'</span><div class="qte"><button type="button" aria-label="Retirer '+n+'">−</button><output id="q'+i+'">0</output><button type="button" aria-label="Ajouter '+n+'">+</button></div>';
+ var b=d.querySelectorAll("button");b[0].onclick=function(){q[n]=Math.max(0,q[n]-1);maj()};b[1].onclick=function(){q[n]=Math.min(20,q[n]+1);maj()};box.appendChild(d)});
+var retrait="À la ferme";
+document.querySelector(".retrait .puces").addEventListener("click",function(e){var b=e.target.closest(".puce");if(!b)return;
+ document.querySelectorAll(".retrait .puce").forEach(function(x){x.setAttribute("aria-pressed",x===b)});retrait=b.textContent.trim();maj()});
+function maj(){var l=[];noms.forEach(function(n,i){document.getElementById("q"+i).textContent=q[n];if(q[n])l.push("• "+q[n]+" × "+n)});
+ var t="Bonjour Les Gourmandises du Jardin !\n"+(l.length?"Je souhaiterais :\n"+l.join("\n"):"Je souhaiterais passer commande.")+"\nRetrait : "+(retrait==="À la ferme"?"à la ferme":"on en parle ensemble")+".";
+ document.getElementById("apercu").textContent=t;document.getElementById("wa").href="https://wa.me/262692526124?text="+encodeURIComponent(t)}
+maj();
+/* Brume des Hauts + feuilles qui tombent */
+var cv=document.getElementById("brume");if(!cv||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var cx=cv.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),F=[],B=[],run=true;
+function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener("resize",size);
+var cols=["#6f8f4e","#8fae5f","#c2405a","#d9a441"],N=W<600?11:20;
+function feuille(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,s:5+Math.random()*7,v:.35+Math.random()*.5,w:Math.random()*6.28,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:.35+Math.random()*.35,c:cols[Math.random()<.75?Math.floor(Math.random()*2):2+Math.floor(Math.random()*2)]}}
+for(var i=0;i<N;i++)F.push(feuille(true));
+for(var j=0;j<4;j++)B.push({x:Math.random()*W,y:H*(.2+Math.random()*.7),r:180+Math.random()*220,v:.12+Math.random()*.15});
+function draw(){if(!run)return;cx.clearRect(0,0,W,H);
+ B.forEach(function(b){b.x+=b.v;if(b.x-b.r>W)b.x=-b.r;var g=cx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.r);g.addColorStop(0,"rgba(255,255,255,.07)");g.addColorStop(1,"rgba(255,255,255,0)");cx.fillStyle=g;cx.beginPath();cx.arc(b.x,b.y,b.r,0,6.29);cx.fill()});
+ F.forEach(function(p,i){p.y+=p.v;p.w+=.012;p.x+=Math.sin(p.w)*.6;p.a+=p.va;
+  cx.save();cx.globalAlpha=p.o;cx.translate(p.x,p.y);cx.rotate(p.a);cx.fillStyle=p.c;
+  cx.beginPath();cx.moveTo(0,-p.s);cx.quadraticCurveTo(p.s*.8,0,0,p.s);cx.quadraticCurveTo(-p.s*.8,0,0,-p.s);cx.fill();
+  cx.globalAlpha=p.o*.6;cx.strokeStyle="rgba(255,255,255,.5)";cx.lineWidth=.6;cx.beginPath();cx.moveTo(0,-p.s*.9);cx.lineTo(0,p.s*.9);cx.stroke();cx.restore();
+  if(p.y>H+20)F[i]=feuille(false)});
+ requestAnimationFrame(draw)}
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+</body>
+</html>
