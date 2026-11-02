@@ -4,27 +4,21 @@
    ============================================================ */
 (function () {
   "use strict";
-  const KEY = "reserve-marine-lagon-v1";
-  const defaut = () => ({
-    faits: { 1: false, 2: false, 3: false, 4: false },
-    nom: "", equipe: [], tour: 0, public: "famille", lang: "fr", theme: "lagon",
-    taille: 1, facile: false, son: true, intro: false, edits: {}
-  });
+  const KEY = "reserve-marine-lagon-v2";
+  const defaut = () => ({ faits: {}, etoiles: {}, public: "famille", theme: "lagon", taille: 1, son: true, intro: false });
   let mem = null;
   function charge() {
     if (mem) return mem;
     try { mem = Object.assign(defaut(), JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) { mem = defaut(); }
-    mem.faits = Object.assign(defaut().faits, mem.faits || {});
     return mem;
   }
   function sauve() { try { localStorage.setItem(KEY, JSON.stringify(mem)); } catch (e) { /* mode privé : on continue en mémoire */ } }
   window.Store = {
     get(k) { return charge()[k]; },
     set(k, v) { charge()[k] = v; sauve(); },
-    fait(id, v) { charge().faits[id] = v !== false; sauve(); },
+    fait(id, v, etoiles) { const c = charge(); c.faits[id] = v !== false; if (etoiles) c.etoiles[id] = Math.max(c.etoiles[id] || 0, etoiles); if (v === false) delete c.etoiles[id]; sauve(); },
     faits() { return charge().faits; },
     count() { return Object.values(charge().faits).filter(Boolean).length; },
-    // remise à zéro de la partie (on garde les réglages et les textes modifiés dans l'éditeur)
-    reset() { const c = charge(); mem = Object.assign(defaut(), { theme: c.theme, taille: c.taille, facile: c.facile, son: c.son, lang: c.lang, public: c.public, edits: c.edits }); sauve(); }
+    reset() { const c = charge(); mem = Object.assign(defaut(), { theme: c.theme, taille: c.taille, son: c.son, public: c.public }); sauve(); }
   };
 })();

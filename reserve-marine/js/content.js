@@ -1,106 +1,185 @@
 /* ============================================================
-   CONTENT.JS — Tous les textes du prototype « Enquête au bord du lagon ».
-   Faits sur les bons gestes : « Guide des écogestes » de la Réserve naturelle marine
-   de La Réunion (R1, voir SOURCES.md). Zouzou est un personnage FICTIF.
+   CONTENT.JS — Tous les textes de « Enquête au bord du lagon »
+   (prototype pour la Réserve naturelle marine de La Réunion).
+   Faits : « Guide des écogestes » de la Réserve [R5] et pages publiques [R1-R6],
+   voir SOURCES.md (page du guide indiquée pour chaque fait).
+   Zouzou la zourite est un personnage FICTIF : elle « parle » (convention de fiction).
+   Rien n'est définitif : tout est à relire et à réécrire avec les équipes de la Réserve.
    ============================================================ */
 (function () {
   "use strict";
-  const CONFIG = { versionComplete: false };
+  // VERSION DÉMO : étapes 1 à 3 jouables, 4 et 5 présentées (verrouillées).
+  // Passer à true quand les étapes 4 et 5 existeront.
+  const CONFIG = { versionComplete: false, etapesJouables: 3, total: 5 };
 
+  // ---------- écran « Le projet » ----------
   const projet = {
-    kicker: "Prototype · à co-écrire avec la Réserve naturelle marine",
+    lieu: "Réserve marine · La Réunion",
+    badge: "Proposition · à imaginer et co-écrire avec vos équipes",
     titre: "Enquête au bord du lagon",
-    idee: "Zouzou, une petite zourite, ne retrouve plus sa maison dans le récif. Les familles et les classes mènent l'enquête sur la plage, sans entrer dans l'eau, et découvrent les bons gestes qui protègent les coraux.",
-    cartes: [
-      { ico: "📱", t: "Un QR code, c'est parti", d: "Un QR code sur place ouvre l'aventure : pas de compte, pas de téléchargement." },
-      { ico: "🏖️", t: "Jouable depuis la plage", d: "Des énigmes et des mini-jeux tactiles, étape après étape, sans entrer dans l'eau." },
-      { ico: "📶", t: "Sans connexion", d: "Une fois ouverte, l'aventure se rejoue hors réseau, même sur la plage." },
-      { ico: "📖", t: "Vos contenus, vos mots", d: "Les messages viennent de vos documents (guide des écogestes…) et sont relus par vos équipes." },
-      { ico: "🎭", t: "Version animée en personnage", d: "Pour un événement, Jonathan peut jouer l'aventure en direct, en costume." },
-      { ico: "🌐", t: "Français, kréol, anglais", d: "Prévus dans la version complète, avec voix enregistrées." }
+    sous: "Une aventure sur téléphone, en complément de vos animations",
+    idee: "Zouzou la zourite ne reconnaît plus son coin de récif. Familles et classes mènent l'enquête <b>depuis la plage, sans entrer dans l'eau</b>, et découvrent en jouant <b>les bons gestes de votre guide des écogestes</b>. On scanne un QR code : rien à télécharger, et ça marche <b>sans réseau</b>.",
+    complete: [
+      ["🪸", "5 étapes au bord du lagon", "Aujourd'hui, vous en jouez trois.", "large"],
+      ["👨‍👩‍👧", "Familles et classes", "Le même jeu, un ton adapté à chacun"],
+      ["🗣️", "Français, kréol, anglais", "Avec de vraies voix enregistrées"],
+      ["📶", "Hors connexion", "Une fois ouverte, plus besoin de réseau"],
+      ["🔳", "Un QR code pour démarrer", "Sur un panneau, un flyer, un livret"],
+      ["✏️", "Vos contenus, vos mots", "Relus et validés par vos équipes"],
+      ["📊", "Statistiques anonymes", "Ce qui est joué, ce qui est retenu"]
     ],
-    mention: "Zouzou est un personnage inventé pour l'histoire. Les contenus sont issus du guide des écogestes de la Réserve et restent à relire par ses équipes."
+    possible: [
+      ["🔭", "Réalité augmentée", "Faire apparaître le récif et ses habitants sur l'écran, depuis la plage"],
+      ["🎧", "Parcours sonore", "Des voix et des sons du lagon, au fil de la promenade"],
+      ["🎭", "En personnage", "Jonathan anime l'aventure en direct lors de vos événements"],
+      ["🗺️", "Autres lieux, autres héros", "Un autre personnage, une autre plage de la Réserve"]
+    ],
+    fiction: "Zouzou est un personnage inventé pour l'histoire. Les messages viennent du guide des écogestes de la Réserve et restent à relire par vos équipes."
   };
 
+  // ---------- accueil du jeu ----------
+  const accueil = {
+    kicker: "Réserve naturelle marine · La Réunion",
+    titre: "Enquête au bord du lagon",
+    accroche: "Zouzou la zourite a besoin de toi. Mène l'enquête sur la plage, sans entrer dans l'eau, et deviens gardien du lagon.",
+    promesses: [{ n: "5", t: "étapes" }, { n: "0", t: "réseau requis" }, { n: "15", t: "min environ*" }]
+  };
+  const publics = {
+    famille: { ico: "👨‍👩‍👧", t: "Famille", desc: "À jouer ensemble, en se passant le téléphone (dès 7 ans environ, à valider avec vous)." },
+    classe: { ico: "🎓", t: "Classe", desc: "Consignes scolaires, mots-clés et une question à débattre à chaque étape. Fiche enseignant disponible." }
+  };
+
+  // ---------- intro (Zouzou se présente) ----------
   const intro = [
-    { qui: "zouzou", expr: "triste", t: "Psst… par ici ! Je suis Zouzou la zourite. Mon trou dans le récif est tout abîmé, et je ne sais pas qui a fait ça. Tu veux bien m'aider à trouver ?" },
-    { qui: "zouzou", expr: "clin", t: "Il y a des indices partout sur la plage. Pour chaque indice, scanne le QR code… ou touche « Je suis à l'étape ». À la fin, on saura qui a abîmé ma maison !" }
+    { expr: "triste", t: "Psst… ici, dans l'eau ! Je suis Zouzou, une zourite. Depuis quelque temps, mon coin de récif change : des déchets, des branches de corail cassées… Je ne comprends pas ce qui se passe." },
+    { expr: "surpris", t: "Moi, quand j'ai peur, je crache un nuage d'encre et je file ! Mais là, l'encre ne sert à rien : j'ai besoin d'un enquêteur. Quelqu'un qui reste au sec, sur la plage, et qui ouvre l'œil." },
+    { expr: "clin", t: "Sur la plage, il y a 5 étapes. À chacune, un défi et un indice. Sur place, tu scannes le QR code ; ici, tu touches simplement l'étape. On y va ?" }
   ];
 
-  // lieu : nom GÉNÉRIQUE (à choisir avec la Réserve selon le site retenu)
+  // ---------- les 5 étapes ----------
+  // lieu : GÉNÉRIQUE (le site et les emplacements des QR codes sont à choisir avec la Réserve)
   const etapes = [
-    { id: 1, ico: "🏖️", jeu: "tri", titre: "Sur la plage",
-      lieu: "L'entrée de la plage (lieu à choisir avec vous)",
-      apercu: "",
-      brief: "Première énigme : regarde cette plage. Certaines choses n'ont rien à faire là, parce qu'elles finissent dans le lagon. Touche-les pour les retirer, et garde les bons gestes !",
-      consigne: "Touche ce qui n'a rien à faire sur la plage. Laisse les bons gestes !",
-      quiz: { q: "Après le pique-nique, que fait-on de ses déchets ?",
-        opts: ["On les laisse : le vent s'en occupe", "On les ramène chez soi", "On les enterre dans le sable"], ok: 1,
-        bravo: "Oui ! Tout ce qui est abandonné sur l'île finit dans le lagon, dans l'océan. Les déchets, on les ramène chez soi.",
-        rate: "Cherche encore : où finit ce que le vent emporte ?" },
-      fait: "Un mégot pollue 500 litres d'eau de mer et met jusqu'à 15 ans à se dégrader. Un sac plastique, plus de 400 ans.",
-      src: "R1 · Guide des écogestes, « Profiter sans polluer »",
-      indice: "Les déchets laissés sur la plage finissent dans le lagon.",
-      classe: { notion: "Impact des activités humaines sur un milieu · déchets.", mots: ["lagon", "déchet", "micro-plastique", "geste responsable"], q: "Que devient un déchet laissé sur la plage ? Où peut-il voyager ?" },
-      fin: "Bien joué ! La plage est plus propre. Mais ma maison reste abîmée… suis-moi vers le lagon !" },
-    { id: 2, ico: "🏄", jeu: "lagon", titre: "Traverser sans casser",
-      lieu: "Le bord du lagon, face au récif (lieu à choisir avec vous)",
-      apercu: "",
-      brief: "Deuxième énigme : et si c'étaient les promeneurs et les paddles qui abîmaient mon récif ? Aide ce paddle à traverser le lagon sans toucher les coraux !",
-      consigne: "Touche les cases CLAIRES (le sable) pour avancer jusqu'au drapeau. Les cases sombres, ce sont les coraux !",
-      quiz: { q: "Le corail est…", opts: ["Une plante", "Une pierre", "Un animal"], ok: 2,
-        bravo: "Exact ! Le corail est un animal : si on lui marche dessus, on le tue. On reste donc au-dessus du sable, dans les zones claires.",
-        rate: "Indice : si je lui marche dessus, je risque de le tuer…" },
-      fait: "Les coraux sont des animaux : de petits polypes, qu'on risque de tuer en cassant une branche ou en marchant dessus.",
-      src: "R1 · Guide des écogestes, « Naviguer sans casser »",
-      indice: "Piétiner ou toucher le corail abîme de petits animaux fragiles.",
-      classe: { notion: "Êtres vivants · classification (le corail est un animal).", mots: ["corail", "polype", "récif", "lagon"], q: "Pourquoi dit-on qu'un récif est « vivant » ?" },
-      fin: "Bravo ! Avec toi, mon récif est à l'abri. Il me reste un indice, mais il faudra revenir pour la suite." },
-    { id: 3, ico: "🟠", jeu: null, titre: "Les zones de quiétude", lieu: "À définir", apercu: "Repérer sur la carte les zones où les animaux ont besoin de tranquillité." },
-    { id: 4, ico: "🐠", jeu: null, titre: "Admirer sans déranger", lieu: "À définir", apercu: "Observer les poissons sans les nourrir ni les déranger." }
+    { id: 1, ico: "🏖️", jeu: "plage", titre: "Le sable n'est pas un cendrier",
+      lieu: "L'entrée de la plage",
+      brief: { expr: "triste", t: "Première piste : la plage. Le vent emporte tout ce qu'on oublie… et tout finit chez moi, dans le lagon. Ramasse ce qui n'a rien à faire là. Mais attention : certaines choses sont à leur place sur le sable !" },
+      consigne: "Touche les déchets pour les mettre dans le sac. Laisse ce qui est naturel. Et vite : le vent pousse un sac plastique vers l'eau !",
+      quiz: { q: "Un seul mégot jeté dans le sable peut polluer…", opts: ["5 litres d'eau de mer", "50 litres d'eau de mer", "500 litres d'eau de mer"], ok: 2,
+        bravo: "Oui : 500 litres d'eau de mer, et il met jusqu'à 15 ans à se dégrader. Le sable n'est pas un cendrier !",
+        rate: "Plus que ça ! C'est tout petit, un mégot… mais ça pollue énormément." },
+      fait: "Un sac plastique met plus de 400 ans à se dégrader. Il peut tuer une tortue, blesser un dauphin et même étouffer les coraux. Avec le temps, les plastiques deviennent des micro-plastiques qui se retrouvent dans toute la chaîne alimentaire, jusque dans nos assiettes.",
+      src: "R5 · guide des écogestes, « Profiter sans polluer »",
+      indice: "Indice n° 1 : des déchets oubliés sur la plage, emportés par le vent jusqu'au lagon.",
+      carte: "bernard",
+      classe: { notion: "Impact des activités humaines sur un milieu : les déchets.", mots: ["déchet", "dégradation", "micro-plastique", "chaîne alimentaire"], q: "Où va un déchet oublié sur la plage ? Que devient-il au bout de longues années ?" },
+      fin: { expr: "content", t: "Merci ! Et tu as laissé les coquillages et le corail mort à leur place : ils servent de maison aux bernard-l'ermite et deviennent, avec le temps, le sable blanc de la plage." } },
+
+    { id: 2, ico: "🏄", jeu: "paddle", titre: "Naviguer sans casser",
+      lieu: "Le bord du lagon, face aux paddles",
+      brief: { expr: "surpris", t: "Deuxième piste : des branches de mon récif sont cassées ! Les paddles et les kayaks passent juste au-dessus. Guide ce paddle jusqu'au banc de sable… sans toucher un seul massif de corail." },
+      consigne: "Fais glisser ton doigt pour guider le paddle. Reste sur les zones CLAIRES (le sable) et évite les zones SOMBRES (les coraux). Attention au courant !",
+      quiz: { q: "Le corail, c'est…", opts: ["une plante", "une pierre", "un animal"], ok: 2,
+        bravo: "Exact ! Le corail est fait de petits animaux, les polypes. Si on marche dessus ou si on le cogne avec une pagaie, on les écrase.",
+        rate: "Pas tout à fait… Indice : si je marche dessus, je l'écrase… et je le tue." },
+      fait: "Les coraux sont de petits polypes qui fabriquent un squelette calcaire, en bouquet branchu ou en boule massive. Avec un paddle, un kayak ou un matelas, on reste au-dessus des zones claires de sable : à cause du vent ou du courant, on peut vite se retrouver poussé au-dessus des massifs sans le vouloir.",
+      src: "R5 · guide des écogestes, « Explorer sans piétiner » et « Naviguer sans casser »",
+      indice: "Indice n° 2 : des pagaies et des pieds qui touchent le corail, souvent sans le faire exprès.",
+      carte: "corail",
+      classe: { notion: "Le vivant : le corail est un animal (des polypes et leur squelette calcaire).", mots: ["corail", "polype", "récif", "zone sableuse"], q: "Pourquoi dit-on que le récif est « vivant » ? Que se passe-t-il si des milliers de visiteurs le touchent un peu ?" },
+      fin: { expr: "content", t: "Bravo, tu es resté au-dessus du sable ! Les zones claires pour passer, les zones sombres pour admirer de loin : c'est simple, et ça protège mes voisins les polypes." } },
+
+    { id: 3, ico: "🎒", jeu: "sac", titre: "Le sac de plage",
+      lieu: "À l'ombre des filaos",
+      brief: { expr: "clin", t: "Troisième piste : ce qu'on emporte à la plage. Certains objets protègent le lagon, d'autres le dérangent sans qu'on s'en rende compte. Prépare le sac idéal pour une journée au bord de l'eau !" },
+      consigne: "Glisse dans le sac (ou touche) les objets qui protègent le lagon et toi. Les autres restent à la maison.",
+      quiz: { q: "Donner du pain aux poissons du lagon, c'est…", opts: ["un bon goûter pour eux", "les rendre malades et plus faciles à braconner", "sans aucun effet"], ok: 1,
+        bravo: "Oui ! Le récif leur offre déjà « le gîte et le couvert ». Le pain les rend malades et plus vulnérables au braconnage.",
+        rate: "Non… Le récif les nourrit déjà très bien. Et le pain, ce n'est pas fait pour eux." },
+      fait: "Pour se protéger du soleil sans abîmer le récif : des vêtements protecteurs (chapeau, lunettes, T-shirt ou Lycra à manches longues), pas d'exposition entre 10 h et 16 h, et une crème solaire minérale, moins nocive pour les récifs, appliquée au moins 20 minutes avant la baignade.",
+      src: "R5 · guide des écogestes, « Admirer sans déranger » et « Se protéger sans intoxiquer »",
+      indice: "Indice n° 3 : du pain pour les poissons, des épuisettes, de la crème qui file dans l'eau.",
+      carte: "baliste",
+      classe: { notion: "Relations entre les êtres vivants et leur milieu : se nourrir, se protéger.", mots: ["récif", "nourrissage", "crème minérale", "braconnage"], q: "Pourquoi un geste « gentil », comme nourrir un poisson, peut-il lui faire du mal ?" },
+      fin: { expr: "fete", t: "Un sac parfait ! Pas de pain, pas d'épuisette, pas de seau à coquillages : tu viens admirer sans déranger. Il reste deux étapes à l'enquête…" } },
+
+    { id: 4, ico: "🟡", jeu: null, titre: "Visiter sans dépasser",
+      lieu: "Face aux balises jaunes",
+      apercu: "Repérer les balises jaunes des zones de quiétude, où toute activité est interdite pour laisser le récif se repeupler." },
+    { id: 5, ico: "🐙", jeu: null, titre: "Chez Zouzou",
+      lieu: "Le point de vue sur le récif",
+      apercu: "Réunir les indices, répondre à la grande question : qui a abîmé le coin de récif de Zouzou ?" }
   ];
 
-  const tri = [
-    { ico: "🚬", nom: "un mégot", mal: true, msg: "Un mégot pollue 500 litres d'eau de mer et met jusqu'à 15 ans à se dégrader." },
-    { ico: "👒", nom: "un chapeau et un T-shirt", mal: false, msg: "Des vêtements qui protègent du soleil : un bon geste, sans crème en trop." },
-    { ico: "🛍️", nom: "un sac plastique", mal: true, msg: "Un sac plastique peut tuer une tortue, blesser un dauphin et même étouffer les coraux." },
-    { ico: "🏰", nom: "un château de sable", mal: false, msg: "Jouer dans le sable ne nuit pas à l'écosystème, tant qu'on ne ramène rien à la maison." },
-    { ico: "🍞", nom: "du pain pour les poissons", mal: true, msg: "Nourrir les poissons avec du pain, c'est surtout les rendre malades et plus vulnérables au braconnage." },
-    { ico: "🧴", nom: "une crème solaire minérale", mal: false, msg: "Une crème minérale est moins nocive pour les récifs, à appliquer au moins 20 minutes avant la baignade." },
-    { ico: "🐚", nom: "un coquillage dans le seau", mal: true, msg: "Prendre un coquillage, c'est priver un bernard-l'ermite de sa protection. Sa place est sur la plage !" },
-    { ico: "🗑️", nom: "un sac pour ramener ses déchets", mal: false, msg: "Voilà un bon réflexe : on ramène ses déchets chez soi." },
-    { ico: "🥤", nom: "un gobelet oublié", mal: true, msg: "Tout ce qui est abandonné sur l'île finit dans le lagon et dans l'océan." }
+  // ---------- étape 1 : la plage ----------
+  // x, y en unités du dessin (360 × 430) ; mal = déchet à ramasser
+  const plage = [
+    { id: "canette", nom: "une canette", mal: true, x: 64, y: 268, msg: "Une canette de moins dans le lagon !" },
+    { id: "bouteille", nom: "une bouteille en plastique", mal: true, x: 272, y: 300, msg: "Ramassée ! Le plastique ne disparaît jamais vraiment." },
+    { id: "megot", nom: "un mégot", mal: true, x: 186, y: 352, msg: "Bien vu ! Ce petit mégot aurait pollué 500 litres d'eau de mer." },
+    { id: "gobelet", nom: "un gobelet", mal: true, x: 118, y: 372, msg: "Hop, dans le sac ! On ramène ses déchets chez soi." },
+    { id: "chips", nom: "un paquet de chips", mal: true, x: 300, y: 384, msg: "Le vent l'aurait emporté jusqu'à l'eau." },
+    { id: "sac", nom: "un sac plastique", mal: true, x: 150, y: 250, vent: true, msg: "Rattrapé ! Un sac plastique peut tuer une tortue et étouffer les coraux." },
+    { id: "coquillage", nom: "un coquillage", mal: false, x: 236, y: 266, msg: "On le laisse : un coquillage peut devenir la maison d'un bernard-l'ermite." },
+    { id: "corailmort", nom: "un morceau de corail mort", mal: false, x: 44, y: 340, msg: "On le laisse : avec le temps, les débris de corail deviennent le sable blanc." },
+    { id: "bernard", nom: "un bernard-l'ermite", mal: false, x: 330, y: 334, msg: "Chut… c'est un bernard-l'ermite ! Il nettoie la plage : on le laisse tranquille." },
+    { id: "chateau", nom: "un château de sable", mal: false, x: 214, y: 404, msg: "Un château de sable ne fait aucun mal… tant qu'on ne ramène rien à la maison !" }
   ];
 
-  // grille du paddle : S = sable (clair), C = corail (sombre) ; départ en haut à gauche, arrivée en haut à droite
-  const lagon = { grille: ["SCCCS", "SSCSS", "CSCSC", "CSSSC", "CCCCC"], depart: [0, 0], arrivee: [0, 4],
-    ko: ["Aïe ! Ça, c'est du corail : on le contourne.", "Pas par là : ce sont de petits animaux fragiles.", "Les cases sombres, ce sont les coraux. On reste sur le sable !"] };
+  // ---------- étape 3 : le sac de plage ----------
+  const sac = [
+    { id: "chapeau", nom: "Chapeau", ok: true, msg: "Le chapeau protège du soleil, sans une goutte de crème." },
+    { id: "pain", nom: "Pain pour les poissons", ok: false, msg: "Non ! Le pain rend les poissons malades et plus faciles à braconner." },
+    { id: "lycra", nom: "T-shirt à manches longues", ok: true, msg: "Parfait : un T-shirt ou un Lycra à manches longues, c'est moins de crème dans l'eau." },
+    { id: "epuisette", nom: "Épuisette", ok: false, msg: "On la laisse : poursuivre un poisson l'éloigne de son abri et le rend vulnérable." },
+    { id: "creme", nom: "Crème solaire minérale", ok: true, msg: "Oui : une crème minérale, moins nocive pour les récifs, au moins 20 minutes avant la baignade." },
+    { id: "seau", nom: "Seau à coquillages", ok: false, msg: "On s'en passe : les coquillages sont plus utiles sur la plage que sur une étagère." },
+    { id: "dechets", nom: "Sac pour mes déchets", ok: true, msg: "Le bon réflexe : on ramène ses déchets chez soi." },
+    { id: "lunettes", nom: "Lunettes de soleil", ok: true, msg: "Bien vu : les lunettes font partie des protections conseillées." }
+  ];
 
-  const dossier = {
-    titre: "Le dossier de Zouzou",
-    q: "Qui a abîmé la maison de Zouzou ?",
-    reponse: "Un peu tout le monde, sans le vouloir. Un déchet oublié, un pas sur le corail, un coquillage emporté : chaque petit geste compte, et chacun peut aussi bien faire pour le protéger."
+  // ---------- cartes du carnet du lagon ----------
+  const cartes = {
+    bernard: { nom: "Le bernard-l'ermite", sous: "Crustacé · habitant des plages",
+      t: "Il s'abrite dans une coquille vide. C'est un charognard : il évite la prolifération des bactéries et des maladies.", src: "R5 · « Jouer sans ramener »" },
+    corail: { nom: "Le corail", sous: "Animal · bâtisseur du récif",
+      t: "De petits polypes fragiles fabriquent un squelette calcaire. Vivant, il est coloré ; mort, il sert de support aux nouveaux coraux et d'abri à de petits animaux.", src: "R5 · « Explorer sans piétiner »" },
+    baliste: { nom: "Le baliste Picasso", sous: "Poisson · « bourse »",
+      t: "Il projette de l'eau avec sa bouche pour retourner les oursins dont il se nourrit.", src: "R5 · page à colorier « Le baliste Picasso (bourse) »" }
   };
 
-  const fin = {
-    gestes: [
-      { ico: "🗑️", t: "Je ramène mes déchets chez moi." },
-      { ico: "🏖️", t: "Je marche et je navigue au-dessus du sable, jamais sur le corail." },
-      { ico: "🐚", t: "Je laisse les coquillages à leur place." },
-      { ico: "🐠", t: "Je ne nourris pas les poissons." },
-      { ico: "🧴", t: "Je choisis une crème solaire minérale et des vêtements protecteurs." }
-    ],
-    src: "R1 · Guide des écogestes de la Réserve naturelle marine de La Réunion"
+  // ---------- fin de la démo ----------
+  const findemo = {
+    suite: [
+      ["🟡", "2 autres étapes", "Les zones de quiétude, puis le récif de Zouzou"],
+      ["🕵️", "La grande révélation", "Qui a abîmé le coin de récif de Zouzou ? Un peu tout le monde, sans le vouloir…"],
+      ["📒", "Le carnet du lagon complet", "Une carte par habitant du récif rencontré"],
+      ["🏅", "Le diplôme de gardien du lagon", "À garder en image ou à imprimer"]
+    ]
   };
+
+  // ---------- bons gestes (fin d'aventure et fiche) ----------
+  const gestes = [
+    ["🗑️", "Je ramène mes déchets chez moi."],
+    ["🏝️", "Je marche et je navigue au-dessus du sable, jamais sur les coraux."],
+    ["🐚", "Je laisse coquillages et corail mort à leur place."],
+    ["🐠", "J'admire les poissons sans les nourrir ni les poursuivre."],
+    ["🧴", "Je me protège du soleil avec des vêtements et une crème minérale."],
+    ["🟡", "Je respecte les balises jaunes des zones de quiétude."]
+  ];
 
   const credits = [
-    "Prototype conçu par Jonathan Bou (Atma digital) pour la Réserve naturelle marine de La Réunion. Proposition à co-construire, rien n'est officiel.",
-    "Zouzou est un personnage FICTIF. Elle « parle » : convention de fiction, à signaler aux classes.",
-    "Messages sur les bons gestes : guide des écogestes de la Réserve (voir SOURCES.md), à relire par vos équipes.",
-    "Illustrations, sons et générateur de QR codes : faits maison, sans ressource externe. Aucune donnée n'est collectée."
+    "Prototype conçu et développé par Jonathan Bou (Atma digital) pour la Réserve naturelle marine de La Réunion. C'est une proposition : rien n'est officiel, tout peut changer.",
+    "Zouzou est un personnage FICTIF. Elle « parle » : c'est une convention de fiction, à signaler aux classes.",
+    "Messages sur les bons gestes : guide des écogestes de la Réserve (voir SOURCES.md), à relire et valider par vos équipes.",
+    "Illustrations, sons et QR codes : faits maison, sans aucune ressource externe. Aucune donnée n'est collectée, aucun compte n'est créé.",
+    "* Durée indicative, à mesurer sur place avec vous."
   ];
 
-  const demo = [["projet"], ["accueil"], ["intro", "0"], ["hub"], ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"], ["st2", "brief"], ["st2", "jeu"], ["st2", "quiz"], ["st2", "info"], ["findemo"], ["fiche"]];
+  // diaporama ?demo=1 : [écran, étape]
+  const demo = [["projet"], ["accueil"], ["intro", "0"], ["intro", "2"], ["hub"],
+    ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"],
+    ["st2", "brief"], ["st2", "jeu"], ["st2", "quiz"], ["st2", "info"],
+    ["st3", "brief"], ["st3", "jeu"], ["st3", "quiz"], ["st3", "info"],
+    ["findemo"], ["fiche"], ["qr"]];
 
-  window.Content = { CONFIG, projet, intro, etapes, tri, lagon, dossier, fin, credits, demo };
+  window.Content = { CONFIG, projet, accueil, publics, intro, etapes, plage, sac, cartes, findemo, gestes, credits, demo };
 })();
