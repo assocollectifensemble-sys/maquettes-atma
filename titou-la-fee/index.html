@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Titou La Fée — fait main avec amour, Saint-Benoît</title>
+<meta name="description" content="Créations éco-responsables cousues main, broderies personnalisées et bijoux brodés légers, à Saint-Benoît, La Réunion.">
+<meta property="og:title" content="Titou La Fée — Offrez du fait main avec amour">
+<meta property="og:description" content="Bijoux brodés au fil Madeira, chouchous, sacs et broderies personnalisées : une page imaginée pour Titou La Fée.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/titou-la-fee/img/boucles-vie-en-rose-fuchsia.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/titou-la-fee/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F4EEE4; --cream-2:#EBE3D6; --paper:#FBF8F2;
+  --leaf:#9EDB83; --leaf-d:#5FAE45; --forest:#2C5A31; --forest-2:#3D6E42;
+  --gold:#D4A72C; --gold-l:#E9CB7A; --gold-d:#94711A;
+  --fuchsia:#D61F82; --fuchsia-d:#A8125F; --rose:#F7D3E5;
+  --ink:#24291F; --muted:#5D6657; --line:rgba(44,90,49,.16);
+  --serif:"Fraunces",Georgia,serif; --sans:"Figtree",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--fuchsia);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--forest);color:var(--cream);font-size:13px;padding:9px var(--pad);position:relative;z-index:3}
+.ribbon b{color:var(--gold-l)}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--fuchsia-d)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5.2vw,54px);line-height:1.04;letter-spacing:-.01em;color:var(--forest);margin:10px 0 16px}
+h2 em,h1 em{font-style:italic;color:var(--fuchsia)}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 80% 10%,#fff 0,var(--cream) 60%)}
+#dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero .in{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:clamp(26px,6vw,80px) var(--pad) clamp(48px,7vw,90px);display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.hero .in{grid-template-columns:1.05fr .95fr}}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:64px;height:64px;border-radius:50%;box-shadow:0 6px 18px -8px rgba(148,113,26,.6)}
+.brand span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold-d);line-height:1.4}
+h1{font-family:var(--serif);font-weight:400;color:var(--forest);font-size:clamp(46px,10vw,96px);line-height:.98;letter-spacing:-.02em;margin:22px 0 18px}
+h1 .w{display:inline-block;opacity:0;transform:translateY(18px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.lede{max-width:34ch;font-size:clamp(18px,2.3vw,21px);color:var(--forest-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--forest);transition:transform .2s,background .2s,color .2s,box-shadow .2s}
+.btn.main{background:var(--fuchsia);border-color:var(--fuchsia);color:#fff;animation:breathe 3.6s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-2px);background:var(--fuchsia-d)}
+.btn.ghost{color:var(--forest)}
+.btn.ghost:hover{background:var(--forest);color:var(--cream)}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(214,31,130,.12)}}
+/* tambour à broder */
+.hoop{position:relative;justify-self:center;width:min(86vw,470px);aspect-ratio:1}
+.hoop .screw{position:absolute;left:50%;top:-14px;width:34px;height:30px;transform:translateX(-50%);background:linear-gradient(90deg,#b88a2a,#e9cb7a,#b88a2a);border-radius:6px 6px 3px 3px;box-shadow:0 2px 0 #8d6a17}
+.hoop .ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 20deg,#c9963a,#e8c57a,#b8862c,#e3bc68,#c9963a);box-shadow:0 30px 60px -28px rgba(80,55,10,.55),inset 0 0 0 2px rgba(255,255,255,.35)}
+.hoop .fabric{position:absolute;inset:4.2%;border-radius:50%;overflow:hidden;background:#fff}
+.hoop .fabric img{width:100%;height:100%;object-fit:cover;object-position:50% 46%;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,1.5%)}}
+.hoop .stitch{position:absolute;inset:7.5%;border-radius:50%;border:2px dashed rgba(255,255,255,.8);animation:spin 70s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hoop .tag{position:absolute;right:-2%;bottom:3%;background:var(--paper);border:1.5px solid var(--gold);border-radius:14px;padding:9px 14px;max-width:62%;box-shadow:0 12px 26px -14px rgba(0,0,0,.4);transform:rotate(2deg)}
+.hoop .tag small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fuchsia-d);font-weight:700}
+.hoop .tag strong{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--forest);line-height:1.15;display:block}
+
+/* bandeau */
+.band{background:var(--fuchsia);color:#fff;overflow:hidden;white-space:nowrap;padding:13px 0;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.6vw,24px)}
+.band .track{display:inline-flex;animation:slide 32s linear infinite}
+.band span{padding:0 22px}
+.band span::after{content:"✦";font-style:normal;font-size:.7em;color:var(--gold-l);margin-left:44px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* bord cranté (ciseaux cranteurs) */
+.pinked{position:relative}
+.pinked::before{content:"";position:absolute;left:0;right:0;top:-13px;height:14px;background:linear-gradient(135deg,transparent 50%,var(--pk) 50%) 0 0/20px 14px,linear-gradient(225deg,transparent 50%,var(--pk) 50%) 0 0/20px 14px;background-repeat:repeat-x}
+
+/* geste */
+.geste{--pk:var(--paper);background:var(--paper);padding:clamp(60px,9vw,110px) var(--pad)}
+.geste .in{max-width:1080px;margin:0 auto;display:grid;gap:40px;align-items:start}
+@media(min-width:880px){.geste .in{grid-template-columns:.9fr 1.1fr}}
+.geste .photo{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -36px rgba(44,90,49,.6)}
+.geste .photo img{width:100%;height:100%;object-fit:cover}
+.geste .photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(251,248,242,.92);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;color:var(--forest)}
+.steps{position:relative;padding:6px 0 0 34px;margin-top:22px}.steps ol{list-style:none;padding:0}
+.steps .thread{position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:repeating-linear-gradient(to bottom,var(--gold) 0 9px,transparent 9px 16px);transform-origin:top;transform:scaleY(var(--p,0))}
+.steps .needle{position:absolute;left:3px;top:calc(10px + var(--p,0) * (100% - 40px));width:14px;height:22px;transition:top .1s linear}
+.steps li{position:relative;padding:0 0 22px}
+.steps li::before{content:"";position:absolute;left:-30px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--paper);border:2px solid var(--fuchsia)}
+.steps b{font-family:var(--serif);font-weight:600;font-size:clamp(22px,3vw,26px);color:var(--forest);display:block;line-height:1.2}
+.steps span{color:var(--muted)}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(23px,3vw,30px);line-height:1.25;color:var(--fuchsia-d);border-left:3px solid var(--gold);padding-left:18px;margin-top:10px}
+.src{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}
+
+/* bijoux */
+.bijoux{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad)}
+.bijoux .head{max-width:640px}
+.bijoux .head p{color:var(--muted)}
+.cards{display:grid;gap:22px;margin-top:30px}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--paper);border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 50px -30px rgba(214,31,130,.55)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.card .t{padding:16px 18px 20px}
+.card h3{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--forest);line-height:1.15}
+.card p{color:var(--muted);font-size:15.5px;margin-top:6px}
+.checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.checks span{background:var(--rose);color:var(--fuchsia-d);font-weight:700;font-size:14px;border-radius:999px;padding:7px 14px}
+
+/* cousu main */
+.cousu{--pk:var(--forest);background:var(--forest);color:var(--cream);padding:clamp(60px,9vw,100px) 0}
+.cousu .head{max-width:1080px;margin:0 auto 26px;padding:0 var(--pad)}
+.cousu .kicker{color:var(--leaf)}
+.cousu h2{color:var(--cream)}
+.cousu .head p{color:#D7E3D3;max-width:52ch}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--pad);padding:6px var(--pad) 20px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+.strip figure{flex:0 0 min(70vw,290px);scroll-snap-align:start}
+.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:#fff;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-5px) rotate(1deg)}
+.strip figcaption{font-family:var(--serif);font-size:19px;margin-top:9px;color:var(--cream)}
+.strip figcaption small{display:block;font-family:var(--sans);font-size:13.5px;color:#BFD3BA}
+.hint{padding:0 var(--pad);font-size:13px;color:#BFD3BA}
+
+/* s'aimerveiller */
+.ame{max-width:1080px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:34px;align-items:center}
+@media(min-width:860px){.ame{grid-template-columns:.85fr 1.15fr}}
+.ame .vis{position:relative;max-width:420px;justify-self:center;width:100%}
+.ame .vis img{border-radius:20px;box-shadow:0 26px 50px -30px rgba(168,18,95,.5);transform:rotate(-2deg)}
+.ame .vis figcaption{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
+.ame p{color:var(--forest-2);max-width:56ch}
+.ame p+p{margin-top:12px}
+.lagon{margin-top:22px;background:var(--paper);border-radius:18px;padding:18px 20px;border:1px solid var(--line)}
+.lagon b{color:var(--forest)}
+
+/* outil commande */
+.atelier{--pk:var(--cream-2);background:var(--cream-2);padding:clamp(60px,9vw,110px) var(--pad)}
+.atelier .in{max-width:1080px;margin:0 auto;display:grid;gap:34px}
+@media(min-width:900px){.atelier .in{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.atelier .intro p{color:var(--muted);max-width:44ch}
+.form{background:var(--paper);border-radius:22px;padding:clamp(20px,4vw,32px);border:1px solid var(--line);box-shadow:0 26px 50px -34px rgba(44,90,49,.5)}
+.form fieldset{border:0;padding:0;margin:0 0 18px}
+.form legend{font-weight:700;color:var(--forest);margin-bottom:10px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.chip label{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:500;cursor:pointer;transition:all .2s}
+.chip input:checked+label{border-color:var(--fuchsia);background:var(--rose);color:var(--fuchsia-d);font-weight:700}
+.chip input:focus-visible+label{outline:3px solid var(--fuchsia);outline-offset:2px}
+.dot{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.15)}
+.preview{font-family:var(--serif);font-style:italic;color:var(--forest-2);background:var(--cream);border-radius:14px;padding:14px 16px;margin:4px 0 18px;font-size:17px;line-height:1.45}
+.form .btn{width:100%}
+.form small{display:block;text-align:center;color:var(--muted);margin-top:10px;font-size:13px}
+
+/* infos */
+.info{padding:clamp(60px,9vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-weight:400;font-size:27px;color:var(--forest);margin-bottom:6px}
+.info p{color:var(--forest-2)}
+.info a{color:var(--fuchsia-d);font-weight:700;text-underline-offset:3px}
+.salons{max-width:1080px;margin:34px auto 0;border-top:1.5px dashed var(--gold);padding-top:22px;color:var(--muted)}
+.salons b{color:var(--forest)}
+footer{text-align:center;padding:40px var(--pad);color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer img{width:70px;height:70px;border-radius:50%;margin:0 auto 10px}
+footer b{font-family:var(--serif);font-weight:600;font-size:24px;color:var(--forest);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(251,248,242,.96);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--forest)}
+.bar a.m{background:var(--fuchsia);color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:390px}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,h1 .w{opacity:1;transform:none}#dust{display:none}.steps .thread{transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Titou La Fée</div>
+
+<header class="hero">
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="in">
+    <div>
+      <div class="brand"><img src="img/logo-rond.jpg" alt="Logo Titou La Fée : un papillon dont le corps est une aiguille"><span>Boutique artisanale<br>Saint-Benoît · La Réunion</span></div>
+      <h1><span class="w">Offrez</span> <span class="w" style="animation-delay:.12s">du</span> <span class="w" style="animation-delay:.24s">fait</span> <span class="w" style="animation-delay:.36s">main</span> <em class="w" style="animation-delay:.5s">avec amour</em></h1>
+      <p class="lede">Créations éco-responsables cousues main, broderies personnalisées et bijoux brodés légers : boucles d’oreilles, colliers et bracelets sur commande.</p>
+      <div class="cta">
+        <a class="btn main" href="#atelier">Composer ma commande</a>
+        <a class="btn ghost" href="#bijoux">Voir les créations</a>
+      </div>
+    </div>
+    <div class="hoop">
+      <span class="screw" aria-hidden="true"></span>
+      <div class="ring" aria-hidden="true"></div>
+      <div class="fabric"><img src="img/boucles-vie-en-rose-fuchsia.jpg" alt="Boucle d’oreille brodée fuchsia en dentelle, posée près d’un réglet"></div>
+      <div class="stitch" aria-hidden="true"></div>
+      <div class="tag"><small>La vie en rose Fushia</small><strong>3h30 de broderie, finitions à la main</strong></div>
+    </div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Fait main</span><span>Fait avec cœur</span><span>Fait pour durer</span><span>Brodé au fil Madeira</span><span>Fabriqué à La Réunion</span>
+  <span>Fait main</span><span>Fait avec cœur</span><span>Fait pour durer</span><span>Brodé au fil Madeira</span><span>Fabriqué à La Réunion</span>
+</div></div>
+
+<section class="geste pinked">
+  <div class="in">
+    <figure class="photo reveal"><img src="img/mains-broderie-fil-dore.jpg" alt="Mains brodant au fil doré sur un tissu en jean" loading="lazy"><figcaption>Point après point</figcaption></figure>
+    <div>
+      <p class="kicker reveal">Derrière une boucle d’oreille</p>
+      <h2 class="reveal">Des milliers de points, <em>un par un</em></h2>
+      <div class="steps" id="steps">
+        <span class="thread" aria-hidden="true"></span>
+        <svg class="needle" viewBox="0 0 14 22" aria-hidden="true"><path d="M7 1 L9 18 L7 21 L5 18 Z" fill="#94711A"/><ellipse cx="7" cy="5" rx="1" ry="2.2" fill="#FBF8F2"/></svg>
+        <ol>
+        <li class="reveal"><b>15 minutes</b><span>de préparation machine</span></li>
+        <li class="reveal"><b>30 à 60 minutes</b><span>de broderie</span></li>
+        <li class="reveal"><b>20 minutes</b><span>de montage des apprêts en acier inoxydable</span></li>
+        <li class="reveal"><b>Puis le nettoyage</b><span>de chaque boucle, pour un rendu final soigné</span></li>
+        </ol>
+      </div>
+      <p class="quote reveal">« Ce n’est pas juste un bijou. C’est une histoire qu’on porte sur soi. »<span class="src">Titou La Fée, publication du 24 septembre 2026</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="bijoux" id="bijoux">
+  <div class="head">
+    <p class="kicker reveal">Les bijoux brodés</p>
+    <h2 class="reveal">Légers comme une plume, <em>vifs comme l’île</em></h2>
+    <p class="reveal">Chaque pièce est unique. Les dernières nées : Noir Volcan, sobre et intense, et Trio Volcanik en rouge, noir et jaune, « pour celles qui n’ont pas peur d’oser ».</p>
+  </div>
+  <div class="cards">
+    <article class="card reveal"><img src="img/boucles-vie-en-rose-fuchsia.jpg" alt="Boucle brodée fuchsia en dentelle" loading="lazy"><div class="t"><h3>La vie en rose Fushia</h3><p>Broderie FSL, une dentelle autoportante, et finitions entièrement au fil, à la main : 3h30 de minutie.</p></div></article>
+    <article class="card reveal"><img src="img/boucles-brodees-fleur-spirale.jpg" alt="Boucles brodées en fleur spirale rouge, jaune et noir, sur fond de feuillage" loading="lazy"><div class="t"><h3>Rouge, noir, jaune</h3><p>Des fleurs en spirale aux couleurs du volcan, pour oser la couleur.</p></div></article>
+    <article class="card reveal"><img src="img/boucles-brodees-noires-fleur.jpg" alt="Boucles brodées noires en forme de fleur" loading="lazy"><div class="t"><h3>Tout en noir</h3><p>Une dentelle de fil noire, sobre et intense, qui s’accorde à tout.</p></div></article>
+  </div>
+  <div class="checks reveal"><span>Fil de qualité Luxe Madeira</span><span>Ultra légères</span><span>Apprêts acier inoxydable doré ou argenté</span><span>Pièces uniques</span></div>
+</section>
+
+<section class="cousu pinked">
+  <div class="head">
+    <p class="kicker reveal">Cousu main, éco-responsable</p>
+    <h2 class="reveal">Pratiques, stylées, <em style="color:var(--gold-l)">pour votre quotidien</em></h2>
+    <p class="reveal">Chouchous, carrés lavables, sacs et pochettes, coffrets, broderies personnalisées : des articles éthiques fabriqués à La Réunion.</p>
+  </div>
+  <div class="strip">
+    <figure><img src="img/chouchou-rose-vert.jpg" alt="Chouchou en éponge rose et tissu vert" loading="lazy"><figcaption>Chouchou rose et vert<small>éponge douce, tissu gaufré</small></figcaption></figure>
+    <figure><img src="img/carres-lavables-chouchou.jpg" alt="Carrés lavables, pochette et chouchou beige" loading="lazy"><figcaption>Carrés lavables<small>et chouchou assorti</small></figcaption></figure>
+    <figure><img src="img/sacs-tote-eventail.jpg" alt="Sacs et pochettes cousus à motif éventail" loading="lazy"><figcaption>Sacs et pochettes<small>motif éventail</small></figcaption></figure>
+    <figure><img src="img/coffret-accessoires-textiles.jpg" alt="Coffret argenté garni de tissus fleuris" loading="lazy"><figcaption>Coffret textile<small>tissus fleuris</small></figcaption></figure>
+    <figure><img src="img/chouchou-creme.jpg" alt="Chouchou crème en éponge" loading="lazy"><figcaption>Chouchou crème<small>tout en douceur</small></figcaption></figure>
+    <figure><img src="img/mug-maman-d-amour.jpg" alt="Mug Maman d’amour, mi yaim a ou, sur un dessous de verre fleuri" loading="lazy"><figcaption>« Maman d’amour »<small>mi yaim a ou</small></figcaption></figure>
+    <figure><img src="img/mains-machine-a-coudre-jaune.jpg" alt="Couture à la machine d’un tissu jaune moutarde" loading="lazy"><figcaption>À la machine<small>velours moutarde</small></figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="ame">
+  <figure class="vis reveal"><img src="img/visuel-s-aimerveiller.jpg" alt="Visuel « Il est temps de S’aimerVeiller » entouré de fleurs roses" loading="lazy"><figcaption>Visuel publié sur la page de Titou La Fée</figcaption></figure>
+  <div>
+    <p class="kicker reveal">L’esprit de la fée</p>
+    <h2 class="reveal">Prendre le temps de <em>s’aimerveiller</em></h2>
+    <p class="reveal">« S’aimerveiller du monde qui nous entoure, ce n’est pas être naïf. C’est un acte de résistance face à la morosité. C’est choisir de se nourrir de la beauté là où elle se trouve. »</p>
+    <p class="reveal">Sur sa page, Titou La Fée partage aussi ces petits rituels de douceur : un café bu assis, un livre, ses chansons préférées, dix minutes par jour pour soi.</p>
+    <div class="lagon reveal"><b>Consommer autrement pour sauver nos lagons.</b> Moins de plastique, des achats pensés pour soi et pour la Terre, une consommation locale : chaque geste compte pour le corail de La Réunion.</div>
+  </div>
+</section>
+
+<section class="atelier pinked" id="atelier">
+  <div class="in">
+    <div class="intro">
+      <p class="kicker reveal">Sur commande</p>
+      <h2 class="reveal">Votre bijou, <em>brodé pour vous</em></h2>
+      <p class="reveal">Choisissez la pièce, la couleur et la finition : votre demande part toute prête sur WhatsApp, et la fée s’occupe du reste.</p>
+    </div>
+    <form class="form reveal" id="cmd" onsubmit="return false">
+      <fieldset><legend>Je rêve de…</legend><div class="chips">
+        <span class="chip"><input type="radio" name="p" id="p1" value="des boucles d’oreilles brodées" checked><label for="p1">Boucles d’oreilles</label></span>
+        <span class="chip"><input type="radio" name="p" id="p2" value="un collier brodé"><label for="p2">Collier</label></span>
+        <span class="chip"><input type="radio" name="p" id="p3" value="un bracelet brodé"><label for="p3">Bracelet</label></span>
+        <span class="chip"><input type="radio" name="p" id="p4" value="une broderie personnalisée"><label for="p4">Broderie perso</label></span>
+      </div></fieldset>
+      <fieldset><legend>Ma couleur</legend><div class="chips">
+        <span class="chip"><input type="radio" name="c" id="c1" value="fuchsia" checked><label for="c1"><i class="dot" style="background:#D61F82"></i>Fuchsia</label></span>
+        <span class="chip"><input type="radio" name="c" id="c2" value="noir"><label for="c2"><i class="dot" style="background:#1d1d1d"></i>Noir</label></span>
+        <span class="chip"><input type="radio" name="c" id="c3" value="rouge, noir et jaune"><label for="c3"><i class="dot" style="background:conic-gradient(#d22 0 33%,#111 0 66%,#f2c200 0)"></i>Rouge-noir-jaune</label></span>
+        <span class="chip"><input type="radio" name="c" id="c4" value="une couleur à choisir ensemble"><label for="c4">On en parle</label></span>
+      </div></fieldset>
+      <fieldset><legend>Les apprêts</legend><div class="chips">
+        <span class="chip"><input type="radio" name="a" id="a1" value="dorés" checked><label for="a1"><i class="dot" style="background:#D4A72C"></i>Doré</label></span>
+        <span class="chip"><input type="radio" name="a" id="a2" value="argentés"><label for="a2"><i class="dot" style="background:#C8CCD0"></i>Argenté</label></span>
+      </div></fieldset>
+      <p class="preview" id="pv" aria-live="polite"></p>
+      <a class="btn main" id="go" href="https://wa.me/262692116458" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+      <small>ou par e-mail : <a href="mailto:titoulafee@gmail.com">titoulafee@gmail.com</a></small>
+    </form>
+  </div>
+</section>
+
+<section class="info" id="infos">
+  <div class="in">
+    <div class="reveal"><h3>L’atelier</h3><p>Boutique artisanale<br>Saint-Benoît 97470, La Réunion<br>Du lundi au samedi, 9h–17h</p></div>
+    <div class="reveal"><h3>Écrire, appeler</h3><p><a href="tel:+262692116458">0692 11 64 58</a><br><a href="mailto:titoulafee@gmail.com">titoulafee@gmail.com</a></p></div>
+    <div class="reveal"><h3>Suivre la fée</h3><p><a href="https://www.facebook.com/profile.php?id=109149322265142">Facebook</a> · <a href="https://www.instagram.com/titou_la_fe/">Instagram</a><br><a href="https://titou-lafee-974.sumupstore.com/">Boutique en ligne</a> · <a href="https://wa.me/c/262692116458">Catalogue WhatsApp</a></p></div>
+  </div>
+  <p class="salons reveal"><b>Sur les salons :</b> Titou La Fée retrouve aussi ses clientes sur les marchés d’artisans péi, comme Talent Péi avec Oté Z’Artisans au Centre commercial E.Leclerc La Réserve, au printemps 2026.</p>
+</section>
+
+<footer><img src="img/logo-rond.jpg" alt=""><b>Titou La Fée</b>Créations éco-responsables cousues main · Saint-Benoît<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Titou La Fée.</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="#atelier">Commander</a>
+  <a href="tel:+262692116458">Appeler</a>
+</nav>
+
+<script>
+(function(){
+  var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+
+  /* fil qui se coud au scroll */
+  var st=document.getElementById("steps");
+  function sew(){var r=st.getBoundingClientRect(),h=innerHeight;var p=Math.min(1,Math.max(0,(h*.8-r.top)/(r.height)));st.style.setProperty("--p",p.toFixed(3));}
+  if(rm){st.style.setProperty("--p",1)}else{addEventListener("scroll",sew,{passive:true});sew();}
+
+  /* commande WhatsApp */
+  var f=document.getElementById("cmd"),pv=document.getElementById("pv"),go=document.getElementById("go");
+  function msg(){var p=f.p.value,c=f.c.value,a=f.a.value;
+    var t="Bonjour Titou La Fée ! J’aimerais commander "+p+" en "+c+(p.indexOf("broderie")<0?", avec des apprêts "+a:"")+". Est-ce possible ?";
+    pv.textContent="« "+t+" »";go.href="https://wa.me/262692116458?text="+encodeURIComponent(t);}
+  f.addEventListener("change",msg);msg();
+
+  /* poussière de fée : fils d'or et paillettes fuchsia */
+  if(rm)return;
+  var cv=document.getElementById("dust"),cx=cv.getContext("2d"),hero=cv.parentNode,W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+  var cols=["212,167,44","233,203,122","214,31,130","158,219,131"];
+  function size(){W=hero.offsetWidth;H=hero.offsetHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);}
+  function mk(y0){return{x:Math.random()*W,y:y0==null?Math.random()*H:H+10,r:Math.random()*2.2+.8,v:Math.random()*.35+.15,s:Math.random()*6.28,c:cols[(Math.random()*cols.length)|0],o:Math.random()*.5+.25}}
+  size();var n=W<600?22:34;for(var i=0;i<n;i++)P.push(mk());
+  addEventListener("resize",size);
+  document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(loop)});
+  new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run){run=true;requestAnimationFrame(loop)}else if(!v)run=false;}).observe(hero);
+  function loop(){if(!run)return;cx.clearRect(0,0,W,H);
+    P.forEach(function(p,k){p.y-=p.v;p.s+=.02;p.x+=Math.sin(p.s)*.3;var tw=.6+.4*Math.sin(p.s*3);
+      cx.fillStyle="rgba("+p.c+","+(p.o*tw)+")";cx.beginPath();
+      cx.moveTo(p.x,p.y-p.r*2);cx.lineTo(p.x+p.r*.6,p.y);cx.lineTo(p.x,p.y+p.r*2);cx.lineTo(p.x-p.r*.6,p.y);cx.closePath();cx.fill();
+      cx.fillRect(p.x-p.r*1.6,p.y-.3,p.r*3.2,.6);
+      if(p.y<-10)P[k]=mk(1);});
+    requestAnimationFrame(loop);}
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

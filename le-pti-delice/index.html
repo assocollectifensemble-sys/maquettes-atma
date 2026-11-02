@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Le Pti Délice — nout traiteur pays, créole et chinois · Saint-Leu</title>
+<meta name="description" content="Traiteur créole et chinois basé à Saint-Leu, sur toute l'île : mariages, baptêmes, communions, anniversaires, séminaires. Produits frais et locaux.">
+<meta property="og:title" content="Le Pti Délice — nout traiteur pays">
+<meta property="og:description" content="Le goût de chez nous, le plaisir de vous recevoir : une page imaginée pour Le Pti Délice, traiteur à Saint-Leu.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-pti-delice/img/paella-geante.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-pti-delice/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,600&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#16100D; --char-2:#231915; --char-3:#33241D;
+  --chili:#C8251D; --bordeaux:#7A1A17; --flame:#F08A24; --gold:#D9A441; --gold-l:#F3C870;
+  --cream:#F6EBD7; --paper:#FBF6EC; --ink:#2A1A14; --muted:#6E5A4E; --line:rgba(122,26,23,.16);
+  --serif:'Fraunces',Georgia,serif; --sans:'Figtree',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flame);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--chili);color:#fff;font-size:13px;line-height:1.45;padding:9px var(--pad);text-align:center}
+.ribbon b{color:var(--gold-l)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--chili)}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(34px,6.4vw,58px);line-height:1.02;letter-spacing:-.01em;margin:10px 0 16px}
+h2 em{font-weight:500;color:var(--chili)}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,880px);background:var(--char);color:var(--cream);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero .ph{position:absolute;inset:0;background:url(img/paella-geante.jpg) 62% 60%/cover;transform-origin:62% 70%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.18) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,16,13,.6) 0%,rgba(22,16,13,.08) 26%,rgba(22,16,13,.72) 52%,rgba(22,16,13,.96) 74%)}
+#embers{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero .in{position:relative;z-index:3;max-width:1180px;margin:0 auto;width:100%;padding:0 var(--pad) clamp(70px,12vw,120px)}
+.badge{position:absolute;z-index:3;top:22px;left:var(--pad);display:flex;align-items:center;gap:12px}
+.badge img{width:74px;height:74px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);box-shadow:0 0 0 0 rgba(240,138,36,.6);animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 26px 4px rgba(240,138,36,.55)}}
+.badge span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold-l);line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.hero .kicker{color:var(--gold-l)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(50px,13vw,118px);line-height:.92;letter-spacing:-.02em;margin:12px 0 18px}
+.hero h1 em{display:block;font-weight:500;font-style:italic;color:var(--gold-l);font-size:.62em;letter-spacing:-.01em;margin-top:8px}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(24px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.lede{max-width:34ch;font-size:clamp(18px,2.4vw,21px);color:#EADBC4}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer;font:inherit;font-weight:700}
+.btn.fire{background:var(--chili);color:#fff;animation:breathe 3.4s ease-in-out infinite}
+.btn.fire:hover{background:#A91D16;transform:translateY(-2px)}
+@keyframes breathe{50%{box-shadow:0 0 0 8px rgba(200,37,29,.18)}}
+.btn.line{border-color:rgba(246,235,215,.6);color:var(--cream)}
+.btn.line:hover{background:var(--cream);color:var(--char)}
+.edge{display:block;width:100%;height:46px;position:absolute;bottom:-1px;left:0;z-index:4}
+
+/* MARQUEE */
+.marquee{background:var(--paper);overflow:hidden;border-bottom:1px solid var(--line);padding:14px 0}
+.marquee .tr{display:flex;width:max-content;animation:mq 34s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--bordeaux);white-space:nowrap;padding:0 18px}
+.marquee span i{font-style:normal;color:var(--flame);margin-left:36px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* MAISON */
+.maison{max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:44px}
+@media(min-width:900px){.maison{grid-template-columns:1fr 1fr;align-items:center}}
+.maison p{color:var(--muted);max-width:52ch}
+.maison p+p{margin-top:14px}
+.maison .q{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,28px);line-height:1.25;color:var(--bordeaux);border-left:3px solid var(--flame);padding-left:16px;margin-top:22px}
+.pillars{display:grid;gap:10px;margin-top:26px;padding:0;list-style:none}
+.pillars li{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;transition:transform .25s,box-shadow .25s}
+.pillars li:hover{transform:translateX(4px);box-shadow:0 10px 24px -16px rgba(122,26,23,.5)}
+.pillars svg{flex:0 0 34px;height:34px}
+.pillars b{display:block;color:var(--ink)}
+.pillars small{color:var(--muted);font-size:14px}
+.duo{position:relative;min-height:440px}
+.duo figure{position:absolute;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(22,16,13,.7)}
+.duo .a{inset:0 22% 14% 0}
+.duo .b{width:52%;aspect-ratio:1;right:0;bottom:0;border:6px solid var(--paper)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figcaption{position:absolute;left:10px;bottom:10px;background:rgba(22,16,13,.72);color:var(--cream);font-size:12px;padding:4px 10px;border-radius:999px}
+
+/* BUFFET */
+.buffet{background:var(--char);color:var(--cream);padding:clamp(60px,9vw,110px) 0;position:relative;overflow:hidden}
+.buffet .head{max-width:1180px;margin:0 auto 26px;padding:0 var(--pad)}
+.buffet .kicker{color:var(--gold-l)}
+.buffet h2 em{color:var(--flame)}
+.buffet .head p{color:#CDBBA6;max-width:52ch}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chips button{font:inherit;font-size:14px;font-weight:700;color:var(--cream);background:transparent;border:1.5px solid rgba(243,200,112,.45);border-radius:999px;padding:8px 16px;cursor:pointer;transition:background .2s,color .2s}
+.chips button[aria-pressed=true]{background:var(--gold-l);color:var(--char);border-color:var(--gold-l)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--pad) 20px;scrollbar-width:none;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(74vw,320px);scroll-snap-align:start;position:relative;border-radius:18px;overflow:hidden;background:var(--char-2);transition:opacity .35s,transform .35s}
+.strip figure.off{display:none}
+.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(22,16,13,.92))}
+.strip figcaption small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:700}
+.strip figcaption b{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.15}
+.hint{max-width:1180px;margin:0 auto;padding:0 var(--pad);font-size:13px;color:#A8957F}
+
+/* PAELLA */
+.paella{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:36px}
+@media(min-width:900px){.paella{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.paella .pic{position:relative;border-radius:50% 50% 22px 22px;overflow:hidden;aspect-ratio:4/5;max-width:460px;box-shadow:0 30px 60px -30px rgba(122,26,23,.7)}
+.paella .pic img{width:100%;height:100%;object-fit:cover}
+.paella .date{display:inline-block;background:var(--cream);color:var(--bordeaux);font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px}
+.paella blockquote{font-family:var(--serif);font-size:clamp(22px,3vw,30px);line-height:1.25;color:var(--ink);margin:16px 0}
+.paella blockquote::before{content:"« "; color:var(--flame)}
+.paella blockquote::after{content:" »"; color:var(--flame)}
+.paella .tri{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}
+.paella .tri span{border:1.5px solid var(--gold);color:var(--bordeaux);border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px}
+.paella .btn.fire{animation:none}
+
+/* DEVIS */
+.devis{background:linear-gradient(180deg,var(--cream),var(--paper));padding:clamp(60px,9vw,110px) var(--pad)}
+.devis .in{max-width:1080px;margin:0 auto;display:grid;gap:34px}
+@media(min-width:940px){.devis .in{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.formules{display:grid;gap:14px;margin-top:22px}
+.f{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;position:relative}
+.f.hot{background:var(--char);color:var(--cream);border-color:var(--char)}
+.f .t{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.f h3{font-family:var(--serif);font-size:24px;font-weight:600}
+.f .p{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--chili);white-space:nowrap}
+.f.hot .p{color:var(--flame)}
+.f .p small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--muted)}
+.f.hot .p small{color:#BFAE98}
+.f ul{list-style:none;padding:0;margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.f li{font-size:14px;background:var(--cream);color:var(--bordeaux);border-radius:999px;padding:3px 11px;font-weight:500}
+.f.hot li{background:var(--char-3);color:var(--gold-l)}
+.f .src{font-size:12.5px;color:var(--muted);margin-top:10px}
+.f.hot .src{color:#A8957F}
+.tool{background:#fff;border-radius:22px;padding:clamp(20px,4vw,32px);box-shadow:0 30px 60px -36px rgba(122,26,23,.55);border:1px solid var(--line)}
+.tool h3{font-family:var(--serif);font-size:28px;font-weight:600;line-height:1.1}
+.tool .sub{color:var(--muted);font-size:15px;margin-top:4px}
+.tool fieldset{border:0;padding:0;margin-top:20px}
+.tool legend{font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opts span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:15px;font-weight:500;transition:all .2s}
+.opts input:checked+span{background:var(--chili);border-color:var(--chili);color:#fff}
+.opts input:focus-visible+span{outline:3px solid var(--flame);outline-offset:2px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.num label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+.num input,.tool input[type=date]{width:100%;font:inherit;font-size:18px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.est{margin-top:22px;background:var(--char);color:var(--cream);border-radius:16px;padding:18px 18px 16px;position:relative;overflow:hidden}
+.est small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);font-weight:700}
+.est .v{font-family:var(--serif);font-size:clamp(34px,8vw,44px);font-weight:700;line-height:1.1;color:var(--flame)}
+.est p{font-size:14px;color:#CDBBA6;line-height:1.45}
+.send{display:grid;gap:10px;margin-top:16px}
+.send .btn{width:100%}
+.send .btn.wa{background:#1E7A4A;color:#fff}
+.send .btn.wa:hover{background:#17643C}
+.send .btn.ml{border-color:var(--ink);color:var(--ink)}
+.send .btn.ml:hover{background:var(--ink);color:#fff}
+
+/* AVIS */
+.avis{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad)}
+.big{background:var(--chili);color:#fff;border-radius:24px;padding:clamp(26px,5vw,48px);position:relative;overflow:hidden}
+.big::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(243,200,112,.45),transparent 70%)}
+.big p{font-family:var(--serif);font-size:clamp(26px,4.4vw,42px);line-height:1.15;font-weight:500;position:relative}
+.big cite{display:block;margin-top:14px;font-style:normal;font-size:14px;color:#FBE3C8}
+.cards{display:grid;gap:14px;margin-top:16px}
+@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(122,26,23,.6)}
+.card p{font-family:var(--serif);font-size:19px;line-height:1.35}
+.card cite{display:block;font-style:normal;color:var(--muted);font-size:14px;margin-top:10px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tags span{font-family:var(--serif);font-style:italic;font-size:18px;background:var(--cream);color:var(--bordeaux);padding:6px 14px;border-radius:999px}
+.tags + .note{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* SAINT-IGNACE */
+.lieu{background:var(--char);color:var(--cream);position:relative;overflow:hidden}
+.lieu .in{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:34px;position:relative;z-index:2}
+@media(min-width:900px){.lieu .in{grid-template-columns:1fr 1fr;align-items:center}}
+.lieu .kicker{color:var(--gold-l)}
+.lieu h2 em{color:var(--flame)}
+.lieu p{color:#CDBBA6;max-width:46ch}
+.tl{list-style:none;padding:0;margin-top:22px;border-left:2px solid rgba(243,200,112,.35)}
+.tl li{position:relative;padding:8px 0 8px 22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:16px;width:12px;height:12px;border-radius:50%;background:var(--flame);box-shadow:0 0 12px var(--flame)}
+.tl b{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--cream)}
+.tl span{display:block;font-size:14px;color:#A8957F}
+.lieu .ph2{border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:460px}
+.lieu .ph2 img{width:100%;height:100%;object-fit:cover}
+
+/* CONTACT */
+.contact{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:22px}
+@media(min-width:860px){.contact{grid-template-columns:repeat(3,1fr)}}
+.contact h2{grid-column:1/-1;margin-bottom:0}
+.co{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.co h3{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--bordeaux);margin-bottom:6px}
+.co a{font-weight:700;text-decoration-color:var(--flame);text-underline-offset:4px;word-break:break-word}
+.co p{color:var(--muted)}
+.co .tel{font-family:var(--serif);font-size:28px;color:var(--chili);text-decoration:none}
+footer{background:var(--char);color:#BFAE98;text-align:center;padding:40px var(--pad) 36px;font-size:14px}
+footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;border:2px solid var(--gold)}
+footer b{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:22px;color:var(--gold-l);margin-bottom:10px}
+footer .m{margin-top:14px;font-size:12.5px;color:#8E7C69}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(22,16,13,.94);border-radius:999px;padding:6px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);backdrop-filter:blur(6px)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--cream)}
+.bar a.m{background:var(--chili);color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.hero h1 .w{opacity:1;transform:none}#embers{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Pti Délice</div>
+
+<header class="hero">
+  <div class="ph" role="img" aria-label="La paella géante du Pti Délice : riz safrané, gambas, langoustines, moules et citrons"></div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="badge"><img src="img/logo.jpg" alt="Logo Le Pti Délice : une flamme sur un piment rouge"><span>Traiteur créole &amp; chinois<br>Saint-Leu · toute l’île</span></div>
+  <div class="in">
+    <p class="kicker">Le Pti Délice</p>
+    <h1><span class="w">Nout</span> <span class="w" style="animation-delay:.12s">traiteur</span> <span class="w" style="animation-delay:.24s">pays</span><em class="w" style="animation-delay:.45s">le goût de chez nous</em></h1>
+    <p class="lede">… et le plaisir de vous recevoir. Mariages, baptêmes, communions, anniversaires : des buffets généreux, des produits frais et locaux, partout sur l’île.</p>
+    <div class="cta">
+      <a class="btn fire" href="#devis">Préparer mon devis</a>
+      <a class="btn line" href="tel:+262692528529">0692 52 85 29</a>
+    </div>
+  </div>
+  <svg class="edge" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V24C120 8 240 36 360 22S600 6 720 22 960 38 1080 22 1320 8 1440 22V46Z" fill="#FBF6EC"/></svg>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="tr" id="mq"><span>Mariages<i>✦</i></span><span>Baptêmes<i>✦</i></span><span>Communions<i>✦</i></span><span>Anniversaires<i>✦</i></span><span>Séminaires<i>✦</i></span><span>Événements d’entreprise<i>✦</i></span><span>Réceptions privées<i>✦</i></span></div></div>
+
+<section class="maison">
+  <div class="reveal">
+    <p class="kicker">La maison</p>
+    <h2>Une cuisine créole <em>et chinoise</em>, servie avec le cœur</h2>
+    <p>« Fort d’une expérience traditionnelle et multiculturelle, le Pti Délice sera votre traiteur pour vos différents types d’événements. » En cuisine, Tony et son équipe travaillent sur toute l’île, avec des produits frais et locaux, et s’adaptent à chaque projet.</p>
+    <p class="q">Vos événements, notre passion… des saveurs qui restent en mémoire.</p>
+    <ul class="pillars">
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 4c3 5-2 7 1 11 2-2 2-4 1.5-6C24 12 26 17 24 22a8 8 0 0 1-15-1c-1-4 1-7 3-9 0 3 1 4 2.5 4.5C13 12 14 7 17 4z" fill="#F08A24"/><path d="M8 26c5 3 13 3 18-1 1 4-3 6-9 6-5 0-9-2-9-5z" fill="#C8251D"/></svg><span><b>Cuisine maison</b><small>Créole et chinoise, comme à la maison</small></span></li>
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M8 26C8 14 16 7 28 6c0 13-7 21-19 21" fill="none" stroke="#1E7A4A" stroke-width="2.4"/><path d="M8 26l12-12" stroke="#1E7A4A" stroke-width="2.2"/></svg><span><b>Produits frais et locaux</b><small>Les saveurs de La Réunion</small></span></li>
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31s-9-9-9-16a9 9 0 0 1 18 0c0 7-9 16-9 16z" fill="none" stroke="#C8251D" stroke-width="2.4"/><circle cx="17" cy="15" r="3.2" fill="#C8251D"/></svg><span><b>Partout sur l’île</b><small>Depuis Saint-Leu, en livraison ou en service complet</small></span></li>
+    </ul>
+  </div>
+  <div class="duo reveal" aria-label="Buffets du Pti Délice">
+    <figure class="a"><img src="img/buffet-froid.jpg" alt="Buffet froid : salades composées, agrumes et brochettes sur nappe blanche" loading="lazy"></figure>
+    <figure class="b"><img src="img/table-dressee.jpg" alt="Table de réception dressée, bougies et verrines" loading="lazy"><figcaption>Une table de fête</figcaption></figure>
+  </div>
+</section>
+
+<section class="buffet" id="buffet">
+  <div class="head reveal">
+    <p class="kicker">Sur les buffets</p>
+    <h2>Le buffet, <em>plateau par plateau</em></h2>
+    <p>Bouchons, samoussas, verrines, salades, plats chauds… Les vraies photos des réceptions du Pti Délice, à parcourir du doigt.</p>
+    <div class="chips" role="group" aria-label="Filtrer les photos">
+      <button type="button" data-f="all" aria-pressed="true">Tout</button>
+      <button type="button" data-f="ape" aria-pressed="false">Apéritif</button>
+      <button type="button" data-f="ent" aria-pressed="false">Entrées</button>
+      <button type="button" data-f="pla" aria-pressed="false">Plats chauds</button>
+    </div>
+  </div>
+  <div class="strip" id="strip">
+    <figure data-c="ape"><img src="img/bouchons.jpg" alt="Bouchons et petits pains garnis piqués de brochettes" loading="lazy"><figcaption><small>Apéritif</small><b>Bouchons et petits pains garnis</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/samoussas.jpg" alt="Plateau de samoussas dorés" loading="lazy"><figcaption><small>Apéritif</small><b>Samoussas dorés</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/mini-burgers.jpg" alt="Mini-burgers et wraps sur ardoise" loading="lazy"><figcaption><small>Apéritif</small><b>Mini-burgers et wraps</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/nems.jpg" alt="Rouleaux croustillants et leur sauce" loading="lazy"><figcaption><small>Apéritif</small><b>Rouleaux croustillants et leur sauce</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/verrines.jpg" alt="Longue rangée de verrines et de petits pains" loading="lazy"><figcaption><small>Apéritif</small><b>Verrines en rangs serrés</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/bouchons-terrasse.jpg" alt="Corbeille de bouchons et croustillants sur une terrasse, le soir" loading="lazy"><figcaption><small>Apéritif</small><b>Bouchons à la nuit tombée</b></figcaption></figure>
+    <figure data-c="ape"><img src="img/buffet-salle.jpg" alt="Long buffet d’apéritif dressé dans une salle de réception" loading="lazy"><figcaption><small>Apéritif</small><b>Le grand buffet d’apéritif</b></figcaption></figure>
+    <figure data-c="ent"><img src="img/salade-agrumes.jpg" alt="Salade composée aux agrumes et tomates" loading="lazy"><figcaption><small>Entrée</small><b>Salade aux agrumes</b></figcaption></figure>
+    <figure data-c="ent"><img src="img/charcuterie.jpg" alt="Plateau de charcuterie et rondelles d’orange" loading="lazy"><figcaption><small>Entrée</small><b>Plateau de charcuterie</b></figcaption></figure>
+    <figure data-c="ent"><img src="img/brochettes.jpg" alt="Brochettes grillées en éventail" loading="lazy"><figcaption><small>Entrée</small><b>Brochettes grillées</b></figcaption></figure>
+    <figure data-c="ent"><img src="img/salade.jpg" alt="Salade de crudités et carottes râpées" loading="lazy"><figcaption><small>Entrée</small><b>Crudités et carottes râpées</b></figcaption></figure>
+    <figure data-c="pla"><img src="img/wok-legumes.jpg" alt="Sauté de légumes et carottes en bac chauffant" loading="lazy"><figcaption><small>Plat chaud</small><b>Sauté de légumes</b></figcaption></figure>
+    <figure data-c="pla"><img src="img/plat-sauce.jpg" alt="Plat chaud en sauce, parsemé de ciboulette" loading="lazy"><figcaption><small>Plat chaud</small><b>Plat chaud en sauce</b></figcaption></figure>
+    <figure data-c="pla"><img src="img/paella-moules.jpg" alt="Paella aux moules, calamars et crevettes" loading="lazy"><figcaption><small>Plat chaud</small><b>Paella de la mer</b></figcaption></figure>
+  </div>
+  <p class="hint">← Faites glisser →</p>
+</section>
+
+<section class="paella">
+  <div class="pic reveal"><img src="img/paella-detail.jpg" alt="Gambas et langoustines sur la paella géante du Pti Délice" loading="lazy"></div>
+  <div class="reveal">
+    <p class="kicker">La star des grandes tablées</p>
+    <h2>La paella <em>géante</em></h2>
+    <span class="date">Publication du 21 mars 2026</span>
+    <blockquote>Un savoureux mélange de riz safrané, de gambas charnues, de langoustines, de moules fraîches et de citrons fondants.</blockquote>
+    <div class="tri"><span>Authenticité</span><span>Fraîcheur</span><span>Générosité</span></div>
+    <a class="btn fire" href="#devis">Réserver la vôtre</a>
+  </div>
+</section>
+
+<section class="devis" id="devis">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Les formules</p>
+      <h2>Petit comité <em>ou grande fête</em></h2>
+      <div class="formules">
+        <div class="f hot">
+          <div class="t"><h3>Clé en main</h3><span class="p"><small>dès</small> 32 € <small>HT / pers.</small></span></div>
+          <ul><li>8 apéritifs</li><li>7 entrées</li><li>3 plats chauds</li><li>Service et vaisselle inclus</li><li>60 adultes minimum</li></ul>
+          <p class="src">Tarif indicatif selon le menu et les conditions de prestation — publication du 2 juillet 2026.</p>
+        </div>
+        <div class="f">
+          <div class="t"><h3>Formule n°2, en livraison</h3><span class="p">24 € <small>HT / pers.</small></span></div>
+          <ul><li>8 apéritifs</li><li>5 entrées : 3 salades, 1 brochette, 1 gratin</li><li>3 plats chauds</li><li>Riz, grains, rougail</li><li>Enfants de 4 à 10 ans : 14 € HT</li><li>20 personnes minimum</li></ul>
+          <p class="src">Vaisselle, service et boissons à part ; livraison en supplément selon le secteur — publication du 9 février 2026.</p>
+        </div>
+      </div>
+    </div>
+    <form class="tool reveal" id="tool" onsubmit="return false">
+      <h3>Votre demande de devis, en trois gestes</h3>
+      <p class="sub">On choisit, on compte, et le message part tout prêt.</p>
+      <fieldset><legend>L’occasion</legend>
+        <div class="opts" id="occ">
+          <label><input type="radio" name="occ" value="Mariage" checked><span>Mariage</span></label>
+          <label><input type="radio" name="occ" value="Baptême"><span>Baptême</span></label>
+          <label><input type="radio" name="occ" value="Communion"><span>Communion</span></label>
+          <label><input type="radio" name="occ" value="Anniversaire"><span>Anniversaire</span></label>
+          <label><input type="radio" name="occ" value="Événement d’entreprise"><span>Entreprise</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>La formule</legend>
+        <div class="opts">
+          <label><input type="radio" name="for" value="cle" checked><span>Clé en main</span></label>
+          <label><input type="radio" name="for" value="liv"><span>Formule n°2 en livraison</span></label>
+        </div>
+      </fieldset>
+      <fieldset><legend>Les invités</legend>
+        <div class="row">
+          <div class="num"><label for="ad">Adultes</label><input id="ad" type="number" inputmode="numeric" min="0" max="999" value="80"></div>
+          <div class="num"><label for="en">Enfants 4–10 ans</label><input id="en" type="number" inputmode="numeric" min="0" max="999" value="10"></div>
+        </div>
+      </fieldset>
+      <fieldset><legend><label for="dt">La date</label></legend><input id="dt" type="date"></fieldset>
+      <div class="est" aria-live="polite">
+        <small>Estimation indicative</small>
+        <div class="v" id="v">—</div>
+        <p id="vn"></p>
+      </div>
+      <div class="send">
+        <a class="btn wa" id="wa" href="https://wa.me/262692528529">Envoyer sur WhatsApp</a>
+        <a class="btn ml" id="ml" href="mailto:traiteurleptidelice@gmail.com">ou par e-mail</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="big reveal">
+    <p>« Très bon traiteurs, que de retours positifs chez moi. »</p>
+    <cite>Le Saint-Ignace, lieu de réception — page prestataires, mai 2026</cite>
+  </div>
+  <div class="cards">
+    <div class="card reveal"><p>« Ce n’est pas un petit délices mais un grand délices<br>Le repas comme le service est excellent »</p><cite>Floriane F. · avis Facebook</cite></div>
+    <div class="card reveal"><p>« Repas livré avec maintien chaud et froid, pas besoin de stocker au frais ni réchauffer. Gain de temps appréciable lors d’une réception. »</p><cite>Bruno P. · avis Facebook</cite></div>
+    <div class="card reveal"><p>« À 100% c’était le traiteur pour notre mariage et nos invités se sont régalés et ont pris ses coordonnées »</p><cite>Lynda V. · groupe « Pro du Mariage et Événementiel 974 », octobre 2026</cite></div>
+  </div>
+  <div class="tags reveal"><span>« Valeur sûre »</span><span>« Un des meilleurs »</span><span>« Super traiteur »</span><span>« Le meilleur »</span></div>
+  <p class="note">Réponses spontanées dans le groupe « Pro du Mariage et Événementiel 974 », octobre 2026 · Recommandé à 100 % sur Facebook (7 avis).</p>
+</section>
+
+<section class="lieu">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Un lieu fidèle</p>
+      <h2>Cinq fêtes <em>au Saint-Ignace</em></h2>
+      <p>Tony et son équipe ont déjà assuré cinq réceptions au Saint-Ignace, des mariages à la dernière communion. Le lieu les cite parmi ses prestataires.</p>
+      <ul class="tl">
+        <li><b>Mariage</b><span>22 décembre 2023</span></li>
+        <li><b>Mariage</b><span>12 juillet 2024</span></li>
+        <li><b>Mariage</b><span>9 août 2024</span></li>
+        <li><b>Confirmation</b><span>5 juillet 2025</span></li>
+        <li><b>Communion, en livraison</b><span>16 mai 2026</span></li>
+      </ul>
+    </div>
+    <div class="ph2 reveal"><img src="img/buffet-soir.jpg" alt="Buffet du soir en plein air, salades et paniers de pain" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2 class="reveal">On en parle <em>autour d’un devis ?</em></h2>
+  <div class="co reveal"><h3>Un seul numéro</h3><a class="tel" href="tel:+262692528529">0692 52 85 29</a><p>Appel ou message, pour toutes vos réceptions.</p></div>
+  <div class="co reveal"><h3>Par écrit</h3><p><a href="mailto:traiteurleptidelice@gmail.com">traiteurleptidelice@gmail.com</a></p><p>Ou en message privé sur Facebook.</p></div>
+  <div class="co reveal"><h3>Les coulisses</h3><p><a href="https://www.facebook.com/p/Le-Pti-D%C3%A9lice-100063660307739/">Facebook · Le Pti Délice</a><br><a href="https://www.instagram.com/leptidelice/">Instagram · @leptidelice</a></p><p>Saint-Leu, La Réunion — sur toute l’île.</p></div>
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="" loading="lazy">
+  <b>« Le goût de chez nous, le plaisir de vous recevoir ! »</b>
+  Le Pti Délice · traiteur événementiel · Saint-Leu · SIRET 989 493 697 00019
+  <p class="m">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Pti Délice.</p>
+</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a href="tel:+262692528529">Appeler</a>
+  <a class="m" href="#devis">Mon devis</a>
+</nav>
+
+<script>
+(function(){
+  var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // braises qui montent
+  var c=document.getElementById("embers"),x=c.getContext("2d"),P=[],W,H,run=true,vis=true,dpr=Math.min(devicePixelRatio||1,2);
+  function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(b){return{x:Math.random()*W,y:b?H+Math.random()*40:Math.random()*H,r:.8+Math.random()*2.2,v:.25+Math.random()*.7,s:Math.random()*6.28,a:.35+Math.random()*.55,h:Math.random()<.7?"240,138,36":"243,200,112"}}
+  function tick(){
+    if(!run||!vis)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.s+=.02;p.x+=Math.sin(p.s)*.35;var f=Math.min(1,p.y/(H*.9));
+      x.globalAlpha=p.a*f*(.75+.25*Math.sin(p.s*3));x.fillStyle="rgb("+p.h+")";x.shadowColor="rgba("+p.h+",.9)";x.shadowBlur=8;
+      x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-10)P[i]=mk(1)}
+    requestAnimationFrame(tick)}
+  if(!RM){rs();for(var i=0;i<30;i++)P.push(mk(0));addEventListener("resize",rs);
+    document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)tick()});
+    new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)tick()}).observe(c);tick()}
+  // bandeau : dupliquer pour boucle
+  var mq=document.getElementById("mq");mq.innerHTML+=mq.innerHTML;
+  // apparitions
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  // filtres galerie
+  var bs=document.querySelectorAll(".chips button"),fs=document.querySelectorAll("#strip figure");
+  bs.forEach(function(b){b.addEventListener("click",function(){bs.forEach(function(o){o.setAttribute("aria-pressed",o===b)});
+    fs.forEach(function(f){f.classList.toggle("off",b.dataset.f!=="all"&&f.dataset.c!==b.dataset.f)});document.getElementById("strip").scrollTo({left:0,behavior:RM?"auto":"smooth"})})});
+  // devis
+  var t=document.getElementById("tool"),v=document.getElementById("v"),vn=document.getElementById("vn"),wa=document.getElementById("wa"),ml=document.getElementById("ml");
+  function val(n){var e=t.querySelector("input[name="+n+"]:checked");return e?e.value:""}
+  function eur(n){return n.toLocaleString("fr-FR")+" €"}
+  function up(){
+    var a=Math.max(0,parseInt(document.getElementById("ad").value,10)||0),e=Math.max(0,parseInt(document.getElementById("en").value,10)||0),fo=val("for"),oc=val("occ"),d=document.getElementById("dt").value,txt,note;
+    if(fo==="cle"){txt=a?"dès "+eur(a*32)+" HT":"—";note="Clé en main, à partir de 32 € HT par adulte, service et vaisselle inclus."+(a<60?" Cette formule démarre à 60 adultes.":"")+(e?" Tarif enfants : sur devis.":"")}
+    else{txt=(a||e)?eur(a*24+e*14)+" HT":"—";note="Formule n°2 : 24 € HT par adulte, 14 € HT par enfant de 4 à 10 ans, livraison en supplément selon le secteur."+(a+e<20?" Minimum 20 personnes.":"")}
+    v.textContent=txt;vn.textContent=note+" Le devis final est établi par Le Pti Délice.";
+    var dd=d?new Date(d+"T12:00").toLocaleDateString("fr-FR",{day:"numeric",month:"long",year:"numeric"}):"date à définir";
+    var msg="Bonjour Le Pti Délice ! Je prépare un(e) "+oc.toLowerCase()+" le "+dd+", pour "+a+" adultes et "+e+" enfants. Formule souhaitée : "+(fo==="cle"?"clé en main":"formule n°2 en livraison")+". Pouvez-vous m’envoyer un devis ? Merci !";
+    wa.href="https://wa.me/262692528529?text="+encodeURIComponent(msg);
+    ml.href="mailto:traiteurleptidelice@gmail.com?subject="+encodeURIComponent("Demande de devis — "+oc)+"&body="+encodeURIComponent(msg)}
+  t.addEventListener("input",up);t.addEventListener("change",up);up();
+})();
+</script>
+</body>
+</html>

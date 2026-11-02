@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>La Cazanou — boutique d’art et d’artisanat à Hell-Bourg, Salazie</title>
+<meta name="description" content="Plus de 90 artisans péi réunis dans une case créole d’Hell-Bourg : bijoux, affiches, textile, gourmandises du terroir. Made in La Réunion.">
+<meta property="og:title" content="La Cazanou — Hell-Bourg, cirque de Salazie">
+<meta property="og:description" content="Plus de 90 artisans péi sous un même toit, au cœur d’Hell-Bourg. Une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-cazanou/img/facade.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-cazanou/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#A8323F; --rouge-d:#7A2230; --rouge-l:#E7A3A6;
+  --creme:#F7F2EA; --creme-2:#EFE6D8; --lamb:#FBF8F2;
+  --ciel:#3E8FD8; --brume:#DCE4EC; --cirque:#2E4F44; --jaune:#F2C230;
+  --ink:#2A1D21; --muted:#6B5C60; --line:rgba(122,34,48,.16);
+  --serif:"Fraunces",Georgia,serif; --sans:"Instrument Sans",system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--creme);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--ink);color:var(--creme);font-size:13px;padding:9px var(--pad);position:relative;z-index:3}
+.ribbon b{color:var(--jaune);font-weight:700}
+
+/* HERO */
+.hero{position:relative;min-height:min(92svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--cirque);color:var(--lamb)}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:64% 18%;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(20,24,30,.08) 0%,rgba(20,24,30,0) 22%,rgba(42,20,26,.62) 46%,rgba(42,20,26,.9) 66%,rgba(38,16,22,.97) 100%);pointer-events:none}
+#brume{position:absolute;inset:0;width:100%;height:100%;z-index:1;mix-blend-mode:screen;pointer-events:none}
+.hero .txt{position:relative;z-index:2;padding:0 var(--pad) clamp(70px,10vw,110px);max-width:1180px;margin:0 auto;width:100%}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--jaune)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,10vw,104px);line-height:.98;letter-spacing:-.015em;margin:12px 0 18px;max-width:13ch;opacity:0;transform:translateY(18px);animation:up 1.4s .3s cubic-bezier(.2,.7,.2,1) forwards}
+h1 em{font-style:italic;color:var(--rouge-l)}
+@keyframes up{to{opacity:1;transform:none}}
+.lede{max-width:36ch;font-size:clamp(18px,2.3vw,21px);color:#F3E9E4;opacity:0;animation:up 1.4s .8s ease forwards;transform:translateY(12px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;opacity:0;animation:up 1.2s 1.2s ease forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid currentColor;transition:transform .25s,background .25s,color .25s}
+.btn.main{background:var(--rouge);border-color:var(--rouge);color:#fff;animation:breathe 3.6s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-2px);background:var(--rouge-d)}
+.btn.ghost:hover{background:var(--lamb);color:var(--ink)}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(168,50,63,.22)}}
+/* lambrequin */
+.lamb{height:26px;background-repeat:repeat-x;background-size:44px 26px;position:relative;z-index:2}
+.lamb.down{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 26'%3E%3Cpath fill='%23F7F2EA' d='M0 0h44v6H38c0 9-5 15-9 20-2 0-3 0-4-1-3-4-7-10-7-19H0z' /%3E%3Cpath fill='%23F7F2EA' d='M0 6c0 9-3 14-3 14L0 6zm44 0' /%3E%3Ccircle cx='28' cy='11' r='2.4' fill='%232A1D21' fill-opacity='.0'/%3E%3C/svg%3E")}
+.hero .lamb{position:absolute;left:0;right:0;bottom:-1px;transform:scaleY(-1)}
+
+/* marquee */
+.band{background:var(--rouge);color:var(--lamb);overflow:hidden;white-space:nowrap;padding:12px 0;font-family:var(--serif);font-style:italic;font-size:20px}
+.band .track{display:inline-flex;gap:32px;animation:mq 34s linear infinite;padding-left:32px}
+.band span::after{content:"✦";font-style:normal;color:var(--jaune);margin-left:32px;font-size:14px;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* LA CASE */
+.case{max-width:1120px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.case{grid-template-columns:1fr 1fr}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--rouge)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5.6vw,58px);line-height:1.03;letter-spacing:-.01em;margin:10px 0 18px}
+h2 em{font-style:italic;color:var(--rouge)}
+.case p{color:#4A3B3F;max-width:56ch}
+.case p+p{margin-top:12px}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,2.6vw,26px);line-height:1.3;color:var(--rouge-d);border-left:3px solid var(--jaune);padding-left:16px;margin:22px 0}
+.quote small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted);margin-top:6px}
+.polaroid{position:relative;background:#fff;padding:12px 12px 46px;box-shadow:0 30px 60px -32px rgba(42,29,33,.55);transform:rotate(-1.5deg);transition:transform .5s}
+.polaroid:hover{transform:rotate(0) translateY(-4px)}
+.polaroid img{width:100%;aspect-ratio:1100/715;object-fit:cover}
+.polaroid figcaption{position:absolute;left:16px;bottom:13px;font-family:var(--serif);font-style:italic;color:var(--muted);font-size:16px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.facts div{border-top:2px solid var(--rouge);padding-top:8px}
+.facts b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(24px,4vw,34px);color:var(--rouge);line-height:1.1}
+.facts span{font-size:13.5px;color:var(--muted);line-height:1.35;display:block}
+
+/* NOUVEAUTE */
+.new{background:var(--cirque);color:var(--lamb);position:relative}
+.new .lamb{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 26'%3E%3Cpath fill='%23F7F2EA' d='M0 0h44v6H38c0 9-5 15-9 20-2 0-3 0-4-1-3-4-7-10-7-19H0z'/%3E%3C/svg%3E")}
+.new .in{max-width:1120px;margin:0 auto;padding:clamp(50px,8vw,100px) var(--pad);display:grid;gap:34px;align-items:center}
+@media(min-width:900px){.new .in{grid-template-columns:.9fr 1.1fr}}
+.new .kicker{color:var(--jaune)}
+.new h2 em{color:#9FD3B4}
+.new p{color:#D9E3DD;max-width:50ch}
+.new p+p{margin-top:12px}
+.date{display:inline-block;background:var(--jaune);color:var(--ink);font-weight:700;font-size:13px;border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo figure:nth-child(2){margin-top:44px}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:0 26px 50px -30px rgba(0,0,0,.7)}
+.duo figcaption{font-size:13px;color:#BFD0C6;margin-top:7px}
+
+/* ETAGERES */
+.shelves{padding:clamp(56px,9vw,110px) 0 clamp(40px,6vw,70px)}
+.shelves .head{max-width:1120px;margin:0 auto;padding:0 var(--pad)}
+.shelves .head p{color:var(--muted);max-width:52ch}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:20px var(--pad) 6px;max-width:1120px;margin:0 auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:600 14px var(--sans);border:1.5px solid var(--rouge);color:var(--rouge);background:transparent;border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s,color .2s}
+.chip[aria-pressed=true]{background:var(--rouge);color:#fff}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px var(--pad) 20px;scrollbar-width:thin;scroll-padding:0 var(--pad)}
+.strip figure{flex:0 0 min(64vw,270px);scroll-snap-align:start;transition:opacity .35s,transform .35s}
+.strip figure.off{display:none}
+.strip .fr{overflow:hidden;border-radius:16px;background:var(--creme-2)}
+.strip img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{margin-top:9px;font-weight:600;font-size:15px;line-height:1.35}
+.strip figcaption small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.hint{max-width:1120px;margin:0 auto;padding:0 var(--pad);font-size:13px;color:var(--muted)}
+
+/* ARTISANS */
+.makers{background:var(--creme-2);padding:clamp(56px,9vw,110px) var(--pad)}
+.makers .in{max-width:1120px;margin:0 auto;display:grid;gap:30px}
+@media(min-width:900px){.makers .in{grid-template-columns:.8fr 1.2fr}}
+.makers .intro p{color:#4A3B3F;max-width:44ch}
+.search{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:4px 6px 4px 18px;margin:18px 0 6px;max-width:420px}
+.search input{flex:1;border:0;font:16px var(--sans);padding:10px 0;background:transparent;min-width:0;color:var(--ink)}
+.search input:focus{outline:none}
+.search:focus-within{border-color:var(--rouge)}
+.search svg{flex:0 0 18px;color:var(--rouge)}
+.tagnote{font-size:13px;color:var(--muted)}
+.list{list-style:none;padding:0;border-top:1.5px solid var(--ink)}
+.list li{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:15px 2px;border-bottom:1px solid var(--line);transition:background .25s,padding .25s}
+.list li:hover{background:rgba(255,255,255,.6);padding-left:10px}
+.list li.off{display:none}
+.list b{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.2}
+.list span{grid-column:1;color:var(--muted);font-size:15px}
+.list i{grid-row:1/3;grid-column:2;align-self:center;font-style:normal;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--rouge);font-weight:700}
+.empty{display:none;color:var(--muted);padding:14px 2px}
+
+/* AVIS */
+.voices{padding:clamp(56px,9vw,100px) var(--pad);max-width:1120px;margin:0 auto}
+.voices .grid{display:grid;gap:18px;margin-top:10px}
+@media(min-width:820px){.voices .grid{grid-template-columns:1fr 1fr}}
+.voice{background:#fff;border-radius:20px;padding:26px 26px 22px;position:relative;box-shadow:0 20px 44px -34px rgba(42,29,33,.5)}
+.voice::before{content:"“";position:absolute;top:-8px;left:18px;font-family:var(--serif);font-size:84px;line-height:1;color:var(--rouge-l)}
+.voice p{font-family:var(--serif);font-size:clamp(21px,2.6vw,25px);line-height:1.3;padding-top:20px}
+.voice small{display:block;margin-top:12px;color:var(--muted);font-size:13.5px}
+
+/* INFOS */
+.info{background:var(--rouge);color:var(--lamb);position:relative}
+.info .lamb{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 26'%3E%3Cpath fill='%23F7F2EA' d='M0 0h44v6H38c0 9-5 15-9 20-2 0-3 0-4-1-3-4-7-10-7-19H0z'/%3E%3C/svg%3E")}
+.info .in{max-width:1120px;margin:0 auto;padding:clamp(48px,8vw,90px) var(--pad);display:grid;gap:28px}
+@media(min-width:860px){.info .in{grid-template-columns:1.2fr 1fr 1fr}}
+.info .kicker{color:var(--jaune)}
+.info h2{color:#fff;margin-bottom:6px}
+.info h3{font-family:var(--serif);font-weight:600;font-size:23px;margin-bottom:6px;color:#fff}
+.info p{color:#F6DEDF}
+.info a{text-decoration-color:rgba(255,255,255,.4);text-underline-offset:3px}
+.info .note{font-size:13px;color:#EBC3C6;margin-top:6px}
+.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.socials a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1.5px solid rgba(255,255,255,.6);border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;transition:background .2s,color .2s}
+.socials a:hover{background:#fff;color:var(--rouge)}
+
+footer{text-align:center;padding:38px var(--pad) 30px;color:var(--muted);font-size:14px}
+footer b{font-family:var(--serif);font-weight:400;font-style:italic;font-size:28px;color:var(--rouge);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(251,248,242,.96);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.4);backdrop-filter:blur(6px)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px}
+.bar a.m{background:var(--rouge);color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,h1,.lede,.cta{opacity:1!important;transform:none!important}#brume{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Cazanou</div>
+
+<header class="hero">
+  <div class="ph"><img src="img/facade.jpg" alt="La façade rouge et blanche de La Cazanou, case créole à balcon, rue Charles de Gaulle à Hell-Bourg"></div>
+  <canvas id="brume" aria-hidden="true"></canvas>
+  <div class="txt">
+    <p class="eyebrow">Hell-Bourg · Cirque de Salazie</p>
+    <h1>Plus de 90 artisans <em>péi</em> sous un même toit</h1>
+    <p class="lede">Bijoux, affiches, textile, gourmandises du terroir : à La Cazanou, tout est Made in La Réunion.</p>
+    <div class="cta">
+      <a class="btn main" href="#venir">Venir à la boutique</a>
+      <a class="btn ghost" href="#etageres">Flâner dans les rayons</a>
+    </div>
+  </div>
+  <div class="lamb down" aria-hidden="true"></div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Made in La Réunion</span><span>Plus de 90 artisans</span><span>Hell-Bourg</span><span>Bijoux faits main</span><span>Affiches de Clavé illustration</span><span>Gouzou by Runshark</span><span>Gelée de géranium rosat</span><span>Vins du Chai de Cilaos</span>
+  <span>Made in La Réunion</span><span>Plus de 90 artisans</span><span>Hell-Bourg</span><span>Bijoux faits main</span><span>Affiches de Clavé illustration</span><span>Gouzou by Runshark</span><span>Gelée de géranium rosat</span><span>Vins du Chai de Cilaos</span>
+</div></div>
+
+<section class="case" id="case">
+  <div class="reveal">
+    <p class="kicker">La case</p>
+    <h2>Juste en dessous de la <em>Maison du Tourisme</em></h2>
+    <p>Sur la rue principale d’Hell-Bourg, une case créole rouge et blanche à balcon. À l’intérieur, les étagères débordent : bijoux en argent et fantaisie, cases créoles, punchs et rhums, vêtements, films et guides sur La Réunion, cartes IGN pour partir en randonnée.</p>
+    <p>Et une spécialité maison : la boutique fabrique elle-même des gourmandises du terroir, croque chouchous et confitures.</p>
+    <p class="quote">« Venez découvrir à La Cazanou tous nos produits de plus de 90 artisans. Made in la Réunion »<small>— la présentation de La Cazanou sur Facebook</small></p>
+    <div class="facts">
+      <div><b>90+</b><span>artisans réunionnais</span></div>
+      <div><b>7j/7</b><span>de 9h à 18h</span></div>
+      <div><b>n°49</b><span>rue Charles de Gaulle</span></div>
+    </div>
+  </div>
+  <figure class="polaroid reveal"><img src="img/boutique-collage.jpg" alt="La façade de La Cazanou, ses gourdes colorées, ses bières locales, le drapeau de La Réunion et ses étals de vannerie" loading="lazy"><figcaption>La Cazanou, dedans comme dehors</figcaption></figure>
+</section>
+
+<section class="new" id="nouveau">
+  <div class="lamb" aria-hidden="true"></div>
+  <div class="in">
+    <div class="reveal">
+      <span class="date">Nouveau · 20 octobre 2026</span>
+      <p class="kicker">Tout juste arrivé</p>
+      <h2>Les serviettes <em>Gouzou</em> by Runshark</h2>
+      <p>« Les serviettes Gouzou by RUNSHARK en édition limitée ! » Le petit bonhomme de Jace part en balade au milieu des fougères et des cascades, imprimé sur des serviettes roulées dans leur pochette.</p>
+      <p>Une histoire qui dure : en septembre 2025 déjà, La Cazanou présentait la Gouzous Beach, maxi-serviette de 200 × 180 cm en microfibre recyclée, signée RunShark × Jace. Et dès 2024, les timbres Gouzou avaient rejoint les rayons.</p>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/gouzou-dessin.jpg" alt="Dessin Gouzou : un randonneur à casquette rouge devant une cascade dans la forêt" loading="lazy"><figcaption>Le motif, version cirque</figcaption></figure>
+      <figure><img src="img/serviettes-runshark.jpg" alt="Serviettes Runshark roulées dans leurs pochettes, posées sur le motif Gouzou" loading="lazy"><figcaption>En édition limitée</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="shelves" id="etageres">
+  <div class="head reveal">
+    <p class="kicker">Les étagères</p>
+    <h2>Un tour de la case, <em>rayon par rayon</em></h2>
+    <p>Toutes ces photos viennent de la page Facebook de La Cazanou. Ici, chaque nouveauté trouverait sa place, rangée et facile à retrouver.</p>
+  </div>
+  <div class="chips" role="group" aria-label="Filtrer les rayons">
+    <button class="chip" aria-pressed="true" data-f="tout">Tout</button>
+    <button class="chip" aria-pressed="false" data-f="bijoux">Bijoux</button>
+    <button class="chip" aria-pressed="false" data-f="affiches">Affiches &amp; papeterie</button>
+    <button class="chip" aria-pressed="false" data-f="textile">Textile</button>
+    <button class="chip" aria-pressed="false" data-f="terroir">Terroir</button>
+    <button class="chip" aria-pressed="false" data-f="soin">Soin &amp; maison</button>
+  </div>
+  <div class="strip" id="strip">
+    <figure data-c="bijoux"><div class="fr"><img src="img/boucles-orchidees.jpg" alt="Boucles d’oreilles à fleurs d’orchidées dans leurs écrins" loading="lazy"></div><figcaption>Boucles fleurs d’orchidée<small>Septembre 2024</small></figcaption></figure>
+    <figure data-c="affiches"><div class="fr"><img src="img/affiche-salazie.jpg" alt="Affiche illustrée Salazie Hellbourg : case créole et pitons" loading="lazy"></div><figcaption>Affiche « Salazie, Hellbourg »<small>Clavé illustration · mars 2025</small></figcaption></figure>
+    <figure data-c="textile"><div class="fr"><img src="img/yab-le-hauts.jpg" alt="Maillot noir « Yab lé hauts »" loading="lazy"></div><figcaption>Maillot « Yab lé hauts »<small>Mai 2026</small></figcaption></figure>
+    <figure data-c="terroir"><div class="fr"><img src="img/gelee-geranium.jpg" alt="Pots de gelée de géranium rosat" loading="lazy"></div><figcaption>Gelée de géranium rosat<small>Maison du géranium · mars 2026</small></figcaption></figure>
+    <figure data-c="bijoux"><div class="fr"><img src="img/bijoux-karoldelaleu.jpg" alt="Planche de bijoux Karoldelaleu : cerises, citrons, hibiscus, feuilles" loading="lazy"></div><figcaption>Bijoux Karoldelaleu<small>Disponibles en magasin · nov. 2024</small></figcaption></figure>
+    <figure data-c="soin"><div class="fr"><img src="img/parfum-ile-intense.jpg" alt="Flacon du parfum L’Île Intense en présentoir" loading="lazy"></div><figcaption>Parfum L’Île Intense<small>« Le premier parfum dédié à La Réunion »</small></figcaption></figure>
+    <figure data-c="textile"><div class="fr"><img src="img/kouler-pei.jpg" alt="Maillot turquoise « Kouler Péi » au motif de piton" loading="lazy"></div><figcaption>Maillot « Kouler Péi »<small>Mai 2026</small></figcaption></figure>
+    <figure data-c="affiches"><div class="fr"><img src="img/timbres-clave.jpg" alt="Planches de timbres illustrés de paysages réunionnais" loading="lazy"></div><figcaption>Timbres Clavé illustration × La Poste<small>Mai 2025</small></figcaption></figure>
+    <figure data-c="terroir"><div class="fr"><img src="img/vins-cilaos.jpg" alt="Bouteilles de vins du Chai de Cilaos en rayon" loading="lazy"></div><figcaption>Vins du Chai de Cilaos<small>Rosé, blancs, et le Goutali</small></figcaption></figure>
+    <figure data-c="bijoux"><div class="fr"><img src="img/boucles-feuilles.jpg" alt="Boucles d’oreilles feuilles dorées et perles colorées" loading="lazy"></div><figcaption>Boucles feuilles dorées<small>Septembre 2024</small></figcaption></figure>
+    <figure data-c="textile"><div class="fr"><img src="img/dodo-sportif.jpg" alt="Tee-shirt noir Le Dodo Sportif" loading="lazy"></div><figcaption>Le Dodo Sportif<small>Nouvelle collection · août 2026</small></figcaption></figure>
+    <figure data-c="affiches"><div class="fr"><img src="img/carnets-hell-bourg.jpg" alt="Carnets illustrés d’un chouchou, titrés Hell-Bourg" loading="lazy"></div><figcaption>Carnets « Hell-Bourg »<small>Le chouchou à l’honneur · oct. 2024</small></figcaption></figure>
+    <figure data-c="soin"><div class="fr"><img src="img/fee-pei.jpg" alt="Soins et huiles Fée Péï en présentoir" loading="lazy"></div><figcaption>Les soins Fée Péï<small>Avril 2026</small></figcaption></figure>
+    <figure data-c="terroir"><div class="fr"><img src="img/coco-jojo.jpg" alt="Bouteilles de thé glacé Coco Jojo, citron, passion et bissap" loading="lazy"></div><figcaption>Thés glacés Coco Jojo<small>Avec Brasserie Dalons · mars 2026</small></figcaption></figure>
+    <figure data-c="textile"><div class="fr"><img src="img/bob-drapeau.jpg" alt="Bob et tee-shirt aux couleurs du drapeau réunionnais" loading="lazy"></div><figcaption>Aux couleurs du drapeau péi<small>Mai 2026</small></figcaption></figure>
+    <figure data-c="bijoux"><div class="fr"><img src="img/boucles-fleurs.jpg" alt="Boucles d’oreilles créoles à fleurs colorées" loading="lazy"></div><figcaption>Créoles fleuries<small>Septembre 2024</small></figcaption></figure>
+    <figure data-c="soin"><div class="fr"><img src="img/bougies.jpg" alt="Bougies en boîtes métalliques sur une étagère" loading="lazy"></div><figcaption>Bougies en boîte<small>Avril 2026</small></figcaption></figure>
+    <figure data-c="affiches"><div class="fr"><img src="img/affiche-volcan.jpg" alt="Affiche illustrée d’une coulée de lave au Piton de la Fournaise" loading="lazy"></div><figcaption>Affiche « Coulée 2026 »<small>Le Piton de la Fournaise · avril 2026</small></figcaption></figure>
+    <figure data-c="soin"><div class="fr"><img src="img/gobelets.jpg" alt="Gobelets isothermes fleuris « Pardon ! La Réunion »" loading="lazy"></div><figcaption>Gobelets « Pardon ! La Réunion »<small>Mai 2026</small></figcaption></figure>
+    <figure data-c="textile"><div class="fr"><img src="img/savates.jpg" alt="Claquettes bleues aux rayons du drapeau réunionnais" loading="lazy"></div><figcaption>Claquettes « Réunion »<small>Mars 2026</small></figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="makers" id="artisans">
+  <div class="in">
+    <div class="intro reveal">
+      <p class="kicker">Le carnet des artisans</p>
+      <h2>Qui se cache <em>derrière les étagères&nbsp;?</em></h2>
+      <p>Quelques-uns des créateurs et producteurs mis à l’honneur sur la page de La Cazanou. Sur le vrai site, chacun aurait sa fiche, et les visiteurs retrouveraient leur coup de cœur en un mot.</p>
+      <label class="search"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Bijoux, affiche, vin…" aria-label="Chercher un artisan ou un produit"></label>
+      <p class="tagnote">Essayez « bijoux » ou « Cilaos ».</p>
+    </div>
+    <div class="reveal">
+      <ul class="list" id="list">
+        <li data-k="serviette gouzou jace plage runshark"><b>Runshark × Gouzou</b><span>Serviettes en édition limitée, motifs de Jace</span><i>Plage</i></li>
+        <li data-k="affiche timbre poste illustration clave salazie"><b>Clavé illustration</b><span>Affiches en tirage numéroté, timbres avec La Poste</span><i>Affiches</i></li>
+        <li data-k="bijoux boucles chouchou goyavier acier karoldelaleu"><b>Bijoux Karoldelaleu</b><span>Bijoux faits main : chouchou, goyavier, acier inoxydable</span><i>Bijoux</i></li>
+        <li data-k="vin rose blanc goutali cilaos chai"><b>Le Chai de Cilaos</b><span>Rosé, blanc moelleux, blanc sec et le Goutali</span><i>Vins</i></li>
+        <li data-k="gelee confiture geranium rosat maido"><b>Maison du géranium</b><span>Gelée de géranium rosat, pour tartines et crêpes</span><i>Terroir</i></li>
+        <li data-k="soin huile cosmetique fee pei"><b>Fée Péï</b><span>Soins, huiles et baumes</span><i>Soin</i></li>
+        <li data-k="the glace boisson coco jojo dalons brasserie biere"><b>Brasserie Dalons</b><span>Associée au post des thés glacés Coco Jojo</span><i>Boissons</i></li>
+        <li data-k="tee shirt vetement debardeur dodo sportif"><b>Le Dodo Sportif</b><span>Tee-shirts et débardeurs, nouvelle collection</span><i>Textile</i></li>
+        <li data-k="parfum ile intense senteur"><b>L’Île Intense</b><span>« Le premier parfum dédié à La Réunion »</span><i>Parfum</i></li>
+      </ul>
+      <p class="empty" id="empty">Pas encore dans le carnet… mais sûrement sur les étagères. Demandez à la boutique !</p>
+    </div>
+  </div>
+</section>
+
+<section class="voices">
+  <p class="kicker reveal">Ils sont passés par la case</p>
+  <h2 class="reveal">Ce qu’on en dit</h2>
+  <div class="grid">
+    <figure class="voice reveal"><p>accueil super pleines de jolies choses</p><small>Marie Paule, recommandation Facebook</small></figure>
+    <figure class="voice reveal"><p>magazin avec multi chose créole et toujours le sourire</p><small>Mickaël, recommandation Facebook</small></figure>
+  </div>
+</section>
+
+<section class="info" id="venir">
+  <div class="lamb" aria-hidden="true"></div>
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Passer à la case</p>
+      <h2>On vous attend à Hell&#8209;Bourg</h2>
+      <div class="socials">
+        <a href="https://www.facebook.com/lacazanou/">Facebook</a>
+        <a href="https://www.instagram.com/lacazanou/">Instagram</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=La+Cazanou+49+rue+Charles+de+Gaulle+Hell-Bourg+Salazie">Itinéraire</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <h3>Venir</h3>
+      <p>49 rue Charles de Gaulle<br>Hell-Bourg, 97433 Salazie<br>sous la Maison du Tourisme</p>
+      <h3 style="margin-top:20px">Horaires</h3>
+      <p>Tous les jours, de 9h à 18h</p>
+      <p class="note">Selon la fiche Île de La Réunion Tourisme</p>
+    </div>
+    <div class="reveal">
+      <h3>Appeler</h3>
+      <p><a href="tel:+262692066488">0692 06 64 88</a></p>
+      <h3 style="margin-top:20px">Écrire</h3>
+      <p><a href="mailto:la.cazanou@yahoo.fr">la.cazanou@yahoo.fr</a></p>
+    </div>
+  </div>
+</section>
+
+<footer><b>La Cazanou</b>Boutique d’art et d’artisanat · Hell-Bourg, cirque de Salazie<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Cazanou.</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="tel:+262692066488">Appeler</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=La+Cazanou+49+rue+Charles+de+Gaulle+Hell-Bourg+Salazie">Itinéraire</a>
+</nav>
+
+<script>
+(function(){
+  var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  /* rayons */
+  var chips=document.querySelectorAll(".chip"),figs=document.querySelectorAll("#strip figure"),strip=document.getElementById("strip");
+  chips.forEach(function(c){c.addEventListener("click",function(){
+    chips.forEach(function(x){x.setAttribute("aria-pressed",x===c)});
+    var f=c.dataset.f;figs.forEach(function(g){g.classList.toggle("off",f!=="tout"&&g.dataset.c!==f)});strip.scrollLeft=0;
+  })});
+  /* carnet */
+  var q=document.getElementById("q"),items=document.querySelectorAll("#list li"),empty=document.getElementById("empty");
+  function norm(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
+  q.addEventListener("input",function(){var v=norm(q.value.trim()),n=0;
+    items.forEach(function(li){var ok=!v||norm(li.dataset.k+" "+li.textContent).indexOf(v)>-1;li.classList.toggle("off",!ok);if(ok)n++});
+    empty.style.display=n?"none":"block";});
+  /* brume de Salazie */
+  var cv=document.getElementById("brume");if(rm||!cv.getContext)return;
+  var ctx=cv.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),run=true,parts=[];
+  function size(){W=cv.offsetWidth;H=cv.offsetHeight;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener("resize",size);
+  for(var i=0;i<8;i++)parts.push({m:1,x:Math.random()*W,y:H*(.05+Math.random()*.45),r:120+Math.random()*160,v:.12+Math.random()*.18,a:.10+Math.random()*.10});
+  for(var j=0;j<20;j++)parts.push({m:0,x:Math.random()*W,y:Math.random()*H,r:.8+Math.random()*1.6,v:.15+Math.random()*.35,a:.25+Math.random()*.4,p:Math.random()*6});
+  function draw(){
+    if(!run)return;ctx.clearRect(0,0,W,H);
+    parts.forEach(function(p){
+      if(p.m){p.x+=p.v;if(p.x-p.r>W)p.x=-p.r;
+        var g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,"rgba(236,241,246,"+p.a+")");g.addColorStop(1,"rgba(236,241,246,0)");
+        ctx.fillStyle=g;ctx.beginPath();ctx.ellipse(p.x,p.y,p.r,p.r*.45,0,0,6.283);ctx.fill();}
+      else{p.y-=p.v;p.p+=.02;p.x+=Math.sin(p.p)*.3;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
+        ctx.fillStyle="rgba(255,240,200,"+(p.a*(.6+.4*Math.sin(p.p*2)))+")";ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();}
+    });
+    requestAnimationFrame(draw);
+  }
+  document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(draw)});
+  new IntersectionObserver(function(e){var v=e[0].isIntersecting;if(v&&!run&&!document.hidden){run=true;requestAnimationFrame(draw)}else if(!v)run=false}).observe(cv);
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Boulangerie Pâtisserie Paris Frédéric · Le goût du fait maison à Bras-Panon</title>
+<meta name="description" content="Au cœur de Bras-Panon : pains, viennoiseries et pâtisseries JUDITH by Paris Frédéric, faits maison dans notre fournil. Espace convivial et salon lounge.">
+<meta property="og:title" content="Paris Frédéric · Le goût du fait maison, au cœur de Bras-Panon">
+<meta property="og:description" content="Maquette offerte par Jonathan · ATMA Digital">
+<meta property="og:image" content="https://maquettes.atma-digital.re/paris-frederic-boulangerie-patisserie/img/vitrine-judith.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/paris-frederic-boulangerie-patisserie/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&amp;family=Marcellus&amp;family=Figtree:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#F6EFE4;--lin:#EDE3D3;--farine:#FBF8F2;
+  --vert:#2B3D1F;--vert2:#3D5430;--sauge:#8A9A6E;
+  --or:#A8824E;--or-l:#D9BC8C;--choco:#3A2618;--fraise:#B83A35;
+  --ink:#2A2419;--muted:#6E6455;--line:rgba(43,61,31,.16);
+  --serif:"Fraunces",Georgia,serif;--caps:"Marcellus",Georgia,serif;--sans:"Figtree",system-ui,sans-serif;
+  --pad:clamp(20px,5.5vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--creme);color:var(--ink);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;letter-spacing:-.01em}
+.caps{font-family:var(--caps);letter-spacing:.2em;text-transform:uppercase;font-size:12.5px;color:var(--or)}
+.ribbon{background:var(--vert);color:#E5E2D2;font-size:12.5px;text-align:center;padding:8px 14px;line-height:1.45}
+.ribbon b{color:var(--or-l)}
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:26px var(--pad) 0}
+.hero .in{max-width:1180px;margin:0 auto;display:grid;gap:30px;align-items:center}
+@media(min-width:920px){.hero .in{grid-template-columns:1fr 1fr;gap:6vw;min-height:88svh;padding-bottom:60px}}
+#poudre{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero .txt{position:relative;z-index:2}
+.marque{display:flex;align-items:center;gap:14px}
+.marque img{width:78px;height:78px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px var(--line),0 10px 24px -14px rgba(43,61,31,.6)}
+.marque span{font-family:var(--caps);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--vert2);line-height:1.5}
+.hero h1{font-size:clamp(44px,11.5vw,92px);color:var(--vert);margin:26px 0 18px}
+.hero h1 em{font-style:italic;color:var(--or);font-weight:400}
+.hero h1 .l{display:block;opacity:0;transform:translateY(18px);animation:monte 1s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 .l:nth-child(2){animation-delay:.18s}.hero h1 .l:nth-child(3){animation-delay:.36s}
+@keyframes monte{to{opacity:1;transform:none}}
+.lede{max-width:40ch;color:var(--muted);font-size:clamp(17px,2.2vw,20px)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15.5px;text-decoration:none;border:1.5px solid var(--vert);transition:transform .25s,background .25s,color .25s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.plein{background:var(--vert);color:var(--farine);animation:souffle 3.6s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 0 0 7px rgba(168,130,78,.18)}}
+.btn.ligne{background:transparent;color:var(--vert)}
+.btn.ligne:hover{background:var(--vert);color:var(--farine)}
+.arche{position:relative;z-index:2;justify-self:center;width:min(100%,500px)}
+.arche .cadre{aspect-ratio:4/5;border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(58,38,24,.75);border:6px solid var(--farine)}
+.arche .cadre img{width:100%;height:100%;object-fit:cover;object-position:40% 50%;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-3%,2%)}}
+.arche .cachet{position:absolute;left:-6px;bottom:30px;background:var(--farine);border:1px solid var(--line);border-radius:16px;padding:10px 16px;box-shadow:0 14px 30px -18px rgba(0,0,0,.45);transform:rotate(-3deg)}
+.arche .cachet small{display:block;font-family:var(--caps);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.arche .cachet b{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--vert)}
+.arche figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+.epi{position:absolute;right:-30px;top:-20px;width:120px;opacity:.5;z-index:0}
+/* MARQUEE */
+.ruban{margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad));background:var(--or);color:var(--farine);overflow:hidden;white-space:nowrap;padding:13px 0;margin-top:46px;position:relative;z-index:2}
+.ruban .piste{display:inline-flex;gap:34px;animation:defile 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:19px}
+.ruban .piste span::after{content:"✦";font-style:normal;margin-left:34px;font-size:12px;opacity:.75;vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* FOURNIL */
+.fournil{background:var(--vert);color:#E9E6D8;padding:clamp(64px,10vw,120px) var(--pad);position:relative}
+.fournil .in{max-width:1080px;margin:0 auto;display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.fournil .in{grid-template-columns:1.05fr .95fr}}
+.fournil .caps{color:var(--or-l)}
+.fournil h2{font-size:clamp(34px,8vw,60px);margin:12px 0 22px;color:var(--farine)}
+.fournil h2 em{color:var(--or-l)}
+.fournil p{max-width:54ch;color:#D6D8C6}
+.fournil p+p{margin-top:14px}
+.fournil blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(21px,3vw,26px);line-height:1.35;color:var(--or-l);border-left:2px solid var(--or);padding-left:18px;margin-top:26px}
+.fournil blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:#B9BCA8;margin-top:8px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.duo figure:first-child{margin-top:42px}
+.duo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:18px}
+.duo figcaption{font-size:13px;color:#B9BCA8;margin-top:6px}
+.vague{display:block;width:100%;height:46px}
+/* COMPTOIR */
+.comptoir{max-width:1140px;margin:0 auto;padding:clamp(64px,10vw,120px) var(--pad)}
+.tete{max-width:640px;margin-bottom:34px}
+.tete h2{font-size:clamp(34px,8vw,58px);color:var(--vert);margin-top:12px}
+.tete p{color:var(--muted);margin-top:14px}
+.cartes{display:grid;gap:20px}
+@media(min-width:700px){.cartes{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.cartes{grid-template-columns:repeat(4,1fr)}}
+.carte{background:var(--farine);border-radius:22px;overflow:hidden;border:1px solid var(--line);transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 44px -30px rgba(58,38,24,.6)}
+.carte .ph{aspect-ratio:4/3;overflow:hidden}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.carte:hover .ph img{transform:scale(1.06)}
+.carte .c{padding:18px 20px 22px}
+.carte h3{font-size:26px;color:var(--vert)}
+.carte p{color:var(--muted);font-size:15.5px;margin-top:6px}
+.carte q{display:block;font-family:var(--serif);font-style:italic;color:var(--or);margin-top:10px;font-size:16px}
+/* JUDITH */
+.judith{background:var(--choco);color:#EADFCF;padding:clamp(64px,10vw,120px) var(--pad);position:relative;overflow:hidden}
+.judith .in{max-width:1080px;margin:0 auto;display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.judith .in{grid-template-columns:.9fr 1.1fr}}
+.judith .sig{font-family:var(--caps);font-size:clamp(46px,12vw,86px);letter-spacing:.14em;color:var(--or-l);line-height:1}
+.judith .sig small{display:block;font-family:var(--serif);font-style:italic;letter-spacing:0;font-size:clamp(19px,3.4vw,26px);color:#CDBFA8;margin-top:6px}
+.judith h2{font-size:clamp(30px,6.6vw,48px);color:var(--farine);margin:26px 0 14px}
+.judith p{color:#D4C7B3;max-width:52ch}
+.piliers{list-style:none;display:grid;gap:12px;margin-top:24px}
+.piliers li{display:flex;gap:14px;align-items:center;border-top:1px solid rgba(217,188,140,.25);padding-top:12px}
+.piliers svg{flex:0 0 34px;height:34px;stroke:var(--or-l);fill:none;stroke-width:1.4}
+.piliers b{display:block;font-family:var(--caps);letter-spacing:.12em;font-weight:400;color:var(--or-l);font-size:14px;text-transform:uppercase}
+.piliers span{font-size:15px;color:#CDBFA8}
+.piece{position:relative}
+.piece img{border-radius:24px;width:100%;box-shadow:0 40px 70px -40px #000}
+.piece figcaption{font-size:13px;color:#A8987F;margin-top:8px}
+.mosa{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.mosa img{border-radius:16px;aspect-ratio:1;object-fit:cover;width:100%}
+/* FETES */
+.fetes{padding:clamp(64px,10vw,120px) var(--pad);background:linear-gradient(180deg,var(--creme),var(--lin))}
+.fetes .in{max-width:1080px;margin:0 auto;display:grid;gap:36px}
+@media(min-width:900px){.fetes .in{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.fetes h2{font-size:clamp(34px,8vw,56px);color:var(--vert);margin:12px 0 14px}
+.fetes .note{color:var(--muted);max-width:44ch}
+.carnet{background:var(--farine);border-radius:24px;padding:clamp(20px,4.5vw,34px);border:1px solid var(--line);box-shadow:0 30px 60px -44px rgba(58,38,24,.7)}
+.carnet fieldset{border:0;margin-bottom:20px}
+.carnet legend{font-family:var(--caps);letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--or);margin-bottom:10px}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix label{position:relative}
+.choix input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.choix span{display:inline-block;padding:10px 15px;border-radius:999px;border:1.5px solid var(--line);font-size:14.5px;background:#fff;transition:all .2s;line-height:1.25}
+.choix input:checked+span{background:var(--vert);color:var(--farine);border-color:var(--vert)}
+.choix input:focus-visible+span{outline:3px solid var(--or);outline-offset:2px}
+.desc{font-size:14px;color:var(--muted);margin-top:10px;min-height:2.6em;font-style:italic}
+.ligne2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.carnet input[type=date],.carnet input[type=text]{width:100%;min-height:48px;border:1.5px solid var(--line);border-radius:14px;padding:0 14px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.recap{background:var(--lin);border-radius:16px;padding:14px 16px;font-size:15px;margin:6px 0 16px;color:var(--choco)}
+.carnet .btns{margin-top:0}
+.carnet .btn{flex:1 1 180px}
+/* GALERIE */
+.galerie{padding:clamp(56px,9vw,100px) 0}
+.galerie .tete{padding:0 var(--pad);max-width:1140px;margin:0 auto 22px}
+.bande{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.bande figure{flex:0 0 min(70vw,300px);scroll-snap-align:start}
+.bande img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;transition:transform .35s}
+.bande figure:hover img{transform:translateY(-5px) rotate(1deg)}
+.bande figcaption{font-family:var(--serif);font-size:18px;color:var(--vert);margin-top:8px;line-height:1.25}
+.bande figcaption small{display:block;font-family:var(--sans);font-size:12px;color:var(--muted)}
+/* SALON */
+.salon{max-width:1080px;margin:0 auto;padding:0 var(--pad) clamp(64px,10vw,110px);display:grid;gap:22px}
+@media(min-width:820px){.salon{grid-template-columns:1.2fr .8fr}}
+.salon .bloc{background:var(--vert2);color:#E8E6D6;border-radius:24px;padding:clamp(26px,5vw,44px);position:relative;overflow:hidden}
+.salon .bloc h2{font-size:clamp(30px,6.6vw,46px);color:var(--farine);margin:10px 0 14px}
+.salon .bloc .caps{color:var(--or-l)}
+.salon .bloc p{color:#D5D9C4}
+.salon .merci{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--or-l);margin-top:18px;line-height:1.4}
+.notes{display:grid;gap:14px}
+.avis{background:var(--farine);border:1px solid var(--line);border-radius:20px;padding:22px}
+.avis .big{font-family:var(--serif);font-size:46px;color:var(--vert);line-height:1}
+.avis .big small{font-size:20px;color:var(--muted)}
+.etoiles{color:var(--or);letter-spacing:3px;font-size:17px;margin:6px 0 2px}
+.avis p{font-size:14.5px;color:var(--muted)}
+/* INFOS */
+.infos{background:var(--farine);border-top:1px solid var(--line);padding:clamp(56px,9vw,100px) var(--pad)}
+.infos .in{max-width:1080px;margin:0 auto;display:grid;gap:30px}
+@media(min-width:820px){.infos .in{grid-template-columns:1.1fr 1fr 1fr}}
+.infos h3{font-size:28px;color:var(--vert);margin-bottom:10px}
+.infos p,.infos li{color:var(--ink)}
+.horaires{list-style:none}
+.horaires li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line);font-size:16px}
+.horaires li.auj{color:var(--vert);font-weight:700}
+.infos .src{font-size:12.5px;color:var(--muted);margin-top:8px}
+.infos a{color:var(--vert);font-weight:700;text-underline-offset:3px}
+footer{text-align:center;padding:40px var(--pad) 30px;color:var(--muted);font-size:14px;background:var(--creme)}
+footer img{width:84px;height:84px;border-radius:50%;margin:0 auto 12px}
+footer .fin{margin-top:14px;font-size:12.5px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(251,248,242,.95);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 14px 30px -14px rgba(0,0,0,.4)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--vert)}
+.bar a.m{background:var(--vert);color:var(--farine)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:420px}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.hero h1 .l{opacity:1;transform:none}#poudre{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour la Boulangerie Pâtisserie Paris Frédéric</div>
+
+<header class="hero">
+  <canvas id="poudre" aria-hidden="true"></canvas>
+  <div class="in">
+    <div class="txt">
+      <div class="marque"><img src="img/logo.jpg" alt="Logo Boulangerie Pâtisserie Paris Frédéric"><span>Boulangerie · Pâtisserie<br>Bras-Panon</span></div>
+      <h1><span class="l">Le goût</span><span class="l">du <em>fait maison,</em></span><span class="l">chaque jour</span></h1>
+      <p class="lede">Au cœur de Bras-Panon, le goût de la tradition française et la passion du bon pain vous attendent chaque jour, de la baguette croustillante aux pains sportifs et aux croissants gourmands.</p>
+      <div class="btns">
+        <a class="btn plein" href="#fetes">Réserver ma bûche</a>
+        <a class="btn ligne" href="#comptoir">Voir le comptoir</a>
+      </div>
+    </div>
+    <figure class="arche">
+      <div class="cadre"><img src="img/vitrine-judith.jpg" alt="La vitrine : tartes chocolat caramel JUDITH, tartes aux fraises et gâteau patate"></div>
+      <div class="cachet"><small>Dès l’aube</small><b>Ouvert à 5 h</b></div>
+    </figure>
+  </div>
+  <div class="ruban" aria-hidden="true"><div class="piste">
+    <span>Toujours croustillant, un bon croissant</span><span>Le goût du fait maison</span><span>Banan’ dann’ sokolatine</span><span>Le goût vrai, le goût d’ici</span><span>Fait maison avec passion</span><span>Merci de faire vivre l’artisanat local</span>
+    <span>Toujours croustillant, un bon croissant</span><span>Le goût du fait maison</span><span>Banan’ dann’ sokolatine</span><span>Le goût vrai, le goût d’ici</span><span>Fait maison avec passion</span><span>Merci de faire vivre l’artisanat local</span>
+  </div></div>
+</header>
+
+<section class="fournil">
+  <div class="in">
+    <div class="reveal">
+      <p class="caps">Nout zistoir</p>
+      <h2>Tout sort de <em>notre fournil</em></h2>
+      <p>Chez Paris Frédéric, les pains, les viennoiseries et les pâtisseries naissent sur place, au laboratoire, avec des produits frais et des recettes maison. Une boulangerie artisanale du centre-ville, où l’on vient chercher sa baguette à l’aube et où l’on reste volontiers pour un café au salon.</p>
+      <p>« Nos viennoiseries sont fabriquées dans notre laboratoire selon nos méthodes artisanales habituelles depuis bientôt 30 ans. »</p>
+      <blockquote>« Nos produits ne viennent pas d’une usine, mais ils sortent de notre fournil. Merci de faire vivre l’artisanat local. »<cite>L’affiche de la boutique, partagée sur votre page Facebook</cite></blockquote>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/pain-fait-maison.jpg" alt="Pains au levain, croûte sombre et mie alvéolée" loading="lazy"><figcaption>Pains du fournil</figcaption></figure>
+      <figure><img src="img/croissant.jpg" alt="Un croissant ouvert en deux, mie feuilletée, au comptoir" loading="lazy"><figcaption>« Toujours croustillant »</figcaption></figure>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v14c-160 26-340 32-520 18S560 2 380 10 120 40 0 30z" fill="#2B3D1F"/></svg>
+
+<section class="comptoir" id="comptoir">
+  <div class="tete reveal">
+    <p class="caps">Au comptoir</p>
+    <h2>Une gamme de pain frais, et tout ce qui va avec</h2>
+    <p>Du premier pain de 5 h du matin aux douceurs de l’après-midi : ce que l’on retrouve dans les vitrines, en photos.</p>
+  </div>
+  <div class="cartes">
+    <article class="carte reveal"><div class="ph"><img src="img/baguettes.jpg" alt="Baguettes dorées posées sur un présentoir en bois" loading="lazy"></div><div class="c"><h3>Les pains</h3><p>La baguette croustillante, les pains spéciaux, les pains sportifs : une gamme de pain frais renouvelée chaque jour.</p></div></article>
+    <article class="carte reveal"><div class="ph"><img src="img/viennoiseries.jpg" alt="Vitrine de croissants, pains au chocolat et chaussons" loading="lazy"></div><div class="c"><h3>Les viennoiseries</h3><p>Croissants, pains au chocolat, chaussons : fabriqués au laboratoire, selon les méthodes artisanales de la maison.</p><q>Toujours croustillant, un bon croissant !</q></div></article>
+    <article class="carte reveal"><div class="ph"><img src="img/mille-feuilles.jpg" alt="Mille-feuilles glacés au décor marbré en vitrine" loading="lazy"></div><div class="c"><h3>Les pâtisseries</h3><p>Mille-feuilles, tartes aux fraises, tartes chocolat caramel, gâteau patate : la vitrine JUDITH change au fil des jours.</p></div></article>
+    <article class="carte reveal"><div class="ph"><img src="img/cookies.jpg" alt="Cookies pépite chocolat dans des corbeilles en osier" loading="lazy"></div><div class="c"><h3>Les petites gourmandises</h3><p>Cookies pépite chocolat et douceurs à emporter, pour le goûter ou la pause au salon.</p></div></article>
+  </div>
+</section>
+
+<section class="judith">
+  <div class="in">
+    <div class="reveal">
+      <p class="sig">JUDITH<small>by Paris Frédéric</small></p>
+      <h2>La pièce montée créole, le goût vrai, le goût d’ici</h2>
+      <p>La signature pâtissière de la maison : entremets, tartes et grandes pièces montées. En tête d’affiche, l’authentique pièce montée créole.</p>
+      <ul class="piliers">
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 30V14M17 18c-6 0-9-4-9-9 6 0 9 4 9 9zM17 22c6 0 9-4 9-9-6 0-9 4-9 9z"/></svg><div><b>Ingrédients naturels</b></div></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="12" cy="11" r="4"/><circle cx="23" cy="13" r="3"/><path d="M5 28c0-5 3-9 7-9s7 4 7 9M18 28c0-4 2-7 5-7s5 3 5 7"/></svg><div><b>Recette familiale</b><span>transmise de génération en génération</span></div></li>
+        <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M10 9c4-3 11-3 15 1s5 10 2 14-9 6-14 4-8-7-7-12c0-3 2-5 4-7z"/></svg><div><b>100 % réunionnais</b><span>fait maison avec passion</span></div></li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <figure class="piece"><img src="img/piece-montee-creole.jpg" alt="Visuel de la pièce montée créole JUDITH by Paris Frédéric" loading="lazy"><figcaption>Le visuel publié sur votre page Facebook</figcaption></figure>
+      <div class="mosa">
+        <img src="img/judith-patisseries.jpg" alt="Pâtisseries JUDITH au chocolat et éclats de pistache" loading="lazy">
+        <img src="img/tartelettes-fraises.jpg" alt="Tartelettes aux fraises au médaillon JUDITH" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="in">
+    <div class="reveal">
+      <p class="caps">Le carnet des fêtes</p>
+      <h2>Votre bûche, réservée en un instant</h2>
+      <p class="note">Les fêtes approchent : ici, chacun choisit sa bûche et sa date de retrait, et la demande arrive directement à la boutique. Les parfums reprennent votre carte des bûches publiée sur Facebook.</p>
+    </div>
+    <form class="carnet reveal" id="carnet" onsubmit="return false">
+      <fieldset>
+        <legend>La bûche</legend>
+        <div class="choix" id="parfums"></div>
+        <p class="desc" id="desc" aria-live="polite"></p>
+      </fieldset>
+      <fieldset>
+        <legend>La taille</legend>
+        <div class="choix">
+          <label><input type="radio" name="taille" value="petite (4/6 pers.)" checked><span>Petite · 4 à 6 pers.</span></label>
+          <label><input type="radio" name="taille" value="grande (8/10 pers.)"><span>Grande · 8 à 10 pers.</span></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Le retrait</legend>
+        <div class="ligne2">
+          <label><span class="sr" style="position:absolute;left:-9999px">Date de retrait</span><input type="date" id="date" aria-label="Date de retrait"></label>
+          <input type="text" id="nom" placeholder="Votre prénom" aria-label="Votre prénom" autocomplete="given-name">
+        </div>
+      </fieldset>
+      <p class="recap" id="recap" aria-live="polite"></p>
+      <div class="btns">
+        <a class="btn plein" id="envoi" href="#">Envoyer ma demande</a>
+        <a class="btn ligne" href="tel:+262262515965">Appeler la boutique</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="tete reveal"><p class="caps">Dans les vitrines</p><h2>Quelques douceurs de la maison</h2></div>
+  <div class="bande">
+    <figure><img src="img/vitrine-fraises.jpg" alt="Vitrine de pâtisseries aux fraises et Saint-Honoré" loading="lazy"><figcaption>La vitrine des fraises<small>Photo publique, fiche Google</small></figcaption></figure>
+    <figure><img src="img/gamme-pain-frais.jpg" alt="Étagères de pains et viennoiseries en boutique" loading="lazy"><figcaption>Une gamme de pain frais</figcaption></figure>
+    <figure><img src="img/fraisier.jpg" alt="Part de fraisier nappé, chantilly et fraises" loading="lazy"><figcaption>Le fraisier, nappé et chantilly<small>Photo publique, fiche Google</small></figcaption></figure>
+    <figure><img src="img/tartelettes-fraises.jpg" alt="Tartelettes aux fraises" loading="lazy"><figcaption>Tartelettes aux fraises</figcaption></figure>
+    <figure><img src="img/judith-patisseries.jpg" alt="Pâtisseries JUDITH" loading="lazy"><figcaption>Les pâtisseries JUDITH</figcaption></figure>
+    <figure><img src="img/vitrine-judith.jpg" alt="Tartes chocolat caramel" loading="lazy"><figcaption>Tartes chocolat caramel<small>Photo publique, fiche Google</small></figcaption></figure>
+    <figure><img src="img/pain-fait-maison.jpg" alt="Pains au levain" loading="lazy"><figcaption>Le pain fait maison</figcaption></figure>
+  </div>
+</section>
+
+<section class="salon">
+  <div class="bloc reveal">
+    <p class="caps">Le salon lounge</p>
+    <h2>Un espace convivial, au centre-ville</h2>
+    <p>Un croissant au comptoir, un café et une part de tarte au salon : la boulangerie a aussi son espace convivial et son salon lounge, pour prendre le temps.</p>
+    <p class="merci">« Merci à nos équipes passionnées pour leur savoir-faire au quotidien, et merci à vous, chers clients, pour votre confiance et votre fidélité ♥ »</p>
+  </div>
+  <div class="notes">
+    <div class="avis reveal"><p class="big">4,2<small> / 5</small></p><p class="etoiles" aria-hidden="true">★★★★☆</p><p>302 avis sur Google</p></div>
+    <div class="avis reveal"><p class="big">7 185</p><p>abonnés qui suivent la boulangerie sur Facebook</p></div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="in">
+    <div class="reveal">
+      <h3>Horaires</h3>
+      <ul class="horaires" id="horaires">
+        <li data-j="1"><span>Lundi</span><span>5 h – 19 h</span></li>
+        <li data-j="2"><span>Mardi</span><span>5 h – 19 h</span></li>
+        <li data-j="3"><span>Mercredi</span><span>5 h – 19 h</span></li>
+        <li data-j="4"><span>Jeudi</span><span>5 h – 19 h</span></li>
+        <li data-j="5"><span>Vendredi</span><span>5 h – 19 h</span></li>
+        <li data-j="6"><span>Samedi</span><span>6 h – 19 h</span></li>
+        <li data-j="0"><span>Dimanche</span><span>5 h – 12 h 15</span></li>
+      </ul>
+      <p class="src">D’après la fiche Google de la boulangerie.</p>
+    </div>
+    <div class="reveal">
+      <h3>Venir</h3>
+      <p>Immeuble Antaé, rue des Limites<br>Centre-ville, 97412 Bras-Panon</p>
+      <p style="margin-top:12px"><a href="https://www.google.com/maps/search/?api=1&amp;query=Boulangerie+P%C3%A2tisserie+Paris+Fr%C3%A9d%C3%A9ric+Bras-Panon">Ouvrir l’itinéraire</a></p>
+    </div>
+    <div class="reveal">
+      <h3>Contacter</h3>
+      <p><a href="tel:+262262515965">0262 51 59 65</a></p>
+      <p><a href="tel:+262692562910">0692 56 29 10</a></p>
+      <p><a href="mailto:boul.pat.paris@orange.fr">boul.pat.paris@orange.fr</a></p>
+      <p style="margin-top:10px"><a href="https://www.facebook.com/parisfrederic.re">Suivre sur Facebook</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="">
+  <p>Boulangerie Pâtisserie Paris Frédéric · Le goût du fait maison, au cœur de Bras-Panon</p>
+  <p class="fin">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de la Boulangerie Pâtisserie Paris Frédéric.</p>
+</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="tel:+262262515965">Appeler</a>
+  <a href="#fetes">Bûches</a>
+  <a href="#infos">Venir</a>
+</nav>
+
+<script>
+(function(){
+var calme=matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* apparitions */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+/* jour courant */
+var j=new Date().getDay(),li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add("auj");
+/* carnet des bûches */
+var B=[
+["Mangue et fruit de la passion","Crémeux à la mangue, crémeux à la passion et biscuit amande"],
+["Litchi","Crémeux litchi, compotée litchi, croustillant chocolat blanc et biscuit amande"],
+["Ananas Victoria et goyavier","Crémeux ananas Victoria, compotée de goyavier et dacquoise coco"],
+["Forêt noire","Crémeux chocolat, compotée de griottes, crème légère vanille et biscuit chocolat"],
+["Royal chocolat","Crémeux chocolat noir, crémeux chocolat blanc, nougatine, biscuit chocolat"],
+["Chocolat au lait et praliné","Crémeux chocolat au lait, croustillant praliné et dacquoise amande"],
+["Fraisier / fraisier pistache","Biscuit roulé maison, crème mousseline vanille ou pistache, fraises fraîches et chantilly vanillée"],
+["Traditionnelle","Au choix : chocolat, vanille, café, marron, praliné"]];
+var P=document.getElementById("parfums");
+B.forEach(function(b,k){var l=document.createElement("label");l.innerHTML='<input type="radio" name="parfum" value="'+k+'"'+(k===0?" checked":"")+'><span>'+b[0]+'</span>';P.appendChild(l)});
+var f=document.getElementById("carnet"),d=document.getElementById("date"),n=document.getElementById("nom"),r=document.getElementById("recap"),e=document.getElementById("envoi"),de=document.getElementById("desc");
+function maj(){
+ var k=+f.querySelector('[name=parfum]:checked').value,t=f.querySelector('[name=taille]:checked').value;
+ de.textContent=B[k][1];
+ var dt=d.value?new Date(d.value+"T12:00").toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"}):"";
+ var txt="Bûche "+B[k][0]+", "+t+(dt?", retrait le "+dt+".":", date de retrait à choisir.");
+ r.textContent=txt;
+ var corps="Bonjour,\n\nJe souhaite réserver : "+txt+"\n\nMerci beaucoup !\n"+(n.value||"");
+ e.href="mailto:boul.pat.paris@orange.fr?subject="+encodeURIComponent("Réservation bûche de Noël")+"&body="+encodeURIComponent(corps);
+}
+f.addEventListener("input",maj);f.addEventListener("change",maj);maj();
+/* poudre de sucre et farine */
+var c=document.getElementById("poudre");if(calme||!c)return;
+var x=c.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),pts=[],run=true,N=matchMedia("(max-width:700px)").matches?22:34;
+function taille(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+function nv(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+10;p.r=.6+Math.random()*2.1;p.v=.12+Math.random()*.35;p.a=Math.random()*6.28;p.o=.18+Math.random()*.4;p.g=Math.random()<.45;return p}
+taille();for(var i=0;i<N;i++)pts.push(nv({},true));
+addEventListener("resize",taille);
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(boucle)});
+new IntersectionObserver(function(es){run=es[0].isIntersecting&&!document.hidden;if(run)requestAnimationFrame(boucle)}).observe(c);
+function boucle(){
+ if(!run)return;x.clearRect(0,0,W,H);
+ for(var i=0;i<pts.length;i++){var p=pts[i];p.y-=p.v;p.a+=.01;p.x+=Math.sin(p.a)*.25;
+  if(p.y<-10)nv(p,false);
+  var tw=.6+.4*Math.sin(p.a*3);
+  x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);
+  x.fillStyle=p.g?"rgba(200,160,95,"+(p.o*tw)+")":"rgba(255,252,244,"+(p.o*tw+.15)+")";x.fill();}
+ requestAnimationFrame(boucle)}
+requestAnimationFrame(boucle);
+})();
+</script>
+</body>
+</html>
