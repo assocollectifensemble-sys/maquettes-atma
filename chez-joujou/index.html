@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bienvenue Chez Joujou — Snack à Saint-Benoît, dès 5h30</title>
+<meta name="description" content="Snack de quartier à Saint-Benoît : poulet croustillant, plus de 40 sandwichs, menu du jour créole. 58 rue Victor Boissy. Maquette offerte.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bienvenue Chez Joujou — Snack à Saint-Benoît">
+<meta property="og:description" content="Poulet croustillant, plus de 40 sandwichs et un menu du jour créole, dès 5h30 au 58 rue Victor Boissy.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-joujou/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-joujou/">
+<meta name="theme-color" content="#14211a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#14211a;--feuille:#24452f;--or:#f6c22b;--or2:#ffd85c;--rouge:#c8262b;--hibiscus:#e0402f;--creme:#f8eed8;--papier:#fffaf0;--encre:#1b1611;--gris:#6a6157;--script:'Kaushan Script',cursive;--sans:'Outfit',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{width:min(1120px,100% - 36px);margin-inline:auto}
+.ribbon{background:var(--encre);color:#efe4cc;font-size:.78rem;text-align:center;padding:8px 14px;line-height:1.4}
+.ribbon b{color:var(--or)}
+.nav{position:sticky;top:0;z-index:40;background:rgba(20,33,26,.93);backdrop-filter:blur(10px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:10px}
+.logo{text-decoration:none;color:#fff;line-height:1;display:flex;flex-direction:column}
+.logo small{font-size:.58rem;letter-spacing:.26em;font-weight:800;color:var(--or);text-transform:uppercase}
+.logo span{font-family:var(--script);font-size:1.6rem;color:var(--or2)}
+.nav ul{display:flex;gap:24px;list-style:none;font-weight:700;font-size:.92rem}
+.nav ul a{color:#fff;text-decoration:none;opacity:.78}.nav ul a:hover{opacity:1}
+@media(max-width:860px){.nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:800;text-decoration:none;border-radius:999px;padding:14px 22px;border:0;cursor:pointer;font-family:var(--sans);font-size:1rem;min-height:48px;text-align:center;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:var(--or);color:var(--encre);box-shadow:0 14px 30px -14px rgba(246,194,43,.95)}
+.btn-wa{background:#25d366;color:#08311a;box-shadow:0 14px 30px -14px rgba(37,211,102,.9)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-sm{padding:9px 16px;min-height:40px;font-size:.88rem}
+.breathe{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}50%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
+
+/* HERO */
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--nuit)}
+.hero-bg{position:absolute;inset:-4%;background:url(img/saute-poulet.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,33,26,.35) 0%,rgba(20,33,26,.15) 30%,rgba(20,33,26,.82) 68%,rgba(20,33,26,.97) 100%)}
+#steam{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 54px}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(246,194,43,.16);border:1px solid rgba(246,194,43,.5);color:var(--or2);font-weight:800;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:7px 13px;border-radius:999px}
+.hero h1{font-weight:900;font-size:clamp(2.5rem,10vw,5.4rem);line-height:.95;margin:16px 0 10px;letter-spacing:-.01em}
+.hero h1 em{display:block;font-family:var(--script);font-style:normal;font-weight:400;color:var(--or);font-size:1.25em;line-height:1.05;text-shadow:0 6px 30px rgba(0,0,0,.4)}
+.hero p.lead{font-size:1.12rem;max-width:34ch;color:#f1e8d4}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.score{display:flex;align-items:center;gap:12px;margin-top:26px;font-size:.92rem;color:#e6dcc5}
+.score b{font-size:1.7rem;color:var(--or);font-weight:900;line-height:1}
+.reveal-h>*{opacity:0;transform:translateY(22px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.reveal-h>*:nth-child(2){animation-delay:.15s}.reveal-h>*:nth-child(3){animation-delay:.3s}.reveal-h>*:nth-child(4){animation-delay:.45s}.reveal-h>*:nth-child(5){animation-delay:.6s}
+@keyframes up{to{opacity:1;transform:none}}
+
+/* MARQUEE */
+.marquee{background:var(--or);color:var(--encre);overflow:hidden;white-space:nowrap;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:.95rem;padding:13px 0;border-block:3px solid var(--encre)}
+.marquee .track{display:inline-flex;gap:28px;animation:mq 38s linear infinite;padding-left:28px}
+.marquee span::after{content:"✦";margin-left:28px;color:var(--rouge)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:76px 0}
+.eyebrow{font-weight:800;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge)}
+h2{font-weight:900;font-size:clamp(1.9rem,6.4vw,3rem);line-height:1.05;margin:8px 0 14px}
+h2 .s{font-family:var(--script);font-weight:400;color:var(--rouge)}
+.muted{color:var(--gris)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* MATIN */
+.matin .grid{display:grid;gap:30px;align-items:center}
+@media(min-width:820px){.matin .grid{grid-template-columns:1fr 1fr}}
+.photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(20,33,26,.6)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(20,33,26,.82);color:#fff;font-size:.78rem;font-weight:700;padding:6px 11px;border-radius:999px}
+.matin .photo{aspect-ratio:1/1}
+.quote-post{margin-top:18px;background:var(--papier);border-left:5px solid var(--or);border-radius:0 16px 16px 0;padding:18px 20px;font-size:1.05rem}
+.quote-post p{font-family:var(--script);font-size:1.35rem;line-height:1.35;color:var(--feuille)}
+.gq{font-family:var(--sans);font-weight:800;color:var(--or)}
+.quote-post small{display:block;margin-top:8px;color:var(--gris);font-size:.8rem}
+.clock{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #e7dcc2;border-radius:999px;padding:8px 14px;font-weight:700;font-size:.88rem}
+
+/* SPECIALITE */
+.spe{background:var(--nuit);color:#fff;position:relative;overflow:hidden}
+.spe::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(246,194,43,.22),transparent 45%),radial-gradient(circle at 10% 90%,rgba(200,38,43,.25),transparent 50%)}
+.spe .wrap{position:relative}
+.spe h2{color:#fff}.spe h2 .s{color:var(--or)}
+.spe .eyebrow{color:var(--or2)}
+.spe p{color:#e3dac6;max-width:58ch}
+.crisp{display:grid;gap:16px;margin-top:30px}
+@media(min-width:760px){.crisp{grid-template-columns:repeat(3,1fr)}}
+.crisp div{background:rgba(255,255,255,.06);border:1px solid rgba(246,194,43,.28);border-radius:18px;padding:20px;transition:transform .3s,background .3s}
+.crisp div:hover{transform:translateY(-4px);background:rgba(246,194,43,.1)}
+.crisp b{display:block;font-size:2.1rem;color:var(--or);font-weight:900;line-height:1}
+.crisp span{font-size:.95rem;color:#efe6d2}
+.wave{display:block;width:100%;height:46px}
+
+/* MENUS */
+.menus{background:var(--papier)}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 18px 22px;margin:22px -18px 0;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:var(--or);border-radius:9px}
+.menu-card{flex:0 0 min(78%,300px);scroll-snap-align:center;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 40px -24px rgba(20,33,26,.55);transition:transform .3s}
+.menu-card:hover{transform:translateY(-5px) rotate(-.6deg)}
+.menu-card img{aspect-ratio:620/823;object-fit:cover;width:100%}
+.menu-card .t{padding:12px 15px 15px}
+.menu-card .t b{display:block;font-size:.95rem}
+.menu-card .t span{font-size:.85rem;color:var(--gris);line-height:1.45;display:block;margin-top:4px}
+.hint{font-size:.85rem;color:var(--gris);margin-top:2px}
+
+/* BACS */
+.bacs .grid{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:24px}
+.bacs .photo{aspect-ratio:3/4}
+.bacs .photo.big,.bacs .photo.wide{grid-column:span 2;aspect-ratio:4/3}
+@media(min-width:820px){.bacs .grid{grid-template-columns:repeat(4,1fr)}.bacs .photo.big{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}.bacs .photo.wide{grid-column:span 2;aspect-ratio:auto}}
+
+/* SANDWICHS */
+.sand{background:var(--feuille);color:#fff}
+.sand h2{color:#fff}.sand h2 .s{color:var(--or)}.sand .eyebrow{color:var(--or2)}
+.sand p{color:#e3ecdf;max-width:60ch}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.tags span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:9px 15px;font-weight:700;font-size:.92rem;transition:background .25s,color .25s,transform .25s}
+.tags span:hover{background:var(--or);color:var(--encre);transform:translateY(-2px)}
+.fait{display:flex;align-items:center;gap:14px;margin-top:28px;background:rgba(0,0,0,.18);border-radius:18px;padding:16px 18px}
+.fait b{font-size:2.3rem;font-weight:900;color:var(--or);line-height:1}
+
+/* AVIS */
+.avis .box{display:grid;gap:18px;margin-top:22px}
+@media(min-width:820px){.avis .box{grid-template-columns:1fr 1.3fr}}
+.big-score{background:var(--rouge);color:#fff;border-radius:22px;padding:26px;text-align:center}
+.big-score b{display:block;font-size:4rem;font-weight:900;line-height:1}
+.big-score span{font-weight:700}
+.big-score small{display:block;margin-top:8px;opacity:.85}
+blockquote{background:#fff;border-radius:22px;padding:24px;box-shadow:0 18px 40px -26px rgba(20,33,26,.5);position:relative}
+blockquote::before{content:"“";position:absolute;top:-8px;left:18px;font-size:5rem;color:var(--or);font-family:Georgia,serif;line-height:1}
+blockquote p{font-size:1.2rem;font-weight:700;padding-top:22px}
+blockquote footer{margin-top:10px;font-size:.85rem;color:var(--gris)}
+.roi{margin-top:18px;font-family:var(--script);font-size:1.5rem;color:var(--feuille);text-align:center}
+
+/* RESERVER */
+.resa{background:var(--nuit);color:#fff}
+.resa h2{color:#fff}.resa h2 .s{color:var(--or)}.resa .eyebrow{color:var(--or2)}
+.form{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:22px;margin-top:22px;display:grid;gap:18px}
+.form label{font-weight:800;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--or2);display:block;margin-bottom:8px}
+.pick{display:flex;flex-wrap:wrap;gap:8px}
+.pick button{font-family:var(--sans);font-weight:700;font-size:.92rem;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:9px 14px;cursor:pointer;min-height:42px;transition:all .2s}
+.pick button[aria-pressed=true]{background:var(--or);border-color:var(--or);color:var(--encre)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form input,.form select{width:100%;font:inherit;font-weight:600;padding:12px 14px;border-radius:12px;border:0;background:#fff;color:var(--encre);min-height:48px}
+.form .btn{width:100%}
+.small{font-size:.82rem;color:#cfc6b3}
+
+/* INFOS */
+.infos .grid{display:grid;gap:18px;margin-top:22px}
+@media(min-width:820px){.infos .grid{grid-template-columns:1fr 1fr}}
+.card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 18px 40px -28px rgba(20,33,26,.5)}
+.card h3{font-size:1.1rem;font-weight:900;margin-bottom:10px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:8px 10px;border-radius:10px;font-weight:600}
+.hours li.today{background:var(--or);font-weight:900}
+.hours li.off{color:var(--gris)}
+.devanture{border-radius:20px;overflow:hidden;margin-top:22px;box-shadow:0 18px 40px -28px rgba(20,33,26,.6)}
+.devanture img{width:100%}
+.devanture p{background:var(--rouge);color:#fff;font-size:.8rem;font-weight:700;padding:8px 14px}
+.list{list-style:none;display:grid;gap:8px}
+.list li{display:flex;gap:10px;align-items:flex-start}
+.list li::before{content:"";flex:none;width:9px;height:9px;border-radius:50%;background:var(--hibiscus);margin-top:.55em}
+a.link{color:var(--rouge);font-weight:800}
+
+footer.site{background:var(--encre);color:#d8cdb6;padding:40px 0 100px;font-size:.88rem;text-align:center}
+footer.site .logo{align-items:center;margin-bottom:12px}
+footer.site a{color:var(--or)}
+.sticky-wa{position:fixed;right:14px;bottom:14px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.5)}
+.sticky-wa svg{width:30px;height:30px;fill:#fff}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.reveal-h>*{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Joujou</div>
+
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="#top"><small>Bienvenue chez</small><span>Joujou</span></a>
+  <ul><li><a href="#matin">Dès 5h30</a></li><li><a href="#menus">Menus du jour</a></li><li><a href="#sandwichs">Sandwichs</a></li><li><a href="#infos">Infos</a></li></ul>
+  <a class="btn btn-wa btn-sm" href="#reserver">Réserver</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Sauté du jour aux oignons et poivrons, photo publiée par Chez Joujou"></div>
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="wrap reveal-h">
+    <span class="kicker">Snack · Saint-Benoît · dès 5h30</span>
+    <h1>Bienvenue <em>Chez Joujou</em></h1>
+    <p class="lead">Un snack qui réveille les papilles au cœur de Saint-Benoît : poulet croustillant, plus de 40 sandwichs et un menu du jour qui sent bon la marmite.</p>
+    <div class="cta">
+      <a class="btn btn-wa breathe" href="https://wa.me/262692692511?text=Bonjour%20Chez%20Joujou%20!%20Je%20voudrais%20r%C3%A9server%20une%20part%20pour%20aujourd%E2%80%99hui." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-1.6-.5-3.5-1.7-4.9-3.4-1-1.2-1.6-2.6-1.7-3.3-.2-1.3.6-2 .9-2.3.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+262692692511">Appeler 0692 69 25 11</a>
+    </div>
+    <div class="score"><b>98 %</b><span>des clients recommandent Chez Joujou<br>34 avis sur Facebook</span></div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="mq">
+  <span>Poulet croustillant</span><span>Rougail saucisse</span><span>Rougail jambon</span><span>Shop suey</span><span>Poulet rôti</span><span>Thon maïs</span><span>Saumon</span><span>Macatias</span><span>Lords</span><span>Kebabs</span><span>Américains</span><span>Crudités</span>
+</div></div>
+
+<section class="matin" id="matin"><div class="wrap grid">
+  <figure class="photo reveal"><img src="img/marmite-matin.jpg" alt="Marmite du matin, pommes de terre et viande, publiée par Chez Joujou" loading="lazy"><figcaption>Photo de Chez Joujou</figcaption></figure>
+  <div class="reveal">
+    <span class="eyebrow">Le matin, chez Joujou</span>
+    <h2>Ça commence tôt, <span class="s">ça mijote déjà</span></h2>
+    <p>Dès 5h30, les marmites sont sur le feu au 58 rue Victor Boissy. Un sandwich pour la route, ou une part du menu du jour mise de côté pour midi : ici, la journée démarre avec le sourire.</p>
+    <div class="quote-post"><p><span class="gq">«</span> Bonjour ! Ça commence tôt chez Joujou, on vous attend nombreux. Bonne journée <span class="gq">»</span></p><small>Le petit mot du matin publié sur la page Facebook de Chez Joujou</small></div>
+    <div class="clock"><span class="chip">☀️ Lun, mar, jeu, ven · 5h30 – 17h30</span><span class="chip">🌿 Mercredi · 5h30 – 14h</span></div>
+  </div>
+</div></section>
+
+<section class="spe">
+  <div class="wrap reveal">
+    <span class="eyebrow">La spécialité de la maison</span>
+    <h2>Le poulet <span class="s">croustillant</span></h2>
+    <p>Il revient sur chaque menu du jour, du lundi au vendredi : c'est la signature de Chez Joujou. Doré, croustillant, à emporter ou à déguster en terrasse, avec riz, grains et rougail.</p>
+    <div class="crisp">
+      <div><b>5 / 5</b><span>jours de la semaine au menu : le poulet croustillant est toujours là</span></div>
+      <div><b>+ de 90 %</b><span>des produits faits maison, « tous préparés avec amour »</span></div>
+      <div><b>25</b><span>couverts sur place, en terrasse, et tout le reste à emporter</span></div>
+    </div>
+  </div>
+</section>
+<svg class="wave" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--papier)"><path d="M0 0h1440v14c-180 26-360 32-540 18S540 2 360 10 120 40 0 30Z" fill="#14211a"/></svg>
+
+<section class="menus" id="menus"><div class="wrap">
+  <div class="reveal">
+    <span class="eyebrow">Publiés chaque jour sur Facebook</span>
+    <h2>Les menus <span class="s">de la semaine</span></h2>
+    <p class="muted">Du lundi 19 au vendredi 23 octobre 2026 : un plat créole différent chaque jour, le shop suey poulet et le poulet croustillant en fidèles compagnons.</p>
+    <p class="hint">← Faites glisser pour voir chaque jour →</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Menus du jour">
+    <article class="menu-card"><img src="img/menu-19-10.jpg" alt="Affiche du menu du lundi 19/10/26" loading="lazy"><div class="t"><b>Lundi 19/10</b><span>Cari poulet fermier au pois mange-tout · Côtelettes porc frais braisées au four à la pomme de terre · Riz, haricots rouges, rougail tomate</span></div></article>
+    <article class="menu-card"><img src="img/menu-20-10.jpg" alt="Affiche du menu du mardi 20/10/26" loading="lazy"><div class="t"><b>Mardi 20/10</b><span>Civet canard frais aux olives · Rougail saucisses fumées porc artisanales · Riz, haricots rosés, rougail mangues</span></div></article>
+    <article class="menu-card"><img src="img/menu-21-10.jpg" alt="Affiche du menu du mercredi 21/10/26" loading="lazy"><div class="t"><b>Mercredi 21/10</b><span>Riz cantonais spécial poulet · Rôti poulet fermier · Rougail boudin noir gros piment façon mémé</span></div></article>
+    <article class="menu-card"><img src="img/menu-22-10.jpg" alt="Affiche du menu du jeudi 22/10/26" loading="lazy"><div class="t"><b>Jeudi 22/10</b><span>Massalé poulet fermier frais pomme de terre · Rougail zandouillette poulet artisanale · Riz, haricots rouges, sauce concombre</span></div></article>
+    <article class="menu-card"><img src="img/menu-23-10.jpg" alt="Affiche du menu du vendredi 23/10/26" loading="lazy"><div class="t"><b>Vendredi 23/10</b><span>Civet zourite · Sauté poulet frais aux oignons · Fricassée brèdes chinois · Riz, pois du cap, rougail mangue</span></div></article>
+  </div>
+</div></section>
+
+<section class="bacs"><div class="wrap">
+  <div class="reveal">
+    <span class="eyebrow">Tout droit sortis des cuisines</span>
+    <h2>Dans les bacs, <span class="s">tout chaud</span></h2>
+    <p class="muted">Les vraies photos publiées par Chez Joujou : généreux, colorés, bien assaisonnés.</p>
+  </div>
+  <div class="grid">
+    <figure class="photo big reveal"><img style="object-position:center top" src="img/rougail-morue.jpg" alt="Bac de rougail la morue gros piment" loading="lazy"><figcaption>Rougail la morue, gros piment</figcaption></figure>
+    <figure class="photo reveal"><img src="img/saute-poulet.jpg" alt="Sauté aux oignons et poivrons" loading="lazy"><figcaption>Sauté oignons et poivrons</figcaption></figure>
+    <figure class="photo reveal"><img src="img/braise-pommes.jpg" alt="Viande braisée aux pommes de terre et persil" loading="lazy"><figcaption>Braisé aux pommes de terre</figcaption></figure>
+    <figure class="photo wide reveal"><img src="img/mijote.jpg" alt="Bac d'un plat mijoté du jour" loading="lazy"><figcaption>Le mijoté du jour</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="sand" id="sandwichs"><div class="wrap reveal">
+  <span class="eyebrow">Plus de 40 sandwichs</span>
+  <h2>Une innombrable <span class="s">diversité</span></h2>
+  <p>Rougail saucisse, rougail jambon, shop suey, poulet rôti, thon maïs, saumon… et bien d'autres encore. Et aussi les crudités, américains, macatias, lords et kebabs : de quoi tenir jusqu'au soir.</p>
+  <div class="tags">
+    <span>Rougail saucisse</span><span>Rougail jambon</span><span>Shop suey</span><span>Poulet rôti</span><span>Thon maïs</span><span>Saumon</span><span>Américain</span><span>Macatia</span><span>Lord</span><span>Kebab</span><span>Crudités</span>
+  </div>
+  <div class="fait"><b>40+</b><span>sandwichs différents, et chaque bouchée est un clin d'œil à la cuisine réunionnaise.</span></div>
+</div></section>
+
+<section class="avis"><div class="wrap">
+  <div class="reveal"><span class="eyebrow">Ce qu'en disent les habitués</span><h2>Un snack <span class="s">qu'on recommande</span></h2></div>
+  <div class="box">
+    <div class="big-score reveal"><b>98 %</b><span>recommandent Chez Joujou</span><small>34 avis · page Facebook · 6,9 K abonnés</small></div>
+    <blockquote class="reveal"><p>Toujours au top rien a dire merci pour ma commande</p><footer>Christabelle, avis Facebook, mai 2022</footer></blockquote>
+  </div>
+  <p class="roi reveal">Chez Joujou, le goût est roi !</p>
+</div></section>
+
+<section class="resa" id="reserver"><div class="wrap">
+  <div class="reveal"><span class="eyebrow">« Réservation au 0692 69 25 11 »</span><h2>Mettez votre part <span class="s">de côté</span></h2>
+  <p class="small">Choisissez, et le message part tout prêt sur WhatsApp.</p></div>
+  <form class="form reveal" id="resa" onsubmit="return false">
+    <div><label>Votre envie</label><div class="pick" id="pick">
+      <button type="button" aria-pressed="true">Menu du jour</button><button type="button" aria-pressed="false">Poulet croustillant</button><button type="button" aria-pressed="false">Shop suey poulet</button><button type="button" aria-pressed="false">Sandwich</button><button type="button" aria-pressed="false">Macatia</button>
+    </div></div>
+    <div class="row">
+      <div><label for="nb">Parts</label><select id="nb"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+      <div><label for="h">Passage vers</label><input id="h" type="time" value="12:00" min="05:30" max="17:30"></div>
+    </div>
+    <div><label for="nom">Votre prénom</label><input id="nom" type="text" placeholder="Votre prénom" autocomplete="given-name"></div>
+    <a class="btn btn-wa" id="send" href="https://wa.me/262692692511" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+    <p class="small">Ou par téléphone : <a href="tel:+262692692511" style="color:var(--or)">0692 69 25 11</a></p>
+  </form>
+</div></section>
+
+<section class="infos" id="infos"><div class="wrap">
+  <div class="reveal"><span class="eyebrow">Venir chez Joujou</span><h2>58 rue Victor Boissy, <span class="s">Saint-Benoît</span></h2>
+  <p class="muted">Face au lycée Patu de Rosemont, à deux pas du lycée Amiral Bouvet.</p></div>
+  <figure class="devanture reveal"><img src="img/devanture.jpg" alt="Le grand store rouge « Bienvenue Chez Joujou » et son numéro" loading="lazy"><p>Le store rouge, on le repère de loin</p></figure>
+  <div class="grid">
+    <div class="card reveal"><h3>Horaires</h3><ul class="hours" id="hours">
+      <li data-d="1"><span>Lundi</span><span>5h30 – 17h30</span></li>
+      <li data-d="2"><span>Mardi</span><span>5h30 – 17h30</span></li>
+      <li data-d="3"><span>Mercredi</span><span>5h30 – 14h00</span></li>
+      <li data-d="4"><span>Jeudi</span><span>5h30 – 17h30</span></li>
+      <li data-d="5"><span>Vendredi</span><span>5h30 – 17h30</span></li>
+      <li data-d="6" class="off"><span>Samedi</span><span>Repos</span></li>
+      <li data-d="0" class="off"><span>Dimanche</span><span>Repos</span></li>
+    </ul></div>
+    <div class="card reveal"><h3>Bon à savoir</h3><ul class="list">
+      <li>Sur place en terrasse (25 couverts) ou à emporter</li>
+      <li>Accueil des personnes à mobilité réduite</li>
+      <li>Tickets restaurant, chèque déjeuner, carte bancaire, American Express, espèces</li>
+      <li>On vous accueille en français, en créole et en anglais</li>
+      <li>Arrêt de bus et parking public à proximité</li>
+    </ul>
+    <p style="margin-top:16px"><a class="link" href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.040860,55.7175886" target="_blank" rel="noopener">Itinéraire →</a> &nbsp; <a class="link" href="https://www.facebook.com/p/CHEZ-joujou-100039381653099" target="_blank" rel="noopener">Page Facebook →</a></p></div>
+  </div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  <a class="logo" href="#top"><small>Bienvenue chez</small><span>Joujou</span></a>
+  <p>58 rue Victor Boissy, 97470 Saint-Benoît · <a href="tel:+262692692511">0692 69 25 11</a></p>
+  <p style="margin-top:14px;opacity:.75">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chez Joujou.</p>
+</div></footer>
+
+<a class="sticky-wa" href="https://wa.me/262692692511" target="_blank" rel="noopener" aria-label="Écrire à Chez Joujou sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-1.6-.5-3.5-1.7-4.9-3.4-1-1.2-1.6-2.6-1.7-3.3-.2-1.3.6-2 .9-2.3.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+
+<script>
+(()=>{
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// marquee: dupliquer pour une boucle continue
+const mq=document.getElementById('mq');mq.innerHTML+=mq.innerHTML;
+// apparitions au scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+// jour courant (heure de La Réunion)
+const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Indian/Reunion'})).getDay();
+const li=document.querySelector('#hours li[data-d="'+d+'"]');if(li)li.classList.add('today');
+// réservation WhatsApp
+const pick=document.getElementById('pick'),send=document.getElementById('send');
+pick.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pick.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));upd()});
+function upd(){const choix=pick.querySelector('[aria-pressed=true]').textContent,nb=document.getElementById('nb').value,h=document.getElementById('h').value,nom=document.getElementById('nom').value.trim();
+const msg='Bonjour Chez Joujou ! '+(nom?'Ici '+nom+'. ':'')+'Je voudrais réserver '+nb+' part(s) : '+choix+', pour un passage vers '+h.replace(':','h')+'. Merci !';
+send.href='https://wa.me/262692692511?text='+encodeURIComponent(msg)}
+['nb','h','nom'].forEach(i=>document.getElementById(i).addEventListener('input',upd));upd();
+// vapeur qui monte des marmites
+const c=document.getElementById('steam'),x=c.getContext('2d');if(RM)return;
+let W,H,P=[],run=true;const N=26;
+function size(){const r=c.getBoundingClientRect(),dp=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*dp;c.height=H*dp;x.setTransform(dp,0,0,dp,0,0)}
+function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+40,r:18+Math.random()*38,v:.25+Math.random()*.45,s:Math.random()*6.28,a:.05+Math.random()*.07}}
+size();for(let i=0;i<N;i++)P.push(mk(true));addEventListener('resize',size);
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(loop)});
+function loop(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.s+=.012;p.r+=.05;const px=p.x+Math.sin(p.s)*16,fade=Math.min(1,p.y/(H*.5));
+const g=x.createRadialGradient(px,p.y,0,px,p.y,p.r);g.addColorStop(0,'rgba(255,248,230,'+(p.a*fade)+')');g.addColorStop(1,'rgba(255,248,230,0)');x.fillStyle=g;x.beginPath();x.arc(px,p.y,p.r,0,6.28);x.fill();
+if(p.y<-p.r||fade<=0)Object.assign(p,mk(false))}requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

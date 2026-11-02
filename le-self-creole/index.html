@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Le Self Créole chez Loïc — cuisine créole authentique depuis 1995 · Saint-Denis</title>
+<meta name="description" content="Le goût qu’on recherche depuis 30 ans. Cuisine créole authentique au 269 rue du Maréchal Leclerc, Saint-Denis : menu du jour, barquettes, sur place ou à emporter.">
+<meta property="og:title" content="Le Self Créole chez Loïc — le goût qu’on recherche depuis 30 ans">
+<meta property="og:description" content="Caris, rougails, sarcive by Loïc et ti barquettes bien chargées : une page imaginée pour Le Self Créole, Saint-Denis de La Réunion.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-self-creole/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-self-creole/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800;900&family=Permanent+Marker&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#100D0B; --noir-2:#1B1613; --noir-3:#2A211C;
+  --flamme:#F47B20; --braise:#E2531B; --or:#FFB547; --rose:#E8405A;
+  --jungle:#1E4A2E; --jungle-l:#2F6B43;
+  --creme:#FBF3E6; --papier:#FFF9F0; --encre:#241A14; --gris:#6F5E52; --ligne:rgba(226,83,27,.18);
+  --titre:'Rubik',system-ui,sans-serif; --main:'Permanent Marker',cursive; --sans:'Outfit',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--papier);color:var(--encre);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:86px}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--braise);color:#fff;font-size:13px;line-height:1.45;padding:9px var(--pad);text-align:center}
+.ribbon b{color:#FFE2B8}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--braise)}
+h2{font-family:var(--titre);font-weight:800;font-size:clamp(32px,7vw,56px);line-height:1.02;letter-spacing:-.01em;margin:10px 0 16px}
+h2 .m{font-family:var(--main);font-weight:400;color:var(--braise);letter-spacing:0}
+.wrap{max-width:1140px;margin:0 auto;padding:0 var(--pad)}
+section{position:relative}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,900px);background:var(--noir);color:var(--creme);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero .ph{position:absolute;inset:0;background:url(img/fresque-chez-loic.jpg) 50% 8%/cover;transform-origin:50% 35%;animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,13,11,.5) 0%,rgba(16,13,11,.04) 20%,rgba(16,13,11,.55) 38%,rgba(16,13,11,.88) 50%,rgba(16,13,11,.97) 70%)}
+#vapeur{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero .in{position:relative;z-index:3;width:100%;max-width:1140px;margin:0 auto;padding:0 var(--pad) clamp(64px,11vw,120px)}
+.badge{position:absolute;z-index:3;top:20px;left:var(--pad);right:var(--pad);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.badge img{width:68px;height:68px;border-radius:50%;object-fit:cover;border:2px solid var(--flamme);animation:glow 3.4s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 26px 4px rgba(244,123,32,.55)}}
+.statut{display:inline-flex;align-items:center;gap:8px;background:rgba(16,13,11,.72);backdrop-filter:blur(6px);border:1px solid rgba(255,181,71,.35);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:500;color:var(--creme)}
+.statut i{width:9px;height:9px;border-radius:50%;background:var(--or);flex:none}
+.statut.on i{background:#3DDC84;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(61,220,132,.25)}}
+.hero .kicker{color:var(--or)}
+.hero h1{text-shadow:0 4px 24px rgba(0,0,0,.55);font-family:var(--titre);font-weight:900;font-size:clamp(52px,15vw,124px);line-height:.9;letter-spacing:-.02em;margin:10px 0 16px;text-transform:uppercase}
+.hero h1 .loic{display:block;font-family:var(--main);font-weight:400;text-transform:none;color:var(--rose);font-size:.5em;letter-spacing:0;margin-top:6px;transform:rotate(-3deg);transform-origin:left}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(26px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.hero h1 .loic.w{transform:translateY(26px) rotate(-3deg)}
+.hero h1 .loic.w{animation-name:upr}
+@keyframes upr{to{opacity:1;transform:rotate(-3deg)}}
+.lede{max-width:32ch;font-size:clamp(18px,2.6vw,22px);color:#F1E3CF}
+.lede b{color:var(--or);font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:0 22px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.feu{background:var(--flamme);color:var(--noir);animation:breathe 3.4s ease-in-out infinite}
+.btn.feu:hover{background:var(--or);transform:translateY(-2px)}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(244,123,32,.2)}}
+.btn.ligne{border-color:rgba(251,243,230,.55);color:var(--creme)}
+.btn.ligne:hover{background:var(--creme);color:var(--noir)}
+.fineprint{margin-top:14px;font-size:14px;color:#CDBBA6}
+
+/* MARQUEE */
+.bande{background:var(--flamme);color:var(--noir);overflow:hidden;white-space:nowrap;padding:13px 0;font-family:var(--titre);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:17px;border-block:3px solid var(--noir)}
+.bande .t{display:inline-block;animation:defile 34s linear infinite}
+.bande span{margin:0 14px}
+.bande span.s{color:var(--papier)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* HISTOIRE */
+.histoire{padding:clamp(64px,10vw,120px) 0;background:var(--papier)}
+.histoire .g{display:grid;gap:34px}
+.memé{font-family:var(--titre);font-weight:700;font-size:clamp(24px,4.6vw,36px);line-height:1.2;color:var(--encre);position:relative;padding-left:22px;border-left:6px solid var(--flamme);margin:6px 0 22px}
+.memé em{font-style:normal;color:var(--braise)}
+.src{font-size:13px;color:var(--gris);margin-top:-12px;margin-bottom:22px}
+.histoire p{max-width:60ch;color:#3E3029}
+.histoire p+p{margin-top:14px}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.chiffres div{background:var(--noir);color:var(--creme);border-radius:16px;padding:16px 10px;text-align:center}
+.chiffres b{display:block;font-family:var(--titre);font-weight:900;font-size:clamp(26px,6vw,38px);color:var(--flamme);line-height:1}
+.chiffres span{font-size:12.5px;line-height:1.3;display:block;margin-top:6px;color:#D9C8B4}
+.photo-cadre{position:relative;max-width:460px;width:100%;justify-self:center;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(16,13,11,.55);transform:rotate(1.2deg)}
+.photo-cadre img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo-cadre figcaption{position:absolute;left:12px;bottom:12px;background:rgba(16,13,11,.78);color:var(--creme);font-size:13px;padding:6px 12px;border-radius:999px}
+.photo-cadre .tag{position:absolute;top:12px;right:12px;font-family:var(--main);color:var(--or);font-size:22px;transform:rotate(-6deg);text-shadow:0 2px 10px rgba(0,0,0,.6)}
+
+/* COMMANDER */
+.commande{background:var(--noir);color:var(--creme);padding:clamp(64px,10vw,120px) 0;overflow:hidden}
+.commande::before{content:"";position:absolute;inset:-2px 0 auto;height:46px;background:var(--papier);clip-path:polygon(0 0,100% 0,100% 30%,88% 70%,74% 35%,60% 80%,45% 40%,30% 85%,16% 40%,0 75%)}
+.commande .kicker{color:var(--or)}
+.commande h2 .m{color:var(--or)}
+.kreol{background:var(--noir-2);border:1px dashed rgba(255,181,71,.45);border-radius:18px;padding:18px 20px;font-size:17px;color:#F1E3CF;margin:8px 0 30px;max-width:640px}
+.kreol small{display:block;color:#AD9A87;font-size:13px;margin-top:8px}
+.etapes{display:grid;gap:14px;counter-reset:e}
+.etape{display:flex;gap:16px;align-items:flex-start;background:var(--noir-3);border-radius:18px;padding:18px;transition:transform .25s,background .25s}
+.etape:hover{transform:translateY(-3px);background:#352A23}
+.etape::before{counter-increment:e;content:counter(e);flex:none;width:44px;height:44px;border-radius:50%;background:var(--flamme);color:var(--noir);font-family:var(--titre);font-weight:900;font-size:22px;display:grid;place-items:center}
+.etape h3{font-family:var(--titre);font-weight:700;font-size:19px;margin-bottom:2px}
+.etape p{color:#D4C3AF;font-size:15.5px}
+.etape a{color:var(--or);font-weight:700}
+.commande .cta{margin-top:30px}
+
+/* GALERIE */
+.galerie{padding:clamp(64px,10vw,110px) 0 clamp(54px,8vw,90px);background:linear-gradient(180deg,var(--papier),var(--creme))}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--pad) 22px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.carte{flex:0 0 min(74vw,300px);scroll-snap-align:center;border-radius:20px;overflow:hidden;background:var(--noir);position:relative;box-shadow:0 18px 36px -22px rgba(16,13,11,.6);transition:transform .3s}
+.carte:hover{transform:translateY(-6px) rotate(-.6deg)}
+.carte img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s}
+.carte:hover img{transform:scale(1.06)}
+.carte figcaption{position:absolute;inset:auto 0 0;padding:40px 16px 14px;background:linear-gradient(0deg,rgba(16,13,11,.92),transparent);color:var(--creme);font-weight:700;font-size:16px}
+.carte figcaption small{display:block;font-weight:400;font-size:12.5px;color:#CDBBA6}
+.hint{font-size:13px;color:var(--gris);padding:0 var(--pad)}
+.galerie .note{font-size:13px;color:var(--gris);margin-top:10px}
+
+/* SAMEDI */
+.samedi{background:var(--jungle);color:var(--creme);padding:clamp(60px,9vw,110px) 0;overflow:hidden}
+.samedi::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,181,71,.18),transparent 45%),radial-gradient(circle at 10% 90%,rgba(244,123,32,.16),transparent 40%)}
+.samedi .wrap{position:relative}
+.samedi .kicker{color:var(--or)}
+.samedi blockquote{font-family:var(--titre);font-weight:700;font-size:clamp(22px,4.4vw,34px);line-height:1.28;margin:10px 0 14px;max-width:26ch}
+.samedi blockquote .hl{color:var(--or)}
+.samedi .src{color:#B9D1BF;margin:0}
+.puces{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.puces span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:8px 14px;border-radius:999px;font-size:15px;font-weight:500}
+
+/* 93 vs 974 */
+.excuses{padding:clamp(64px,10vw,120px) 0;background:var(--creme)}
+.excuses .g{display:grid;gap:30px;align-items:start}
+.communique{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 22px 44px -26px rgba(16,13,11,.5);transform:rotate(-1.4deg);border:1px solid #eee}
+.communique img{width:100%}
+.lignes{list-style:none;padding:0;margin:14px 0 22px}
+.lignes li{padding:9px 0;border-bottom:1px dashed var(--ligne);font-weight:500}
+.lignes li:last-child{border:0;font-family:var(--titre);font-weight:800;font-size:21px;color:var(--braise)}
+.quiz{background:var(--noir);color:var(--creme);border-radius:22px;padding:22px}
+.quiz h3{font-family:var(--titre);font-weight:700;font-size:19px;margin-bottom:12px}
+.quiz .choix{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quiz button{font:inherit;font-weight:700;min-height:52px;border-radius:14px;border:2px solid rgba(255,181,71,.5);background:transparent;color:var(--creme);cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.quiz button:hover{transform:translateY(-2px)}
+.quiz button[aria-pressed=true]{background:var(--flamme);color:var(--noir);border-color:var(--flamme)}
+.quiz .rep{min-height:52px;margin-top:14px;font-size:16px;color:#F1E3CF}
+.quiz .rep a{color:var(--or);font-weight:700}
+
+/* FIDELITE */
+.fidele{background:var(--noir);color:var(--creme);padding:clamp(60px,9vw,100px) 0;text-align:center}
+.fidele .gros{font-family:var(--titre);font-weight:900;font-size:clamp(40px,11vw,96px);line-height:.95;color:var(--flamme);text-transform:uppercase}
+.fidele .gros small{display:block;font-family:var(--main);font-weight:400;text-transform:none;color:var(--creme);font-size:.4em;margin-top:10px}
+.fidele p{max-width:52ch;margin:18px auto 0;color:#D4C3AF}
+.etoiles{display:flex;justify-content:center;gap:6px;margin-top:22px;color:var(--or);font-size:26px;letter-spacing:2px}
+
+/* INFOS */
+.infos{padding:clamp(64px,10vw,120px) 0;background:var(--papier)}
+.infos .g{display:grid;gap:18px}
+.bloc{background:#fff;border:1px solid var(--ligne);border-radius:20px;padding:22px}
+.bloc h3{font-family:var(--titre);font-weight:700;font-size:20px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.bloc h3 svg{width:22px;height:22px;color:var(--braise)}
+.horaires{width:100%;border-collapse:collapse;font-size:16px}
+.horaires td{padding:7px 0;border-bottom:1px dashed var(--ligne)}
+.horaires td:last-child{text-align:right;font-weight:500}
+.horaires tr.auj td{color:var(--braise);font-weight:700}
+.horaires tr.ferme td:last-child{color:var(--gris)}
+.bloc p{color:#3E3029}
+.bloc .lien{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-weight:700;color:var(--braise);text-decoration:none}
+.reseaux{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.reseaux a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--noir);color:var(--creme);text-decoration:none;font-weight:500;font-size:15px;transition:background .2s}
+.reseaux a:hover{background:var(--braise)}
+.reseaux svg{width:18px;height:18px}
+.carte-plan{border-radius:20px;overflow:hidden;background:var(--noir);color:var(--creme);padding:22px;position:relative}
+.carte-plan .pin{font-family:var(--titre);font-weight:800;font-size:24px;line-height:1.15}
+.carte-plan .pin span{color:var(--flamme)}
+.carte-plan p{color:#D4C3AF;margin-top:8px}
+
+footer{background:var(--noir);color:#B9A895;padding:44px var(--pad) 40px;text-align:center;font-size:14px}
+footer img{width:84px;height:84px;border-radius:50%;margin:0 auto 14px;border:2px solid var(--flamme)}
+footer .m{margin-top:14px;color:#8E7D6C;font-size:13px}
+
+/* barre mobile */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(16,13,11,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(244,123,32,.35)}
+.barre a{flex:1;min-height:52px;font-size:16px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+
+@media (min-width:860px){
+  .histoire .g{grid-template-columns:1.1fr .9fr;align-items:center}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .excuses .g{grid-template-columns:.9fr 1.1fr}
+  .infos .g{grid-template-columns:repeat(3,1fr)}
+  .barre{left:auto;right:20px;bottom:20px;border-radius:999px;border:1px solid rgba(244,123,32,.35);width:420px}
+  .rail{padding-left:max(var(--pad),calc((100vw - 1140px)/2 + var(--pad)))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1 .w{opacity:1;transform:none}
+  .hero h1 .loic.w{transform:rotate(-3deg)}
+  .rv{opacity:1;transform:none}
+  #vapeur{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Self Créole</div>
+
+<header class="hero">
+  <div class="ph" role="img" aria-label="La fresque graffée « Self Créole – Chez Loïc » du restaurant"></div>
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <div class="badge">
+    <img src="img/logo-self-creole.jpg" alt="Logo Self Créole, depuis 1995" width="68" height="68">
+    <span class="statut" id="statut"><i></i><span>Service du midi · 11h30 – 13h30</span></span>
+  </div>
+  <div class="in">
+    <p class="kicker">Saint-Denis de La Réunion · depuis 1995</p>
+    <h1><span class="w" style="animation-delay:.15s">Self</span> <span class="w" style="animation-delay:.32s">Créole</span><span class="loic w" style="animation-delay:.6s">chez Loïc</span></h1>
+    <p class="lede">Le goût qu’on recherche <b>depuis 30 ans</b>. Cuisine créole authentique, sur place ou à emporter.</p>
+    <div class="cta">
+      <a class="btn feu" href="https://wa.me/262692072403?text=Bonjour%20Lo%C3%AFc%2C%20je%20voudrais%20commander%20une%20barquette%20pour%20ce%20midi%20%3A%20" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.2-.2-.5-.3Z"/></svg>
+        Commander ma barquette
+      </a>
+      <a class="btn ligne" href="tel:+262692072403">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        0692 07 24 03
+      </a>
+    </div>
+    <p class="fineprint">Commandes avant 11h00 · 269 rue du Maréchal Leclerc</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="t">
+  <span>Caris</span><span class="s">✦</span><span>Rougails</span><span class="s">✦</span><span>Sarcive by Loïc</span><span class="s">✦</span><span>Poulet rôti au four chinois</span><span class="s">✦</span><span>Poulet frit pomme de terre</span><span class="s">✦</span><span>Barquettes bien chargées</span><span class="s">✦</span><span>Sur place · à emporter</span><span class="s">✦</span>
+  <span>Caris</span><span class="s">✦</span><span>Rougails</span><span class="s">✦</span><span>Sarcive by Loïc</span><span class="s">✦</span><span>Poulet rôti au four chinois</span><span class="s">✦</span><span>Poulet frit pomme de terre</span><span class="s">✦</span><span>Barquettes bien chargées</span><span class="s">✦</span><span>Sur place · à emporter</span><span class="s">✦</span>
+</div></div>
+
+<section class="histoire" id="histoire">
+  <div class="wrap g">
+    <div class="rv">
+      <p class="kicker">Notre histoire</p>
+      <h2>Le goût du <span class="m">dimanche chez mémé</span></h2>
+      <p class="memé">« Des plats créoles incontournables, des plus classiques aux plus anciens, avec un goût qui rappelle <em>le dimanche chez mémé</em>. »</p>
+      <p class="src">Publication du Self Créole, 27 octobre 2026</p>
+      <p>Pendant plus de 30 ans, ses parents ont fait vivre le « Self créole chez Matante », petit restaurant dionysien bien connu des habitués. En mai 2023, Loïc, cuisinier de métier, a repris le flambeau : <em>« Je veux surtout rendre hommage à mes parents. »</em></p>
+      <p>Aujourd’hui, derrière chaque assiette, Loïc cuisine avec amour, comme on dit, pour un maximum de saveurs authentiques. Et il partage ses secrets en vidéo : la sarcive, la confiture de fruit à pain, la différence entre le cari et le rougail…</p>
+      <div class="chiffres">
+        <div><b>1995</b><span>l’année où tout a commencé</span></div>
+        <div><b>16 K</b><span>fans sur Facebook</span></div>
+        <div><b>100 %</b><span>recommandé par ses clients</span></div>
+      </div>
+    </div>
+    <figure class="photo-cadre rv">
+      <img src="img/sarcive-by-loic.jpg" alt="Marmite de sarcive caramélisée préparée par Loïc" loading="lazy" width="900" height="683">
+      <span class="tag">by Loïc</span>
+      <figcaption>La sarcive, recette de Loïc</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="commande" id="commander">
+  <div class="wrap">
+    <p class="kicker rv">Le menu du jour</p>
+    <h2 class="rv">Ala li la, <span class="m">le menu du jour !</span></h2>
+    <p class="kreol rv">« Bonjour bonjour zot toutes, ala li la le menu du jour, hésite pas passe prend zot ti barquette ou passe directement zot commande au 0692 072403 avant 11h00 ☎️ »<small>Le rendez-vous quotidien de la page Facebook du Self Créole</small></p>
+    <div class="etapes">
+      <div class="etape rv"><div><h3>Découvre le menu</h3><p>Chaque matin, le menu du jour est publié sur <a href="https://www.facebook.com/p/LE-SELF-CR%C3%89ole-100093247682056/" target="_blank" rel="noopener">la page Facebook</a>.</p></div></div>
+      <div class="etape rv"><div><h3>Commande avant 11h</h3><p>Un appel ou un message au <a href="tel:+262692072403">0692 07 24 03</a>, et ta barquette t’attend.</p></div></div>
+      <div class="etape rv"><div><h3>Passe la prendre</h3><p>Au 269 rue du Maréchal Leclerc, ou installe-toi sur place pour un bon ti repas créole.</p></div></div>
+    </div>
+    <div class="cta rv">
+      <a class="btn feu" href="https://wa.me/262692072403?text=Bonjour%20Lo%C3%AFc%2C%20c%27est%20quoi%20le%20menu%20du%20jour%20%3F" target="_blank" rel="noopener">Demander le menu du jour</a>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="assiettes">
+  <div class="wrap">
+    <p class="kicker rv">Dans les marmites</p>
+    <h2 class="rv">Des <span class="m">barquettes</span> bien chargées</h2>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie de plats, faire défiler">
+    <figure class="carte"><img src="img/barquette.jpg" alt="Une barquette de poulet en sauce servie au comptoir" loading="lazy" width="412" height="732"><figcaption>La ti barquette<small>servie au comptoir</small></figcaption></figure>
+    <figure class="carte"><img src="img/cari-cebouillettes.jpg" alt="Cari mijoté parsemé de cébette" loading="lazy" width="440" height="960"><figcaption>Cari mijoté<small>et sa pluie de cébette</small></figcaption></figure>
+    <figure class="carte"><img src="img/cari-riz-jaune.jpg" alt="Assiette de viande en sauce et riz jaune" loading="lazy" width="412" height="776"><figcaption>Sauce et riz jaune<small>une assiette du Self</small></figcaption></figure>
+    <figure class="carte"><img src="img/roti-porc.jpg" alt="Plaque de viande rôtie tranchée" loading="lazy" width="478" height="960"><figcaption>Le rôti tranché<small>bien doré, bien tendre</small></figcaption></figure>
+    <figure class="carte"><img src="img/gratins.jpg" alt="Gratins dorés en ramequins de terre cuite" loading="lazy" width="434" height="788"><figcaption>Gratins en ramequins<small>bien dorés au four</small></figcaption></figure>
+    <figure class="carte"><img src="img/riz-et-gratins.jpg" alt="Bac de riz et gratins en barquettes alu" loading="lazy" width="435" height="960"><figcaption>Riz et petits gratins<small>prêts à partir</small></figcaption></figure>
+    <figure class="carte"><img src="img/sarcive-by-loic.jpg" alt="Sarcive caramélisée dans la marmite" loading="lazy" width="900" height="683"><figcaption>Sarcive by Loïc<small>la recette est en vidéo</small></figcaption></figure>
+  </div>
+  <p class="hint">← glisse pour voir les assiettes →</p>
+  <div class="wrap"><p class="note">Photos issues des publications et vidéos du Self Créole.</p></div>
+</section>
+
+<section class="samedi">
+  <div class="wrap">
+    <p class="kicker rv">Le samedi au Self</p>
+    <blockquote class="rv">« Demain samedi i sava bien manger… <span class="hl">poulet rôti au four chinois</span>… tendres… moelleux… un p’ti goût charbon… rôti porc frais cuit doucement… »</blockquote>
+    <p class="src rv">Publication du 16 octobre 2026</p>
+    <div class="puces rv"><span>🔥 Poulet rôti au four chinois</span><span>🔥 Rôti porc frais</span><span>🔥 Magret canard</span><span>🔥 Thon</span><span>🍰 Pâtisserie sur commande</span></div>
+  </div>
+</section>
+
+<section class="excuses" id="saint-denis">
+  <div class="wrap g">
+    <figure class="communique rv"><img src="img/communique-excuses.jpg" alt="Communiqué d’excuses officiel du Self Créole, 2 novembre 2026" loading="lazy" width="900" height="821"></figure>
+    <div class="rv">
+      <p class="kicker">Communiqué d’excuses officiel · 2 novembre 2026</p>
+      <h2>Le bon <span class="m">Saint-Denis</span>, c’est ici&nbsp;!</h2>
+      <p>Des curieux ont vu les caris, les rougails, les barquettes bien chargées… et ont cherché le restaurant à Saint-Denis. Dans le 93. Le Self Créole leur a répondu avec le sourire :</p>
+      <ul class="lignes">
+        <li>« Désolés pour les faux espoirs. »</li>
+        <li>« Désolés pour l’eau à la bouche. »</li>
+        <li>« Désolés pour le RER pris pour rien. »</li>
+        <li>« On vous garde une assiette. »</li>
+      </ul>
+      <div class="quiz">
+        <h3>Et toi, tu es de quel Saint-Denis&nbsp;?</h3>
+        <div class="choix">
+          <button type="button" data-r="974" aria-pressed="false">Saint-Denis 974</button>
+          <button type="button" data-r="93" aria-pressed="false">Saint-Denis 93</button>
+        </div>
+        <p class="rep" id="rep" aria-live="polite">Choisis, on te dit tout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fidele">
+  <div class="wrap">
+    <p class="gros rv">30 à 35 ans<small>de fidélité</small></p>
+    <p class="rv">C’est ce que raconte un habitué dans la vidéo « Témoignage d’un client fidèle » publiée par le Self Créole. La page Facebook affiche « Recommandé par 100 % » de ses avis.</p>
+    <div class="etoiles rv" aria-label="Recommandé à 100 %">★★★★★</div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="kicker rv">Infos pratiques</p>
+    <h2 class="rv">On vous <span class="m">garde une assiette</span></h2>
+    <div class="g">
+      <div class="bloc rv">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horaires</h3>
+        <table class="horaires" id="horaires">
+          <tr data-j="1"><td>Lundi</td><td>11h30 – 13h30</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>11h30 – 13h30</td></tr>
+          <tr data-j="3" class="ferme"><td>Mercredi</td><td>repos</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>11h30 – 13h30</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>11h30 – 13h30</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>11h30 – 13h30</td></tr>
+          <tr data-j="0"><td>Dimanche</td><td>11h30 – 13h30</td></tr>
+        </table>
+        <p style="margin-top:10px;font-size:14px;color:var(--gris)">Commandes avant 11h00. Les fermetures exceptionnelles sont annoncées sur Facebook.</p>
+      </div>
+      <div class="carte-plan rv">
+        <p class="pin">269 rue du <span>Maréchal Leclerc</span><br>97400 Saint-Denis</p>
+        <p>Saint-Denis de La Réunion, oui oui : à 11 heures d’avion du 93 😉</p>
+        <p>Sur place · À emporter · Prix doux (€)</p>
+        <div class="cta"><a class="btn feu" href="https://www.google.com/maps/search/?api=1&amp;query=269%20rue%20du%20Mar%C3%A9chal%20Leclerc%2097400%20Saint-Denis%20La%20R%C3%A9union" target="_blank" rel="noopener">Itinéraire</a></div>
+      </div>
+      <div class="bloc rv">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Commander</h3>
+        <p>Par téléphone ou WhatsApp, avant 11h :</p>
+        <a class="lien" href="tel:+262692072403">📞 0692 07 24 03</a><br>
+        <a class="lien" href="https://wa.me/262692072403" target="_blank" rel="noopener">💬 Écrire sur WhatsApp</a>
+        <div class="reseaux" style="margin-top:16px">
+          <a href="https://www.facebook.com/p/LE-SELF-CR%C3%89ole-100093247682056/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Facebook</a>
+          <a href="https://www.instagram.com/le_self_creole_974/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo-self-creole.jpg" alt="" width="84" height="84" loading="lazy">
+  <p><b style="color:var(--creme)">Le Self Créole · chez Loïc</b><br>Cuisine créole authentique depuis 1995 · 269 rue du Maréchal Leclerc, Saint-Denis</p>
+  <p class="m">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Self Créole.</p>
+</footer>
+
+<nav class="barre" aria-label="Commander">
+  <a class="btn feu" href="https://wa.me/262692072403?text=Bonjour%20Lo%C3%AFc%2C%20je%20voudrais%20commander%20une%20barquette%20%3A%20" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="btn ligne" href="tel:+262692072403">📞 Appeler</a>
+</nav>
+
+<script>
+(function(){
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // apparitions
+  var els = document.querySelectorAll('.rv');
+  if (RM || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('vu')}); }
+  else {
+    var io = new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    els.forEach(function(e){io.observe(e)});
+  }
+  // heure de La Réunion (UTC+4)
+  var now = new Date(Date.now() + (new Date().getTimezoneOffset() + 240) * 60000);
+  var j = now.getDay(), m = now.getHours() * 60 + now.getMinutes();
+  var tr = document.querySelector('#horaires tr[data-j="' + j + '"]'); if (tr) tr.classList.add('auj');
+  var st = document.getElementById('statut'), t = st.querySelector('span');
+  if (j === 3) t.textContent = 'Mercredi, jour de repos · à demain';
+  else if (m >= 690 && m < 810) { st.classList.add('on'); t.textContent = 'Ouvert maintenant · jusqu’à 13h30'; }
+  else if (m < 660) t.textContent = 'Commandes ouvertes jusqu’à 11h';
+  else if (m < 690) t.textContent = 'Ça mijote · service à 11h30';
+  else t.textContent = 'Service du midi · 11h30 – 13h30';
+  // quiz Saint-Denis
+  var rep = document.getElementById('rep'), bs = document.querySelectorAll('.quiz button');
+  var R = {
+    '974': 'Parfait ! Commande avant 11h au <a href="tel:+262692072403">0692 07 24 03</a> et passe prendre ta ti barquette au 269 rue du Maréchal Leclerc.',
+    '93': 'Notre Saint-Denis est à 11 heures d’avion… mais vous, vous pouvez venir. On vous garde une assiette 🍛'
+  };
+  bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(o){o.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');rep.innerHTML=R[b.dataset.r];});});
+  // vapeur + braises
+  if (RM) return;
+  var c = document.getElementById('vapeur'), x = c.getContext('2d'), W, H, P = [], run = true, dpr = Math.min(devicePixelRatio || 1, 2);
+  function size(){ W = c.clientWidth; H = c.clientHeight; c.width = W * dpr; c.height = H * dpr; x.setTransform(dpr,0,0,dpr,0,0); }
+  function mk(i){
+    var braise = i % 3 === 0;
+    return { b: braise, x: Math.random() * W, y: H * (.55 + Math.random() * .5), r: braise ? 1 + Math.random() * 2 : 30 + Math.random() * 50,
+      vy: braise ? .5 + Math.random() * .8 : .25 + Math.random() * .35, ph: Math.random() * 6.28, a: 0, life: 0, max: 380 + Math.random() * 380 };
+  }
+  size(); for (var i = 0; i < 27; i++) { var p = mk(i); p.life = Math.random() * p.max; P.push(p); }
+  addEventListener('resize', size);
+  document.addEventListener('visibilitychange', function(){ run = !document.hidden; if (run) requestAnimationFrame(loop); });
+  var hero = document.querySelector('.hero'), vis = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(e){ vis = e[0].isIntersecting; if (vis && run) requestAnimationFrame(loop); }).observe(hero);
+  function loop(){
+    if (!run || !vis) return;
+    x.clearRect(0, 0, W, H);
+    for (var i = 0; i < P.length; i++) {
+      var p = P[i]; p.life++; p.y -= p.vy; p.ph += .012; p.x += Math.sin(p.ph) * (p.b ? .6 : .35);
+      var k = p.life / p.max, fade = k < .2 ? k / .2 : (k > .7 ? (1 - k) / .3 : 1);
+      if (p.life > p.max || p.y < -60) { P[i] = mk(i); continue; }
+      if (p.b) {
+        x.fillStyle = 'rgba(255,' + (140 + (i * 7) % 60) + ',40,' + (.75 * fade) + ')';
+        x.beginPath(); x.arc(p.x, p.y, p.r, 0, 6.28); x.fill();
+      } else {
+        var g = x.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * (1 + k * .8));
+        g.addColorStop(0, 'rgba(255,248,236,' + (.09 * fade) + ')'); g.addColorStop(1, 'rgba(255,248,236,0)');
+        x.fillStyle = g; x.beginPath(); x.arc(p.x, p.y, p.r * (1 + k * .8), 0, 6.28); x.fill();
+      }
+    }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

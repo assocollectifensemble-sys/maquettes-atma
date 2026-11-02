@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Axelle Traiteur by le p’tit chef — le midi, fait maison · Saint-Denis</title>
+<meta name="description" content="Le restaurant ouvert à tous chaque midi au sein de l’Hôtel de Région. Menu du jour créole, végétarien, salades, burgers et wraps maison. Commande de 6h à 10h, livraison de Saint-Denis à Saint-André.">
+<meta property="og:title" content="Axelle Traiteur by le p’tit chef — bon appétit !">
+<meta property="og:description" content="Une page imaginée pour Axelle Traiteur : le menu de la semaine, les vraies barquettes du jour et la commande sur WhatsApp.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/axelle-traiteur/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/axelle-traiteur/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,600&family=Dancing+Script:wght@600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1B1A1F; --ink-2:#26242B; --paper:#FBF7F0; --cream:#F3EADB; --kraft:#C9A27A; --kraft-d:#8C6A45;
+  --red:#C8161D; --red-d:#9E1016; --blue:#2C4A9A; --herb:#3E7B3A; --tomato:#E2562B;
+  --muted:#6B6259; --line:rgba(27,26,31,.12);
+  --serif:'Playfair Display',Georgia,serif; --script:'Dancing Script',cursive; --sans:'DM Sans',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--tomato);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--ink);color:#EDE4D6;font-size:13px;line-height:1.45;padding:9px var(--pad);text-align:center}
+.ribbon b{color:#fff}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--red)}
+h2{font-family:var(--serif);font-weight:800;font-size:clamp(34px,6.6vw,58px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 16px}
+h2 em{font-family:var(--script);font-style:normal;font-weight:600;color:var(--red);font-size:1.05em}
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad)}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,860px);background:var(--ink);color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero .ph{position:absolute;inset:0;background:url(img/barquettes-alignees.jpg) 50% 40%/cover;transform-origin:50% 60%;animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.2) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,26,31,.55) 0%,rgba(27,26,31,.05) 24%,rgba(27,26,31,.55) 48%,rgba(27,26,31,.94) 72%)}
+#steam{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.badge{position:absolute;z-index:3;top:20px;left:var(--pad);right:var(--pad);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.badge img{width:118px;background:#fff;border-radius:14px;padding:6px 8px;box-shadow:0 12px 26px -12px rgba(0,0,0,.6)}
+.badge span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;line-height:1.5;text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.hero .in{position:relative;z-index:3;max-width:1180px;margin:0 auto;width:100%;padding:0 var(--pad) clamp(70px,12vw,120px)}
+.hero .kicker{color:#FFD9C7}
+.hero h1{font-family:var(--serif);font-weight:800;font-size:clamp(48px,13vw,112px);line-height:.95;letter-spacing:-.02em;margin:12px 0 18px}
+.hero h1 em{display:block;font-family:var(--script);font-style:normal;font-weight:600;color:#FFC9A8;font-size:.6em;letter-spacing:0;margin-top:8px}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(24px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.lede{max-width:34ch;font-size:clamp(18px,2.4vw,21px);color:#EFE6DA}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer;font:inherit;font-weight:700}
+.btn.red{background:var(--red);color:#fff;animation:breathe 3.4s ease-in-out infinite}
+.btn.red:hover{background:var(--red-d);transform:translateY(-2px)}
+@keyframes breathe{50%{box-shadow:0 0 0 8px rgba(200,22,29,.2)}}
+.btn.line{border-color:rgba(255,255,255,.65);color:#fff}
+.btn.line:hover{background:#fff;color:var(--ink)}
+.btn.wa{background:#1E7A4A;color:#fff}
+.btn.wa:hover{background:#17643C;transform:translateY(-2px)}
+.edge{display:block;width:100%;height:46px;position:absolute;bottom:-1px;left:0;z-index:4}
+
+/* MARQUEE */
+.marquee{overflow:hidden;border-bottom:1px solid var(--line);padding:14px 0}
+.marquee .tr{display:flex;width:max-content;animation:mq 46s linear infinite}
+.marquee span{font-family:var(--serif);font-style:italic;font-weight:600;font-size:21px;color:var(--ink);white-space:nowrap;padding:0 16px}
+.marquee span i{font-style:normal;color:var(--red);margin-left:32px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* MATIN */
+.steps{display:grid;gap:14px;margin-top:26px;list-style:none;padding:0}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;position:relative;transition:transform .3s,box-shadow .3s}
+.steps li:hover{transform:translateY(-4px);box-shadow:0 18px 36px -24px rgba(27,26,31,.5)}
+.steps .h{font-family:var(--serif);font-weight:800;font-size:40px;color:var(--red);line-height:1}
+.steps b{display:block;font-size:19px;margin:8px 0 4px}
+.steps p{color:var(--muted);font-size:15.5px}
+.live{display:flex;align-items:center;gap:12px;margin-top:22px;background:var(--ink);color:#fff;border-radius:16px;padding:14px 18px;font-weight:500}
+.live .dot{flex:0 0 12px;height:12px;border-radius:50%;background:#3BD17A;box-shadow:0 0 0 0 rgba(59,209,122,.6);animation:pulse 2s infinite}
+.live.off .dot{background:var(--kraft);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(59,209,122,0)}}
+
+/* MENU */
+.menu{background:var(--cream);position:relative}
+.menu .wrap{padding-top:clamp(50px,8vw,90px)}
+.menu .sub{color:var(--muted);max-width:52ch}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:22px calc(var(--pad)*-1) 0;padding:4px var(--pad) 8px}
+.days::-webkit-scrollbar{display:none}
+.days button{flex:0 0 auto;font:inherit;font-weight:700;font-size:15px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:9px 16px;cursor:pointer;transition:background .2s,color .2s}
+.days button small{display:block;font-weight:500;font-size:11.5px;opacity:.7;line-height:1}
+.days button[aria-selected=true]{background:var(--ink);color:#fff}
+.sheet{background:#fff;border-radius:22px;padding:clamp(18px,4vw,30px);margin-top:16px;box-shadow:0 30px 60px -40px rgba(27,26,31,.6);border:1px solid var(--line)}
+.sheet h3{font-family:var(--serif);font-size:22px;color:var(--blue);letter-spacing:.02em;text-transform:uppercase;font-weight:700}
+.grp{margin-top:16px}
+.grp > small{display:block;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--kraft-d);margin-bottom:6px}
+.dish{display:flex;align-items:center;gap:12px;width:100%;text-align:left;font:inherit;background:transparent;border:0;border-bottom:1px dashed var(--line);padding:11px 2px;cursor:pointer;color:var(--ink)}
+.dish span{flex:1;font-size:16.5px;line-height:1.35}
+.dish b{font-family:var(--serif);font-size:19px;color:var(--red);white-space:nowrap}
+.dish i{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-style:normal;font-weight:700;font-size:18px;transition:background .2s,color .2s,transform .2s}
+.dish:hover i{background:var(--ink);color:#fff;transform:rotate(90deg)}
+.dish.added i{background:var(--herb);border-color:var(--herb);color:#fff}
+.side{font-size:15px;color:var(--muted);margin-top:12px}
+.side b{color:var(--ink)}
+.always{margin-top:18px;background:var(--ink);color:#fff;border-radius:18px;padding:16px 18px}
+.always h4{font-family:var(--script);font-size:28px;font-weight:600;color:#FFC9A8;line-height:1}
+.always .dish{color:#fff;border-bottom-color:rgba(255,255,255,.15)}
+.always .dish b{color:#FFB08C}
+.always .dish i{border-color:#fff}
+.always .dish:hover i{background:#fff;color:var(--ink)}
+.src{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+/* PANIER */
+.cart{margin-top:18px;background:#fff;border:2px solid var(--ink);border-radius:22px;padding:18px}
+.cart h3{font-family:var(--serif);font-size:24px;font-weight:800}
+.cart ul{list-style:none;padding:0;margin:10px 0 0}
+.cart li{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.cart li span{flex:1}
+.cart li button{font:inherit;width:30px;height:30px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-weight:700}
+.cart .empty{color:var(--muted);font-size:15px;margin-top:8px}
+.cart .tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;font-weight:700}
+.cart .tot b{font-family:var(--serif);font-size:30px;color:var(--red)}
+.cart label{display:block;font-size:14px;font-weight:700;margin-top:14px}
+.cart input{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);margin-top:6px}
+.cart .btn{width:100%;margin-top:14px}
+
+/* GALERIE */
+.gal{background:var(--ink);color:#fff;padding:clamp(60px,9vw,110px) 0;overflow:hidden}
+.gal .head{max-width:1180px;margin:0 auto 22px;padding:0 var(--pad)}
+.gal .kicker{color:#FFB08C}
+.gal h2 em{color:#FFC9A8}
+.gal .head p{color:#CFC6BA;max-width:50ch}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--pad) 18px;scrollbar-width:none;overscroll-behavior-x:contain}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(72vw,300px);scroll-snap-align:start;position:relative;border-radius:20px;overflow:hidden;background:var(--ink-2)}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .6s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(27,26,31,.94))}
+.strip figcaption small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#FFB08C;font-weight:700}
+.strip figcaption b{font-family:var(--serif);font-size:20px;line-height:1.2}
+.hint{max-width:1180px;margin:0 auto;padding:0 var(--pad);font-size:13px;color:#9C9388}
+
+/* MAISON */
+.maison{display:grid;gap:40px}
+@media(min-width:900px){.maison{grid-template-columns:1fr 1fr;align-items:center}}
+.maison p{color:var(--muted);max-width:52ch}
+.maison p+p{margin-top:14px}
+.maison blockquote{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,3vw,28px);line-height:1.3;color:var(--ink);border-left:4px solid var(--red);padding-left:16px;margin:22px 0 6px}
+.maison cite{font-style:normal;font-size:13px;color:var(--muted);padding-left:20px}
+.pillars{display:grid;gap:10px;margin-top:24px;padding:0;list-style:none}
+.pillars li{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 16px;transition:transform .25s}
+.pillars li:hover{transform:translateX(4px)}
+.pillars svg{flex:0 0 34px;height:34px}
+.pillars b{display:block}
+.pillars small{color:var(--muted);font-size:14px}
+.duo{position:relative;min-height:460px}
+.duo figure{position:absolute;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(27,26,31,.7)}
+.duo .a{inset:0 24% 12% 0}
+.duo .b{width:50%;aspect-ratio:3/4;right:0;bottom:0;border:6px solid var(--paper)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figcaption{position:absolute;left:10px;bottom:10px;background:rgba(27,26,31,.75);color:#fff;font-size:12px;padding:4px 10px;border-radius:999px}
+
+/* AVIS */
+.avis{background:linear-gradient(180deg,var(--paper),var(--cream))}
+.big{background:var(--red);color:#fff;border-radius:26px;padding:clamp(26px,5vw,48px);position:relative;overflow:hidden}
+.big::before{content:"";position:absolute;right:-50px;top:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,201,168,.5),transparent 70%)}
+.big .stars{font-size:22px;letter-spacing:4px;color:#FFD9A0}
+.big p{font-family:var(--serif);font-size:clamp(28px,5vw,44px);line-height:1.12;font-weight:700;position:relative;margin-top:6px}
+.big cite{display:block;margin-top:14px;font-style:normal;font-size:14px;color:#FFE1D2}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;position:relative}
+.tags span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:5px 12px;border-radius:999px;font-size:14px;font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:14px;transition:transform .3s}
+.card:hover{transform:translateY(-4px)}
+.card p{font-family:var(--serif);font-size:21px;line-height:1.35;font-weight:600}
+.card cite{display:block;font-style:normal;color:var(--muted);font-size:14px;margin-top:8px}
+
+/* CONTACT */
+.contact{display:grid;gap:16px}
+@media(min-width:860px){.contact{grid-template-columns:repeat(3,1fr)}}
+.contact > div:first-child{grid-column:1/-1}
+.co{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.co h3{font-family:var(--serif);font-size:23px;font-weight:800;margin-bottom:6px}
+.co p{color:var(--muted)}
+.co a{font-weight:700;text-decoration-color:var(--red);text-underline-offset:4px;word-break:break-word}
+.co .tel{display:block;font-family:var(--serif);font-size:28px;color:var(--red);text-decoration:none;line-height:1.3}
+footer{background:var(--ink);color:#BDB4A8;text-align:center;padding:40px var(--pad) 36px;font-size:14px}
+footer img{width:150px;margin:0 auto 14px;border-radius:12px;background:#fff;padding:6px 10px}
+footer b{display:block;font-family:var(--script);font-weight:600;font-size:30px;color:#FFC9A8;margin-bottom:10px}
+footer .m{margin-top:14px;font-size:12.5px;color:#8E857A}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(27,26,31,.95);border-radius:999px;padding:6px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:#fff}
+.bar a.w{background:#1E7A4A}
+.bar .n{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:999px;background:#fff;color:#1E7A4A;font-size:12.5px;padding:0 6px}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.hero h1 .w{opacity:1;transform:none}#steam{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Axelle Traiteur by le p’tit chef</div>
+
+<header class="hero">
+  <div class="ph" role="img" aria-label="Des dizaines de barquettes du jour alignées : salades, calamars, frites et crudités"></div>
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="badge"><img src="img/logo.jpg" alt="Logo Axelle Traiteur by le petit chef"><span>Hôtel de Région<br>Saint-Denis</span></div>
+  <div class="in">
+    <p class="kicker">Restaurant · traiteur · livraison</p>
+    <h1><span class="w">Bon</span> <span class="w" style="animation-delay:.12s">appétit</span><em class="w" style="animation-delay:.4s">avec Axelle traiteur<br>by le p’tit chef</em></h1>
+    <p class="lede">Votre restaurant ouvert à tous chaque midi au sein de l’Hôtel de Région. Sur place, ou livré de Saint-Denis à Saint-André.</p>
+    <div class="cta">
+      <a class="btn red" href="#menu">Voir le menu de la semaine</a>
+      <a class="btn line" href="tel:+262692614511">0692 61 45 11</a>
+    </div>
+  </div>
+  <svg class="edge" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V24C120 8 240 36 360 22S600 6 720 22 960 38 1080 22 1320 8 1440 22V46Z" fill="#FBF7F0"/></svg>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="tr"><span>Civet zourite<i>✦</i></span><span>Carry bichiques<i>✦</i></span><span>Rougail boucané artisanal<i>✦</i></span><span>Rôti coq sauce foie gras<i>✦</i></span><span>Camaron à l’ail<i>✦</i></span><span>Bouillon morue margoze<i>✦</i></span><span>Canard confit, purée maison<i>✦</i></span><span>Salade César façon Axelle<i>✦</i></span><span>Sauté porc sauce volcan<i>✦</i></span></div></div>
+
+<section class="wrap" id="matin">
+  <div class="reveal">
+    <p class="kicker">Chaque matin</p>
+    <h2>Le menu tombe, <em>on commande</em></h2>
+    <p style="color:var(--muted);max-width:52ch">Tous les matins, le menu du jour est publié sur la page : plats créoles, un plat végétarien, deux salades, grains et rougails au choix. Il ne reste qu’à choisir.</p>
+  </div>
+  <ol class="steps">
+    <li class="reveal"><span class="h">6h</span><b>Les commandes s’ouvrent</b><p>Le menu du jour est en ligne, le téléphone et WhatsApp sont prêts.</p></li>
+    <li class="reveal"><span class="h">10h</span><b>Dernier appel</b><p>« Passez vos commandes avant 10h00 pour vos livraisons sur Saint-Denis et alentours. »</p></li>
+    <li class="reveal"><span class="h">Midi</span><b>Livré ou sur place</b><p>Livraison de Saint-Denis à Saint-André, ou à table au restaurant de l’Hôtel de Région.</p></li>
+  </ol>
+  <div class="live reveal" id="live" aria-live="polite"><span class="dot"></span><span id="livet">Commandes de 6h à 10h, du lundi au vendredi.</span></div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="kicker">Semaine du 2 au 6 novembre 2026</p>
+      <h2>Le menu <em>de la semaine</em></h2>
+      <p class="sub">Touchez un plat pour l’ajouter : votre commande se prépare toute seule, prête à partir sur WhatsApp.</p>
+    </div>
+    <div class="days" role="tablist" id="days"></div>
+    <div class="sheet reveal" id="sheet" role="tabpanel"></div>
+    <div class="always reveal">
+      <h4>Tous les jours</h4>
+      <div id="always"></div>
+    </div>
+    <p class="src">Menu et prix repris de l’affiche publiée par Axelle Traiteur pour la semaine du 2 novembre 2026.</p>
+
+    <form class="cart reveal" id="cart" onsubmit="return false">
+      <h3>Ma commande du midi</h3>
+      <ul id="lines"></ul>
+      <p class="empty" id="empty">Votre barquette vous attend : touchez un plat du menu.</p>
+      <div class="tot"><span>Total indicatif</span><b id="tot">0 €</b></div>
+      <label for="who">Prénom et lieu de livraison</label>
+      <input id="who" type="text" placeholder="ex. Marie, bureau 2e étage, Sainte-Clotilde" autocomplete="off">
+      <a class="btn wa" id="send" href="https://wa.me/262692614511">Commander sur WhatsApp</a>
+    </form>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="head reveal">
+    <p class="kicker">Tout droit sorties des cuisines</p>
+    <h2>Les barquettes <em>du jour</em></h2>
+    <p>Les vraies photos publiées par Axelle Traiteur fin octobre : généreuses, colorées, prêtes à partir. À parcourir du doigt.</p>
+  </div>
+  <div class="strip">
+    <figure><img src="img/saute-poulet-legumes.jpg" alt="Grand bac de sauté de poulet aux carottes et courgettes" loading="lazy"><figcaption><small>Plat chaud</small><b>Sauté poulet aux légumes</b></figcaption></figure>
+    <figure><img src="img/croustillants.jpg" alt="Barquettes de poulet croustillant, crudités et sauce" loading="lazy"><figcaption><small>Tous les jours</small><b>Croustillant + salade composée</b></figcaption></figure>
+    <figure><img src="img/burger-wrap.jpg" alt="Burger au sésame et wrap maison posés sur une table en bois" loading="lazy"><figcaption><small>Tous les jours</small><b>Burger et wrap maison</b></figcaption></figure>
+    <figure><img src="img/salades-oeuf.jpg" alt="Salades composées aux œufs et crudités en barquettes" loading="lazy"><figcaption><small>Salade du jour</small><b>Salades composées</b></figcaption></figure>
+    <figure><img src="img/carrys-du-jour.jpg" alt="Barquettes de carry et pommes de terre, parsemées de cive" loading="lazy"><figcaption><small>Plat du jour</small><b>Les carrys du midi</b></figcaption></figure>
+    <figure><img src="img/salades-composees.jpg" alt="Barquettes de salade avec galette, maïs et crudités" loading="lazy"><figcaption><small>Salade du jour</small><b>Salades façon Axelle</b></figcaption></figure>
+    <figure><img src="img/plat-mijote-bac.jpg" alt="Bac de viande mijotée parsemée de cive" loading="lazy"><figcaption><small>Plat chaud</small><b>Mijoté du jour</b></figcaption></figure>
+    <figure><img src="img/carry-rougail.jpg" alt="Barquettes de carry jaune et de rougail tomate" loading="lazy"><figcaption><small>Plat du jour</small><b>Carry et rougail</b></figcaption></figure>
+    <figure><img src="img/sauce-piment-vert.jpg" alt="Plat en sauce tomate relevé de piments verts" loading="lazy"><figcaption><small>Plat chaud</small><b>Relevé au piment vert</b></figcaption></figure>
+  </div>
+  <p class="hint">← Faites glisser →</p>
+</section>
+
+<section class="wrap maison">
+  <div class="reveal">
+    <p class="kicker">La maison</p>
+    <h2>Un restaurant <em>ouvert à tous</em></h2>
+    <p>Au cœur de l’Hôtel de Région, à Sainte-Clotilde, Axelle Traiteur by le p’tit chef sert chaque midi une cuisine maison : carrys et rougails du pays, plat végétarien du jour, salades « façon Axelle », burgers et wraps.</p>
+    <blockquote>Après des mois d’attente, nous sommes extrêmement fiers de vous présenter notre nouveau restaurant&nbsp;!</blockquote>
+    <cite>— Axelle Traiteur, à l’ouverture du restaurant de l’Hôtel de Région</cite>
+    <ul class="pillars">
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M6 18h22a11 11 0 0 1-22 0z" fill="#C8161D"/><path d="M12 6c-2 3 2 4 0 7M17 4c-2 3 2 4 0 7M22 6c-2 3 2 4 0 7" fill="none" stroke="#8C6A45" stroke-width="2" stroke-linecap="round"/></svg><span><b>Passion, exigence, envie de bien faire</b><small>Ce qui anime le p’tit chef, raconté en vidéo sur la page</small></span></li>
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M8 26C8 14 16 7 28 6c0 13-7 21-19 21" fill="none" stroke="#3E7B3A" stroke-width="2.4"/><path d="M8 26l12-12" stroke="#3E7B3A" stroke-width="2.2"/></svg><span><b>Un plat végétarien chaque jour</b><small>Vindaye de tofu, brianni légumes, brèdes manioc pimenté…</small></span></li>
+      <li><svg viewBox="0 0 34 34" aria-hidden="true"><path d="M17 31s-9-9-9-16a9 9 0 0 1 18 0c0 7-9 16-9 16z" fill="none" stroke="#2C4A9A" stroke-width="2.4"/><circle cx="17" cy="15" r="3.2" fill="#2C4A9A"/></svg><span><b>De Saint-Denis à Saint-André</b><small>Livraison du midi, commande de 6h à 10h</small></span></li>
+    </ul>
+  </div>
+  <div class="duo reveal">
+    <figure class="a"><img src="img/grains-rougail.jpg" alt="Barquettes de plat du jour accompagné de rougail vert" loading="lazy"></figure>
+    <figure class="b"><img src="img/plats-mijotes.jpg" alt="Barquettes rondes de plats mijotés vues du dessus" loading="lazy"><figcaption>Prêt pour midi</figcaption></figure>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <p class="kicker reveal">Ils en parlent</p>
+    <h2 class="reveal">Recommandé <em>5 sur 5</em></h2>
+    <div class="big reveal">
+      <div class="stars" aria-label="Note 5 sur 5">★★★★★</div>
+      <p>«&nbsp;Belle découverte, très bon je recommande&nbsp;!&nbsp;»</p>
+      <cite>Li Meï P. · avis Facebook, 1er juin 2026</cite>
+      <div class="tags"><span>Vaste choix</span><span>Livraison rapide</span><span>Bonne salade</span><span>Plats excellents</span></div>
+    </div>
+    <div class="card reveal"><p>«&nbsp;Super bons les repas d’Axelle traiteur, bravo a toute l’équipe&nbsp;!&nbsp;»</p><cite>Commentaire sur la page Facebook d’Axelle Traiteur</cite></div>
+  </div>
+</section>
+
+<section class="wrap contact" id="contact">
+  <div class="reveal"><p class="kicker">Commander, réserver</p><h2>À tout à l’heure, <em>bon appétit !</em></h2></div>
+  <div class="co reveal"><h3>Téléphone &amp; WhatsApp</h3><a class="tel" href="tel:+262692614511">0692 61 45 11</a><a class="tel" href="tel:+262692019490">0692 01 94 90</a><p>Commandes de 6h à 10h.</p></div>
+  <div class="co reveal"><h3>Le restaurant</h3><p>Hôtel de Région Pierre-Lagourgue<br>Avenue René-Cassin, Sainte-Clotilde<br>Saint-Denis · ouvert à tous chaque midi</p></div>
+  <div class="co reveal"><h3>Le menu du jour</h3><p>Publié chaque matin sur <a href="https://www.facebook.com/axelletraiteurbylepetitchef/" target="_blank" rel="noopener">Facebook</a> et <a href="https://www.instagram.com/axelletraiteur/" target="_blank" rel="noopener">Instagram @axelletraiteur</a>.</p></div>
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="Axelle Traiteur by le petit chef" loading="lazy">
+  <b>Bonne journée et bon appétit !</b>
+  <p>Axelle Traiteur by le p’tit chef · Saint-Denis, La Réunion</p>
+  <p class="m">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d’Axelle Traiteur by le p’tit chef.</p>
+</footer>
+
+<nav class="bar" aria-label="Contact rapide"><a href="tel:+262692614511">Appeler</a><a class="w" href="#cart" id="barw">Ma commande <span class="n" id="cnt">0</span></a></nav>
+
+<script>
+(()=>{
+const W=[
+ ["Lundi","2 nov.",[["Rôti porc pays pommes de terre",9],["Poulet sauce d’huître",8.5],["Poisson sauce grand-mère",9]],["Vindaye de tofu",7],[["Crudités + quiche au jambon de poulet",8],["Niçoise façon Axelle Traiteur",9.5]],"lentilles","tomates ou piment vert"],
+ ["Mardi","3 nov.",[["Rougail boucané artisanal + zambrocal pois/pommes de terre",9],["Carry bichiques",7.5],["Sauté poulet",8.5]],["Carry légumes",6.5],[["Crudités + quiche au saumon fumé",8],["Salade duo tomates/patates douces rôties + jambon cru",9.5]],"pois du cap","oignons ou citron"],
+ ["Mercredi","4 nov.",[["Rougail chevaquines",8],["Civet coq frais",9],["Sauté porc sauce volcan",8.5]],["Brianni légumes",7],[["Crudités + quiche aux lardons",8],["Salade de pâtes au saumon fumé",9.5]],"haricots blancs","concombre ou piment vert"],
+ ["Jeudi","5 nov.",[["Poulet forestier",9],["Rougail boudin",8],["Sauté camarons aigre-doux",9]],["Brèdes manioc pimenté",7],[["Crudités + quiche saumon/poireaux",8],["César au poulet croustillant",9.5]],"haricots rosés","oignons ou citron"],
+ ["Vendredi","6 nov.",[["Rougail morue",8],["Poulet rôti au four",8.5],["Civet zourite",9.5]],["Macaroni à l’ancienne",7],[["Crudités + quiche chèvre/miel",8],["Thaï façon Axelle Traiteur",9.5]],"lentilles","concombre ou piment"]];
+const A=[["Burger maison poulet ou poisson croustillant + salade composée",9.5],["Wrap poulet ou poisson croustillant ou saumon fumé + salade composée",9.5],["Brochettes poulet ou poisson croustillant + gratin du jour + salade composée",8.5]];
+const $=s=>document.getElementById(s),e=(n)=>n.toFixed(2).replace('.00','').replace('.',',').replace(/,(\d)0$/,',$1')+' €';
+const cart=new Map();
+const dish=(n,p,day)=>`<button type="button" class="dish" data-n="${n}" data-p="${p}" data-d="${day}"><span>${n}</span><b>${e(p)}</b><i aria-hidden="true">+</i></button>`;
+function show(i){
+ [...$('days').children].forEach((b,k)=>b.setAttribute('aria-selected',k==i));
+ const d=W[i];
+ $('sheet').innerHTML=`<h3>${d[0]} ${d[1]}</h3><div class="grp"><small>Plats du jour</small>${d[2].map(x=>dish(x[0],x[1],d[0])).join('')}</div><div class="grp"><small>Repas végétarien du jour</small>${dish(d[3][0],d[3][1],d[0])}</div><div class="grp"><small>Salades du jour</small>${d[4].map(x=>dish(x[0],x[1],d[0])).join('')}</div><p class="side">Grains du jour : <b>${d[5]}</b> · Rougails du jour : <b>${d[6]}</b></p>`;
+ mark();
+}
+$('days').innerHTML=W.map((d,i)=>`<button type="button" role="tab" data-i="${i}">${d[0]}<small>${d[1]}</small></button>`).join('');
+$('days').onclick=ev=>{const b=ev.target.closest('button');if(b)show(+b.dataset.i)};
+$('always').innerHTML=A.map(x=>dish(x[0],x[1],'')).join('');
+const now=new Date(Date.now()+4*36e5),dow=now.getUTCDay(),h=now.getUTCHours()+now.getUTCMinutes()/60;
+show(dow>=1&&dow<=5&&now.getUTCMonth()==10&&now.getUTCDate()<=6?dow-1:0);
+// live
+const L=$('live'),T=$('livet');
+if(dow>=1&&dow<=5&&h>=6&&h<10){const m=Math.round((10-h)*60);T.textContent=`Commandes ouvertes : encore ${m>=60?Math.floor(m/60)+' h '+String(m%60).padStart(2,'0'):m+' min'} pour être livré ce midi.`}
+else{L.classList.add('off');T.textContent=(dow>=1&&dow<=4)||dow==0||(dow==5&&h<6)?'Prochaine ouverture des commandes demain dès 6h.':'Rendez-vous lundi dès 6h pour le menu de la semaine.';if(dow>=1&&dow<=5&&h<6)T.textContent='Les commandes ouvrent ce matin à 6h.'}
+document.addEventListener('click',ev=>{
+ const b=ev.target.closest('.dish');if(!b)return;
+ const k=(b.dataset.d?b.dataset.d+' · ':'')+b.dataset.n;
+ const c=cart.get(k)||{p:+b.dataset.p,q:0};c.q++;cart.set(k,c);draw();
+ b.classList.add('added');b.querySelector('i').textContent='✓';setTimeout(()=>{b.querySelector('i').textContent='+'},900);
+});
+$('lines').onclick=ev=>{const b=ev.target.closest('button');if(!b)return;const c=cart.get(b.dataset.k);c.q+=+b.dataset.v;if(c.q<=0)cart.delete(b.dataset.k);draw()};
+$('who').oninput=draw;
+function mark(){document.querySelectorAll('.dish').forEach(b=>{const k=(b.dataset.d?b.dataset.d+' · ':'')+b.dataset.n;b.classList.toggle('added',cart.has(k))})}
+function draw(){
+ let t=0,n=0,msg=[];
+ $('lines').innerHTML=[...cart].map(([k,c])=>{t+=c.p*c.q;n+=c.q;msg.push(`${c.q} × ${k} (${e(c.p)})`);return `<li><span>${c.q} × ${k}</span><button type="button" data-k="${k}" data-v="-1" aria-label="Retirer">−</button><button type="button" data-k="${k}" data-v="1" aria-label="Ajouter">+</button></li>`}).join('');
+ $('empty').hidden=n>0;$('tot').textContent=e(t);$('cnt').textContent=n;mark();
+ const w=$('who').value.trim();
+ const txt=`Bonjour Axelle Traiteur ! Voici ma commande pour ce midi :\n${msg.join('\n')||'(à compléter)'}\nTotal indicatif : ${e(t)}${w?'\nPour : '+w:''}\nMerci et bonne journée !`;
+ $('send').href='https://wa.me/262692614511?text='+encodeURIComponent(txt);
+}
+draw();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('seen');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// steam
+const cv=$('steam'),cx=cv.getContext('2d'),rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(rm)return;
+let w,hh,P=[],run=true;
+function rs(){w=cv.width=cv.offsetWidth;hh=cv.height=cv.offsetHeight}
+rs();addEventListener('resize',rs);
+for(let i=0;i<26;i++)P.push(nw(true));
+function nw(r){return{x:Math.random()*w,y:r?Math.random()*hh:hh+40,r:30+Math.random()*60,v:.25+Math.random()*.45,a:0,ph:Math.random()*6.28,g:Math.random()<.3}}
+function f(){
+ if(!run)return;cx.clearRect(0,0,w,hh);
+ P.forEach((p,i)=>{p.y-=p.v;p.ph+=.012;const x=p.x+Math.sin(p.ph)*18,life=p.y/hh;p.a=Math.min(.16,(1-Math.abs(life-.55)*1.8)*.16);
+  if(p.g){cx.fillStyle=`rgba(255,240,220,${Math.max(0,p.a*3)})`;cx.beginPath();cx.ellipse(x,p.y,2.2,4.4,p.ph,0,6.28);cx.fill()}
+  else{const g=cx.createRadialGradient(x,p.y,0,x,p.y,p.r);g.addColorStop(0,`rgba(255,250,244,${Math.max(0,p.a)})`);g.addColorStop(1,'rgba(255,250,244,0)');cx.fillStyle=g;cx.beginPath();cx.arc(x,p.y,p.r,0,6.28);cx.fill()}
+  if(p.y<-p.r)P[i]=nw(false)});
+ requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>KSK — Snack chez Karene &amp; Shiva · cuisine mahoraise et réunionnaise · Sainte-Marie</title>
+<meta name="description" content="Le KSK, snack de Karene et Shiva au 85 rue de la République à Sainte-Marie : plats du jour mahorais et réunionnais en barquette, kebabs, salades et pâtisseries maison. Du lundi au vendredi, 11h-20h.">
+<meta property="og:title" content="KSK — chez Karene &amp; Shiva, Sainte-Marie">
+<meta property="og:description" content="Notre mixité culturelle culinaire mahoraise et réunionnaise : une page imaginée pour le KSK, snack de Karene et Shiva à Sainte-Marie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ksk-chez-shiva-et-karene/img/marmite-boucane.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ksk-chez-shiva-et-karene/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#140A08; --night-2:#21110D; --night-3:#2F1914;
+  --red:#B3121A; --red-d:#7E0C12; --red-l:#D9352B;
+  --gold:#F2B705; --gold-l:#FFD54A; --saffron:#E98A15;
+  --cream:#FFF5E1; --paper:#FFFAF0; --ink:#2A1510; --muted:#6F574C; --line:rgba(126,12,18,.15);
+  --leaf:#2F7D3B;
+  --serif:'Young Serif',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif; --chalk:'Caveat',cursive;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--red-d);color:#fff;font-size:13px;line-height:1.45;padding:9px var(--pad);text-align:center}
+.ribbon b{color:var(--gold-l)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--red)}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,6.6vw,58px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 16px}
+h2 em{font-style:normal;color:var(--red)}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,900px);background:var(--night);color:var(--cream);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero .ph{position:absolute;inset:0;background:url(img/marmite-boucane.jpg) 50% 45%/cover;transform-origin:50% 40%;animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.2) translate(1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,8,.62) 0%,rgba(20,10,8,.1) 24%,rgba(20,10,8,.55) 48%,rgba(20,10,8,.95) 72%)}
+#steam{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
+.hero .in{position:relative;z-index:3;max-width:1180px;margin:0 auto;width:100%;padding:0 var(--pad) clamp(70px,12vw,120px)}
+.badge{position:absolute;z-index:3;top:20px;left:var(--pad);right:var(--pad);display:flex;align-items:center;gap:12px}
+.badge img{width:76px;height:76px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold-l);line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.7)}
+.hero .kicker{color:var(--gold-l)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,12.5vw,112px);line-height:.95;letter-spacing:-.02em;margin:12px 0 18px}
+.hero h1 .w{display:inline-block;opacity:0;transform:translateY(24px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 em{display:block;font-style:normal;font-family:var(--chalk);font-weight:700;color:var(--gold-l);font-size:.56em;letter-spacing:0;margin-top:6px}
+@keyframes up{to{opacity:1;transform:none}}
+.lede{max-width:36ch;font-size:clamp(18px,2.4vw,21px);color:#F1DFC6}
+.lede q{font-style:italic;color:#fff}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;text-decoration:none;border:2px solid transparent;transition:transform .2s,background .2s,color .2s;cursor:pointer;font:inherit;font-weight:700}
+.btn svg{width:20px;height:20px;flex:0 0 20px}
+.btn.wa{background:#1F8A4C;color:#fff;animation:breathe 3.4s ease-in-out infinite}
+.btn.wa:hover{background:#18703D;transform:translateY(-2px)}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(31,138,76,.2)}}
+.btn.line{border-color:rgba(255,245,225,.6);color:var(--cream)}
+.btn.line:hover{background:var(--cream);color:var(--night)}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{background:var(--red-d);transform:translateY(-2px)}
+.edge{display:block;width:100%;height:46px;position:absolute;bottom:-1px;left:0;z-index:4}
+
+/* MARQUEE */
+.marquee{background:var(--gold);overflow:hidden;padding:13px 0}
+.marquee .tr{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marquee span{font-family:var(--serif);font-size:21px;color:var(--night);white-space:nowrap;padding:0 16px}
+.marquee span i{font-style:normal;color:var(--red);margin-left:32px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* DEUX CULTURES */
+.duo-c{max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,110px) var(--pad);display:grid;gap:40px}
+@media(min-width:900px){.duo-c{grid-template-columns:1.05fr .95fr;align-items:center}}
+.duo-c p{color:var(--muted);max-width:52ch}
+.duo-c p+p{margin-top:14px}
+.quote{font-family:var(--serif);font-size:clamp(21px,3vw,27px);line-height:1.3;color:var(--red-d);border-left:3px solid var(--gold);padding-left:16px;margin-top:22px}
+.yy{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin:0 auto}
+.yy .half{position:absolute;inset:0;border-radius:50%;overflow:hidden}
+.yy .half img{width:100%;height:100%;object-fit:cover}
+.yy .a{clip-path:inset(0 50% 0 0)}
+.yy .b{clip-path:inset(0 0 0 50%)}
+.yy .ring{position:absolute;inset:-10px;border-radius:50%;border:2px dashed rgba(179,18,26,.35);animation:spin 80s linear infinite reverse}
+.yy .tag{position:absolute;bottom:8%;background:var(--night);color:var(--gold-l);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.yy .tag.l{left:4%}
+.yy .tag.r{right:4%;background:var(--red)}
+.yy .mid{position:absolute;left:50%;top:50%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;border:4px solid var(--paper);overflow:hidden;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.yy .mid img{width:100%;height:100%;object-fit:cover}
+
+/* RITUEL */
+.rituel{background:var(--night);color:var(--cream);padding:clamp(60px,9vw,110px) var(--pad);position:relative;overflow:hidden}
+.rituel .in{max-width:1180px;margin:0 auto}
+.rituel .kicker{color:var(--gold-l)}
+.rituel h2 em{color:var(--gold)}
+.rituel .intro{color:#D9C6B0;max-width:52ch}
+.steps{list-style:none;padding:0;margin-top:30px;display:grid;gap:16px}
+@media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{background:var(--night-2);border:1px solid rgba(242,183,5,.18);border-radius:18px;padding:20px;position:relative;transition:transform .3s,border-color .3s}
+.steps li:hover{transform:translateY(-4px);border-color:rgba(242,183,5,.5)}
+.steps .h{font-family:var(--chalk);font-size:30px;font-weight:700;color:var(--gold-l);line-height:1}
+.steps b{display:block;font-family:var(--serif);font-weight:400;font-size:21px;margin:8px 0 6px;line-height:1.2}
+.steps p{font-size:15px;color:#C9B5A0}
+.steps p q{color:var(--cream);font-style:italic}
+
+/* GALERIE */
+.galerie{background:var(--night);color:var(--cream);padding:0 0 clamp(56px,8vw,96px)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--pad) 18px;scrollbar-width:none;overscroll-behavior-x:contain;scroll-padding-left:var(--pad)}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(70vw,300px);scroll-snap-align:start;position:relative;border-radius:20px;overflow:hidden;background:var(--night-2)}
+.strip img{width:100%;aspect-ratio:3/5;object-fit:cover;transition:transform .7s}
+.strip figure:hover img{transform:scale(1.05)}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:48px 16px 14px;background:linear-gradient(transparent,rgba(20,10,8,.94))}
+.strip figcaption small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-l);font-weight:700}
+.strip figcaption b{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.18}
+.hint{max-width:1180px;margin:0 auto;padding:0 var(--pad);font-size:13px;color:#A8917C}
+
+/* ARDOISE */
+.ardoise{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:36px}
+@media(min-width:900px){.ardoise{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.board{background:#1C1F1D;border:10px solid #3A2A1E;border-radius:10px;box-shadow:inset 0 0 50px rgba(0,0,0,.6),0 30px 60px -30px rgba(20,10,8,.8);padding:26px 24px 22px;color:#EFEFE6;font-family:var(--chalk);position:relative;transform:rotate(-1.2deg)}
+.board .top{display:flex;justify-content:space-between;align-items:baseline;font-size:34px;font-weight:700;color:#BFE3F0;border-bottom:1px dashed rgba(239,239,230,.3);padding-bottom:8px}
+.board ul{list-style:none;padding:0;margin:14px 0 10px}
+.board li{font-size:32px;line-height:1.35;opacity:0;transform:translateX(-10px);transition:opacity .6s,transform .6s}
+.board.seen li{opacity:1;transform:none}
+.board.seen li:nth-child(2){transition-delay:.35s}
+.board.seen li:nth-child(3){transition-delay:.7s}
+.board li::before{content:"✱ ";color:#F7D36B}
+.board .tel{display:block;font-size:30px;color:#BFE3F0;text-decoration:none;margin-top:6px}
+.board small{display:block;font-family:var(--sans);font-size:12px;color:#A9AFA6;margin-top:10px}
+.ardoise .pic{border-radius:20px;overflow:hidden;max-width:420px;aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(126,12,18,.6)}
+.ardoise .pic img{width:100%;height:100%;object-fit:cover}
+.ardoise .txt p{color:var(--muted);max-width:50ch}
+.plats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.plats span{background:#fff;border:1.5px solid var(--line);color:var(--red-d);border-radius:999px;padding:6px 14px;font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.plats span:hover{background:var(--red);color:#fff}
+.plats + .src{font-size:13px;color:var(--muted);margin-top:-8px}
+
+/* SNACK */
+.snack{background:linear-gradient(180deg,var(--cream),var(--paper));padding:clamp(60px,9vw,110px) var(--pad)}
+.snack .in{max-width:1180px;margin:0 auto}
+.cards{display:grid;gap:16px;margin-top:26px}
+@media(min-width:860px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -26px rgba(126,12,18,.6)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card .b{padding:18px 20px 20px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--red-d);line-height:1.15}
+.card p{color:var(--muted);font-size:15px;margin-top:6px}
+.card ul{list-style:none;padding:0;margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.card li{font-size:13.5px;background:var(--cream);color:var(--red-d);border-radius:999px;padding:3px 11px;font-weight:500}
+.card li.hot{background:var(--red);color:#fff}
+
+/* AVIS */
+.avis{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad)}
+.big{background:var(--red);color:#fff;border-radius:26px;padding:clamp(26px,5vw,48px);position:relative;overflow:hidden}
+.big::before{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(255,213,74,.5),transparent 70%)}
+.big p{font-family:var(--serif);font-size:clamp(24px,4.2vw,40px);line-height:1.2;position:relative}
+.big cite{display:block;margin-top:14px;font-style:normal;font-size:14px;color:#FFE3C4;position:relative}
+.big cite a{color:#fff}
+.verdicts{display:grid;gap:14px;margin-top:16px}
+@media(min-width:820px){.verdicts{grid-template-columns:repeat(3,1fr)}}
+.v{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;transition:transform .3s}
+.v:hover{transform:rotate(-1deg) translateY(-3px)}
+.v .stamp{display:inline-block;font-family:var(--chalk);font-weight:700;font-size:26px;color:var(--leaf);border:2px solid var(--leaf);border-radius:10px;padding:0 10px;transform:rotate(-4deg);margin-bottom:8px}
+.v p{font-family:var(--serif);font-size:18px;line-height:1.38}
+.v cite{display:block;font-style:normal;color:var(--muted);font-size:13.5px;margin-top:10px}
+.score{display:flex;align-items:center;gap:16px;margin-top:18px;background:var(--night);color:var(--cream);border-radius:20px;padding:18px 22px}
+.score b{white-space:nowrap;font-family:var(--serif);font-weight:400;font-size:44px;color:var(--gold);line-height:1}
+.score span{font-size:15px;color:#D9C6B0}
+
+/* FAMILLE */
+.famille{background:var(--night);color:var(--cream);position:relative;overflow:hidden}
+.famille .in{max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:34px;position:relative;z-index:2}
+@media(min-width:900px){.famille .in{grid-template-columns:1fr 1fr;align-items:center}}
+.famille .kicker{color:var(--gold-l)}
+.famille h2 em{color:var(--gold)}
+.famille p{color:#D9C6B0;max-width:48ch}
+.famille p+p{margin-top:14px}
+.famille q{color:var(--cream);font-style:italic}
+.famille .ph2 img{width:100%;max-width:420px;aspect-ratio:4/5;object-fit:cover;border-radius:22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.famille figcaption{font-size:13px;color:#A8917C;margin-top:8px}
+
+/* COMMANDE */
+.commande{max-width:1080px;margin:0 auto;padding:clamp(60px,9vw,110px) var(--pad);display:grid;gap:30px}
+@media(min-width:940px){.commande{grid-template-columns:.9fr 1.1fr;align-items:start}}
+.commande .txt p{color:var(--muted);max-width:46ch}
+.tip{margin-top:18px;background:var(--cream);border-radius:16px;padding:14px 16px;font-size:15px;color:var(--red-d)}
+.tip b{color:var(--red)}
+.tool{background:#fff;border-radius:24px;padding:clamp(20px,4vw,32px);box-shadow:0 30px 60px -36px rgba(126,12,18,.55);border:1px solid var(--line)}
+.tool h3{font-family:var(--serif);font-weight:400;font-size:27px;line-height:1.12}
+.tool .sub{color:var(--muted);font-size:15px;margin-top:4px}
+.tool fieldset{border:0;padding:0;margin-top:18px}
+.tool legend,.tool .lb{display:block;font-weight:700;font-size:14px;letter-spacing:.04em;margin-bottom:8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative}
+.opts input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opts span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font-size:15px;font-weight:500;transition:all .2s}
+.opts input:checked+span{background:var(--red);border-color:var(--red);color:#fff}
+.opts input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+.qty{display:flex;align-items:center;gap:12px}
+.qty button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);font:inherit;font-size:22px;font-weight:700;color:var(--red-d);cursor:pointer}
+.qty output{font-family:var(--serif);font-size:30px;min-width:2ch;text-align:center}
+.tool input[type=text]{width:100%;font:inherit;font-size:17px;padding:11px 13px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+.prev{margin-top:20px;background:var(--night);color:var(--cream);border-radius:16px;padding:16px 18px;font-size:15px;line-height:1.5}
+.prev small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-l);font-weight:700;margin-bottom:4px}
+.tool .btn{width:100%;margin-top:14px}
+
+/* INFOS */
+.infos{background:var(--cream);padding:clamp(60px,9vw,110px) var(--pad)}
+.infos .in{max-width:1180px;margin:0 auto;display:grid;gap:18px}
+@media(min-width:860px){.infos .in{grid-template-columns:repeat(3,1fr)}.infos h2,.infos .dev{grid-column:1/-1}}
+.infos h2{margin-bottom:0}
+.dev{border-radius:22px;overflow:hidden;position:relative}
+.dev img{width:100%;aspect-ratio:21/9;object-fit:cover}
+.dev span{position:absolute;left:12px;bottom:12px;background:rgba(20,10,8,.78);color:var(--cream);font-size:13px;padding:5px 12px;border-radius:999px}
+.co{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}
+.co h3{font-family:var(--serif);font-weight:400;font-size:23px;color:var(--red-d);margin-bottom:6px}
+.co p{color:var(--muted)}
+.co a{font-weight:700;text-decoration-color:var(--gold);text-underline-offset:4px;word-break:break-word}
+.co .tel{font-family:var(--serif);font-weight:400;font-size:28px;color:var(--red);text-decoration:none}
+.hours{list-style:none;padding:0;margin-top:4px}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:5px 0;font-size:15.5px}
+.hours li b{font-weight:700}
+.hours li.off{color:#A8917C}
+#now{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;border-radius:999px;padding:4px 12px;background:var(--cream);color:var(--red-d)}
+#now.open{background:#E3F4E6;color:#1F6B37}
+
+footer{background:var(--night);color:#C3AE98;text-align:center;padding:42px var(--pad) 36px;font-size:14px}
+footer img{width:70px;height:70px;border-radius:50%;margin:0 auto 12px;border:2px solid var(--gold)}
+footer b{display:block;font-family:var(--chalk);font-weight:700;font-size:28px;color:var(--gold-l);margin-bottom:8px;line-height:1.2}
+footer .m{margin-top:14px;font-size:12.5px;color:#8E7867}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(20,10,8,.94);border-radius:999px;padding:6px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);backdrop-filter:blur(6px)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;color:var(--cream)}
+.bar a.m{background:#1F8A4C;color:#fff}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.hero h1 .w,.board li{opacity:1;transform:none}#steam{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour le KSK de Karene et Shiva</div>
+
+<header class="hero">
+  <div class="ph" role="img" aria-label="Une marmite du KSK en préparation : boucané, poivrons et piments"></div>
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="badge"><img src="img/logo-ksk.jpg" alt="Logo du KSK : un yin-yang rouge et or, K pour Karene, S pour Shiva"><span>Snack · Sainte-Marie<br>mahorais &amp; réunionnais</span></div>
+  <div class="in">
+    <p class="kicker">KSK · chez Karene &amp; Shiva</p>
+    <h1><span class="w">Deux</span> <span class="w" style="animation-delay:.12s">îles,</span> <span class="w" style="animation-delay:.24s">une</span> <span class="w" style="animation-delay:.36s">marmite</span><em class="w" style="animation-delay:.6s">les plats du jour sont en vitrine !</em></h1>
+    <p class="lede"><q>Notre mixité culturelle culinaire mahoraise et réunionnaise</q>, en barquette, du lundi au vendredi, en plein centre de Sainte-Marie.</p>
+    <div class="cta">
+      <a class="btn wa" href="#commande"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3z"/></svg>Commander</a>
+      <a class="btn line" href="tel:+262693606314">0693 60 63 14</a>
+    </div>
+  </div>
+  <svg class="edge" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V24C120 8 240 36 360 22S600 6 720 22 960 38 1080 22 1320 8 1440 22V46Z" fill="#F2B705"/></svg>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="tr" id="mq"><span>Pilao poulet<i>✦</i></span><span>Romazava<i>✦</i></span><span>Boucané bringelle<i>✦</i></span><span>Rougail morue<i>✦</i></span><span>Cabri massalé<i>✦</i></span><span>Civet canard aux olives<i>✦</i></span><span>Poulet vermouth aux champignons<i>✦</i></span><span>Gratin de carottes au sarcive<i>✦</i></span><span>Salade mangue ananas piment<i>✦</i></span><span>Cookies Dakatine<i>✦</i></span></div></div>
+
+<section class="duo-c">
+  <div class="reveal">
+    <p class="kicker">Le KSK</p>
+    <h2>K pour Karene, S pour Shiva, <em>et tout le reste pour vous</em></h2>
+    <p>Sur le logo, un yin-yang rouge et or et deux sourires : Karene d’un côté, Shiva de l’autre. Dans les marmites, c’est la même rencontre : les saveurs de Mayotte et celles de La Réunion, cuisinées chaque matin pour le midi.</p>
+    <p>Pilao poulet, romazava, boucané bringelle, rougail morue, cabri massalé… À la carte du jour, trois plats en barquette, et autour, des kebabs, des salades et des pâtisseries maison.</p>
+    <p class="quote">« Les spécialistes des saveurs créoles et mahoraises à Sainte-Marie. »<br><small style="font-family:var(--sans);font-size:13px;color:var(--muted)">— Adie La Réunion, qui accompagne l’aventure familiale du KSK</small></p>
+  </div>
+  <div class="yy reveal" aria-label="Deux plats du KSK réunis dans un cercle">
+    <span class="ring" aria-hidden="true"></span>
+    <div class="half a"><img src="img/vitrine-mercredi.jpg" alt="Riz parfumé du jour, en grande plaque" loading="lazy"></div>
+    <div class="half b"><img src="img/vitrine-vendredi.jpg" alt="Plat du jour aux herbes fraîches et piments" loading="lazy"></div>
+    <div class="mid"><img src="img/logo-ksk.jpg" alt="" loading="lazy"></div>
+    <span class="tag l">Karene</span><span class="tag r">Shiva</span>
+  </div>
+</section>
+
+<section class="rituel">
+  <div class="in">
+    <p class="kicker reveal">Le rituel du KSK</p>
+    <h2 class="reveal">Une journée <em>au rythme des marmites</em></h2>
+    <p class="intro reveal">Chaque jour, le KSK publie ses marmites sur Facebook : on regarde, on salive, on commande.</p>
+    <ol class="steps">
+      <li class="reveal"><span class="h">Le matin</span><b>Les plats en préparation</b><p><q>Nos plats du jour en préparation au KSK</q> : les oignons, les herbes, les piments, la fumée.</p></li>
+      <li class="reveal"><span class="h">Avant 11h</span><b>On passe commande</b><p>Au 0693 60 63 14, <q>avant 11h car très compliqué ensuite de répondre au téléphone</q>.</p></li>
+      <li class="reveal"><span class="h">11h pile</span><b>Le rideau s’ouvre</b><p><q>Ça y est nos plats sont en vitrine</q> : sur place, au 85 rue de la République.</p></li>
+      <li class="reveal"><span class="h">Jusqu’à 20h</span><b>Du midi au soir</b><p>Ouvert du lundi au vendredi, de 11h à 20h : la vitrine reste garnie du midi jusqu’au soir.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="galerie" aria-label="Les marmites du KSK">
+  <div class="strip" id="strip">
+    <figure><img src="img/preparation-du-jour.jpg" alt="Oignons rouges, herbes et piments sur la plaque, plats du jour en préparation" loading="lazy"><figcaption><small>Le matin</small><b>Les plats du jour en préparation</b></figcaption></figure>
+    <figure><img src="img/poulet-vermouth.jpg" alt="Morceaux de poulet en sauce aux champignons" loading="lazy"><figcaption><small>Au menu de midi</small><b>Poulet vermouth aux champignons</b></figcaption></figure>
+    <figure><img src="img/vitrine-vendredi.jpg" alt="Plat du jour aux herbes fraîches, piments rouges et champignons" loading="lazy"><figcaption><small>Un vendredi</small><b>« Ça y est, nos plats sont en vitrine »</b></figcaption></figure>
+    <figure><img src="img/salade-mangue-ananas.jpg" alt="Lamelles de mangue verte et d’ananas au piment" loading="lazy"><figcaption><small>Première de la saison</small><b>Salade mangue ananas piment</b></figcaption></figure>
+    <figure><img src="img/vitrine-jeudi.jpg" alt="Grande plaque de plat mijoté aux tomates et aux herbes" loading="lazy"><figcaption><small>Un jeudi</small><b>En vitrine, place de Dubaï</b></figcaption></figure>
+    <figure><img src="img/gratin-carottes-prep.jpg" alt="Oignons rouges et épices dans le plat à gratin" loading="lazy"><figcaption><small>Au menu de midi</small><b>Gratin de carottes, nature ou au sarcive</b></figcaption></figure>
+    <figure><img src="img/gratin-vitrine.jpg" alt="Gratin doré aux herbes dans sa barquette" loading="lazy"><figcaption><small>Jour poissonnerie</small><b>Gratin doré, en barquette</b></figcaption></figure>
+    <figure><img src="img/vitrine-mardi.jpg" alt="Grande plaque de plat du jour aux herbes fraîches" loading="lazy"><figcaption><small>Un mardi</small><b>Plein de verdure dans la vitrine</b></figcaption></figure>
+    <figure><img src="img/vitrine-mercredi.jpg" alt="Riz doré du jour en grande plaque" loading="lazy"><figcaption><small>Un mercredi</small><b>Le riz du jour, bien doré</b></figcaption></figure>
+    <figure><img src="img/croustillants.jpg" alt="Petites bouchées frites, dorées et croustillantes" loading="lazy"><figcaption><small>Au comptoir</small><b>Croustillant et tout chaud</b></figcaption></figure>
+  </div>
+  <p class="hint">← Faites glisser les marmites →</p>
+</section>
+
+<section class="ardoise">
+  <div class="reveal">
+    <div class="board" id="board">
+      <div class="top"><span>K.S.K</span><span>8 €</span></div>
+      <ul>
+        <li>Romazava passan</li>
+        <li>Pilao poulet</li>
+        <li>Boucané bringelle</li>
+      </ul>
+      <a class="tel" href="tel:+262693606314">0693 60 63 14</a>
+      <small>Recopiée de l’ardoise posée devant le KSK, publiée sur la page Facebook</small>
+    </div>
+  </div>
+  <div class="txt reveal">
+    <p class="kicker">L’ardoise du jour</p>
+    <h2>Trois plats, <em>une barquette</em></h2>
+    <p>Chaque jour, l’ardoise change. Un jour romazava, pilao poulet et boucané bringelle ; un autre, chop suey poulet, civet canard et carry poisson. Il y a aussi les jours poissonnerie, et les envies de saison.</p>
+    <div class="plats">
+      <span>Pilao poulet</span><span>Romazava</span><span>Boucané bringelle</span><span>Chop suey poulet</span><span>Civet canard aux olives</span><span>Carry poisson</span><span>Rougail morue</span><span>Cabri massalé</span><span>Poulet vermouth</span><span>Gratin courgettes</span>
+    </div>
+    <p class="src">Plats cités dans les publications du KSK et dans l’article de Clicanoo.</p>
+    <a class="btn red" href="#commande" style="margin-top:20px">Réserver ma barquette</a>
+  </div>
+</section>
+
+<section class="snack">
+  <div class="in">
+    <p class="kicker reveal">Côté snack</p>
+    <h2 class="reveal">Kebabs, salades <em>et douceurs maison</em></h2>
+    <div class="cards">
+      <article class="card reveal"><img src="img/sandwich.jpg" alt="Sandwich garni et fromage fondu dans son papier" loading="lazy"><div class="b"><h3>Les kebabs</h3><p>Version réunionnaise comprise : on y glisse du sarcive ou du magret.</p><ul><li>Poulet</li><li>Bouchon</li><li>Agneau</li><li>Steak poulet</li><li class="hot">Sarcives</li><li>Merguez</li><li>Saumon</li><li class="hot">Magret</li></ul></div></article>
+      <article class="card reveal"><img src="img/carte-kebab.jpg" alt="La carte orange du KSK : kebabs et salades" loading="lazy"><div class="b"><h3>Les salades</h3><p>Sur la carte orange, à côté des kebabs.</p><ul><li>Nature</li><li>Jambon</li><li>Saumon</li><li>Sarcive</li><li>Poulet</li><li>Agneau</li><li>Merguez</li><li>Magret de canard</li></ul></div></article>
+      <article class="card reveal"><img src="img/vitrine-patisseries.jpg" alt="Vitrine de cookies, brownies et desserts en pots" loading="lazy"><div class="b"><h3>Les pâtisseries maison</h3><p>Cookies, brownies, desserts en pots… et les fameux cookies Dakatine. Pour finir sur une touche de feu : le piment la pâte du chef, vendu en pots.</p><ul><li class="hot">Cookies Dakatine</li><li>Brownies</li><li>Piment la pâte du chef</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="big reveal">
+    <p>« KSK est une bonne adresse où aller chercher son “bouché manzé”, la cuisine y est bien faite, et les pâtisseries maison aussi. »</p>
+    <cite>Clicanoo, « Ces petits restaurants qui régalent pour pas cher », 29 avril 2024</cite>
+  </div>
+  <div class="verdicts">
+    <div class="v reveal"><span class="stamp">validé !</span><p>« Le cabri s’en arrange […] en nous envoyant au nez des salves odorantes appétissantes. »</p><cite>Clicanoo, à propos du cabri massalé</cite></div>
+    <div class="v reveal"><span class="stamp">validé !</span><p>« Le rougail morue s’en sort presque mieux. […] Du bel ouvrage comme on dit […] Les grains en accompagnement sont excellents. »</p><cite>Clicanoo, à propos du rougail morue</cite></div>
+    <div class="v reveal"><span class="stamp">une tuerie</span><p>« Les cookies dakatine sont une tuerie, et vous comblent efficacement les derniers creux. »</p><cite>Clicanoo, côté pâtisseries maison</cite></div>
+  </div>
+  <div class="score reveal"><b>100 %</b><span>de recommandation sur Facebook (15 avis), et 57 000 personnes qui suivent les marmites du KSK.</span></div>
+</section>
+
+<section class="famille">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Une histoire de famille</p>
+      <h2>Karene, Shiva <em>et le fiston</em></h2>
+      <p>Le KSK, c’est une aventure entrepreneuriale en famille : Karene et Shiva, rejoints par leur fils. Une évolution accompagnée par l’Adie La Réunion, que le KSK remercie : <q>Et oui merci Adie La Réunion de nous avoir permis cette évolution</q>.</p>
+      <p>Et le KSK vit avec sa ville : fin octobre 2026, la <q>mission du jour accomplie</q>, le KSK donnait rendez-vous à tous au complexe sportif de Flacourt, pour la journée Octobre Rose de mobilisation contre le cancer.</p>
+    </div>
+    <figure class="ph2 reveal"><img src="img/ardoise.jpg" alt="L’ardoise du KSK posée sur le trottoir : romazava passan, pilao poulet, boucané bringelle" loading="lazy"><figcaption>L’ardoise du jour, posée sur le trottoir devant le KSK.</figcaption></figure>
+  </div>
+</section>
+
+<section class="commande" id="commande">
+  <div class="txt reveal">
+    <p class="kicker">Commander</p>
+    <h2>Votre barquette, <em>mise de côté</em></h2>
+    <p>On choisit, on compte, et le message part tout prêt sur WhatsApp, au 0693 60 63 14. Il ne reste plus qu’à passer la récupérer.</p>
+    <p class="tip"><b>Astuce du KSK :</b> commandez avant 11h, le téléphone sonne beaucoup ensuite !</p>
+  </div>
+  <form class="tool reveal" id="tool" onsubmit="return false">
+    <h3>Ma commande en trois gestes</h3>
+    <p class="sub">Les plats changent chaque jour : on vous confirme le menu par retour.</p>
+    <fieldset><legend>Je prends</legend>
+      <div class="opts">
+        <label><input type="radio" name="q" value="la barquette du jour" checked><span>Barquette du jour</span></label>
+        <label><input type="radio" name="q" value="un kebab"><span>Kebab</span></label>
+        <label><input type="radio" name="q" value="une salade"><span>Salade</span></label>
+      </div>
+    </fieldset>
+    <fieldset><legend>Combien ?</legend>
+      <div class="qty"><button type="button" id="mn" aria-label="Une de moins">−</button><output id="n" aria-live="polite">2</output><button type="button" id="pl" aria-label="Une de plus">+</button></div>
+    </fieldset>
+    <fieldset><legend>Je passe la chercher</legend>
+      <div class="opts">
+        <label><input type="radio" name="h" value="vers 11h30" checked><span>11h30</span></label>
+        <label><input type="radio" name="h" value="vers 12h"><span>12h</span></label>
+        <label><input type="radio" name="h" value="vers 12h30"><span>12h30</span></label>
+        <label><input type="radio" name="h" value="ce soir"><span>Ce soir</span></label>
+      </div>
+    </fieldset>
+    <fieldset><label class="lb" for="nm">À quel nom ?</label><input id="nm" type="text" autocomplete="given-name" placeholder="Votre prénom"></fieldset>
+    <div class="prev" aria-live="polite"><small>Votre message</small><span id="msg"></span></div>
+    <a class="btn wa" id="wa" href="https://wa.me/262693606314"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Envoyer sur WhatsApp</a>
+  </form>
+</section>
+
+<section class="infos" id="infos">
+  <div class="in">
+    <h2 class="reveal">On se retrouve <em>place de Dubaï ?</em></h2>
+    <figure class="dev reveal"><img src="img/devanture.jpg" alt="Le kiosque rouge et jaune du KSK" loading="lazy"><span>« Aisément repérable de loin avec ses couleurs vives » (Clicanoo)</span></figure>
+    <div class="co reveal"><h3>L’adresse</h3><p><b>85 rue de la République</b><br>97438 Sainte-Marie, centre-ville<br>Lieu-dit place de Dubaï, près du rond-point côté église.</p><p style="margin-top:8px"><a href="https://www.google.com/maps/search/?api=1&amp;query=KSK+85+rue+de+la+R%C3%A9publique+97438+Sainte-Marie">Voir l’itinéraire</a></p></div>
+    <div class="co reveal"><h3>Les horaires</h3><ul class="hours"><li><span>Lundi → vendredi</span><b>11h – 20h</b></li><li class="off"><span>Samedi, dimanche</span><span>repos</span></li></ul><span id="now"></span></div>
+    <div class="co reveal"><h3>Commandes</h3><a class="tel" href="tel:+262693606314">0693 60 63 14</a><p>Appel ou WhatsApp. Et chaque jour, les marmites en direct sur <a href="https://www.facebook.com/p/KSk-snack-Karene-et-Shiva-100057648811823/">Facebook</a> et <a href="https://www.instagram.com/ksk_snack_karene_shiva/">Instagram</a>.</p></div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo-ksk.jpg" alt="" loading="lazy">
+  <b>Amicalement à vous, Karene et Shiva</b>
+  KSK · snack chez Karene &amp; Shiva · cuisine mahoraise et réunionnaise · Sainte-Marie
+  <p class="m">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du KSk snack Karene et Shiva.</p>
+</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a href="tel:+262693606314">Appeler</a>
+  <a class="m" href="#commande">Commander</a>
+</nav>
+
+<script>
+(function(){
+  var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // vapeur de marmite + grains d'épices
+  var c=document.getElementById("steam"),x=c.getContext("2d"),P=[],W,H,run=true,vis=true,dpr=Math.min(devicePixelRatio||1,2);
+  function rs(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(b){var s=Math.random()<.4;return{s:s,x:Math.random()*W,y:b?H+Math.random()*60:Math.random()*H,r:s?30+Math.random()*50:.9+Math.random()*1.8,v:s?.25+Math.random()*.35:.35+Math.random()*.7,p:Math.random()*6.28,a:s?.05+Math.random()*.07:.4+Math.random()*.5,h:Math.random()<.6?"242,183,5":"233,138,21"}}
+  function tick(){
+    if(!run||!vis)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var q=P[i];q.y-=q.v;q.p+=.012;q.x+=Math.sin(q.p)*(q.s?.45:.3);var f=Math.min(1,Math.max(0,q.y/(H*.85)));
+      if(q.s){q.r+=.06;var g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.r);g.addColorStop(0,"rgba(255,245,225,"+(q.a*f)+")");g.addColorStop(1,"rgba(255,245,225,0)");x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill()}
+      else{x.globalAlpha=q.a*f;x.fillStyle="rgb("+q.h+")";x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();x.globalAlpha=1}
+      if(q.y<-q.r-10)P[i]=mk(1)}
+    requestAnimationFrame(tick)}
+  if(!RM){rs();for(var i=0;i<32;i++)P.push(mk(0));addEventListener("resize",rs);
+    document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)tick()});
+    new IntersectionObserver(function(e){vis=e[0].isIntersecting;if(vis)tick()}).observe(c);tick()}
+  var mq=document.getElementById("mq");mq.innerHTML+=mq.innerHTML;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll(".reveal,#board").forEach(function(el){io.observe(el)});
+  // ouvert / fermé (heure de La Réunion)
+  var now=document.getElementById("now");
+  try{var p=new Intl.DateTimeFormat("fr-FR",{timeZone:"Indian/Reunion",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date()),o={};p.forEach(function(k){o[k.type]=k.value});
+    var d=o.weekday.replace(".",""),h=+o.hour+o.minute/60,wd=["lun","mar","mer","jeu","ven"].indexOf(d)>-1,op=wd&&h>=11&&h<20;
+    now.textContent=op?"Ouvert en ce moment":"Fermé en ce moment · réouverture "+(wd&&h<11?"à 11h":"au prochain jour ouvré, 11h");if(op)now.classList.add("open")}catch(e){now.remove()}
+  // commande WhatsApp
+  var t=document.getElementById("tool"),n=2,out=document.getElementById("n"),msg=document.getElementById("msg"),wa=document.getElementById("wa");
+  function val(k){var e=t.querySelector("input[name="+k+"]:checked");return e?e.value:""}
+  function up(){out.textContent=n;var q=val("q"),nm=document.getElementById("nm").value.trim();
+    var what=n>1?n+" × "+q.replace(/^(la|un|une) /,""):q;
+    var m="Bonjour Karene et Shiva ! Je voudrais "+what+", à récupérer "+val("h")+(nm?", au nom de "+nm:"")+". Quels sont les plats du jour ? Merci !";
+    msg.textContent=m;wa.href="https://wa.me/262693606314?text="+encodeURIComponent(m)}
+  document.getElementById("mn").onclick=function(){if(n>1){n--;up()}};
+  document.getElementById("pl").onclick=function(){if(n<20){n++;up()}};
+  t.addEventListener("input",up);t.addEventListener("change",up);up();
+})();
+</script>
+</body>
+</html>

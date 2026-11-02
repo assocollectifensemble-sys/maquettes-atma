@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Mont Gourmand · Cuisine généreuse à emporter à La Montagne</title>
+<meta name="description" content="Le Mont Gourmand, cuisine généreuse à emporter à La Montagne (Saint-Denis) : poulets rôtis, grillades, sarcive, rougails et douceurs maison. Commandes au 0693 42 44 62.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le Mont Gourmand · Cuisine généreuse à emporter à La Montagne">
+<meta property="og:description" content="Poulets rôtis bien dorés, grillades au barbecue, sarcive, rougails et douceurs maison. Commandes par téléphone, SMS ou WhatsApp au 0693 42 44 62.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-mont-gourmand/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-mont-gourmand/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;800&family=Caveat:wght@600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#1a1410; --nuit2:#241b15; --bois:#5a2e1a; --braise:#d9822b; --or:#f0aa46;
+  --piment:#a3301f; --vert:#5e7a35; --vert2:#7f9b4a; --creme:#f6eee0; --papier:#efe3cc;
+  --texte:#2b1d14; --doux:#6b5847;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Roboto Slab",Georgia,serif;line-height:1.15}
+.script{font-family:Caveat,cursive;font-weight:700}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* ruban */
+.ruban{background:var(--vert);color:#fff;font-size:.82rem;text-align:center;padding:8px 14px;position:relative;z-index:5}
+.ruban b{color:#ffe2b0}
+
+/* hero */
+.hero{position:relative;min-height:92vh;min-height:92svh;background:radial-gradient(120% 80% at 70% 30%,#3a2618 0%,var(--nuit) 60%);color:var(--creme);overflow:hidden;display:flex;align-items:center}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.monts{position:absolute;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1}
+.monts .m1{fill:#2c3a1d}.monts .m2{fill:#3d5226}.monts .m3{fill:var(--creme)}
+.hero-in{position:relative;z-index:3;width:100%;padding:56px 20px 170px;max-width:1080px;margin:0 auto;display:grid;gap:28px;align-items:center}
+.logo{width:120px;height:120px;border-radius:50%;box-shadow:0 0 0 4px rgba(240,170,70,.35),0 10px 40px rgba(0,0,0,.5);animation:monte 1s ease both}
+.hero h1{font-size:clamp(2.1rem,8vw,3.6rem);font-weight:800;letter-spacing:.5px;animation:monte 1s .15s ease both}
+.hero h1 span{display:block;color:var(--or)}
+.hero .accroche{font-size:1.65rem;color:var(--vert2);animation:monte 1s .3s ease both}
+.hero p.lead{max-width:34ch;color:#e9dcc6;animation:monte 1s .45s ease both}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;animation:monte 1s .6s ease both}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 20px;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:#25d366;color:#0b2a14;box-shadow:0 6px 24px rgba(37,211,102,.35);animation:respire 3.2s ease-in-out infinite}
+.btn-tel{background:var(--or);color:var(--nuit)}
+.btn-ghost{background:rgba(255,255,255,.08);color:var(--creme);border:1px solid rgba(255,255,255,.25)}
+.medaillon{position:relative;justify-self:center;width:min(78vw,360px);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 6px rgba(217,130,43,.35),0 0 80px rgba(217,130,43,.35);animation:monte 1.2s .3s ease both}
+.medaillon img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate}
+.legende{font-size:.72rem;color:#bfae96;text-align:center;margin-top:8px}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-3%,2%)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes respire{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.3)}50%{box-shadow:0 6px 34px rgba(37,211,102,.65)}}
+
+/* bandeau */
+.bandeau{background:var(--piment);color:#fff3e0;overflow:hidden;white-space:nowrap;padding:12px 0;font-family:"Roboto Slab",serif;font-weight:600}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 18px}
+.bandeau i{font-style:normal;color:var(--or)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:70px 0}
+.titre{text-align:center;margin-bottom:34px}
+.titre .script{font-size:1.6rem;color:var(--braise);display:block}
+.titre h2{font-size:clamp(1.7rem,6vw,2.5rem);color:var(--bois)}
+.titre p{color:var(--doux);max-width:56ch;margin:10px auto 0}
+
+/* feu */
+.feu{background:var(--creme)}
+.feu-grid{display:grid;gap:22px}
+.citation{background:#fff;border-radius:var(--r);padding:26px 24px;box-shadow:0 10px 30px rgba(90,46,26,.1);border-left:6px solid var(--braise)}
+.citation blockquote{font-family:"Roboto Slab",serif;font-size:1.25rem;color:var(--bois)}
+.citation .src{font-size:.85rem;color:var(--doux);margin-top:12px}
+.valeurs{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.valeurs span{background:var(--papier);border-radius:999px;padding:6px 14px;font-weight:700;font-size:.9rem;color:var(--bois)}
+.plats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.plat{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1;box-shadow:0 8px 24px rgba(0,0,0,.15);transition:transform .35s}
+.plat:hover{transform:translateY(-4px) rotate(-.5deg)}
+.plat img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.plat:hover img{transform:scale(1.08)}
+.plat b{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(26,20,16,.88));color:#fff;font-size:.92rem}
+.note-visuel{font-size:.78rem;color:var(--doux);text-align:center;margin-top:12px}
+
+/* vague */
+.vague{display:block;width:100%;height:60px}
+
+/* carte */
+.carte{background:var(--nuit);color:var(--creme);position:relative}
+.carte .titre h2{color:var(--creme)}
+.carte .titre p{color:#cdbca4}
+.date-carte{display:inline-block;background:var(--or);color:var(--nuit);font-weight:800;border-radius:8px;padding:4px 12px;margin-top:12px;transform:rotate(-2deg)}
+.blocs{display:grid;gap:18px}
+.bloc{background:var(--nuit2);border:1px solid rgba(240,170,70,.18);border-radius:var(--r);padding:22px 20px}
+.bloc h3{font-size:1.1rem;display:flex;align-items:center;gap:10px;margin-bottom:12px;color:var(--or)}
+.bloc h3 em{font-style:normal;background:var(--piment);color:#fff;border-radius:8px;padding:2px 10px;font-size:.95rem}
+.bloc.vert h3 em{background:var(--vert)}
+.ligne{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+.ligne:last-child{border-bottom:0}
+.ligne .nom{flex:1}
+.ligne .prix{font-weight:800;color:var(--or);white-space:nowrap}
+.qte{display:flex;align-items:center;gap:6px}
+.qte button{width:30px;height:30px;border-radius:50%;border:1px solid rgba(240,170,70,.5);background:transparent;color:var(--or);font-size:1.1rem;font-weight:800;cursor:pointer;line-height:1}
+.qte button:active{transform:scale(.9)}
+.qte output{min-width:18px;text-align:center;font-weight:800}
+.douceur{text-align:center;font-family:Caveat,cursive;font-size:1.6rem;color:var(--or)}
+.panier{position:relative;margin-top:24px;background:var(--creme);color:var(--texte);border-radius:var(--r);padding:16px 18px;box-shadow:0 12px 40px rgba(0,0,0,.45);display:grid;gap:10px}
+.panier .total{font-weight:800;font-size:1.05rem}
+.panier input{width:100%;padding:11px 12px;border-radius:10px;border:1px solid #d6c5a8;font:inherit;background:#fff}
+.panier small{color:var(--doux);font-size:.78rem}
+
+/* bons plans */
+.plans{background:var(--papier)}
+.plans-grid{display:grid;gap:18px}
+.plan{background:#fff;border-radius:var(--r);padding:24px;text-align:center;box-shadow:0 10px 30px rgba(90,46,26,.1);transition:transform .3s}
+.plan:hover{transform:translateY(-4px)}
+.plan .gros{font-family:"Roboto Slab",serif;font-weight:800;font-size:2.6rem;color:var(--piment);line-height:1}
+.plan h3{color:var(--bois);margin:8px 0}
+.plan p{color:var(--doux);font-size:.95rem}
+.plan .quand{display:inline-block;margin-top:12px;font-size:.8rem;background:var(--creme);border-radius:999px;padding:4px 12px;color:var(--bois);font-weight:700}
+
+/* affiches */
+.affiches{background:var(--creme)}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.rail figure{flex:0 0 72%;max-width:300px;scroll-snap-align:center;border-radius:14px;overflow:hidden;box-shadow:0 10px 28px rgba(0,0,0,.18);background:#fff}
+.rail img{width:100%;aspect-ratio:2/3;object-fit:cover}
+.rail figcaption{font-size:.82rem;padding:8px 12px;color:var(--doux)}
+.astuce{text-align:center;font-size:.85rem;color:var(--doux)}
+
+/* comment commander */
+.etapes{display:grid;gap:16px;counter-reset:e}
+.etape{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:var(--r);padding:20px;box-shadow:0 6px 20px rgba(90,46,26,.08)}
+.etape::before{counter-increment:e;content:counter(e);flex:none;width:42px;height:42px;border-radius:50%;background:var(--vert);color:#fff;display:grid;place-items:center;font-family:"Roboto Slab",serif;font-weight:800;font-size:1.2rem}
+.etape h3{font-size:1.05rem;color:var(--bois)}
+.etape p{color:var(--doux);font-size:.95rem}
+
+/* avis */
+.avis{background:var(--vert);color:#fff;text-align:center}
+.avis .grand{font-family:"Roboto Slab",serif;font-weight:800;font-size:clamp(3.4rem,16vw,5.5rem);line-height:1;color:#ffe2b0}
+.avis p{max-width:48ch;margin:10px auto 0;color:#eef3e2}
+.coeurs{font-size:1.4rem;letter-spacing:6px;margin-top:10px}
+
+/* infos */
+.infos-grid{display:grid;gap:16px}
+.info{background:#fff;border-radius:var(--r);padding:22px;box-shadow:0 6px 20px rgba(90,46,26,.08)}
+.info h3{color:var(--braise);font-size:1rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.info a{color:var(--bois);font-weight:800}
+.info p{color:var(--texte)}
+
+footer{background:var(--nuit);color:#bfae96;text-align:center;padding:40px 20px 50px;font-size:.88rem}
+footer img{width:70px;height:70px;border-radius:50%;margin:0 auto 14px}
+footer .script{font-size:1.5rem;color:var(--or);display:block;margin-bottom:8px}
+
+.rev{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rev.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .hero-in{grid-template-columns:1.2fr 1fr;padding-bottom:200px}
+  .feu-grid{grid-template-columns:1fr 1fr;align-items:center}
+  .blocs{grid-template-columns:1fr 1fr}
+  .plans-grid{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .infos-grid{grid-template-columns:repeat(3,1fr)}
+  .rail figure{flex-basis:260px}
+  .panier{grid-template-columns:1fr 1fr auto;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rev{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Mont Gourmand</div>
+
+<header class="hero">
+  <canvas id="feu" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div>
+      <img class="logo" src="img/logo.jpg" alt="Logo Le Mont Gourmand : montagnes vertes, fourchette et épi">
+      <h1 style="margin-top:22px">Le Mont Gourmand <span>à La Montagne</span></h1>
+      <p class="accroche script">Cuisine généreuse à emporter</p>
+      <p class="lead">Poulets rôtis bien dorés, grillades au barbecue, sarcive, rougails bien relevés et douceurs maison. Des plats faits avec passion et une touche de folie.</p>
+      <div class="ctas" style="margin-top:22px">
+        <a class="btn btn-wa" href="https://wa.me/262693424462?text=Bonjour%20Le%20Mont%20Gourmand%20!%20Je%20souhaite%20passer%20une%20commande%20%3A%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Commander sur WhatsApp</a>
+        <a class="btn btn-tel" href="tel:+262693424462"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>0693 42 44 62</a>
+        <a class="btn btn-ghost" href="#carte">Voir la carte</a>
+      </div>
+    </div>
+    <div>
+      <div class="medaillon"><img src="img/poulet-roti.jpg" alt="Poulet rôti bien doré sur planche, visuel d'une affiche du Mont Gourmand"></div>
+      <p class="legende">Visuel tiré d'une affiche du Mont Gourmand</p>
+    </div>
+  </div>
+  <svg class="monts" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <path class="m1" d="M0 150 L120 90 L220 130 L360 40 L470 120 L600 70 L720 140 L860 50 L990 120 L1110 60 L1240 130 L1360 80 L1440 110 V220 H0Z" opacity=".7"/>
+    <path class="m2" d="M0 180 L150 120 L280 165 L420 95 L560 160 L700 110 L840 170 L990 105 L1130 165 L1280 115 L1440 160 V220 H0Z"/>
+    <path class="m3" d="M0 205 C240 185 480 215 720 198 C960 182 1200 214 1440 196 V220 H0Z"/>
+  </svg>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Poulets rôtis</span><i>✦</i><span>Grillades au barbecue</span><i>✦</i><span>Sarcive fumée</span><i>✦</i><span>Brochettes maison</span><i>✦</i><span>Rougails bien relevés</span><i>✦</i><span>Produits frais · Fait maison · Saveurs lontan</span><i>✦</i>
+  <span>Poulets rôtis</span><i>✦</i><span>Grillades au barbecue</span><i>✦</i><span>Sarcive fumée</span><i>✦</i><span>Brochettes maison</span><i>✦</i><span>Rougails bien relevés</span><i>✦</i><span>Produits frais · Fait maison · Saveurs lontan</span><i>✦</i>
+</div></div>
+
+<section class="feu">
+  <div class="wrap">
+    <div class="titre rev">
+      <span class="script">Ce week-end, ça sent le feu…</span>
+      <h2>La cuisine créole généreuse comme on l'aime</h2>
+    </div>
+    <div class="feu-grid">
+      <div class="rev">
+        <div class="citation">
+          <blockquote>« Tous les week-ends, je vous propose une cuisine généreuse à emporter. Laissez-vous tenter ! »</blockquote>
+          <p class="src">— Le Mont Gourmand, photo de couverture de la page Facebook</p>
+        </div>
+        <div class="citation" style="margin-top:16px;border-left-color:var(--vert)">
+          <blockquote>« Poulets rôtis bien dorés, grillades au barbecue, sarcive fumée, brochettes maison, rougails bien relevés… »</blockquote>
+          <p class="src">— publication Facebook du 23 mai 2026</p>
+        </div>
+        <div class="valeurs"><span>Produits frais</span><span>Fait maison</span><span>Saveurs lontan</span><span>Préparés avec passion</span></div>
+      </div>
+      <div class="rev">
+        <div class="plats">
+          <div class="plat"><img src="img/brochettes.jpg" alt="Brochettes grillées aux poivrons"><b>Brochettes maison</b></div>
+          <div class="plat"><img src="img/barquettes.jpg" alt="Barquettes de plats du jour" style="object-position:center 30%"><b>Barquettes du jour</b></div>
+          <div class="plat"><img src="img/ratatouille.jpg" alt="Poêlée ratatouille"><b>Poêlée ratatouille</b></div>
+          <div class="plat"><img src="img/salade-russe.jpg" alt="Salade russe maison"><b>Salade russe maison</b></div>
+        </div>
+        <p class="note-visuel">Visuels tirés des affiches du Mont Gourmand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 60 L0 34 L160 12 L300 40 L460 6 L620 38 L780 14 L940 42 L1100 10 L1260 36 L1440 16 L1440 60Z" fill="#1a1410"/></svg>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div class="titre rev">
+      <span class="script">Plats généreux · Saveurs maison · Préparés avec passion</span>
+      <h2>La carte du dimanche</h2>
+      <p>Dernière carte publiée sur la page. Composez votre commande ci-dessous : le message part tout prêt sur WhatsApp.</p>
+      <span class="date-carte">Dimanche 1er novembre</span>
+    </div>
+    <div class="blocs">
+      <div class="bloc rev" data-bloc>
+        <h3><em>Nos volailles</em></h3>
+        <div class="ligne" data-n="Poulet rôti" data-p="12"><span class="nom">Poulets rôtis</span><span class="prix">12 €</span></div>
+        <div class="ligne" data-n="Poulet grillé" data-p="10"><span class="nom">Poulets grillés</span><span class="prix">10 €</span></div>
+        <div class="ligne" data-n="Sarcive de poulet (250 g)" data-p="7.5"><span class="nom">Sarcive de poulet <small>(250 g)</small></span><span class="prix">7,50 €</span></div>
+        <div class="ligne" data-n="Steak de poulet braisé" data-p="2.5"><span class="nom">Steak de poulet braisé</span><span class="prix">2,50 €</span></div>
+        <div class="ligne" data-n="Riz frit (poulet grillé/rôti/sarcive/œuf)" data-p="9"><span class="nom">Riz frit poulet grillé, rôti, sarcive ou œuf</span><span class="prix">9 €</span></div>
+      </div>
+      <div class="bloc vert rev" data-bloc>
+        <h3><em>Accompagnements &amp; salades</em></h3>
+        <div class="ligne" data-n="Achard de légumes" data-p="5"><span class="nom">Achard de légumes <small>avec ou sans piment</small></span><span class="prix">5 €</span></div>
+        <div class="ligne" data-n="Achard de mangue" data-p="5"><span class="nom">Achard de mangue <small>sans piment</small></span><span class="prix">5 €</span></div>
+        <div class="ligne" data-n="Rougail concombre et carottes" data-p="5"><span class="nom">Rougail concombre et carottes</span><span class="prix">5 €</span></div>
+        <div class="ligne" data-n="Salade piémontaise au poulet" data-p="7"><span class="nom">Salade piémontaise au poulet</span><span class="prix">7 €</span></div>
+        <div class="ligne" data-n="Pommes de terre sautées au jus du poulet" data-p="6"><span class="nom">Pommes de terre sautées au jus du poulet</span><span class="prix">6 € / 9 €</span></div>
+        <div class="ligne" data-n="Gratin de chouchou" data-p="7"><span class="nom">Gratin de chouchou</span><span class="prix">7 €</span></div>
+        <div class="ligne" data-n="Brèdes chou de Chine" data-p="7"><span class="nom">Brèdes chou de Chine</span><span class="prix">7 €</span></div>
+        <div class="ligne" data-n="Frites" data-p="3"><span class="nom">Frites</span><span class="prix">3 €</span></div>
+      </div>
+    </div>
+    <p class="douceur rev" style="margin-top:22px">Douceur maison : gâteau patate à la vanille, fait maison avec amour ♥</p>
+
+    <div class="panier" id="panier">
+      <div><div class="total" id="total">Votre sélection : 0 plat</div><small>Prix de la carte du 1er novembre, à titre indicatif ; la carte change selon les jours. Réservation fortement conseillée !</small></div>
+      <input id="prenom" type="text" placeholder="Votre prénom et l'heure de retrait souhaitée" aria-label="Prénom et heure de retrait">
+      <a class="btn btn-wa" id="envoi" href="https://wa.me/262693424462" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 21l1.6-5A9.5 9.5 0 1 1 8 20.4L2 21z"/></svg>Envoyer sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--papier)"><path d="M0 0 L1440 0 L1440 22 L1280 46 L1120 18 L960 50 L800 20 L640 44 L480 14 L320 48 L160 20 L0 40Z" fill="#1a1410"/></svg>
+
+<section class="plans">
+  <div class="wrap">
+    <div class="titre rev">
+      <span class="script">Gourmands, à vos téléphones !</span>
+      <h2>Les bons plans de la page</h2>
+    </div>
+    <div class="plans-grid">
+      <div class="plan rev">
+        <div class="gros">8 €</div>
+        <h3>La barquette de 1000 g</h3>
+        <p>« Oui oui… 1 kilo de bonheur dans votre assiette » : poulet, dorade, vindaye de thon, magret… avec riz, grains et rougail tomates.</p>
+        <span class="quand">Vendredi 19 juin</span>
+      </div>
+      <div class="plan rev">
+        <div class="gros">9,90 €</div>
+        <h3>La formule du jour</h3>
+        <p>Un plat au choix, une boisson (limonade) et une part de gâteau framboisier à la vanille de Madagascar.</p>
+        <span class="quand">Carte du jour</span>
+      </div>
+      <div class="plan rev">
+        <div class="gros">10 h 30</div>
+        <h3>Commande par message</h3>
+        <p>Un message avant 10 h 30 au 0693 42 44 62, et votre plat vous attend. Les quantités sont limitées : on réserve !</p>
+        <span class="quand">Affiches de la carte</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="affiches">
+  <div class="titre rev wrap">
+    <span class="script">Au fil des semaines</span>
+    <h2>Les cartes du Mont Gourmand</h2>
+    <p>Chaque jour sa carte, chaque carte son affiche. Faites glisser du doigt.</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Affiches des cartes du Mont Gourmand">
+    <figure><img src="img/affiche-carte.jpg" alt="Affiche La carte du Mont Gourmand : poulets, grillades, brochettes et accompagnements maison" loading="lazy"><figcaption>La carte : produits frais &amp; saveurs maison</figcaption></figure>
+    <figure><img src="img/affiche-barquettes.jpg" alt="Affiche carte du jour du vendredi 19 juin, barquettes 1000 g à 8 euros" loading="lazy"><figcaption>Vendredi 19 juin : barquettes 1000 g à 8 €</figcaption></figure>
+    <figure><img src="img/affiche-formule.jpg" alt="Affiche carte du jour, formule à 9,90 euros" loading="lazy"><figcaption>La formule du jour à 9,90 €</figcaption></figure>
+    <figure><img src="img/affiche-dimanche.jpg" alt="Affiche La carte du dimanche 17 mai" loading="lazy"><figcaption>La carte du dimanche 17 mai</figcaption></figure>
+    <figure><img src="img/affiche-carte-dimanche.jpg" alt="Affiche Carte du dimanche 7 juin" loading="lazy"><figcaption>Carte du dimanche 7 juin</figcaption></figure>
+    <figure><img src="img/affiche-samedi.jpg" alt="Affiche Menu du samedi 9 mai" loading="lazy"><figcaption>Menu du samedi 9 mai</figcaption></figure>
+  </div>
+  <p class="astuce">← glissez →</p>
+</section>
+
+<section style="background:var(--creme);padding-top:20px">
+  <div class="wrap">
+    <div class="titre rev">
+      <span class="script">Simple comme bonjour</span>
+      <h2>Comment commander</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape rev"><div><h3>Choisissez vos plats</h3><p>Dans la carte du jour, publiée sur la page Facebook du Mont Gourmand.</p></div></div>
+      <div class="etape rev"><div><h3>Envoyez un message</h3><p>Téléphone, SMS ou WhatsApp au 0693 42 44 62, de préférence avant 10 h 30.</p></div></div>
+      <div class="etape rev"><div><h3>Venez chercher votre plat</h3><p>1 impasse des Badamiers, à La Montagne. Bon appétit !</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap rev">
+    <span class="script" style="font-size:1.6rem;color:#ffe2b0">Votre avis compte</span>
+    <div class="grand">92 %</div>
+    <p>des personnes qui ont donné leur avis sur la page Facebook recommandent Le Mont Gourmand (10 avis).</p>
+    <div class="coeurs" aria-hidden="true">♥ ♥ ♥</div>
+  </div>
+</section>
+
+<section style="background:var(--creme)">
+  <div class="wrap">
+    <div class="titre rev">
+      <span class="script">On vous attend</span>
+      <h2>Infos pratiques</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="info rev"><h3>Adresse</h3><p>1 impasse des Badamiers<br>La Montagne, 97417 Saint-Denis</p><p style="margin-top:8px"><a href="https://share.google/xKxpUnE0jWhw356DG" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a></p></div>
+      <div class="info rev"><h3>Commandes</h3><p>Téléphone, SMS ou WhatsApp</p><p style="margin-top:8px"><a href="tel:+262693424462">0693 42 44 62</a></p><p style="margin-top:4px"><a href="https://wa.me/262693424462" target="_blank" rel="noopener">Écrire sur WhatsApp →</a></p></div>
+      <div class="info rev"><h3>La carte du jour</h3><p>Publiée sur la page Facebook, suivie par 1,9 K gourmands.</p><p style="margin-top:8px"><a href="https://www.facebook.com/people/Le-Mont-Gourmand/61554049959032/" target="_blank" rel="noopener">Page Facebook →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.jpg" alt="" loading="lazy">
+  <span class="script">Le Mont Gourmand vous souhaite un excellent appétit !</span>
+  <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Mont Gourmand.</p>
+  <p style="margin-top:6px;font-size:.78rem">Les visuels de plats proviennent des affiches publiées par Le Mont Gourmand.</p>
+</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* apparitions */
+var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+document.querySelectorAll('.rev').forEach(function(el){io&&!rm?io.observe(el):el.classList.add('vu')});
+
+/* braises + fumée */
+var c=document.getElementById('feu'),x=c.getContext('2d'),W,H,P=[],run=!rm,raf;
+function size(){var d=Math.min(devicePixelRatio||1,2);W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+function mk(i){var s=i%4===0;return{s:s,x:Math.random()*W,y:H*(.55+Math.random()*.5),r:s?14+Math.random()*22:1+Math.random()*2.2,vy:s?.18+Math.random()*.2:.35+Math.random()*.7,vx:(Math.random()-.5)*.3,a:0,l:0,L:s?380+Math.random()*200:200+Math.random()*220,ph:Math.random()*6}}
+function init(){size();P=[];for(var i=0;i<28;i++){var p=mk(i);p.l=Math.random()*p.L;P.push(p)}}
+function step(){x.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var p=P[i];p.l++;p.y-=p.vy;p.x+=p.vx+Math.sin((p.l+p.ph*40)/40)*.25;var t=p.l/p.L,al=Math.sin(Math.PI*Math.min(t,1));
+if(p.s){x.fillStyle='rgba(235,220,200,'+(al*.05)+')';x.beginPath();x.arc(p.x,p.y,p.r*(1+t),0,7);x.fill()}
+else{x.fillStyle='rgba(255,'+(140+(i*7)%80)+',60,'+(al*.85)+')';x.shadowColor='rgba(255,140,40,.9)';x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();x.shadowBlur=0}
+if(p.l>=p.L||p.y<-40)P[i]=mk(i)}
+if(run)raf=requestAnimationFrame(step)}
+init();addEventListener('resize',size);
+if(run)step();
+document.addEventListener('visibilitychange',function(){if(rm)return;run=!document.hidden;cancelAnimationFrame(raf);if(run)step()});
+
+/* commande WhatsApp */
+var q={},tot=document.getElementById('total'),env=document.getElementById('envoi'),pr=document.getElementById('prenom');
+document.querySelectorAll('.ligne').forEach(function(l){var n=l.dataset.n,b=document.createElement('div');b.className='qte';b.innerHTML='<button type="button" aria-label="Retirer">−</button><output>0</output><button type="button" aria-label="Ajouter">+</button>';l.appendChild(b);var o=b.querySelector('output');
+b.children[0].onclick=function(){q[n]=Math.max(0,(q[n]||0)-1);o.textContent=q[n];maj()};b.children[2].onclick=function(){q[n]=(q[n]||0)+1;o.textContent=q[n];maj()}});
+function maj(){var n=0,s=0,lignes=[];document.querySelectorAll('.ligne').forEach(function(l){var k=q[l.dataset.n]||0;if(k){n+=k;s+=k*parseFloat(l.dataset.p);lignes.push('• '+k+' × '+l.dataset.n)}});
+tot.textContent='Votre sélection : '+n+' plat'+(n>1?'s':'')+(n?' · environ '+s.toFixed(2).replace('.',',').replace(',00','')+' €':'');
+var m='Bonjour Le Mont Gourmand ! Je souhaite réserver :\n'+(lignes.join('\n')||'(ma commande)')+(pr.value?'\n\n'+pr.value:'')+'\n\nMerci !';
+env.href='https://wa.me/262693424462?text='+encodeURIComponent(m)}
+pr.addEventListener('input',maj);maj();
+})();
+</script>
+</body>
+</html>
