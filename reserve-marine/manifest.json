@@ -1,0 +1,19 @@
+{
+  "id": "./?app=reserve-marine-lagon",
+  "name": "Enquête au bord du lagon · Réserve marine",
+  "short_name": "Lagon",
+  "description": "Enquête au bord du lagon : aventure sur téléphone pour la Réserve naturelle marine de La Réunion (prototype)",
+  "lang": "fr",
+  "start_url": "./?station=projet",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06303a",
+  "theme_color": "#06303a",
+  "categories": ["education", "games"],
+  "icons": [
+    {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
