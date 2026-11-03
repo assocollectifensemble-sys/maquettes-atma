@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Mad PiZ'z — pizzeria feu de bois à Saint-Denis</title>
+<meta name="description" content="Pizzas artisanales cuites au four à bois, pâte pétrie chaque matin. Place du Marché des Camélias, Saint-Denis. Du mardi au dimanche dès 18h30.">
+<meta property="og:title" content="Mad PiZ'z — pizzeria feu de bois à Saint-Denis">
+<meta property="og:description" content="Le spectacle du feu et de la gourmandise : une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mad-pizz/img/piquante.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mad-pizz/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --char:#0E0B09; --char-2:#1A140F; --ember:#F26B1D; --flame:#FFB22E; --red:#D9381E;
+  --cream:#FFF4E3; --cream-2:#F6E6CB; --brown:#5C3D2E; --muted:#B9A892;
+  --serif:'Fraunces',Georgia,serif; --sans:'Nunito',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--char);color:var(--cream);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flame);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--ember);color:var(--char);font-size:13px;font-weight:600;padding:9px var(--pad);position:relative;z-index:5}
+.ribbon b{font-weight:800}
+/* HERO */
+.hero{position:relative;min-height:calc(100svh - 38px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero .bg{position:absolute;inset:-4%;z-index:-3;background:url(img/piquante.jpg) center/cover;animation:ken 22s ease-in-out infinite alternate;will-change:transform}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(14,11,9,.55) 0%,rgba(14,11,9,.35) 30%,rgba(14,11,9,.88) 78%,var(--char) 100%)}
+@keyframes ken{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.12) translate3d(-1.5%,-1%,0)}}
+#fire{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero .in{max-width:1080px;margin:0 auto;width:100%;padding:60px var(--pad) 70px}
+.badge{width:96px;height:96px;border-radius:50%;border:3px solid var(--ember);object-fit:cover;box-shadow:0 0 0 6px rgba(242,107,29,.18),0 10px 30px rgba(0,0,0,.5);animation:breathe 4s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.05);box-shadow:0 0 0 12px rgba(242,107,29,.1),0 10px 30px rgba(0,0,0,.5)}}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--flame);margin-top:22px}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(46px,12vw,104px);line-height:.95;letter-spacing:-.02em;margin:10px 0 18px;text-wrap:balance}
+h1 em{font-style:italic;font-weight:600;color:var(--flame)}
+h1 span{display:inline-block;opacity:0;transform:translateY(24px);animation:rise 1s cubic-bezier(.2,.7,.2,1) forwards}
+h1 span:nth-child(2){animation-delay:.25s}h1 span:nth-child(3){animation-delay:.5s}
+@keyframes rise{to{opacity:1;transform:none}}
+.lede{max-width:34ch;font-size:clamp(18px,2.4vw,22px);color:var(--cream-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--ember);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--ember);color:var(--char);animation:pulse 3.2s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-2px);background:var(--flame)}
+.btn.ghost{color:var(--cream)}.btn.ghost:hover{background:var(--ember);color:var(--char)}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(242,107,29,.18)}}
+/* MARQUEE */
+.marq{background:var(--ember);color:var(--char);overflow:hidden;white-space:nowrap;font-family:var(--serif);font-weight:800;font-size:22px;padding:10px 0;transform:rotate(-1.2deg);margin:-14px -10px 0;position:relative;z-index:2}
+.marq div{display:inline-block;animation:slide 32s linear infinite}
+.marq span{margin:0 18px}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* STORY */
+section{position:relative}
+.story{background:var(--cream);color:var(--char);padding:clamp(72px,10vw,120px) var(--pad) clamp(64px,9vw,110px)}
+.story .in{max-width:1080px;margin:0 auto;display:grid;gap:36px}
+@media(min-width:860px){.story .in{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.story .kicker{color:var(--red);margin-top:0}
+.story h2{font-family:var(--serif);font-weight:800;font-size:clamp(34px,6vw,58px);line-height:1.02;margin-top:10px;color:var(--char)}
+.story p{color:#3b2c22;max-width:56ch}.story p+p{margin-top:14px}
+.quote{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,3vw,30px);color:var(--red);border-left:4px solid var(--ember);padding-left:16px;margin-top:22px;line-height:1.25}
+.quote small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--brown);margin-top:8px;letter-spacing:.04em}
+.story .pic{position:relative}
+.story .pic img{border-radius:22px;aspect-ratio:1;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(92,61,46,.7);transform:rotate(1.5deg)}
+.story .pic .cap{position:absolute;left:-6px;bottom:-14px;background:var(--char);color:var(--flame);font-family:var(--serif);font-weight:600;padding:8px 16px;border-radius:12px;font-size:18px;transform:rotate(-2deg)}
+.wave{display:block;width:100%;height:50px;position:absolute;left:0;bottom:-1px}
+/* GALERIE */
+.carte{padding:clamp(64px,9vw,110px) 0 clamp(56px,8vw,100px);background:var(--char)}
+.carte .head{max-width:1080px;margin:0 auto 26px;padding:0 var(--pad)}
+.carte .kicker{margin-top:0}
+.carte h2{font-family:var(--serif);font-weight:800;font-size:clamp(34px,6vw,56px);line-height:1.02;margin-top:8px}
+.carte .head p{color:var(--muted);max-width:50ch;margin-top:10px}
+.strip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px var(--pad) 22px;scrollbar-width:thin;scrollbar-color:var(--ember) transparent;-webkit-overflow-scrolling:touch}
+.card{flex:0 0 min(78vw,330px);scroll-snap-align:start;background:var(--char-2);border:1px solid rgba(242,107,29,.28);border-radius:20px;overflow:hidden;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--ember)}
+.card img{aspect-ratio:1;object-fit:cover;width:100%;transition:transform .6s}
+.card:hover img{transform:scale(1.06)}
+.card .ph{overflow:hidden}
+.card .t{padding:16px 18px 20px}
+.card h3{font-family:var(--serif);font-weight:800;font-size:23px;line-height:1.1;color:var(--flame)}
+.card p{font-size:15px;color:var(--cream-2);margin-top:8px;line-height:1.5}
+/* ENGAGEMENTS */
+.vals{background:linear-gradient(180deg,var(--char),#2a160c);padding:clamp(56px,8vw,100px) var(--pad)}
+.vals .in{max-width:1080px;margin:0 auto;display:grid;gap:22px}
+@media(min-width:820px){.vals .in{grid-template-columns:repeat(3,1fr)}}
+.val{border-top:2px solid var(--ember);padding-top:16px}
+.val b{font-family:var(--serif);font-size:26px;display:block;color:var(--flame);line-height:1.1;margin-bottom:6px}
+.val p{color:var(--cream-2)}
+.fid{max-width:1080px;margin:36px auto 0;border:2px dashed var(--ember);border-radius:20px;padding:20px 24px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.fid .dots{display:flex;gap:6px;flex-wrap:wrap}
+.fid .dots i{width:22px;height:22px;border-radius:50%;background:var(--ember);display:block;opacity:.25;animation:dot 5s infinite}
+.fid .dots i:nth-child(n){animation-delay:calc(var(--i)*.35s)}
+.fid .dots i:last-child{background:var(--flame)}
+@keyframes dot{0%,60%{opacity:.25}75%,100%{opacity:1}}
+.fid p{flex:1 1 220px}
+.fid strong{font-family:var(--serif);font-size:22px;color:var(--flame)}
+/* INFOS */
+.info{background:var(--cream);color:var(--char);padding:clamp(56px,8vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:28px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-weight:800;font-size:28px;color:var(--red);margin-bottom:6px}
+.info p{color:#3b2c22}.info a{font-weight:800}
+.info .big{font-family:var(--serif);font-size:26px;font-weight:800;color:var(--char);text-decoration:none}
+footer{background:var(--char);text-align:center;padding:40px var(--pad);color:var(--muted);font-size:14px}
+footer b{font-family:var(--serif);font-size:24px;color:var(--flame);display:block;margin-bottom:6px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:10px;background:rgba(14,11,9,.94);border:1px solid rgba(242,107,29,.5);border-radius:999px;padding:6px;box-shadow:0 12px 30px -10px rgba(0,0,0,.7)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.bar a.m{background:var(--ember);color:var(--char)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}h1 span{opacity:1;transform:none}#fire{display:none}.fid .dots i{opacity:1}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Mad PiZ'z</div>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Pizza piquante tout juste sortie de sa boîte"></div>
+  <canvas id="fire" aria-hidden="true"></canvas>
+  <div class="in">
+    <img class="badge" src="img/logo.jpg" alt="Nouveau logo Mad PiZ'z">
+    <p class="kicker">Pizzeria traditionnelle feu de bois · Saint-Denis</p>
+    <h1><span>Le spectacle</span> <span>du feu et de</span> <em><span>la gourmandise</span></em></h1>
+    <p class="lede">Des pizzas artisanales, directement sorties du four à bois, à deux pas du marché des Camélias.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262693429758">Commander : 0693 42 97 58</a>
+      <a class="btn ghost" href="#pizzas">Voir les pizzas</a>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>🔥 Cuite au feu de bois</span><span>Pâte pétrie avec amour chaque matin</span><span>🍕 Du mardi au dimanche</span><span>Même proprio, même pizzaïolo, mêmes recettes</span>
+  <span>🔥 Cuite au feu de bois</span><span>Pâte pétrie avec amour chaque matin</span><span>🍕 Du mardi au dimanche</span><span>Même proprio, même pizzaïolo, mêmes recettes</span>
+</div></div>
+
+<section class="story">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Notre histoire</p>
+      <h2>Un nouveau logo, la même âme</h2>
+      <p>Fin juillet 2026, Mad PiZ'z a dévoilé son nouveau logo et ses nouveaux tee-shirts au comptoir : « On a profité pour refaire une beauté à notre image. »</p>
+      <p>La devanture change, la recette reste : « Même proprio, même pizzaïolo, même recettes gourmandes et toujours la même passion. » Au fournil, il y a de la bonne humeur, des produits frais qui sentent bon l'Italie et une pâte pétrie avec amour chaque matin.</p>
+      <p class="quote">« Le visage change, l'âme reste… »<small>Publication Instagram de Mad PiZ'z · 29 juillet 2026</small></p>
+    </div>
+    <div class="pic reveal">
+      <img src="img/feu.jpg" alt="Pizza Le Feu du Four" loading="lazy">
+      <span class="cap">Le Feu du Four</span>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50V20C100 0 200 40 300 25S500 0 600 22 800 45 900 25 1100 5 1200 22V50Z" fill="#0E0B09"/></svg>
+</section>
+
+<section class="carte" id="pizzas">
+  <div class="head reveal"><p class="kicker">Au feu de bois</p><h2>Les pizzas, vues de près</h2><p>Quelques créations publiées par la maison, avec leurs mots à elle. Faites glisser du doigt.</p></div>
+  <div class="strip">
+    <article class="card"><div class="ph"><img src="img/piquante.jpg" alt="La pizza piquante et généreuse, tout juste sortie de sa boîte" loading="lazy"></div><div class="t"><h3>La Pizza Piquante &amp; Généreuse</h3><p>Garnie de belles tranches de charcuterie relevée, de poivrons verts, d'oignons rouges et d'olives.</p></div></article>
+    <article class="card"><div class="ph"><img src="img/feu.jpg" alt="Le Feu du Four" loading="lazy"></div><div class="t"><h3>Le Feu du Four</h3><p>Cuite à la perfection dans le four à bois crépitant : poulet tendre, poivrons croquants et olives noires.</p></div></article>
+    <article class="card"><div class="ph"><img src="img/sucree.jpg" alt="La pizza sucrée salée" loading="lazy"></div><div class="t"><h3>La Pizza Sucrée Salée</h3><p>Une alliance audacieuse et ensoleillée qui réveille les papilles, avec des morceaux d'ananas dorés.</p></div></article>
+    <article class="card"><div class="ph"><img src="img/terremer.jpg" alt="Pizza qui marie la terre et la mer" loading="lazy"></div><div class="t"><h3>Terre &amp; mer</h3><p>Une composition originale et surprenante : une véritable explosion de saveurs en bouche !</p></div></article>
+    <article class="card"><div class="ph"><img src="img/marine.jpg" alt="Pizza au citron et à la persillade verte" loading="lazy"></div><div class="t"><h3>Le voyage marin</h3><p>Rondelles de citron acidulées, touches iodées et persillade verte éclatante.</p></div></article>
+    <article class="card"><div class="ph"><img src="img/persillade.jpg" alt="Persil frais, ail, poivrons et oignons, ingrédients de la maison" loading="lazy"></div><div class="t"><h3>Le cœur du savoir-faire</h3><p>Du persil frais, de l'ail gorgé de soleil et une huile d'olive de qualité supérieure. 100 % local.</p></div></article>
+  </div>
+</section>
+
+<section class="vals">
+  <div class="in">
+    <div class="val reveal"><b>Pâte pétrie avec amour</b><p>Chaque matin, au fournil.</p></div>
+    <div class="val reveal"><b>Produits frais</b><p>Des ingrédients qui sentent bon l'Italie, avec le persil, l'ail et l'huile d'olive en vedettes.</p></div>
+    <div class="val reveal"><b>Four à bois</b><p>Le spectacle du feu et de la gourmandise, pizza après pizza.</p></div>
+  </div>
+  <div class="fid reveal">
+    <div class="dots" aria-hidden="true"><i style="--i:0"></i><i style="--i:1"></i><i style="--i:2"></i><i style="--i:3"></i><i style="--i:4"></i><i style="--i:5"></i><i style="--i:6"></i><i style="--i:7"></i><i style="--i:8"></i><i style="--i:9"></i></div>
+    <p><strong>Carte de fidélité numérique</strong><br>Après 10 points : 1 pizza 33 cm offerte (via l'application Fidelatoo).</p>
+  </div>
+</section>
+
+<section class="info" id="infos">
+  <div class="in">
+    <div class="reveal"><h3>Venir</h3><p>Place du Marché des Camélias<br>(parking du marché forain)<br>100 Bd Jean Jaurès, Saint-Denis</p></div>
+    <div class="reveal"><h3>Horaires</h3><p>Du mardi au dimanche<br>à partir de 18h30</p></div>
+    <div class="reveal"><h3>Commander</h3><p><a class="big" href="tel:+262693429758">0693 42 97 58</a></p><p><a href="https://www.instagram.com/madpizz974/">Instagram @madpizz974</a><br><a href="https://www.facebook.com/MadPiZz974">Facebook Mad PiZ'z</a></p></div>
+  </div>
+</section>
+
+<footer><b>Mad PiZ'z</b>Pizzeria traditionnelle feu de bois · Saint-Denis<br>Madpizzrun@gmail.com<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Mad PiZ'z.</footer>
+
+<nav class="bar" aria-label="Actions rapides"><a class="m" href="tel:+262693429758">Appeler</a><a href="#infos">Venir</a></nav>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)');
+  var c=document.getElementById('fire'),x=c.getContext('2d'),W,H,P=[],N=30,run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*2.2+.8,v:Math.random()*.7+.3,s:Math.random()*Math.PI*2,a:Math.random()*.5+.25,h:Math.random()<.5?'255,178,46':'242,107,29'}}
+  function init(){size();P=[];for(var i=0;i<N;i++)P.push(mk(true))}
+  function draw(){
+    if(!run||rm.matches){return}
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.s+=.02;p.x+=Math.sin(p.s)*.35;
+      if(p.y<-10){P[i]=mk(false);continue}
+      var f=Math.min(1,p.y/(H*.5));x.beginPath();x.fillStyle='rgba('+p.h+','+(p.a*f).toFixed(2)+')';x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
+    requestAnimationFrame(draw)
+  }
+  if(!rm.matches){init();draw()}
+  addEventListener('resize',function(){if(!rm.matches)size()});
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run&&!rm.matches)draw()});
+})();
+</script>
+</body>
+</html>

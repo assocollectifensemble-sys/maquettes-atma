@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Le Vieux Saltimbanque — salle de réception à Saint-André</title>
+<meta name="description" content="Une maison créole, un jardin, des soirées qui font rêver : Le Vieux Saltimbanque, salle de réception et de conférence à Saint-André, La Réunion.">
+<meta property="og:title" content="Le Vieux Saltimbanque — salle de réception à Saint-André">
+<meta property="og:description" content="Salon du mariage les 7 & 8 novembre, dîner dansant, soirées immersion : une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-vieux-saltimbanque/img/maison.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-vieux-saltimbanque/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#EEE8D5; --creme-2:#E4DCC2; --nuit:#1D1A15; --nuit-2:#2B2720;
+  --or:#C9A961; --or-l:#E6CF8E; --or-d:#8F7430; --rose:#C98F86;
+  --ink:#26231D; --muted:#6B6455; --line:rgba(38,35,29,.16);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--creme);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--nuit);color:var(--creme);font-size:13px;padding:9px var(--pad);position:relative;z-index:5}
+.ribbon b{color:var(--or-l);font-weight:600}
+/* HERO */
+.hero{position:relative;min-height:min(92vh,720px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:var(--creme)}
+.hero .bg{position:absolute;inset:-4%;background:url(img/maison.jpg) center/cover;animation:kb 26s ease-in-out infinite alternate;opacity:.78}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,26,21,.25) 0%,rgba(29,26,21,.15) 35%,rgba(29,26,21,.88) 100%)}
+@keyframes kb{from{transform:scale(1) translate3d(0,0,0)}to{transform:scale(1.1) translate3d(-1.5%,-1%,0)}}
+#lights{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:2;width:100%;max-width:1100px;margin:0 auto;padding:clamp(80px,14vw,150px) var(--pad) clamp(40px,7vw,80px)}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:22px;animation:rise 1.2s .1s both}
+.brand img{width:68px;height:68px;border-radius:50%;border:2px solid var(--or);object-fit:cover}
+.brand span{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--or-l);font-weight:500}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(46px,10.5vw,104px);line-height:.96;letter-spacing:-.01em;animation:rise 1.3s .3s both}
+h1 em{color:var(--or-l);font-weight:500}
+.lede{max-width:34ch;margin-top:20px;font-size:clamp(18px,2.3vw,22px);color:#E9E2CD;animation:rise 1.3s .55s both}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;animation:rise 1.3s .8s both}
+@keyframes rise{from{transform:translateY(22px);letter-spacing:.03em}to{transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--or);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--or);color:var(--nuit);animation:breathe 3.6s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-2px);background:var(--or-l)}
+.btn.ghost{color:var(--creme)}
+.btn.ghost:hover{background:var(--or);color:var(--nuit)}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(201,169,97,.5)}50%{box-shadow:0 0 0 10px rgba(201,169,97,0)}}
+/* BANDEAU */
+.marquee{background:var(--or);color:var(--nuit);overflow:hidden;white-space:nowrap;font-family:var(--serif);font-size:22px;font-weight:600;padding:10px 0}
+.marquee div{display:inline-block;padding-left:100%;animation:scroll 40s linear infinite}
+.marquee span{margin:0 22px}
+@keyframes scroll{to{transform:translateX(-100%)}}
+/* WAVE */
+.wave{display:block;width:100%;height:46px;margin-bottom:-1px}
+/* SECTIONS */
+.kicker{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--or-d)}
+h2{font-family:var(--serif);font-weight:600;line-height:1.03;color:var(--nuit);font-size:clamp(34px,6vw,58px);margin:10px 0 16px}
+.sec{max-width:1100px;margin:0 auto;padding:clamp(50px,8vw,100px) var(--pad)}
+.story{display:grid;gap:36px;align-items:center}
+@media(min-width:860px){.story{grid-template-columns:1fr 1fr}}
+.story p{max-width:52ch;color:#3b362c}
+.story p+p{margin-top:14px}
+.story figure{position:relative}
+.story figure img{border-radius:200px 200px 16px 16px;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -28px rgba(29,26,21,.6);width:100%}
+.story figcaption{font-family:var(--serif);font-style:italic;color:var(--muted);margin-top:10px;text-align:center}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.facts div{border-top:1.5px solid var(--or);padding-top:8px}
+.facts b{display:block;font-family:var(--serif);font-size:30px;color:var(--or-d);line-height:1}
+.facts small{font-size:13px;color:var(--muted);line-height:1.3;display:block;margin-top:4px}
+/* EVENT */
+.event{background:var(--nuit);color:var(--creme);position:relative;overflow:hidden}
+.event .sec{display:grid;gap:34px;align-items:center}
+@media(min-width:860px){.event .sec{grid-template-columns:.9fr 1.1fr}}
+.event h2{color:var(--creme)} .event .kicker{color:var(--or-l)}
+.event p{color:#D9D2BE;max-width:52ch}
+.date{display:inline-flex;align-items:center;gap:14px;margin:6px 0 18px}
+.date .d{width:84px;height:84px;border-radius:50%;background:var(--or);color:var(--nuit);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--serif);line-height:.95;animation:breathe 4s ease-in-out infinite}
+.date .d b{font-size:34px}.date .d span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--sans);font-weight:600}
+.date .t{font-family:var(--serif);font-size:24px;line-height:1.15;color:var(--or-l)}
+.event ul{list-style:none;padding:0;margin:14px 0 0}
+.event li{padding:9px 0;border-bottom:1px dotted rgba(230,207,142,.35);display:flex;gap:10px}
+.event li::before{content:"✦";color:var(--or)}
+.poster{justify-self:center;max-width:430px;width:100%}
+.poster img{border-radius:14px;box-shadow:0 30px 60px -20px rgba(0,0,0,.7);transition:transform .5s}
+.poster:hover img{transform:rotate(-1.2deg) scale(1.02)}
+.poster figcaption{font-family:var(--serif);font-style:italic;color:var(--or-l);text-align:center;margin-top:10px}
+/* GALERIE */
+.gal .head{max-width:1100px;margin:0 auto;padding:clamp(50px,8vw,90px) var(--pad) 20px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 22px;scrollbar-width:thin}
+.strip figure{flex:0 0 min(74vw,340px);scroll-snap-align:start}
+.strip img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:16px;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-4px) rotate(-1deg)}
+.strip figcaption{font-family:var(--serif);font-size:20px;margin-top:8px;color:var(--nuit)}
+.strip figcaption small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--or-d)}
+.strip svg{width:100%;aspect-ratio:4/5;border-radius:16px;display:block}
+/* AVIS */
+.avis{background:var(--creme-2)}
+.avis blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(26px,4.4vw,42px);line-height:1.15;color:var(--nuit);max-width:24ch}
+.avis blockquote::before{content:"“";color:var(--or);font-size:1.6em;line-height:0;vertical-align:-.35em;margin-right:4px}
+.avis cite{display:block;margin-top:16px;font-style:normal;font-size:14px;color:var(--muted)}
+/* INFOS */
+.info{background:var(--nuit);color:var(--creme)}
+.info .sec{display:grid;gap:28px}
+@media(min-width:820px){.info .sec{grid-template-columns:repeat(3,1fr)}}
+.info h3{font-family:var(--serif);font-size:28px;color:var(--or-l);margin-bottom:6px}
+.info a{color:var(--creme)}
+.info .big{font-family:var(--serif);font-size:26px;color:var(--creme)}
+.info p{color:#D9D2BE}
+footer{background:var(--nuit);border-top:1px solid rgba(230,207,142,.25);text-align:center;padding:30px var(--pad) 40px;color:#B9B19A;font-size:14px}
+footer b{font-family:var(--serif);font-size:22px;color:var(--or-l);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px;background:rgba(29,26,21,.94);border:1px solid rgba(230,207,142,.4);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;color:var(--creme)}
+.bar a.m{background:var(--or);color:var(--nuit)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#lights{display:none}.marquee div{padding-left:0}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Vieux Saltimbanque</div>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="La maison du Vieux Saltimbanque et sa véranda, entourées de verdure"></div>
+  <canvas id="lights" aria-hidden="true"></canvas>
+  <div class="in">
+    <div class="brand"><img src="img/logo.jpg" alt="Logo Le Vieux Saltimbanque"><span>Salle de réception · Saint-André</span></div>
+    <h1>Entrez dans la <em>soirée</em> du Vieux Saltimbanque</h1>
+    <p class="lede">Une maison à véranda, un jardin, des lumières qui s’allument au crépuscule : votre grand jour prend ses quartiers à Saint-André.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262692440463">Réserver · 0692 44 04 63</a>
+      <a class="btn ghost" href="#salon">Le Salon du mariage</a>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div><span>Salon du mariage</span>✦<span>Dîner dansant</span>✦<span>Soirée immersion mariage</span>✦<span>Salle de réception &amp; salle de conférence</span>✦<span>Saint-André, La Réunion</span>✦<span>Salon du mariage</span>✦<span>Dîner dansant</span>✦<span>Soirée immersion mariage</span>✦</div></div>
+
+<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V20C1000 50 800 -8 600 20S200 46 0 18Z" fill="#C9A961"/></svg>
+
+<main>
+<section class="sec story">
+  <div class="reveal">
+    <p class="kicker">Le lieu</p>
+    <h2>Salle de réception &amp; salle de conférence</h2>
+    <p>Au bout d’une allée bordée de verdure, la maison blanche et sa grande véranda accueillent mariages, soirées et rendez-vous professionnels à Saint-André.</p>
+    <p>Chaque événement reçoit sa propre mise en scène : musique, show, animation, et un vrai moment de surprise pour vos invités.</p>
+    <div class="facts">
+      <div><b>6,5 K</b><small>abonnés sur Facebook</small></div>
+      <div><b>50+</b><small>exposants annoncés au Salon du mariage</small></div>
+      <div><b>7 &amp; 8</b><small>novembre 2026</small></div>
+    </div>
+  </div>
+  <figure class="reveal"><img src="img/allee.jpg" alt="L’allée verdoyante qui mène au Vieux Saltimbanque" loading="lazy"><figcaption>L’allée du domaine, photo publiée par Le Vieux Saltimbanque</figcaption></figure>
+</section>
+
+<section class="event" id="salon">
+  <div class="sec">
+    <div class="reveal">
+      <p class="kicker">Au programme</p>
+      <h2>Soirée immersion mariage</h2>
+      <div class="date"><div class="d"><b>07</b><span>Nov.</span></div><div class="t">Dîner dansant<br>samedi dès 18h30</div></div>
+      <p>« Tous réunis au Vieux Saltimbanque pour votre grand jour » : le Salon du mariage rassemble plus de 50 exposants les 7 &amp; 8 novembre, avec une soirée pour vivre l’ambiance en vrai.</p>
+      <ul>
+        <li>Dîner dansant : 60 € / adulte · 30 € / enfant</li>
+        <li>Animation musicale « L’ambiance 974 », show &amp; animation</li>
+        <li>Inspiration pour votre grand jour, et une surprise</li>
+        <li>Salon du mariage : 3 € par adulte, entrée gratuite pour les enfants</li>
+      </ul>
+      <div class="cta"><a class="btn main" href="tel:+262692440463">Places limitées · 0692 44 04 63</a></div>
+    </div>
+    <figure class="poster reveal"><img src="img/affiche-diner-dansant.jpg" alt="Affiche du dîner dansant, soirée immersion mariage, samedi 7 novembre" loading="lazy"><figcaption>L’affiche publiée par la maison</figcaption></figure>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="head reveal"><p class="kicker">En images</p><h2>L’univers du lieu</h2></div>
+  <div class="strip">
+    <figure><img src="img/maison.jpg" alt="La maison et sa véranda" loading="lazy" style="object-position:50% 50%"><figcaption><small>Photo</small>La maison &amp; sa véranda</figcaption></figure>
+    <figure><img src="img/affiche-menu.jpg" alt="Affiche du menu" loading="lazy" style="object-position:50% 40%"><figcaption><small>Affiche</small>Le menu : civet cerf, mini burger…</figcaption></figure>
+    <figure>
+      <svg viewBox="0 0 400 500" role="img" aria-label="Illustration : guirlande de lumières dorées sur ciel de nuit"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1D1A15"/><stop offset="1" stop-color="#3a3021"/></linearGradient><radialGradient id="h"><stop offset="0" stop-color="#F3DFA0"/><stop offset="1" stop-color="#C9A961" stop-opacity="0"/></radialGradient></defs><rect width="400" height="500" fill="url(#g)"/><path d="M-10 70Q100 150 200 90T410 80" fill="none" stroke="#8F7430" stroke-width="2"/><path d="M-10 160Q120 240 220 170T410 170" fill="none" stroke="#8F7430" stroke-width="2"/><g fill="url(#h)"><circle cx="40" cy="104" r="22"/><circle cx="100" cy="124" r="22"/><circle cx="160" cy="122" r="22"/><circle cx="230" cy="100" r="22"/><circle cx="300" cy="98" r="22"/><circle cx="360" cy="104" r="22"/><circle cx="50" cy="196" r="22"/><circle cx="120" cy="214" r="22"/><circle cx="190" cy="200" r="22"/><circle cx="260" cy="176" r="22"/><circle cx="330" cy="186" r="22"/></g><g fill="#F3DFA0"><circle cx="40" cy="104" r="4"/><circle cx="100" cy="124" r="4"/><circle cx="160" cy="122" r="4"/><circle cx="230" cy="100" r="4"/><circle cx="300" cy="98" r="4"/><circle cx="360" cy="104" r="4"/><circle cx="50" cy="196" r="4"/><circle cx="120" cy="214" r="4"/><circle cx="190" cy="200" r="4"/><circle cx="260" cy="176" r="4"/><circle cx="330" cy="186" r="4"/></g><text x="200" y="400" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="34" fill="#E6CF8E" font-style="italic">Dès 18h30, la fête</text></svg>
+      <figcaption><small>Illustration</small>Les lumières du soir</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="sec reveal">
+    <p class="kicker">Ils en parlent</p>
+    <blockquote>Nous nous sommes mariés dans ce lieu magnifique…</blockquote>
+    <cite>Avis 5/5 publié sur la fiche PagesJaunes du Vieux Saltimbanque</cite>
+  </div>
+</section>
+
+<section class="info" id="infos">
+  <div class="sec">
+    <div class="reveal"><h3>Où nous trouver</h3><p class="big">463 chemin Centre<br>97440 Saint-André</p><p>La Réunion</p></div>
+    <div class="reveal"><h3>Réserver</h3><p class="big"><a href="tel:+262692440463">0692 44 04 63</a></p><p>Inscription &amp; réservation. Fixe : <a href="tel:+262262237524">02 62 23 75 24</a><br><a href="mailto:levieuxsaltimbanque@gmail.com">levieuxsaltimbanque@gmail.com</a></p></div>
+    <div class="reveal"><h3>Suivre la maison</h3><p><a href="https://www.facebook.com/p/Le-Vieux-Saltimbanque-100075563307068/">Facebook · Le Vieux Saltimbanque</a><br><a href="https://www.instagram.com/levieuxsaltimbanque/">Instagram · @levieuxsaltimbanque</a></p></div>
+  </div>
+</section>
+</main>
+<footer><b>Le Vieux Saltimbanque</b>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Vieux Saltimbanque.</footer>
+
+<nav class="bar" aria-label="Contact rapide"><a class="m" href="tel:+262692440463">Appeler</a><a href="#salon">Salon du mariage</a><a href="#infos">Adresse</a></nav>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('seen');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var c=document.getElementById('lights'); if(!c||rm)return;
+  var x=c.getContext('2d'),W,H,P=[],N=26,run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(i){return{x:Math.random()*W,y:i===true?Math.random()*H:H+10,r:1.5+Math.random()*3.2,v:.12+Math.random()*.32,ph:Math.random()*6.28,a:.25+Math.random()*.4}}
+  size();for(var i=0;i<N;i++)P.push(mk(true));
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+  function loop(){
+    if(!run)return;
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){
+      p.y-=p.v;p.ph+=.02;p.x+=Math.sin(p.ph)*.3;
+      if(p.y<-10)P[i]=mk();
+      var tw=.6+.4*Math.sin(p.ph*2.3);
+      var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*5);
+      g.addColorStop(0,'rgba(243,223,160,'+(p.a*tw)+')');g.addColorStop(1,'rgba(201,169,97,0)');
+      x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*5,0,6.283);x.fill();
+    });
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+</body>
+</html>

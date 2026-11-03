@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>GDM resto — snack &amp; traiteur à Saint-Denis</title>
+<meta name="description" content="Menu du jour, sandwichs américain, gratiné, tacos, panini et service traiteur. 7 allée Pierre de Lune, Saint-Denis.">
+<meta property="og:title" content="GDM resto — snack &amp; traiteur à Saint-Denis">
+<meta property="og:description" content="Le menu du jour, les sandwichs et le service traiteur de GDM resto : une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/gdm-resto/img/logo.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/gdm-resto/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#F2730B; --orange-d:#D56011; --brown:#492E20; --sand:#E4A254;
+  --black:#151415; --cream:#FFF4E3; --cream-2:#FBE6C6;
+  --head:'Bowlby One',Impact,sans-serif; --body:'Nunito',system-ui,sans-serif;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--body);background:var(--cream);color:var(--black);font-size:17px;line-height:1.6;padding-bottom:84px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--black);color:var(--cream);font-size:13px;padding:9px var(--pad);text-align:center}
+.ribbon b{color:var(--sand)}
+/* HERO */
+.hero{position:relative;background:var(--orange);color:var(--black);overflow:hidden;padding:clamp(34px,7vw,90px) var(--pad) 90px;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.hero .rays{position:absolute;inset:-40%;z-index:-2;background:repeating-conic-gradient(from 0deg at 50% 60%,rgba(255,255,255,.10) 0 6deg,transparent 6deg 14deg);animation:rot 120s linear infinite}
+.hero .in{max-width:1080px;margin:0 auto;display:grid;gap:34px;align-items:center}
+@media(min-width:880px){.hero .in{grid-template-columns:1.1fr .9fr}}
+.kick{display:inline-block;background:var(--black);color:var(--cream);font-weight:800;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+h1{font-family:var(--head);font-weight:400;font-size:clamp(40px,10.5vw,86px);line-height:1;color:var(--cream);text-shadow:4px 4px 0 var(--black);margin:16px 0 16px;opacity:0;transform:translateY(18px);animation:in 1s .15s ease forwards}
+.lede{font-weight:600;font-size:clamp(18px,2.4vw,22px);max-width:34ch;color:var(--black)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:800;text-decoration:none;border:3px solid var(--black);transition:transform .2s,background .2s}
+.btn.main{background:var(--black);color:var(--cream);animation:breathe 3s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-3px)}
+.btn.ghost{background:var(--cream)}
+.btn.ghost:hover{transform:translateY(-3px) rotate(-1deg)}
+.badge{justify-self:center;width:min(78vw,380px);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--black);box-shadow:10px 10px 0 var(--black);animation:float 6s ease-in-out infinite}
+.badge img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:60px;width:100%;display:block}
+/* marquee */
+.marq{background:var(--black);color:var(--cream);overflow:hidden;white-space:nowrap;padding:12px 0;font-family:var(--head);font-size:18px;letter-spacing:.04em}
+.marq div{display:inline-block;animation:slide 32s linear infinite}
+.marq span{color:var(--orange);margin:0 14px}
+/* sections */
+section{padding:clamp(52px,8vw,100px) var(--pad)}
+.wrap{max-width:1080px;margin:0 auto}
+h2{font-family:var(--head);font-weight:400;font-size:clamp(30px,6vw,52px);line-height:1.05;color:var(--black);margin-bottom:12px}
+h2 em{font-style:normal;color:var(--orange-d)}
+.sub{color:var(--brown);max-width:52ch}
+.menu{background:var(--cream-2)}
+.cards{display:grid;gap:18px;margin-top:28px}
+@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:3px solid var(--black);border-radius:20px;padding:22px;box-shadow:6px 6px 0 var(--black);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translate(-2px,-3px);box-shadow:9px 9px 0 var(--orange-d)}
+.card .d{font-family:var(--head);font-size:18px;color:var(--orange-d);border-bottom:2px dashed var(--sand);padding-bottom:8px;margin-bottom:8px}
+.card ul{list-style:none;padding:0}
+.card li{padding:6px 0;border-bottom:1px dotted rgba(73,46,32,.25);font-weight:600}
+.card li:last-child{border:0}
+.card .f{margin-top:10px;font-size:14px;color:var(--brown)}
+.src{font-size:13px;color:var(--brown);margin-top:18px}
+/* offre */
+.offer{background:var(--black);color:var(--cream);text-align:center;position:relative;overflow:hidden}
+.offer h2{color:var(--cream)}
+.offer h2 em{color:var(--orange)}
+.offer p{max-width:48ch;margin:0 auto;color:#f0dcc0}
+.offer .stamp{display:inline-block;margin-top:20px;border:3px dashed var(--orange);color:var(--orange);border-radius:14px;padding:10px 20px;font-family:var(--head);font-size:20px;transform:rotate(-2deg)}
+.mini{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}
+.mini span{background:var(--orange);color:var(--black);font-weight:800;border-radius:999px;padding:6px 16px}
+/* galerie */
+.gal .strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 0 18px;margin:20px calc(var(--pad)*-1) 0;padding-left:var(--pad);padding-right:var(--pad)}
+.strip figure{flex:0 0 min(74vw,300px);scroll-snap-align:start}
+.strip img{aspect-ratio:1;object-fit:cover;border-radius:18px;border:3px solid var(--black);transition:transform .35s}
+.strip figure:hover img{transform:rotate(-1.5deg) translateY(-4px)}
+.strip figcaption{font-size:14px;color:var(--brown);margin-top:8px}
+/* infos */
+.info{background:var(--orange)}
+.info .g{display:grid;gap:18px}
+@media(min-width:820px){.info .g{grid-template-columns:repeat(3,1fr)}}
+.info .b{background:var(--cream);border:3px solid var(--black);border-radius:20px;padding:22px;box-shadow:6px 6px 0 var(--black)}
+.info h3{font-family:var(--head);font-weight:400;font-size:22px;margin-bottom:6px}
+.info a{font-weight:800}
+.info table{border-collapse:collapse;width:100%}
+.info td{padding:3px 0}
+.info td:last-child{text-align:right;font-weight:700}
+footer{text-align:center;padding:30px var(--pad);font-size:14px;color:var(--brown)}
+footer b{font-family:var(--head);font-weight:400;font-size:22px;color:var(--black);display:block}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(21,20,21,.94);border-radius:999px;padding:6px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px;color:var(--cream)}
+.bar a.m{background:var(--orange);color:var(--black)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:380px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@keyframes in{to{opacity:1;transform:none}}
+@keyframes rot{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-10px) rotate(1deg)}}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12)}}
+@keyframes breathe{50%{transform:scale(1.04)}}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,h1{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour GDM resto</div>
+
+<header class="hero">
+  <div class="rays" aria-hidden="true"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="in">
+    <div>
+      <span class="kick">Snack · Repas emporter · Traiteur</span>
+      <h1>Bonjour à tous, le menu du jour est prêt&nbsp;!</h1>
+      <p class="lede">Américain, gratiné, tacos, panini et plats maison à Saint-Denis. Sur place ou à emporter, « n’hésitez pas à réserver ».</p>
+      <div class="cta">
+        <a class="btn main" href="tel:+262692355874">Réserver au 0692 35 58 74</a>
+        <a class="btn ghost" href="#menu">Voir le menu du jour</a>
+      </div>
+    </div>
+    <div class="badge"><img src="img/logo.jpg" alt="Logo GDM Traiteur : snack, repas emporter" width="720" height="720"></div>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 Q150 0 300 30 T600 30 T900 30 T1200 30 V60 H0Z" fill="#151415"/></svg>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>★</span>Américain<span>★</span>Gratiné<span>★</span>Tacos<span>★</span>Panini<span>★</span>Frites<span>★</span>Salade<span>★</span>Service traiteur<span>★</span>Sur place ou à emporter
+  <span>★</span>Américain<span>★</span>Gratiné<span>★</span>Tacos<span>★</span>Panini<span>★</span>Frites<span>★</span>Salade<span>★</span>Service traiteur<span>★</span>Sur place ou à emporter
+</div></div>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <h2 class="reveal">Les <em>menus du jour</em>, tels que GDM les annonce</h2>
+    <p class="sub reveal">Chaque matin, une nouvelle page de plats créoles et d’inspirations asiatiques. Voici ceux de la fin octobre, repris mot pour mot.</p>
+    <div class="cards">
+      <article class="card reveal"><div class="d">Mardi 27/10/2026</div><ul>
+        <li>Civet aille de dinde 🦃</li><li>Camaron aux ti jacques 🦐</li><li>Poulet sésames 🐓</li><li>Riz cantonais poulet 🐓</li></ul>
+        <p class="f">« Bon appétit Zot tout »</p></article>
+      <article class="card reveal"><div class="d">Mercredi 28/10/2026</div><ul>
+        <li>Civet poulet 🐓</li><li>Sauté porc gros piment carottes 🐷</li><li>Rougail chevaquine 🦐</li><li>Riz cantonais poulet 🐓</li></ul>
+        <p class="f">« Bon appétit 😋 zot tout »</p></article>
+      <article class="card reveal"><div class="d">Lundi 26/10/2026</div><ul>
+        <li>Boucané bringelle (porc)</li><li>Poulet sauce d’huîtres</li><li>Massalé thon</li><li>Sauté mine crevettes 🍤</li></ul>
+        <p class="f">« Bon appétit 😋 »</p></article>
+    </div>
+    <p class="src">Source : publications de la page Facebook GDM resto, 26 au 28 octobre 2026.</p>
+  </div>
+</section>
+
+<section class="offer">
+  <div class="wrap">
+    <h2 class="reveal">Un sandwich acheté, <em>une boisson offerte</em></h2>
+    <p class="reveal">Américain, gratiné, tacos ou panini : jusqu’à fin 2026, la boisson accompagne votre sandwich.</p>
+    <div class="mini reveal"><span>Américain</span><span>Gratiné</span><span>Tacos</span><span>Panini</span></div>
+    <div class="stamp reveal">Offre jusqu’à fin 2026</div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="wrap">
+    <h2 class="reveal">L’univers <em>GDM</em></h2>
+    <p class="sub reveal">Extraits de l’affiche de la page : snack, frites, burger, sacs à emporter.</p>
+    <div class="strip">
+      <figure><img src="img/affiche-snack.jpg" alt="Burger et frites sur l’affiche GDM Traiteur" loading="lazy"><figcaption>Le burger et les frites</figcaption></figure>
+      <figure><img src="img/affiche-emporter.jpg" alt="Sacs et boîtes à emporter GDM Traiteur" loading="lazy"><figcaption>Repas à emporter</figcaption></figure>
+      <figure><img src="img/affiche-badge.jpg" alt="Médaillon GDM Traiteur, Bon appétit" loading="lazy"><figcaption>« Bon appétit ! »</figcaption></figure>
+      <figure><img src="img/affiche-carte.jpg" alt="Tableau snacks, plats maison, saveurs gourmandes" loading="lazy"><figcaption>Snacks, plats maison</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap g">
+    <div class="b reveal"><h3>Adresse</h3><p>7 allée Pierre de Lune<br>97400 Saint-Denis</p></div>
+    <div class="b reveal"><h3>Horaires</h3>
+      <table><tr><td>Lundi au vendredi</td><td>6h – 14h</td></tr></table></div>
+    <div class="b reveal"><h3>Réserver</h3><p><a href="tel:+262692355874">0692 35 58 74</a><br><a href="mailto:depechethaisgtd@gmail.com">depechethaisgtd@gmail.com</a><br><a href="https://www.facebook.com/people/GDM-resto/100049218578576/">Page Facebook</a></p></div>
+  </div>
+</section>
+
+<footer><b>GDM resto</b>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de GDM resto.</footer>
+
+<nav class="bar"><a class="m" href="tel:+262692355874">Appeler</a><a href="https://www.facebook.com/people/GDM-resto/100049218578576/">Facebook</a></nav>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.reveal');
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('seen')});}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('seen');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+if(rm)return;
+var c=document.getElementById('fx'),g=c.getContext('2d'),W,H,P=[],N=26,run=true;
+function size(){var r=c.getBoundingClientRect();W=c.width=r.width;H=c.height=r.height}
+function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:1.5+Math.random()*3,v:.3+Math.random()*.8,s:Math.random()*6,a:.15+Math.random()*.35,k:Math.random()<.6}}
+size();for(var i=0;i<N;i++)P.push(mk(true));
+addEventListener('resize',size);
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+function loop(){if(!run)return;g.clearRect(0,0,W,H);
+ P.forEach(function(p,i){p.y-=p.v;p.s+=.02;p.x+=Math.sin(p.s)*.5;
+  if(p.y<-10)P[i]=mk(false);
+  g.beginPath();g.arc(p.x,p.y,p.r,0,6.28);
+  g.fillStyle=p.k?'rgba(255,244,227,'+p.a+')':'rgba(21,20,21,'+(p.a*.5)+')';g.fill();});
+ requestAnimationFrame(loop)}
+loop();
+})();
+</script>
+</body>
+</html>

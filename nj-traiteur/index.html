@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>NJ Traiteur — traiteur à Saint-André, La Réunion</title>
+<meta name="description" content="NJ Traiteur à Saint-André : renouvellements de mariage, départs à la retraite, buffets et services à domicile.">
+<meta property="og:title" content="NJ Traiteur — traiteur à Saint-André">
+<meta property="og:description" content="Des buffets préparés avec soin pour vos grands moments : une maquette offerte par Jonathan, ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/nj-traiteur/img/cuisine.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/nj-traiteur/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --coal:#171514; --coal-2:#24201d; --ember:#E4572E; --ember-l:#F58A5F; --ember-d:#B83E1B;
+  --herb:#7BA05B; --herb-d:#4E6F36; --cream:#FAF4EA; --cream-2:#F1E7D6; --ink:#2A2421; --muted:#6F655D;
+  --serif:'Fraunces',Georgia,serif; --sans:'Outfit',system-ui,sans-serif; --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:4px}
+.ribbon{background:var(--coal);color:var(--cream);font-size:13px;padding:9px var(--pad);text-align:center}
+.ribbon b{color:var(--ember-l);font-weight:600}
+/* hero */
+.hero{position:relative;min-height:min(92vh,720px);background:var(--coal);color:var(--cream);overflow:hidden;display:flex;align-items:flex-end}
+.hero .bg{position:absolute;inset:0;overflow:hidden}
+.hero .bg img{width:100%;height:100%;object-fit:cover;opacity:.55;transform:scale(1.05);animation:kb 22s ease-in-out infinite alternate}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,21,20,.35) 0%,rgba(23,21,20,.55) 45%,var(--coal) 100%)}
+@keyframes kb{to{transform:scale(1.18) translate(-2%,-2%)}}
+#steam{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .in{position:relative;z-index:2;width:100%;max-width:1100px;margin:0 auto;padding:60px var(--pad) 70px}
+.mono{display:inline-flex;align-items:center;gap:12px}
+.mono i{font-style:normal;font-family:var(--serif);font-weight:700;font-size:26px;width:60px;height:60px;border-radius:14px;background:#D9D5CF;color:#171514;display:grid;place-items:center;letter-spacing:.02em}
+.mono span{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ember-l);font-weight:600}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(42px,10vw,92px);line-height:1;letter-spacing:-.015em;margin:22px 0 18px;animation:rise 1.2s .2s ease both}
+h1 em{color:var(--ember-l);font-weight:500}
+.lede{max-width:34ch;font-size:clamp(18px,2.4vw,22px);color:#E7DDCF;animation:rise 1.2s .6s ease both}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;animation:rise 1.2s 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ember);transition:transform .2s,background .2s}
+.btn.main{background:var(--ember);color:#fff;animation:breathe 3.4s ease-in-out infinite}
+.btn.main:hover{transform:translateY(-2px);background:var(--ember-d)}
+.btn.ghost{color:var(--cream)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(228,87,46,.18)}}
+/* marquee */
+.marq{background:var(--ember);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;font-family:var(--serif);font-style:italic;font-size:20px}
+.marq div{display:inline-block;animation:slide 32s linear infinite}
+.marq span{margin:0 22px}.marq span:after{content:"✦";margin-left:44px;opacity:.7;font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+/* sections */
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--ember-d)}
+h2{font-family:var(--serif);font-weight:700;color:var(--coal);font-size:clamp(32px,6vw,54px);line-height:1.05;margin:10px 0 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,104px) var(--pad)}
+.intro p{max-width:56ch;color:var(--ink)}
+.moments{display:grid;gap:18px;margin-top:34px}
+@media(min-width:820px){.moments{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid rgba(42,36,33,.12);border-radius:18px;padding:24px;box-shadow:0 22px 44px -32px rgba(23,21,20,.5);transition:transform .3s}
+.card:hover{transform:translateY(-4px) rotate(-.4deg)}
+.card small{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--herb-d);font-weight:600}
+.card h3{font-family:var(--serif);font-size:24px;line-height:1.15;color:var(--coal);margin:8px 0}
+.card p{color:var(--muted);font-size:16px}
+/* quotes */
+.voices{background:var(--coal);color:var(--cream)}
+.voices h2{color:var(--cream)}.voices .kicker{color:var(--ember-l)}
+.q{margin-top:26px;display:grid;gap:22px}
+@media(min-width:860px){.q{grid-template-columns:1.3fr 1fr}}
+blockquote{border-left:3px solid var(--ember);padding-left:18px;font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.8vw,26px);line-height:1.35;color:#F3E8D8}
+blockquote cite{display:block;margin-top:10px;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.06em;color:var(--ember-l)}
+/* gallery */
+.gal{padding-bottom:clamp(56px,9vw,96px)}
+.gal .head{max-width:1080px;margin:0 auto;padding:clamp(56px,9vw,96px) var(--pad) 18px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--pad) 18px;scrollbar-width:thin}
+.strip figure{flex:0 0 min(70vw,290px);scroll-snap-align:start}
+.strip img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:16px;transition:transform .35s}
+.strip figure:hover img{transform:translateY(-4px) rotate(-1deg)}
+.strip figcaption{font-family:var(--serif);font-size:18px;color:var(--coal);margin-top:8px}
+/* contact */
+.contact{background:var(--cream-2)}
+.contact .grid{display:grid;gap:26px;margin-top:26px}
+@media(min-width:820px){.contact .grid{grid-template-columns:repeat(3,1fr)}}
+.contact h3{font-family:var(--serif);font-size:24px;color:var(--coal);margin-bottom:6px}
+.contact a.big{font-family:var(--serif);font-size:26px;color:var(--ember-d);text-decoration:none;display:block;overflow-wrap:anywhere}
+.contact p{color:var(--muted)}
+footer{text-align:center;padding:34px var(--pad);color:var(--muted);font-size:14px}
+footer b{font-family:var(--serif);font-size:22px;color:var(--coal);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(250,244,234,.97);border:1px solid rgba(42,36,33,.15);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px}
+.bar a.m{background:var(--ember);color:#fff}.bar a.w{background:var(--coal);color:var(--cream)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#steam{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour NJ Traiteur</div>
+
+<header class="hero">
+  <div class="bg"><img src="img/cuisine.jpg" alt="Légumes frais, herbes et ustensiles dans la cuisine de NJ Traiteur"></div>
+  <canvas id="steam" aria-hidden="true"></canvas>
+  <div class="in">
+    <div class="mono"><i>NJ</i><span>Traiteur · Saint-André</span></div>
+    <h1>Vos grands moments, <em>préparés avec soin</em></h1>
+    <p class="lede">Renouvellement de mariage, départ à la retraite, buffet entre amis : NJ Traiteur prépare toute la prestation, avec soin.</p>
+    <div class="cta">
+      <a class="btn main" href="tel:+262692165124">Appeler 0692 16 51 24</a>
+      <a class="btn ghost" href="https://wa.me/262692165124">Écrire sur WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+  <span>Traiteur à Saint-André</span><span>Renouvellements de mariage</span><span>Départs à la retraite</span><span>Buffets &amp; barquettes</span><span>Services à domicile</span>
+  <span>Traiteur à Saint-André</span><span>Renouvellements de mariage</span><span>Départs à la retraite</span><span>Buffets &amp; barquettes</span><span>Services à domicile</span>
+</div></div>
+
+<section class="wrap intro reveal">
+  <div class="kicker">Ils nous ont fait confiance</div>
+  <h2>« Toute la prestation traiteur », du début à la fin</h2>
+  <p>Sur sa page, NJ Traiteur raconte ses plus beaux services : des familles réunies, des collègues qui disent au revoir à un médecin, des invités qui se régalent. Voici trois de ces moments, dans les mots de la page.</p>
+  <div class="moments">
+    <article class="card"><small>1 septembre 2025</small><h3>Un renouvellement de mariage</h3><p>« Un grand merci à notre client pour sa confiance. Nous avons eu le plaisir d’accompagner le renouvellement de mariage des parents de notre client en assurant toute la… »</p></article>
+    <article class="card"><small>8 juillet 2025</small><h3>Le CHU de Bellepierre</h3><p>« Prestation pour le CHU de Bellepierre. Commande réalisée pour le départ à la retraite d’un médecin du CHU de Bellepierre. »</p></article>
+    <article class="card"><small>25 octobre 2026</small><h3>Retour de nos clients</h3><p>Publication partagée par la page le 25 octobre 2026, intitulée « Retour de nos clients ».</p></article>
+  </div>
+</section>
+
+<section class="voices">
+  <div class="wrap reveal">
+    <div class="kicker">Des mots de clients</div>
+    <h2>Ce qu’on en dit</h2>
+    <div class="q">
+      <blockquote>« Merci pour votre professionnalisme et votre gentillesse. Les invités ont apprécié le menu et je me suis régalé ce soir en mangeant les barquettes que vous nous avez préparé. Je n’hésiterais pas à vous recommander. »
+        <cite>Message d’un client, partagé par NJ Traiteur sur sa page Facebook</cite></blockquote>
+      <blockquote>« …tt a été succulent… vous êtes très à l’écoute et d’un professionnalisme hors pair… »
+        <cite>Commentaire sous la publication du 1er septembre 2025</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="head reveal"><div class="kicker">Dans les bacs et en cuisine</div><h2>Un aperçu des préparations</h2></div>
+  <div class="strip reveal">
+    <figure><img loading="lazy" src="img/buffet-dore.jpg" alt="Un bac de service doré, prêt pour le buffet"><figcaption>Prêt pour le buffet</figcaption></figure>
+    <figure><img loading="lazy" src="img/mise-en-place.jpg" alt="Mise en place : légumes, herbes et épices sur la planche"><figcaption>La mise en place</figcaption></figure>
+    <figure><img loading="lazy" src="img/bac-persil.jpg" alt="Un bac garni de persil frais"><figcaption>Une touche d’herbes fraîches</figcaption></figure>
+    <figure><img loading="lazy" src="img/bac-nouilles.jpg" alt="Un bac de service garni"><figcaption>Servi en bac</figcaption></figure>
+    <figure><img loading="lazy" src="img/bacs-sauces.jpg" alt="Plusieurs bacs de service alignés"><figcaption>Plusieurs bacs alignés</figcaption></figure>
+    <figure><img loading="lazy" src="img/plat-mijote.jpg" alt="Un plat mijoté parsemé d’herbes"><figcaption>Du persil sur le plat</figcaption></figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <div class="kicker">Parlons de votre événement</div>
+    <h2>Un message, et on organise</h2>
+    <div class="grid">
+      <div><h3>Téléphone</h3><a class="big" href="tel:+262692165124">0692 16 51 24</a><a class="big" href="tel:+262692117933">0692 11 79 33</a></div>
+      <div><h3>E-mail</h3><a class="big" href="mailto:nj.traiteur6@gmail.com">nj.traiteur6@gmail.com</a></div>
+      <div><h3>Où &amp; comment</h3><p>Saint-André, 97440 · services à domicile.</p><p><a href="https://www.facebook.com/p/NJ-Traiteur-100063806780132">La page Facebook de NJ Traiteur</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>NJ Traiteur</b>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de NJ Traiteur.</footer>
+
+<nav class="bar"><a class="m" href="tel:+262692165124">Appeler</a><a class="w" href="https://wa.me/262692165124">WhatsApp</a></nav>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var c=document.getElementById('steam');if(!c||rm)return;
+  var x=c.getContext('2d'),W,H,P=[],N=26,run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(i){return{x:Math.random()*W,y:i?H+Math.random()*60:Math.random()*H,r:18+Math.random()*34,v:.18+Math.random()*.35,d:Math.random()*6,s:Math.random()<.22,a:.05+Math.random()*.07}}
+  size();for(var i=0;i<N;i++)P.push(mk(0));
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+  function loop(){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y-=p.v*(p.s?2:1);p.d+=.012;var px=p.x+Math.sin(p.d)*16;
+      if(p.s){x.fillStyle='rgba(245,138,95,'+(.5*Math.min(1,p.y/H+.1))+')';x.beginPath();x.arc(px,p.y,1.6,0,6.3);x.fill()}
+      else{var g=x.createRadialGradient(px,p.y,0,px,p.y,p.r);g.addColorStop(0,'rgba(255,244,230,'+p.a+')');g.addColorStop(1,'rgba(255,244,230,0)');x.fillStyle=g;x.beginPath();x.arc(px,p.y,p.r,0,6.3);x.fill()}
+      if(p.y<-p.r)P[i]=mk(1)});
+    requestAnimationFrame(loop)}
+  loop();
+})();
+</script>
+</body>
+</html>
