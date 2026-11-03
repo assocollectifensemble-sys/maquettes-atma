@@ -3,8 +3,8 @@
    (prototype pour la Réserve naturelle marine de La Réunion).
    Architecture reprise du prototype Kélonia (« Le dossier Kawann »).
    Écrans : projet (1er écran) · accueil · intro · hub (carte de la plage) ·
-   st1…st3 (brief → jeu → quiz → info) · findemo · fiche (enseignant) · qr (pour l'équipe).
-   Étapes 4 et 5 : présentées, verrouillées (« Application complète »).
+   st1…st5 (brief → jeu → quiz → info) · findemo · fiche (enseignant) · qr (pour l'équipe).
+   Version démo : étapes 1 et 2 jouables ; 3, 4 et 5 présentées, verrouillées (« Dans l'application complète »).
    ============================================================ */
 (function () {
   "use strict";
@@ -131,8 +131,8 @@
       P.complete.map(x => '<li class="' + (x[3] || "") + '"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul>' +
       '<section class="pj-possible"><h2 class="pj-h">Et si on allait plus loin ?</h2><p>' + esc("Ce prototype n'est qu'un point de départ : une proposition pour ouvrir la discussion. On peut aussi partir sur tout autre chose.") + '</p><ul>' +
       P.possible.map(x => '<li><span aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul></section>' +
-      '<section class="pj-cycle3"><div class="pj-c3-t"><span class="pj-c3-i" aria-hidden="true">🎓</span><div><h3>Version classe</h3><span class="pj-c3-niv">Niveaux à choisir avec vous</span></div></div>' +
-      '<p>' + esc("Consignes scolaires, mots-clés, une question à débattre par étape, et une fiche enseignant imprimable, à relire par votre pôle éducation.") + '</p>' + btn("Lire la fiche enseignant ➜", "go", "pj-btn", { r: "fiche" }) + '</section>' +
+      '<section class="pj-cycle3"><div class="pj-c3-t"><span class="pj-c3-i" aria-hidden="true">🎓</span><div><h3>Version classe</h3><span class="pj-c3-niv">Du CE1 à la 6<sup>e</sup>, comme vos animations</span></div></div>' +
+      '<p>' + esc("Travail en équipes, consignes scolaires, mots-clés, une question à débattre par étape, liens avec les programmes de sciences, d'EMC et d'EDD, et une fiche enseignant imprimable, à relire par votre pôle éducation.") + '</p>' + btn("Lire la fiche enseignant ➜", "go", "pj-btn", { r: "fiche" }) + '</section>' +
       aideInstall() +
       '<div class="pj-acces">' + btn("🔳 Les QR codes", "go", "pj-sec", { r: "qr" }) + btn("ℹ️ Crédits", "credits", "pj-sec") + '</div>' +
       '<p class="pj-fiction">' + esc(P.fiction) + '</p></div>' +
@@ -148,7 +148,7 @@
       '<ul class="promesses" aria-label="En bref">' + A.promesses.map(x => '<li><b>' + x.n + '</b>' + esc(x.t) + '</li>').join("") + '</ul>' +
       '<section class="card"><h3>Qui joue ?</h3><div class="pubs" role="group" aria-label="Public">' + pubBtn("famille") + pubBtn("classe") + '</div>' +
       '<p class="small dim pubdesc">' + esc(C.publics[p].desc) + '</p></section>' +
-      '<p class="small dim center">' + esc("Version démo : 3 étapes jouables sur 5 · aucune donnée envoyée · * durée à mesurer sur place") + '</p>' +
+      '<p class="small dim center">' + esc("Version démo : 2 étapes jouables sur 5 · aucune donnée envoyée · * durée à mesurer sur place") + '</p>' +
       '<p class="center retour-projet"><button class="lien" data-act="go" data-r="projet">← Présentation du projet</button></p>' +
       dock(btn(n > 0 && n < JOUABLES ? "🐙 Continuer l'enquête (" + n + "/" + JOUABLES + ")" : "🐙 Commencer l'enquête", "start", "big"));
   };
@@ -176,12 +176,12 @@
     C.etapes.forEach(E => { etats[E.id] = E.id > JOUABLES ? "verrou" : f[E.id] ? "fait" : E.id === nx ? "suivant" : "ouvert"; });
     const rows = C.etapes.map((E, k) => {
       const lien = k < TOTAL - 1 ? '<li class="sentier" aria-hidden="true"></li>' : "";
-      if (E.id > JOUABLES) return '<li class="st verrou"><div class="station" aria-disabled="true"><span class="num">' + Art.ICO.cadenas + '<span class="sr-only">Verrouillée</span></span><span class="st-t"><b>' + E.ico + " " + esc(E.titre) + '</b><small>' + esc(E.apercu) + '</small><span class="badge-complet">Application complète</span></span></div></li>' + lien;
+      if (E.id > JOUABLES) return '<li class="st verrou"><div class="station" aria-disabled="true"><span class="num">' + Art.ICO.cadenas + '<span class="sr-only">Verrouillée</span></span><span class="st-t"><b>' + E.ico + " " + esc(E.titre) + '</b><small>' + esc(E.apercu) + '</small><span class="badge-complet">Dans l’application complète</span></span></div></li>' + lien;
       const et = (Store.get("etoiles") || {})[E.id] || 0;
       return '<li class="st ' + etats[E.id] + '"><button class="station" data-act="station" data-id="' + E.id + '"><span class="num" aria-hidden="true">' + (f[E.id] ? "✓" : E.id) + '</span><span class="st-t"><b>' + E.ico + " " + esc(E.titre) + '</b><small>📍 ' + esc(E.lieu) + '</small>' +
         (f[E.id] ? '<span class="mini-etoiles" aria-label="' + et + ' étoile(s)">' + [1, 2, 3].map(k2 => Art.ICO.etoile(k2 <= et)).join("") + '</span>' : "") + '</span><span class="go" aria-hidden="true">' + (f[E.id] ? "↻" : "➜") + '</span></button></li>' + lien;
     }).join("");
-    const t = n >= JOUABLES ? { expr: "fete", t: "Trois indices réunis ! Pour la démo, l'enquête s'arrête ici. La suite arrive dans l'application complète." }
+    const t = n >= JOUABLES ? { expr: "fete", t: "Deux indices réunis ! Pour la démo, l'enquête s'arrête ici. Les trois autres étapes t'attendent dans l'application complète." }
       : n === 0 ? { expr: "clin", t: "Voici la plage vue du ciel. Commence par l'étape 1 : touche-la sur la carte ou dans la liste. Sur place, tu scannerais le QR code du panneau." }
         : { expr: "content", t: "Encore " + (JOUABLES - n) + " étape" + (JOUABLES - n > 1 ? "s" : "") + " jouable" + (JOUABLES - n > 1 ? "s" : "") + " dans cette démo. L'étape " + nx + " t'attend !" };
     return '<span class="kicker">L\'enquête</span><h2>La plage de Zouzou</h2>' +
@@ -250,9 +250,9 @@
   }
 
   // ===================== FIN DE LA DÉMO =====================
-  SCREENS.findemo = () => '<div class="findemo"><span class="kicker">Version démo · 3 étapes sur 5</span><h2>Fin de la démo</h2>' +
+  SCREENS.findemo = () => '<div class="findemo"><span class="kicker">Version démo · 2 étapes sur 5</span><h2>Fin de la démo</h2>' +
     '<div class="fd-art" aria-hidden="true"><span class="pj-halo"></span>' + Art.zouzou("fete", "flotte") + '</div>' +
-    '<p class="fd-lead">' + esc("Merci, enquêteur !") + '</p><p class="fd-txt">' + esc("Vous venez de jouer les 3 premières étapes. Dans l'application complète, l'enquête continuerait jusqu'à la grande révélation.") + '</p>' +
+    '<p class="fd-lead">' + esc("Merci, enquêteur !") + '</p><p class="fd-txt">' + esc("Vous venez de jouer les 2 premières étapes. Dans l'application complète, l'enquête continuerait sur trois autres étapes, jusqu'à la grande révélation.") + '</p>' +
     '<ul class="fd-suite">' + C.findemo.suite.map(x => '<li><span class="fd-i" aria-hidden="true">' + x[0] + '</span><span class="fd-t"><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></span></li>').join("") + '</ul>' +
     '<section class="fd-gestes"><h3>Les bons gestes de Zouzou</h3><ul>' + C.gestes.map(g => '<li><span aria-hidden="true">' + g[0] + '</span>' + esc(g[1]) + '</li>').join("") + '</ul>' + src("R5 · guide des écogestes de la Réserve") + '</section>' +
     '<section class="fd-ensemble"><b>' + esc("Et maintenant ?") + '</b><p>' + esc("Tout reste à imaginer avec vos équipes : l'histoire, le personnage, les lieux, et pourquoi pas la réalité augmentée ou un parcours sonore.") + '</p></section></div>' +
@@ -260,15 +260,17 @@
   AFTER.findemo = () => { if (!navigator.userActivation || navigator.userActivation.hasBeenActive) Audio2.Sfx.fanfare(); fete(); };
 
   // ===================== FICHE ENSEIGNANT =====================
-  SCREENS.fiche = () => '<div class="doc fiche">' + flecheRetour("projet") + '<span class="kicker">Version classe · proposition</span><h2>Fiche enseignant</h2>' +
+  SCREENS.fiche = () => '<div class="doc fiche">' + flecheRetour("projet") + '<span class="kicker">Version classe · du CE1 à la 6<sup>e</sup> · proposition</span><h2>Fiche enseignant</h2>' +
     '<p class="badge alert">À relire et réécrire avec le pôle éducation de la Réserve</p>' +
-    '<h3>L\'idée</h3><p>' + esc("Par équipes de 3 à 5 élèves, un téléphone ou une tablette par équipe, les élèves mènent l'enquête de Zouzou sur la plage, sans entrer dans l'eau. Chaque étape associe un défi tactile, une question et un « Le savais-tu ? » tiré du guide des écogestes de la Réserve.") + '</p>' +
-    '<h3>Objectifs</h3><ul class="clean"><li>' + esc("Comprendre que le corail est un animal et que le récif est vivant.") + '</li><li>' + esc("Relier des gestes du quotidien (déchets, crème solaire, nourrissage) à leurs effets sur le lagon.") + '</li><li>' + esc("Argumenter en équipe à partir d'une question ouverte.") + '</li></ul>' +
-    '<h3>Déroulé proposé</h3><ul class="clean"><li><b>Avant :</b> ' + esc("découverte de Zouzou en classe (intro, 5 min).") + '</li><li><b>Sur la plage :</b> ' + esc("les étapes, environ 5 minutes chacune (à mesurer).") + '</li><li><b>Après :</b> ' + esc("retour sur les questions « À débattre », et les bons gestes.") + '</li></ul>' +
-    C.etapes.filter(E => E.jeu).map(E => '<h3>Étape ' + E.id + ' · ' + esc(E.titre) + '</h3><p><b>Notion :</b> ' + esc(E.classe.notion) + '</p><p class="mots">' + E.classe.mots.map(m => '<span>' + esc(m) + '</span>').join("") + '</p><p><b>À débattre :</b> ' + esc(E.classe.q) + '</p><p><b>Corrigé de la question :</b> ' + esc(E.quiz.opts[E.quiz.ok]) + '. ' + esc(E.quiz.bravo) + '</p>').join("") +
+    '<h3>L\'idée</h3><p>' + esc("Par équipes de 3 à 4 élèves, un téléphone ou une tablette par équipe, les élèves mènent l'enquête de Zouzou sur la plage, sans entrer dans l'eau. Chaque étape associe un défi tactile, une question et un « Le savais-tu ? » tiré du guide des écogestes de la Réserve.") + '</p>' +
+    '<h3>Objectifs</h3><ul class="clean"><li>' + esc("Comprendre que le corail est un animal et que le récif est vivant.") + '</li><li>' + esc("Relier des gestes du quotidien (déchets, crème solaire, nourrissage) à leurs effets sur le lagon.") + '</li><li>' + esc("Coopérer en équipe et argumenter à partir d'une question ouverte.") + '</li></ul>' +
+    '<h3>Liens avec les programmes</h3><ul class="clean"><li><b>Sciences :</b> ' + esc("le vivant et son environnement, les effets des activités humaines (cycle 2) ; les écosystèmes et les conséquences des actions humaines (cycle 3).") + '</li><li><b>EMC :</b> ' + esc("respect dû à l'environnement et au vivant, écogestes et intérêt général.") + '</li><li><b>EDD :</b> ' + esc("biodiversité et écosystèmes, gestion des ressources et des déchets.") + '</li></ul>' +
+    '<h3>Déroulé proposé</h3><ul class="clean"><li><b>Avant :</b> ' + esc("en classe, découverte de Zouzou et des équipes (15 min).") + '</li><li><b>Sur la plage :</b> ' + esc("les étapes en équipes, environ 5 minutes chacune (à mesurer ensemble).") + '</li><li><b>Après :</b> ' + esc("retour sur les questions « À débattre », et les bons gestes.") + '</li></ul>' +
+    C.etapes.filter(E => E.jeu && E.id <= JOUABLES).map(E => '<h3>Étape ' + E.id + ' · ' + esc(E.titre) + '</h3><p><b>Notion :</b> ' + esc(E.classe.notion) + '</p><p class="mots">' + E.classe.mots.map(m => '<span>' + esc(m) + '</span>').join("") + '</p><p><b>À débattre :</b> ' + esc(E.classe.q) + '</p><p><b>Corrigé de la question :</b> ' + esc(E.quiz.opts[E.quiz.ok]) + '. ' + esc(E.quiz.bravo) + '</p>').join("") +
+    '<h3>Dans l\'application complète</h3><ul class="clean">' + C.etapes.filter(E => E.id > JOUABLES).map(E => '<li><b>Étape ' + E.id + ' · ' + esc(E.titre) + ' :</b> ' + esc(E.apercu) + '</li>').join("") + '</ul>' +
     '<h3>Point de vigilance</h3><p>' + esc("Zouzou « parle » : c'est une convention de fiction, à expliciter avec les élèves. Une zourite ne parle pas et ne « comprend » pas ce qui arrive au récif.") + '</p>' +
-    '<h3>À définir ensemble</h3><ul class="clean"><li>' + esc("Les niveaux visés (vos animations vont du CE1 à la 6e) et le lien précis avec les programmes.") + '</li><li>' + esc("Le lieu, la durée, le rôle de l'enseignant pendant que l'animateur est dans le lagon.") + '</li></ul>' +
-    '<p class="src">Sources : R5 (guide des écogestes), R3 (mission de sensibilisation). Voir SOURCES.md.</p>' +
+    '<h3>À définir ensemble</h3><ul class="clean"><li>' + esc("Les niveaux visés en priorité (vos animations vont du CE1 à la 6e).") + '</li><li>' + esc("Le lieu, la durée, le rôle de l'enseignant pendant que l'animateur est dans le lagon.") + '</li></ul>' +
+    '<p class="src">Sources : R5 (guide des écogestes), R3 (mission de sensibilisation), programmes officiels E1 à E4. Voir SOURCES.md.</p>' +
     '<div class="rang-btn noprint">' + btn("🖨️ Imprimer", "print", "sec") + btn("← Retour au projet", "go", "sec", { r: "projet" }) + '</div></div>';
 
   // ===================== QR CODES (pour l'équipe) =====================
@@ -299,7 +301,7 @@
   }
 
   // ===================== BARRE DE PRÉSENTATION (?demo=1) =====================
-  const NOMS = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "La carte", st1: "Étape 1 · la plage", st2: "Étape 2 · le paddle", st3: "Étape 3 · le sac", findemo: "Fin de la démo", fiche: "Fiche enseignant", qr: "QR codes" };
+  const NOMS = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "La carte", st1: "Étape 1 · la plage", st2: "Étape 2 · le paddle", findemo: "Fin de la démo", fiche: "Fiche enseignant", qr: "QR codes" };
   const ETAPE = { brief: "mission", jeu: "jeu", quiz: "question", info: "indice" };
   function updatePresbar() {
     let p = document.getElementById("presbar");

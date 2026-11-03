@@ -8,9 +8,11 @@
    ============================================================ */
 (function () {
   "use strict";
-  // VERSION DÉMO : étapes 1 à 3 jouables, 4 et 5 présentées (verrouillées).
-  // Passer à true quand les étapes 4 et 5 existeront.
-  const CONFIG = { versionComplete: false, etapesJouables: 3, total: 5 };
+  // VERSION DÉMO : étapes 1 et 2 jouables (les deux mini-jeux les plus spectaculaires),
+  // 3, 4 et 5 présentées et verrouillées « Dans l'application complète ».
+  // (Le jeu de l'étape 3, « le sac de plage », existe dans games.js mais reste verrouillé.)
+  // Passer versionComplete à true quand toutes les étapes seront ouvertes.
+  const CONFIG = { versionComplete: false, etapesJouables: 2, total: 5 };
 
   // ---------- écran « Le projet » ----------
   const projet = {
@@ -20,7 +22,7 @@
     sous: "Une aventure sur téléphone, en complément de vos animations",
     idee: "Zouzou la zourite ne reconnaît plus son coin de récif. Familles et classes mènent l'enquête <b>depuis la plage, sans entrer dans l'eau</b>, et découvrent en jouant <b>les bons gestes de votre guide des écogestes</b>. On scanne un QR code : rien à télécharger, et ça marche <b>sans réseau</b>.",
     complete: [
-      ["🪸", "5 étapes au bord du lagon", "Aujourd'hui, vous en jouez trois.", "large"],
+      ["🪸", "5 étapes au bord du lagon", "Aujourd'hui, vous en jouez deux.", "large"],
       ["👨‍👩‍👧", "Familles et classes", "Le même jeu, un ton adapté à chacun"],
       ["🗣️", "Français, kréol, anglais", "Avec de vraies voix enregistrées"],
       ["📶", "Hors connexion", "Une fois ouverte, plus besoin de réseau"],
@@ -99,7 +101,8 @@
       indice: "Indice n° 3 : du pain pour les poissons, des épuisettes, de la crème qui file dans l'eau.",
       carte: "baliste",
       classe: { notion: "Relations entre les êtres vivants et leur milieu : se nourrir, se protéger.", mots: ["récif", "nourrissage", "crème minérale", "braconnage"], q: "Pourquoi un geste « gentil », comme nourrir un poisson, peut-il lui faire du mal ?" },
-      fin: { expr: "fete", t: "Un sac parfait ! Pas de pain, pas d'épuisette, pas de seau à coquillages : tu viens admirer sans déranger. Il reste deux étapes à l'enquête…" } },
+      fin: { expr: "fete", t: "Un sac parfait ! Pas de pain, pas d'épuisette, pas de seau à coquillages : tu viens admirer sans déranger. Il reste deux étapes à l'enquête…" },
+      apercu: "Préparer le sac idéal pour une journée au bord du lagon." },
 
     { id: 4, ico: "🟡", jeu: null, titre: "Visiter sans dépasser",
       lieu: "Face aux balises jaunes",
@@ -149,7 +152,7 @@
   // ---------- fin de la démo ----------
   const findemo = {
     suite: [
-      ["🟡", "2 autres étapes", "Les zones de quiétude, puis le récif de Zouzou"],
+      ["🎒", "3 autres étapes", "Le sac de plage, les zones de quiétude, puis le récif de Zouzou"],
       ["🕵️", "La grande révélation", "Qui a abîmé le coin de récif de Zouzou ? Un peu tout le monde, sans le vouloir…"],
       ["📒", "Le carnet du lagon complet", "Une carte par habitant du récif rencontré"],
       ["🏅", "Le diplôme de gardien du lagon", "À garder en image ou à imprimer"]
@@ -178,7 +181,6 @@
   const demo = [["projet"], ["accueil"], ["intro", "0"], ["intro", "2"], ["hub"],
     ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"],
     ["st2", "brief"], ["st2", "jeu"], ["st2", "quiz"], ["st2", "info"],
-    ["st3", "brief"], ["st3", "jeu"], ["st3", "quiz"], ["st3", "info"],
     ["findemo"], ["fiche"], ["qr"]];
 
   window.Content = { CONFIG, projet, accueil, publics, intro, etapes, plage, sac, cartes, findemo, gestes, credits, demo };

@@ -1,5 +1,5 @@
 /* Service worker : aventure en cache pour un usage HORS CONNEXION. Incrémenter VERSION à chaque livraison. */
-const VERSION = "reserve-marine-lagon-v2";
+const VERSION = "reserve-marine-lagon-v3";
 const FICHIERS = ["./", "index.html", "manifest.json", "css/style.css",
   "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/icons/icon-maskable-512.png", "assets/icons/apple-touch-icon-180.png",
   "js/storage.js", "js/audio.js", "js/qr.js", "js/art.js", "js/content.js", "js/games.js", "js/app.js"];
