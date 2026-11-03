@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Kourkoi — Snack, plats créoles et chinois à Saint-Joseph</title>
+<meta name="description" content="Snack à Saint-Joseph : américains, paninis, tacos, plats créoles et chinois à emporter. 219 rue Marcel Pagnol. Maquette offerte.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le Kourkoi — Snack à Saint-Joseph">
+<meta property="og:description" content="Américains, paninis, tacos, plats créoles et chinois du jour. 219 rue Marcel Pagnol.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-kourkoi/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-kourkoi/">
+<meta name="theme-color" content="#111111">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#111;--noir2:#1c1a17;--or:#e8b84a;--orange:#f08a1c;--creme:#f6efe1;--blanc:#fff;--gris:#b9b0a0;--tit:'Bowlby One',Impact,sans-serif;--txt:'Outfit',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--txt);background:var(--noir);color:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}.wrap{width:min(1100px,100% - 36px);margin-inline:auto}
+.ribbon{background:var(--or);color:#111;font-size:.78rem;text-align:center;padding:8px 14px;font-weight:600}
+.nav{position:sticky;top:0;z-index:40;background:rgba(17,17,17,.94);backdrop-filter:blur(8px);border-bottom:1px solid #2d2a25}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--tit);color:var(--or);font-size:1.25rem;text-decoration:none;letter-spacing:.02em}
+.logo i{color:var(--orange);font-style:normal}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:800;text-decoration:none;border-radius:10px;padding:13px 22px;min-height:48px;font-family:var(--txt);font-size:1rem;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn-or{background:var(--or);color:#111}.btn-wa{background:#25d366;color:#07301a}
+.btn-line{border:2px solid var(--or);color:var(--or)}
+.hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:-4%;background:url(img/poulet-oignons.jpg) center/cover;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-1.5%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.25),rgba(17,17,17,.88) 70%,#111)}
+#fx{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:110px 0 56px}
+.tag{display:inline-block;background:var(--orange);color:#111;font-weight:800;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:6px}
+h1{font-family:var(--tit);font-weight:400;font-size:clamp(2.8rem,12vw,6.2rem);line-height:.95;margin:16px 0 12px;color:var(--or);text-shadow:0 6px 28px rgba(0,0,0,.5)}
+h1 span{display:block;color:#fff;font-size:.42em;letter-spacing:.04em;margin-top:8px}
+.lead{max-width:36ch;font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.up>*{opacity:0;transform:translateY(22px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards}.up>*:nth-child(2){animation-delay:.15s}.up>*:nth-child(3){animation-delay:.3s}.up>*:nth-child(4){animation-delay:.45s}.up>*:nth-child(5){animation-delay:.6s}
+@keyframes up{to{opacity:1;transform:none}}
+.mq{background:var(--orange);color:#111;overflow:hidden;white-space:nowrap;font-family:var(--tit);font-size:1rem;padding:12px 0}
+.mq .tr{display:inline-flex;gap:30px;animation:mq 34s linear infinite;padding-left:30px}.mq span::after{content:"•";margin-left:30px}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:72px 0}
+.eb{color:var(--orange);font-weight:800;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase}
+h2{font-family:var(--tit);font-weight:400;font-size:clamp(1.8rem,6vw,2.9rem);line-height:1.05;margin:8px 0 14px;color:var(--or)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+.jour .g{display:grid;gap:28px;align-items:center}@media(min-width:820px){.jour .g{grid-template-columns:1.1fr .9fr}}
+.post{background:var(--noir2);border:1px solid #302c26;border-radius:16px;padding:22px}
+.post small{color:var(--gris);display:block;margin-bottom:10px}
+.post ul{list-style:none;display:grid;gap:7px}.post li{padding-left:22px;position:relative}.post li::before{content:"";position:absolute;left:0;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.post h3{color:var(--or);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:14px 0 8px}
+.ph{border-radius:16px;overflow:hidden;position:relative}.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1s}.ph:hover img{transform:scale(1.05)}
+.ph figcaption{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.75);font-size:.78rem;font-weight:600;padding:5px 10px;border-radius:99px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.gal .ph{aspect-ratio:1/1}@media(min-width:820px){.gal{grid-template-columns:repeat(4,1fr)}}
+.carte{background:var(--creme);color:#111}.carte h2{color:#111}.carte .eb{color:#b4580a}
+.cg{display:grid;gap:26px;align-items:start}@media(min-width:900px){.cg{grid-template-columns:.8fr 1.2fr}}
+.cg img{border-radius:14px;box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.lst{display:grid;gap:18px}.bloc{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 14px 30px -22px rgba(0,0,0,.5)}
+.bloc h3{font-family:var(--tit);font-weight:400;font-size:1.15rem;margin-bottom:8px;color:#b4580a}
+.bloc li{list-style:none;display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed #e5d9c0;padding:6px 0}.bloc li b{color:#111;white-space:nowrap}.bloc li span em{display:block;font-style:normal;font-size:.8rem;color:#6a6157}
+.bloc p{font-size:.88rem;color:#6a6157;margin-top:8px}
+.trois{display:grid;gap:16px;margin-top:26px}@media(min-width:760px){.trois{grid-template-columns:repeat(3,1fr)}}
+.trois div{border:1px solid #3a352d;border-radius:14px;padding:20px;background:var(--noir2);transition:transform .3s,border-color .3s}.trois div:hover{transform:translateY(-4px);border-color:var(--or)}
+.trois b{display:block;font-family:var(--tit);font-weight:400;color:var(--or);font-size:1.35rem;margin-bottom:6px}
+.resa{background:var(--noir2)}
+.form{background:#171513;border:1px solid #38332b;border-radius:16px;padding:22px;margin-top:20px;display:grid;gap:16px}
+.form label{display:block;font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--or);margin-bottom:7px}
+.pick{display:flex;flex-wrap:wrap;gap:8px}.pick button{font:inherit;font-weight:600;border-radius:99px;border:1.5px solid #5a5347;background:transparent;color:#fff;padding:9px 14px;min-height:42px;cursor:pointer}
+.pick button[aria-pressed=true]{background:var(--or);color:#111;border-color:var(--or)}
+.form input{width:100%;font:inherit;padding:12px 14px;border-radius:10px;border:0;min-height:48px}
+.form .btn{width:100%}.small{font-size:.84rem;color:var(--gris)}
+.infos .g{display:grid;gap:18px;margin-top:20px}@media(min-width:820px){.infos .g{grid-template-columns:1fr 1fr}}
+.card{background:var(--noir2);border:1px solid #302c26;border-radius:16px;padding:22px}.card h3{color:var(--or);margin-bottom:8px}
+a.lk{color:var(--or);font-weight:800}
+footer{padding:36px 0 100px;text-align:center;font-size:.86rem;color:var(--gris);border-top:1px solid #2d2a25}
+.fab{position:fixed;right:14px;bottom:14px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.6)}.fab svg{width:30px;height:30px;fill:#fff}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.up>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — imaginée avec plaisir pour Le Kourkoi</div>
+<nav class="nav"><div class="wrap"><a class="logo" href="#top">LE <i>KOURKOI</i></a><a class="btn btn-wa" style="padding:8px 16px;min-height:40px" href="#reserver">Commander</a></div></nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg" role="img" aria-label="Poulet sauté aux oignons verts, photo publiée par Le Kourkoi"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="wrap up">
+    <span class="tag">Snack · Saint-Joseph</span>
+    <h1>Le Kourkoi<span>Américains, tacos, plats créoles et chinois</span></h1>
+    <p class="lead">Le snack où l'on trouve tout : un sandwich chaud pour la route, ou le plat du jour à emporter, fait pour satisfaire tout le monde.</p>
+    <div class="cta">
+      <a class="btn btn-wa" href="https://wa.me/262693056549?text=Bonjour%20Le%20Kourkoi%20!">Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262693056549">Appeler 0693 05 65 49</a>
+    </div>
+  </div>
+</header>
+
+<div class="mq" aria-hidden="true"><div class="tr" id="mq"><span>Américains</span><span>Paninis</span><span>Tacos</span><span>Salades</span><span>Riz cantonais</span><span>Poulet croustillant</span><span>Rougail tomates</span><span>Bières pression</span></div></div>
+
+<section class="jour"><div class="wrap g">
+  <div class="reveal">
+    <span class="eb">Chaque matin sur Facebook</span>
+    <h2>Le plat du jour, <br>de la marmite à l'emporter</h2>
+    <p>Chaque jour, Le Kourkoi publie son menu : plusieurs plats au choix, riz, pois du cap, rougail. Un exemple publié le lundi 2 novembre :</p>
+    <div class="post" style="margin-top:18px">
+      <small>Menu du lundi 2 novembre, publié par Le Kourkoi</small>
+      <ul><li>Riz cantonais</li><li>Poulet croustillant</li><li>Rôti de porc pommes de terre</li><li>Poulet sauce huître</li><li>Sauté mine poulet</li><li>Steak de porc aux champignons</li></ul>
+      <h3>Pour accompagner</h3>
+      <ul><li>Riz</li><li>Pois du cap</li><li>Rougail tomates</li></ul>
+      <p style="margin-top:14px;color:var(--or);font-weight:800">« De quoi satisfaire tout le monde ! »</p>
+    </div>
+  </div>
+  <figure class="ph reveal" style="aspect-ratio:4/5"><img src="img/braise-pommes.jpg" alt="Viande braisée aux pommes de terre et persil" loading="lazy"><figcaption>Photo publiée par Le Kourkoi</figcaption></figure>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="reveal"><span class="eb">Tout droit de la cuisine</span><h2>Généreux, parfumé, <br>bien garni</h2></div>
+  <div class="gal">
+    <figure class="ph reveal"><img src="img/poulet-oignons.jpg" alt="Poulet sauté aux oignons verts" loading="lazy"><figcaption>Poulet aux oignons verts</figcaption></figure>
+    <figure class="ph reveal"><img src="img/nouilles.jpg" alt="Nouilles sautées au bœuf et légumes" loading="lazy"><figcaption>Mine sautée</figcaption></figure>
+    <figure class="ph reveal"><img src="img/viande-herbes.jpg" alt="Viande mijotée aux herbes fraîches" loading="lazy"><figcaption>Mijoté aux herbes</figcaption></figure>
+    <figure class="ph reveal"><img src="img/riz-cantonais.jpg" alt="Riz cantonais" loading="lazy"><figcaption>Riz cantonais</figcaption></figure>
+  </div>
+  <div class="trois">
+    <div class="reveal"><b>Snack</b>Américains, parisiens, paninis, tacos et salades.</div>
+    <div class="reveal"><b>Créole et chinois</b>Des repas à emporter, un menu différent à chaque service.</div>
+    <div class="reveal"><b>Bar</b>Bières pression, bières variées et panachés.</div>
+  </div>
+</div></section>
+
+<section class="carte" id="carte"><div class="wrap cg">
+  <figure class="reveal"><img src="img/carte.jpg" alt="Carte des sandwichs du Kourkoi" loading="lazy"></figure>
+  <div class="reveal"><span class="eb">La carte du snack</span><h2>Sandwichs, spécialités <br>et tacos</h2>
+    <div class="lst">
+      <div class="bloc"><h3>Américains</h3><ul><li><span>Jambon</span><b>3,50 €</b></li><li><span>Poulet, merguez, steak, hot dog, bouchons</span><b>5,00 €</b></li><li><span>Saucisses</span><b>5,80 €</b></li></ul><p>Supplément viande : 1,00 €</p></div>
+      <div class="bloc"><h3>Spécialités</h3><ul><li><span>Le Kourkoi<em>Américain jambon + 3 viandes</em></span><b>7,50 €</b></li><li><span>Le Vip<em>Américain jambon + 2 viandes</em></span><b>6,30 €</b></li></ul></div>
+      <div class="bloc"><h3>Tacos</h3><ul><li><span>Taille S : poulet, merguez, steak, cordon bleu, nuggets…</span><b>8,00 €</b></li><li><span>Taille XL</span><b>13,00 €</b></li></ul></div>
+      <div class="bloc"><h3>Menu enfant</h3><ul><li><span>Un menu pour les petits</span><b>4,50 €</b></li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="resa" id="reserver"><div class="wrap">
+  <div class="reveal"><span class="eb">Réserver sur place ou à emporter</span><h2>Votre part, <br>prête à votre passage</h2><p class="small">Choisissez, le message part tout prêt sur WhatsApp. Le Kourkoi accepte aussi les SMS et les appels.</p></div>
+  <form class="form reveal" onsubmit="return false">
+    <div><label>Votre envie</label><div class="pick" id="pick"><button type="button" aria-pressed="true">Plat du jour</button><button type="button" aria-pressed="false">Américain</button><button type="button" aria-pressed="false">Panini</button><button type="button" aria-pressed="false">Tacos</button><button type="button" aria-pressed="false">Salade</button></div></div>
+    <div><label for="nom">Votre prénom</label><input id="nom" placeholder="Votre prénom" autocomplete="given-name"></div>
+    <div><label for="h">Passage vers</label><input id="h" type="time" value="12:00"></div>
+    <a class="btn btn-wa" id="send" href="https://wa.me/262693056549" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+  </form>
+</div></section>
+
+<section class="infos"><div class="wrap">
+  <div class="reveal"><span class="eb">Passer nous voir</span><h2>219 rue Marcel Pagnol, <br>Saint-Joseph</h2></div>
+  <div class="g">
+    <div class="card reveal"><h3>Contact</h3><p>Téléphone ou SMS : <a class="lk" href="tel:+262693056549">0693 05 65 49</a></p><p style="margin-top:10px"><a class="lk" href="https://www.facebook.com/le.kourkoi/" target="_blank" rel="noopener">Page Facebook →</a></p></div>
+    <div class="card reveal"><h3>Le Kourkoi, c'est</h3><p>Un snack de sandwichs chauds et froids, des repas créoles et chinois à emporter et un bar convivial. Plus de 1,7 K abonnés suivent le menu du jour.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Kourkoi. Horaires à compléter avec vous.</div></footer>
+<a class="fab" href="https://wa.me/262693056549" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-1.6-.5-3.5-1.7-4.9-3.4-1-1.2-1.6-2.6-1.7-3.3-.2-1.3.6-2 .9-2.3.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4Z"/></svg></a>
+<script>
+(()=>{const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mq=document.getElementById('mq');mq.innerHTML+=mq.innerHTML;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>RM?el.classList.add('in'):io.observe(el));
+const pick=document.getElementById('pick'),send=document.getElementById('send');
+function upd(){const c=pick.querySelector('[aria-pressed=true]').textContent,n=document.getElementById('nom').value.trim(),h=document.getElementById('h').value.replace(':','h');
+send.href='https://wa.me/262693056549?text='+encodeURIComponent('Bonjour Le Kourkoi ! '+(n?'Ici '+n+'. ':'')+'Je voudrais commander : '+c+', pour un passage vers '+h+'. Merci !')}
+pick.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;pick.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));upd()});
+['nom','h'].forEach(i=>document.getElementById(i).addEventListener('input',upd));upd();
+if(RM)return;
+// braises et vapeur qui montent
+const c=document.getElementById('fx'),x=c.getContext('2d');let W,H,P=[],run=true;
+function size(){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+function mk(i){return{x:Math.random()*W,y:i?Math.random()*H:H+20,r:1.5+Math.random()*3,v:.35+Math.random()*.8,s:Math.random()*6.28,a:.3+Math.random()*.5}}
+size();for(let i=0;i<40;i++)P.push(mk(1));addEventListener('resize',size);
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(loop)});
+function loop(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.s+=.02;const px=p.x+Math.sin(p.s)*14,f=Math.min(1,p.y/(H*.6));
+x.fillStyle='rgba(240,138,28,'+(p.a*f)+')';x.beginPath();x.arc(px,p.y,p.r,0,6.28);x.fill();if(p.y<0)Object.assign(p,mk(0))}requestAnimationFrame(loop)}
+requestAnimationFrame(loop)})();
+</script>
+</body></html>
