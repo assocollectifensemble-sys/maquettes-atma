@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Laeti Traiteur 974 — Traiteur à l'Entre-Deux</title>
+<meta name="description" content="Le menu du jour de Laeti Traiteur, livraison à domicile, et vos mariages, anniversaires et événements à l'Entre-Deux.">
+<meta property="og:title" content="Laeti Traiteur 974 — une page imaginée pour vous">
+<meta property="og:description" content="Le menu du jour, la livraison à domicile et vos événements : mariages, anniversaires, réceptions.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/laeti-traiteur-974/img/banniere.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/laeti-traiteur-974/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0b09;--noir2:#17130f;--or:#d4af37;--or2:#f1d58a;--or3:#9c7b22;--creme:#f4ecdc;--gris:#b9ad98;--piment:#c0392b;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--noir);color:var(--creme);font:400 16px/1.6 Outfit,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{position:relative;z-index:5;background:linear-gradient(90deg,var(--or3),var(--or),var(--or3));color:#1a1408;text-align:center;font-size:.8rem;padding:.5rem 1rem;letter-spacing:.02em}
+canvas#vapeur{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.1;color:var(--or2)}
+.or{background:linear-gradient(100deg,var(--or3),var(--or2) 40%,var(--or) 60%,var(--or3));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:brille 7s ease-in-out infinite}
+@keyframes brille{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.kicker{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+/* hero */
+.hero{padding:2.2rem 0 3rem;text-align:center}
+.cadre{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 80px -30px rgba(212,175,55,.35),0 0 0 1px rgba(212,175,55,.35);margin:1.4rem auto 0;max-width:900px}
+.cadre img{width:100%;height:auto;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.07)}}
+.hero h1{font-size:clamp(2.6rem,9vw,4.6rem);margin-top:.6rem}
+.hero p.sous{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.3rem;color:var(--gris);margin-top:.4rem}
+.puces{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-top:1.2rem}
+.puces span{white-space:nowrap;border:1px solid rgba(212,175,55,.45);border-radius:99px;padding:.3rem .85rem;font-size:.85rem;color:var(--or2)}
+.cta{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:99px;background:linear-gradient(135deg,var(--or2),var(--or));color:#1a1408;font-weight:600;text-decoration:none;margin-top:1.6rem;animation:respire 3.2s ease-in-out infinite;border:0;cursor:pointer;font-family:inherit;font-size:1rem}
+.cta.ghost{background:transparent;color:var(--or2);border:1px solid var(--or);animation:none}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.45)}50%{box-shadow:0 0 0 12px rgba(212,175,55,0)}}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+/* sections */
+section{padding:3.5rem 0}
+.titre{text-align:center;margin-bottom:2rem}
+.titre h2{font-size:clamp(2rem,6vw,3rem);margin-top:.4rem}
+.titre p{color:var(--gris);max-width:560px;margin:.6rem auto 0}
+.orne{display:block;width:120px;height:14px;margin:.8rem auto 0}
+/* ardoise */
+.ardoise{background:radial-gradient(120% 90% at 50% 0,#211b14,var(--noir2));border:1px solid rgba(212,175,55,.35);border-radius:22px;padding:1.6rem 1.2rem;max-width:720px;margin:0 auto;position:relative}
+.onglets{display:flex;gap:.5rem;justify-content:center;margin-bottom:1.3rem;flex-wrap:wrap}
+.onglets button{min-height:44px;background:transparent;border:1px solid rgba(212,175,55,.4);color:var(--gris);border-radius:99px;padding:.4rem 1rem;font:500 .9rem Outfit,sans-serif;cursor:pointer;transition:.25s}
+.onglets button[aria-selected=true]{background:var(--or);color:#1a1408;border-color:var(--or)}
+.plat{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:.8rem;padding:.85rem .2rem;border-bottom:1px dashed rgba(212,175,55,.25)}
+.plat:last-of-type{border-bottom:0}
+.plat .n{font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--creme);line-height:1.2}
+.plat .n small{display:block;font:300 .85rem Outfit,sans-serif;color:var(--gris)}
+.plat .p{color:var(--or2);font-weight:600;white-space:nowrap}
+.qte{display:flex;align-items:center;gap:.3rem}
+.qte button{width:36px;height:36px;border-radius:50%;border:1px solid var(--or);background:transparent;color:var(--or2);font-size:1.1rem;cursor:pointer}
+.qte output{min-width:1.2rem;text-align:center}
+.sep{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin:1.2rem 0 .2rem}
+.infos{display:grid;gap:.4rem;margin-top:1.2rem;font-size:.92rem;color:var(--gris)}
+.infos b{color:var(--creme);font-weight:500}
+.panier{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(212,175,55,.35);text-align:center}
+.panier .tot{font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--or2)}
+.note{font-size:.8rem;color:var(--gris);margin-top:.6rem}
+/* evenements */
+.evt{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:820px){.evt{grid-template-columns:1.1fr 1fr}}
+.evt figure{border-radius:var(--r);overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(212,175,55,.3)}
+.evt figure img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s}
+.evt figure:hover img{transform:scale(1.05)}
+figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .9rem .6rem;font-size:.78rem;color:var(--creme);background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.liste{list-style:none;display:grid;gap:.7rem;margin-top:1rem}
+.liste li{display:flex;gap:.8rem;align-items:baseline;font-size:1.05rem}
+.liste li:before{content:"";flex:0 0 8px;height:8px;transform:rotate(45deg) translateY(-2px);background:var(--or)}
+/* contact */
+.contact{text-align:center;background:linear-gradient(180deg,transparent,rgba(212,175,55,.07));border-top:1px solid rgba(212,175,55,.25)}
+.contact .tel{font-family:"Cormorant Garamond",serif;font-size:clamp(2.1rem,8vw,3.2rem);text-decoration:none;display:inline-block;margin-top:.6rem}
+.contact p{color:var(--gris)}
+footer{text-align:center;padding:2rem 1.2rem 2.6rem;font-size:.8rem;color:#8a7f6c}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Laeti Traiteur 974</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero wrap">
+  <p class="kicker rv">Traiteur · Événementiel · Entre-Deux</p>
+  <h1 class="rv"><span class="or">Laeti Traiteur</span></h1>
+  <p class="sous rv">Un menu gourmand et généreux, chaque jour, livré chez vous</p>
+  <div class="cadre rv"><img src="img/banniere.jpg" alt="Les plats de Laeti Traiteur autour du logo doré" width="1400" height="933"></div>
+  <div class="puces rv"><span>Mariages</span><span>Anniversaires</span><span>Événements privés &amp; professionnels</span></div>
+  <div class="ctas rv"><a class="cta" href="#menu">Voir le menu du jour</a><a class="cta ghost" href="tel:+262693001539">Appeler Laeti</a></div>
+</header>
+
+<section id="menu">
+ <div class="wrap">
+  <div class="titre rv"><p class="kicker">Publié chaque veille sur Facebook</p><h2>Le menu du jour</h2>
+   <svg class="orne" viewBox="0 0 120 14" aria-hidden="true"><path d="M0 7h46M74 7h46" stroke="#d4af37" stroke-width="1"/><path d="M60 1l6 6-6 6-6-6z" fill="none" stroke="#d4af37"/></svg>
+   <p>Composez votre commande : elle part toute prête sur le WhatsApp de Laeti.</p></div>
+  <div class="ardoise rv">
+   <div class="onglets" role="tablist">
+    <button role="tab" aria-selected="false" data-j="mar">Mardi 3 novembre</button>
+    <button role="tab" aria-selected="true" data-j="mer">Mercredi 4 novembre</button>
+   </div>
+   <div id="plats"></div>
+   <div class="infos">
+    <div><b>Boissons :</b> coca, sambo, thé pêche, Caprisonne</div>
+    <div><b>Et toujours :</b> le rougail piments</div>
+    <div><b>Livraison à domicile</b> · pensez à réserver !</div>
+   </div>
+   <div class="panier">
+    <div class="tot" id="tot">Votre commande : 0 €</div>
+    <button class="cta" id="envoyer" type="button">Commander sur WhatsApp</button>
+    <p class="note">Exemples tirés des menus publiés les 2 et 3 novembre 2026. Sur la vraie page, le menu se met à jour chaque jour.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="evenements">
+ <div class="wrap evt">
+  <figure class="rv"><img src="img/salle.jpg" alt="Salle de réception décorée de ballons violets et roses, lumières mauves" width="1400" height="647" loading="lazy"><figcaption>Une soirée récente, partagée sur la page de Laeti Traiteur</figcaption></figure>
+  <div class="rv">
+   <p class="kicker">Traiteur – Événementiel</p>
+   <h2 style="font-size:clamp(2rem,6vw,2.8rem);margin-top:.4rem">Vos grands moments, à table</h2>
+   <ul class="liste"><li>Mariages</li><li>Anniversaires</li><li>Événements privés</li><li>Événements professionnels</li></ul>
+   <a class="cta" href="mailto:laetitraiteur974@gmail.com?subject=Demande%20pour%20un%20%C3%A9v%C3%A9nement">Parler de mon événement</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap rv">
+  <p class="kicker">Commandes &amp; réservations</p>
+  <a class="tel or" href="tel:+262693001539">0693 00 15 39</a>
+  <p style="margin-top:.6rem"><a href="mailto:laetitraiteur974@gmail.com">laetitraiteur974@gmail.com</a></p>
+  <p style="margin-top:.3rem">Entre-Deux, La Réunion · livraison à domicile</p>
+  <div class="ctas"><a class="cta ghost" href="https://www.facebook.com/people/Laeti-Traiteur-974/61585452436834/">Suivre le menu sur Facebook</a></div>
+ </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Laeti Traiteur 974.</footer>
+<script>
+const M={mar:[["Sauté boucané brède",8],["Civet poulet fumé",8],["Carry poisson",8]],
+mer:[["Sauté mines",8],["Porc à la bière",8],["Sauce camarons",8]]};
+const A=[["Assiette de Laeti","frites, salade, sarcive porc ou poulet",12.5],["Assiette de Laeti","pavé de saumon, frites, salade",13.5]];
+let jour="mer",q={};
+const eur=n=>n.toFixed(2).replace(".",",").replace(",00","")+" €";
+function rendu(){const el=document.getElementById("plats");let h="";
+ const L=M[jour].map(p=>[p[0],"",p[1]]);
+ L.forEach((p,i)=>h+=ligne(p,"p"+i));h+='<p class="sep">L\u2019assiette de Laeti</p>';A.forEach((p,i)=>h+=ligne(p,"a"+i));
+ el.innerHTML=h;el.querySelectorAll("[data-k]").forEach(b=>b.onclick=()=>{const k=b.dataset.k;q[k]=Math.max(0,(q[k]||0)+(+b.dataset.d));rendu()});tot()}
+function ligne(p,k){const id=jour+k;return `<div class="plat"><div class="n">${p[0]}${p[1]?`<small>${p[1]}</small>`:""}</div><div class="p">${eur(p[2])}</div><div class="qte"><button type="button" aria-label="moins" data-k="${id}" data-d="-1">−</button><output>${q[id]||0}</output><button type="button" aria-label="plus" data-k="${id}" data-d="1">+</button></div></div>`}
+function items(){const r=[];M[jour].forEach((p,i)=>{const n=q[jour+"p"+i];if(n)r.push([n,p[0],p[1]])});A.forEach((p,i)=>{const n=q[jour+"a"+i];if(n)r.push([n,p[0]+" ("+p[1]+")",p[2]])});return r}
+function tot(){const s=items().reduce((a,b)=>a+b[0]*b[2],0);document.getElementById("tot").textContent="Votre commande : "+eur(s)}
+document.querySelectorAll(".onglets button").forEach(b=>b.onclick=()=>{jour=b.dataset.j;document.querySelectorAll(".onglets button").forEach(x=>x.setAttribute("aria-selected",x===b));rendu()});
+document.getElementById("envoyer").onclick=()=>{const r=items();const t=r.length?"Bonjour Laeti ! Je voudrais commander :\n"+r.map(x=>"- "+x[0]+" × "+x[1]).join("\n")+"\nMerci !":"Bonjour Laeti ! Quel est le menu du jour ?";location.href="https://wa.me/262693001539?text="+encodeURIComponent(t)};
+rendu();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("vu");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(x=>io.observe(x));
+// vapeur dorée
+(()=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const c=document.getElementById("vapeur"),x=c.getContext("2d");let W,H,P=[];
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener("resize",sz);
+function n(){return{x:Math.random()*W,y:H+Math.random()*H*.5,r:20+Math.random()*50,v:.25+Math.random()*.45,a:0,o:.04+Math.random()*.06,s:Math.random()*6.28,g:Math.random()<.35}}
+for(let i=0;i<26;i++){const p=n();p.y=Math.random()*H;P.push(p)}
+function f(){if(document.hidden){requestAnimationFrame(f);return}x.clearRect(0,0,W,H);
+P.forEach((p,i)=>{p.y-=p.v;p.s+=.01;p.x+=Math.sin(p.s)*.35;const life=Math.min(1,(H-p.y)/(H*.3));
+if(p.g){x.fillStyle=`rgba(241,213,138,${.5*life*(p.y/H)})`;x.beginPath();x.arc(p.x,p.y,1.4,0,6.28);x.fill()}
+else{const gr=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);gr.addColorStop(0,`rgba(244,236,220,${p.o*(p.y/H)})`);gr.addColorStop(1,"rgba(244,236,220,0)");x.fillStyle=gr;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+if(p.y<-60)P[i]=n()});requestAnimationFrame(f)}f()})();
+</script>
+</body>
+</html>
