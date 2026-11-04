@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kanteen · Snack créole à Sainte-Marie</title>
+<meta name="description" content="Kanteen, 38 chemin 23 à Sainte-Marie : le poulet croustillant et un menu créole qui change chaque semaine, du lundi au samedi de 10h à 14h.">
+<meta property="og:title" content="Kanteen · Snack créole à Sainte-Marie">
+<meta property="og:description" content="Une page imaginée pour Kanteen, avec votre menu de la semaine.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/kanteen-sainte-marie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#f29a1f;--orange-f:#d97a06;--noir:#17130f;--creme:#fff8ee;--sable:#f6e7cf;--vert:#2f6b3a;--doux:#6e6253}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",system-ui,sans-serif;background:var(--creme);color:var(--noir);line-height:1.6;overflow-x:hidden}
+.ruban{background:var(--noir);color:#f3e6d2;font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--orange)}
+.wrap{width:min(1120px,92vw);margin:auto}
+.wrap>*{min-width:0}
+.hero{background:var(--orange);color:var(--noir);position:relative;overflow:hidden;padding:clamp(3rem,9vh,6rem) 0 clamp(4rem,11vh,7rem)}
+.hero .wrap{position:relative;z-index:2}
+.logo{font-family:Pacifico,cursive;font-size:clamp(4rem,15vw,9.5rem);line-height:1.1;color:#fff;text-shadow:4px 4px 0 var(--noir)}
+.tag{font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.85rem}
+.hero h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(2.2rem,6.5vw,4.6rem);line-height:1;text-transform:uppercase;margin:1rem 0 1.2rem;max-width:14ch}
+.hero p.lead{font-size:1.15rem;max-width:40ch;font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:50px;padding:.85rem 1.6rem;border-radius:12px;text-decoration:none;font-weight:700;transition:transform .2s,box-shadow .2s}
+.btn.noir{background:var(--noir);color:#fff;box-shadow:4px 4px 0 #fff}
+.btn.noir:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #fff}
+.btn.blanc{background:#fff;color:var(--noir);box-shadow:4px 4px 0 var(--noir)}
+.btn.blanc:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--noir)}
+.miettes{position:absolute;inset:0;z-index:1;pointer-events:none}
+.miettes i{position:absolute;bottom:-20px;width:var(--s);height:var(--s);border-radius:40% 55% 45% 60%;background:rgba(255,255,255,.35);animation:saute var(--d) ease-in infinite;animation-delay:var(--t)}
+@keyframes saute{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:1}100%{transform:translateY(-110vh) rotate(260deg);opacity:0}}
+.horaires{background:var(--noir);color:#fff;font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:.05em;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-size:1.25rem}
+.horaires div{display:inline-block;animation:defile 30s linear infinite}
+.horaires span{margin:0 1.4rem}.horaires span::after{content:"●";color:var(--orange);margin-left:2.8rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+.bloc{padding:clamp(4rem,12vh,8rem) 0}
+.titre{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(2.2rem,6vw,4rem);line-height:1;margin-bottom:.8rem}
+.titre em{font-style:normal;color:var(--orange-f)}
+.chapo{color:var(--doux);font-size:1.08rem;max-width:58ch}
+.semaine-de{display:inline-block;background:var(--sable);border-radius:99px;padding:.35rem 1rem;font-weight:600;font-size:.9rem;margin:1rem 0 1.6rem}
+.jours{display:flex;flex-wrap:wrap;gap:.4rem}
+.jours button{flex:none;font:inherit;font-weight:700;text-transform:uppercase;font-size:.85rem;letter-spacing:.06em;border:2px solid var(--noir);background:#fff;color:var(--noir);border-radius:10px;padding:.6rem 1rem;min-height:46px;cursor:pointer;transition:.2s}
+.jours button[aria-selected=true]{background:var(--noir);color:var(--orange)}
+.ardoise{margin-top:1.2rem;background:var(--noir);color:#fff;border-radius:22px;padding:clamp(1.4rem,4vw,2.6rem);box-shadow:10px 10px 0 var(--orange)}
+.ardoise h3{font-family:Pacifico,cursive;font-weight:400;color:var(--orange);font-size:2rem;margin-bottom:1rem}
+.ligne{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.85rem 0;border-bottom:1px dashed rgba(255,255,255,.22);opacity:0;transform:translateX(-12px);animation:entre .45s forwards}
+.ligne:last-child{border:0}
+.ligne b{font-weight:500;font-size:1.12rem}
+.ligne .p{font-family:Anton,sans-serif;font-size:1.5rem;color:var(--orange);white-space:nowrap}
+.ligne.star b::after{content:"La spécialité";margin-left:.6rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;background:var(--orange);color:var(--noir);border-radius:99px;padding:.15rem .5rem;vertical-align:middle;font-weight:700}
+@keyframes entre{to{opacity:1;transform:none}}
+.ferme{padding:1.5rem 0;font-size:1.1rem;color:#f3e6d2}
+.reserve{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.reserve small{color:var(--doux);font-size:.95rem}
+.croustillant{background:var(--sable)}
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+.grid2>*{min-width:0}
+.formes{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.forme{background:#fff;border:2px solid var(--noir);border-radius:18px;padding:1.4rem;transition:transform .25s,background .25s}
+.forme:hover{transform:rotate(-1.5deg) translateY(-4px);background:var(--orange)}
+.forme strong{font-family:Anton,sans-serif;font-weight:400;font-size:1.6rem;text-transform:uppercase;display:block}
+.forme span{color:var(--doux);font-size:.92rem}
+.forme:hover span{color:var(--noir)}
+.chiffres{display:flex;flex-wrap:wrap;gap:2.4rem;margin-top:2rem}
+.chiffres div{font-family:Anton,sans-serif;font-size:2.6rem;line-height:1}
+.chiffres small{display:block;font-family:"Work Sans",sans-serif;font-size:.85rem;color:var(--doux);margin-top:.3rem}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.infos h3{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:1.5rem;color:var(--orange-f);margin-bottom:.3rem}
+.infos a{color:var(--noir);overflow-wrap:anywhere}
+footer{text-align:center;font-size:.85rem;color:var(--doux);padding:2.5rem 1rem 3.5rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){.grid2,.infos{grid-template-columns:1fr}.formes{grid-template-columns:1fr 1fr}.hero h1{max-width:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.ligne{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+
+<header class="hero">
+ <div class="miettes" aria-hidden="true" id="miettes"></div>
+ <div class="wrap">
+  <p class="tag rv">Snack gourmet créole · Sainte-Marie</p>
+  <div class="logo rv">Kanteen</div>
+  <h1 class="rv">Le poulet croustillant, chaque jour de la semaine</h1>
+  <p class="lead rv">Un menu créole qui change chaque semaine, au 38 chemin 23. Ouvert du lundi au samedi, de 10h à 14h.</p>
+  <div class="btns rv">
+   <a class="btn noir" href="tel:+262693318209">Réserver au 0693 318 209</a>
+   <a class="btn blanc" href="#menu">Voir le menu du jour</a>
+  </div>
+ </div>
+</header>
+
+<div class="horaires" aria-hidden="true"><div>
+ <span>Lundi → samedi</span><span>10h – 14h</span><span>Réservation dès 9h</span><span>38 chemin 23, Sainte-Marie</span><span>Aussi sur Uber Eats</span>
+ <span>Lundi → samedi</span><span>10h – 14h</span><span>Réservation dès 9h</span><span>38 chemin 23, Sainte-Marie</span><span>Aussi sur Uber Eats</span>
+</div></div>
+
+<section class="bloc" id="menu">
+ <div class="wrap">
+  <h2 class="titre rv">Le menu de <em>la semaine</em></h2>
+  <p class="chapo rv">Quatre plats par jour, et le poulet croustillant toujours au rendez-vous.</p>
+  <span class="semaine-de rv">Du lundi 2 au samedi 7 novembre 2026</span>
+  <div class="jours rv" role="tablist" id="jours"></div>
+  <div class="ardoise rv" id="ardoise" aria-live="polite"></div>
+  <div class="reserve rv"><a class="btn noir" href="tel:+262693318209" style="box-shadow:4px 4px 0 var(--orange)">Réserver mon plat</a><small>Par téléphone dès 9h, à emporter de 10h à 14h.</small></div>
+ </div>
+</section>
+
+<section class="bloc croustillant">
+ <div class="wrap grid2">
+  <div class="rv">
+   <h2 class="titre">Le croustillant, <em>à toutes les sauces</em></h2>
+   <p class="chapo">La spécialité de la maison se décline : en apéro, en plat créole, en salade ou en burger.</p>
+   <div class="chiffres">
+    <div>4,8 K<small>abonnés sur Facebook</small></div>
+    <div>96 %<small>recommandent Kanteen</small></div>
+   </div>
+  </div>
+  <div class="formes rv">
+   <div class="forme"><strong>Apéro</strong><span>au poulet croustillant</span></div>
+   <div class="forme"><strong>Plat créole</strong><span>au poulet croustillant</span></div>
+   <div class="forme"><strong>Salade</strong><span>au poulet croustillant</span></div>
+   <div class="forme"><strong>Burger</strong><span>au poulet croustillant</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap infos">
+  <div class="rv"><h3>Où</h3><p>38 chemin 23<br>Sainte-Marie, La Réunion</p></div>
+  <div class="rv"><h3>Quand</h3><p>Lundi au samedi, 10h – 14h<br>Réservation dès 9h</p></div>
+  <div class="rv"><h3>Contact</h3><p><a href="tel:+262693318209">0693 318 209</a><br><a href="mailto:snack.kanteen@gmail.com">snack.kanteen@gmail.com</a><br><a href="https://www.facebook.com/snack.kanteen/" target="_blank" rel="noopener">Facebook · Kanteen</a></p></div>
+ </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Kanteen.</footer>
+
+<script>
+(()=>{
+const M={
+ "Lundi":[["Bol renversé poulet",10],["Sauté poulet",9],["Riz sofé + poulet croustillant sauté, salade",9],["Poulet rôti",8]],
+ "Mardi":[["Massalé poulet",8],["Sauté poulet aigre-doux",9],["Gratin de légumes + poulet croustillant",10],["Poulet croustillant",8,1]],
+ "Mercredi":[["Sauté mines poulet",8],["Cari poulet palmiste",12],["Rougail",8],["Poulet croustillant",9,1]],
+ "Jeudi":[["Poulet fumé chouchou",10],["Sauté poulet",9],["Poulet sauce d'huître",8],["Poulet croustillant",9,1]],
+ "Vendredi":[["Cari poisson (grenadier)",10],["Civet poulet",8],["Riz frit morue",8],["Poulet croustillant",9,1]],
+ "Samedi":[["Cari poulet palmiste",12],["Poulet rôti pommes de terre",8],["Rougail saucisse poulet",10],["Poulet croustillant",9,1]],
+ "Dimanche":null};
+const J=document.getElementById('jours'),A=document.getElementById('ardoise');
+const show=j=>{[...J.children].forEach(b=>b.setAttribute('aria-selected',b.textContent===j));
+ if(!M[j]){A.innerHTML=`<h3>${j}</h3><p class="ferme">Kanteen se repose le dimanche. Rendez-vous lundi dès 10h !</p>`;return}
+ A.innerHTML=`<h3>${j}</h3>`+M[j].map((l,i)=>`<div class="ligne${l[2]?' star':''}" style="animation-delay:${i*.08}s"><b>${l[0]}</b><span class="p">${l[1]} €</span></div>`).join('')};
+Object.keys(M).forEach(j=>{const b=document.createElement('button');b.textContent=j;b.setAttribute('role','tab');b.onclick=()=>show(j);J.appendChild(b)});
+const d=new Date().getDay();show(Object.keys(M)[(d+6)%7]);
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){const m=document.getElementById('miettes');
+ for(let i=0;i<22;i++){const e=document.createElement('i');e.style.cssText=`left:${Math.random()*100}%;--s:${6+Math.random()*14}px;--d:${7+Math.random()*8}s;--t:${-Math.random()*12}s`;m.appendChild(e)}}
+})();
+</script>
+</body>
+</html>
