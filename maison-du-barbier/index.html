@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Maison du Barbier · Barber Room au Port, La Réunion</title>
+<meta name="description" content="Coupe, barbe, rasage à l'ancienne et désormais coloration, mèches et balayage. Du mercredi au samedi, 7h-18h, au Port.">
+<meta property="og:title" content="Maison du Barbier · Barber Room">
+<meta property="og:description" content="Le rituel commence ici. Le Port, du mercredi au samedi.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/maison-du-barbier/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/maison-du-barbier/">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0b0b0b;--noir2:#151515;--or:#d4af37;--or2:#e9cf7a;--turq:#397484;--blanc:#fff;--gris:#d9d9d9;--rouge:#c8102e;--muted:#a8a8a8;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',system-ui,sans-serif;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--noir);color:#ececec;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);line-height:1.02;font-weight:700;color:#fff}
+h2{font-size:clamp(2.2rem,6vw,3.8rem)}
+h1 em,h2 em{font-style:italic;font-weight:600;color:var(--or)}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-weight:600;font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);margin-bottom:14px}
+.kicker::before{content:"";width:28px;height:1px;background:var(--or)}
+.lead{font-size:clamp(1.02rem,2.2vw,1.15rem);color:var(--muted);max-width:56ch}
+section{padding:clamp(70px,11vw,130px) 0;position:relative}
+.ribbon{background:var(--or);color:var(--noir);font-size:.8rem;text-align:center;padding:8px 14px;font-weight:500}
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,55,.18)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid var(--or)}
+.brand b{font-family:var(--serif);font-size:1.25rem;line-height:1;color:#fff}
+.brand small{display:block;font-size:.6rem;letter-spacing:.28em;color:var(--or);text-transform:uppercase;margin-top:3px}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:.92rem;letter-spacing:.04em}
+.nav ul a{text-decoration:none;opacity:.7}.nav ul a:hover{opacity:1;color:var(--or)}
+@media(max-width:900px){.nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:600;text-decoration:none;border-radius:999px;padding:15px 28px;border:0;cursor:pointer;font-family:var(--sans);font-size:1rem;letter-spacing:.03em;transition:transform .25s,box-shadow .25s,background .25s;min-height:48px;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--or);color:var(--noir);box-shadow:0 14px 30px -16px rgba(212,175,55,.8)}
+.btn-or:hover{background:var(--or2)}
+.btn-line{border:1px solid rgba(212,175,55,.6);color:#fff;background:transparent}
+.nav .btn{padding:10px 18px;font-size:.88rem;min-height:44px}
+/* hero */
+.hero{position:relative;min-height:min(88vh,820px);display:grid;align-items:end;overflow:hidden;padding:0}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(1.05);transform:scale(1.06);animation:zoom 24s ease-in-out infinite alternate}
+@keyframes zoom{to{transform:scale(1.14)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,11,.1) 30%,rgba(11,11,11,.95))}
+#dust{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 clamp(50px,8vw,90px)}
+.hero h1{font-size:clamp(3rem,10vw,6.6rem);max-width:12ch}
+.hero .lead{color:#d6d6d6;margin:20px 0 30px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.ill{position:absolute;right:14px;top:14px;z-index:3;background:rgba(0,0,0,.55);color:#fff;font-size:.68rem;padding:4px 10px;border-radius:999px;letter-spacing:.05em}
+.pole{position:absolute;right:clamp(16px,6vw,80px);bottom:clamp(60px,10vw,110px);z-index:2;width:22px;height:150px;border-radius:12px;overflow:hidden;border:2px solid var(--or);background:repeating-linear-gradient(-45deg,#fff 0 10px,var(--rouge) 10px 20px,#fff 20px 30px,var(--turq) 30px 40px);background-size:100% 56px;animation:pole 2.2s linear infinite}
+@keyframes pole{to{background-position:0 56px}}
+@media(max-width:640px){.pole{display:none}}
+/* signature */
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.sig figure{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(212,175,55,.25)}
+.sig figure img{width:100%;height:100%;object-fit:cover}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3.6vw,2.2rem);color:var(--or2);line-height:1.2;margin:22px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.tags span{border:1px solid rgba(212,175,55,.45);border-radius:999px;padding:7px 14px;font-size:.88rem;color:#fff}
+@media(max-width:860px){.sig{grid-template-columns:1fr}.sig figure{aspect-ratio:4/4}}
+/* rituel / sélecteur */
+.rit{background:var(--noir2);border-block:1px solid rgba(212,175,55,.15)}
+.sel{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;margin-top:44px;align-items:start}
+.list{display:grid;gap:10px}
+.opt{display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;text-align:left;width:100%;padding:18px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.02);color:#fff;font:inherit;cursor:pointer;transition:.25s;min-height:56px}
+.opt:hover{border-color:rgba(212,175,55,.5)}
+.opt[aria-pressed=true]{border-color:var(--or);background:rgba(212,175,55,.08)}
+.opt b{font-family:var(--serif);font-size:1.3rem;font-weight:700}
+.opt .p{font-family:var(--serif);font-size:1.4rem;color:var(--or)}
+.opt small{grid-column:1/-1;color:var(--muted);font-size:.86rem}
+.recap{position:sticky;top:90px;border-radius:var(--r);overflow:hidden;background:#000;border:1px solid rgba(212,175,55,.3)}
+.recap figure{aspect-ratio:16/10;position:relative;overflow:hidden}
+.recap figure img{width:100%;height:100%;object-fit:cover;transition:opacity .4s}
+.recap .in{padding:24px}
+.recap h3{font-size:1.9rem}
+.recap .price{font-family:var(--serif);font-size:2.6rem;color:var(--or);line-height:1;margin:8px 0 14px}
+.days{display:flex;gap:6px;margin:14px 0 20px}
+.days span{flex:1;text-align:center;padding:8px 0;border-radius:8px;font-size:.8rem;font-weight:600;background:rgba(255,255,255,.05);color:#777}
+.days span.on{background:var(--or);color:var(--noir)}
+@media(max-width:860px){.sel{grid-template-columns:1fr}.recap{position:relative;top:0}}
+/* femmes */
+.fem{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.fem .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fem .mosaic figure{border-radius:var(--r);overflow:hidden;position:relative;aspect-ratio:3/4}
+.fem .mosaic figure:first-child{margin-top:40px}
+.fem .mosaic img{width:100%;height:100%;object-fit:cover}
+.fem ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+.fem li{padding:14px 16px;border-left:0;border-radius:12px;background:rgba(57,116,132,.18);color:#fff;font-weight:500}
+@media(max-width:860px){.fem{grid-template-columns:1fr}.fem .mosaic{order:2}}
+/* cadeau + infos */
+.gift{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#1a1a1a,#0b0b0b);border:1px solid rgba(212,175,55,.25);border-radius:24px;padding:clamp(24px,5vw,50px)}
+.gift img{border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);transform:rotate(-3deg);transition:transform .5s}
+.gift img:hover{transform:rotate(0) scale(1.02)}
+@media(max-width:820px){.gift{grid-template-columns:1fr}}
+.info{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.info dl{display:grid;grid-template-columns:auto 1fr;gap:14px 22px;margin:24px 0}
+.info dt{color:var(--or);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;padding-top:4px}
+.info dd{color:#eee}
+.info .poster{border-radius:var(--r);overflow:hidden;border:1px solid rgba(212,175,55,.25);max-width:400px;margin-inline:auto}
+@media(max-width:820px){.info{grid-template-columns:1fr}}
+.cap{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:.68rem;padding:4px 10px;border-radius:999px}
+footer{border-top:1px solid rgba(212,175,55,.2);padding:40px 0;text-align:center;color:#888;font-size:.86rem}
+footer a{color:var(--or)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#dust{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — page privée, visible seulement par vous</div>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="img/logo-maison-du-barbier-barber-room.jpg" alt="Logo Maison du Barbier"><span><b>Maison du Barbier</b><small>Barber Room · Le Port</small></span></a>
+  <ul><li><a href="#rituel">Le rituel</a></li><li><a href="#femmes">Coloration</a></li><li><a href="#cadeau">Carte cadeau</a></li><li><a href="#infos">Nous trouver</a></li></ul>
+  <a class="btn btn-or" href="https://l-atelier-de-monsieur.reservio.com/booking" rel="noopener">Réserver</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <img src="img/illu-fauteuil.jpg" alt="Fauteuil de barbier devant un mur turquoise et des lames de bois clair">
+  <span class="ill">Illustration</span>
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="pole" aria-hidden="true"></div>
+  <div class="wrap reveal">
+    <span class="kicker">Le Port · La Réunion</span>
+    <h1>Le rituel <em>commence ici</em></h1>
+    <p class="lead">Coupe, barbe, rasage à l'ancienne, et désormais coloration, mèches et balayage. « L'exigence d'un salon, des prestations au juste prix. »</p>
+    <div class="ctas"><a class="btn btn-or" href="#rituel">Choisir ma prestation</a><a class="btn btn-line" href="tel:+262693659715">0693 65 97 15</a></div>
+  </div>
+</header>
+
+<section><div class="wrap sig">
+  <figure class="reveal"><img src="img/coupe-degrade-cape-rayee-dos.jpg" alt="Un dégradé net, vu de dos, sous la cape rayée du salon" loading="lazy"></figure>
+  <div class="reveal">
+    <span class="kicker">Notre signature</span>
+    <h2>Un nouveau nom, <em>la même exigence</em></h2>
+    <p class="quote">« Plus clair. Plus direct. Plus nous. Toujours la même exigence, juste un nouveau costume ! »</p>
+    <p class="lead">L'Atelier de Monsieur est devenu Maison du Barbier : un salon où chaque coupe se travaille avec précision, des plus grands aux plus petits, avec des coupes aux ciseaux pour les tout-petits. « Chaque petit monsieur mérite son grand moment. »</p>
+    <div class="tags"><span>Classique ou dégradé</span><span>Barbe</span><span>Rasage à l'ancienne</span><span>Serviette chaude</span><span>Jeune gentleman</span></div>
+  </div>
+</div></section>
+
+<section class="rit" id="rituel"><div class="wrap">
+  <div class="reveal"><span class="kicker">Choisissez votre moment</span><h2>Votre <em>rituel</em>, en un geste</h2>
+  <p class="lead" style="margin-top:14px">Touchez une prestation : prix, jours d'ouverture et réservation en ligne, tout est là.</p></div>
+  <div class="sel">
+    <div class="list" role="group" aria-label="Prestations">
+      <button class="opt" aria-pressed="true" data-n="Coupe classique ou dégradé" data-p="25 €" data-i="img/coupe-degrade-cape-rayee-dos.jpg" data-d="La coupe de la maison, net et précis."><b>Coupe classique ou dégradé</b><span class="p">25 €</span><small>La coupe de la maison, net et précis.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Formule coupe &amp; barbe" data-p="38 €" data-i="img/illu-outils.jpg" data-ill="1" data-d="La coupe et la barbe, dans le même moment."><b>Formule coupe &amp; barbe</b><span class="p">38 €</span><small>La coupe et la barbe, dans le même moment.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Expérience premium" data-p="50 €" data-i="img/illu-serviette.jpg" data-ill="1" data-d="Coupe, barbe, serviette chaude : le grand rituel."><b>Expérience premium</b><span class="p">50 €</span><small>Coupe, barbe, serviette chaude : le grand rituel.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Rituel du rasage à l'ancienne" data-p="25 €" data-i="img/illu-serviette.jpg" data-ill="1" data-d="Le rasage comme autrefois, en douceur."><b>Rituel du rasage à l'ancienne</b><span class="p">25 €</span><small>Le rasage comme autrefois, en douceur.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Taille &amp; structure de barbe" data-p="18 €" data-i="img/illu-outils.jpg" data-ill="1" data-d="Une barbe dessinée, structurée, entretenue."><b>Taille &amp; structure de barbe</b><span class="p">18 €</span><small>Une barbe dessinée, structurée, entretenue.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Coupe jeune gentleman (−13 ans)" data-p="15 €" data-i="img/illu-fauteuil.jpg" data-ill="1" data-d="Pour les petits messieurs, aux ciseaux pour les tout-petits."><b>Coupe jeune gentleman</b><span class="p">15 €</span><small>Moins de 13 ans, aux ciseaux pour les tout-petits.</small></button>
+      <button class="opt" aria-pressed="false" data-n="Contour" data-p="8 €" data-i="img/illu-outils.jpg" data-ill="1" data-d="La finition nette entre deux coupes."><b>Contour · Sourcils</b><span class="p">8 € · 5 €</span><small>Les finitions nettes entre deux coupes.</small></button>
+    </div>
+    <aside class="recap" aria-live="polite">
+      <figure><img id="ri" src="img/coupe-degrade-cape-rayee-dos.jpg" alt=""><span class="cap" id="rc" hidden>Illustration</span></figure>
+      <div class="in">
+        <h3 id="rn">Coupe classique ou dégradé</h3>
+        <div class="price" id="rp">25 €</div>
+        <p id="rd" style="color:var(--muted)">La coupe de la maison, net et précis.</p>
+        <div class="days" aria-label="Jours d'ouverture"><span>Lun</span><span>Mar</span><span class="on">Mer</span><span class="on">Jeu</span><span class="on">Ven</span><span class="on">Sam</span><span>Dim</span></div>
+        <a class="btn btn-or" style="width:100%" href="https://l-atelier-de-monsieur.reservio.com/booking" rel="noopener">Réserver ce créneau</a>
+      </div>
+    </aside>
+  </div>
+</div></section>
+
+<section id="femmes"><div class="wrap fem">
+  <div class="mosaic">
+    <figure class="reveal"><img src="img/illu-outils.jpg" alt="Outils de barbier alignés sur un plan de travail en bois sombre" loading="lazy"><span class="cap">Illustration</span></figure>
+    <figure class="reveal"><img src="img/illu-serviette.jpg" alt="Serviettes chaudes roulées et blaireau" loading="lazy"><span class="cap">Illustration</span></figure>
+  </div>
+  <div class="reveal">
+    <span class="kicker">Nouvelle signature</span>
+    <h2>La Maison s'ouvre <em>aux femmes</em></h2>
+    <p class="lead" style="margin-top:16px">« La Maison du Barbier ouvre désormais son savoir-faire aux femmes. » Diagnostic personnalisé : contactez-nous.</p>
+    <ul><li>Coloration</li><li>Mèches</li><li>Balayage</li><li>Brushing</li></ul>
+    <a class="btn btn-line" href="tel:+262693659715">Demander un diagnostic</a>
+  </div>
+</div></section>
+
+<section id="cadeau" style="padding-top:0"><div class="wrap">
+  <div class="gift reveal">
+    <img src="img/carte-cadeau-maison-du-barbier.jpg" alt="Carte cadeau Maison du Barbier à ruban rouge" loading="lazy">
+    <div>
+      <span class="kicker">À offrir</span>
+      <h2>Un moment <em>en cadeau</em></h2>
+      <p class="lead" style="margin:16px 0 24px">Coffret ou bon cadeau : une belle façon d'offrir une coupe, une barbe ou l'expérience premium à quelqu'un qui compte.</p>
+      <a class="btn btn-or" href="tel:+262693659715">Commander une carte cadeau</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="infos" style="padding-top:0"><div class="wrap info">
+  <div class="reveal">
+    <span class="kicker">Nous trouver</span>
+    <h2>Au Port, <em>en face du Carrefour Market</em></h2>
+    <dl>
+      <dt>Adresse</dt><dd>24 bis avenue du 14 Juillet 1789, 97420 Le Port</dd>
+      <dt>Horaires</dt><dd>Mercredi et jeudi : 7h-12h, 13h30-18h<br>Vendredi et samedi : 7h-12h30, 13h30-18h</dd>
+      <dt>Rendez-vous</dt><dd><a href="tel:+262693659715">0693 65 97 15</a> · en ligne 24h/24</dd>
+      <dt>Suivre</dt><dd><a href="https://www.facebook.com/p/Maison-du-Barbier-%C3%AEle-de-la-R%C3%A9union-61573862603673/" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/maisondubarbier_" rel="noopener">Instagram</a></dd>
+    </dl>
+    <div class="ctas"><a class="btn btn-or" href="https://l-atelier-de-monsieur.reservio.com/booking" rel="noopener">Réserver en ligne</a><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=24+bis+avenue+du+14+Juillet+1789+Le+Port" rel="noopener">Itinéraire</a></div>
+  </div>
+  <div class="poster reveal"><img src="img/affiche-horaires-mercredi-samedi.jpg" alt="Affiche des horaires : mercredi-samedi, 7h-18h" loading="lazy"></div>
+</div></section>
+
+<footer><div class="wrap">Maison du Barbier · Barber Room · Le Port<br>Maquette offerte par Jonathan · ATMA Digital — photos issues de votre page, visuels marqués « Illustration » créés pour la maquette. <a href="tel:+262693828108">0693 82 81 08</a></div></footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const os=document.querySelectorAll('.opt'),ri=document.getElementById('ri'),rc=document.getElementById('rc');
+os.forEach(o=>o.addEventListener('click',()=>{os.forEach(x=>x.setAttribute('aria-pressed',x===o));
+ document.getElementById('rn').innerHTML=o.dataset.n;document.getElementById('rp').textContent=o.dataset.p;document.getElementById('rd').textContent=o.dataset.d;
+ ri.style.opacity=0;setTimeout(()=>{ri.src=o.dataset.i;ri.style.opacity=1;rc.hidden=!o.dataset.ill},250)}));
+// poussière d'or
+const c=document.getElementById('dust'),x=c.getContext('2d');let W,H,ps=[];
+function rs(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio}rs();addEventListener('resize',rs);
+for(let i=0;i<60;i++)ps.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.4,v:Math.random()*.0006+.0002,s:Math.random()*7});
+(function f(t){x.clearRect(0,0,W,H);ps.forEach(p=>{p.y-=p.v;if(p.y<0)p.y=1;const a=.35+.35*Math.sin(t/700+p.s);
+ x.fillStyle='rgba(233,207,122,'+a+')';x.beginPath();x.arc((p.x+Math.sin(t/3000+p.s)*.01)*W,p.y*H,p.r*devicePixelRatio,0,7);x.fill()});requestAnimationFrame(f)})(0);
+</script>
+</body>
+</html>
