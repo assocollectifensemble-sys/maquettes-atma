@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Labrèz Traiteur · Restaurant terrasse et traiteur à Sainte-Marie</title>
+<meta property="og:title" content="Labrèz Traiteur · Cuisine créole et du monde à Sainte-Marie">
+<meta property="og:description" content="Une page imaginée pour Labrèz Traiteur, Restaurant Labrez.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/labrez-traiteur-sainte-marie/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/labrez-traiteur-sainte-marie/img/table-fleurie.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--braise:#b5352b;--rose:#e9a0a4;--poudre:#fbeeea;--ivoire:#fffaf6;--feuille:#2f5b3f;--or:#d99a2b;--ink:#2a1d1b;--gris:#6f5f5b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Lora",Georgia,serif;background:var(--ivoire);color:var(--ink);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--ink);color:var(--poudre);font:500 .8rem/1.4 "Bricolage Grotesque",sans-serif;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--rose)}
+.wrap{width:min(1160px,92vw);margin:auto}
+h1,h2,h3,.sur,.btn,nav{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+h1,h2{font-weight:800;line-height:.98;letter-spacing:-.02em}
+h1 em,h2 em{font-family:"Lora",serif;font-style:italic;font-weight:400;color:var(--braise);letter-spacing:0}
+.sur{font-size:.75rem;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--braise)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;font-weight:800}
+nav a{color:inherit;text-decoration:none}
+nav .tel{border:1.5px solid var(--ink);border-radius:999px;padding:.5rem 1.1rem;font-weight:500;min-height:44px;display:inline-flex;align-items:center}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:800;transition:transform .25s,background .25s}
+.btn.plein{background:var(--braise);color:#fff;animation:pulse 3.2s ease-in-out infinite}
+.btn.plein:hover{background:#962a22;transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid currentColor;color:inherit}
+.btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(181,53,43,.15)}}
+.hero{position:relative;background:var(--poudre);overflow:hidden}
+#petales{position:absolute;inset:0;pointer-events:none}
+.hero .g{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding:clamp(2rem,6vh,4rem) 0 clamp(4rem,9vh,6rem)}
+.hero h1{font-size:clamp(2.8rem,7.6vw,6rem);margin:1rem 0 1.3rem;animation:monte 1s ease both}
+.lead{font-size:1.15rem;color:var(--gris);max-width:40ch;animation:monte 1s .2s ease both}
+.mosa{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:1rem;animation:monte 1.1s .1s ease both}
+.mosa img{width:100%;height:100%;object-fit:cover;border-radius:22px}
+.mosa img:first-child{grid-row:span 2;aspect-ratio:3/5}
+.mosa img:nth-child(2),.mosa img:nth-child(3){aspect-ratio:1}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}}
+.bande{background:var(--braise);color:var(--poudre);overflow:hidden;white-space:nowrap;padding:.9rem 0;font:800 1.15rem "Bricolage Grotesque",sans-serif}
+.bande div{display:inline-block;animation:glisse 32s linear infinite}
+.bande span{margin:0 1.4rem}.bande i{font-family:"Lora",serif;font-weight:400;color:var(--rose)}
+@keyframes glisse{to{transform:translateX(-50%)}}
+.bloc{padding:clamp(4rem,10vh,6.5rem) 0}
+.bloc h2{font-size:clamp(2.1rem,5.4vw,3.8rem);margin:.7rem 0 1.1rem}
+.chapo{font-size:1.08rem;color:var(--gris);max-width:56ch}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.8rem}
+.trio article{border-top:2px solid var(--ink);padding-top:1.2rem}
+.trio b{font:800 .8rem "Bricolage Grotesque",sans-serif;color:var(--braise);letter-spacing:.2em}
+.trio h3{font-size:1.5rem;font-weight:800;margin:.4rem 0 .5rem;line-height:1.1}
+.trio p{color:var(--gris)}
+.galerie{background:var(--ink);color:var(--poudre)}
+.galerie .sur{color:var(--rose)}
+.galerie h2 em{color:var(--rose)}
+.galerie .chapo{color:#d6c7c3}
+.grille{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,19vw,240px);gap:.9rem;margin-top:2.6rem}
+.grille figure{position:relative;overflow:hidden;border-radius:18px}
+.grille img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.grille figure:hover img{transform:scale(1.06)}
+.grille figcaption{position:absolute;left:.8rem;bottom:.7rem;font:500 .85rem "Bricolage Grotesque",sans-serif;background:rgba(42,29,27,.72);padding:.25rem .7rem;border-radius:999px}
+.grille .l{grid-column:span 2;grid-row:span 2}
+.grille .h{grid-row:span 2}
+.semaine .g{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.ardoise{background:var(--feuille);color:#f4efe2;border-radius:28px;padding:2.2rem 2rem;transform:rotate(-1.2deg);box-shadow:0 26px 50px -28px rgba(47,91,63,.8)}
+.ardoise h3{font-size:1.6rem;font-weight:800;margin-bottom:.8rem}
+.ardoise p{opacity:.9}
+.ardoise .sur{color:var(--or)}
+.contact{background:var(--poudre)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.coord{list-style:none;display:grid;gap:1.1rem}
+.coord li{border-bottom:1px solid #ead2cd;padding-bottom:1rem}
+.coord span{display:block;font:800 .72rem "Bricolage Grotesque",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--braise)}
+.coord a{color:var(--ink)}
+footer{text-align:center;font-size:.85rem;color:var(--gris);padding:2rem 1rem 3rem}
+.apparait{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:860px){.hero .g,.semaine .g,.contact .g{grid-template-columns:1fr}.trio{grid-template-columns:1fr}.grille{grid-template-columns:1fr 1fr}.grille .l{grid-column:span 2;grid-row:span 1}.grille .h{grid-row:span 1}.ardoise{transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, imaginée avec plaisir pour Labrèz · page privée</div>
+<header class="hero">
+ <canvas id="petales"></canvas>
+ <div class="wrap">
+  <nav><a href="#">Labrèz</a><a class="tel" href="tel:+262692277019">0692 27 70 19</a></nav>
+  <div class="g">
+   <div>
+    <p class="sur">Restaurant terrasse · Traiteur · Livraison</p>
+    <h1>La cuisine créole <em>et du monde</em>, à Sainte-Marie</h1>
+    <p class="lead">Des produits issus de la ferme Piton Fougères, une terrasse près de Gillot, et des buffets qui font la fête à chacun de vos événements.</p>
+    <div class="btns"><a class="btn plein" href="https://wa.me/262692277019">Demander un devis traiteur</a><a class="btn ligne" href="#semaine">Le menu de la semaine</a></div>
+   </div>
+   <div class="mosa">
+    <img src="img/table-fleurie.webp" alt="Buffet Labrèz dressé avec fleurs roses et bouchées dorées">
+    <img src="img/buffet-rose.webp" alt="Brochettes et bouchées sur nappe rose">
+    <img src="img/brochettes-agrumes.webp" alt="Brochettes de fruits disposées en couronne">
+   </div>
+  </div>
+ </div>
+</header>
+<div class="bande" aria-hidden="true"><div>
+ <span>Cuisine créole</span><span><i>et du monde</i></span><span>Buffets &amp; cocktails</span><span><i>terrasse</i></span><span>Livraison</span><span><i>ferme Piton Fougères</i></span>
+ <span>Cuisine créole</span><span><i>et du monde</i></span><span>Buffets &amp; cocktails</span><span><i>terrasse</i></span><span>Livraison</span><span><i>ferme Piton Fougères</i></span>
+</div></div>
+<section class="bloc">
+ <div class="wrap">
+  <div class="apparait"><p class="sur">Trois façons de se régaler</p><h2>Sur place, chez vous, <em>pour vos fêtes</em></h2></div>
+  <div class="trio">
+   <article class="apparait"><b>01</b><h3>La terrasse</h3><p>Au 2 rue Hélène Boucher, à deux pas du rond-point de l'aéroport Gillot : on s'installe dehors et on savoure.</p></article>
+   <article class="apparait"><b>02</b><h3>Le traiteur</h3><p>Buffets, cocktails, bouchées maison : des tables dressées avec soin, jusqu'aux fleurs.</p></article>
+   <article class="apparait"><b>03</b><h3>La livraison</h3><p>Vos plats préférés livrés, et le retrait sur place pour les plus pressés.</p></article>
+  </div>
+ </div>
+</section>
+<section class="bloc galerie">
+ <div class="wrap">
+  <div class="apparait"><p class="sur">Nos tables</p><h2>Le goût, <em>et le coup d'œil</em></h2><p class="chapo">Chaque buffet Labrèz est pensé comme une fête : des couleurs, des fleurs, et des bouchées qui disparaissent en un clin d'œil.</p></div>
+  <div class="grille">
+   <figure class="l apparait"><img src="img/douceurs.webp" alt="Bouchées dorées et brochettes rouges sur nappe rouge"><figcaption>Buffet cocktail</figcaption></figure>
+   <figure class="h apparait"><img src="img/table-exterieure.webp" alt="Table dressée en extérieur avec fleurs rouges"><figcaption>En plein air</figcaption></figure>
+   <figure class="apparait"><img src="img/bouchees.webp" alt="Plateau de bouchées frites"><figcaption>Fait maison</figcaption></figure>
+   <figure class="apparait"><img src="img/poelee.webp" alt="Bouchées et légumes en plat traiteur"></figure>
+   <figure class="apparait"><img src="img/plateau.webp" alt="Plateau traiteur garni de bouchées et de poivrons"></figure>
+  </div>
+ </div>
+</section>
+<section class="bloc semaine" id="semaine">
+ <div class="wrap g">
+  <div class="apparait"><p class="sur">Chaque semaine</p><h2>Le menu <em>qui change</em></h2><p class="chapo">Labrèz publie son menu chaque semaine. Ici, il s'afficherait automatiquement dès sa parution, pour que vos clients le trouvent en un instant, sur leur téléphone.</p></div>
+  <div class="ardoise apparait"><p class="sur">Cette semaine</p><h3>Le menu du moment</h3><p>Le menu de la semaine apparaît ici, avec un bouton pour commander directement par WhatsApp.</p><div class="btns"><a class="btn plein" href="https://wa.me/262692277019">Commander</a></div></div>
+ </div>
+</section>
+<section class="bloc contact" id="contact">
+ <div class="wrap g">
+  <div class="apparait"><h2>On vous <em>régale</em> ?</h2><p class="chapo">Un repas, un buffet pour un anniversaire, un cocktail d'entreprise : écrivez-nous, on prépare ça avec vous.</p><div class="btns"><a class="btn plein" href="https://wa.me/262692277019">WhatsApp</a><a class="btn ligne" href="tel:+262692277019">Appeler</a></div></div>
+  <ul class="coord apparait">
+   <li><span>Adresse</span>2 rue Hélène Boucher, 97438 Sainte-Marie</li>
+   <li><span>Téléphone</span><a href="tel:+262692277019">0692 27 70 19</a></li>
+   <li><span>Sur place</span>Terrasse · retrait sur place · livraison</li>
+   <li><span>Suivez-nous</span><a href="https://www.facebook.com/labrez974">Facebook · Labrèz Traiteur</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Labrèz Traiteur.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('petales'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ var C=['233,160,164','181,53,43','255,255,255','217,154,43'];
+ for(var i=0;i<24;i++)P.push({x:Math.random(),y:Math.random(),v:.0003+Math.random()*.0005,r:4+Math.random()*6,p:Math.random()*6,c:C[i%4]});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;if(p.y>1.05){p.y=-.05;p.x=Math.random()}
+  x.save();x.translate(p.x*W+Math.sin(t/1500+p.p)*30,p.y*H);x.rotate(t/1800+p.p);x.scale(1,.55+.45*Math.sin(t/700+p.p));
+  x.fillStyle='rgba('+p.c+',.42)';x.beginPath();x.ellipse(0,0,p.r,p.r*.6,0,0,7);x.fill();x.restore()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
