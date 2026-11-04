@@ -14,19 +14,26 @@
   // Passer versionComplete à true quand toutes les étapes seront ouvertes.
   const CONFIG = { versionComplete: false, etapesJouables: 2, total: 5 };
 
+  // ---------- déclenchement des étapes (comme au Croc Parc : on marche, l'étape s'ouvre à l'arrivée) ----------
+  // Mode À CHOISIR AVEC LA RÉSERVE : "gps" (position du téléphone) ou "qr-depart" (un seul QR code au départ,
+  // puis bouton « Je suis arrivé » devant le repère). Aucun QR code par étape.
+  // points : coordonnées réelles des étapes, inconnues tant que les emplacements ne sont pas choisis (null).
+  // La géolocalisation n'est demandée QUE si le joueur touche « Utiliser ma position » ; refus = aucun souci.
+  const DECLENCHEMENT = { mode: "à choisir ensemble", rayon: 25, points: { 1: null, 2: null, 3: null, 4: null, 5: null } };
+
   // ---------- écran « Le projet » ----------
   const projet = {
     lieu: "Réserve marine · La Réunion",
     badge: "Proposition · à imaginer et co-écrire avec vos équipes",
     titre: "Enquête au bord du lagon",
     sous: "Une aventure sur téléphone, en complément de vos animations",
-    idee: "Zouzou la zourite ne reconnaît plus son coin de récif. Familles et classes mènent l'enquête <b>depuis la plage, sans entrer dans l'eau</b>, et découvrent en jouant <b>les bons gestes de votre guide des écogestes</b>. On scanne un QR code : rien à télécharger, et ça marche <b>sans réseau</b>.",
+    idee: "Zouzou la zourite ne reconnaît plus son coin de récif. Familles et classes mènent l'enquête <b>depuis la plage, sans entrer dans l'eau</b>, et découvrent en jouant <b>les bons gestes de votre guide des écogestes</b>. Un seul QR code au départ (ou le GPS du téléphone), puis on marche : <b>chaque étape s'ouvre quand on arrive au bon endroit</b>. Rien à télécharger, et ça marche <b>sans réseau</b>.",
     complete: [
       ["🪸", "5 étapes au bord du lagon", "Aujourd'hui, vous en jouez deux.", "large"],
       ["👨‍👩‍👧", "Familles et classes", "Le même jeu, un ton adapté à chacun"],
       ["🗣️", "Français, kréol, anglais", "Avec de vraies voix enregistrées"],
       ["📶", "Hors connexion", "Une fois ouverte, plus besoin de réseau"],
-      ["🔳", "Un QR code pour démarrer", "Sur un panneau, un flyer, un livret"],
+      ["📍", "Un départ, puis on marche", "QR code au départ ou GPS : à choisir ensemble"],
       ["✏️", "Vos contenus, vos mots", "Relus et validés par vos équipes"],
       ["📊", "Statistiques anonymes", "Ce qui est joué, ce qui est retenu"]
     ],
@@ -55,11 +62,12 @@
   const intro = [
     { expr: "triste", t: "Psst… ici, dans l'eau ! Je suis Zouzou, une zourite. Depuis quelque temps, mon coin de récif change : des déchets, des branches de corail cassées… Je ne comprends pas ce qui se passe." },
     { expr: "surpris", t: "Moi, quand j'ai peur, je crache un nuage d'encre et je file ! Mais là, l'encre ne sert à rien : j'ai besoin d'un enquêteur. Quelqu'un qui reste au sec, sur la plage, et qui ouvre l'œil." },
-    { expr: "clin", t: "Sur la plage, il y a 5 étapes. À chacune, un défi et un indice. Sur place, tu scannes le QR code ; ici, tu touches simplement l'étape. On y va ?" }
+    { expr: "clin", t: "Sur la plage, il y a 5 étapes. À chacune, un défi et un indice. Tu pars du point de départ, puis tu marches : l'étape suivante s'ouvre quand tu arrives au bon endroit. On y va ?" }
   ];
 
   // ---------- les 5 étapes ----------
-  // lieu : GÉNÉRIQUE (le site et les emplacements des QR codes sont à choisir avec la Réserve)
+  // lieu : GÉNÉRIQUE (le site, le mode de déclenchement — GPS ou un seul QR code au départ — et les emplacements
+  // sont à choisir avec la Réserve). marche : trajet indicatif depuis l'étape précédente (écran « Rejoins le prochain point »).
   const etapes = [
     { id: 1, ico: "🏖️", jeu: "plage", titre: "Le sable n'est pas un cendrier",
       lieu: "L'entrée de la plage",
@@ -77,6 +85,7 @@
 
     { id: 2, ico: "🏄", jeu: "paddle", titre: "Naviguer sans casser",
       lieu: "Le bord du lagon, face aux paddles",
+      marche: { distance: "≈ 150 m", duree: "2 min à pied", repere: "Longe la plage vers le nord. Arrête-toi là où les paddles sont posés sur le sable, face au lagon.", vignette: "paddles" },
       brief: { expr: "surpris", t: "Deuxième piste : des branches de mon récif sont cassées ! Les paddles et les kayaks passent juste au-dessus. Guide ce paddle jusqu'au banc de sable… sans toucher un seul massif de corail." },
       consigne: "Fais glisser ton doigt pour guider le paddle. Reste sur les zones CLAIRES (le sable) et évite les zones SOMBRES (les coraux). Attention au courant !",
       quiz: { q: "Le corail, c'est…", opts: ["une plante", "une pierre", "un animal"], ok: 2,
@@ -91,6 +100,7 @@
 
     { id: 3, ico: "🎒", jeu: "sac", titre: "Le sac de plage",
       lieu: "À l'ombre des filaos",
+      marche: { distance: "≈ 120 m", duree: "2 min à pied", repere: "Cherche le grand filao penché, à l'ombre.", vignette: "filao" },
       brief: { expr: "clin", t: "Troisième piste : ce qu'on emporte à la plage. Certains objets protègent le lagon, d'autres le dérangent sans qu'on s'en rende compte. Prépare le sac idéal pour une journée au bord de l'eau !" },
       consigne: "Glisse dans le sac (ou touche) les objets qui protègent le lagon et toi. Les autres restent à la maison.",
       quiz: { q: "Donner du pain aux poissons du lagon, c'est…", opts: ["un bon goûter pour eux", "les rendre malades et plus faciles à braconner", "sans aucun effet"], ok: 1,
@@ -173,15 +183,15 @@
     "Prototype conçu et développé par Jonathan Bou (Atma digital) pour la Réserve naturelle marine de La Réunion. C'est une proposition : rien n'est officiel, tout peut changer.",
     "Zouzou est un personnage FICTIF. Elle « parle » : c'est une convention de fiction, à signaler aux classes.",
     "Messages sur les bons gestes : guide des écogestes de la Réserve (voir SOURCES.md), à relire et valider par vos équipes.",
-    "Illustrations, sons et QR codes : faits maison, sans aucune ressource externe. Aucune donnée n'est collectée, aucun compte n'est créé.",
-    "* Durée indicative, à mesurer sur place avec vous."
+    "Illustrations, sons et QR code : faits maison, sans aucune ressource externe. Aucune donnée n'est collectée, aucun compte n'est créé. La position du téléphone n'est utilisée que si vous l'autorisez, sur le téléphone seulement, jamais envoyée.",
+    "* Durées et distances indicatives, à mesurer sur place avec vous."
   ];
 
   // diaporama ?demo=1 : [écran, étape]
   const demo = [["projet"], ["accueil"], ["intro", "0"], ["intro", "2"], ["hub"],
-    ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"],
+    ["st1", "brief"], ["st1", "jeu"], ["st1", "quiz"], ["st1", "info"], ["marche", "2"],
     ["st2", "brief"], ["st2", "jeu"], ["st2", "quiz"], ["st2", "info"],
     ["findemo"], ["fiche"], ["qr"]];
 
-  window.Content = { CONFIG, projet, accueil, publics, intro, etapes, plage, sac, cartes, findemo, gestes, credits, demo };
+  window.Content = { CONFIG, DECLENCHEMENT, projet, accueil, publics, intro, etapes, plage, sac, cartes, findemo, gestes, credits, demo };
 })();

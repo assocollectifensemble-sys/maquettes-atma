@@ -412,6 +412,20 @@ html[data-taille="3"] .guide { grid-template-columns: 1fr; } html[data-taille="3
   .plage-svg .obj.pris .obj-in { opacity: 0; }
 }
 /* ---------- impression (fiche, QR) ---------- */
+/* ---------- marche : « Rejoins le prochain point » ---------- */
+.marche-box { margin: 6px -4px 6px; border-radius: 22px; overflow: hidden; box-shadow: 0 14px 30px rgba(6,59,76,.22); border: 3px solid #fff; background: #fff; }
+.marche-carte { display: block; width: 100%; height: auto; }
+.marche-carte .onde { animation: onde 1.8s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+.marche-dist { display: flex; justify-content: space-between; gap: 10px; margin: 0; padding: 8px 14px; font-weight: 700; color: var(--deep); background: var(--sable); }
+.marche-dist b { font-size: 1.15rem; }
+.card.repere .vignette { display: block; width: 100%; height: auto; border-radius: 14px; margin: 6px 0 8px; }
+.card.repere p { margin: 4px 0; }
+.card.geo .btn { margin-top: 6px; }
+.geo-etat { margin: 8px 0 0; min-height: 0; }
+.geo-etat.ok { color: #1c6b40; font-weight: 700; }
+.geo-etat.info { color: var(--ink-dim); }
+@media (prefers-reduced-motion: reduce) { .marche-carte .marcheur { display: none; } }
+
 @media print {
   .topbar, .dock, .presbar, .noprint, .toast, .fete { display: none !important; }
   body { background: #fff !important; color: #000; } main#screen { padding: 0; }

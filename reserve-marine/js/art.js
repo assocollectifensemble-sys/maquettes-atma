@@ -192,6 +192,46 @@
 
   // ---------- OBJETS DES MINI-JEUX ----------
   // plage : chaque objet centré sur (0,0), environ 40 × 40
+
+  // ---------- MARCHE vers le prochain point (écran « Rejoins le prochain point ») ----------
+  // Mini-carte stylisée du bord du lagon : point de départ (étape faite) → prochain point, chemin à pied le long du sable.
+  function marcheCarte(de, vers) {
+    const c = U("mc"), A = [64, 160], B = [292, 122];
+    const chemin = "M64 160 C120 176 170 168 210 150 C240 138 262 128 292 122";
+    const pin = (x, y, n, fait) => '<g transform="translate(' + x + ' ' + y + ')">' + (fait ? "" : '<circle class="onde" r="16" fill="none" stroke="#e0553f" stroke-width="3"/>') +
+      '<ellipse cx="0" cy="17" rx="9" ry="3" fill="#00303d" opacity=".25"/><path d="M0 18 L-7 6 A14 14 0 1 1 7 6Z" fill="' + (fait ? "#1c8a4e" : "#e0553f") + '" stroke="#fff" stroke-width="2.5"/>' +
+      '<g transform="translate(0 -4)">' + (fait ? '<path d="M-6 0 l4 4.5 8 -9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>' : '<text x="0" y="5.5" text-anchor="middle" font-size="15" font-weight="900" fill="#fff" font-family="system-ui,sans-serif">' + n + '</text>') + '</g></g>';
+    const paddles = '<g transform="translate(300 96) rotate(-12)"><rect x="-26" y="-5" width="52" height="10" rx="5" fill="#ffd23f" stroke="#a87a00" stroke-width="1.5"/><rect x="-22" y="8" width="46" height="9" rx="4.5" fill="#19b3c4" stroke="#0b6c78" stroke-width="1.5"/><path d="M-30 24 L18 20" stroke="#5a3a1a" stroke-width="2.2" stroke-linecap="round"/><ellipse cx="22" cy="20" rx="6" ry="3" fill="#e0553f"/></g>';
+    return '<svg class="marche-carte" viewBox="0 0 360 210" role="img" aria-label="Mini-carte : du point de l\'étape ' + de + ' au point de l\'étape ' + vers + ', à pied le long de la plage">' +
+      '<defs><linearGradient id="' + c + 'l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1aa7bd"/><stop offset="1" stop-color="#7fe0d6"/></linearGradient>' +
+      '<linearGradient id="' + c + 's" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2b6"/><stop offset="1" stop-color="#ead09a"/></linearGradient></defs>' +
+      '<rect width="360" height="210" fill="#0d5b86"/>' +
+      '<path d="M0 22 Q90 12 180 20 T360 14 V92 Q270 84 180 92 T0 104Z" fill="url(#' + c + 'l)"/>' +
+      '<path class="ressac-carte" d="M0 22 Q90 12 180 20 T360 14" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="14 8" stroke-linecap="round" opacity=".9"/>' +
+      '<g fill="#25747a" opacity=".7"><ellipse cx="50" cy="56" rx="22" ry="9"/><ellipse cx="150" cy="48" rx="26" ry="10"/><ellipse cx="250" cy="60" rx="20" ry="8"/></g>' +
+      '<path d="M0 104 Q90 92 180 92 T360 84 V210 H0Z" fill="url(#' + c + 's)"/>' +
+      '<path d="M0 104 Q90 92 180 92 T360 84" fill="none" stroke="#fff" stroke-width="3" opacity=".7"/>' +
+      '<g fill="#2a6f52">' + [[18, 204], [70, 210], [130, 206], [196, 212], [256, 206], [318, 210]].map(p => '<circle cx="' + p[0] + '" cy="' + p[1] + '" r="15"/><circle cx="' + (p[0] + 9) + '" cy="' + (p[1] - 6) + '" r="10" fill="#3a8a66"/>').join("") + '</g>' +
+      paddles + '<circle cx="300" cy="104" r="34" fill="none" stroke="#ffd23f" stroke-width="2.5" stroke-dasharray="5 5" opacity=".95"/>' +
+      '<path id="' + c + 'p" d="' + chemin + '" fill="none" stroke="#063b4c" stroke-width="3.2" stroke-dasharray="2 8" stroke-linecap="round" opacity=".75"/>' +
+      '<g class="marcheur"><circle r="6.5" fill="#fff" stroke="#e0553f" stroke-width="3"/><animateMotion dur="5s" repeatCount="indefinite" path="' + chemin + '"/></g>' +
+      pin(A[0], A[1], de, true) + pin(B[0], B[1], vers, false) +
+      '<g font-family="system-ui,sans-serif" font-weight="800"><text x="64" y="194" text-anchor="middle" font-size="10" fill="#063b4c">Tu es ici</text>' +
+      '<text x="20" y="80" font-size="9" fill="#063b4c" opacity=".7">LE LAGON</text>' +
+      '<g transform="translate(336 40)" fill="#fff"><path d="M0 -12 L5 2 L0 -1 L-5 2Z"/><text y="14" text-anchor="middle" font-size="9">N</text></g></g></svg>';
+  }
+  // Indice visuel : le repère à chercher en arrivant (dessin, pas une photo : emplacements à choisir ensemble)
+  function vignette(sorte) {
+    if (sorte === "filao") return '<svg class="vignette" viewBox="0 0 300 140" aria-hidden="true"><rect width="300" height="140" fill="#bfe9f2"/><path d="M0 92 Q150 80 300 92 V140 H0Z" fill="#f2dcaa"/>' + filao(150, 236, .62, false) + '</svg>';
+    return '<svg class="vignette" viewBox="0 0 300 140" aria-hidden="true"><defs><linearGradient id="vg-ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe9f2"/><stop offset="1" stop-color="#e9f8fb"/></linearGradient></defs>' +
+      '<rect width="300" height="140" fill="url(#vg-ciel)"/><path d="M0 46 H300 V74 Q150 64 0 76Z" fill="#2fb8c8"/><path d="M0 46 H300" stroke="#0d5b86" stroke-width="3"/>' +
+      '<path d="M0 76 Q150 64 300 74 V140 H0Z" fill="#f2dcaa"/><path d="M0 76 Q150 64 300 74" fill="none" stroke="#fff" stroke-width="3" opacity=".8"/>' +
+      '<g transform="translate(150 100) rotate(-6)"><ellipse cx="0" cy="14" rx="96" ry="7" fill="#b98f55" opacity=".35"/><path d="M-92 0 Q-96 -9 -80 -10 H84 Q98 -6 92 4 Q86 10 70 10 H-80 Q-90 9 -92 0Z" fill="#ffd23f" stroke="#a87a00" stroke-width="2"/><path d="M-70 -2 H64" stroke="#fff" stroke-width="3" opacity=".7"/></g>' +
+      '<g transform="translate(160 122) rotate(-2)"><path d="M-86 0 Q-90 -8 -74 -9 H78 Q92 -5 86 4 Q80 9 64 9 H-74 Q-84 8 -86 0Z" fill="#19b3c4" stroke="#0b6c78" stroke-width="2"/></g>' +
+      '<path d="M30 132 L230 86" stroke="#5a3a1a" stroke-width="4" stroke-linecap="round"/><ellipse cx="238" cy="84" rx="13" ry="6" fill="#e0553f" transform="rotate(-14 238 84)"/>' +
+      '<g fill="none" stroke="#fff" stroke-width="2" opacity=".8"><path d="M30 60 q8 -4 16 0 M120 58 q8 -4 16 0 M220 62 q8 -4 16 0"/></g></svg>';
+  }
+
   const objets = {
     canette: '<g transform="rotate(70)"><rect x="-9" y="-16" width="18" height="32" rx="4" fill="#d8333a"/><rect x="-9" y="-16" width="18" height="5" rx="2" fill="#c9c9c9"/><rect x="-9" y="11" width="18" height="5" rx="2" fill="#c9c9c9"/><path d="M-5 -6 h10 M-5 2 h10" stroke="#fff" stroke-width="2.4"/></g>',
     bouteille: '<g transform="rotate(-62)"><path d="M-8 -8 C-8 -14 -4 -16 -4 -20 V-24 H4 V-20 C4 -16 8 -14 8 -8 V20 Q8 24 4 24 H-4 Q-8 24 -8 20Z" fill="#bfe8f5" fill-opacity=".85" stroke="#4a9fbd" stroke-width="2"/><rect x="-5" y="-29" width="10" height="6" rx="2" fill="#2f74c0"/><rect x="-8" y="0" width="16" height="9" fill="#5cb85c" opacity=".8"/></g>',
@@ -235,5 +275,5 @@
       '<g transform="translate(256 262) scale(' + echelle + ') translate(-100 -100)">' + zouzou("content", "").replace(/<svg[^>]*>/, "").replace("</svg>", "").replace(/<rect class="paupiere"[^>]*\/>/g, "") + '</g></g></svg>';
   }
 
-  window.Art = { zouzou, accueil, carte, habitants, objets, sacIco, ICO, icone };
+  window.Art = { zouzou, accueil, carte, marcheCarte, vignette, habitants, objets, sacIco, ICO, icone };
 })();

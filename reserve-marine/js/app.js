@@ -3,7 +3,10 @@
    (prototype pour la Réserve naturelle marine de La Réunion).
    Architecture reprise du prototype Kélonia (« Le dossier Kawann »).
    Écrans : projet (1er écran) · accueil · intro · hub (carte de la plage) ·
-   st1…st5 (brief → jeu → quiz → info) · findemo · fiche (enseignant) · qr (pour l'équipe).
+   st1…st5 (brief → jeu → quiz → info) · marche (« Rejoins le prochain point », entre deux étapes) ·
+   findemo · fiche (enseignant) · qr (le QR code de départ).
+   Déclenchement comme au Croc Parc : un seul départ (QR code ou GPS, à choisir avec la Réserve), puis on marche ;
+   l'étape suivante s'ouvre à l'arrivée (bouton « Je suis arrivé », ou position si le joueur l'autorise).
    Version démo : étapes 1 et 2 jouables ; 3, 4 et 5 présentées, verrouillées (« Dans l'application complète »).
    ============================================================ */
 (function () {
@@ -13,7 +16,7 @@
   const JOUABLES = C.CONFIG.versionComplete ? C.CONFIG.total : C.CONFIG.etapesJouables, TOTAL = C.CONFIG.total;
   let route = { n: "projet", step: null }, jeu = null, demoMode = false, demoIdx = 0, installPrompt = null, resultat = {};
   // Tous les chemins passent par go() : c'est là que les étapes verrouillées sont refusées.
-  const VERROU = n => { const m = /^st(\d)$/.exec(n); return !!m && +m[1] > JOUABLES; };
+  const VERROU = (n, step) => { if (n === "marche") return step != null && +step > JOUABLES; const m = /^st(\d)$/.exec(n); return !!m && +m[1] > JOUABLES; };
 
   // typographie française : espace insécable avant ! ? ; : » et après « (jamais de « ! » seul en début de ligne)
   const typo = s => String(s).replace(/ ([!?;:»])/g, " $1").replace(/« /g, "« ");
@@ -84,9 +87,10 @@
   // ---------- routeur ----------
   function go(n, step, noScroll, mode) {
     if (jeu) { jeu.destroy(); jeu = null; }
+    stopGeo();
     fermerFeuille(true);
     let refus = false;
-    if (VERROU(n)) { refus = true; n = "hub"; step = null; }
+    if (VERROU(n, step)) { refus = true; n = "hub"; step = null; }
     if (!SCREENS[n]) { n = "projet"; step = null; }
     route = { n, step: step == null ? null : String(step) };
     const u = new URL(location.href); u.searchParams.delete("station");
@@ -134,7 +138,7 @@
       '<section class="pj-cycle3"><div class="pj-c3-t"><span class="pj-c3-i" aria-hidden="true">🎓</span><div><h3>Version classe</h3><span class="pj-c3-niv">Du CE1 à la 6<sup>e</sup>, comme vos animations</span></div></div>' +
       '<p>' + esc("Travail en équipes, consignes scolaires, mots-clés, une question à débattre par étape, liens avec les programmes de sciences, d'EMC et d'EDD, et une fiche enseignant imprimable, à relire par votre pôle éducation.") + '</p>' + btn("Lire la fiche enseignant ➜", "go", "pj-btn", { r: "fiche" }) + '</section>' +
       aideInstall() +
-      '<div class="pj-acces">' + btn("🔳 Les QR codes", "go", "pj-sec", { r: "qr" }) + btn("ℹ️ Crédits", "credits", "pj-sec") + '</div>' +
+      '<div class="pj-acces">' + btn("🔳 Le QR code de départ", "go", "pj-sec", { r: "qr" }) + btn("ℹ️ Crédits", "credits", "pj-sec") + '</div>' +
       '<p class="pj-fiction">' + esc(P.fiction) + '</p></div>' +
       dock(btn("▶ Démarrer la démo", "go", "big", { r: "accueil" }));
   };
@@ -182,14 +186,14 @@
         (f[E.id] ? '<span class="mini-etoiles" aria-label="' + et + ' étoile(s)">' + [1, 2, 3].map(k2 => Art.ICO.etoile(k2 <= et)).join("") + '</span>' : "") + '</span><span class="go" aria-hidden="true">' + (f[E.id] ? "↻" : "➜") + '</span></button></li>' + lien;
     }).join("");
     const t = n >= JOUABLES ? { expr: "fete", t: "Deux indices réunis ! Pour la démo, l'enquête s'arrête ici. Les trois autres étapes t'attendent dans l'application complète." }
-      : n === 0 ? { expr: "clin", t: "Voici la plage vue du ciel. Commence par l'étape 1 : touche-la sur la carte ou dans la liste. Sur place, tu scannerais le QR code du panneau." }
+      : n === 0 ? { expr: "clin", t: "Voici la plage vue du ciel. Commence par l'étape 1 : touche-la sur la carte ou dans la liste. Sur place, tu commences au point de départ, puis tu marches d'un point à l'autre." }
         : { expr: "content", t: "Encore " + (JOUABLES - n) + " étape" + (JOUABLES - n > 1 ? "s" : "") + " jouable" + (JOUABLES - n > 1 ? "s" : "") + " dans cette démo. L'étape " + nx + " t'attend !" };
     return '<span class="kicker">L\'enquête</span><h2>La plage de Zouzou</h2>' +
       '<div class="carte-box">' + Art.carte(etats) + '</div>' +
       '<div class="progress" role="img" aria-label="' + n + ' indices sur ' + TOTAL + '"><i style="width:' + (n / TOTAL * 100) + '%"></i><span>' + n + ' / ' + TOTAL + ' indices</span></div>' +
       bulle(t, { compact: true }) + '<ul class="stations">' + rows + '</ul>' +
-      '<p class="note small">🔗 Sur place, chaque QR code ouvre son étape : <b>?station=1</b> … <b>?station=5</b>. Emplacements à choisir avec vous.</p>' +
-      (n >= JOUABLES ? dock(btn("🏁 Fin de la démo ➜", "go", "big", { r: "findemo" })) : nx ? dock(btn("➜ Aller à l'étape " + nx, "station", "big", { id: nx })) : "");
+      '<p class="note small">📍 Sur place, comme au Croc Parc : <b>un seul départ</b> (un QR code ou le GPS du téléphone), puis l\'étape suivante s\'ouvre <b>quand on arrive au bon endroit</b>. Mode et emplacements à choisir avec vous.</p>' +
+      (n >= JOUABLES ? dock(btn("🏁 Fin de la démo ➜", "go", "big", { r: "findemo" })) : nx ? dock(btn(nx > 1 ? "🚶 Rejoindre l'étape " + nx : "➜ Aller à l'étape " + nx, "station", "big", { id: nx })) : "");
   };
 
   // ===================== ÉTAPES =====================
@@ -214,7 +218,7 @@
     if (step === "info") {
       if (!Store.faits()[id]) Store.fait(id, true, (resultat[id] && resultat[id].etoiles) || 2);
       const K = C.cartes[E.carte], et = (Store.get("etoiles") || {})[id] || 0, r = resultat[id];
-      const suite = id < JOUABLES ? btn("➜ Étape " + (id + 1) + " : " + esc(ET(id + 1).titre), "station", "big", { id: id + 1 }) + btn("🗺️ La carte de la plage", "go", "sec", { r: "hub" })
+      const suite = id < JOUABLES ? btn("🚶 Rejoindre l'étape " + (id + 1), "go", "big", { r: "marche", s: id + 1 }) + btn("🗺️ La carte de la plage", "go", "sec", { r: "hub" })
         : btn("🏁 Terminer la démo ➜", "go", "big", { r: "findemo" }) + btn("🗺️ La carte de la plage", "go", "sec", { r: "hub" });
       return '<span class="kicker">Indice trouvé · ' + Store.count() + ' / ' + TOTAL + '</span><h2>' + E.ico + " " + esc(E.titre) + '</h2>' +
         '<div class="score"><div class="etoiles" aria-label="' + et + ' étoile(s) sur 3">' + [1, 2, 3].map(k => Art.ICO.etoile(k <= et)).join("") + '</div>' + (r ? '<small>' + esc(r.detail) + '</small>' : "") + '</div>' +
@@ -249,6 +253,57 @@
     }
   }
 
+
+  // ===================== MARCHE : « Rejoins le prochain point » =====================
+  // Comme au Croc Parc : la carte sous les yeux, on marche jusqu'au repère, puis « Je suis arrivé » ouvre l'étape.
+  // GPS facultatif : demandé seulement si le joueur touche « Utiliser ma position » ; refus, absence ou test à la maison = aucun souci.
+  let geoWatch = null, geoTimer = null;
+  function stopGeo() { if (geoWatch != null && navigator.geolocation) navigator.geolocation.clearWatch(geoWatch); geoWatch = null; clearTimeout(geoTimer); geoTimer = null; }
+  const cibleMarche = () => { const v = +route.step; return v >= 2 && v <= JOUABLES ? v : Math.max(2, prochaine() || 2); };
+  function distM(a, b) { const R = 6371000, r = x => x * Math.PI / 180, dl = r(b.lat - a.lat), dg = r(b.lng - a.lng);
+    const h = Math.sin(dl / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dg / 2) ** 2; return 2 * R * Math.asin(Math.sqrt(h)); }
+  function geoMsg(t, cls) { const e = document.getElementById("geo-etat"); if (e) { e.className = "geo-etat small " + (cls || ""); e.textContent = typo(t); } }
+  function activerGeo() {
+    const id = cibleMarche(), pt = C.DECLENCHEMENT.points[id];
+    if (!("geolocation" in navigator) || !window.isSecureContext) { geoMsg("Ce téléphone ne donne pas sa position ici. Aucun souci : touche « Je suis arrivé » devant le repère.", "info"); return; }
+    stopGeo(); geoMsg("Recherche de ta position…", "info");
+    const b = document.querySelector("[data-act=geo]"); if (b) b.disabled = true;
+    const fin = () => { const bb = document.querySelector("[data-act=geo]"); if (bb) bb.disabled = false; };
+    geoTimer = setTimeout(() => { stopGeo(); fin(); geoMsg("Pas de position pour l'instant (réseau, intérieur…). Touche « Je suis arrivé » devant le repère.", "info"); }, 20000);
+    try {
+      geoWatch = navigator.geolocation.watchPosition(pos => {
+        if (route.n !== "marche") return stopGeo();
+        clearTimeout(geoTimer);
+        const ici = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        if (!pt) { stopGeo(); fin(); geoMsg("Position reçue ✓ Les emplacements des étapes restent à choisir avec la Réserve : pour cette démo, touche « Je suis arrivé ».", "ok"); return; }
+        const d = Math.round(distM(ici, pt));
+        if (d <= C.DECLENCHEMENT.rayon) { stopGeo(); arriver("gps"); } else geoMsg("Encore environ " + d + " m. Continue vers le repère !", "ok");
+      }, err => {
+        stopGeo(); fin();
+        geoMsg(err && err.code === 1 ? "Position non autorisée : aucun souci. Touche « Je suis arrivé » une fois devant le repère." : "Position indisponible (réseau, intérieur…). Touche « Je suis arrivé » devant le repère.", "info");
+      }, { enableHighAccuracy: true, maximumAge: 5000, timeout: 15000 });
+    } catch (e) { stopGeo(); fin(); geoMsg("Position indisponible. Touche « Je suis arrivé » devant le repère.", "info"); }
+  }
+  function arriver(par) {
+    if (route.n !== "marche") return;
+    const id = cibleMarche(); stopGeo();
+    Audio2.Sfx.ok(); Audio2.vibre([40, 30, 40]); vague();
+    go("st" + id, "brief", false, demoMode ? "replace" : undefined);
+    toast(par === "gps" ? "📍 Tu es arrivé ! L'étape " + id + " s'ouvre." : "📍 Bien arrivé ! L'étape " + id + " s'ouvre.", 2600);
+  }
+  SCREENS.marche = () => {
+    const id = cibleMarche(), E = ET(id), M = E.marche || {}, de = id - 1;
+    return '<span class="kicker">En route · étape ' + de + ' → étape ' + id + '</span><h2>Rejoins le prochain point</h2>' +
+      '<div class="marche-box">' + Art.marcheCarte(de, id) +
+      '<p class="marche-dist"><span><b>' + esc(M.distance || "quelques pas") + '</b> environ*</span><span>🚶 ' + esc(M.duree || "") + '</span></p></div>' +
+      bulle({ expr: "clin", t: "Bravo pour l'indice ! Maintenant, on marche, sans courir et sans entrer dans l'eau. La prochaine étape s'ouvre quand tu arrives au bon endroit." }, { compact: true }) +
+      '<section class="card repere"><h3>🔎 Le repère à chercher</h3>' + Art.vignette(M.vignette) + '<p>' + esc(M.repere || "") + '</p><p class="small dim">📍 ' + esc(E.lieu) + '</p></section>' +
+      '<section class="card geo"><h3>📡 Arrivée automatique (facultatif)</h3><p class="small">' + esc("Sur place, le téléphone peut reconnaître le bon endroit tout seul, si tu l'autorises. Ta position reste sur le téléphone.") + '</p>' +
+      btn("Utiliser ma position", "geo", "sec") + '<p id="geo-etat" class="geo-etat small" aria-live="polite"></p></section>' +
+      '<p class="note small">' + esc("Démo ou test à distance : touche « Je suis arrivé » pour simuler l'arrivée. GPS ou QR code de départ, emplacements et distances* : à voir ensemble.") + '</p>' +
+      dock(btn("📍 Je suis arrivé", "arrive", "big") + btn("🗺️ La carte de la plage", "go", "sec", { r: "hub" }));
+  };
+
   // ===================== FIN DE LA DÉMO =====================
   SCREENS.findemo = () => '<div class="findemo"><span class="kicker">Version démo · 2 étapes sur 5</span><h2>Fin de la démo</h2>' +
     '<div class="fd-art" aria-hidden="true"><span class="pj-halo"></span>' + Art.zouzou("fete", "flotte") + '</div>' +
@@ -265,19 +320,20 @@
     '<h3>L\'idée</h3><p>' + esc("Par équipes de 3 à 4 élèves, un téléphone ou une tablette par équipe, les élèves mènent l'enquête de Zouzou sur la plage, sans entrer dans l'eau. Chaque étape associe un défi tactile, une question et un « Le savais-tu ? » tiré du guide des écogestes de la Réserve.") + '</p>' +
     '<h3>Objectifs</h3><ul class="clean"><li>' + esc("Comprendre que le corail est un animal et que le récif est vivant.") + '</li><li>' + esc("Relier des gestes du quotidien (déchets, crème solaire, nourrissage) à leurs effets sur le lagon.") + '</li><li>' + esc("Coopérer en équipe et argumenter à partir d'une question ouverte.") + '</li></ul>' +
     '<h3>Liens avec les programmes</h3><ul class="clean"><li><b>Sciences :</b> ' + esc("le vivant et son environnement, les effets des activités humaines (cycle 2) ; les écosystèmes et les conséquences des actions humaines (cycle 3).") + '</li><li><b>EMC :</b> ' + esc("respect dû à l'environnement et au vivant, écogestes et intérêt général.") + '</li><li><b>EDD :</b> ' + esc("biodiversité et écosystèmes, gestion des ressources et des déchets.") + '</li></ul>' +
-    '<h3>Déroulé proposé</h3><ul class="clean"><li><b>Avant :</b> ' + esc("en classe, découverte de Zouzou et des équipes (15 min).") + '</li><li><b>Sur la plage :</b> ' + esc("les étapes en équipes, environ 5 minutes chacune (à mesurer ensemble).") + '</li><li><b>Après :</b> ' + esc("retour sur les questions « À débattre », et les bons gestes.") + '</li></ul>' +
+    '<h3>Déroulé proposé</h3><ul class="clean"><li><b>Avant :</b> ' + esc("en classe, découverte de Zouzou et des équipes (15 min).") + '</li><li><b>Sur la plage :</b> ' + esc("un seul départ (un QR code, ou le GPS), puis les équipes marchent d'un point à l'autre : chaque étape s'ouvre à l'arrivée, environ 5 minutes chacune (à mesurer ensemble).") + '</li><li><b>Après :</b> ' + esc("retour sur les questions « À débattre », et les bons gestes.") + '</li></ul>' +
     C.etapes.filter(E => E.jeu && E.id <= JOUABLES).map(E => '<h3>Étape ' + E.id + ' · ' + esc(E.titre) + '</h3><p><b>Notion :</b> ' + esc(E.classe.notion) + '</p><p class="mots">' + E.classe.mots.map(m => '<span>' + esc(m) + '</span>').join("") + '</p><p><b>À débattre :</b> ' + esc(E.classe.q) + '</p><p><b>Corrigé de la question :</b> ' + esc(E.quiz.opts[E.quiz.ok]) + '. ' + esc(E.quiz.bravo) + '</p>').join("") +
     '<h3>Dans l\'application complète</h3><ul class="clean">' + C.etapes.filter(E => E.id > JOUABLES).map(E => '<li><b>Étape ' + E.id + ' · ' + esc(E.titre) + ' :</b> ' + esc(E.apercu) + '</li>').join("") + '</ul>' +
     '<h3>Point de vigilance</h3><p>' + esc("Zouzou « parle » : c'est une convention de fiction, à expliciter avec les élèves. Une zourite ne parle pas et ne « comprend » pas ce qui arrive au récif.") + '</p>' +
-    '<h3>À définir ensemble</h3><ul class="clean"><li>' + esc("Les niveaux visés en priorité (vos animations vont du CE1 à la 6e).") + '</li><li>' + esc("Le lieu, la durée, le rôle de l'enseignant pendant que l'animateur est dans le lagon.") + '</li></ul>' +
+    '<h3>À définir ensemble</h3><ul class="clean"><li>' + esc("Les niveaux visés en priorité (vos animations vont du CE1 à la 6e).") + '</li><li>' + esc("Le lieu, la durée, le rôle de l'enseignant pendant que l'animateur est dans le lagon.") + '</li><li>' + esc("Le déclenchement des étapes (GPS ou QR code de départ) et leurs emplacements.") + '</li></ul>' +
     '<p class="src">Sources : R5 (guide des écogestes), R3 (mission de sensibilisation), programmes officiels E1 à E4. Voir SOURCES.md.</p>' +
     '<div class="rang-btn noprint">' + btn("🖨️ Imprimer", "print", "sec") + btn("← Retour au projet", "go", "sec", { r: "projet" }) + '</div></div>';
 
-  // ===================== QR CODES (pour l'équipe) =====================
+  // ===================== LE QR CODE DE DÉPART (un seul, pas de QR par étape) =====================
   const baseURL = () => location.origin + location.pathname;
-  SCREENS.qr = () => '<div class="doc qrdoc">' + flecheRetour("projet") + '<span class="kicker">Pour l\'équipe</span><h2>Les QR codes</h2>' +
-    '<p>' + esc("Générés sur ce téléphone, sans réseau. Un QR code pour démarrer, puis un par étape (emplacements à choisir avec vous).") + '</p>' +
-    '<div class="qr-grille">' + [["Démarrer l'aventure", baseURL()]].concat(C.etapes.slice(0, JOUABLES).map(E => ["Étape " + E.id + " · " + E.titre, baseURL() + "?station=" + E.id])).map(q => '<figure class="qr-carte">' + QR.svg(q[1], { taille: 150 }) + '<figcaption><b>' + esc(q[0]) + '</b><small>' + esc(q[1]) + '</small></figcaption></figure>').join("") + '</div>' +
+  SCREENS.qr = () => '<div class="doc qrdoc">' + flecheRetour("projet") + '<span class="kicker">Pour l\'équipe · un seul QR code</span><h2>Le QR code de départ</h2>' +
+    '<p>' + esc("Généré sur ce téléphone, sans réseau. Comme au Croc Parc, un seul QR code suffit : on le scanne au départ, puis on marche, et chaque étape s'ouvre en arrivant au bon endroit. Pas de QR code à chaque étape.") + '</p>' +
+    '<p class="small dim">' + esc("GPS ou QR code de départ, et emplacements : à voir ensemble.") + '</p>' +
+    '<div class="qr-grille">' + [["Le QR code de départ", baseURL()]].map(q => '<figure class="qr-carte">' + QR.svg(q[1], { taille: 150 }) + '<figcaption><b>' + esc(q[0]) + '</b><small>' + esc(q[1]) + '</small></figcaption></figure>').join("") + '</div>' +
     '<div class="rang-btn noprint">' + btn("🖨️ Imprimer", "print", "sec") + btn("← Retour au projet", "go", "sec", { r: "projet" }) + '</div></div>';
 
   // ===================== FEUILLES (réglages, crédits) =====================
@@ -301,7 +357,7 @@
   }
 
   // ===================== BARRE DE PRÉSENTATION (?demo=1) =====================
-  const NOMS = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "La carte", st1: "Étape 1 · la plage", st2: "Étape 2 · le paddle", findemo: "Fin de la démo", fiche: "Fiche enseignant", qr: "QR codes" };
+  const NOMS = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "La carte", marche: "En marche vers l'étape 2", st1: "Étape 1 · la plage", st2: "Étape 2 · le paddle", findemo: "Fin de la démo", fiche: "Fiche enseignant", qr: "QR code de départ" };
   const ETAPE = { brief: "mission", jeu: "jeu", quiz: "question", info: "indice" };
   function updatePresbar() {
     let p = document.getElementById("presbar");
@@ -327,7 +383,11 @@
       case "start": { Audio2.Sfx.bulle(); const premiere = !Store.get("intro"); Store.set("intro", true); premiere ? go("intro", "0") : go("hub"); break; }
       case "pub": Store.set("public", b.dataset.v); Audio2.Sfx.tap(); go(route.n, route.step, true, "replace"); break;
       case "intro": Audio2.Sfx.page(); go("intro", b.dataset.i); break;
-      case "station": { const id = +b.dataset.id; if (id > JOUABLES) { toast("🔒 Cette étape arrive dans l'application complète"); break; } vague(); go("st" + id, "brief"); break; }
+      case "station": { const id = +b.dataset.id; if (id > JOUABLES) { toast("🔒 Cette étape arrive dans l'application complète"); break; }
+        if (id > 1 && !Store.faits()[id]) { Audio2.Sfx.tap(); go("marche", id); break; } // on y va à pied ; une étape déjà faite se rejoue directement
+        vague(); go("st" + id, "brief"); break; }
+      case "arrive": arriver("bouton"); break;
+      case "geo": activerGeo(); break;
       case "go": Audio2.Sfx.tap(); go(b.dataset.r, b.dataset.s || null); break;
       case "retour": Audio2.Sfx.tap(); if (aPrecedent()) history.back(); else go(b.dataset.r || "projet", null, false, "replace"); break;
       case "rep": repondre(+b.dataset.i); break;
