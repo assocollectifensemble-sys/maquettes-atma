@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Quintesens Institut · Votre parenthèse beauté &amp; bien-être à Saint-Benoît</title>
+<meta name="description" content="Onglerie, rehaussement de cils, épilation, head spa et soins en duo : Quintesens Institut, 178 RN2 Bourbier-les-Bas, Saint-Benoît.">
+<meta property="og:title" content="Quintesens Institut · Votre parenthèse beauté & bien-être">
+<meta property="og:description" content="Une page imaginée pour Quintesens Institut, à Saint-Benoît.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/quintesens-institut-saint-benoit/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/quintesens-institut-saint-benoit/img/facade.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#16202f;--nuit2:#1f2c40;--or:#c9a961;--or2:#e3cc8e;--poudre:#f3dcd6;--rose:#d9a5a0;--ivoire:#fbf6f1;--ink:#1d2330;--gris:#6c6f78}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",system-ui,sans-serif;font-weight:400;background:var(--ivoire);color:var(--ink);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--nuit);color:var(--or2);font-size:.78rem;text-align:center;padding:.55rem 1rem;letter-spacing:.04em}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.05}
+h2 em{font-style:italic;font-weight:500;color:var(--rose)}
+.sur{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--or);font-weight:500}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.04em;transition:transform .3s,background .3s,color .3s}
+.btn.or{background:var(--or);color:var(--nuit)}.btn.or:hover{background:var(--or2);transform:translateY(-2px)}
+.btn.ligne{border:1px solid var(--or);color:var(--or2)}.btn.ligne:hover{background:var(--or);color:var(--nuit)}
+.btn:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+/* hero */
+.hero{position:relative;background:var(--nuit);color:var(--ivoire);overflow:hidden}
+#feuilles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.hero .g{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center;min-height:min(88vh,800px);padding:4rem 0}
+.script{font-family:"Great Vibes",cursive;font-size:clamp(3.6rem,10vw,7rem);color:var(--or2);line-height:1;font-weight:400;animation:ecrit 1.6s ease both}
+@keyframes ecrit{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+.hero h1 small{display:block;font-family:"Jost";font-size:.85rem;letter-spacing:.42em;text-transform:uppercase;color:var(--or);font-weight:400;margin-top:.6rem}
+.hero .lead{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.35rem,2.6vw,1.75rem);margin-top:1.6rem;color:var(--poudre)}
+.arche{position:relative;border-radius:340px 340px 18px 18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 0 0 1px var(--or),0 0 0 12px var(--nuit),0 0 0 13px rgba(201,169,97,.5)}
+.arche img{width:100%;height:100%;object-fit:cover;animation:lent 22s ease-in-out infinite alternate}
+@keyframes lent{to{transform:scale(1.1)}}
+/* soins */
+.bloc{padding:clamp(4.2rem,10vh,7rem) 0}
+.bloc h2{font-size:clamp(2.3rem,5.4vw,3.9rem);margin:.6rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.06rem;max-width:56ch}
+.carte{display:grid;grid-template-columns:repeat(2,1fr);gap:0 4rem;margin-top:2.4rem}
+.soin{padding:1.5rem 0;border-bottom:1px solid #e6d9c8;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:baseline}
+.soin i{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--or);font-size:1.4rem}
+.soin h3{font-size:1.6rem}
+.soin p{color:var(--gris);font-size:.98rem;grid-column:2}
+/* galerie */
+.galerie{background:var(--poudre)}
+.mur{columns:3 240px;column-gap:1rem;margin-top:2.4rem}
+.mur figure{break-inside:avoid;margin-bottom:1rem;border-radius:18px;overflow:hidden;position:relative}
+.mur img{width:100%;transition:transform .8s}
+.mur figure:hover img{transform:scale(1.05)}
+/* head spa */
+.spa{background:var(--nuit2);color:var(--ivoire);position:relative;overflow:hidden}
+.spa .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.spa .chapo{color:#c9cfdb}
+.spa h2 em{color:var(--or2)}
+.bienfaits{list-style:none;margin-top:1.6rem}
+.bienfaits li{padding:.7rem 0;border-bottom:1px solid rgba(201,169,97,.25);font-family:"Cormorant Garamond",serif;font-size:1.3rem}
+.bienfaits li:before{content:"✦";color:var(--or);margin-right:.8rem;font-size:.9rem}
+.vapeur{position:relative;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 60%,rgba(243,220,214,.22),transparent 65%);display:flex;align-items:center;justify-content:center;text-align:center}
+.vapeur span{position:absolute;bottom:30%;width:60px;height:160px;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.22),transparent 70%);filter:blur(10px);animation:monte 7s ease-in infinite}
+.vapeur span:nth-child(2){left:38%;animation-delay:2.3s}.vapeur span:nth-child(3){right:34%;animation-delay:4.6s}
+@keyframes monte{0%{transform:translateY(40px) scaleX(.6);opacity:0}30%{opacity:1}100%{transform:translateY(-200px) scaleX(1.4);opacity:0}}
+.vapeur p{font-family:"Great Vibes",cursive;font-size:clamp(2.4rem,5vw,3.6rem);color:var(--or2);line-height:1.1;position:relative}
+/* duo */
+.duo .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.duo img{border-radius:18px 160px 18px 18px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.pastille{display:inline-block;margin-top:1.4rem;padding:.6rem 1.2rem;border:1px solid var(--or);border-radius:999px;color:var(--nuit);font-size:.92rem}
+/* contact */
+.contact{background:var(--nuit);color:var(--ivoire);text-align:left}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact h2 em{color:var(--or2)}
+.contact .chapo{color:#c9cfdb}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(201,169,97,.25);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--or);min-width:7.5rem;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;padding-top:.3rem}
+.coord a{color:var(--ivoire);text-underline-offset:4px}
+footer{background:#0f1622;color:#8d93a0;text-align:center;font-size:.84rem;padding:1.8rem 1rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s,transform 1s}.rv.vu{opacity:1;transform:none}
+@media (max-width:880px){.hero .g,.spa .g,.duo .g,.contact .g,.carte{grid-template-columns:1fr}.hero .g{padding:3rem 0 4rem;gap:2.4rem}.arche{max-width:420px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}#feuilles{display:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour Quintesens Institut · page privée</div>
+<header class="hero">
+ <canvas id="feuilles" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Institut de beauté · Saint-Benoît</p>
+   <h1><span class="script">Quintesens</span><small>Institut</small></h1>
+   <p class="lead">Votre parenthèse beauté &amp; bien-être commence ici.</p>
+   <div class="btns">
+    <a class="btn or" href="sms:+262692043550">Prendre rendez-vous par SMS</a>
+    <a class="btn ligne" href="#soins">Découvrir les soins</a>
+   </div>
+  </div>
+  <div class="arche"><img src="img/facade.webp" alt="La devanture bleu nuit et or de Quintesens Institut, fleurs et fauteuil en rotin"></div>
+ </div>
+</header>
+
+<section class="bloc" id="soins">
+ <div class="wrap">
+  <p class="sur rv">À l'institut</p>
+  <h2 class="rv">Des soins pensés <em>pour vous</em></h2>
+  <p class="chapo rv">Des mains au regard, jusqu'au bout des pieds : chaque soin est un moment rien qu'à vous.</p>
+  <div class="carte">
+   <div class="soin rv"><i>01</i><h3>Onglerie</h3><p>Poses et nail art tout en finesse : nude, rose poudré, touches dorées, petites fleurs…</p></div>
+   <div class="soin rv"><i>02</i><h3>Rehaussement de cils</h3><p>Un regard ouvert et naturel, avec vos propres cils.</p></div>
+   <div class="soin rv"><i>03</i><h3>Head Spa</h3><p>Massage profond, vapeur douce et soins ciblés du cuir chevelu.</p></div>
+   <div class="soin rv"><i>04</i><h3>Yumi Feet</h3><p>Le soin qui offre de jolis pieds tout doux.</p></div>
+   <div class="soin rv"><i>05</i><h3>Épilation</h3><p>Une peau douce, en toute délicatesse.</p></div>
+   <div class="soin rv"><i>06</i><h3>Soins en duo</h3><p>Une expérience à vivre et à partager, pour petits et grands.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc galerie">
+ <div class="wrap">
+  <p class="sur rv">Fait main à l'institut</p>
+  <h2 class="rv">Nos dernières <em>créations</em></h2>
+  <div class="mur">
+   <figure class="rv"><img src="img/ongles-nude.webp" alt="Ongles longs nude et bagues dorées" loading="lazy"></figure>
+   <figure class="rv"><img src="img/ongles-dores.webp" alt="Ongles rose poudré aux lignes dorées" loading="lazy"></figure>
+   <figure class="rv"><img src="img/fleurs.webp" alt="Ongles rose poudré ornés de petites fleurs" loading="lazy"></figure>
+   <figure class="rv"><img src="img/pointes-or.webp" alt="Ongles aux pointes dorées" loading="lazy"></figure>
+   <figure class="rv"><img src="img/coeur.webp" alt="Nail art rouge et blanc avec un cœur" loading="lazy"></figure>
+   <figure class="rv"><img src="img/turquoise.webp" alt="Ongles rose et turquoise" loading="lazy"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="bloc spa">
+ <div class="wrap g">
+  <div class="rv">
+   <p class="sur">Le soin signature</p>
+   <h2>Le <em>Head Spa</em></h2>
+   <p class="chapo">Bien plus qu'un soin du cuir chevelu : un vrai moment de lâcher-prise, entre vos mains expertes et une vapeur douce. Offrez à votre tête ce que vous offrez à votre corps.</p>
+   <ul class="bienfaits"><li>Un cuir chevelu purifié</li><li>Une chevelure brillante et revitalisée</li><li>Une relaxation intense, jusqu'au bout des doigts</li></ul>
+  </div>
+  <div class="vapeur rv" aria-hidden="true"><span></span><span></span><span></span><p>une vraie pause<br>bien-être</p></div>
+ </div>
+</section>
+
+<section class="bloc duo">
+ <div class="wrap g">
+  <img class="rv" src="img/rose-poudre.webp" alt="Ongles rose poudré, ciel bleu en fond" loading="lazy">
+  <div class="rv">
+   <p class="sur">À partager</p>
+   <h2>Un moment <em>à deux</em></h2>
+   <p class="chapo">Entre amies, en famille ou avec la personne de votre choix : les soins en duo se vivent ensemble, petits et grands.</p>
+   <p class="pastille">Partenaire du Pass Loisirs</p>
+  </div>
+ </div>
+</section>
+
+<section class="bloc contact" id="contact">
+ <div class="wrap g">
+  <div class="rv">
+   <h2>Votre parenthèse <em>vous attend</em></h2>
+   <p class="chapo">Les rendez-vous se prennent par SMS de préférence, ou en message privé sur nos réseaux.</p>
+   <div class="btns"><a class="btn or" href="sms:+262692043550">SMS · 0692 04 35 50</a></div>
+  </div>
+  <ul class="coord rv">
+   <li><span>Adresse</span>178 Route Nationale 2, Bourbier-les-Bas, 97470 Saint-Benoît</li>
+   <li><span>Rendez-vous</span><a href="sms:+262692043550">0692 04 35 50</a></li>
+   <li><span>E-mail</span><a href="mailto:qs.institut@gmail.com">qs.institut@gmail.com</a></li>
+   <li><span>Réseaux</span><a href="https://www.facebook.com/quintesensinstitut">Facebook</a> · <a href="https://www.instagram.com/quintesens.institut/">Instagram</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Quintesens Institut.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('feuilles'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<22;i++)P.push({x:Math.random(),y:Math.random(),v:.00025+Math.random()*.0004,s:4+Math.random()*6,p:Math.random()*6,c:Math.random()<.5});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;if(p.y>1.05){p.y=-.05;p.x=Math.random()}
+  var cx=p.x*W+Math.sin(t/1800+p.p)*30,cy=p.y*H;x.save();x.translate(cx,cy);x.rotate(Math.sin(t/1400+p.p)*1.2);
+  x.fillStyle=p.c?'rgba(201,169,97,.45)':'rgba(243,220,214,.35)';x.beginPath();x.moveTo(0,-p.s);x.quadraticCurveTo(p.s*.8,0,0,p.s);x.quadraticCurveTo(-p.s*.8,0,0,-p.s);x.fill();x.restore()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
