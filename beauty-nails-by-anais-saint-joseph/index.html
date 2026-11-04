@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Beauty &amp; Nails by Anaïs · Institut de beauté &amp; styliste ongulaire à Saint-Joseph</title>
+<meta name="description" content="Institut de beauté et styliste ongulaire à Saint-Joseph, sur rendez-vous. Gel, remplissage, rallongement, nail art.">
+<meta property="og:title" content="Beauty &amp; Nails by Anaïs · Saint-Joseph">
+<meta property="og:description" content="Une page imaginée pour Beauty &amp; Nails by Anaïs.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/beauty-nails-by-anais-saint-joseph/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/beauty-nails-by-anais-saint-joseph/img/tropical.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Great+Vibes&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--blanc:#fffafb;--poudre:#fbe6ec;--rose:#f4a7bd;--fuchsia:#d63f7a;--prune:#4a1f33;--gris:#7d6670}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--blanc);color:var(--prune);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--prune);color:var(--poudre);font-size:.78rem;text-align:center;padding:.55rem 1rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05}
+.script{font-family:"Great Vibes",cursive;color:var(--fuchsia);font-weight:400}
+.sur{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--fuchsia);font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:transform .3s,background .3s,color .3s}
+.btn.plein{background:var(--fuchsia);color:#fff}.btn.plein:hover{background:var(--prune);transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid var(--prune);color:var(--prune)}.btn.ligne:hover{background:var(--prune);color:#fff}
+.btn:focus-visible{outline:2px solid var(--fuchsia);outline-offset:3px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 10%,#fff 0%,var(--poudre) 60%,#f8d3de 100%)}
+#paillettes{position:absolute;inset:0;pointer-events:none;z-index:1}
+.hero .g{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;min-height:min(88vh,800px);padding:4rem 0}
+.hero h1{font-size:clamp(3.2rem,8.5vw,6.4rem)}
+.hero h1 .script{display:block;font-size:.62em;margin-top:.2rem}
+.lead{font-size:1.12rem;color:var(--gris);max-width:42ch;margin-top:1.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.tags span{background:#fff;border:1px solid var(--rose);border-radius:999px;padding:.35rem .9rem;font-size:.85rem}
+.duo{position:relative;height:min(68vh,600px)}
+.duo img{position:absolute;object-fit:cover;border-radius:28px;box-shadow:0 30px 60px -28px rgba(74,31,51,.45)}
+.duo .a{width:72%;height:82%;right:0;top:0}
+.duo .b{width:50%;height:52%;left:0;bottom:0;border:8px solid var(--blanc);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-12px) rotate(-1.5deg)}}
+.bloc{padding:clamp(4.2rem,10vh,7rem) 0}
+.bloc h2{font-size:clamp(2.4rem,5.4vw,4rem);margin:.6rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.05rem;max-width:58ch}
+.anniv{background:var(--prune);color:var(--poudre)}
+.anniv .g{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+.six{font-family:"Cormorant Garamond",serif;font-size:clamp(7rem,18vw,13rem);line-height:.8;color:var(--rose)}
+.anniv h2{color:#fff}.anniv p{color:#e7c9d4;max-width:56ch}
+.galerie .g{columns:3 260px;column-gap:1.1rem;margin-top:2.6rem}
+.galerie figure{break-inside:avoid;margin-bottom:1.1rem;position:relative;border-radius:22px;overflow:hidden}
+.galerie img{width:100%;transition:transform 1s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:.9rem;bottom:.9rem;background:rgba(255,250,251,.92);font-size:.84rem;font-weight:700;padding:.3rem .85rem;border-radius:999px}
+.prestas{background:var(--poudre)}
+.liste{display:grid;grid-template-columns:repeat(2,1fr);gap:0 3.5rem;margin-top:2.4rem}
+.liste div{padding:1.3rem 0;border-top:1px solid rgba(214,63,122,.25)}
+.liste h3{font-size:1.7rem}.liste p{color:var(--gris);font-size:.96rem}
+.infos .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(74,31,51,.15);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--fuchsia);min-width:7.5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;padding-top:.3rem}
+.coord a{color:var(--prune);text-underline-offset:4px}
+footer{background:var(--prune);color:#c9a6b5;text-align:center;font-size:.84rem;padding:1.8rem 1rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s,transform 1s}.rv.vu{opacity:1;transform:none}
+@media (max-width:880px){.hero .g,.infos .g,.anniv .g{grid-template-columns:1fr}.liste{grid-template-columns:1fr}.duo{height:440px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}#paillettes{display:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour Beauty &amp; Nails by Anaïs · page privée</div>
+<header class="hero">
+ <canvas id="paillettes" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Institut de beauté · Saint-Joseph</p>
+   <h1>Beauty &amp; Nails<span class="script">by Anaïs</span></h1>
+   <p class="lead">Styliste ongulaire et institut de beauté, rue Charles Baudelaire : des poses délicates ou audacieuses, pensées pour sublimer vos mains jusqu'au bout des ongles.</p>
+   <div class="tags"><span>Gel sur ongle naturel</span><span>Remplissage</span><span>Rallongement gel</span><span>Nail art</span><span>Sourcils</span></div>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693216127">Prendre rendez-vous</a><a class="btn ligne" href="#poses">Voir les poses</a></div>
+  </div>
+  <div class="duo">
+   <img class="a" src="img/tropical.webp" alt="Pose délicate aux fleurs d'hibiscus">
+   <img class="b" src="img/bleu.webp" alt="Pose bleue intense et scintillante" loading="lazy">
+  </div>
+ </div>
+</header>
+
+<section class="bloc anniv">
+ <div class="wrap g">
+  <div class="six rv" aria-hidden="true">6</div>
+  <div class="rv">
+   <p class="sur" style="color:var(--rose)">Six ans déjà</p>
+   <h2>Six ans de passion, <span class="script" style="color:var(--rose)">une pose après l'autre</span></h2>
+   <p>Depuis six ans, Anaïs accueille ses clientes sur rendez-vous, dans un cadre pensé pour prendre le temps. Chaque pose est une petite création : un geste précis, des couleurs choisies ensemble, et le plaisir de repartir avec des mains qui donnent le sourire.</p>
+  </div>
+ </div>
+</section>
+
+<section class="bloc galerie" id="poses">
+ <div class="wrap">
+  <p class="sur rv">Les créations</p>
+  <h2 class="rv">Douceur ou <span class="script">caractère</span></h2>
+  <p class="chapo rv">Fleurs d'hibiscus, bleu scintillant, clin d'œil à Spider-Man ou couleurs gourmandes façon M&amp;M's : chaque cliente repart avec sa pose à elle.</p>
+  <div class="g">
+   <figure class="rv"><img src="img/tropical.webp" alt="Pose aux fleurs d'hibiscus" loading="lazy"><figcaption>Douceur tropicale</figcaption></figure>
+   <figure class="rv"><img src="img/spider.webp" alt="Nail art rouge et noir inspiré de Spider-Man" loading="lazy"><figcaption>Spider-Man vibes</figcaption></figure>
+   <figure class="rv"><img src="img/ongles-3.webp" alt="Gel sur ongle naturel" loading="lazy"><figcaption>Gel sur ongle naturel</figcaption></figure>
+   <figure class="rv"><img src="img/couleurs.webp" alt="Pose multicolore gourmande" loading="lazy"><figcaption>Pose M&amp;M's</figcaption></figure>
+   <figure class="rv"><img src="img/ongles-1.webp" alt="Remplissage" loading="lazy"><figcaption>Remplissage</figcaption></figure>
+   <figure class="rv"><img src="img/bleu.webp" alt="Pose bleue scintillante" loading="lazy"><figcaption>Le bleu qui fait la différence</figcaption></figure>
+   <figure class="rv"><img src="img/ongles-2.webp" alt="Remplissage nude et rose" loading="lazy"><figcaption>Tout en finesse</figcaption></figure>
+   <figure class="rv"><img src="img/ongles-4.webp" alt="Remplissage rose et blanc" loading="lazy"><figcaption>Remplissage</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="bloc prestas">
+ <div class="wrap">
+  <p class="sur rv">Les prestations</p>
+  <h2 class="rv">Prendre soin <span class="script">de vous</span></h2>
+  <div class="liste">
+   <div class="rv"><h3>Gel sur ongle naturel</h3><p>Une pose solide et brillante qui respecte l'ongle, en couleur unie ou décorée.</p></div>
+   <div class="rv"><h3>Rallongement gel</h3><p>La longueur et la forme que vous aimez, pour une main élégante.</p></div>
+   <div class="rv"><h3>Remplissage</h3><p>Pour garder une pose impeccable, semaine après semaine.</p></div>
+   <div class="rv"><h3>Nail art &amp; libre choix</h3><p>Fleurs, paillettes, motifs graphiques : on imagine votre pose ensemble.</p></div>
+   <div class="rv"><h3>Sourcils</h3><p>Une ligne harmonieuse et naturelle, dessinée en respectant la forme du visage.</p></div>
+   <div class="rv"><h3>Institut de beauté</h3><p>Une clientèle féminine, reçue uniquement sur rendez-vous, au calme.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc infos">
+ <div class="wrap g">
+  <div class="rv">
+   <p class="sur">Rendez-vous</p>
+   <h2>À très vite <span class="script">chez Anaïs</span></h2>
+   <p class="chapo">Un message suffit pour réserver votre créneau.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693216127">WhatsApp</a><a class="btn ligne" href="https://www.instagram.com/beautynailsbyanais/">Instagram</a></div>
+  </div>
+  <ul class="coord rv">
+   <li><span>Adresse</span>27B rue Charles Baudelaire, Saint-Joseph</li>
+   <li><span>Horaires</span>Lun., mar., jeu., ven. : 9h-12h / 13h30-17h<br>Mer. et sam. : 9h-12h · dimanche : fermé</li>
+   <li><span>Téléphone</span><a href="tel:+262693216127">0693 21 61 27</a></li>
+   <li><span>Réseaux</span><a href="https://www.facebook.com/beautynailsanais/">Facebook</a> · <a href="https://www.instagram.com/beautynailsbyanais/">@beautynailsbyanais</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Beauty &amp; Nails by Anaïs.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('paillettes'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<34;i++)P.push({x:Math.random(),y:Math.random(),v:.00008+Math.random()*.0002,s:1+Math.random()*2.6,p:Math.random()*6});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;if(p.y<-.05){p.y=1.05;p.x=Math.random()}
+  var a=.35+.35*Math.sin(t/600+p.p*3),cx=p.x*W+Math.sin(t/2500+p.p)*12,cy=p.y*H;x.fillStyle='rgba(214,63,122,'+a+')';
+  x.beginPath();x.moveTo(cx,cy-p.s*2);x.lineTo(cx+p.s*.6,cy);x.lineTo(cx,cy+p.s*2);x.lineTo(cx-p.s*.6,cy);x.fill();
+  x.beginPath();x.moveTo(cx-p.s*2,cy);x.lineTo(cx,cy+p.s*.6);x.lineTo(cx+p.s*2,cy);x.lineTo(cx,cy-p.s*.6);x.fill()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
