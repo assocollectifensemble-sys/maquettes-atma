@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>O Ti Traiteur LéÔ · Restaurant & traiteur à la Plaine des Cafres</title>
+<meta name="description" content="Repas gourmands pour vos invités, restaurant sur place et à emporter du mardi au dimanche, rue Jean de Fos du Rau.">
+<meta property="og:title" content="O Ti Traiteur LéÔ · Restaurant & traiteur">
+<meta property="og:description" content="Une page imaginée pour O Ti Traiteur LéÔ.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/o-ti-traiteur-leo/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/o-ti-traiteur-leo/img/plat-1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#f28a1b;--orange2:#d9660a;--soleil:#ffc34d;--hibiscus:#d9372b;--nuit:#1c1712;--charbon:#2b241d;--creme:#fff8ee;--sable:#f6e7d2;--gris:#7a6a5a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;background:var(--creme);color:var(--nuit);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--nuit);color:var(--soleil);text-align:center;font-size:.78rem;padding:.55rem 1rem}
+.wrap{width:min(1140px,92vw);margin:auto}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1;letter-spacing:-.02em}
+.sur{font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--orange2)}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:.85rem 1.7rem;border-radius:14px;font-weight:700;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s}
+.btn.plein{background:var(--orange);color:var(--nuit);box-shadow:0 6px 0 var(--orange2)}.btn.plein:hover{transform:translateY(-3px);box-shadow:0 9px 0 var(--orange2)}
+.btn.ligne{border:2px solid currentColor}.btn.ligne:hover{background:rgba(255,255,255,.08)}
+.btn:focus-visible{outline:3px solid var(--soleil);outline-offset:3px}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+/* HERO */
+.hero{background:var(--nuit);color:var(--creme);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;min-height:86vh;padding:4rem 0}
+.hero .sur{color:var(--soleil)}
+.hero h1{font-size:clamp(3.2rem,8.5vw,6.6rem);font-weight:800;margin:1rem 0}
+.hero h1 b{color:var(--orange)}
+.hero p.intro{font-size:1.12rem;color:#e9dccb;max-width:30rem}
+.hero .visuel{position:relative}
+.hero .visuel img.plat{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;transform:rotate(2deg);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.hero .visuel img.logo{position:absolute;left:-28px;bottom:-24px;width:120px;height:120px;object-fit:cover;border-radius:50%;border:5px solid var(--nuit);animation:flotte 5s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(-4deg)}}
+.fleurs{position:absolute;inset:0;pointer-events:none}
+.fleurs svg{position:absolute;opacity:.22;animation:tourne linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.vapeur{position:absolute;left:20%;right:20%;top:-12%;height:40%;pointer-events:none}
+.vapeur span{position:absolute;bottom:0;width:70px;height:170px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.3),transparent);filter:blur(10px);opacity:0;animation:monte 6s ease-in infinite}
+@keyframes monte{0%{transform:translateY(40px);opacity:0}30%{opacity:.8}100%{transform:translateY(-120px) scaleX(1.5);opacity:0}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:auto;padding:3.5rem 0 4.5rem}.hero .visuel{max-width:360px;justify-self:center}}
+section{padding:6rem 0}
+.titre{max-width:38rem;margin-bottom:3rem}
+.titre h2{font-size:clamp(2.3rem,5vw,3.6rem);font-weight:800;margin-top:.5rem}
+.titre p{color:var(--gris);margin-top:1rem;font-size:1.05rem}
+/* JOUR */
+.jour{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.jour figure{border-radius:20px;overflow:hidden;position:relative;background:var(--sable)}
+.jour img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.jour figure:hover img{transform:scale(1.05)}
+.jour figcaption{position:absolute;left:1rem;bottom:1rem;background:var(--creme);padding:.35rem .9rem;border-radius:999px;font-weight:700;font-size:.9rem}
+.j1{grid-column:span 7;grid-row:span 2;min-height:520px}.j2{grid-column:span 5;min-height:250px}.j3{grid-column:span 5;min-height:250px}.j4{grid-column:span 4;min-height:280px}.j5{grid-column:span 4;min-height:280px}.j6{grid-column:span 4;min-height:280px}
+@media(max-width:860px){.jour{grid-template-columns:1fr 1fr}.jour figure{grid-column:span 1!important;min-height:220px!important}.j1{grid-column:span 2!important;min-height:340px!important}}
+/* HORAIRES */
+.horaires{background:var(--orange);color:var(--nuit)}
+.horaires .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:center}
+.horaires h2{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800}
+.horaires .sur{color:var(--nuit)}
+.semaine{display:grid;grid-template-columns:repeat(7,1fr);gap:.5rem}
+.jr{background:rgba(28,23,18,.1);border-radius:14px;padding:1rem .3rem;text-align:center;font-weight:700}
+.jr small{display:block;font-size:.7rem;font-weight:600;margin-top:.4rem;line-height:1.3}
+.jr.on{background:var(--nuit);color:var(--soleil)}
+.jr.ferme{opacity:.5}
+@media(max-width:860px){.horaires .wrap{grid-template-columns:1fr}.semaine{grid-template-columns:repeat(4,1fr)}}
+/* TRAITEUR */
+.traiteur{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+.traiteur img{border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.liste{list-style:none;margin-top:1.6rem;display:grid;gap:.9rem}
+.liste li{display:flex;gap:.9rem;align-items:baseline;font-size:1.05rem}
+.liste li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--hibiscus);transform:translateY(-1px)}
+@media(max-width:860px){.traiteur{grid-template-columns:1fr;gap:2rem}}
+/* CONTACT */
+.contact{background:var(--nuit);color:var(--creme)}
+.contact .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.contact h2{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:800}
+.contact .sur{color:var(--soleil)}
+.infos{display:grid;gap:1.2rem}
+.infos small{display:block;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--soleil)}
+.infos div{border-bottom:1px solid #3a3128;padding-bottom:1rem;font-size:1.06rem}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+footer{background:var(--nuit);color:#9c8b78;text-align:center;font-size:.85rem;padding:0 0 2.5rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.reveal.vu{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour O Ti Traiteur LéÔ · page privée</div>
+
+<header class="hero">
+  <div class="fleurs" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="sur">Restaurant & traiteur · Plaine des Cafres</p>
+      <h1>O Ti Traiteur <b>LéÔ</b></h1>
+      <p class="intro">Des repas gourmands qui raviront vos invités, et un restaurant qui vous accueille sur place ou à emporter, du mardi au dimanche.</p>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262692406814">Réserver / commander</a>
+        <a class="btn ligne" href="#menu">Le menu du jour</a>
+      </div>
+    </div>
+    <div class="visuel reveal">
+      <div class="vapeur" aria-hidden="true"><span style="left:20%"></span><span style="left:45%;animation-delay:2s"></span><span style="left:68%;animation-delay:4s"></span></div>
+      <img class="plat" src="img/plat-1.webp" alt="Viande sautée aux oignons verts">
+      <img class="logo" src="img/logo.webp" alt="Logo O Ti Traiteur LéÔ">
+    </div>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="titre reveal">
+      <p class="sur">Nos bons petits plats</p>
+      <h2>Ce qui vous attend aujourd'hui</h2>
+      <p>Chaque jour, un menu à emporter publié sur notre page, comme ce sauté mine au poulet. Les marmites changent, la gourmandise reste.</p>
+    </div>
+    <div class="jour">
+      <figure class="j1 reveal"><img src="img/bacs-1.webp" alt="Carry de viande aux légumes" loading="lazy"><figcaption>Le carry du jour</figcaption></figure>
+      <figure class="j2 reveal"><img src="img/plat-2.webp" alt="Viande mijotée en sauce" loading="lazy"><figcaption>Mijoté maison</figcaption></figure>
+      <figure class="j3 reveal"><img src="img/plat-3.webp" alt="Riz sauté garni" loading="lazy"><figcaption>Riz sauté</figcaption></figure>
+      <figure class="j4 reveal"><img src="img/bacs-2.webp" alt="Viande braisée" loading="lazy"><figcaption>Braisé</figcaption></figure>
+      <figure class="j5 reveal"><img src="img/plat-4.webp" alt="Légumes du pays mijotés" loading="lazy"><figcaption>Légumes du pays</figcaption></figure>
+      <figure class="j6 reveal"><img src="img/boissons.webp" alt="Boissons fraîches" loading="lazy"><figcaption>Boissons fraîches</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="horaires">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sur">Horaires</p>
+      <h2>Midi et soir, on vous régale</h2>
+      <p style="margin-top:1rem;font-weight:600">Tous les midis du mardi au dimanche, et les soirs du mardi, vendredi et samedi.</p>
+    </div>
+    <div class="semaine reveal">
+      <div class="jr ferme">Lun<small>repos</small></div>
+      <div class="jr on">Mar<small>midi<br>soir</small></div>
+      <div class="jr on">Mer<small>midi</small></div>
+      <div class="jr on">Jeu<small>midi</small></div>
+      <div class="jr on">Ven<small>midi<br>soir</small></div>
+      <div class="jr on">Sam<small>midi<br>soir</small></div>
+      <div class="jr on">Dim<small>midi</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap traiteur">
+    <img class="reveal" src="img/plat-1.webp" alt="Plat cuisiné maison" loading="lazy">
+    <div class="reveal">
+      <p class="sur">Le traiteur</p>
+      <h2 style="font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;margin-top:.5rem">Vos invités vont se régaler</h2>
+      <ul class="liste">
+        <li>Une gamme de repas gourmands pour vos réceptions</li>
+        <li>Sur place ou à emporter, pour toutes vos occasions</li>
+        <li>Recommandé par 96 % des avis sur Facebook</li>
+      </ul>
+      <div class="btns"><a class="btn plein" href="https://wa.me/262692406814">Demander un devis</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sur">Nous trouver</p>
+      <h2>À tout de suite chez LéÔ</h2>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262692406814">WhatsApp</a>
+        <a class="btn ligne" href="tel:+262692406814">Appeler</a>
+      </div>
+    </div>
+    <div class="infos reveal">
+      <div><small>Adresse</small>Rue Jean de Fos du Rau, 97418 Plaine des Cafres</div>
+      <div><small>Téléphone</small>0692 40 68 14</div>
+      <div><small>E-mail</small>otitraiteurleo@outlook.fr</div>
+    </div>
+  </div>
+</section>
+<footer>O Ti Traiteur LéÔ · Maquette imaginée par Jonathan · ATMA Digital, page non référencée</footer>
+<script>
+const fl=document.querySelector('.fleurs');
+const svg='<svg viewBox="0 0 100 100" width="W" height="W"><g fill="#f28a1b">'+[0,72,144,216,288].map(a=>'<ellipse cx="50" cy="26" rx="16" ry="26" transform="rotate('+a+' 50 50)"/>').join('')+'</g><circle cx="50" cy="50" r="8" fill="#ffc34d"/></svg>';
+[[6,12,120,60],[82,8,90,80],[70,72,140,70],[12,78,80,50]].forEach(([x,y,w,d])=>{const s=document.createElement('div');s.innerHTML=svg.replace(/W/g,w);const e=s.firstChild;e.style.left=x+'%';e.style.top=y+'%';e.style.animationDuration=d+'s';fl.appendChild(e)});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
