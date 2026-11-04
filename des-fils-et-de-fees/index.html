@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Des Fils et de Fées · Tricot et crochet faits main au Tampon</title>
+<meta name="description" content="Doudous, vêtements pour bébés, chaussons, mitaines et ponchos au tricot et au crochet, faits main à Bérive, Le Tampon. Artisane depuis 2016.">
+<meta property="og:title" content="Des Fils et de Fées · Tricot et crochet faits main">
+<meta property="og:description" content="Une page imaginée pour Des Fils et de Fées.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/des-fils-et-de-fees/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/des-fils-et-de-fees/img/chaussons-fuchsia.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--laine:#fbf5ef;--rose:#c8326f;--rose-doux:#f4d5e0;--turq:#1fa3b5;--sauge:#8c9a6b;--encre:#3a2630;--gris:#7d6670}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--laine);color:var(--encre);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--encre);color:#f6e6ec;font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:#ffb3cf}
+.wrap{width:min(1120px,92vw);margin:auto}
+.wrap>*,.grid>*{min-width:0}
+h1,h2{font-family:Fraunces,serif;font-weight:400;line-height:1.04}
+h1 em,h2 em{font-style:italic;color:var(--rose)}
+.sur{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--turq);font-weight:700}
+/* fil qui court */
+.fil{position:absolute;inset:0;pointer-events:none;z-index:0}
+.fil path{fill:none;stroke:var(--rose);stroke-width:2.2;stroke-linecap:round;opacity:.55}
+.hero{position:relative;overflow:hidden;padding:clamp(3rem,8vh,6rem) 0 clamp(4rem,10vh,7rem)}
+.hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero h1{font-size:clamp(2.7rem,7.4vw,5.6rem);margin:1rem 0 1.3rem}
+.lead{font-size:1.15rem;color:var(--gris);max-width:42ch}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .25s,background .25s,color .25s}
+.btn.plein{background:var(--rose);color:#fff}
+.btn.plein:hover{transform:translateY(-2px);background:#a8255b}
+.btn.ligne{border:2px solid var(--encre);color:var(--encre)}
+.btn.ligne:hover{background:var(--encre);color:var(--laine)}
+.btn:focus-visible{outline:3px solid var(--turq);outline-offset:3px}
+.pelote{position:relative;aspect-ratio:4/5;border-radius:48% 52% 46% 54%/55% 45% 55% 45%;overflow:hidden;box-shadow:0 30px 60px -28px rgba(200,50,111,.55);animation:respire 9s ease-in-out infinite}
+.pelote img{width:100%;height:100%;object-fit:cover}
+@keyframes respire{50%{border-radius:54% 46% 52% 48%/47% 53% 47% 53%}}
+.depuis{position:absolute;right:-4%;bottom:6%;background:var(--laine);padding:1rem 1.3rem;border-radius:18px;box-shadow:0 12px 30px -16px rgba(58,38,48,.4);font-family:Fraunces,serif;font-size:1.05rem}
+.depuis b{display:block;font-size:2rem;color:var(--rose);font-weight:600;line-height:1}
+.bloc{padding:clamp(4rem,11vh,7.5rem) 0;position:relative}
+.bloc h2{font-size:clamp(2.1rem,5.2vw,3.6rem);margin:.7rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.08rem;max-width:56ch}
+/* vitrine */
+.vitrine{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.vitrine figure{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -30px rgba(58,38,48,.5);transition:transform .5s}
+.vitrine figure:nth-child(3n+2){transform:translateY(2.2rem)}
+.vitrine figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.vitrine figure:nth-child(3n+2):hover{transform:translateY(1.6rem) rotate(.6deg)}
+.vitrine img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.vitrine figcaption{padding:1rem 1.2rem 1.2rem;font-family:Fraunces,serif;font-size:1.15rem}
+.vitrine figcaption small{display:block;font-family:Karla,sans-serif;font-size:.88rem;color:var(--gris);margin-top:.15rem}
+.unique{display:inline-block;margin-top:4rem;padding:.6rem 1.1rem;border:1.5px dashed var(--rose);border-radius:999px;color:var(--rose);font-weight:700;font-size:.95rem}
+/* ateliers */
+.atelier{background:var(--rose-doux)}
+.atelier .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.atelier img{border-radius:24px;aspect-ratio:1;object-fit:cover;width:100%}
+.points{list-style:none;margin-top:1.6rem}
+.points li{padding:.85rem 0 .85rem 2.2rem;position:relative;border-bottom:1px solid rgba(58,38,48,.12)}
+.points li::before{content:"";position:absolute;left:0;top:1.15rem;width:1.2rem;height:1.2rem;border-radius:50%;border:2px solid var(--rose);background:repeating-linear-gradient(45deg,transparent 0 3px,rgba(200,50,111,.35) 3px 5px)}
+/* rendez-vous */
+.marches{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.4rem}
+.marches div{background:#fff;border-radius:20px;padding:1.5rem 1.6rem}
+.marches strong{font-family:Fraunces,serif;font-size:1.3rem;font-weight:600;display:block;margin-bottom:.3rem}
+.marches p{color:var(--gris)}
+.contact{background:var(--encre);color:#f6e6ec}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact h2 em{color:#ffb3cf}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(246,230,236,.18);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:#ffb3cf;min-width:7rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;padding-top:.2rem;font-weight:700}
+.coord a{color:#fff;text-underline-offset:4px;word-break:break-word}
+.contact .btn.ligne{border-color:#f6e6ec;color:#f6e6ec}
+.contact .btn.ligne:hover{background:#f6e6ec;color:var(--encre)}
+footer{background:var(--encre);color:#b9a3ad;text-align:center;font-size:.85rem;padding:0 1rem 2rem}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+.vitrine figure.apparait.vu:nth-child(3n+2){transform:translateY(2.2rem)}
+@media (max-width:860px){
+ .hero .grid,.atelier .grid,.contact .grid{grid-template-columns:1fr}
+ .vitrine{grid-template-columns:1fr 1fr}
+ .vitrine figure:nth-child(3n+2),.vitrine figure.apparait.vu:nth-child(3n+2){transform:none}
+ .marches{grid-template-columns:1fr}
+ .depuis{right:4%}
+}
+@media (max-width:480px){.vitrine{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.pelote{animation:none}.apparait{opacity:1;transform:none;transition:none}.fil path{stroke-dashoffset:0!important}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+
+<header class="hero">
+ <svg class="fil" viewBox="0 0 1200 700" preserveAspectRatio="none" aria-hidden="true"><path id="fil" d="M-20 610 C 180 520, 260 660, 420 560 S 640 380, 760 470 S 960 640, 1060 470 S 1180 260, 1240 300"/></svg>
+ <div class="wrap grid">
+  <div>
+   <p class="sur">Bérive · Le Tampon</p>
+   <h1>Des mailles <em>faites avec le cœur</em></h1>
+   <p class="lead">Des Fils et de Fées crée des doudous et des vêtements pour bébés au tricot et au crochet, et aussi des chaussons, des mitaines et des ponchos pour l'hiver austral.</p>
+   <div class="btns">
+    <a class="btn plein" href="#creations">Voir les créations</a>
+    <a class="btn ligne" href="tel:+262692665853">Appeler la boutique</a>
+   </div>
+  </div>
+  <div style="position:relative">
+   <div class="pelote apparait"><img src="img/chaussons-fuchsia.webp" alt="Une paire de chaussons fuchsia au crochet posée sur un plan de bois"></div>
+   <p class="depuis apparait"><b>2016</b>artisane depuis</p>
+  </div>
+ </div>
+</header>
+
+<section class="bloc" id="creations">
+ <div class="wrap">
+  <p class="sur apparait">La vitrine</p>
+  <h2 class="apparait">Une douceur pour <em>chaque saison</em></h2>
+  <p class="chapo apparait">Laine bien chaude, laine de doudou, dentelle au poignet : chaque pièce est pensée pour réchauffer, et pour faire plaisir.</p>
+  <div class="vitrine">
+   <figure class="apparait"><img src="img/chaussons-turquoise.webp" alt="Chaussons turquoise au crochet" loading="lazy"><figcaption>Chaussons douillets<small>Un écrin de chaleur pour les petits petons</small></figcaption></figure>
+   <figure class="apparait"><img src="img/mitaines-jacquard.webp" alt="Mitaines à motifs jacquard rose, blanc et noir" loading="lazy"><figcaption>Mitaines jacquard<small>Colorées et joyeuses, en laine bien chaude</small></figcaption></figure>
+   <figure class="apparait"><img src="img/poncho-turquoise.webp" alt="Poncho turquoise à col roulé avec trois boutons" loading="lazy"><figcaption>Ponchos<small>Pour les matins frais des Hauts</small></figcaption></figure>
+  </div>
+  <p class="unique apparait">Souvent des modèles uniques : une seule pièce disponible</p>
+ </div>
+</section>
+
+<section class="bloc atelier">
+ <div class="wrap grid">
+  <img class="apparait" src="img/bonnet.webp" alt="Bonnet tricoté vert sauge et blanc à pompon" loading="lazy">
+  <div class="apparait">
+   <p class="sur">Cours de tricot et de crochet</p>
+   <h2>Apprendre <em>en douceur</em></h2>
+   <p class="chapo">Avec de la patience pour deux, Des Fils et de Fées vous accompagne pas à pas, dans un vrai moment de convivialité.</p>
+   <ul class="points">
+    <li>Des ateliers crochet et tricot sur rendez-vous</li>
+    <li>Une belle idée cadeau pour la fête des mères</li>
+    <li>Une place pour garer la voiture sur place</li>
+   </ul>
+   <div class="btns"><a class="btn plein" href="tel:+262692665853">Réserver un atelier</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap">
+  <p class="sur apparait">Où la trouver</p>
+  <h2 class="apparait">À la boutique, <em>et sur les marchés</em></h2>
+  <div class="marches">
+   <div class="apparait"><strong>La boutique de Bérive</strong><p>1 allée des Mouettes, au Tampon : on vient voir, toucher, choisir.</p></div>
+   <div class="apparait"><strong>Expos et marchés artisanaux</strong><p>De la Plaine des Palmistes au marché de Noël de Saint-Leu, suivez la page pour connaître les prochaines dates.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc contact">
+ <div class="wrap grid">
+  <div class="apparait">
+   <h2>Une envie, <em>une commande ?</em></h2>
+   <p class="chapo" style="color:#e9d3dc">Un doudou à offrir, une couleur précise, une taille : parlons-en.</p>
+   <div class="btns"><a class="btn plein" href="tel:+262692665853">0692 66 58 53</a><a class="btn ligne" href="mailto:desfilsetdefees@gmail.com">Écrire un e-mail</a></div>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Boutique</span>1 allée des Mouettes, 97430 Le Tampon</li>
+   <li><span>Téléphone</span><a href="tel:+262692665853">0692 66 58 53</a></li>
+   <li><span>E-mail</span><a href="mailto:desfilsetdefees@gmail.com">desfilsetdefees@gmail.com</a></li>
+   <li><span>Facebook</span><a href="https://www.facebook.com/DesFilsetdeFees/">Des Fils et de Fées</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Des Fils et de Fées · Bérive, Le Tampon · Maquette offerte par Jonathan · ATMA Digital</footer>
+
+<script>
+(function(){
+ var p=document.getElementById('fil'),L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;
+ var t0=null;function draw(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/2600);p.style.strokeDashoffset=L*(1-(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(draw);}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(draw);else p.style.strokeDashoffset=0;
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}})},{threshold:.12});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
