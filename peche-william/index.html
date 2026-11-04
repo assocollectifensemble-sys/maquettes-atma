@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pêche William · Cake design, pâtisserie & traiteur · Sainte-Clotilde</title>
+<meta name="description" content="Vos plus beaux moments, notre savoir‑faire. Gâteaux personnalisés, box et traiteur sur commande.">
+<meta property="og:title" content="Pêche William · Vos plus beaux moments, notre savoir‑faire">
+<meta property="og:description" content="Une page imaginée pour Pêche William, avec vos créations et vos couleurs.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/peche-william/img/layer-cake-rose-fuchsia-roses.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/peche-william/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--peche:#f4a58a;--corail:#e8525a;--bord:#881f3f;--or:#c9a24b;--creme:#fff6ef;--rose:#fbe3dc;--menthe:#c9e4df;--encre:#3a1726;--doux:#7b5a64}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;background:var(--creme);color:var(--encre);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:700;line-height:1.08}
+.ruban{background:var(--bord);color:#fff;text-align:center;font-size:.8rem;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:#ffd9a8}
+#sucre{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer,.galerie{position:relative;z-index:2}
+.wrap{width:min(1120px,92vw);margin:auto}
+.sur{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;color:var(--corail);font-weight:600}
+/* hero */
+.hero{min-height:90svh;display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center;padding:6vh 4vw}
+.hero h1{font-size:clamp(3rem,8.5vw,6.2rem);color:var(--bord);margin:.5rem 0 1rem}
+.hero h1 i{font-weight:500;color:var(--corail)}
+.lead{font-family:"Playfair Display",serif;font-style:italic;font-size:1.35rem;color:var(--doux)}
+.tags{margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.tags span{background:#fff;border:1px solid #f1cfc3;border-radius:99px;padding:.4rem .95rem;font-size:.92rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.5rem;border-radius:99px;text-decoration:none;font-weight:500;transition:transform .25s,box-shadow .25s}
+.btn.plein{background:var(--corail);color:#fff;box-shadow:0 10px 24px -10px rgba(232,82,90,.7);animation:respire 3.2s ease-in-out infinite}
+.btn.plein:hover{transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid var(--bord);color:var(--bord)}
+.pile{position:relative;height:min(74svh,640px)}
+.pile figure{position:absolute;border-radius:22px;overflow:hidden;box-shadow:0 28px 50px -24px rgba(58,23,38,.45);border:8px solid #fff}
+.pile img{width:100%;height:100%;object-fit:cover}
+.p1{width:68%;aspect-ratio:1;right:0;top:0;transform:rotate(2.5deg);animation:flotte 7s ease-in-out infinite}
+.p2{width:48%;aspect-ratio:1;left:0;bottom:4%;transform:rotate(-4deg);animation:flotte 8s ease-in-out -3s infinite}
+.sceau{position:absolute;right:6%;bottom:2%;width:118px;height:118px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Playfair Display",serif;font-style:italic;font-size:.95rem;line-height:1.15;padding:12px;animation:tourne 26s linear infinite}
+/* sections */
+.bloc{padding:13vh 0}
+.titre{font-size:clamp(2rem,5vw,3.3rem);color:var(--bord);margin:.5rem 0 1rem}
+.chapo{font-size:1.1rem;color:var(--doux);max-width:58ch}
+.unes{display:grid;grid-template-columns:1.2fr 1fr;gap:5vw;align-items:center}
+.unes .ph{border-radius:28px;overflow:hidden;aspect-ratio:1;border:10px solid #fff;box-shadow:0 30px 60px -30px rgba(58,23,38,.5)}
+.unes .ph img{width:100%;height:100%;object-fit:cover}
+.cit{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(1.4rem,3vw,2rem);line-height:1.3;color:var(--encre)}
+.cit small{display:block;font:400 .82rem Jost;color:var(--doux);margin-top:.8rem;font-style:normal}
+.carte{background:var(--rose)}
+.offres{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.6rem}
+.offre{background:#fff;border-radius:22px;padding:2rem 1.7rem;transition:transform .3s,box-shadow .3s}
+.offre:hover{transform:translateY(-6px);box-shadow:0 22px 40px -24px rgba(136,31,63,.45)}
+.offre h3{font-size:1.5rem;color:var(--corail);margin-bottom:.6rem}
+.offre ul{list-style:none;display:grid;gap:.35rem}
+.offre li::before{content:"✦ ";color:var(--or)}
+.bento{margin-top:2.6rem;background:var(--bord);color:#fff;border-radius:22px;padding:1.8rem 2rem;display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap}
+.bento p{font-family:"Playfair Display",serif;font-style:italic;font-size:1.3rem;flex:1 1 320px}
+.bento span{font-size:.85rem;opacity:.85}
+.galerie{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 4vw 2rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(70vw,320px);scroll-snap-align:center;border-radius:22px;overflow:hidden;aspect-ratio:1;border:7px solid #fff;box-shadow:0 16px 30px -20px rgba(58,23,38,.5)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.galerie figure:hover img{transform:scale(1.06)}
+/* atelier */
+.atelier{background:linear-gradient(160deg,#fff 0%,var(--menthe) 140%)}
+.form{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2rem;max-width:760px}
+.form label{display:grid;gap:.35rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bord);font-weight:600}
+.form input,.form select,.form textarea{min-height:48px;border:1px solid #e8c9bf;border-radius:14px;background:#fff;padding:.7rem .9rem;font:400 1rem Jost;color:var(--encre)}
+.form textarea{min-height:96px;resize:vertical}
+.form .full{grid-column:1/-1}
+.form button{grid-column:1/-1;justify-self:start;min-height:52px;border:0;border-radius:99px;background:var(--corail);color:#fff;font:600 1.02rem Jost;padding:0 2rem;cursor:pointer;transition:transform .25s}
+.form button:hover{transform:translateY(-2px)}
+.note{font-size:.88rem;color:var(--doux);margin-top:1rem}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.infos h3{font-size:1.25rem;color:var(--bord);margin-bottom:.4rem}
+.infos a{color:var(--encre)}
+footer{text-align:center;padding:3rem 1rem;font-size:.85rem;color:var(--doux);border-top:1px solid #f1d8cf}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@keyframes flotte{50%{translate:0 -12px}}
+@keyframes tourne{to{rotate:360deg}}
+@keyframes respire{50%{box-shadow:0 14px 30px -8px rgba(232,82,90,.85)}}
+@media (max-width:820px){
+ .hero{grid-template-columns:1fr;padding-top:4vh}
+ .pile{height:96vw}
+ .unes{grid-template-columns:1fr}
+ .offres{grid-template-columns:1fr}
+ .form{grid-template-columns:1fr}
+ .infos{grid-template-columns:1fr}
+ .bloc{padding:10vh 0}
+ .sceau{width:96px;height:96px;font-size:.8rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}#sucre{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Pêche William</div>
+<canvas id="sucre" aria-hidden="true"></canvas>
+
+<header class="hero">
+ <div class="rv">
+  <p class="sur">Cake design · Pâtisserie · Traiteur</p>
+  <h1>Pêche <i>William</i></h1>
+  <p class="lead">Vos plus beaux moments, notre savoir‑faire.</p>
+  <div class="tags"><span>Anniversaires</span><span>Baptêmes</span><span>Box gourmandes</span><span>Sur commande</span></div>
+  <div class="btns">
+   <a class="btn plein" href="#atelier">Imaginer mon gâteau</a>
+   <a class="btn ligne" href="#creations">Voir les créations</a>
+  </div>
+ </div>
+ <div class="pile rv">
+  <figure class="p1"><img src="img/gateau-turquoise-happy-birthday.jpg" alt="Gâteau turquoise, fleurs en sucre et perles"></figure>
+  <figure class="p2"><img src="img/gateau-blanc-roses-gypsophile.jpg" alt="Gâteau blanc, roses blanches et gypsophile"></figure>
+  <div class="sceau">Fait main avec amour</div>
+ </div>
+</header>
+
+<section class="bloc">
+ <div class="wrap unes">
+  <div class="rv">
+   <p class="sur">La dernière création</p>
+   <h2 class="titre">Du rose, de l'orange, et une touche de doré</h2>
+   <p class="cit">« Un layer cake coloré et fleuri pour célébrer un anniversaire avec gourmandise ! »<small>Pêche William, octobre 2026</small></p>
+  </div>
+  <div class="ph rv"><img src="img/layer-cake-rose-fuchsia-roses.jpg" alt="Layer cake rose fuchsia aux roses et perles dorées"></div>
+ </div>
+</section>
+
+<section class="bloc carte">
+ <div class="wrap">
+  <p class="sur rv">Sur commande</p>
+  <h2 class="titre rv">Trois façons de régaler vos invités</h2>
+  <div class="offres">
+   <article class="offre rv"><h3>Cake design</h3><ul><li>Layer cakes</li><li>Bento cakes</li><li>Mini gâteaux</li><li>Décors personnalisés</li></ul></article>
+   <article class="offre rv"><h3>Box gourmandes</h3><ul><li>Box d'anniversaire</li><li>Cupcakes</li><li>Box sucrées</li><li>Box à thème (Halloween…)</li></ul></article>
+   <article class="offre rv"><h3>Traiteur</h3><ul><li>Box apéritives</li><li>Box salées</li><li>Box combo</li><li>Pour vos événements</li></ul></article>
+  </div>
+  <div class="bento rv"><p>« 8 mois de Minnie, 9 mois de quenottes… à chaque mois son thème ! »</p><span>Les bento cakes mois par mois, pour fêter chaque étape.</span></div>
+ </div>
+</section>
+
+<div class="galerie" id="creations" aria-label="Créations Pêche William">
+ <figure><img src="img/gateau-rose-croix-doree-papillons.jpg" alt="Gâteau rose poudré, croix et papillons dorés" loading="lazy"></figure>
+ <figure><img src="img/mini-cake-halloween-fantome.jpg" alt="Mini cake Halloween au fantôme et à la citrouille" loading="lazy"></figure>
+ <figure><img src="img/boites-fait-main-avec-amour.jpg" alt="Boîtes blanches, étiquette dorée Fait main avec amour" loading="lazy"></figure>
+</div>
+
+<section class="bloc atelier" id="atelier">
+ <div class="wrap">
+  <p class="sur rv">L'atelier de commande</p>
+  <h2 class="titre rv">Quel thème choisiriez-vous pour votre prochain événement ?</h2>
+  <p class="chapo rv">Décrivez votre envie en quelques mots : elle arrive toute prête sur le WhatsApp de Pêche William, qui vous répond pour la suite.</p>
+  <form class="form rv" id="cmd">
+   <label>Occasion<select id="o"><option>Anniversaire</option><option>Baptême</option><option>Mariage</option><option>Fête de famille</option><option>Événement pro</option></select></label>
+   <label>Création<select id="c"><option>Layer cake</option><option>Bento cake</option><option>Mini gâteau</option><option>Box d'anniversaire / cupcakes</option><option>Box apéritive / traiteur</option></select></label>
+   <label>Date souhaitée<input type="date" id="d"></label>
+   <label>Nombre de parts / invités<input type="number" id="n" min="1" placeholder="Ex. 12"></label>
+   <label class="full">Votre thème, vos couleurs<textarea id="t" placeholder="Ex. rose et doré, fleurs fraîches, papillons…"></textarea></label>
+   <label>Retrait ou livraison<select id="r"><option>Retrait au labo</option><option>Livraison (selon secteur)</option></select></label>
+   <label>Prénom<input type="text" id="p" placeholder="Votre prénom"></label>
+   <button type="submit">Envoyer mon idée</button>
+  </form>
+  <p class="note rv">Retrait au labo ou livraison possible selon secteur.</p>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap infos">
+  <div class="rv"><h3>Commandes</h3><p>Sur commande, par message ou au <a href="tel:+262693868868">0693 868 868</a></p></div>
+  <div class="rv"><h3>Où</h3><p>Chemin Bois Rouge<br>Sainte-Clotilde, Saint-Denis</p></div>
+  <div class="rv"><h3>Suivre les créations</h3><p><a href="https://www.instagram.com/peche.william/" target="_blank" rel="noopener">Instagram @peche.william</a><br><a href="https://www.facebook.com/peche.william/" target="_blank" rel="noopener">Facebook Pêche William</a></p></div>
+ </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Pêche William.</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const v=id=>document.getElementById(id).value.trim();
+document.getElementById('cmd').addEventListener('submit',e=>{e.preventDefault();
+ const d=v('d')?new Date(v('d')+'T12:00').toLocaleDateString('fr-FR',{day:'numeric',month:'long'}):'à définir';
+ const m=`Bonjour Pêche William ! Je rêve d'un ${v('c')} pour un(e) ${v('o').toLowerCase()}, le ${d}${v('n')?', pour '+v('n')+' personnes':''}. Thème / couleurs : ${v('t')||'à imaginer ensemble'}. ${v('r')}. ${v('p')}`;
+ window.open('https://wa.me/262693868868?text='+encodeURIComponent(m),'_blank');});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('sucre'),x=c.getContext('2d');let W,H,P=[],run=true;
+const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight};rs();addEventListener('resize',rs);
+const cols=['232,82,90','244,165,138','201,162,75','255,255,255'];
+function nv(i){const k=Math.random();return{x:Math.random()*W,y:i?Math.random()*H:-20,s:k<.55?2+Math.random()*2.5:6+Math.random()*5,petale:k>=.55,v:.3+Math.random()*.6,a:Math.random()*6.28,c:cols[(Math.random()*cols.length)|0],o:.35+Math.random()*.35}}
+for(let i=0;i<32;i++)P.push(nv(true));
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+ for(const p of P){p.y+=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.5;
+  x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=`rgba(${p.c},${p.o})`;
+  if(p.petale){x.beginPath();x.ellipse(0,0,p.s,p.s*.55,0,0,6.28);x.fill()}
+  else{x.beginPath();for(let k=0;k<4;k++){x.rotate(Math.PI/2);x.moveTo(0,0);x.lineTo(p.s*.3,p.s*.3);x.lineTo(0,p.s);x.lineTo(-p.s*.3,p.s*.3)}x.fill()}
+  x.restore();if(p.y>H+20)Object.assign(p,nv(false))}
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)draw()});draw();
+})();
+</script>
+</body>
+</html>
