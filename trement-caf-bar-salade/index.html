@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ôtrement · Café &amp; bar à salades à Saint-Louis</title>
+<meta name="description" content="Bar à salades à Saint-Louis : composez votre pause déjeuner, fraîche, équilibrée et pleine de saveurs. Sur place, à emporter ou en livraison.">
+<meta property="og:title" content="Ôtrement · Café &amp; bar à salades">
+<meta property="og:description" content="Une page imaginée pour Ôtrement, à Saint-Louis.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/trement-caf-bar-salade/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/trement-caf-bar-salade/img/bols.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f5efe4;--lin:#e9dfcd;--olive:#5f6f3a;--feuille:#8aa04a;--terre:#2f2a1f;--tomate:#d9542b;--gris:#6e6656}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--creme);color:var(--terre);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--olive);color:var(--creme);text-align:center;font-size:.78rem;padding:.55rem 1rem}
+.wrap{width:min(1140px,92vw);margin:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:700;line-height:1.02;letter-spacing:-.01em}
+.sur{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--olive);font-weight:700}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .3s,background .3s,color .3s}
+.btn.plein{background:var(--olive);color:#fff}.btn.plein:hover{background:var(--terre);transform:translateY(-2px)}
+.btn.ligne{border:2px solid var(--terre);color:var(--terre)}.btn.ligne:hover{background:var(--terre);color:var(--creme)}
+.btn:focus-visible{outline:2px solid var(--tomate);outline-offset:3px}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.hero{position:relative;overflow:hidden}
+#feuilles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.hero .g{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;min-height:min(88vh,780px);padding:3.5rem 0}
+.hero h1{font-size:clamp(3.3rem,9vw,6.8rem)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--olive)}
+.devise{font-family:Fraunces,serif;font-style:italic;font-size:1.35rem;color:var(--olive);margin-top:1rem}
+.lead{font-size:1.1rem;color:var(--gris);max-width:44ch;margin-top:1rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.pastilles span{background:#fff;border:1px solid var(--lin);padding:.35rem .95rem;border-radius:999px;font-size:.88rem;font-weight:600}
+.visuel{position:relative;height:min(70vh,620px)}
+.visuel img{position:absolute;object-fit:cover;border-radius:220px 220px 26px 26px;box-shadow:0 30px 60px -30px rgba(47,42,31,.5)}
+.visuel .a{width:70%;height:90%;right:0;top:0}
+.visuel .b{width:46%;height:50%;left:0;bottom:4%;border-radius:26px;border:8px solid var(--creme);animation:balance 8s ease-in-out infinite}
+@keyframes balance{50%{transform:translateY(-12px) rotate(1.5deg)}}
+.bloc{padding:clamp(4rem,10vh,7rem) 0}
+.bloc h2{font-size:clamp(2.3rem,5.5vw,4rem);margin:.6rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.06rem;max-width:58ch}
+.etapes{background:var(--terre);color:var(--creme)}
+.etapes .sur{color:var(--feuille)}.etapes .chapo{color:#cfc5b2}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4rem;margin-top:2.6rem;counter-reset:e}
+.trois div{border-top:2px solid var(--feuille);padding-top:1.2rem}
+.trois div::before{counter-increment:e;content:"0" counter(e);font-family:Fraunces,serif;font-size:3rem;color:var(--feuille);display:block;line-height:1;margin-bottom:.6rem}
+.trois h3{font-size:1.6rem;margin-bottom:.4rem;color:#fff}.trois p{color:#cfc5b2}
+.comptoir .g{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:2.6rem}
+.comptoir figure{position:relative;overflow:hidden;border-radius:20px}
+.comptoir img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s}
+.comptoir figure:hover img{transform:scale(1.05)}
+.comptoir figcaption{position:absolute;left:.8rem;bottom:.8rem;background:var(--creme);font-weight:700;font-size:.84rem;padding:.3rem .8rem;border-radius:999px}
+.f1{grid-column:span 5;grid-row:span 2;min-height:520px}.f2{grid-column:span 4;height:252px}.f3{grid-column:span 3;height:252px}.f4{grid-column:span 3;height:252px}.f5{grid-column:span 4;height:252px}
+.infos{background:var(--lin)}
+.infos .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.coord{list-style:none}
+.coord li{display:flex;gap:1rem;flex-wrap:wrap;padding:1rem 0;border-bottom:1px solid rgba(47,42,31,.18)}
+.coord span{min-width:7.5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--olive);font-weight:700;padding-top:.3rem}
+.coord a{color:var(--terre);text-underline-offset:4px}
+footer{background:var(--terre);color:#b8ad98;text-align:center;font-size:.84rem;padding:1.8rem 1rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}.rv.vu{opacity:1;transform:none}
+@media (max-width:880px){.hero .g,.infos .g{grid-template-columns:1fr}.trois{grid-template-columns:1fr}.visuel{height:440px}
+ .comptoir .g{grid-template-columns:1fr 1fr}.comptoir figure{grid-column:span 1!important;grid-row:auto!important;min-height:0!important;height:230px!important}.comptoir .f1{grid-column:span 2!important;height:340px!important}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}#feuilles{display:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour Ôtrement · page privée</div>
+<header class="hero">
+ <canvas id="feuilles" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Café &amp; bar à salades · Saint-Louis</p>
+   <h1>Ôtrement,<br><em>à votre goût</em></h1>
+   <p class="devise">Frais. Simple. Authentique.</p>
+   <p class="lead">On compose votre pause déjeuner comme vous l'aimez : fraîche, équilibrée et pleine de saveurs.</p>
+   <div class="pastilles"><span>Sur place</span><span>À emporter</span><span>Livraison 2 €</span></div>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693990014">Commander sur WhatsApp</a><a class="btn ligne" href="#comptoir">Voir le comptoir</a></div>
+  </div>
+  <div class="visuel">
+   <img class="a" src="img/bols.webp" alt="Bols d'ingrédients frais au comptoir">
+   <img class="b" src="img/desserts.webp" alt="Verrines dessert" loading="lazy">
+  </div>
+ </div>
+</header>
+
+<section class="bloc etapes">
+ <div class="wrap">
+  <p class="sur rv">Votre salade, votre recette</p>
+  <h2 class="rv">Composée devant vous</h2>
+  <p class="chapo rv">Chaque jour, le comptoir se remplit de nouvelles bonnes choses. Vous choisissez, on assemble.</p>
+  <div class="trois">
+   <div class="rv"><h3>Choisissez</h3><p>Légumes croquants, salades composées, protéines, fromages : le comptoir change avec les arrivages.</p></div>
+   <div class="rv"><h3>Composez</h3><p>Salade, wrap ou plat du jour : votre pause déjeuner prend la forme que vous aimez.</p></div>
+   <div class="rv"><h3>Savourez</h3><p>Sur place, à emporter, ou livré pour 2 € à Saint-Louis, Saint-Pierre et L'Étang-Salé.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc comptoir" id="comptoir">
+ <div class="wrap">
+  <p class="sur rv">Au comptoir cette semaine</p>
+  <h2 class="rv">Des couleurs plein l'assiette</h2>
+  <p class="chapo rv">Artichauts, myrtilles, petits pois, salade de pois chiches, omelette au four, aubergines… et des verrines pour finir en douceur.</p>
+  <div class="g">
+   <figure class="f1 rv"><img src="img/plats.webp" alt="Salades composées au comptoir" loading="lazy"><figcaption>Salades composées</figcaption></figure>
+   <figure class="f2 rv"><img src="img/bacs.webp" alt="Bacs d'ingrédients frais" loading="lazy"><figcaption>Les ingrédients du jour</figcaption></figure>
+   <figure class="f3 rv"><img src="img/plats-2.webp" alt="Légumes cuisinés" loading="lazy"><figcaption>Légumes cuisinés</figcaption></figure>
+   <figure class="f4 rv"><img src="img/desserts.webp" alt="Verrines dessert" loading="lazy"><figcaption>Les verrines</figcaption></figure>
+   <figure class="f5 rv"><img src="img/banniere.webp" alt="Frais. Simple. Authentique." loading="lazy"><figcaption>L'esprit Ôtrement</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="bloc infos">
+ <div class="wrap g">
+  <div class="rv">
+   <p class="sur">Nous trouver</p>
+   <h2>À tout à l'heure chez Ôtrement</h2>
+   <p class="chapo">Ouvert en continu de 8h à 15h, au 4 rue de l'Étang, ZI Bel Air.</p>
+   <div class="btns"><a class="btn plein" href="tel:+262693990014">Appeler</a><a class="btn ligne" href="https://www.instagram.com/otrement.barasalade/">Instagram</a></div>
+  </div>
+  <ul class="coord rv">
+   <li><span>Adresse</span>4 rue de l'Étang, ZI Bel Air, Saint-Louis</li>
+   <li><span>Horaires</span>En continu, 8h-15h</li>
+   <li><span>Livraison</span>Saint-Louis, Saint-Pierre, L'Étang-Salé · 2 €</li>
+   <li><span>Téléphone</span><a href="tel:+262693990014">0693 99 00 14</a></li>
+   <li><span>Mail</span><a href="mailto:otrement974@gmail.com">otrement974@gmail.com</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d'Ôtrement.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('feuilles'),x=cv.getContext('2d'),P=[],W,H,run=true,C=['#8aa04a','#5f6f3a','#d9542b','#e9b949'];
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<22;i++)P.push({x:Math.random(),y:Math.random(),v:.0001+Math.random()*.00025,s:5+Math.random()*7,r:Math.random()*6,c:C[i%4],k:Math.random()});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;if(p.y>1.05){p.y=-.05;p.x=Math.random()}
+  var cx=p.x*W+Math.sin(t/1800+p.r)*18,cy=p.y*H;x.save();x.translate(cx,cy);x.rotate(p.r+t/3000);x.globalAlpha=.28;x.fillStyle=p.c;
+  if(p.k<.6){x.beginPath();x.ellipse(0,0,p.s,p.s*.45,0,0,7);x.fill()}else{x.beginPath();x.arc(0,0,p.s*.45,0,7);x.fill()}x.restore()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
