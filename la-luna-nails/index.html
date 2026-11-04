@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Luna · Concept store à Saint-Denis · Brunch, salon de thé &amp; institut</title>
+<meta name="description" content="Brunch, repas créole, salon de thé, institut de beauté, showroom et coworking : La Luna, 24 bis route de Montgaillard, Saint-Denis.">
+<meta property="og:title" content="La Luna · Concept store à Saint-Denis">
+<meta property="og:description" content="Une page imaginée pour La Luna, à Saint-Denis.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-luna-nails/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-luna-nails/img/patisseries.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--lin:#f7f2ea;--sable:#ece2d3;--taupe:#b9a68c;--taupe2:#8c7759;--brun:#3e3328;--ink:#2b241d;--gris:#7a6e62;--lune:#fffaf2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Manrope",system-ui,sans-serif;font-weight:400;background:var(--lin);color:var(--ink);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--brun);color:var(--sable);font-size:.78rem;text-align:center;padding:.55rem 1rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:"Italiana",Georgia,serif;font-weight:400;line-height:1.08}
+.script{font-family:"Pinyon Script",cursive;color:var(--taupe2)}
+.sur{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--taupe2);font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.03em;transition:transform .3s,background .3s,color .3s}
+.btn.plein{background:var(--brun);color:var(--lune)}.btn.plein:hover{background:var(--taupe2);transform:translateY(-2px)}
+.btn.ligne{border:1px solid var(--brun);color:var(--brun)}.btn.ligne:hover{background:var(--brun);color:var(--lune)}
+.btn:focus-visible{outline:2px solid var(--taupe2);outline-offset:3px}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 80% 20%,#fffdf8 0%,var(--lin) 55%,var(--sable) 100%)}
+#plumes{position:absolute;inset:0;pointer-events:none;z-index:1}
+.hero .g{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;min-height:min(90vh,820px);padding:4rem 0}
+.lune{width:68px;height:68px;border-radius:50%;box-shadow:inset -14px 6px 0 0 var(--taupe);margin-bottom:1.6rem;animation:orbite 9s ease-in-out infinite}
+@keyframes orbite{50%{transform:translateY(-8px) rotate(-8deg)}}
+.hero h1{font-size:clamp(3.6rem,10vw,7.4rem);color:var(--brun)}
+.hero h1 .script{display:block;font-size:.42em;margin-top:-.2rem}
+.lead{font-size:1.12rem;color:var(--gris);max-width:40ch;margin-top:1.4rem}
+.offres{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.offres span{border:1px solid var(--taupe);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;color:var(--brun);background:rgba(255,255,255,.5)}
+.vitrine{position:relative}
+.vitrine img{border-radius:999px 999px 24px 24px;width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -30px rgba(62,51,40,.45)}
+.vitrine .mini{position:absolute;width:42%;left:-12%;bottom:-6%;border-radius:22px;border:8px solid var(--lin);aspect-ratio:1;animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px)}}
+.bloc{padding:clamp(4.2rem,10vh,7rem) 0}
+.bloc h2{font-size:clamp(2.4rem,5.6vw,4rem);color:var(--brun);margin:.6rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.05rem;max-width:56ch}
+/* brunch */
+.brunch .g{display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem;margin-top:2.6rem}
+.brunch figure{position:relative;border-radius:22px;overflow:hidden}
+.brunch figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.brunch figure:hover img{transform:scale(1.05)}
+.brunch figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(255,250,242,.92);color:var(--brun);font-size:.85rem;font-weight:600;padding:.35rem .9rem;border-radius:999px}
+.f1{grid-column:span 5;aspect-ratio:4/5}.f2{grid-column:span 7;aspect-ratio:4/3;align-self:end}.f3{grid-column:span 6;aspect-ratio:4/3}.f4{grid-column:span 6;aspect-ratio:4/3}.f5{grid-column:span 4;aspect-ratio:4/5}
+/* univers */
+.univers{background:var(--brun);color:var(--sable)}
+.univers h2{color:var(--lune)}
+.univers .chapo{color:#cbbfae}
+.liste{display:grid;grid-template-columns:repeat(3,1fr);gap:0 3rem;margin-top:2.6rem}
+.liste div{padding:1.4rem 0;border-top:1px solid rgba(185,166,140,.35)}
+.liste h3{font-size:1.75rem;color:var(--lune)}
+.liste p{color:#cbbfae;font-size:.95rem}
+/* douceur */
+.douceur .g{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.grande-lune{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffdf8,var(--sable) 60%,var(--taupe) 120%);box-shadow:inset -40px 20px 0 0 rgba(185,166,140,.45),0 40px 80px -40px rgba(62,51,40,.4);display:flex;align-items:center;justify-content:center;animation:orbite 12s ease-in-out infinite;max-width:440px;width:100%;margin:auto}.grande-lune span{font-family:"Pinyon Script",cursive;font-size:clamp(3rem,7vw,4.6rem);color:var(--taupe2)}
+.cite{font-family:"Pinyon Script",cursive;font-size:clamp(2.2rem,4.6vw,3.2rem);color:var(--taupe2);line-height:1.2;margin:1.4rem 0}
+/* infos */
+.infos{background:var(--sable)}
+.infos .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(140,119,89,.3);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--taupe2);min-width:7.5rem;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;padding-top:.3rem}
+.coord a{color:var(--brun);text-underline-offset:4px}
+footer{background:var(--brun);color:#a99a87;text-align:center;font-size:.84rem;padding:1.8rem 1rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 1s,transform 1s}.rv.vu{opacity:1;transform:none}
+@media (max-width:880px){.hero .g,.douceur .g,.infos .g{grid-template-columns:1fr}.liste{grid-template-columns:1fr}.brunch .g{grid-template-columns:1fr 1fr}.f1,.f2,.f3,.f4{grid-column:span 1;aspect-ratio:4/5;margin-top:0}.f2{grid-column:span 2;aspect-ratio:4/3}.vitrine{max-width:420px;margin:0 auto 2rem}.vitrine .mini{left:-4%}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}#plumes{display:none}.rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour La Luna · page privée</div>
+<header class="hero">
+ <canvas id="plumes" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <div class="lune" aria-hidden="true"></div>
+   <p class="sur">Concept store · Saint-Denis</p>
+   <h1>La Luna<span class="script">dans un cadre idyllique et apaisant</span></h1>
+   <p class="lead">Un brunch gourmand, un thé qui prend son temps, un soin beauté ou une matinée de travail au calme : tout se vit au même endroit, route de Montgaillard.</p>
+   <div class="offres"><span>Brunch</span><span>Repas créole</span><span>Salon de thé</span><span>Institut de beauté</span><span>Showroom</span><span>Coworking</span></div>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693915352">Réserver une table</a><a class="btn ligne" href="#brunch">Voir le brunch</a></div>
+  </div>
+  <div class="vitrine">
+   <img src="img/patisseries.webp" alt="Plateau de pâtisseries, tartelettes aux fraises et verrines du brunch">
+   <img class="mini" src="img/croissant.webp" alt="Croissant garni de crème et chocolat" loading="lazy">
+  </div>
+ </div>
+</header>
+
+<section class="bloc brunch" id="brunch">
+ <div class="wrap">
+  <p class="sur rv">Le brunch chez La Luna</p>
+  <h2 class="rv">Une pause <span class="script">gourmande</span></h2>
+  <p class="chapo rv">Sucré, salé, et toujours joliment présenté : un petit aperçu de ce qui vous attend à table.</p>
+  <div class="g">
+   <figure class="f1 rv"><img src="img/brioche.webp" alt="Le Brioché, brioche dorée garnie" loading="lazy"><figcaption>Le Brioché</figcaption></figure>
+   <figure class="f2 rv"><img src="img/plateau.webp" alt="Plateau salé et toasts du brunch" loading="lazy"><figcaption>Le plateau salé</figcaption></figure>
+   <figure class="f3 rv"><img src="img/gaufre.webp" alt="Gaufre salée garnie" loading="lazy"><figcaption>Gaufre gourmande</figcaption></figure>
+   <figure class="f4 rv"><img src="img/verrines.webp" alt="Verrines de mousse mauve" loading="lazy"><figcaption>Verrines</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="bloc univers">
+ <div class="wrap">
+  <p class="sur rv" style="color:var(--taupe)">Un lieu, mille envies</p>
+  <h2 class="rv">Tout l'univers <span class="script" style="color:var(--taupe)">La Luna</span></h2>
+  <p class="chapo rv">Venez pour un brunch, restez pour le reste.</p>
+  <div class="liste">
+   <div class="rv"><h3>Brunch</h3><p>Le rendez-vous gourmand, sucré comme salé.</p></div>
+   <div class="rv"><h3>Repas créole</h3><p>Les saveurs d'ici, pour le déjeuner.</p></div>
+   <div class="rv"><h3>Salon de thé</h3><p>Une boisson, une douceur, un moment rien qu'à vous.</p></div>
+   <div class="rv"><h3>Institut de beauté</h3><p>Une parenthèse soin, juste à côté.</p></div>
+   <div class="rv"><h3>Showroom</h3><p>De jolies découvertes à emporter.</p></div>
+   <div class="rv"><h3>Coworking</h3><p>Travailler au calme, dans un cadre qui inspire.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc douceur">
+ <div class="wrap g">
+  <div class="grande-lune rv" aria-hidden="true"><span>La Luna</span></div>
+  <div class="rv">
+   <p class="sur">Notre promesse</p>
+   <h2>Prendre le temps</h2>
+   <p class="cite">un cadre idyllique et apaisant</p>
+   <p class="chapo">À une minute du boulevard Sud, La Luna vous accueille dans une atmosphère douce et lumineuse, pour une pause qui fait du bien.</p>
+   <div class="btns"><a class="btn plein" href="tel:+262693915352">0693 91 53 52</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc infos" id="infos">
+ <div class="wrap g">
+  <div class="rv">
+   <p class="sur">Infos pratiques</p>
+   <h2>À très vite <span class="script">chez La Luna</span></h2>
+   <p class="chapo">Pour réserver votre brunch, un appel ou un message suffit.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693915352">WhatsApp</a><a class="btn ligne" href="https://www.instagram.com/laluna_reunion/">Instagram</a></div>
+  </div>
+  <ul class="coord rv">
+   <li><span>Adresse</span>24 bis route de Montgaillard, Safer, 97400 Saint-Denis</li>
+   <li><span>Horaires</span>Du lundi au samedi, de 9h à 19h · fermé le mercredi</li>
+   <li><span>Réservation</span><a href="tel:+262693915352">0693 91 53 52</a></li>
+   <li><span>Réseaux</span><a href="https://www.facebook.com/DidiNailsinstitut">Facebook</a> · <a href="https://www.instagram.com/laluna_reunion/">@laluna_reunion</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Luna.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('plumes'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<18;i++)P.push({x:Math.random(),y:Math.random(),v:.00018+Math.random()*.0003,s:10+Math.random()*16,p:Math.random()*6});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;p.x+=Math.sin(t/3000+p.p)*.0004;if(p.y>1.08){p.y=-.08;p.x=Math.random()}
+  var cx=p.x*W,cy=p.y*H;x.save();x.translate(cx,cy);x.rotate(Math.sin(t/2200+p.p)*.8+.6);x.strokeStyle='rgba(185,166,140,.38)';x.lineWidth=1;
+  x.beginPath();x.moveTo(0,-p.s);x.lineTo(0,p.s);x.stroke();for(var k=-p.s;k<p.s;k+=3){var l=(1-Math.abs(k)/p.s)*p.s*.45;x.beginPath();x.moveTo(0,k);x.quadraticCurveTo(l*.6,k-2,l,k-5);x.moveTo(0,k);x.quadraticCurveTo(-l*.6,k-2,-l,k-5);x.stroke()}x.restore()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
