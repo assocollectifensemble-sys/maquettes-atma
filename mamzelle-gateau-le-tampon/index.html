@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mam'Zelle Gâteau · Gâteaux traditionnels au Tampon</title>
+<meta name="description" content="Gâteau patate, manioc, songe, cambar, pâté créole, napolitains et beignets : les gâteaux traditionnels de Mam'Zelle Gâteau, sur commande, au Tampon.">
+<meta property="og:title" content="Mam'Zelle Gâteau · Le goût des gâteaux lontan">
+<meta property="og:description" content="Une page imaginée pour Mam'Zelle Gâteau, au Tampon.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mamzelle-gateau-le-tampon/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mamzelle-gateau-le-tampon/img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#120f0c;--noir2:#1d1813;--or:#d1a15a;--or2:#ecc98d;--caramel:#a8692c;--creme:#fbf4e8;--sable:#f2e5cf;--gris:#74685a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--creme);color:var(--noir);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--or);color:var(--noir);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.wrap{width:min(1140px,92vw);margin:auto}
+.wrap>*,.g>*{min-width:0}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.02}
+h1 em,h2 em{font-style:italic;font-weight:600;color:var(--or2)}
+.sur{font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--caramel)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .25s,background .25s,color .25s}
+.btn.or{background:var(--or);color:var(--noir)}
+.btn.or:hover{background:var(--or2);transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid currentColor;color:inherit}
+.btn.ligne:hover{background:var(--creme);color:var(--noir)}
+.btn:focus-visible{outline:2px solid var(--or2);outline-offset:3px}
+.hero{background:var(--noir);color:var(--creme);position:relative;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center;min-height:min(90vh,820px);padding:3rem 0;position:relative;z-index:2}
+.hero .sur{color:var(--or)}
+.hero h1{font-size:clamp(3rem,8vw,6.4rem);font-weight:800;margin:1rem 0 1.3rem}
+.lead{font-size:1.14rem;color:#ddd0bd;max-width:42ch}
+.plat{position:relative;aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--noir2),0 0 0 11px rgba(209,161,90,.5),0 40px 80px -30px #000;animation:tourne 60s linear infinite}
+.plat img{width:100%;height:100%;object-fit:cover;object-position:35% 50%}
+@keyframes tourne{to{transform:rotate(360deg)}}
+#vapeur{position:absolute;inset:0;z-index:1;pointer-events:none}
+.bloc{padding:clamp(4.5rem,11vh,7.5rem) 0}
+.bloc h2{font-size:clamp(2.2rem,5.4vw,3.9rem);margin:.8rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.08rem;max-width:58ch}
+/* carte */
+.carte{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem;margin-top:3rem}
+.carte h3{font-size:1.6rem;color:var(--caramel);margin:0 0 .6rem;padding-bottom:.6rem;border-bottom:2px solid var(--or)}
+.carte ul{list-style:none;margin-bottom:2.4rem}
+.carte li{padding:.65rem 0;border-bottom:1px dashed #d8c6a6;display:flex;justify-content:space-between;gap:1rem}
+.carte li small{color:var(--gris);white-space:nowrap}
+.note{background:var(--noir);color:var(--creme);padding:1.4rem 1.6rem;border-radius:18px;font-size:.98rem}
+.note b{color:var(--or2)}
+/* atelier */
+.atelier{background:var(--sable)}
+.atelier .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.photos img{border-radius:22px;width:100%;object-fit:cover;aspect-ratio:3/4}
+.photos img:first-child{margin-top:3rem}
+.kreol{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.4;margin-top:1.6rem;color:var(--noir)}
+.kreol small{display:block;font-family:"DM Sans",sans-serif;font-style:normal;font-size:.9rem;color:var(--gris);margin-top:.5rem}
+/* contact */
+.contact{background:var(--noir);color:var(--creme)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact .chapo{color:#cdbfaa}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(209,161,90,.25);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--or);min-width:7rem;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:.25rem}
+.coord a{color:#fff;text-underline-offset:4px}
+footer{background:#0a0806;color:#8f8372;text-align:center;font-size:.85rem;padding:1.8rem 1rem}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:880px){.hero .g,.atelier .g,.contact .g,.carte{grid-template-columns:1fr}.plat{max-width:420px;margin:auto}}
+@media (prefers-reduced-motion:reduce){.plat{animation:none}#vapeur{display:none}.apparait{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+<header class="hero">
+ <canvas id="vapeur" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Pâtisserie traditionnelle · Le Tampon</p>
+   <h1>Mam'Zelle Gâteau, <em>le goût lontan</em></h1>
+   <p class="lead">Envie de déguster un bon gâteau traditionnel ? Patate, manioc, songe, cambar, pâté créole et beignets : passez commande, on s'occupe du reste.</p>
+   <div class="btns">
+    <a class="btn or" href="https://wa.me/262692037653">Commander sur WhatsApp</a>
+    <a class="btn ligne" href="#carte">Voir la carte</a>
+   </div>
+  </div>
+  <div class="plat apparait"><img src="img/hero.webp" alt="Gâteau doré Mam'Zelle Gâteau"></div>
+ </div>
+</header>
+
+<section class="bloc" id="carte">
+ <div class="wrap">
+  <p class="sur apparait">Sur commande</p>
+  <h2 class="apparait">La carte <em style="color:var(--caramel)">des gourmands</em></h2>
+  <p class="chapo apparait">Des recettes péi qui sentent bon la cuisine de grand-mère, en gâteaux de 21 cm à partager.</p>
+  <div class="carte apparait">
+   <div>
+    <h3>Les gâteaux</h3>
+    <ul>
+     <li>Gâteau patate</li><li>Gâteau patate chocolat</li><li>Gâteau manioc</li><li>Gâteau de songe</li><li>Gâteau de cambar</li><li>Gâteau banane</li><li>Gâteau Ti Son</li><li>Fondant banane chocolat</li><li>Gâteau chocolat <small>façon brownie</small></li>
+    </ul>
+   </div>
+   <div>
+    <h3>Pâtés &amp; douceurs</h3>
+    <ul>
+     <li>Pâté créole nature</li><li>Pâté créole confiture maison <small>ananas ou papaye</small></li><li>Pâté créole crème de marron</li><li>Pâté créole poulet</li><li>Napolitains <small>à la pièce</small></li><li>Beignets manioc <small>par lot</small></li><li>Beignets banane <small>par lot</small></li>
+    </ul>
+    <p class="note">Bonne nouvelle pour les amis <b>sans gluten</b> : les gâteaux patate, manioc, cambar, songe et les beignets manioc vous attendent aussi.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc atelier">
+ <div class="wrap g">
+  <div class="photos apparait">
+   <img src="img/tranche.webp" alt="Tranche de gâteau maison" loading="lazy">
+   <img src="img/boite.webp" alt="Gâteau emballé, étiquette Mam'Zelle Gâteau" loading="lazy">
+  </div>
+  <div class="apparait">
+   <p class="sur">Fait avec amour</p>
+   <h2>Prêt à <em style="color:var(--caramel)">offrir</em></h2>
+   <p class="chapo">Bien emballé, noué à la ficelle, avec son étiquette : un gâteau maison qui fait plaisir à table comme en cadeau.</p>
+   <p class="kreol">« Kan ou rente la kaz é ke ou trouv pu le ti bout gato patate… »<small>Le petit clin d'œil de la page Mam'Zelle Gâteau 😉</small></p>
+  </div>
+ </div>
+</section>
+
+<section class="bloc contact" id="contact">
+ <div class="wrap g">
+  <div class="apparait">
+   <h2>On passe <em>commande ?</em></h2>
+   <p class="chapo">Un appel ou un message WhatsApp, et votre gâteau se prépare.</p>
+   <div class="btns"><a class="btn or" href="tel:+262692037653">0692 03 76 53</a><a class="btn ligne" href="https://wa.me/262692037653">WhatsApp</a></div>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Adresse</span>35 rue du Général de Gaulle, 97430 Le Tampon</li>
+   <li><span>Téléphone</span><a href="tel:+262692037653">0692 03 76 53</a></li>
+   <li><span>Commandes</span>Sur commande, gâteaux de 21 cm</li>
+  </ul>
+ </div>
+</section>
+<footer>Mam'Zelle Gâteau · Le Tampon · Maquette offerte par Jonathan · ATMA Digital</footer>
+<script>
+(function(){
+ var cv=document.getElementById('vapeur'),x=cv.getContext('2d'),P=[],W,H;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<40;i++)P.push({x:Math.random(),y:Math.random(),v:.0002+Math.random()*.0005,r:1+Math.random()*2.2,p:Math.random()*6});
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(function f(t){x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;if(p.y<-.03){p.y=1.03;p.x=Math.random()}var a=.18+.3*Math.sin(t/900+p.p);x.fillStyle='rgba(236,201,141,'+Math.max(0,a)+')';x.beginPath();x.arc(p.x*W+Math.sin(t/1400+p.p)*10,p.y*H,p.r,0,7);x.fill()});requestAnimationFrame(f)})(0);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
