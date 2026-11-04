@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mam'zelle Cookies · Cookies gourmands faits maison à L'Étang-Salé</title>
+<meta property="og:title" content="Mam'zelle Cookies · Le cookies-truck de L'Étang-Salé">
+<meta property="og:description" content="Une page imaginée pour Mam'zelle Cookies.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mamzelle-cookies/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mamzelle-cookies/img/cookies-bois.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,100&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--pate:#f6ead8;--beurre:#fbf4ea;--choco:#3d2418;--caramel:#b8743d;--rose:#e7a3a6;--hibiscus:#c9475a;--gris:#7a6656}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--beurre);color:var(--choco);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--choco);color:var(--pate);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--rose)}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:700;line-height:1.02}
+h1 em,h2 em{font-style:italic;font-weight:500;color:var(--hibiscus)}
+.sur{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--caramel)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:800;transition:transform .25s,background .25s}
+.btn.plein{background:var(--hibiscus);color:#fff;animation:pulse 3.2s ease-in-out infinite}
+.btn.plein:hover{background:#ad3747;transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid currentColor;color:inherit}
+.btn:focus-visible{outline:2px solid var(--caramel);outline-offset:3px}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(201,71,90,.15)}}
+.hero{position:relative;background:var(--pate);overflow:hidden}
+#miettes{position:absolute;inset:0;pointer-events:none}
+.hero .g{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding:clamp(3.5rem,9vh,6rem) 0}
+.hero h1{font-size:clamp(2.9rem,7.6vw,5.9rem);margin:1rem 0 1.2rem;animation:monte 1s ease both}
+.lead{font-size:1.15rem;color:var(--gris);max-width:40ch;animation:monte 1s .2s ease both}
+.cookie{position:relative;animation:monte 1.1s .1s ease both}
+.cookie img{border-radius:50%;aspect-ratio:1;object-fit:cover;width:100%;box-shadow:0 30px 60px -28px rgba(61,36,24,.55);animation:flotte 6s ease-in-out infinite}
+.cookie .pastille{position:absolute;right:-2%;top:6%;background:var(--hibiscus);color:#fff;border-radius:50%;width:clamp(100px,14vw,132px);aspect-ratio:1;display:flex;align-items:center;justify-content:center;text-align:center;font:700 clamp(.85rem,1.4vw,1rem)/1.15 "Fraunces",serif;padding:.8rem;transform:rotate(10deg)}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(2deg)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}}
+.bloc{padding:clamp(4rem,10vh,6.5rem) 0}
+.bloc h2{font-size:clamp(2.1rem,5.2vw,3.6rem);margin:.7rem 0 1.1rem}
+.chapo{font-size:1.08rem;color:var(--gris);max-width:56ch}
+.truck{background:var(--choco);color:var(--pate)}
+.truck .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.truck .sur{color:var(--rose)}.truck h2 em{color:var(--rose)}.truck .chapo{color:#dccbbb}
+.rdv{background:var(--pate);color:var(--choco);border-radius:28px;padding:2.2rem;position:relative}
+.rdv .jour{font:700 clamp(2.6rem,6vw,4rem)/1 "Fraunces",serif;color:var(--hibiscus)}
+.rdv .heure{font:700 1.5rem "Fraunces",serif;margin:.4rem 0 .2rem}
+.rdv p{color:var(--gris)}
+.saveurs{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.6rem}
+.saveur{background:#fff;border-radius:26px;overflow:hidden;transition:transform .35s}
+.saveur:hover{transform:translateY(-6px) rotate(-.6deg)}
+.saveur img{width:100%;aspect-ratio:1;object-fit:cover}
+.saveur div{padding:1.2rem 1.4rem 1.5rem}
+.saveur h3{font-size:1.4rem;margin-bottom:.3rem}
+.saveur p{color:var(--gris);font-size:.97rem}
+.cadeaux{background:var(--pate)}
+.cadeaux .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.duo img{border-radius:22px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.duo img:last-child{margin-top:2.5rem}
+.idees{list-style:none;margin-top:1.4rem;display:grid;gap:.7rem}
+.idees li{padding-left:1.8rem;position:relative}
+.idees li::before{content:"";position:absolute;left:0;top:.45rem;width:.9rem;height:.9rem;border-radius:50%;background:var(--caramel);box-shadow:inset -3px -3px 0 rgba(61,36,24,.35)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.coord{list-style:none;display:grid;gap:1.1rem}
+.coord li{border-bottom:1px solid #ead9c3;padding-bottom:1rem}
+.coord span{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);font-weight:800}
+.coord a{color:var(--choco)}
+footer{text-align:center;font-size:.85rem;color:var(--gris);padding:2rem 1rem 3rem}
+.apparait{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:860px){.hero .g,.truck .g,.cadeaux .g,.contact .g{grid-template-columns:1fr}.saveurs{grid-template-columns:1fr}.cookie{max-width:400px;margin:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, imaginée avec plaisir pour Mam'zelle Cookies · page privée</div>
+<header class="hero">
+ <canvas id="miettes"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Cookies gourmands · depuis 2019 · L'Étang-Salé</p>
+   <h1>Des cookies <em>faits maison</em>, et avec amour</h1>
+   <p class="lead">Chaque saveur a sa propre pâte, et le gourmand se cache à l'intérieur. Au cookies-truck le mardi, ou livrés chez vous sur commande.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693203959">Commander mes cookies</a><a class="btn ligne" href="#truck">Le cookies-truck</a></div>
+  </div>
+  <div class="cookie"><img src="img/cookies-bois.webp" alt="Cookies Mam'zelle Cookies posés sur une planche en bois"><div class="pastille">Nouveau : le cookie kinder bueno</div></div>
+ </div>
+</header>
+<section class="bloc truck" id="truck">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur">Le rendez-vous gourmand</p>
+   <h2>C'est l'heure <em>du goûter</em></h2>
+   <p class="chapo">Le cookies-truck s'installe chaque mardi à L'Étang-Salé : cookies chocolatés, fruités, brookies… il y en a pour tout le monde. Les autres jours, les cookies voyagent jusqu'à vous en livraison.</p>
+  </div>
+  <div class="rdv apparait"><p class="sur">Chaque semaine</p><div class="jour">Mardi</div><div class="heure">15h30 – 18h</div><p>L'Étang-Salé · livraisons sur commande les autres jours</p><div class="btns"><a class="btn plein" href="https://wa.me/262693203959">Réserver ma commande</a></div></div>
+ </div>
+</section>
+<section class="bloc">
+ <div class="wrap">
+  <div class="apparait"><p class="sur">Les gourmandises</p><h2>Une saveur, <em>une pâte</em></h2><p class="chapo">Des recettes imaginées pendant des mois, des nouveautés régulières et des cookies péi : la carte change, la gourmandise reste.</p></div>
+  <div class="saveurs">
+   <article class="saveur apparait"><img src="img/cookie-tropical.webp" alt="Grand cookie tropical"><div><h3>Le cookie tropical</h3><p>Papaye confite et pépites de chocolat au lait : gourmand, original et péi.</p></div></article>
+   <article class="saveur apparait"><img src="img/cookies-balls.webp" alt="Cookies balls dans une assiette"><div><h3>Les cookies balls</h3><p>Une version encore plus fun, à croquer en une bouchée.</p></div></article>
+   <article class="saveur apparait"><img src="img/noir-blanc.webp" alt="Cookies en noir et blanc"><div><h3>Les classiques</h3><p>Chocolatés, fruités, généreux : le gourmand est à l'intérieur.</p></div></article>
+  </div>
+ </div>
+</section>
+<section class="bloc cadeaux">
+ <div class="wrap g">
+  <div class="duo apparait"><img src="img/minis-ruban.webp" alt="Minis cookies emballés avec un ruban rose"><img src="img/coffrets.webp" alt="Coffrets de cookies Mam'zelle Cookies"></div>
+  <div class="apparait">
+   <p class="sur">Pour faire plaisir</p>
+   <h2>Le cadeau <em>qui fond de plaisir</em></h2>
+   <p class="chapo">Des minis cookies pour vos événements, et des cadeaux originaux et gourmands pour toutes les occasions.</p>
+   <ul class="idees"><li>Anniversaires à l'école, à la maison ou à la plage</li><li>Fin d'année scolaire : maîtresses, ATSEM, collègues</li><li>Fête des pères et fêtes de fin d'année</li><li>Minis cookies pour vos événements, sur devis</li></ul>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693203959">Demander un devis</a></div>
+  </div>
+ </div>
+</section>
+<section class="bloc contact" id="contact">
+ <div class="wrap g">
+  <div class="apparait"><h2>Une envie <em>de cookies</em> ?</h2><p class="chapo">Saveurs de la semaine, lieux de livraison, commandes pour un événement : un message et c'est parti.</p><div class="btns"><a class="btn plein" href="https://wa.me/262693203959">WhatsApp</a><a class="btn ligne" href="tel:+262693203959">0693 20 39 59</a></div></div>
+  <ul class="coord apparait">
+   <li><span>Cookies-truck</span>Le mardi, 15h30 – 18h, L'Étang-Salé</li>
+   <li><span>Téléphone</span><a href="tel:+262693203959">0693 20 39 59</a></li>
+   <li><span>E-mail</span><a href="mailto:mamzellecookies974@gmail.com">mamzellecookies974@gmail.com</a></li>
+   <li><span>Suivez-nous</span><a href="https://www.instagram.com/mamzelle_cookies/">Instagram</a> · <a href="https://www.facebook.com/p/Mamzelle-Cookies-100063572021332">Facebook</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Mam'zelle Cookies.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('miettes'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ var C=['61,36,24','184,116,61','231,163,166'];
+ for(var i=0;i<30;i++)P.push({x:Math.random(),y:Math.random(),v:.0002+Math.random()*.0004,r:2+Math.random()*4,p:Math.random()*6,c:C[i%3],k:Math.floor(Math.random()*3)});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;if(p.y>1.04){p.y=-.04;p.x=Math.random()}
+  x.save();x.translate(p.x*W+Math.sin(t/1600+p.p)*20,p.y*H);x.rotate(t/2000+p.p);x.fillStyle='rgba('+p.c+',.38)';
+  x.beginPath();if(p.k==0){x.rect(-p.r/2,-p.r/2,p.r,p.r*.8)}else{x.moveTo(0,-p.r);x.lineTo(p.r,p.r*.7);x.lineTo(-p.r*.8,p.r*.5)}x.fill();x.restore()});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
