@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fraîcheur Des Plaines · Fruits, légumes et charcuterie artisanale à Saint-Benoît</title>
+<meta name="description" content="Fruits et légumes, charcuterie artisanale et épicerie : Fraîcheur Des Plaines, une histoire de famille au 39 avenue Jean Jaurès, Saint-Benoît.">
+<meta property="og:title" content="Fraîcheur Des Plaines · Le marché de famille de Saint-Benoît">
+<meta property="og:description" content="Une page imaginée pour Fraîcheur Des Plaines, à Saint-Benoît.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/fraicheur-des-plaines/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/fraicheur-des-plaines/img/agrumes.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Outfit:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#1f5b36;--vert2:#2f7d4a;--feuille:#8cc63f;--pasteque:#e2463d;--orange:#f39c2b;--creme:#fbf7ec;--sable:#f1ead6;--ink:#17261b;--gris:#5f6b60}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Outfit",system-ui,sans-serif;background:var(--creme);color:var(--ink);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--feuille);color:var(--ink);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.wrap{width:min(1140px,92vw);margin:auto}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.04}
+h1 em,h2 em{font-style:italic;font-weight:500}
+.sur{font-size:.76rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--vert2)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .25s,background .25s}
+.btn.plein{background:var(--feuille);color:var(--ink);animation:respire 3.2s ease-in-out infinite}
+.btn.plein:hover{background:#a5d95c;transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid currentColor;color:inherit}
+.btn:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+@keyframes respire{50%{box-shadow:0 0 0 9px rgba(140,198,63,.18)}}
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.hero .fond{position:absolute;inset:0;background:url(img/agrumes.webp) center/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,40,22,.15) 0%,rgba(15,40,22,.55) 50%,rgba(15,40,22,.92) 100%)}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,-2%)}}
+#gouttes{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:6rem 0 3.4rem}
+.hero .sur{color:var(--feuille)}
+.hero h1{font-size:clamp(2.9rem,9vw,6.6rem);font-weight:800;margin:.9rem 0 1.1rem;animation:monte 1.2s ease both}
+.hero h1 em{color:#ffd28a}
+.lead{font-size:1.15rem;max-width:40ch;color:#eef3e6;animation:monte 1.2s .25s ease both}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}}
+/* bandeau */
+.defile{background:var(--vert);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:"Fraunces",serif;font-style:italic;font-size:1.25rem}
+.defile div{display:inline-block;animation:glisse 32s linear infinite}
+.defile span{margin:0 1.4rem}.defile b{color:var(--feuille);font-style:normal}
+@keyframes glisse{to{transform:translateX(-50%)}}
+.bloc{padding:clamp(4.2rem,10vh,7rem) 0}
+.bloc h2{font-size:clamp(2.1rem,5.2vw,3.7rem);margin:.7rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.08rem;max-width:56ch}
+/* famille */
+.famille .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.famille h2 em{color:var(--pasteque)}
+.citation{font-family:"Fraunces",serif;font-style:italic;font-size:clamp(1.3rem,2.7vw,1.75rem);line-height:1.4;margin-top:1.6rem;padding-top:1.4rem;border-top:2px solid var(--feuille)}
+.citation small{display:block;font-family:"Outfit",sans-serif;font-style:normal;font-size:.88rem;color:var(--gris);margin-top:.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.duo img{border-radius:24px;width:100%;aspect-ratio:3/4;object-fit:cover}
+.duo img:last-child{margin-top:3rem}
+/* rayons */
+.rayons{background:var(--sable)}
+.rayons h2 em{color:var(--vert2)}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.6rem}
+.rayon{background:#fff;border-radius:26px;overflow:hidden;transition:transform .35s}
+.rayon:hover{transform:translateY(-6px) rotate(-.4deg)}
+.rayon img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.rayon div{padding:1.3rem 1.4rem 1.6rem}
+.pastille{aspect-ratio:4/3;display:flex!important;align-items:center;justify-content:center;text-align:center;background:var(--pasteque);color:#fff;font-family:"Fraunces",serif;font-size:2rem;line-height:1.1;padding:1rem}.pastille em{color:#ffe1b0}
+.rayon h3{font-size:1.45rem;margin-bottom:.35rem}
+.rayon p{color:var(--gris);font-size:.98rem}
+/* arrivages */
+.arr .rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.2rem 0 1rem;scrollbar-width:thin}
+.arr figure{flex:0 0 min(300px,74vw);scroll-snap-align:start}
+.arr figure img{border-radius:22px;width:100%;aspect-ratio:3/4;object-fit:cover}
+.arr figcaption{font-weight:700;margin-top:.6rem}
+.arr figcaption small{display:block;font-weight:400;color:var(--gris)}
+.astuce{font-size:.9rem;color:var(--gris)}
+/* débat */
+.debat{background:var(--pasteque);color:#fff;position:relative;overflow:hidden}
+.debat .g{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.debat .sur{color:#ffe1b0}
+.debat h2 em{color:#ffe1b0}
+.debat .chapo{color:#ffe9e4}
+.vote{display:flex;gap:.8rem;margin-top:1.8rem;flex-wrap:wrap}
+.vote button{font:inherit;font-weight:700;min-height:50px;padding:.8rem 1.4rem;border-radius:999px;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer;transition:background .25s,color .25s}
+.vote button:hover,.vote button.on{background:#fff;color:var(--pasteque)}
+#merci{margin-top:1rem;min-height:1.6em;font-style:italic}
+.debat img{border-radius:200px 200px 26px 26px;width:100%;max-height:560px;object-fit:cover}
+/* contact */
+.contact{background:var(--vert);color:var(--creme)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact h2 em{color:var(--feuille)}
+.contact .chapo{color:#cfe0cf}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(140,198,63,.3);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--feuille);min-width:7rem;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:.25rem}
+.coord a{color:#fff;text-underline-offset:4px}
+footer{background:#10301c;color:#9fb39f;text-align:center;font-size:.85rem;padding:1.8rem 1rem}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:880px){.famille .g,.debat .g,.contact .g,.trois{grid-template-columns:1fr}.debat img{max-height:420px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}#gouttes{display:none}.apparait{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, créée avec plaisir pour Fraîcheur Des Plaines · page privée</div>
+<header class="hero">
+ <div class="fond" role="img" aria-label="Oranges et citrons verts en panier, à l'étal de Fraîcheur Des Plaines"></div>
+ <canvas id="gouttes" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <p class="sur">Fruits &amp; légumes · Charcuterie artisanale · Épicerie</p>
+  <h1>Fraîcheur <em>Des Plaines</em></h1>
+  <p class="lead">Au 39 avenue Jean Jaurès, à Saint-Benoît : les beaux produits du jour, une histoire de famille et toujours le sourire.</p>
+  <div class="btns">
+   <a class="btn plein" href="https://wa.me/262692822684">Un message sur WhatsApp</a>
+   <a class="btn ligne" href="#rayons">Découvrir les rayons</a>
+  </div>
+ </div>
+</header>
+<div class="defile" aria-hidden="true"><div>
+ <span>Pastèques</span><b>·</b><span>Oignon pays</span><b>·</b><span>Jaboticaba</span><b>·</b><span>Poivrons</span><b>·</b><span>Agrumes</span><b>·</b><span>Haricots verts</span><b>·</b><span>Charcuterie artisanale</span><b>·</b>
+ <span>Pastèques</span><b>·</b><span>Oignon pays</span><b>·</b><span>Jaboticaba</span><b>·</b><span>Poivrons</span><b>·</b><span>Agrumes</span><b>·</b><span>Haricots verts</span><b>·</b><span>Charcuterie artisanale</span><b>·</b>
+</div></div>
+
+<section class="bloc famille">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur">Notre histoire</p>
+   <h2>Une affaire <em>de famille</em></h2>
+   <p class="chapo">Le commerce se transmet de parents à enfants, et ça se voit : on choisit les produits avec soin, on se taquine entre frères, et on accueille chaque client comme un voisin.</p>
+   <p class="citation">« Derrière notre commerce, une histoire de famille, transmise par nos parents. »<small>Fraîcheur Des Plaines, sur sa page</small></p>
+  </div>
+  <div class="duo apparait">
+   <img src="img/pommes.webp" alt="Pommes rouges, jaunes et vertes à l'étal" loading="lazy">
+   <img src="img/haricots.webp" alt="Haricots verts frais en caisses" loading="lazy">
+  </div>
+ </div>
+</section>
+
+<section class="bloc rayons" id="rayons">
+ <div class="wrap">
+  <p class="sur apparait">Dans la boutique</p>
+  <h2 class="apparait">Trois rayons, <em>une même envie</em></h2>
+  <p class="chapo apparait">Tout ce qu'il faut pour remplir le panier de la semaine, au même endroit.</p>
+  <div class="trois">
+   <article class="rayon apparait"><img src="img/poivrons.webp" alt="Poivrons rouges, jaunes et verts" loading="lazy"><div><h3>Fruits &amp; légumes</h3><p>Les couleurs du jour, des légumes du quotidien aux fruits de saison.</p></div></article>
+   <article class="rayon apparait"><div class="pastille" aria-hidden="true">Charcuterie<br><em>artisanale</em></div><div><h3>Charcuterie artisanale</h3><p>De quoi composer un bon carry ou un rougail à la maison.</p></div></article>
+   <article class="rayon apparait"><img src="img/fruits-tropicaux.webp" alt="Fruits tropicaux, avocats et bananes" loading="lazy"><div><h3>Épicerie</h3><p>Les essentiels et l'alimentation divers, pour compléter vos courses.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="bloc arr">
+ <div class="wrap">
+  <p class="sur apparait">Ça vient d'arriver</p>
+  <h2 class="apparait">Les <em>arrivages</em> à guetter</h2>
+  <p class="chapo apparait">Vous les attendez avec impatience ? On les annonce ici dès qu'ils arrivent à la boutique.</p>
+  <div class="rail">
+   <figure><img src="img/oignons-pays.webp" alt="Bottes d'oignons pays" loading="lazy"><figcaption>Oignon pays<small>« Le retour !!! »</small></figcaption></figure>
+   <figure><img src="img/jaboticaba.webp" alt="Barquettes de jaboticaba" loading="lazy"><figcaption>Jaboticaba<small>En barquette, à la saison</small></figcaption></figure>
+   <figure><img src="img/agrumes.webp" alt="Oranges et citrons verts" loading="lazy"><figcaption>Agrumes<small>Oranges et citrons verts</small></figcaption></figure>
+   <figure><img src="img/haricots.webp" alt="Haricots verts" loading="lazy"><figcaption>Haricots verts<small>Bien croquants</small></figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour voir les autres →</p>
+ </div>
+</section>
+
+<section class="bloc debat">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur">Le grand débat</p>
+   <h2>Pastèque ou <em>melon</em> ?</h2>
+   <p class="chapo">« Mi lance le débat : comment zot y appel ça zot ? » La question a fait réagir toute la page. Et vous, vous êtes de quelle équipe ?</p>
+   <div class="vote"><button type="button" data-t="#teamPasteque">#teamPasteque</button><button type="button" data-t="#teamMelon">#teamMelon</button></div>
+   <p id="merci" aria-live="polite"></p>
+  </div>
+  <img class="apparait" src="img/pasteques.webp" alt="Demi-pastèques bien rouges" loading="lazy">
+ </div>
+</section>
+
+<section class="bloc contact" id="contact">
+ <div class="wrap g">
+  <div class="apparait">
+   <h2>À très vite <em>à la boutique</em></h2>
+   <p class="chapo">Une question sur un arrivage, une commande à mettre de côté ? Un appel ou un message suffit.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262692822684">WhatsApp</a><a class="btn ligne" href="tel:+262692822684">0692 82 26 84</a></div>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Adresse</span>39 avenue Jean Jaurès, 97470 Saint-Benoît</li>
+   <li><span>Téléphone</span><a href="tel:+262692822684">0692 82 26 84</a></li>
+   <li><span>Suivez-nous</span><a href="https://www.facebook.com/p/Fra%C3%AEcheur-Des-Plaines-100063769803027">Facebook · Fraîcheur Des Plaines</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Fraîcheur Des Plaines.</footer>
+<script>
+(function(){
+ var cv=document.getElementById('gouttes'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<30;i++)P.push({x:Math.random(),y:Math.random(),v:.0003+Math.random()*.0006,r:1.5+Math.random()*3,p:Math.random()*6,f:Math.random()<.35});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;if(p.y<-.03){p.y=1.03;p.x=Math.random()}
+  var a=.15+.25*Math.sin(t/1000+p.p),cx=p.x*W+Math.sin(t/1600+p.p)*14,cy=p.y*H;
+  if(p.f){x.save();x.translate(cx,cy);x.rotate(Math.sin(t/1200+p.p));x.fillStyle='rgba(140,198,63,'+Math.max(0,a+.1)+')';x.beginPath();x.ellipse(0,0,p.r*2.2,p.r,0,0,7);x.fill();x.restore()}
+  else{x.strokeStyle='rgba(255,255,255,'+Math.max(0,a+.15)+')';x.lineWidth=1.2;x.beginPath();x.arc(cx,cy,p.r,0,7);x.stroke()}});requestAnimationFrame(f)}
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(f);
+ document.querySelectorAll('.vote button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.vote button').forEach(function(o){o.classList.remove('on')});b.classList.add('on');document.getElementById('merci').textContent='Vote enregistré pour '+b.dataset.t+' 😄 On en reparle à la boutique !'})});
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
