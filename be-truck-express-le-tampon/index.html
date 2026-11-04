@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Be Truck Express — Food truck burgers, wraps & frites maison</title>
+<meta name="description" content="Burgers Black Angus, poulet, poisson ou végétarien, wraps et frites maison : Be Truck Express sillonne les fêtes du Sud de La Réunion.">
+<meta property="og:title" content="Be Truck Express — une page imaginée pour vous">
+<meta property="og:description" content="Burgers, wraps, frites maison, et le truck à réserver pour vos événements.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/be-truck-express-le-tampon/img/truck.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/be-truck-express-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Yellowtail&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0c0c0d;--noir2:#161618;--rouge:#e3262f;--rouge2:#ff4b3e;--braise:#ff9a2e;--blanc:#f7f4ef;--gris:#a9a6a0;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--noir);color:var(--blanc);font:400 16px/1.6 Barlow,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{position:relative;z-index:5;background:var(--rouge);color:#fff;text-align:center;font-size:.8rem;padding:.5rem 1rem}
+canvas#braises{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.2rem}
+.script{font-family:Yellowtail,cursive;font-weight:400}
+h1,h2{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+.kicker{font-weight:700;font-size:.78rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rouge2)}
+/* hero */
+.hero{position:relative;min-height:min(88vh,760px);display:grid;align-items:end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%;animation:kb 20s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.1) translateY(-1.5%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,13,.15) 20%,rgba(12,12,13,.65) 60%,var(--noir) 98%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:2.6rem;padding-top:6rem}
+.hero .script{font-size:clamp(3.2rem,13vw,6rem);line-height:.9;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.6)}
+.hero h1{font-size:clamp(1.3rem,5vw,2.2rem);margin-top:.5rem;color:var(--blanc)}
+.hero h1 span{color:var(--rouge2)}
+.hero p{max-width:520px;margin-top:.8rem;color:#ddd;font-size:1.05rem}
+.neon{display:block;height:4px;width:140px;margin:1rem 0;border-radius:4px;background:var(--rouge2);box-shadow:0 0 12px var(--rouge2),0 0 30px var(--rouge);animation:neon 4s infinite}
+@keyframes neon{0%,18%,22%,62%,64%,100%{opacity:1}20%,63%{opacity:.35}}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.4rem;border-radius:10px;background:var(--rouge);color:#fff;font-weight:700;text-decoration:none;text-transform:uppercase;letter-spacing:.05em;font-size:.92rem;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
+.cta:hover{background:var(--rouge2);transform:translateY(-2px)}
+.cta.ghost{background:transparent;border:2px solid #fff}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+section{padding:3.6rem 0}
+.titre{margin-bottom:1.8rem}
+.titre h2{font-size:clamp(2.1rem,8vw,3.6rem);margin-top:.3rem}
+.titre p{color:var(--gris);max-width:560px;margin-top:.5rem}
+/* carte */
+.carte{display:grid;gap:1rem}
+@media(min-width:760px){.carte{grid-template-columns:repeat(4,1fr)}}
+.burger{background:var(--noir2);border:1px solid #2a2a2d;border-radius:var(--r);padding:1.2rem 1.1rem;cursor:pointer;transition:border-color .25s,transform .25s;text-align:left;color:inherit;font:inherit}
+.burger:hover,.burger[aria-pressed=true]{border-color:var(--rouge2);transform:translateY(-3px)}
+.burger b{display:block;font-family:Anton,sans-serif;font-weight:400;font-size:1.5rem;text-transform:uppercase}
+.burger span{color:var(--gris);font-size:.92rem}
+.burger[aria-pressed=true] b{color:var(--rouge2)}
+.plus{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.plus span{border:1px solid #333;border-radius:99px;padding:.35rem .9rem;font-size:.9rem}
+.plus span:first-child{border-color:var(--braise);color:var(--braise)}
+.mention{font-size:.82rem;color:var(--gris);margin-top:.9rem}
+/* galerie */
+.gal{display:grid;gap:1rem}
+@media(min-width:760px){.gal{grid-template-columns:1fr 1fr}}
+.gal figure{position:relative;border-radius:var(--r);overflow:hidden}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s}
+.gal figure:hover img{transform:scale(1.05)}
+figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .7rem;font-size:.85rem;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+/* tournee */
+.route{position:relative;display:grid;gap:.2rem;padding-left:1.6rem}
+.route:before{content:"";position:absolute;left:.45rem;top:.4rem;bottom:.4rem;border-left:2px dashed #444}
+.etape{position:relative;padding:.75rem 0}
+.etape:before{content:"";position:absolute;left:-1.45rem;top:1.15rem;width:12px;height:12px;border-radius:50%;background:var(--noir);border:2px solid var(--rouge2)}
+.etape.vu:before{background:var(--rouge2);box-shadow:0 0 10px var(--rouge2)}
+.etape b{font-size:1.1rem}
+.etape small{display:block;color:var(--gris);font-size:.9rem}
+/* reserver */
+.resa{background:linear-gradient(160deg,#1b1b1e,#101012);border:1px solid #2c2c30;border-radius:22px;padding:1.6rem 1.2rem}
+.resa label{display:block;font-weight:600;margin:1rem 0 .45rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips button{min-height:44px;padding:.45rem 1rem;border-radius:99px;border:1px solid #444;background:transparent;color:var(--blanc);font:500 .95rem Barlow,sans-serif;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--rouge);border-color:var(--rouge)}
+.resa input{width:100%;min-height:46px;border-radius:10px;border:1px solid #444;background:#0e0e10;color:#fff;padding:.6rem .8rem;font:inherit}
+.apercu{margin-top:1.2rem;background:#0e0e10;border-left:3px solid var(--rouge2);border-radius:8px;padding:.8rem 1rem;font-size:.92rem;color:#ddd;white-space:pre-line}
+.contact{text-align:center;border-top:1px solid #222}
+.contact .tel{font-family:Anton,sans-serif;font-size:clamp(2.2rem,10vw,3.6rem);text-decoration:none;display:inline-block;margin-top:.5rem;color:#fff}
+.contact p{color:var(--gris)}
+.contact .ctas{justify-content:center}
+footer{text-align:center;padding:2rem 1.2rem 2.6rem;font-size:.8rem;color:#777}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*:before{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}canvas#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — imaginée pour Be Truck Express</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+ <img src="img/truck.jpg" alt="Le food truck noir et rouge de Be Truck Express, fenêtre de service ouverte" width="1500" height="1125">
+ <div class="wrap">
+  <p class="kicker">Food truck · Le Tampon &amp; tout le Sud</p>
+  <div class="script">Be Truck</div>
+  <h1>Burgers, wraps &amp; <span>frites maison</span></h1>
+  <i class="neon"></i>
+  <p>Coucou les Be Truckers ! Le truck noir et rouge vous attend sur les fêtes et les marchés du Sud, avec des pains artisanaux et des frites maison bien croustillantes.</p>
+  <div class="ctas"><a class="cta" href="#carte">Voir la carte</a><a class="cta ghost" href="#reserver">Réserver le truck</a></div>
+ </div>
+</header>
+
+<section id="carte">
+ <div class="wrap">
+  <div class="titre rv"><p class="kicker">La carte</p><h2>Choisissez votre burger</h2><p>Touchez votre favori : il s'ajoute à votre message pour le truck.</p></div>
+  <div class="carte rv">
+   <button class="burger" type="button" aria-pressed="false" data-b="Black Angus"><b>Black Angus</b><span>Le burger au bœuf Black Angus</span></button>
+   <button class="burger" type="button" aria-pressed="false" data-b="Poulet"><b>Poulet</b><span>Le burger au poulet</span></button>
+   <button class="burger" type="button" aria-pressed="false" data-b="Poisson"><b>Poisson</b><span>Le burger au poisson</span></button>
+   <button class="burger" type="button" aria-pressed="false" data-b="Végétarien"><b>Végétarien</b><span>Le burger végétarien</span></button>
+  </div>
+  <div class="plus rv"><span>Frites maison</span><span>Wraps généreux</span><span>Pains artisanaux</span><span>Gaufres</span><span>Boissons fraîches</span></div>
+  <p class="mention rv">Carte reprise des affiches publiées par Be Truck Express ; les prix s'ajoutent sur la vraie page.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap gal">
+  <figure class="rv"><img src="img/route.jpg" alt="Le truck garé au bord de la route, palmiers et petite chapelle blanche" width="1500" height="1125" loading="lazy"><figcaption>En route vers la prochaine fête</figcaption></figure>
+  <figure class="rv"><img src="img/terrasse.jpg" alt="Le truck et sa terrasse de tables noires sous le ciel bleu" width="1500" height="1125" loading="lazy"><figcaption>Tables dressées, le service peut commencer</figcaption></figure>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="titre rv"><p class="kicker">La tournée</p><h2>Où était le truck ?</h2><p>Quelques rendez-vous partagés sur la page cette année.</p></div>
+  <div class="route">
+   <div class="etape rv"><b>Les Florilèges, Le Tampon</b><small>Parc floral · 10 jours, de 9h à 18h · octobre 2026</small></div>
+   <div class="etape rv"><b>Salon d'Été Maison &amp; Jardin</b><small>Grands Kiosques, La Plaine-des-Cafres · 29 et 30 août 2026</small></div>
+   <div class="etape rv"><b>Fête de la Plaine</b><small>Site de Miel Vert · fête de la pomme de terre et du cheval</small></div>
+   <div class="etape rv"><b>Les Découvertes du Jardin Baz'Art</b><small>Le Jardin Secret, Ligne des Bambous · 8 août 2026</small></div>
+   <div class="etape rv"><b>Braderie commerciale de Saint-Joseph</b><small>Burgers et frites maison tout le week-end</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="reserver">
+ <div class="wrap">
+  <div class="titre rv"><p class="kicker">Événements</p><h2>Le truck chez vous</h2><p>Fête, salon, soirée d'entreprise : composez votre demande, elle part prête sur le WhatsApp du truck.</p></div>
+  <div class="resa rv">
+   <label>Votre événement</label>
+   <div class="chips" data-g="type"><button type="button" aria-pressed="true">Anniversaire</button><button type="button" aria-pressed="false">Mariage</button><button type="button" aria-pressed="false">Entreprise</button><button type="button" aria-pressed="false">Fête / marché</button></div>
+   <label>Nombre d'invités</label>
+   <div class="chips" data-g="nb"><button type="button" aria-pressed="false">Moins de 30</button><button type="button" aria-pressed="true">30 à 80</button><button type="button" aria-pressed="false">Plus de 80</button></div>
+   <label for="lieu">Lieu et date</label>
+   <input id="lieu" placeholder="ex. Saint-Pierre, samedi 12 décembre">
+   <div class="apercu" id="apercu"></div>
+   <div class="ctas"><button class="cta" id="go" type="button">Envoyer sur WhatsApp</button></div>
+  </div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap rv">
+  <p class="kicker">Une question, une commande ?</p>
+  <a class="tel" href="tel:+262692669323">0692 66 93 23</a>
+  <p style="margin-top:.4rem"><a href="mailto:betruck974@gmail.com">betruck974@gmail.com</a></p>
+  <div class="ctas"><a class="cta ghost" href="https://www.facebook.com/p/Be-Truck-express-61559204956124/">Facebook</a><a class="cta ghost" href="https://www.instagram.com/betruckexpress974/">Instagram</a></div>
+ </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Be Truck Express.</footer>
+<script>
+const S={type:"Anniversaire",nb:"30 à 80"},B=new Set();
+document.querySelectorAll(".chips").forEach(g=>g.querySelectorAll("button").forEach(b=>b.onclick=()=>{g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));S[g.dataset.g]=b.textContent;msg()}));
+document.querySelectorAll(".burger").forEach(b=>b.onclick=()=>{const k=b.dataset.b;B.has(k)?B.delete(k):B.add(k);b.setAttribute("aria-pressed",B.has(k));msg()});
+document.getElementById("lieu").oninput=msg;
+function txt(){const l=document.getElementById("lieu").value.trim();return "Coucou Be Truck ! 🍔\nJe prépare un événement : "+S.type.toLowerCase()+", "+S.nb.toLowerCase()+" invités"+(l?", "+l:"")+"."+(B.size?"\nOn adore : burger "+[...B].join(", ")+" + frites maison.":"")+"\nVous seriez disponibles ?"}
+function msg(){document.getElementById("apercu").textContent=txt()}msg();
+document.getElementById("go").onclick=()=>location.href="https://wa.me/262692669323?text="+encodeURIComponent(txt());
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("vu");io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(x=>io.observe(x));
+(()=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const c=document.getElementById("braises"),x=c.getContext("2d");let W,H,P=[];
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener("resize",sz);
+function n(){return{x:Math.random()*W,y:H+10,v:.4+Math.random()*1.1,r:.8+Math.random()*2,s:Math.random()*6.28,h:Math.random()<.6?20:0,l:1}}
+for(let i=0;i<34;i++){const p=n();p.y=Math.random()*H;P.push(p)}
+(function f(){x.clearRect(0,0,W,H);P.forEach((p,i)=>{p.y-=p.v;p.s+=.03;p.x+=Math.sin(p.s)*.5;const a=Math.max(0,p.y/H)*.8;
+x.fillStyle=`hsla(${p.h+15},100%,60%,${a})`;x.shadowColor=`hsla(${p.h+10},100%,55%,${a})`;x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-10)P[i]=n()});requestAnimationFrame(f)})()})();
+</script>
+</body>
+</html>
