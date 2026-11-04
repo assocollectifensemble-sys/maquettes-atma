@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Soin de Soi by Maya · Institut de beauté à Saint-Pierre</title>
+<meta property="og:title" content="Soin de Soi by Maya · Saint-Pierre">
+<meta property="og:description" content="Une page imaginée pour l'institut Soin de Soi by Maya.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/soin-de-soi-institut-saint-pierre/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/soin-de-soi-institut-saint-pierre/img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0d0b08;--nuit2:#1a1610;--or:#d4a640;--or-c:#f0d48a;--creme:#f7f1e6;--lin:#ece2d0;--encre:#2a241b;--gris:#6f665a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:#000;color:var(--lin);font-size:.8rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--or-c);font-weight:500}
+.wrap{width:min(1100px,92vw);margin:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.05}
+.script{font-family:"Great Vibes",cursive;color:var(--or);font-weight:400}
+.sur{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--or)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.8rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;letter-spacing:.03em;transition:background .3s,transform .3s,color .3s}
+.btn.plein{background:linear-gradient(135deg,var(--or-c),var(--or));color:var(--nuit)}.btn.plein:hover{transform:translateY(-2px)}
+.btn.ligne{border:1px solid rgba(240,212,138,.55);color:var(--or-c)}.btn.ligne:hover{background:rgba(240,212,138,.1)}
+.btn:focus-visible{outline:2px solid var(--or-c);outline-offset:3px}
+/* hero nuit et or */
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 40%,#2a2113 0%,var(--nuit) 60%);color:var(--creme)}
+#paillettes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .g{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center;padding:clamp(3.5rem,10vh,7rem) 0}
+.hero h1{font-size:clamp(3.4rem,8vw,6.2rem);animation:monte 1.1s ease both}
+.hero h1 .script{display:block;font-size:.62em;margin-top:.3rem}
+.lead{color:#cfc5b2;font-size:1.12rem;max-width:40ch;margin-top:1.4rem;animation:monte 1.1s .2s ease both}
+.logo{position:relative;animation:monte 1.2s .1s ease both}
+.logo img{width:100%;max-width:430px;margin-left:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 1px rgba(240,212,138,.25),0 0 80px rgba(212,166,64,.28);animation:halo 6s ease-in-out infinite}
+@keyframes halo{50%{box-shadow:0 0 0 1px rgba(240,212,138,.4),0 0 120px rgba(212,166,64,.42)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}}
+section{padding:clamp(4rem,10vh,6.5rem) 0}
+h2{font-size:clamp(2.3rem,5vw,3.6rem)}
+/* mot de Maya */
+.mot{background:var(--creme);text-align:center}
+.mot blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.35;max-width:30ch;margin:1.4rem auto 0;color:var(--encre)}
+.mot .sig{font-family:"Great Vibes",cursive;font-size:2.4rem;color:var(--or);margin-top:1rem;display:block}
+.filet{width:80px;height:1px;background:var(--or);margin:2rem auto 0}
+/* soins */
+.soins{background:var(--lin)}
+.soins .tete{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
+.soins .tete p{max-width:40ch;color:var(--gris)}
+.carte{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(2rem,5vw,4rem);margin-top:2.6rem}
+.carte div{padding:1.6rem 0;border-top:1px solid #d6c7aa}
+.carte h3{font-size:1.65rem}
+.carte h3 span{font-family:"Jost",sans-serif;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:.3rem;font-weight:500}
+.carte p{color:var(--gris);margin-top:.35rem}
+/* épilation */
+.cire{background:var(--nuit2);color:var(--creme);position:relative;overflow:hidden}
+.cire .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.cire h2 em{font-style:italic;color:var(--or-c)}
+.cire p{color:#cfc5b2;margin-top:1.2rem;max-width:44ch}
+.goutte{position:relative;aspect-ratio:1;max-width:380px;margin:auto}
+.goutte i{position:absolute;inset:0;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 35% 30%,#fbe7b0,#d9a443 45%,#8a5d17 100%);animation:coule 9s ease-in-out infinite;opacity:.92}
+.goutte i:nth-child(2){inset:18%;background:radial-gradient(circle at 40% 30%,rgba(255,255,255,.55),transparent 60%);animation-delay:-3s}
+.goutte b{position:absolute;inset:0;display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:clamp(1.4rem,3vw,2rem);color:var(--nuit);text-align:center;line-height:1.1;font-weight:500}
+@keyframes coule{50%{border-radius:56% 44% 48% 52%/52% 64% 36% 48%;transform:rotate(6deg) scale(1.03)}}
+/* rdv */
+.fin .g{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.fin address{font-style:normal;color:var(--gris);margin-top:1rem;font-size:1.05rem}
+.fin .tel{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,5vw,3.2rem);color:var(--encre);text-decoration:none;display:block;margin-top:1rem}
+.fin .moyens{margin-top:.6rem;color:var(--gris)}
+.fin .rond{aspect-ratio:1;border-radius:50%;background:var(--nuit);display:grid;place-items:center;max-width:340px;margin-left:auto;text-align:center;color:var(--or-c);padding:2rem}
+.fin .rond .script{font-size:3rem;line-height:1}
+.fin .rond small{display:block;color:#cfc5b2;letter-spacing:.25em;text-transform:uppercase;font-size:.7rem;margin-top:.6rem}
+footer{padding:2rem 0;font-size:.82rem;color:var(--gris);border-top:1px solid #e0d5c1}
+.rev{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}.rev.vu{opacity:1;transform:none}
+@media (max-width:820px){.hero .g,.cire .g,.fin .g{grid-template-columns:1fr}.carte{grid-template-columns:1fr}.logo img{margin:0 auto;max-width:300px}.fin .rond{margin:0 auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}#paillettes{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> · page privée, visible seulement par vous</div>
+<header class="hero">
+ <canvas id="paillettes" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Institut de beauté · Saint-Pierre</p>
+   <h1>Soin de Soi <span class="script">by Maya</span></h1>
+   <p class="lead">Épilations à la cire, soins du visage, LPG, massage, onglerie et maquillage. Un moment rien que pour vous, avec écoute et bienveillance.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693881965">Prendre rendez-vous</a><a class="btn ligne" href="#soins">Les prestations</a></div>
+  </div>
+  <div class="logo"><img src="img/logo.webp" alt="Logo de l'institut Soin de Soi by Maya, or sur fond noir"></div>
+ </div>
+</header>
+
+<section class="mot">
+ <div class="wrap rev">
+  <p class="sur">Le mot de Maya</p>
+  <blockquote>« Prendre soin de vous est ma priorité : vous accorder du temps, de l'écoute, dans la bienveillance, pour votre confort et votre bien-être. »</blockquote>
+  <span class="sig">Maya</span>
+  <div class="filet"></div>
+ </div>
+</section>
+
+<section class="soins" id="soins">
+ <div class="wrap">
+  <div class="tete rev"><div><p class="sur">Les prestations</p><h2>Se faire <span class="script" style="font-size:1.1em">chouchouter</span></h2></div><p>Des soins pensés pour chaque peau et chaque envie, à prix tout doux.</p></div>
+  <div class="carte">
+   <div class="rev"><h3><span>Peau douce</span>Épilations</h3><p>À la cire traditionnelle ou à la cire Epiloderm, avec des combos à prix tout doux.</p></div>
+   <div class="rev"><h3><span>Éclat</span>Soins du visage</h3><p>Un soin visage pour une peau fraîche, et le soin anti-rides LPG.</p></div>
+   <div class="rev"><h3><span>Silhouette</span>Soin corps LPG</h3><p>Le soin amincissant LPG, pour prendre soin de votre corps en douceur.</p></div>
+   <div class="rev"><h3><span>Détente</span>Massage</h3><p>Un vrai moment de lâcher-prise, pour vous offrir une parenthèse.</p></div>
+   <div class="rev"><h3><span>Mains</span>Onglerie</h3><p>Des ongles soignés, pour des mains belles jusqu'au bout des doigts.</p></div>
+   <div class="rev"><h3><span>Lumière</span>Maquillage</h3><p>Pour un événement, une fête ou simplement pour vous sentir belle.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="cire">
+ <div class="wrap g">
+  <div class="rev">
+   <p class="sur">La spécialité</p>
+   <h2>Envie d'une peau <em>douce et impeccable</em>&nbsp;?</h2>
+   <p>Confiez vos épilations à des mains expertes, avec la cire traditionnelle : un résultat net, un soin tout en douceur. Réservez votre créneau en un message.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693881965">Réserver mon créneau</a></div>
+  </div>
+  <div class="goutte rev" aria-hidden="true"><i></i><i></i><b>Cire<br>traditionnelle</b></div>
+ </div>
+</section>
+
+<section class="fin">
+ <div class="wrap g">
+  <div class="rev"><p class="sur">Rendez-vous</p><h2>Prenez soin de vous</h2><address>4 rue du Père Favron<br>97410 Saint-Pierre</address><a class="tel" href="tel:+262693881965">0693 88 19 65</a><p class="moyens">Sur rendez-vous, par téléphone, WhatsApp, Messenger ou Instagram.</p></div>
+  <div class="rond rev"><div><span class="script">Soin de Soi</span><small>Institut de Maya</small></div></div>
+ </div>
+</section>
+<footer><div class="wrap">Soin de Soi by Maya · Saint-Pierre, La Réunion · Maquette imaginée par Jonathan · ATMA Digital à partir des pages Facebook et Instagram de l'institut</div></footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rev').forEach(f=>io.observe(f));
+(()=>{const c=document.getElementById('paillettes');if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const x=c.getContext('2d');let W,H,P=[];
+function t(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}t();addEventListener('resize',t);
+for(let i=0;i<70;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.4,v:Math.random()*.00035+.0001,p:Math.random()*6.28});
+(function f(){x.clearRect(0,0,W,H);for(const s of P){s.y-=s.v;s.p+=.02;if(s.y<0){s.y=1;s.x=Math.random()}const a=.35+.35*Math.sin(s.p);x.beginPath();x.arc(s.x*W+Math.sin(s.p)*6,s.y*H,s.r,0,6.28);x.fillStyle=`rgba(240,212,138,${a})`;x.fill()}requestAnimationFrame(f)})();})();
+</script>
+</body>
+</html>
