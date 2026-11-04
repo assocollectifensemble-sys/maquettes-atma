@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MEL Esthetik · Institut de beauté à La Rivière Saint-Louis</title>
+<meta name="description" content="Soins visage et corps, épilations, maquillage, modelages relaxants et onglerie, uniquement sur rendez-vous, à La Rivière Saint-Louis.">
+<meta property="og:title" content="MEL Esthetik · Institut de beauté">
+<meta property="og:description" content="Une page imaginée pour MEL Esthetik, à La Rivière Saint-Louis.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mel-esthetik-saint-louis/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mel-esthetik-saint-louis/img/ongles-3.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bordeaux:#a91d3a;--bordeaux2:#7e1229;--orchidee:#e7c3d6;--poudre:#fbf3f5;--creme:#fffdfb;--or:#c9a14a;--encre:#3a2329;--doux:#7d6168}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:400;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--bordeaux);color:#fff;text-align:center;font-size:.78rem;padding:.55rem 1rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.1}
+.script{font-family:'Great Vibes',cursive;color:var(--bordeaux);font-weight:400}
+.sur{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or);font-weight:500}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.8rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.04em;transition:transform .3s,box-shadow .3s,background .3s}
+.btn.plein{background:var(--bordeaux);color:#fff;box-shadow:0 10px 28px rgba(169,29,58,.25)}.btn.plein:hover{background:var(--bordeaux2);transform:translateY(-2px)}
+.btn.ligne{border:1px solid var(--bordeaux);color:var(--bordeaux)}.btn.ligne:hover{background:var(--poudre)}
+.btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+/* HERO */
+.hero{position:relative;background:linear-gradient(180deg,var(--poudre),var(--creme));overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;min-height:88vh;padding:4rem 0}
+.hero h1{font-size:clamp(4rem,10vw,7.5rem);line-height:.9}
+.hero h1 .script{display:block;font-size:.8em;margin-top:.2rem}
+.hero p.intro{font-size:1.12rem;color:var(--doux);max-width:28rem;margin-top:1.5rem}
+.rdv{display:inline-block;margin-top:1.4rem;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bordeaux);border-bottom:1px solid var(--orchidee);padding-bottom:.3rem}
+.arche{position:relative;justify-self:center;width:min(440px,100%)}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 14px 14px}
+.arche::after{content:"";position:absolute;inset:-14px;border:1px solid var(--or);border-radius:234px 234px 22px 22px;opacity:.6}
+.petales{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.petales i{position:absolute;top:-30px;width:16px;height:12px;background:var(--orchidee);border-radius:80% 0 80% 0;opacity:.7;animation:tombe linear infinite}
+@keyframes tombe{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(80px,105vh) rotate(480deg)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:auto;padding:3.5rem 0}.arche{width:min(320px,90%)}}
+section{padding:6rem 0}
+.titre{text-align:center;max-width:38rem;margin:0 auto 3.5rem}
+.titre h2{font-size:clamp(2.3rem,5vw,3.4rem);margin-top:.6rem}
+.titre p{color:var(--doux);margin-top:1rem}
+/* SOINS */
+.soins{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.soin{background:var(--poudre);border-radius:14px;padding:2rem 1.3rem;text-align:center;transition:transform .4s,background .4s}
+.soin:hover{transform:translateY(-6px);background:#f6e4ea}
+.soin .script{font-size:2.6rem;line-height:1}
+.soin h3{font-size:1.25rem;margin:.6rem 0 .4rem}
+.soin p{font-size:.92rem;color:var(--doux)}
+@media(max-width:960px){.soins{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.soins{grid-template-columns:1fr}}
+/* COCON */
+.cocon{background:var(--bordeaux);color:#fff}
+.cocon .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center}
+.cocon img{border-radius:14px;aspect-ratio:1;object-fit:cover;width:100%}
+.cocon h2{font-size:clamp(2.3rem,5vw,3.4rem)}
+.cocon .sur{color:var(--orchidee)}
+.cocon blockquote{font-family:Fraunces,serif;font-style:italic;font-size:1.4rem;line-height:1.5;margin:1.6rem 0 .8rem;padding-left:1.2rem;border-left:1px solid var(--or)}
+.cocon small{color:var(--orchidee);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem}
+.cocon p.txt{opacity:.9}
+@media(max-width:860px){.cocon .wrap{grid-template-columns:1fr;gap:2rem}}
+/* ONGLES */
+.galerie{columns:3 260px;column-gap:1rem}
+.galerie figure{break-inside:avoid;margin-bottom:1rem;border-radius:12px;overflow:hidden}
+.galerie img{width:100%;transition:transform 1s}
+.galerie figure:hover img{transform:scale(1.04)}
+/* CONTACT */
+.contact{background:var(--poudre)}
+.contact .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.contact h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+.infos{display:grid;gap:1.2rem}
+.infos small{display:block;font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--or)}
+.infos div{border-bottom:1px solid var(--orchidee);padding-bottom:1rem;font-size:1.06rem}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+footer{padding:2.5rem 0;text-align:center;font-size:.85rem;color:var(--doux)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.reveal.vu{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour MEL Esthetik · page privée</div>
+
+<header class="hero">
+  <div class="petales" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="sur">Institut de beauté · La Rivière Saint-Louis</p>
+      <h1>MEL<span class="script">Esthetik</span></h1>
+      <p class="intro">Soins visage et corps, épilations, maquillage, modelages relaxants et onglerie. Un moment rien que pour vous, dans un cocon au cœur d'un jardin.</p>
+      <span class="rdv">Uniquement sur rendez-vous</span>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262692159079">Réserver mon moment</a>
+        <a class="btn ligne" href="#soins">Les soins</a>
+      </div>
+    </div>
+    <div class="arche reveal"><img src="img/ongles-3.webp" alt="Manucure rose poudré réalisée à l'institut"></div>
+  </div>
+</header>
+
+<section id="soins">
+  <div class="wrap">
+    <div class="titre reveal"><p class="sur">Les soins</p><h2>Prendre soin de vous, <span class="script">en douceur</span></h2><p>Chaque rendez-vous est pensé pour vous : on prend le temps, on écoute, on chouchoute.</p></div>
+    <div class="soins">
+      <div class="soin reveal"><span class="script">Visage</span><h3>Soins du visage</h3><p>Pour une peau éclatante et apaisée.</p></div>
+      <div class="soin reveal"><span class="script">Corps</span><h3>Soins du corps</h3><p>Une parenthèse de bien-être, de la tête aux pieds.</p></div>
+      <div class="soin reveal"><span class="script">Regard</span><h3>Épilations & sourcils</h3><p>Dont la teinture, qui teinte et intensifie la ligne des sourcils.</p></div>
+      <div class="soin reveal"><span class="script">Détente</span><h3>Modelages relaxants</h3><p>Le temps s'arrête, le corps se relâche.</p></div>
+      <div class="soin reveal"><span class="script">Mains</span><h3>Onglerie & maquillage</h3><p>Des mains soignées et un teint sublimé pour chaque occasion.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cocon">
+  <div class="wrap">
+    <img class="reveal" src="img/ongles-rouge.webp" alt="Vernis rouge réalisé à l'institut" loading="lazy">
+    <div class="reveal">
+      <p class="sur">L'institut</p>
+      <h2>Un cocon au cœur d'un jardin</h2>
+      <blockquote>« L'institut est au cœur d'un jardin paradisiaque. On est dans un cocon qui crée une rupture avec le monde. »</blockquote>
+      <small>Avis d'une cliente sur Facebook</small>
+      <p class="txt" style="margin-top:1.4rem">Mél se forme régulièrement pour vous proposer des soins toujours plus justes. Ici, vous êtes reçue sur rendez-vous, pour profiter pleinement de votre moment.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titre reveal"><p class="sur">L'onglerie</p><h2>Des mains <span class="script">sublimées</span></h2></div>
+    <div class="galerie">
+      <figure class="reveal"><img src="img/ongles-1.webp" alt="Manucure rose et blanc" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/ongles-4.webp" alt="Manucure rose nude" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/ongles-2.webp" alt="Manucure pailletée" loading="lazy"></figure>
+      <figure class="reveal"><img src="img/ongles-5.webp" alt="Manucure rose délicate" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="sur">Rendez-vous</p>
+      <h2>Votre moment <span class="script">vous attend</span></h2>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262692159079">WhatsApp</a>
+        <a class="btn ligne" href="tel:+262692159079">Appeler</a>
+      </div>
+    </div>
+    <div class="infos reveal">
+      <div><small>Adresse</small>La Rivière Saint-Louis, 97421</div>
+      <div><small>Téléphone</small>0692 15 90 79</div>
+      <div><small>E-mail</small>melesthetik97421@gmail.com</div>
+      <div><small>Accueil</small>Uniquement sur rendez-vous</div>
+    </div>
+  </div>
+</section>
+
+<footer>MEL Esthetik · Maquette imaginée par Jonathan · ATMA Digital, page non référencée</footer>
+<script>
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){const p=document.querySelector('.petales');for(let i=0;i<12;i++){const e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.animationDuration=(10+Math.random()*10)+'s';e.style.animationDelay=(-Math.random()*18)+'s';e.style.transform='scale('+(.6+Math.random()*.8)+')';p.appendChild(e)}}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
