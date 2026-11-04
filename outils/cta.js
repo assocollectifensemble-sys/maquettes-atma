@@ -8,8 +8,8 @@
   var url = location.origin + location.pathname;
   var TEL = '262693828108';
   function wa(txt) { return 'https://wa.me/' + TEL + '?text=' + encodeURIComponent(txt); }
-  var veux = wa('Bonjour Jonathan ! J\u2019ai vu la page imaginée pour ' + nom + ' et je veux ce site \uD83D\uDE42 ' + url);
-  var appel = wa('Bonjour Jonathan, j\u2019aimerais en parler 10 minutes au téléphone pour la page de ' + nom + '. Je suis disponible : ');
+  var veux = wa('Bonjour Jonathan ! J\u2019ai vu la page « ' + nom + ' » et je veux ce site \uD83D\uDE42 ' + url);
+  var appel = wa('Bonjour Jonathan, j\u2019aimerais en parler 10 minutes au téléphone de la page « ' + nom + ' ». Je suis disponible : ');
 
   var css = '' +
     '.atma-cta{position:fixed;left:50%;bottom:14px;transform:translate(-50%,140%);z-index:2147483000;display:flex;gap:8px;align-items:center;' +
