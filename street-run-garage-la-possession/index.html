@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Street RUN Garage · Atelier moto à La Possession</title>
+<meta name="description" content="Entretien et réparation toutes marques, pièces, accessoires et équipements motard, 39 bis rue de Hanoi à La Possession.">
+<meta property="og:title" content="Street RUN Garage · Atelier moto à La Possession">
+<meta property="og:description" content="Une page imaginée pour Street RUN Garage.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/street-run-garage-la-possession/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/street-run-garage-la-possession/img/moto-face.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0d0f;--asphalte:#18181c;--gris:#2a2a30;--acier:#9a9aa3;--blanc:#f4f3ef;--rouge:#e10a17;--rouge2:#a3070f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,sans-serif;background:var(--noir);color:var(--blanc);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--rouge);color:#fff;text-align:center;font-size:.78rem;padding:.55rem 1rem;letter-spacing:.02em}
+.wrap{width:min(1160px,92vw);margin:auto}
+h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.01em}
+.sur{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rouge)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:52px;padding:.9rem 1.7rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:transform .25s,background .25s}
+.btn.plein{background:var(--rouge);color:#fff}.btn.plein:hover{background:var(--rouge2);transform:translateX(4px)}
+.btn.ligne{background:var(--blanc);color:var(--noir)}.btn.ligne:hover{transform:translateX(4px)}
+.btn:focus-visible{outline:2px solid #fff;outline-offset:4px}
+/* HERO */
+.hero{position:relative;min-height:92vh;display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.08);animation:zoom 14s ease-out forwards}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(13,13,15,.92) 0%,rgba(13,13,15,.55) 55%,rgba(13,13,15,.15)),linear-gradient(0deg,var(--noir) 0%,transparent 35%)}
+@keyframes zoom{to{transform:scale(1)}}
+.vitesse{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.vitesse i{position:absolute;height:2px;width:30vw;left:-30vw;background:linear-gradient(90deg,transparent,rgba(225,10,23,.9),transparent);animation:file linear infinite}
+@keyframes file{to{transform:translateX(160vw)}}
+.hero .wrap{padding:6rem 0 5rem}
+.hero h1{font-size:clamp(3.4rem,11vw,8.5rem)}
+.hero h1 span{color:var(--rouge);display:block}
+.hero p.intro{max-width:34rem;font-size:1.15rem;color:#d9d8d3;margin-top:1.4rem}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.compteur{position:absolute;right:4vw;bottom:5rem;width:150px;opacity:.9}
+@media(max-width:760px){.compteur{display:none}}
+/* BANDE */
+.bande{background:var(--rouge);overflow:hidden;white-space:nowrap;padding:.9rem 0;transform:skewY(-1.5deg);margin:-1rem 0 0}
+.bande div{display:inline-block;animation:defile 26s linear infinite;font-family:Anton,sans-serif;font-size:1.4rem;text-transform:uppercase;letter-spacing:.06em}
+.bande span{margin:0 1.6rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* SERVICES */
+section{padding:6.5rem 0}
+.titre{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.titre h2{font-size:clamp(2.4rem,6vw,4.4rem)}
+.titre p{max-width:28rem;color:var(--acier)}
+.services{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:1.2rem}
+.svc{background:var(--asphalte);padding:2.2rem 2rem;position:relative;overflow:hidden;border-top:3px solid var(--gris);transition:border-color .3s,transform .3s}
+.svc:hover{border-color:var(--rouge);transform:translateY(-4px)}
+.svc .n{font-family:Anton,sans-serif;font-size:3.6rem;color:var(--gris);line-height:1}
+.svc h3{font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;text-transform:uppercase;margin:.6rem 0 .5rem}
+.svc p{color:var(--acier)}
+.svc.grand{grid-row:span 2;padding:0;display:flex;flex-direction:column}
+.svc.grand img{flex:1;object-fit:cover;min-height:260px}
+.svc.grand .txt{padding:2rem}
+@media(max-width:860px){.services{grid-template-columns:1fr}.svc.grand{grid-row:auto}}
+/* GALERIE */
+.galerie{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:220px;gap:.8rem}
+.galerie figure{overflow:hidden;position:relative}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.06)}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2}.g3{grid-column:span 2}.g4{grid-column:span 3}.g5{grid-column:span 3}
+@media(max-width:760px){.galerie{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.g1{grid-column:span 2}.g2,.g3{grid-column:span 1}.g4,.g5{grid-column:span 2}}
+/* CONSEILS */
+.conseils{background:var(--asphalte)}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.carte{border:1px solid var(--gris);padding:2rem;transition:background .3s}
+.carte:hover{background:#1f1f24}
+.carte b{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;text-transform:uppercase;display:block;margin-bottom:.6rem}
+.carte p{color:var(--acier)}
+.carte .tag{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge);margin-bottom:1rem;display:block}
+@media(max-width:860px){.cartes{grid-template-columns:1fr}}
+/* COURSE */
+.course{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.course img{width:100%;aspect-ratio:4/3;object-fit:cover;clip-path:polygon(6% 0,100% 0,94% 100%,0 100%)}
+.course h2{font-size:clamp(2.2rem,5vw,3.8rem);margin:1rem 0}
+.course p{color:#cfcec9;margin-bottom:1rem}
+@media(max-width:860px){.course{grid-template-columns:1fr}}
+/* VENIR */
+.venir{background:var(--blanc);color:var(--noir)}
+.venir .grille{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+.venir h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+.venir .sur{color:var(--rouge)}
+.infos{display:grid;gap:1.4rem;font-size:1.1rem}
+.infos div{border-left:4px solid var(--rouge);padding-left:1rem}
+.infos small{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:#666}
+.venir .btn.ligne{background:var(--noir);color:#fff}
+@media(max-width:860px){.venir .grille{grid-template-columns:1fr}}
+footer{padding:2.5rem 0;color:var(--acier);font-size:.85rem;text-align:center}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.reveal.vu{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour Street RUN Garage · page privée</div>
+
+<header class="hero">
+  <img src="img/moto-face.webp" alt="Moto sportive rouge et blanche, vue de face">
+  <div class="vitesse" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="sur">La Possession · 974</p>
+    <h1>Street RUN<span>Garage</span></h1>
+    <p class="intro">Entretien et réparation toutes marques, pièces, accessoires et équipements motard. Votre atelier moto au 39 bis rue de Hanoi.</p>
+    <div class="btns">
+      <a class="btn plein" href="https://wa.me/262693442743">Prendre rendez-vous</a>
+      <a class="btn ligne" href="#atelier">L'atelier</a>
+    </div>
+  </div>
+  <svg class="compteur" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="52" fill="none" stroke="#2a2a30" stroke-width="6"/>
+    <circle id="arc" cx="60" cy="60" r="52" fill="none" stroke="#e10a17" stroke-width="6" stroke-dasharray="327" stroke-dashoffset="327" stroke-linecap="round" transform="rotate(135 60 60)" style="transition:stroke-dashoffset 2.4s cubic-bezier(.2,.8,.2,1)"/>
+    <text x="60" y="66" text-anchor="middle" fill="#f4f3ef" font-family="Anton" font-size="22" id="tr">0</text>
+    <text x="60" y="84" text-anchor="middle" fill="#9a9aa3" font-family="Barlow" font-size="9" letter-spacing="2">x1000 TR/MIN</text>
+  </svg>
+</header>
+
+<div class="bande" aria-hidden="true"><div>
+<span>Entretien</span>★<span>Réparation</span>★<span>Pneumatiques</span>★<span>Pièces</span>★<span>Accessoires</span>★<span>Équipement motard</span>★
+<span>Entretien</span>★<span>Réparation</span>★<span>Pneumatiques</span>★<span>Pièces</span>★<span>Accessoires</span>★<span>Équipement motard</span>★
+</div></div>
+
+<section id="atelier">
+  <div class="wrap">
+    <div class="titre reveal">
+      <div><p class="sur">L'atelier</p><h2>Tout pour<br>votre moto</h2></div>
+      <p>Une seule adresse pour faire réviser votre machine, changer vos pneus ou vous équiper avant la prochaine sortie.</p>
+    </div>
+    <div class="services">
+      <article class="svc grand reveal">
+        <img src="img/detail.webp" alt="Détail mécanique d'une moto rouge" loading="lazy">
+        <div class="txt"><h3>Entretien & réparation</h3><p>Toutes marques. Révision, diagnostic, remise en état : on prend soin de votre moto comme de la nôtre.</p></div>
+      </article>
+      <article class="svc reveal"><div class="n">01</div><h3>Pneumatiques</h3><p>Plusieurs gammes adaptées à votre budget et à votre façon de rouler, de la route au circuit.</p></article>
+      <article class="svc reveal"><div class="n">02</div><h3>Pièces & accessoires</h3><p>Les pièces qu'il faut, et des nouveautés comme les selles confort Sit'n Go, fabriquées à la main en France.</p></article>
+      <article class="svc reveal"><div class="n">03</div><h3>Équipement motard</h3><p>Tout pour rouler bien équipé·e, à découvrir en magasin.</p></article>
+      <article class="svc reveal"><div class="n">04</div><h3>Conseils</h3><p>Des conseils partagés toute l'année pour rouler serein et en sécurité.</p></article>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="titre reveal"><div><p class="sur">En images</p><h2>Ça roule</h2></div></div>
+    <div class="galerie">
+      <figure class="g1 reveal"><img src="img/motos-2.webp" alt="Moto sportive rouge et blanche" loading="lazy"></figure>
+      <figure class="g2 reveal"><img src="img/moto-3.webp" alt="Motos sportives alignées" loading="lazy"></figure>
+      <figure class="g3 reveal"><img src="img/detail.webp" alt="Détail moteur" loading="lazy"></figure>
+      <figure class="g4 reveal"><img src="img/motos-1.webp" alt="Rangée de motos sportives" loading="lazy"></figure>
+      <figure class="g5 reveal"><img src="img/moto-face.webp" alt="Face avant d'une moto sportive" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="conseils">
+  <div class="wrap">
+    <div class="titre reveal">
+      <div><p class="sur">Le coin conseils</p><h2>Rouler<br>l'esprit libre</h2></div>
+      <p>Les rappels que l'équipe partage sur sa page, réunis au même endroit.</p>
+    </div>
+    <div class="cartes">
+      <div class="carte reveal"><span class="tag">Pneus</span><b>Un pneu vieillit aussi au garage</b><p>Même avec peu de kilomètres, le caoutchouc évolue avec le temps. Un coup d'œil régulier, et vous repartez en confiance.</p></div>
+      <div class="carte reveal"><span class="tag">Révision</span><b>Les signes qui disent « révision »</b><p>Votre moto vous parle : bruits, freinage, comportement. On vous aide à les repérer au bon moment.</p></div>
+      <div class="carte reveal"><span class="tag">Sécurité</span><b>Bien équipé, bien protégé</b><p>Le bon équipement fait toute la différence sur la route. On vous conseille selon votre pratique.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap course">
+    <img class="reveal" src="img/moto-3.webp" alt="Motos sportives" loading="lazy">
+    <div class="reveal">
+      <p class="sur">Passion</p>
+      <h2>Faisons vivre la course de côte</h2>
+      <p>Street RUN Garage soutient les pilotes et le développement de la Course de Côte à La Réunion, avec des offres sur une sélection d'équipements indispensables.</p>
+      <p>Parce qu'ici, la moto, c'est d'abord une histoire de passionnés.</p>
+    </div>
+  </div>
+</section>
+
+<section class="venir">
+  <div class="wrap grille">
+    <div class="reveal">
+      <p class="sur">Nous trouver</p>
+      <h2>Passez<br>à l'atelier</h2>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262693442743">WhatsApp</a>
+        <a class="btn ligne" href="tel:+262693442743">Appeler</a>
+      </div>
+    </div>
+    <div class="infos reveal">
+      <div><small>Adresse</small>39 bis rue de Hanoi, 97419 La Possession</div>
+      <div><small>Téléphone</small>0693 44 27 43</div>
+      <div><small>E-mail</small>streetrungarage@hotmail.com</div>
+      <div><small>Avis</small>Recommandé par 100 % des avis sur Facebook</div>
+    </div>
+  </div>
+</section>
+
+<footer>Street RUN Garage · La Possession · Maquette imaginée par Jonathan · ATMA Digital, page non référencée</footer>
+
+<script>
+const v=document.querySelector('.vitesse');
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){for(let i=0;i<9;i++){const l=document.createElement('i');l.style.top=(8+Math.random()*84)+'%';l.style.animationDuration=(1.6+Math.random()*2.4)+'s';l.style.animationDelay=(Math.random()*4)+'s';l.style.opacity=.25+Math.random()*.5;v.appendChild(l)}}
+setTimeout(()=>{const a=document.getElementById('arc');if(!a)return;a.style.strokeDashoffset=327*(1-.62);let n=0;const t=document.getElementById('tr');const k=setInterval(()=>{n++;t.textContent=n;if(n>=9)clearInterval(k)},240)},500);
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Délices et Traditions · Traiteur à La Plaine-des-Palmistes</title>
+<meta name="description" content="Traiteur et restaurant Les Délices du Domaine : cuisine créole généreuse, 260 rue de la République à La Plaine-des-Palmistes.">
+<meta property="og:title" content="Délices et Traditions · Traiteur créole">
+<meta property="og:description" content="Une page imaginée pour Délices et Traditions, à La Plaine-des-Palmistes.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/delices-et-traditions-plaine-des-palmistes/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/delices-et-traditions-plaine-des-palmistes/img/plat-1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--brume:#f3efe6;--papier:#faf7f1;--foret:#1f3a2c;--palmiste:#3f6b4a;--curcuma:#d89a2b;--piment:#b4432a;--terre:#2b241c;--gris:#6f675b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;background:var(--papier);color:var(--terre);line-height:1.7;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--foret);color:var(--brume);text-align:center;font-size:.78rem;padding:.55rem 1rem}
+.wrap{width:min(1140px,92vw);margin:auto}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;line-height:1.02}
+.sur{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--palmiste);font-weight:600}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .3s,background .3s,color .3s}
+.btn.plein{background:var(--curcuma);color:var(--terre)}.btn.plein:hover{background:var(--piment);color:#fff;transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid currentColor}.btn.ligne:hover{background:var(--brume);color:var(--foret)}
+.btn:focus-visible{outline:2px solid var(--curcuma);outline-offset:3px}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+/* HERO */
+.hero{background:var(--foret);color:var(--brume);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center;min-height:88vh;padding:4rem 0}
+.hero .sur{color:var(--curcuma)}
+.hero h1{font-size:clamp(3.2rem,8vw,6.4rem);margin:1rem 0}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--curcuma)}
+.hero p.intro{font-size:1.12rem;max-width:30rem;color:#dfe5dc}
+.assiette{position:relative;aspect-ratio:1;max-width:520px;justify-self:center;width:100%}
+.assiette img{width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.assiette::before{content:"";position:absolute;inset:-18px;border:1px solid rgba(216,154,43,.5);border-radius:50%;animation:tourne 40s linear infinite;border-style:dashed}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.vapeur{position:absolute;left:0;right:0;top:-10%;height:60%;pointer-events:none}
+.vapeur span{position:absolute;bottom:0;width:60px;height:160px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.35),transparent);filter:blur(8px);animation:monte 6s ease-in infinite;opacity:0}
+@keyframes monte{0%{transform:translateY(40px) scaleX(.6);opacity:0}30%{opacity:.8}100%{transform:translateY(-140px) scaleX(1.4);opacity:0}}
+.feuilles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.feuilles i{position:absolute;top:-40px;width:14px;height:6px;border-radius:50%;background:#6c9a4f;opacity:.55;animation:tombe linear infinite}
+@keyframes tombe{to{transform:translate(60px,105vh) rotate(540deg)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;min-height:auto;padding:3.5rem 0 4rem}.assiette{max-width:340px}}
+/* MOT */
+section{padding:6rem 0}
+.mot{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;align-items:center}
+.mot h2{font-size:clamp(2.4rem,5vw,3.8rem)}
+.mot p{margin-top:1.2rem;color:var(--gris);font-size:1.08rem}
+.mot img{border-radius:6px;aspect-ratio:3/4;object-fit:cover;width:100%}
+@media(max-width:860px){.mot{grid-template-columns:1fr;gap:2rem}}
+/* CARRYS */
+.marmites{background:var(--brume)}
+.titre{text-align:center;max-width:40rem;margin:0 auto 3.5rem}
+.titre h2{font-size:clamp(2.4rem,5vw,3.8rem);margin-top:.6rem}
+.titre p{color:var(--gris);margin-top:1rem}
+.plats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.plats figure{background:var(--papier);border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(43,36,28,.08)}
+.plats .ph{overflow:hidden;aspect-ratio:4/5}
+.plats img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.plats figure:hover img{transform:scale(1.05)}
+.plats figcaption{padding:1rem 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic}
+@media(max-width:860px){.plats{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.plats{grid-template-columns:1fr}}
+/* TRAITEUR */
+.traiteur{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem}
+.etape h3{font-size:1.8rem;margin:.4rem 0 .6rem}
+.etape .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:3rem;color:var(--curcuma);line-height:1}
+.etape p{color:var(--gris)}
+@media(max-width:860px){.traiteur{grid-template-columns:1fr}}
+.citation{background:var(--foret);color:var(--brume);text-align:center}
+.citation blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.25;max-width:46rem;margin:auto}
+.citation p{margin-top:1.4rem;color:var(--curcuma);letter-spacing:.2em;text-transform:uppercase;font-size:.78rem}
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;align-items:center}
+.contact h2{font-size:clamp(2.4rem,5vw,4rem)}
+.infos{display:grid;gap:1.3rem}
+.infos small{display:block;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--palmiste)}
+.infos div{font-size:1.08rem;border-bottom:1px solid #e3dccd;padding-bottom:1rem}
+.contact .btn.ligne{color:var(--foret)}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+footer{padding:2.5rem 0;text-align:center;font-size:.85rem;color:var(--gris)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.reveal.vu{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> pour Délices et Traditions · page privée</div>
+
+<header class="hero">
+  <div class="feuilles" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <p class="sur">Traiteur · La Plaine-des-Palmistes</p>
+      <h1>Délices <em>&amp;</em> Traditions</h1>
+      <p class="intro">La cuisine créole généreuse, mijotée comme à la maison. Au restaurant Les Délices du Domaine ou pour vos fêtes de famille.</p>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262693137325">Commander / réserver</a>
+        <a class="btn ligne" href="#marmites">Les marmites du jour</a>
+      </div>
+    </div>
+    <div class="assiette">
+      <div class="vapeur" aria-hidden="true"><span style="left:30%"></span><span style="left:48%;animation-delay:2s"></span><span style="left:64%;animation-delay:4s"></span></div>
+      <img src="img/plat-1.webp" alt="Carry créole parsemé de cives fraîches">
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap mot">
+    <img class="reveal" src="img/cuisine.webp" alt="La salle du restaurant, poutres et comptoir en bois" loading="lazy">
+    <div class="reveal">
+      <p class="sur">Notre maison</p>
+      <h2>Le goût des Hauts, servi avec le cœur</h2>
+      <p>Au 260 rue de la République, au cœur de la Plaine, Délices et Traditions vous accueille au restaurant Les Délices du Domaine et prépare aussi vos repas de fête.</p>
+      <p>Au fil des jours, les marmites se renouvellent : carrys, légumes du pays, cives et herbes fraîches. Une cuisine simple, généreuse, qui sent bon la tradition.</p>
+    </div>
+  </div>
+</section>
+
+<section class="marmites" id="marmites">
+  <div class="wrap">
+    <div class="titre reveal">
+      <p class="sur">Les marmites</p>
+      <h2>Ce qui mijote cette semaine</h2>
+      <p>Les plats changent au fil des jours : suivez-les ici et sur notre page, puis réservez votre part.</p>
+    </div>
+    <div class="plats">
+      <figure class="reveal"><div class="ph"><img src="img/plat-2.webp" alt="Carry de légumes du pays" loading="lazy"></div><figcaption>Légumes du pays mijotés</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="img/plat-3.webp" alt="Carry de viande aux cives" loading="lazy"></div><figcaption>Carry aux cives fraîches</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="img/plat-4.webp" alt="Carry créole" loading="lazy"></div><figcaption>Le carry de la marmite</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="img/plat-5.webp" alt="Carry créole aux légumes" loading="lazy"></div><figcaption>Saveurs de la Plaine</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="img/plat-6.webp" alt="Plat créole mijoté" loading="lazy"></div><figcaption>Mijoté comme à la maison</figcaption></figure>
+      <figure class="reveal"><div class="ph"><img src="img/plat-1.webp" alt="Carry créole parsemé de cives" loading="lazy"></div><figcaption>Le plat du jour</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="titre reveal"><p class="sur">Traiteur</p><h2>Votre fête, notre cuisine</h2><p>Anniversaire, repas de famille, événement : on vous prépare un repas à votre image.</p></div>
+    <div class="traiteur">
+      <div class="etape reveal"><div class="n">1</div><h3>On en parle</h3><p>Un message ou un appel : le nombre d'invités, la date, vos envies.</p></div>
+      <div class="etape reveal"><div class="n">2</div><h3>On cuisine</h3><p>Des marmites généreuses, préparées avec soin pour le jour J.</p></div>
+      <div class="etape reveal"><div class="n">3</div><h3>Vous profitez</h3><p>Vous recevez l'esprit libre, vos invités se régalent.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="citation">
+  <div class="wrap reveal">
+    <blockquote>« Accueil agréable, repas parfait. »</blockquote>
+    <p>Recommandé par 100 % des avis Facebook</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap contact">
+    <div class="reveal">
+      <p class="sur">Nous trouver</p>
+      <h2>À table, à la Plaine</h2>
+      <div class="btns">
+        <a class="btn plein" href="https://wa.me/262693137325">WhatsApp</a>
+        <a class="btn ligne" href="tel:+262693137325">Appeler</a>
+      </div>
+    </div>
+    <div class="infos reveal">
+      <div><small>Adresse</small>260 rue de la République, 97431 La Plaine-des-Palmistes</div>
+      <div><small>Téléphone</small>0693 13 73 25</div>
+      <div><small>E-mail</small>delices.traditions.traiteur@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<footer>Délices et Traditions Traiteur · Maquette imaginée par Jonathan · ATMA Digital, page non référencée</footer>
+<script>
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){const f=document.querySelector('.feuilles');for(let i=0;i<10;i++){const l=document.createElement('i');l.style.left=Math.random()*100+'%';l.style.animationDuration=(9+Math.random()*9)+'s';l.style.animationDelay=(-Math.random()*15)+'s';f.appendChild(l)}}
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
