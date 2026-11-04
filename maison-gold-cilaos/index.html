@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maison Gold · Traiteur, box brunch et plateaux à Cilaos</title>
+<meta name="description" content="Box brunch, brunch péi, box sucrées, box apéro et plateaux charcuterie et fromages, préparés à la commande à Cilaos. Commandes sur réservation.">
+<meta property="og:title" content="Maison Gold · Le goût du partage">
+<meta property="og:description" content="Une page imaginée pour Maison Gold, à Cilaos.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/maison-gold-cilaos/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/maison-gold-cilaos/img/plateau-fleurs.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cacao:#2b1d17;--chocolat:#4a3227;--or:#c9a24a;--or-clair:#e8cf8f;--ivoire:#fbf7f0;--lin:#f1e7d8;--gris:#7c6a5f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;background:var(--ivoire);color:var(--cacao);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--cacao);color:var(--or-clair);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--or)}
+.wrap{width:min(1140px,92vw);margin:auto}
+.wrap>*,.g>*{min-width:0}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500;line-height:1.05}
+h1 em,h2 em{color:var(--or);font-style:italic}
+.sur{font-size:.76rem;letter-spacing:.3em;text-transform:uppercase;color:var(--or);font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;transition:transform .25s,background .25s,color .25s}
+.btn.or{background:linear-gradient(135deg,#b88b35,#e2c27a 55%,#b88b35);color:var(--cacao)}
+.btn.or:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn.ligne{border:1.5px solid currentColor;color:inherit}
+.btn.ligne:hover{background:var(--cacao);color:var(--ivoire)}
+.btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+/* hero */
+.hero{background:var(--cacao);color:var(--ivoire);position:relative;overflow:hidden}
+.hero .g{display:grid;grid-template-columns:1fr 1fr;min-height:min(90vh,820px);align-items:center;gap:clamp(2rem,5vw,4rem);position:relative;z-index:2}
+.hero h1{font-size:clamp(2.9rem,7.6vw,5.8rem);margin:1rem 0 1.3rem}
+.lead{color:#e7dccd;font-size:1.12rem;max-width:42ch}
+.hero .btn.ligne:hover{background:var(--ivoire);color:var(--cacao)}
+.arche{border-radius:999px 999px 24px 24px;overflow:hidden;aspect-ratio:3/4;max-height:640px;justify-self:end;width:min(100%,460px);box-shadow:0 0 0 1px rgba(201,162,74,.5),0 0 0 14px rgba(201,162,74,.08)}
+.arche img{width:100%;height:100%;object-fit:cover;animation:zoom 14s ease-in-out infinite alternate}
+@keyframes zoom{to{transform:scale(1.08)}}
+#paillettes{position:absolute;inset:0;z-index:1;pointer-events:none}
+.bloc{padding:clamp(4.5rem,11vh,7.5rem) 0}
+.bloc h2{font-size:clamp(2.2rem,5.4vw,3.8rem);margin:.8rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.08rem;max-width:56ch}
+/* la carte des box */
+.box{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:3rem}
+.box article{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 22px 46px -34px rgba(43,29,23,.5);display:flex;flex-direction:column;transition:transform .5s}
+.box article:hover{transform:translateY(-6px)}
+.box article:nth-child(1),.box article:nth-child(2){grid-column:span 3}
+.box article:nth-child(n+3){grid-column:span 2}
+.box img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.box article:nth-child(-n+2) img{aspect-ratio:16/10}
+.box div{padding:1.2rem 1.4rem 1.5rem}
+.box h3{font-size:1.45rem;margin-bottom:.3rem}
+.box p{color:var(--gris);font-size:.95rem}
+/* promesses */
+.promesses{background:var(--lin)}
+.promesses ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:2.4rem;border-top:1px solid #dccbb2}
+.promesses li{padding:1.6rem 1.2rem 1.6rem 0;border-right:1px solid #dccbb2}
+.promesses li+li{padding-left:1.2rem}
+.promesses li:last-child{border-right:0}
+.promesses strong{font-family:"Playfair Display",serif;font-size:1.45rem;font-weight:500;display:block;margin-bottom:.3rem}
+.promesses span{color:var(--gris);font-size:.95rem}
+/* occasions */
+.occasions .g{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.occasions img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.tags span{border:1px solid var(--or);color:var(--chocolat);border-radius:999px;padding:.45rem 1rem;font-weight:500}
+/* commande */
+.commande{background:var(--cacao);color:var(--ivoire)}
+.commande .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.commande .chapo{color:#e7dccd}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(232,207,143,.2);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--or);min-width:7rem;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding-top:.2rem}
+.coord a{color:#fff;word-break:break-word;text-underline-offset:4px}
+.commande .btn.ligne:hover{background:var(--ivoire);color:var(--cacao)}
+footer{background:#1f1511;color:#a8978a;text-align:center;font-size:.85rem;padding:1.8rem 1rem}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:900px){
+ .hero .g,.occasions .g,.commande .g{grid-template-columns:1fr}
+ .hero .g{padding:3.5rem 0}
+ .arche{justify-self:center}
+ .box{grid-template-columns:1fr 1fr}
+ .box article:nth-child(n){grid-column:span 1}
+ .promesses ul{grid-template-columns:1fr 1fr}
+ .promesses li{border-bottom:1px solid #dccbb2;padding:1.3rem 1rem 1.3rem 0}
+ .promesses li:nth-child(2n){border-right:0;padding-left:1rem}
+ .promesses li:nth-child(3){padding-left:0}
+}
+@media (max-width:520px){.box{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.arche img{animation:none}#paillettes{display:none}.apparait{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+
+<header class="hero">
+ <canvas id="paillettes" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Traiteur · Cilaos</p>
+   <h1>Le goût <em>du partage</em></h1>
+   <p class="lead">Box brunch, box sucrées, box apéro et plateaux charcuterie et fromages, préparés avec soin à la commande pour régaler vos invités.</p>
+   <div class="btns">
+    <a class="btn or" href="tel:+262692552243">Réserver ma box</a>
+    <a class="btn ligne" href="#box">Découvrir les box</a>
+   </div>
+  </div>
+  <div class="arche apparait"><img src="img/plateau-fleurs.webp" alt="Plateau rond de charcuterie, fromages, fruits rouges et fleurs comestibles"></div>
+ </div>
+</header>
+
+<section class="bloc" id="box">
+ <div class="wrap">
+  <p class="sur apparait">La carte</p>
+  <h2 class="apparait">Une box pour <em>chaque envie</em></h2>
+  <p class="chapo apparait">Box brunch, box brunch péi, box sucrée, box apéro personnalisée et plateaux charcuterie et fromages : toutes se composent selon vos envies.</p>
+  <div class="box">
+   <article class="apparait"><img src="img/plateau-bois.webp" alt="Grand plateau de charcuterie et fromages sur bois, raisins et olives" loading="lazy"><div><h3>Plateaux charcuterie &amp; fromages</h3><p>Le grand classique des apéros réussis, joliment dressé.</p></div></article>
+   <article class="apparait"><img src="img/box-apero.webp" alt="Box apéro garnie de sandwichs triangles et de croquettes" loading="lazy"><div><h3>Box apéro personnalisée</h3><p>Des pièces à partager, en famille ou entre amis.</p></div></article>
+   <article class="apparait"><img src="img/viennoiseries.webp" alt="Box de viennoiseries dorées" loading="lazy"><div><h3>Viennoiseries dorées</h3><p>Pour un brunch tout en gourmandise.</p></div></article>
+   <article class="apparait"><img src="img/box-sale.webp" alt="Box de petits pains et sandwichs" loading="lazy"><div><h3>Petits pains garnis</h3><p>Des bouchées à partager.</p></div></article>
+   <article class="apparait"><img src="img/brochettes-fruits.webp" alt="Brochettes de fruits frais : ananas, raisin, kiwi" loading="lazy"><div><h3>Brochettes de fruits</h3><p>Une touche fraîche et colorée.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="bloc promesses">
+ <div class="wrap">
+  <h2 class="apparait">Préparé <em>avec soin</em></h2>
+  <ul class="apparait">
+   <li><strong>Produits frais</strong><span>Choisis pour le goût.</span></li>
+   <li><strong>À la commande</strong><span>Préparé pour votre date.</span></li>
+   <li><strong>Présentation soignée</strong><span>Une box qui fait son effet.</span></li>
+   <li><strong>Personnalisable</strong><span>Composée selon vos envies.</span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="bloc occasions">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur">Pour toutes vos occasions</p>
+   <h2>Vos invités <em>régalés</em></h2>
+   <p class="chapo">Un anniversaire, un brunch en famille, un apéro entre amis, une baby shower ou une fête de fin d'année : Maison Gold s'occupe de la table, vous profitez du moment.</p>
+   <div class="tags"><span>Anniversaire</span><span>Brunch en famille</span><span>Apéro entre amis</span><span>Baby shower</span><span>Fêtes de fin d'année</span></div>
+  </div>
+  <img class="apparait" src="img/plateau-dore.webp" alt="Plateau doré de charcuterie, fruits et nœuds festifs" loading="lazy">
+ </div>
+</section>
+
+<section class="bloc commande">
+ <div class="wrap g">
+  <div class="apparait">
+   <h2>Composez <em>votre box</em></h2>
+   <p class="chapo">Les commandes se font sur réservation : un appel ou un message pour réserver votre date et composer votre box sur mesure.</p>
+   <div class="btns"><a class="btn or" href="tel:+262692552243">0692 55 22 43</a><a class="btn ligne" href="mailto:maisongoldcm@gmail.com">Écrire un e-mail</a></div>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Où</span>Cilaos, La Réunion</li>
+   <li><span>Téléphone</span><a href="tel:+262692552243">0692 55 22 43</a></li>
+   <li><span>E-mail</span><a href="mailto:maisongoldcm@gmail.com">maisongoldcm@gmail.com</a></li>
+   <li><span>Commandes</span>Sur réservation</li>
+  </ul>
+ </div>
+</section>
+<footer>Maison Gold · Le goût du partage · Cilaos · Maquette offerte par Jonathan · ATMA Digital</footer>
+<script>
+(function(){
+ var cv=document.getElementById('paillettes'),x=cv.getContext('2d'),P=[],W,H;
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<60;i++)P.push({x:Math.random(),y:Math.random(),v:.0002+Math.random()*.0007,r:.5+Math.random()*1.8,p:Math.random()*6});
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)(function f(t){x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;if(p.y>1.02){p.y=-.02;p.x=Math.random()}var a=.35+.45*Math.sin(t/600+p.p);x.beginPath();x.arc(p.x*W+Math.sin(t/1400+p.p)*10,p.y*H,p.r,0,7);x.fillStyle='rgba(226,194,122,'+Math.max(0,a)+')';x.fill()});requestAnimationFrame(f)})(0);
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
