@@ -21,7 +21,9 @@
     '.atma-cta .v{background:#25D366;color:#0b2b17}' +
     '.atma-cta .a{color:#fff;border:1px solid rgba(255,255,255,.35)}' +
     '.atma-cta button{background:none;border:0;color:rgba(255,255,255,.6);font-size:18px;cursor:pointer;padding:0 8px 0 2px}' +
-    '@media (max-width:420px){.atma-cta{font-size:14px}.atma-cta a{padding:10px 13px}}' +
+    '@media (max-width:520px){.atma-cta{left:8px;right:8px;max-width:none;transform:translateY(140%);gap:6px;padding:6px}.atma-cta.on{transform:translateY(0)}'+
+    '.atma-cta a{flex:1 1 0;min-width:0;text-align:center;padding:11px 6px;font-size:14px;white-space:normal}.atma-cta button{flex:0 0 auto;padding:0 6px}}' +
+    'body{padding-bottom:84px}' +
     '@media print{.atma-cta{display:none}}';
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
 
