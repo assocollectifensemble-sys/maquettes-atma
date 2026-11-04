@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lé Yabar · Ferme familiale bio au Grand Tampon</title>
+<meta name="description" content="Fruits et légumes bio, confitures, sirops, galabé et ail noir, visites de l'exploitation et ateliers culinaires au Grand Tampon. Entreprise familiale depuis 2017.">
+<meta property="og:title" content="Lé Yabar · Ferme familiale bio au Grand Tampon">
+<meta property="og:description" content="Une page imaginée pour Lé Yabar.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-yabar/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-yabar/img/bocaux.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--terre:#3d2a1c;--feuille:#2f6b3a;--pousse:#8cc152;--soleil:#f2b33d;--goyave:#e0574f;--sable:#fbf3e4;--paille:#efe1c4;--gris:#6f5f50}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;background:var(--sable);color:var(--terre);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--terre);color:var(--paille);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--soleil)}
+.wrap{width:min(1140px,92vw);margin:auto}
+.wrap>*,.g>*{min-width:0}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1}
+.sur{font-weight:700;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--feuille)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.6rem;border-radius:14px;font-weight:700;text-decoration:none;transition:transform .25s,background .25s}
+.btn.plein{background:var(--feuille);color:#fff}
+.btn.plein:hover{background:#245430;transform:translateY(-2px)}
+.btn.soleil{background:var(--soleil);color:var(--terre)}
+.btn.soleil:hover{transform:translateY(-2px)}
+.btn.ligne{border:2px solid currentColor;color:inherit}
+.btn:focus-visible{outline:3px solid var(--goyave);outline-offset:3px}
+/* hero : pousses qui sortent de terre */
+.hero{position:relative;background:linear-gradient(180deg,#fff6df 0,#fbe7b8 62%,var(--terre) 62%,#2e1f15 100%);overflow:hidden;padding:clamp(3rem,7vh,5rem) 0 0}
+.hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:end;position:relative;z-index:2}
+.hero h1{font-size:clamp(3rem,9vw,7rem);font-weight:800;letter-spacing:-.03em;margin:.8rem 0 1.2rem}
+.hero h1 span{color:var(--feuille)}
+.lead{font-size:1.15rem;max-width:40ch;color:var(--gris)}
+.hero .photo{border-radius:28px 28px 0 0;overflow:hidden;box-shadow:0 -10px 40px -20px rgba(61,42,28,.5)}
+.hero .photo img{aspect-ratio:3/4;object-fit:cover;width:100%;max-height:560px}
+.soleil-rond{position:absolute;top:-80px;right:8%;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,#ffd77a 0,#f2b33d 55%,rgba(242,179,61,0) 70%);animation:lueur 7s ease-in-out infinite;z-index:1}
+@keyframes lueur{50%{transform:scale(1.08)}}
+.pousses{position:absolute;left:0;right:0;bottom:38%;height:90px;z-index:1;pointer-events:none}
+.pousses i{position:absolute;bottom:0;width:4px;background:var(--pousse);border-radius:4px;transform-origin:bottom;transform:scaleY(0);animation:pousse 1.6s cubic-bezier(.2,.8,.2,1) forwards;animation-delay:var(--d)}
+.pousses i::before,.pousses i::after{content:"";position:absolute;top:0;width:16px;height:9px;background:var(--pousse);border-radius:16px 0}
+.pousses i::before{right:2px;transform:rotate(-20deg)}
+.pousses i::after{left:2px;border-radius:0 16px;transform:rotate(20deg)}
+@keyframes pousse{to{transform:scaleY(1)}}
+.bande{background:var(--terre);color:var(--paille);padding:1.6rem 0;position:relative;z-index:2}
+.bande ul{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 2rem;justify-content:space-between;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;font-weight:700}
+.bande li::before{content:"●";color:var(--pousse);margin-right:.55rem;font-size:.7em;vertical-align:middle}
+.bloc{padding:clamp(4.5rem,11vh,7.5rem) 0}
+.bloc h2{font-size:clamp(2.2rem,5.6vw,4rem);font-weight:800;letter-spacing:-.02em;margin:.7rem 0 1rem}
+.chapo{color:var(--gris);font-size:1.08rem;max-width:56ch}
+/* garde-manger */
+.garde{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.garde img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -32px rgba(61,42,28,.6)}
+.pots{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.pots div{background:#fff;border-radius:18px;padding:1.3rem 1.4rem;border-bottom:5px solid var(--c)}
+.pots strong{font-family:"Bricolage Grotesque",sans-serif;font-size:1.3rem;display:block;margin-bottom:.25rem}
+.pots p{color:var(--gris);font-size:.95rem}
+/* ferme */
+.ferme{background:var(--feuille);color:#f1f7e6}
+.ferme .g{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.ferme .chapo{color:#d8ead0}
+.ferme img{border-radius:24px;aspect-ratio:1;object-fit:cover;width:100%}
+.expe{list-style:none;margin-top:1.8rem;display:grid;gap:.8rem}
+.expe li{background:rgba(255,255,255,.1);border-radius:16px;padding:1.1rem 1.3rem;display:flex;gap:1rem;align-items:baseline}
+.expe b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem;min-width:9.5rem}
+/* mariage */
+.mariage .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.etiquette{background:#fff;border-radius:22px;padding:2.2rem;box-shadow:0 24px 50px -34px rgba(61,42,28,.55);position:relative;transform:rotate(-1.5deg)}
+.etiquette::before{content:"";position:absolute;top:-14px;left:50%;width:28px;height:28px;border-radius:50%;background:var(--sable);border:3px solid var(--paille);transform:translateX(-50%)}
+.etiquette p{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:700;color:var(--goyave);text-align:center;line-height:1.15}
+.etiquette small{display:block;text-align:center;color:var(--gris);margin-top:.8rem}
+.avo{display:grid;grid-template-columns:.8fr 1.2fr;gap:2rem;align-items:center;margin-top:4rem;background:var(--paille);border-radius:26px;padding:1.6rem}
+.avo img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%}
+/* contact */
+.contact{background:var(--terre);color:var(--paille)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact h2 span{color:var(--soleil)}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid rgba(239,225,196,.18);display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{color:var(--soleil);min-width:7rem;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;padding-top:.2rem}
+.coord a{color:#fff;word-break:break-word;text-underline-offset:4px}
+footer{background:#2e1f15;color:#a99784;text-align:center;font-size:.85rem;padding:1.6rem 1rem}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero{background:linear-gradient(180deg,#fff6df 0,#fbe7b8 70%,var(--terre) 70%)}
+ .hero .g,.garde,.ferme .g,.mariage .g,.contact .g,.avo{grid-template-columns:1fr}
+ .pousses{display:none}
+ .expe li{flex-direction:column;gap:.2rem}
+}
+@media (max-width:480px){.pots{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.soleil-rond{animation:none}.pousses i{animation:none;transform:none}.apparait{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+
+<header class="hero">
+ <div class="soleil-rond" aria-hidden="true"></div>
+ <div class="pousses" id="pousses" aria-hidden="true"></div>
+ <div class="wrap g">
+  <div style="padding-bottom:clamp(2rem,6vh,4rem)">
+   <p class="sur">Grand Tampon · bio · depuis 2017</p>
+   <h1>Du champ <span>au pot</span>, en famille</h1>
+   <p class="lead">Lé Yabar cultive des fruits et légumes bio au Grand Tampon, et les transforme en confitures, sirops, pâte de piment, galabé et ail noir.</p>
+   <div class="btns">
+    <a class="btn plein" href="tel:+262692412658">Réserver une visite</a>
+    <a class="btn ligne" href="#garde-manger">Le garde-manger</a>
+   </div>
+  </div>
+  <div class="photo apparait"><img src="img/bocaux.webp" alt="Assortiment de confitures du Yabar sur un plan de travail, au petit déjeuner"></div>
+ </div>
+</header>
+<div class="bande"><div class="wrap"><ul><li>Fruits et légumes bio</li><li>Confitures et sirops</li><li>Galabé et ail noir</li><li>Visites et ateliers</li></ul></div></div>
+
+<section class="bloc" id="garde-manger">
+ <div class="wrap garde">
+  <img class="apparait" src="img/semis.webp" alt="Jeunes plants alignés dans la terre de l'exploitation" loading="lazy">
+  <div class="apparait">
+   <p class="sur">Le garde-manger</p>
+   <h2>Du bon, du bio, <span style="color:var(--feuille)">du local</span></h2>
+   <p class="chapo">Et beaucoup d'amour dans chaque pot : tout part des parcelles de la famille, au Grand Tampon.</p>
+   <div class="pots">
+    <div style="--c:var(--goyave)"><strong>Confitures</strong><p>Un assortiment pour accompagner les pancakes du matin.</p></div>
+    <div style="--c:var(--soleil)"><strong>Sirops</strong><p>Les fruits de l'île, en bouteille.</p></div>
+    <div style="--c:#8a4b2a"><strong>Galabé</strong><p>Le caramel péi à base de jus de canne.</p></div>
+    <div style="--c:var(--terre)"><strong>Ail noir</strong><p>Et sa tapenade, une spécialité de la maison.</p></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc ferme">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur" style="color:var(--soleil)">À la ferme</p>
+   <h2>Venez voir comment ça pousse</h2>
+   <p class="chapo">La famille ouvre les portes de l'exploitation : on marche entre les cultures, on goûte, on cuisine.</p>
+   <ul class="expe">
+    <li><b>Visite</b>Découvrir l'exploitation et l'agriculture biologique de l'intérieur.</li>
+    <li><b>Atelier culinaire</b>Mettre la main à la pâte avec les produits du jour.</li>
+    <li><b>Saveurs lontan</b>Beignets longtemps et jus de canne longtemps.</li>
+   </ul>
+   <div class="btns"><a class="btn soleil" href="tel:+262692412658">Réserver au 0692 41 26 58</a></div>
+  </div>
+  <div class="apparait" style="background:rgba(255,255,255,.08);border-radius:24px;padding:2rem">
+   <p class="sur" style="color:var(--soleil)">Au marché</p>
+   <h3 style="font-size:1.8rem;margin:.6rem 0 .8rem">On se retrouve au Marché Péi</h3>
+   <p style="color:#d8ead0">Salades, brèdes, betteraves et les produits de la maison : suivez la page pour les prochains rendez-vous au Jardin de l'État.</p>
+  </div>
+ </div>
+</section>
+
+<section class="bloc mariage">
+ <div class="wrap">
+  <div class="g">
+   <div class="apparait">
+    <p class="sur">Mariages et événements</p>
+    <h2>Un souvenir <span style="color:var(--goyave)">à savourer</span></h2>
+    <p class="chapo">Des petits pots de confiture, de sirop ou de pâte de piment bio, personnalisés avec vos prénoms et la date du grand jour, pour que vos invités repartent avec un cadeau gourmand et péi.</p>
+    <div class="btns"><a class="btn plein" href="mailto:leyabar.re@gmail.com?subject=Petits%20pots%20pour%20un%20%C3%A9v%C3%A9nement">Demander un devis</a></div>
+   </div>
+   <div class="etiquette apparait"><p>Léa &amp; Théo<br>12 · 06</p><small>Exemple d'étiquette personnalisée</small></div>
+  </div>
+  <div class="avo apparait">
+   <img src="img/avocats.webp" alt="Avocats bio du Yabar" loading="lazy">
+   <div>
+    <p class="sur">À la ferme, en direct</p>
+    <h3 style="font-size:clamp(1.8rem,4vw,2.6rem);margin:.6rem 0 .8rem">Les récoltes du moment</h3>
+    <p class="chapo">Avocats certifiés bio et produits de saison, à venir chercher sur place au Grand Tampon. Les arrivages sont annoncés sur la page.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc contact">
+ <div class="wrap g">
+  <div class="apparait">
+   <h2>Passez <span>nous voir</span></h2>
+   <p class="chapo" style="color:var(--paille)">Une visite, un atelier, une commande pour un événement : un appel suffit.</p>
+   <div class="btns"><a class="btn soleil" href="tel:+262692412658">0692 41 26 58</a><a class="btn ligne" href="mailto:leyabar.re@gmail.com">Écrire un e-mail</a></div>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Ferme</span>133 chemin du Grand Tampon, Le Tampon</li>
+   <li><span>Téléphone</span><a href="tel:+262692412658">0692 41 26 58</a></li>
+   <li><span>E-mail</span><a href="mailto:leyabar.re@gmail.com">leyabar.re@gmail.com</a></li>
+   <li><span>Instagram</span><a href="https://www.instagram.com/leyabar974/">@leyabar974</a></li>
+  </ul>
+ </div>
+</section>
+<footer>Lé Yabar · entreprise familiale bio depuis 2017 · Maquette offerte par Jonathan · ATMA Digital</footer>
+<script>
+(function(){
+ var p=document.getElementById('pousses');
+ for(var i=0;i<26;i++){var e=document.createElement('i');e.style.left=(2+i*3.8+(i%3))+'%';e.style.height=(30+((i*37)%55))+'px';e.style.setProperty('--d',(0.25+((i*7)%13)*0.09).toFixed(2)+'s');p.appendChild(e);}
+ var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}})},{threshold:.12});
+ document.querySelectorAll('.apparait').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
