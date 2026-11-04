@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ti Kaz Épices · Vanille de Saint-Philippe</title>
+<meta name="description" content="Exploitation agricole familiale à Saint-Philippe : vanille, épicerie et visite de la vanilleraie sur rendez-vous.">
+<meta property="og:title" content="Ti Kaz Épices · Vanille de Saint-Philippe">
+<meta property="og:description" content="Une page imaginée pour Ti Kaz Épices.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ti-kaz-epices-saint-philippe/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ti-kaz-epices-saint-philippe/img/vanilleraie.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--gousse:#1d140d;--cacao:#2c1f15;--creme:#f6efe1;--vanille:#e9d9b4;--feuille:#4f7a3a;--or:#c8963e;--gris:#a89a86}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;background:var(--creme);color:var(--gousse);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--gousse);color:var(--vanille);font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.01em}
+.sur{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--or)}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;transition:transform .25s,background .25s,color .25s}
+.btn.plein{background:var(--or);color:var(--gousse)}
+.btn.plein:hover{background:var(--vanille);transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid var(--vanille);color:var(--vanille)}
+.btn.ligne:hover{background:var(--vanille);color:var(--gousse)}
+.btn:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.hero{position:relative;min-height:min(94vh,880px);display:grid;align-items:end;color:var(--creme);overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:zoom 22s ease-out both}
+@keyframes zoom{from{transform:scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,20,13,.25),rgba(29,20,13,.15) 40%,rgba(29,20,13,.9) 85%)}
+#graines{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-bottom:clamp(3rem,9vh,6rem)}
+.hero h1{font-size:clamp(3.2rem,10vw,7.5rem);margin:.8rem 0 1rem}
+.hero h1 em{font-style:italic;color:var(--vanille)}
+.lead{font-size:1.15rem;max-width:46ch;color:#efe4cf}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.bloc{padding:clamp(4.5rem,11vh,7.5rem) 0}
+.bloc h2{font-size:clamp(2.3rem,5.5vw,4rem);margin:.6rem 0 1.2rem}
+.chapo{font-size:1.1rem;max-width:56ch;color:#4d3e30}
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.intro figure{position:relative}
+.intro figure img{border-radius:200px 200px 14px 14px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.intro figure img.petit{position:absolute;width:42%;bottom:-2rem;left:-2.5rem;border-radius:14px;aspect-ratio:3/4;box-shadow:0 18px 40px rgba(29,20,13,.25);border:6px solid var(--creme)}
+.faits{list-style:none;margin-top:1.8rem;display:grid;gap:.2rem}
+.faits li{padding:.8rem 0;border-bottom:1px solid #dccfb6;display:flex;gap:1rem}
+.faits b{font-family:Fraunces,serif;font-weight:600;color:var(--feuille);min-width:6.5rem}
+/* le chemin de la vanille */
+.chemin{background:var(--gousse);color:var(--creme)}
+.chemin .chapo{color:var(--gris)}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.etape{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--cacao)}
+.etape img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.etape:hover img{transform:scale(1.06)}
+.etape div{position:absolute;inset:auto 0 0 0;padding:1.4rem;background:linear-gradient(0deg,rgba(29,20,13,.92),transparent)}
+.etape span{font-family:Fraunces,serif;font-size:2.6rem;color:var(--or);line-height:1}
+.etape h3{font-size:1.5rem;margin:.2rem 0 .2rem}
+.etape p{font-size:.95rem;color:#e6d9c2}
+/* visite */
+.visite .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.visite img{border-radius:14px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.carte-visite{background:#fff;border-radius:18px;padding:clamp(1.6rem,4vw,2.6rem);box-shadow:0 20px 50px rgba(29,20,13,.08)}
+.carte-visite ol{list-style:none;counter-reset:v;margin:1.4rem 0}
+.carte-visite li{counter-increment:v;padding:.7rem 0 .7rem 2.8rem;position:relative}
+.carte-visite li::before{content:counter(v);position:absolute;left:0;top:.6rem;width:2rem;height:2rem;border-radius:50%;background:var(--vanille);display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.carte-visite .btn{background:var(--feuille);color:#fff}
+.carte-visite .btn:hover{background:var(--gousse)}
+/* galerie */
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:2.4rem}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;transition:filter .4s,transform .4s}
+.galerie img:hover{transform:translateY(-4px)}
+.galerie img:nth-child(2){margin-top:2.4rem}.galerie img:nth-child(4){margin-top:1.2rem}
+/* contact */
+.contact{background:var(--vanille)}
+.contact .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.coord{list-style:none}
+.coord li{padding:1rem 0;border-bottom:1px solid #cdb98f;display:flex;gap:1rem;flex-wrap:wrap}
+.coord span{min-width:7rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#7a5a24;padding-top:.25rem}
+.coord a{color:var(--gousse);text-underline-offset:4px;word-break:break-word}
+footer{background:var(--gousse);color:var(--gris);text-align:center;font-size:.85rem;padding:1.8rem 1rem}
+.apparait{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.apparait.vu{opacity:1;transform:none}
+.leg{font-size:.8rem;color:var(--gris);margin-top:.6rem}
+@media (max-width:860px){
+ .intro,.visite .g,.contact .g{grid-template-columns:1fr}
+ .etapes{grid-template-columns:1fr}
+ .etape{aspect-ratio:4/3}
+ .galerie{grid-template-columns:repeat(2,1fr)}
+ .intro figure img.petit{left:auto;right:-.5rem;width:38%}
+}
+@media (prefers-reduced-motion:reduce){.hero>img{animation:none}#graines{display:none}.apparait{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, page privée, visible seulement par vous</div>
+
+<header class="hero">
+ <img src="img/vanilleraie.webp" alt="La vanilleraie de Ti Kaz Épices à Saint-Philippe">
+ <canvas id="graines" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <p class="sur">Agriculture sud sauvage · Saint-Philippe</p>
+  <h1>Ti Kaz <em>Épices</em></h1>
+  <p class="lead">Une exploitation agricole familiale au cœur du Sud sauvage, où la vanille pousse, mûrit et se prépare avec patience.</p>
+  <div class="btns">
+   <a class="btn plein" href="tel:+262692172087">Réserver une visite</a>
+   <a class="btn ligne" href="#chemin">Le chemin de la vanille</a>
+  </div>
+ </div>
+</header>
+
+<section class="bloc">
+ <div class="wrap intro">
+  <div class="apparait">
+   <p class="sur">La famille, la terre, la vanille</p>
+   <h2>Une ti kaz au milieu des lianes</h2>
+   <p class="chapo">Ici, à Takamaka, on cultive la vanille en famille. Les lianes grimpent sur leurs tuteurs, les gousses se forment, puis vient le temps de la récolte et de la préparation, jusqu'à la gousse noire et parfumée que l'on retrouve à l'épicerie.</p>
+   <ul class="faits">
+    <li><b>Production</b>Vanille de Saint-Philippe</li>
+    <li><b>Épicerie</b>Vanille et épices de l'exploitation</li>
+    <li><b>Visite</b>La vanilleraie, sur rendez-vous</li>
+   </ul>
+  </div>
+  <figure class="apparait">
+   <img src="img/liane.webp" alt="Une liane de vanille et ses gousses vertes" loading="lazy">
+   <img class="petit" src="img/gousses-noires.webp" alt="Des gousses de vanille préparées" loading="lazy">
+  </figure>
+ </div>
+</section>
+
+<section class="bloc chemin" id="chemin">
+ <div class="wrap">
+  <p class="sur apparait">De la fleur à la gousse</p>
+  <h2 class="apparait">Le chemin de la vanille</h2>
+  <p class="chapo apparait">Plusieurs mois de soin entre la liane et la gousse prête à parfumer vos desserts.</p>
+  <div class="etapes">
+   <article class="etape apparait"><img src="img/gousses-pied.webp" alt="Gousses de vanille vertes sur la liane" loading="lazy"><div><span>01</span><h3>Sur la liane</h3><p>Les gousses grandissent au soleil du Sud.</p></div></article>
+   <article class="etape apparait"><img src="img/recolte.webp" alt="Gousses de vanille fraîchement cueillies" loading="lazy"><div><span>02</span><h3>La récolte</h3><p>« La récolte bat son plein… », comme vous l'annonciez cet été.</p></div></article>
+   <article class="etape apparait"><img src="img/vanille-preparee.webp" alt="Gousses de vanille préparées" loading="lazy"><div><span>03</span><h3>La préparation</h3><p>Les gousses brunissent et développent tout leur parfum.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="bloc visite">
+ <div class="wrap g">
+  <img class="apparait" src="img/parcelle.webp" alt="Une parcelle de l'exploitation" loading="lazy">
+  <div class="carte-visite apparait">
+   <p class="sur">Sur rendez-vous</p>
+   <h2>Visitez la vanilleraie</h2>
+   <p class="chapo">Venez découvrir les lianes, les gousses et le savoir-faire de la famille, puis repartez avec votre vanille.</p>
+   <ol>
+    <li>Appelez-nous pour choisir votre créneau</li>
+    <li>Rendez-vous au 7 b Takamaka, Saint-Philippe</li>
+    <li>Balade dans la vanilleraie, puis passage à l'épicerie</li>
+   </ol>
+   <a class="btn" href="tel:+262692172087">0692 17 20 87</a>
+  </div>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap">
+  <p class="sur apparait">Au fil des saisons</p>
+  <h2 class="apparait">Dans la vanilleraie</h2>
+  <div class="galerie apparait">
+   <img src="img/gousse-verte.webp" alt="Gousse de vanille verte" loading="lazy">
+   <img src="img/sous-bois.webp" alt="Les lianes de vanille sous les arbres" loading="lazy">
+   <img src="img/gousses-noires.webp" alt="Gousses de vanille noires" loading="lazy">
+   <img src="img/recolte.webp" alt="Récolte de vanille" loading="lazy">
+  </div>
+ </div>
+</section>
+
+<section class="bloc contact">
+ <div class="wrap g">
+  <div class="apparait">
+   <p class="sur">Nous trouver</p>
+   <h2>À Takamaka, Saint-Philippe</h2>
+   <p class="chapo">Pour une visite, une commande de vanille ou un renseignement, un appel ou un message suffit.</p>
+  </div>
+  <ul class="coord apparait">
+   <li><span>Téléphone</span><a href="tel:+262692172087">0692 17 20 87</a></li>
+   <li><span>E-mail</span><a href="mailto:mouniamarudyolivier.974@gmail.com">mouniamarudyolivier.974@gmail.com</a></li>
+   <li><span>Adresse</span>7 b Takamaka, 97442 Saint-Philippe</li>
+   <li><span>Facebook</span><a href="https://www.facebook.com/mouniamarudy" rel="noopener">Agriculture sud sauvage / Ti kaz épices</a></li>
+  </ul>
+ </div>
+</section>
+
+<footer>Ti Kaz Épices · Saint-Philippe, La Réunion · Maquette offerte par Jonathan · ATMA Digital</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+(()=>{const c=document.getElementById('graines');if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const x=c.getContext('2d');let W,H,P=[];
+function r(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio}r();addEventListener('resize',r);
+for(let i=0;i<46;i++)P.push({x:Math.random(),y:Math.random(),s:.6+Math.random()*1.8,v:.0004+Math.random()*.0009,d:Math.random()*6});
+(function f(t){x.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;if(p.y<-.02){p.y=1.02;p.x=Math.random()}const px=(p.x+Math.sin(t/2400+p.d)*.012)*W,py=p.y*H;x.beginPath();x.fillStyle='rgba(233,217,180,'+(.25+.35*Math.sin(t/900+p.d)**2)+')';x.arc(px,py,p.s*devicePixelRatio,0,7);x.fill()});requestAnimationFrame(f)})(0)})();
+</script>
+</body>
+</html>
