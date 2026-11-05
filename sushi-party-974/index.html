@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SushiParty 974 · Sushis frais et gourmands à Sainte-Marie</title>
+<meta name="description" content="Dark kitchen de sushis frais et gourmands à Sainte-Marie, préparés uniquement sur commande.">
+<meta property="og:title" content="SushiParty 974 · Sushis frais à Sainte-Marie">
+<meta property="og:description" content="Une page imaginée pour SushiParty, avec vos photos et vos créations.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/sushi-party-974/img/plateaux-sushis.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/sushi-party-974/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#121412;--nuit2:#1c201c;--riz:#f6f1e6;--rouge:#d23b3b;--rouge2:#a92a2f;--bambou:#3f7a4a;--saumon:#f08a5d;--doux:#b9b7ad;--ligne:#2e332e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Zen Kaku Gothic New",system-ui,sans-serif;background:var(--nuit);color:var(--riz);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:"Shippori Mincho",Georgia,serif;line-height:1.08;font-weight:800}
+.ruban{background:var(--rouge);color:#fff;font-size:.8rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+#riz{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer,.defile{position:relative;z-index:2}
+.wrap{width:min(1140px,92vw);margin:auto}
+.sur{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--saumon);font-weight:700}
+/* hero */
+.hero{min-height:94svh;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:4vw;padding:7vh 0}
+.hero .txt{padding-left:5vw}
+.marque{display:flex;align-items:center;gap:.8rem;margin-bottom:1.8rem}
+.hanko{width:58px;height:58px;border-radius:12px;background:var(--rouge);display:grid;place-items:center;font-family:"Shippori Mincho";font-weight:800;font-size:1.05rem;color:#fff;transform:rotate(-6deg);box-shadow:0 10px 24px -10px rgba(210,59,59,.7);animation:tampon 6s ease-in-out infinite}
+.marque b{font-size:.95rem;letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.7rem,8.5vw,6.6rem)}
+.hero h1 em{font-style:normal;color:var(--rouge);display:block}
+.lead{font-size:1.15rem;color:var(--doux);max-width:34ch;margin-top:1.2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.5rem;border-radius:99px;font-weight:700;text-decoration:none;transition:transform .25s,background .25s,color .25s}
+.btn.plein{background:var(--rouge);color:#fff}.btn.plein:hover{background:var(--rouge2);transform:translateY(-2px)}
+.btn.ligne{border:1.5px solid var(--riz);color:var(--riz)}.btn.ligne:hover{background:var(--riz);color:var(--nuit)}
+.visuel{position:relative;height:min(80svh,740px)}
+.visuel .grand{position:absolute;inset:0 0 12% 10%;border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -40px #000}
+.visuel .grand img{width:100%;height:100%;object-fit:cover;animation:kb 24s ease-in-out infinite alternate}
+.visuel .petit{position:absolute;left:0;bottom:0;width:42%;aspect-ratio:3/4;border-radius:22px;overflow:hidden;border:6px solid var(--nuit);animation:flotte 7s ease-in-out infinite}
+.visuel .petit img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;right:4%;bottom:4%;background:var(--riz);color:var(--nuit);border-radius:18px;padding:.9rem 1.1rem;max-width:220px;font-weight:700;line-height:1.3;box-shadow:0 16px 34px -14px #000}
+.badge small{display:block;font-weight:400;color:#555;margin-top:.2rem}
+/* defile */
+.defile{background:var(--riz);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:1rem 0;font-family:"Shippori Mincho";font-weight:700;font-size:1.25rem}
+.defile div{display:inline-block;animation:defile 34s linear infinite}
+.defile span{margin:0 1.4rem}.defile i{color:var(--rouge);font-style:normal}
+.bloc{padding:14vh 0}
+.titre{font-size:clamp(2.1rem,5vw,3.6rem);margin:.6rem 0 1rem}
+.chapo{color:var(--doux);font-size:1.1rem;max-width:58ch}
+/* signature */
+.signature{display:grid;grid-template-columns:1.05fr .95fr;gap:5vw;align-items:center}
+.signature .ph{border-radius:26px;overflow:hidden;aspect-ratio:16/11}
+.signature .ph img{width:100%;height:100%;object-fit:cover}
+.compo{margin-top:1.8rem;display:grid;gap:.1rem;border-top:1px solid var(--ligne)}
+.compo div{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--ligne)}
+.compo b{color:var(--saumon);min-width:2.2rem;font-family:"Shippori Mincho"}
+/* guide */
+.guide{background:var(--riz);color:var(--nuit)}
+.guide .chapo{color:#575a52}.guide .sur{color:var(--rouge2)}
+.onglets{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.onglets button{min-height:44px;border:1.5px solid var(--nuit);background:transparent;border-radius:99px;padding:.5rem 1.1rem;font:700 .95rem "Zen Kaku Gothic New";cursor:pointer;transition:all .25s}
+.onglets button[aria-selected=true]{background:var(--nuit);color:var(--riz)}
+.def{margin-top:1.6rem;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;min-height:150px}
+.def .kanji{font-family:"Shippori Mincho";font-size:clamp(4rem,10vw,7rem);color:var(--rouge);line-height:1}
+.def p{font-size:1.2rem;max-width:52ch;transition:opacity .3s}
+/* chaud */
+.chaud{display:grid;grid-template-columns:.9fr 1.1fr;gap:5vw;align-items:center}
+.chaud .ph{border-radius:26px;overflow:hidden;aspect-ratio:1;position:relative}
+.chaud .ph img{width:100%;height:100%;object-fit:cover}
+.trois{display:grid;gap:1rem;margin-top:1.8rem}
+.plat{background:var(--nuit2);border:1px solid var(--ligne);border-radius:18px;padding:1.3rem 1.4rem;transition:transform .3s,border-color .3s}
+.plat:hover{transform:translateX(6px);border-color:var(--rouge)}
+.plat h3{font-size:1.3rem;margin-bottom:.3rem}
+.plat p{color:var(--doux)}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 4vw 2rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(74vw,360px);scroll-snap-align:center;border-radius:22px;overflow:hidden;aspect-ratio:3/4}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.galerie figure:hover img{transform:scale(1.06)}
+/* box */
+.box{background:linear-gradient(180deg,var(--nuit2),var(--nuit))}
+.choix{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2rem}
+.item{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--nuit);border:1px solid var(--ligne);border-radius:16px;padding:.9rem 1rem}
+.item span{font-weight:700}.item small{display:block;color:var(--doux);font-weight:400}
+.qte{display:flex;align-items:center;gap:.4rem}
+.qte button{width:44px;height:44px;border-radius:50%;border:1px solid var(--ligne);background:var(--nuit2);color:var(--riz);font-size:1.3rem;cursor:pointer}
+.qte button:hover{border-color:var(--rouge)}
+.qte output{min-width:1.6rem;text-align:center;font-weight:700}
+.envoi{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1.6rem}
+.envoi input{min-height:48px;border-radius:12px;border:1px solid var(--ligne);background:var(--nuit);color:var(--riz);padding:.6rem .9rem;font:inherit;flex:1 1 220px}
+.envoi button{min-height:48px;border:0;border-radius:99px;background:var(--rouge);color:#fff;font:700 1rem "Zen Kaku Gothic New";padding:0 1.6rem;cursor:pointer}
+.envoi button:disabled{opacity:.45;cursor:default}
+.note{font-size:.88rem;color:var(--doux);margin-top:1rem}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.infos h3{font-size:1.2rem;color:var(--saumon);margin-bottom:.5rem}
+.infos a{color:var(--riz)}
+footer{padding:3rem 0;text-align:center;font-size:.85rem;color:var(--doux);border-top:1px solid var(--ligne)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.rv.vu{opacity:1;transform:none}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes defile{to{transform:translateX(-50%)}}
+@keyframes flotte{50%{transform:translateY(-12px)}}
+@keyframes tampon{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(-2deg) scale(1.04)}}
+@media(max-width:860px){
+ .hero{grid-template-columns:1fr;padding-top:4vh;gap:2.6rem}.hero .txt{padding:0 5vw}
+ .visuel{height:64svh;margin:0 4vw}
+ .signature,.chaud{grid-template-columns:1fr}
+ .choix{grid-template-columns:1fr}
+ .def{grid-template-columns:1fr;gap:.6rem}
+ .infos{grid-template-columns:1fr}
+ .bloc{padding:10vh 0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}#riz{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — imaginée avec plaisir pour SushiParty</div>
+<canvas id="riz" aria-hidden="true"></canvas>
+
+<header class="hero">
+ <div class="txt rv">
+  <div class="marque"><div class="hanko">SP</div><b>SushiParty 974</b></div>
+  <p class="sur">Dark kitchen · Sainte-Marie</p>
+  <h1>Des sushis frais<em>et gourmands.</em></h1>
+  <p class="lead">Préparés frais, uniquement sur commande, entre fusion et tradition. À récupérer sur place, rue des Vavangues.</p>
+  <div class="btns">
+   <a class="btn plein" href="#box">Composer ma commande</a>
+   <a class="btn ligne" href="#signature">Le Crunchy Péi</a>
+  </div>
+ </div>
+ <div class="visuel rv">
+  <div class="grand"><img src="img/plateaux-sushis.jpg" alt="Plateaux de sushis, rolls et sashimis SushiParty"></div>
+  <div class="petit"><img src="img/assortiment-thon-saumon.jpg" alt="Assortiment de nigiris et rolls thon et saumon"></div>
+  <div class="badge">Préparé frais, sur commande<small>Commande la veille pour le lendemain</small></div>
+ </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div>
+ <span>Maki</span><i>●</i><span>California</span><i>●</i><span>Cheesy</span><i>●</i><span>Nigiri</span><i>●</i><span>Sashimi</span><i>●</i><span>Chirashi</span><i>●</i><span>Crunchy Péi</span><i>●</i><span>Karaage</span><i>●</i>
+ <span>Maki</span><i>●</i><span>California</span><i>●</i><span>Cheesy</span><i>●</i><span>Nigiri</span><i>●</i><span>Sashimi</span><i>●</i><span>Chirashi</span><i>●</i><span>Crunchy Péi</span><i>●</i><span>Karaage</span><i>●</i>
+</div></div>
+
+<section class="bloc" id="signature">
+ <div class="wrap signature">
+  <div class="rv">
+   <p class="sur">Création signature</p>
+   <h2 class="titre">Le Crunchy Péi</h2>
+   <p class="chapo">Un roll bien doré et ultra croustillant, au goût bien local : croustillant, fumé, fraîcheur et saveurs péi.</p>
+   <div class="compo">
+    <div><b>01</b><span>Poulet fumé et concombre croquant</span></div>
+    <div><b>02</b><span>Pâte à tempura au curcuma, frit pour le doré</span></div>
+    <div><b>03</b><span>8 pièces, une petite pointe de fromage</span></div>
+    <div><b>04</b><span>Mayonnaise créole fumée, tomates cerises et verdure</span></div>
+   </div>
+  </div>
+  <div class="ph rv"><img src="img/rolls-croustillants.jpg" alt="Rolls croustillants et nigiris SushiParty"></div>
+ </div>
+</section>
+
+<section class="bloc guide">
+ <div class="wrap">
+  <p class="sur rv">La Base, le guide des classiques</p>
+  <h2 class="titre rv">Plutôt maki, california ou cheesy ?</h2>
+  <p class="chapo rv">Il y en a pour tous les goûts. Touchez un nom pour le découvrir.</p>
+  <div class="onglets rv" role="tablist" id="ong"></div>
+  <div class="def rv"><div class="kanji" id="k">巻</div><p id="dp"></p></div>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap chaud">
+  <div class="ph rv"><img src="img/plats-chauds.jpg" alt="Miso ramen au poulet et karaage SushiParty"></div>
+  <div class="rv">
+   <p class="sur">Côté chaud</p>
+   <h2 class="titre">Les plats chauds à l'honneur</h2>
+   <p class="chapo">Trois incontournables de la cuisine japonaise, à savourer bien chauds.</p>
+   <div class="trois">
+    <article class="plat"><h3>Karaage de poulet</h3><p>Généreux, ultra-croustillant dehors, tendre dedans, sur chou blanc émincé, cébette fraîche et sauce verte maison.</p></article>
+    <article class="plat"><h3>Miso ramen au poulet</h3><p>Un bouillon miso réconfortant, poulet, nouilles soba et œuf fondant.</p></article>
+    <article class="plat"><h3>Yakitori de poulet</h3><p>Des brochettes grillées, généreusement nappées de sauce yakitori.</p></article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="galerie" aria-label="Galerie SushiParty">
+ <figure><img src="img/plateau-rolls.jpg" alt="Plateau de rolls et nigiris" loading="lazy"></figure>
+ <figure><img src="img/thon-frais.jpg" alt="Thon frais avant la découpe" loading="lazy"></figure>
+ <figure><img src="img/assortiment-thon-saumon.jpg" alt="Assortiment thon et saumon" loading="lazy"></figure>
+ <figure><img src="img/plateaux-sushis.jpg" alt="Plateaux à partager" loading="lazy"></figure>
+</div>
+
+<section class="bloc box" id="box">
+ <div class="wrap">
+  <p class="sur rv">À partager… ou pas</p>
+  <h2 class="titre rv">Composez votre commande</h2>
+  <p class="chapo rv">Choisissez vos envies : votre demande arrive toute prête sur le WhatsApp de SushiParty, qui vous confirme le retrait.</p>
+  <div class="choix rv" id="choix"></div>
+  <div class="envoi rv">
+   <input id="pr" type="text" placeholder="Votre prénom et le jour souhaité" aria-label="Votre prénom et le jour souhaité">
+   <button id="go" disabled>Envoyer sur WhatsApp</button>
+  </div>
+  <p class="note rv">Pensez à commander la veille pour le lendemain : tout est préparé frais.</p>
+ </div>
+</section>
+
+<section class="bloc">
+ <div class="wrap infos">
+  <div class="rv"><h3>Retrait</h3><p>17 rue des Vavangues<br>97438 Sainte-Marie</p></div>
+  <div class="rv"><h3>Commandes</h3><p>Uniquement sur commande, à récupérer sur place.<br>En message privé ou par téléphone.</p></div>
+  <div class="rv"><h3>Contact</h3><p><a href="tel:+262693530327">0693 53 03 27</a><br><a href="https://www.instagram.com/sushiparty974" target="_blank" rel="noopener">Instagram @sushiparty974</a></p></div>
+ </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de SushiParty.</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const G=[["Maki","巻","Petit rouleau de riz vinaigré entouré d'une feuille d'algue nori, garni au centre de poisson, de légumes ou de fromage."],
+["California","米","Rouleau inversé : le riz à l'extérieur, l'algue nori à l'intérieur, garni selon vos envies, saumon, thon, avocat, concombre, fromage…"],
+["Cheesy","鮭","Comme un maki, mais entouré de saumon à la place de l'algue. Vous choisissez le topping, et le fromage se pose sur le dessus."],
+["Sashimi","刺","De fines tranches de poisson cru, servies sans riz, pour apprécier toute la fraîcheur du poisson."],
+["Nigiri","握","Une petite boule de riz vinaigré façonnée à la main, recouverte d'une tranche de poisson, de crevette ou d'une autre garniture."],
+["Shirashi","丼","Un bol de riz vinaigré garni de tranches de poisson et de légumes : la version généreuse, fraîche et complète du sushi."]];
+const ong=document.getElementById('ong'),k=document.getElementById('k'),dp=document.getElementById('dp');
+G.forEach((g,i)=>{const b=document.createElement('button');b.textContent=g[0];b.setAttribute('role','tab');b.onclick=()=>sel(i);ong.appendChild(b)});
+function sel(i){[...ong.children].forEach((b,j)=>b.setAttribute('aria-selected',j==i));dp.style.opacity=0;setTimeout(()=>{k.textContent=G[i][1];dp.textContent=G[i][2];dp.style.opacity=1},180)}sel(0);
+const C=[["Crunchy Péi","8 pièces"],["Box duo 100 % saumon","34 pièces"],["Mix Cali","California variés"],["Box Omakase","Futomaki, nigiri, maki fried"],["Karaage de poulet","Sauce verte maison"],["Miso ramen au poulet","Nouilles soba"]];
+const q=C.map(()=>0),ch=document.getElementById('choix'),go=document.getElementById('go');
+C.forEach((c,i)=>{const d=document.createElement('div');d.className='item';d.innerHTML=`<span>${c[0]}<small>${c[1]}</small></span><div class="qte"><button aria-label="Retirer">−</button><output>0</output><button aria-label="Ajouter">+</button></div>`;
+ const [m,o,p]=d.querySelectorAll('button,output');m.onclick=()=>{q[i]=Math.max(0,q[i]-1);o.textContent=q[i];maj()};p.onclick=()=>{q[i]++;o.textContent=q[i];maj()};ch.appendChild(d)});
+function maj(){go.disabled=!q.some(x=>x)}
+go.onclick=()=>{const l=C.map((c,i)=>q[i]?`- ${q[i]} x ${c[0]}`:'').filter(Boolean).join('\n');
+ const t=`Bonjour SushiParty ! Je voudrais commander :\n${l}\n${document.getElementById('pr').value.trim()}`;
+ window.open('https://wa.me/262693530327?text='+encodeURIComponent(t),'_blank')};
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('riz'),x=c.getContext('2d');let W,H,P=[],run=true;
+const rs=()=>{W=c.width=innerWidth;H=c.height=innerHeight};rs();addEventListener('resize',rs);
+function nv(init){const t=Math.random();return{x:Math.random()*W,y:init?Math.random()*H:-20,k:t<.55?'riz':t<.85?'sesame':'feuille',r:t<.55?3.2:t<.85?2.2:9+Math.random()*6,v:.3+Math.random()*.6,a:Math.random()*6.28,s:(Math.random()-.5)*.02}}
+for(let i=0;i<34;i++)P.push(nv(true));
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+ for(const p of P){p.y+=p.v;p.a+=p.s+.004;p.x+=Math.sin(p.a*3)*.3;x.save();x.translate(p.x,p.y);x.rotate(p.a);
+  if(p.k=='riz'){x.fillStyle='rgba(246,241,230,.32)';x.beginPath();x.ellipse(0,0,p.r,p.r*.48,0,0,6.28);x.fill()}
+  else if(p.k=='sesame'){x.fillStyle='rgba(40,40,36,.55)';x.strokeStyle='rgba(246,241,230,.15)';x.beginPath();x.ellipse(0,0,p.r,p.r*.6,0,0,6.28);x.fill();x.stroke()}
+  else{x.fillStyle='rgba(63,122,74,.28)';x.beginPath();x.moveTo(-p.r,0);x.quadraticCurveTo(0,-p.r*.45,p.r,0);x.quadraticCurveTo(0,p.r*.45,-p.r,0);x.fill()}
+  x.restore();if(p.y>H+30)Object.assign(p,nv(false))}
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)draw()});draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="SushiParty 974" defer></script>
+</body>
+</html>
