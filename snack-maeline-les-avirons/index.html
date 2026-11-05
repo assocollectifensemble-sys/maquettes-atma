@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#151515">
+<title>Snack Maéline · Sandwichs, américains et repas · Les Avirons</title>
+<meta name="description" content="Maquette privée : Snack Maéline aux Avirons, sandwichs, américains, paninis et repas, sur place ou à emporter, sous une terrasse fleurie.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Snack Maéline · Les Avirons">
+<meta property="og:description" content="Une page imaginée pour le Snack Maéline, aux Avirons.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-maeline-les-avirons/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-maeline-les-avirons/img/entree-fleurie.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#151515; --noir-2:#232323; --bleu:#1fa3e0; --bleu-f:#0b6fa8; --jaune:#ffe11a; --jaune-2:#ffc400;
+  --vert:#2e7d4a; --creme:#fffbea; --encre:#1b1b1b; --gris:#5f6368;
+  --titre:'Lilita One','Arial Black',sans-serif; --sans:'Nunito',system-ui,sans-serif; --bar:62px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.05rem;line-height:1.6;color:var(--encre);background:var(--creme);overflow-x:hidden;padding-bottom:var(--bar)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--jaune);outline-offset:3px}
+.wrap{width:min(1100px,100% - 2.4rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:400;line-height:1.05;letter-spacing:.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.ruban{background:var(--jaune);color:var(--noir);font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem;position:relative;z-index:3}
+#hibiscus{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+
+/* HERO */
+.hero{position:relative;min-height:90svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.13) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.05) 0%,rgba(21,21,21,.3) 40%,rgba(21,21,21,.93) 100%)}
+.hero .wrap{position:relative;z-index:2;padding:3rem 0 3.2rem}
+.pastille-nom{display:inline-block;background:var(--bleu);color:var(--jaune);font-family:var(--titre);border-radius:999px;padding:.15rem 1.1rem .25rem;font-size:.95rem;letter-spacing:.06em}
+.hero h1{font-size:clamp(3.6rem,19vw,8.5rem);color:var(--jaune);margin:.4rem 0 .2rem;text-shadow:0 5px 0 var(--bleu-f),0 10px 30px rgba(0,0,0,.4)}
+.hero .accroche{font-size:clamp(1.12rem,3.8vw,1.4rem);max-width:30ch;font-weight:600}
+.in{opacity:0;transform:translateY(16px);animation:monte 1s .2s ease forwards}
+.in.d2{animation-delay:.5s}.in.d3{animation-delay:.85s}
+@keyframes monte{to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.75rem 1.4rem;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .2s,background .2s}
+.btn-jaune{background:var(--jaune);color:var(--noir);box-shadow:0 6px 0 var(--jaune-2);animation:respire 3s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.045)}}
+.btn-ligne{border:2px solid var(--bleu);color:#fff;background:rgba(31,163,224,.18)}
+.btn-ligne:hover{background:var(--bleu)}
+
+.defile{background:var(--bleu);color:var(--noir);overflow:hidden;white-space:nowrap;font-family:var(--titre);font-size:1.2rem;padding:.65rem 0;border-block:3px solid var(--jaune)}
+.defile div{display:inline-block;animation:defile 26s linear infinite}
+.defile span{margin:0 1rem}
+.defile i{font-style:normal;color:var(--jaune)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:clamp(3.2rem,9vw,6rem) 0}
+.etiquette{font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--bleu-f);margin-bottom:.7rem}
+h2{font-size:clamp(2.2rem,8vw,3.8rem);margin-bottom:1rem}
+h2 em{font-style:normal;color:var(--bleu)}
+.grille2{display:grid;gap:2.2rem}
+.grille2>*{min-width:0}
+.lead{font-size:1.2rem;font-weight:600}
+.texte p+p{margin-top:.9rem}
+
+/* ambiance */
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.mosaique figure{border-radius:16px;overflow:hidden;position:relative;box-shadow:0 10px 26px rgba(0,0,0,.14)}
+.mosaique img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform .7s}
+.mosaique figure:hover img{transform:scale(1.06)}
+.mosaique .grand{grid-column:span 2}
+.mosaique .grand img{aspect-ratio:16/10}
+.mosaique figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(21,21,21,.75);color:#fff;font-size:.78rem;font-weight:700;padding:.2rem .6rem;border-radius:999px}
+
+/* carte */
+.carte{background:var(--noir);color:#f2f2f2;position:relative;overflow:hidden}
+.carte h2{color:var(--jaune)}.carte h2 em{color:var(--bleu)}
+.carte .etiquette{color:var(--bleu)}
+.carte .intro{max-width:46ch;color:#d6d6d6}
+.onglets{display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;margin:1.6rem 0 1.2rem;padding-bottom:.3rem}
+.onglets::-webkit-scrollbar{display:none}
+.onglets button{flex:0 0 auto;font:inherit;font-weight:800;font-size:.95rem;border:2px solid var(--bleu);background:transparent;color:#fff;border-radius:999px;padding:.5rem 1rem;cursor:pointer;min-height:44px;transition:background .2s,color .2s}
+.onglets button[aria-selected=true]{background:var(--jaune);border-color:var(--jaune);color:var(--noir)}
+.panneau{display:none;background:var(--noir-2);border-radius:18px;padding:1.2rem 1.2rem 1rem;border:1px solid #333}
+.panneau.actif{display:block;animation:fondu .45s ease}
+@keyframes fondu{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panneau .garni{color:var(--bleu);font-weight:700;font-size:.92rem;margin-bottom:.6rem}
+.panneau ul{list-style:none;columns:2;column-gap:1.4rem}
+.panneau li{display:flex;justify-content:space-between;gap:.5rem;padding:.38rem 0;border-bottom:1px dashed #3b3b3b;break-inside:avoid;font-size:.98rem}
+.panneau li b{color:var(--jaune);white-space:nowrap}
+.panneau li.star{color:var(--jaune);font-weight:800}
+.divers{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.3rem}
+.divers div{background:var(--bleu);color:var(--noir);border-radius:14px;padding:.8rem .6rem;text-align:center;font-weight:800;line-height:1.25;font-size:.92rem}
+.divers b{display:block;font-family:var(--titre);font-weight:400;font-size:1.5rem;color:#fff}
+.carte-img{border-radius:16px;overflow:hidden;border:3px solid var(--bleu);max-width:340px;margin-top:1.4rem;transform:rotate(-1.5deg)}
+.source{font-size:.82rem;color:#a9a9a9;margin-top:.8rem}
+
+/* au comptoir */
+.comptoir .duo{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.4rem}
+.comptoir figure{border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.14)}
+.comptoir img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.comptoir .seul img{aspect-ratio:8/7}
+.legende{font-size:.82rem;color:var(--gris);margin-top:.5rem}
+
+/* avis */
+.avis{background:var(--bleu);color:var(--noir)}
+.avis .etiquette{color:var(--noir)}
+.avis h2{color:#fff;text-shadow:0 3px 0 var(--bleu-f)}
+blockquote{font-family:var(--titre);font-size:clamp(1.45rem,5.4vw,2.2rem);line-height:1.2;margin-top:1.5rem}
+blockquote cite{display:block;font-family:var(--sans);font-style:normal;font-size:.85rem;font-weight:800;margin-top:.5rem;color:var(--noir)}
+blockquote+blockquote{padding-top:1.5rem;border-top:2px dashed rgba(21,21,21,.3)}
+
+/* infos */
+.infos dl{display:grid;gap:1.2rem;margin-top:1.3rem}
+.infos dt{font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--bleu-f)}
+.infos dd{font-size:1.25rem;font-weight:800;line-height:1.35}
+.infos dd small{display:block;font-size:.92rem;font-weight:600;color:var(--gris)}
+.infos dd a{text-decoration-color:var(--bleu);text-decoration-thickness:3px;text-underline-offset:4px}
+.plan{display:flex;flex-direction:column;justify-content:flex-end;min-height:250px;border-radius:20px;padding:1.5rem;color:#fff;text-decoration:none;position:relative;overflow:hidden;
+ background:radial-gradient(circle at 78% 28%,rgba(255,225,26,.5),transparent 42%),linear-gradient(140deg,var(--bleu-f),var(--noir))}
+.plan::before{content:"";position:absolute;right:2rem;top:2rem;width:30px;height:30px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--jaune);box-shadow:0 0 0 10px rgba(255,225,26,.3);animation:pin 2.4s ease-in-out infinite}
+@keyframes pin{50%{box-shadow:0 0 0 18px rgba(255,225,26,.06)}}
+.plan strong{font-family:var(--titre);font-weight:400;font-size:1.6rem;line-height:1.15}
+.plan span{margin-top:.35rem;text-decoration:underline;text-underline-offset:4px}
+
+footer{background:var(--noir);color:#cfcfcf;padding:2.3rem 0 2.8rem;font-size:.9rem;border-top:4px solid var(--jaune)}
+footer .nom{font-family:var(--titre);font-size:1.7rem;color:var(--jaune)}
+footer p{margin-top:.45rem;max-width:62ch}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr 1fr;height:var(--bar);background:var(--noir);border-top:3px solid var(--bleu)}
+.barre a{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;text-decoration:none}
+.barre a:first-child{background:var(--jaune);color:var(--noir)}
+
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.vu{opacity:1;transform:none}
+@media (min-width:760px){
+  body{padding-bottom:0}.barre{display:none}
+  .grille2{grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+  .carte .grille2{align-items:start}
+}
+@media (max-width:380px){.panneau ul{columns:1}}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .in{opacity:1;transform:none}.js .rv{opacity:1;transform:none}#hibiscus{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour le Snack Maéline</div>
+<canvas id="hibiscus" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/entree-fleurie.jpg" alt="L'entrée du Snack Maéline sous une pergola en bois couverte de fleurs rouges et de plantes en pots" width="900" height="1200"></div>
+  <div class="wrap">
+    <span class="pastille-nom in">Snack bar · Les Avirons</span>
+    <h1 class="in d2">Maéline</h1>
+    <p class="accroche in d3">Sandwichs, américains, paninis et repas, sur place sous la terrasse fleurie ou à emporter.</p>
+    <div class="cta in d3">
+      <a class="btn btn-jaune" href="tel:+262692414060">Commander · 0692 41 40 60</a>
+      <a class="btn btn-ligne" href="#carte">Voir la carte</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div>
+<span>Sandwichs</span><i>✿</i><span>Américains</span><i>✿</i><span>Paninis</span><i>✿</i><span>Lords</span><i>✿</i><span>Crudités</span><i>✿</i><span>Repas</span><i>✿</i>
+<span>Sandwichs</span><i>✿</i><span>Américains</span><i>✿</i><span>Paninis</span><i>✿</i><span>Lords</span><i>✿</i><span>Crudités</span><i>✿</i><span>Repas</span><i>✿</i>
+</div></div>
+
+<section class="ambiance">
+  <div class="wrap grille2">
+    <div class="texte rv">
+      <p class="etiquette">L'ambiance</p>
+      <h2>Une pause <em>zen</em> au milieu des fleurs</h2>
+      <p class="lead">Au Snack Maéline, on mange sous une pergola fleurie, entre plantes vertes, hibiscus et un grand bouddha qui veille sur la terrasse.</p>
+      <p>Une adresse simple et chaleureuse aux Avirons, à l'angle du chemin Kerbel et de l'avenue du Général de Gaulle : on s'installe pour souffler un moment, ou on repart avec son sandwich encore chaud.</p>
+      <p>Et à chaque fête, l'équipe du snack pense à tout le monde : fête des mamans, des papas, fèt kaf, Noël… un petit mot pour chacun sur la page.</p>
+    </div>
+    <div class="mosaique rv">
+      <figure class="grand"><img src="img/terrasse-vue.jpg" alt="La terrasse fleurie avec vue dégagée sur le ciel bleu des Avirons" width="1200" height="628" loading="lazy"><figcaption>La terrasse</figcaption></figure>
+      <figure><img src="img/bouddha-zen.jpg" alt="Statue de bouddha en bronze entourée de plantes" width="1200" height="1200" loading="lazy"><figcaption>Le coin zen</figcaption></figure>
+      <figure><img src="img/terrasse-tables.jpg" alt="Tables et chaises sous la toile bleue, entourées de plantes" width="1200" height="900" loading="lazy"><figcaption>À l'ombre</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="etiquette">La carte</p>
+      <h2>Faites <em>votre</em> choix</h2>
+      <p class="intro">Toute la carte publiée par le snack, à petits prix. Choisissez votre catégorie :</p>
+      <div class="onglets" role="tablist">
+        <button role="tab" aria-selected="true" data-p="am">Américains</button>
+        <button role="tab" aria-selected="false" data-p="sa">Sandwichs</button>
+        <button role="tab" aria-selected="false" data-p="pa">Paninis</button>
+        <button role="tab" aria-selected="false" data-p="lo">Lords</button>
+        <button role="tab" aria-selected="false" data-p="cr">Crudités</button>
+      </div>
+      <div class="panneau actif" id="am" role="tabpanel"><p class="garni">Frites et fromages</p><ul>
+        <li>Sans épaule<b>3,00 €</b></li><li>Épaule<b>3,50 €</b></li><li>Surimi<b>4,50 €</b></li><li>Bouchon<b>4,50 €</b></li><li>Thon maïs<b>4,50 €</b></li><li>Hot dog<b>4,50 €</b></li><li>Lardon<b>5,00 €</b></li><li>Poulet<b>5,00 €</b></li><li>Steak<b>5,00 €</b></li><li>Créole<b>5,00 €</b></li><li>Merguez<b>5,00 €</b></li><li>Sarcive<b>6,00 €</b></li><li>Saumon<b>6,00 €</b></li><li>Magret<b>7,00 €</b></li><li class="star">Maéline ✿<b>8,00 €</b></li></ul>
+        <p class="source">L'Américain Maéline : frite, épaule, bouchon, hot dog et poulet.</p></div>
+      <div class="panneau" id="sa" role="tabpanel"><ul>
+        <li>Thon maïs<b>4,00 €</b></li><li>Bouchon<b>4,00 €</b></li><li>Hot dog<b>4,00 €</b></li><li>Poulet<b>4,00 €</b></li><li>Steak<b>4,50 €</b></li><li>Saumon<b>5,00 €</b></li><li>Sarcive<b>5,00 €</b></li><li>Lardon<b>4,50 €</b></li><li>Magret<b>6,50 €</b></li><li>Épaule<b>3,00 €</b></li><li>Merguez<b>4,50 €</b></li></ul></div>
+      <div class="panneau" id="pa" role="tabpanel"><p class="garni">Salades, tomates, oignons et fromage</p><ul>
+        <li>Épaule<b>5,00 €</b></li><li>Surimi<b>5,00 €</b></li><li>Bouchon<b>5,00 €</b></li><li>Hot dog<b>5,00 €</b></li><li>Lardon<b>5,00 €</b></li><li>Poulet<b>5,00 €</b></li><li>Steak<b>6,00 €</b></li><li>Merguez<b>6,00 €</b></li><li>Sarcive<b>6,00 €</b></li><li>Saumon<b>6,00 €</b></li><li>Magret<b>7,00 €</b></li></ul></div>
+      <div class="panneau" id="lo" role="tabpanel"><p class="garni">Salades, tomates, oignons, frites et fromages</p><ul>
+        <li>Épaule<b>6,00 €</b></li><li>Surimi<b>6,00 €</b></li><li>Bouchon<b>6,00 €</b></li><li>Thon maïs<b>6,00 €</b></li><li>Hot dog<b>6,00 €</b></li><li>Lardon<b>6,50 €</b></li><li>Poulet<b>6,00 €</b></li><li>Steak<b>6,50 €</b></li><li>Merguez<b>6,50 €</b></li><li>Sarcive<b>7,00 €</b></li><li>Saumon<b>7,00 €</b></li><li>Magret<b>7,00 €</b></li></ul></div>
+      <div class="panneau" id="cr" role="tabpanel"><p class="garni">Salades, tomates, poivrons, cornichons et concombres</p><ul>
+        <li>Épaule<b>4,50 €</b></li><li>Surimi<b>4,50 €</b></li><li>Bouchon<b>4,50 €</b></li><li>Thon maïs<b>4,50 €</b></li><li>Hot dog<b>4,50 €</b></li><li>Lardon<b>5,00 €</b></li><li>Poulet<b>5,00 €</b></li><li>Steak<b>5,00 €</b></li><li>Merguez<b>5,00 €</b></li><li>Sarcive<b>6,00 €</b></li><li>Saumon<b>6,00 €</b></li><li>Magret<b>7,00 €</b></li></ul></div>
+      <div class="divers">
+        <div><b>7 €</b>Repas à partir de</div>
+        <div><b>2,50 €</b>La frite</div>
+        <div><b>0,50 €</b>Le bouchon</div>
+      </div>
+      <p class="source">Prix de la carte publiée sur la page Facebook du snack (janvier 2026). Boissons fraîches dès 2 €, café 2 €.</p>
+    </div>
+    <figure class="rv">
+      <div class="carte-img"><img src="img/carte-maeline.jpg" alt="La carte du Snack Maéline, noire à hibiscus jaunes et bleus" width="900" height="1500" loading="lazy"></div>
+    </figure>
+  </div>
+</section>
+
+<section class="comptoir">
+  <div class="wrap">
+    <div class="rv">
+      <p class="etiquette">Au comptoir</p>
+      <h2>Des plats <em>bien chauds</em></h2>
+      <p>Pour les repas, les bacs se remplissent de plats chauds : riz, nouilles sautées, viandes en sauce… et côté sandwichs, de beaux gratinés au fromage fondu.</p>
+    </div>
+    <div class="duo rv">
+      <figure><img src="img/bain-marie-1.jpg" alt="Bacs de nouilles sautées et de plats en sauce au comptoir" width="960" height="720" loading="lazy"></figure>
+      <figure><img src="img/bain-marie-2.jpg" alt="Bacs de riz cantonais, saucisses et viandes en sauce" width="960" height="673" loading="lazy"></figure>
+      <figure class="seul"><img src="img/sandwich-gratine.jpg" alt="Sandwich gratiné au fromage fondu" width="548" height="470" loading="lazy"></figure>
+      <figure class="seul"><img src="img/coin-zen.jpg" alt="Plantes en pots et petit bouddha sur la terrasse ensoleillée" width="960" height="720" loading="lazy"></figure>
+    </div>
+    <p class="legende rv">Photos publiées sur les pages Facebook du Snack Maéline.</p>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <div class="rv"><p class="etiquette">Ce qu'on en dit</p><h2>Les Avironnais aiment</h2></div>
+    <div class="rv">
+      <blockquote>« Snack Maéline aux Avirons très bon et sympathique merci beaucoup. »<cite>Johnny D. · avis sur la page Facebook</cite></blockquote>
+      <blockquote>« Les meilleurs des Avirons, on les aime ♥ »<cite>Mathias E. · avis sur la page Facebook</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="infos">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="etiquette">Passer commande</p>
+      <h2>On vous attend <em>aux Avirons</em></h2>
+      <dl>
+        <div><dt>Adresse</dt><dd>Angle chemin Kerbel et avenue du Général de Gaulle<br>97425 Les Avirons</dd></div>
+        <div><dt>Commander</dt><dd><a href="tel:+262692414060">0692 41 40 60</a><small>Sur place ou à emporter : un coup de fil et c'est prêt.</small></dd></div>
+        <div><dt>Suivre</dt><dd><a href="https://www.facebook.com/people/Snack-Ma%C3%A9line/100057502207497/" target="_blank" rel="noopener">Snack Maéline sur Facebook</a></dd></div>
+      </dl>
+    </div>
+    <a class="plan rv" href="https://www.google.com/maps/search/?api=1&amp;query=Snack+Ma%C3%A9line+Les+Avirons" target="_blank" rel="noopener">
+      <strong>Snack Maéline, Les Avirons</strong>
+      <span>Ouvrir l'itinéraire dans Google Maps</span>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="nom">Snack Maéline</p>
+    <p>Angle chemin Kerbel et avenue du Général de Gaulle, Les Avirons · 0692 41 40 60</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Snack Maéline. Photos et carte : pages Facebook du Snack Maéline.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="tel:+262692414060">Commander</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Snack+Ma%C3%A9line+Les+Avirons" target="_blank" rel="noopener">Itinéraire</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)})}
+  /* onglets de la carte */
+  var bs=document.querySelectorAll('.onglets button');
+  bs.forEach(function(b){b.addEventListener('click',function(){
+    bs.forEach(function(o){o.setAttribute('aria-selected','false')});b.setAttribute('aria-selected','true');
+    document.querySelectorAll('.panneau').forEach(function(p){p.classList.toggle('actif',p.id===b.dataset.p)})})});
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* fleurs d'hibiscus jaunes et bleues qui flottent */
+  var c=document.getElementById('hibiscus'),x=c.getContext('2d'),W,H,P=[],run=true,cols=['#ffe11a','#1fa3e0','#ffc400','#5cc3f0'];
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  function nv(r){return{x:Math.random()*W,y:r?Math.random()*H:-20,v:.2+Math.random()*.45,r:5+Math.random()*7,
+    c:cols[Math.random()*cols.length|0],a:.18+Math.random()*.3,t:Math.random()*6.28,s:(Math.random()-.5)*.01}}
+  for(var i=0;i<22;i++)P.push(nv(true));
+  function fleur(p){x.save();x.translate(p.x,p.y);x.rotate(p.t);x.fillStyle=p.c;
+    for(var k=0;k<5;k++){x.rotate(1.2566);x.beginPath();x.ellipse(0,-p.r*.62,p.r*.42,p.r*.62,0,0,6.28);x.fill()}
+    x.fillStyle='#b8321f';x.beginPath();x.arc(0,0,p.r*.18,0,6.28);x.fill();x.restore()}
+  function f(){if(!run)return;x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.v;p.t+=p.s+.004;p.x+=Math.sin(p.t*3)*.3;
+      if(p.y>H+20)P[i]=nv(false);x.globalAlpha=p.a;fleur(p)}
+    requestAnimationFrame(f)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+  f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Snack Maéline" defer></script>
+</body>
+</html>
