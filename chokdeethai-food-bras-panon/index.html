@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chok Dee Thai Food · Snack thaï à Bras-Panon</title>
+<meta name="description" content="Saveurs authentiques de Thaïlande, fait maison, produits frais : le kiosque thaï de la rue des Limites à Bras-Panon.">
+<meta property="og:title" content="Chok Dee Thai Food · Snack thaï à Bras-Panon">
+<meta property="og:description" content="Saveurs authentiques de Thaïlande, fait maison, produits frais. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chokdeethai-food-bras-panon/img/curry-rouge.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chokdeethai-food-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14304a;--navy2:#0d2236;--gold:#d4af37;--red:#c41e3a;--orange:#e8731a;--lotus:#e2557f;--cream:#fbf5ea;--ink:#1d1a16;--muted:#5b5348;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Prompt',sans-serif;line-height:1.1;text-wrap:balance}p{text-wrap:pretty}img{display:block;max-width:100%}
+.ruban{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--navy2);color:#f3e4b0;font-size:.78rem;text-align:center;padding:.45rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--gold)}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:var(--navy2);color:#fff}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:.8;transform:scale(1.1);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,34,54,.25) 0%,rgba(13,34,54,.1) 35%,rgba(13,34,54,.92) 88%)}
+canvas#fx{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:2;padding:6rem 1.4rem 3rem;max-width:62rem;margin:0 auto;width:100%}
+.kicker{font-family:'Prompt';font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-size:clamp(2.5rem,10vw,5.2rem);margin:.4rem 0 .8rem;animation:up 1.2s .2s both}
+.hero h1 span{color:var(--gold)}
+.hero p.lead{font-size:1.12rem;max-width:34rem;opacity:.93;animation:up 1.2s .5s both}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem;animation:up 1.2s .8s both}
+.tags span{border:1px solid rgba(212,175,55,.6);color:#f6e7b8;border-radius:99px;padding:.3rem .8rem;font-size:.85rem}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.75rem 1.4rem;border-radius:99px;font-family:'Prompt';font-weight:500;text-decoration:none;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-a{background:var(--gold);color:var(--navy2);animation:breathe 3.2s ease-in-out infinite}
+.btn-b{border:1.5px solid #fff;color:#fff}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(212,175,55,.18)}}
+.band{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;font-family:'Prompt';font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 0;border-top:3px solid var(--gold);border-bottom:3px solid var(--gold)}
+.band div{display:inline-block;animation:defile 26s linear infinite}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:4.5rem 1.4rem}.wrap{max-width:62rem;margin:0 auto}
+h2{font-size:clamp(1.9rem,6vw,2.9rem);color:var(--navy);margin-bottom:1rem}
+.eyebrow{font-family:'Prompt';font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
+.jour{display:grid;gap:1.4rem}
+@media(min-width:760px){.jour{grid-template-columns:1fr 1fr}}
+.plat{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 14px 40px -24px rgba(20,48,74,.55);transition:transform .35s}
+.plat:hover{transform:translateY(-4px)}
+.plat img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.plat .t{padding:1.1rem 1.2rem 1.4rem}
+.plat h3{font-size:1.3rem;color:var(--navy);margin-bottom:.35rem}
+.plat small{display:block;color:var(--orange);font-weight:600;margin-bottom:.4rem}
+.plat p{color:var(--muted)}
+.carte{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.carte h2{color:#fff}.carte .eyebrow{color:var(--gold)}
+.carte ul{list-style:none;display:grid;gap:.2rem;margin-top:1.4rem}
+@media(min-width:760px){.carte ul{grid-template-columns:1fr 1fr;column-gap:3rem}}
+.carte li{display:flex;align-items:baseline;gap:.8rem;padding:.9rem 0;border-bottom:1px dashed rgba(212,175,55,.35);font-size:1.12rem}
+.carte li b{font-family:'Prompt';font-weight:500;color:var(--gold);min-width:7.5rem}
+.carte .note{margin-top:1.4rem;opacity:.85}
+.lotus{position:absolute;right:-60px;top:-40px;width:260px;opacity:.09}
+.affiches{display:grid;grid-auto-flow:column;grid-auto-columns:78%;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.8rem;-webkit-overflow-scrolling:touch}
+@media(min-width:760px){.affiches{grid-auto-columns:40%}}
+.affiches figure{scroll-snap-align:start;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 12px 30px -22px rgba(0,0,0,.5)}
+.affiches img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.affiches figcaption{padding:.7rem 1rem;font-size:.9rem;color:var(--muted)}
+.kiosque{display:grid;gap:2rem;align-items:center}
+@media(min-width:760px){.kiosque{grid-template-columns:1.1fr 1fr}}
+.kiosque img{border-radius:var(--r);width:100%;aspect-ratio:4/5;object-fit:cover}
+.infos{display:grid;gap:1rem;margin-top:1rem}
+.infos div{padding-bottom:1rem;border-bottom:1px solid #e7dccb}
+.infos dt{font-family:'Prompt';font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange)}
+.infos dd{font-size:1.08rem}
+.contact{background:linear-gradient(160deg,var(--orange),#c9541a);color:#fff;text-align:left}
+.contact h2{color:#fff}
+.contact .btn-a{background:var(--navy2);color:#fff;animation:none}
+footer{background:var(--navy2);color:#cfd8e2;font-size:.85rem;padding:2rem 1.4rem 6rem;text-align:center}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, créée avec plaisir pour Chok Dee Thai Food</div>
+
+<header class="hero">
+<img src="img/kiosque.webp" alt="Le kiosque Chok Dee Thai Food illuminé le soir, rue des Limites à Bras-Panon">
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="in">
+<p class="kicker">Snack thaï · Bras-Panon</p>
+<h1>Chok Dee <span>Thai Food</span></h1>
+<p class="lead">Saveurs authentiques de Thaïlande, recettes traditionnelles, fait maison avec des produits frais. Sur place et à emporter, rue des Limites.</p>
+<div class="tags"><span>Fait maison</span><span>Produits frais</span><span>Recettes traditionnelles</span></div>
+<div class="btns"><a class="btn btn-a" href="tel:+262693949666">Commander au 0693 94 96 66</a><a class="btn btn-b" href="#carte">Voir la carte</a></div>
+</div>
+</header>
+
+<div class="band" aria-hidden="true"><div>Pad thaï · Khao phat · Nems croustillants · Bo bun · Salades parfumées · Curry rouge · Pad thaï · Khao phat · Nems croustillants · Bo bun · Salades parfumées · Curry rouge ·&nbsp;</div></div>
+
+<section>
+<div class="wrap">
+<p class="eyebrow reveal">Le plat du jour</p>
+<h2 class="reveal">Mijoté le matin, servi avec son riz blanc</h2>
+<div class="jour">
+<article class="plat reveal"><img src="img/curry-rouge.webp" alt="Curry rouge au poulet, herbes fraîches et légumes" loading="lazy"><div class="t"><small>Plat du jour</small><h3>Curry rouge poulet</h3><p>Le curry rouge au poulet, avec son riz blanc : une sauce parfumée, des herbes fraîches, de la couleur dans l'assiette.</p></div></article>
+<article class="plat reveal"><img src="img/curry-poulet.webp" alt="Poulet mijoté aux pommes de terre, carottes et petits légumes en sauce thaï" loading="lazy"><div class="t"><small>Quantité limitée</small><h3>Un plat généreux aux saveurs thaïlandaises</h3><p>De tendres morceaux de poulet, des pommes de terre fondantes, des carottes et petits légumes, mijotés dans une sauce thaï parfumée et gourmande. Servi avec son riz blanc, pour profiter jusqu'à la dernière goutte de sauce.</p></div></article>
+</div>
+</div>
+</section>
+
+<section class="carte" id="carte">
+<svg class="lotus" viewBox="0 0 100 100" aria-hidden="true"><g fill="#d4af37"><path d="M50 15c9 14 9 34 0 50-9-16-9-36 0-50z"/><path d="M50 65C38 58 26 44 24 28c13 6 24 20 26 37z"/><path d="M50 65c12-7 24-21 26-37-13 6-24 20-26 37z"/><path d="M50 68C34 68 18 60 10 48c16 0 31 8 40 20z"/><path d="M50 68c16 0 32-8 40-20-16 0-31 8-40 20z"/></g></svg>
+<div class="wrap">
+<p class="eyebrow reveal">La carte</p>
+<h2 class="reveal">Les classiques de la cuisine thaï</h2>
+<ul>
+<li class="reveal"><b>Pad thaï</b>les nouilles sautées, le grand classique</li>
+<li class="reveal"><b>Khao phat</b>le riz sauté à la thaïlandaise</li>
+<li class="reveal"><b>Nems</b>croustillants, frits minute</li>
+<li class="reveal"><b>Bo bun</b>frais et parfumé</li>
+<li class="reveal"><b>Salades</b>parfumées aux herbes</li>
+<li class="reveal"><b>Plat du jour</b>à suivre chaque semaine sur la page</li>
+</ul>
+<p class="note reveal">Une carte qui change régulièrement : le plat du jour s'annonce sur Facebook.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<p class="eyebrow reveal">L'univers Chok Dee</p>
+<h2 class="reveal">Un petit voyage en Thaïlande</h2>
+<div class="affiches reveal">
+<figure><img src="img/affiche-chanphen.webp" alt="Affiche Chanphen, snack cuisine thaï à Bras-Panon" loading="lazy"><figcaption>Saveurs authentiques de Thaïlande, sur place et à emporter</figcaption></figure>
+<figure><img src="img/affiche-tuktuk.webp" alt="Affiche illustrée Chok Dee Thai Food avec tuk-tuk et temple" loading="lazy"><figcaption>Le tuk-tuk Chok Dee, en route pour Bras-Panon</figcaption></figure>
+<figure><img src="img/curry-rouge.webp" alt="Curry rouge au poulet" loading="lazy"><figcaption>Le curry rouge, plat du jour</figcaption></figure>
+</div>
+</div>
+</section>
+
+<section style="background:#f3e9d8">
+<div class="wrap kiosque">
+<img class="reveal" src="img/kiosque.webp" alt="Le kiosque Chok Dee Thai Food le soir" loading="lazy">
+<div>
+<p class="eyebrow reveal">Le kiosque</p>
+<h2 class="reveal">Rendez-vous rue des Limites</h2>
+<dl class="infos">
+<div class="reveal"><dt>Adresse</dt><dd>Kiosque 4, 9 rue des Limites, 97412 Bras-Panon<br>Sur le parking en face de la boulangerie Paris</dd></div>
+<div class="reveal"><dt>Horaires</dt><dd>Du mardi au samedi, de 11 h à 14 h</dd></div>
+<div class="reveal"><dt>Formules</dt><dd>Sur place en petite terrasse (6 places), à emporter, et livraison offerte dans l'Est</dd></div>
+<div class="reveal"><dt>Paiement</dt><dd>Carte bancaire, chèque, espèces, tickets restaurant</dd></div>
+</dl>
+</div>
+</div>
+</section>
+
+<section class="contact">
+<div class="wrap">
+<p class="eyebrow reveal" style="color:#fff3c8">Une petite faim ?</p>
+<h2 class="reveal">Appelez, on vous prépare ça</h2>
+<p class="reveal">Commande à emporter ou en livraison dans l'Est, du mardi au samedi midi.</p>
+<div class="btns reveal"><a class="btn btn-a" href="tel:+262693949666">0693 94 96 66</a><a class="btn btn-b" href="https://www.facebook.com/chokdeechanphen/">Suivre sur Facebook</a></div>
+</div>
+</section>
+
+<footer>Chok Dee Thai Food · Kiosque 4, 9 rue des Limites, Bras-Panon<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chok Dee Thai Food, visible seulement par vous.</footer>
+<script>
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,c=document.getElementById('fx');
+if(!rm&&c){const x=c.getContext('2d');let W,H,P=[],run=true;const rs=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push({x:Math.random(),y:Math.random(),r:14+Math.random()*30,v:.15+Math.random()*.35,a:Math.random()*6.28,o:.04+Math.random()*.07,g:i%7==0});
+const f=()=>{if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v/H*2.2;p.a+=.01;if(p.y<-.1){p.y=1.05;p.x=Math.random()}const px=p.x*W+Math.sin(p.a)*18,py=p.y*H;
+const gr=x.createRadialGradient(px,py,0,px,py,p.r);gr.addColorStop(0,p.g?`rgba(212,175,55,${p.o*2.2})`:`rgba(255,248,235,${p.o})`);gr.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=gr;x.beginPath();x.arc(px,py,p.r,0,6.28);x.fill()}requestAnimationFrame(f)};f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('on')),4000);})();
+</script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Chok Dee Thai Food" defer></script>
+</body>
+</html>
