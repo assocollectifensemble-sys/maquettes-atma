@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1c120c">
+<title>Lylo Pizza · Pizzas au feu de bois · Petite-Île</title>
+<meta name="description" content="Maquette : Lylo Pizza, pizzeria au feu de bois, 4 rue du Gymnase à Petite-Île, face au collège Suacot. Ouvert du mercredi au dimanche de 18h à 21h.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lylo Pizza · Pizzas au feu de bois à Petite-Île">
+<meta property="og:description" content="« C'est comme vous voulez chez Lylo Pizza ! » Une page imaginée pour Lylo Pizza.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lylo-pizza-petite-ile/img/pizza-four-flammes.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lylo-pizza-petite-ile/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#1c120c;
+  --nuit-2:#2a1a10;
+  --brique:#8a4a2c;
+  --flamme:#f29a2e;
+  --braise:#d4471c;
+  --creme:#f8eedc;
+  --pate:#ecd3a3;
+  --basilic:#3d7a36;
+  --encre:#2a1a10;
+  --serif:'Fraunces',Georgia,serif;
+  --main:'Caveat','Segoe Print',cursive;
+  --sans:'Karla',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--encre);background:var(--creme);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px}
+.wrap{width:min(1100px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:900;line-height:1.04;letter-spacing:-.015em;text-wrap:balance}
+p{text-wrap:pretty}
+
+.ruban{background:#0f0905;color:#e3cfae;font-size:.8rem;line-height:1.4;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--flamme)}
+
+/* HÉRO */
+.hero{position:relative;min-height:min(92vh,760px);display:flex;align-items:flex-end;color:var(--creme);overflow:hidden;background:var(--nuit)}
+.hero-photo{position:absolute;inset:0}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:kenburns 22s ease-in-out infinite alternate;transform-origin:50% 45%}
+.hero-photo picture{display:block;height:100%}
+@media (max-width:819px){.hero{min-height:880px}.hero-photo{bottom:auto;height:640px;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}.hero-photo img{object-position:50% 40%}.hero::after{background:linear-gradient(180deg,rgba(28,18,12,.2) 0%,rgba(28,18,12,0) 25%,rgba(28,18,12,.35) 52%,rgba(28,18,12,.92) 70%,var(--nuit) 74%)}}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,18,12,.25) 0%,rgba(28,18,12,.15) 30%,rgba(28,18,12,.82) 68%,rgba(28,18,12,.97) 100%);pointer-events:none}
+#braises{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:6rem 0 3rem}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--flamme)}
+.hero h1{font-size:clamp(3.6rem,17vw,8.5rem);margin:.4rem 0 .3rem;font-variation-settings:"opsz" 144}
+.hero h1 span{display:block;font-family:var(--main);font-weight:700;font-size:.42em;color:var(--pate);letter-spacing:0;line-height:1;margin-top:.1em}
+.hero .accroche{font-size:1.15rem;max-width:34ch;color:#f1e2c6}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.8rem 1.4rem;border-radius:999px;font-weight:700;font-size:1.05rem;text-decoration:none;transition:transform .2s,background .2s,color .2s}
+.btn-feu{background:var(--braise);color:#fff;box-shadow:0 0 0 0 rgba(242,154,46,.55);animation:souffle 2.8s ease-in-out infinite}
+@keyframes souffle{0%,100%{box-shadow:0 0 0 0 rgba(242,154,46,.5)}50%{box-shadow:0 0 0 12px rgba(242,154,46,0)}}
+.btn-feu:hover{transform:translateY(-2px);background:#e2541f}
+.btn-ligne{border:2px solid rgba(248,238,220,.7);color:var(--creme)}
+.btn-ligne:hover{background:var(--creme);color:var(--nuit)}
+.apparait{opacity:0;transform:translateY(18px);animation:monte 1.1s .25s ease-out forwards}
+.apparait.d2{animation-delay:.55s}.apparait.d3{animation-delay:.85s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau défilant */
+.defile{background:var(--braise);color:#fff;overflow:hidden;white-space:nowrap;border-block:3px solid var(--nuit)}
+.defile div{display:inline-block;padding:.7rem 0;font-family:var(--main);font-size:1.55rem;animation:defile 26s linear infinite}
+.defile span{margin:0 1.1rem;color:var(--pate)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding:clamp(3.5rem,9vw,6.5rem) 0}
+.etiquette{font-size:.8rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--braise);margin-bottom:.8rem}
+h2{font-size:clamp(2.2rem,7.5vw,3.9rem);margin-bottom:1.2rem}
+h2 em{font-style:italic;color:var(--braise)}
+.texte p+p{margin-top:1rem}
+
+.feu .wrap{display:grid;gap:2.2rem;align-items:center}
+.cadre-four{position:relative;border-radius:200px 200px 14px 14px;overflow:hidden;border:6px solid var(--nuit);box-shadow:0 22px 45px rgba(42,26,16,.35);aspect-ratio:4/3.4;background:var(--nuit)}
+.cadre-four img{width:100%;height:100%;object-fit:cover}
+.cadre-four::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 70%,rgba(242,154,46,.25),transparent 70%);animation:lueur 3.5s ease-in-out infinite alternate}
+@keyframes lueur{from{opacity:.4}to{opacity:1}}
+figcaption{font-size:.8rem;color:#7a6250;margin-top:.6rem}
+
+/* comme vous voulez */
+.voulez{background:var(--nuit);color:var(--creme);position:relative;overflow:hidden}
+.voulez::before{content:"";position:absolute;inset:-30% -30% auto auto;width:70%;aspect-ratio:1;background:radial-gradient(closest-side,rgba(212,71,28,.35),transparent);pointer-events:none}
+.voulez .wrap{position:relative;display:grid;gap:2.4rem;align-items:center}
+.voulez h2{color:var(--creme)}
+.voulez h2 em{color:var(--flamme)}
+.citation{font-family:var(--main);font-size:clamp(1.9rem,7vw,2.6rem);line-height:1.15;color:var(--pate);margin:.4rem 0 1rem}
+.source{font-size:.82rem;color:#bfa889}
+.atelier{background:var(--nuit-2);border:1px solid rgba(236,211,163,.18);border-radius:18px;padding:1.4rem}
+.atelier h3{font-family:var(--main);font-weight:700;font-size:1.7rem;color:var(--flamme);margin-bottom:.2rem}
+.atelier .ligne{margin-top:1rem}
+.atelier .ligne p{font-size:.85rem;text-transform:uppercase;letter-spacing:.14em;color:#bfa889;margin-bottom:.5rem}
+.puces{display:flex;flex-wrap:wrap;gap:.55rem}
+.puce{font:inherit;font-weight:700;font-size:1rem;min-height:46px;padding:.55rem 1.05rem;border-radius:999px;border:2px solid rgba(236,211,163,.45);background:transparent;color:var(--creme);cursor:pointer;transition:background .2s,color .2s,transform .15s,border-color .2s}
+.puce:hover{transform:translateY(-2px)}
+.puce[aria-pressed="true"]{background:var(--pate);color:var(--nuit);border-color:var(--pate)}
+.resume{margin-top:1.2rem;font-family:var(--main);font-size:1.45rem;line-height:1.25;color:var(--pate);min-height:2.6em}
+
+/* galerie */
+.galerie h2{margin-bottom:.6rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.25rem 1.2rem;margin-top:.6rem;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rail figure{flex:0 0 min(78vw,330px);scroll-snap-align:center;margin:0}
+.rail .img{border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--nuit);box-shadow:0 14px 30px rgba(42,26,16,.28);transition:transform .35s}
+.rail figure:hover .img{transform:translateY(-6px) rotate(-.6deg)}
+.rail img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.rail figure:hover img{transform:scale(1.05)}
+.astuce{font-size:.85rem;color:#7a6250}
+
+/* infos */
+.infos{background:linear-gradient(180deg,var(--creme),var(--pate))}
+.cartes{display:grid;gap:1.1rem;margin-top:1.4rem}
+.carte{background:#fffaf1;border-radius:18px;padding:1.5rem;border:1px solid rgba(138,74,44,.18);box-shadow:0 10px 26px rgba(138,74,44,.12);transition:transform .25s}
+.carte:hover{transform:translateY(-4px)}
+.carte h3{font-size:1.45rem;margin-bottom:.5rem}
+.carte .gros{font-family:var(--main);font-size:1.9rem;line-height:1.15;color:var(--braise)}
+.carte a.tel{font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--braise)}
+
+.vague{display:block;width:100%;height:46px}
+
+footer{background:var(--nuit);color:#cdb898;padding:2.6rem 0 2.2rem;font-size:.9rem}
+footer .nom{font-family:var(--main);font-size:2rem;color:var(--pate)}
+footer a{color:var(--flamme)}
+footer .prive{margin-top:1.2rem;font-size:.8rem;color:#9c8670}
+
+.revele{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.revele.vu{opacity:1;transform:none}
+.no-js .revele{opacity:1;transform:none}
+
+@media (min-width:820px){
+  .feu .wrap{grid-template-columns:1fr 1fr;gap:4rem}
+  .voulez .wrap{grid-template-columns:1.05fr 1fr;gap:4rem}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .rail{padding-inline:max(1.25rem,calc((100vw - 1100px)/2))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .apparait,.revele{opacity:1!important;transform:none!important}
+  #braises{display:none}
+}
+</style>
+</head>
+<body class="no-js">
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Lylo Pizza</div>
+
+<header class="hero">
+  <div class="hero-photo"><picture><source media="(max-width:819px)" srcset="img/pizza-bord-du-feu.jpg"><img src="img/pizza-four-flammes.jpg" alt="Pizza en cuisson dans le four à bois de Lylo Pizza, flammes en arrière-plan" fetchpriority="high"></picture></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kicker apparait">Pizzeria · Petite-Île</p>
+    <h1 class="apparait d2">Lylo Pizza<span>au feu de bois</span></h1>
+    <p class="accroche apparait d3">Des pizzas qui dorent au milieu des flammes, rue du Gymnase, face au collège Suacot. Du mercredi au dimanche, dès 18h.</p>
+    <div class="cta apparait d3">
+      <a class="btn btn-feu" href="tel:+262692777938">📞 Commander au 0692 77 79 38</a>
+      <a class="btn btn-ligne" href="#infos">Horaires &amp; adresse</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div>
+  Au feu de bois <span>✦</span> Base tomate ou crème <span>✦</span> C’est comme vous voulez <span>✦</span> Mercredi → dimanche, 18h–21h <span>✦</span> Petite-Île <span>✦</span>
+  Au feu de bois <span>✦</span> Base tomate ou crème <span>✦</span> C’est comme vous voulez <span>✦</span> Mercredi → dimanche, 18h–21h <span>✦</span> Petite-Île <span>✦</span>
+</div></div>
+
+<section class="feu">
+  <div class="wrap">
+    <figure class="revele">
+      <div class="cadre-four"><img src="img/feu-de-bois.jpg" alt="Bûches qui flambent dans le four à bois de Lylo Pizza" loading="lazy"></div>
+      <figcaption>Le four de Lylo Pizza, photo publiée sur sa page Facebook.</figcaption>
+    </figure>
+    <div class="texte revele">
+      <p class="etiquette">Le cœur de la maison</p>
+      <h2>Un vrai four, un vrai <em>feu de bois</em></h2>
+      <p>Chez Lylo Pizza, tout commence par les bûches. La pâte glisse sur la pierre chaude, juste à côté des flammes, et ressort dorée, le bord bien gonflé, prête à partager.</p>
+      <p>Une pizzeria de quartier à Petite-Île : on appelle, on commande, on vient chercher sa pizza encore toute chaude.</p>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20C180 2 360 2 540 16s360 30 540 18 270-28 360-22v34z" fill="#1c120c"/></svg>
+<section class="voulez" style="padding-top:2.5rem">
+  <div class="wrap">
+    <div class="revele">
+      <p class="etiquette" style="color:var(--flamme)">La devise de la maison</p>
+      <h2>Votre pizza, <em>à votre façon</em></h2>
+      <p class="citation">« C’est comme vous voulez chez Lylo Pizza ! »</p>
+      <p>Base sauce tomate ou crème, avec ou sans poivrons, avec ou sans champignons, avec ou sans fromage : chacun compose la sienne.</p>
+      <p class="source" style="margin-top:.8rem">Publication Facebook de Lylo Pizza, 19 septembre 2026.</p>
+    </div>
+    <div class="atelier revele" id="atelier">
+      <h3>Composez-la ici, pour le plaisir</h3>
+      <div class="ligne">
+        <p>La base</p>
+        <div class="puces" data-groupe="base">
+          <button class="puce" type="button" aria-pressed="true" data-v="sauce tomate">Sauce tomate</button>
+          <button class="puce" type="button" aria-pressed="false" data-v="crème">Crème</button>
+        </div>
+      </div>
+      <div class="ligne">
+        <p>Avec ou sans ?</p>
+        <div class="puces" data-groupe="extras">
+          <button class="puce" type="button" aria-pressed="true" data-v="poivrons">Poivrons</button>
+          <button class="puce" type="button" aria-pressed="true" data-v="champignons">Champignons</button>
+          <button class="puce" type="button" aria-pressed="true" data-v="fromage">Fromage</button>
+        </div>
+      </div>
+      <p class="resume" id="resume" aria-live="polite">Base sauce tomate, avec poivrons, champignons et fromage.</p>
+      <a class="btn btn-feu" href="tel:+262692777938" style="margin-top:.4rem;white-space:nowrap">Commander : 0692 77 79 38</a>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 46V20C180 2 360 2 540 16s360 30 540 18 270-28 360-22v34z" fill="#1c120c"/></svg>
+
+<section class="galerie" style="padding-bottom:3rem">
+  <div class="wrap revele">
+    <p class="etiquette">Tout droit sortis du four</p>
+    <h2>Ça y est, c’est le week-end&nbsp;! <em>Une petite pizza&nbsp;?</em></h2>
+    <p class="astuce">Les mots de Lylo Pizza (24 octobre 2026), les photos de sa page Facebook. Faites glisser →</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie des pizzas de Lylo Pizza">
+    <figure><div class="img"><img src="img/pizza-coloree-au-four.jpg" alt="Pizza garnie et colorée cuisant dans le four à bois" loading="lazy"></div></figure>
+    <figure><div class="img"><img src="img/pizza-champignons-poivrons.jpg" alt="Pizza aux champignons, poivrons, tomates et olives noires" loading="lazy"></div></figure>
+    <figure><div class="img"><img src="img/pizza-four-flammes.jpg" alt="Pizza dorée sur la pierre, à côté des flammes" loading="lazy" style="object-position:30% 60%"></div></figure>
+    <figure><div class="img"><img src="img/pizza-basilic-olives.jpg" alt="Pizza au basilic frais et olives noires" loading="lazy"></div></figure>
+    <figure><div class="img"><img src="img/pizza-enfournee.jpg" alt="Pizza aux olives en cuisson dans le four" loading="lazy" style="object-position:40% 50%"></div></figure>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="revele">
+      <p class="etiquette">Passez commande</p>
+      <h2>Le soir, <em>on allume le four</em></h2>
+    </div>
+    <div class="cartes">
+      <div class="carte revele">
+        <h3>Horaires</h3>
+        <p class="gros">Du mercredi au dimanche</p>
+        <p>de 18h à 21h</p>
+      </div>
+      <div class="carte revele">
+        <h3>Commandes</h3>
+        <p>Par téléphone :</p>
+        <a class="tel" href="tel:+262692777938">0692 77 79 38</a>
+      </div>
+      <div class="carte revele">
+        <h3>Adresse</h3>
+        <p>4 rue du Gymnase<br>97429 Petite-Île<br>face au collège Suacot</p>
+        <p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&query=4+rue+du+Gymnase+97429+Petite-%C3%8Ele" target="_blank" rel="noopener">Voir sur la carte →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="nom">Lylo Pizza</p>
+    <p>Pizzeria au feu de bois · 4 rue du Gymnase, Petite-Île · <a href="tel:+262692777938">0692 77 79 38</a></p>
+    <p style="margin-top:.4rem"><a href="https://www.facebook.com/profile.php?id=100094355296698" target="_blank" rel="noopener">Suivre Lylo Pizza sur Facebook</a></p>
+    <p class="prive">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Lylo Pizza.</p>
+  </div>
+</footer>
+
+<script>
+document.body.classList.remove('no-js');
+(function(){
+  var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // apparitions au scroll
+  var els=document.querySelectorAll('.revele');
+  if(reduit||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')})}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:0,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})}
+
+  // composeur
+  var res=document.getElementById('resume');
+  function maj(){
+    var b=document.querySelector('[data-groupe=base] [aria-pressed=true]').dataset.v;
+    var avec=[],sans=[];
+    document.querySelectorAll('[data-groupe=extras] .puce').forEach(function(p){(p.getAttribute('aria-pressed')==='true'?avec:sans).push(p.dataset.v)});
+    function liste(a){return a.length>1?a.slice(0,-1).join(', ')+' et '+a[a.length-1]:a[0]}
+    var t='Base '+b;
+    if(avec.length)t+=', avec '+liste(avec);
+    if(sans.length)t+=(avec.length?', ':', ')+'sans '+liste(sans);
+    res.textContent=t+'. Comme vous voulez !';
+  }
+  document.querySelectorAll('.puce').forEach(function(p){p.addEventListener('click',function(){
+    var g=p.parentNode.dataset.groupe;
+    if(g==='base'){p.parentNode.querySelectorAll('.puce').forEach(function(q){q.setAttribute('aria-pressed','false')});p.setAttribute('aria-pressed','true')}
+    else p.setAttribute('aria-pressed',p.getAttribute('aria-pressed')==='true'?'false':'true');
+    maj();
+  })});
+
+  // braises qui montent
+  var c=document.getElementById('braises');if(!c||reduit)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],N=32,on=true;
+  function taille(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function neuf(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+10;p.r=.8+Math.random()*2.2;p.v=.25+Math.random()*.7;p.o=.25+Math.random()*.5;p.d=Math.random()*6.28;return p}
+  taille();for(var i=0;i<N;i++)P.push(neuf({},true));
+  addEventListener('resize',taille);
+  document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(f)});
+  function f(){
+    if(!on)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<N;i++){var p=P[i];p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.35;
+      var a=p.o*Math.min(1,p.y/(H*.5));if(p.y<-10)neuf(p,false);
+      x.beginPath();x.fillStyle='rgba(255,'+(140+(i%5)*18)+',60,'+Math.max(0,a)+')';x.shadowColor='rgba(255,120,40,.8)';x.shadowBlur=6;x.arc(p.x,p.y,p.r,0,6.283);x.fill()}
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Lylo Pizza" defer></script>
+</body>
+</html>

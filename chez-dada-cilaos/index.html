@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Dada · Cuisine créole et chinoise au cœur du cirque de Cilaos</title>
+<meta name="description" content="Chez Dada, cuisine créole et chinoise au cœur du cirque de Cilaos : repas à emporter, grillades du dimanche, fritures et traiteur fait maison.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chez Dada · Cuisine créole et chinoise à Cilaos">
+<meta property="og:description" content="Repas à emporter, grillades et fait maison au cœur du cirque de Cilaos. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-dada-cilaos/img/brochette-cirque-cilaos.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-dada-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kalam:wght@400;700&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#141011; --noir2:#211a19; --rouge:#c8262b; --rouge2:#e2483d;
+  --or:#e8b54a; --or2:#f6d488; --creme:#fff4e2; --bleu:#2b6cb0; --texte:#2a2220;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--texte);background:var(--creme);overflow-x:hidden;line-height:1.55}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--noir);color:var(--or2);font-size:.82rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:#fff}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/brochette-cirque-cilaos.jpg) center 35%/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,17,.15) 0%,rgba(20,16,17,.25) 40%,rgba(20,16,17,.92) 85%)}
+#braises{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero-txt{position:relative;z-index:2;padding:2rem 1.4rem 3.2rem;max-width:760px}
+.badge{display:inline-block;background:var(--rouge);color:#fff;font-weight:800;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .8rem;border-radius:99px;margin-bottom:1rem}
+.hero h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(3.6rem,17vw,7.5rem);line-height:.92;letter-spacing:.01em;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+.hero h1 span{color:var(--or)}
+.hero .tag{font-size:1.15rem;margin-top:.9rem;font-weight:600;max-width:30ch}
+.hero .sous{font-family:Kalam,cursive;color:var(--or2);font-size:1.25rem;margin-top:.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.3rem;border-radius:99px;font-weight:800;text-decoration:none;font-size:1rem}
+.btn-or{background:var(--or);color:var(--noir);animation:respire 3.2s ease-in-out infinite}
+.btn-ghost{border:2px solid rgba(255,255,255,.7);color:#fff}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(232,181,74,.55)}50%{box-shadow:0 0 0 12px rgba(232,181,74,0)}}
+.hero-in>*{opacity:0;transform:translateY(18px);animation:monte .9s ease forwards}
+.hero-in>*:nth-child(2){animation-delay:.15s}.hero-in>*:nth-child(3){animation-delay:.3s}.hero-in>*:nth-child(4){animation-delay:.45s}.hero-in>*:nth-child(5){animation-delay:.6s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* BANDEAU */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Anton,Impact,sans-serif;font-size:1.25rem;letter-spacing:.04em}
+.bandeau .piste{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 1rem}
+.bandeau i{color:var(--or2);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.2rem 1.4rem}
+.wrap{max-width:1040px;margin:0 auto}
+.kicker{font-family:Kalam,cursive;color:var(--rouge);font-size:1.25rem}
+h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(2.2rem,9vw,3.6rem);line-height:1.06;color:var(--noir);margin:.2rem 0 1rem;letter-spacing:.01em}
+p.lead{font-size:1.08rem;max-width:62ch}
+
+/* NOUVEAU DEPART */
+.depart{background:var(--noir);color:var(--creme);position:relative}
+.depart h2{color:#fff}
+.depart .kicker{color:var(--or)}
+.annonce{margin-top:1.6rem;border-left:4px solid var(--or);padding:1rem 1.2rem;background:var(--noir2);border-radius:0 14px 14px 0}
+.annonce q{display:block;font-size:1.05rem;quotes:"« " " »"}
+.annonce small{display:block;margin-top:.6rem;color:var(--or2);font-size:.85rem}
+.cri{font-family:Anton,Impact,sans-serif;font-size:clamp(1.5rem,6.5vw,2.4rem);color:var(--or);margin-top:1.6rem;line-height:1.1}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:2rem}
+.chiffre{background:var(--noir2);border:1px solid #3a2e2b;border-radius:16px;padding:1rem .6rem;text-align:center}
+.chiffre b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:1.9rem;color:var(--or)}
+.chiffre span{font-size:.82rem;color:#e9dccb}
+
+/* VAGUE */
+.vague{display:block;width:100%;height:46px;margin:-1px 0;position:relative;z-index:1}
+
+/* GRILLADES */
+.grill{background:var(--creme)}
+.grill-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.carte{position:relative;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(60,30,20,.12);transition:transform .35s ease,box-shadow .35s ease}
+.carte:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(60,30,20,.2)}
+.carte img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s ease}
+.carte:hover img{transform:scale(1.05)}
+.carte .leg{padding:.85rem 1rem 1rem}
+.carte .leg b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:1.35rem;color:var(--noir);letter-spacing:.02em}
+.carte .leg p{font-size:.92rem;color:#5a4c47;margin-top:.15rem}
+.liste-grill{list-style:none;margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:.55rem}
+.liste-grill li{background:var(--noir);color:var(--or2);padding:.5rem .95rem;border-radius:99px;font-weight:700;font-size:.92rem}
+
+/* ARDOISE */
+.ardoise{background:linear-gradient(180deg,var(--creme),#f6e6cc)}
+.ard-flex{display:grid;gap:1.6rem;align-items:center}
+.ard-photo{border-radius:20px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.2);transform:rotate(-1.5deg)}
+.ard-photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.craie{background:#1d2220;color:#f3efe6;border-radius:18px;padding:1.4rem 1.3rem;font-family:Kalam,cursive;font-size:1.15rem;box-shadow:inset 0 0 0 8px #4a3727,0 10px 30px rgba(0,0,0,.18)}
+.craie h3{font-family:Kalam,cursive;font-size:1.6rem;color:var(--or2);font-weight:700;margin-bottom:.4rem}
+.craie ul{list-style:none;margin-bottom:.8rem}
+.craie li::before{content:"✱ ";color:var(--or)}
+
+/* CREOLE CHINOIS */
+.cuisine{background:var(--noir);color:var(--creme)}
+.cuisine h2{color:#fff}.cuisine .kicker{color:var(--or)}
+.mosa{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.6rem}
+.mosa figure{position:relative;border-radius:16px;overflow:hidden}
+.mosa img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .8s ease}
+.mosa figure:hover img{transform:scale(1.06)}
+.mosa figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .7rem .6rem;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;font-weight:700;font-size:.88rem}
+.mosa .large{grid-column:span 2}
+.mosa .large img{aspect-ratio:16/10}
+.plats{margin-top:1.8rem;columns:2;column-gap:1.2rem;font-size:.98rem}
+.plats li{list-style:none;break-inside:avoid;padding:.35rem 0;border-bottom:1px dashed #4a3b36}
+.plats li::before{content:"";display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--rouge2);margin-right:.5rem;vertical-align:middle}
+
+/* TRAITEUR */
+.traiteur{background:var(--creme)}
+.galerie{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem .2rem 1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 72%;max-width:320px;scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(60,30,20,.12)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie figcaption{padding:.7rem .9rem;font-weight:700;font-size:.92rem}
+.glisse{font-size:.85rem;color:#8a7368}
+.citation{margin-top:1.4rem;background:#fff;border-radius:16px;padding:1.1rem 1.2rem;box-shadow:0 6px 20px rgba(60,30,20,.08);border-top:4px solid var(--rouge)}
+.citation q{font-weight:600;quotes:"« " " »"}
+.citation small{display:block;margin-top:.4rem;color:#8a7368}
+
+/* SLOGAN */
+.slogan{background:var(--rouge);color:#fff;text-align:center;padding:3.2rem 1.4rem}
+.slogan p{font-family:Anton,Impact,sans-serif;font-size:clamp(1.8rem,8vw,3rem);line-height:1.05;letter-spacing:.01em}
+.slogan small{display:block;margin-top:.8rem;font-family:Kalam,cursive;font-size:1.1rem;color:var(--or2)}
+
+/* CONTACT */
+.contact{background:var(--noir);color:var(--creme)}
+.contact h2{color:#fff}.contact .kicker{color:var(--or)}
+.c-grid{display:grid;gap:.9rem;margin-top:1.4rem}
+.c-item{display:flex;gap:.9rem;align-items:center;background:var(--noir2);border:1px solid #3a2e2b;border-radius:16px;padding:1rem 1.1rem;text-decoration:none;transition:border-color .3s,transform .3s}
+.c-item:hover{border-color:var(--or);transform:translateX(3px)}
+.c-ico{flex:0 0 44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--rouge);color:#fff;font-size:1.2rem}
+.c-item b{display:block;color:#fff}
+.c-item span{font-size:.9rem;color:#d8c9b6}
+.astuce{margin-top:1.4rem;font-family:Kalam,cursive;font-size:1.2rem;color:var(--or2)}
+footer{background:#0c0909;color:#a8988c;text-align:center;font-size:.82rem;padding:1.6rem 1.2rem 2rem}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .grill-grid{grid-template-columns:repeat(3,1fr)}
+  .ard-flex{grid-template-columns:1fr 1fr}
+  .mosa{grid-template-columns:repeat(3,1fr)}
+  .mosa .large{grid-column:span 3}
+  .plats{columns:3}
+  .c-grid{grid-template-columns:repeat(2,1fr)}
+  .galerie figure{flex-basis:30%}
+  section{padding:5.5rem 2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero-in>*{opacity:1;transform:none}
+  #braises{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Dada</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Brochette grillée devant les remparts du cirque de Cilaos"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="hero-txt hero-in">
+    <span class="badge">Cilaos · Réunion</span>
+    <h1>Chez <span>Dada</span></h1>
+    <p class="tag">Cuisine créole et chinoise au cœur du cirque de Cilaos</p>
+    <p class="sous">Repas à emporter 🍛 · Grillades 🍗 · Fait maison</p>
+    <div class="btns">
+      <a class="btn btn-or" href="https://wa.me/262692279751">Commander sur WhatsApp</a>
+      <a class="btn btn-ghost" href="#grillades">Voir les grillades</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Cabris massalé</span><i>✦</i><span>Civet zourite</span><i>✦</i><span>Poulet 3 merveilles</span><i>✦</i><span>Poitrine de porc à la chinoise</span><i>✦</i><span>Rougail 3 cousins</span><i>✦</i><span>Nems camembert brède</span><i>✦</i><span>Piment farci</span><i>✦</i><span>Samoussas</span><i>✦</i><span>Sarcive porc</span><i>✦</i><span>Capitaine grillé</span><i>✦</i>
+  <span>Cabris massalé</span><i>✦</i><span>Civet zourite</span><i>✦</i><span>Poulet 3 merveilles</span><i>✦</i><span>Poitrine de porc à la chinoise</span><i>✦</i><span>Rougail 3 cousins</span><i>✦</i><span>Nems camembert brède</span><i>✦</i><span>Piment farci</span><i>✦</i><span>Samoussas</span><i>✦</i><span>Sarcive porc</span><i>✦</i><span>Capitaine grillé</span><i>✦</i>
+</div></div>
+
+<section class="depart">
+  <div class="wrap">
+    <p class="kicker rv">La suite de l'aventure</p>
+    <h2 class="rv">Un nouveau départ à Cilaos</h2>
+    <p class="lead rv">Après une première année de gourmandise, de partage et de belles rencontres, Chez Dada prépare son installation dans un nouveau local à Cilaos, pour s'y installer durablement. Au programme : vos plats préférés, les spécialités créoles et chinoises, les grillades du week-end… et des sandwiches la semaine.</p>
+    <div class="annonce rv">
+      <q>Merci à toutes les personnes qui continuent de nous soutenir, qui prennent de nos nouvelles et qui réclament notre retour. Votre fidélité et vos encouragements nous donnent la force de continuer cette belle aventure !</q>
+      <small>Publication de Chez Dada, 17 octobre 2026</small>
+    </div>
+    <p class="cri rv">« Chez Dada, c'est pas fini… c'est un nouveau départ ! »</p>
+    <div class="chiffres rv">
+      <div class="chiffre"><b>1 an</b><span>fêté le 12&nbsp;sept. 2026</span></div>
+      <div class="chiffre"><b>1 K</b><span>abonnés sur Facebook</span></div>
+      <div class="chiffre"><b>2</b><span>cuisines : créole &amp; chinoise</span></div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true" style="background:var(--noir)"><path d="M0,20 C240,46 480,0 720,18 C960,36 1200,6 1440,22 L1440,46 L0,46 Z" fill="#fff4e2"/></svg>
+
+<section class="grill" id="grillades">
+  <div class="wrap">
+    <p class="kicker rv">Dimanche = grillade Chez Dada !</p>
+    <h2 class="rv">Le feu, la fumée, le goût</h2>
+    <p class="lead rv">Au charbon, en plein air, avec les remparts de Cilaos pour décor : brochettes dorées, poulet grillé et poisson entier pour les repas à emporter du week-end.</p>
+    <div class="grill-grid">
+      <article class="carte rv"><img src="img/brochettes-poulet-braise.jpg" alt="Brochettes de poulet dorées sur la grille" loading="lazy"><div class="leg"><b>Brochette poulet</b><p>Marinée, dorée sur la braise.</p></div></article>
+      <article class="carte rv"><img src="img/poulet-grille.jpg" alt="Poulet grillé caramélisé" loading="lazy"><div class="leg"><b>Poulet grillé</b><p>La peau qui croustille, le cœur tendre.</p></div></article>
+      <article class="carte rv"><img src="img/capitaine-grille.jpg" alt="Poissons entiers sur la grille" loading="lazy"><div class="leg"><b>Poisson entier grillé</b><p>Le capitaine, tout simplement grillé.</p></div></article>
+    </div>
+    <ul class="liste-grill rv">
+      <li>Poulet grillé</li><li>Brochette poulet</li><li>Sarcive porc</li><li>Poitrine de porc à la chinoise</li><li>Capitaine grillé</li><li>Divers fritures</li><li>Sauces maison</li>
+    </ul>
+  </div>
+</section>
+
+<section class="ardoise">
+  <div class="wrap ard-flex">
+    <div class="ard-photo rv"><img src="img/ardoise-menu-du-jour.jpg" alt="L'ardoise Chez Dada posée dans une rue de Cilaos, face aux remparts" loading="lazy"></div>
+    <div>
+      <p class="kicker rv">Le menu du jour</p>
+      <h2 class="rv">Écrit à la craie, face aux remparts</h2>
+      <p class="lead rv" style="margin-bottom:1.2rem">Chaque semaine, un nouveau menu créole et chinois. Voici celui de l'ardoise, telle qu'elle a été publiée sur la page :</p>
+      <div class="craie rv">
+        <h3>Menu du jour</h3>
+        <ul><li>Cabris massalé</li><li>Civet zourite</li><li>Poulet 3 merveilles</li></ul>
+        <h3>Nos grillades</h3>
+        <ul><li>Poulet grillé</li><li>Brochette</li><li>Poitrine de porc à la chinoise</li></ul>
+        <ul><li>Salade choux-carotte / piémontaise</li><li>Samoussa · Croquette poulet</li><li>Nem's camembert brède · Piment farci</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true" style="background:#f6e6cc"><path d="M0,26 C300,0 520,46 780,22 C1040,0 1240,36 1440,16 L1440,46 L0,46 Z" fill="#141011"/></svg>
+
+<section class="cuisine">
+  <div class="wrap">
+    <p class="kicker rv">Créole &amp; chinois</p>
+    <h2 class="rv">Deux cuisines, une même marmite de cœur</h2>
+    <p class="lead rv">Le wok à côté du cari, les légumes croquants à côté des civets : la carte change au fil des dimanches, toujours avec riz, grains et rougail.</p>
+    <div class="mosa">
+      <figure class="large rv"><img src="img/saute-legumes-croquants.jpg" alt="Sauté aux légumes croquants" loading="lazy"><figcaption>Sauté aux légumes croquants</figcaption></figure>
+      <figure class="rv"><img src="img/saute-a-la-chinoise.jpg" alt="Sauté nappé de sauce et julienne de légumes" loading="lazy"><figcaption>Sauté à la chinoise</figcaption></figure>
+      <figure class="rv"><img src="img/saute-boeuf-oignons-verts.jpg" alt="Sauté de viande aux oignons verts" loading="lazy"><figcaption>Sauté aux oignons verts</figcaption></figure>
+      <figure class="large rv"><img style="object-position:center 62%" src="img/barquette-a-emporter.jpg" alt="Barquette de repas à emporter tenue à la main devant la verdure" loading="lazy"><figcaption>La barquette à emporter</figcaption></figure>
+    </div>
+    <ul class="plats rv">
+      <li>Rougail 3 cousins (andouille, boucané &amp; saucisse fumée)</li>
+      <li>Sauté bœuf gros piment</li>
+      <li>Massalé la corée bringelle</li>
+      <li>Ragoût pied porc</li>
+      <li>Poulet croustillant spicy ou nature</li>
+      <li>Sauté poulet</li>
+      <li>Cabris massalé</li>
+      <li>Civet zourite</li>
+      <li>Poulet 3 merveilles</li>
+    </ul>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true" style="background:var(--noir)"><path d="M0,18 C260,40 520,4 760,22 C1000,40 1220,8 1440,24 L1440,46 L0,46 Z" fill="#fff4e2"/></svg>
+
+<section class="traiteur">
+  <div class="wrap">
+    <p class="kicker rv">Pour vos événements</p>
+    <h2 class="rv">Petites bouchées, grands moments</h2>
+    <p class="lead rv">Babyshower, fêtes, réceptions : Chez Dada régale aussi vos événements avec des bouchées faites maison.</p>
+    <div class="galerie rv" tabindex="0" aria-label="Galerie des créations traiteur">
+      <figure><img src="img/mini-burgers-traiteur.jpg" alt="Plateau de mini burgers et bouchées" loading="lazy"><figcaption>Mini burgers</figcaption></figure>
+      <figure><img src="img/samoussas-maison.jpg" alt="Samoussas dorés" loading="lazy"><figcaption>Samoussas</figcaption></figure>
+      <figure><img src="img/mini-pizzas.jpg" alt="Mini pizzas aux olives" loading="lazy"><figcaption>Mini pizzas</figcaption></figure>
+      <figure><img src="img/nems-camembert-brede.jpg" alt="Nems sur une étiquette Camembert brède" loading="lazy"><figcaption>Nems camembert brède</figcaption></figure>
+      <figure><img src="img/piments-farcis.jpg" alt="Piments farcis en beignet" loading="lazy"><figcaption>Piments farcis</figcaption></figure>
+      <figure><img src="img/grill-brochettes.jpg" alt="Rangée de brochettes sur le grill" loading="lazy"><figcaption>Brochettes au grill</figcaption></figure>
+    </div>
+    <p class="glisse">← Faites glisser pour voir la suite →</p>
+    <div class="citation rv">
+      <q>Petite livraison du jour : samoussas, bouchons, navettes, mini pizzas, mini burgers. C'est toujours un plaisir de régaler vos événements !</q>
+      <small>Publication de Chez Dada, 27 septembre 2026</small>
+    </div>
+  </div>
+</section>
+
+<div class="slogan">
+  <p class="rv">Du fait maison, du goût<br>et du cœur !</p>
+  <small class="rv">— la devise de Chez Dada</small>
+</div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker rv">On vous attend nombreux !</p>
+    <h2 class="rv">Commander chez Dada</h2>
+    <p class="lead rv">Pensez à commander à l'avance pour être sûr de vous régaler. La nouvelle adresse à Cilaos sera dévoilée très bientôt sur la page.</p>
+    <div class="c-grid">
+      <a class="c-item rv" href="tel:+262692279751"><span class="c-ico">☎</span><div><b>0692 27 97 51</b><span>Appeler pour commander</span></div></a>
+      <a class="c-item rv" href="https://wa.me/262692279751"><span class="c-ico">✆</span><div><b>WhatsApp</b><span>Envoyer votre commande</span></div></a>
+      <a class="c-item rv" href="https://www.facebook.com/profile.php?id=61579552084018"><span class="c-ico">f</span><div><b>Facebook · CHEZ DADA</b><span>Menus du dimanche et nouvelles</span></div></a>
+      <a class="c-item rv" href="https://www.instagram.com/chezdada1/"><span class="c-ico">◎</span><div><b>Instagram · @chezdada1</b><span>Les coulisses du grill</span></div></a>
+    </div>
+    <p class="astuce rv">Au cœur du cirque de Cilaos, île de la Réunion</p>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chez Dada.</footer>
+
+<script>
+(function(){
+  var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=document.querySelectorAll('.rv');
+  if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+  else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});els.forEach(function(e){io.observe(e)});}
+  if(rm)return;
+  var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],on=true,dpr=Math.min(window.devicePixelRatio||1,2);
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*1.8+.6,v:Math.random()*.6+.25,d:Math.random()*Math.PI*2,a:Math.random()*.5+.3,smoke:Math.random()<.25}}
+  size();for(var i=0;i<32;i++)P.push(mk(true));
+  window.addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(step)});
+  function step(){
+    if(!on)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.35;
+      var life=Math.max(0,Math.min(1,p.y/H));
+      if(p.smoke){x.fillStyle='rgba(255,240,225,'+(.05*life)+')';x.beginPath();x.arc(p.x,p.y,p.r*10,0,7);x.fill();}
+      else{x.fillStyle='rgba(255,'+(140+Math.floor(80*life))+',60,'+(p.a*life)+')';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+      if(p.y<-20)P[i]=mk(false);}
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Dada" defer></script>
+</body>
+</html>
