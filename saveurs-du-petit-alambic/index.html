@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Saveurs du petit alambic · Le Tampon</title>
+<meta name="description" content="Produits issus du géranium, transformés à l’exploitation, et fraises fraîchement cueillies au Tampon.">
+<meta property="og:title" content="Saveurs du petit alambic · Le Tampon">
+<meta property="og:description" content="Produits issus du géranium, transformés à l’exploitation, et fraises fraîchement cueillies au Tampon. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/saveurs-du-petit-alambic/img/pots.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/saveurs-du-petit-alambic/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--fh:'Cormorant Garamond';--fb:Karla;--bg:#fbf6f4;--bg2:#f1ece2;--ink:#2b2622;--dark:#33402f;--veil:rgba(36,44,33,.92);--acc:#b8456b;--acc2:#f2b8c9;--onacc:#fff;--muted:#6a625b;--r:6px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--fb),system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--fh),Georgia,serif;line-height:1.08;text-wrap:balance}p{text-wrap:pretty}
+img{display:block;max-width:100%}
+.ruban{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ink);color:var(--acc2);font-size:.78rem;letter-spacing:.05em;text-align:center;padding:.45rem 1rem}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:var(--dark);color:#fff}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;transform:scale(1.07);animation:zoom 16s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 25%,var(--veil) 90%)}
+.fx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero .in{position:relative;z-index:2;padding:7rem 1.4rem 3.2rem;max-width:1100px;margin:0 auto;width:100%}
+.kicker{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2);font-weight:600}
+.hero h1{font-size:clamp(2.6rem,8vw,5.4rem);margin:.5rem 0 1rem}
+.hero p{max-width:34rem;font-size:1.12rem;opacity:.93}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.btn-a{background:var(--acc);color:var(--onacc)}.btn-b{border:1.5px solid currentColor;color:inherit}
+section{padding:4.6rem 1.4rem}.wrap{max-width:1100px;margin:0 auto}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin:.4rem 0 1.1rem}
+.lead{font-size:1.1rem;max-width:40rem;color:var(--muted)}
+.split{display:grid;gap:2.4rem;align-items:center}@media(min-width:820px){.split{grid-template-columns:1.05fr .95fr}}
+.split img{border-radius:var(--r);width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 18px 40px rgba(0,0,0,.14)}
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2rem}@media(min-width:820px){.gal{grid-template-columns:repeat(4,1fr)}}
+.gal figure{position:relative;overflow:hidden;border-radius:var(--r)}.gal figure:first-child{grid-column:span 2;grid-row:span 2}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform .6s}.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem;padding:.25rem .6rem;border-radius:999px}
+.items{display:grid;gap:1rem;margin-top:2rem}@media(min-width:720px){.items{grid-template-columns:repeat(var(--n,3),1fr)}}
+.item{padding:1.5rem 1.4rem;border-top:2px solid var(--acc)}.item h3{font-size:1.35rem;margin-bottom:.4rem}.item p{color:var(--muted)}
+.dark{background:var(--dark);color:#fff}.dark .lead{color:rgba(255,255,255,.78)}
+.contact{text-align:center}.contact .big{font-family:var(--fh);font-size:clamp(2rem,7vw,3.6rem);color:var(--acc2);text-decoration:none;display:inline-block;margin:.6rem 0}
+.contact .lead{margin:0 auto}.contact .btns{justify-content:center}
+footer{padding:2.2rem 1.4rem 3rem;background:var(--ink);color:rgba(255,255,255,.6);font-size:.85rem;text-align:center}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero>img{animation:none}.fx{display:none}}
+
+.hero h1{font-weight:700;font-style:italic}.fx b{position:absolute;top:-30px;width:14px;height:10px;border-radius:70% 0 70% 0;background:var(--acc2);opacity:.75;animation:tombe linear infinite}@keyframes tombe{to{transform:translate(var(--dx),110vh) rotate(540deg)}}.fx s{position:absolute;bottom:-120px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);filter:blur(14px);animation:vap linear infinite;text-decoration:none}@keyframes vap{to{transform:translate(var(--dx),-110vh) scale(1.6);opacity:0}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, créée avec plaisir pour Saveurs du petit alambic</div>
+<header class="hero">
+  <img src="img/fleurs.webp" alt="Fleurs dans les cultures de l’exploitation">
+  <div class="fx" aria-hidden="true"></div>
+  <div class="in">
+    <span class="kicker">Producteurs · Le Tampon</span>
+    <h1>Saveurs du petit alambic</h1>
+    <p>Le géranium des hauts, distillé et transformé chez nous, de la plante au flacon. Et à la belle saison, des fraises fraîchement cueillies.</p>
+    <div class="btns"><a class="btn btn-a" href="tel:+262692280436">Appeler le 0692 28 04 36</a><a class="btn btn-b" href="#produits">Découvrir nos produits</a></div>
+  </div>
+</header>
+<section>
+  <div class="wrap split">
+    <div class="reveal"><span class="kicker" style="color:var(--acc)">De la plante au flacon</span><h2>Tout se fait à l’exploitation</h2><p class='lead'>Nous produisons des produits issus du géranium. Tout le procédé de transformation se fait ici, à l’exploitation du chemin du Grand Tampon : la cueillette, la distillation au petit alambic, puis les gelées, sirops et confitures qui portent son parfum.</p></div>
+    <img class="reveal" src="img/pots.webp" alt="Pots de confiture de l’exploitation" loading="lazy">
+  </div>
+</section>
+<section id="produits" style="background:var(--bg2)">
+  <div class="wrap"><span class="kicker" style="color:var(--acc)">Nos produits</span><h2 class="reveal">Le parfum du géranium rosat</h2>
+  <div class="items" style="--n:3"><div class="item reveal"><h3>Géranium</h3><p>Les produits issus de notre géranium, transformés à l’exploitation.</p></div><div class="item reveal"><h3>Confitures & sirops</h3><p>Confiture de fraise au géranium rosat, sirop de géranium : nos douceurs maison.</p></div><div class="item reveal"><h3>Fraises de saison</h3><p>Fraîchement cueillies, en barquettes, à retrouver lors de nos ventes du samedi matin.</p></div></div></div>
+</section>
+<section>
+  <div class="wrap"><span class="kicker" style="color:var(--acc)">En direct de l’exploitation</span><h2 class="reveal">Cueilli, transformé, partagé</h2>
+  <div class="gal reveal"><figure><img src="img/etal.webp" alt="Fraises fraîchement cueillies" loading="lazy"><figcaption>Fraises fraîchement cueillies</figcaption></figure><figure><img src="img/barquettes.webp" alt="Barquettes de fraises" loading="lazy"><figcaption>Barquettes de fraises</figcaption></figure><figure><img src="img/stand.webp" alt="Notre étal" loading="lazy"><figcaption>Notre étal</figcaption></figure><figure><img src="img/pots.webp" alt="Confitures maison" loading="lazy"><figcaption>Confitures maison</figcaption></figure><figure><img src="img/fleurs.webp" alt="Dans les cultures" loading="lazy"><figcaption>Dans les cultures</figcaption></figure></div></div>
+</section>
+<section class="dark contact">
+  <div class="wrap reveal">
+    <span class="kicker">Une commande, une question ?</span><br>
+    <a class="big" href="tel:+262692280436">0692 28 04 36</a>
+    <p class="lead">245 chemin du Grand Tampon · 97430 Le Tampon<br>Ventes annoncées chaque semaine sur notre page Facebook</p>
+    <div class="btns"><a class="btn btn-b" href="https://www.facebook.com/profile.php?id=100054258170105" target="_blank" rel="noopener">Suivre la page Facebook</a></div>
+  </div>
+</section>
+<footer>Saveurs du petit alambic · Le Tampon<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Saveurs du petit alambic, visible seulement par vous.</footer>
+<script>
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if(!rm){const f=document.querySelector('.fx');for(let i=0;i<14;i++){const e=document.createElement('b');e.style.left=Math.random()*100+'%';e.style.setProperty('--dx',(Math.random()*160-80)+'px');e.style.animationDuration=(10+Math.random()*10)+'s';e.style.animationDelay=(-Math.random()*18)+'s';f.appendChild(e)}for(let i=0;i<5;i++){const e=document.createElement('s');e.style.left=Math.random()*90+'%';e.style.setProperty('--dx',(Math.random()*100-50)+'px');e.style.animationDuration=(12+Math.random()*8)+'s';e.style.animationDelay=(-Math.random()*16)+'s';f.appendChild(e)}}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+</script>
+</body>
+</html>
