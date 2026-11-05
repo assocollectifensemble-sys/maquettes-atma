@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Palm Restaurant · Buffet, brasero et soirées à Sainte-Marie</title>
+<meta name="description" content="Buffets, viandes grillées au brasero et soirées karaoké &amp; dansantes : le Palm Restaurant, rue de la Pépinière à Sainte-Marie.">
+<meta property="og:title" content="Palm Restaurant · Buffet, brasero et soirées à Sainte-Marie"><meta property="og:description" content="Buffets, viandes grillées au brasero et soirées karaoké &amp; dansantes : le Palm Restaurant, rue de la Pépinière à Sainte-Marie. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/palm-restaurant/img/hero.webp"><meta property="og:url" content="https://maquettes.atma-digital.re/palm-restaurant/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#17110f;--bg2:#0d0908;--acc:#e0b95c;--acc2:#b3202a;--paper:#faf4ea;--ink:#1d1714;--muted:#5d534b;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.1;text-wrap:balance}p{text-wrap:pretty}img{display:block;max-width:100%}
+.ruban{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--bg2);color:#eee;font-size:.78rem;text-align:center;padding:.45rem 1rem}.ruban b{color:var(--acc)}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:var(--bg);color:#fff}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;opacity:.78;transform:scale(1.1);animation:kb 18s ease-out forwards}
+@keyframes kb{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3) 0%,rgba(0,0,0,.1) 35%,var(--bg) 96%)}
+canvas#fx{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:2;text-shadow:0 2px 14px rgba(0,0,0,.6);padding:6rem 1.4rem 3rem;max-width:62rem;margin:0 auto;width:100%}
+.kicker{font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.hero h1{font-size:clamp(2.5rem,10vw,5rem);margin:.4rem 0 .8rem;animation:up 1.2s .2s both}.hero h1 span{color:var(--acc)}
+.hero p.lead{font-size:1.1rem;max-width:34rem;opacity:.94;animation:up 1.2s .5s both}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem;animation:up 1.2s .8s both}.tags span{border:1px solid var(--acc);color:#fff;border-radius:99px;padding:.3rem .8rem;font-size:.85rem}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.75rem 1.4rem;border-radius:99px;font-weight:600;text-decoration:none;transition:transform .25s}.btn:hover{transform:translateY(-2px)}
+.btn-a{background:var(--acc);color:var(--bg2);animation:breathe 3.2s ease-in-out infinite}.btn-b{border:1.5px solid currentColor;color:inherit}
+@keyframes breathe{50%{box-shadow:0 0 0 9px rgba(255,255,255,.14)}}
+.band{background:var(--acc2);color:#fff;overflow:hidden;white-space:nowrap;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;padding:.75rem 0}
+.band div{display:inline-block;animation:defile 30s linear infinite}@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:4.5rem 1.4rem}.wrap{max-width:62rem;margin:0 auto}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);color:var(--bg);margin-bottom:1rem}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acc2);margin-bottom:.5rem;font-weight:600}
+.dark{background:var(--bg);color:#fff}.dark h2{color:#fff}.dark .eyebrow{color:var(--acc)}
+.affiches{display:grid;grid-auto-flow:column;grid-auto-columns:74%;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.8rem;-webkit-overflow-scrolling:touch}
+@media(min-width:760px){.affiches{grid-auto-columns:30%}}
+.affiches figure{scroll-snap-align:start;border-radius:var(--r);overflow:hidden;background:#fff;color:var(--ink)}
+.affiches img{width:100%;aspect-ratio:3/4;object-fit:cover}.affiches figcaption{padding:.7rem 1rem;font-size:.9rem;color:var(--muted)}
+.cards{display:grid;gap:1.1rem}@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 14px 40px -26px rgba(0,0,0,.5);transition:transform .35s}.card:hover{transform:translateY(-4px)}
+.card h3{font-size:1.25rem;color:var(--bg);margin-bottom:.4rem}.card p{color:var(--muted)}
+.infos{display:grid;gap:1rem;margin-top:1rem}.infos div{padding-bottom:1rem;border-bottom:1px solid rgba(128,128,128,.3)}
+.infos dt{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}.infos dd{font-size:1.08rem}
+.contact{background:var(--acc2);color:#fff}.contact h2{color:#fff}.contact .btn-a{background:#fff;color:var(--bg2);animation:none}
+footer{background:var(--bg2);color:#c9c9c9;font-size:.85rem;padding:2rem 1.4rem 6rem;text-align:center}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style></head><body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, créée avec plaisir pour Palm Restaurant</div>
+<header class="hero"><img src="img/hero.webp" alt="La façade rouge du Palm Restaurant, ses palmiers et sa terrasse, à Sainte-Marie"><canvas id="fx" aria-hidden="true"></canvas>
+<div class="in"><p class="kicker">Restaurant buffet · Sainte-Marie</p><h1>Palm <span>Restaurant</span></h1><p class="lead">Un nouveau gérant, un nouveau chef aux fourneaux : buffets, viandes grillées au brasero et soirées qui font chanter et danser Sainte-Marie.</p>
+<div class="tags"><span>Sur place</span><span>À emporter</span><span>Réservation</span></div>
+<div class="btns"><a class="btn btn-a" href="tel:+262692870051">Réserver au 0692 87 00 51</a><a class="btn btn-b" href="#soirees">Voir les soirées</a></div></div></header>
+<div class="band" aria-hidden="true"><div>Buffet à volonté · Brasero au feu de bois · Soirées karaoké · Dîners dansants · Fritures maison · Sauces maison · Buffet à volonté · Brasero au feu de bois · Soirées karaoké · Dîners dansants · Fritures maison · Sauces maison · &nbsp;</div></div>
+<section class="dark" id="soirees"><div class="wrap"><p class="eyebrow reveal">Les soirées du Palm</p><h2 class="reveal">Chanter, danser, partager</h2>
+<div class="affiches reveal"><figure><img src="img/a1.webp" alt="Affiche de la Soirée Fanm au Palm Restaurant, vendredi 13 novembre" loading="lazy"><figcaption>Soirée Fanm, vendredi 13 novembre</figcaption></figure><figure><img src="img/a2.webp" alt="Affiche de la soirée d&#x27;Halloween du Palm Restaurant" loading="lazy"><figcaption>Soirée d&#x27;Halloween</figcaption></figure><figure><img src="img/a3.webp" alt="Affiche de la soirée karaoké du Palm Restaurant" loading="lazy"><figcaption>Soirée karaoké</figcaption></figure><figure><img src="img/a4.webp" alt="Affiche d&#x27;une soirée karaoké au Palm Restaurant" loading="lazy"><figcaption>Chantez, dansez</figcaption></figure><figure><img src="img/a5.webp" alt="Affiche d&#x27;une soirée karaoké avec buffet et tapas" loading="lazy"><figcaption>Karaoké, buffet et tapas</figcaption></figure><figure><img src="img/a6.webp" alt="Affiche d&#x27;une soirée dansante avec buffet à volonté" loading="lazy"><figcaption>Soirée dansante, buffet à volonté</figcaption></figure></div></div></section>
+<section><div class="wrap"><p class="eyebrow reveal">À table</p><h2 class="reveal">Un buffet généreux, du feu de bois aux desserts</h2><div class="cards"><article class="card reveal"><h3>Le brasero</h3><p>Des viandes grillées au feu de bois, avec leurs accompagnements : grains chouchou, pommes de terre, frites.</p></article><article class="card reveal"><h3>Les fritures</h3><p>Poulet croustillant, samoussas, nems, bouchons frits ou vapeur : le plaisir de picorer ensemble.</p></article><article class="card reveal"><h3>Pour finir</h3><p>Glace et gâteau maison, et des sauces maison pour relever le tout : poivre, roquefort, miel.</p></article></div></div></section>
+<section class="dark"><div class="wrap"><p class="eyebrow reveal">Infos pratiques</p><h2 class="reveal">Rendez-vous rue de la Pépinière</h2><dl class="infos"><div class="reveal"><dt>Adresse</dt><dd>Immeuble Altéa, 41 rue de la Pépinière, 97438 Sainte-Marie</dd></div><div class="reveal"><dt>Formules</dt><dd>Sur place avec terrasse, à emporter, sur réservation</dd></div><div class="reveal"><dt>Téléphone</dt><dd>0692 87 00 51</dd></div><div class="reveal"><dt>Programme</dt><dd>Les prochaines soirées s'annoncent sur la page Facebook du Palm</dd></div></dl></div></section>
+<section class="contact"><div class="wrap"><p class="eyebrow reveal" style="color:#fff">Une table pour la soirée ?</p><h2 class="reveal">Réservez, on vous garde une place</h2><p class="reveal">Un coup de fil suffit pour réserver votre table, un buffet ou une soirée entre amis.</p>
+<div class="btns reveal"><a class="btn btn-a" href="tel:+262692870051">0692 87 00 51</a><a class="btn btn-b" href="https://www.facebook.com/p/Palm-Restaurant-61566907736545/">Suivre sur Facebook</a></div></div></section>
+<footer>Palm Restaurant · 41 rue de la Pépinière, Sainte-Marie<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Palm Restaurant, visible seulement par vous.</footer>
+<script>
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches,c=document.getElementById('fx');
+if(!rm&&c){const x=c.getContext('2d');let W,H,Q=[],run=true;const cols=["#e0b95c", "#ffffff", "#e8708a"];const rs=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};rs();addEventListener('resize',rs);
+for(let i=0;i<34;i++)Q.push({x:Math.random(),y:Math.random(),r:1.6+Math.random()*3.2,v:.15+Math.random()*.4,a:Math.random()*6.28,o:.25+Math.random()*.5,c:cols[i%cols.length],dir:-1});
+const f=()=>{if(!run)return;x.clearRect(0,0,W,H);for(const p of Q){p.y+=p.dir*p.v/H*2.2;p.a+=.02;if(p.y<-.05)p.y=1.05;if(p.y>1.05)p.y=-.05;const px=p.x*W+Math.sin(p.a)*16,py=p.y*H;x.globalAlpha=p.o*(.6+.4*Math.sin(p.a*2));x.fillStyle=p.c;x.beginPath();x.arc(px,py,p.r,0,6.28);x.fill()}x.globalAlpha=1;requestAnimationFrame(f)};f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()})}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));setTimeout(()=>document.querySelectorAll('.reveal').forEach(e=>e.classList.add('on')),4000);})();
+</script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Palm Restaurant" defer></script>
+</body></html>
