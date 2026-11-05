@@ -229,5 +229,6 @@ for(let i=0;i<60;i++)ps.push({x:Math.random(),y:Math.random(),r:Math.random()*1.
 (function f(t){x.clearRect(0,0,W,H);ps.forEach(p=>{p.y-=p.v;if(p.y<0)p.y=1;const a=.35+.35*Math.sin(t/700+p.s);
  x.fillStyle='rgba(233,207,122,'+a+')';x.beginPath();x.arc((p.x+Math.sin(t/3000+p.s)*.01)*W,p.y*H,p.r*devicePixelRatio,0,7);x.fill()});requestAnimationFrame(f)})(0);
 </script>
+<script src="/outils/cta.js" data-nom="Maison du Barbier" defer></script>
 </body>
 </html>

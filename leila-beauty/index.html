@@ -148,5 +148,6 @@ for(let i=0;i<36;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:1+Math.random
 (function t(){x.clearRect(0,0,W,H);P.forEach(p=>{p.y+=p.v;p.a+=.05;if(p.y>H+8){p.y=-8;p.x=Math.random()*W}
 const o=.3+Math.sin(p.a)*.3;x.save();x.translate(p.x,p.y);x.rotate(p.a/3);x.fillStyle=`rgba(201,162,74,${o})`;x.fillRect(-p.s/2,-p.s*1.6,p.s,p.s*3.2);x.fillRect(-p.s*1.6,-p.s/2,p.s*3.2,p.s);x.restore()});requestAnimationFrame(t)})();})();
 </script>
+<script src="/outils/cta.js" data-nom="Leila Beauty" defer></script>
 </body>
 </html>

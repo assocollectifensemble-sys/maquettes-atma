@@ -144,5 +144,6 @@ function t(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}t();addEventListe
 for(let i=0;i<70;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.4,v:Math.random()*.00035+.0001,p:Math.random()*6.28});
 (function f(){x.clearRect(0,0,W,H);for(const s of P){s.y-=s.v;s.p+=.02;if(s.y<0){s.y=1;s.x=Math.random()}const a=.35+.35*Math.sin(s.p);x.beginPath();x.arc(s.x*W+Math.sin(s.p)*6,s.y*H,s.r,0,6.28);x.fillStyle=`rgba(240,212,138,${a})`;x.fill()}requestAnimationFrame(f)})();})();
 </script>
+<script src="/outils/cta.js" data-nom="Soin de Soi by Maya" defer></script>
 </body>
 </html>

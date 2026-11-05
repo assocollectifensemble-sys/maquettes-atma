@@ -131,5 +131,6 @@ P.forEach(p=>{p.y-=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.4;if(p.y<-p.r){p.y=H+p.r;p.x
 const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,199,0,'+p.o+')');g.addColorStop(1,'rgba(255,199,0,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()});
 requestAnimationFrame(f)}f()})();
 </script>
+<script src="/outils/cta.js" data-nom="Le Bol Renversé" defer></script>
 </body>
 </html>

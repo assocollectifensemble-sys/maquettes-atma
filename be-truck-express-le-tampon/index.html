@@ -184,5 +184,6 @@ for(let i=0;i<34;i++){const p=n();p.y=Math.random()*H;P.push(p)}
 (function f(){x.clearRect(0,0,W,H);P.forEach((p,i)=>{p.y-=p.v;p.s+=.03;p.x+=Math.sin(p.s)*.5;const a=Math.max(0,p.y/H)*.8;
 x.fillStyle=`hsla(${p.h+15},100%,60%,${a})`;x.shadowColor=`hsla(${p.h+10},100%,55%,${a})`;x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-10)P[i]=n()});requestAnimationFrame(f)})()})();
 </script>
+<script src="/outils/cta.js" data-nom="Be Truck Express" defer></script>
 </body>
 </html>

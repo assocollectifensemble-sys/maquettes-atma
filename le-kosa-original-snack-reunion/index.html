@@ -176,5 +176,6 @@ for(let i=0;i<40;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:.8+Math.rando
 (function t(){x.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.4;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
 x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle=`rgba(255,${150+Math.random()*60|0},40,${p.o})`;x.fill()});requestAnimationFrame(t)})();})();
 </script>
+<script src="/outils/cta.js" data-nom="Le Kosa" defer></script>
 </body>
 </html>

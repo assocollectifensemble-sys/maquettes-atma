@@ -155,5 +155,6 @@ for(let i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random
 (function t(){x.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;p.a+=.03;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
 const o=.25+Math.sin(p.a)*.2;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle=`rgba(181,138,76,${o})`;x.fill()});requestAnimationFrame(t)})();})();
 </script>
+<script src="/outils/cta.js" data-nom="RC Beauty" defer></script>
 </body>
 </html>

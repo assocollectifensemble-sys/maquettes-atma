@@ -226,5 +226,6 @@ for(let i=0;i<26;i++){const p=np();p.y=Math.random()*H;ps.push(p)}
  const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+p.a+')');g.addColorStop(1,'rgba(255,255,255,0)');
  x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();if(p.y<-p.r)ps[i]=np()});requestAnimationFrame(f)})(0);
 </script>
+<script src="/outils/cta.js" data-nom="La Pause Gourmande by Meal Évasion" defer></script>
 </body>
 </html>

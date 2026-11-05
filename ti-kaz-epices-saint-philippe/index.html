@@ -199,5 +199,6 @@ function r(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*
 for(let i=0;i<46;i++)P.push({x:Math.random(),y:Math.random(),s:.6+Math.random()*1.8,v:.0004+Math.random()*.0009,d:Math.random()*6});
 (function f(t){x.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;if(p.y<-.02){p.y=1.02;p.x=Math.random()}const px=(p.x+Math.sin(t/2400+p.d)*.012)*W,py=p.y*H;x.beginPath();x.fillStyle='rgba(233,217,180,'+(.25+.35*Math.sin(t/900+p.d)**2)+')';x.arc(px,py,p.s*devicePixelRatio,0,7);x.fill()});requestAnimationFrame(f)})(0)})();
 </script>
+<script src="/outils/cta.js" data-nom="Ti Kaz Épices" defer></script>
 </body>
 </html>
