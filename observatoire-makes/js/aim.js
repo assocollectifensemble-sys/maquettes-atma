@@ -1,5 +1,5 @@
 /* ============================================================
-   AIM.JS — Mini-jeu « Vise le ciel »
+   AIM.JS — Mini-jeu « Vise le ciel » (copie adaptée de makes-demo : FR/EN, thèmes ciel/jour/rouge)
    L'enfant oriente son téléphone (dos tourné vers le ciel) vers un astre
    ou une zone du ciel de La Réunion. Flèche + « chaud/froid » (texte, sons,
    vibration), tolérance réglable (±18° par défaut : boussole imprécise).
@@ -13,11 +13,11 @@
   "use strict";
   const RAD = Math.PI / 180;
   const NIV = [
-    { mot: "Glacé", ico: "🧊", c: "#9bd1ff" },
-    { mot: "Froid", ico: "❄️", c: "#7be0ff" },
-    { mot: "Tiède", ico: "🌤️", c: "#ffe27a" },
-    { mot: "Chaud", ico: "🔥", c: "#ff9a3c" },
-    { mot: "Brûlant", ico: "🎯", c: "#ff4d3d" }
+    { mot: "Glacé", en: "Freezing", ico: "🧊", c: "#9bd1ff" },
+    { mot: "Froid", en: "Cold", ico: "❄️", c: "#7be0ff" },
+    { mot: "Tiède", en: "Warm", ico: "🌤️", c: "#ffe27a" },
+    { mot: "Chaud", en: "Hot", ico: "🔥", c: "#ff9a3c" },
+    { mot: "Brûlant", en: "Burning", ico: "🎯", c: "#ff4d3d" }
   ];
   const HOLD = 1.1;        // secondes à tenir dans la zone
   let sunGate = false;     // la consigne de sécurité a été validée dans cette session
@@ -30,7 +30,9 @@
   }
 
   function mount(host, o) {
+    let detruit = false; // écran quitté : plus aucun rappel différé
     const tol = o.tol || Store.get("tolerance") || 18;
+    const EN = o.lang === "en", T = (f, e) => (EN ? e : f); // consignes de visée : FR ou EN
     let target = null, date = Sky.now(), lastUpd = 0, raf = 0, hold = 0, done = false, t0 = performance.now(), lastIn = false, lastT = 0;
     let cw = 0, ch = 0, F = 1, dpr = 1, started = false, pulse = 0, burst = null, full = false;
     const isSun = o.targetId === "soleil";
@@ -43,7 +45,7 @@
         '<canvas id="aimcv" aria-hidden="true"></canvas>' +
         '<div class="reticle" aria-hidden="true"><svg viewBox="0 0 120 120"><circle class="ring" cx="60" cy="60" r="50"/><path class="cross" d="M60 4v22M60 94v22M4 60h22M94 60h22"/><circle class="prog" id="prog" cx="60" cy="60" r="54" stroke-dasharray="339.3" stroke-dashoffset="339.3"/></svg></div>' +
         '<div class="arrow" id="arrow" aria-hidden="true"><div class="arrow-in" id="arrowin">' + Art.ICO.arrow + '</div></div>' +
-        '<div class="hud-top"><span class="chip mission" id="hmis">🎯 ' + (o.titreCourt || "Vise le ciel") + '</span><button class="iconbtn quit" id="bquit" aria-label="Quitter le plein écran">✕</button></div>' +
+        '<div class="hud-top"><span class="chip mission" id="hmis">🎯 ' + (o.titreCourt || T("Vise le ciel", "Aim at the sky")) + '</span><button class="iconbtn quit" id="bquit" aria-label="Quitter le plein écran">✕</button></div>' +
         '<div class="hud-mid"><span class="chip" id="hcap">Cap —</span><span class="chip" id="hhaut">Hauteur —</span></div>' +
         '<div class="hud-bottom"><div class="row" style="gap:8px;flex-wrap:nowrap">' +
           '<button class="iconbtn" id="bcal" aria-label="Calibrer : dessiner un 8 avec le téléphone" title="Calibrer">🧭</button>' +
@@ -70,7 +72,8 @@
       if (typeof c !== "string" || !rougeNatif()) return c;
       let v = memo.get(c); if (v) return v;
       let r, gg, bb, a = 1, m;
-      if ((m = /^#([0-9a-f]{6})$/i.exec(c))) { const n = parseInt(m[1], 16); r = n >> 16; gg = (n >> 8) & 255; bb = n & 255; }
+      if ((m = /^#([0-9a-f])([0-9a-f])([0-9a-f])$/i.exec(c))) { r = parseInt(m[1] + m[1], 16); gg = parseInt(m[2] + m[2], 16); bb = parseInt(m[3] + m[3], 16); } // #fff (3 chiffres) aussi
+      else if ((m = /^#([0-9a-f]{6})$/i.exec(c))) { const n = parseInt(m[1], 16); r = n >> 16; gg = (n >> 8) & 255; bb = n & 255; }
       else if ((m = /^rgba?\(([^)]+)\)$/i.exec(c))) { const p = m[1].split(",").map(Number); [r, gg, bb] = p; if (p.length > 3) a = p[3]; }
       else return c;
       const L = Math.min(255, Math.round(0.44 * r + 0.36 * gg + 0.2 * bb));
@@ -106,7 +109,7 @@
     // Couleurs du ciel selon la hauteur du Soleil (jour → crépuscule → nuit)
     function palette(sa) {
       const th = theme();
-      const jour = th === "soleil" ? { top: "#2d7fe0", bot: "#d4ecff" } : { top: "#1f63c9", bot: "#a9d4ff" };
+      const jour = th === "jour" ? { top: "#2d7fe0", bot: "#d4ecff" } : { top: "#1f63c9", bot: "#a9d4ff" };
       const crep = { top: "#1a2f6e", bot: "#f2a65a" }, nuit = { top: "#020617", bot: "#10265a" };
       let top, bot;
       if (sa > 6) { top = jour.top; bot = jour.bot; }
@@ -116,8 +119,8 @@
       const night = sa < -3, dark = sa < 2;
       return {
         top, bot, night, starA: sa > -1 ? 0 : Math.min(1, (-1 - sa) / 8),
-        gnd: dark ? "#06130d" : (th === "soleil" ? "#2f6b3c" : "#1f4d2b"), gnd2: dark ? "#020604" : "#13301b",
-        hor: dark ? "#7be0ff" : "#04102c", txt: dark ? "#ffffff" : "#04102c", acc: dark ? "#ffd23f" : (th === "soleil" ? "#0a2a8c" : "#fff2a8"),
+        gnd: dark ? "#06130d" : (th === "jour" ? "#2f6b3c" : "#1f4d2b"), gnd2: dark ? "#020604" : "#13301b",
+        hor: dark ? "#7be0ff" : "#04102c", txt: dark ? "#ffffff" : "#04102c", acc: dark ? "#ffd23f" : (th === "jour" ? "#0a2a8c" : "#fff2a8"),
         grid: dark ? "rgba(190,215,255,.35)" : "rgba(4,16,44,.32)"
       };
     }
@@ -200,7 +203,7 @@
         let any = null;
         ["acrux", "mimosa", "gacrux", "imai"].forEach(k => { const s = C.cs[k]; if (s.alt < 0) return; const p = P(s.az, s.alt, b); if (!inScreen(p, 20)) return; g.beginPath(); g.arc(p[0], p[1], 7, 0, 7); g.stroke(); any = p; });
         g.setLineDash([]);
-        if (any) { g.textAlign = "center"; label("Croix du Sud (cachée par le jour)", any[0], any[1] + 26, Pl.txt, 13, 800); }
+        if (any) { g.textAlign = "center"; label(T("Croix du Sud (cachée par le jour)", "Southern Cross (hidden by daylight)"), any[0], any[1] + 26, Pl.txt, 13, 800); }
         return;
       }
       g.globalAlpha = A;
@@ -270,7 +273,7 @@
       const p = P(180, -Sky.LAT, b); if (!inScreen(p, 20)) return;
       g.strokeStyle = Pl.acc; g.lineWidth = 2; g.beginPath(); g.arc(p[0], p[1], 9, 0, 7); g.stroke();
       g.beginPath(); g.moveTo(p[0] - 15, p[1]); g.lineTo(p[0] + 15, p[1]); g.moveTo(p[0], p[1] - 15); g.lineTo(p[0], p[1] + 15); g.stroke();
-      const droite = p[0] < cw - 140; g.textAlign = droite ? "left" : "right"; label("pôle sud céleste", p[0] + (droite ? 14 : -14), p[1] - 14, Pl.acc, 13, 800);
+      const droite = p[0] < cw - 140; g.textAlign = droite ? "left" : "right"; label(T("pôle sud céleste", "south celestial pole"), p[0] + (droite ? 14 : -14), p[1] - 14, Pl.acc, 13, 800);
     }
     function drawTarget(b, Pl, dist) {
       if (!target) return; const p = P(target.az, target.alt, b); if (!p) return;
@@ -319,13 +322,13 @@
       draw(b, dist);
       // HUD
       const pts = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"][Math.round(pt.az / 45) % 8];
-      $("hcap").textContent = "Cap " + Math.round(pt.az) + "° " + pts;
-      $("hhaut").textContent = "Hauteur " + Math.round(pt.alt) + "°";
+      $("hcap").textContent = T("Cap ", "Bearing ") + Math.round(pt.az) + "° " + pts;
+      $("hhaut").textContent = T("Hauteur ", "Altitude ") + Math.round(pt.alt) + "°";
       const n = dist <= tol ? 4 : dist <= tol * 1.7 ? 3 : dist <= tol * 3 ? 2 : dist <= tol * 5 ? 1 : 0;
       const N = NIV[n], tc = $("htemp");
-      if (!done) { tc.textContent = N.ico + " " + N.mot; tc.dataset.n = n; tc.style.background = N.c; tc.style.color = "#0a1233"; }
+      if (!done) { tc.textContent = N.ico + " " + (EN ? N.en : N.mot); tc.dataset.n = n; tc.style.background = N.c; tc.style.color = "#0a1233"; }
       $("hotfill").style.width = Math.max(4, 100 - Math.min(100, dist / (tol * 5) * 100)) + "%";
-      if (n !== lastLevel) { lastLevel = n; $("live").textContent = N.mot; }
+      if (n !== lastLevel) { lastLevel = n; $("live").textContent = EN ? N.en : N.mot; }
       // flèche
       const x = D(t, b.r), y = D(t, b.u), z = D(t, f);
       const ang = Math.atan2(x, y) / RAD;
@@ -341,10 +344,10 @@
     }
     function success() {
       done = true; burst = performance.now(); Audio2.stopPing(); Audio2.Sfx.trouve(); Audio2.vibre([80, 60, 160]);
-      $("arrow").style.opacity = 0; const tc = $("htemp"); tc.textContent = "🎯 Trouvé !"; tc.dataset.n = 4; $("live").textContent = "Trouvé !";
+      $("arrow").style.opacity = 0; const tc = $("htemp"); tc.textContent = T("🎯 Trouvé !", "🎯 Found!"); tc.dataset.n = 4; $("live").textContent = T("Trouvé !", "Found!");
       wrap.classList.add("gagne");
-      msg("✅ <b>Trouvé !</b> Tu as visé " + target.nom + (o.apres ? ". " + o.apres : "."));
-      if (o.onSuccess) setTimeout(() => { setFull(false); o.onSuccess({ secondes: Math.round((performance.now() - t0) / 1000) }); }, 1600);
+      msg(T("✅ <b>Trouvé !</b> Tu as visé ", "✅ <b>Found!</b> You aimed at ") + (o.nomCible || target.nom) + (o.apres ? ". " + o.apres : "."));
+      if (o.onSuccess) setTimeout(() => { if (detruit) return; setFull(false); o.onSuccess({ secondes: Math.round((performance.now() - t0) / 1000) }); }, 1600);
     }
 
     // ---------- plein écran immersif ----------
@@ -366,9 +369,9 @@
         $("ok1").onclick = () => { sunGate = true; Audio2.Sfx.unlock(); demarrage(); };
         return;
       }
-      overlay('<div class="ov-ico" aria-hidden="true">🎯</div><h3 style="font-size:24px">Vise le ciel</h3><p>Trouve <b>' + (target ? target.nom : "la cible") + '</b> : ' + (o.mission || "tourne-toi, la flèche te guide") + '.</p>' +
-        '<button class="btn" id="bsens">📱 Utiliser les capteurs</button><button class="btn sec" id="bdrag">✋ Faire glisser le ciel au doigt</button>' +
-        '<p class="small" style="opacity:.85">Pas de capteur (ordinateur) ? Le mode « glisser » marche partout.</p>');
+      overlay('<div class="ov-ico" aria-hidden="true">🎯</div><h3 style="font-size:24px">' + T("Vise le ciel", "Aim at the sky") + '</h3><p>' + T("Trouve ", "Find ") + '<b>' + (o.nomCible || (target ? target.nom : "la cible")) + '</b> : ' + (o.mission || T("tourne-toi, la flèche te guide", "turn around, the arrow guides you")) + '.</p>' +
+        '<button class="btn" id="bsens">📱 ' + T("Utiliser la boussole du téléphone", "Use the phone's compass") + '</button><button class="btn sec" id="bdrag">✋ ' + T("Faire glisser le ciel au doigt", "Drag the sky with your finger") + '</button>' +
+        '<p class="small" style="opacity:.85">' + T("Assis, à l'intérieur ou sans capteur ? Le mode « glisser » marche partout.", "Sitting indoors or no sensor? Drag mode works everywhere.") + '</p>');
       $("bsens").onclick = async () => {
         Audio2.Sfx.unlock(); overlay('<p class="center">Activation des capteurs…</p>');
         const m = await Sensors.start();          // requestPermission() est appelé DANS le geste (iOS)
@@ -395,7 +398,7 @@
     function setMode() {
       const sens = Sensors.isSensor();
       $("bmode").textContent = sens ? "✋" : "📱"; $("bmode").setAttribute("aria-label", sens ? "Passer en mode glisser" : "Utiliser les capteurs");
-      if (!sens) { const p = Sensors.pointing(); Sensors.setView(Sensors.vue.az || p.az, Sensors.vue.alt); msg("✋ <b>Mode glisser</b> : fais glisser le ciel au doigt (ou à la souris, ou avec les flèches du clavier) jusqu'à ce que le viseur soit sur la cible.  " + (Sensors.raison ? '<span class="dim">(' + Sensors.raison + ')</span>' : "")); }
+      if (!sens) { const p = Sensors.pointing(); Sensors.setView(Sensors.vue.az || p.az, Sensors.vue.alt); msg(T("✋ <b>Mode glisser</b> : fais glisser le ciel au doigt (ou à la souris, ou avec les flèches du clavier) jusqu'à ce que le viseur soit sur la cible. ", "✋ <b>Drag mode</b>: drag the sky with your finger (or mouse, or arrow keys) until the sight is on the target. ") + (Sensors.raison ? '<span class="dim">(' + Sensors.raison + ')</span>' : "")); }
     }
     function toast(t) { const e = document.createElement("div"); e.className = "toast"; e.setAttribute("role", "status"); e.textContent = t; document.body.appendChild(e); setTimeout(() => e.remove(), 3800); }
 
@@ -430,7 +433,7 @@
 
     raf = requestAnimationFrame(frame); demarrage();
     return {
-      destroy() { cancelAnimationFrame(raf); clearTimeout(skipTimer); Audio2.stopPing(); window.removeEventListener("resize", resize); document.removeEventListener("keydown", onKey); setFull(false); },
+      destroy() { detruit = true; cancelAnimationFrame(raf); clearTimeout(skipTimer); Audio2.stopPing(); window.removeEventListener("resize", resize); document.removeEventListener("keydown", onKey); setFull(false); },
       state: () => ({ started, done, dist: frame.dist, target, hold, tol, full })
     };
   }
