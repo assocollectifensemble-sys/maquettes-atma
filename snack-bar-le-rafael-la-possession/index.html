@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snack BAR le Rafael · Snack-bar à Moulin Joli, La Possession</title>
+<meta name="description" content="Snack BAR le Rafael, rue Nelson Mandela à La Possession (Moulin Joli) : menu du jour créole, barquettes et sandwichs fait maison, sur place ou à emporter.">
+<meta property="og:title" content="Snack BAR le Rafael · Un vrai QG, un lieu rempli de bonnes saveurs">
+<meta property="og:description" content="Menu du jour créole, barquettes et sandwichs fait maison, sur place ou à emporter. Rue Nelson Mandela, La Possession.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-bar-le-rafael-la-possession/img/porc-a-la-chinoise.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-bar-le-rafael-la-possession/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Bebas+Neue&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#e3401d; --rouge-f:#b52c10; --jaune:#f7c21a; --vert:#2f8a3b; --vert-c:#8cc43f;
+  --nuit:#1b130e; --nuit2:#2a1d15; --creme:#fff8ec; --sable:#f6ead3; --texte:#2c2019;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--nuit);color:#f3e6d3;font-size:.78rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--jaune)}
+.liseré{height:5px;background:linear-gradient(90deg,var(--rouge) 0 40%,var(--jaune) 40% 70%,var(--vert) 70%)}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/porc-a-la-chinoise.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,19,14,.25) 0%,rgba(27,19,14,.35) 28%,rgba(27,19,14,.9) 60%,var(--nuit) 100%)}
+#vapeur{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:2rem 1.35rem 3rem;width:100%;max-width:780px;margin:0 auto}
+.enseigne{width:min(300px,80%);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.55);margin-bottom:1.4rem;border:3px solid rgba(255,255,255,.9);transform:rotate(-2deg);animation:entree 1.1s .2s both}
+.sur-h{font-family:Lobster,cursive;font-size:1.6rem;color:var(--jaune);line-height:1.1;display:block;margin-bottom:.35rem;animation:entree 1s .5s both}
+.hero h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2.7rem,13vw,4.6rem);line-height:.95;letter-spacing:.02em;margin-bottom:.8rem;text-shadow:0 3px 18px rgba(0,0,0,.6);animation:entree 1s .7s both}
+.hero h1 em{font-style:normal;color:var(--jaune)}
+.hero p.sous{color:#f6e8d6;font-size:1.03rem;max-width:32rem;animation:entree 1s .9s both}
+@keyframes entree{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.1rem 0 1.4rem;animation:entree 1s 1.05s both}
+.badge{border:1px solid rgba(247,194,26,.6);color:var(--jaune);border-radius:99px;padding:.25rem .75rem;font-size:.8rem;background:rgba(27,19,14,.55)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.hero .btns{animation:entree 1s 1.2s both}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:800;border-radius:99px;padding:.85rem 1.4rem;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-r{background:var(--rouge);color:#fff;box-shadow:0 8px 24px rgba(227,64,29,.45);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 8px 36px rgba(247,194,26,.7);transform:scale(1.03)}}
+.btn-o{border:1.5px solid #f3e6d3;color:#fff}
+.btn-v{background:var(--vert);color:#fff}
+
+/* bandeau */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.65rem 0;font-family:"Bebas Neue",sans-serif;letter-spacing:.08em;font-size:1.3rem}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 .9rem}
+.bandeau i{font-style:normal;color:var(--jaune)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4rem 1.3rem}
+.wrap{max-width:1000px;margin:0 auto}
+.sur{font-family:Lobster,cursive;color:var(--rouge);font-size:1.5rem;display:block;line-height:1.15;margin-bottom:.25rem}
+h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(2.1rem,9vw,3.2rem);line-height:1;letter-spacing:.02em;color:var(--nuit);margin-bottom:1rem}
+h2 em{font-style:normal;color:var(--rouge)}
+.lead{font-size:1.03rem;max-width:40rem}
+.cite{font-style:italic;color:#6b5546;font-size:.95rem;margin-top:1rem;border-left:4px solid var(--jaune);padding-left:.9rem}
+.cite small{font-style:normal;display:block;color:#9a8270;font-size:.78rem;margin-top:.2rem}
+
+/* QG */
+.qg{background:var(--creme)}
+.qg .grid{display:grid;gap:1.6rem;align-items:center}
+.qg .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 14px 34px rgba(80,40,10,.18);position:relative}
+.qg .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.qg .ph:hover img{transform:scale(1.05)}
+.qg .ph span{position:absolute;left:.8rem;bottom:.8rem;background:rgba(27,19,14,.75);color:#fff;font-size:.82rem;padding:.3rem .7rem;border-radius:99px}
+@media(min-width:760px){.qg .grid{grid-template-columns:1.1fr 1fr}}
+.points{display:grid;gap:.7rem;margin-top:1.4rem}
+.point{display:flex;gap:.8rem;align-items:flex-start;background:#fff;border-radius:14px;padding:.85rem 1rem;box-shadow:0 6px 18px rgba(80,40,10,.07)}
+.point b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.25rem;letter-spacing:.03em;color:var(--vert);display:block;line-height:1.1}
+.point .ic{font-size:1.4rem;line-height:1}
+.point p{font-size:.92rem;color:#5b4739}
+
+/* vague */
+.vague{display:block;width:100%;height:44px;margin:-1px 0}
+
+/* menu du jour */
+.menu{background:var(--nuit);color:#f3e6d3;position:relative;overflow:hidden}
+.menu::before{content:"";position:absolute;left:-20%;right:-20%;top:-30%;height:60%;background:radial-gradient(ellipse at center,rgba(247,194,26,.16),transparent 65%);pointer-events:none;animation:lueur 6s ease-in-out infinite}
+@keyframes lueur{50%{opacity:.5}}
+.menu h2{color:#fff}.menu h2 em{color:var(--jaune)}
+.menu .sur{color:var(--jaune)}
+.ardoise{position:relative;margin-top:1.6rem;background:#22302a;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:6px 6px;border:10px solid #6b4426;border-radius:14px;padding:1.4rem 1.2rem;box-shadow:inset 0 0 40px rgba(0,0,0,.5),0 16px 40px rgba(0,0,0,.4)}
+.ardoise h3{font-family:Lobster,cursive;font-weight:400;font-size:1.7rem;color:#fff;text-align:center;margin-bottom:.6rem}
+.ardoise ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1rem}
+.ardoise li{font-size:1rem;color:#f4efe2;padding-left:1.1rem;position:relative}
+.ardoise li::before{content:"•";position:absolute;left:.1rem;color:var(--jaune)}
+.ardoise p{text-align:center;font-size:.85rem;color:#cfc6b2;margin-top:1rem}
+.plats{display:grid;gap:1rem;margin-top:2rem}
+.plat{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#000}
+.plat img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.plat:hover img{transform:scale(1.06)}
+.plat .lab{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem 1rem;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff}
+.plat .t{font-family:"Bebas Neue",sans-serif;font-size:1.45rem;letter-spacing:.03em;line-height:1.05}
+.plat .d{font-size:.85rem;color:#eadbc6}
+@media(min-width:760px){.plats{grid-template-columns:repeat(3,1fr)}}
+.menu .cite{color:#d9c6b0}.menu .cite small{color:#b39b86}
+
+/* sandwichs */
+.sandw{background:var(--sable)}
+.formules{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.4rem}
+.formule{background:#fff;border-radius:14px;text-align:center;padding:.9rem .4rem;box-shadow:0 6px 18px rgba(80,40,10,.08);border-top:5px solid var(--rouge);transition:transform .3s}
+.formule:nth-child(2){border-top-color:var(--jaune)}.formule:nth-child(3){border-top-color:var(--vert)}
+.formule:hover{transform:translateY(-4px)}
+.formule b{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.35rem;letter-spacing:.03em;display:block;line-height:1.1}
+.formule span{font-size:.78rem;color:#6b5546}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.puces span{background:#fff;border:1.5px solid var(--rouge);color:var(--rouge-f);padding:.35rem .85rem;border-radius:99px;font-weight:700;font-size:.9rem;transition:background .3s,color .3s}
+.puces span:hover{background:var(--rouge);color:#fff}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.6rem}
+.trio div{border-radius:14px;overflow:hidden;aspect-ratio:3/5;box-shadow:0 10px 24px rgba(80,40,10,.15)}
+.trio img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.trio div:hover img{transform:scale(1.07)}
+
+/* galerie */
+.galerie{padding-left:0;padding-right:0;background:var(--creme)}
+.galerie .wrap{padding:0 1.3rem}
+.defil{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.3rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defil::-webkit-scrollbar{display:none}
+.defil figure{flex:0 0 74%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(80,40,10,.13)}
+.defil img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.defil figcaption{padding:.6rem .85rem;font-size:.88rem;font-weight:700;color:#4a382c}
+.glisse{font-size:.8rem;color:#9a8270;text-align:center}
+
+/* histoire */
+.histoire{background:linear-gradient(160deg,var(--vert) 0%,#1f6a2b 100%);color:#fff;position:relative;overflow:hidden}
+.histoire::after{content:"";position:absolute;right:-80px;bottom:-80px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(140,196,63,.25)}
+.histoire h2{color:#fff}.histoire h2 em{color:var(--jaune)}
+.histoire .sur{color:var(--jaune)}
+.histoire blockquote{font-size:1.1rem;line-height:1.65;max-width:40rem;position:relative;z-index:1}
+.histoire blockquote::before{content:"“";font-family:Lobster,cursive;font-size:4.5rem;line-height:.6;color:var(--jaune);display:block;margin-bottom:.4rem}
+.histoire small{display:block;margin-top:.8rem;color:#d7efc6;font-size:.8rem}
+
+/* actus */
+.posts{display:grid;gap:1rem;margin-top:1.4rem}
+.post{background:#fff;border-radius:16px;padding:1.1rem 1.2rem;box-shadow:0 8px 22px rgba(80,40,10,.08);border-left:5px solid var(--rouge)}
+.post:nth-child(2){border-left-color:var(--jaune)}.post:nth-child(3){border-left-color:var(--vert)}
+.post time{font-family:"Bebas Neue",sans-serif;font-size:1.15rem;letter-spacing:.04em;color:var(--rouge-f)}
+.post p{font-size:.95rem;margin-top:.2rem}
+@media(min-width:760px){.posts{grid-template-columns:repeat(3,1fr)}}
+
+/* infos */
+.infos{background:var(--nuit);color:#f3e6d3}
+.infos h2{color:#fff}
+.infos .sur{color:var(--jaune)}
+.grille{display:grid;gap:1rem;margin:1.4rem 0 1.8rem}
+.bloc{background:var(--nuit2);border-radius:16px;padding:1.1rem 1.2rem;border:1px solid rgba(247,194,26,.18)}
+.bloc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;letter-spacing:.06em;color:var(--jaune);font-size:1.2rem;margin-bottom:.3rem}
+.bloc a{color:#fff;font-weight:700}
+@media(min-width:760px){.grille{grid-template-columns:repeat(3,1fr)}}
+footer{background:#120c08;color:#a99482;text-align:center;font-size:.8rem;padding:1.6rem 1.2rem 2rem}
+footer b{color:#e8d6c0}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snack BAR le Rafael</div>
+<div class="liseré"></div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Barquette de porc à la chinoise du Snack BAR le Rafael"></div>
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <img class="enseigne" src="img/enseigne-snack-bar.jpg" alt="Enseigne Snack-Bar Le Rafaël, repas à emporter ou sur place">
+    <span class="sur-h">Moulin Joli · La Possession</span>
+    <h1>Snack BAR <em>le Rafael</em></h1>
+    <p class="sous">Un vrai QG, un lieu rempli de bonnes saveurs&nbsp;: menu du jour créole, barquettes et sandwichs fait maison, sur place ou à emporter.</p>
+    <div class="badges"><span class="badge">Menu du jour</span><span class="badge">Fait maison</span><span class="badge">Sur place ou à emporter</span></div>
+    <div class="btns">
+      <a class="btn btn-r" href="sms:+262692825362">Commander par SMS</a>
+      <a class="btn btn-o" href="#menu">Voir le menu</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Civet porc</span><i>✦</i><span>Massalé coq</span><i>✦</i><span>Rougail morue</span><i>✦</i><span>Carry bichique</span><i>✦</i><span>Pois du cap</span><i>✦</i><span>Boucané volaille Ti Jack</span><i>✦</i><span>Panini</span><i>✦</i><span>Américain</span><i>✦</i>
+  <span>Civet porc</span><i>✦</i><span>Massalé coq</span><i>✦</i><span>Rougail morue</span><i>✦</i><span>Carry bichique</span><i>✦</i><span>Pois du cap</span><i>✦</i><span>Boucané volaille Ti Jack</span><i>✦</i><span>Panini</span><i>✦</i><span>Américain</span><i>✦</i>
+</div></div>
+
+<section class="qg" id="qg">
+  <div class="wrap grid">
+    <div>
+      <span class="sur rv">Bienvenue chez le Rafael</span>
+      <h2 class="rv">Le QG des bonnes <em>saveurs</em> de Moulin Joli</h2>
+      <p class="lead rv">Rue Nelson Mandela, à côté du Port, le Snack BAR le Rafael sert chaque jour un menu créole fait maison, des barquettes généreuses et des sandwichs garnis, à savourer sur place ou à emporter.</p>
+      <p class="cite rv">«&nbsp;Parfois, on a juste envie de se poser… tranquillement. Prendre le temps de savourer un bon petit plat.&nbsp;»<small>Snack BAR le Rafael, publication Facebook du 30 mars 2026</small></p>
+      <div class="points">
+        <div class="point rv"><span class="ic">🍛</span><div><b>Un menu qui change chaque jour</b><p>Le menu du jour est publié sur la page Facebook.</p></div></div>
+        <div class="point rv"><span class="ic">🥖</span><div><b>Sandwichs fait maison</b><p>Original, gratiné, panini ou américain.</p></div></div>
+        <div class="point rv"><span class="ic">📱</span><div><b>Commandes par SMS</b><p>«&nbsp;Privilégier les commandes par SMS svp&nbsp;», au 0692 82 53 62.</p></div></div>
+      </div>
+    </div>
+    <div class="ph rv"><img src="img/saute-piment-vert.jpg" alt="Barquette de viande sautée au piment vert" loading="lazy"><span>Un bon petit plat, piment vert</span></div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V20C180 2 360 0 540 14s360 30 540 18 270-24 360-20v12z" fill="#1b130e"/></svg>
+<section class="menu" id="menu">
+  <div class="wrap">
+    <span class="sur rv">Fait maison · Frais &amp; local</span>
+    <h2 class="rv">Le <em>menu du jour</em></h2>
+    <p class="lead rv">Chaque matin, la page annonce les plats du jour. Quelques plats déjà proposés au Rafael&nbsp;:</p>
+    <div class="ardoise rv">
+      <h3>Au menu chez Rafael</h3>
+      <ul>
+        <li>Civet porc</li><li>Massalé coq</li>
+        <li>Rougail morue</li><li>Sauté de poulet</li>
+        <li>Carry bichique</li><li>Rôti patte cochon</li>
+        <li>Boucané volaille Ti Jack</li><li>Porc à la chinoise</li>
+        <li>Lentilles</li><li>Pois du cap</li>
+        <li>Coco rosé</li><li>Sauce citron</li>
+      </ul>
+      <p>Le menu change chaque jour&nbsp;: retrouvez celui du jour sur la page Facebook.</p>
+    </div>
+    <div class="plats">
+      <div class="plat rv"><img src="img/boucane-volaille-ti-jack.jpg" alt="Barquette de boucané volaille Ti Jack" loading="lazy"><div class="lab"><div class="t">Boucané volaille Ti Jack</div><div class="d">«&nbsp;Une note pour le Boucané Volaille Ti Jack, s’il vous plaît /10&nbsp;»</div></div></div>
+      <div class="plat rv"><img src="img/roti-porc-barquette.jpg" alt="Barquette de rôti de porc en sauce" loading="lazy"><div class="lab"><div class="t">Rôti porc</div><div class="d">En barquette, bien nappé de sauce</div></div></div>
+      <div class="plat rv"><img src="img/poulet-barquette.jpg" alt="Barquette d’escalope de poulet sur riz" loading="lazy"><div class="lab"><div class="t">Escalope de poulet</div><div class="d">Avec du riz grain, prête à emporter</div></div></div>
+    </div>
+    <p class="cite rv">«&nbsp;Petite question&nbsp;: vous êtes plus Sandwich ou Barquette repas&nbsp;?&nbsp;»<small>Snack BAR le Rafael, publication Facebook du 20 mai 2026</small></p>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true" style="background:#f6ead3"><path d="M0 0v24c200 18 380 20 560 8S900-2 1080 10s270 20 360 14V0z" fill="#1b130e"/></svg>
+
+<section class="sandw" id="sandwichs">
+  <div class="wrap">
+    <span class="sur rv">Frais &amp; délicieux</span>
+    <h2 class="rv">Nos sandwichs <em>fait maison</em></h2>
+    <div class="formules">
+      <div class="formule rv"><b>Original</b><span>le classique</span></div>
+      <div class="formule rv"><b>Gratiné</b><span>fromage fondant</span></div>
+      <div class="formule rv"><b>Panini &amp; Américain</b><span>bien garnis</span></div>
+    </div>
+    <p class="lead rv" style="margin-top:1.4rem">Au choix, selon le jour&nbsp;:</p>
+    <div class="puces rv"><span>Poulet</span><span>Sarcive</span><span>Bouchon</span><span>Hot dog</span><span>Merguez</span><span>Museau</span><span>Épaule</span><span>Saumon</span><span>Surimi</span><span>Dakatine</span><span>Agneau</span><span>Thon maïs</span><span>Steak</span></div>
+    <div class="trio">
+      <div class="rv"><img src="img/sandwich-crudites.jpg" alt="Sandwich garni de viande, salade et tomate" loading="lazy"></div>
+      <div class="rv"><img src="img/sandwich-chaud.jpg" alt="Sandwich chaud gratiné" loading="lazy"></div>
+      <div class="rv"><img src="img/sandwich-legumes.jpg" alt="Sandwich crudités, salade et tomate" loading="lazy"></div>
+    </div>
+    <p class="cite rv">«&nbsp;Voilà voilà XL ici même&nbsp;»<small>Snack BAR le Rafael, publication Facebook du 21 mars 2026</small></p>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <span class="sur rv">Dans les barquettes</span>
+    <h2 class="rv">Ça sort de la <em>cuisine</em></h2>
+  </div>
+  <div class="defil">
+    <figure><img src="img/porc-a-la-chinoise.jpg" alt="Barquette de porc à la chinoise" loading="lazy"><figcaption>Porc à la chinoise</figcaption></figure>
+    <figure><img src="img/poisson-grille-bredes.jpg" alt="Assiette de poissons grillés et brèdes" loading="lazy"><figcaption>Poisson et brèdes</figcaption></figure>
+    <figure><img src="img/baguette-xl.jpg" alt="Baguette XL garnie de saucisses, poivrons et piments" loading="lazy"><figcaption>La version XL</figcaption></figure>
+    <figure><img src="img/barquette-oignons.jpg" alt="Barquette de viande avec salade d’oignons" loading="lazy"><figcaption>Barquette et salade d’oignons</figcaption></figure>
+    <figure><img src="img/sandwich-jambon-frites.jpg" alt="Sandwich jambon frites gratiné" loading="lazy"><figcaption>Sandwich jambon frites gratiné</figcaption></figure>
+    <figure><img src="img/saute-piment-vert.jpg" alt="Viande sautée au piment vert" loading="lazy"><figcaption>Sauté au piment vert</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section class="histoire" id="histoire">
+  <div class="wrap">
+    <span class="sur rv">L’histoire du Rafael</span>
+    <h2 class="rv">Toujours debout, <em>toujours présent</em></h2>
+    <blockquote class="rv">Un lieu vivant, marqué par le temps, les rencontres, les habitudes, mais toujours debout, toujours présent. Un endroit qui a su évoluer sans perdre son identité, et qui continue d’écrire son histoire jour après jour.
+      <small>Snack BAR le Rafael, publication Facebook du 14 janvier 2026</small></blockquote>
+  </div>
+</section>
+
+<section id="actus">
+  <div class="wrap">
+    <span class="sur rv">Bonne journée à tous&nbsp;!</span>
+    <h2 class="rv">Les nouvelles <em>du snack</em></h2>
+    <div class="posts">
+      <article class="post rv"><time datetime="2026-11-04">4 novembre 2026</time><p>Menu du jour&nbsp;: sauté de poulet au gros piment, rôti patte cochon, carry poisson, lentille, choux pimenté.</p></article>
+      <article class="post rv"><time datetime="2026-11-03">3 novembre 2026</time><p>Civet porc, massalé coq, tranche de grenadier frit croustillante, coco rosé, sauce citron.</p></article>
+      <article class="post rv"><time datetime="2026-08-19">19 août 2026</time><p>«&nbsp;Porc à la chinoise&nbsp;», et les commentaires suivent&nbsp;: «&nbsp;C’était très bon&nbsp;».</p></article>
+          </div>
+    <p class="cite rv"><small>D’après les publications de la page Facebook Snack BAR le Rafael</small></p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <span class="sur rv">À tout à l’heure&nbsp;!</span>
+    <h2 class="rv">Snack BAR le Rafael, La Possession</h2>
+    <div class="grille">
+      <div class="bloc rv"><h3>📍 Adresse</h3><p>Rue Nelson Mandela, Moulin Joli<br>97419 La Possession<br>(à côté du Port)</p><p style="margin-top:.4rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=Snack+bar+le+Rafael+rue+Nelson+Mandela+La+Possession" target="_blank" rel="noopener">Ouvrir l’itinéraire →</a></p></div>
+      <div class="bloc rv"><h3>📱 Commandes</h3><p><a href="tel:+262692825362">0692 82 53 62</a></p><p style="margin-top:.3rem">De préférence par <a href="sms:+262692825362">SMS</a> · sur place ou à emporter</p></div>
+      <div class="bloc rv"><h3>🕚 Horaires</h3><p>Du lundi au samedi<br>11h – 14h et 18h – 22h</p><p style="margin-top:.3rem">Le dimanche, repos. Le menu du jour sur <a href="https://www.facebook.com/Pablo974RUN" target="_blank" rel="noopener">la page Facebook</a>.</p></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-r" href="sms:+262692825362">Commander par SMS</a>
+      <a class="btn btn-v" href="https://www.facebook.com/Pablo974RUN" target="_blank" rel="noopener">Suivre sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Snack BAR le Rafael.<br>Photos&nbsp;: page Facebook Snack BAR le Rafael.</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('vu')})}
+  if(rm||!('IntersectionObserver' in window)){all()}else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(all,4000);
+  }
+  if(rm)return;
+  /* vapeur qui monte des barquettes + quelques grains d'épices dorés */
+  var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function rs(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  rs();addEventListener('resize',rs);
+  function nv(i){var s=i%3!==0;return{x:Math.random()*W,y:H*.55+Math.random()*H*.6,r:s?18+Math.random()*26:1+Math.random()*1.6,v:s?.22+Math.random()*.25:.35+Math.random()*.6,d:Math.random()*6.28,s:s}}
+  for(var i=0;i<30;i++){var p=nv(i);p.y=Math.random()*H;P.push(p)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  function f(){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*(p.s?.4:.5);
+      var k=Math.max(0,Math.min(1,p.y/H)),a;
+      if(p.s){a=k*.07;var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,248,236,'+a+')');g.addColorStop(1,'rgba(255,248,236,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();p.r+=.04}
+      else{a=k*.7*(.6+.4*Math.sin(p.d*3));x.fillStyle='rgba(247,'+(170+(i*7)%50)+',40,'+a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+      if(p.y<-50)P[i]=nv(i)});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Snack BAR le Rafael" defer></script>
+</body>
+</html>

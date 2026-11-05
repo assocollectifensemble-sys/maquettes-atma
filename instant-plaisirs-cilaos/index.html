@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L'Instant Plaisirs · La crêperie du Cirque · Cilaos</title>
+<meta name="description" content="L'Instant Plaisirs, crêperie artisanale au cœur de Cilaos : galettes de sarrasin, crêpes, gaufres et coupes glacées, 28 rue du Père Boiteau.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L'Instant Plaisirs · La crêperie du Cirque">
+<meta property="og:description" content="Galettes de sarrasin, crêpes et gaufres maison au cœur de Cilaos. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/instant-plaisirs-cilaos/img/cilaosienne.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/instant-plaisirs-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#c23b2e; --rouge-f:#9e2c22; --sauge:#7c9a68; --vert:#2f5d3a;
+  --creme:#f8f0e3; --papier:#fffaf2; --sarrasin:#7a4e2d; --caramel:#c98a3d; --encre:#2b211b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15}
+.script{font-family:"Parisienne",cursive;font-weight:400}
+
+/* ruban */
+.ruban{position:relative;z-index:20;background:var(--encre);color:#f3e7d4;font-size:.8rem;text-align:center;padding:.55rem 1rem;line-height:1.4}
+.ruban b{color:#f0c27a}
+
+/* univers anime */
+#sucre{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+
+/* hero */
+.hero{position:relative;min-height:clamp(560px,88vh,820px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/cilaosienne.jpg) center/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,33,27,.15) 0%,rgba(43,33,27,.25) 40%,rgba(43,33,27,.88) 100%)}
+.hero-txt{position:relative;z-index:2;padding:2rem 1.4rem 3.6rem;max-width:720px}
+.logo{width:92px;height:92px;border-radius:50%;object-fit:cover;object-position:50% 58%;border:3px solid #fff;box-shadow:0 6px 24px rgba(0,0,0,.35);margin-bottom:1rem;background:#fff}
+.hero .script{font-size:1.7rem;color:#f6d79c;display:block}
+.hero h1{font-size:clamp(2.3rem,10vw,4.2rem);margin:.1rem 0 .4rem;text-shadow:0 2px 18px rgba(0,0,0,.4)}
+.hero p{font-size:1.06rem;max-width:30rem;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem}
+.btn-r{background:var(--rouge);color:#fff;box-shadow:0 8px 22px rgba(194,59,46,.45);animation:respire 3.2s ease-in-out infinite}
+.btn-c{background:rgba(255,250,242,.94);color:var(--encre)}
+@keyframes respire{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.hero-in>*{opacity:0;transform:translateY(18px);animation:monte .9s ease forwards}
+.hero-in>*:nth-child(2){animation-delay:.15s}.hero-in>*:nth-child(3){animation-delay:.3s}.hero-in>*:nth-child(4){animation-delay:.45s}.hero-in>*:nth-child(5){animation-delay:.6s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.75rem 0;font-weight:700;letter-spacing:.02em;position:relative;z-index:3}
+.bandeau-in{display:inline-block;animation:defile 30s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau i{font-style:normal;color:#f6d79c}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4rem 1.3rem}
+.wrap{max-width:1040px;margin:0 auto}
+.kicker{font-family:"Parisienne",cursive;color:var(--rouge);font-size:1.6rem;display:block;margin-bottom:.1rem}
+h2{font-size:clamp(1.8rem,7vw,2.6rem);color:var(--encre);margin-bottom:1rem}
+.lead{font-size:1.06rem;max-width:40rem}
+
+/* galette du moment */
+.moment{background:var(--papier);position:relative}
+.moment::before{content:"";position:absolute;left:0;right:0;top:-28px;height:30px;background:var(--papier);clip-path:polygon(0 60%,8% 30%,18% 55%,30% 20%,42% 50%,55% 15%,68% 45%,80% 20%,91% 50%,100% 25%,100% 100%,0 100%)}
+.duo{display:grid;gap:1.6rem;margin-top:1.8rem}
+.duo-photos{display:grid;grid-template-columns:2fr 1fr;gap:.7rem}
+.duo-photos img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:0 10px 28px rgba(60,35,20,.18)}
+.duo-photos img:first-child{aspect-ratio:1/1}
+.fiche{background:#fff;border-radius:22px;padding:1.6rem 1.4rem;box-shadow:0 12px 34px rgba(60,35,20,.1);border-top:6px solid var(--vert)}
+.fiche h3{font-size:1.9rem;color:var(--vert)}
+.fiche .date{font-size:.85rem;color:#8a7766;margin-bottom:.8rem}
+.fiche ul{list-style:none;margin:.9rem 0}
+.fiche li{padding-left:1.5rem;position:relative;margin:.45rem 0}
+.fiche li::before{content:"";position:absolute;left:0;top:.55rem;width:.6rem;height:.6rem;border-radius:50%;background:var(--sauge)}
+.prix{display:inline-block;background:#f6d79c;color:var(--encre);font-family:"Fraunces",serif;font-weight:700;font-size:1.4rem;padding:.25rem .9rem;border-radius:12px;transform:rotate(-2deg)}
+.mariage{margin-top:1rem;background:var(--vert);color:#fff;border-radius:14px;padding:.9rem 1.1rem;font-style:italic}
+
+/* carte */
+.cartes{display:grid;gap:1.1rem;margin-top:1.8rem}
+.carte{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(60,35,20,.1);transition:transform .35s ease,box-shadow .35s ease}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 16px 36px rgba(60,35,20,.18)}
+.carte img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.carte div{padding:1rem 1.15rem 1.25rem}
+.carte h3{font-size:1.25rem;color:var(--rouge-f)}
+.carte p{font-size:.95rem;color:#5b4a3e}
+
+/* galerie */
+.galerie{background:var(--encre);color:#f3e7d4;padding-left:0;padding-right:0}
+.galerie .wrap{padding:0 1.3rem}
+.galerie h2{color:#fff}
+.rail{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.3rem .8rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:340px;scroll-snap-align:center}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:16px}
+.rail figcaption{font-size:.85rem;margin-top:.5rem;color:#d9c8b2}
+.astuce{font-size:.85rem;color:#bfae99;padding:0 1.3rem}
+
+/* lieu */
+.lieu{background:linear-gradient(180deg,var(--creme),#efe3cf)}
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:1.8rem}
+.mosaique figure{position:relative;overflow:hidden;border-radius:16px}
+.mosaique img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform 1.2s ease}
+.mosaique figure:hover img{transform:scale(1.06)}
+.mosaique .large{grid-column:1/-1}
+.mosaique .large img{aspect-ratio:16/10}
+.mosaique figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(255,250,242,.92);padding:.2rem .65rem;border-radius:999px;font-size:.78rem;font-weight:700}
+
+/* contact */
+.contact{background:var(--rouge);color:#fff;text-align:center;position:relative}
+.contact h2{color:#fff}
+.contact .kicker{color:#f6d79c}
+.contact-grid{display:grid;gap:1rem;margin:1.8rem auto 0;max-width:640px;text-align:left}
+.bloc{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:1.1rem 1.2rem}
+.bloc strong{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:#f6d79c;margin-bottom:.2rem}
+.bloc a{color:#fff;font-weight:700;word-break:break-word}
+.contact .btns{justify-content:center}
+.contact .btn-c{color:var(--rouge-f)}
+.contact .btn-r{background:var(--encre);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+
+footer{background:var(--encre);color:#cdbba5;text-align:center;padding:2rem 1.3rem 2.4rem;font-size:.85rem}
+footer .script{font-size:1.5rem;color:#f6d79c;display:block;margin-bottom:.3rem}
+
+/* apparitions */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  section{padding:5.5rem 2rem}
+  .duo{grid-template-columns:1.1fr 1fr;align-items:center}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .rail figure{flex-basis:300px}
+  .mosaique{grid-template-columns:repeat(3,1fr)}
+  .mosaique .large{grid-column:span 2}
+  .contact-grid{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero-in>*{opacity:1;transform:none}
+  .js .rv{opacity:1;transform:none}
+  #sucre{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour L'Instant Plaisirs</div>
+<canvas id="sucre" aria-hidden="true"></canvas>
+<main>
+  <header class="hero">
+    <div class="hero-img" role="img" aria-label="La Cilaosienne, galette de sarrasin et sa salade"></div>
+    <div class="hero-txt hero-in">
+      <img class="logo" src="img/logo.jpg" alt="Logo L'Instant Plaisirs, la crêperie du Cirque">
+      <span class="script">La crêperie du Cirque</span>
+      <h1>L'Instant Plaisirs</h1>
+      <p>Crêperie artisanale au cœur de Cilaos. Galettes de sarrasin, crêpes, gaufres et coupes glacées… comme une envie de crêpes&nbsp;?</p>
+      <div class="btns">
+        <a class="btn btn-r" href="tel:+262692457199">📞 Réserver : 0692 45 71 99</a>
+        <a class="btn btn-c" href="#lieu">Découvrir le lieu</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="bandeau" aria-hidden="true"><div class="bandeau-in">
+    <span>Galettes de sarrasin</span><i>✦</i><span>Crêpes</span><i>✦</i><span>Gaufres</span><i>✦</i><span>Coupes glacées</span><i>✦</i><span>Comme une envie de crêpes…</span><i>✦</i><span>Cilaos</span><i>✦</i>
+    <span>Galettes de sarrasin</span><i>✦</i><span>Crêpes</span><i>✦</i><span>Gaufres</span><i>✦</i><span>Coupes glacées</span><i>✦</i><span>Comme une envie de crêpes…</span><i>✦</i><span>Cilaos</span><i>✦</i>
+  </div></div>
+
+  <section class="moment">
+    <div class="wrap">
+      <span class="kicker rv">La petite galette du moment</span>
+      <h2 class="rv">Les saveurs de Cilaos</h2>
+      <p class="lead rv">Une galette qui raconte le cirque : le sarrasin de la tradition bretonne et les lentilles de Cilaos réunis dans la même assiette.</p>
+      <div class="duo">
+        <div class="duo-photos rv">
+          <img src="img/cilaosienne.jpg" alt="La Cilaosienne, galette de sarrasin pliée en carré avec sa salade" loading="lazy">
+          <img src="img/cilaosienne-lentilles.jpg" alt="Gros plan sur les lentilles, le boucané de poulet et les oignons verts" loading="lazy">
+        </div>
+        <div class="fiche rv">
+          <h3 class="script" style="font-family:'Parisienne',cursive;font-size:2.4rem">La Cilaosienne</h3>
+          <p class="date">Présentée sur la page de la crêperie le 14 octobre 2026</p>
+          <ul>
+            <li>Une galette de sarrasin garnie d'emmental, de lentilles de Cilaos et de boucané de poulet, d'oignons verts</li>
+            <li>Accompagnée de sa salade et de sa vinaigrette maison au curcuma</li>
+          </ul>
+          <span class="prix">17,90 €</span>
+          <p class="mariage">« Un mariage de saveurs authentiques entre tradition bretonne et terroir réunionnais »</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="carte-sec">
+    <div class="wrap">
+      <span class="kicker rv">Salé, sucré, glacé</span>
+      <h2 class="rv">Un instant pour chaque envie</h2>
+      <p class="lead rv">De la galette généreuse à la gaufre nappée de caramel, voici quelques créations partagées par la crêperie.</p>
+      <div class="cartes">
+        <article class="carte rv">
+          <img src="img/galette-bassin-bleu.jpg" alt="Galette Bassin Bleu avec salade et citron" loading="lazy">
+          <div><h3>Galette Bassin Bleu</h3><p>Une galette de sarrasin garnie, servie avec sa salade fraîche et une tranche de citron.</p></div>
+        </article>
+        <article class="carte rv">
+          <img src="img/galette-burrata.jpg" alt="Galette de sarrasin avec burrata et salade" loading="lazy">
+          <div><h3>Galettes du moment</h3><p>Burrata crémeuse, salade croquante, garnitures gratinées : des galettes généreuses à découvrir.</p></div>
+        </article>
+        <article class="carte rv">
+          <img src="img/gaufre-caramel.jpg" alt="Gaufre nappée de caramel beurre salé" loading="lazy">
+          <div><h3>Gaufre caramel beurre salé maison</h3><p>Dorée, croustillante, et ce caramel maison qui coule doucement sur l'assiette.</p></div>
+        </article>
+        <article class="carte rv">
+          <img src="img/gaufre-chocolat-banane.jpg" alt="Gaufre chocolat, banane et chantilly" loading="lazy">
+          <div><h3>Gaufre chocolat &amp; banane</h3><p>Chocolat, banane, chantilly… une douceur gourmande pour finir en beauté.</p></div>
+        </article>
+        <article class="carte rv">
+          <img src="img/coupes-glacees.jpg" alt="Deux coupes glacées avec chantilly et chocolat" loading="lazy">
+          <div><h3>Coupes glacées</h3><p>Chantilly et dentelles de chocolat, à savourer en terrasse.</p></div>
+        </article>
+        <article class="carte rv">
+          <img src="img/salade-burrata.jpg" alt="Salade composée avec burrata et jambon" loading="lazy">
+          <div><h3>Salades fraîches</h3><p>Des assiettes colorées pour accompagner les galettes ou se régaler en version légère.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="galerie">
+    <div class="wrap">
+      <span class="kicker rv" style="color:#f6d79c">En images</span>
+      <h2 class="rv">Les assiettes de la maison</h2>
+    </div>
+    <div class="rail">
+      <figure><img src="img/galette-gratinee.jpg" alt="Galette gratinée avec burrata et tomates cerises" loading="lazy"><figcaption>Galette gratinée, février 2026</figcaption></figure>
+      <figure><img src="img/crepe-pommes-caramel.jpg" alt="Crêpe aux pommes et sauce caramel" loading="lazy"><figcaption>Pommes et caramel</figcaption></figure>
+      <figure><img src="img/cilaosienne-lentilles.jpg" alt="Lentilles de Cilaos et boucané" loading="lazy"><figcaption>Lentilles de Cilaos et boucané</figcaption></figure>
+      <figure><img src="img/galette-burrata.jpg" alt="Galette et burrata" loading="lazy"><figcaption>Galette et burrata</figcaption></figure>
+      <figure><img src="img/coupes-glacees.jpg" alt="Coupes glacées" loading="lazy"><figcaption>Coupes glacées</figcaption></figure>
+      <figure><img src="img/gaufre-caramel.jpg" alt="Gaufre caramel" loading="lazy"><figcaption>Gaufre caramel beurre salé maison</figcaption></figure>
+    </div>
+    <p class="astuce">Faites glisser pour voir la suite →</p>
+  </section>
+
+  <section class="lieu" id="lieu">
+    <div class="wrap">
+      <span class="kicker rv">28 rue du Père Boiteau</span>
+      <h2 class="rv">Une maison rouge face aux remparts</h2>
+      <p class="lead rv">L'enseigne « Crêperie Artisanale », une salle aux couleurs vives, une terrasse en bois sous les parasols et un jardin avec ses tables en bois : ici, on savoure sa galette avec les montagnes du cirque pour horizon.</p>
+      <div class="mosaique">
+        <figure class="large rv"><img src="img/devanture.jpg" alt="Devanture rouge de L'Instant Plaisirs, Crêperie Artisanale" loading="lazy" style="object-position:50% 45%"><figcaption>Comme une envie de crêpes…</figcaption></figure>
+        <figure class="rv"><img src="img/terrasse-parasols.jpg" alt="Terrasse en bois avec chaises vertes et parasols" loading="lazy"><figcaption>La terrasse</figcaption></figure>
+        <figure class="rv"><img src="img/interieur.jpg" alt="Comptoir et salle rouge de la crêperie" loading="lazy"><figcaption>La salle</figcaption></figure>
+        <figure class="rv"><img src="img/jardin.jpg" alt="Jardin avec tables en bois et montagnes" loading="lazy"><figcaption>Le jardin</figcaption></figure>
+        <figure class="rv"><img src="img/vue-terrasse.jpg" alt="Vue sur les montagnes de Cilaos depuis la terrasse" loading="lazy"><figcaption>Vue sur le cirque</figcaption></figure>
+        <figure class="rv"><img src="img/terrasse.jpg" alt="Terrasse couverte et tables" loading="lazy"><figcaption>À l'ombre</figcaption></figure>
+        <figure class="rv"><img src="img/rue-montagnes.jpg" alt="La crêperie dans sa rue, montagnes en arrière-plan" loading="lazy"><figcaption>Au cœur de Cilaos</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="wrap">
+      <span class="kicker rv">À très vite</span>
+      <h2 class="rv">Réservez votre instant plaisir</h2>
+      <div class="contact-grid">
+        <div class="bloc rv"><strong>Adresse</strong>28 rue du Père Boiteau<br>97413 Cilaos, La Réunion</div>
+        <div class="bloc rv"><strong>Réservation</strong><a href="tel:+262692457199">0692 45 71 99</a></div>
+        <div class="bloc rv"><strong>E-mail</strong><a href="mailto:creperiedu413@gmail.com">creperiedu413@gmail.com</a></div>
+        <div class="bloc rv"><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=100063664775283" target="_blank" rel="noopener">L'Instant Plaisirs Cilaos</a></div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-r" href="tel:+262692457199">📞 Appeler la crêperie</a>
+        <a class="btn btn-c" href="https://www.google.com/maps/search/?api=1&query=28+rue+du+P%C3%A8re+Boiteau+97413+Cilaos" target="_blank" rel="noopener">📍 Itinéraire</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <span class="script">L'Instant Plaisirs</span>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de L'Instant Plaisirs.
+</footer>
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('vu')});
+  setTimeout(function(){els.forEach(function(el){el.classList.add('vu')})},4000);
+
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var c=document.getElementById('sucre'),x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],run=true;
+  function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  var cols=['246,215,156','201,138,61','255,250,242'];
+  for(var i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.2+.8,v:Math.random()*.35+.12,d:Math.random()*6.28,a:Math.random()*.35+.2,c:cols[i%3]});
+  function f(){
+    if(!run)return;
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      p.y-=p.v;p.d+=.012;p.x+=Math.sin(p.d)*.35;
+      if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+      x.beginPath();x.fillStyle='rgba('+p.c+','+p.a+')';x.arc(p.x,p.y,p.r,0,6.28);x.fill();
+    });
+    requestAnimationFrame(f);
+  }
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+  f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="L&#x27;Instant Plaisirs" defer></script>
+</body>
+</html>

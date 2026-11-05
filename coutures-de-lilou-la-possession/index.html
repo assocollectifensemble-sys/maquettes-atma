@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Coutures de Lilou · Retouches & sacs faits main · La Possession</title>
+<meta name="description" content="Les Coutures de Lilou, à La Possession : retouches, réparations, modifications de vêtements, customisations et créations de sacs à main signés LC2L.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les Coutures de Lilou · Retouches & sacs faits main">
+<meta property="og:description" content="Retouches, réparations, customisations et créations de sacs à main LC2L, à La Possession. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/coutures-de-lilou-la-possession/img/banane-bulles-ouverte.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/coutures-de-lilou-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Nunito+Sans:wght@400;600;700;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#151115; --noir2:#231b22; --fuchsia:#e3157a; --fuchsia-f:#b30d5f; --rose:#f8c9de; --rose-p:#fdeef5;
+  --kraft:#c4976a; --kraft-f:#8f6440; --sable:#d9c7aa; --creme:#fbf6f0; --encre:#2a2128; --argent:#c9c6cc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.15}
+.script{font-family:"Dancing Script",cursive;font-weight:600}
+
+/* ruban */
+.ruban{position:relative;z-index:20;background:var(--noir);color:#efe4ea;font-size:.8rem;text-align:center;padding:.55rem 1rem;line-height:1.4;border-bottom:2px dashed rgba(227,21,122,.6)}
+.ruban b{color:var(--rose)}
+
+/* hero */
+.hero{position:relative;min-height:clamp(580px,90vh,840px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:var(--noir)}
+.hero-img{position:absolute;inset:0;background:url(img/banane-bulles-ouverte.jpg) 50% 40%/cover;animation:kb 24s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.15) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,17,21,.2) 0%,rgba(21,17,21,.35) 25%,rgba(21,17,21,.88) 52%,rgba(21,17,21,.97) 100%);z-index:1}
+#paillettes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero-txt{position:relative;z-index:3;padding:2rem 1.4rem 3.4rem;max-width:720px}
+.logo{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--fuchsia);box-shadow:0 6px 26px rgba(227,21,122,.45);margin-bottom:1rem;background:#000}
+.hero .script{font-size:1.45rem;color:var(--rose);display:block}
+.hero h1{font-size:clamp(2.4rem,11vw,4.4rem);margin:.05rem 0 .5rem;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.hero h1 em{font-style:italic;color:var(--fuchsia)}
+.hero p{font-size:1.05rem;max-width:31rem;color:#f4ecf0}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.35rem;border-radius:999px;font-weight:800;text-decoration:none;font-size:.98rem}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-f{background:var(--fuchsia);color:#fff;box-shadow:0 8px 24px rgba(227,21,122,.45);animation:respire 3.2s ease-in-out infinite}
+.btn-c{background:rgba(255,255,255,.95);color:var(--noir)}
+@keyframes respire{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
+.hero-in>*{opacity:0;transform:translateY(18px);animation:monte .9s ease forwards}
+.hero-in>*:nth-child(2){animation-delay:.15s}.hero-in>*:nth-child(3){animation-delay:.3s}.hero-in>*:nth-child(4){animation-delay:.45s}.hero-in>*:nth-child(5){animation-delay:.6s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau */
+.bandeau{background:var(--fuchsia);color:#fff;overflow:hidden;white-space:nowrap;padding:.75rem 0;font-weight:800;letter-spacing:.02em;position:relative;z-index:3;border-top:2px dashed rgba(255,255,255,.55);border-bottom:2px dashed rgba(255,255,255,.55)}
+.bandeau-in{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 1rem}
+.bandeau i{font-style:normal;color:var(--noir)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4rem 1.3rem;position:relative}
+.wrap{max-width:1040px;margin:0 auto}
+.kicker{font-family:"Dancing Script",cursive;color:var(--fuchsia);font-size:1.65rem;display:block;margin-bottom:.1rem}
+h2{font-size:clamp(1.85rem,7.5vw,2.7rem);margin-bottom:1rem}
+.lead{font-size:1.06rem;max-width:40rem}
+
+/* couture : ligne de piqure qui se dessine */
+.piqure{display:block;width:100%;height:14px;margin:1.6rem 0 0}
+.piqure path{fill:none;stroke:var(--fuchsia);stroke-width:2.2;stroke-dasharray:9 7;stroke-linecap:round;animation:coud 2.4s linear infinite}
+@keyframes coud{to{stroke-dashoffset:-32}}
+
+/* retouches */
+.retouches{background:var(--creme)}
+.cartes{display:grid;gap:1rem;margin-top:1.8rem}
+.carte{background:#fff;border-radius:20px;padding:1.3rem 1.25rem 1.2rem;box-shadow:0 8px 26px rgba(42,33,40,.08);border:2px dashed transparent;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;position:relative}
+.carte:hover{transform:translateY(-5px);border-color:var(--fuchsia);box-shadow:0 16px 36px rgba(227,21,122,.15)}
+.carte .ico{width:52px;height:52px;border-radius:14px;background:var(--rose-p);display:grid;place-items:center;margin-bottom:.7rem}
+.carte .ico svg{width:30px;height:30px;stroke:var(--noir);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.carte h3{font-size:1.25rem;color:var(--noir);margin-bottom:.35rem}
+.carte ul{list-style:none;font-size:.95rem;color:#5a4b55}
+.carte li{padding-left:1.15rem;position:relative;margin:.2rem 0}
+.carte li::before{content:"";position:absolute;left:0;top:.62rem;width:.55rem;border-top:2px dashed var(--fuchsia)}
+.devis{margin-top:1.6rem;background:var(--noir);color:#f3e9ef;border-radius:18px;padding:1.1rem 1.25rem;display:flex;gap:.9rem;align-items:flex-start}
+.devis svg{width:28px;height:28px;flex:none;stroke:var(--rose);fill:none;stroke-width:1.7}
+.devis q{font-style:italic;color:#fff}
+.devis small{display:block;color:#bfaab6;margin-top:.3rem}
+
+/* LC2L */
+.lc2l{background:linear-gradient(180deg,#f3e6d6,#ead6bf);overflow:hidden}
+.lc2l .kicker{color:var(--kraft-f)}
+.lc2l-grid{display:grid;gap:1.6rem;margin-top:1.6rem;align-items:center}
+.etiq{position:relative}
+.etiq img{border-radius:20px;box-shadow:0 14px 34px rgba(110,70,35,.25);width:100%;aspect-ratio:6/5;object-fit:cover}
+.tampon{position:absolute;right:-6px;bottom:-14px;width:112px;height:112px;border-radius:50%;background:var(--kraft);color:#3d2716;display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;font-size:1.5rem;letter-spacing:.06em;box-shadow:0 8px 20px rgba(80,50,25,.3);border:2px dashed #7a5332;outline:6px solid var(--kraft);animation:tourne 18s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.citation{background:#fffaf3;border-radius:20px;padding:1.5rem 1.35rem;box-shadow:0 10px 30px rgba(110,70,35,.12);border-left:6px solid var(--kraft)}
+.citation p{font-family:"Playfair Display",serif;font-style:italic;font-size:1.15rem;color:#3d2a1e}
+.citation .date{font-size:.85rem;color:#8f6f55;margin-top:.8rem}
+.puce-verte{display:inline-flex;align-items:center;gap:.4rem;margin-top:1rem;background:#e5efd9;color:#3e5a2a;border-radius:999px;padding:.35rem .85rem;font-weight:700;font-size:.85rem}
+
+/* creations */
+.creations{background:var(--noir);color:#f3e9ef}
+.creations h2{color:#fff}
+.creations .kicker{color:var(--rose)}
+.crea{display:grid;gap:1.4rem;margin-top:2.2rem}
+.crea+.crea{margin-top:3.2rem}
+.crea-photos{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.crea-photos img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.crea-photos .grand{grid-column:1/-1;aspect-ratio:4/3}
+.crea-photos img:not(.grand){aspect-ratio:1/1}
+.fiche{background:var(--noir2);border-radius:20px;padding:1.4rem 1.3rem;border:1px solid rgba(248,201,222,.18);position:relative}
+.fiche::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(227,21,122,.45);border-radius:14px;pointer-events:none}
+.fiche h3{font-size:1.6rem;color:#fff}
+.fiche .date{font-size:.85rem;color:#c7aebb;margin:.2rem 0 .8rem}
+.fiche ul{list-style:none;margin:.6rem 0}
+.fiche li{padding-left:1.6rem;position:relative;margin:.45rem 0;color:#efe2e9}
+.fiche li::before{content:"";position:absolute;left:0;top:.45rem;width:.85rem;height:.85rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--argent) 45%,#8d8992);box-shadow:0 0 6px rgba(255,255,255,.5)}
+.fiche .mot{font-family:"Dancing Script",cursive;font-size:1.35rem;color:var(--rose)}
+
+/* galerie */
+.galerie{background:var(--rose-p);padding-left:0;padding-right:0}
+.galerie .wrap{padding:0 1.3rem}
+.rail{display:flex;align-items:flex-start;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.3rem .8rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 76%;max-width:360px;scroll-snap-align:center;background:#fff;padding:.6rem .6rem .8rem;border-radius:16px;box-shadow:0 10px 26px rgba(179,13,95,.12)}
+.rail figure:nth-child(odd){transform:rotate(-1deg)}
+.rail figure:nth-child(even){transform:rotate(1deg)}
+.rail img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.rail .haut img{aspect-ratio:4/5}
+.rail figcaption{font-size:.86rem;margin-top:.5rem;color:#6b4f5e;font-weight:600}
+.astuce{font-size:.85rem;color:#9b6f86;padding:0 1.3rem}
+
+/* 7 ans */
+.sept{background:var(--creme);text-align:center}
+.badge7{width:150px;height:150px;margin:0 auto 1.2rem;border-radius:50%;display:grid;place-items:center;background:var(--noir);color:#fff;position:relative;box-shadow:0 12px 30px rgba(21,17,21,.25)}
+.badge7::before{content:"";position:absolute;inset:7px;border-radius:50%;border:2px dashed var(--fuchsia);animation:tourne 22s linear infinite}
+.badge7 b{font-family:"Playfair Display",serif;font-size:3.4rem;line-height:1;color:var(--rose)}
+.badge7 span{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;margin-top:-.2rem}
+.sept blockquote{font-family:"Playfair Display",serif;font-style:italic;font-size:1.2rem;max-width:34rem;margin:0 auto;color:var(--noir)}
+.sept .src{font-size:.85rem;color:#8a7380;margin-top:.6rem}
+.avis{margin:2rem auto 0;max-width:30rem;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 8px 24px rgba(42,33,40,.08)}
+.etoiles{color:var(--fuchsia);font-size:1.2rem;letter-spacing:.15em}
+.avis p{font-style:italic;margin-top:.3rem}
+.avis small{display:block;color:#8a7380;margin-top:.3rem}
+
+/* contact */
+.contact{background:var(--fuchsia);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .kicker{color:var(--noir)}
+.contact-grid{display:grid;gap:1rem;margin:1.8rem auto 0;max-width:640px;text-align:left}
+.bloc{background:rgba(255,255,255,.12);border:2px dashed rgba(255,255,255,.45);border-radius:18px;padding:1.1rem 1.2rem}
+.bloc strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;color:var(--noir);margin-bottom:.2rem}
+.bloc a{color:#fff;font-weight:800;word-break:break-word}
+.contact .btns{justify-content:center}
+.contact .btn-f{background:var(--noir);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.contact .btn-c{color:var(--fuchsia-f)}
+
+footer{background:var(--noir);color:#cbb7c3;text-align:center;padding:2rem 1.3rem 2.4rem;font-size:.85rem}
+footer .script{font-size:1.6rem;color:var(--rose);display:block;margin-bottom:.3rem}
+
+/* apparitions */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  section{padding:5.5rem 2rem}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .lc2l-grid,.crea{grid-template-columns:1fr 1fr;gap:2.4rem}
+  .crea.inverse .crea-photos{order:2}
+  .rail figure{flex-basis:32%}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .hero-txt{padding:3rem 3rem 4.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero-in>*{opacity:1;transform:none}
+  .js .rv{opacity:1;transform:none}
+  #paillettes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les Coutures de Lilou</div>
+
+<main>
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Banane en fausse fourrure nid d'abeille blanc cassé, étiquette LC2L"></div>
+  <canvas id="paillettes" aria-hidden="true"></canvas>
+  <div class="hero-txt hero-in">
+    <img class="logo" src="img/logo.jpg" alt="Logo Les Coutures de Lilou : cintre, machine à coudre et mannequin" width="96" height="96">
+    <span class="script">Couture, retouches & sacs faits main</span>
+    <h1>Les Coutures de <em>Lilou</em></h1>
+    <p>Retouches, réparations, modifications de vêtements, customisations… et créations de sacs à main signés LC2L, à La Possession.</p>
+    <div class="btns">
+      <a class="btn btn-f" href="https://wa.me/262692710311"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>Écrire sur WhatsApp</a>
+      <a class="btn btn-c" href="#retouches">Voir les retouches</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-in">
+  <span>Ourlets</span><i>✂</i><span>Reprises de taille</span><i>✂</i><span>Fermetures à glissière</span><i>✂</i><span>Réparations</span><i>✂</i><span>Customisations</span><i>✂</i><span>Sacs à main LC2L</span><i>✂</i><span>Rideaux</span><i>✂</i>
+  <span>Ourlets</span><i>✂</i><span>Reprises de taille</span><i>✂</i><span>Fermetures à glissière</span><i>✂</i><span>Réparations</span><i>✂</i><span>Customisations</span><i>✂</i><span>Sacs à main LC2L</span><i>✂</i><span>Rideaux</span><i>✂</i>
+</div></div>
+
+<section class="retouches" id="retouches">
+  <div class="wrap">
+    <span class="kicker rv">Retouches & réparations</span>
+    <h2 class="rv">Vos vêtements, ajustés à vous</h2>
+    <p class="lead rv">Un ourlet, une taille à reprendre, une fermeture à remplacer, une déchirure à réparer : l'atelier redonne vie et justesse à vos pièces préférées, du jean au manteau, jusqu'aux rideaux de la maison.</p>
+    <svg class="piqure" viewBox="0 0 400 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 Q 100 1 200 7 T 398 7"/></svg>
+    <div class="cartes">
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><path d="M9 3h14l2 26h-6l-3-16-3 16H7z"/><path d="M9 7h14"/></svg></div>
+        <h3>Pantalons & jeans</h3>
+        <ul><li>Ourlets simples, invisibles, revers ou ourlet d'origine</li><li>Reprise ou agrandissement de taille</li><li>Bas de pantalon, jambe côté et entrejambe</li><li>Pose de fermeture, de bouton, de pression</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><path d="M11 3h10l-1 7 6 19H6l6-19z"/><path d="M12 10h8"/></svg></div>
+        <h3>Jupes & robes</h3>
+        <ul><li>Ourlets, avec ou sans doublure, même pour les modèles amples</li><li>Reprise de taille, cintrage avec pinces</li><li>Rallonge de jupe, ajustement des bretelles</li><li>Changement d'élastique</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><path d="M11 3l5 4 5-4 7 5-3 6-3-1v16H9V13l-3 1-3-6z"/><path d="M16 7v22"/></svg></div>
+        <h3>Chemises, vestes & manteaux</h3>
+        <ul><li>Ourlet du bas, avec ou sans doublure</li><li>Ajustage de la longueur des manches</li><li>Cintrage chemise ou veste</li><li>Manches longues transformées en courtes</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><path d="M3 4h26"/><path d="M6 4c0 10 4 18 7 24H6z"/><path d="M26 4c0 10-4 18-7 24h7z"/></svg></div>
+        <h3>Rideaux</h3>
+        <ul><li>Ourlets de rideaux, au mètre linéaire</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><circle cx="9" cy="9" r="4"/><circle cx="9" cy="23" r="4"/><path d="M12 11l16 12M12 21l16-12"/></svg></div>
+        <h3>Réparations & customisations</h3>
+        <ul><li>Déchirures réparées</li><li>Finitions particulières : double piqûre, création de fente…</li><li>Customisation de vos vêtements</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32"><path d="M5 12h22l-2 16H7z"/><path d="M11 12a5 5 0 0 1 10 0"/></svg></div>
+        <h3>Créations de sacs</h3>
+        <ul><li>Bananes et sacs à main faits main</li><li>Fausse fourrure, suédine, doublures en coton à motifs</li><li>Signés de l'étiquette LC2L</li></ul>
+      </article>
+    </div>
+    <div class="devis rv">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v12H8l-4 4z"/><path d="M8 9h8M8 12h5"/></svg>
+      <div><q>Pour tous renseignements, devis personnalisé, vous pouvez me contacter en message privé ou par téléphone.</q><small>Les Coutures de Lilou, sur sa page Facebook</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="lc2l">
+  <div class="wrap lc2l-grid">
+    <div class="etiq rv">
+      <img src="img/etiquettes-lc2l.jpg" alt="Étiquettes LC2L en cuir végan" loading="lazy" width="768" height="640">
+      <div class="tampon" aria-hidden="true">LC2L</div>
+    </div>
+    <div>
+      <span class="kicker rv">La signature de l'atelier</span>
+      <h2 class="rv">LC2L, une marque cousue main</h2>
+      <div class="citation rv">
+        <p>« Les étiquettes LC2L viennent d'arriver ! Mes sacs, sacoches etc. porteront fièrement ma marque. J'ai choisi des étiquettes en cuir végan car ce cuir est fabriqué à partir de matériaux recyclés, ce qui est très important à mes yeux et pour la planète. »</p>
+        <div class="date">Publication du 12 janvier 2026</div>
+        <span class="puce-verte">🌍 Cuir végan, matériaux recyclés</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="creations">
+  <div class="wrap">
+    <span class="kicker rv">Créations</span>
+    <h2 class="rv">Les bananes LC2L</h2>
+    <p class="lead rv">Chaque création est pensée dans ses moindres détails : la matière, la doublure, l'anse, jusqu'au mousqueton.</p>
+
+    <div class="crea">
+      <div class="crea-photos rv">
+        <img class="grand" src="img/banane-bulles-anse-sequins.jpg" alt="Banane en fausse fourrure nid d'abeille blanc cassé avec anse à sequins argent" loading="lazy">
+        <img src="img/banane-bulles-ouverte.jpg" alt="Banane fausse fourrure ouverte sur sa doublure noire et argent" loading="lazy">
+        <img src="img/collage-banane-bulles.jpg" alt="Mise en scène façon carnet de création de la banane fausse fourrure" loading="lazy">
+      </div>
+      <div class="fiche rv">
+        <span class="mot">Nouvelle création</span>
+        <h3>Banane modèle enfant, effet nid d'abeille</h3>
+        <div class="date">Publiée le 9 janvier 2026</div>
+        <ul>
+          <li>Tissu principal effet fausse fourrure nid d'abeille blanc cassé</li>
+          <li>Doublure en coton aux motifs noirs et argentés</li>
+          <li>Anse en coton et sequin argent</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="crea inverse">
+      <div class="crea-photos rv">
+        <img class="grand" src="img/banane-suedine-doublure.jpg" alt="Banane en suédine beige ouverte sur sa doublure en coton aux motifs dorés" loading="lazy">
+        <img src="img/banane-suedine-fermee.jpg" alt="Banane en suédine beige fermée avec sangle à motifs" loading="lazy">
+        <img src="img/banane-suedine-dos.jpg" alt="Dos de la banane en suédine avec poche zippée" loading="lazy">
+      </div>
+      <div class="fiche rv">
+        <span class="mot">Création</span>
+        <h3>Banane en suédine, intérieur doré</h3>
+        <div class="date">Publiée le 15 novembre 2025</div>
+        <ul>
+          <li>Tissu suédine couleur sable</li>
+          <li>Intérieur en coton avec motifs dorés</li>
+          <li>Sangle réglable à motifs géométriques</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap">
+    <span class="kicker rv">L'atelier en images</span>
+    <h2 class="rv">Faites défiler</h2>
+  </div>
+  <div class="rail">
+    <figure><img src="img/banane-bulles-ouverte.jpg" alt="Banane fausse fourrure ouverte" loading="lazy"><figcaption>Fausse fourrure nid d'abeille & doublure noir et argent</figcaption></figure>
+    <figure><img src="img/banane-suedine-doublure.jpg" alt="Banane suédine ouverte" loading="lazy"><figcaption>Suédine sable & coton aux motifs dorés</figcaption></figure>
+    <figure><img src="img/collage-banane-bulles.jpg" alt="Collage façon carnet de création" loading="lazy"><figcaption>La mise en scène de l'atelier, façon carnet de création</figcaption></figure>
+    <figure><img src="img/etiquettes-lc2l.jpg" alt="Étiquettes LC2L" loading="lazy"><figcaption>Les étiquettes LC2L en cuir végan</figcaption></figure>
+    <figure><img src="img/banane-bulles-anse-sequins.jpg" alt="Anse à sequins argent" loading="lazy"><figcaption>L'anse en coton et sequin argent</figcaption></figure>
+    <figure><img src="img/banane-suedine-dos.jpg" alt="Dos zippé de la banane suédine" loading="lazy"><figcaption>Le dos zippé, finitions soignées</figcaption></figure>
+  </div>
+  <p class="astuce">← Glissez du doigt pour voir toutes les créations →</p>
+</section>
+
+<section class="sept">
+  <div class="wrap">
+    <div class="badge7 rv"><div><b>7</b><span>ans</span></div></div>
+    <span class="kicker rv">Merci à vous</span>
+    <blockquote class="rv">« Les Coutures De Lilou fête sa 7<sup>e</sup> année sur Facebook ! Merci à vous tous pour votre soutien. »</blockquote>
+    <p class="src rv">Publication du 3 juillet 2026</p>
+    <div class="avis rv">
+      <div class="etoiles" aria-label="Avis">★★★★★</div>
+      <p>« Couturière au top, je suis entièrement satisfaite. »</p>
+      <small>Avis d'une cliente, sur la page Facebook</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="kicker rv">Un ourlet, une création ?</span>
+    <h2 class="rv">Parlons de votre projet</h2>
+    <div class="contact-grid">
+      <div class="bloc rv"><strong>WhatsApp & téléphone</strong><a href="tel:+262692710311">06 92 71 03 11</a></div>
+      <div class="bloc rv"><strong>Où</strong>La Possession, La Réunion</div>
+      <div class="bloc rv"><strong>Devis personnalisé</strong>Par message privé ou par téléphone</div>
+      <div class="bloc rv"><strong>Facebook</strong><a href="https://www.facebook.com/profile.php?id=100063119956626">Les Coutures De Lilou</a></div>
+    </div>
+    <div class="btns rv" style="margin-top:1.8rem">
+      <a class="btn btn-f" href="https://wa.me/262692710311">Écrire sur WhatsApp</a>
+      <a class="btn btn-c" href="tel:+262692710311">Appeler</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="script">Les Coutures de Lilou</span>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les Coutures de Lilou.
+</footer>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});
+  els.forEach(function(e){io.observe(e)});
+  setTimeout(function(){els.forEach(function(e){e.classList.add('vu')})},4000);
+})();
+(function(){
+  var c=document.getElementById('paillettes');
+  if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+  var cols=['#ffffff','#d9d6dc','#f8c9de','#e3157a','#c4976a'];
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(y0){return{x:Math.random()*W,y:y0===undefined?Math.random()*H:y0,r:2+Math.random()*3.5,vy:.15+Math.random()*.35,vx:(Math.random()-.5)*.2,a:Math.random()*6.28,va:(Math.random()-.5)*.05,k:Math.random()<.22?1:0,c:cols[Math.floor(Math.random()*cols.length)],o:.35+Math.random()*.45}}
+  size();for(var i=0;i<28;i++)P.push(mk());
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  function f(){
+    if(!run)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(p.y/60)*.15;p.a+=p.va;
+      if(p.y>H+10){P[i]=mk(-10);continue}
+      x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;
+      if(p.k){x.fillStyle=p.c;x.beginPath();x.arc(0,0,p.r+2.5,0,6.28);x.fill();x.fillStyle='rgba(21,17,21,.55)';
+        [[-1.4,-1.4],[1.4,-1.4],[-1.4,1.4],[1.4,1.4]].forEach(function(h){x.beginPath();x.arc(h[0],h[1],.75,0,6.28);x.fill()});}
+      else{var s=Math.abs(Math.cos(p.a*2));x.fillStyle=p.c;x.beginPath();x.ellipse(0,0,p.r,p.r*(.25+.75*s),0,0,6.28);x.fill();
+        if(s>.85){x.globalAlpha=p.o*.9;x.fillStyle='#fff';x.beginPath();x.arc(-p.r*.3,-p.r*.2,p.r*.35,0,6.28);x.fill()}}
+      x.restore();}
+    requestAnimationFrame(f);
+  }
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les Coutures de Lilou" defer></script>
+</body>
+</html>

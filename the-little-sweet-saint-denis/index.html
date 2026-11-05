@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Little Sweet · Cupcakes &amp; biscuits faits maison · Saint-Denis</title>
+<meta name="description" content="The Little Sweet, boutique de cupcakes à Saint-Denis : cupcakes, mini cupcakes, barfi biscuit, royal cream, napolitains… faits maison, confectionnés avec amour. Commande en message.">
+<meta property="og:title" content="The Little Sweet · Homemade with love">
+<meta property="og:description" content="Cupcakes, biscuits et napolitains faits maison à Saint-Denis. Commande en message.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/the-little-sweet-saint-denis/img/cupcakes-roses.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/the-little-sweet-saint-denis/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#f3a6bd; --rose-p:#fbdde6; --framboise:#c94f74; --framboise-f:#a63a5c;
+  --cacao:#4b2e2a; --cacao2:#3a2320; --creme:#fff7f4; --sauge:#9bb39a; --sauge-f:#6f8a6e; --or:#d9b26a; --texte:#4a3530;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--cacao);color:#f8e6e9;font-size:.78rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--rose)}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--cacao2);color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/cupcakes-roses.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.16) translate(-1.5%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,35,32,.05) 0%,rgba(58,35,32,.25) 35%,rgba(58,35,32,.86) 66%,var(--cacao2) 100%)}
+#sucre{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:2rem 1.35rem 3rem;width:100%;max-width:780px;margin:0 auto}
+.sur-h{display:inline-block;white-space:nowrap;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--rose-p);border:1px solid rgba(251,221,230,.5);border-radius:99px;padding:.3rem .85rem;margin-bottom:.9rem;background:rgba(58,35,32,.35)}
+.hero h1{font-family:"Great Vibes",cursive;font-weight:400;font-size:clamp(3.4rem,17vw,5.6rem);line-height:.95;margin-bottom:.6rem;text-shadow:0 3px 22px rgba(0,0,0,.45);opacity:0;animation:monte 1.4s .2s ease-out forwards}
+.hero h1 span{color:var(--rose)}
+@keyframes monte{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero p.sous{color:#f8e9e6;font-size:1.05rem;max-width:32rem}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.1rem 0 1.4rem}
+.badge{border:1px solid rgba(243,166,189,.6);color:var(--rose-p);border-radius:99px;padding:.25rem .75rem;font-size:.8rem;background:rgba(58,35,32,.5)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;border-radius:99px;padding:.85rem 1.4rem;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-r{background:var(--framboise);color:#fff;box-shadow:0 8px 24px rgba(201,79,116,.45);animation:respire 3.4s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 8px 36px rgba(243,166,189,.8);transform:scale(1.03)}}
+.btn-o{border:1.5px solid #f8e6e9;color:#fff}
+.btn-s{background:var(--sauge-f);color:#fff}
+
+/* bandeau */
+.bandeau{background:var(--rose);color:var(--cacao);overflow:hidden;white-space:nowrap;padding:.75rem 0;font-family:"Playfair Display",serif;font-style:italic;font-weight:600;font-size:1.02rem}
+.bandeau div{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 .9rem}
+.bandeau i{font-style:normal;color:#fff}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4rem 1.3rem}
+.wrap{max-width:1000px;margin:0 auto}
+.sur{font-family:"Great Vibes",cursive;color:var(--framboise);font-size:2rem;display:block;line-height:1.1;margin-bottom:.1rem}
+h2{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.65rem,7vw,2.6rem);line-height:1.15;color:var(--cacao);margin-bottom:1rem}
+h2 em{color:var(--framboise)}
+.lead{font-size:1.03rem;max-width:40rem}
+.cite{font-style:italic;color:#7b625b;font-size:.93rem;margin-top:.9rem}
+.cite small{font-style:normal;display:block;color:#a08a83;font-size:.78rem}
+
+/* intro */
+.intro{text-align:center;background:var(--creme);position:relative}
+.intro .lead{margin:0 auto}
+.coeur{font-family:"Great Vibes",cursive;font-size:2.5rem;color:var(--framboise);margin-top:1rem;line-height:1.1}
+
+/* cupcakes */
+.cupcakes{background:var(--rose-p)}
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.8rem}
+.mosaique figure{border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;background:#fff;box-shadow:0 10px 26px rgba(120,50,70,.14)}
+.mosaique figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s}
+.mosaique figure:hover img{transform:scale(1.07)}
+.mosaique figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem .75rem .65rem;background:linear-gradient(transparent,rgba(58,35,32,.85));color:#fff;font-weight:700;font-size:.86rem;line-height:1.3}
+@media(min-width:760px){.mosaique{grid-template-columns:repeat(4,1fr)}}
+.parfums{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}
+.parfums span{background:#fff;border:1.5px solid var(--framboise);color:var(--framboise-f);padding:.4rem .95rem;border-radius:99px;font-weight:700;font-size:.9rem;transition:transform .25s,background .25s}
+.parfums span:hover{transform:translateY(-2px) rotate(-1deg);background:var(--rose-p)}
+
+.vague{display:block;width:100%;height:44px;margin:-1px 0}
+
+/* biscuits */
+.biscuits{background:var(--creme)}
+.duo{display:grid;gap:1.1rem;margin-top:1.6rem}
+.ph{border-radius:20px;overflow:hidden;box-shadow:0 10px 28px rgba(80,40,30,.12)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.ph:hover img{transform:scale(1.05)}
+.ph.l{aspect-ratio:16/9}
+@media(min-width:760px){.duo{grid-template-columns:1fr 1fr}}
+.liste{background:#fff;border-radius:20px;padding:1.3rem 1.3rem .8rem;box-shadow:0 10px 28px rgba(80,40,30,.08);border-top:5px solid var(--sauge);margin-top:1.4rem}
+.liste li{list-style:none;padding:.5rem 0;border-bottom:1px dashed #ecd9d3;display:flex;gap:.6rem;align-items:baseline}
+.liste li:last-child{border:0}
+.liste li::before{content:"✦";color:var(--or);font-size:.8rem}
+.liste b{font-family:"Playfair Display",serif;color:var(--cacao)}
+.liste span{font-size:.88rem;color:#7b625b}
+
+/* napolitains */
+.napo{background:linear-gradient(165deg,var(--cacao) 0%,var(--cacao2) 100%);color:#f8e6e9;position:relative;overflow:hidden}
+.napo h2{color:#fff}.napo h2 em{color:var(--rose)}
+.napo .sur{color:var(--rose)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.6rem}
+.trio .ph{aspect-ratio:3/4;box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.trio .ph:nth-child(2){transform:translateY(1.2rem)}
+.napo .cite{color:#e7cfd4;margin-top:2.4rem}.napo .cite small{color:#c5a9ae}
+
+/* fêtes */
+.fetes{background:#f1f5ef}
+.fetes h2 em{color:var(--sauge-f)}
+.fetes .sur{color:var(--sauge-f)}
+.fetes .duo{grid-template-columns:1fr 1fr}
+.plateau{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:1.4rem}
+.plateau div{background:#fff;border-radius:16px;padding:1rem .8rem;text-align:center;box-shadow:0 6px 18px rgba(60,80,60,.08);transition:transform .3s}
+.plateau div:hover{transform:translateY(-3px)}
+.plateau b{display:block;font-family:"Playfair Display",serif;color:var(--cacao);font-size:1.02rem;line-height:1.25}
+.plateau span{font-size:.82rem;color:#6f7d6d}
+@media(min-width:760px){.plateau{grid-template-columns:repeat(4,1fr)}}
+
+/* galerie */
+.galerie{padding-left:0;padding-right:0;background:var(--rose-p)}
+.galerie .wrap{padding:0 1.3rem}
+.defil{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.3rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defil::-webkit-scrollbar{display:none}
+.defil figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(120,50,70,.14)}
+.defil img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.defil figcaption{padding:.6rem .85rem;font-size:.88rem;font-weight:700;color:var(--cacao)}
+.glisse{font-size:.8rem;color:#a07f88;text-align:center}
+
+/* actus */
+.posts{display:grid;gap:1rem;margin-top:1.5rem}
+.post{background:#fff;border-radius:18px;padding:1.2rem 1.25rem;border-left:5px solid var(--rose);box-shadow:0 8px 22px rgba(80,40,30,.07)}
+.post time{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--framboise)}
+.post p{margin-top:.35rem;font-size:.97rem}
+@media(min-width:760px){.posts{grid-template-columns:repeat(3,1fr)}}
+
+/* infos */
+.infos{background:var(--cacao2);color:#f8e6e9}
+.infos h2{color:#fff}.infos .sur{color:var(--rose)}
+.grille{display:grid;gap:1rem;margin:1.5rem 0 1.8rem}
+.bloc{background:rgba(255,255,255,.06);border:1px solid rgba(243,166,189,.25);border-radius:18px;padding:1.1rem 1.2rem}
+.bloc h3{font-size:.8rem;letter-spacing:.14em;color:var(--rose);margin-bottom:.35rem}
+.bloc a{color:#fff;font-weight:700}
+@media(min-width:760px){.grille{grid-template-columns:repeat(3,1fr)}}
+footer{background:#2a1917;color:#cdb3b0;text-align:center;font-size:.8rem;padding:1.6rem 1.3rem 2rem}
+footer b{color:var(--rose)}
+
+/* apparitions */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero h1{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour The Little Sweet</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Cupcakes au glaçage rose et vermicelles colorés"></div>
+  <canvas id="sucre" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <span class="sur-h">Cupcake shop · Saint-Denis</span>
+    <h1>The Little <span>Sweet</span></h1>
+    <p class="sous">Cupcakes, biscuits et douceurs faits maison, confectionnés avec amour pour sublimer vos tables de fête.</p>
+    <div class="badges"><span class="badge">Homemade with love</span><span class="badge">Commande en message</span><span class="badge">Saint-Denis, La Réunion</span></div>
+    <div class="btns">
+      <a class="btn btn-r" href="https://www.facebook.com/TheLittleSweet.reunion/" target="_blank" rel="noopener">Commander en message</a>
+      <a class="btn btn-o" href="tel:+262693003813">Appeler</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Cupcakes</span><i>✦</i><span>Barfi biscuit</span><i>✦</i><span>Royal cream</span><i>✦</i><span>Napolitains</span><i>✦</i><span>Nane catay</span><i>✦</i><span>Mini cupcakes rose letchis</span><i>✦</i><span>Homemade with love</span><i>✦</i>
+  <span>Cupcakes</span><i>✦</i><span>Barfi biscuit</span><i>✦</i><span>Royal cream</span><i>✦</i><span>Napolitains</span><i>✦</i><span>Nane catay</span><i>✦</i><span>Mini cupcakes rose letchis</span><i>✦</i><span>Homemade with love</span><i>✦</i>
+</div></div>
+
+<section class="intro">
+  <div class="wrap">
+    <span class="sur rv">Bienvenue</span>
+    <h2 class="rv">Des douceurs <em>faites maison</em>, une à une</h2>
+    <p class="lead rv">Chez The Little Sweet, tout est 100&nbsp;% fait maison, préparé avec soin et avec amour. Des saveurs pour raviver les papilles des plus gourmands, à commander pour vos fêtes, vos événements ou simplement pour le plaisir.</p>
+    <p class="coeur rv">Homemade with love</p>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 60 480 0 720 30 C960 60 1200 0 1440 30 V60 H0Z" fill="#fbdde6"/></svg>
+<section class="cupcakes" id="cupcakes">
+  <div class="wrap">
+    <span class="sur rv">La spécialité</span>
+    <h2 class="rv">Les <em>cupcakes</em>, petits et grands</h2>
+    <p class="lead rv">Glaçage généreux, décors gourmands et couleurs tendres&nbsp;: les cupcakes sont la signature de la maison, aussi en version mini, parfaits pour un plateau à partager.</p>
+    <div class="parfums rv">
+      <span>Rose letchis</span><span>Vanille nutella</span><span>Caramel beurre salé</span><span>Vanille framboise</span><span>Banane chocolat</span>
+    </div>
+    <div class="mosaique">
+      <figure class="rv"><img src="img/cupcakes-colores.jpg" alt="Cupcakes au glaçage rose vif, chocolat et vanille" loading="lazy"><figcaption>Toutes les couleurs</figcaption></figure>
+      <figure class="rv"><img src="img/cupcakes-creme.jpg" alt="Mini cupcakes à la crème et au caramel beurre salé" loading="lazy"><figcaption>Mini cupcakes caramel beurre salé</figcaption></figure>
+      <figure class="rv"><img src="img/cupcakes-papillon.jpg" alt="Cupcakes nappés de chocolat décorés de papillons en sucre" loading="lazy"><figcaption>Cupcakes banane chocolat</figcaption></figure>
+      <figure class="rv"><img src="img/cupcakes-fruits-rouges.jpg" alt="Cupcakes à la crème vanille et décors framboise" loading="lazy"><figcaption>Crème vanille &amp; douceurs rouges</figcaption></figure>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#fbdde6"><path d="M0 30 C240 60 480 0 720 30 C960 60 1200 0 1440 30 V60 H0Z" fill="#fff7f4"/></svg>
+
+<section class="biscuits" id="biscuits">
+  <div class="wrap">
+    <span class="sur rv">À la boîte ou au plateau</span>
+    <h2 class="rv">Les <em>biscuits</em> de la maison</h2>
+    <p class="lead rv">Des petites boîtes de biscuits mix, barfi biscuit et royal cream, aux recettes parfumées à la cardamome&nbsp;: une tradition gourmande à offrir et à partager.</p>
+    <div class="duo">
+      <div class="ph l rv"><img src="img/barfi-biscuits.jpg" alt="Plaque de barfi biscuits roses fraîchement pochés" loading="lazy"></div>
+      <div class="ph l rv"><img src="img/biscuits-trempes-chocolat.jpg" alt="Biscuits à la vanille trempés au chocolat" loading="lazy"></div>
+    </div>
+    <ul class="liste rv">
+      <li><div><b>Biscuit royal cream</b></div></li>
+      <li><div><b>Barfi biscuit</b></div></li>
+      <li><div><b>Nane catay</b> <span>· biscuits à la cardamome</span></div></li>
+      <li><div><b>Biscuit à la vanille trempé au chocolat</b></div></li>
+      <li><div><b>Biscuit au chocolat coco</b></div></li>
+      <li><div><b>Biscuit au café</b></div></li>
+      <li><div><b>Biscuit à la confiture d’abricot</b></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="napo" id="napolitains">
+  <div class="wrap">
+    <span class="sur rv">Pour vos événements</span>
+    <h2 class="rv">Les <em>napolitains</em>, tout en couleurs</h2>
+    <p class="lead rv">Rose, violet, turquoise, cœurs à la fraise… Les napolitains se parent de la couleur de votre fête et d’une pluie de paillettes dorées.</p>
+    <div class="trio">
+      <div class="ph rv"><img src="img/napolitains-coeur.jpg" alt="Napolitains en forme de cœur au glaçage rose" loading="lazy"></div>
+      <div class="ph rv"><img src="img/napolitains-violets.jpg" alt="Napolitains au glaçage violet pailleté" loading="lazy"></div>
+      <div class="ph rv"><img src="img/napolitains-turquoise.jpg" alt="Napolitains turquoise et roses" loading="lazy"></div>
+    </div>
+    <p class="cite rv">«&nbsp;N’hésitez pas à commander nos napolitains pour vos événements&nbsp;»<small>The Little Sweet, sur sa page Facebook</small></p>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap">
+    <span class="sur rv">Eid douceurs</span>
+    <h2 class="rv">Un plateau <em>pour les fêtes</em></h2>
+    <p class="lead rv">Pour l’Eid, The Little Sweet compose un plateau de 40 biscuits et des minis cupcakes, de quoi sublimer votre table.</p>
+    <div class="plateau">
+      <div class="rv"><b>Barfi biscuits</b><span>10 au plateau</span></div>
+      <div class="rv"><b>Royal cream</b><span>10 au plateau</span></div>
+      <div class="rv"><b>Viennois</b><span>10 au plateau</span></div>
+      <div class="rv"><b>Tout chocolat</b><span>10 au plateau</span></div>
+    </div>
+    <div class="duo">
+      <div class="ph rv" style="aspect-ratio:4/5"><img src="img/box-biscuits-mix.jpg" alt="Boîte de biscuits mix : barfi biscuits roses et royal cream" loading="lazy"></div>
+      <div class="ph rv" style="aspect-ratio:4/5"><img src="img/biscuits-roses-plateau.jpg" alt="Biscuits roses et blancs pochés en rosace" loading="lazy"></div>
+    </div>
+    <p class="cite rv">Minis cupcakes vanille nutella, framboise, rose letchis.<small>D’après l’affiche « Eid douceurs by The Little Sweet », mars 2026</small></p>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <span class="sur rv">Encore un peu de gourmandise</span>
+    <h2 class="rv">Tout sort <em>du four de la maison</em></h2>
+  </div>
+  <div class="defil">
+    <figure><img src="img/donuts.jpg" alt="Donuts glacés rose et chocolat" loading="lazy"><figcaption>Donuts glacés</figcaption></figure>
+    <figure><img src="img/cookies.jpg" alt="Cookies aux pépites de chocolat" loading="lazy"><figcaption>Cookies généreux</figcaption></figure>
+    <figure><img src="img/gourmandise-caramel.jpg" alt="Parts de gâteau nappées de caramel" loading="lazy"><figcaption>Nappage caramel</figcaption></figure>
+    <figure><img src="img/breakfast-box.jpg" alt="Breakfast box garnie : granola, fruits, gâteau et jus" loading="lazy"><figcaption>Healthy breakfast box</figcaption></figure>
+    <figure><img src="img/cupcakes-roses.jpg" alt="Cupcakes roses aux vermicelles" loading="lazy"><figcaption>Cupcakes roses</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section id="actus">
+  <div class="wrap">
+    <span class="sur rv">Les nouvelles</span>
+    <h2 class="rv">Sur la page <em>The Little Sweet</em></h2>
+    <div class="posts">
+      <article class="post rv"><time datetime="2026-03-20">20 mars 2026</time><p>«&nbsp;Eid Mubarak&nbsp;! Je tiens à remercier sincèrement toutes les personnes qui ont commandé leurs gâteaux avec moi, votre confiance et votre soutien me touchent énormément.&nbsp;»</p></article>
+      <article class="post rv"><time datetime="2026-03-01">1<sup>er</sup> mars 2026</time><p>«&nbsp;Eid douceurs by The Little Sweet&nbsp;»&nbsp;: plateau de 40 biscuits et minis cupcakes vanille nutella, framboise, rose letchis.</p></article>
+      <article class="post rv"><time datetime="2024-09-29">29 septembre 2024</time><p>«&nbsp;Des petites boites de biscuits mix (barfi biscuit et royal cream)… Homemade with love&nbsp;»</p></article>
+    </div>
+    <p class="cite rv"><small>Extraits des publications de la page Facebook The Little Sweet</small></p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <span class="sur rv">À très vite</span>
+    <h2 class="rv">The Little Sweet, Saint-Denis</h2>
+    <div class="grille">
+      <div class="bloc rv"><h3>💌 COMMANDES</h3><p>En message privé sur <a href="https://www.facebook.com/TheLittleSweet.reunion/" target="_blank" rel="noopener">la page Facebook</a>.</p></div>
+      <div class="bloc rv"><h3>📞 TÉLÉPHONE</h3><p><a href="tel:+262693003813">0693 00 38 13</a></p><p style="margin-top:.2rem"><a href="tel:+262692965909">0692 96 59 09</a></p></div>
+      <div class="bloc rv"><h3>📍 OÙ</h3><p>À récupérer à Saint-Denis, La Réunion.</p></div>
+    </div>
+    <div class="btns">
+      <a class="btn btn-r" href="https://www.facebook.com/TheLittleSweet.reunion/" target="_blank" rel="noopener">Commander en message</a>
+      <a class="btn btn-s" href="https://www.instagram.com/the_little_sweet_reunion/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de The Little Sweet.<br>Photos&nbsp;: page Facebook The Little Sweet.</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('vu')})}
+  if(rm||!('IntersectionObserver' in window)){all()}else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(all,4000);
+  }
+  if(rm)return;
+  /* étincelles de sucre et quelques vermicelles qui tombent doucement */
+  var c=document.getElementById('sucre'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+  var cols=['#fbdde6','#f3a6bd','#ffffff','#d9b26a','#9bb39a'];
+  function rs(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  rs();addEventListener('resize',rs);
+  function nv(i){var v=i%4===0;return{x:Math.random()*W,y:-20-Math.random()*H*.3,r:v?5+Math.random()*3:.8+Math.random()*1.6,v:.35+Math.random()*.7,d:Math.random()*6.28,a:Math.random()*6.28,ver:v,c:cols[i%cols.length]}}
+  for(var i=0;i<30;i++){var p=nv(i);p.y=Math.random()*H;P.push(p)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  function f(){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y+=p.v;p.d+=.025;p.a+=.02;p.x+=Math.sin(p.d)*.4;
+      var al=.35+.35*Math.sin(p.d*2.3);
+      if(p.ver){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=.55;x.strokeStyle=p.c;x.lineWidth=2.2;x.lineCap='round';x.beginPath();x.moveTo(-p.r,0);x.lineTo(p.r,0);x.stroke();x.restore()}
+      else{x.globalAlpha=al;x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();
+        if(p.r>1.8){x.globalAlpha=al*.5;x.fillRect(p.x-p.r*2.2,p.y-.3,p.r*4.4,.6);x.fillRect(p.x-.3,p.y-p.r*2.2,.6,p.r*4.4)}}
+      x.globalAlpha=1;
+      if(p.y>H+20)P[i]=nv(i)});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="The Little Sweet" defer></script>
+</body>
+</html>

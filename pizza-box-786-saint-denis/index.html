@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizza Box 786 · Pizza au feu de bois · Saint-Denis</title>
+<meta name="description" content="Pizza Box 786, 240 rue du Maréchal Leclerc à Saint-Denis : pizzas au feu de bois, pâte maison façonnée à la main, américains, panuozzo et poulet rôti au feu de bois.">
+<meta property="og:title" content="Pizza Box 786 · L’Italie dans chaque bouchée">
+<meta property="og:description" content="Pizzas au feu de bois, pâte maison préparée chaque jour et cuite à la flamme. 240 rue du Maréchal Leclerc, Saint-Denis.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/pizza-box-786-saint-denis/img/four-feu-pizza.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/pizza-box-786-saint-denis/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vert:#3f9b3a; --vert-f:#2c7a2a; --rouge:#d22e2b; --rouge-f:#a91f1d;
+  --flamme:#f28a1c; --braise:#ffb347; --nuit:#17110d; --nuit2:#241a14; --creme:#fdf6ea; --farine:#f3e8d6; --texte:#2b211b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--nuit);color:#f3e6d3;font-size:.78rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--braise)}
+.tricolore{height:5px;background:linear-gradient(90deg,var(--vert) 0 33.3%,#fff 33.3% 66.6%,var(--rouge) 66.6%)}
+
+/* HERO */
+.hero{position:relative;min-height:94vh;min-height:94svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/four-feu-pizza.jpg) 40% center/cover;animation:kb 24s ease-in-out infinite alternate;transform-origin:35% 55%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.15) translate(1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,17,13,.15) 0%,rgba(23,17,13,.35) 30%,rgba(23,17,13,.88) 62%,var(--nuit) 100%)}
+#braises{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:2rem 1.35rem 3rem;width:100%;max-width:780px;margin:0 auto}
+.medaille{width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px var(--vert),0 0 0 8px #fff,0 0 0 12px var(--rouge),0 10px 30px rgba(0,0,0,.5);margin:0 0 1.5rem 12px;overflow:hidden}
+.medaille img{width:92%}
+.sur-h{font-family:Caveat,cursive;font-size:1.7rem;color:var(--braise);line-height:1;display:block;margin-bottom:.3rem}
+.hero h1{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(2rem,9.5vw,3.4rem);line-height:1.05;margin-bottom:.8rem;text-shadow:0 3px 18px rgba(0,0,0,.5)}
+.hero h1 em{font-style:normal;color:var(--flamme)}
+.hero p.sous{color:#f3e4d0;font-size:1.02rem;max-width:32rem}
+.badges{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.1rem 0 1.4rem}
+.badge{border:1px solid rgba(255,179,71,.55);color:var(--braise);border-radius:99px;padding:.25rem .75rem;font-size:.8rem;background:rgba(23,17,13,.5)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:700;border-radius:99px;padding:.85rem 1.4rem;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-r{background:var(--rouge);color:#fff;box-shadow:0 8px 24px rgba(210,46,43,.45);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 8px 36px rgba(242,138,28,.75);transform:scale(1.03)}}
+.btn-o{border:1.5px solid #f3e6d3;color:#fff}
+.btn-v{background:var(--vert);color:#fff}
+
+/* bandeau */
+.bandeau{background:var(--vert);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:"Alfa Slab One",serif;letter-spacing:.05em;font-size:.98rem}
+.bandeau div{display:inline-block;animation:defile 30s linear infinite}
+.bandeau span{margin:0 1rem}
+.bandeau i{font-style:normal;color:var(--braise)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4rem 1.3rem}
+.wrap{max-width:1000px;margin:0 auto}
+.sur{font-family:Caveat,cursive;color:var(--rouge);font-size:1.6rem;display:block;line-height:1.1;margin-bottom:.2rem}
+h2{font-family:"Alfa Slab One",serif;font-weight:400;font-size:clamp(1.65rem,7vw,2.6rem);line-height:1.12;color:var(--nuit);margin-bottom:1rem}
+h2 em{font-style:normal;color:var(--rouge)}
+.lead{font-size:1.03rem;max-width:40rem}
+.cite{font-style:italic;color:#6b5546;font-size:.93rem;margin-top:.9rem}
+.cite small{font-style:normal;display:block;color:#9a8270;font-size:.78rem}
+
+/* le feu */
+.feu{background:var(--nuit);color:#f3e6d3;position:relative;overflow:hidden}
+.feu::before{content:"";position:absolute;left:-20%;right:-20%;bottom:-35%;height:70%;background:radial-gradient(ellipse at center,rgba(242,120,30,.3),transparent 65%);pointer-events:none;animation:lueur 5s ease-in-out infinite}
+@keyframes lueur{50%{opacity:.6}}
+.feu h2{color:#fff}.feu h2 em{color:var(--flamme)}
+.feu .sur{color:var(--braise)}
+.etapes{display:grid;gap:1rem;margin-top:2rem;position:relative}
+.etape{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:#000}
+.etape img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.etape:hover img{transform:scale(1.06)}
+.etape .lab{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem 1rem;background:linear-gradient(transparent,rgba(0,0,0,.88));color:#fff}
+.etape .n{font-family:"Alfa Slab One",serif;color:var(--flamme);font-size:1.5rem;line-height:1}
+.etape .t{font-weight:700;font-size:1.05rem}
+.etape .d{font-size:.86rem;color:#e8d8c4}
+@media(min-width:760px){.etapes{grid-template-columns:repeat(3,1fr)}}
+.feu .cite{color:#d9c6b0}.feu .cite small{color:#b39b86}
+.vague{display:block;width:100%;height:44px;margin:-1px 0}
+
+/* carte */
+.carte-pizzas{display:grid;gap:1rem;margin-top:1.8rem}
+.groupe{background:#fff;border-radius:18px;padding:1.2rem 1.2rem .6rem;box-shadow:0 10px 28px rgba(80,40,10,.09);border-top:5px solid var(--vert);transition:transform .35s,box-shadow .35s}
+.groupe:nth-child(2){border-top-color:var(--rouge)}.groupe:nth-child(3){border-top-color:var(--flamme)}.groupe:nth-child(4){border-top-color:var(--vert-f)}
+.groupe:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(80,40,10,.15)}
+.groupe h3{font-family:"Alfa Slab One",serif;font-weight:400;font-size:1.05rem;letter-spacing:.03em;color:var(--vert-f);margin-bottom:.5rem}
+.groupe:nth-child(2) h3{color:var(--rouge)}.groupe:nth-child(3) h3{color:#c76a0e}
+.groupe li{list-style:none;padding:.45rem 0;border-bottom:1px dashed #e6d7c2}
+.groupe li:last-child{border:0}
+.groupe b{display:block;font-family:"Alfa Slab One",serif;font-weight:400;letter-spacing:.02em;color:var(--nuit)}
+.groupe span{font-size:.86rem;color:#6b5546}
+@media(min-width:760px){.carte-pizzas{grid-template-columns:repeat(2,1fr)}}
+.note{font-size:.85rem;color:#8a7360;margin-top:1rem}
+
+/* galerie */
+.galerie{padding-left:0;padding-right:0;background:var(--farine)}
+.galerie .wrap{padding:0 1.3rem}
+.defil{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.3rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defil::-webkit-scrollbar{display:none}
+.defil figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 8px 24px rgba(80,40,10,.13)}
+.defil img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.defil figcaption{padding:.6rem .85rem;font-size:.88rem;font-weight:600;color:#4a382c}
+.glisse{font-size:.8rem;color:#9a8270;text-align:center}
+
+/* americains */
+.duo{display:grid;gap:1.1rem;margin-top:1.6rem}
+.duo .ph{border-radius:18px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 28px rgba(80,40,10,.12)}
+.duo .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.duo .ph:hover img{transform:scale(1.06)}
+@media(min-width:760px){.duo{grid-template-columns:1fr 1fr}}
+.puces{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.3rem}
+.puces span{background:#fff;border:1.5px solid var(--vert);color:var(--vert-f);padding:.4rem .95rem;border-radius:99px;font-weight:700;font-size:.92rem}
+
+/* poulet */
+.poulet{background:linear-gradient(160deg,var(--rouge) 0%,var(--rouge-f) 100%);color:#fff;position:relative;overflow:hidden}
+.poulet h2{color:#fff}.poulet .sur{color:#ffd9a0}
+.poulet .ph{border-radius:20px;overflow:hidden;margin-top:1.4rem;aspect-ratio:4/3;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.poulet .ph img{width:100%;height:100%;object-fit:cover}
+.encart{margin-top:1.3rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:16px;padding:1rem 1.2rem}
+.encart a{color:#fff;font-weight:700}
+@media(min-width:760px){.poulet .grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}.poulet .ph{margin-top:0}}
+
+/* actus */
+.posts{display:grid;gap:1rem;margin-top:1.6rem}
+.post{background:#fff;border-left:4px solid var(--vert);border-radius:12px;padding:1.1rem 1.2rem;box-shadow:0 6px 18px rgba(80,40,10,.07)}
+.post:nth-child(2){border-left-color:var(--rouge)}.post:nth-child(3){border-left-color:var(--flamme)}
+.post time{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vert-f);font-weight:700}
+.post p{margin-top:.35rem;font-size:.97rem}
+@media(min-width:760px){.posts{grid-template-columns:repeat(3,1fr)}}
+
+/* infos */
+.infos{background:var(--nuit);color:#f3e6d3}
+.infos h2{color:#fff}.infos .sur{color:var(--braise)}
+.grille{display:grid;gap:1rem;margin-top:1.6rem}
+.bloc{background:var(--nuit2);border:1px solid rgba(255,179,71,.22);border-radius:16px;padding:1.2rem}
+.bloc h3{font-family:"Alfa Slab One",serif;font-weight:400;letter-spacing:.03em;color:var(--braise);font-size:1.02rem;margin-bottom:.35rem}
+.bloc a{color:#fff;font-weight:700}
+@media(min-width:760px){.grille{grid-template-columns:repeat(3,1fr)}}
+.infos .btns{margin-top:1.8rem}
+footer{background:#0d0907;color:#a8968a;font-size:.8rem;text-align:center;padding:1.6rem 1.3rem 2rem}
+footer b{color:var(--braise)}
+
+/* apparitions */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.vu{opacity:1;transform:none}
+.hero-in>*{animation:monte 1.1s ease both}
+.hero-in>*:nth-child(2){animation-delay:.15s}.hero-in>*:nth-child(3){animation-delay:.3s}.hero-in>*:nth-child(4){animation-delay:.45s}.hero-in>*:nth-child(5){animation-delay:.6s}.hero-in>*:nth-child(6){animation-delay:.75s}
+@keyframes monte{from{opacity:0;transform:translateY(20px)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}
+  #braises{display:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Pizza Box 786</div>
+<div class="tricolore"></div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Le four à bois de Pizza Box, flammes vives et pizza qui cuit sur la pierre"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div class="medaille"><img src="img/logo.jpg" alt="Logo Pizza Box"></div>
+    <span class="sur-h">L’Italie dans chaque bouchée</span>
+    <h1>Pizza au <em>feu de bois</em>, à Saint-Denis</h1>
+    <p class="sous">Une pâte maison préparée chaque jour, façonnée à la main et cuite à la flamme. Authentique. Généreux. Irrésistible.</p>
+    <div class="badges"><span class="badge">🔥 Four à bois</span><span class="badge">Pâte maison</span><span class="badge">À emporter</span><span class="badge">Sur Uber Eats</span></div>
+    <div class="btns">
+      <a class="btn btn-r" href="tel:+262693035350">📞 Commander · 0693 03 53 50</a>
+      <a class="btn btn-o" href="#infos">Nous trouver</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>MARGARITA</span><i>✦</i><span>REINE</span><i>✦</i><span>ROUGAIL SAUCISSE</span><i>✦</i><span>CHÈVRE-MIEL</span><i>✦</i><span>LA BOX</span><i>✦</i><span>POULET CITRON MIEL</span><i>✦</i><span>PIZZA BOUCHON</span><i>✦</i><span>AMÉRICAINS</span><i>✦</i><span>PANUOZZO</span><i>✦</i>
+  <span>MARGARITA</span><i>✦</i><span>REINE</span><i>✦</i><span>ROUGAIL SAUCISSE</span><i>✦</i><span>CHÈVRE-MIEL</span><i>✦</i><span>LA BOX</span><i>✦</i><span>POULET CITRON MIEL</span><i>✦</i><span>PIZZA BOUCHON</span><i>✦</i><span>AMÉRICAINS</span><i>✦</i><span>PANUOZZO</span><i>✦</i>
+</div></div>
+
+<section class="feu" id="feu">
+  <div class="wrap">
+    <span class="sur rv">Goûtez la différence</span>
+    <h2 class="rv">Tout se joue <em>dans le four</em></h2>
+    <p class="lead rv">Chez Pizza Box, chaque pizza passe par la flamme&nbsp;: les bûches crépitent, la pierre chauffe, et la pâte gonfle et dore juste à côté des braises. C’est ce qui donne ce bord croustillant, légèrement fumé, que l’on reconnaît tout de suite.</p>
+    <div class="etapes">
+      <figure class="etape rv"><img src="img/flammes-four.jpg" alt="Flammes vives dans le four à bois" loading="lazy"><figcaption class="lab"><div class="n">01</div><div class="t">Le feu de bois</div><div class="d">Cuisson traditionnelle, au cœur du four</div></figcaption></figure>
+      <figure class="etape rv"><img src="img/chausson-flammes.jpg" alt="Pizza pliée qui dore près des flammes" loading="lazy"><figcaption class="lab"><div class="n">02</div><div class="t">Façonnée à la main</div><div class="d">Une pâte maison préparée chaque jour</div></figcaption></figure>
+      <figure class="etape rv"><img src="img/pizza-pres-des-braises.jpg" alt="Pizza qui cuit sur la pierre, près des braises" loading="lazy"><figcaption class="lab"><div class="n">03</div><div class="t">Cuite à la flamme</div><div class="d">Pour une texture unique et un goût incomparable</div></figcaption></figure>
+    </div>
+    <p class="cite rv">«&nbsp;Pâte maison · Façonné à la main · Cuite à la flamme · Qualité, fraîcheur et passion&nbsp;!&nbsp;»<small>Pizza Box 786, visuel publié sur Facebook le 6 août 2026</small></p>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0,0 L1440,0 L1440,12 C1100,48 800,0 480,24 C280,40 120,28 0,16 Z" fill="#17110d"/></svg>
+
+<section id="carte">
+  <div class="wrap">
+    <span class="sur rv">Une pizza pour chaque envie</span>
+    <h2 class="rv">Notre carte <em>au feu de bois</em></h2>
+    <p class="lead rv">Base tomate, base crème, produits de la mer, recettes sans viande… et quelques créations bien de chez nous, comme la Rougail Saucisse ou la Pizza Bouchon. En 26 ou 33&nbsp;cm.</p>
+    <div class="carte-pizzas">
+      <div class="groupe rv"><h3>SANS VIANDE</h3><ul>
+        <li><b>Margarita</b><span>Tomate, fromage, olive</span></li>
+        <li><b>Végétarienne</b><span>Tomate, fromage, tomate fraîche, poivrons, champignon, pomme de terre, olive</span></li>
+        <li><b>4 Fromages</b><span>Tomate, fromage, bleu, gorgonzola, mozzarella, olive</span></li>
+      </ul></div>
+      <div class="groupe rv"><h3>BASE TOMATE</h3><ul>
+        <li><b>Rougail Saucisse</b><span>Tomate, fromage, saucisse, gros piment, oignon, tomate fraîche, olive</span></li>
+        <li><b>Pizza Bouchon</b><span>Tomate, fromage, bouchon, oignon, gros piment, olive</span></li>
+        <li><b>Chèvre-Miel</b><span>Tomate, fromage, jambon, pomme de terre, chèvre, miel, olive</span></li>
+      </ul></div>
+      <div class="groupe rv"><h3>BASE CRÈME</h3><ul>
+        <li><b>La Box</b><span>Crème, fromage, jambon, oignon, câpres, pomme de terre, olive</span></li>
+        <li><b>Poulet Citron Miel</b><span>Crème, fromage, poulet, citron, jus de citron, câpres, miel, olive</span></li>
+        <li><b>L’Indienne</b><span>Crème, fromage, tandoori, oignon, miel, olive</span></li>
+      </ul></div>
+      <div class="groupe rv"><h3>PRODUITS DE LA MER</h3><ul>
+        <li><b>Camaron Tandoori</b><span>Tomate, fromage, camaron tandoori, oignon, crème, olive</span></li>
+        <li><b>La Riviera</b><span>Tomate, fromage, saumon, crevette, crème, olive</span></li>
+        <li><b>Saumon</b><span>Tomate, fromage, crème, saumon, beurre à l’ail, olive</span></li>
+      </ul></div>
+    </div>
+    <p class="note rv">Un extrait de la carte publiée sur notre page Facebook, où vous retrouvez la carte complète.</p>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <span class="sur rv">Tout droit sorties du four</span>
+    <h2 class="rv">Généreuses, <em>dorées</em>, prêtes à partager</h2>
+  </div>
+  <div class="defil">
+    <figure><img src="img/pizza-poivrons-ananas.jpg" alt="Pizza garnie de poivrons, ananas et olives, bords dorés" loading="lazy"><figcaption>Bien garnie, bords dorés au feu</figcaption></figure>
+    <figure><img src="img/pizza-champignons.jpg" alt="Pizza aux champignons dans sa boîte" loading="lazy"><figcaption>Champignons, prête à emporter</figcaption></figure>
+    <figure><img src="img/pizza-garnie.jpg" alt="Pizza garnie de viande et d'oignon rouge" loading="lazy"><figcaption>Généreuse jusqu’au bord</figcaption></figure>
+    <figure><img src="img/pizza-tomates-poivrons.jpg" alt="Pizza aux tomates fraîches, poivrons et olives" loading="lazy"><figcaption>Tomates fraîches &amp; poivrons</figcaption></figure>
+    <figure><img src="img/pizza-olives.jpg" alt="Pizza à la viande et aux olives noires" loading="lazy"><figcaption>Fromage fondant, olives noires</figcaption></figure>
+    <figure><img src="img/pizza-creme.jpg" alt="Pizza base crème garnie" loading="lazy"><figcaption>Une base crème bien gourmande</figcaption></figure>
+    <figure><img src="img/calzone-doree.jpg" alt="Calzone dorée dans sa boîte" loading="lazy"><figcaption>La Calzone, bien dorée</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section id="americains">
+  <div class="wrap">
+    <span class="sur rv">Cuit à la flamme, savourez l’authentique</span>
+    <h2 class="rv">Américains <em>&amp;</em> Panuozzo</h2>
+    <p class="lead rv">Le feu de bois réussit aussi aux sandwichs&nbsp;: des américains gratinés au four, et le panuozzo, un sandwich pizza à la pâte artisanale, garni généreusement.</p>
+    <div class="duo">
+      <div class="ph rv"><img src="img/americain-four.jpg" alt="Américain gratiné en train de cuire dans le four à bois" loading="lazy"></div>
+      <div class="ph rv"><img src="img/americains.jpg" alt="Américains garnis et gratinés sur le plan de travail" loading="lazy"></div>
+    </div>
+    <div class="puces rv"><span>Poulet Tandoori</span><span>Poulet Rôti</span><span>Jambon</span><span>Poulet Crispy</span></div>
+    <p class="cite rv">«&nbsp;Découvrez nos Sandwichs Pizza&nbsp;! Une pâte à pizza artisanale, façonnée à la main et cuite à la flamme, garnie généreusement.&nbsp;»<small>Pizza Box 786, publication Facebook du 6 août 2026</small></p>
+  </div>
+</section>
+
+<section class="poulet" id="poulet">
+  <div class="wrap grid">
+    <div>
+      <span class="sur rv">Grandes saveurs au rendez-vous&nbsp;!</span>
+      <h2 class="rv">Le poulet rôti au feu de bois</h2>
+      <p class="lead rv">«&nbsp;100&nbsp;% authentique, 100&nbsp;% savoureux&nbsp;»&nbsp;: rôti lentement au feu de bois pour un goût inoubliable, servi avec ses pommes de terre.</p>
+      <div class="encart rv">Le samedi, de 11h30 à 13h.<br>Pensez à réserver au <a href="tel:+262693035350">0693 03 53 50</a>.</div>
+    </div>
+    <div class="ph rv"><img src="img/poulet-roti-four.jpg" alt="Plats de poulet et pommes de terre qui rôtissent devant les flammes du four" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="actus">
+  <div class="wrap">
+    <span class="sur rv">Les nouvelles de la pizzeria</span>
+    <h2 class="rv">Toujours du nouveau <em>autour du feu</em></h2>
+    <div class="posts">
+      <article class="post rv"><time datetime="2026-10-04">4 octobre 2026</time><p>«&nbsp;Le midi, nous restons ouverts comme d’habitude, les lundis, mercredis, jeudis et samedis, de 11h30 à 13h30. Vous pourrez également retrouver les Américains et les Panuozzo.&nbsp;»</p></article>
+      <article class="post rv"><time datetime="2026-08-05">5 août 2026</time><p>«&nbsp;Le PANUOZZO DESSERT débarque chez Pizza Box&nbsp;!&nbsp;» Nutella &amp; sucre glace, Nutella &amp; banane, Nutella &amp; fraise… le goût qui fait fondre.</p></article>
+      <article class="post rv"><time datetime="2026-04-11">11 avril 2026</time><p>«&nbsp;Bonne nouvelle&nbsp;! Pizza Box est maintenant sur Uber Eats. Commandez en quelques clics&nbsp;!&nbsp;»</p></article>
+    </div>
+    <p class="cite rv"><small>Extraits des publications de la page Facebook Pizza Box 786</small></p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <span class="sur rv">À tout de suite&nbsp;!</span>
+    <h2 class="rv">Pizza Box 786, Saint-Denis</h2>
+    <div class="grille">
+      <div class="bloc rv"><h3>📍 ADRESSE</h3><p>240 rue du Maréchal Leclerc<br>97400 Saint-Denis</p><p style="margin-top:.4rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=240+rue+Mar%C3%A9chal+Leclerc+97400+Saint-Denis" target="_blank" rel="noopener">Ouvrir l’itinéraire →</a></p></div>
+      <div class="bloc rv"><h3>📞 COMMANDES</h3><p><a href="tel:+262693035350">0693 03 53 50</a></p><p style="margin-top:.3rem">À emporter · Sur Uber Eats</p></div>
+      <div class="bloc rv"><h3>🕚 LE MIDI</h3><p>Lundi, mercredi, jeudi et samedi, de 11h30 à 13h30.</p><p style="margin-top:.3rem">Horaires du soir et nouveautés sur <a href="https://www.facebook.com/pizzabox786.re/" target="_blank" rel="noopener">notre page Facebook</a>.</p></div>
+    </div>
+    <p class="cite rv" style="color:#d9c6b0">Recommandé par 96&nbsp;% des avis sur Facebook (35 avis).</p>
+    <div class="btns">
+      <a class="btn btn-r" href="tel:+262693035350">Appeler pour commander</a>
+      <a class="btn btn-v" href="https://www.facebook.com/pizzabox786.re/" target="_blank" rel="noopener">Suivre sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Pizza Box 786.<br>Photos&nbsp;: page Facebook Pizza Box 786.</footer>
+
+<script>
+(function(){
+  var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  function all(){els.forEach(function(e){e.classList.add('vu')})}
+  if(rm||!('IntersectionObserver' in window)){all()}else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+    els.forEach(function(e){io.observe(e)});
+    setTimeout(all,4000);
+  }
+  if(rm)return;
+  /* braises du four à bois qui montent, avec un peu de fumée */
+  var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function rs(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  rs();addEventListener('resize',rs);
+  function nv(i){var s=i%5===0;return{x:Math.random()*W,y:H+Math.random()*H*.5,r:s?16+Math.random()*22:.8+Math.random()*2,v:s?.25+Math.random()*.25:.6+Math.random()*1.3,d:Math.random()*6.28,s:s}}
+  for(var i=0;i<32;i++){var p=nv(i);p.y=Math.random()*H;P.push(p)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  function f(){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y-=p.v;p.d+=.03;p.x+=Math.sin(p.d)*(p.s?.35:.7);
+      var k=Math.max(0,Math.min(1,p.y/H)),a;
+      if(p.s){a=k*.06;var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,240,225,'+a+')');g.addColorStop(1,'rgba(255,240,225,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();p.r+=.03}
+      else{a=k*.9*(.6+.4*Math.sin(p.d*3));x.fillStyle='rgba(255,'+(120+(i*9)%90)+',30,'+a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+      if(p.y<-40)P[i]=nv(i)});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Pizza Box 786" defer></script>
+</body>
+</html>
