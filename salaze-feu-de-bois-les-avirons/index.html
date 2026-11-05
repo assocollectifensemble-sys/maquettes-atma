@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#17110d">
+<title>Salaze Feu de Bois · Repas au feu de bois livrés · Les Avirons</title>
+<meta name="description" content="Maquette privée : Salaze Feu de Bois, livraison de repas au feu de bois du mardi au samedi midi et service traiteur, aux Avirons.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salaze Feu de Bois · Les Avirons">
+<meta property="og:description" content="Une page imaginée pour Salaze Feu de Bois : les marmites sur la braise, le menu du jour et la réservation en deux clics.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/salaze-feu-de-bois-les-avirons/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/salaze-feu-de-bois-les-avirons/img/foyer.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --suie:#17110d;      /* intérieur du foyer */
+  --suie-2:#241a14;
+  --braise:#ff6b1c;    /* la flamme */
+  --flamme:#ffb627;
+  --hibiscus:#e8357c;  /* dégradés de leurs menus */
+  --violet:#8b3fe0;
+  --lagon:#17b3a3;
+  --tole:#d8dbdc;      /* hotte en tôle galvanisée */
+  --creme:#fff5e8;
+  --creme-2:#f6e6cf;
+  --encre:#21160f;
+  --titre:'Bricolage Grotesque',system-ui,sans-serif;
+  --main:'Caveat',cursive;
+  --texte:'Nunito',system-ui,sans-serif;
+  --bar:62px;
+  --arc:linear-gradient(120deg,var(--hibiscus),var(--braise) 45%,var(--flamme));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--texte);font-size:1.0625rem;line-height:1.65;color:var(--encre);background:var(--creme);padding-bottom:var(--bar);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--flamme);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:800;line-height:1.02;letter-spacing:-.02em;text-wrap:balance}
+p{text-wrap:pretty}
+.main{font-family:var(--main);font-weight:700;letter-spacing:0}
+
+.ruban{background:#0d0907;color:#e6d3b8;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--flamme)}
+
+/* HÉRO */
+.hero{position:relative;min-height:min(92svh,820px);display:flex;align-items:flex-end;color:var(--creme);overflow:hidden;background:var(--suie);isolation:isolate}
+.hero .fond{position:absolute;inset:0;z-index:-2}
+.hero .fond img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 60%;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 70%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(180deg,rgba(23,17,13,.55) 0%,rgba(23,17,13,.15) 30%,rgba(23,17,13,.7) 62%,rgba(23,17,13,.96) 100%),
+  radial-gradient(70% 45% at 50% 78%,rgba(255,107,28,.35),transparent 70%)}
+#braises{position:absolute;inset:0;z-index:0;pointer-events:none;width:100%;height:100%}
+.hero .wrap{position:relative;z-index:1;padding:5rem 0 3.2rem}
+.salut{font-size:clamp(2rem,8vw,3rem);color:var(--flamme);transform:rotate(-3deg);display:inline-block;margin-bottom:.4rem;opacity:0;animation:monte .9s .2s ease forwards}
+.kicker{font-size:.8rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#ffd9b8}
+.hero h1{font-size:clamp(3.6rem,17vw,8.6rem);margin:.35rem 0 .1rem;opacity:0;animation:monte 1s .45s ease forwards}
+.hero h1 span{display:block;background:var(--arc);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.accroche{font-size:clamp(1.15rem,3.8vw,1.45rem);line-height:1.45;max-width:30ch;color:#fbe9d4;margin-top:.6rem;opacity:0;animation:monte 1s .75s ease forwards}
+@keyframes monte{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.8rem 1.4rem;border-radius:999px;font-weight:800;font-size:1.02rem;text-decoration:none;border:0;cursor:pointer;font-family:var(--texte);transition:transform .2s,box-shadow .2s,background .2s}
+.btn-feu{background:var(--arc);color:#fff;box-shadow:0 8px 26px rgba(255,107,28,.45);animation:souffle 3.2s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 8px 38px rgba(255,107,28,.75);transform:translateY(-1px)}}
+.btn-feu:hover{transform:translateY(-2px)}
+.btn-clair{background:rgba(255,245,232,.1);color:var(--creme);border:2px solid rgba(255,245,232,.55)}
+.btn-clair:hover{background:var(--creme);color:var(--suie)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* bandeau défilant aux couleurs de leurs menus */
+.defile{background:var(--arc);color:#fff;overflow:hidden;white-space:nowrap;border-block:3px solid var(--suie)}
+.defile .piste{display:inline-flex;gap:2.2rem;padding:.8rem 0;animation:defile 38s linear infinite;font-family:var(--titre);font-weight:800;font-size:1.15rem}
+.defile .piste span::after{content:"✦";margin-left:2.2rem;opacity:.75}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* FOYER */
+.foyer{padding:clamp(3.5rem,9vw,7rem) 0;position:relative}
+.foyer .wrap{display:grid;gap:2.4rem;align-items:center}
+.etiquette{font-size:.78rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--braise);margin-bottom:.8rem}
+.foyer h2,.menu h2,.plats h2,.infos h2,.traiteur h2{font-size:clamp(2.2rem,7.4vw,4.2rem);margin-bottom:1.2rem}
+.lead{font-size:1.22rem;line-height:1.5;font-weight:600}
+.foyer p+p{margin-top:1rem}
+.cadre-feu{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(33,22,15,.35);border:6px solid #fff}
+.cadre-feu img{width:100%;height:auto;aspect-ratio:17/10;object-fit:cover}
+.cadre-feu::after{content:"";position:absolute;inset:0;background:radial-gradient(50% 55% at 55% 70%,rgba(255,140,40,.28),transparent 70%);mix-blend-mode:screen;animation:lueur 2.6s ease-in-out infinite alternate}
+@keyframes lueur{from{opacity:.4}to{opacity:1}}
+.legende{font-size:.82rem;color:#7a614c;margin-top:.7rem}
+.clin{margin-top:1.4rem;padding:1rem 1.2rem;border-left:5px solid var(--lagon);background:#fff;border-radius:0 14px 14px 0;font-size:.98rem}
+.clin b{font-family:var(--titre)}
+
+/* MENU DU JOUR */
+.menu{background:var(--suie);color:var(--creme);padding:clamp(3.5rem,9vw,7rem) 0;position:relative;overflow:hidden}
+.menu::before{content:"";position:absolute;inset:-30% -10% auto;height:60%;background:radial-gradient(50% 60% at 50% 0%,rgba(232,53,124,.22),transparent 70%);pointer-events:none}
+.menu .etiquette{color:var(--flamme)}
+.menu .intro{max-width:48ch;color:#ead8c2}
+.etapes{list-style:none;display:grid;gap:1rem;margin:2rem 0 2.4rem;counter-reset:e}
+.etapes li{counter-increment:e;background:var(--suie-2);border:1px solid rgba(255,245,232,.12);border-radius:18px;padding:1.1rem 1.2rem 1.1rem 4.2rem;position:relative}
+.etapes li::before{content:counter(e);position:absolute;left:1.1rem;top:1rem;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;background:var(--arc);color:#fff;font-family:var(--titre);font-weight:800}
+.etapes b{display:block;font-family:var(--titre);font-size:1.15rem;color:#fff}
+.etapes span{font-size:.95rem;color:#d9c6ae}
+.citation{font-size:clamp(1.7rem,6vw,2.4rem);line-height:1.15;color:var(--flamme);margin:.4rem 0 .3rem}
+.citation-src{font-size:.85rem;color:#bfa98f}
+
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 1.25rem 1.2rem;margin:2rem -1.25rem 0;scrollbar-width:thin;scrollbar-color:var(--braise) transparent}
+.galerie figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;background:var(--suie-2);border-radius:18px;overflow:hidden;border:1px solid rgba(255,245,232,.12);transition:transform .3s}
+.galerie figure:hover{transform:translateY(-4px) rotate(-.5deg)}
+.galerie img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.galerie figcaption{padding:.8rem 1rem 1rem;font-size:.9rem;color:#e7d3bb}
+.galerie figcaption b{display:block;color:#fff;font-family:var(--titre);font-size:1rem}
+.glisse{font-size:.85rem;color:#bfa98f;margin-top:.3rem}
+
+/* OUTIL RÉSERVATION */
+.resa{margin-top:3rem;background:var(--creme);color:var(--encre);border-radius:24px;padding:1.5rem 1.25rem;box-shadow:0 20px 50px rgba(0,0,0,.4);position:relative}
+.resa::before{content:"";position:absolute;inset:0 0 auto;height:8px;border-radius:24px 24px 0 0;background:var(--arc)}
+.resa h3{font-size:clamp(1.6rem,5.6vw,2.2rem);margin:.4rem 0 .3rem}
+.resa .demo{font-size:.85rem;color:#7a614c}
+.ligne{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.8rem;padding:1rem 0;border-bottom:1px dashed #d8c3a5}
+.ligne b{font-family:var(--titre);font-size:1.12rem;display:block;line-height:1.2}
+.ligne small{color:#7a614c;font-size:.88rem}
+.qte{display:flex;align-items:center;gap:.4rem}
+.qte button{width:44px;height:44px;border-radius:50%;border:2px solid var(--braise);background:#fff;color:var(--braise);font-size:1.4rem;font-weight:800;cursor:pointer;line-height:1}
+.qte button:active{transform:scale(.92)}
+.qte output{min-width:1.6rem;text-align:center;font-family:var(--titre);font-weight:800;font-size:1.25rem}
+.accomp{font-size:.92rem;margin-top:.9rem;color:#5d4634}
+.champs{display:grid;gap:.8rem;margin-top:1.1rem}
+.champs label{font-size:.85rem;font-weight:800;display:grid;gap:.3rem}
+.champs input{font:inherit;font-weight:400;padding:.75rem .9rem;border-radius:12px;border:2px solid #e2cfb3;background:#fff;min-height:48px}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-top:1.2rem;font-family:var(--titre);font-size:1.3rem;font-weight:800}
+.total output{font-size:1.7rem;background:var(--arc);-webkit-background-clip:text;background-clip:text;color:transparent}
+.resa .btn{width:100%;margin-top:1rem}
+.resa .btn[aria-disabled="true"]{opacity:.45;pointer-events:none;animation:none}
+
+/* PLATS */
+.plats{padding:clamp(3.5rem,9vw,7rem) 0;background:var(--creme-2);position:relative}
+.plats .intro{max-width:50ch}
+.prix{display:inline-block;margin:1.2rem 0 .4rem;padding:.5rem 1rem;border-radius:999px;background:var(--suie);color:var(--flamme);font-family:var(--titre);font-weight:800}
+.grille{display:grid;gap:1rem;margin-top:1.8rem}
+.carte-plat{background:#fff;border-radius:18px;padding:1.2rem 1.3rem;box-shadow:0 8px 22px rgba(33,22,15,.08);border-top:5px solid var(--c,var(--braise));transition:transform .25s,box-shadow .25s}
+.carte-plat:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(33,22,15,.14)}
+.carte-plat h3{font-size:1.35rem;line-height:1.15}
+.carte-plat p{font-size:.92rem;color:#6b5240;margin-top:.35rem}
+.carte-plat .jour{font-size:.75rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--c,var(--braise))}
+
+/* TRAITEUR */
+.traiteur{padding:clamp(3.5rem,9vw,6.5rem) 0;background:var(--arc);color:#fff;position:relative;overflow:hidden}
+.traiteur::after{content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;border-radius:50%;border:30px solid rgba(255,255,255,.14)}
+.traiteur p{max-width:46ch;font-size:1.12rem}
+.traiteur .btn{margin-top:1.4rem;background:var(--suie);color:#fff}
+
+/* INFOS */
+.infos{padding:clamp(3.5rem,9vw,7rem) 0}
+.infos .wrap{display:grid;gap:2.2rem}
+.dl{display:grid;gap:1.3rem}
+.dl dt{font-size:.76rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--braise)}
+.dl dd{font-family:var(--titre);font-weight:600;font-size:1.35rem;line-height:1.3;margin-top:.1rem}
+.dl dd small{display:block;font-family:var(--texte);font-size:.9rem;color:#6b5240;margin-top:.2rem;font-weight:400}
+.dl a{text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:var(--braise)}
+.bloc-wa{background:var(--suie);color:var(--creme);border-radius:24px;padding:1.8rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;justify-content:center}
+.bloc-wa .main{font-size:2.3rem;color:var(--flamme);line-height:1}
+.bloc-wa p{color:#e2cdb3}
+
+footer{background:#0d0907;color:#bca88f;padding:2.4rem 0 2.6rem;font-size:.9rem}
+footer .nom{font-family:var(--titre);font-weight:800;font-size:1.6rem;background:var(--arc);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+footer p{margin-top:.45rem;max-width:62ch}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1.2fr 1fr;height:var(--bar);background:var(--suie);border-top:2px solid var(--braise)}
+.barre a{display:flex;align-items:center;justify-content:center;gap:.45rem;font-weight:800;text-decoration:none;color:var(--creme)}
+.barre a:first-child{background:var(--arc);color:#fff}
+.barre svg{width:20px;height:20px}
+
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.vu{opacity:1;transform:none}
+
+@media (max-width:819px){
+  .hero{min-height:0}
+  .hero .fond{bottom:auto;height:112vw}
+  .hero .fond img{object-position:50% 40%;filter:brightness(1.18) saturate(1.1)}
+  .hero::after{background:linear-gradient(180deg,rgba(23,17,13,.35) 0%,rgba(23,17,13,0) 25%,rgba(23,17,13,.2) 60vw,rgba(23,17,13,.92) 100vw,var(--suie) 112vw),radial-gradient(60% 30% at 50% 70vw,rgba(255,107,28,.3),transparent 70%)}
+  .hero .wrap{padding-top:calc(100vw - 30px)}
+}
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .barre{display:none}
+  .foyer .wrap{grid-template-columns:1fr 1fr;gap:4.5rem}
+  .menu-haut{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+  .galerie{margin-inline:0;padding-inline:0}
+  .galerie figure{flex-basis:300px}
+  .resa{max-width:620px;margin-inline:auto;padding:2rem 2.2rem}
+  .grille{grid-template-columns:repeat(3,1fr)}
+  .infos .wrap{grid-template-columns:1.1fr .9fr;gap:4.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .salut,.hero h1,.accroche{opacity:1}
+  .js .rv{opacity:1;transform:none}
+  #braises{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Salaze Feu de Bois</div>
+
+<header class="hero">
+  <div class="fond"><img src="img/foyer.jpg" alt="Le grand foyer en tôle galvanisée de Salaze Feu de Bois : deux marmites en fonte sur la grille, les bûches qui flambent dessous" width="1120" height="1060"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="main salut">Bonsoir à zot !</p>
+    <p class="kicker">Repas au feu de bois · Les Avirons</p>
+    <h1>Salaze <span>Feu de Bois</span></h1>
+    <p class="accroche">Les marmites mijotent sur la braise, et votre repas arrive le midi, du mardi au samedi.</p>
+    <div class="cta">
+      <a class="btn btn-feu" href="https://wa.me/262693653243?text=Bonjour%20Salaze%20Feu%20de%20Bois%20!%20Je%20voudrais%20r%C3%A9server%20pour%20demain%20midi." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>
+        Réserver sur WhatsApp</a>
+      <a class="btn btn-clair" href="tel:+262693653243">Appeler · 0693 65 32 43</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Civet coq Ducheman</span><span>Carri perche</span><span>Boucané bringelle</span><span>Rougail morue</span><span>Saucisses porc grillé</span><span>Escalope de marlin frit</span><span>Poulet croustillant</span><span>Sauté poisson</span><span>Zambrocal ti pois</span>
+  <span>Civet coq Ducheman</span><span>Carri perche</span><span>Boucané bringelle</span><span>Rougail morue</span><span>Saucisses porc grillé</span><span>Escalope de marlin frit</span><span>Poulet croustillant</span><span>Sauté poisson</span><span>Zambrocal ti pois</span>
+</div></div>
+
+<main>
+<section class="foyer" id="foyer">
+  <div class="wrap">
+    <div class="rv">
+      <p class="etiquette">Le cœur de la maison</p>
+      <h2>Tout commence par le feu.</h2>
+      <p class="lead">Un grand foyer, des marmites en fonte posées sur la grille et les bûches qui crépitent dessous : chez Salaze, chaque plat prend le temps de la braise.</p>
+      <p>Carris, civets, rougails, sautés et grillades : la cuisine créole comme à la maison, préparée au feu de bois puis livrée bien chaude à l’heure du déjeuner.</p>
+      <p class="clin"><b>Salaze</b>, un nom qui sent bon Salazie, d’où vient la maison. Le foyer, lui, s’allume aux Avirons.</p>
+    </div>
+    <figure class="rv">
+      <div class="cadre-feu"><img src="img/braise-marmites.jpg" alt="Gros plan sur les marmites en fonte au-dessus des braises et des bûches" width="680" height="400" loading="lazy"></div>
+      <figcaption class="legende">Les marmites sur la braise, photo publiée sur la page Salaze Feu de Bois.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-haut">
+      <div class="rv">
+        <p class="etiquette">Le menu du jour</p>
+        <h2>Deux plats, un rendez-vous chaque soir.</h2>
+        <p class="intro">La veille au soir, le menu tombe sur la page avec un grand « Bonsoir à zot ». Deux plats au choix, leurs accompagnements, et il ne reste plus qu’à réserver.</p>
+        <ol class="etapes">
+          <li><b>Le soir, on découvre</b><span>Le menu du lendemain est publié sur la page Facebook.</span></li>
+          <li><b>On réserve sa part</b><span>Par téléphone ou sur WhatsApp, au 0693 65 32 43.</span></li>
+          <li><b>Le midi, on se régale</b><span>Livraison du mardi au samedi, à l’heure du déjeuner.</span></li>
+        </ol>
+      </div>
+      <div class="rv">
+        <p class="etiquette">Les plats partent vite</p>
+        <p class="main citation">« Tout le poulet croustillant est déjà réservé à demain »</p>
+        <p class="citation-src">Publication de Salaze Feu de Bois, novembre 2026.</p>
+      </div>
+    </div>
+
+    <div class="galerie rv" tabindex="0" aria-label="Les menus publiés sur la page, faire glisser">
+      <figure><img src="img/menu-civet.jpg" alt="Visuel du menu du mardi 03/11 sur fond de civet coq" width="900" height="959" loading="lazy"><figcaption><b>Mardi 03/11</b>Civet coq (Ducheman) ou carri perche</figcaption></figure>
+      <figure><img src="img/menu-saucisses.jpg" alt="Visuel du menu du mercredi 28/10 sur fond de saucisses grillées et riz jaune" width="900" height="925" loading="lazy"><figcaption><b>Mercredi 28/10</b>Saucisses porc grillé ou sauté poulet</figcaption></figure>
+      <figure><img src="img/menu-poulet-marlin.jpg" alt="Visuel coloré du menu du jeudi 05/11" width="885" height="907" loading="lazy"><figcaption><b>Jeudi 05/11</b>Poulet croustillant ou escalope de marlin frit</figcaption></figure>
+      <figure><img src="img/menu-porc-poisson.jpg" alt="Visuel coloré du menu du lundi 02/11" width="900" height="807" loading="lazy"><figcaption><b>Lundi 02/11</b>Porc pomme de terre ou sauté poisson</figcaption></figure>
+      <figure><img src="img/menu-boucane-morue.jpg" alt="Visuel coloré du menu du 29/10" width="900" height="803" loading="lazy"><figcaption><b>Jeudi 29/10</b>Boucané bringelle ou rougail morue</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser : les menus publiés sur la page, fin octobre et début novembre 2026.</p>
+
+    <form class="resa rv" id="resa" onsubmit="return false">
+      <p class="etiquette">Réserver ma part</p>
+      <h3>Le menu de demain, en deux clics</h3>
+      <p class="demo">Exemple avec le menu du jeudi 05/11 publié sur la page : chaque soir, le nouveau menu s’affiche ici.</p>
+      <div class="ligne"><div><b>Poulet croustillant</b><small>9,00 €</small></div>
+        <div class="qte"><button type="button" data-p="0" data-d="-1" aria-label="Retirer un poulet croustillant">−</button><output id="q0">0</output><button type="button" data-p="0" data-d="1" aria-label="Ajouter un poulet croustillant">+</button></div></div>
+      <div class="ligne"><div><b>Escalope de marlin frit</b><small>9,00 €</small></div>
+        <div class="qte"><button type="button" data-p="1" data-d="-1" aria-label="Retirer une escalope de marlin">−</button><output id="q1">0</output><button type="button" data-p="1" data-d="1" aria-label="Ajouter une escalope de marlin">+</button></div></div>
+      <p class="accomp">Avec : riz cantonnais, rougail dakatine.</p>
+      <div class="champs">
+        <label>Votre prénom<input id="prenom" autocomplete="given-name" placeholder="Votre prénom"></label>
+        <label>Lieu de livraison<input id="lieu" placeholder="Quartier, entreprise…"></label>
+      </div>
+      <div class="total"><span>Total</span><output id="total">0,00 €</output></div>
+      <a class="btn btn-feu" id="envoyer" aria-disabled="true" href="#" target="_blank" rel="noopener">Envoyer ma réservation sur WhatsApp</a>
+    </form>
+  </div>
+</section>
+
+<section class="plats" id="plats">
+  <div class="wrap">
+    <div class="rv">
+      <p class="etiquette">Passés sur le feu ces derniers jours</p>
+      <h2>Une carte qui change chaque jour</h2>
+      <p class="intro">Du civet au boucané, du poisson aux grillades : un petit tour des menus publiés sur la page, avec leurs accompagnements.</p>
+      <span class="prix">9,00 € le plat</span>
+    </div>
+    <div class="grille">
+      <article class="carte-plat rv" style="--c:var(--hibiscus)"><p class="jour">Mardi 03/11</p><h3>Civet coq (Ducheman) · Carri perche</h3><p>Riz jaune, lentilles, salade concombre pimenté.</p></article>
+      <article class="carte-plat rv" style="--c:var(--braise)"><p class="jour">Mercredi 28/10</p><h3>Saucisses porc grillé · Sauté poulet</h3><p>Riz, lentilles, rougail tomate.</p></article>
+      <article class="carte-plat rv" style="--c:var(--lagon)"><p class="jour">Jeudi 29/10</p><h3>Boucané bringelle · Rougail morue</h3><p>Zambrocal ti pois, sauce piment.</p></article>
+      <article class="carte-plat rv" style="--c:var(--violet)"><p class="jour">Lundi 02/11</p><h3>Porc pomme de terre · Sauté poisson</h3><p>Riz, haricots coco rosé, rougail tomate.</p></article>
+      <article class="carte-plat rv" style="--c:var(--flamme)"><p class="jour">Jeudi 05/11</p><h3>Poulet croustillant · Escalope de marlin frit</h3><p>Riz cantonnais, rougail dakatine.</p></article>
+      <article class="carte-plat rv" style="--c:var(--hibiscus)"><p class="jour">Et demain ?</p><h3>La surprise du soir</h3><p>Rendez-vous sur la page, le menu tombe la veille avec un « Bonsoir à zot ».</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="traiteur" id="traiteur">
+  <div class="wrap rv">
+    <p class="etiquette" style="color:#fff">Aussi en traiteur</p>
+    <h2>Le feu de bois s’invite à vos tablées</h2>
+    <p>Salaze Feu de Bois propose aussi un service traiteur. Un repas en famille, une fête entre amis ? On en parle simplement par téléphone ou sur WhatsApp.</p>
+    <a class="btn" href="https://wa.me/262693653243?text=Bonjour%20!%20Je%20voudrais%20des%20renseignements%20pour%20le%20service%20traiteur." target="_blank" rel="noopener">Demander un renseignement</a>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="rv">
+      <p class="etiquette">Infos pratiques</p>
+      <h2>À table, le midi</h2>
+      <dl class="dl">
+        <div><dt>Livraison</dt><dd>Du mardi au samedi, le midi<small>Le menu du lendemain est publié chaque soir sur la page.</small></dd></div>
+        <div><dt>Réserver</dt><dd><a href="tel:+262693653243">0693 65 32 43</a><small>Appel ou WhatsApp. Aussi au <a href="tel:+262262024917">0262 02 49 17</a>.</small></dd></div>
+        <div><dt>D’où ça fume</dt><dd>Les Avirons, La Réunion</dd></div>
+        <div><dt>Suivre le menu</dt><dd><a href="https://www.facebook.com/p/Salaze-FEU-de-BOIS-100069736401024/" target="_blank" rel="noopener">Page Facebook Salaze Feu de Bois</a></dd></div>
+      </dl>
+    </div>
+    <div class="bloc-wa rv">
+      <p class="main">À demain midi ?</p>
+      <p>Une envie de civet ou de rougail morue ? Le plus simple : un petit message sur WhatsApp.</p>
+      <a class="btn btn-feu" href="https://wa.me/262693653243" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="nom">Salaze Feu de Bois</p>
+    <p>Repas au feu de bois livrés le midi, du mardi au samedi · traiteur · Les Avirons · 0693 65 32 43</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Salaze Feu de Bois. Photos et menus : page Facebook de Salaze Feu de Bois.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="https://wa.me/262693653243" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>WhatsApp</a>
+  <a href="tel:+262693653243">Appeler</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.1});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* braises qui montent du foyer */
+(function(){
+  var c=document.getElementById('braises');
+  if(!c||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var x=c.getContext('2d'),W,H,P=[],N=32,run=true,dpr=Math.min(devicePixelRatio||1,2);
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function nouv(p,init){p.x=W*(.25+Math.random()*.5);p.y=init?H*(.35+Math.random()*.65):H*(.82+Math.random()*.2);
+    p.r=.8+Math.random()*2.2;p.v=.35+Math.random()*.9;p.o=Math.random()*6.3;p.a=0;p.max=.45+Math.random()*.5;p.vie=0;p.dur=220+Math.random()*260;return p}
+  size();for(var i=0;i<N;i++)P.push(nouv({},true));
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  function f(){
+    if(!run)return;
+    x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+    for(var i=0;i<N;i++){var p=P[i];p.vie++;p.y-=p.v;p.o+=.03;p.x+=Math.sin(p.o)*.45;
+      var t=p.vie/p.dur;p.a=t<.15?t/.15*p.max:p.max*(1-(t-.15)/.85);
+      if(t>=1||p.y<-10){nouv(p,false);continue}
+      var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);
+      g.addColorStop(0,'rgba(255,220,140,'+p.a+')');g.addColorStop(.35,'rgba(255,120,30,'+p.a*.7+')');g.addColorStop(1,'rgba(255,80,20,0)');
+      x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*4,0,6.3);x.fill()}
+    x.globalCompositeOperation='source-over';requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+/* réservation WhatsApp */
+(function(){
+  var q=[0,0],noms=['Poulet croustillant','Escalope de marlin frit'],prix=9;
+  var bt=document.getElementById('envoyer'),tot=document.getElementById('total');
+  function maj(){
+    var n=q[0]+q[1];tot.textContent=(n*prix).toFixed(2).replace('.',',')+' €';
+    document.getElementById('q0').textContent=q[0];document.getElementById('q1').textContent=q[1];
+    if(!n){bt.setAttribute('aria-disabled','true');bt.href='#';return}
+    bt.setAttribute('aria-disabled','false');
+    var pr=document.getElementById('prenom').value.trim(),li=document.getElementById('lieu').value.trim();
+    var m='Bonsoir ! '+(pr?'C’est '+pr+'. ':'')+'Je voudrais réserver pour demain midi :';
+    for(var i=0;i<2;i++)if(q[i])m+='\n- '+q[i]+' × '+noms[i];
+    m+='\nTotal : '+tot.textContent+(li?'\nLivraison : '+li:'')+'\nMerci !';
+    bt.href='https://wa.me/262693653243?text='+encodeURIComponent(m)}
+  document.querySelectorAll('.qte button').forEach(function(b){b.addEventListener('click',function(){
+    var i=+b.dataset.p;q[i]=Math.max(0,Math.min(20,q[i]+ +b.dataset.d));maj()})});
+  ['prenom','lieu'].forEach(function(id){document.getElementById(id).addEventListener('input',maj)});
+  maj();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Salaze Feu de Bois" defer></script>
+</body>
+</html>
