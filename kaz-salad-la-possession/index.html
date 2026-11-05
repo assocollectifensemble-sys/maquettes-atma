@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kaz&#x27; Salad · Bar à salades à La Possession et au Port</title>
+<meta name="description" content="Plus de 6 000 combinaisons, 27 ingrédients cuisinés chaque matin, bases majoritairement bio : la salade qui te ressemble.">
+<meta property="og:title" content="Kaz&#x27; Salad · Bar à salades à La Possession et au Port">
+<meta property="og:description" content="Plus de 6 000 combinaisons, 27 ingrédients cuisinés chaque matin, bases majoritairement bio : la salade qui te ressemble. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/kaz-salad-la-possession/img/hero.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/kaz-salad-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--fh:'Fraunces';--fb:'Outfit';--bg:#fbfaf5;--bg2:#eef0e3;--ink:#1f2a1c;--dark:#27331f;--veil:rgba(31,42,28,.88);--acc:#6f7f45;--acc2:#c8d59a;--onacc:#fff;--muted:#4c5545;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:var(--fb),system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--fh),Georgia,serif;line-height:1.08;text-wrap:balance}p{text-wrap:pretty}img{display:block;max-width:100%}
+.ruban{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ink);color:var(--acc2);font-size:.78rem;letter-spacing:.04em;text-align:center;padding:.45rem 1rem}
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;overflow:hidden;background:var(--dark);color:#fff}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.78;transform:scale(1.08);animation:zoom 16s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08) 30%,var(--veil) 92%)}
+.fx{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.hero .in{position:relative;z-index:2;padding:7rem 1.4rem 3.2rem;max-width:1100px;margin:0 auto;width:100%;animation:up 1.2s .2s both}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+.kicker{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2);font-weight:700}
+.hero h1{font-size:clamp(2.5rem,8vw,5.2rem);margin:.5rem 0 1rem}.hero p{max-width:34rem;font-size:1.12rem;opacity:.94}
+.logo{width:120px;height:120px;object-fit:contain;border-radius:50%;background:#fff;padding:8px;margin-bottom:1rem;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.btn-a{background:var(--acc);color:var(--onacc);animation:respire 3.2s ease-in-out infinite}.btn-b{border:1.5px solid currentColor;color:inherit}
+@keyframes respire{50%{box-shadow:0 0 0 8px color-mix(in srgb,var(--acc) 22%,transparent)}}
+section{padding:4.6rem 1.4rem}.wrap{max-width:1100px;margin:0 auto}
+h2{font-size:clamp(2rem,5vw,3.1rem);margin:.4rem 0 1.1rem}.lead{font-size:1.08rem;max-width:40rem;color:var(--muted)}
+.split{display:grid;gap:2.4rem;align-items:center}@media(min-width:820px){.split{grid-template-columns:1.05fr .95fr}}
+.split img{border-radius:var(--r);width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 18px 40px rgba(0,0,0,.14)}
+.gal{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 0 1rem;margin-top:1.6rem;-webkit-overflow-scrolling:touch}
+.gal figure{flex:0 0 78%;max-width:340px;scroll-snap-align:start;position:relative;overflow:hidden;border-radius:var(--r)}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(0,0,0,.55);color:#fff;font-size:.78rem;padding:.25rem .65rem;border-radius:999px}
+.items{display:grid;gap:1rem;margin-top:2rem}@media(min-width:720px){.items{grid-template-columns:repeat(var(--n,3),1fr)}}
+.item{padding:1.5rem 1.4rem;border-top:2px solid var(--acc);background:color-mix(in srgb,var(--bg) 70%,#fff);border-radius:0 0 var(--r) var(--r);transition:transform .3s}.item:hover{transform:translateY(-4px)}
+.item h3{font-size:1.3rem;margin-bottom:.4rem}.item p{color:var(--muted)}
+.steps{counter-reset:s;display:grid;gap:1rem;margin-top:1.6rem}@media(min-width:720px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps div{counter-increment:s;padding:1.2rem;border-radius:var(--r);background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.06)}.steps div::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--acc);color:var(--onacc);font-weight:700;margin-bottom:.6rem}
+.quote{font-family:var(--fh);font-size:clamp(1.5rem,4vw,2.3rem);line-height:1.25;max-width:46rem}
+.dark{background:var(--dark);color:#fff}.dark .lead{color:rgba(255,255,255,.8)}
+.contact{text-align:center}.contact .big{font-family:var(--fh);font-size:clamp(2rem,7vw,3.4rem);color:var(--acc2);text-decoration:none;display:inline-block;margin:.6rem 0}
+.contact .lead{margin:0 auto}.contact .btns{justify-content:center}
+.addr{display:grid;gap:1rem;margin:1.4rem auto 0;max-width:44rem}@media(min-width:720px){.addr{grid-template-columns:1fr 1fr}}.addr div{padding:1.1rem;border:1px solid rgba(255,255,255,.2);border-radius:var(--r)}
+footer{padding:2.2rem 1.4rem 3rem;background:var(--ink);color:rgba(255,255,255,.65);font-size:.85rem;text-align:center}
+.wave{display:block;width:100%;height:40px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.reveal.on{opacity:1;transform:none}
+@keyframes tombe{to{transform:translate(var(--dx),110vh) rotate(var(--rot,360deg))}}@keyframes monte{to{transform:translate(var(--dx),-110vh)}}@keyframes scint{to{opacity:.9}}
+.fx b{position:absolute;top:-30px;width:14px;height:22px;background:var(--acc);border-radius:0 100% 0 100%;opacity:.55;animation:tombe linear infinite}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero>img,.btn-a,.hero .in{animation:none}.fx{display:none}}
+
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b>, créée avec plaisir pour Kaz&#x27; Salad</div>
+<header class="hero">
+  <img src="img/hero.webp" alt="Salade Kaz&#x27; Salad au-dessus d&#x27;une eau turquoise">
+  <div class="fx" aria-hidden="true"></div>
+  <div class="in">
+    <img class="logo" src="img/logo.webp" alt="Logo Kaz&#x27; Salad">
+    <span class="kicker">Bar à salades · La Possession & Le Port</span>
+    <h1>La salade qui<br>te ressemble</h1>
+    <p>Bases majoritairement bio, 27 ingrédients cuisinés chaque matin, vinaigrettes maison. Sur place, à emporter ou livrée.</p>
+    <div class="btns"><a class="btn btn-a" href="https://wa.me/262693930094?text=Bonjour%20Kaz%27%20Salad%20!">Commander sur WhatsApp</a><a class="btn btn-b" href="#adresses">Nos adresses</a></div>
+  </div>
+</header>
+
+<section class="reveal"><div class="wrap split">
+  <div>
+    <span class="kicker" style="color:var(--acc)">Ta salade, tes envies</span>
+    <h2>Plus de 6&nbsp;000 façons de composer ta salade</h2>
+    <p class="lead">Une dizaine de bases majoritairement bio, 27 ingrédients cuisinés chaque matin, des vinaigrettes maison et des produits frais choisis au maximum en circuits courts. Végétarien, gourmand, léger ou simplement indécis&nbsp;: chacun repart avec la salade qui lui ressemble.</p>
+  </div>
+  <img src="img/assiette.webp" alt="Salade colorée Kaz' Salad dans une assiette blanche" loading="lazy">
+</div></section>
+
+<section class="reveal" style="background:var(--bg2)"><div class="wrap">
+  <span class="kicker" style="color:var(--acc)">Composée avec amour</span>
+  <h2>Quatre gestes, une salade à toi</h2>
+  <div class="steps">
+    <div><h3>Ta base</h3><p>Pâtes, laitue, quinoa, riz, blé, semoule…</p></div>
+    <div><h3>Tes ingrédients</h3><p>Cuisinés le matin même, pour toute la fraîcheur du midi.</p></div>
+    <div><h3>Ta sauce</h3><p>Nos vinaigrettes maison, de la plus douce à la plus parfumée.</p></div>
+    <div><h3>Ton topping</h3><p>La petite touche finale qui fait toute la différence.</p></div>
+  </div>
+</div></section>
+
+<section class="reveal"><div class="wrap">
+  <span class="kicker" style="color:var(--acc)">Nos recettes signature</span>
+  <h2>Et si tu manques d'inspiration…</h2>
+  <div class="items" style="--n:2">
+    <div class="item"><h3>La Libanaise</h3><p>Falafels croustillants, taboulé parfumé, aubergines et poivrons grillés, tomates confites, sauce yaourt onctueuse et pain pita.</p></div>
+    <div class="item"><h3>La César</h3><p>Poulet tendre, œuf mollet bien coulant, croûtons à l'ail, copeaux de parmesan, tomates confites et notre sauce César.</p></div>
+  </div>
+  <div class="gal">
+    <figure><img src="img/plage.webp" alt="Salade Kaz' Salad face à la mer" loading="lazy"><figcaption>Au bord de la mer</figcaption></figure>
+    <figure><img src="img/bols.webp" alt="Bols de salades Kaz' Salad prêts à emporter" loading="lazy"><figcaption>À emporter</figcaption></figure>
+    <figure><img src="img/legumes.webp" alt="Salade de légumes Kaz' Salad" loading="lazy"><figcaption>Fraîcheur du jour</figcaption></figure>
+    <figure><img src="img/lagon.webp" alt="Salade betterave et mozzarella Kaz' Salad" loading="lazy"><figcaption>Couleurs du jour</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="reveal dark"><div class="wrap split">
+  <img src="img/terrasse.webp" alt="Coin de verdure chez Kaz' Salad" loading="lazy">
+  <div>
+    <span class="kicker">Sur place ou à emporter</span>
+    <h2>Une vraie pause à midi</h2>
+    <p class="lead">Au bord de la mer, au bureau, à la maison ou sur notre terrasse au vert du Port&nbsp;: c'est toi qui décides. Le temps de souffler, de te faire plaisir et de recharger les batteries.</p>
+    <p class="quote" style="margin-top:1.4rem;color:var(--acc2)">« Chaque salade est composée avec amour. »</p>
+  </div>
+</div></section>
+
+<section id="adresses" class="reveal contact" style="background:var(--bg2)"><div class="wrap">
+  <span class="kicker" style="color:var(--acc)">Nos deux adresses</span>
+  <h2>On t'attend du lundi au vendredi</h2>
+  <div class="addr" style="color:var(--ink)">
+    <div style="border-color:rgba(0,0,0,.12)"><h3>La Possession</h3><p>8 rue Mahatma Gandhi<br>11h30 – 14h30<br>Livraison Uber Eats 11h – 14h</p></div>
+    <div style="border-color:rgba(0,0,0,.12)"><h3>Le Port</h3><p>27 rue Léon de Lepervanche<br>11h00 – 14h00<br>Terrasse au vert</p></div>
+  </div>
+  <div class="btns"><a class="btn btn-a" href="https://wa.me/262693930094?text=Bonjour%20Kaz%27%20Salad%20!">Écrire sur WhatsApp</a><a class="btn btn-b" href="tel:+262693930094">0693 93 00 94</a></div>
+</div></section>
+
+<footer>Kaz' Salad · 8 rue Mahatma Gandhi, La Possession · 27 rue Léon de Lepervanche, Le Port<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Kaz&#x27; Salad, visible seulement par vous.</footer>
+<script>
+(()=>{const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;const f=document.querySelector('.fx');
+if(!rm&&f){const n=16;for(let i=0;i<n;i++){const e=document.createElement('b');e.style.left=Math.random()*100+'%';e.style.top=e.style.top||'';if('leaves'=='stars')e.style.top=Math.random()*100+'%';e.style.setProperty('--dx',(Math.random()*140-70)+'px');e.style.setProperty('--rot',(Math.random()*540)+'deg');e.style.animationDuration=(9+Math.random()*10)+'s';e.style.animationDelay=(-Math.random()*18)+'s';e.style.transform='scale('+(.6+Math.random()*.8)+')';f.appendChild(e)}
+document.addEventListener('visibilitychange',()=>f.style.display=document.hidden?'none':'')}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));})();
+</script>
+</body>
+</html>
