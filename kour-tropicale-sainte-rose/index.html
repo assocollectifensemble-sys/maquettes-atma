@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Kour Tropicale · Entretien et création d'espaces verts à La Réunion</title>
+<meta name="description" content="Une page imaginée pour Kour Tropicale.">
+<meta property="og:title" content="Kour Tropicale · Jardins et espaces verts à La Réunion">
+<meta property="og:description" content="Une page imaginée pour Kour Tropicale.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/kour-tropicale-sainte-rose/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/kour-tropicale-sainte-rose/img/jardin.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2b19;--vert:#2D5016;--feuille:#7CB342;--soleil:#F28C1E;--hibiscus:#E63946;--volcan:#3E4259;--creme:#FBF6EC;--sable:#F2E8D5;--muted:#5d6656}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;color:var(--ink);background:var(--creme);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;text-wrap:balance}
+a{color:inherit}
+.ruban{background:var(--volcan);color:#fff;text-align:center;font-size:.8rem;padding:.45rem 1rem;letter-spacing:.03em}
+.wrap{width:min(1100px,92vw);margin:0 auto}
+/* feuilles qui tombent */
+#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.f{position:absolute;top:-40px;width:18px;height:10px;border-radius:0 100% 0 100%;opacity:.75;animation:tombe linear forwards}
+@keyframes tombe{to{transform:translate(var(--dx),110vh) rotate(var(--r))}}
+header.hero{position:relative;min-height:min(88vh,760px);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:3rem;padding:4rem 0}
+.hero .txt{position:relative;z-index:2}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--vert);background:#e6efd6;padding:.35rem .8rem;border-radius:99px;margin-bottom:1.3rem}
+.hero h1{font-size:clamp(2.6rem,6.5vw,5rem);color:var(--vert)}
+.hero h1 em{font-style:normal;color:var(--soleil)}
+.hero p.lead{font-size:clamp(1.1rem,2vw,1.3rem);margin:1.4rem 0 2rem;max-width:34ch;color:#33402e}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;min-height:48px;padding:.8rem 1.4rem;border-radius:99px;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 10px 24px -10px rgba(45,80,22,.6)}
+.btn.p{background:var(--vert);color:#fff}
+.btn.s{border:2px solid var(--vert);color:var(--vert)}
+.btn:focus-visible{outline:3px solid var(--soleil);outline-offset:3px}
+.logo-zone{position:relative;justify-self:center;width:min(420px,80vw);aspect-ratio:1}
+.soleil{position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,#ffc06a 0%,var(--soleil) 55%,rgba(242,140,30,0) 72%);animation:pulse 6s ease-in-out infinite;opacity:.55}
+@keyframes pulse{50%{transform:scale(1.06);opacity:.75}}
+.logo-zone img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 60px -25px rgba(29,43,25,.55);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(-1deg)}}
+section{position:relative;z-index:2;padding:5.5rem 0}
+.kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--hibiscus);font-weight:600}
+h2{font-size:clamp(2rem,4.5vw,3.1rem);color:var(--vert);margin:.4rem 0 1.2rem}
+/* services : liste éditoriale */
+.services{background:var(--sable)}
+.svc{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+.svc ol{list-style:none;counter-reset:s}
+.svc li{counter-increment:s;display:grid;grid-template-columns:3.2rem 1fr;gap:1rem;padding:1.3rem 0;border-bottom:1px solid rgba(45,80,22,.18)}
+.svc li::before{content:"0" counter(s);font-family:Fraunces,serif;font-size:1.6rem;color:var(--soleil)}
+.svc li h3{font-size:1.4rem;color:var(--ink)}
+.svc li p{color:var(--muted);font-size:.98rem}
+.svc .intro p{font-size:1.1rem;color:#33402e;max-width:38ch}
+/* photo */
+.photo{padding:0}
+.photo figure{position:relative;height:min(78vh,640px);overflow:hidden}
+.photo img{width:100%;height:120%;object-fit:cover;object-position:center 40%;transform:translateY(var(--py,0))}
+.photo figcaption{position:absolute;left:4vw;bottom:2.4rem;max-width:520px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.photo figcaption strong{display:block;font-family:Fraunces,serif;font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15}
+.photo figcaption small{opacity:.85}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(20,30,15,.6));pointer-events:none}
+/* devis interactif */
+.devis .carte{background:#fff;border-radius:22px;padding:clamp(1.5rem,4vw,3rem);box-shadow:0 30px 70px -40px rgba(29,43,25,.45);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.q{margin-bottom:1.4rem}
+.q > span{display:block;font-weight:600;margin-bottom:.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips button{font:inherit;min-height:44px;padding:.5rem 1rem;border-radius:99px;border:1.5px solid #cdd8bd;background:var(--creme);color:var(--ink);cursor:pointer;transition:all .2s}
+.chips button[aria-pressed=true]{background:var(--vert);border-color:var(--vert);color:#fff}
+.chips button:focus-visible{outline:3px solid var(--soleil);outline-offset:2px}
+.apercu{background:#eaf3dc;border-radius:16px;padding:1.4rem;display:flex;flex-direction:column;gap:1rem}
+.bulle{background:#fff;border-radius:14px 14px 14px 4px;padding:1rem 1.1rem;font-size:.97rem;white-space:pre-line;min-height:7rem;box-shadow:0 6px 16px -10px rgba(0,0,0,.25)}
+.apercu small{color:var(--muted)}
+/* contact */
+.contact{background:var(--vert);color:#f4f8ec}
+.contact h2{color:#fff}
+.contact .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.contact .tel{font-family:Fraunces,serif;font-size:clamp(2rem,5vw,3.2rem);color:#ffd08f;text-decoration:none;display:inline-block;margin:.5rem 0 1rem}
+.contact .btn.p{background:var(--soleil);color:#1d2b19}
+.contact address{font-style:normal;opacity:.9}
+.contact .k{justify-self:center;width:180px;height:180px;border-radius:50%;background:#fff url(img/logo.webp) center/cover;box-shadow:0 0 0 10px rgba(255,255,255,.08)}
+footer{background:#18240f;color:#c9d3bd;font-size:.85rem;text-align:center;padding:2rem 1rem 6rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ header.hero{grid-template-columns:1fr;min-height:auto;padding:2.5rem 0 3rem;gap:2rem;text-align:left}
+ .logo-zone{width:min(300px,70vw);order:-1}
+ .svc,.devis .carte,.contact .grid{grid-template-columns:1fr;gap:1.8rem}
+ .contact .k{display:none}
+ section{padding:4rem 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#feuilles{display:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par Jonathan · ATMA Digital · page privée, visible seulement par vous</div>
+<div id="feuilles" aria-hidden="true"></div>
+
+<div class="wrap">
+<header class="hero">
+  <div class="txt">
+    <span class="eyebrow">Sainte-Rose · La Réunion</span>
+    <h1>Kour <em>Tropicale</em></h1>
+    <p class="lead">Nous entretenons, aménageons et faisons vivre vos jardins et espaces verts à La Réunion.</p>
+    <div class="btns">
+      <a class="btn p" href="#devis">Décrire mon jardin</a>
+      <a class="btn s" href="tel:+262693023939">0693 02 39 39</a>
+    </div>
+  </div>
+  <div class="logo-zone"><div class="soleil"></div><img src="img/logo.webp" alt="Logo Kour Tropicale : tondeuse, volcan, palmiers et hibiscus" width="700" height="700"></div>
+</header>
+</div>
+
+<section class="services">
+  <div class="wrap svc">
+    <div class="intro reveal">
+      <span class="kicker">Ce que nous faisons</span>
+      <h2>Votre kour, entre de bonnes mains</h2>
+      <p>Entretien régulier ou grand coup de propre, petit coin de verdure ou grand terrain : on regarde ensemble ce dont votre jardin a besoin.</p>
+    </div>
+    <ol class="reveal">
+      <li><div><h3>Débroussaillage</h3><p>Le terrain retrouve de l'air et de la place.</p></div></li>
+      <li><div><h3>Travaux de jardinage</h3><p>Tonte, taille, entretien : un jardin soigné au fil des saisons.</p></div></li>
+      <li><div><h3>Aménagement paysager</h3><p>Imaginer un espace vert qui vous ressemble.</p></div></li>
+      <li><div><h3>Conseils</h3><p>Les bons gestes et les bonnes plantes pour votre jardin.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="photo">
+  <figure>
+    <img id="px" src="img/jardin.webp" alt="Allée de jardin tropical bordée de fleurs et de palmiers au coucher du soleil" loading="lazy" width="1080" height="1350">
+    <figcaption class="reveal"><strong>Faire vivre vos jardins</strong><small>Photo publiée par Kour Tropicale</small></figcaption>
+  </figure>
+</section>
+
+<section class="devis" id="devis">
+  <div class="wrap">
+    <span class="kicker">Votre demande en 30 secondes</span>
+    <h2>Parlez-nous de votre jardin</h2>
+    <div class="carte reveal">
+      <div>
+        <div class="q"><span>Votre besoin</span><div class="chips" data-q="besoin">
+          <button type="button" aria-pressed="true">Débroussaillage</button><button type="button" aria-pressed="false">Entretien du jardin</button><button type="button" aria-pressed="false">Aménagement</button><button type="button" aria-pressed="false">Un conseil</button></div></div>
+        <div class="q"><span>La taille du terrain</span><div class="chips" data-q="taille">
+          <button type="button" aria-pressed="false">Petit jardin</button><button type="button" aria-pressed="true">Jardin moyen</button><button type="button" aria-pressed="false">Grand terrain</button></div></div>
+        <div class="q"><span>Le rythme</span><div class="chips" data-q="rythme">
+          <button type="button" aria-pressed="true">Une fois</button><button type="button" aria-pressed="false">Régulièrement</button></div></div>
+      </div>
+      <div class="apercu">
+        <small>Votre message, prêt à partir :</small>
+        <div class="bulle" id="bulle"></div>
+        <a class="btn p" id="envoyer" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="kicker" style="color:#ffd08f">Contact</span>
+      <h2>On en parle ?</h2>
+      <a class="tel" href="tel:+262693023939">0693 02 39 39</a>
+      <address>18 chemin Lacroix, 97439 Sainte-Rose<br>kourtropicale@proton.me</address>
+      <div class="btns" style="margin-top:1.4rem"><a class="btn p" href="https://wa.me/262693023939" target="_blank" rel="noopener">Écrire sur WhatsApp</a></div>
+    </div>
+    <div class="k" role="img" aria-label="Logo Kour Tropicale"></div>
+  </div>
+</section>
+
+<footer>Page imaginée pour Kour Tropicale par Jonathan · ATMA Digital. Visible seulement par vous, elle n'apparaît pas sur Google.</footer>
+
+<script>
+(function(){
+ var c=['#7CB342','#2D5016','#9bc45a','#F28C1E','#E63946'],z=document.getElementById('feuilles'),red=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ function feuille(){if(document.hidden||red)return;var f=document.createElement('i');f.className='f';var d=8+Math.random()*8;
+  f.style.left=Math.random()*100+'vw';f.style.background=c[Math.random()*c.length|0];f.style.setProperty('--dx',(Math.random()*160-80)+'px');
+  f.style.setProperty('--r',(360+Math.random()*540)+'deg');f.style.animationDuration=d+'s';f.style.transform='scale('+(.6+Math.random()*.8)+')';
+  z.appendChild(f);setTimeout(function(){f.remove()},d*1000)}
+ setInterval(feuille,1400);for(var i=0;i<4;i++)setTimeout(feuille,i*400);
+ var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.15});
+ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+ var px=document.getElementById('px');addEventListener('scroll',function(){var r=px.parentNode.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)px.style.setProperty('--py',(-r.top*0.12)+'px')},{passive:true});
+ var choix={};
+ function maj(){document.querySelectorAll('.chips').forEach(function(g){var b=g.querySelector('[aria-pressed=true]');choix[g.dataset.q]=b?b.textContent:''});
+  var t='Bonjour Kour Tropicale !\nJe souhaite : '+choix.besoin.toLowerCase()+'\nTerrain : '+choix.taille.toLowerCase()+'\nRythme : '+choix.rythme.toLowerCase()+'\nPouvez-vous me rappeler pour en parler ?';
+  document.getElementById('bulle').textContent=t;document.getElementById('envoyer').href='https://wa.me/262693023939?text='+encodeURIComponent(t)}
+ document.querySelectorAll('.chips').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+  g.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');maj()})});
+ maj();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Kour Tropicale" defer></script>
+</body>
+</html>
