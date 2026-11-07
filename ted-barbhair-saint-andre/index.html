@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TED Barb'Hair · Barber 974 à Saint-André</title>
+<meta name="description" content="TED Barb'Hair, barber 974 à Saint-André : coupe, barbe, sourcils, à domicile ou en salon privé, sur rendez-vous.">
+<meta property="og:title" content="TED Barb'Hair · Barber 974 à Saint-André">
+<meta property="og:description" content="Coupe • Barbe • Sourcils, à domicile ou en salon privé à Saint-André : une page imaginée pour TED Barb'Hair.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ted-barbhair-saint-andre/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ted-barbhair-saint-andre/img/hero-salon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0d0d;--noir2:#171717;--or:#d9a928;--or-c:#f0cf6a;--blanc:#f6f3ec;--rouge:#c8272f;--bleu:#1f4f9a;--gris:#a7a39a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--noir);color:var(--blanc);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{background:var(--or);color:var(--noir);font-size:.76rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:3}
+.ruban b{font-weight:600}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer{position:relative;z-index:2}
+/* HERO */
+.hero{min-height:88vh;display:flex;align-items:flex-end;overflow:hidden;position:relative}
+.hero .bg{position:absolute;inset:0;background:url(img/hero-salon.webp) center 35%/cover;animation:kb 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,.25) 0%,rgba(13,13,13,.35) 40%,rgba(13,13,13,.94) 88%)}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translateY(-2%)}}
+.hero .in{position:relative;z-index:2;padding:2rem 1.3rem 2.6rem;width:100%}
+.pole{display:inline-block;width:12px;height:46px;border-radius:7px;border:2px solid var(--or);background:repeating-linear-gradient(135deg,var(--rouge) 0 6px,#fff 6px 12px,var(--bleu) 12px 18px,#fff 18px 24px);background-size:100% 34px;animation:pole 1.6s linear infinite;vertical-align:middle;margin-right:.6rem}
+@keyframes pole{to{background-position:0 34px}}
+.kicker{font-family:Oswald;letter-spacing:.22em;text-transform:uppercase;color:var(--or-c);font-size:.82rem;display:flex;align-items:center;opacity:0;animation:up 1s .2s forwards}
+h1{font-family:Oswald;font-weight:700;font-size:clamp(2.9rem,15vw,5.4rem);line-height:.95;text-transform:uppercase;margin:.7rem 0 .5rem;opacity:0;animation:up 1.1s .4s forwards}
+h1 span{color:var(--or)}
+.hero p.lead{font-size:1.02rem;max-width:30rem;color:#e9e4d8;opacity:0;animation:up 1s .7s forwards}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin:1rem 0 1.4rem;opacity:0;animation:up 1s .9s forwards}
+.chips span{border:1px solid rgba(217,169,40,.6);color:var(--or-c);border-radius:99px;padding:.25rem .8rem;font-size:.8rem;background:rgba(0,0,0,.35)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--or);color:var(--noir);font-weight:600;text-decoration:none;padding:.9rem 1.4rem;border-radius:99px;font-size:1rem;box-shadow:0 8px 24px rgba(217,169,40,.25);animation:breathe 3.2s ease-in-out infinite}
+.btn.ghost{background:transparent;color:var(--blanc);border:1px solid rgba(246,243,236,.5);box-shadow:none;animation:none}
+@keyframes breathe{50%{transform:scale(1.035)}}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;opacity:0;animation:up 1s 1.1s forwards}
+.cap{font-size:.72rem;color:var(--gris);margin-top:1.2rem}
+/* bandeau */
+.band{background:var(--or);color:var(--noir);overflow:hidden;white-space:nowrap;font-family:Oswald;font-weight:600;text-transform:uppercase;letter-spacing:.12em;padding:.65rem 0;font-size:.95rem}
+.band div{display:inline-block;animation:defile 26s linear infinite}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:4rem 1.3rem}
+.wrap{max-width:62rem;margin:0 auto}
+.eyebrow{font-family:Oswald;color:var(--or);letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:.5rem}
+h2{font-family:Oswald;font-size:clamp(1.9rem,8vw,2.8rem);line-height:1.08;text-transform:uppercase;margin-bottom:1rem}
+h2 em{font-style:normal;color:var(--or)}
+p{color:#e8e3d8}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+.intro{background:linear-gradient(180deg,var(--noir) 0%,var(--noir2) 100%)}
+.quote{border-left:3px solid var(--or);padding:.6rem 0 .6rem 1rem;margin:1.4rem 0;font-size:1.05rem;color:var(--blanc)}
+.quote small{display:block;color:var(--gris);font-size:.76rem;margin-top:.4rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:1.6rem}
+.card{background:#1d1d1d;border:1px solid #2c2c2c;border-radius:14px;padding:1.1rem 1rem;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--or)}
+.card h3{font-family:Oswald;text-transform:uppercase;font-size:1.15rem;color:var(--or-c);letter-spacing:.04em}
+.card p{font-size:.92rem;margin-top:.25rem;color:#e8e3d8}
+/* galerie */
+.gal{background:var(--noir2)}
+.track{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem .1rem 1rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.track figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;border-radius:16px;overflow:hidden;background:#222;border:1px solid #2c2c2c}
+.track img{width:100%;height:380px;object-fit:cover;transition:transform .6s}
+.track figure:hover img{transform:scale(1.04)}
+.track figcaption{padding:.7rem .9rem;font-size:.82rem;color:#cfc9bb}
+.swipe{font-size:.78rem;color:var(--gris);margin-top:.2rem}
+/* domicile */
+.lieu{background:linear-gradient(180deg,var(--noir2),var(--noir))}
+.duo{display:grid;gap:.9rem;margin-top:1.4rem}
+@media(min-width:640px){.duo{grid-template-columns:1fr 1fr}}
+.duo div{border:1px dashed rgba(217,169,40,.55);border-radius:14px;padding:1.2rem}
+.duo h3{font-family:Oswald;text-transform:uppercase;color:var(--or-c);font-size:1.2rem}
+.fibre{margin-top:1.4rem;background:#1d1d1d;border-radius:14px;padding:1.2rem;border:1px solid #2c2c2c}
+.fibre h3{font-family:Oswald;text-transform:uppercase;font-size:1.15rem;color:var(--or-c)}
+/* noel */
+.noel{background:radial-gradient(circle at 50% 0%,#3a2a05 0%,var(--noir) 70%);text-align:center;overflow:hidden;border-top:1px solid rgba(217,169,40,.35);border-bottom:1px solid rgba(217,169,40,.35)}
+.noel .giftcard{max-width:21rem;margin:1.6rem auto;aspect-ratio:1.6;border-radius:16px;background:linear-gradient(135deg,#111 0%,#1d1d1d 55%,#2a2108 100%);border:1px solid var(--or);position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 18px 40px rgba(0,0,0,.5);animation:float 5s ease-in-out infinite}
+.giftcard::before{content:"";position:absolute;top:0;bottom:0;left:18%;width:10px;background:repeating-linear-gradient(135deg,var(--rouge) 0 5px,#fff 5px 10px,var(--bleu) 10px 15px,#fff 15px 20px);opacity:.85}
+.giftcard b{font-family:Oswald;font-size:1.7rem;letter-spacing:.06em;text-transform:uppercase}
+.giftcard b span{color:var(--or)}
+.giftcard small{color:var(--or-c);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;margin-top:.3rem}
+@keyframes float{50%{transform:translateY(-8px) rotate(-1deg)}}
+.noel p{max-width:34rem;margin:0 auto 1.4rem}
+/* contact */
+.contact{text-align:center}
+.contact .ctas{opacity:1;animation:none;justify-content:center;margin-top:1.2rem}
+.infos{list-style:none;margin:1.4rem auto 0;max-width:26rem;text-align:left}
+.infos li{padding:.65rem 0;border-bottom:1px solid #262626;font-size:.95rem;color:#e2ddd1}
+.infos li b{color:var(--or-c);font-weight:600;display:inline-block;min-width:6.4rem}
+footer{background:#080808;color:#c4bfb4;text-align:center;padding:2.2rem 1.25rem 5.5rem;font-size:.82rem}
+.float-wa{position:fixed;right:14px;bottom:16px;z-index:5;background:#25d366;color:#08130b;text-decoration:none;font-weight:600;border-radius:99px;padding:.75rem 1.1rem;font-size:.9rem;box-shadow:0 8px 22px rgba(0,0,0,.45)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.kicker,h1,.hero p.lead,.chips,.ctas{opacity:1!important;transform:none!important}#fx{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour TED Barb'Hair</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Fauteuil de barbier et néons hexagonaux, photo publiée par TED Barb'Hair"></div>
+  <div class="in">
+    <div class="kicker"><span class="pole"></span>Barber 974 · Saint-André</div>
+    <h1>TED<br><span>Barb'Hair</span></h1>
+    <p class="lead">Coiffeur barbier à domicile ou en salon privé, à Saint-André. Service propre, rapide, sans attente.</p>
+    <div class="chips"><span>Coupe</span><span>Barbe</span><span>Sourcils</span><span>Uniquement sur rendez-vous</span></div>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/262692478674?text=Bonjour%20TED%2C%20je%20voudrais%20r%C3%A9server%20un%20cr%C3%A9neau" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+      <a class="btn ghost" href="tel:+262692478674">0692 47 86 74</a>
+    </div>
+    <p class="cap">Photo : le salon, publiée par TED Barb'Hair sur Facebook.</p>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div>Fade ✦ Taper ✦ Espagnol ✦ Design ✦ Transfo ✦ Fibre TB ✦ Coupe enfant ✦ Barbe ✦ Sourcils ✦ Fade ✦ Taper ✦ Espagnol ✦ Design ✦ Transfo ✦ Fibre TB ✦ Coupe enfant ✦ Barbe ✦ Sourcils ✦&nbsp;</div></div>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="eyebrow rv">Le barber de l'Est</div>
+    <h2 class="rv">Un dégradé net,<br><em>là où vous êtes</em></h2>
+    <p class="rv">TED se déplace chez vous ou vous reçoit en salon privé à Saint-André. Chaque rendez-vous se prend en message ou par téléphone, pour un créneau rien qu'à vous.</p>
+    <div class="quote rv">« Coupe • Barbe • Sourcils<br>Service propre • Rapide • Sans attente »<small>Publication Instagram de TED Barb'Hair, 17 août 2026</small></div>
+    <div class="cards">
+      <div class="card rv"><h3>Fade</h3><p>Le dégradé, net et progressif.</p></div>
+      <div class="card rv"><h3>Taper</h3><p>Des contours propres et précis.</p></div>
+      <div class="card rv"><h3>Espagnol</h3><p>La coupe espagnole, à la demande.</p></div>
+      <div class="card rv"><h3>Design</h3><p>Des motifs dessinés dans la coupe.</p></div>
+      <div class="card rv"><h3>Transfo</h3><p>« Coupe transformation », avant / après.</p></div>
+      <div class="card rv"><h3>Coupe enfant</h3><p>Les plus jeunes aussi ont leur style.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="wrap">
+    <div class="eyebrow rv">Le travail</div>
+    <h2 class="rv">Du travail <em>à la nuque</em></h2>
+    <div class="track rv">
+      <figure><img src="img/degrade-nuque.webp" alt="Dégradé net et texture sur le dessus, vu de dos" loading="lazy"><figcaption>Dégradé et texture, publié en avril 2026</figcaption></figure>
+      <figure><img src="img/degrade-saint-andre.webp" alt="Dégradé court vu de trois-quarts arrière" loading="lazy"><figcaption>« Coiffeur barber à domicile ou en salon privé »</figcaption></figure>
+      <figure><img src="img/degrade-profil.webp" alt="Dégradé progressif derrière l'oreille" loading="lazy"><figcaption>Fondu progressif, finition nette</figcaption></figure>
+      <figure><img src="img/hero-salon.webp" alt="Fauteuil de barbier sous les néons" loading="lazy"><figcaption>Le fauteuil vous attend</figcaption></figure>
+    </div>
+    <p class="swipe">← Faites glisser pour voir les photos →<br>Photos publiées par TED Barb'Hair sur Instagram et Facebook.</p>
+  </div>
+</section>
+
+<section class="lieu">
+  <div class="wrap">
+    <div class="eyebrow rv">Deux façons de venir</div>
+    <h2 class="rv">À domicile <em>ou</em> en salon privé</h2>
+    <div class="duo">
+      <div class="rv"><h3>TED se déplace</h3><p>« Déplace ou reçois en salon » : la coupe arrive chez vous, à Saint-André.</p></div>
+      <div class="rv"><h3>Le salon privé</h3><p>À Saint-André, au calme, sur rendez-vous uniquement.</p></div>
+    </div>
+    <div class="fibre rv"><h3>Fibre TB</h3><p>La fibre capillaire fait partie des incontournables mis en avant sur le compte : demandez-la à TED lors de votre rendez-vous.</p></div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="eyebrow rv">Offrir pour Noël</div>
+    <h2 class="rv">Une coupe fraîche <em>sous le sapin</em></h2>
+    <div class="giftcard rv"><b>TED <span>Barb'Hair</span></b><small>Carte cadeau</small></div>
+    <p class="rv">Pour un frère, un père, un ami ou un fils : offrez un moment chez TED Barb'Hair, coupe, barbe ou sourcils, à domicile ou en salon privé.</p>
+    <a class="btn rv" href="https://wa.me/262692478674?text=Bonjour%20TED%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv">Réserver</div>
+    <h2 class="rv">Réserve ton <em>créneau</em></h2>
+    <p class="rv">Uniquement sur rendez-vous : en message ou au téléphone.</p>
+    <div class="ctas rv">
+      <a class="btn" href="https://wa.me/262692478674?text=Bonjour%20TED%2C%20je%20voudrais%20r%C3%A9server%20un%20cr%C3%A9neau" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn ghost" href="tel:+262692478674">Appeler</a>
+    </div>
+    <ul class="infos rv">
+      <li><b>Téléphone</b><a href="tel:+262692478674">0692 47 86 74</a></li>
+      <li><b>Lieu</b>Saint-André · domicile ou salon privé</li>
+      <li><b>Instagram</b><a href="https://www.instagram.com/ted_barbhair/" target="_blank" rel="noopener">@ted_barbhair</a></li>
+      <li><b>Facebook</b><a href="https://www.facebook.com/profile.php?id=61572222921754" target="_blank" rel="noopener">TED Barb'Hair</a></li>
+      <li><b>TikTok</b>TED Barb'Hair</li>
+    </ul>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de TED Barb'Hair.<br>Photos : publiées par TED Barb'Hair sur Instagram et Facebook.</footer>
+<a class="float-wa" href="https://wa.me/262692478674?text=Bonjour%20TED%2C%20je%20voudrais%20r%C3%A9server%20un%20cr%C3%A9neau" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('fx'),g=c.getContext('2d');let W,H,run=true;const P=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push(n(true));
+function n(s){return{x:Math.random()*W,y:s?Math.random()*H:-12,l:4+Math.random()*7,a:Math.random()*6.28,va:(Math.random()-.5)*.03,vy:.25+Math.random()*.5,vx:(Math.random()-.5)*.25,o:.12+Math.random()*.28,gold:Math.random()<.35}}
+function f(){if(!run)return;g.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.vy;p.x+=p.vx+Math.sin(p.y/60)*.15;p.a+=p.va;
+if(p.y>H+12)Object.assign(p,n(false));
+g.save();g.translate(p.x,p.y);g.rotate(p.a);g.strokeStyle=p.gold?`rgba(217,169,40,${p.o})`:`rgba(246,243,236,${p.o*.8})`;g.lineWidth=1.1;g.lineCap='round';g.beginPath();g.moveTo(-p.l/2,0);g.quadraticCurveTo(0,p.l*.18,p.l/2,0);g.stroke();g.restore()}
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="TED Barb&#x27;Hair" defer></script>
+</body>
+</html>
