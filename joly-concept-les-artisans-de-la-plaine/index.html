@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>JOLY Concept · Couture sur mesure, crochet et événements · Plaine des Cafres</title>
+<meta name="description" content="JOLY Concept, Plaine des Cafres (Le Tampon) : créations sur mesure, articles au crochet faits main et organisation d'événements. Créateurs d'émotions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JOLY Concept · Créateurs d'émotions">
+<meta property="og:description" content="Couture sur mesure, crochet 100 % fait main et organisation d'événements à la Plaine des Cafres.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/joly-concept-les-artisans-de-la-plaine/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/joly-concept-les-artisans-de-la-plaine/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#fef8f8; --blush:#f6e3e2; --rose:#ecc2c4; --rose-f:#c98b8f; --vieux-rose:#a2585e;
+  --or:#c9a25a; --or-c:#e8cf9b; --encre:#2f2a2e; --gris:#5a4a4e; --sauge:#8fa08a; --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.1;font-weight:700}
+.ruban{position:relative;z-index:30;background:var(--encre);color:var(--creme);text-align:center;font-size:.84rem;padding:.55rem 1rem}
+.ruban b{color:var(--rose)}
+#petales{position:fixed;inset:0;pointer-events:none;z-index:1;width:100%;height:100%}
+main,footer{position:relative;z-index:2}
+.sur{display:inline-block;font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;color:var(--vieux-rose);margin-bottom:.5rem}
+
+/* HERO */
+.hero{position:relative;min-height:90vh;display:grid;align-items:end;overflow:hidden;color:#fff;background:#3a2a26}
+.hero-img{position:absolute;inset:0;background:url(img/lili-mascotte.webp) 55% 40%/cover no-repeat;animation:kb 24s ease-in-out infinite alternate;transform-origin:55% 45%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.15) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,42,46,.05) 0%,rgba(47,42,46,.25) 40%,rgba(47,30,32,.9) 100%)}
+.hero-in{position:relative;z-index:2;padding:2rem 1.3rem 4.4rem;max-width:760px}
+.logo{width:92px;height:92px;border-radius:50%;border:3px solid var(--rose);box-shadow:0 8px 30px rgba(0,0,0,.3);margin-bottom:1rem;background:var(--creme)}
+.hero .sur{color:var(--or-c)}
+.hero h1{font-size:clamp(3rem,13vw,5rem);text-shadow:0 3px 22px rgba(0,0,0,.4)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--rose)}
+.hero p.acc{font-size:1.1rem;margin:.6rem 0 1.4rem;max-width:34ch;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero .signature{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.5rem;color:var(--rose)}
+.fade{opacity:0;transform:translateY(18px);animation:up 1.1s .25s ease forwards}
+.fade.d2{animation-delay:.55s}.fade.d3{animation-delay:.85s}
+@keyframes up{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-rose{background:var(--rose);color:var(--encre);box-shadow:0 6px 22px rgba(236,194,196,.45);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 6px 34px rgba(236,194,196,.85)}}
+.btn-ligne{border:2px solid rgba(254,248,248,.85);color:var(--creme)}
+.btn-encre{background:var(--encre);color:var(--creme)}
+.btn svg{width:20px;height:20px;flex:none}
+
+.vague{display:block;width:100%;height:46px;margin-top:-45px;position:relative;z-index:3}
+
+/* BANDEAU */
+.bandeau{background:var(--creme);overflow:hidden;border-bottom:1px dashed rgba(162,88,94,.3);padding:.9rem 0}
+.piste{display:flex;gap:2.4rem;white-space:nowrap;width:max-content;animation:defile 40s linear infinite;font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--vieux-rose);font-size:1.2rem}
+.piste span::after{content:"✿";color:var(--or);margin-left:2.4rem;font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.2rem 1.3rem}
+.wrap{max-width:1080px;margin:0 auto}
+.titre{text-align:center;margin-bottom:2.2rem}
+.titre h2{font-size:clamp(2.1rem,8vw,3rem);color:var(--encre)}
+.titre p{max-width:58ch;margin:.7rem auto 0;color:var(--gris)}
+
+/* fil de couture */
+.fil{display:block;width:min(260px,70%);height:34px;margin:0 auto 1.2rem}
+.fil path{fill:none;stroke:var(--rose-f);stroke-width:2;stroke-dasharray:6 6}
+.fil circle{fill:var(--or)}
+
+/* HISTOIRE */
+.histoire{display:grid;gap:2rem;align-items:center}
+.cadre{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 50px rgba(162,88,94,.2);border:6px solid #fff}
+.cadre figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(254,248,248,.92);color:var(--gris);font-size:.75rem;padding:.25rem .6rem;border-radius:999px}
+.citation{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;line-height:1.25;color:var(--vieux-rose);border-left:3px solid var(--or);padding-left:1rem;margin:1rem 0}
+.histoire p{margin-bottom:.8rem}
+.histoire h2{font-size:clamp(2rem,7.5vw,2.7rem)}
+
+/* PRESTATIONS */
+.presta-bg{background:linear-gradient(180deg,var(--creme) 0,var(--blush) 100%)}
+.cartes{display:grid;gap:1.1rem}
+.carte{background:#fff;border-radius:var(--r);padding:1.5rem 1.3rem;box-shadow:0 10px 30px rgba(162,88,94,.1);transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.carte::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:var(--blush);opacity:.7}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 18px 40px rgba(162,88,94,.18)}
+.carte .ico{width:52px;height:52px;border-radius:50%;background:var(--blush);display:grid;place-items:center;margin-bottom:.8rem;position:relative;z-index:1}
+.carte .ico svg{width:28px;height:28px;stroke:var(--vieux-rose);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.carte h3{font-size:1.5rem;margin-bottom:.3rem;position:relative;z-index:1}
+.carte p{position:relative;z-index:1;color:var(--gris)}
+.ill{font-size:.7rem;color:var(--rose-f);text-align:center;margin-top:1rem}
+
+/* FORMULES */
+.formules{display:grid;gap:1.2rem;max-width:820px;margin:0 auto}
+.formule{background:#fff;border:1px solid var(--rose);border-radius:var(--r);padding:1.5rem 1.3rem}
+.formule.plus{background:var(--encre);color:var(--creme);border-color:var(--encre)}
+.formule h3{font-size:1.8rem;margin-bottom:.6rem}
+.formule.plus h3{color:var(--rose)}
+.formule ul{list-style:none}
+.formule li{padding:.5rem 0 .5rem 1.7rem;position:relative;border-bottom:1px dashed rgba(162,88,94,.25)}
+.formule.plus li{border-color:rgba(236,194,196,.25)}
+.formule li:last-child{border:0}
+.formule li::before{content:"✿";position:absolute;left:0;color:var(--or)}
+.devis{text-align:center;margin-top:1.6rem;color:var(--gris)}
+
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 76%;max-width:320px;scroll-snap-align:center;background:#fff;padding:.55rem .55rem .7rem;border-radius:18px;box-shadow:0 10px 26px rgba(162,88,94,.14);transition:transform .35s}
+.galerie figure:nth-child(odd){transform:rotate(-1.2deg)}
+.galerie figure:nth-child(even){transform:rotate(1.1deg)}
+.galerie figure:hover{transform:rotate(0) scale(1.02)}
+.galerie img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
+.galerie figcaption{font-size:.88rem;color:var(--gris);padding:.55rem .2rem 0;text-align:center}
+.astuce{text-align:center;font-size:.8rem;color:var(--gris);opacity:.75}
+
+/* LILI */
+.lili{background:var(--blush)}
+.lili .wrap{display:grid;gap:2rem;align-items:center}
+.lili .cadre{max-width:430px;margin:0 auto;animation:flotte 6s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-8px) rotate(.6deg)}}
+.carton{background:#fff;border-radius:6px;padding:1.6rem 1.4rem;box-shadow:0 10px 30px rgba(162,88,94,.15);transform:rotate(-1.5deg);max-width:420px;margin:0 auto;text-align:center;border-top:4px solid var(--rose)}
+.carton p.mot{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2rem;line-height:1.2;color:var(--vieux-rose)}
+
+/* MOMENTS */
+.moments{background:var(--encre);color:var(--creme)}
+.moments .titre h2{color:var(--creme)}.moments .titre p{color:#e9d6d6}.moments .sur{color:var(--rose)}
+.frise{display:grid;gap:1rem;max-width:760px;margin:0 auto}
+.jalon{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;background:rgba(254,248,248,.06);border:1px solid rgba(236,194,196,.25);border-radius:18px;padding:1rem 1.1rem}
+.jalon .date{font-family:"Cormorant Garamond",serif;font-weight:700;color:var(--or-c);font-size:1.1rem;min-width:4.4rem;line-height:1.2}
+.jalon h3{font-size:1.25rem;margin-bottom:.2rem;color:#fff}
+.jalon p{font-size:.95rem;color:#e9d6d6}
+
+/* NOEL */
+.noel{position:relative;background:radial-gradient(120% 90% at 50% 0%,#fff 0%,var(--blush) 55%,var(--rose) 100%);overflow:hidden;text-align:center}
+.noel::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(201,162,90,.55) 1px,transparent 1.6px);background-size:30px 30px;opacity:.35}
+.noel .wrap{position:relative;max-width:720px}
+.guirlande{display:flex;justify-content:center;gap:.9rem;margin-bottom:1rem}
+.guirlande i{width:10px;height:10px;border-radius:50%;background:var(--or);box-shadow:0 0 12px var(--or);animation:scint 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:#fff;box-shadow:0 0 12px #fff;animation-delay:.6s}
+.guirlande i:nth-child(3n){background:var(--vieux-rose);box-shadow:0 0 12px var(--vieux-rose);animation-delay:1.1s}
+@keyframes scint{50%{opacity:.35;transform:scale(.8)}}
+.noel h2{font-size:clamp(2.3rem,9vw,3.3rem)}
+.noel h2 em{color:var(--vieux-rose)}
+.noel p{color:var(--gris);margin:.9rem auto;max-width:52ch}
+.noel .idees{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:1.3rem 0 1.8rem}
+.noel .idees span{border:1px solid var(--rose-f);border-radius:999px;padding:.4rem .9rem;font-size:.92rem;background:rgba(255,255,255,.6)}
+.noel .btns{justify-content:center}
+.noel .note{font-size:.8rem;opacity:.75;margin-top:1.2rem}
+
+/* CONTACT */
+.contact{display:grid;gap:1.2rem}
+.bloc{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 10px 30px rgba(162,88,94,.1)}
+.bloc h3{font-size:1.6rem;margin-bottom:.6rem}
+.ligne{display:flex;gap:.7rem;align-items:flex-start;padding:.5rem 0;border-bottom:1px dashed rgba(162,88,94,.2);word-break:break-word}
+.ligne:last-child{border:0}
+.ligne b{min-width:6.2rem;color:var(--vieux-rose);font-weight:600}
+.contact .btns{margin-top:1rem}
+
+footer{background:#231e21;color:#e9d6d6;text-align:center;padding:2.2rem 1.3rem 2.6rem;font-size:.9rem}
+footer img{width:64px;height:64px;border-radius:50%;margin:0 auto .8rem;border:2px solid var(--rose)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+
+@media(min-width:780px){
+  .hero{min-height:84vh}
+  .hero-img{background-position:center 40%}
+  .hero-in{padding:4rem 2rem 5rem 6vw}
+  .histoire,.lili .wrap{grid-template-columns:1fr 1fr}
+  .cartes{grid-template-columns:repeat(2,1fr)}
+  .formules{grid-template-columns:1fr 1fr}
+  .galerie figure{flex-basis:280px}
+  .contact{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1040px){.cartes{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .fade,.reveal{opacity:1!important;transform:none!important}
+  #petales{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour JOLY Concept</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Lili, la mascotte hérisson de JOLY Concept, crochet en main"></div>
+  <div class="hero-in">
+    <img class="logo fade" src="img/logo.webp" alt="Logo JOLY Concept" width="92" height="92">
+    <span class="sur fade">Créations · Événements · Artisanat</span>
+    <h1 class="fade d2">JOLY <em>Concept</em></h1>
+    <p class="signature fade d2">Créateurs d'émotions…</p>
+    <p class="acc fade d2">Couture sur mesure, crochet 100 % fait main et organisation de vos grands jours, à la Plaine des Cafres.</p>
+    <div class="btns fade d3">
+      <a class="btn btn-rose" href="mailto:jolyconcept974@gmail.com?subject=Demande%20de%20devis%20JOLY%20Concept">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        Demander un devis</a>
+      <a class="btn btn-ligne" href="#prestations">Nos prestations</a>
+    </div>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 0 480 46 720 24 S1200 4 1440 26 V46 H0Z" fill="#fef8f8"/></svg>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Créateurs d'émotions</span><span>100 % fait main</span><span>Robes de mariée</span><span>Demoiselles d'honneur</span><span>Robes de soirée</span><span>Décoration de salle</span><span>Chaque maille compte</span>
+  <span>Créateurs d'émotions</span><span>100 % fait main</span><span>Robes de mariée</span><span>Demoiselles d'honneur</span><span>Robes de soirée</span><span>Décoration de salle</span><span>Chaque maille compte</span>
+</div></div>
+
+<section id="histoire">
+  <div class="wrap histoire">
+    <figure class="cadre reveal"><img src="img/couture-logo.webp" alt="Mains au travail sur un tissu blanc, à côté du logo JOLY Concept Créateurs d'émotions" loading="lazy" width="1280" height="720"><figcaption>Photo publiée par JOLY Concept, juillet 2026</figcaption></figure>
+    <div class="reveal">
+      <span class="sur">Notre histoire</span>
+      <h2>Nouveau nom, nouveau concept</h2>
+      <p class="citation">« Qui dit nouveau nom, dit nouveau concept ! »</p>
+      <p>Depuis la Plaine des Cafres, JOLY Concept crée des vêtements sur mesure et des articles au crochet. Et depuis juillet 2026, l'atelier s'ouvre à l'événementiel : « Nous continuerons la couture et le crochet, mais à un autre niveau ! »</p>
+      <p>« Nos robes ne ressembleront à aucune autre, 100 % fait main. »</p>
+    </div>
+  </div>
+</section>
+
+<section id="prestations" class="presta-bg">
+  <div class="wrap">
+    <svg class="fil reveal" viewBox="0 0 260 34" aria-hidden="true"><path d="M4 20 C60 2 100 32 150 16 S230 6 250 18"/><circle cx="252" cy="18" r="4"/></svg>
+    <div class="titre reveal"><span class="sur">Pour vos grands jours</span><h2>Vivez un moment inoubliable</h2><p>Robes, décoration, photos, traiteur : JOLY Concept s'occupe de tout, avec son partenaire Passion974 pour la partie traiteur.</p></div>
+    <div class="cartes">
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 2h6l-1 4 4 4-2 12H8L6 10l4-4z"/><path d="M8 13h8"/></svg></div><h3>Robes de mariée</h3><p>Des robes uniques, cousues 100 % à la main, pensées pour vous.</p></article>
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3c2 2 2 4 0 6-2-2-2-4 0-6Z"/><path d="M7 21l2-9h6l2 9z"/></svg></div><h3>Demoiselles d'honneur &amp; soirée</h3><p>Robes de demoiselle d'honneur, pour les enfants comme pour les adultes, et robes de soirée.</p></article>
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M12 11v10M8 15c2 0 4 1 4 3M16 15c-2 0-4 1-4 3"/><path d="M6 8c-2 0-3 1-3 3M18 8c2 0 3 1 3 3"/></svg></div><h3>Décoration de salle</h3><p>Une salle habillée selon votre thème, pour que tout vous ressemble.</p></article>
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l2-3h4l2 3"/></svg></div><h3>Photos</h3><p>Les souvenirs de la journée, pris en charge par l'équipe.</p></article>
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><path d="M8 3v7a4 4 0 0 1-2 3.5V21M8 3v5M5 3v5M11 3v5"/><path d="M17 21V3c-2 1-3 4-3 8h3"/></svg></div><h3>Traiteur</h3><p>La partie repas avec notre partenaire Passion974.</p></article>
+      <article class="carte reveal"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="14" r="6"/><path d="M5 12c3 1 5 3 6 6M4 15c2 0 4 1 5 4M14 8l7-5"/></svg></div><h3>Sur mesure &amp; crochet</h3><p>Vêtements sur mesure et articles au crochet : paniers, coussins, porte-clés…</p></article>
+    </div>
+    <p class="ill">Pictogrammes : illustrations</p>
+  </div>
+</section>
+
+<section id="formules">
+  <div class="wrap">
+    <div class="titre reveal"><span class="sur">Notre brochure</span><h2>Deux formules pour votre événement</h2><p>Extraits de la brochure JOLY Concept, mise à jour au fur et à mesure.</p></div>
+    <div class="formules">
+      <div class="formule reveal"><h3>Simple</h3><ul><li>Robes de demoiselles d'honneur (enfants ou adultes)</li><li>Accessoires (cheveux et bracelet)</li><li>Déco de la salle</li><li>Photos uniquement</li></ul></div>
+      <div class="formule plus reveal"><h3>Complète</h3><ul><li>Robe de mariée</li><li>Accessoires (couronne, bijoux de cheveux)</li><li>Déco de la salle</li><li>Et bien plus, à découvrir dans la brochure</li></ul></div>
+    </div>
+    <p class="devis reveal">Devis et informations par mail : <a href="mailto:jolyconcept974@gmail.com">jolyconcept974@gmail.com</a></p>
+  </div>
+</section>
+
+<section class="presta-bg" id="crochet">
+  <div class="wrap">
+    <div class="titre reveal"><span class="sur">L'atelier crochet</span><h2>Sorties de nos mailles</h2><p>Des créations faites main, souvent en pièce unique : beaucoup ont déjà trouvé leur maison !</p></div>
+    <div class="galerie reveal" tabindex="0" aria-label="Galerie de créations au crochet, défilement horizontal">
+      <figure><img src="img/paniers-bleus.webp" alt="Deux petits paniers au crochet bleu ciel, marqués vendu" loading="lazy"><figcaption>Paniers bleu ciel · déjà adoptés</figcaption></figure>
+      <figure><img src="img/porte-cles-coeur.webp" alt="Porte-clés cœur au crochet rose pâle avec perles, marqués vendu" loading="lazy"><figcaption>Porte-clés cœur · déjà adoptés</figcaption></figure>
+      <figure><img src="img/paniers-gris-beige.webp" alt="Paniers au crochet gris et crème, marqués vendu" loading="lazy"><figcaption>Paniers gris et crème · déjà adoptés</figcaption></figure>
+      <figure><img src="img/coussin-vert.webp" alt="Coussin vert clair, marqué vendu" loading="lazy"><figcaption>Coussin vert tendre · déjà adopté</figcaption></figure>
+      <figure><img src="img/paniers-gris-noir.webp" alt="Paniers au crochet gris et brun, marqués vendu" loading="lazy"><figcaption>Duo de paniers · déjà adoptés</figcaption></figure>
+      <figure><img src="img/crochet-winstub.webp" alt="Mains qui crochètent sur une terrasse, plaid en grosse maille" loading="lazy" style="aspect-ratio:1/1;object-position:center 70%"><figcaption>Un moment crochet à La Winstub du volcan</figcaption></figure>
+    </div>
+    <p class="astuce">← faites glisser →</p>
+  </div>
+</section>
+
+<section class="lili">
+  <div class="wrap">
+    <figure class="cadre reveal"><img src="img/lili-mascotte.webp" alt="Illustration de Lili, hérisson en robe de dentelle, crochet et fil doré en main" loading="lazy" width="960" height="960"><figcaption>Visuel publié par JOLY Concept</figcaption></figure>
+    <div class="reveal">
+      <div class="carton">
+        <span class="sur">Le conseil de Lili</span>
+        <p class="mot">« Chaque maille compte. »</p>
+        <p style="margin-top:.8rem;color:var(--gris)">Lili, la mascotte de JOLY Concept, rappelle l'esprit de l'atelier : du temps, du soin et de la patience dans chaque création.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="moments">
+  <div class="wrap">
+    <div class="titre reveal"><span class="sur">Les derniers moments partagés</span><h2>Au fil des mois</h2><p>Une jolie aventure qui grandit à la Plaine des Cafres.</p></div>
+    <div class="frise">
+      <div class="jalon reveal"><span class="date">3 juil.<br>2026</span><div><h3>Lancement de l'événementiel</h3><p>« Nous nous lançons dans l'événementiel ! » Robes de mariée, de demoiselle d'honneur et de soirée, décoration de salle, photos et traiteur.</p></div></div>
+      <div class="jalon reveal"><span class="date">5 juil.<br>2026</span><div><h3>« Créateurs d'émotions »</h3><p>Le logo JOLY Concept et sa signature « Créateurs d’émotions » arrivent sur Instagram.</p></div></div>
+      <div class="jalon reveal"><span class="date">1ᵉʳ août<br>2026</span><div><h3>Une collecte solidaire</h3><p>Les Artisans de la Plaine lancent une collecte de dons alimentaires pour aider les familles de la Plaine des Cafres.</p></div></div>
+      <div class="jalon reveal"><span class="date">8 sept.<br>2026</span><div><h3>Crochet au volcan</h3><p>Un moment de détente, crochet en main, à La Winstub du volcan avec O' Fil des Mailles.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap reveal">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <span class="sur">Création à offrir</span>
+    <h2>Offrir pour <em>Noël</em></h2>
+    <p>Sous le sapin, glissez une pièce faite main : une création au crochet, une tenue cousue sur mesure, ou le premier pas vers un grand jour imaginé par JOLY Concept.</p>
+    <div class="idees"><span>Créations au crochet</span><span>Couture sur mesure</span><span>Robe de soirée</span><span>Projet d'événement</span></div>
+    <div class="btns">
+      <a class="btn btn-encre" href="https://m.me/100083197363438?text=Bonjour%20JOLY%20Concept%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20pour%20No%C3%ABl%20%F0%9F%8E%84" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.4 2 2 6.1 2 11.6c0 2.9 1.2 5.4 3.2 7.1V22l3-1.7c1.2.3 2.5.5 3.8.5 5.6 0 10-4.1 10-9.6S17.6 2 12 2Zm1 12.9-2.6-2.7-5 2.7 5.5-5.8 2.6 2.7 4.9-2.7-5.4 5.8Z"/></svg>
+        Écrire sur Messenger</a>
+      <a class="btn btn-rose" href="mailto:jolyconcept974@gmail.com?subject=Une%20cr%C3%A9ation%20%C3%A0%20offrir%20pour%20No%C3%ABl">Par mail</a>
+    </div>
+    <p class="note">Idées et disponibilités à confirmer directement avec JOLY Concept.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="titre reveal"><span class="sur">Contact</span><h2>Parlons de votre projet</h2><p>Pour vos demandes de devis ou d'informations, écrivez-nous : nous ferons de votre journée un moment inoubliable.</p></div>
+    <div class="contact">
+      <div class="bloc reveal">
+        <h3>JOLY Concept</h3>
+        <div class="ligne"><b>Atelier</b><span>La Plaine des Cafres, Le Tampon, La Réunion</span></div>
+        <div class="ligne"><b>E-mail</b><a href="mailto:jolyconcept974@gmail.com">jolyconcept974@gmail.com</a></div>
+        <div class="btns">
+          <a class="btn btn-rose" href="mailto:jolyconcept974@gmail.com?subject=Demande%20de%20devis%20JOLY%20Concept">Demander un devis</a>
+        </div>
+      </div>
+      <div class="bloc reveal">
+        <h3>Suivre l'atelier</h3>
+        <div class="ligne"><b>Facebook</b><a href="https://www.facebook.com/p/JOLY-Concept-100083197363438/" target="_blank" rel="noopener">JOLY Concept</a></div>
+        <div class="ligne"><b>Instagram</b><a href="https://www.instagram.com/jolyconcept/" target="_blank" rel="noopener">@jolyconcept</a></div>
+        <div class="ligne"><b>Partenaire</b><span>Passion974, pour la partie traiteur</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <img src="img/logo.webp" alt="" width="64" height="64">
+  <p><b>JOLY Concept</b> · Créateurs d'émotions · Plaine des Cafres</p>
+  <p style="margin-top:.9rem;opacity:.8">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de JOLY Concept.</p>
+</footer>
+<script>
+(()=>{
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const els=document.querySelectorAll('.reveal');
+if(rm||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('vu'))}
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>io.observe(e))}
+if(rm)return;
+const c=document.getElementById('petales'),x=c.getContext('2d');let W,H,d=Math.min(devicePixelRatio||1,2),run=true,raf;
+const cols=['236,194,196','246,227,226','201,139,143','232,207,155'];
+function size(){W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+size();addEventListener('resize',size);
+const N=innerWidth<600?18:30,P=[];
+function mk(y){return{x:Math.random()*W,y:y??Math.random()*H,s:4+Math.random()*6,vy:.25+Math.random()*.45,vx:(Math.random()-.5)*.3,t:Math.random()*6.28,w:.01+Math.random()*.02,r:Math.random()*6.28,c:cols[Math.random()*cols.length|0],a:.3+Math.random()*.35}}
+for(let i=0;i<N;i++)P.push(mk());
+function f(){x.clearRect(0,0,W,H);for(const p of P){p.t+=p.w;p.y+=p.vy;p.x+=p.vx+Math.sin(p.t)*.5;p.r+=.01;if(p.y>H+12)Object.assign(p,mk(-12));
+x.save();x.translate(p.x,p.y);x.rotate(p.r+Math.sin(p.t)*.6);x.scale(1,.55+.45*Math.abs(Math.cos(p.t)));
+x.fillStyle=`rgba(${p.c},${p.a})`;x.beginPath();x.moveTo(0,-p.s);x.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.7,0,p.s);x.bezierCurveTo(-p.s*.7,p.s*.7,-p.s*.9,-p.s*.6,0,-p.s);x.fill();x.restore()}
+if(run)raf=requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',()=>{if(document.hidden){run=false;cancelAnimationFrame(raf)}else if(!run){run=true;f()}});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="JOLY Concept" defer></script>
+</body>
+</html>
