@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Miam Food by HM — Repas chinois, cuisine traditionnelle et grillades à Ravine Ango, Saint-Philippe</title>
+<meta name="description" content="Miam Food by HM, à Ravine Ango (Saint-Philippe) : repas chinois et cuisine traditionnelle faits maison, grillades, fritures, jus de fruits maison et service traiteur. Sur place ou à emporter.">
+<meta property="og:title" content="Miam Food by HM — Bons petits plats faits maison à Saint-Philippe">
+<meta property="og:description" content="Repas chinois, cuisine traditionnelle, grillades et service traiteur, sur place ou à emporter, à Ravine Ango, Saint-Philippe.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/miam-food-by-hm-saint-philippe/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/miam-food-by-hm-saint-philippe/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#F4E21A;--jaune-doux:#FFF6B8;--charbon:#17140F;--charbon-2:#26211A;--braise:#E8641E;--braise-2:#F59A3B;--creme:#FBF6E9;--vert:#3E7D3A;--texte:#2A251D}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{position:relative;z-index:30;background:var(--charbon);color:var(--creme);text-align:center;font-size:.84rem;padding:.55rem 1rem}
+.ruban b{color:var(--jaune)}
+h1,h2{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02}
+h2{font-size:clamp(2.2rem,8vw,3.4rem);color:var(--charbon)}
+.main-ecrite{font-family:Caveat,cursive;font-size:1.45rem;color:var(--braise)}
+section{padding:4.2rem 1.25rem;position:relative}
+.wrap{max-width:1080px;margin:0 auto}
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--charbon);padding:0}
+.hero-img{position:absolute;inset:0;background:url(img/grillades-au-feu.webp) center/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,20,15,.35) 0%,rgba(23,20,15,.15) 35%,rgba(23,20,15,.88) 78%,var(--charbon) 100%)}
+#braises{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero-txt{position:relative;z-index:3;padding:2rem 1.25rem 3.2rem;max-width:1080px;margin:0 auto;width:100%}
+.logo-rond{width:92px;height:92px;border-radius:50%;background:#fff;padding:4px;box-shadow:0 0 0 4px var(--jaune),0 8px 30px rgba(0,0,0,.4);margin-bottom:1rem;opacity:0;animation:monte .9s .1s forwards}
+.hero h1{font-size:clamp(3.3rem,15vw,6.4rem);color:var(--jaune);text-shadow:0 3px 18px rgba(0,0,0,.5);opacity:0;animation:monte 1s .3s forwards}
+.hero .slogan{font-family:Caveat,cursive;font-size:clamp(1.6rem,6vw,2.2rem);color:#fff;opacity:0;animation:monte 1s .55s forwards}
+.hero p.sous{max-width:34rem;margin:.6rem 0 1.5rem;font-size:1.06rem;opacity:0;animation:monte 1s .75s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;opacity:0;animation:monte 1s .95s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.35rem;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-jaune{background:var(--jaune);color:var(--charbon);box-shadow:0 0 0 0 rgba(244,226,26,.6);animation:respire 2.8s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(244,226,26,.45)}50%{box-shadow:0 0 0 10px rgba(244,226,26,0)}}
+.btn-contour{border:2px solid rgba(255,255,255,.85);color:#fff}
+.btn-sombre{background:var(--charbon);color:var(--jaune)}
+.btn-wa{background:#1f9d55;color:#fff}
+/* BANDEAU */
+.bandeau{background:var(--jaune);color:var(--charbon);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:"Bebas Neue",sans-serif;font-size:1.45rem;letter-spacing:.06em;border-top:3px solid var(--charbon);border-bottom:3px solid var(--charbon)}
+.bandeau-in{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau i{font-style:normal;color:var(--braise)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* INTRO */
+.intro{background:var(--creme)}
+.intro-grid{display:grid;gap:2rem;align-items:center}
+.intro p{font-size:1.08rem;margin-top:.8rem}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.badge{background:#fff;border:2px solid var(--charbon);border-radius:999px;padding:.35rem .9rem;font-weight:800;font-size:.9rem}
+.intro-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(23,20,15,.25);transform:rotate(-1.5deg)}
+.intro-photo img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.etiquette{position:absolute;left:12px;bottom:12px;background:rgba(23,20,15,.78);color:var(--jaune);font-size:.82rem;padding:.25rem .7rem;border-radius:8px;font-weight:600}
+/* MENU */
+.menu{background:var(--charbon);color:var(--creme)}
+.menu h2{color:var(--jaune)}
+.menu .chapo{max-width:40rem;margin:.6rem 0 2rem;opacity:.9}
+.ardoise{display:grid;gap:1rem}
+.carte{background:var(--charbon-2);border:1px solid rgba(244,226,26,.18);border-radius:18px;padding:1.3rem 1.3rem 1.1rem;transition:transform .25s,border-color .25s}
+.carte:hover{transform:translateY(-4px);border-color:var(--jaune)}
+.carte h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.04em;color:var(--braise-2);margin-bottom:.4rem}
+.carte ul{list-style:none}
+.carte li{padding:.28rem 0;border-bottom:1px dashed rgba(251,246,233,.14)}
+.carte li:last-child{border:0}
+.note-menu{margin-top:1.4rem;font-size:.9rem;opacity:.75}
+/* GALERIE */
+.galerie{background:var(--creme);padding-left:0;padding-right:0}
+.galerie .wrap{padding:0 1.25rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 1.25rem 1rem;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 74%;max-width:340px;scroll-snap-align:center;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(23,20,15,.16);transition:transform .3s}
+.rail figure:hover{transform:translateY(-5px) rotate(-.5deg)}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.rail figcaption{padding:.7rem .9rem;font-weight:600;font-size:.95rem}
+.glisse{font-size:.88rem;opacity:.65;padding:0 1.25rem}
+/* CADRE */
+.cadre{background:linear-gradient(180deg,var(--creme),#F3EBD3)}
+.cadre-grid{display:grid;gap:1.2rem;margin-top:1.6rem}
+.cadre-grid img{border-radius:20px;width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:0 14px 30px rgba(23,20,15,.2)}
+.avis{display:grid;gap:1rem;margin-top:2rem}
+blockquote{background:#fff;border-left:6px solid var(--jaune);border-radius:14px;padding:1rem 1.1rem;box-shadow:0 6px 18px rgba(23,20,15,.08)}
+blockquote p{font-style:italic}
+blockquote cite{display:block;font-style:normal;font-size:.84rem;opacity:.7;margin-top:.4rem}
+.note-g{display:inline-block;margin-top:1rem;font-weight:800;background:var(--charbon);color:var(--jaune);padding:.4rem .9rem;border-radius:10px}
+/* TRAITEUR */
+.traiteur{background:var(--jaune);color:var(--charbon);overflow:hidden}
+.traiteur-grid{display:grid;gap:1.6rem;align-items:center}
+.traiteur img{border-radius:20px;border:4px solid var(--charbon);width:100%;aspect-ratio:4/3;object-fit:cover}
+.traiteur p{font-size:1.08rem;margin:.8rem 0 1.3rem}
+/* NOEL */
+.noel{background:radial-gradient(ellipse at top,#3b1a10 0%,var(--charbon) 70%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--jaune)}
+.noel p{max-width:36rem;margin:.9rem auto 1.5rem;font-size:1.06rem}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.2rem}
+.guirlande span{width:11px;height:11px;border-radius:50%;background:var(--braise-2);box-shadow:0 0 12px var(--braise-2);animation:luit 2.4s ease-in-out infinite}
+.guirlande span:nth-child(2n){background:var(--jaune);box-shadow:0 0 12px var(--jaune);animation-delay:.8s}
+.guirlande span:nth-child(3n){animation-delay:1.5s}
+@keyframes luit{0%,100%{opacity:.35}50%{opacity:1}}
+.petit{font-size:.86rem;opacity:.7;margin-top:1rem}
+/* INFOS */
+.infos{background:var(--creme)}
+.infos-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.bloc{background:#fff;border-radius:18px;padding:1.3rem;box-shadow:0 8px 22px rgba(23,20,15,.08);border-top:5px solid var(--jaune)}
+.bloc h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.5rem;letter-spacing:.04em;margin-bottom:.4rem}
+.bloc table{width:100%;border-collapse:collapse}
+.bloc td{padding:.22rem 0}
+.bloc td:last-child{text-align:right;font-weight:600}
+.ferme{color:var(--braise)}
+.bloc a{font-weight:800;color:var(--charbon);word-break:break-word}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+footer{background:var(--charbon);color:var(--creme);text-align:center;padding:2.2rem 1.25rem;font-size:.9rem}
+footer b{color:var(--jaune);font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.05em;display:block}
+footer .sign{opacity:.65;margin-top:.9rem;font-size:.82rem}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:46px}
+@media(min-width:760px){
+ .intro-grid,.traiteur-grid{grid-template-columns:1.1fr .9fr}
+ .ardoise{grid-template-columns:repeat(3,1fr)}
+ .cadre-grid{grid-template-columns:repeat(3,1fr)}
+ .avis{grid-template-columns:repeat(3,1fr)}
+ .infos-grid{grid-template-columns:repeat(3,1fr)}
+ .rail figure{flex-basis:300px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.logo-rond,.hero h1,.hero .slogan,.hero p.sous,.btns{opacity:1!important;transform:none!important}#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Miam Food by HM</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Grillades sur le feu chez Miam Food"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="hero-txt">
+    <img class="logo-rond" src="img/logo.webp" alt="Logo Miam Food by HM" width="92" height="92">
+    <h1>Miam Food<br>by HM</h1>
+    <div class="slogan">Venez vous régaler avec nos bons petits plats faits maison</div>
+    <p class="sous">Repas chinois, cuisine traditionnelle, grillades et jus de fruits maison — sur place ou à emporter, à Ravine Ango, Saint-Philippe.</p>
+    <div class="btns">
+      <a class="btn btn-jaune" href="tel:+262692366609">📞 0692 36 66 09</a>
+      <a class="btn btn-contour" href="#menu">Voir le menu</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-in">
+<span>Repas chinois</span><i>✦</i><span>Cuisine traditionnelle</span><i>✦</i><span>Grillades</span><i>✦</i><span>Fritures</span><i>✦</i><span>Salades</span><i>✦</i><span>Snacks</span><i>✦</i><span>Jus de fruits maison</span><i>✦</i><span>Service traiteur</span><i>✦</i>
+<span>Repas chinois</span><i>✦</i><span>Cuisine traditionnelle</span><i>✦</i><span>Grillades</span><i>✦</i><span>Fritures</span><i>✦</i><span>Salades</span><i>✦</i><span>Snacks</span><i>✦</i><span>Jus de fruits maison</span><i>✦</i><span>Service traiteur</span><i>✦</i>
+</div></div>
+
+<section class="intro"><div class="wrap intro-grid">
+  <div class="rv">
+    <div class="main-ecrite">Bienvenue chez nous !</div>
+    <h2>Des petits plats faits maison, au cœur du Sud sauvage</h2>
+    <p>Au bord de la route nationale, à Ravine Ango, Miam Food by HM vous accueille dans son jardin avec un menu qui change au fil des jours : rougails et carrys, repas chinois, poulet grillé et brochettes, salade de choux coco… et un jus frais de bigarade pour accompagner le tout.</p>
+        <div class="badges"><span class="badge">Sur place</span><span class="badge">À emporter</span><span class="badge">Service traiteur</span><span class="badge">Livraison</span></div>
+  </div>
+  <figure class="intro-photo rv"><img src="img/nouilles-sautees.webp" alt="Nouilles sautées aux légumes" loading="lazy"><span class="etiquette">Côté repas chinois</span></figure>
+</div></section>
+
+<section class="menu" id="menu"><div class="wrap">
+  <div class="main-ecrite rv">Le menu du jour</div>
+  <h2 class="rv">Ce qui mijote chez Miam Food</h2>
+  <p class="chapo rv">Chaque matin, le menu du jour est annoncé sur notre page. Voici quelques plats servis cet été, pour vous mettre l'eau à la bouche :</p>
+  <div class="ardoise">
+    <div class="carte rv"><h3>🔥 Côté grillades</h3><ul><li>Poulet grillé</li><li>Brochettes de bœuf</li><li>Brochettes de poulet</li><li>Merguez</li></ul></div>
+    <div class="carte rv"><h3>🍲 Carrys &amp; rougails</h3><ul><li>Rougail saucisses</li><li>Rougail boucané de dinde</li><li>Carry poulet · Carry coq</li><li>Rôti de canard</li><li>Carry bichique</li></ul></div>
+    <div class="carte rv"><h3>🥢 Saveurs chinoises</h3><ul><li>Poulet sauce huître</li><li>Fricassée de brèdes</li></ul></div>
+    <div class="carte rv"><h3>🥗 Entrées &amp; accompagnements</h3><ul><li>Salade choux coco</li><li>Gratin choux coco</li><li>Salade de crudités</li><li>Riz · Zembrocal · Lentilles</li><li>Haricots rouges · Gros pois · Rougail maison</li></ul></div>
+    <div class="carte rv"><h3>🍌 Desserts</h3><ul><li>Galettes de manioc</li><li>Bananes flambées</li><li>Glaces, divers parfums</li></ul></div>
+    <div class="carte rv"><h3>🍹 Boissons</h3><ul><li>Jus frais de bigarade</li><li>Jus de fruits maison</li><li>Café · Thé</li><li>Boissons fraîches</li></ul></div>
+  </div>
+  <p class="note-menu rv">Plats relevés dans nos menus du jour publiés en juin et juillet 2026 : le menu change selon les jours.</p>
+</div></section>
+
+<section class="galerie"><div class="wrap">
+  <div class="main-ecrite rv">En images</div>
+  <h2 class="rv">Tout juste sorti de la cuisine</h2>
+</div>
+  <div class="rail">
+    <figure><img src="img/grillades-braise.webp" alt="Grillades sur la braise" loading="lazy"><figcaption>Les grillades sur la braise</figcaption></figure>
+    <figure><img src="img/nouilles-sautees.webp" alt="Nouilles sautées" loading="lazy"><figcaption>Nouilles sautées aux légumes</figcaption></figure>
+    <figure><img src="img/salade-chou-crudites.webp" alt="Salade de chou et crudités" loading="lazy"><figcaption>Salade de chou et crudités</figcaption></figure>
+    <figure><img src="img/legumes-sautes.webp" alt="Légumes sautés" loading="lazy"><figcaption>Légumes sautés</figcaption></figure>
+    <figure><img src="img/fritures-dorees.webp" alt="Fritures dorées" loading="lazy"><figcaption>Fritures bien dorées</figcaption></figure>
+    <figure><img src="img/assiette-maison.webp" alt="Assiette maison" loading="lazy"><figcaption>Une assiette maison</figcaption></figure>
+    <figure><img src="img/galette-dessert.webp" alt="Galette en dessert" loading="lazy"><figcaption>Côté desserts</figcaption></figure>
+    <figure><img src="img/cafes.webp" alt="Cafés" loading="lazy"><figcaption>Un petit café pour finir</figcaption></figure>
+  </div>
+  <p class="glisse">← Faites glisser pour voir plus →</p>
+</section>
+
+<section class="cadre"><div class="wrap">
+  <div class="main-ecrite rv">Le cadre</div>
+  <h2 class="rv">Un jardin au calme, et le feu qui crépite</h2>
+  <div class="cadre-grid">
+    <img class="rv" src="img/jardin-parasols.webp" alt="Tables sous les parasols dans le jardin" loading="lazy">
+    <img class="rv" src="img/terrasse-feu-de-bois.webp" alt="Terrasse avec un feu de bois en fin de journée" loading="lazy">
+    <img class="rv" src="img/grill-plein-air.webp" alt="Le grill en plein air" loading="lazy">
+  </div>
+  <div class="avis">
+    <blockquote class="rv"><p>« Cuisine local excellente et simple avec un cadre incroyable le tout servi par une famille adorable et très agréable à votre service. »</p><cite>Avis Google, visite en juillet 2026</cite></blockquote>
+    <blockquote class="rv"><p>« Une cuisine généreuse et authentique ! Les plats faits maison, c'est le top. Famille adorable et accueil chaleureux. »</p><cite>Avis Google, visite en juin 2026</cite></blockquote>
+    <blockquote class="rv"><p>« Très bon accueil et bien installé au calme !! Nous avons très bien mangé. »</p><cite>Avis Google, visite en octobre 2026</cite></blockquote>
+  </div>
+  <span class="note-g rv">★ 4,2 / 5 · 54 avis Google</span>
+</div></section>
+
+<section class="traiteur"><div class="wrap traiteur-grid">
+  <div class="rv">
+    <div class="main-ecrite" style="color:var(--charbon)">Service traiteur</div>
+    <h2>Pour tous vos moments conviviaux</h2>
+    <p>Miam Food by HM propose aussi un service traiteur, pour tous vos moments conviviaux. Appelez-nous pour en parler ensemble.</p>
+    <a class="btn btn-sombre" href="tel:+262692366609">📞 Parlons de votre repas</a>
+  </div>
+  <img class="rv" src="img/grillades-au-feu.webp" alt="Grillades préparées au feu" loading="lazy">
+</div></section>
+
+<section class="noel" id="noel"><div class="wrap">
+  <div class="guirlande" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="main-ecrite rv" style="color:var(--braise-2)">Offrir pour Noël</div>
+  <h2 class="rv">Les fêtes, version Miam Food</h2>
+  <p class="rv">Pour un réveillon en famille ou un repas de fin d'année entre collègues, pensez au service traiteur de Miam Food by HM : offrez à vos proches un bon repas à partager.</p>
+  <a class="btn btn-wa rv" href="https://wa.me/262692366609?text=Bonjour%20Miam%20Food%2C%20je%20voudrais%20des%20renseignements%20pour%20un%20repas%20de%20f%C3%AAtes%20(service%20traiteur)%20pour%20No%C3%ABl." target="_blank" rel="noopener">💬 Commander pour les fêtes</a>
+  <p class="petit rv">Ou par téléphone au <a href="tel:+262692366609">0692 36 66 09</a></p>
+</div></section>
+
+<section class="infos" id="infos"><div class="wrap">
+  <div class="main-ecrite rv">Venir nous voir</div>
+  <h2 class="rv">Infos pratiques</h2>
+  <div class="infos-grid">
+    <div class="bloc rv"><h3>📍 Adresse</h3><p>59b Route Nationale 2<br>Ravine Ango<br>97442 Saint-Philippe</p><p style="margin-top:.7rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=Miam+food+by+hm+59b+Route+Nationale+2+Ravine+Ango+Saint-Philippe" target="_blank" rel="noopener">Itinéraire →</a></p></div>
+    <div class="bloc rv"><h3>🕚 Horaires</h3><table>
+      <tr><td>Lundi</td><td>11h – 22h</td></tr><tr><td>Mardi</td><td>11h – 22h</td></tr><tr><td>Mercredi</td><td>11h – 22h</td></tr><tr><td>Jeudi</td><td class="ferme">Fermé</td></tr><tr><td>Vendredi</td><td>11h – 22h</td></tr><tr><td>Samedi</td><td>11h – 22h</td></tr><tr><td>Dimanche</td><td>11h – 22h</td></tr></table></div>
+    <div class="bloc rv"><h3>📞 Contact</h3><p><a href="tel:+262692366609">0692 36 66 09</a></p><p><a href="mailto:miamfood8@gmail.com">miamfood8@gmail.com</a></p><p style="margin-top:.5rem">Sur place · À emporter · Livraison</p><div class="reseaux"><a class="btn btn-sombre" style="padding:.55rem 1rem;font-size:.9rem" href="https://www.facebook.com/p/MIAM-FOOD-BY-HM-61580473851151" target="_blank" rel="noopener">Facebook</a><a class="btn btn-sombre" style="padding:.55rem 1rem;font-size:.9rem" href="https://www.instagram.com/miam_food_by_hm/" target="_blank" rel="noopener">Instagram</a></div></div>
+  </div>
+</div></section>
+
+<footer>
+  <b>Miam Food by HM</b>
+  Repas chinois · Cuisine traditionnelle · Grillades · Ravine Ango, Saint-Philippe
+  <div class="sign">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Miam Food by HM.</div>
+</footer>
+
+<script>
+(()=>{const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>rm?el.classList.add('vu'):io.observe(el));
+if(rm)return;
+const c=document.getElementById('braises'),x=c.getContext('2d');let W,H,P=[],run=true,vis=true;
+function size(){const r=c.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*2.2+.8,vy:Math.random()*.7+.35,vx:(Math.random()-.5)*.3,ph:Math.random()*6.28,life:Math.random()*.5+.5,h:Math.random()<.7?28:48}}
+size();for(let i=0;i<30;i++)P.push(mk(true));addEventListener('resize',size);
+new IntersectionObserver(e=>{vis=e[0].isIntersecting;if(vis&&run)requestAnimationFrame(f)}).observe(c);
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run&&vis)requestAnimationFrame(f)});
+function f(){if(!run||!vis)return;x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+for(const p of P){p.y-=p.vy;p.ph+=.03;p.x+=p.vx+Math.sin(p.ph)*.35;const a=Math.max(0,Math.min(1,p.y/H))*p.life;
+const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);g.addColorStop(0,`hsla(${p.h},95%,62%,${a})`);g.addColorStop(1,`hsla(${p.h},95%,50%,0)`);
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*4,0,6.28);x.fill();if(p.y<-20)Object.assign(p,mk(false))}
+x.globalCompositeOperation='source-over';requestAnimationFrame(f)}
+requestAnimationFrame(f)})();
+</script>
+<script src="/outils/cta.js" data-nom="Miam Food by HM" defer></script>
+</body>
+</html>
