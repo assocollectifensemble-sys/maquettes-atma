@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les gâteaux d'Eva · Cake design et pâtisseries maison à La Possession</title>
+<meta name="description" content="Gâteaux, pâtisseries, cake design et décors pour gâteaux d'anniversaire, faits maison à La Possession (La Réunion).">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les gâteaux d'Eva · Cake design à La Possession">
+<meta property="og:description" content="Chiffon cakes, ganaches montées, pâte à sucre maison et macarons : les créations d'Eva, à La Possession.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-gateaux-d-eva/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-gateaux-d-eva/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --framboise:#a8345e; --framboise-d:#7e2245; --rose:#f6d3df; --rose-l:#fdf0f4;
+  --ciel:#b9c9d8; --ciel-l:#e7eef5; --turquoise:#38aeb8; --pistache:#c9d8b6;
+  --creme:#fff8f2; --choco:#3d2422; --texte:#4a3434;
+  --r:22px; --ombre:0 14px 40px rgba(126,34,69,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--choco);line-height:1.15}
+.script{font-family:"Dancing Script",cursive;color:var(--framboise)}
+#sucre{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,header,footer,.ruban{position:relative;z-index:2}
+.ruban{background:var(--choco);color:#fbe9ef;font-size:.82rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:#fff}
+/* HERO */
+.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/hero-macarons.webp) center 40%/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,36,34,.05) 30%,rgba(61,36,34,.55) 62%,rgba(61,36,34,.88))}
+.hero-in{position:relative;z-index:2;padding:2rem 1.4rem 4.6rem;max-width:760px}
+.hero .tag{display:inline-block;background:rgba(255,248,242,.92);color:var(--framboise);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .8rem;border-radius:99px}
+.hero h1{color:#fff;font-family:"Dancing Script",cursive;font-size:clamp(3rem,13vw,5.6rem);font-weight:700;margin:.6rem 0 .3rem;text-shadow:0 4px 24px rgba(0,0,0,.35)}
+.hero p{font-size:1.08rem;max-width:30ch;opacity:.95}
+.fade-up{opacity:0;transform:translateY(22px);animation:fu 1.1s .25s ease forwards}
+.fade-up.d2{animation-delay:.55s}.fade-up.d3{animation-delay:.85s}
+@keyframes fu{to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--framboise);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.4rem;border-radius:99px;box-shadow:0 8px 22px rgba(168,52,94,.35);transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px);background:var(--framboise-d)}
+.btn.clair{background:#fff;color:var(--framboise)}
+.btn.respire{animation:resp 3.2s ease-in-out infinite}
+@keyframes resp{50%{box-shadow:0 8px 34px rgba(168,52,94,.55);transform:scale(1.03)}}
+.hero .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.vague{display:block;width:100%;height:46px;margin-top:-45px;position:relative;z-index:3}
+/* SECTIONS */
+section{padding:4.2rem 1.4rem}
+.wrap{max-width:1080px;margin:0 auto}
+.kicker{font-family:"Dancing Script",cursive;color:var(--framboise);font-size:1.6rem;display:block;margin-bottom:.2rem}
+h2{font-size:clamp(1.8rem,6.5vw,2.6rem);margin-bottom:1rem}
+.lead{font-size:1.08rem;max-width:62ch}
+.intro{display:grid;gap:2rem;align-items:center}
+.logo-card{background:var(--ciel-l);border-radius:var(--r);padding:1rem;box-shadow:var(--ombre);transform:rotate(-1.5deg);transition:transform .5s}
+.logo-card:hover{transform:rotate(0) scale(1.02)}
+.logo-card img{border-radius:14px}
+.logo-card small{display:block;text-align:center;font-size:.8rem;margin-top:.5rem;color:#6d5a5a}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.pills span{background:var(--rose);color:var(--framboise-d);font-weight:700;font-size:.85rem;padding:.35rem .8rem;border-radius:99px}
+/* BANDEAU */
+.bandeau{background:var(--framboise);color:#fff;overflow:hidden;padding:.9rem 0;white-space:nowrap}
+.bandeau .piste{display:inline-flex;gap:2.2rem;animation:defile 32s linear infinite;font-family:Fraunces,serif;font-size:1.15rem}
+.bandeau .piste span::after{content:"✦";margin-left:2.2rem;color:var(--rose)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* SAVOIR-FAIRE */
+.fond-rose{background:linear-gradient(180deg,var(--rose-l),var(--creme))}
+.cartes{display:grid;gap:1.1rem;margin-top:1.8rem}
+.carte{background:#fff;border-radius:var(--r);padding:1.4rem 1.3rem;box-shadow:var(--ombre);border-top:4px solid var(--turquoise);transition:transform .35s,box-shadow .35s}
+.carte:nth-child(2){border-color:var(--framboise)}.carte:nth-child(3){border-color:#d9a441}.carte:nth-child(4){border-color:#8fb26b}
+.carte:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(126,34,69,.2)}
+.carte h3{font-size:1.2rem;margin-bottom:.4rem}
+.carte blockquote{font-style:italic;color:#5b4545}
+.carte .src{display:block;font-size:.78rem;color:#8a7272;margin-top:.6rem;font-style:normal}
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 1.4rem 1.4rem;margin:1.6rem -1.4rem 0;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);transition:transform .35s}
+.galerie figure:hover{transform:translateY(-4px) rotate(-.6deg)}
+.galerie img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.galerie figcaption{padding:.75rem .95rem .9rem;font-size:.88rem}
+.galerie figcaption b{display:block;color:var(--choco);font-family:Fraunces,serif;font-size:1rem}
+.astuce{font-size:.82rem;color:#8a7272;margin-top:.2rem}
+/* DERNIERE */
+.derniere{background:var(--ciel-l)}
+.post{background:#fff;border-radius:var(--r);padding:1.6rem 1.4rem;box-shadow:var(--ombre);position:relative;max-width:720px}
+.post::before{content:"“";position:absolute;top:-.6rem;left:1rem;font-family:Fraunces,serif;font-size:5rem;color:var(--rose);line-height:1}
+.post p{position:relative;font-size:1.08rem}
+.post .date{font-weight:700;color:var(--framboise);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem}
+.frise{display:grid;gap:.9rem;margin-top:2rem}
+.frise li{list-style:none;background:#fff;border-left:4px solid var(--turquoise);border-radius:0 14px 14px 0;padding:.9rem 1.1rem;box-shadow:0 6px 18px rgba(61,36,34,.07)}
+.frise time{font-weight:700;color:var(--framboise);font-size:.82rem;display:block}
+/* NOEL */
+.noel{background:radial-gradient(circle at 20% 0,#4c2a2e,var(--choco) 60%);color:#fbeef2;position:relative;overflow:hidden}
+.noel h2{color:#fff}.noel .kicker{color:#f5b8cb}
+.noel-grid{display:grid;gap:1.8rem;align-items:center}
+.noel-photo{border-radius:var(--r);overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.4);position:relative}
+.noel-photo img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.noel-photo span{position:absolute;bottom:.7rem;left:.7rem;background:rgba(255,248,242,.92);color:var(--choco);font-size:.78rem;font-weight:700;padding:.3rem .7rem;border-radius:99px}
+.guirlande{position:absolute;top:0;left:0;right:0;height:16px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande i{width:8px;height:8px;border-radius:50%;background:#f5b8cb;margin-top:6px;animation:luit 2.6s ease-in-out infinite;box-shadow:0 0 10px #f5b8cb}
+.guirlande i:nth-child(3n){background:#9fe0e6;box-shadow:0 0 10px #9fe0e6;animation-delay:.8s}
+.guirlande i:nth-child(3n+1){background:#f3d27a;box-shadow:0 0 10px #f3d27a;animation-delay:1.5s}
+@keyframes luit{50%{opacity:.35}}
+.noel .btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.noel .note{font-size:.82rem;opacity:.75;margin-top:1rem}
+/* CONTACT */
+.contact-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.c-item{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:var(--ombre);text-decoration:none;transition:transform .3s}
+a.c-item:hover{transform:translateX(4px)}
+.c-ico{flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--rose);color:var(--framboise)}
+.c-item small{display:block;color:#8a7272;font-size:.8rem}
+.c-item strong{color:var(--choco);word-break:break-word}
+footer{background:var(--choco);color:#e9d6da;text-align:center;padding:2.2rem 1.4rem 2.6rem;font-size:.86rem}
+footer .script{font-size:1.8rem;color:#f5b8cb;display:block;margin-bottom:.4rem}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+@media(min-width:780px){
+  .intro{grid-template-columns:1.2fr 1fr}
+  .cartes{grid-template-columns:repeat(2,1fr)}
+  .galerie figure{flex-basis:300px}
+  .noel-grid{grid-template-columns:1fr 1.1fr}
+  .contact-grid{grid-template-columns:repeat(3,1fr)}
+  .frise{grid-template-columns:repeat(2,1fr)}
+  .hero-in{padding-left:4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal,.fade-up{opacity:1;transform:none}
+  #sucre{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="sucre" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les gâteaux d'Eva</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Pyramide de macarons maison aux couleurs variées, réalisée pour un mariage"></div>
+  <div class="hero-in">
+    <span class="tag fade-up">Cake design · La Possession</span>
+    <h1 class="fade-up d2">Les gâteaux d'Eva</h1>
+    <p class="fade-up d2">Gâteaux, pâtisseries, cake design et décors pour gâteaux d'anniversaire.</p>
+    <div class="btns fade-up d3">
+      <a class="btn respire" href="#creations">Voir les créations</a>
+      <a class="btn clair" href="#noel">Offrir pour Noël</a>
+    </div>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 0 480 46 720 24 S1200 4 1440 26 V46 H0Z" fill="#fff8f2"/></svg>
+
+<main>
+<section id="eva">
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="kicker">Bienvenue chez Eva</span>
+      <h2>Des gâteaux qui racontent une fête</h2>
+      <p class="lead">À La Possession, Eva imagine des gâteaux à l'image de chaque célébration : une pool party, un anniversaire de gamer, une licorne fleurie, un mariage riche en couleurs. Chiffon cake moelleux, ganache montée, et ce petit mot qui revient dans presque chaque publication : <strong>pâte à sucre maison</strong>.</p>
+      <div class="pills"><span>Cake design</span><span>Pâte à sucre maison</span><span>Macarons maison</span><span>Pièces montées</span><span>Piñatas</span></div>
+    </div>
+    <figure class="logo-card reveal">
+      <img src="img/logo.webp" alt="Visuel de la page : trois cupcakes illustrés sur un nuage, titre Les gâteaux d'Eva" width="840" height="480" loading="lazy">
+      <small>Le visuel de la page Les gâteaux d'Eva</small>
+    </figure>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Chiffon cake vanille</span><span>Ganache montée</span><span>Pâte à sucre maison</span><span>Macarons framboise, mangue passion, pistache</span><span>Personnages en sucre</span><span>Drip cake</span>
+  <span>Chiffon cake vanille</span><span>Ganache montée</span><span>Pâte à sucre maison</span><span>Macarons framboise, mangue passion, pistache</span><span>Personnages en sucre</span><span>Drip cake</span>
+</div></div>
+
+<section class="fond-rose" id="savoir-faire">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Le fait maison</span>
+      <h2>Dans ses propres mots</h2>
+      <p class="lead">Chaque création est décrite avec gourmandise sur la page d'Eva : voici quelques-unes de ses recettes, telles qu'elle les a publiées.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte reveal"><h3>Pool party</h3><blockquote>« Gâteau poire chocolat, ganache chocolat montée et pâte à sucre maison. »</blockquote><span class="src">Publication du 7 novembre 2026</span></article>
+      <article class="carte reveal"><h3>Anniversaire de gamer</h3><blockquote>« Un gâteau tout choco (chiffon cake chocolat, ganache chocolat noire montée, ganache chocolat noire de couverture, mini m&amp;ms) et pâte à sucre maison ! »</blockquote><span class="src">Publication du 19 avril 2026</span></article>
+      <article class="carte reveal"><h3>Pour une princesse</h3><blockquote>« Chiffon cake vanille, ganache chocolat blanc, ganache montée chocolat blanc, smarties et pâte à sucre maison. »</blockquote><span class="src">Publication du 7 juin 2026</span></article>
+      <article class="carte reveal"><h3>Un mariage en couleurs</h3><blockquote>« Pyramide de macarons maison saveur framboise, mangue passion, pistache, citron et chocolat pour un mariage riche en couleurs ! »</blockquote><span class="src">Publication du 1er mai 2025</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="creations">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">La vitrine</span>
+      <h2>Quelques créations d'Eva</h2>
+      <p class="astuce">Faites glisser pour découvrir la suite →</p>
+    </div>
+    <div class="galerie" tabindex="0" aria-label="Galerie des créations">
+      <figure><img src="img/sirene-drip.webp" alt="Drip cake turquoise décoré de queues de sirène en sucre" width="720" height="960" loading="lazy"><figcaption><b>Sous la mer</b>Drip cake turquoise et queues de sirène en sucre</figcaption></figure>
+      <figure><img src="img/licorne-fleurs.webp" alt="Gâteau licorne blanc à corne dorée et fleurs roses" width="1080" height="1350" loading="lazy"><figcaption><b>Licorne fleurie</b>Corne dorée et couronne de fleurs</figcaption></figure>
+      <figure><img src="img/chocolat-framboises.webp" alt="Gâteau au chocolat garni de framboises fraîches" width="1080" height="1350" loading="lazy"><figcaption><b>Chocolat &amp; framboises</b>Novembre 2024</figcaption></figure>
+      <figure><img src="img/tarte-fraises.webp" alt="Tarte aux fraises vue du dessus" width="1080" height="1350" loading="lazy"><figcaption><b>« Bon dimanche gourmand ! »</b>Tarte aux fraises, septembre 2025</figcaption></figure>
+      <figure><img src="img/arc-en-ciel-sucre.webp" alt="Arc-en-ciel et fleurs en pâte à sucre" width="1080" height="1350" loading="lazy"><figcaption><b>Arc-en-ciel en sucre</b>Décor en pâte à sucre, février 2025</figcaption></figure>
+      <figure><img src="img/macarons-pistache.webp" alt="Macarons vert pistache sur un plateau en bois" width="1080" height="1350" loading="lazy"><figcaption><b>Macarons maison</b>Vert tendre, février 2025</figcaption></figure>
+      <figure><img src="img/entremets-chocolat.webp" alt="Gâteau au chocolat à étages" width="1080" height="1350" loading="lazy"><figcaption><b>Tout chocolat</b>Novembre 2024</figcaption></figure>
+      <figure><img src="img/licorne-pate-a-sucre.webp" alt="Figurine de licorne en pâte à sucre entourée de petites fleurs" width="1080" height="1350" loading="lazy"><figcaption><b>Licorne en sucre</b>Modelée à la main, février 2025</figcaption></figure>
+      <figure><img src="img/tarte-myrtilles.webp" alt="Tarte garnie de myrtilles" width="1099" height="1466" loading="lazy"><figcaption><b>Tarte aux myrtilles</b>Juin 2026</figcaption></figure>
+      <figure><img src="img/macarons-orange.webp" alt="Macarons orangés sur un plateau en bois" width="1080" height="1350" loading="lazy"><figcaption><b>Macarons orangés</b>Février 2025</figcaption></figure>
+      <figure><img src="img/flan.webp" alt="Tarte dorée posée sur une table" width="1080" height="1350" loading="lazy"><figcaption><b>« Bon WE à vous ! »</b>Janvier 2025</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="derniere" id="actu">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Tout frais</span>
+      <h2>La dernière publication</h2>
+    </div>
+    <div class="post reveal">
+      <p class="date">7 novembre 2026</p>
+      <p>Pour une pool party d'anniversaire : « Gâteau poire chocolat, ganache chocolat montée et pâte à sucre maison. »</p>
+    </div>
+    <ul class="frise">
+      <li class="reveal"><time>20 septembre 2026</time>« Petite dernière, tout en rose et en douceur ! »</li>
+      <li class="reveal"><time>29 mai 2025</time>« Décorations en sucre et pâte à sucre maison pour un anniversaire de glace ! »</li>
+      <li class="reveal"><time>20 mars 2025</time>« Personnages de pièce montée en pâte à sucre pour un joli mariage plein d'émotion ! »</li>
+      <li class="reveal"><time>12 octobre 2024</time>« Cette fois ci, piñata pour musiciens en herbe ! »</li>
+    </ul>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap noel-grid">
+    <div class="noel-photo reveal">
+      <img src="img/biscuits-noel.webp" alt="Biscuits décorés de sapins et de bonshommes sur une assiette rouge" width="1099" height="1466" loading="lazy">
+      <span>Publié par Eva le 14 décembre 2025</span>
+    </div>
+    <div class="reveal">
+      <span class="kicker">Offrir pour Noël</span>
+      <h2>Une table de fête signée Eva</h2>
+      <p class="lead">En décembre dernier, Eva a partagé ses biscuits décorés de sapins et de bonshommes. Cette année, offrez une création à partager : un gâteau à l'image de votre famille, une pyramide de macarons, des décors en sucre… Racontez votre idée à Eva, elle vous répondra avec plaisir.</p>
+      <div class="btns">
+        <a class="btn respire" href="https://m.me/lesgateauxdeva974" target="_blank" rel="noopener">Écrire à Eva sur Messenger</a>
+        <a class="btn clair" href="mailto:gateaudeva@gmail.com?subject=Commande%20pour%20No%C3%ABl&amp;body=Bonjour%20Eva%2C%20je%20voudrais%20commander%20une%20cr%C3%A9ation%20pour%20No%C3%ABl.">Par e-mail</a>
+      </div>
+      <p class="note">Commandes des fêtes : modalités à voir directement avec Eva.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Une envie, une fête ?</span>
+      <h2>Contacter Eva</h2>
+      <p class="lead">Anniversaire, mariage, goûter gourmand : décrivez votre thème, Eva s'occupe du reste en sucre et en couleurs.</p>
+    </div>
+    <div class="contact-grid">
+      <a class="c-item reveal" href="mailto:gateaudeva@gmail.com"><span class="c-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small><strong>gateaudeva@gmail.com</strong></span></a>
+      <a class="c-item reveal" href="https://www.facebook.com/lesgateauxdeva974/" target="_blank" rel="noopener"><span class="c-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.7-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6 1-.6Z"/></svg></span><span><small>Facebook</small><strong>Les gâteaux d'Eva</strong></span></a>
+      <div class="c-item reveal"><span class="c-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Zone</small><strong>La Possession, La Réunion</strong></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="script">Les gâteaux d'Eva</span>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les gâteaux d'Eva.
+</footer>
+
+<script>
+(()=>{
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const els=document.querySelectorAll('.reveal');
+if(rm||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('vu'))}
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>io.observe(e));let tk=0;const chk=()=>{tk=0;els.forEach(e=>{if(!e.classList.contains('vu')&&e.getBoundingClientRect().top<innerHeight*.95)e.classList.add('vu')})};addEventListener('scroll',()=>{if(!tk){tk=1;requestAnimationFrame(chk)}},{passive:true})}
+if(rm)return;
+const c=document.getElementById('sucre'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),run=true;
+const cols=['#ffffff','#f6d3df','#f5b8cb','#9fe0e6','#f3d27a','#c9d8b6'];
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+const N=W<600?22:34,P=[];
+function mk(top){return{x:Math.random()*W,y:top?-10:Math.random()*H,r:1+Math.random()*2.2,v:.15+Math.random()*.45,d:Math.random()*6.28,s:.004+Math.random()*.01,c:cols[Math.random()*cols.length|0],t:Math.random()<.35,a:.35+Math.random()*.45,rot:Math.random()*3}}
+for(let i=0;i<N;i++)P.push(mk(false));
+function star(p){x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.beginPath();const r=p.r*2.2;for(let i=0;i<4;i++){x.lineTo(0,-r);x.rotate(Math.PI/4);x.lineTo(0,-r*.35);x.rotate(Math.PI/4)}x.closePath();x.fill();x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.d+=p.s;p.x+=Math.sin(p.d)*.35;p.rot+=.004;if(p.y>H+10)Object.assign(p,mk(true));x.globalAlpha=p.a*(.75+.25*Math.sin(p.d*3));x.fillStyle=p.c;if(p.t)star(p);else{x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}}requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les gâteaux d&#x27;Eva" defer></script>
+</body>
+</html>

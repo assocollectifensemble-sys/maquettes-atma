@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L'Instant Gayar — Pâtisserie artisanale, café & brunch à Montgaillard, Saint-Denis</title>
+<meta name="description" content="L'Instant Gayar : pâtisserie artisanale, café, viennoiseries, boulangerie, restauration légère et brunch, 55 boulevard de la Trinité, Montgaillard – Saint-Denis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="L'Instant Gayar — L'instant qui n'appartient qu'à vous">
+<meta property="og:description" content="Pâtisserie artisanale, café, viennoiseries et brunch à Montgaillard, Saint-Denis. Ouvert depuis le 2 novembre 2026.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/linstant-gayar/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/linstant-gayar/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#F5EFE7;--lin:#EDE3D6;--brun:#3D2817;--cacao:#5C3A24;--taupe:#A68B7E;--or:#C4A574;--caramel:#B07A4A;--blanc:#FFFDF9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--brun);background:var(--creme);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+.ruban{background:var(--brun);color:var(--creme);font-size:.8rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--or);font-weight:500}
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;color:var(--blanc)}
+.hero .bg{position:absolute;inset:0;background:url(img/cafe-latte.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 50%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,40,23,.25) 0%,rgba(61,40,23,.15) 35%,rgba(40,25,14,.86) 100%)}
+#vapeur{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:2;padding:2rem 1.4rem 3.4rem;max-width:960px;margin:0 auto;width:100%}
+.sur{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);opacity:0;animation:up 1s .2s forwards}
+.hero h1{font-size:clamp(2.9rem,12vw,5.6rem);margin:.4rem 0 .5rem;opacity:0;animation:up 1.2s .45s forwards}
+.hero .slogan{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.3rem,5vw,1.8rem);opacity:0;animation:up 1.2s .8s forwards}
+.hero .tags{margin-top:1rem;font-size:.92rem;opacity:0;animation:up 1.2s 1.05s forwards;color:#f1e6d8}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;opacity:0;animation:up 1.2s 1.3s forwards}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .3s,box-shadow .3s,background .3s}
+.btn-or{background:var(--or);color:var(--brun);animation:respire 3.2s ease-in-out infinite}
+.btn-ligne{border:1px solid rgba(255,253,249,.7);color:var(--blanc)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(196,165,116,.55)}50%{box-shadow:0 0 0 10px rgba(196,165,116,0)}}
+/* bandeau défilant */
+.defile{background:var(--brun);color:var(--or);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-style:italic}
+.defile div{display:inline-block;animation:defil 32s linear infinite}
+.defile span{margin:0 1.2rem}
+@keyframes defil{to{transform:translateX(-50%)}}
+section{padding:4.5rem 1.4rem}
+.wrap{max-width:960px;margin:0 auto}
+.eyebrow{font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;color:var(--caramel);font-weight:500}
+h2{font-size:clamp(2.1rem,8vw,3.2rem);margin:.4rem 0 1.1rem;color:var(--brun)}
+.lead{font-size:1.08rem;max-width:620px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+/* intro */
+.intro{display:grid;gap:2.2rem;align-items:center}
+.logo-carte{background:var(--blanc);border-radius:22px;padding:1.4rem;box-shadow:0 18px 40px rgba(61,40,23,.1);max-width:340px;margin:0 auto}
+.logo-carte img{border-radius:12px}
+.logo-carte small{display:block;text-align:center;font-size:.75rem;color:var(--taupe);margin-top:.6rem}
+@media(min-width:780px){.intro{grid-template-columns:1.3fr 1fr}}
+/* univers */
+.univers{background:var(--lin)}
+.cartes{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:2rem}
+.carte{background:var(--blanc);border-radius:18px;padding:1.3rem 1.1rem;transition:transform .35s,box-shadow .35s;border:1px solid rgba(166,139,126,.18)}
+.carte:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(61,40,23,.12)}
+.carte svg{width:34px;height:34px;stroke:var(--caramel);fill:none;stroke-width:1.5;margin-bottom:.6rem}
+.carte h3{font-size:1.35rem;margin-bottom:.25rem}
+.carte p{font-size:.9rem;color:var(--cacao)}
+/* midi */
+.midi{display:grid;gap:2rem;align-items:center}
+.midi figure{border-radius:24px;overflow:hidden;box-shadow:0 20px 44px rgba(61,40,23,.16)}
+.midi figcaption{font-size:.78rem;color:var(--taupe);padding:.6rem .2rem 0;background:none}
+.liste{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.3rem}
+.liste h3{font-size:1.25rem;color:var(--caramel);letter-spacing:.06em;text-transform:uppercase;font-family:Jost,sans-serif;font-weight:500;font-size:.85rem;margin-bottom:.5rem}
+.liste li{list-style:none;padding:.35rem 0;border-bottom:1px dashed rgba(166,139,126,.45);font-size:.95rem}
+.note{font-size:.82rem;color:var(--taupe);margin-top:1rem}
+@media(min-width:780px){.midi{grid-template-columns:1fr 1.1fr}}
+/* citation */
+.citation{background:var(--brun);color:var(--creme);text-align:center;position:relative}
+.citation blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.7rem,7vw,2.6rem);line-height:1.25;max-width:720px;margin:0 auto}
+.citation cite{display:block;margin-top:1rem;font-style:normal;font-size:.82rem;color:var(--or);letter-spacing:.08em}
+.vague{display:block;width:100%;height:46px}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.4rem 1rem;margin:0 -1.4rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 78%;max-width:360px;scroll-snap-align:center;background:var(--blanc);border-radius:20px;overflow:hidden;box-shadow:0 12px 28px rgba(61,40,23,.1);transition:transform .4s}
+.galerie figure:hover{transform:scale(1.02)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie img.contain{object-fit:contain;background:var(--creme)}
+.galerie figcaption{font-size:.82rem;padding:.75rem 1rem;color:var(--cacao)}
+.astuce{font-size:.78rem;color:var(--taupe);text-align:center}
+/* horaires */
+.horaires{display:grid;gap:1rem;margin-top:1.6rem}
+.h{display:flex;justify-content:space-between;gap:1rem;background:var(--blanc);border-radius:16px;padding:1.1rem 1.3rem;border-left:4px solid var(--or)}
+.h b{font-weight:500}
+/* noel */
+.noel{position:relative;background:radial-gradient(circle at 20% 10%,#4d331f 0%,var(--brun) 60%);color:var(--creme);overflow:hidden}
+.noel h2{color:var(--blanc)}
+.noel .eyebrow{color:var(--or)}
+.noel p{max-width:600px}
+.etoiles{position:absolute;inset:0;pointer-events:none}
+.etoiles i{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--or);opacity:.0;animation:scint 4s ease-in-out infinite}
+@keyframes scint{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.75;transform:scale(1)}}
+.noel .wrap{position:relative;z-index:1}
+.idees{display:grid;gap:.8rem;margin:1.6rem 0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.idees div{border:1px solid rgba(196,165,116,.45);border-radius:16px;padding:1rem 1.1rem;background:rgba(255,253,249,.04)}
+.idees b{font-family:"Cormorant Garamond",serif;font-size:1.3rem;font-weight:600;color:var(--or);display:block}
+.noel .petit{font-size:.8rem;opacity:.75;margin-top:1rem}
+/* contact */
+.contact-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.cc{background:var(--blanc);border-radius:18px;padding:1.2rem 1.3rem;text-decoration:none;display:block;transition:transform .3s,box-shadow .3s;overflow-wrap:anywhere}
+.cc:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(61,40,23,.12)}
+.cc small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:.2rem}
+@media(min-width:780px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.carte-map{margin-top:1.4rem;border-radius:20px;overflow:hidden;height:260px;border:0;width:100%}
+footer{background:var(--brun);color:#d9cbb8;text-align:center;font-size:.82rem;padding:2rem 1.4rem}
+footer img{width:64px;margin:0 auto .8rem;border-radius:50%;opacity:.9}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.sur,.hero h1,.hero .slogan,.hero .tags,.btns{opacity:1!important;transform:none!important}#vapeur{display:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour L'Instant Gayar</div>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Un café latte servi chez L'Instant Gayar"></div>
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <div class="in">
+    <div class="sur">Montgaillard · Saint-Denis · La Réunion</div>
+    <h1>L'Instant Gayar</h1>
+    <p class="slogan">« L'instant qui n'appartient qu'à vous. »</p>
+    <p class="tags">Pâtisserie artisanale · Café · Viennoiseries · Boulangerie · Restauration légère · Brunch</p>
+    <div class="btns">
+      <a class="btn btn-or" href="#horaires">Horaires & adresse</a>
+      <a class="btn btn-ligne" href="#noel">Offrir pour Noël</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div>
+<span>Un gayar week-end à zot</span>·<span>Pâtisserie artisanale</span>·<span>Café</span>·<span>Viennoiseries</span>·<span>Pains bouchons</span>·<span>Brunch</span>·
+<span>Un gayar week-end à zot</span>·<span>Pâtisserie artisanale</span>·<span>Café</span>·<span>Viennoiseries</span>·<span>Pains bouchons</span>·<span>Brunch</span>·
+</div></div>
+
+<section>
+  <div class="wrap intro">
+    <div class="reveal">
+      <span class="eyebrow">Nouvelle adresse depuis le 2 novembre 2026</span>
+      <h2>Vos pauses gourmandes, du petit-déjeuner au goûter</h2>
+      <p class="lead">Au 55 boulevard de la Trinité, L'Instant Gayar réunit une pâtisserie artisanale, un coffee house et une boulangerie. Une maison à taille humaine, tenue par une pâtissière diplômée, où l'on vient sur place ou à emporter.</p>
+      <p class="note" style="margin-top:1.2rem">Pâtisserie entre grands classiques et création, viennoiserie, gâteaux de voyage et confitures artisanales, restauration légère le midi et brunch le samedi.</p>
+    </div>
+    <div class="logo-carte reveal">
+      <img src="img/logo.webp" alt="Logo de L'Instant Gayar : un soleil levant au-dessus de deux courbes entrelacées" width="700" height="703" loading="lazy">
+      <small>Leur logo, publié sur leur page Facebook</small>
+    </div>
+  </div>
+</section>
+
+<section class="univers">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">L'univers de la maison</span>
+    <h2>Six envies, une seule adresse</h2></div>
+    <div class="cartes">
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><path d="M6 20c0-6 4.5-10 10-10s10 4 10 10H6z"/><path d="M4 20h24v3H4z"/><path d="M16 10V7"/></svg><h3>Pâtisserie</h3><p>Artisanale, entre grands classiques et création.</p></div>
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><path d="M6 12h17v8a7 7 0 0 1-7 7h-3a7 7 0 0 1-7-7z"/><path d="M23 14h2a3 3 0 0 1 0 6h-2"/><path d="M11 4c-1 2 1 3 0 5M16 4c-1 2 1 3 0 5"/></svg><h3>Café</h3><p>Un coffee house pour un ti café, sur place ou à emporter.</p></div>
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><path d="M5 22c3-9 19-9 22 0-4 3-18 3-22 0z"/><path d="M10 17l2 4M16 15v5M22 17l-2 4"/></svg><h3>Viennoiseries</h3><p>Pour bien commencer la journée, dès 6 h en semaine.</p></div>
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><path d="M4 18c0-5 6-8 12-8s12 3 12 8-6 6-12 6-12-1-12-6z"/><path d="M10 14l3 4M16 13l3 4M22 14l2 3"/></svg><h3>Boulangerie</h3><p>Le pain du quotidien, au cœur de Montgaillard.</p></div>
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><path d="M5 16h22a11 11 0 0 1-22 0z"/><path d="M12 12c0-3 3-3 3-6M18 12c0-2 2-3 2-5"/></svg><h3>Restauration légère</h3><p>Salades, sandwichs et pains bouchons le midi.</p></div>
+      <div class="carte reveal"><svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="9"/><circle cx="16" cy="17" r="4"/><path d="M4 8v18M28 8v18"/></svg><h3>Brunch</h3><p>Le samedi, pour prendre tout son temps.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap midi">
+    <figure class="reveal">
+      <img src="img/plat-pates.webp" alt="Salade de pâtes au citron et persil" width="780" height="570" loading="lazy">
+      <figcaption>Photo publiée par L'Instant Gayar, 4 novembre 2026</figcaption>
+    </figure>
+    <div class="reveal">
+      <span class="eyebrow">Votre pause déjeuner</span>
+      <h2>« Au menu aujourd'hui »</h2>
+      <p>« Salades, sandwichs et pains bouchons vous attendent aujourd'hui, sur place ou à emporter. »</p>
+      <div class="liste">
+        <div><h3>Salades</h3><ul><li>Pâtes au poulet</li><li>Pâtes au poulet rôti</li><li>Pâtes au saumon</li><li>Taboulé</li></ul></div>
+        <div><h3>Sandwichs</h3><ul><li>Jambon-beurre</li><li>Poulet rôti</li><li>Thon-maïs</li><li>Pains bouchons</li></ul></div>
+      </div>
+      <p class="note">Menu du jour publié le mercredi 4 novembre 2026 ; la carte évolue au fil des jours.</p>
+    </div>
+  </div>
+</section>
+
+<div class="citation">
+  <svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v18c-240 30-480 30-720 8S240-6 0 22z" fill="#F5EFE7"/></svg>
+  <section style="padding-top:2.5rem">
+    <blockquote class="reveal">« Avec qui zot vien prendre un ti café ? »</blockquote>
+    <cite class="reveal">L'Instant Gayar, sur sa page Facebook — 31 octobre 2026</cite>
+  </section>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">En images</span>
+    <h2>Ce qu'ils partagent</h2>
+    <p class="lead">Les photos et visuels publiés par L'Instant Gayar sur sa page.</p></div>
+    <div class="galerie reveal">
+      <figure><img src="img/cafe-tasse.webp" alt="Tasse de café au lait avec latte art" loading="lazy" width="1200" height="1200"><figcaption>Le café, prêt pour la première pause</figcaption></figure>
+      <figure><img src="img/cafe-latte.webp" alt="Café latte en tasse blanche" loading="lazy" width="1400" height="1383"><figcaption>Un latte, dans sa tasse blanche</figcaption></figure>
+      <figure><img src="img/plat-pates.webp" alt="Salade de pâtes au citron" loading="lazy" width="780" height="570"><figcaption>Salade de pâtes, citron et persil</figcaption></figure>
+      <figure><img class="contain" src="img/menu-du-jour.webp" alt="Affiche du menu du jour de L'Instant Gayar" loading="lazy" width="900" height="1199"><figcaption>Leur affiche « Au menu aujourd'hui »</figcaption></figure>
+      <figure><img class="contain" src="img/logo.webp" alt="Logo L'Instant Gayar" loading="lazy" width="700" height="703"><figcaption>« L'instant qui n'appartient qu'à vous. »</figcaption></figure>
+    </div>
+    <p class="astuce">Faites glisser pour voir la suite →</p>
+  </div>
+</section>
+
+<section id="horaires" style="background:var(--lin)">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Horaires</span>
+    <h2>Du petit-déjeuner au goûter</h2></div>
+    <div class="horaires">
+      <div class="h reveal"><b>Du lundi au samedi</b><span>6h – 18h30</span></div>
+      <div class="h reveal"><b>Dimanche et jours fériés</b><span>7h – 13h30</span></div>
+    </div>
+    <p class="note reveal">Sur place · À emporter. Horaires publiés le 31 octobre 2026.</p>
+  </div>
+</section>
+
+<section id="noel" class="noel">
+  <div class="etoiles" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Fêtes de fin d'année</span>
+    <h2>Offrir pour Noël</h2>
+    <p>Pour les tables de fêtes ou un cadeau gourmand, offrez un moment chez L'Instant Gayar. Écrivez-leur pour parler de votre commande des fêtes.</p></div>
+    <div class="idees">
+      <div class="reveal"><b>Pâtisseries</b>Artisanales, entre grands classiques et création.</div>
+      <div class="reveal"><b>Gâteaux de voyage</b>Faciles à partager, à glisser dans un panier.</div>
+      <div class="reveal"><b>Confitures artisanales</b>Une douceur maison à offrir.</div>
+    </div>
+    <div class="btns" style="opacity:1;animation:none">
+      <a class="btn btn-or" href="https://m.me/61581523945482" target="_blank" rel="noopener">Écrire sur Messenger</a>
+      <a class="btn btn-ligne" href="mailto:contact.linstantgayar@gmail.com?subject=Commande%20des%20f%C3%AAtes&body=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20No%C3%ABl.">Par e-mail</a>
+    </div>
+    <p class="petit">Les créations et modalités des fêtes sont à voir directement avec la maison.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Venir</span>
+    <h2>À tout à l'heure !</h2></div>
+    <div class="contact-grid">
+      <a class="cc reveal" href="https://www.google.com/maps/search/?api=1&query=L%27instant%20Gayar%2055%20Boulevard%20de%20la%20Trinit%C3%A9%20Saint-Denis%20R%C3%A9union" target="_blank" rel="noopener"><small>Adresse</small>55 boulevard de la Trinité<br>Montgaillard – 97400 Saint-Denis</a>
+      <a class="cc reveal" href="mailto:contact.linstantgayar@gmail.com"><small>E-mail</small>contact.linstantgayar@gmail.com</a>
+      <a class="cc reveal" href="https://www.facebook.com/p/Linstant-Gayar-61581523945482" target="_blank" rel="noopener"><small>Facebook</small>L'Instant Gayar</a>
+    </div>
+    <iframe class="carte-map reveal" title="Carte : L'Instant Gayar, Montgaillard" loading="lazy" src="https://www.google.com/maps?q=L%27instant%20Gayar%2C%2055%20Boulevard%20de%20la%20Trinit%C3%A9%2C%2097400%20Saint-Denis&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.webp" alt="" width="64" height="64">
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de L'Instant Gayar.
+</footer>
+
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.reveal');
+if(rm||!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('vu')});}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+var et=document.querySelector('.etoiles');
+if(et&&!rm){for(var i=0;i<22;i++){var s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*4)+'s';et.appendChild(s)}}
+if(rm)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+function rs(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+rs();addEventListener('resize',rs);
+function mk(){return{x:W*(.35+Math.random()*.4),y:H*(.62+Math.random()*.2),r:18+Math.random()*30,a:0,v:.25+Math.random()*.35,ph:Math.random()*6.3,l:0,L:260+Math.random()*220}}
+for(var k=0;k<26;k++){var p=mk();p.l=Math.random()*p.L;P.push(p)}
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.l++;p.y-=p.v;p.x+=Math.sin(p.l/40+p.ph)*.45;p.r+=.06;
+var t=p.l/p.L,o=Math.sin(Math.PI*t)*.11;
+var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,250,242,'+o+')');g.addColorStop(1,'rgba(255,250,242,0)');
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill();if(p.l>=p.L)P[i]=mk()});
+requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="L&#x27;Instant Gayar" defer></script>
+</body>
+</html>
