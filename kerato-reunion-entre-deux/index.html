@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Kérato Réunion · Le rituel d'une peau saine · Entre-Deux (maquette offerte)</title>
-<meta name="description" content="Maquette offerte pour Kérato Réunion : soins du visage correctifs Dr Janka, soins bio Oxalia, épilation Epiloderm, massages, ongles, à l'Entre-Deux.">
+<meta name="description" content="Maquette offerte pour Kérato Réunion : soins du visage correctifs Dr Janka, soins bio Oxalia, épilation Epiloderm, massages et ongles, à l'Entre-Deux.">
 <meta property="og:title" content="Kérato Réunion · Le rituel d'une peau saine">
-<meta property="og:description" content="Une page imaginée pour Kérato Réunion. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:description" content="Une page imaginée pour Kérato Réunion, institut de soins à l'Entre-Deux. Maquette offerte par Jonathan · ATMA Digital.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://maquettes.atma-digital.re/kerato-reunion-entre-deux/img/gamme.webp">
 <meta property="og:url" content="https://maquettes.atma-digital.re/kerato-reunion-entre-deux/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#a67c7c;--rose-d:#7d5656;--poudre:#efe2dd;--creme:#faf7f3;--sauge:#8fa596;--sauge-d:#4f6656;--encre:#2e2424;--or:#c9a46a}
+:root{--rose:#a97070;--rose-d:#7d5050;--poudre:#f1e4df;--creme:#faf7f3;--sauge:#8fa596;--sauge-d:#46604f;--encre:#2e2424;--or:#c9a46a;--beige:#e9dfd2}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
@@ -22,15 +22,15 @@ h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.08
 img{display:block;max-width:100%}
 .ruban{background:var(--encre);color:#e9dfdb;font-size:12.5px;text-align:center;padding:8px 12px;position:relative;z-index:5}.ruban b{color:#fff;font-weight:500}
 #voile{position:fixed;inset:0;pointer-events:none;z-index:1}
-.hero{position:relative;min-height:92svh;display:grid;align-content:end;padding:0 22px 54px;overflow:hidden;color:#fff;isolation:isolate}
-.hero .fond{position:absolute;inset:0;z-index:-2;background:url(img/gamme.webp) center 60%/cover;animation:kb 26s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(46,36,36,.15) 0%,rgba(46,36,36,.25) 40%,rgba(58,40,40,.86) 100%)}
-@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero{position:relative;min-height:94svh;display:grid;align-content:end;padding:0 22px 58px;overflow:hidden;color:#fff;isolation:isolate}
+.hero .fond{position:absolute;inset:-6% 0;z-index:-2;background:url(img/gamme.webp) center 55%/cover;animation:kb 28s ease-in-out infinite alternate;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(46,36,36,.2) 0%,rgba(46,36,36,.25) 38%,rgba(58,40,40,.9) 100%)}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.15) translateY(-2%)}}
 .hero .in{max-width:880px;margin:0 auto;width:100%}
 .kick{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--rose)}
 .hero .kick{color:#f3dcd5}
-.hero h1{font-size:clamp(52px,15vw,104px);margin:10px 0 2px;opacity:0;animation:up 1.4s .2s forwards}
-.hero .slog{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,6.4vw,32px);color:#f6e6e1;opacity:0;animation:up 1.4s .5s forwards}
+.hero h1{font-size:clamp(52px,15vw,108px);margin:10px 0 2px;opacity:0;animation:up 1.4s .2s forwards}
+.hero .slog{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,6.4vw,34px);color:#f6e6e1;opacity:0;animation:up 1.4s .5s forwards}
 .hero p.l{max-width:520px;margin-top:14px;color:#efe3df;opacity:0;animation:up 1.4s .8s forwards}
 .btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
 .hero .btns{opacity:0;animation:up 1.4s 1.1s forwards}
@@ -38,62 +38,97 @@ img{display:block;max-width:100%}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 26px;border-radius:40px;text-decoration:none;font-weight:500;font-size:15.5px;transition:transform .25s,box-shadow .25s,background .25s}
 .btn:hover{transform:translateY(-2px)}
 .btn.p{background:var(--poudre);color:var(--rose-d);animation:respire 3.6s ease-in-out infinite}
-@keyframes respire{50%{box-shadow:0 0 0 9px rgba(239,226,221,.18)}}
+@keyframes respire{50%{box-shadow:0 0 0 9px rgba(241,228,223,.2)}}
 .btn.v{border:1px solid rgba(255,255,255,.65);color:#fff}
+/* bandeau défilant */
+.band{background:var(--rose-d);color:#f6e6e1;overflow:hidden;white-space:nowrap;padding:13px 0;position:relative;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px}
+.band div{display:inline-block;animation:def 38s linear infinite}
+.band span{margin:0 18px}.band i{font-style:normal;color:var(--or)}
+@keyframes def{to{transform:translateX(-50%)}}
 main{position:relative;z-index:2}
 section{padding:76px 22px;max-width:980px;margin:0 auto}
-h2{font-size:clamp(36px,9.5vw,54px);margin:8px 0 16px;color:var(--rose-d)}
+h2{font-size:clamp(36px,9.5vw,56px);margin:8px 0 16px;color:var(--rose-d)}
 .lead{font-size:19px;color:#5a4a4a;max-width:640px}
 .rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}.rv.on{opacity:1;transform:none}
 .marque{display:grid;gap:30px;align-items:center}
-.marque .logo{width:min(260px,70%);margin:0 auto;border-radius:50%;box-shadow:0 18px 50px rgba(166,124,124,.22);animation:flotte 7s ease-in-out infinite}
+.marque .logo{width:min(250px,68%);margin:0 auto;border-radius:50%;box-shadow:0 18px 50px rgba(169,112,112,.24);animation:flotte 7s ease-in-out infinite}
 @keyframes flotte{50%{transform:translateY(-8px)}}
-.rituel{list-style:none;margin-top:34px;border-top:1px solid #e3d4cf}
-.rituel li{display:grid;grid-template-columns:54px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid #e3d4cf;transition:background .3s}
-.rituel li:hover{background:rgba(239,226,221,.45)}
-.rituel .n{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--rose);line-height:1}
-.rituel h3{font-size:28px;color:var(--encre)}
-.rituel p{grid-column:2;color:#665656;font-size:16px}
+.sep{display:block;width:100%;height:46px;margin:0;color:var(--poudre)}
+/* soins */
+.soins{display:grid;gap:16px;margin-top:30px}
+.carte{background:#fff;border:1px solid #eadcd7;border-radius:22px;padding:24px 22px;display:grid;grid-template-columns:54px 1fr;gap:4px 16px;transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(125,80,80,.13)}
+.carte svg{width:48px;height:48px;grid-row:span 2;color:var(--rose);transition:transform .6s}
+.carte:hover svg{transform:rotate(-8deg) scale(1.08)}
+.carte h3{font-size:27px;color:var(--encre)}
+.carte p{color:#665656;font-size:16px;grid-column:2}
+/* duo photo/texte */
+.duo{display:grid;gap:26px;align-items:center}
+.duo figure{border-radius:26px;overflow:hidden;box-shadow:0 18px 44px rgba(125,80,80,.16);position:relative}
+.duo figure img{width:100%;height:auto;transition:transform 1.6s}
+.duo figure:hover img{transform:scale(1.05)}
+.duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;background:linear-gradient(transparent,rgba(46,36,36,.72));color:#fff;font-size:13.5px}
+.duo ul{list-style:none;margin-top:18px}
+.duo li{padding:9px 0 9px 28px;position:relative;color:#5a4a4a;border-bottom:1px solid #eadcd7}
+.duo li::before{content:"✦";position:absolute;left:0;color:var(--or);font-size:13px;top:12px}
+.beige{background:var(--beige);max-width:none;padding:76px 0}
+.beige>.duo{padding:0 22px;max-width:980px;margin:0 auto}
+/* oxalia */
 .oxa{background:var(--poudre);max-width:none;padding:76px 0}
 .oxa .t{padding:0 22px;max-width:980px;margin:0 auto}
 .defile{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 22px 12px;scrollbar-width:none}
 .defile::-webkit-scrollbar{display:none}
-.defile figure{flex:0 0 78%;max-width:400px;scroll-snap-align:center;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 34px rgba(125,86,86,.12)}
+.defile figure{flex:0 0 78%;max-width:400px;scroll-snap-align:center;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 34px rgba(125,80,80,.12)}
 .defile img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
 .defile figure:hover img{transform:scale(1.05)}
 .defile figcaption{padding:14px 18px 18px;font-size:14.5px;color:#665656}
-.defile figcaption b{display:block;font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:500;color:var(--rose-d)}
+.defile figcaption b{display:block;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--rose-d)}
 .astuce{font-size:13px;color:#8a7676;padding:0 22px;max-width:980px;margin:0 auto}
-.news{background:var(--sauge-d);color:#eef2ee;border-radius:28px;padding:38px 28px}
-.news .kick{color:#cfe0d3}
+.labels{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.labels span{border:1px solid var(--sauge);color:var(--sauge-d);border-radius:30px;padding:5px 15px;font-size:13.5px;font-weight:400;background:rgba(255,255,255,.55)}
+/* 4 gestes */
+.gestes{counter-reset:g;list-style:none;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gestes li{counter-increment:g;background:var(--sauge-d);color:#eef2ee;border-radius:22px;padding:22px 18px;position:relative;overflow:hidden;min-height:150px}
+.gestes li::before{content:counter(g);position:absolute;right:12px;top:-10px;font-family:'Cormorant Garamond',serif;font-size:90px;color:rgba(255,255,255,.12)}
+.gestes h3{font-size:28px;color:#fff}
+.gestes p{font-size:14.5px;color:#d7e3da;margin-top:6px}
+/* actu */
+.news{background:var(--rose-d);color:#f8ece8;border-radius:28px;padding:38px 28px}
+.news .kick{color:#f0d3cb}
 .news blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(27px,7vw,40px);line-height:1.2;margin-top:12px}
-.news small{display:block;margin-top:14px;color:#c8d6cc;font-size:13.5px}
+.news small{display:block;margin-top:14px;color:#ecd2cb;font-size:13.5px}
 .preuves{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
 .preuves div{background:#fff;border:1px solid #eadcd7;border-radius:18px;padding:18px 16px;min-width:0}
-.preuves b{display:block;font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:500;color:var(--rose-d);line-height:1.05}
+.preuves b{display:block;font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:500;color:var(--rose-d);line-height:1.05}
 .preuves span{font-size:13.5px;color:#6c5b5b}
-.noel{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,#5d7466 0%,#3f5246 60%,#33443a 100%);color:#f4efe6;border-radius:30px;padding:46px 28px;text-align:center}
+.lieu{display:grid;gap:12px;margin-top:22px}
+.lieu div{background:#fff;border:1px dashed #d9c6bf;border-radius:18px;padding:18px 20px;color:#5a4a4a}
+.lieu b{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:var(--rose-d);display:block}
+/* noel */
+.noel{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,#5d7466 0%,#3f5246 60%,#33443a 100%);color:#f4efe6;border-radius:30px;padding:46px 26px;text-align:center}
 .noel .kick{color:var(--or)}
 .noel h2{color:#fff}
 .noel p{max-width:520px;margin:0 auto;color:#e2e8df}
-.noel .btn.p{background:var(--or);color:#2f2a1e;margin-top:24px}
+.noel img{width:min(330px,82%);margin:24px auto 4px;border-radius:18px;box-shadow:0 14px 34px rgba(0,0,0,.3)}
+.noel small{display:block;color:#bfcdc3;font-size:12.5px;margin-top:6px}
+.noel .btn.p{background:var(--or);color:#2f2a1e;margin-top:22px}
 .noel .etoile{position:absolute;color:var(--or);opacity:.5;font-size:14px;animation:scint 3s ease-in-out infinite}
 @keyframes scint{50%{opacity:.1;transform:scale(.6)}}
 .contact{text-align:center}
-.contact .g{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,11vw,60px);color:var(--rose-d);text-decoration:none;display:block;margin:4px 0 10px}
+.contact .g{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,11vw,62px);color:var(--rose-d);text-decoration:none;display:block;margin:4px 0 10px}
 .contact .btns{justify-content:center}
 .contact .btn.p{background:var(--rose-d);color:#fff;animation:none}
 .contact .btn.v{border-color:var(--rose-d);color:var(--rose-d)}
-footer{position:relative;z-index:2;background:var(--encre);color:#b9aaa6;text-align:center;font-size:13px;padding:30px 22px 90px}
-@media(min-width:780px){.marque{grid-template-columns:1fr 1.3fr}.defile{justify-content:center}.defile figure{flex-basis:30%}.preuves{grid-template-columns:repeat(4,1fr)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1,.hero .slog,.hero p.l,.hero .btns{opacity:1;transform:none}#voile{display:none}}
+footer{position:relative;z-index:2;background:var(--encre);color:#b9aaa6;text-align:center;font-size:13px;padding:30px 22px 60px}
+@media(min-width:780px){.marque{grid-template-columns:1fr 1.3fr}.soins{grid-template-columns:1fr 1fr}.duo{grid-template-columns:1fr 1fr}.duo.inv figure{order:2}.defile{justify-content:center}.defile figure{flex-basis:23%}.preuves{grid-template-columns:repeat(4,1fr)}.gestes{grid-template-columns:repeat(4,1fr)}.lieu{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1,.hero .slog,.hero p.l,.hero .btns{opacity:1;transform:none}#voile{display:none}.band{overflow-x:auto}}
 </style>
 </head>
 <body>
 <div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Kérato Réunion</b></div>
 <canvas id="voile" aria-hidden="true"></canvas>
 <header class="hero">
-<div class="fond" role="img" aria-label="La gamme de soins bio Oxalia présentée par Kérato Réunion"></div>
+<div class="fond" id="fond" role="img" aria-label="La gamme de soins bio Oxalia présentée par Kérato Réunion"></div>
 <div class="in">
 <p class="kick">Institut de soins · Entre-Deux</p>
 <h1>Kérato Réunion</h1>
@@ -104,6 +139,7 @@ footer{position:relative;z-index:2;background:var(--encre);color:#b9aaa6;text-al
 <a class="btn v" href="tel:0693005309">0693 00 53 09</a>
 </div></div>
 </header>
+<div class="band" aria-hidden="true"><div><span>Soins du visage Dr Janka</span><i>✦</i><span>Soins bio Oxalia</span><i>✦</i><span>Cire végétale Epiloderm</span><i>✦</i><span>Massages relaxants</span><i>✦</i><span>Vernis laque &amp; semi-permanent</span><i>✦</i><span>Maquillage</span><i>✦</i><span>Soins du visage Dr Janka</span><i>✦</i><span>Soins bio Oxalia</span><i>✦</i><span>Cire végétale Epiloderm</span><i>✦</i><span>Massages relaxants</span><i>✦</i><span>Vernis laque &amp; semi-permanent</span><i>✦</i><span>Maquillage</span><i>✦</i></div></div>
 <main>
 <section class="marque">
 <img class="logo rv" src="img/logo.webp" alt="Logo Kérato Réunion, le rituel d'une peau saine" width="700" height="700">
@@ -113,47 +149,92 @@ footer{position:relative;z-index:2;background:var(--encre);color:#b9aaa6;text-al
 <p class="lead">Chez Kérato Réunion, chaque soin suit un fil : comprendre votre peau, choisir la bonne gamme, puis prendre le temps. Des soins correctifs Dr Janka aux soins bio Oxalia, tout est pensé pour une peau qui respire.</p>
 </div>
 </section>
-<section style="padding-top:20px">
+<svg class="sep" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20C150 -2 300 -2 450 20S750 42 900 20 1100 4 1200 16V46Z" fill="currentColor"/></svg>
+
+<section>
 <div class="rv"><p class="kick">Les soins</p><h2>Cinq rituels, de la tête aux mains</h2></div>
-<ol class="rituel">
-<li class="rv"><span class="n">01</span><h3>Soins correctifs Dr Janka</h3><p>Des soins du visage ciblés, avec la gamme Dr Janka.</p></li>
-<li class="rv"><span class="n">02</span><h3>Soins bio Oxalia</h3><p>Des soins du visage bio, certifiés Cosmos Organic, tout en douceur.</p></li>
-<li class="rv"><span class="n">03</span><h3>Épilation Epiloderm</h3><p>L'épilation à la cire végétale Epiloderm.</p></li>
-<li class="rv"><span class="n">04</span><h3>Massages relaxants</h3><p>Un temps de détente pour relâcher les tensions.</p></li>
-<li class="rv"><span class="n">05</span><h3>Ongles &amp; maquillage</h3><p>Vernis laque, semi-permanent et maquillage.</p></li>
-</ol>
+<div class="soins">
+<article class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="24" cy="24" r="15"/><path d="M17 27c2 4 12 4 14 0M18 20h.1M30 20h.1"/><path d="M24 4v4M40 10l-3 3M8 10l3 3"/></svg><h3>Soins correctifs Dr Janka</h3><p>Des soins du visage ciblés avec la gamme de cosmétique corrective professionnelle Dr Janka.</p></article>
+<article class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 38C10 20 22 10 40 8c-1 18-11 30-30 30Z"/><path d="M10 38C18 28 26 21 34 15"/></svg><h3>Soins bio Oxalia</h3><p>Des soins du visage bio, certifiés Cosmos Organic et fabriqués en France, tout en douceur.</p></article>
+<article class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M24 6c6 8 9 13 9 18a9 9 0 0 1-18 0c0-5 3-10 9-18Z"/><path d="M20 26a4 4 0 0 0 4 4"/></svg><h3>Épilation Epiloderm</h3><p>L'épilation à la cire végétale Epiloderm.</p></article>
+<article class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 30c6-6 10 6 16 0s10 6 16 0M6 20c6-6 10 6 16 0s10 6 16 0M6 40c6-6 10 6 16 0s10 6 16 0"/></svg><h3>Massages relaxants</h3><p>Un temps de détente pour relâcher les tensions, sur rendez-vous.</p></article>
+<article class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="19" y="22" width="10" height="20" rx="2"/><path d="M21 22v-8h6v8M24 14V6"/></svg><h3>Ongles &amp; maquillage</h3><p>Vernis laque, semi-permanent et maquillage pour finir en beauté.</p></article>
+</div>
 </section>
+
+<section class="beige">
+<div class="duo">
+<figure class="rv"><img src="img/drjanka.webp" alt="Produits Dr Janka et bon cadeau « Bon pour un diagnostic et un premier soin »" loading="lazy" width="960" height="720"><figcaption>Dr Janka · cosmétique corrective professionnelle</figcaption></figure>
+<div class="rv">
+<p class="kick">Le diagnostic</p>
+<h2>Dr Janka, des soins qui corrigent</h2>
+<p class="lead">Le soin commence par regarder votre peau. La gamme Dr Janka, pensée pour les instituts, accompagne des soins du visage correctifs, ajustés à ce dont elle a besoin.</p>
+<ul><li>Soins du visage correctifs</li><li>Cosmétique corrective professionnelle</li><li>Un premier soin pensé pour votre peau</li></ul>
+</div>
+</div>
+</section>
+
 <section class="oxa">
-<div class="t rv"><p class="kick">Dans la cabine</p><h2>La gamme Oxalia</h2><p class="lead">Des soins bio fabriqués en France, aux noms qui donnent déjà envie de s'installer.</p></div>
+<div class="t rv"><p class="kick">Dans la cabine</p><h2>La gamme Oxalia</h2><p class="lead">Des soins bio fabriqués en France, aux noms qui donnent déjà envie de s'installer.</p>
+<div class="labels"><span>Bio</span><span>Cosmos Organic</span><span>Fabriqué en France</span></div></div>
 <div class="defile">
-<figure><img src="img/pot.webp" alt="Un pot de soin Oxalia" loading="lazy" width="750" height="1000"><figcaption><b>Le soin en pot</b>La texture qu'on prend le temps d'appliquer.</figcaption></figure>
-<figure><img src="img/brume.webp" alt="Flacons Oxalia" loading="lazy" width="750" height="1000"><figcaption><b>Lait &amp; Brume de Douceur</b>Pour démaquiller puis rafraîchir la peau.</figcaption></figure>
-<figure><img src="img/coffrets.webp" alt="Coffrets de soins Oxalia" loading="lazy" width="824" height="1000"><figcaption><b>Doudou Cocoon</b>Sérum, masque et crème, la ligne cocon.</figcaption></figure>
+<figure><img src="img/lait-brume.webp" alt="Lait démaquillant et Brume de Douceur Oxalia" loading="lazy" width="1200" height="1600"><figcaption><b>Lait &amp; Brume de Douceur</b>Pour démaquiller puis apaiser la peau.</figcaption></figure>
+<figure><img src="img/yeux-doudou.webp" alt="Plein les Yeux et Crème Doudou Cocoon, soins Oxalia" loading="lazy" width="1200" height="1457"><figcaption><b>Plein les Yeux · Doudou Cocoon</b>Le contour des yeux, puis la crème ultra hydratante.</figcaption></figure>
+<figure><img src="img/peeling.webp" alt="Peeling Végétal Oxalia, gommage visage aux poudres ayurvédiques" loading="lazy" width="1200" height="1600"><figcaption><b>Peeling Végétal</b>Un gommage visage aux poudres ayurvédiques.</figcaption></figure>
+<figure><img src="img/gamme.webp" alt="La gamme Oxalia réunie : Riz aux Amandes, Doudou Cocoon, Plein les Yeux, Brume de Douceur" loading="lazy" width="1600" height="847" style="aspect-ratio:4/5"><figcaption><b>La gamme réunie</b>Riz aux Amandes, Doudou Cocoon, Plein les Yeux…</figcaption></figure>
 </div>
 <p class="astuce">Faites glisser pour voir les soins · Photos : page Facebook Kérato Réunion</p>
 </section>
+
+<section>
+<div class="rv"><p class="kick">Les bons gestes</p><h2>Prendre soin de sa peau en 4 temps</h2><p class="lead">Des conseils que Kérato Réunion partage sur sa page : une routine simple, chaque jour.</p></div>
+<ol class="gestes">
+<li class="rv"><h3>Nettoyer</h3><p>Démaquiller en douceur, pour une peau libre de respirer.</p></li>
+<li class="rv"><h3>Tonifier</h3><p>Apaiser et rafraîchir avant le soin.</p></li>
+<li class="rv"><h3>Hydrater</h3><p>Nourrir la peau avec une crème adaptée.</p></li>
+<li class="rv"><h3>Le contour des yeux</h3><p>Un soin à part pour le regard.</p></li>
+</ol>
+</section>
+
+<section class="duo inv" style="padding-top:10px">
+<figure class="rv"><img src="img/gel-vernis.webp" alt="Rangée de gels vernis 1944 sur une table en bois" loading="lazy" width="960" height="720"><figcaption>Le gel vernis 1944 · « La beauté est un droit »</figcaption></figure>
+<div class="rv">
+<p class="kick">Les mains</p>
+<h2>Des ongles qui font plaisir</h2>
+<p class="lead">Vernis laque, semi-permanent, ongles : la touche finale d'un moment pour soi, dans une palette de teintes à choisir sur place.</p>
+</div>
+</section>
+
 <section>
 <div class="news rv">
 <p class="kick">À la une · 5 novembre 2026</p>
 <blockquote>« Retrouvez-moi chez Coiffure les Alizés à l'Entre-Deux »</blockquote>
 <small>Publication partagée sur la page Facebook Kérato Réunion. Les créneaux se calent directement avec l'institut.</small>
 </div>
+<div class="lieu rv">
+<div><b>À l'Entre-Deux</b>Kérato Réunion vous reçoit à l'Entre-Deux (97414), chez Coiffure les Alizés.</div>
+<div><b>Sur rendez-vous</b>Un message WhatsApp ou un appel au 0693 00 53 09 suffit pour choisir votre soin.</div>
+</div>
 <div class="preuves rv">
-<div><b>100 %</b><span>de recommandations sur Facebook</span></div>
-<div><b>540</b><span>personnes suivent la page</span></div>
-<div><b>5</b><span>rituels de soin</span></div>
+<div><b data-n="100">100</b><span>% de recommandations sur Facebook</span></div>
+<div><b data-n="540">540</b><span>personnes suivent la page</span></div>
+<div><b data-n="5">5</b><span>rituels de soin</span></div>
 <div><b>Bio</b><span>soins Oxalia certifiés</span></div>
 </div>
 </section>
+
 <section>
 <div class="noel rv">
-<span class="etoile" style="left:12%;top:18%">✦</span><span class="etoile" style="right:14%;top:30%;animation-delay:1s">✦</span><span class="etoile" style="left:22%;bottom:16%;animation-delay:2s">✦</span>
+<span class="etoile" style="left:12%;top:8%">✦</span><span class="etoile" style="right:14%;top:14%;animation-delay:1s">✦</span><span class="etoile" style="left:20%;bottom:10%;animation-delay:2s">✦</span><span class="etoile" style="right:18%;bottom:14%;animation-delay:1.5s">✦</span>
 <p class="kick">Offrir pour Noël</p>
 <h2>Offrez un rituel Kérato</h2>
-<p>La carte cadeau Kérato Réunion : un soin à offrir, à glisser sous le sapin pour une maman, une amie, une sœur.</p>
-<a class="btn p" href="https://wa.me/262693005309?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20K%C3%A9rato%20pour%20No%C3%ABl" target="_blank" rel="noopener">Commander une carte cadeau</a>
+<p>Un moment pour la peau à glisser sous le sapin pour une maman, une amie, une sœur : Kérato Réunion propose une carte cadeau.</p>
+<img src="img/drjanka.webp" alt="Bon cadeau « Bon pour un diagnostic et un premier soin » et produits Dr Janka" loading="lazy" width="960" height="720">
+<small>Idée de cadeau : un diagnostic et un premier soin</small>
+<a class="btn p" href="https://wa.me/262693005309?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau</a>
 </div>
 </section>
+
 <section class="contact rv">
 <p class="kick">Rendez-vous</p>
 <h2>Votre moment vous attend</h2>
@@ -167,14 +248,27 @@ footer{position:relative;z-index:2;background:var(--encre);color:#b9aaa6;text-al
 </main>
 <footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Kérato Réunion.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</footer>
 <script>
-(function(){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(rm)return;
+/* compteurs */
+var co=new IntersectionObserver(function(e){e.forEach(function(x){if(!x.isIntersecting)return;co.unobserve(x.target);var n=+x.target.dataset.n,t0=null;function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1400,1);x.target.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.6});
+document.querySelectorAll('[data-n]').forEach(function(b){co.observe(b)});
+/* paillettes */
 var c=document.getElementById('voile'),x=c.getContext('2d'),W,H,P=[],run=true;
 function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener('resize',sz);
-for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:2+Math.random()*7,v:.15+Math.random()*.35,d:Math.random()*6.28,f:Math.random()<.5});
+for(var i=0;i<30;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1.5+Math.random()*5,v:.12+Math.random()*.32,d:Math.random()*6.28,t:i%3});
 document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(t)});
-function t(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.3;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
-x.beginPath();if(p.f){x.ellipse(p.x,p.y,p.r*1.6,p.r*.7,p.d,0,6.28);x.fillStyle='rgba(143,165,150,.16)'}else{x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba(166,124,124,.13)'}x.fill()});requestAnimationFrame(t)}t()})();
+function t(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.d+=.015;p.x+=Math.sin(p.d)*.3;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+var a=.1+.12*Math.abs(Math.sin(p.d*1.3));
+if(p.t==0){x.fillStyle='rgba(201,164,106,'+a+')';x.save();x.translate(p.x,p.y);x.rotate(p.d);x.fillRect(-p.r,-p.r,p.r*2,p.r*2);x.restore()}
+else if(p.t==1){x.beginPath();x.ellipse(p.x,p.y,p.r*1.6,p.r*.7,p.d,0,6.28);x.fillStyle='rgba(143,165,150,'+(a*.9)+')';x.fill()}
+else{x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba(169,112,112,'+(a*.8)+')';x.fill()}});requestAnimationFrame(t)}t();
+/* parallaxe hero */
+var f=document.getElementById('fond');addEventListener('scroll',function(){if(scrollY<900)f.style.marginTop=(scrollY*.12)+'px'},{passive:true});
+})();
 </script>
 <script src="/outils/cta.js" data-nom="Kérato Réunion" defer></script>
 </body></html>

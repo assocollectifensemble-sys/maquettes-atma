@@ -14,148 +14,226 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--nuit:#1d2733;--nuit2:#2a3746;--sable:#efe7da;--creme:#f8f4ec;--givre:#cfe0ea;--or:#b48a52;--encre:#161c24}
+:root{--nuit:#1d2733;--nuit2:#2a3746;--sable:#efe7da;--creme:#f8f4ec;--givre:#cfe0ea;--or:#b48a52;--encre:#161c24;--or2:#d9b886}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Jost',sans-serif;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
 h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
-a{color:inherit}
+a{color:inherit}img{max-width:100%}
 .ruban{background:var(--encre);color:#e9dfcd;font-size:12.5px;text-align:center;padding:8px 12px;letter-spacing:.02em}
 .ruban b{color:#fff;font-weight:500}
-header.hero{position:relative;background:radial-gradient(120% 90% at 70% 0%,var(--nuit2),var(--nuit) 60%);color:#fff;text-align:center;padding:64px 22px 84px;overflow:hidden}
-#flocons{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero>*:not(canvas){position:relative;z-index:1}
-.logo{width:132px;height:132px;border-radius:50%;background:#fff;color:var(--nuit);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 26px;box-shadow:0 0 0 8px rgba(255,255,255,.08),0 0 60px rgba(207,224,234,.25);animation:respire 5s ease-in-out infinite}
+/* HERO */
+header.hero{position:relative;color:#fff;text-align:center;padding:60px 22px 100px;overflow:hidden;background:var(--nuit);isolation:isolate}
+.hero .fond{position:absolute;inset:-6%;z-index:-3;background:url(img/fleurs.webp) center/cover;filter:saturate(.7) brightness(.8);animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.14) translate(-2%,-2%)}}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(29,39,51,.82),rgba(29,39,51,.7) 45%,rgba(22,28,36,.96))}
+#flocons{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1}
+.logo{width:132px;height:132px;border-radius:50%;background:#fff;color:var(--nuit);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 26px;box-shadow:0 0 0 8px rgba(255,255,255,.08),0 0 60px rgba(207,224,234,.3);animation:respire 5s ease-in-out infinite}
 .logo span{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;line-height:1}
 .logo small{font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
 @keyframes respire{50%{transform:scale(1.035)}}
-.hero h1{font-size:clamp(40px,11vw,76px);letter-spacing:.01em;opacity:0;animation:monte 1.4s .2s forwards}
-.hero h1 em{display:block;font-size:.42em;font-style:italic;color:var(--givre);margin-top:10px;letter-spacing:.02em}
-.hero p.sous{max-width:520px;margin:22px auto 0;color:#d6dde4;opacity:0;animation:monte 1.4s .6s forwards}
-.btns{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;opacity:0;animation:monte 1.4s 1s forwards}
+.hero h1{font-size:clamp(40px,11vw,80px);letter-spacing:.01em;opacity:0;animation:monte 1.4s .2s forwards}
+.hero h1 em{display:block;font-size:.4em;font-style:italic;color:var(--givre);margin-top:10px}
+.hero p.sous{max-width:540px;margin:22px auto 0;color:#dde4ea;opacity:0;animation:monte 1.4s .6s forwards}
+.sign{margin-top:22px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--or2);opacity:0;animation:monte 1.4s .85s forwards}
+.btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;opacity:0;animation:monte 1.4s 1.1s forwards}
 @keyframes monte{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .btn{display:inline-block;padding:14px 26px;border-radius:40px;text-decoration:none;font-weight:400;font-size:15px;letter-spacing:.03em;transition:transform .25s,box-shadow .25s}
 .btn:hover{transform:translateY(-2px)}
-.btn.plein{background:var(--sable);color:var(--encre)}
-.btn.plein:hover{box-shadow:0 8px 26px rgba(239,231,218,.35)}
+.btn.plein{background:var(--sable);color:var(--encre);animation:souffle 3.6s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 0 0 7px rgba(239,231,218,.14)}}
 .btn.vide{border:1px solid rgba(255,255,255,.55);color:#fff}
-.vague{position:absolute;left:0;right:0;bottom:-1px;height:46px;z-index:1}
+.vague{position:absolute;left:0;right:0;bottom:-1px;height:46px}
 .defile{background:var(--sable);overflow:hidden;white-space:nowrap;padding:14px 0;border-bottom:1px solid #e1d6c3}
-.defile div{display:inline-block;animation:def 38s linear infinite;font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;color:var(--nuit2)}
+.defile div{display:inline-block;animation:def 40s linear infinite;font-family:'Cormorant Garamond',serif;font-size:21px;font-style:italic;color:var(--nuit2)}
 .defile span{margin:0 22px}.defile i{color:var(--or);font-style:normal}
 @keyframes def{to{transform:translateX(-50%)}}
 section{padding:70px 22px;max-width:980px;margin:0 auto}
 .kick{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--or);font-weight:400}
-h2{font-size:clamp(32px,8vw,48px);margin:10px 0 18px;color:var(--nuit)}
+h2{font-size:clamp(32px,8vw,50px);margin:10px 0 18px;color:var(--nuit)}
 .lead{font-size:19px;color:#3a4552;max-width:640px}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.rv.on{opacity:1;transform:none}
-.soins{display:grid;gap:16px;margin-top:34px}
-.carte{background:#fff;border:1px solid #e6dccb;border-radius:20px 20px 20px 4px;padding:26px 24px;transition:transform .35s,box-shadow .35s,border-color .35s;position:relative;overflow:hidden}
-.carte:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(29,39,51,.1);border-color:var(--or)}
-.carte h3{font-size:27px;color:var(--nuit);margin-bottom:6px}
-.carte p{font-size:16px;color:#4a5562}
-.carte .num{position:absolute;right:16px;top:6px;font-family:'Cormorant Garamond',serif;font-size:64px;color:#efe7da;line-height:1;pointer-events:none}
-.signature{background:var(--nuit);color:#fff;border:none}
-.signature h3{color:#fff}.signature p{color:#cdd6de}.signature .num{color:rgba(255,255,255,.07)}
-.signature:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(207,224,234,.18) 50%,transparent 60%);transform:translateX(-100%);animation:givre 6s 1s infinite}
-@keyframes givre{60%,100%{transform:translateX(100%)}}
-.etiq{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid currentColor;border-radius:20px;padding:2px 10px;margin-bottom:10px;color:var(--givre)}
-.duo{display:grid;gap:30px;align-items:center}
-.duo img{width:100%;border-radius:6px 70px 6px 70px;box-shadow:0 18px 48px rgba(29,39,51,.18);display:block}
-.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+/* manifeste */
+.trois{display:grid;gap:14px;margin-top:30px}
+.trois div{border-left:2px solid var(--or);padding:6px 0 6px 18px}
+.trois b{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:var(--nuit);display:block;line-height:1.1}
+.trois span{font-size:15.5px;color:#4a5562}
+.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:34px}
 .chiffres div{background:var(--sable);border-radius:14px;padding:16px 14px;min-width:0}
 .chiffres b{display:block;font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--nuit);font-weight:600;line-height:1}
 .chiffres span{font-size:13.5px;color:#4a5562}
-.une{background:var(--nuit);color:#fff;border-radius:26px;padding:34px 26px;position:relative;overflow:hidden}
-.une blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,7vw,40px);font-style:italic;line-height:1.2}
+/* cryolift */
+.cryo{max-width:none;padding:0}
+.cryo .in{max-width:980px;margin:0 auto;padding:80px 22px;position:relative;text-align:center;color:#fff}
+.cryo{background:radial-gradient(90% 80% at 50% 0%,#33465b,#1d2733 70%);position:relative;overflow:hidden}
+.cryo h2{color:#fff}
+.cryo .kick{color:var(--givre)}
+.temp{font-family:'Cormorant Garamond',serif;font-size:clamp(96px,32vw,190px);line-height:.95;font-weight:500;background:linear-gradient(180deg,#fff,var(--givre) 60%,#7fa3bb);-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0 6px;text-shadow:0 0 50px rgba(207,224,234,.25)}
+.cryo p{max-width:520px;margin:0 auto;color:#cdd8e1;font-size:18px}
+.cryo svg.fl{position:absolute;opacity:.12;width:200px;animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.etiq{display:inline-block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;border:1px solid currentColor;border-radius:20px;padding:2px 10px;margin-bottom:12px;color:var(--givre)}
+/* soins */
+.soins{display:grid;gap:16px;margin-top:34px}
+.carte{background:#fff;border:1px solid #e6dccb;border-radius:20px 20px 20px 4px;padding:26px 24px;transition:transform .35s,box-shadow .35s,border-color .35s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(29,39,51,.1);border-color:var(--or)}
+.carte svg{width:38px;height:38px;stroke:var(--or);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px;display:block}
+.carte h3{font-size:27px;color:var(--nuit);margin-bottom:6px}
+.carte p{font-size:16px;color:#4a5562}
+.carte .num{position:absolute;right:16px;top:6px;font-family:'Cormorant Garamond',serif;font-size:64px;color:#efe7da;line-height:1;pointer-events:none}
+/* revital */
+.revital{background:var(--sable);max-width:none;padding:0}
+.revital .in{max-width:980px;margin:0 auto;padding:70px 22px}
+.seances{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.seances div{flex:1 1 56px;min-width:56px;aspect-ratio:1;border-radius:50%;background:#fff;border:1px solid #d8cbb4;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--nuit);line-height:1;transition:.4s}
+.seances div small{font-family:'Jost';font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:#7a828b;margin-top:2px}
+.seances div.on{background:var(--nuit);color:#fff;border-color:var(--nuit)}
+.seances div.on small{color:var(--givre)}
+/* galerie */
+.galerie{max-width:none;padding:70px 0 60px}
+.galerie .tete{max-width:980px;margin:0 auto;padding:0 22px}
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 22px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 78%;max-width:420px;scroll-snap-align:center;background:#fff;padding:10px 10px 14px;border-radius:6px;box-shadow:0 14px 36px rgba(29,39,51,.12);transition:transform .4s}
+.rail figure:nth-child(odd){transform:rotate(-1deg)}.rail figure:nth-child(even){transform:rotate(1deg)}
+.rail figure:hover{transform:none}
+.rail img{width:100%;height:260px;object-fit:cover;display:block;border-radius:3px}
+.rail figcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--nuit2);padding-top:10px;text-align:center}
+/* une */
+.une{background:var(--nuit);color:#fff;border-radius:26px;padding:38px 26px;position:relative;overflow:hidden}
+.une:after{content:"“";position:absolute;right:14px;top:-26px;font-family:'Cormorant Garamond',serif;font-size:200px;color:rgba(255,255,255,.06);line-height:1}
+.une blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,7vw,42px);font-style:italic;line-height:1.2}
 .une small{display:block;margin-top:16px;color:#aebac5;font-size:13.5px}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tags span{border:1px solid rgba(217,184,134,.6);color:var(--or2);border-radius:20px;padding:3px 12px;font-size:13.5px}
+/* duo */
+.duo{display:grid;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:6px 70px 6px 70px;box-shadow:0 18px 48px rgba(29,39,51,.18);display:block}
 .horaires{width:100%;border-collapse:collapse;margin-top:18px}
 .horaires td{padding:9px 0;border-bottom:1px solid #e2d8c6}
 .horaires td:last-child{text-align:right;color:var(--nuit);font-weight:400}
-.noel{background:linear-gradient(160deg,#233042,#161e29);color:#fff;border-radius:28px;padding:44px 26px;text-align:center;position:relative;overflow:hidden}
+.avis{display:flex;align-items:center;gap:16px;margin-top:26px;background:#fff;border:1px solid #e6dccb;border-radius:16px;padding:16px 18px}
+.avis b{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--nuit);line-height:1}
+.avis span{font-size:15px;color:#4a5562}
+/* noel */
+.noel{background:linear-gradient(160deg,#233042,#161e29);color:#fff;border-radius:28px;padding:48px 26px;text-align:center;position:relative;overflow:hidden}
 .noel h2{color:#fff}.noel p{color:#d3dbe3;max-width:520px;margin:0 auto 26px}
-.noel .kick{color:#d9b886}
-.etoile{position:absolute;color:#d9b886;opacity:.55;animation:scint 3.4s ease-in-out infinite;font-size:18px}
+.noel .kick{color:var(--or2)}
+.etoile{position:absolute;color:var(--or2);opacity:.55;animation:scint 3.4s ease-in-out infinite;font-size:18px}
 @keyframes scint{50%{opacity:.1;transform:scale(.6) rotate(25deg)}}
 .contact{text-align:center}
-.contact .grand{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,10vw,52px);color:var(--nuit);text-decoration:none;display:block;margin:8px 0 20px}
+.contact .grand{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,10vw,54px);color:var(--nuit);text-decoration:none;display:block;margin:8px 0 14px}
 .contact .btns{opacity:1;animation:none}
-.contact .btn.plein{background:var(--nuit);color:#fff}
+.contact .btn.plein{background:var(--nuit);color:#fff;animation:none}
 .contact .btn.vide{border-color:var(--nuit);color:var(--nuit)}
-footer{background:var(--encre);color:#aeb6c0;text-align:center;font-size:13px;padding:30px 22px 90px}
+.pratique{display:grid;gap:12px;margin:26px auto 0;max-width:560px;text-align:left}
+.pratique div{background:#fff;border:1px solid #e6dccb;border-radius:14px;padding:12px 16px;font-size:15.5px}
+.pratique b{font-weight:500;color:var(--nuit)}
+footer{background:var(--encre);color:#aeb6c0;text-align:center;font-size:13px;padding:30px 22px 100px}
 footer a{color:#e9dfcd}
-@media(min-width:760px){.soins{grid-template-columns:1fr 1fr}.duo{grid-template-columns:1fr 1fr}.chiffres{grid-template-columns:repeat(4,1fr)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1,.hero p.sous,.btns{opacity:1;transform:none}#flocons{display:none}}
+.flot{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:flex;justify-content:center;transform:translateY(120px);transition:transform .5s}
+.flot.on{transform:none}
+.flot a{background:var(--nuit);color:#fff;text-decoration:none;border-radius:40px;padding:13px 26px;font-size:15px;box-shadow:0 10px 30px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.2)}
+@media(min-width:760px){.soins{grid-template-columns:1fr 1fr}.duo{grid-template-columns:1fr 1fr}.chiffres{grid-template-columns:repeat(4,1fr)}.trois{grid-template-columns:repeat(3,1fr)}.rail figure{flex-basis:360px}.flot{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1,.hero p.sous,.sign,.btns{opacity:1;transform:none}#flocons{display:none}}
 </style>
 </head>
 <body>
 <div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Kô! Esthétik</b></div>
 
 <header class="hero">
+<div class="fond" role="img" aria-label="Bouquet de fleurs jaunes, publication « Parce que vous êtes unique »"></div>
 <canvas id="flocons" aria-hidden="true"></canvas>
 <div class="logo"><span>Kô!</span><small>ici vous êtes unique</small></div>
 <h1>Kô! Esthétik<em>Institut de beauté · Saint-Pierre · La Réunion</em></h1>
 <p class="sous">Maître Artisan esthéticienne, Corine Bédier vous accueille depuis plus de 25 ans pour des soins anti-âge, des conseils justes et un moment rien qu'à vous.</p>
+<p class="sign">Parlons Peau, Parlons Vrai, Parlons Kô!</p>
 <div class="btns">
 <a class="btn plein" href="https://wa.me/262692875398?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20K%C3%B4!%20Esth%C3%A9tik" target="_blank" rel="noopener">Prendre rendez-vous (WhatsApp)</a>
 <a class="btn vide" href="tel:+262692875398">0692 87 53 98</a>
 </div>
-<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none"><path d="M0 46V20C240 0 480 40 720 24S1200 0 1440 22v24z" fill="#efe7da"/></svg>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20C240 0 480 40 720 24S1200 0 1440 22v24z" fill="#efe7da"/></svg>
 </header>
 
 <div class="defile" aria-hidden="true"><div>
-<span>Maître Artisan</span><i>✦</i><span>Fillmed by Filorga</span><i>✦</i><span>Cryolift</span><i>✦</i><span>Revital Skin</span><i>✦</i><span>Oxyderme THBO</span><i>✦</i><span>Parlons Peau, Parlons Vrai, Parlons Kô!</span><i>✦</i>
-<span>Maître Artisan</span><i>✦</i><span>Fillmed by Filorga</span><i>✦</i><span>Cryolift</span><i>✦</i><span>Revital Skin</span><i>✦</i><span>Oxyderme THBO</span><i>✦</i><span>Parlons Peau, Parlons Vrai, Parlons Kô!</span><i>✦</i>
+<span>Maître Artisan</span><i>✦</i><span>Fillmed by Filorga</span><i>✦</i><span>Cryolift à −18°</span><i>✦</i><span>Revital Skin</span><i>✦</i><span>Oxyderme THBO</span><i>✦</i><span>Parlons Peau, Parlons Vrai, Parlons Kô!</span><i>✦</i>
+<span>Maître Artisan</span><i>✦</i><span>Fillmed by Filorga</span><i>✦</i><span>Cryolift à −18°</span><i>✦</i><span>Revital Skin</span><i>✦</i><span>Oxyderme THBO</span><i>✦</i><span>Parlons Peau, Parlons Vrai, Parlons Kô!</span><i>✦</i>
 </div></div>
 
 <section id="institut">
 <div class="rv"><p class="kick">L'institut</p>
 <h2>Ici, vous êtes unique.</h2>
 <p class="lead">Kô! Esthétik exerce « avec passion l'art de l'esthétique » : adolescents, femmes et hommes y trouvent des prestations et des conseils pour leur confort. Corine est allée jusqu'au Brevet de Maîtrise III pour offrir qualité et conseils pertinents.</p></div>
+<div class="trois rv">
+<div><b>Parlons Peau</b><span>Un bilan pour comprendre votre peau, avec une experte anti-âge et facialiste.</span></div>
+<div><b>Parlons Vrai</b><span>Des conseils pertinents, adaptés à chacun : ados, femmes et hommes.</span></div>
+<div><b>Parlons Kô!</b><span>Un institut à taille humaine, où chaque visite commence par vous.</span></div>
+</div>
 <div class="chiffres rv">
-<div><b>25+</b><span>ans d'expérience</span></div>
+<div><b data-n="25" data-p="+">25+</b><span>ans d'expérience</span></div>
 <div><b>2003</b><span>Fillmed, la cosmétique d'excellence</span></div>
-<div><b>19 ans</b><span>Show Room Fillmed by Filorga</span></div>
+<div><b data-n="19" data-s=" ans">19 ans</b><span>Show Room Fillmed by Filorga</span></div>
 <div><b>100 %</b><span>de recommandations (6 avis Facebook)</span></div>
 </div>
 </section>
 
-<section id="soins" style="padding-top:10px">
+<div class="cryo">
+<svg class="fl" style="left:-60px;top:20px" viewBox="0 0 100 100" fill="none" stroke="#cfe0ea" stroke-width="1.2" aria-hidden="true"><path d="M50 4v92M10 27l80 46M10 73l80-46M50 14l-8-8M50 14l8-8M50 86l-8 8M50 86l8 8"/></svg>
+<svg class="fl" style="right:-70px;bottom:10px;animation-direction:reverse" viewBox="0 0 100 100" fill="none" stroke="#cfe0ea" stroke-width="1.2" aria-hidden="true"><path d="M50 4v92M10 27l80 46M10 73l80-46M50 14l-8-8M50 14l8-8M50 86l-8 8M50 86l8 8"/></svg>
+<div class="in rv">
+<span class="etiq">Soin signature</span>
+<h2>Cryolift</h2>
+<div class="temp" id="temp" aria-label="moins 18 degrés">−18°</div>
+<p>Un soin unique à La Réunion, avec les Laboratoires Fillmed by Filorga dont l'institut est le Show Room depuis 19 ans.</p>
+</div>
+</div>
+
+<section id="soins">
 <div class="rv"><p class="kick">Les soins</p><h2>L'art de la peau, tout en finesse</h2></div>
 <div class="soins">
-<article class="carte signature rv"><span class="num">01</span><span class="etiq">Soin signature</span><h3>Cryolift à −18°</h3><p>Un soin unique à La Réunion avec les Laboratoires Fillmed by Filorga, dont l'institut est le Show Room depuis 19 ans.</p></article>
-<article class="carte rv"><span class="num">02</span><h3>Revital Skin</h3><p>La nouvelle prestation : en 5 séances, des résultats anti-âge et sur les imperfections de la peau.</p></article>
-<article class="carte rv"><span class="num">03</span><h3>Sourcils à la pince</h3><p>L'art d'épiler les sourcils à la pince, et le maquillage de longue durée à l'effet naturel, dans le respect des règles d'hygiène.</p></article>
-<article class="carte rv"><span class="num">04</span><h3>Regard</h3><p>Rehaussement des cils avec teinture, pour un regard ouvert et naturel.</p></article>
-<article class="carte rv"><span class="num">05</span><h3>Mains &amp; pieds</h3><p>Le soin prestigieux des pieds avec Yumi, et une beauté des mains prestigieuse et naturelle.</p></article>
-<article class="carte rv"><span class="num">06</span><h3>Oxyderme THBO</h3><p>Corine distribue Oxyderme THBO pour La Réunion et l'océan Indien : des traitements d'oxygénation esthétique.</p></article>
+<article class="carte rv"><span class="num">01</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19z"/><path d="M15 24a5 5 0 0 0 5 5"/></svg><h3>Revital Skin</h3><p>La nouvelle prestation : en 5 séances, des résultats anti-âge et sur les imperfections de la peau.</p></article>
+<article class="carte rv"><span class="num">02</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 24c8-9 22-9 30-3"/><path d="M8 29l24-5"/></svg><h3>Sourcils à la pince</h3><p>L'art d'épiler les sourcils à la pince, et le maquillage de longue durée à l'effet naturel, dans le respect des règles d'hygiène.</p></article>
+<article class="carte rv"><span class="num">03</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 22c8-10 24-10 32 0-8 10-24 10-32 0z"/><circle cx="20" cy="22" r="4"/><path d="M8 13l-3-4M16 10l-1-5M24 10l1-5M32 13l3-4"/></svg><h3>Regard</h3><p>Rehaussement des cils avec teinture, pour un regard ouvert et naturel.</p></article>
+<article class="carte rv"><span class="num">04</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 36V18l-3-9M13 18l5-11M13 18l9-7M13 18l11-2M13 18l8 9M13 36h14V26"/></svg><h3>Mains &amp; pieds</h3><p>Le soin prestigieux des pieds avec Yumi, et une beauté des mains prestigieuse et naturelle.</p></article>
+<article class="carte rv"><span class="num">05</span><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="14" cy="22" r="6"/><circle cx="27" cy="14" r="4"/><circle cx="28" cy="29" r="3"/></svg><h3>Oxyderme THBO</h3><p>Corine distribue Oxyderme THBO pour La Réunion et l'océan Indien : des traitements d'oxygénation esthétique.</p></article>
+<article class="carte rv"><span class="num">06</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6l3.5 8 8.5 1-6.4 5.7 1.9 8.5L20 24.8 12.5 29.2l1.9-8.5L8 15l8.5-1z"/></svg><h3>Fillmed by Filorga</h3><p>Les Laboratoires Fillmed by Filorga, que Kô! Esthétik accueille en Show Room depuis 19 ans.</p></article>
 </div>
 </section>
 
-<section id="une">
+<div class="revital">
+<div class="in">
+<div class="rv"><p class="kick">Nouveauté</p><h2>Revital Skin en 5 séances</h2>
+<p class="lead">Cinq rendez-vous pour agir sur l'anti-âge et sur les imperfections de la peau.</p></div>
+<div class="seances rv" id="seances" aria-label="5 séances">
+<div><span>1</span><small>séance</small></div><div><span>2</span><small>séance</small></div><div><span>3</span><small>séance</small></div><div><span>4</span><small>séance</small></div><div><span>5</span><small>séance</small></div>
+</div>
+</div>
+</div>
+
+<section class="galerie">
+<div class="tete rv"><p class="kick">En images</p><h2>L'univers Kô!</h2></div>
+<div class="rail">
+<figure><img src="img/banniere.jpg" alt="Bannière Kô! Esthétik, institut de beauté Saint-Pierre" loading="lazy"><figcaption>Kô! Esthétik, « ici vous êtes unique »</figcaption></figure>
+<figure><img src="img/fleurs.webp" alt="Bouquet de fleurs jaunes, publication Kô! Esthétik" loading="lazy"><figcaption>« Parce que vous êtes unique »</figcaption></figure>
+<figure><img src="img/affiche.jpg" alt="Affiche Beauté Kréol'" loading="lazy" style="object-fit:contain;background:#f1ebdf"><figcaption>Beauté Kréol'</figcaption></figure>
+</div>
+</section>
+
+<section id="une" style="padding-top:20px">
 <div class="une rv">
 <p class="kick" style="color:#d9b886">À la une sur Facebook · 2 novembre 2026</p>
 <blockquote style="margin-top:12px">« Parlons Peau, Parlons Vrai, Parlons Kô! »</blockquote>
-<p style="margin-top:14px;color:#cdd6de">Un rendez-vous pour un bilan : #expertisepeau #experteantiage #facialiste.</p>
+<p style="margin-top:14px;color:#cdd6de">Un rendez-vous pour un bilan.</p>
+<div class="tags"><span>#expertisepeau</span><span>#experteantiage</span><span>#facialiste</span></div>
 <small>Source : page Facebook Kô Esthétik Institut de Beauté</small>
 </div>
 </section>
 
 <section class="duo">
 <div class="rv"><img src="img/affiche.jpg" alt="Affiche Kô! Esthétik, Beauté Kréol'" loading="lazy"></div>
-<div class="rv"><p class="kick">Beauté Kréol'</p><h2>Un lieu simple, des conseils précis</h2>
-<p class="lead" style="font-size:17px">Trois places de parking devant l'institut, au 3 rue Luc Lorion, à la Ravine Blanche. Pas d'agitation : du temps, de l'écoute et des soins de qualité.</p>
-<table class="horaires">
-<tr><td>Lundi</td><td>Fermé</td></tr>
-<tr><td>Mardi au samedi</td><td>9h – 18h</td></tr>
-<tr><td>Dimanche</td><td>Fermé</td></tr>
-</table></div>
-</section>
-
-<section class="duo">
-<div class="rv"><p class="kick">L'esprit Kô!</p><h2>Parce que vous êtes unique</h2>
-<p class="lead">Une attention, une fleur, un conseil juste : chez Kô! Esthétik, chaque visite commence par vous.</p></div>
-<div class="rv"><img src="img/fleurs.webp" alt="Bouquet de fleurs jaunes, « Parce que vous êtes unique », publication de Kô! Esthétik" loading="lazy" width="1000" height="1000"></div>
+<div class="rv"><p class="kick">Maître Artisan</p><h2>Un lieu simple, des conseils précis</h2>
+<p class="lead" style="font-size:17px">Maître Artisan depuis plus de 20 ans, Corine vous reçoit au 3 rue Luc Lorion, avec trois places de parking devant l'institut. Du temps, de l'écoute et des soins de qualité.</p>
+<div class="avis"><b>100 %</b><span>des 6 avis Facebook recommandent Kô! Esthétik</span></div></div>
 </section>
 
 <section>
@@ -173,21 +251,33 @@ footer a{color:#e9dfcd}
 <h2>Parlons Kô!</h2>
 <a class="grand" href="tel:+262692875398">0692 87 53 98</a>
 <p>3 rue Luc Lorion · 97410 Saint-Pierre</p>
-<div class="btns" style="margin-top:22px">
+<div class="pratique">
+<div><b>Horaires</b> · mardi au samedi, 9h – 18h</div>
+<div><b>Accès</b> · 3 places de parking</div>
+<div><b>Réseaux</b> · Facebook Kô Esthétik · Instagram @corine.bedier</div>
+</div>
+<div class="btns" style="margin-top:24px">
 <a class="btn plein" href="https://wa.me/262692875398?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20K%C3%B4!%20Esth%C3%A9tik" target="_blank" rel="noopener">WhatsApp</a>
 <a class="btn vide" href="https://www.facebook.com/FilorgaPro974" target="_blank" rel="noopener">Facebook</a>
+<a class="btn vide" href="https://www.instagram.com/corine.bedier/" target="_blank" rel="noopener">Instagram</a>
 <a class="btn vide" href="https://www.google.com/maps/search/?api=1&query=3+Rue+Luc+Lorion+97410+Saint-Pierre" target="_blank" rel="noopener">Itinéraire</a>
 </div>
 </section>
 
 <footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Kô! Esthétik.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</footer>
 
+<div class="flot" id="flot"><a href="https://wa.me/262692875398?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20K%C3%B4!%20Esth%C3%A9tik" target="_blank" rel="noopener">Prendre rendez-vous · WhatsApp</a></div>
+
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+var seances=document.querySelectorAll('#seances div');
+function allume(){seances.forEach(function(d,i){setTimeout(function(){d.classList.add('on')},rm?0:i*350)})}
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');if(x.target.id==='seances')allume();io.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-if(rm){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('on')});return}
+var fl=document.getElementById('flot'),h=document.querySelector('.hero');
+addEventListener('scroll',function(){fl.classList.toggle('on',scrollY>h.offsetHeight-100)},{passive:true});
+if(rm)return;
 var c=document.getElementById('flocons'),x=c.getContext('2d'),W,H,P=[],run=true;
 function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
 size();addEventListener('resize',size);

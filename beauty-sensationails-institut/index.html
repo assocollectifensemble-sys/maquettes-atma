@@ -5,161 +5,311 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Beauty'Sensationails · Institut de beauté à Petite-Île, La Réunion</title>
+<meta name="description" content="Onglerie, cils, sourcils, microblading, épilations, soins visage et corps : l'institut face à l'église de Petite-Île, sur rendez-vous.">
 <meta property="og:title" content="Beauty'Sensationails · Institut à Petite-Île">
-<meta property="og:description" content="Ongles, cils, sourcils, épilations, soins visage et corps, maquillage : l'institut face à l'église de Petite-Île.">
+<meta property="og:description" content="Onglerie, cils, sourcils, épilations, soins visage et corps : un moment privilégié face à l'église de Petite-Île.">
+<meta property="og:type" content="website">
 <meta property="og:image" content="https://maquettes.atma-digital.re/beauty-sensationails-institut/img/ongles.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/beauty-sensationails-institut/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--prune:#5c2e3a;--mauve:#8b6b7a;--poudre:#d4a5a5;--rose:#e8c5d0;--fond:#f5e6e8;--creme:#fff9f8;--or:#c49a6c;--encre:#3a2229}
+:root{--prune:#5c2e3a;--prune2:#42202b;--mauve:#8b6b7a;--poudre:#d4a5a5;--rose:#e8c5d0;--fond:#f5e6e8;--creme:#fff9f8;--or:#c49a6c;--encre:#3a2229}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Jost",system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden}
+body{font-family:"Jost",system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden;padding-bottom:72px}
 img,svg{display:block;max-width:100%}
-.ruban{background:var(--prune);color:#f6e4e8;font-size:.8rem;text-align:center;padding:.55rem 1rem}.ruban b{color:#fff;font-weight:500}
+a{color:inherit}
+.ruban{background:var(--prune);color:#f6e4e8;font-size:.8rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}.ruban b{color:#fff;font-weight:500}
 .wrap{width:min(1100px,92vw);margin:auto}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1;color:var(--prune)}
 .script{font-family:"Pinyon Script",cursive;font-weight:400;color:var(--mauve)}
 .sur{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--mauve)}
 .btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;transition:transform .3s,background .3s,color .3s}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;transition:transform .3s,background .3s,color .3s;cursor:pointer}
 .btn.plein{background:var(--prune);color:#fff;animation:respire 4s ease-in-out infinite}.btn.plein:hover{transform:translateY(-2px);background:#472330}
 .btn.ligne{border:1px solid var(--prune);color:var(--prune)}.btn.ligne:hover{background:var(--prune);color:#fff}
-.btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--or);outline-offset:3px}
 @keyframes respire{50%{box-shadow:0 0 0 8px rgba(92,46,58,.12)}}
+/* hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(150deg,#f9ecee 0%,var(--fond) 50%,#ecd3d6 100%)}
-.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);animation:flotte 12s ease-in-out infinite}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;animation:flotte 12s ease-in-out infinite;pointer-events:none}
 .hero:before{width:380px;height:380px;right:-90px;top:-80px;background:radial-gradient(circle,var(--rose),transparent 70%)}
 .hero:after{width:300px;height:300px;left:-80px;bottom:-90px;background:radial-gradient(circle,rgba(196,154,108,.35),transparent 70%);animation-delay:-5s}
 @keyframes flotte{50%{transform:translate(18px,-22px) scale(1.06)}}
+#paillettes{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .hero .g{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center;padding:clamp(3rem,9vh,6rem) 0}
 .hero h1{font-size:clamp(3rem,7.5vw,5.2rem);animation:monte 1.1s ease both}
 .hero h1 .script{display:block;font-size:.75em;margin-top:.1rem}
 .lead{color:#6e555d;font-size:1.1rem;max-width:44ch;margin-top:1.3rem;animation:monte 1.1s .2s ease both}
 .hero .photo{position:relative;animation:monte 1.2s .1s ease both}
-.hero .photo img{width:100%;max-width:400px;margin-left:auto;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 24px 24px;box-shadow:0 0 0 8px #fff,0 28px 60px rgba(92,46,58,.2);animation:zoom 14s ease-in-out infinite alternate}
-.hero .photo{overflow:visible}
-@keyframes zoom{to{transform:scale(1.025)}}
+.hero .photo .cadre{width:100%;max-width:400px;margin-left:auto;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;box-shadow:0 0 0 8px #fff,0 28px 60px rgba(92,46,58,.2)}
+.hero .photo img{width:100%;height:100%;object-fit:cover;animation:zoom 16s ease-in-out infinite alternate}
+.badge{position:absolute;left:-6px;bottom:28px;background:#fff;border-radius:18px;padding:.6rem 1rem;box-shadow:0 14px 30px rgba(92,46,58,.16);font-size:.82rem;line-height:1.35;color:var(--prune);animation:flotte 9s ease-in-out infinite}
+.badge b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;font-weight:600}
+@keyframes zoom{to{transform:scale(1.07)}}
 @keyframes monte{from{opacity:0;transform:translateY(22px)}}
+.ouvert{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;background:#fff;border:1px solid #efd9dd;border-radius:999px;padding:.3rem .9rem;margin-top:1.3rem;color:var(--prune)}
+.ouvert i{width:9px;height:9px;border-radius:50%;background:#b9a0a8}.ouvert.on i{background:#4fa36a;animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(79,163,106,.2)}}
 .defile{background:var(--prune);color:#f3d9df;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:"Cormorant Garamond",serif;font-size:1.15rem}
-.defile div{display:inline-block;padding-left:100%;animation:def 34s linear infinite}@keyframes def{to{transform:translateX(-100%)}}
+.defile div{display:inline-block;padding-left:100%;animation:def 40s linear infinite}@keyframes def{to{transform:translateX(-100%)}}
 section{padding:clamp(3.5rem,9vw,6rem) 0}
 .titre{text-align:center;margin-bottom:2.6rem}.titre h2{font-size:clamp(2.2rem,5vw,3.3rem);margin-top:.5rem}
+.titre p.sous{max-width:56ch;margin:1rem auto 0;color:#76606a}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}.rv.on{opacity:1;transform:none}
-.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.carte{background:#fff;border-radius:22px;padding:1.8rem;border:1px solid #efd9dd;transition:transform .35s,box-shadow .35s}
-.carte:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(92,46,58,.12)}
-.carte svg{width:46px;height:46px;margin-bottom:.8rem;stroke:var(--or);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.carte h3{font-size:1.55rem;margin-bottom:.4rem}.carte p{color:#76606a;font-size:.96rem}
+/* vagues */
+.vague{display:block;width:100%;height:46px;margin-bottom:-1px}
+/* chiffres */
+.chiffres{padding:2.4rem 0;background:#fff;border-bottom:1px solid #f1e0e3}
+.chiffres .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.chiffres b{display:block;font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--prune);font-weight:500;line-height:1.1}
+.chiffres span{font-size:.82rem;color:#76606a;letter-spacing:.04em}
+/* prestations */
 .prest{background:var(--fond)}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.carte{background:#fff;border-radius:22px;padding:1.8rem;border:1px solid #efd9dd;transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.carte:before{content:attr(data-n);position:absolute;right:1rem;top:-.4rem;font-family:"Cormorant Garamond",serif;font-size:4.6rem;color:rgba(212,165,165,.22);line-height:1}
+.carte:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(92,46,58,.12)}
+.carte h3{font-size:1.55rem;margin-bottom:.4rem;position:relative}.carte p{color:#76606a;font-size:.96rem;position:relative}
+.carte ul{list-style:none;margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem;position:relative}
+.carte li{font-size:.78rem;border:1px solid var(--poudre);color:var(--mauve);border-radius:999px;padding:.12rem .7rem}
 .dip{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:2.2rem}
 .dip span{border:1px solid var(--mauve);color:var(--mauve);border-radius:999px;padding:.4rem 1.1rem;font-size:.88rem}
-.bulle{background:linear-gradient(160deg,var(--prune),#42202b);color:#f6e4e8}
-.bulle .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
-.bulle .sur{color:var(--rose)}.bulle h2{color:#fff;font-size:clamp(2.2rem,5vw,3.2rem);margin:.5rem 0 1.2rem}
-.bulle p{color:#ead3d9}
-.deco{display:flex;justify-content:center}
-.deco svg{width:min(320px,80%);height:auto}
-.deco figcaption{font-size:.75rem;text-align:center;color:var(--rose);margin-top:.6rem}
-.hor{list-style:none;margin-top:1.4rem}.hor li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px solid rgba(255,255,255,.18)}.hor li span:last-child{color:#fff}
-.noel{text-align:center;background:linear-gradient(180deg,#fff,#f7e3e6)}
-.noel .boite{max-width:680px;margin:auto;background:#fff;border:1px dashed var(--poudre);border-radius:26px;padding:clamp(2rem,6vw,3.2rem);box-shadow:0 24px 60px rgba(92,46,58,.1)}
+/* galerie */
+.galerie{background:var(--creme);overflow:hidden}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 4vw 1.6rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--poudre) transparent}
+.rail figure{flex:0 0 min(300px,72vw);scroll-snap-align:center;margin:0}
+.rail img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:22px;box-shadow:0 14px 34px rgba(92,46,58,.14);transition:transform .5s}
+.rail figure:hover img{transform:scale(1.025) rotate(-.6deg)}
+.rail figcaption{font-size:.78rem;color:var(--mauve);margin-top:.6rem;text-align:center;letter-spacing:.04em}
+.astuce{text-align:center;font-size:.8rem;color:var(--mauve)}
+/* mot */
+.mot{background:linear-gradient(160deg,var(--prune),var(--prune2));color:#f6e4e8;position:relative;overflow:hidden}
+.mot .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.mot .sur{color:var(--rose)}.mot h2{color:#fff;font-size:clamp(2.2rem,5vw,3.2rem);margin:.5rem 0 1.2rem}
+.mot blockquote{font-family:"Cormorant Garamond",serif;font-size:1.45rem;line-height:1.35;color:#fff;border-left:2px solid var(--or);padding-left:1.1rem;margin:1.2rem 0}
+.mot cite{display:block;font-family:"Jost",sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.06em;color:var(--rose);margin-top:.6rem}
+.mot p{color:#ead3d9}
+.mot figure img{width:100%;border-radius:22px;box-shadow:0 16px 40px rgba(0,0,0,.3)}
+.mot figcaption{font-size:.75rem;text-align:center;color:var(--rose);margin-top:.6rem}
+/* étapes */
+.etapes{background:#fff}
+.pas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;counter-reset:p}
+.pas li{list-style:none;background:var(--creme);border:1px solid #efd9dd;border-radius:22px;padding:1.8rem 1.6rem;counter-increment:p;position:relative}
+.pas li:before{content:counter(p);display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--prune);color:#fff;font-family:"Cormorant Garamond",serif;font-size:1.4rem;margin-bottom:.8rem}
+.pas h3{font-size:1.45rem;margin-bottom:.3rem}.pas p{color:#76606a;font-size:.95rem}
+details{max-width:760px;margin:2rem auto 0;border:1px solid #efd9dd;border-radius:16px;background:var(--creme);padding:.2rem 1.2rem}
+details+details{margin-top:.8rem}
+summary{cursor:pointer;padding:.9rem 0;font-weight:500;color:var(--prune);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--or);font-size:1.3rem;line-height:1}
+details[open] summary:after{content:"–"}
+details p{padding:0 0 1rem;color:#76606a;font-size:.95rem}
+/* horaires */
+.horaires{background:var(--fond)}
+.horaires .g{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.horaires h2{font-size:clamp(2.2rem,5vw,3.2rem);margin:.5rem 0 1rem}
+.hor{list-style:none;margin-top:1rem;background:#fff;border-radius:22px;padding:.6rem 1.5rem;border:1px solid #efd9dd}
+.hor li{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-bottom:1px solid #f1e0e3}.hor li:last-child{border:0}
+.hor li span:last-child{color:var(--prune);font-weight:500}.hor li.auj{background:linear-gradient(90deg,transparent,rgba(232,197,208,.4),transparent)}
+.note{font-size:.85rem;color:#76606a;margin-top:.8rem}
+.horaires img{width:100%;border-radius:22px;box-shadow:0 16px 40px rgba(92,46,58,.18)}
+.horaires figcaption{font-size:.75rem;text-align:center;color:var(--mauve);margin-top:.6rem}
+/* noël */
+.noel{text-align:center;background:linear-gradient(180deg,#fff,#f7e3e6);position:relative;overflow:hidden}
+.noel .boite{max-width:680px;margin:auto;background:#fff;border:1px dashed var(--poudre);border-radius:26px;padding:clamp(2rem,6vw,3.2rem);box-shadow:0 24px 60px rgba(92,46,58,.1);position:relative}
 .noel h2{font-size:clamp(2.1rem,5vw,3.1rem);margin:.4rem 0 1rem}.noel p{color:#76606a}
-.etoiles{letter-spacing:.8em;color:var(--or);margin-bottom:.8rem}.noel .btns{justify-content:center}
-.fin{background:var(--fond);text-align:center}.fin h2{font-size:clamp(2.2rem,5vw,3.2rem)}
+.etoiles{letter-spacing:.8em;color:var(--or);margin-bottom:.8rem;animation:scint 3s ease-in-out infinite}
+@keyframes scint{50%{opacity:.45}}
+.noel .btns{justify-content:center}
+/* contact */
+.fin{background:var(--creme);text-align:center}.fin h2{font-size:clamp(2.2rem,5vw,3.2rem)}
 .infos{margin:1.6rem 0;color:#76606a}.infos a{color:var(--prune);text-decoration:none;border-bottom:1px solid currentColor}
 .fin .btns{justify-content:center}
 footer{background:var(--prune);color:#ecd3d9;text-align:center;font-size:.8rem;padding:1.3rem 1rem}
+/* barre mobile */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;gap:.6rem;padding:.6rem .8rem;background:rgba(255,249,248,.94);backdrop-filter:blur(8px);border-top:1px solid #efd9dd}
+.barre .btn{flex:1;min-height:46px;padding:.6rem 1rem;animation:none}
 @media(max-width:820px){
- .hero .g,.bulle .g{grid-template-columns:1fr}.hero .photo{order:-1}.hero .photo img{margin:auto;max-width:270px}
+ .barre{display:flex}
+ .hero .g,.mot .g,.horaires .g{grid-template-columns:minmax(0,1fr)}.hero h1{font-size:clamp(2.2rem,10.2vw,3rem);overflow-wrap:anywhere}.hero .photo{order:-1}.hero .photo .cadre{margin:auto;max-width:270px}.badge{left:50%;transform:translateX(-50%);bottom:-18px;white-space:nowrap;animation:none}
  .hero .g{text-align:center}.lead{margin-inline:auto}.hero .btns{justify-content:center}
- .cartes{grid-template-columns:1fr}
+ .cartes,.pas{grid-template-columns:1fr}
+ .chiffres .wrap{grid-template-columns:repeat(2,1fr)}
+ .mot figure{order:-1}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+@media(min-width:821px){body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}#paillettes{display:none}}
 </style>
 </head>
 <body>
 <div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Beauty'Sensationails</div>
 
 <header class="hero">
+<canvas id="paillettes" aria-hidden="true"></canvas>
 <div class="wrap g">
  <div>
   <p class="sur">Institut de beauté · Petite-Île</p>
   <h1>Beauty'Sensationails<span class="script">institut de beauté</span></h1>
-  <p class="lead">Ongles, cils, sourcils, épilations, soins du visage et du corps : une professionnelle diplômée et passionnée, en plein centre de Petite-Île.</p>
+  <p class="lead">Une professionnelle de la beauté diplômée et passionnée vous propose diverses prestations esthétiques, en plein centre de Petite-Île, sur rendez-vous.</p>
+  <p class="ouvert" id="ouvert"><i></i><span>Sur rendez-vous · mardi, jeudi, vendredi, samedi</span></p>
   <div class="btns">
    <a class="btn plein" href="sms:+262693908855?&body=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20%3A%20">Prendre RDV par SMS</a>
    <a class="btn ligne" href="tel:+262693908855">0693 90 88 55</a>
   </div>
  </div>
- <div class="photo"><img src="img/ongles.webp" alt="Ongles manucurés en rose poudré, réalisation de l'institut" width="900" height="900" ></div>
+ <div class="photo">
+  <div class="cadre"><img src="img/ongles.webp" alt="Ongles manucurés en rose poudré, réalisation de l'institut" width="900" height="900"></div>
+  <p class="badge"><b>100 %</b>recommandé sur Facebook</p>
+ </div>
 </div>
 </header>
 
-<div class="defile" aria-hidden="true"><div>Onglerie &nbsp;✦&nbsp; Soins mains &amp; pieds &nbsp;✦&nbsp; Extension de cils &nbsp;✦&nbsp; Restructuration des sourcils &nbsp;✦&nbsp; Maquillage permanent &nbsp;✦&nbsp; Épilation au fil ou à la cire &nbsp;✦&nbsp; Soins visage &amp; corps &nbsp;✦&nbsp; Cours d’auto-maquillage &nbsp;✦&nbsp; Onglerie &nbsp;✦&nbsp; Soins mains &amp; pieds &nbsp;✦&nbsp; Extension de cils &nbsp;✦&nbsp; Restructuration des sourcils &nbsp;✦&nbsp; Maquillage permanent</div></div>
+<div class="defile" aria-hidden="true"><div>Onglerie &nbsp;✦&nbsp; Soins mains &amp; pieds &nbsp;✦&nbsp; Extension de cils &nbsp;✦&nbsp; Restructuration des sourcils &nbsp;✦&nbsp; Microblading &nbsp;✦&nbsp; Épilation &nbsp;✦&nbsp; Soins visage &amp; corps &nbsp;✦&nbsp; Maquillage &nbsp;✦&nbsp; Cours d’auto-maquillage &nbsp;✦&nbsp; Onglerie &nbsp;✦&nbsp; Soins mains &amp; pieds &nbsp;✦&nbsp; Extension de cils &nbsp;✦&nbsp; Microblading</div></div>
+
+<div class="chiffres"><div class="wrap rv">
+ <div><b>100 %</b><span>recommandé (6 avis)</span></div>
+ <div><b>842</b><span>abonné·e·s Facebook</span></div>
+ <div><b>4 jours</b><span>d'ouverture par semaine</span></div>
+ <div><b>9h30</b><span>première ouverture, journée continue</span></div>
+</div></div>
 
 <section class="prest" id="prestations">
 <div class="wrap">
- <div class="titre rv"><p class="sur">Prestations</p><h2>Un moment <span class="script">rien que pour vous</span></h2></div>
+ <div class="titre rv"><p class="sur">Prestations</p><h2>Un moment <span class="script">rien que pour vous</span></h2><p class="sous">Au fil de ses publications, l'institut présente ces univers : de l'onglerie au soin du visage, chaque prestation est réalisée avec minutie.</p></div>
  <div class="cartes">
-  <article class="carte rv"><h3>Onglerie</h3><p>Soins des mains et des pieds, pose semi-permanente, capsules gel : des ongles soignés qui tiennent.</p></article>
-  <article class="carte rv"><h3>Regard</h3><p>Extension de cils et restructuration des sourcils pour un regard mis en valeur naturellement.</p></article>
-  <article class="carte rv"><h3>Maquillage permanent</h3><p>Sourcils, lèvres, eye-liner : une mise en beauté durable, réalisée avec minutie.</p></article>
-  <article class="carte rv"><h3>Épilations</h3><p>À la cire ou au fil, pour une peau nette et douce, dans le respect de chacune.</p></article>
-  <article class="carte rv"><h3>Soins visage &amp; corps</h3><p>Des soins pour prendre le temps de souffler et retrouver une peau reposée.</p></article>
-  <article class="carte rv"><h3>Maquillage &amp; cours</h3><p>Maquillage pour vos événements et cours d’auto-maquillage pour apprendre à vous sublimer.</p></article>
+  <article class="carte rv" data-n="01"><h3>Onglerie</h3><p>Mains et pieds, pose de vernis semi-permanent, capsules : des ongles soignés et personnalisés, à votre image.</p><ul><li>Semi-permanent</li><li>Capsules Gel X</li><li>Capsules américaines</li><li>Nail art</li></ul></article>
+  <article class="carte rv" data-n="02"><h3>Regard</h3><p>Extension de cils et restructuration des sourcils pour un regard naturellement mis en valeur.</p><ul><li>Extension de cils</li><li>Restructuration des sourcils</li></ul></article>
+  <article class="carte rv" data-n="03"><h3>Microblading</h3><p>Une mise en beauté durable des sourcils, réalisée avec précision.</p><ul><li>Microblading</li></ul></article>
+  <article class="carte rv" data-n="04"><h3>Épilations</h3><p>Pour une peau nette et douce, dans le respect de chacune.</p><ul><li>Épilation</li></ul></article>
+  <article class="carte rv" data-n="05"><h3>Soins visage &amp; corps</h3><p>Prendre le temps de souffler et retrouver une peau reposée : soins du visage, du corps et des pieds.</p><ul><li>Soins visage</li><li>Soins corps</li><li>Anti-callosité</li><li>LPG</li></ul></article>
+  <article class="carte rv" data-n="06"><h3>Maquillage &amp; cours</h3><p>Maquillage pour vos événements, et cours d'auto-maquillage pour apprendre à vous sublimer.</p><ul><li>Maquillage</li><li>Auto-maquillage</li></ul></article>
  </div>
- <div class="dip rv"><span>Professionnelle de la beauté diplômée</span><span>100 % recommandé</span><span>Plus de 840 abonnés</span></div>
+ <div class="dip rv"><span>Professionnelle de la beauté diplômée</span><span>Recommandé par 100 % (6 avis)</span><span>Rendez-vous par SMS</span></div>
 </div>
 </section>
 
-<section class="bulle" id="institut">
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--fond)"><path d="M0 46V20C240 -6 480 -6 720 20s480 26 720 0V46z" fill="#fff9f8"/></svg>
+<section class="galerie" id="galerie">
+ <div class="titre rv"><p class="sur">Réalisations</p><h2>Quelques <span class="script">créations</span></h2><p class="sous">Des photos de la page Facebook de l'institut. Faites glisser pour les parcourir.</p></div>
+ <div class="rail rv" tabindex="0" aria-label="Galerie de réalisations">
+  <figure><img src="img/ongles.webp" alt="Ongles rose poudré avec bagues" loading="lazy" width="900" height="900"><figcaption>Rose poudré</figcaption></figure>
+  <figure><img src="img/corail.webp" alt="Mains aux ongles manucurés, ton corail" loading="lazy" width="900" height="900"><figcaption>Onglerie · mains</figcaption></figure>
+  <figure><img src="img/rouge-fleurs.webp" alt="Mains aux ongles rouges et motifs floraux" loading="lazy" width="900" height="900"><figcaption>Rouge &amp; fleurs</figcaption></figure>
+  <figure><img src="img/fleurs-poudre.webp" alt="Mains aux ongles poudrés et petites fleurs" loading="lazy" width="900" height="900"><figcaption>Nail art délicat</figcaption></figure>
+  <figure><img src="img/poudre-fleurs.webp" alt="Mains manucurées, motifs floraux" loading="lazy" width="900" height="900"><figcaption>Poudré &amp; motifs</figcaption></figure>
+  <figure><img src="img/pieds-rouge.webp" alt="Pédicure rouge" loading="lazy" width="900" height="900"><figcaption>Pédicure · rouge</figcaption></figure>
+  <figure><img src="img/pieds-cheville.webp" alt="Pédicure avec bracelet de cheville doré" loading="lazy" width="900" height="900"><figcaption>Pédicure · détails dorés</figcaption></figure>
+  <figure><img src="img/pieds-sandales.webp" alt="Pédicure et sandales colorées" loading="lazy" width="900" height="900"><figcaption>Pieds soignés</figcaption></figure>
+  <figure><img src="img/pieds-bordeaux.webp" alt="Pédicure bordeaux" loading="lazy" width="900" height="900"><figcaption>Bordeaux</figcaption></figure>
+  <figure><img src="img/signature.webp" alt="Mains manucurées, signature Beauty'Sensationails" loading="lazy" width="900" height="900"><figcaption>La signature de l'institut</figcaption></figure>
+ </div>
+ <p class="astuce" aria-hidden="true">← glissez →</p>
+</section>
+
+<section class="mot" id="institut">
 <div class="wrap g">
  <div class="rv">
-  <p class="sur">À l’institut</p>
-  <h2>Une approche attentionnée, sur rendez-vous</h2>
-  <p>Chaque cliente a droit à un moment privilégié : les rendez-vous se prennent de préférence par SMS, et l’institut travaille en journée continue pour prendre le temps qu’il faut. Votre avis compte, n’hésitez pas à préciser vos envies.</p>
-  <ul class="hor">
-   <li><span>Mardi &amp; jeudi</span><span>9h30 – 17h</span></li>
-   <li><span>Vendredi</span><span>10h – 18h</span></li>
-   <li><span>Samedi</span><span>9h – 16h30</span></li>
-   <li><span>Lundi &amp; mercredi</span><span>Fermé</span></li>
-  </ul>
+  <p class="sur">À l'institut</p>
+  <h2>Une approche attentionnée</h2>
+  <p>Dans une publication, l'esthéticienne explique sa façon de travailler : prendre le temps, écouter chaque cliente, et la laisser repartir plus que satisfaite.</p>
+  <blockquote>« Je tiens à satisfaire tout le monde, n’hésitez pas à me préciser si vous avez des demandes spécifiques. »<cite>Page Facebook de l'institut, publication du 28 janvier 2025</cite></blockquote>
+  <blockquote>« Afin que chacun(e) d’entre vous passe un moment privilégié au sein de l’institut. »<cite>Page Facebook de l'institut, publication du 28 janvier 2025</cite></blockquote>
  </div>
- <figure class="deco rv"><img src="img/signature.webp" alt="Mains manucurées, signature Beauty'Sensationails" loading="lazy" width="900" height="900" style="width:100%;border-radius:22px;box-shadow:0 16px 40px rgba(92,46,58,.18)"><figcaption>Photo : page Facebook de l'institut</figcaption></figure>
+ <figure class="rv"><img src="img/signature.webp" alt="Mains manucurées, signature de l'institut" loading="lazy" width="900" height="900"><figcaption>Photo : page Facebook de l'institut</figcaption></figure>
+</div>
+</section>
+
+<section class="etapes" id="rdv">
+<div class="wrap">
+ <div class="titre rv"><p class="sur">Prendre rendez-vous</p><h2>Simple, par <span class="script">SMS</span></h2><p class="sous">L'institut privilégie les rendez-vous par SMS, pour que chacune soit accueillie avec toute l'attention nécessaire.</p></div>
+ <ol class="pas">
+  <li class="rv"><h3>Envoyez un SMS</h3><p>Au 0693 90 88 55, indiquez la prestation souhaitée et vos disponibilités. Un message vocal fonctionne aussi.</p></li>
+  <li class="rv"><h3>Votre rendez-vous est confirmé</h3><p>Réponse dès qu'un moment se libère, parfois en soirée. Le rendez-vous est validé quand l'institut vous le confirme.</p></li>
+  <li class="rv"><h3>Profitez de votre moment</h3><p>Sur rendez-vous, de préférence en journée continue, pour prendre le temps qu'il faut.</p></li>
+ </ol>
+ <details class="rv"><summary>Et si je prends rendez-vous par l'agenda Facebook ?</summary><p>L'institut précise que les rendez-vous pris via l'agenda de Facebook ne comptent que si elle les valide (« c’est noté pour moi »). Le SMS reste le plus simple.</p></details>
+ <details class="rv"><summary>Un petit retard, est-ce un souci ?</summary><p>L'esthéticienne écrit tolérer les retards sans exagération, étant minutieuse et « dans sa bulle ». Elle demande en retour un peu d'indulgence, vous pouvez la prévenir par SMS.</p></details>
+ <details class="rv"><summary>Un souhait particulier ?</summary><p>N'hésitez pas à préciser vos demandes ou à demander de modifier quelque chose : « c’est grâce à vous que je m’améliore ».</p></details>
+</div>
+</section>
+
+<section class="horaires" id="horaires">
+<div class="wrap g">
+ <div class="rv">
+  <p class="sur">Horaires</p>
+  <h2>Ouvert <span class="script">quatre jours</span> par semaine</h2>
+  <ul class="hor" id="hor">
+   <li data-j="2"><span>Mardi</span><span>9h30 – 17h</span></li>
+   <li data-j="4"><span>Jeudi</span><span>9h30 – 17h</span></li>
+   <li data-j="5"><span>Vendredi</span><span>10h – 18h</span></li>
+   <li data-j="6"><span>Samedi</span><span>9h – 16h30</span></li>
+   <li data-j="1"><span>Lundi &amp; mercredi</span><span>Fermé</span></li>
+  </ul>
+  <p class="note">Fermé les lundis et mercredis, hors période festive. Sur rendez-vous, de préférence en journée continue.</p>
+ </div>
+ <figure class="rv"><img src="img/pieds-cheville.webp" alt="Pédicure soignée avec bracelet de cheville doré" loading="lazy" width="900" height="900"><figcaption>Photo : page Facebook de l'institut</figcaption></figure>
 </div>
 </section>
 
 <section class="noel" id="noel">
-<div class="wrap">
+<canvas id="flocons" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+<div class="wrap" style="position:relative">
  <div class="boite rv">
   <p class="etoiles" aria-hidden="true">✦ ✦ ✦</p>
   <p class="sur">Offrir pour Noël</p>
   <h2>Un moment beauté à <span class="script">offrir</span></h2>
-  <p>Les fêtes approchent : et si vous offriez un moment de soin à quelqu’un qui compte, ou à vous-même ? Contactez l’institut pour en parler.</p>
-  <div class="btns"><a class="btn plein" href="sms:+262693908855?&body=Bonjour%2C%20je%20voudrais%20offrir%20un%20moment%20beaut%C3%A9%20pour%20No%C3%ABl">Écrire par SMS</a></div>
+  <p>Les fêtes approchent : et si vous offriez un moment chez Beauty'Sensationails à quelqu’un qui compte, ou à vous-même ? Écrivez à l'institut pour en parler.</p>
+  <div class="btns"><a class="btn plein" href="sms:+262693908855?&body=Bonjour%2C%20je%20voudrais%20offrir%20un%20moment%20beaut%C3%A9%20pour%20No%C3%ABl">Écrire par SMS</a><a class="btn ligne" href="tel:+262693908855">Appeler</a></div>
  </div>
 </div>
 </section>
 
 <section class="fin" id="contact">
 <div class="wrap rv">
- <p class="sur">Rendez-vous</p>
+ <p class="sur">Nous trouver</p>
  <h2>Face à l’église de <span class="script">Petite-Île</span></h2>
- <p class="infos">271 rue Mahé Labourdonnais · 97429 Petite-Île<br>Près de la cave et de la laverie, stationnement à proximité<br>Rendez-vous de préférence par SMS : <a href="tel:+262693908855">0693 90 88 55</a></p>
+ <p class="infos">271 rue Mahé Labourdonnais · 97429 Petite-Île<br>Au centre-ville, près de la cave et de la laverie, stationnement à proximité<br>Rendez-vous de préférence par SMS : <a href="tel:+262693908855">0693 90 88 55</a><br><a href="mailto:beautysensationails@gmail.com">beautysensationails@gmail.com</a></p>
  <div class="btns">
   <a class="btn plein" href="sms:+262693908855?&body=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20%3A%20">SMS</a>
   <a class="btn ligne" href="tel:+262693908855">Appeler</a>
-  <a class="btn ligne" href="https://www.facebook.com/institutBS/">Facebook</a>
+  <a class="btn ligne" href="https://www.google.com/maps/search/?api=1&query=271+rue+Mah%C3%A9+Labourdonnais+97429+Petite-%C3%8Ele" target="_blank" rel="noopener">Itinéraire</a>
+  <a class="btn ligne" href="https://www.facebook.com/institutBS/" target="_blank" rel="noopener">Facebook</a>
  </div>
 </div>
 </section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir de la page Facebook de Beauty'Sensationails.</footer>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Beauty'Sensationails.</footer>
+
+<div class="barre"><a class="btn plein" href="sms:+262693908855?&body=Bonjour%2C%20je%20souhaite%20prendre%20rendez-vous%20%3A%20">RDV par SMS</a><a class="btn ligne" href="tel:+262693908855">Appeler</a></div>
 
 <script>
-(function(){var rv=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}else{rv.forEach(function(el){el.classList.add('on')})}})();
+(function(){
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}else{rv.forEach(function(el){el.classList.add('on')})}
+// ouvert / fermé (heure Réunion)
+try{var p=new Intl.DateTimeFormat('fr-FR',{timeZone:'Indian/Reunion',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};p.forEach(function(x){o[x.type]=x.value});
+var jm={'lun.':1,'mar.':2,'mer.':3,'jeu.':4,'ven.':5,'sam.':6,'dim.':0},j=jm[o.weekday],m=(+o.hour%24)*60+ +o.minute;
+var h={2:[570,1020],4:[570,1020],5:[600,1080],6:[540,990]};
+var li=document.querySelector('#hor li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+if(j===3||j===1){var l2=document.querySelector('#hor li[data-j="1"]');if(l2)l2.classList.add('auj')}
+if(h[j]&&m>=h[j][0]&&m<h[j][1]){var ov=document.getElementById('ouvert');ov.classList.add('on');ov.lastChild.textContent='Ouvert actuellement · sur rendez-vous'}}catch(e){}
+// particules
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
+function mk(id,n,kind){var c=document.getElementById(id);if(!c)return null;var x=c.getContext('2d'),W,H,P=[],run=false,vis=true;
+function size(){var r=c.getBoundingClientRect(),d=Math.min(window.devicePixelRatio||1,2);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+size();window.addEventListener('resize',size);
+for(var i=0;i<n;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+.8,s:Math.random()*.0004+.00015,t:Math.random()*6.28,v:Math.random()*.02+.008});
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(q){q.t+=q.v;var a;
+ if(kind==='sp'){q.y-=q.s;if(q.y<-.05)q.y=1.05;a=.25+.45*Math.abs(Math.sin(q.t));var px=q.x*W+Math.sin(q.t*.5)*6,py=q.y*H;x.globalAlpha=a;x.fillStyle='#c49a6c';x.beginPath();x.moveTo(px,py-q.r*2);x.quadraticCurveTo(px,py,px+q.r*2,py);x.quadraticCurveTo(px,py,px,py+q.r*2);x.quadraticCurveTo(px,py,px-q.r*2,py);x.quadraticCurveTo(px,py,px,py-q.r*2);x.fill();}
+ else{q.y+=q.s*1.3;if(q.y>1.05)q.y=-.05;x.globalAlpha=.5;x.fillStyle='#e8c5d0';x.beginPath();x.arc(q.x*W+Math.sin(q.t)*10,q.y*H,q.r,0,6.28);x.fill();}});
+requestAnimationFrame(draw)}
+var io2=new IntersectionObserver(function(e){vis=e[0].isIntersecting;go()});io2.observe(c);
+function go(){var w=vis&&!document.hidden;if(w&&!run){run=true;draw()}else if(!w)run=false}
+document.addEventListener('visibilitychange',go);go();}
+mk('paillettes',window.innerWidth<600?18:32,'sp');mk('flocons',22,'fl');
+})();
 </script>
 <script src="/outils/cta.js" data-nom="Beauty&#x27;Sensationails" defer></script>
 </body>
