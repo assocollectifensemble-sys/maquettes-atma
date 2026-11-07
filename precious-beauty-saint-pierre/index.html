@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Precious Beauty · Onglerie et formations à Saint-Pierre</title>
+<meta property="og:title" content="Precious Beauty · Onglerie &amp; formations · Saint-Pierre">
+<meta property="og:description" content="Une page imaginée pour Precious Beauty : onglerie, beauté du regard et formations à Saint-Pierre.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/precious-beauty-saint-pierre/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/precious-beauty-saint-pierre/img/ongles-degrade.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--taupe:#8a7566;--brun:#5a4034;--nude:#e6cdbf;--nude-c:#f3e5dc;--creme:#f8f3ee;--or:#b58b5e;--bord:#7d2f3e;--encre:#2c2420;--gris:#7b6e66}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Jost",system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden}
+img{display:block;max-width:100%}
+.ruban{background:var(--brun);color:#f1e3d9;font-size:.8rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--nude);font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.05}
+.script{font-family:"Great Vibes",cursive;color:var(--or);font-weight:400}
+.sur{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--or)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;transition:transform .3s,background .3s}
+.btn.plein{background:linear-gradient(135deg,var(--nude),#d2a891);color:var(--brun);animation:respire 4s ease-in-out infinite}
+.btn.plein:hover{transform:translateY(-2px)}
+.btn.ligne{border:1px solid rgba(230,205,191,.7);color:var(--nude)}
+.btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
+@keyframes respire{50%{box-shadow:0 0 0 8px rgba(230,205,191,.22)}}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 30%,#7a6153 0%,#3f2d25 75%);color:var(--creme)}
+#poudre{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .g{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center;padding:clamp(3rem,9vh,6rem) 0}
+.hero h1{font-size:clamp(3.4rem,9vw,6.2rem);animation:monte 1.1s ease both}
+.hero h1 .script{display:block;font-size:.55em;color:var(--nude);margin-top:.2rem}
+.lead{color:#e6d8cf;font-size:1.1rem;max-width:40ch;margin-top:1.3rem;animation:monte 1.1s .2s ease both}
+.photo{border-radius:200px 200px 24px 24px;overflow:hidden;max-width:400px;margin-left:auto;aspect-ratio:3/4;box-shadow:0 0 0 1px rgba(230,205,191,.35),0 0 70px rgba(230,205,191,.2);animation:monte 1.2s .1s ease both}
+.photo img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.1)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}}
+section{padding:clamp(3.5rem,9vh,6rem) 0}
+h2{font-size:clamp(2.2rem,5vw,3.4rem)}
+.metiers{text-align:center}
+.metiers .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.6rem}
+.m{padding:1.6rem 1rem;background:var(--nude-c);border-top:2px solid var(--or);border-radius:0 0 16px 16px;transition:transform .3s}
+.m:hover{transform:translateY(-4px)}
+.m h3{font-size:1.35rem;color:var(--brun)}
+.avis{margin-top:2rem;color:var(--gris);font-size:.95rem}
+.avis b{color:var(--bord);font-weight:500}
+.ecole{background:var(--nude-c)}
+.ecole .tete{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap}
+.ecole .tete p{max-width:42ch;color:var(--gris)}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.4rem}
+.mod{background:#fff;border-radius:18px;padding:1.5rem 1.4rem;box-shadow:0 10px 30px rgba(90,64,52,.09);transition:transform .35s}
+.mod:hover{transform:translateY(-5px)}
+.mod span{display:block;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--or);font-weight:500}
+.mod h3{font-size:1.5rem;margin:.3rem 0 .4rem;color:var(--brun)}
+.mod p{font-size:.92rem;color:var(--gris);line-height:1.55}
+.mod p b{font-weight:500;color:var(--encre)}
+.dem{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.dem .photo2{border-radius:24px;overflow:hidden;max-width:380px;margin:auto}
+.dem .photo2 img{width:100%;height:auto}
+.etapes{counter-reset:e;list-style:none;margin-top:1.6rem}
+.etapes li{counter-increment:e;padding:.7rem 0 .7rem 3rem;position:relative;border-bottom:1px solid #e3d3c8}
+.etapes li:before{content:counter(e);position:absolute;left:0;top:.55rem;width:2rem;height:2rem;border-radius:50%;background:var(--brun);color:var(--nude);display:grid;place-items:center;font-size:.9rem}
+.fin-note{margin-top:1.4rem;color:var(--gris);font-size:.95rem}
+.fin-note b{color:var(--brun);font-weight:500}
+.noel{background:linear-gradient(160deg,#f3e1d8,#f8f3ee);text-align:center;position:relative;overflow:hidden}
+.noel .carte{max-width:640px;margin:2rem auto 0;padding:2.4rem 1.6rem;border:1px solid var(--or);border-radius:22px;background:rgba(255,255,255,.7);position:relative}
+.noel .carte:before,.noel .carte:after{content:"✦";position:absolute;color:var(--or);font-size:1.1rem;animation:scint 3s ease-in-out infinite}
+.noel .carte:before{top:14px;left:20px}.noel .carte:after{bottom:14px;right:20px;animation-delay:1.4s}
+@keyframes scint{50%{opacity:.25;transform:scale(.8)}}
+.noel p{color:var(--gris);max-width:44ch;margin:0 auto}
+.noel .btns{justify-content:center}
+.fin address{font-style:normal;color:var(--gris);margin-top:1rem;font-size:1.05rem}
+.fin .tel{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,5vw,3.2rem);color:var(--brun);text-decoration:none;display:block;margin-top:.8rem}
+.fin .mail{color:var(--bord)}
+.fin .g{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.fin .rond{aspect-ratio:1;border-radius:50%;background:var(--brun);display:grid;place-items:center;max-width:320px;margin-left:auto;text-align:center;color:var(--nude);padding:2rem}
+.fin .rond .script{font-size:3rem;line-height:1;color:var(--nude)}
+.fin .rond small{display:block;letter-spacing:.22em;text-transform:uppercase;font-size:.68rem;margin-top:.6rem;color:#d9c6ba}
+footer{padding:2rem 0;font-size:.82rem;color:var(--gris);border-top:1px solid #e6d8cf}
+.rev{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}.rev.vu{opacity:1;transform:none}
+@media (max-width:860px){.hero .g,.dem,.fin .g{grid-template-columns:1fr}.metiers .grid{grid-template-columns:1fr 1fr}.mods{grid-template-columns:1fr 1fr}.photo{margin:0 auto;max-width:300px}.fin .rond{margin:0 auto}}
+@media (max-width:520px){.metiers .grid,.mods{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}#poudre{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Precious Beauty</div>
+<header class="hero">
+ <canvas id="poudre" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur" style="color:var(--nude)">Onglerie · Beauté du regard · Formations</p>
+   <h1>Precious Beauty <span class="script">à Saint-Pierre</span></h1>
+   <p class="lead">Prothésiste ongulaire confirmée et diplômée, artiste ongulaire et formatrice. « Apprends, révèle, perfectionne et vis de ta passion ! »</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693638536?text=Bonjour%2C%20je%20voudrais%20des%20informations%20sur%20Precious%20Beauty">Nous écrire</a><a class="btn ligne" href="#formations">Les formations</a></div>
+  </div>
+  <div class="photo"><img src="img/ongles-degrade.webp" alt="Ongles dégradé rose nude vers bordeaux avec chaînes dorées et cristal"></div>
+ </div>
+</header>
+
+<section class="metiers">
+ <div class="wrap rev">
+  <p class="sur">Les savoir-faire</p>
+  <h2>Quatre façons de <span class="script" style="font-size:1.1em">sublimer</span></h2>
+  <div class="grid">
+   <div class="m"><h3>Prothésiste ongulaire</h3></div>
+   <div class="m"><h3>Artiste ongulaire</h3></div>
+   <div class="m"><h3>Beauté du regard</h3></div>
+   <div class="m"><h3>Formatrice onglerie</h3></div>
+  </div>
+  <p class="avis">Sur Facebook : <b>100 % de recommandations</b> (7 avis) et 3,4 K followers.</p>
+ </div>
+</section>
+
+<section class="ecole" id="formations">
+ <div class="wrap">
+  <div class="tete rev"><div><p class="sur">Precious Beauty School</p><h2>Développe tes <span class="script" style="font-size:1.1em">compétences</span></h2></div><p>Théorie, pratique sur toi puis sur modèle. Possibilité de te former chez toi ou dans ton institut (voir les conditions). Centre certifié Qualiopi.</p></div>
+  <div class="mods">
+   <div class="mod rev"><span>4 jours</span><h3>Popits N1</h3><p><b>Programme :</b> manucure, demi popits, full popits, couleur sous cuticule, décos.</p></div>
+   <div class="mod rev"><span>2 jours</span><h3>Manucure russe</h3><p><b>Programme :</b> manucure, patch, couleur sous cuticule, décos.</p></div>
+   <div class="mod rev"><span>2 jours</span><h3>Technique sans limage</h3><p><b>Programme :</b> manucure, renfort, couleur sous cuticule, décos.</p></div>
+   <div class="mod rev"><span>3 jours</span><h3>Initiation gel</h3><p><b>Programme :</b> manucure, rallongement, couleur sous cuticule, décos.</p></div>
+   <div class="mod rev"><span>4 jours</span><h3>Perfectionnement ou coaching privé</h3><p><b>Programme :</b> manucure, rallongement chablon, couleur sous cuticule, décos.</p></div>
+   <div class="mod rev"><span>1 jour</span><h3>Nail art</h3><p>1 jour = 1 nail art : baby-boomer, babycolor, dégradé et bijoux, stamping, arabesque, one stroke…</p></div>
+   <div class="mod rev"><span>1 jour</span><h3>Beauté des pieds</h3><p><b>Programme :</b> pédicure, patch, couleur sous cuticule, wrap, décos.</p></div>
+   <div class="mod rev"><span>2 jours</span><h3>Pedikur</h3><p><b>Programme :</b> pédicure, couleur sous cuticule, wrap, décos et soin callosité.</p></div>
+   <div class="mod rev"><span>Formation disponible à La Réunion</span><h3>Soin callosités</h3><p>Technique complète du diagnostic au résultat, matériel fourni, formatrice à tes côtés, attestation de fin de formation.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap dem">
+  <div class="rev">
+   <p class="sur">Inscription</p>
+   <h2>Comment réserver ta <span class="script" style="font-size:1.1em">formation</span> ?</h2>
+   <ol class="etapes">
+    <li>Prends contact avec nous par message privé ou mail.</li>
+    <li>Indique la ou les formations souhaitées.</li>
+    <li>Règle l'acompte de 30 % (CB, virement ou espèces).</li>
+    <li>Inscription : fournis les pièces nécessaires. Ta formation est réservée !</li>
+   </ol>
+   <p class="fin-note"><b>Financements :</b> prise en charge FAFCEA possible, ou financement personnel en 2, 3 ou 4 fois (voir conditions).</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693638536?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20formation">Réserver ma formation</a></div>
+  </div>
+  <div class="photo2 rev"><img src="img/formations-affiche.webp" alt="Affiche Formations onglerie : Développe tes compétences, forme-toi" loading="lazy"></div>
+ </div>
+</section>
+
+<section class="noel">
+ <div class="wrap rev">
+  <p class="sur">Offrir pour Noël</p>
+  <h2>Un <span class="script" style="font-size:1.1em">cadeau</span> qui fait briller</h2>
+  <div class="carte">
+   <p>Offrez un moment chez Precious Beauty ou une formation à quelqu'un qui rêve de se lancer : à choisir ensemble.</p>
+   <div class="btns"><a class="btn plein" href="https://wa.me/262693638536?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20cadeau%20pour%20No%C3%ABl">Offrir un cadeau</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="fin">
+ <div class="wrap g">
+  <div class="rev"><p class="sur">Contact</p><h2>Parlons de ta passion</h2><address>Precious Beauty School<br>46 bis rue Théodore Thomas<br>97410 Saint-Pierre</address><a class="tel" href="tel:+262693638536">0693 63 85 36</a><p><a class="mail" href="mailto:thepreciousbeauty974@gmail.com">thepreciousbeauty974@gmail.com</a></p><p style="margin-top:.6rem"><a class="mail" href="https://www.facebook.com/preciOus974">Facebook · Precious Beauty</a></p></div>
+  <div class="rond rev"><div><span class="script">Precious Beauty</span><small>Onglerie · Formations</small></div></div>
+ </div>
+</section>
+<footer><div class="wrap">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Precious Beauty.</div></footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(f=>io.observe(f));
+(()=>{const c=document.getElementById('poudre');if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const x=c.getContext('2d');let W,H,P=[],on=true;
+function t(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}t();addEventListener('resize',t);
+document.addEventListener('visibilitychange',()=>{on=!document.hidden;if(on)f()});
+for(let i=0;i<40;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.5,v:Math.random()*.00035+.0001,p:Math.random()*6.28});
+function f(){if(!on)return;x.clearRect(0,0,W,H);for(const s of P){s.y-=s.v;s.p+=.02;if(s.y<0){s.y=1;s.x=Math.random()}const a=.3+.3*Math.sin(s.p);x.beginPath();x.arc(s.x*W+Math.sin(s.p)*6,s.y*H,s.r,0,6.28);x.fillStyle=`rgba(230,205,191,${a})`;x.fill()}requestAnimationFrame(f)}f();})();
+</script>
+<script src="/outils/cta.js" data-nom="Precious Beauty" defer></script>
+</body>
+</html>

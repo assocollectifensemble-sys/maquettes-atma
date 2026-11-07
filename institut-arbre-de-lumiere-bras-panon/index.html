@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Institut Arbre de Lumière · Bras-Panon</title>
+<meta name="description" content="Un espace de bien-être chaleureux et cocooning à Bras-Panon : soins du visage, épilation, ongles, maquillage, massages.">
+<meta property="og:title" content="Institut Arbre de Lumière · Bras-Panon">
+<meta property="og:description" content="Un espace de bien-être chaleureux et cocooning, avec Clarisse, à Bras-Panon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/institut-arbre-de-lumiere-bras-panon/img/carte.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/institut-arbre-de-lumiere-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#b8909f;--mauve:#9b6b7f;--fuchsia:#d4527f;--teal:#2d7a6f;--blush:#f5d5e0;--cream:#fbf5f3;--ink:#3a2c33;--wood:#c9a27a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;font-size:16px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ribbon{background:var(--teal);color:#fff;text-align:center;font-size:.78rem;padding:.5rem .8rem;letter-spacing:.02em}
+.ribbon b{font-weight:500}
+nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:rgba(251,245,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--blush)}
+nav .brand{display:flex;align-items:center;gap:.6rem;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.15rem;text-decoration:none;color:var(--teal)}
+nav .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+nav .links{display:none;gap:1.4rem;font-size:.9rem}
+nav .links a{text-decoration:none}
+.btn{display:inline-block;background:var(--mauve);color:#fff;text-decoration:none;padding:.8rem 1.5rem;border-radius:99px;font-weight:500;font-size:.95rem;animation:breathe 3.5s ease-in-out infinite;transition:background .3s}
+.btn:hover{background:var(--teal)}
+.btn.ghost{background:transparent;border:1.5px solid #fff;animation:none}
+.btn.small{padding:.5rem 1rem;font-size:.85rem;animation:none}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.hero{position:relative;min-height:min(84vh,640px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/carte.jpg) center/cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,30,40,.35) 0%,rgba(45,30,40,.88) 100%)}
+.hero .in{position:relative;z-index:2;padding:2rem 1.3rem 3.2rem;max-width:760px}
+.hero small{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;opacity:.9}
+.hero h1,.hero p{text-shadow:0 2px 14px rgba(30,15,25,.55)}
+.hero h1{font-size:2.9rem;margin:.5rem 0 .8rem;opacity:0;animation:rise 1.4s .3s forwards}
+.hero h1 em{color:var(--blush)}
+.hero p{max-width:34rem;opacity:0;animation:rise 1.4s .7s forwards}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;opacity:0;animation:rise 1.4s 1.1s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+canvas#petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+section{padding:3.6rem 1.3rem;max-width:1000px;margin:auto}
+.kicker{color:var(--fuchsia);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:500}
+h2{font-size:2.15rem;margin:.4rem 0 1rem;color:var(--teal)}
+.wave{display:block;width:100%;height:46px;margin-bottom:-1px}
+.about{display:grid;gap:1.6rem}
+.about img{border-radius:200px 200px 18px 18px;aspect-ratio:3/4;object-fit:cover;width:100%;max-width:340px;margin:auto;box-shadow:0 18px 40px -18px rgba(155,107,127,.6)}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--mauve);border-left:3px solid var(--rose);padding-left:1rem;margin-top:1.2rem}
+.band{background:var(--teal);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic}
+.band div{display:inline-block;animation:scroll 32s linear infinite}
+.band span{margin:0 1.6rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.menu-wrap{background:#fff;max-width:none;padding:3.6rem 1.3rem}
+.menu{max-width:1000px;margin:auto;display:grid;gap:1.4rem}
+.card{background:var(--cream);border:1px solid var(--blush);border-radius:18px;padding:1.4rem;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 30px -18px rgba(155,107,127,.7)}
+.card h3{font-size:1.5rem;color:var(--mauve);margin-bottom:.6rem}
+.card li{list-style:none;display:flex;justify-content:space-between;gap:.8rem;padding:.4rem 0;border-bottom:1px dashed var(--blush);font-size:.95rem}
+.card li b{color:var(--teal);font-weight:500;white-space:nowrap}
+.card li small{color:#8a7580;display:block;font-size:.76rem}
+.note{font-size:.8rem;color:#8a7580;text-align:center;margin-top:1.2rem}
+.gal{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.3rem 1rem;-webkit-overflow-scrolling:touch}
+.gal figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden}
+.gal img{width:100%;height:340px;object-fit:cover;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .9rem .7rem;color:#fff;background:linear-gradient(transparent,rgba(45,30,40,.7));font-size:.85rem}
+.reviews{display:grid;gap:1rem}
+.rev{background:#fff;border-radius:16px;padding:1.2rem;border:1px solid var(--blush)}
+.rev p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic}
+.rev span{display:block;margin-top:.5rem;font-size:.78rem;color:#8a7580}
+.stars{color:var(--fuchsia);letter-spacing:.15em}
+.noel{background:linear-gradient(135deg,#2d7a6f,#1f5a52);color:#fff;max-width:none;position:relative;overflow:hidden;text-align:center}
+.noel .box{max-width:620px;margin:auto;position:relative;z-index:2}
+.noel h2{color:#fff}
+.noel .btn{background:var(--fuchsia);margin-top:1rem}
+.star{position:absolute;color:#f5d5e0;opacity:.5;animation:tw 4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:.7}}
+.contact{display:grid;gap:1.4rem}
+.hours li{list-style:none;display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px dashed var(--blush);max-width:320px}
+.hours li.closed{color:#8a7580}
+footer{background:var(--ink);color:#d9c9d0;text-align:center;font-size:.8rem;padding:2rem 1.2rem}
+footer a{color:var(--blush)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.reveal.on{opacity:1;transform:none}
+@media(min-width:760px){
+ nav .links{display:flex}
+ .hero h1{font-size:4.4rem}
+ .about{grid-template-columns:1fr 1.2fr;align-items:center}
+ .menu{grid-template-columns:1fr 1fr}
+ .gal{padding:0 max(1.3rem,calc((100vw - 1000px)/2))}
+ .gal figure{flex-basis:30%}
+ .reviews{grid-template-columns:1fr 1fr}
+ .contact{grid-template-columns:1fr 1fr}
+}
+html.shot .hero h1,html.shot .hero p,html.shot .hero .cta{opacity:1!important;animation:none!important}
+@media(prefers-reduced-motion:reduce){
+ *{animation:none!important;transition:none!important}
+ .reveal,.hero h1,.hero p,.hero .cta{opacity:1;transform:none}
+ canvas#petals{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Institut Arbre de Lumière</div>
+<nav>
+ <a class="brand" href="#top"><img src="img/logo.jpg" alt="Logo Institut Arbre de Lumière">Arbre de Lumière</a>
+ <div class="links"><a href="#institut">L'institut</a><a href="#soins">Soins</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
+ <a class="btn small" href="tel:+262692390516">Appeler</a>
+</nav>
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<header class="hero" id="top">
+ <div class="bg" role="img" aria-label="Carte fleurie Institut de Beauté posée sur du bois"></div>
+ <div class="in">
+  <small>Institut de beauté · Bras-Panon</small>
+  <h1>Un espace de <em>bien-être</em> chaleureux et cocooning</h1>
+  <p>Chez Clarisse, chaque détail est pensé pour vous offrir un moment de douceur : soins du visage, épilation, ongles, maquillage et massages.</p>
+  <div class="cta"><a class="btn" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn ghost" href="#soins">Découvrir les soins</a></div>
+ </div>
+</header>
+
+<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20C150 0 300 0 450 14s300 28 450 14 200-16 300-6v24z" fill="#fbf5f3"/></svg>
+
+<section class="about reveal" id="institut">
+ <img src="img/bain.jpg" alt="Savons et pots de produits de soin aux tons dorés" loading="lazy">
+ <div>
+  <div class="kicker">L'institut</div>
+  <h2>Un véritable havre de beauté</h2>
+  <p>Situé à Bras-Panon, l'Institut Arbre de Lumière vous accueille dans une ambiance chaleureuse et conviviale, avec une décoration épurée et raffinée, propice à la détente et à la relaxation.</p>
+  <p style="margin-top:.8rem">Avec Clarisse : épilation à la cire ou au fil, manucure, vernis semi-permanent, soins du visage, maquillage, ongles en gel, mise en valeur des cils et sourcils.</p>
+  <p class="quote">« Clarisse est une personne douce et lumineuse. C'est elle qui illumine cet institut qui porte bien son nom. »<br><small style="font-family:Jost;font-style:normal;font-size:.78rem;color:#8a7580">Avis Planity, septembre 2024</small></p>
+ </div>
+</section>
+
+<div class="band" aria-hidden="true"><div><span>✿ Douceur</span><span>✿ Sérénité</span><span>✿ Beauté du regard</span><span>✿ Soins du visage</span><span>✿ Manucure russe</span><span>✿ Hydra SPA Face</span><span>✿ Douceur</span><span>✿ Sérénité</span><span>✿ Beauté du regard</span><span>✿ Soins du visage</span><span>✿ Manucure russe</span><span>✿ Hydra SPA Face</span></div></div>
+
+<div class="menu-wrap" id="soins">
+ <div style="max-width:1000px;margin:0 auto 1.6rem" class="reveal"><div class="kicker">Les soins</div><h2>Quelques-unes de vos envies</h2></div>
+ <div class="menu">
+  <div class="card reveal"><h3>Soins du visage</h3><ul>
+   <li><span>Soin Express<small>30 min</small></span><b>40 €</b></li>
+   <li><span>Soin complet Yumi<small>1 h · tous types de peaux</small></span><b>70 €</b></li>
+   <li><span>Soin Esthemax + Modelage Shinzu<small>1 h 20</small></span><b>85 €</b></li>
+   <li><span>Hydra SPA Face complet<small>1 h 15</small></span><b>130 €</b></li></ul></div>
+  <div class="card reveal"><h3>Ongles &amp; vernis</h3><ul>
+   <li><span>Semi-permanent couleur mains, manucure russe<small>1 h 20</small></span><b>50 €</b></li>
+   <li><span>Pose French mains ou pieds<small>1 h</small></span><b>42 €</b></li>
+   <li><span>Babyboomer mains<small>1 h 20</small></span><b>48 €</b></li>
+   <li><span>Gel couleur extensions chablons<small>2 h</small></span><b>68 €</b></li></ul></div>
+  <div class="card reveal"><h3>Beauté du regard</h3><ul>
+   <li><span>Sourcils à la cire<small>30 min</small></span><b>15 €</b></li>
+   <li><span>Sourcils au fil<small>30 min</small></span><b>18 €</b></li>
+   <li><span>Restructuration des sourcils à l'henné<small>1 h</small></span><b>55 €</b></li>
+   <li><span>Réhaussement des cils<small>1 h</small></span><b>80 €</b></li></ul></div>
+  <div class="card reveal"><h3>Corps &amp; détente</h3><ul>
+   <li><span>Modelage dos<small>20 min</small></span><b>35 €</b></li>
+   <li><span>Massage relaxant californien<small>1 h</small></span><b>80 €</b></li>
+   <li><span>Massage prénatal<small>1 h 30</small></span><b>95 €</b></li>
+   <li><span>Maquillage mariée, essai compris<small>1 h</small></span><b>160 €</b></li></ul></div>
+ </div>
+ <p class="note">Tarifs repris de la page Planity de l'institut (liste complète et réservation en ligne sur Planity).</p>
+</div>
+
+<section style="padding-bottom:1rem" class="reveal" id="galerie"><div class="kicker">Dans l'institut</div><h2>Des petits détails qui font du bien</h2></section>
+<div class="gal reveal">
+ <figure><img src="img/pots.jpg" alt="Pots de paillettes sombres et dorées" loading="lazy"><figcaption>Paillettes &amp; éclats</figcaption></figure>
+ <figure><img src="img/bougie.jpg" alt="Bougie ajourée et cadre « Amour »" loading="lazy"><figcaption>Lumière de bougie</figcaption></figure>
+ <figure><img src="img/soins.jpg" alt="Sérums Soskin alignés" loading="lazy"><figcaption>Sérums Soskin</figcaption></figure>
+ <figure><img src="img/pinceaux.jpg" alt="Pinceaux de maquillage noirs" loading="lazy"><figcaption>Maquillage</figcaption></figure>
+ <figure><img src="img/bois.jpg" alt="Étagère en bois clair et paniers" loading="lazy"><figcaption>Un cadre en bois clair</figcaption></figure>
+</div>
+
+<section id="avis" class="reveal">
+ <div class="kicker">Avis</div><h2>5,0 / 5 <span class="stars">★★★★★</span></h2>
+ <p style="margin-bottom:1.2rem">65 avis sur Planity.</p>
+ <div class="reviews">
+  <div class="rev"><p>« Une prestation exceptionnelle… de la douceur et un œil d'experte. Merci Clarisse. »</p><span>Avis Planity, 26 septembre 2026</span></div>
+  <div class="rev"><p>« Sérénité, calme et compétences. Lieu propice aux soins. »</p><span>Avis Planity, 28 novembre 2025</span></div>
+  <div class="rev"><p>« Cadre chaleureux et agréable. Très bon accueil pétillant et jovial. »</p><span>Avis Planity, 10 novembre 2025</span></div>
+  <div class="rev"><p>« Un soin de qualité, une peau de bébé garantie. Très bon moment. »</p><span>Avis Planity, 13 juillet 2025</span></div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:30%;animation-delay:1.2s">✧</span><span class="star" style="left:20%;bottom:16%;animation-delay:2s">✦</span><span class="star" style="right:22%;bottom:12%;animation-delay:.6s">✧</span>
+ <div class="box reveal">
+  <div class="kicker" style="color:var(--blush)">Offrir pour Noël</div>
+  <h2>Offrez un moment chez Arbre de Lumière</h2>
+  <p>Un soin du visage, un massage, un moment pour les ongles : offrez une parenthèse de douceur à quelqu'un que vous aimez.</p>
+  <a class="btn" href="https://wa.me/262692390516?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau par WhatsApp</a>
+ </div>
+</section>
+
+<section class="contact reveal" id="contact">
+ <div>
+  <div class="kicker">Contact</div><h2>Venez nous voir</h2>
+  <p>4 Rue des Jamalacs<br>97412 Bras-Panon</p>
+  <p style="margin:.8rem 0"><a href="tel:+262692390516"><b>0692 39 05 16</b></a></p>
+  <p><a href="https://www.facebook.com/InstitutADL" target="_blank" rel="noopener">Facebook · Institut Arbre de Lumière</a></p>
+  <p style="margin-top:1rem"><a class="btn small" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Réserver sur Planity</a></p>
+ </div>
+ <div>
+  <h3 style="font-size:1.5rem;color:var(--mauve);margin-bottom:.5rem">Horaires</h3>
+  <ul class="hours"><li><span>Lundi</span><span>8h30 – 18h</span></li><li><span>Mardi</span><span>8h30 – 18h</span></li><li><span>Mercredi</span><span>9h – 16h</span></li><li><span>Jeudi</span><span>8h30 – 18h</span></li><li><span>Vendredi</span><span>8h30 – 18h</span></li><li class="closed"><span>Samedi</span><span>Fermé · ouvertures ponctuelles sur Planity</span></li><li class="closed"><span>Dimanche</span><span>Fermé</span></li></ul>
+ </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Institut Arbre de Lumière.</footer>
+
+<script>
+(function(){
+ var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+ document.querySelectorAll(".reveal").forEach(function(el){if(location.hash=="#shot"){el.classList.add("on");document.documentElement.classList.add("shot")};else io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ var c=document.getElementById('petals'),x=c.getContext('2d'),W,H,P=[],N=22,run=true;
+ function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+ function mk(i){return{x:Math.random()*W,y:i?-20:Math.random()*H,r:4+Math.random()*5,vy:.35+Math.random()*.6,vx:(Math.random()-.5)*.4,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:.25+Math.random()*.3,t:Math.random()*6.28}}
+ for(var i=0;i<N;i++)P.push(mk(0));
+ var cols=['#f5d5e0','#e8a9c0','#d4a5a5','#fff'];
+ function draw(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p,i){p.t+=.015;p.x+=p.vx+Math.sin(p.t)*.4;p.y+=p.vy;p.a+=p.va;
+   if(p.y>H+20)P[i]=mk(1);
+   x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=cols[i%4];
+   x.beginPath();x.ellipse(0,0,p.r,p.r*.55,0,0,6.28);x.fill();x.restore()});
+  requestAnimationFrame(draw)}
+ draw();
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Institut Arbre de Lumière" defer></script>
+</body>
+</html>
