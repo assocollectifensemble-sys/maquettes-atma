@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1a1410">
+<title>Prestige Beauté · Lash, Brow &amp; Skin Expert · Saint-Gilles-les-Hauts</title>
+<meta name="description" content="Maquette : Prestige Beauté, spécialiste du regard et des soins esthétiques sur-mesure. Extensions de cils, rehaussement de cils, Henné Brow, Powder Brows, soins du visage. Nouvelle adresse à Saint-Gilles-les-Hauts depuis le 1er novembre 2026.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Prestige Beauté · Un nouveau chapitre — une page imaginée pour vous">
+<meta property="og:description" content="Le regard sur-mesure, des cils aux sourcils, désormais au 116 ter rue Joseph Hubert à Saint-Gilles-les-Hauts. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/prestige-beaute-le-port/img/hero-cils.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/prestige-beaute-le-port/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#1a1410;      /* fond noir chaud de leur visuel « Une nouvelle page » */
+  --nuit-2:#2a211b;
+  --or:#c9a961;        /* or champagne du monogramme PB */
+  --or-2:#e3c98f;
+  --creme:#f6f0e7;
+  --creme-2:#ece2d3;
+  --taupe:#a89080;     /* l'arche taupe du visuel */
+  --rose:#f1d3cc;      /* rose poudré de leur carte « Esthéticienne » */
+  --bordeaux:#6e2b33;  /* texte bordeaux de cette même carte */
+  --encre:#2a1f19;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --bar:62px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.05rem;line-height:1.65;color:var(--encre);background:var(--creme);padding-bottom:var(--bar);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.etiquette{font-size:.76rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--bordeaux);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.etiquette::before{content:"⚜";letter-spacing:0;font-size:1rem;color:var(--or)}
+
+/* ruban */
+.ruban{background:#0f0b08;color:#d9cdbd;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--or)}
+
+/* HÉRO */
+.hero{position:relative;color:var(--creme);overflow:hidden;background:var(--nuit);min-height:min(100svh,860px);display:flex;align-items:flex-end}
+.hero .photo{position:absolute;inset:0;overflow:hidden}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:kenburns 24s ease-in-out infinite alternate;transform-origin:60% 45%}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.18) translate(-2%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,20,16,.6) 0,rgba(26,20,16,.2) 26%,rgba(26,20,16,.82) 52%,var(--nuit) 78%);pointer-events:none;z-index:1}
+#paillettes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero .wrap{position:relative;z-index:3;padding:7rem 0 3.2rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(201,169,97,.16);border:1px solid rgba(201,169,97,.6);color:var(--or-2);border-radius:999px;padding:.35rem .9rem;font-size:.78rem;font-weight:500;letter-spacing:.04em;backdrop-filter:blur(4px)}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--or);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(201,169,97,.0),0 0 0 3px rgba(201,169,97,.35)}}
+.kicker{display:block;font-size:.78rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--or);margin-top:1.4rem}
+.hero h1{font-size:clamp(3.6rem,17vw,8.6rem);font-weight:600;margin:.3rem 0 0;line-height:.9;letter-spacing:-.015em}
+.hero h1 span{display:block;font-style:italic;font-weight:500;color:var(--or-2)}
+.cil{display:block;width:min(260px,70%);height:auto;margin:.9rem 0 .4rem;overflow:visible}
+.cil path{fill:none;stroke:var(--or);stroke-width:1.6;stroke-linecap:round}
+.js .cil path{stroke-dasharray:120;stroke-dashoffset:120;animation:trace 1.6s .5s ease forwards}
+.js .cil path:nth-child(n+2){animation-delay:calc(.9s + var(--i)*.07s);animation-duration:.8s}
+@keyframes trace{to{stroke-dashoffset:0}}
+.accroche{font-family:var(--serif);font-size:clamp(1.35rem,4.6vw,2rem);line-height:1.28;font-style:italic;max-width:26ch;color:#fff}
+.accroche small{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;color:#cbbba8;margin-top:.45rem;letter-spacing:.02em}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.7rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.8rem 1.45rem;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:linear-gradient(135deg,var(--or-2),var(--or));color:var(--nuit);box-shadow:0 8px 24px rgba(201,169,97,.35);animation:respire 3.4s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px)}
+@keyframes respire{50%{box-shadow:0 8px 34px rgba(227,201,143,.65)}}
+.btn-ligne{border:1.5px solid rgba(246,240,231,.7);color:var(--creme)}
+.btn-ligne:hover{background:var(--creme);color:var(--nuit)}
+.js .titre-in{opacity:0;transform:translateY(18px);animation:monte 1.1s .2s ease forwards}
+.js .titre-in.d2{animation-delay:.45s}.js .titre-in.d3{animation-delay:.7s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau défilant */
+.defile{background:var(--nuit);color:var(--creme);overflow:hidden;white-space:nowrap;border-block:1px solid rgba(201,169,97,.45)}
+.defile .piste{display:inline-flex;gap:2rem;padding:.85rem 0;animation:defile 40s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
+.defile span::after{content:"✦";font-style:normal;color:var(--or);margin-left:2rem;font-size:.8rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* apparitions */
+.js .rev{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.js .rev.in{opacity:1;transform:none}
+
+/* CHAPITRE */
+.chapitre{padding:clamp(3.5rem,9vw,7rem) 0;position:relative}
+.chapitre .wrap{display:grid;gap:2.6rem;align-items:center}
+.chapitre h2{font-size:clamp(2.5rem,9vw,4.6rem);color:var(--nuit)}
+.chapitre h2 em{color:var(--bordeaux)}
+.chapitre .l{margin-top:1.1rem;max-width:50ch}
+.citation{font-family:var(--serif);font-style:italic;font-size:1.32rem;line-height:1.35;border-left:2px solid var(--or);padding-left:1.1rem;margin:1.5rem 0;color:var(--nuit-2)}
+.citation cite{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;color:#8a7766;margin-top:.5rem}
+.changes{list-style:none;display:grid;gap:.75rem;margin-top:1.2rem}
+.changes li{display:flex;gap:.85rem;align-items:flex-start;background:#fff;border-radius:14px;padding:.85rem 1rem;box-shadow:0 6px 18px rgba(42,31,25,.07)}
+.changes li b{display:block;font-weight:600}
+.changes .ic{flex:none;width:36px;height:36px;border-radius:50%;background:var(--nuit);color:var(--or);display:grid;place-items:center;font-size:1rem}
+.arche{position:relative;justify-self:center;width:min(100%,380px)}
+.arche .cadre{border-radius:999px 999px 12px 12px;overflow:hidden;box-shadow:0 0 0 1px var(--or),0 0 0 9px var(--creme),0 0 0 10px rgba(201,169,97,.5),0 26px 60px rgba(26,20,16,.35);aspect-ratio:4/5;background:var(--nuit)}
+.arche img{width:100%;height:100%;object-fit:cover}
+.arche figcaption{font-size:.8rem;color:#8a7766;margin-top:1.3rem;text-align:center}
+
+/* REGARD (prestations) */
+.regard{background:var(--nuit);color:var(--creme);padding:clamp(3.5rem,9vw,7rem) 0;position:relative;overflow:hidden}
+.regard::before{content:"";position:absolute;left:0;right:0;top:-1px;height:40px;background:var(--creme);clip-path:ellipse(70% 100% at 50% 0)}
+.regard .wrap{position:relative}
+.regard .etiquette{color:var(--or)}
+.regard h2{font-size:clamp(2.4rem,8.5vw,4.4rem);max-width:15ch}
+.regard h2 em{color:var(--or-2)}
+.regard .intro{max-width:52ch;margin-top:1rem;color:#d9cdbd}
+.cartes{display:grid;gap:1.3rem;margin-top:2.4rem}
+.carte{background:var(--nuit-2);border:1px solid rgba(201,169,97,.25);border-radius:20px;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s;display:flex;flex-direction:column}
+.carte:hover{transform:translateY(-6px);border-color:rgba(201,169,97,.7);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.carte .ph{aspect-ratio:4/3;overflow:hidden}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.carte:hover .ph img{transform:scale(1.06)}
+.carte .tx{padding:1.2rem 1.3rem 1.4rem}
+.carte .cat{font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--or)}
+.carte h3{font-size:1.8rem;margin:.25rem 0 .5rem;color:#fff}
+.carte p{font-size:.97rem;color:#e2d8ca}
+.carte q{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--or-2)}
+.puces{list-style:none;margin-top:.7rem;display:flex;flex-wrap:wrap;gap:.45rem}
+.puces li{font-size:.8rem;border:1px solid rgba(201,169,97,.45);border-radius:999px;padding:.2rem .7rem;color:#eadfcd}
+.liste{list-style:none;margin-top:2.6rem;border-top:1px solid rgba(201,169,97,.3)}
+.liste li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(201,169,97,.3);font-family:var(--serif);font-size:clamp(1.5rem,5.4vw,2.2rem);line-height:1.1;transition:padding .3s,color .3s}
+.liste li:hover{padding-left:.6rem;color:var(--or-2)}
+.liste small{font-family:var(--sans);font-size:.8rem;color:#bfae99;text-align:right;max-width:20ch;line-height:1.35}
+
+/* MÉTHODE */
+.methode{padding:clamp(3.5rem,9vw,7rem) 0;background:var(--rose);position:relative}
+.methode .wrap{display:grid;gap:2.6rem;align-items:center}
+.methode h2{font-size:clamp(2.3rem,8vw,4.2rem);color:var(--bordeaux)}
+.etapes{list-style:none;counter-reset:e;display:grid;gap:1rem;margin-top:1.6rem}
+.etapes li{counter-increment:e;position:relative;padding-left:3.4rem;min-height:2.6rem}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:-.1rem;width:2.5rem;height:2.5rem;border-radius:50%;border:1.5px solid var(--bordeaux);display:grid;place-items:center;font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--bordeaux)}
+.etapes b{display:block;color:var(--bordeaux)}
+.devise{font-family:var(--serif);font-size:clamp(1.5rem,5vw,2.1rem);font-style:italic;line-height:1.25;color:var(--nuit);margin-top:1.8rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:end}
+.duo figure{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(110,43,51,.18)}
+.duo figure:first-child{border-radius:999px 999px 16px 16px}
+.duo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.duo figure:last-child img{aspect-ratio:1}
+.duo figcaption{font-size:.76rem;padding:.5rem .7rem;color:#6d5a4c}
+
+/* ESPRIT */
+.esprit{padding:clamp(3.5rem,9vw,7rem) 0}
+.esprit .wrap{display:grid;gap:2.4rem}
+.definition{background:#fff;border-radius:22px;padding:2rem 1.5rem;box-shadow:0 14px 40px rgba(42,31,25,.08);position:relative;overflow:hidden}
+.definition::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(241,211,204,.9),transparent 70%)}
+.definition h3{font-size:2.3rem;color:var(--bordeaux)}
+.definition .genre{font-style:italic;color:#8a7766;font-size:.92rem}
+.definition p{margin-top:.8rem;position:relative}
+.definition .pouvoir{font-family:var(--serif);font-size:1.4rem;line-height:1.3;color:var(--nuit)}
+.definition .pouvoir b{color:var(--bordeaux)}
+.definition small{display:block;margin-top:1rem;font-size:.76rem;color:#8a7766}
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.chiffre{background:var(--nuit);color:var(--creme);border-radius:18px;padding:1.3rem 1.1rem}
+.chiffre strong{display:block;font-family:var(--serif);font-size:2.7rem;line-height:1;color:var(--or-2)}
+.chiffre span{font-size:.86rem;color:#d9cdbd}
+.chiffre.large{grid-column:1/-1;background:var(--creme-2);color:var(--encre)}
+.chiffre.large strong{color:var(--bordeaux);font-size:2rem}
+.chiffre.large span{color:#5d4b3f}
+.conseil{display:grid;grid-template-columns:110px 1fr;gap:1rem;align-items:center;margin-top:1rem;background:#fff;border-radius:18px;padding:.8rem;box-shadow:0 8px 22px rgba(42,31,25,.07)}
+.conseil img{border-radius:12px;aspect-ratio:1;object-fit:cover}
+.conseil p{font-size:.92rem}
+.conseil b{display:block;font-family:var(--serif);font-size:1.2rem;color:var(--bordeaux)}
+
+/* GALERIE */
+.galerie{padding:0 0 clamp(3rem,7vw,5rem)}
+.galerie h2{font-size:clamp(2.1rem,7vw,3.6rem);color:var(--nuit)}
+.galerie .aide{font-size:.9rem;color:#8a7766;margin-top:.4rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 1.25rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 70%;max-width:320px;scroll-snap-align:center;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--creme-2);box-shadow:0 12px 28px rgba(42,31,25,.15)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.rail figcaption{font-size:.8rem;padding:.6rem .9rem;background:#fff}
+
+/* NOËL */
+.noel{position:relative;overflow:hidden;color:var(--creme);padding:clamp(4rem,10vw,7rem) 0;background:radial-gradient(90% 70% at 50% 0,#3a2a20 0,var(--nuit) 55%,#0f0b08 100%)}
+.guirlande{position:absolute;left:0;right:0;top:0;height:70px;pointer-events:none}
+.guirlande path{fill:none;stroke:rgba(201,169,97,.55);stroke-width:1.2}
+.guirlande circle{fill:var(--or-2);animation:scintille 2.8s ease-in-out infinite}
+.guirlande circle:nth-child(odd){animation-delay:1.4s}
+@keyframes scintille{50%{opacity:.25}}
+.noel .wrap{position:relative;display:grid;gap:2.2rem;align-items:center;padding-top:2.5rem}
+.noel .etiquette{color:var(--or)}
+.noel h2{font-size:clamp(2.6rem,9vw,4.6rem)}
+.noel h2 em{color:var(--or-2)}
+.noel p.l{font-size:1.06rem;max-width:46ch;margin-top:1rem;color:#e3d8c9}
+.carte-cadeau{position:relative;justify-self:center;width:min(100%,340px);aspect-ratio:1.6;border-radius:18px;background:linear-gradient(135deg,#2c221b,#1a1410 60%);border:1px solid rgba(201,169,97,.75);box-shadow:0 24px 50px rgba(0,0,0,.5);padding:1.3rem 1.4rem;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transform:rotate(-3deg);transition:transform .5s}
+.carte-cadeau:hover{transform:rotate(0) scale(1.02)}
+.carte-cadeau::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,240,200,.18) 45%,transparent 60%);background-size:250% 100%;animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{from{background-position:120% 0}to{background-position:-120% 0}}
+.carte-cadeau .m{font-family:var(--serif);font-size:2.4rem;font-weight:600;color:var(--or-2);line-height:1}
+.carte-cadeau .n{font-family:var(--serif);font-size:1.5rem;color:#fff}
+.carte-cadeau .s{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+.note-noel{font-size:.82rem;color:#bfae99;margin-top:1rem}
+
+/* CONTACT */
+.contact{padding:clamp(3.5rem,9vw,6rem) 0}
+.contact .wrap{display:grid;gap:2.2rem}
+.contact h2{font-size:clamp(2.3rem,7.5vw,3.8rem);color:var(--nuit)}
+dl.infos{display:grid;gap:1.1rem;margin-top:1.4rem}
+dl.infos dt{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--bordeaux)}
+dl.infos dd{font-size:1.04rem;overflow-wrap:anywhere}
+dl.infos dd a{text-decoration-color:var(--or);text-underline-offset:3px}
+.reseaux{display:flex;flex-wrap:wrap;gap:.5rem 1.2rem}
+.plan{display:flex;flex-direction:column;gap:.4rem;justify-content:center;text-decoration:none;background:var(--nuit);color:var(--creme);border-radius:22px;padding:1.8rem 1.5rem;position:relative;overflow:hidden;min-height:220px}
+.plan::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(35deg,transparent 0 22px,rgba(201,169,97,.07) 22px 23px),repeating-linear-gradient(-55deg,transparent 0 30px,rgba(201,169,97,.06) 30px 31px)}
+.plan>*{position:relative}
+.plan .pin{font-size:2rem}
+.plan strong{font-family:var(--serif);font-size:1.75rem;line-height:1.1}
+.plan span{color:var(--or-2);font-size:.92rem}
+
+footer{background:#0f0b08;color:#bfae99;padding:2.4rem 0 2.8rem;font-size:.85rem}
+footer .nom{font-family:var(--serif);font-size:1.7rem;color:var(--or-2)}
+footer p{margin-top:.6rem}
+
+.barre{position:fixed;left:0;right:0;bottom:0;height:var(--bar);display:grid;grid-template-columns:repeat(3,1fr);background:rgba(15,11,8,.96);backdrop-filter:blur(6px);border-top:1px solid rgba(201,169,97,.45);z-index:50}
+.barre a{display:flex;align-items:center;justify-content:center;color:var(--creme);text-decoration:none;font-weight:600;font-size:.92rem;letter-spacing:.02em}
+.barre a:first-child{color:var(--nuit);background:linear-gradient(135deg,var(--or-2),var(--or))}
+.barre a+a{border-left:1px solid rgba(201,169,97,.25)}
+
+@media (min-width:860px){
+  .chapitre .wrap{grid-template-columns:1.1fr .9fr;gap:4rem}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .methode .wrap{grid-template-columns:1fr 1fr;gap:4rem}
+  .esprit .wrap{grid-template-columns:1.1fr .9fr;gap:3rem}
+  .noel .wrap{grid-template-columns:1.2fr .8fr;gap:4rem}
+  .contact .wrap{grid-template-columns:1.1fr .9fr;gap:3rem}
+  .rail{padding-inline:calc((100% - 1120px)/2 + 1.25rem)}
+  .barre{display:none}
+  body{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rev,.js .titre-in{opacity:1;transform:none}
+  .js .cil path{stroke-dashoffset:0}
+  #paillettes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Prestige Beauté</div>
+
+<header class="hero" id="haut">
+  <div class="photo"><img src="img/hero-cils.jpg" alt="Gros plan d'une pose d'extensions de cils sur-mesure réalisée par Prestige Beauté" fetchpriority="high"></div>
+  <canvas id="paillettes" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="badge titre-in"><i></i>Nouvelle adresse · Saint-Gilles-les-Hauts</span>
+    <span class="kicker titre-in">Lash, Brow &amp; Skin Expert</span>
+    <h1 class="titre-in d2">Prestige <span>Beauté</span></h1>
+    <svg class="cil" viewBox="0 0 260 46" aria-hidden="true">
+      <path d="M8 34 Q130 6 252 34"/>
+      <path style="--i:0" d="M30 27 l-6 -14"/><path style="--i:1" d="M52 21 l-4 -16"/><path style="--i:2" d="M76 17 l-2 -17"/><path style="--i:3" d="M100 14 l0 -17"/><path style="--i:4" d="M124 13 l1 -18"/><path style="--i:5" d="M148 13 l3 -18"/><path style="--i:6" d="M172 15 l5 -17"/><path style="--i:7" d="M196 18 l7 -16"/><path style="--i:8" d="M218 23 l9 -14"/><path style="--i:9" d="M238 29 l11 -11"/>
+    </svg>
+    <p class="accroche titre-in d3">« Le sur-mesure n'est pas une option, c'est une exigence. »<small>Carla, Prestige Beauté — publication du 23 janvier 2026</small></p>
+    <div class="cta titre-in d3">
+      <a class="btn btn-or" href="https://www.planity.com/prestige-beaute-97420-le-port-reunion" target="_blank" rel="noopener">Réserver mon instant beauté</a>
+      <a class="btn btn-ligne" href="https://wa.me/262693320240?text=Bonjour%20Prestige%20Beaut%C3%A9%2C%20je%20souhaiterais%20un%20renseignement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Extensions de cils</span><span>Volume russe</span><span>Fox Eyes</span><span>Rehaussement de cils</span><span>Henné Brow</span><span>Powder Brows</span><span>Épilation au fil</span><span>Soins du visage</span><span>Massages</span>
+  <span>Extensions de cils</span><span>Volume russe</span><span>Fox Eyes</span><span>Rehaussement de cils</span><span>Henné Brow</span><span>Powder Brows</span><span>Épilation au fil</span><span>Soins du visage</span><span>Massages</span>
+</div></div>
+
+<section class="chapitre" id="chapitre">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Depuis le 1<sup>er</sup> novembre 2026</p>
+      <h2>Un nouveau <em>chapitre</em> à Saint-Gilles-les-Hauts</h2>
+      <p class="l">Après la Côte d'Azur, puis Le Port, Prestige Beauté vous accueille désormais au cœur de Saint-Gilles-les-Hauts, au sein du salon La Parenthèse.</p>
+      <blockquote class="citation">« Une nouvelle adresse, un nouvel environnement, mais toujours la même passion, la même exigence. »<cite>Publication du 15 octobre 2026</cite></blockquote>
+      <ul class="changes">
+        <li><span class="ic">◎</span><span><b>116 ter, rue Joseph Hubert</b>Au sein du salon La Parenthèse, Saint-Gilles-les-Hauts</span></li>
+        <li><span class="ic">↗</span><span><b>À environ 5 minutes de la Route des Tamarins</b>Stationnement public à proximité, accès en transports en commun</span></li>
+        <li><span class="ic">◷</span><span><b>Du mardi au samedi, de 8 h à 17 h</b>Sans interruption · réservations sur Planity, comme toujours</span></li>
+      </ul>
+    </div>
+    <figure class="arche rev">
+      <div class="cadre"><img src="img/nouvelle-page.jpg" alt="Visuel Prestige Beauté « Une nouvelle page », feuillage doré sur fond noir" loading="lazy"></div>
+      <figcaption>« Une nouvelle page » — visuel publié par Prestige Beauté</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="regard" id="regard">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Spécialiste du regard</p>
+      <h2>Des cils aux sourcils, <em>votre regard</em> sur-mesure</h2>
+      <p class="intro">Chaque prestation est personnalisée selon votre visage et le résultat souhaité : « un regard travaillé avec précision, tout en restant harmonieux ».</p>
+    </div>
+    <div class="cartes">
+      <article class="carte rev">
+        <div class="ph"><img src="img/cils-sur-mesure.jpg" alt="Extensions de cils en gros plan" loading="lazy"></div>
+        <div class="tx">
+          <span class="cat">Extensions de cils</span>
+          <h3>Cil à cil, mixte, volume russe</h3>
+          <p>La morphologie de votre œil guide le mapping ; longueur, épaisseur et type d'extensions sont choisis selon votre style et la santé de vos cils naturels.</p>
+          <ul class="puces"><li>Fox Eyes</li><li>Volume Wet</li><li>Pose mixte</li></ul>
+        </div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/henne-pinceaux.jpg" alt="Pinceaux et pigment de henné pour les sourcils" loading="lazy"></div>
+        <div class="tx">
+          <span class="cat">Beauté des sourcils</span>
+          <h3>Henné Brow &amp; Powder Brows</h3>
+          <p><q>Le henné colore à la fois le poil ET la peau</q> pour restructurer et intensifier le regard naturellement. Et pour un effet poudré durable : la dermopigmentation asiatique.</p>
+          <ul class="puces"><li>Mapping inclus</li><li>Épilation au fil</li><li>Brow Lift</li></ul>
+        </div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/rouleau-visage.jpg" alt="Rouleau de massage du visage posé sur du lin blanc" loading="lazy"></div>
+        <div class="tx">
+          <span class="cat">Skin · soins du visage</span>
+          <h3>Hydra Glow &amp; soins experts</h3>
+          <p>Un soin visage hautement personnalisé, pensé pour nettoyer, traiter et illuminer la peau en profondeur, chaque étape choisie grâce au diagnostic de peau haute précision.</p>
+          <ul class="puces"><li>Teint éclatant</li><li>Peau nette et fraîche</li><li>Bien-être immédiat</li></ul>
+        </div>
+      </article>
+    </div>
+    <ul class="liste rev">
+      <li>Rehaussement de cils <small>produits ZOLA + soin Botox 9-en-1 après la lamination</small></li>
+      <li>Brow Lift &amp; teinture <small>sourcils restructurés, regard ouvert</small></li>
+      <li>Épilations <small>dont l'épilation au fil, précise et douce</small></li>
+      <li>Massages <small>un vrai moment de détente</small></li>
+      <li>Formations <small>transmettre l'exigence Prestige</small></li>
+    </ul>
+  </div>
+</section>
+
+<section class="methode" id="methode">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">La méthode Prestige</p>
+      <h2>Chaque pose commence par votre regard</h2>
+      <ol class="etapes">
+        <li><b>Consultation &amp; analyse</b>Un temps d'échange pour comprendre le résultat souhaité, du très naturel au plus défini.</li>
+        <li><b>Le mapping</b>La morphologie de votre œil et de votre visage guide le dessin.</li>
+        <li><b>Le choix précis</b>Longueur, épaisseur, courbure, teinte : tout s'accorde à votre style et à vos cils naturels.</li>
+        <li><b>Les conseils après la séance</b>Pour que le résultat dure : brossage, routine, entretien.</li>
+      </ol>
+      <p class="devise">« Vous pouvez prendre rendez-vous en toute confiance, les yeux fermés. »</p>
+    </div>
+    <div class="duo rev">
+      <figure><img src="img/cils-macro.jpg" alt="Macro d'une frange de cils travaillée" loading="lazy"><figcaption>Le détail de chaque cil</figcaption></figure>
+      <figure><img src="img/conseil-brossage.jpg" alt="Visuel Prestige Beauté : pourquoi brosser vos cils est essentiel" loading="lazy"><figcaption>Le conseil du 1<sup>er</sup> janvier 2026</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="esprit" id="esprit">
+  <div class="wrap">
+    <div class="definition rev">
+      <h3>Esthéticienne</h3>
+      <p class="genre">[nom féminin]</p>
+      <p>Professionnelle aux multiples talents qui maîtrise l'art de prendre soin des autres. À la fois experte de la peau, confidente, conseillère…</p>
+      <p class="pouvoir"><b>Son super-pouvoir ?</b> Faire en sorte qu'une femme reparte en se sentant mieux qu'à son arrivée.</p>
+      <small>Carte publiée par Prestige Beauté sur sa page Facebook</small>
+    </div>
+    <div class="rev">
+      <div class="chiffres">
+        <div class="chiffre"><strong>5,0</strong><span>note moyenne sur Planity, plus de 60 avis</span></div>
+        <div class="chiffre"><strong>100 %</strong><span>de recommandations sur Facebook (15 avis)</span></div>
+        <div class="chiffre large"><strong>« La beauté naît là où l'on se sent bien »</strong><span>Prestige Beauté, 12 décembre 2025</span></div>
+      </div>
+      <div class="conseil">
+        <img src="img/cils-sur-mesure.jpg" alt="">
+        <p><b>« Formée par un jury professionnel »</b>Une approche experte, réfléchie et sécurisée, pour chaque pose de cils.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" aria-label="Galerie">
+  <div class="wrap rev">
+    <h2>L'univers Prestige</h2>
+    <p class="aide">Faites glisser du doigt →</p>
+  </div>
+  <div class="rail">
+    <figure><img src="img/hero-cils.jpg" alt="Pose d'extensions de cils" decoding="async"><figcaption>Le sur-mesure &amp; le respect du cil</figcaption></figure>
+    <figure><img src="img/henne-pinceaux.jpg" alt="Pinceaux et henné" decoding="async"><figcaption>Henné Brow</figcaption></figure>
+    <figure><img src="img/cils-macro.jpg" alt="Macro de cils" decoding="async"><figcaption>Volume tout en finesse</figcaption></figure>
+    <figure><img src="img/rouleau-visage.jpg" alt="Rouleau de soin du visage" decoding="async"><figcaption>Le rituel visage</figcaption></figure>
+    <figure><img src="img/nouvelle-page.jpg" alt="Une nouvelle page" decoding="async"><figcaption>Une nouvelle page</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 8 Q50 50 100 18 T200 18 T300 18 T400 8"/>
+    <circle cx="50" cy="33" r="2.6"/><circle cx="100" cy="18" r="2"/><circle cx="150" cy="33" r="2.6"/><circle cx="200" cy="18" r="2"/><circle cx="250" cy="33" r="2.6"/><circle cx="300" cy="18" r="2"/><circle cx="350" cy="33" r="2.6"/>
+  </svg>
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Offrir pour Noël</p>
+      <h2>Offrez un <em>regard sublimé</em></h2>
+      <p class="l">Pour une maman, une sœur, une amie : offrez un moment chez Prestige Beauté, un rehaussement de cils, un Henné Brow ou un soin du visage, dans le nouvel espace de Saint-Gilles-les-Hauts.</p>
+      <div class="cta">
+        <a class="btn btn-or" href="https://wa.me/262693320240?text=Bonjour%20Prestige%20Beaut%C3%A9%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Offrir une carte cadeau</a>
+      </div>
+      <p class="note-noel">Réponse directe de Carla sur WhatsApp, au 0693 32 02 40.</p>
+    </div>
+    <div class="carte-cadeau rev" aria-hidden="true">
+      <span class="s">Carte cadeau</span>
+      <span class="m">PB</span>
+      <span class="n">Prestige Beauté<br><span class="s">L'art de prendre soin de vous</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Prendre rendez-vous</p>
+      <h2>À très vite dans votre nouvel espace</h2>
+      <dl class="infos">
+        <div><dt>Adresse</dt><dd>116 ter, rue Joseph Hubert, 97435 Saint-Gilles-les-Hauts<br>au sein du salon La Parenthèse</dd></div>
+        <div><dt>Horaires</dt><dd>Du mardi au samedi, de 8 h à 17 h, sans interruption</dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+262693320240">0693 32 02 40</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:salonprive.prestigebeaute@gmail.com">salonprive.prestigebeaute@gmail.com</a></dd></div>
+        <div><dt>Réservation en ligne</dt><dd><a href="https://www.planity.com/prestige-beaute-97420-le-port-reunion" target="_blank" rel="noopener">Planity · 24 h/24</a></dd></div>
+        <div><dt>Suivre Prestige Beauté</dt><dd class="reseaux"><a href="https://www.instagram.com/prestige_beaute_/" target="_blank" rel="noopener">Instagram @prestige_beaute_</a><a href="https://www.facebook.com/PrestigeBeaute83" target="_blank" rel="noopener">Facebook</a></dd></div>
+      </dl>
+    </div>
+    <a class="plan rev" href="https://www.google.com/maps/search/?api=1&query=116%20ter%20rue%20Joseph%20Hubert%2C%2097435%20Saint-Gilles-les-Hauts" target="_blank" rel="noopener">
+      <span class="pin" aria-hidden="true">⚜</span>
+      <strong>116 ter, rue Joseph Hubert<br>Saint-Gilles-les-Hauts</strong>
+      <span>Ouvrir l'itinéraire dans Google Maps</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="nom">Prestige Beauté</p>
+    <p>Lash, Brow &amp; Skin Expert · 116 ter, rue Joseph Hubert, Saint-Gilles-les-Hauts · 0693 32 02 40</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Prestige Beauté. Photos et visuels : page Facebook et Instagram de Prestige Beauté.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="https://www.planity.com/prestige-beaute-97420-le-port-reunion" target="_blank" rel="noopener">Réserver</a>
+  <a href="https://wa.me/262693320240?text=Bonjour%20Prestige%20Beaut%C3%A9%20!" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="tel:+262693320240">Appeler</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* paillettes dorées qui scintillent doucement dans la lumière du regard */
+(function(){
+  var c=document.getElementById('paillettes');
+  if(!c||!c.getContext||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true,vis=true;
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  for(var i=0;i<32;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.5+.5,s:Math.random()*.22+.05,d:Math.random()*6.28,a:Math.random()*.5+.2,star:i%5==0,t:Math.random()*.04+.015});
+  function star(p,al){x.save();x.translate(p.x,p.y);x.globalAlpha=al;x.beginPath();var R=p.r*4.5;x.moveTo(0,-R);x.quadraticCurveTo(0,0,R,0);x.quadraticCurveTo(0,0,0,R);x.quadraticCurveTo(0,0,-R,0);x.quadraticCurveTo(0,0,0,-R);x.fill();x.restore()}
+  function f(){
+    if(!run||!vis)return;
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      p.y+=p.s;p.d+=p.t;p.x+=Math.sin(p.d*.5)*.2;
+      if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+      var al=p.a*(.45+.55*Math.abs(Math.sin(p.d)));
+      x.fillStyle=p.star?'#f3e2b3':'#e3c98f';
+      if(p.star)star(p,al);else{x.globalAlpha=al;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+    });
+    requestAnimationFrame(f);
+  }
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){var was=vis;vis=e[0].isIntersecting;if(vis&&!was)requestAnimationFrame(f)}).observe(c);
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Prestige Beauté" defer></script>
+</body>
+</html>

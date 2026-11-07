@@ -4,96 +4,178 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Déborah Coiffure · Balayages, ombrés et blonds à Saint-Leu</title>
-<meta name="description" content="Déborah Coiffure, salon à Saint-Leu (15 boulevard Bonnier) : blond, balayage, ombré, transformation sur-mesure. Une page imaginée pour Déborah Coiffure.">
+<title>Déborah Coiffure · Blond, balayage et transformation sur-mesure à Saint-Leu</title>
+<meta name="description" content="Déborah Coiffure, 15 boulevard Bonnier à Saint-Leu : blond, balayage, ombré, coloration, lissage tanin et soin Botox Effet Miroir. Une page imaginée pour Déborah Coiffure.">
 <meta property="og:title" content="Déborah Coiffure · Saint-Leu">
-<meta property="og:description" content="Blond, balayage, transformation sur-mesure : une page imaginée pour Déborah Coiffure, Saint-Leu.">
+<meta property="og:description" content="Blond • Balayage • Transformation sur-mesure : une page imaginée pour Déborah Coiffure, 15 boulevard Bonnier à Saint-Leu.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://maquettes.atma-digital.re/deborah-coiffure-saint-leu/">
 <meta property="og:image" content="https://maquettes.atma-digital.re/deborah-coiffure-saint-leu/img/hero.webp">
+<meta name="theme-color" content="#1b1618">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Parisienne&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#d6368a;--rose-f:#8f1859;--noir:#1c1719;--miel:#f3bf2f;--miel-c:#fbe7a6;--ciel:#cfe5f6;--creme:#fffaf0;--blush:#fde7f1}
+:root{--rose:#d63d8f;--rose-f:#9c1d61;--blush:#fbe6f0;--miel:#f2b52c;--miel-f:#b97d06;--miel-c:#fcefc4;--noir:#1b1618;--ciel:#dbe9f4;--facade:#f8f1d9;--creme:#fffbf3}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Montserrat',sans-serif;background:var(--creme);color:var(--noir);font-size:17px;line-height:1.65;overflow-x:hidden}
+body{font-family:'Outfit',sans-serif;background:var(--creme);color:var(--noir);font-size:17px;line-height:1.65;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-.ruban{background:var(--noir);color:var(--creme);font-size:.76rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.08}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.ruban{background:var(--noir);color:var(--miel-c);font-size:.76rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:6}
 .ruban b{color:var(--miel);font-weight:500}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
-.hero .bg{position:absolute;inset:0;background:url(img/hero.webp) center 30%/cover;animation:kb 24s ease-in-out infinite alternate;transform-origin:60% 40%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,23,25,.25) 0%,rgba(28,23,25,.2) 30%,rgba(28,23,25,.93) 100%)}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12)}}
-.hero .in{position:relative;z-index:2;padding:0 1.25rem 3rem;max-width:1040px;margin:0 auto;width:100%}
-.mark{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:var(--miel);opacity:0;animation:up 1s .2s forwards}
-.kick{letter-spacing:.26em;text-transform:uppercase;font-size:.7rem;color:#fff;opacity:0;animation:up 1s .4s forwards;margin-top:.3rem}
-.hero h1{font-size:clamp(2.5rem,10vw,4.6rem);margin:.4rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards}
-.hero h1 em{color:var(--miel)}
-.hero p.lead{max-width:30rem;font-weight:300;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
-.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--rose);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(214,54,138,.45)}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);animation:none}
-@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,54,138,.5)}50%{box-shadow:0 0 0 10px rgba(214,54,138,0)}}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+/* HERO */
+.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
+.hero .bg{position:absolute;inset:-2%;background:url(img/hero.webp) center 28%/cover;animation:kb 28s ease-in-out infinite alternate;transform-origin:55% 35%}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.14) translateY(-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,22,24,.35) 0%,rgba(27,22,24,.05) 28%,rgba(27,22,24,.55) 58%,rgba(27,22,24,.96) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 1.25rem 3.2rem;max-width:1060px;margin:0 auto;width:100%}
+.badge{position:absolute;top:1.1rem;right:1.1rem;z-index:3;width:86px;height:86px;border-radius:50%;overflow:hidden;border:3px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.35);animation:spin 40s linear infinite;background:#fff}
+.badge img{width:100%;height:100%;object-fit:cover;animation:spin 40s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.script{font-family:'Parisienne',cursive;font-size:2.6rem;color:var(--miel);line-height:1;opacity:0;animation:up 1s .2s forwards}
+.kick{letter-spacing:.28em;text-transform:uppercase;font-size:.7rem;margin-top:.5rem;opacity:0;animation:up 1s .4s forwards}
+.kick i{color:var(--rose);font-style:normal}
+.hero h1{font-size:clamp(2.9rem,13vw,5.4rem);margin:.45rem 0 .9rem;opacity:0;animation:up 1.1s .6s forwards;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;background:linear-gradient(90deg,#f7d77a,var(--miel),#fff3c8,var(--miel));background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gold 6s linear infinite}
+@keyframes gold{to{background-position:250% 0}}
+.lead{max-width:31rem;font-weight:300;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.45rem;border-radius:99px;background:var(--rose);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,62%{left:-60%}100%{left:130%}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(214,61,143,.45)}
+.btn.ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);animation:none;backdrop-filter:blur(4px)}
+.btn.ghost::after{display:none}
+.btn.miel{background:var(--miel);color:var(--noir)}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(214,61,143,.5)}50%{box-shadow:0 0 0 11px rgba(214,61,143,0)}}
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
-.bee{position:absolute;z-index:3;top:16%;left:-60px;width:44px;animation:fly 16s linear 2s infinite;opacity:.95}
-.bee .w{transform-origin:50% 60%;animation:flap .18s ease-in-out infinite alternate}
-@keyframes flap{from{transform:scaleY(1)}to{transform:scaleY(.35)}}
-@keyframes fly{0%{transform:translate(0,0)}20%{transform:translate(90px,-24px)}40%{transform:translate(200px,18px)}60%{transform:translate(290px,-18px)}80%{transform:translate(380px,14px)}100%{transform:translate(520px,-10px)}}
-.marq{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem}
-.marq span{display:inline-block;padding-left:100%;animation:mq 32s linear infinite}
-@keyframes mq{to{transform:translateX(-100%)}}
-section{padding:4.2rem 0;position:relative}
-.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;color:var(--rose);font-weight:600}
-h2{font-size:clamp(1.9rem,6vw,2.8rem);margin:.4rem 0 1rem}
-h2 em{color:var(--rose)}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.bee{position:absolute;z-index:3;top:34%;left:0;width:30px;height:30px;offset-path:path("M -40 60 C 80 -20, 160 140, 260 40 S 420 10, 520 90");animation:fly 14s ease-in-out infinite;opacity:.95}
+@keyframes fly{0%{offset-distance:0%}100%{offset-distance:100%}}
+.bee .w{transform-origin:15px 12px;animation:flap .12s linear infinite alternate}
+@keyframes flap{to{transform:scaleY(.4)}}
+/* MARQUEE */
+.marq{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.75rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;position:relative}
+.marq .t{display:inline-block;animation:mq 38s linear infinite}
+.marq .t span{padding:0 .9rem}.marq .t b{color:var(--miel-c);font-weight:500}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:4.4rem 0;position:relative}
+.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;color:var(--rose-f);font-weight:600;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:currentColor}
+h2{font-size:clamp(2.2rem,9vw,3.4rem);margin:.45rem 0 1rem}
+h2 em{color:var(--rose);font-style:italic}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
 .rv.on{opacity:1;transform:none}
-.duo{display:grid;gap:2rem}
-.duo .ph{border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(143,24,89,.22)}
-.duo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
-.chips li{list-style:none;border:1px solid var(--rose);color:var(--rose-f);padding:.35rem .9rem;border-radius:99px;font-size:.85rem;background:#fff}
-.presta{background:var(--noir);color:var(--creme)}
-.presta .eyebrow{color:var(--miel)}
-.presta h2 em{color:var(--miel)}
-.pg{display:grid;gap:.8rem;margin-top:1.4rem;list-style:none}
-.pg li{border:1px solid rgba(251,231,166,.35);border-radius:14px;padding:.9rem 1.1rem;display:flex;gap:.8rem;align-items:center;transition:transform .3s,border-color .3s}
-.pg li:hover{transform:translateX(4px);border-color:var(--miel)}
-.pg li::before{content:"✦";color:var(--miel)}
-.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.hex{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 1 55 16.5v31L28 63 1 47.5v-31z M28 63v34' fill='none' stroke='%23f2b52c' stroke-opacity='.35' stroke-width='1'/%3E%3C/svg%3E");background-size:56px 97px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%)}
+/* ATELIER */
+.atelier{background:linear-gradient(180deg,var(--facade),var(--creme))}
+.duo{display:grid;gap:2.2rem;position:relative}
+.arch{border-radius:220px 220px 20px 20px;overflow:hidden;box-shadow:0 22px 50px rgba(27,22,24,.22);max-width:430px;position:relative;border:6px solid #fff}
+.arch img{width:100%;aspect-ratio:4/4.4;object-fit:cover;object-position:center 40%}
+.arch figcaption{position:absolute;bottom:.8rem;left:.8rem;background:rgba(255,255,255,.92);font-size:.78rem;padding:.3rem .7rem;border-radius:99px}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.35;border-left:3px solid var(--miel);padding:.2rem 0 .2rem 1rem;margin:1.2rem 0;color:#3b2c32}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem;list-style:none}
+.chips li{border:1px solid #efd2df;padding:.35rem .9rem;border-radius:99px;font-size:.85rem;background:#fff;transition:background .3s,color .3s}
+.chips li:hover{background:var(--rose);color:#fff}
+.src{font-size:.78rem;color:#7b6870;margin-top:.8rem}
+/* NUANCIER */
+.nuancier{background:var(--noir);color:#fff;overflow:hidden}
+.nuancier .eyebrow{color:var(--miel)}
+.nuancier h2 em{color:var(--miel)}
+.nuancier p.intro{color:#e9dfe3;font-weight:300;max-width:34rem}
+.stage{position:relative;margin-top:1.8rem;border-radius:22px;overflow:hidden;aspect-ratio:4/5;max-width:440px;box-shadow:0 30px 60px rgba(0,0,0,.5);border:1px solid rgba(242,181,44,.35)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s,transform 1.4s}
+.stage img.on{opacity:1;transform:scale(1)}
+.stage .lbl{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.1rem 1rem;background:linear-gradient(180deg,transparent,rgba(27,22,24,.85));font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;z-index:2}
+.sw{display:flex;gap:.7rem;margin-top:1.3rem;flex-wrap:wrap}
+.sw button{width:50px;height:50px;border-radius:50%;border:2px solid rgba(255,255,255,.35);cursor:pointer;transition:transform .3s,border-color .3s;position:relative}
+.sw button.on{border-color:#fff;transform:scale(1.15);box-shadow:0 0 0 4px rgba(242,181,44,.35)}
+.sw button span{position:absolute;top:100%;left:50%;transform:translateX(-50%);font-size:.66rem;white-space:nowrap;margin-top:.35rem;color:#d9cdd2;letter-spacing:.04em}
+.sw-legend{font-size:.8rem;color:#bfaeb5;margin-top:2.2rem}
+.nuancier .grid{display:grid;gap:2rem;align-items:center}
+/* CARNET */
+.carnet{background:linear-gradient(180deg,var(--blush),var(--creme))}
+.posts{display:grid;gap:1rem;margin-top:1.6rem}
+.post{background:#fff;border-radius:20px;padding:1.3rem 1.3rem 1.2rem;box-shadow:0 10px 30px rgba(156,29,97,.08);position:relative;transition:transform .35s,box-shadow .35s;overflow:hidden}
+.post:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(156,29,97,.15)}
+.post::before{content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:linear-gradient(var(--miel),var(--rose))}
+.post time{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-f);font-weight:600}
+.post h3{font-size:1.45rem;margin:.3rem 0 .45rem}
+.post p{font-size:.95rem;color:#4c3c43}
+.post .tags{margin-top:.6rem;font-size:.78rem;color:var(--miel-f)}
+/* PRESTATIONS */
+.presta .list{display:grid;gap:.8rem;margin-top:1.4rem;list-style:none}
+.presta .list li{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid #f3e3ea;border-radius:16px;padding:1rem 1.1rem;transition:transform .3s,border-color .3s}
+.presta .list li:hover{transform:translateX(4px);border-color:var(--miel)}
+.presta .ic{flex:0 0 38px;height:38px;border-radius:50%;background:var(--miel-c);display:grid;place-items:center;color:var(--miel-f)}
+.presta h3{font-size:1.3rem}
+.presta .list p{font-size:.9rem;color:#5d4b53}
+.tarifs{margin-top:1.6rem;background:var(--noir);color:#fff;border-radius:20px;padding:1.3rem 1.3rem 1.1rem}
+.tarifs h3{color:var(--miel);font-size:1.35rem;margin-bottom:.5rem}
+.tarifs div{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed rgba(255,255,255,.2);font-size:.95rem}
+.tarifs div:last-of-type{border:0}
+.tarifs b{color:var(--miel-c);font-weight:500;white-space:nowrap}
+.tarifs small{display:block;color:#bfaeb5;font-size:.76rem;margin-top:.5rem}
+/* GALERIE */
+.galerie{background:var(--facade);padding-bottom:3rem}
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.25rem 1.6rem;scrollbar-width:none}
 .gal::-webkit-scrollbar{display:none}
-.gal figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(28,23,25,.22);transition:transform .4s}
-.gal figure:hover{transform:scale(1.02)}
+.gal figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center;border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 16px 34px rgba(27,22,24,.2);background:#fff;transition:transform .45s}
+.gal figure:hover{transform:translateY(-6px) rotate(-.6deg)}
 .gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.hint{font-size:.8rem;color:#7a5a6a;padding:0 1.25rem}
-.lieu{background:var(--blush)}
-.lieu .box{display:grid;gap:1.6rem;align-items:center}
-.lieu .ph{border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(143,24,89,.2)}
-.lieu .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.logo{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;box-shadow:0 8px 24px rgba(143,24,89,.3);animation:sway 6s ease-in-out infinite}
-@keyframes sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
-.noel{background:linear-gradient(160deg,var(--rose-f),var(--rose) 75%);color:#fff;text-align:center;overflow:hidden}
-.noel .eyebrow{color:var(--miel-c)}
+.gal figcaption{font-size:.84rem;padding:.65rem .95rem;color:#4c3c43}
+.hint{font-size:.8rem;color:var(--rose-f);padding:0 1.25rem}
+.dots{display:flex;gap:.4rem;justify-content:center;margin-top:.2rem}
+.dots i{width:7px;height:7px;border-radius:50%;background:#e8c9d7;transition:background .3s,width .3s}
+.dots i.on{background:var(--rose);width:20px;border-radius:9px}
+/* NOEL */
+.noel{background:radial-gradient(120% 70% at 50% 0%,#4a1733 0%,var(--noir) 72%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--miel);justify-content:center}
+.noel .eyebrow::after{content:"";width:22px;height:1.5px;background:currentColor}
 .noel h2 em{color:var(--miel)}
-.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300}
-.noel .btn{background:#fff;color:var(--rose-f);animation:none}
-.star{position:absolute;color:var(--miel);opacity:.5;font-size:1.1rem;animation:tw 3s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.85;transform:scale(1.15)}}
-.ct{display:grid;gap:1.2rem;margin-top:1.4rem}
-.ct div{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 8px 24px rgba(28,23,25,.08)}
-.ct h3{font-size:1.2rem;color:var(--rose);margin-bottom:.3rem}
-.ct a{color:var(--rose-f);font-weight:500;text-decoration:none;border-bottom:1px solid var(--miel);overflow-wrap:anywhere}
-.hrs{list-style:none;font-size:.95rem}
-.hrs li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed #e8d8c0;padding:.15rem 0}
-footer{background:var(--noir);color:#d9cbd2;text-align:center;padding:2.2rem 1.25rem 4rem;font-size:.82rem}
-@media(min-width:760px){.duo,.lieu .box{grid-template-columns:1fr 1fr}.ct{grid-template-columns:repeat(3,1fr)}.gal figure{flex-basis:260px}.pg{grid-template-columns:1fr 1fr}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mark,.kick,.hero h1,.hero p.lead,.btns{opacity:1!important;transform:none!important}canvas#fx,.bee{display:none}.marq span{padding-left:0}}
+.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300;color:#efe3e8}
+.carte{max-width:330px;margin:0 auto 2rem;aspect-ratio:1.6;border-radius:18px;background:linear-gradient(135deg,#fff 0%,var(--blush) 50%,#fff 100%);color:var(--noir);position:relative;overflow:hidden;box-shadow:0 26px 50px rgba(0,0,0,.45);transform:rotate(-3deg);transition:transform .6s;display:flex;align-items:center;justify-content:center}
+.carte:hover{transform:rotate(0) scale(1.03)}
+.carte::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.85) 45%,transparent 60%);background-size:250% 100%;animation:foil 4.5s ease-in-out infinite}
+@keyframes foil{0%{background-position:150% 0}100%{background-position:-100% 0}}
+.carte .ruba{position:absolute;top:0;bottom:0;right:20%;width:16px;background:var(--rose)}
+.carte .rubh{position:absolute;left:0;right:0;top:62%;height:16px;background:var(--rose)}
+.carte .noeud{position:absolute;right:calc(20% - 17px);top:calc(62% - 22px);width:50px;height:60px}
+.carte .txt{position:relative;z-index:2;text-align:left;margin-right:28%;padding-left:1rem}
+.carte .n{font-family:'Parisienne',cursive;font-size:2.2rem;color:var(--rose-f);line-height:1}
+.carte .t{display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;margin-top:.3rem}
+.carte .lg{position:absolute;left:1rem;top:1rem;width:40px;height:40px;border-radius:50%;overflow:hidden;border:2px solid #fff;z-index:2}
+.carte .lg img{width:100%;height:100%;object-fit:cover}
+.idees{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin:0 auto 1.8rem;max-width:34rem;list-style:none}
+.idees li{border:1px solid rgba(242,181,44,.5);color:var(--miel-c);padding:.35rem .85rem;border-radius:99px;font-size:.85rem}
+.noel .note{font-size:.8rem;color:#bfaeb5;margin-top:1.3rem}
+.flake{position:absolute;color:var(--miel);opacity:.4;animation:tw 3.4s ease-in-out infinite;font-size:.9rem}
+@keyframes tw{0%,100%{opacity:.12;transform:scale(.8)}50%{opacity:.8;transform:scale(1.15)}}
+/* VISITE */
+.visite .cards{display:grid;gap:1rem;margin-top:1.4rem}
+.visite .c{background:#fff;border-radius:20px;padding:1.3rem;box-shadow:0 10px 28px rgba(27,22,24,.07);border-top:4px solid var(--miel)}
+.visite .c:nth-child(2){border-top-color:var(--rose)}
+.visite .c:nth-child(3){border-top-color:var(--ciel)}
+.visite h3{font-size:1.4rem;margin-bottom:.5rem}
+.h{list-style:none;font-size:.95rem}
+.h li{display:flex;justify-content:space-between;padding:.32rem 0;border-bottom:1px dotted #ead9e0}
+.h li.today{color:var(--rose-f);font-weight:600}
+.h li span:last-child{white-space:nowrap}
+.visite p{font-size:.95rem}
+.visite a{color:var(--rose-f);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(214,61,143,.3)}
+.open{display:inline-block;margin-top:.7rem;font-size:.8rem;padding:.25rem .7rem;border-radius:99px;background:var(--miel-c);color:var(--noir)}
+.fin{background:var(--rose);color:#fff;text-align:center;padding:3.4rem 0}
+.fin .script{opacity:1;animation:none;color:#fff;font-size:2.4rem}
+.fin h2{color:#fff;margin:.2rem 0 1.2rem}
+.fin .btn{background:#fff;color:var(--rose-f);animation:none}
+.fin .btns{justify-content:center;opacity:1;animation:none}
+footer{background:var(--noir);color:#cbbcc3;text-align:center;font-size:.8rem;padding:1.6rem 1.25rem 2.4rem}
+footer b{color:var(--miel)}
+.wave{display:block;width:100%;height:40px}
+@media(min-width:820px){.duo,.nuancier .grid{grid-template-columns:1fr 1fr}.posts{grid-template-columns:1fr 1fr}.visite .cards{grid-template-columns:repeat(3,1fr)}.presta .list{grid-template-columns:1fr 1fr}.gal{justify-content:center}.gal figure{flex-basis:260px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.script,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}.bee{display:none}}
 </style>
 </head>
 <body>
@@ -101,121 +183,208 @@ footer{background:var(--noir);color:#d9cbd2;text-align:center;padding:2.2rem 1.2
 <canvas id="fx" aria-hidden="true"></canvas>
 
 <header class="hero">
-  <div class="bg" role="img" aria-label="Longue chevelure blonde aux reflets dorés, réalisation de Déborah Coiffure, vue de dos"></div>
-  <svg class="bee" viewBox="0 0 60 50" aria-hidden="true"><g class="w"><ellipse cx="22" cy="14" rx="11" ry="8" fill="#cfe5f6" opacity=".9"/><ellipse cx="38" cy="14" rx="11" ry="8" fill="#cfe5f6" opacity=".9"/></g><ellipse cx="30" cy="30" rx="15" ry="12" fill="#1c1719"/><path d="M24 20q-3 10 0 20M32 19q-3 11 0 22M39 22q-2 8 0 16" stroke="#f3bf2f" stroke-width="5" fill="none"/><circle cx="43" cy="26" r="1.5" fill="#fff"/></svg>
+  <div class="bg" role="img" aria-label="Long blond lumineux réalisé au salon, vu de dos"></div>
+  <a class="badge" href="#atelier" aria-label="L'enseigne de Déborah Coiffure"><img src="img/logo.webp" alt="Enseigne ronde Déborah Coiffure à l'abeille rose"></a>
+  <svg class="bee" viewBox="0 0 30 30" aria-hidden="true"><g class="w"><ellipse cx="11" cy="9" rx="6" ry="4.5" fill="#dbe9f4" opacity=".9"/><ellipse cx="18" cy="8" rx="5" ry="4" fill="#fff" opacity=".85"/></g><ellipse cx="15" cy="17" rx="8" ry="6" fill="#f2b52c"/><path d="M12 11.5v11M16 11.2v11.6M20 12.5v9" stroke="#1b1618" stroke-width="2"/><circle cx="23" cy="16" r="2.4" fill="#1b1618"/></svg>
   <div class="in">
-    <div class="mark">Déborah Coiffure</div>
-    <div class="kick">Saint-Leu · Blond · Balayage</div>
-    <h1>Blond, balayage,<br><em>transformation</em><br>sur-mesure</h1>
-    <p class="lead">Un salon chaleureux au 15 boulevard Bonnier, à Saint-Leu, pour sublimer chaque chevelure.</p>
+    <div class="script">Déborah Coiffure</div>
+    <div class="kick">Saint-Leu <i>•</i> 15 boulevard Bonnier</div>
+    <h1>Blond, balayage &amp; <em>transformation sur-mesure</em></h1>
+    <p class="lead">Balayages, ombrés, colorations et rattrapages techniques : chaque chevelure est sublimée avec soin, écoute et précision, pour un résultat personnalisé et naturel.</p>
     <div class="btns">
-      <a class="btn" href="https://wa.me/262693843626?text=Bonjour%20D%C3%A9borah%20Coiffure%2C%20je%20voudrais%20prendre%20rendez-vous">Écrire sur WhatsApp</a>
-      <a class="btn ghost" href="#realisations">Voir les réalisations</a>
+      <a class="btn" href="https://wa.me/262693843626?text=Bonjour%20D%C3%A9borah%2C%20je%20voudrais%20vous%20parler%20de%20mon%20projet%20cheveux">Parlons de votre projet</a>
+      <a class="btn ghost" href="#nuancier">Voir les nuances</a>
     </div>
   </div>
 </header>
 
-<div class="marq" aria-hidden="true"><span>Blond ✦ Balayage ✦ Ombré ✦ Babylight ✦ Coloration ✦ Lissage tanin ✦ Soin Botox Effet Miroir ✦ Transformation sur-mesure ✦ Saint-Leu ✦ &nbsp;</span></div>
+<div class="marq" aria-hidden="true"><div class="t">
+<span>Blond</span><b>✦</b><span>Balayage</span><b>✦</b><span>Ombré polaire</span><b>✦</b><span>Babylight</span><b>✦</b><span>Patine</span><b>✦</b><span>Soin Botox Effet Miroir</span><b>✦</b><span>Lissage tanin</span><b>✦</b><span>Transformation sur-mesure</span><b>✦</b>
+<span>Blond</span><b>✦</b><span>Balayage</span><b>✦</b><span>Ombré polaire</span><b>✦</b><span>Babylight</span><b>✦</b><span>Patine</span><b>✦</b><span>Soin Botox Effet Miroir</span><b>✦</b><span>Lissage tanin</span><b>✦</b><span>Transformation sur-mesure</span><b>✦</b>
+</div></div>
 
-<section>
+<section class="atelier" id="atelier">
+  <div class="hex"></div>
   <div class="wrap duo">
+    <figure class="arch rv"><img src="img/salon.webp" alt="Façade jaune pâle du salon Déborah Coiffure, enseigne Coloration • Balayage • Lissage" loading="lazy"><figcaption>15 boulevard Bonnier, Saint-Leu</figcaption></figure>
     <div class="rv">
-      <img class="logo" src="img/logo.webp" alt="Enseigne ronde de Déborah Coiffure avec son abeille" loading="lazy">
       <div class="eyebrow">Le salon</div>
-      <h2>Un espace <em>chaleureux</em> et moderne</h2>
-      <p>Déborah Coiffure est spécialisé dans les balayages, ombrés, colorations et rattrapages techniques. Chaque prestation est réalisée avec soin, écoute et précision, pour un résultat personnalisé et naturel.</p>
-      <p style="margin-top:.8rem">Un changement, un entretien ou une transformation complète : vous repartez avec des conseils adaptés à vos envies.</p>
-      <ul class="chips"><li>Blond</li><li>Balayage</li><li>Ombré</li><li>Transformation sur-mesure</li></ul>
+      <h2>Un espace <em>chaleureux</em> dédié à vos cheveux</h2>
+      <p>Derrière la façade jaune pâle et l'abeille rose de l'enseigne, Déborah vous accueille dans un espace chaleureux et moderne, pensé pour la mise en beauté de vos cheveux.</p>
+      <p class="quote">« Que vous souhaitiez un changement, un entretien ou une transformation complète, vous bénéficiez de conseils adaptés à vos envies et à votre style. »</p>
+      <ul class="chips"><li>Coloration</li><li>Balayage</li><li>Ombré</li><li>Rattrapages techniques</li><li>Lissage</li><li>Femme · Homme · Enfants</li></ul>
+      <p class="src">Mots du salon, fiche de réservation Déborah Coiffure.</p>
     </div>
-    <div class="ph rv"><img src="img/c1.webp" alt="Longues ondulations blondes miel, réalisation du salon, vue de dos" loading="lazy"></div>
   </div>
 </section>
 
-<section class="presta">
-  <div class="wrap">
-    <div class="eyebrow rv">Les prestations</div>
-    <h2 class="rv">De la couleur à la <em>brillance</em></h2>
-    <ul class="pg rv">
-      <li>Coupes et coiffures</li><li>Couleur</li><li>Balayage, ombré, babylight…</li><li>Lissage tanin</li><li>Soin Botox Effet Miroir</li><li>Permanente</li><li>Enfants</li><li>Homme</li>
-    </ul>
-    <p class="rv" style="margin-top:1.2rem;font-weight:300">Réservation en message privé, ou en ligne sur la fiche Fresha du salon.</p>
-  </div>
-</section>
-
-<section id="realisations">
-  <div class="wrap">
-    <div class="eyebrow rv">Quelques réalisations</div>
-    <h2 class="rv">Des blonds et des <em>nuances</em> à admirer</h2>
-  </div>
-  <div class="gal">
-    <figure><img src="img/c2.webp" alt="Balayage blond et châtain en ondulations, réalisation du salon"></figure>
-    <figure><img src="img/c3.webp" alt="Blond caramel et miel en boucles souples"></figure>
-    <figure><img src="img/c4.webp" alt="Longueur lisse aux tons argentés"></figure>
-    <figure><img src="img/c5.webp" alt="Blond clair en ondulations douces"></figure>
-    <figure><img src="img/c6.webp" alt="Longue chevelure lisse blond cendré"></figure>
-    <figure><img src="img/c7.webp" alt="Blond argenté ondulé aux reflets lumineux"></figure>
-    <figure><img src="img/c8.webp" alt="Longueurs lisses blond doré"></figure>
-    <figure><img src="img/c9.webp" alt="Châtain aux reflets, ondulations naturelles"></figure>
-  </div>
-  <p class="hint">Faites glisser pour voir les réalisations →</p>
-</section>
-
-<section class="lieu">
-  <div class="wrap box">
-    <div class="ph rv"><img src="img/salon.webp" alt="Façade jaune du salon Déborah Coiffure, boulevard Bonnier à Saint-Leu" loading="lazy"></div>
+<section class="nuancier" id="nuancier">
+  <div class="wrap grid">
     <div class="rv">
-      <div class="eyebrow">Venir au salon</div>
-      <h2>Repérez la <em>façade</em> à Saint-Leu</h2>
-      <p>Coloration, balayage, lissage : l'enseigne à l'abeille vous accueille au 15 boulevard Bonnier. Le salon est accessible aux fauteuils roulants.</p>
+      <div class="eyebrow">Le nuancier de Déborah</div>
+      <h2>Trouvez <em>votre lumière</em></h2>
+      <p class="intro">Polaire, miel, caramel, cuivré… Touchez une pastille pour découvrir une réalisation du salon dans cette nuance. Toutes ces photos viennent de la page de Déborah Coiffure.</p>
+      <div class="sw" role="tablist" aria-label="Nuances">
+        <button class="on" data-i="0" style="background:linear-gradient(135deg,#f4f1ea,#cfd3d6)" aria-label="Blond polaire"><span>Polaire</span></button>
+        <button data-i="1" style="background:linear-gradient(135deg,#f3dca0,#c99a4e)" aria-label="Blond miel"><span>Miel</span></button>
+        <button data-i="2" style="background:linear-gradient(135deg,#d3a466,#5a3a24)" aria-label="Balayage caramel"><span>Caramel</span></button>
+        <button data-i="3" style="background:linear-gradient(135deg,#e2a06a,#9a4a22)" aria-label="Reflets cuivrés"><span>Cuivré</span></button>
+        <button data-i="4" style="background:linear-gradient(135deg,#ddd5c6,#8c8576)" aria-label="Blond cendré"><span>Cendré</span></button>
+      </div>
+      <p class="sw-legend">Chaque nuance se construit au salon, selon votre base et vos envies.</p>
+    </div>
+    <div class="stage rv">
+      <img class="on" src="img/c4.webp" alt="Longueurs lisses blond polaire, vues de dos" data-l="Blond polaire, lisse et lumineux">
+      <img src="img/c3.webp" alt="Longueurs ondulées blond miel, vues de dos" data-l="Blond miel, ondulations souples" loading="lazy">
+      <img src="img/c2.webp" alt="Balayage caramel sur base châtain, vu de dos" data-l="Balayage caramel sur base châtain" loading="lazy">
+      <img src="img/c8.webp" alt="Boucles aux reflets cuivrés, vues de dos" data-l="Reflets cuivrés, boucles pleines de vie" loading="lazy">
+      <img src="img/c5.webp" alt="Ondulations blond cendré au salon, vues de dos" data-l="Blond cendré, fondu tout en douceur" loading="lazy">
+      <div class="lbl" id="lbl">Blond polaire, lisse et lumineux</div>
     </div>
   </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap">
+    <div class="eyebrow rv">Le carnet du salon</div>
+    <h2 class="rv">Les dernières <em>transformations</em></h2>
+    <p class="rv">Quelques mots tirés des publications de Déborah Coiffure, cet automne.</p>
+    <div class="posts">
+      <article class="post rv"><time>6 novembre 2026</time><h3>Attention, transformation en vue !</h3><p>« Une décoloration tête entière pour un changement radical, une patine pour peaufiner le blond et un soin Botox pour apporter douceur et brillance à la chevelure. »</p><div class="tags">#DecolorationTotale #Patine #SoinBotox</div></article>
+      <article class="post rv"><time>5 novembre 2026</time><h3>Un joli ombré tout en douceur</h3><p>« De la lumière, de belles nuances et un fondu naturel pour sublimer la chevelure sans gros changement. »</p><div class="tags">#OmbreHair #CoupeFemme #CheveuxLumineux</div></article>
+      <article class="post rv"><time>4 novembre 2026</time><h3>Des cheveux qui retrouvent toute leur beauté !</h3><p>« Une chevelure nourrie, hydratée, plus douce et surtout une brillance qui fait toute la différence ! »</p><div class="tags">#SoinBotox #SoinCapillaire #CheveuxBrillants</div></article>
+      <article class="post rv"><time>30 octobre 2026</time><h3>Un ombré polaire qui attire tous les regards !</h3><p>« Un blond polaire éclatant, de magnifiques reflets froids et un fondu qui se mélange tout en douceur à la base naturelle. »</p><div class="tags">#OmbréPolaire #BlondPolaire #BlondFroid</div></article>
+    </div>
+    <p class="src rv">Publications de la page Facebook Déborah Coiffure – Saint-Leu.</p>
+  </div>
+</section>
+
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <div class="eyebrow rv">Prestations</div>
+    <h2 class="rv">De la coupe à la <em>grande transformation</em></h2>
+    <ul class="list">
+      <li class="rv"><span class="ic">✦</span><div><h3>Balayage, ombré, babylight</h3><p>La spécialité du salon : de la lumière posée au bon endroit, du fondu naturel au blond polaire.</p></div></li>
+      <li class="rv"><span class="ic">✦</span><div><h3>Couleur</h3><p>Colorations, racines, patines et rattrapages techniques, pour une couleur qui vous ressemble.</p></div></li>
+      <li class="rv"><span class="ic">✦</span><div><h3>Soin Botox Effet Miroir</h3><p>Douceur, nutrition et brillance : une vraie cure de bonheur pour vos longueurs.</p></div></li>
+      <li class="rv"><span class="ic">✦</span><div><h3>Lissage tanin</h3><p>Des cheveux lisses et brillants, en toute légèreté.</p></div></li>
+      <li class="rv"><span class="ic">✦</span><div><h3>Coupes et coiffures</h3><p>Coupe, brushing, séchage naturel et coiffures d'invitée pour les grandes occasions.</p></div></li>
+      <li class="rv"><span class="ic">✦</span><div><h3>Permanente · Homme · Enfants</h3><p>Le salon accueille toute la famille.</p></div></li>
+    </ul>
+    <div class="tarifs rv">
+      <h3>Quelques repères</h3>
+      <div><span>Shampooing coupe classique</span><b>dès 20 €</b></div>
+      <div><span>Coupe femme</span><b>dès 30 €</b></div>
+      <div><span>Racines (2 cm max)</span><b>dès 40 €</b></div>
+      <small>Tarifs publiés par le salon sur sa page de réservation en ligne.</small>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="realisations">
+  <svg class="wave" viewBox="0 0 390 40" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;top:-39px;left:0"><path d="M0 40 C 90 0, 180 30, 260 14 S 360 4, 390 18 V40Z" fill="#f8f1d9"/></svg>
+  <div class="wrap"><div class="eyebrow rv">Réalisations</div><h2 class="rv">Des cheveux <em>pleins de vie</em></h2></div>
+  <div class="gal" id="gal">
+    <figure><img src="img/c1.webp" alt="Ondulations blond doré, vues de dos" loading="lazy"><figcaption>Blond doré, ondulations légères</figcaption></figure>
+    <figure><img src="img/c7.webp" alt="Balayage blond cendré ondulé, vu de dos" loading="lazy"><figcaption>Blond cendré et mouvement</figcaption></figure>
+    <figure><img src="img/c9.webp" alt="Mèches claires sur base châtain, vues de dos" loading="lazy"><figcaption>Le clair et le foncé, mélangés</figcaption></figure>
+    <figure><img src="img/c6.webp" alt="Longueurs lisses aux nuances naturelles, vues de dos" loading="lazy"><figcaption>Lisse, brillant, naturel</figcaption></figure>
+    <figure><img src="img/hero.webp" alt="Longueurs blond clair très lumineuses, vues de dos" loading="lazy"><figcaption>Un blond éclatant</figcaption></figure>
+  </div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+  <p class="hint" style="text-align:center;margin-top:.6rem">Faites glisser pour voir la suite →</p>
 </section>
 
 <section class="noel" id="noel">
-  <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:12%;animation-delay:.8s">✦</span><span class="star" style="left:18%;bottom:14%;animation-delay:1.6s">✦</span><span class="star" style="right:20%;bottom:20%;animation-delay:2.2s">✦</span>
+  <span class="flake" style="top:12%;left:8%">✦</span><span class="flake" style="top:22%;right:10%;animation-delay:1s">✦</span><span class="flake" style="top:58%;left:5%;animation-delay:2s">✧</span><span class="flake" style="bottom:12%;right:7%;animation-delay:.5s">✦</span>
   <div class="wrap">
     <div class="eyebrow rv">Offrir pour Noël</div>
-    <h2 class="rv">Offrez un moment <em>chez Déborah Coiffure</em></h2>
-    <p class="rv">Une idée cadeau qui fait briller les cheveux et le sourire. Écrivez au salon sur WhatsApp pour préparer ensemble une jolie attention.</p>
-    <a class="btn rv" href="https://wa.me/262693843626?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl%20chez%20D%C3%A9borah%20Coiffure">Offrir une carte cadeau</a>
+    <h2 class="rv">Offrez un moment <em>chez Déborah</em></h2>
+    <p class="rv">« Vos cheveux aussi méritent d'être chouchoutés ! » Pour Noël, offrez une carte cadeau Déborah Coiffure : un soin, une couleur, une coupe ou la transformation dont elle rêve.</p>
+    <div class="carte rv" aria-label="Carte cadeau Déborah Coiffure">
+      <span class="lg"><img src="img/logo.webp" alt=""></span>
+      <span class="ruba"></span><span class="rubh"></span>
+      <svg class="noeud" viewBox="0 0 50 60" aria-hidden="true"><path d="M25 22 C10 4, 0 18, 12 26 C 18 30, 22 26, 25 22 C28 26, 32 30, 38 26 C 50 18, 40 4, 25 22Z" fill="#d63d8f"/><path d="M23 24 L16 50 L22 46 L25 52 L27 24Z" fill="#9c1d61"/><circle cx="25" cy="23" r="4" fill="#f2b52c"/></svg>
+      <span class="txt"><span class="n">Carte cadeau</span><span class="t">Déborah Coiffure</span></span>
+    </div>
+    <ul class="idees rv"><li>Soin Botox Effet Miroir</li><li>Balayage</li><li>Coupe &amp; brushing</li><li>Lissage tanin</li></ul>
+    <a class="btn miel rv" href="https://wa.me/262693843626?text=Bonjour%20D%C3%A9borah%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Offrir une carte cadeau</a>
+    <p class="note rv">Un message WhatsApp au salon, et Déborah vous guide.</p>
   </div>
 </section>
 
-<section>
+<section class="visite" id="visite">
+  <div class="hex"></div>
   <div class="wrap">
-    <div class="eyebrow rv">Contact</div>
-    <h2 class="rv">On vous <em>accueille</em> à Saint-Leu</h2>
-    <div class="ct">
-      <div class="rv"><h3>Adresse</h3><p>15 boulevard Bonnier<br>97436 Saint-Leu</p></div>
-      <div class="rv"><h3>Horaires</h3><ul class="hrs"><li><span>Lundi</span><span>Fermé</span></li><li><span>Mardi – vendredi</span><span>9h – 17h30</span></li><li><span>Samedi</span><span>8h – 16h</span></li><li><span>Dimanche</span><span>Fermé</span></li></ul></div>
-      <div class="rv"><h3>Rendez-vous</h3><p><a href="tel:+262693843626">0693 84 36 26</a><br><a href="https://wa.me/262693843626">WhatsApp</a><br><a href="https://www.fresha.com/fr/a/deborah-coiffure-saint-leu-boulevard-bonnier-15-k4nxhn7z">Fiche Fresha</a><br><a href="https://www.facebook.com/deborah.coiffure.saintleu">Facebook · Déborah Coiffure</a></p></div>
+    <div class="eyebrow rv">Venir au salon</div>
+    <h2 class="rv">On vous attend à <em>Saint-Leu</em></h2>
+    <div class="cards">
+      <div class="c rv"><h3>Horaires</h3>
+        <ul class="h" id="hor"><li data-d="2"><span>Mardi</span><span>9h – 17h30</span></li><li data-d="3"><span>Mercredi</span><span>9h – 17h30</span></li><li data-d="4"><span>Jeudi</span><span>9h – 17h30</span></li><li data-d="5"><span>Vendredi</span><span>9h – 17h30</span></li><li data-d="6"><span>Samedi</span><span>8h – 16h</span></li><li data-d="0"><span>Dimanche &amp; lundi</span><span>repos</span></li></ul>
+        <span class="open" id="open">Rendez-vous du mardi au samedi</span>
+      </div>
+      <div class="c rv"><h3>Rendez-vous</h3>
+        <p>Réservation en message privé ou en ligne.</p>
+        <p style="margin-top:.6rem"><a href="tel:+262693843626">0693 84 36 26</a><br><a href="https://wa.me/262693843626">WhatsApp</a><br><a href="https://www.fresha.com/fr/a/deborah-coiffure-saint-leu-boulevard-bonnier-15-k4nxhn7z">Réserver en ligne</a><br><a href="mailto:deborah_coiffure@protonmail.com">deborah_coiffure@protonmail.com</a></p>
+      </div>
+      <div class="c rv"><h3>Adresse</h3>
+        <p>15 boulevard Bonnier<br>97436 Saint-Leu, La Réunion</p>
+        <p style="margin-top:.4rem">Salon accessible aux fauteuils roulants.</p>
+        <p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=15%20boulevard%20Bonnier%2097436%20Saint-Leu">Ouvrir l'itinéraire</a><br><a href="https://www.facebook.com/deborah.coiffure.saintleu">Page Facebook</a></p>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Déborah Coiffure.<br>Photos : réalisations et enseigne publiées par le salon sur Facebook.</footer>
+<section class="fin">
+  <div class="wrap">
+    <div class="script">Et vous ?</div>
+    <h2>Vous oseriez ce blond&nbsp;?</h2>
+    <div class="btns"><a class="btn" href="https://wa.me/262693843626?text=Bonjour%20D%C3%A9borah%2C%20je%20voudrais%20prendre%20rendez-vous">Prendre rendez-vous</a></div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Déborah Coiffure.<br>Photos : page Facebook de Déborah Coiffure.</footer>
 
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+/* nuancier */
+var imgs=document.querySelectorAll('.stage img'),bt=document.querySelectorAll('.sw button'),lbl=document.getElementById('lbl'),cur=0,auto;
+function show(i){cur=i;imgs.forEach(function(m,k){m.classList.toggle('on',k===i)});bt.forEach(function(b,k){b.classList.toggle('on',k===i)});lbl.textContent=imgs[i].dataset.l}
+bt.forEach(function(b){b.addEventListener('click',function(){clearInterval(auto);show(+b.dataset.i)})});
+if(!rm)auto=setInterval(function(){show((cur+1)%imgs.length)},4200);
+/* galerie dots */
+var g=document.getElementById('gal'),d=document.querySelectorAll('#dots i');
+g.addEventListener('scroll',function(){var f=g.querySelectorAll('figure'),c=g.scrollLeft+g.clientWidth/2,b=0,bd=1e9;f.forEach(function(x,k){var m=Math.abs(x.offsetLeft+x.offsetWidth/2-c);if(m<bd){bd=m;b=k}});d.forEach(function(x,k){x.classList.toggle('on',k===b)})},{passive:true});
+/* horaires du jour */
+var day=new Date().getDay(),li=document.querySelector('#hor li[data-d="'+(day===1?0:day)+'"]');if(li)li.classList.add('today');
 if(rm)return;
-var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true;
-function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+/* univers : paillettes dorées et fils de lumière */
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
 size();addEventListener('resize',size);
-for(var i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.8,v:Math.random()*.35+.12,p:Math.random()*6.28,s:Math.random()*.02+.008,k:i%3});
+for(var i=0;i<30;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.6,v:Math.random()*.3+.1,p:Math.random()*6.28,s:Math.random()*.02+.006,k:i%5,l:Math.random()*40+30});
 function draw(){
  if(!run)return;x.clearRect(0,0,W,H);
- P.forEach(function(q){q.y-=q.v;q.p+=q.s;q.x+=Math.sin(q.p)*.35;if(q.y<-10){q.y=H+10;q.x=Math.random()*W}
-  var a=.2+.35*Math.abs(Math.sin(q.p*1.6)),col=q.k?'243,191,47':'240,130,185';
-  x.beginPath();x.fillStyle='rgba('+col+','+a+')';x.arc(q.x,q.y,q.r,0,6.28);x.fill();
-  x.strokeStyle='rgba('+col+','+a*.6+')';x.lineWidth=.6;x.beginPath();x.moveTo(q.x-q.r*3,q.y);x.lineTo(q.x+q.r*3,q.y);x.moveTo(q.x,q.y-q.r*3);x.lineTo(q.x,q.y+q.r*3);x.stroke()});
+ P.forEach(function(q){q.y-=q.v;q.p+=q.s;q.x+=Math.sin(q.p)*.3;if(q.y<-60){q.y=H+60;q.x=Math.random()*W}
+  var a=.15+.3*Math.abs(Math.sin(q.p*1.5));
+  if(q.k===0){/* fil de lumiere : meche doree ondulante */
+   x.strokeStyle='rgba(242,181,44,'+a*.55+')';x.lineWidth=1;x.beginPath();x.moveTo(q.x,q.y);
+   x.bezierCurveTo(q.x+Math.sin(q.p)*14,q.y+q.l*.33,q.x-Math.sin(q.p)*14,q.y+q.l*.66,q.x+Math.sin(q.p*.7)*6,q.y+q.l);x.stroke();
+  }else{var col=q.k===1?'214,61,143':'246,205,96';
+   x.fillStyle='rgba('+col+','+a+')';x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();
+   if(q.k===2){x.strokeStyle='rgba('+col+','+a*.7+')';x.lineWidth=.6;x.beginPath();x.moveTo(q.x-q.r*3.2,q.y);x.lineTo(q.x+q.r*3.2,q.y);x.moveTo(q.x,q.y-q.r*3.2);x.lineTo(q.x,q.y+q.r*3.2);x.stroke()}}
+ });
  requestAnimationFrame(draw)}
-document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run){clearInterval(auto);auto=setInterval(function(){show((cur+1)%imgs.length)},4200);draw()}else clearInterval(auto)});
 draw();
+/* parallaxe douce du hero */
+var bg=document.querySelector('.hero .bg');addEventListener('scroll',function(){var y=scrollY;if(y<innerHeight)bg.style.translate='0 '+(y*.25)+'px'},{passive:true});
 })();
 </script>
-<script src="/outils/cta.js" data-nom="Déborah Coiffure" defer></script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Déborah Coiffure" defer></script>
 </body>
 </html>

@@ -5,170 +5,361 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>LM Nails · Prothésiste ongulaire à Saint-Louis</title>
+<meta name="description" content="LM Nails, prothésiste ongulaire diplômée et déclarée au Ouaki, Saint-Louis : renfort rubber base, remplissage gel, technique popits, French et nail art.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="LM Nails · Des ongles qui vous ressemblent">
-<meta property="og:description" content="Une page imaginée pour LM Nails, prothésiste ongulaire à Saint-Louis.">
+<meta property="og:description" content="Renfort rubber base, popits, French et nail art : une page imaginée pour LM Nails, prothésiste ongulaire à Saint-Louis.">
 <meta property="og:url" content="https://maquettes.atma-digital.re/lm-nails-saint-louis/">
-<meta property="og:image" content="https://maquettes.atma-digital.re/lm-nails-saint-louis/img/pose-rose-fleurs.webp">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lm-nails-saint-louis/img/og.jpg">
+<meta name="theme-color" content="#161013">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#e8b4c8;--rose-p:#f8e6ec;--champ:#c9a27c;--or:#b8895a;--vert:#1b5e4f;--vert-n:#0f3a31;--creme:#fdf7f4;--encre:#2e2326;--gris:#7a6a6e}
+:root{--nuit:#161013;--velours:#241a1f;--rose:#f0bfcf;--rose-p:#fbeef2;--fuchsia:#c23a78;--or:#c9a35c;--or-c:#e8cf98;--emer:#1d6b57;--emer-n:#0e3a30;--creme:#fdf8f6;--encre:#2c2226;--gris:#76666b}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:"Jost",system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.75;overflow-x:hidden}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;background:var(--creme);color:var(--encre);line-height:1.7;font-size:17px;overflow-x:hidden}
 img{display:block;max-width:100%}
-.ruban{background:var(--vert-n);color:#f1e6dc;font-size:.8rem;text-align:center;padding:.55rem 1rem}
-.ruban b{color:var(--rose);font-weight:500}
-.wrap{width:min(1100px,90vw);margin:auto}
-h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;line-height:1.05}
-.script{font-family:"Great Vibes",cursive;color:var(--or);font-weight:400}
-.sur{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;font-weight:500;color:var(--or)}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
-.btn{display:inline-flex;align-items:center;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.92rem;transition:transform .3s,background .3s}
-.btn.plein{background:linear-gradient(135deg,var(--rose),#d98fae);color:var(--vert-n);animation:respire 4s ease-in-out infinite}
-.btn.plein:hover{transform:translateY(-2px)}
-.btn.ligne{border:1px solid rgba(232,180,200,.7);color:var(--rose)}
-.btn.ligne.sombre{border-color:var(--vert);color:var(--vert)}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05}
+.wrap{width:min(1080px,100%);margin:0 auto;padding:0 1.3rem}
+.script{font-family:"Great Vibes",cursive;font-weight:400}
+.sur{font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--fuchsia)}
+h2{font-size:clamp(2.3rem,9vw,3.6rem);margin:.4rem 0 1rem}
+h2 em{color:var(--fuchsia)}
+section{padding:4.5rem 0;position:relative}
+.ruban{background:#000;color:#eadfe2;font-size:.75rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:6}
+.ruban b{color:var(--or-c);font-weight:500}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+/* boutons */
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.8rem}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:.5rem;min-height:50px;padding:.85rem 1.5rem;border-radius:99px;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .3s,box-shadow .3s}
+.btn.plein{background:linear-gradient(135deg,var(--rose),#e48fb0);color:var(--nuit);animation:respire 3.8s ease-in-out infinite}
+.btn.plein::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:brille 5s ease-in-out infinite}
+.btn.or{background:linear-gradient(135deg,var(--or-c),var(--or));color:var(--nuit)}
+.btn.ligne{border:1px solid rgba(240,191,207,.6);color:var(--rose)}
+.btn:hover{transform:translateY(-2px)}
 .btn:focus-visible{outline:2px solid var(--or);outline-offset:3px}
-@keyframes respire{50%{box-shadow:0 0 0 8px rgba(232,180,200,.22)}}
-.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 30%,#1f5a4c 0%,var(--vert-n) 70%);color:var(--creme)}
-#petales{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero .g{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center;padding:clamp(3rem,9vh,6rem) 0}
-.hero h1{font-size:clamp(3.6rem,9vw,6.4rem);animation:monte 1.1s ease both}
-.hero h1 .script{display:block;font-size:.55em;color:var(--rose);margin-top:.2rem}
-.lead{color:#e3d6d0;font-size:1.1rem;max-width:40ch;margin-top:1.3rem;animation:monte 1.1s .2s ease both}
-.photo{position:relative;border-radius:200px 200px 24px 24px;overflow:hidden;max-width:400px;margin-left:auto;aspect-ratio:3/4;box-shadow:0 0 0 1px rgba(232,180,200,.35),0 0 70px rgba(232,180,200,.22);animation:monte 1.2s .1s ease both}
-.photo img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
-@keyframes kb{to{transform:scale(1.1)}}
-@keyframes monte{from{opacity:0;transform:translateY(22px)}}
-section{padding:clamp(3.5rem,9vh,6rem) 0}
-h2{font-size:clamp(2.2rem,5vw,3.4rem)}
-.mot{text-align:center}
-.mot blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.3;max-width:26ch;margin:1.2rem auto 0}
-.mot small{display:block;margin-top:1rem;color:var(--gris);font-size:.85rem}
-.piliers{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
-.pil{padding:1.6rem 1.2rem;border-top:2px solid var(--rose);background:var(--rose-p);border-radius:0 0 16px 16px;transition:transform .3s}
-.pil:hover{transform:translateY(-4px)}
-.pil h3{font-size:1.35rem;color:var(--vert)}
-.pil p{font-size:.92rem;color:var(--gris);margin-top:.4rem}
-.galerie{background:var(--rose-p)}
-.galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:1.5rem;flex-wrap:wrap}
-.galerie .tete p{max-width:40ch;color:var(--gris)}
-.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:2.2rem;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
-.rail figure{flex:0 0 min(300px,72vw);scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(120,60,80,.12);transition:transform .4s}
-.rail figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.btn svg{width:18px;height:18px;flex:none}
+@keyframes respire{50%{box-shadow:0 0 0 9px rgba(240,191,207,.18)}}
+@keyframes brille{0%,60%{left:-60%}100%{left:130%}}
+/* hero */
+.hero{position:relative;overflow:hidden;color:var(--creme);background:radial-gradient(120% 70% at 85% 20%,#5a1f3d 0%,transparent 60%),radial-gradient(90% 60% at 0% 100%,#123c32 0%,transparent 65%),var(--nuit);padding:2.6rem 0 3.4rem}
+.hero .g{display:grid;gap:2.4rem;align-items:center}
+.marque{display:flex;align-items:center;gap:.8rem;opacity:0;animation:monte 1s .1s forwards}
+.marque img{width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--or),0 0 24px rgba(201,163,92,.4)}
+.marque span{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or-c);line-height:1.5}
+.hero h1{font-size:clamp(4rem,19vw,7rem);font-weight:500;margin-top:1.2rem;letter-spacing:-.01em;opacity:0;animation:monte 1.1s .3s forwards}
+.hero h1 .script{display:block;font-size:.42em;color:var(--rose);margin-top:.15em;letter-spacing:0}
+.or-txt{background:linear-gradient(100deg,#f6e6c0 0%,var(--or) 30%,#fff3d6 50%,var(--or) 70%,#f6e6c0 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:reflet 7s linear infinite}
+@keyframes reflet{to{background-position:-200% 0}}
+.lead{color:#e6d9dc;max-width:34rem;margin-top:1.1rem;opacity:0;animation:monte 1.1s .5s forwards}
+.hero .btns{opacity:0;animation:monte 1.1s .7s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.eventail{position:relative;height:430px;max-width:420px;width:100%;margin:0 auto}
+.eventail figure{position:absolute;top:30px;left:50%;width:58%;aspect-ratio:3/4;border-radius:160px 160px 18px 18px;overflow:hidden;border:3px solid var(--or);box-shadow:0 24px 50px rgba(0,0,0,.5);opacity:0;animation:carte 1.2s forwards,flotte 7s ease-in-out infinite}
+.eventail figure img{width:100%;height:100%;object-fit:cover;animation:kb 20s ease-in-out infinite alternate}
+.eventail .c1{transform:translateX(-95%) rotate(-10deg);--r:-10deg;--x:-95%;animation-delay:.5s,1.7s}
+.eventail .c3{transform:translateX(-5%) rotate(10deg);--r:10deg;--x:-5%;animation-delay:.7s,2.4s}
+.eventail .c2{top:0;transform:translateX(-50%);--r:0deg;--x:-50%;z-index:2;width:62%;animation-delay:.9s,2s}
+@keyframes carte{from{opacity:0;transform:translateX(-50%) translateY(40px) rotate(0)}to{opacity:1;transform:translateX(var(--x)) rotate(var(--r))}}
+@keyframes flotte{0%,100%{transform:translateX(var(--x)) rotate(var(--r)) translateY(0)}50%{transform:translateX(var(--x)) rotate(var(--r)) translateY(-8px)}}
+@keyframes kb{to{transform:scale(1.12)}}
+.eventail .tag{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:3;background:rgba(22,16,19,.85);border:1px solid rgba(201,163,92,.6);color:var(--or-c);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.45rem .9rem;border-radius:99px;white-space:nowrap}
+/* défilant */
+.marq{background:var(--velours);color:var(--rose);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem;border-top:1px solid rgba(201,163,92,.35);border-bottom:1px solid rgba(201,163,92,.35)}
+.marq div{display:inline-block;animation:mq 40s linear infinite}
+.marq i{color:var(--or);font-style:normal;margin:0 .9rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+/* style */
+.style{text-align:center;background:linear-gradient(180deg,var(--creme),var(--rose-p))}
+.style blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.7rem,7vw,2.5rem);line-height:1.25;max-width:24ch;margin:1rem auto 0;color:var(--encre)}
+.style blockquote::before{content:"“";display:block;font-size:3.5rem;line-height:.6;color:var(--or)}
+.style small{display:block;margin-top:1rem;color:var(--gris);font-size:.82rem}
+.piliers{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2.6rem;text-align:left}
+.pil{background:#fff;border-radius:18px;padding:1.2rem 1rem;box-shadow:0 10px 26px rgba(120,50,80,.08);transition:transform .35s,box-shadow .35s}
+.pil:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(120,50,80,.14)}
+.pil svg{width:30px;height:30px;color:var(--fuchsia)}
+.pil h3{font-size:1.25rem;margin:.5rem 0 .2rem}
+.pil p{font-size:.86rem;color:var(--gris);line-height:1.5}
+/* techniques */
+.tech{background:var(--rose-p)}
+.cartes{display:grid;gap:1.4rem;margin-top:1.6rem}
+.tc{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 34px rgba(120,50,80,.1);display:grid;grid-template-columns:42% 1fr;transition:transform .35s}
+.tc:hover{transform:translateY(-4px)}
+.tc img{width:100%;height:100%;min-height:200px;object-fit:cover}
+.tc div{padding:1.1rem 1rem 1.2rem}
+.tc h3{font-size:1.45rem;color:var(--encre)}
+.tc p{font-size:.88rem;color:var(--gris);line-height:1.55;margin-top:.35rem}
+.tc .vu{display:block;font-size:.72rem;color:var(--fuchsia);margin-top:.6rem;letter-spacing:.04em}
+/* nuancier */
+.nuancier{background:var(--velours);color:var(--creme);overflow:hidden}
+.nuancier .sur{color:var(--or-c)}
+.nuancier h2 em{color:var(--rose)}
+.nuancier p.intro{color:#d9cbd0;max-width:34rem}
+.studio{display:grid;gap:1.6rem;margin-top:1.6rem;align-items:center}
+.studio svg.capsules{width:100%;max-width:360px;margin:0 auto;display:block;filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.capsules .ongle{transition:fill .6s}
+.teintes{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.teintes button{font:inherit;font-size:.78rem;color:#eadfe2;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:.6rem .4rem;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:.4rem;transition:border-color .3s,transform .3s;line-height:1.25;min-height:84px}
+.teintes button:hover{transform:translateY(-2px)}
+.teintes button[aria-pressed=true]{border-color:var(--or);background:rgba(201,163,92,.12)}
+.teintes i{width:34px;height:34px;border-radius:50% 50% 45% 45%/60% 60% 40% 40%;box-shadow:inset 0 -4px 8px rgba(0,0,0,.25),0 0 0 2px rgba(255,255,255,.15)}
+.nuancier .note{font-size:.75rem;color:#a99aa0;margin-top:1rem}
+/* galerie */
+.galerie .tete p{color:var(--gris);max-width:34rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.3rem 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 74%;max-width:310px;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 14px 32px rgba(120,50,80,.14);transition:transform .4s}
+.rail figure:hover{transform:translateY(-5px) rotate(-.6deg)}
 .rail img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.rail figcaption{padding:.7rem 1rem;font-size:.85rem;color:var(--gris)}
-.dernier{background:var(--vert-n);color:var(--creme);position:relative;overflow:hidden}
-.dernier .g{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
-.dernier h2 em{color:var(--rose)}
-.dernier p{color:#e3d6d0;margin-top:1.1rem;max-width:44ch}
-.dernier .cite{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.5rem;color:var(--rose);line-height:1.3;margin-top:1.2rem}
-.dernier .cite small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.78rem;color:#c4b4ae;margin-top:.4rem}
-.dernier .photo2{border-radius:24px;overflow:hidden;max-width:380px;margin:auto}
-.dernier .photo2 img{width:100%;height:auto}
-.noel{background:linear-gradient(160deg,#fbeaf0,#fdf7f4);text-align:center;position:relative;overflow:hidden}
-.noel .carte{max-width:640px;margin:2rem auto 0;padding:2.4rem 1.6rem;border:1px solid var(--champ);border-radius:22px;background:rgba(255,255,255,.7);position:relative}
-.noel .carte:before,.noel .carte:after{content:"✦";position:absolute;color:var(--champ);font-size:1.1rem;animation:scint 3s ease-in-out infinite}
-.noel .carte:before{top:14px;left:20px}.noel .carte:after{bottom:14px;right:20px;animation-delay:1.4s}
-@keyframes scint{50%{opacity:.25;transform:scale(.8)}}
-.noel p{color:var(--gris);max-width:44ch;margin:1rem auto 0}
+.rail figcaption{padding:.8rem 1rem 1.1rem;font-size:.85rem;color:var(--encre);line-height:1.45}
+.rail figcaption time{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fuchsia);margin-bottom:.2rem}
+.points{display:flex;justify-content:center;gap:.4rem}
+.points span{width:7px;height:7px;border-radius:50%;background:#e2c9d1;transition:background .3s,width .3s}
+.points span.on{background:var(--fuchsia);width:20px;border-radius:9px}
+.hint{text-align:center;font-size:.78rem;color:var(--gris);margin-top:.6rem}
+/* emeraude */
+.emer{background:radial-gradient(120% 80% at 100% 0%,#2a8a70 0%,transparent 55%),var(--emer-n);color:#eef6f2;overflow:hidden}
+.emer .sur{color:var(--or-c)}
+.emer h2 em{color:var(--or-c)}
+.emer .g{display:grid;gap:2rem;align-items:center}
+.emer p{color:#cfe2da;max-width:34rem}
+.emer blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.45rem;line-height:1.35;border-left:2px solid var(--or);padding-left:1rem;margin:1.2rem 0;color:#fff}
+.emer blockquote small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.75rem;color:#a9c9bd;margin-top:.5rem}
+.emer .aff{max-width:340px;margin:0 auto;border-radius:20px;overflow:hidden;border:1px solid rgba(201,163,92,.6);box-shadow:0 26px 60px rgba(0,0,0,.45);transform:rotate(2deg);transition:transform .5s}
+.emer .aff:hover{transform:rotate(0) scale(1.02)}
+/* séparateur vague */
+.vague{display:block;width:100%;height:40px}
+/* noël */
+.noel{background:linear-gradient(170deg,var(--nuit) 0%,#3a1428 100%);color:#fff;text-align:center;overflow:hidden}
+.noel .sur{color:var(--or-c)}
+.noel h2 em{color:var(--rose)}
+.noel p{color:#e2d3d8;max-width:32rem;margin:0 auto}
+.cadeau{width:min(330px,100%);aspect-ratio:1.6;margin:2rem auto;border-radius:18px;position:relative;overflow:hidden;background:linear-gradient(135deg,#2b1d23 0%,#3e2530 50%,#24191e 100%);border:1px solid rgba(201,163,92,.7);box-shadow:0 26px 50px rgba(0,0,0,.5);transform:rotate(-3deg);transition:transform .6s;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.cadeau:hover{transform:rotate(0) scale(1.03)}
+.cadeau::before{content:"";position:absolute;inset:8px;border:1px solid rgba(201,163,92,.4);border-radius:12px}
+.cadeau::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,240,210,.22),transparent);transform:skewX(-20deg);animation:brille 6s ease-in-out infinite}
+.cadeau .n{font-family:"Great Vibes",cursive;font-size:2.6rem;line-height:1}
+.cadeau .t{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-top:.5rem}
+.cadeau .h{position:absolute;bottom:14px;right:18px;font-size:.62rem;letter-spacing:.18em;color:var(--or-c);text-transform:uppercase}
+.etoile{position:absolute;color:var(--or);font-size:.9rem;animation:scint 3.2s ease-in-out infinite}
+@keyframes scint{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:.9;transform:scale(1.15)}}
 .noel .btns{justify-content:center}
-.fin .g{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
-.fin address{font-style:normal;color:var(--gris);margin-top:1rem;font-size:1.05rem}
-.fin .tel{font-family:"Cormorant Garamond",serif;font-size:clamp(2.2rem,5vw,3.2rem);color:var(--vert);text-decoration:none;display:block;margin-top:.8rem}
-.fin .rond{max-width:300px;margin-left:auto}
-.fin .rond img{border-radius:50%;width:100%;aspect-ratio:1;object-fit:cover;box-shadow:0 12px 40px rgba(120,60,80,.18)}
-.liens a{color:var(--vert);margin-right:1rem}
-footer{padding:2rem 0;font-size:.82rem;color:var(--gris);border-top:1px solid #eadbd9}
-.rev{opacity:0;transform:translateY(24px);transition:opacity 1s,transform 1s}.rev.vu{opacity:1;transform:none}
-@media (max-width:820px){.hero .g,.dernier .g,.fin .g{grid-template-columns:1fr}.piliers{grid-template-columns:1fr 1fr}.photo{margin:0 auto;max-width:300px}.fin .rond{margin:0 auto}}
-@media (max-width:420px){.piliers{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}#petales{display:none}}
+.noel .pt{font-size:.82rem;color:#bfaeb5;margin-top:1.4rem}
+/* contact */
+.contact .g{display:grid;gap:1.4rem}
+.fiche{background:#fff;border-radius:20px;padding:1.4rem;box-shadow:0 10px 28px rgba(120,50,80,.08)}
+.fiche h3{font-size:1.35rem;margin-bottom:.3rem}
+.fiche p,.fiche address{font-style:normal;color:var(--gris)}
+.tel{display:block;font-family:"Cormorant Garamond",serif;font-size:2.4rem;color:var(--encre);text-decoration:none;line-height:1.1;margin-top:.2rem}
+.liens a{display:inline-block;color:var(--encre);border-bottom:1px solid var(--rose);text-decoration:none;margin:.2rem .8rem .2rem 0}
+.rond{width:180px;margin:0 auto;border-radius:50%;overflow:hidden;box-shadow:0 0 0 3px var(--or),0 16px 40px rgba(120,50,80,.2)}
+.rond img{width:100%;aspect-ratio:1;object-fit:cover}
+footer{background:var(--nuit);color:#e2d6da;text-align:center;padding:2.4rem 1.5rem 6rem;font-size:.86rem;line-height:1.6}
+@media(min-width:800px){
+ .hero{padding:4.5rem 0}
+ .hero .g{grid-template-columns:1.05fr .95fr}
+ .piliers{grid-template-columns:repeat(4,1fr)}
+ .cartes{grid-template-columns:1fr 1fr}
+ .studio{grid-template-columns:1fr 1fr}
+ .emer .g{grid-template-columns:1.1fr .9fr}
+ .contact .g{grid-template-columns:1fr 1fr auto;align-items:center}
+ .rail{padding-left:max(1.3rem,calc((100% - 1080px)/2 + 1.3rem))}
+ .rail figure{flex-basis:280px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.marque,.hero h1,.lead,.hero .btns,.eventail figure{opacity:1!important}.rv{transform:none}#fx{display:none}}
 </style>
 </head>
 <body>
 <div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour LM Nails</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
 <header class="hero">
- <canvas id="petales" aria-hidden="true"></canvas>
  <div class="wrap g">
   <div>
-   <p class="sur" style="color:var(--rose)">Prothésiste ongulaire · Saint-Louis</p>
-   <h1>LM Nails <span class="script">des ongles qui vous ressemblent</span></h1>
-   <p class="lead">Prothésiste ongulaire diplômée et déclarée. Des poses soignées et élégantes, personnalisées, pour un résultat durable : votre beauté entre de bonnes mains.</p>
-   <div class="btns"><a class="btn plein" href="https://wa.me/262693503690?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20LM%20Nails">Prendre rendez-vous</a><a class="btn ligne" href="#poses">Voir les poses</a></div>
+   <div class="marque"><img src="img/logo.webp" alt="Logo LM Nails"><span>Prothésiste ongulaire<br>diplômée et déclarée</span></div>
+   <h1><span class="or-txt">LM Nails</span><span class="script">des ongles qui vous ressemblent</span></h1>
+   <p class="lead">Renfort rubber base, remplissage gel, technique popits, French et nail art : des poses soignées, élégantes et personnalisées, au Ouaki à Saint-Louis.</p>
+   <div class="btns">
+    <a class="btn plein" href="https://wa.me/262693503690?text=Bonjour%20LM%20Nails%2C%20je%20voudrais%20prendre%20rendez-vous%20pour%20une%20pose"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg>Prendre rendez-vous</a>
+    <a class="btn ligne" href="#poses">Voir les poses</a>
+   </div>
   </div>
-  <div class="photo"><img src="img/pose-rose-fleurs.webp" alt="Ongles dégradé rose et noir, création de LM Nails"></div>
+  <div class="eventail" aria-label="Trois poses réalisées par LM Nails">
+   <figure class="c1"><img src="img/popits-double-french.webp" alt="Pose popits, double French et finition pailletée"></figure>
+   <figure class="c3"><img src="img/rubber-couleurs-nail-art.webp" alt="Renfort rubber base, couleurs pleines et nail art"></figure>
+   <figure class="c2"><img src="img/feuille-or-marbre.webp" alt="Remplissage gel, effet marbré et feuille d'or"></figure>
+   <span class="tag">Effet marbré &amp; feuille d'or</span>
+  </div>
  </div>
 </header>
 
-<section class="mot">
- <div class="wrap rev">
-  <p class="sur">Le style LM Nails</p>
-  <blockquote>« Une pose spéciale où rien n'est identique, couleurs pleines et full nail art. »</blockquote>
-  <small>Publication LM Nails du 5 novembre 2026</small>
+<div class="marq" aria-hidden="true"><div>Renfort rubber base<i>✦</i>Remplissage gel<i>✦</i>Technique popits<i>✦</i>French biais<i>✦</i>Double French<i>✦</i>Effet marbré<i>✦</i>Feuille d'or<i>✦</i>Chrome<i>✦</i>Milky white nacré<i>✦</i>Fleurs 3D<i>✦</i>Full nail art<i>✦</i>Renfort rubber base<i>✦</i>Remplissage gel<i>✦</i>Technique popits<i>✦</i>French biais<i>✦</i>Double French<i>✦</i>Effet marbré<i>✦</i>Feuille d'or<i>✦</i>Chrome<i>✦</i>Milky white nacré<i>✦</i>Fleurs 3D<i>✦</i>Full nail art<i>✦</i></div></div>
+
+<section class="style">
+ <div class="wrap">
+  <p class="sur rv">Le style LM Nails</p>
+  <blockquote class="rv">Une pose spéciale où rien n'est identique, couleurs pleines et full nail art.</blockquote>
+  <small class="rv">LM Nails, publication du 5 novembre 2026</small>
   <div class="piliers">
-   <div class="pil"><h3>Résultat durable</h3><p>Des poses qui tiennent, pour des mains belles longtemps.</p></div>
-   <div class="pil"><h3>Soigné &amp; élégant</h3><p>Le détail qui fait la différence, du bout des doigts.</p></div>
-   <div class="pil"><h3>Poses uniques</h3><p>Personnalisées : chaque jeu d'ongles raconte sa propre histoire.</p></div>
-   <div class="pil"><h3>Entre de bonnes mains</h3><p>Une prothésiste diplômée et déclarée, à Saint-Louis.</p></div>
+   <div class="pil rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9Z"/></svg><h3>Résultat durable</h3><p>Des poses pensées pour tenir et rester belles.</p></div>
+   <div class="pil rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21c-4-3-7-6.2-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 3.8-3 7-7 10Z"/></svg><h3>Soigné &amp; élégant</h3><p>Le détail travaillé jusqu'au bout des ongles.</p></div>
+   <div class="pil rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3c-2 4-2 8 0 12M15 3c2 4 2 8 0 12M6 21h12M12 15v6"/></svg><h3>Poses uniques</h3><p>Personnalisées, à votre image, à chaque rendez-vous.</p></div>
+   <div class="pil rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l7 3v6c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6Z"/><path d="m9 12 2 2 4-4"/></svg><h3>Entre de bonnes mains</h3><p>Une prothésiste ongulaire diplômée et déclarée.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="tech" id="techniques">
+ <div class="wrap">
+  <p class="sur rv">Le carnet des techniques</p>
+  <h2 class="rv">Chaque pose, <em>sa technique</em></h2>
+  <p class="rv" style="color:var(--gris);max-width:34rem">Les mots que LM Nails utilise pour présenter ses poses, illustrés par ses propres réalisations.</p>
+  <div class="cartes">
+   <article class="tc rv"><img src="img/rubber-nail-art.webp" alt="Renfort rubber base avec couleurs pleines et nail art" loading="lazy"><div><h3>Renfort rubber base</h3><p>Une base souple qui renforce l'ongle naturel, en couleurs pleines ou habillée de nail art.</p><span class="vu">Vu sur la page · 7 octobre 2026</span></div></article>
+   <article class="tc rv"><img src="img/remplissage-chrome.webp" alt="Remplissage gel et couleurs pleines en chrome" loading="lazy"><div><h3>Remplissage gel</h3><p>Pour entretenir la pose et changer d'humeur : couleurs pleines, chrome, French ou milky white.</p><span class="vu">« Remplissage gel et couleurs pleines en chrome » · 19 octobre</span></div></article>
+   <article class="tc rv"><img src="img/popits-nail-art-fleuri.webp" alt="Remplissage technique popits, French et nail art fleuri" loading="lazy"><div><h3>Technique popits</h3><p>Des capsules qui dessinent une forme nette et régulière, parfaites pour les French les plus fines.</p><span class="vu">« Remplissage technique popits, French et Nail art fleuri »</span></div></article>
+   <article class="tc rv"><img src="img/french-biais-duo.webp" alt="French avec nail art et French biais" loading="lazy"><div><h3>French &amp; nail art</h3><p>French classique, double, en biais… et le nail art qui signe chaque pose.</p><span class="vu">« Duo mère/fille » · 4 novembre 2026</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="nuancier">
+ <div class="wrap">
+  <p class="sur rv">Le nuancier</p>
+  <h2 class="rv">Et vous, <em>quelle teinte ?</em></h2>
+  <p class="intro rv">Touchez une couleur pour l'essayer : des nuances inspirées des poses partagées par LM Nails.</p>
+  <div class="studio">
+   <svg class="capsules rv" viewBox="0 0 320 230" role="img" aria-label="Illustration : cinq capsules d'ongles dans la teinte choisie">
+    <defs>
+     <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1"><stop id="s1" offset="0" stop-color="#f6e9e4"/><stop id="s2" offset="1" stop-color="#e9d2cf"/></linearGradient>
+     <linearGradient id="lu" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".45" stop-color="#fff" stop-opacity=".55"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g id="caps"></g>
+   </svg>
+   <div>
+    <div class="teintes rv" role="group" aria-label="Choisir une teinte">
+     <button aria-pressed="true" data-a="#fbf3ef" data-b="#e7d3cf"><i style="background:linear-gradient(135deg,#fbf3ef,#e7d3cf)"></i>Milky white nacré</button>
+     <button aria-pressed="false" data-a="#f6c9d6" data-b="#e59ab3"><i style="background:linear-gradient(135deg,#f6c9d6,#e59ab3)"></i>Rose poudré</button>
+     <button aria-pressed="false" data-a="#e2559a" data-b="#7d1d55"><i style="background:linear-gradient(135deg,#e2559a,#7d1d55)"></i>Fuchsia chrome</button>
+     <button aria-pressed="false" data-a="#8b2338" data-b="#3e0d1a"><i style="background:linear-gradient(135deg,#8b2338,#3e0d1a)"></i>Bordeaux</button>
+     <button aria-pressed="false" data-a="#2f9a7c" data-b="#0d3d31"><i style="background:linear-gradient(135deg,#2f9a7c,#0d3d31)"></i>Vert émeraude</button>
+     <button aria-pressed="false" data-a="#f3dc9e" data-b="#a67a33"><i style="background:linear-gradient(135deg,#f3dc9e,#a67a33)"></i>Feuille d'or</button>
+    </div>
+    <p class="note rv">Illustration · la vraie pose se choisit avec LM Nails.</p>
+    <div class="btns rv"><a class="btn or" href="https://wa.me/262693503690?text=Bonjour%20LM%20Nails%2C%20j%27aimerais%20une%20pose%20dans%20cette%20teinte%20%3A%20" id="wa-teinte">Je veux cette teinte</a></div>
+   </div>
   </div>
  </div>
 </section>
 
 <section class="galerie" id="poses">
+ <div class="wrap tete">
+  <p class="sur rv">Les dernières poses</p>
+  <h2 class="rv">Tout droit sortis <em>de la table</em></h2>
+  <p class="rv">Les réalisations partagées sur la page LM Nails, avec leurs propres mots.</p>
+ </div>
+ <div class="rail" id="rail">
+  <figure><img src="img/feuille-or-marbre.webp" alt="Ongles roses, effet marbré et feuille d'or" loading="lazy"><figcaption><time>9 octobre 2026</time>Remplissage gel, couleurs pleines, French, effet marbré et feuille d'or</figcaption></figure>
+  <figure><img src="img/popits-double-french.webp" alt="Pose popits, double French et paillettes" loading="lazy"><figcaption><time>27 octobre 2026</time>Pose popits, couleurs pleines, double French, nail art et finition pailletée</figcaption></figure>
+  <figure><img src="img/rubber-couleurs-nail-art.webp" alt="Renfort rubber base, couleurs pleines et nail art" loading="lazy"><figcaption><time>4 novembre 2026</time>Renfort rubber base, couleurs pleines et nail art</figcaption></figure>
+  <figure><img src="img/milky-white-nacre.webp" alt="Ongles milky white à l'effet nacré" loading="lazy"><figcaption><time>9 septembre 2026</time>Remplissage milky white effet nacré, tout simplement</figcaption></figure>
+  <figure><img src="img/popits-french.webp" alt="Technique popits avec French et nail art" loading="lazy"><figcaption><time>2 septembre 2026</time>Remplissage technique popits avec French et nail art</figcaption></figure>
+  <figure><img src="img/rubber-petit-nail-art.webp" alt="Rubber base couleurs pleines et petit nail art" loading="lazy"><figcaption><time>9 septembre 2026</time>Renfort rubber base avec couleurs pleines et un petit nail art</figcaption></figure>
+  <figure><img src="img/rubber-couleurs-pleines.webp" alt="Rubber base en couleurs pleines" loading="lazy"><figcaption><time>12 août 2026</time>Renfort rubber base et couleurs pleines</figcaption></figure>
+  <figure><img src="img/gel-french-nail-art.webp" alt="Remplissage gel, French et nail art" loading="lazy"><figcaption><time>11 août 2026</time>Remplissage gel, French et nail art</figcaption></figure>
+  <figure><img src="img/degrade-paillettes.webp" alt="Couleurs pleines, dégradé de paillettes et nail art" loading="lazy"><figcaption><time>23 juillet 2026</time>Renfort rubber base, couleurs pleines, dégradé de paillettes et nail art</figcaption></figure>
+ </div>
+ <div class="points" id="points" aria-hidden="true"></div>
+ <p class="hint">Faites glisser pour voir les poses →</p>
+</section>
+
+<section class="emer">
+ <div class="wrap g">
+  <div>
+   <p class="sur rv">La pose émeraude</p>
+   <h2 class="rv">Votre beauté jusqu'au <em>bout des ongles</em></h2>
+   <blockquote class="rv">Une jolie pose aux reflets vert émeraude scintillants, sublimée par de délicates décorations florales. Un mélange d'élégance, d'originalité et de féminité !<small>LM Nails, publication du 15 octobre 2026</small></blockquote>
+   <p class="rv">Renforcement couleur verte, feuille d'argent et cat eyes argenté, déco fleur minimaliste avec du chrome : pour celles qui aiment les ongles qui sortent de l'ordinaire.</p>
+   <div class="btns rv"><a class="btn or" href="https://wa.me/262693503690?text=Bonjour%20LM%20Nails%2C%20j%27aimerais%20une%20pose%20comme%20la%20pose%20%C3%A9meraude">Je veux ma pose</a></div>
+  </div>
+  <div class="aff rv"><img src="img/affiche-vert.webp" alt="Affiche LM Nails présentant la pose vert émeraude, feuille d'argent et fleur minimaliste" loading="lazy"></div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <span class="etoile" style="left:8%;top:9%">✦</span><span class="etoile" style="right:9%;top:14%;animation-delay:.9s">✦</span><span class="etoile" style="left:12%;bottom:16%;animation-delay:1.7s">✦</span><span class="etoile" style="right:14%;bottom:10%;animation-delay:2.4s">✦</span>
  <div class="wrap">
-  <div class="tete rev"><div><p class="sur">Les créations</p><h2>Des poses <span class="script" style="font-size:1.1em">signées</span> LM Nails</h2></div><p>French, dégradés, couleurs profondes et feuilles métallisées : un aperçu des réalisations partagées sur la page.</p></div>
-  <div class="rail">
-   <figure><img src="img/pose-nude.webp" alt="Ongles blancs et nude pailletés" loading="lazy"><figcaption>Nude, blanc et paillettes</figcaption></figure>
-   <figure><img src="img/pose-prune.webp" alt="Ongles prune brillants" loading="lazy"><figcaption>Prune profond, finition miroir</figcaption></figure>
-   <figure><img src="img/pose-rose-fleurs.webp" alt="Ongles dégradé rose et noir" loading="lazy"><figcaption>Dégradé tout en douceur</figcaption></figure>
-   <figure><img src="img/pose-bronze.webp" alt="Ongles bronze avec motifs dorés" loading="lazy"><figcaption>Bronze et touches dorées</figcaption></figure>
-   <figure><img src="img/pose-rose-doux.webp" alt="Ongles rose nude pointe perlée" loading="lazy"><figcaption>Rose nude, pointe perlée</figcaption></figure>
+  <p class="sur rv">Offrir pour Noël</p>
+  <h2 class="rv">Un cadeau qui <em>brille</em> jusqu'au bout des doigts</h2>
+  <div class="cadeau rv" aria-hidden="true"><span class="n or-txt">LM Nails</span><span class="t">Carte cadeau</span><span class="h">Noël</span></div>
+  <p class="rv">Offrez un moment chez LM Nails : une pose pensée pour elle, couleurs, French ou nail art, à choisir ensemble. Écrivez sur WhatsApp pour préparer votre carte cadeau.</p>
+  <div class="btns rv"><a class="btn plein" href="https://wa.me/262693503690?text=Bonjour%20LM%20Nails%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Offrir une carte cadeau</a></div>
+  <p class="pt rv">Et pour vous, des mains de fête prêtes pour le réveillon.</p>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap">
+  <p class="sur rv">Rendez-vous</p>
+  <h2 class="rv">Prenez soin <em>de vos mains</em></h2>
+  <div class="g">
+   <div class="fiche rv"><h3>Appelez ou écrivez</h3><a class="tel" href="tel:+262693503690">0693 50 36 90</a><p class="liens" style="margin-top:.6rem"><a href="https://wa.me/262693503690">WhatsApp</a><a href="https://www.facebook.com/Nathalies97421">Facebook · LM Nails</a><a href="https://www.instagram.com/nat.turpin/">Instagram · nat.turpin</a></p></div>
+   <div class="fiche rv"><h3>Où ?</h3><address>Le Ouaki · Saint-Louis<br>97421 La Réunion</address><p style="margin-top:.5rem;font-size:.9rem">Prothésiste ongulaire diplômée et déclarée.</p></div>
+   <div class="rond rv"><img src="img/logo.webp" alt="Logo LM Nails, roses et cadre doré" loading="lazy"></div>
   </div>
  </div>
 </section>
 
-<section class="dernier">
- <div class="wrap g">
-  <div class="rev">
-   <p class="sur" style="color:var(--rose)">Une pose au vert émeraude</p>
-   <h2>Quand le <em>nail art</em> devient bijou</h2>
-   <p>Renforcement couleur verte, feuille d'argent et cat eyes argenté, déco fleur minimaliste avec du chrome : une création présentée sur l'affiche LM Nails, pour des ongles qui ressemblent à celle qui les porte.</p>
-   <div class="btns"><a class="btn plein" href="https://wa.me/262693503690?text=Bonjour%2C%20je%20voudrais%20une%20pose%20nail%20art%20chez%20LM%20Nails">Je veux ma pose</a></div>
-  </div>
-  <div class="photo2 rev"><img src="img/affiche-vert.webp" alt="Affiche LM Nails : pose vert émeraude, feuille d'argent et fleur minimaliste" loading="lazy"></div>
- </div>
-</section>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de LM Nails.<br>Photos : réalisations publiées par LM Nails sur sa page Facebook. Nuancier : illustration.</footer>
 
-<section class="noel">
- <div class="wrap rev">
-  <p class="sur">Offrir pour Noël</p>
-  <h2>Un <span class="script" style="font-size:1.1em">cadeau</span> qui fait briller</h2>
-  <div class="carte">
-   <p style="margin-top:0">Offrez un moment chez LM Nails à quelqu'un que vous aimez : une pose en cadeau, à choisir ensemble.</p>
-   <div class="btns"><a class="btn plein" href="https://wa.me/262693503690?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Offrir une carte cadeau</a></div>
-  </div>
- </div>
-</section>
-
-<section class="fin">
- <div class="wrap g">
-  <div class="rev"><p class="sur">Rendez-vous</p><h2>Prenez soin de vos mains</h2><address>Le Ouaki · Saint-Louis<br>97421 La Réunion</address><a class="tel" href="tel:+262693503690">0693 50 36 90</a><p class="liens" style="margin-top:.6rem"><a href="https://www.facebook.com/Nathalies97421">Facebook · LM Nails</a><a href="https://www.instagram.com/nat.turpin">Instagram · nat.turpin</a></p></div>
-  <div class="rond rev"><img src="img/logo.webp" alt="Logo LM Nails, prothésiste ongulaire, roses et cadre doré"></div>
- </div>
-</section>
-<footer><div class="wrap">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de LM Nails.</div></footer>
 <script>
-const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
-document.querySelectorAll('.rev').forEach(f=>io.observe(f));
-(()=>{const c=document.getElementById('petales');if(!c||matchMedia('(prefers-reduced-motion:reduce)').matches)return;const x=c.getContext('2d');let W,H,P=[],on=true;
-function t(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}t();addEventListener('resize',t);
-document.addEventListener('visibilitychange',()=>{on=!document.hidden;if(on)f()});
-for(let i=0;i<28;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*5+4,v:Math.random()*.0004+.00015,p:Math.random()*6.28,a:Math.random()*6.28});
-function f(){if(!on)return;x.clearRect(0,0,W,H);for(const s of P){s.y+=s.v;s.p+=.015;s.a+=.01;if(s.y>1.05){s.y=-.05;s.x=Math.random()}
-x.save();x.translate(s.x*W+Math.sin(s.p)*14,s.y*H);x.rotate(s.a);x.beginPath();x.ellipse(0,0,s.r,s.r*.55,0,0,6.28);x.fillStyle='rgba(232,180,200,.38)';x.fill();x.restore()}requestAnimationFrame(f)}f();})();
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* apparitions */
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+function chk(){document.querySelectorAll('.rv:not(.on)').forEach(function(el){if(el.getBoundingClientRect().top<innerHeight*1.05)el.classList.add('on')})}
+addEventListener('scroll',chk,{passive:true});addEventListener('load',chk);chk();
+/* capsules du nuancier */
+var g=document.getElementById('caps'),ns='http://www.w3.org/2000/svg',h='';
+[[-36,70,150],[-18,115,118],[0,160,104],[18,205,118],[36,250,150]].forEach(function(c){
+ h+='<g transform="translate('+c[1]+' '+c[2]+') rotate('+c[0]+')"><path class="ongle" d="M-22 40 L-22 -30 C-22 -62 22 -62 22 -30 L22 40 Z" fill="url(#tg)" stroke="rgba(255,255,255,.35)" stroke-width="1"/><path d="M-14 30 L-14 -28 C-14 -48 -4 -54 2 -54" fill="none" stroke="url(#lu)" stroke-width="6" stroke-linecap="round" opacity=".8"/><rect x="-24" y="40" width="48" height="10" rx="3" fill="#c9a35c"/></g>'});
+g.innerHTML=h;
+var s1=document.getElementById('s1'),s2=document.getElementById('s2'),wa=document.getElementById('wa-teinte'),base=wa.href;
+document.querySelectorAll('.teintes button').forEach(function(b){b.addEventListener('click',function(){
+ document.querySelectorAll('.teintes button').forEach(function(o){o.setAttribute('aria-pressed','false')});
+ b.setAttribute('aria-pressed','true');s1.setAttribute('stop-color',b.dataset.a);s2.setAttribute('stop-color',b.dataset.b);
+ wa.href=base+encodeURIComponent(b.textContent.trim())})});
+wa.href=base+encodeURIComponent('Milky white nacré');
+/* points de la galerie */
+var r=document.getElementById('rail'),p=document.getElementById('points'),f=r.querySelectorAll('figure');
+f.forEach(function(){p.appendChild(document.createElement('span'))});
+function dot(){var w=f[0].offsetWidth+16,i=Math.round(r.scrollLeft/w);p.querySelectorAll('span').forEach(function(s,k){s.classList.toggle('on',k===Math.min(i,f.length-1))})}
+r.addEventListener('scroll',dot,{passive:true});dot();
+if(rm)return;
+/* paillettes et éclats de feuille d'or */
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var cols=['201,163,92','240,191,207','255,240,214','194,58,120'];
+for(var i=0;i<30;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.6,v:Math.random()*.25+.06,p:Math.random()*6.28,s:Math.random()*.03+.01,k:i%4,f:i%5==0,a:Math.random()*6.28});
+function draw(){
+ if(!run)return;x.clearRect(0,0,W,H);
+ P.forEach(function(q){q.y+=q.v;q.p+=q.s;q.a+=.012;q.x+=Math.sin(q.p*.5)*.25;if(q.y>H+10){q.y=-10;q.x=Math.random()*W}
+  var al=.12+.4*Math.abs(Math.sin(q.p)),col=cols[q.k];
+  if(q.f){x.save();x.translate(q.x,q.y);x.rotate(q.a);x.fillStyle='rgba(201,163,92,'+(al*.8)+')';x.beginPath();x.moveTo(-4,-2);x.lineTo(3,-3.5);x.lineTo(4.5,2);x.lineTo(-2,3.5);x.closePath();x.fill();x.restore();return}
+  x.fillStyle='rgba('+col+','+al+')';x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();
+  if(q.r>1.5){x.strokeStyle='rgba('+col+','+al*.7+')';x.lineWidth=.6;x.beginPath();x.moveTo(q.x-q.r*3.2,q.y);x.lineTo(q.x+q.r*3.2,q.y);x.moveTo(q.x,q.y-q.r*3.2);x.lineTo(q.x,q.y+q.r*3.2);x.stroke()}});
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
 </script>
-<script src="/outils/cta.js" data-nom="LM Nails" defer></script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="LM Nails" defer></script>
 </body>
 </html>

@@ -5,80 +5,152 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>Signé Camille · Salon de coiffure mixte aux Trois-Bassins</title>
-<meta name="description" content="Signé Camille, salon de coiffure mixte au 72 chemin Croix Bigat, Les Trois-Bassins : touches de miel, brushing, naturel tout en douceur. Une page imaginée pour Signé Camille.">
-<meta property="og:title" content="Signé Camille · Coiffure mixte, Les Trois-Bassins">
-<meta property="og:description" content="De jolies touches de miel et un beau brushing : une page imaginée pour Signé Camille.">
+<meta name="description" content="Signé Camille, salon de coiffure mixte au 72 chemin Croix Bigat, Les Trois-Bassins : touches de miel, brushing longue tenue, boucles et chignons. Une page imaginée pour le salon.">
+<meta name="theme-color" content="#1d1519">
+<meta property="og:title" content="Signé Camille · Coiffure mixte aux Trois-Bassins">
+<meta property="og:description" content="De jolies touches de miel, un beau brushing, des boucles pleines de vie : une page imaginée pour Signé Camille.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://maquettes.atma-digital.re/signe-camille-trois-bassins/">
 <meta property="og:image" content="https://maquettes.atma-digital.re/signe-camille-trois-bassins/img/hero.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#c2185b;--rose-f:#7d0f3a;--noir:#1d1519;--miel:#e0a63a;--miel-c:#f7e0ac;--poudre:#fbe4ec;--creme:#fff8f4}
+:root{--rose:#c2185b;--rose-f:#7d0f3a;--rose-p:#f9dbe6;--noir:#1d1519;--noir2:#2a1e23;--miel:#d9a04a;--miel-c:#f4dcaa;--caramel:#a5845d;--creme:#fff8f3;--txt:#2a1e23}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Montserrat',sans-serif;background:var(--creme);color:var(--noir);font-size:17px;line-height:1.65;overflow-x:hidden}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Montserrat',system-ui,sans-serif;background:var(--creme);color:var(--txt);font-size:16.5px;line-height:1.7;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-.ruban{background:var(--noir);color:var(--creme);font-size:.76rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;line-height:1.12}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.3rem}
+.ruban{position:relative;z-index:6;background:var(--noir);color:#f3e6ec;font-size:.74rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
 .ruban b{color:var(--miel);font-weight:500}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
-.hero .bg{position:absolute;inset:0;background:url(img/hero.webp) center 35%/cover;animation:kb 24s ease-in-out infinite alternate;transform-origin:50% 40%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,21,25,.2) 0%,rgba(29,21,25,.25) 30%,rgba(29,21,25,.93) 100%)}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.1)}}
-.hero .in{position:relative;z-index:2;padding:0 1.25rem 3rem;max-width:1040px;margin:0 auto;width:100%}
-.mark{font-family:'Playfair Display',serif;font-style:italic;font-size:1.3rem;color:var(--miel);opacity:0;animation:up 1s .2s forwards}
-.kick{letter-spacing:.24em;text-transform:uppercase;font-size:.7rem;opacity:0;animation:up 1s .4s forwards;margin-top:.3rem}
-.hero h1{font-size:clamp(2.5rem,10vw,4.6rem);margin:.4rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards}
-.hero h1 em{color:var(--miel)}
-.hero p.lead{max-width:30rem;font-weight:300;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
-.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--rose);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(194,24,91,.45)}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);animation:none}
-@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(194,24,91,.5)}50%{box-shadow:0 0 0 10px rgba(194,24,91,0)}}
+
+/* HERO */
+.hero{position:relative;min-height:calc(100svh - 34px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir);isolation:isolate}
+.hero .bg{position:absolute;inset:-4% 0 0;background:url(img/hero.webp) 50% 28%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:55% 30%;z-index:-2}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(29,21,25,.15) 0%,rgba(29,21,25,.05) 30%,rgba(29,21,25,.72) 62%,rgba(29,21,25,.96) 100%)}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translateY(-1.5%)}}
+#curls{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1}
+.hero .in{width:100%;max-width:1060px;margin:0 auto;padding:7rem 1.3rem 5.8rem}
+.sig{width:min(300px,78vw);height:auto;display:block;margin-left:-.3rem}
+.sig text{font-family:'Allura',cursive;font-size:92px;fill:transparent;stroke:var(--miel-c);stroke-width:1.1;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.8s .3s ease forwards,fillin 1s 2.4s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fillin{to{fill:var(--miel-c);stroke-width:0}}
+.kick{letter-spacing:.26em;text-transform:uppercase;font-size:.68rem;font-weight:500;opacity:0;animation:up 1s .5s forwards;color:#f3e6ec}
+.hero h1{font-size:clamp(2.2rem,9.4vw,4.4rem);margin:.7rem 0 .9rem;opacity:0;animation:up 1.1s .8s forwards}
+.hero h1 em{font-style:italic;color:var(--miel)}
+.lead{max-width:30rem;font-weight:300;font-size:1.02rem;opacity:0;animation:up 1.1s 1.05s forwards;color:#f6edf1}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem;opacity:0;animation:up 1.1s 1.3s forwards}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.92rem 1.45rem;border-radius:99px;background:var(--rose);color:#fff;text-decoration:none;font-weight:500;font-size:.94rem;transition:transform .25s,box-shadow .25s,background .25s;animation:breathe 3.8s ease-in-out infinite}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(194,24,91,.4)}
+.btn.ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);animation:none;backdrop-filter:blur(4px)}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(194,24,91,.55)}55%{box-shadow:0 0 0 12px rgba(194,24,91,0)}}
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
-.marq{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.1rem}
-.marq span{display:inline-block;padding-left:100%;animation:mq 32s linear infinite}
-@keyframes mq{to{transform:translateX(-100%)}}
-section{padding:4.2rem 0;position:relative}
-.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;color:var(--rose);font-weight:600}
-h2{font-size:clamp(1.9rem,6vw,2.8rem);margin:.4rem 0 1rem}
-h2 em{color:var(--rose)}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.scroll{position:absolute;left:50%;bottom:.7rem;width:22px;height:34px;border:1.5px solid rgba(255,255,255,.5);border-radius:12px;transform:translateX(-50%)}
+.scroll::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:7px;border-radius:2px;background:var(--miel);transform:translateX(-50%);animation:sc 1.8s infinite}
+@keyframes sc{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}100%{opacity:0;transform:translate(-50%,12px)}}
+
+/* bandeau */
+.marq{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.75rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.06rem}
+.marq div{display:inline-flex;animation:mq 34s linear infinite}
+.marq span{padding-right:2.2rem}
+.marq i{color:var(--miel-c);font-style:normal;padding-right:2.2rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{padding:4.4rem 0;position:relative;overflow-x:clip}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;letter-spacing:.24em;text-transform:uppercase;font-size:.7rem;color:var(--rose);font-weight:600}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:currentColor}
+h2{font-size:clamp(1.9rem,7vw,2.9rem);margin:.5rem 0 1rem}
+h2 em{color:var(--rose);font-style:italic}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
 .rv.on{opacity:1;transform:none}
-.duo{display:grid;gap:2rem}
-.duo .ph{border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(125,15,58,.22)}
-.duo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
-.chips li{list-style:none;border:1px solid var(--rose);color:var(--rose-f);padding:.35rem .9rem;border-radius:99px;font-size:.85rem;background:#fff}
-.quote{background:var(--noir);color:var(--creme)}
+
+/* salon */
+.duo{display:grid;gap:2.2rem;align-items:center}
+.arch{position:relative}
+.arch .ph{border-radius:999px 999px 22px 22px;overflow:hidden;box-shadow:0 24px 54px rgba(125,15,58,.24)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.arch:hover img{transform:scale(1.04)}
+.arch .stamp{position:absolute;right:.4rem;bottom:1.4rem;background:var(--creme);color:var(--rose-f);border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;font-family:'Allura',cursive;font-size:1.65rem;line-height:1;box-shadow:0 10px 26px rgba(29,21,25,.18);animation:spin 18s linear infinite}
+.arch .stamp span{animation:spin 18s linear infinite reverse;display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.emo{font-size:1.5rem;letter-spacing:.3rem;margin:.2rem 0 .9rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.chips li{list-style:none;border:1px solid rgba(194,24,91,.45);color:var(--rose-f);padding:.32rem .9rem;border-radius:99px;font-size:.82rem;background:#fff}
+
+/* gestes */
+.gestes{background:linear-gradient(180deg,var(--creme),#fbeef2)}
+.cards{display:grid;gap:1rem;margin-top:1.6rem}
+.card{background:#fff;border-radius:20px;padding:1.4rem 1.3rem;box-shadow:0 10px 28px rgba(29,21,25,.07);display:grid;grid-template-columns:52px 1fr;gap:1rem;align-items:start;transition:transform .35s,box-shadow .35s;border:1px solid rgba(194,24,91,.08)}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px rgba(125,15,58,.14)}
+.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--rose-p);color:var(--rose-f)}
+.ico svg{width:28px;height:28px}
+.card h3{font-size:1.2rem;margin-bottom:.25rem}
+.card p{font-size:.93rem;color:#5b4650}
+
+/* citation */
+.quote{background:var(--noir);color:#f4e9ee;overflow:hidden}
 .quote .eyebrow{color:var(--miel)}
-.quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.3rem,4.6vw,2rem);line-height:1.4;margin:1rem 0 .8rem;border-left:3px solid var(--miel);padding-left:1.1rem}
-.quote small{color:var(--miel-c);font-size:.8rem}
-.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.gal::-webkit-scrollbar{display:none}
-.gal figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(29,21,25,.22);transition:transform .4s}
-.gal figure:hover{transform:scale(1.02)}
-.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.hint{font-size:.8rem;color:#8a5a6e;padding:0 1.25rem}
-.noel{background:linear-gradient(160deg,var(--rose-f),var(--rose) 75%);color:#fff;text-align:center;overflow:hidden}
-.noel .eyebrow{color:var(--miel-c)}
+.quote blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.35rem,5.4vw,2.1rem);line-height:1.42;margin:1.1rem 0 1rem;position:relative;padding-top:2.2rem}
+.quote blockquote::before{content:"“";position:absolute;top:-1.4rem;left:-.2rem;font-size:6rem;color:var(--miel);opacity:.55;line-height:1}
+.quote blockquote mark{background:linear-gradient(transparent 62%,rgba(217,160,74,.38) 62%);color:inherit}
+.quote small{color:var(--miel-c);font-size:.8rem;letter-spacing:.04em}
+.quote .detail{margin-top:2rem;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.quote .detail img{width:100%;aspect-ratio:16/11;object-fit:cover}
+
+/* nuancier */
+.nuancier .stage{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;max-width:460px;margin:1.4rem auto 0;box-shadow:0 26px 60px rgba(29,21,25,.25);background:var(--noir)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .9s ease,transform 5s ease}
+.stage img.act{opacity:1;transform:scale(1)}
+.stage figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.2rem 1.1rem;background:linear-gradient(transparent,rgba(29,21,25,.85));color:#fff;font-size:.88rem}
+.stage figcaption b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:1.3rem}
+.sw{display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap;margin:1.3rem auto 0;max-width:460px}
+.sw button{display:flex;flex-direction:column;align-items:center;gap:.35rem;background:none;border:0;cursor:pointer;font:500 .7rem 'Montserrat',sans-serif;color:#6d5560;width:62px}
+.sw button i{width:40px;height:40px;border-radius:50%;box-shadow:inset 0 -6px 12px rgba(0,0,0,.18),0 4px 10px rgba(29,21,25,.15);transition:transform .3s,outline-color .3s;outline:2px solid transparent;outline-offset:3px}
+.sw button.act i{transform:scale(1.12);outline-color:var(--rose)}
+.sw button.act{color:var(--rose-f)}
+.note{font-size:.78rem;color:#8a6b78;text-align:center;margin-top:.9rem}
+
+/* soins */
+.soins{background:#fbeef2}
+.soins .ph{border-radius:22px;overflow:hidden;box-shadow:0 20px 46px rgba(125,15,58,.18);transform:rotate(-1.5deg);transition:transform .5s}
+.soins .ph:hover{transform:rotate(0)}
+.soins .ph img{width:100%;height:auto}
+.check{list-style:none;margin-top:1rem;display:grid;gap:.5rem}
+.check li{display:flex;gap:.7rem;align-items:center}
+.check li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/13px no-repeat}
+.doux{font-family:'Allura',cursive;font-size:2.1rem;color:var(--rose);margin-top:.8rem;line-height:1.2}
+
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#9b1748 0%,var(--rose-f) 55%,#4f0a26 100%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--miel-c);justify-content:center}
 .noel h2 em{color:var(--miel-c)}
-.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300}
-.noel .btn{background:#fff;color:var(--rose-f);animation:none}
-.star{position:absolute;color:var(--miel);opacity:.5;font-size:1.1rem;animation:tw 3s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.85;transform:scale(1.15)}}
-.ct{display:grid;gap:1.2rem;margin-top:1.4rem}
-.ct div{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 8px 24px rgba(29,21,25,.08)}
-.ct h3{font-size:1.2rem;color:var(--rose);margin-bottom:.3rem}
+.noel p{max-width:33rem;margin:0 auto 1.6rem;font-weight:300}
+.gift{width:min(320px,86%);margin:0 auto 1.8rem;background:linear-gradient(135deg,#fff8f3,#f7e6d2);color:var(--noir);border-radius:18px;padding:1.4rem 1.2rem 1.2rem;position:relative;box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-2deg);animation:float 6s ease-in-out infinite}
+.gift::before{content:"";position:absolute;top:0;bottom:0;left:22%;width:14px;background:linear-gradient(90deg,var(--miel),#f0c77d,var(--miel))}
+.gift .t{font-family:'Allura',cursive;font-size:2.3rem;color:var(--rose-f);line-height:1;position:relative}
+.gift .s{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#7a5b66;margin-top:.5rem;position:relative}
+@keyframes float{0%,100%{transform:rotate(-2deg) translateY(0)}50%{transform:rotate(-1deg) translateY(-8px)}}
+.noel .btn{background:#fff;color:var(--rose-f);animation:breathe2 3.8s ease-in-out infinite}
+@keyframes breathe2{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.5)}55%{box-shadow:0 0 0 12px rgba(255,255,255,0)}}
+.flake{position:absolute;color:var(--miel-c);opacity:.0;font-size:.9rem;animation:tw 4s ease-in-out infinite;pointer-events:none}
+@keyframes tw{0%,100%{opacity:.1;transform:scale(.7)}50%{opacity:.8;transform:scale(1.15)}}
+.small{font-size:.78rem;opacity:.8;margin-top:1.1rem}
+
+/* contact */
+.ct{display:grid;gap:1rem;margin-top:1.5rem}
+.ct>div{background:#fff;border-radius:20px;padding:1.35rem 1.3rem;box-shadow:0 10px 28px rgba(29,21,25,.07)}
+.ct h3{font-size:1.15rem;color:var(--rose);margin-bottom:.35rem}
 .ct a{color:var(--rose-f);font-weight:500;text-decoration:none;border-bottom:1px solid var(--miel);overflow-wrap:anywhere}
-footer{background:var(--noir);color:#d9cbd2;text-align:center;padding:2.2rem 1.25rem 4rem;font-size:.82rem}
-@media(min-width:760px){.duo{grid-template-columns:1fr 1fr}.ct{grid-template-columns:repeat(2,1fr)}.gal figure{flex-basis:260px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mark,.kick,.hero h1,.hero p.lead,.btns{opacity:1!important;transform:none!important}canvas#fx{display:none}.marq span{padding-left:0}}
+.ct .lines{display:grid;gap:.35rem}
+footer{background:var(--noir);color:#d9cbd2;text-align:center;padding:2.4rem 1.3rem 5.5rem;font-size:.8rem}
+footer .s{font-family:'Allura',cursive;color:var(--miel-c);font-size:2.2rem;display:block;margin-bottom:.6rem}
+
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+@media(min-width:780px){.duo{grid-template-columns:1.05fr .95fr}.cards{grid-template-columns:1fr 1fr}.ct{grid-template-columns:repeat(3,1fr)}.quote .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}.quote .detail{margin-top:0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}.sig text{stroke-dashoffset:0;fill:var(--miel-c)}canvas{display:none}}
 </style>
 </head>
 <body>
@@ -86,99 +158,166 @@ footer{background:var(--noir);color:#d9cbd2;text-align:center;padding:2.2rem 1.2
 <canvas id="fx" aria-hidden="true"></canvas>
 
 <header class="hero">
-  <div class="bg" role="img" aria-label="Longue chevelure bouclée aux mèches blondes dorées, réalisation de Signé Camille, vue de dos"></div>
+  <div class="bg" role="img" aria-label="Boucles volumineuses aux reflets miel et caramel, réalisation de Signé Camille vue de dos"></div>
+  <canvas id="curls" aria-hidden="true"></canvas>
   <div class="in">
-    <div class="mark">Signé Camille</div>
+    <svg class="sig" viewBox="0 0 420 120" role="img" aria-label="Signé Camille"><text x="6" y="92">Signé Camille</text></svg>
     <div class="kick">Salon de coiffure mixte · Les Trois-Bassins</div>
-    <h1>Touches de <em>miel</em>,<br>brushing<br>tout en douceur</h1>
-    <p class="lead">Un salon pour femmes et hommes au 72 chemin Croix Bigat, pour illuminer la chevelure en toute simplicité.</p>
+    <h1>Des touches de <em>miel</em>,<br>une signature<br>tout en douceur</h1>
+    <p class="lead">Femmes et hommes, boucles, couleurs et brushings : le salon du 72 chemin Croix Bigat illumine chaque chevelure avec naturel.</p>
     <div class="btns">
-      <a class="btn" href="https://wa.me/262693044158?text=Bonjour%20Sign%C3%A9%20Camille%2C%20je%20voudrais%20prendre%20rendez-vous">Écrire sur WhatsApp</a>
-      <a class="btn ghost" href="#realisations">Voir les réalisations</a>
+      <a class="btn" href="https://wa.me/262693044158?text=Bonjour%20Sign%C3%A9%20Camille%2C%20je%20voudrais%20prendre%20rendez-vous%20%F0%9F%98%8A"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.7-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.3-.2-.5-.3z"/></svg>Prendre rendez-vous</a>
+      <a class="btn ghost" href="#nuancier">Voir les réalisations</a>
     </div>
   </div>
 </header>
 
-<div class="marq" aria-hidden="true"><span>Touches de miel ✦ Brushing ✦ Naturel tout en douceur ✦ Tenue longue durée ✦ Salon de coiffure mixte ✦ Les Trois-Bassins ✦ &nbsp;</span></div>
+<div class="marq" aria-hidden="true"><div>
+  <span>Touches de miel</span><i>✦</i><span>Brushing longue tenue</span><i>✦</i><span>Boucles pleines de vie</span><i>✦</i><span>Chignons de fête</span><i>✦</i><span>Coiffure mixte</span><i>✦</i><span>Les Trois-Bassins</span><i>✦</i>
+  <span>Touches de miel</span><i>✦</i><span>Brushing longue tenue</span><i>✦</i><span>Boucles pleines de vie</span><i>✦</i><span>Chignons de fête</span><i>✦</i><span>Coiffure mixte</span><i>✦</i><span>Les Trois-Bassins</span><i>✦</i>
+</div></div>
 
-<section>
+<section id="salon">
   <div class="wrap duo">
-    <div class="rv">
-      <div class="eyebrow">Le salon</div>
-      <h2>Un salon <em>mixte</em> aux Trois-Bassins</h2>
-      <p>Signé Camille accueille femmes et hommes au 72 chemin Croix Bigat, aux Trois-Bassins. Sur sa page, le salon partage ses réalisations : des boucles, des couleurs, des coiffures de fête.</p>
-      <p style="margin-top:.8rem">Ici, le maître-mot est le naturel : des nuances qui font briller la chevelure, avec douceur.</p>
-      <ul class="chips"><li>Coiffure mixte</li><li>Touches de miel</li><li>Brushing</li><li>Naturel</li></ul>
+    <div>
+      <div class="eyebrow rv">Le salon</div>
+      <h2 class="rv">Un salon <em>mixte</em>,<br>au cœur des Trois-Bassins</h2>
+      <div class="emo rv" aria-label="Coiffure et soins, pour femmes et pour hommes">💇‍♀️💇‍♂️💆‍♀️💆‍♂️</div>
+      <p class="rv">Signé Camille accueille femmes et hommes au 72 chemin Croix Bigat. Sur sa page, le salon partage ses réalisations : des boucles généreuses, des reflets miel et caramel, de belles chevelures poivre et sel mises en valeur, des chignons parés pour les grands jours.</p>
+      <p class="rv" style="margin-top:.8rem">Le fil rouge&nbsp;? <b>Le naturel, tout en douceur</b> : des nuances qui font briller la chevelure et une mise en forme qui tient.</p>
+      <ul class="chips rv"><li>Coiffure mixte</li><li>Couleur &amp; touches de miel</li><li>Brushing</li><li>Boucles</li><li>Chignons</li><li>Soins</li></ul>
     </div>
-    <div class="ph rv"><img src="img/c1.webp" alt="Cheveux noirs bouclés et volumineux, réalisation du salon, vue de dos" loading="lazy"></div>
+    <div class="arch rv">
+      <div class="ph"><img src="img/c1.webp" alt="Chevelure noire bouclée très volumineuse, réalisation du salon vue de dos" loading="lazy" width="900" height="1200"></div>
+      <div class="stamp" aria-hidden="true"><span>Signé<br>Camille</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="gestes">
+  <div class="wrap">
+    <div class="eyebrow rv">Les gestes du salon</div>
+    <h2 class="rv">Ce que l’on <em>signe</em> ici</h2>
+    <div class="cards">
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c3 4.2 5.5 7.2 5.5 10.3A5.5 5.5 0 0 1 6.5 13.3C6.5 10.2 9 7.2 12 3z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2.4"/></svg></div><div><h3>Touches de miel</h3><p>De jolies nuances dorées pour illuminer la chevelure, naturelles et tout en douceur.</p></div></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9a6 5 0 0 1 12 0v1H4z"/><path d="M16 8h4l-1 3h-3M8 10l-1 9h3l1-9"/><path d="M20 5.5c.8.4.8 1.4 0 1.8M21.5 4c1.6 1 1.6 3.4 0 4.6"/></svg></div><div><h3>Brushing longue tenue</h3><p>Un beau brushing pensé pour durer, souple et lumineux.</p></div></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 4c-3 2-3 5 0 6s3 4 0 6-3 5 0 6"/><path d="M13 3c-3 2-3 5 0 6s3 4 0 6-3 5 0 6"/><path d="M19 4c-3 2-3 5 0 6s3 4 0 6"/></svg></div><div><h3>Boucles &amp; volume</h3><p>Des boucles définies et généreuses, du noir profond au poivre et sel.</p></div></div>
+      <div class="card rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="9" r="5"/><path d="M8 12.5c-1.5 2-1.2 5 1 7M16 12.5c1.5 2 1.2 5-1 7"/><path d="M14.5 5.5l2-2.5 1 2.6 2.6.4-2 1.8"/></svg></div><div><h3>Chignons de fête</h3><p>Des attaches soignées et des accessoires délicats pour les beaux événements.</p></div></div>
+    </div>
   </div>
 </section>
 
 <section class="quote">
-  <div class="wrap">
-    <div class="eyebrow rv">Dernière publication · 28 octobre</div>
-    <blockquote class="rv">« De jolies touches de miel pour illuminer la chevelure, naturel tout en douceur et un beau brushing pour une tenue longue durée ! »</blockquote>
-    <small class="rv">Signé Camille, page Facebook</small>
+  <div class="wrap grid">
+    <div>
+      <div class="eyebrow rv">Publication du 28 octobre</div>
+      <blockquote class="rv">De jolies <mark>touches de miel</mark> pour illuminer la chevelure, naturel tout en douceur et un beau brushing pour une <mark>tenue longue durée</mark>&nbsp;!</blockquote>
+      <small class="rv">— Signé Camille, sur sa page Facebook</small>
+    </div>
+    <div class="detail rv"><img src="img/boucles-miel.webp" alt="Gros plan sur des boucles brunes aux reflets miel et caramel" loading="lazy" width="900" height="737"></div>
   </div>
 </section>
 
-<section id="realisations">
+<section class="nuancier" id="nuancier">
   <div class="wrap">
-    <div class="eyebrow rv">Quelques réalisations</div>
-    <h2 class="rv">Des boucles, des reflets, des <em>chignons</em></h2>
+    <div class="eyebrow rv">Le nuancier du salon</div>
+    <h2 class="rv">Choisissez une <em>teinte</em>, découvrez une réalisation</h2>
+    <figure class="stage rv" aria-live="polite">
+      <img class="act" src="img/hero.webp" alt="Boucles brunes aux reflets miel et caramel, vue de dos" data-t="Miel &amp; caramel" data-d="Des reflets dorés qui illuminent les boucles.">
+      <img src="img/c1.webp" alt="Chevelure noire bouclée et volumineuse, vue de dos" loading="lazy" data-t="Ébène" data-d="Un noir profond, des boucles pleines de volume.">
+      <img src="img/c2.webp" alt="Boucles brunes définies, vue de dos" loading="lazy" data-t="Chocolat" data-d="Des boucles brunes bien définies, toutes en souplesse.">
+      <img src="img/c3.webp" alt="Longues boucles poivre et sel, vue de dos" loading="lazy" data-t="Poivre &amp; sel" data-d="Le gris naturel sublimé, des boucles longues et lumineuses.">
+      <img src="img/c4.webp" alt="Chignon blond orné d’un accessoire délicat" loading="lazy" data-t="Blond perle" data-d="Un chignon de fête et son accessoire délicat.">
+      <figcaption><b>Miel &amp; caramel</b><span>Des reflets dorés qui illuminent les boucles.</span></figcaption>
+    </figure>
+    <div class="sw rv" role="tablist" aria-label="Nuancier">
+      <button class="act" data-i="0" aria-label="Miel et caramel"><i style="background:linear-gradient(135deg,#d9a04a,#9c6b55)"></i>Miel</button>
+      <button data-i="1" aria-label="Ébène"><i style="background:linear-gradient(135deg,#3b302c,#121212)"></i>Ébène</button>
+      <button data-i="2" aria-label="Chocolat"><i style="background:linear-gradient(135deg,#6f5644,#3a2a24)"></i>Chocolat</button>
+      <button data-i="3" aria-label="Poivre et sel"><i style="background:linear-gradient(135deg,#d6cfc0,#786e63)"></i>Poivre&nbsp;&amp;&nbsp;sel</button>
+      <button data-i="4" aria-label="Blond perle"><i style="background:linear-gradient(135deg,#e8d3c6,#a5845d)"></i>Blond</button>
+    </div>
+    <p class="note">Teintes relevées sur les réalisations publiées par le salon · photos Signé Camille</p>
   </div>
-  <div class="gal">
-    <figure><img src="img/c2.webp" alt="Longues boucles brunes aux reflets plus clairs, vue de dos" loading="lazy"></figure>
-    <figure><img src="img/c3.webp" alt="Boucles longues et souples aux reflets dorés, vue de dos" loading="lazy"></figure>
-    <figure><img src="img/c4.webp" alt="Chignon blond doré orné d'un accessoire argenté en feuille" loading="lazy"></figure>
-  </div>
-  <p class="hint">Faites glisser pour voir les réalisations →</p>
 </section>
 
-<section class="noel" id="noel">
-  <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:12%;animation-delay:.8s">✦</span><span class="star" style="left:18%;bottom:14%;animation-delay:1.6s">✦</span><span class="star" style="right:20%;bottom:20%;animation-delay:2.2s">✦</span>
-  <div class="wrap">
-    <div class="eyebrow rv">Offrir pour Noël</div>
-    <h2 class="rv">Offrez un moment <em>chez Signé Camille</em></h2>
-    <p class="rv">Une idée cadeau qui fait briller les cheveux et le sourire. Écrivez au salon sur WhatsApp pour préparer ensemble une jolie attention.</p>
-    <a class="btn rv" href="https://wa.me/262693044158?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl%20chez%20Sign%C3%A9%20Camille">Offrir une carte cadeau</a>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="eyebrow rv">Contact</div>
-    <h2 class="rv">On vous <em>accueille</em> aux Trois-Bassins</h2>
-    <div class="ct">
-      <div class="rv"><h3>Adresse</h3><p>72 chemin Croix Bigat<br>97426 Les Trois-Bassins</p></div>
-      <div class="rv"><h3>Rendez-vous</h3><p><a href="tel:+262693044158">06 93 04 41 58</a><br><a href="https://wa.me/262693044158">WhatsApp</a><br><a href="https://www.facebook.com/signe.camille">Facebook · Signé Camille</a></p></div>
+<section class="soins">
+  <div class="wrap duo">
+    <div class="ph rv"><img src="img/nouveautes.webp" alt="Shampoings, masques, sérums et produits coiffants présentés au salon" loading="lazy" width="900" height="1080"></div>
+    <div>
+      <div class="eyebrow rv">Au salon</div>
+      <h2 class="rv">Les nouveautés <em>sont arrivées</em></h2>
+      <p class="rv">Shampoings, masques, soins, sérums et produits coiffants pour toutes les chevelures&nbsp;:</p>
+      <ul class="check rv"><li>Cheveux secs ou abîmés</li><li>Cheveux colorés</li><li>Cheveux bouclés &amp; curly</li><li>Sérums et soins</li></ul>
+      <p class="doux rv">à des prix tout doux&nbsp;♥</p>
     </div>
   </div>
 </section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Signé Camille.<br>Photos : réalisations publiées par le salon sur Facebook.</footer>
+<section class="noel" id="noel">
+  <span class="flake" style="left:7%;top:12%">✦</span><span class="flake" style="right:9%;top:9%;animation-delay:1s">❄</span><span class="flake" style="left:14%;bottom:16%;animation-delay:2s">❄</span><span class="flake" style="right:16%;bottom:24%;animation-delay:2.8s">✦</span><span class="flake" style="left:46%;top:5%;animation-delay:1.6s">✦</span>
+  <div class="wrap">
+    <div class="eyebrow rv">Offrir pour Noël</div>
+    <h2 class="rv">Offrez un moment <em>Signé Camille</em></h2>
+    <div class="gift rv" aria-hidden="true"><div class="t">Signé Camille</div><div class="s">Carte cadeau · Noël</div></div>
+    <p class="rv">Une couleur lumineuse, un brushing, un chignon pour les fêtes… Offrez à vos proches un moment de douceur au salon. Écrivez à Signé Camille sur WhatsApp pour préparer ensemble votre carte cadeau.</p>
+    <a class="btn rv" href="https://wa.me/262693044158?text=Bonjour%20Sign%C3%A9%20Camille%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl%20%F0%9F%8E%81"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M12 9v12M3 13h18M12 9C10 4 6 5 7.5 7.5 8.5 9 12 9 12 9zm0 0c2-5 6-4 4.5-1.5C15.5 9 12 9 12 9z"/></svg>Offrir une carte cadeau</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv">Rendez-vous</div>
+    <h2 class="rv">Le salon vous <em>accueille</em></h2>
+    <div class="ct">
+      <div class="rv"><h3>Adresse</h3><p>72 chemin Croix Bigat<br>97426 Les Trois-Bassins</p><p style="margin-top:.5rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=72%20Chemin%20Croix%20Bigat%2097426%20Les%20Trois-Bassins">Ouvrir l’itinéraire</a></p></div>
+      <div class="rv"><h3>Téléphone</h3><div class="lines"><a href="tel:+262693044158">06 93 04 41 58</a><a href="https://wa.me/262693044158?text=Bonjour%20Sign%C3%A9%20Camille%2C%20je%20voudrais%20prendre%20rendez-vous">Écrire sur WhatsApp</a></div></div>
+      <div class="rv"><h3>Suivre le salon</h3><p>Réalisations et nouveautés en direct&nbsp;:</p><p style="margin-top:.35rem"><a href="https://www.facebook.com/signe.camille">Facebook · Signé Camille</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer><span class="s">Signé Camille</span>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Signé Camille.<br>Photos : réalisations publiées par le salon sur sa page Facebook.</footer>
 
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+/* nuancier */
+var imgs=[].slice.call(document.querySelectorAll('.stage img')),bs=[].slice.call(document.querySelectorAll('.sw button')),cap=document.querySelector('.stage figcaption'),cur=0,auto=null;
+function show(i){cur=i;imgs.forEach(function(m,k){m.classList.toggle('act',k===i)});bs.forEach(function(b,k){b.classList.toggle('act',k===i);b.setAttribute('aria-selected',k===i)});cap.innerHTML='<b>'+imgs[i].dataset.t+'</b><span>'+imgs[i].dataset.d+'</span>'}
+bs.forEach(function(b){b.addEventListener('click',function(){clearInterval(auto);show(+b.dataset.i)})});
+if(!rm)auto=setInterval(function(){if(!document.hidden)show((cur+1)%imgs.length)},4200);
 if(rm)return;
-var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true;
-function size(){W=c.width=innerWidth;H=c.height=innerHeight}
-size();addEventListener('resize',size);
-for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.8,v:Math.random()*.35+.12,p:Math.random()*6.28,s:Math.random()*.02+.008,k:i%3});
-function draw(){
- if(!run)return;x.clearRect(0,0,W,H);
- P.forEach(function(q){q.y-=q.v;q.p+=q.s;q.x+=Math.sin(q.p)*.35;if(q.y<-10){q.y=H+10;q.x=Math.random()*W}
-  var a=.2+.35*Math.abs(Math.sin(q.p*1.6)),col=q.k?'224,166,58':'236,120,166';
-  x.beginPath();x.fillStyle='rgba('+col+','+a+')';x.arc(q.x,q.y,q.r,0,6.28);x.fill();
-  x.strokeStyle='rgba('+col+','+a*.6+')';x.lineWidth=.6;x.beginPath();x.moveTo(q.x-q.r*3,q.y);x.lineTo(q.x+q.r*3,q.y);x.moveTo(q.x,q.y-q.r*3);x.lineTo(q.x,q.y+q.r*3);x.stroke()});
- requestAnimationFrame(draw)}
-document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
-draw();
+/* fils de miel : boucles dorées et paillettes */
+function field(c,n,curly,alpha){
+ var x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+ function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.6,v:Math.random()*.3+.1,p:Math.random()*6.28,s:Math.random()*.02+.006,c:curly&&i%3===0,L:Math.random()*14+10,rot:Math.random()*6.28});
+ function draw(){
+  if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(q){q.y-=q.v;q.p+=q.s;q.x+=Math.sin(q.p)*.3;q.rot+=.004;
+   if(q.y<-30){q.y=H+30;q.x=Math.random()*W}
+   var a=alpha*(.35+.65*Math.abs(Math.sin(q.p*1.4)));
+   if(q.c){x.save();x.translate(q.x,q.y);x.rotate(q.rot);x.strokeStyle='rgba(232,184,104,'+a*.8+')';x.lineWidth=1.1;x.beginPath();
+    for(var t=0;t<=1.001;t+=.04){var ang=t*12.5,rad=3.2,px=Math.cos(ang)*rad,py=t*q.L*2-q.L+Math.sin(ang)*rad*.5;t?x.lineTo(px,py):x.moveTo(px,py)}
+    x.stroke();x.restore()}
+   else{var col=q.r>1.6?'236,140,176':'244,214,150';x.fillStyle='rgba('+col+','+a+')';x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();
+    if(q.r>1.4){x.strokeStyle='rgba('+col+','+a*.55+')';x.lineWidth=.6;x.beginPath();x.moveTo(q.x-q.r*3,q.y);x.lineTo(q.x+q.r*3,q.y);x.moveTo(q.x,q.y-q.r*3);x.lineTo(q.x,q.y+q.r*3);x.stroke()}}
+  });
+  requestAnimationFrame(draw)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+ draw();
+}
+field(document.getElementById('curls'),18,true,.9);
+field(document.getElementById('fx'),14,false,.45);
+/* léger parallaxe du hero */
+var bg=document.querySelector('.hero .bg');
+addEventListener('scroll',function(){var y=scrollY;if(y<innerHeight)bg.style.translate='0 '+(y*.25)+'px'},{passive:true});
 })();
 </script>
-<script src="/outils/cta.js" data-nom="Signé Camille" defer></script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Signé Camille" defer></script>
 </body>
 </html>

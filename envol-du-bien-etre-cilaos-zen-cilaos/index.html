@@ -4,87 +4,188 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>L'envol du Bien-être By Cilaos Zen · Massages bien-être à Cilaos</title>
-<meta name="description" content="Massages bien-être (relaxant, californien, tuina) au cœur de Cilaos, à l'Archipel des métiers, depuis 2018. Une page imaginée pour L'envol du Bien-être By Cilaos Zen.">
+<title>L'envol du Bien-être By Cilaos Zen · Massages bien-être au cœur de Cilaos</title>
+<meta name="description" content="Massages relaxants, décontractants et apaisants au cœur du cirque de Cilaos, depuis 2018 : californien, tuina, à la bougie, à l'huile essentielle. Une page imaginée pour L'envol du Bien-être By Cilaos Zen.">
 <meta property="og:title" content="L'envol du Bien-être By Cilaos Zen · Cilaos">
-<meta property="og:description" content="Massages bien-être au cœur de Cilaos depuis 2018 : relaxant, californien, tuina. Une page imaginée pour L'envol du Bien-être.">
+<meta property="og:description" content="Prenez votre envol : massages bien-être au cœur du cirque de Cilaos, depuis 2018.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://maquettes.atma-digital.re/envol-du-bien-etre-cilaos-zen-cilaos/">
-<meta property="og:image" content="https://maquettes.atma-digital.re/envol-du-bien-etre-cilaos-zen-cilaos/img/e1.webp">
+<meta property="og:image" content="https://maquettes.atma-digital.re/envol-du-bien-etre-cilaos-zen-cilaos/img/bougies-huile.webp">
+<meta name="theme-color" content="#241638">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Parisienne&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--vio:#6e4aa3;--vio-f:#2c1d4a;--turq:#1fa3a8;--turq-c:#bfeaea;--lav:#e9e0f6;--creme:#faf7fc;--or:#e8c9a0}
+:root{--vio:#6e4aa3;--vio-c:#9b7fd0;--nuit:#241638;--nuit2:#3a2560;--turq:#1b9b9e;--turq-c:#a8e6e4;--rose:#d85ba8;--ciel:#5b9fd8;--lav:#efe8f8;--creme:#fbf8fd;--or:#e9cf9f;--txt:#2b2140}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Nunito Sans',sans-serif;background:var(--creme);color:var(--vio-f);font-size:17px;line-height:1.65;overflow-x:hidden}
+body{font-family:'Nunito Sans',sans-serif;background:var(--creme);color:var(--txt);font-size:17px;line-height:1.68;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-.ruban{background:var(--vio-f);color:var(--creme);font-size:.76rem;text-align:center;padding:.55rem 1rem}
+.ruban{position:relative;z-index:6;background:var(--nuit);color:#e6dcf5;font-size:.76rem;text-align:center;padding:.55rem 1rem;line-height:1.45}
 .ruban b{color:var(--turq-c);font-weight:600}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
-.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
-.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--vio-f)}
-.hero .bg{position:absolute;inset:0;background:url(img/e1.webp) center/cover;animation:kb 24s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,29,74,.25) 0%,rgba(44,29,74,.25) 30%,rgba(44,29,74,.93) 100%)}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translateY(-1.5%)}}
-.hero .in{position:relative;z-index:2;padding:0 1.25rem 3rem;max-width:1040px;margin:0 auto;width:100%}
-.mark{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--turq-c);opacity:0;animation:up 1s .2s forwards}
-.kick{letter-spacing:.26em;text-transform:uppercase;font-size:.7rem;color:var(--or);opacity:0;animation:up 1s .4s forwards;margin-top:.3rem}
-.hero h1{font-size:clamp(2.7rem,11vw,5rem);margin:.5rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards}
-.hero h1 em{color:var(--turq-c)}
-.lead{max-width:30rem;font-weight:300;font-size:1.08rem;opacity:0;animation:up 1.1s .85s forwards}
-.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.5rem;opacity:0;animation:up 1.1s 1.05s forwards}
-.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--turq);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,163,168,.4)}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);animation:none}
-@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(31,163,168,.5)}50%{box-shadow:0 0 0 10px rgba(31,163,168,0)}}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.3rem}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+
+/* HERO */
+.hero{position:relative;min-height:94vh;min-height:94svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--nuit)}
+.hero .bg{position:absolute;left:-4%;right:-4%;top:-2%;height:64%;background:url(img/bougies-huile.webp) center 45%/cover;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%);animation:kb 26s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,22,56,.3) 0%,rgba(36,22,56,.05) 22%,rgba(36,22,56,.55) 38%,rgba(36,22,56,.9) 50%,var(--nuit) 62%)}
+@media(min-width:760px){.hero .bg{height:auto;bottom:-2%;-webkit-mask-image:none;mask-image:none}.hero::after{background:linear-gradient(90deg,rgba(36,22,56,.95) 0%,rgba(36,22,56,.7) 45%,rgba(36,22,56,.1) 100%)}}
+.hero .in{position:relative;z-index:3;padding:0 1.3rem 6.5rem;max-width:1060px;margin:0 auto;width:100%}
+.mark{font-family:'Parisienne',cursive;font-size:2.1rem;line-height:1.05;color:var(--turq-c);opacity:0;animation:up 1s .2s forwards}
+.mark small{display:block;font-size:1.3rem;color:#d9c8f2}
+.kick{letter-spacing:.28em;text-transform:uppercase;font-size:.68rem;color:var(--or);margin-top:.7rem;opacity:0;animation:up 1s .4s forwards}
+.hero h1{font-size:clamp(2.6rem,11.5vw,5.2rem);margin:.45rem 0 .8rem;opacity:0;animation:up 1.2s .6s forwards}
+.hero h1 em{font-style:italic;background:linear-gradient(90deg,var(--turq-c),#d9c2ff,var(--turq-c));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+.lead{max-width:31rem;font-weight:300;font-size:1.06rem;color:#efe8fb;opacity:0;animation:up 1.1s .85s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem;opacity:0;animation:up 1.1s 1.05s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.92rem 1.45rem;border-radius:99px;background:var(--turq);color:#fff;text-decoration:none;font-weight:700;font-size:.93rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.8s ease-in-out infinite;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,62%{left:-60%}100%{left:130%}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(27,155,158,.45)}
+.btn.ghost{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.7);animation:none;backdrop-filter:blur(4px)}
+.btn.ghost::after{display:none}
+.btn.vio{background:var(--vio)}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(27,155,158,.55)}50%{box-shadow:0 0 0 11px rgba(27,155,158,0)}}
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
-.marq{background:var(--vio);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem}
-.marq span{display:inline-block;padding-left:100%;animation:mq 34s linear infinite}
-@keyframes mq{to{transform:translateX(-100%)}}
-section{padding:4.2rem 0;position:relative}
-.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.7rem;color:var(--turq);font-weight:600}
-h2{font-size:clamp(2rem,7vw,3.1rem);margin:.4rem 0 1rem}
+.monts{position:absolute;left:0;right:0;bottom:-1px;z-index:2;width:100%;height:auto;display:block}
+.monts path{transition:transform .2s linear}
+
+/* BANDEAU */
+.marq{background:var(--creme);color:var(--vio);overflow:hidden;white-space:nowrap;padding:.4rem 0 .9rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;position:relative;z-index:1}
+.marq span{display:inline-block;animation:mq 38s linear infinite}
+.marq i{font-style:normal;color:var(--turq);margin:0 .7rem;font-size:.9rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{padding:4.3rem 0;position:relative}
+.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.7rem;color:var(--turq);font-weight:700;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:1.6rem;height:1px;background:currentColor;opacity:.7}
+h2{font-size:clamp(2.1rem,8vw,3.3rem);margin:.45rem 0 1rem;color:var(--nuit)}
 h2 em{color:var(--vio)}
-.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
 .rv.on{opacity:1;transform:none}
-.duo{display:grid;gap:2rem}
-.duo .ph{border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(110,74,163,.28)}
-.duo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
-.chips li{list-style:none;border:1px solid var(--vio);color:var(--vio-f);padding:.35rem .9rem;border-radius:99px;font-size:.85rem;background:#fff}
-.soins{background:var(--lav)}
-.cards{display:grid;gap:1rem;margin-top:1.5rem}
-.card{background:#fff;border-radius:18px;padding:1.4rem 1.4rem 1.5rem;box-shadow:0 10px 28px rgba(44,29,74,.08);transition:transform .35s,box-shadow .35s;border-top:4px solid var(--turq)}
-.card:nth-child(even){border-top-color:var(--vio)}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(44,29,74,.15)}
-.card h3{font-size:1.7rem;color:var(--vio)}
-.card p{font-size:.95rem;margin-top:.3rem}
-.cit{background:var(--vio-f);color:var(--creme);text-align:center}
-.cit .eyebrow{color:var(--turq-c)}
-.cit blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,6vw,2.5rem);line-height:1.3;max-width:34rem;margin:1rem auto .8rem;color:var(--turq-c)}
-.cit cite{font-style:normal;font-size:.82rem;font-weight:300;display:block}
-.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+
+/* SALON */
+.duo{display:grid;gap:2.2rem}
+.arch{position:relative;max-width:420px;margin:0 auto;width:100%}
+.arch .ph{border-radius:220px 220px 22px 22px;overflow:hidden;box-shadow:0 24px 54px rgba(110,74,163,.3)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s}
+.arch:hover img{transform:scale(1.04)}
+.arch::before{content:"";position:absolute;inset:-12px -12px 12px 12px;border:1.5px solid var(--turq);border-radius:220px 220px 22px 22px;opacity:.5;z-index:-1}
+.badge{position:absolute;right:-6px;bottom:28px;background:#fff;border-radius:16px;padding:.7rem .95rem;box-shadow:0 12px 30px rgba(36,22,56,.18);text-align:center;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--vio);animation:flo 6s ease-in-out infinite}
+.badge b{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;letter-spacing:0;line-height:1;color:var(--nuit)}
+@keyframes flo{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.intro{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.32rem;line-height:1.45;color:var(--nuit2);border-left:2px solid var(--turq);padding-left:1rem;margin:1rem 0}
+.intro small{display:block;font-family:'Nunito Sans',sans-serif;font-style:normal;font-size:.78rem;color:#7a6a92;margin-top:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem;list-style:none}
+.chips li{border:1px solid #d6c8ec;color:var(--nuit2);padding:.35rem .9rem;border-radius:99px;font-size:.84rem;background:#fff;transition:background .3s,color .3s}
+.chips li:hover{background:var(--vio);color:#fff}
+
+/* RANDO + SOUFFLE */
+.rando{background:linear-gradient(180deg,var(--lav),#e3f4f3);overflow:hidden;text-align:center}
+.rando p{max-width:33rem;margin:0 auto}
+.souffle{position:relative;width:210px;height:210px;margin:2.2rem auto 1rem;display:grid;place-items:center}
+.souffle span{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,rgba(27,155,158,.28),rgba(110,74,163,.12) 60%,transparent 70%);animation:souf 10s ease-in-out infinite}
+.souffle span:nth-child(2){inset:30px;background:radial-gradient(circle,rgba(255,255,255,.9),rgba(168,230,228,.5) 70%);animation-delay:-.4s}
+.souffle b{position:relative;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:1.35rem;color:var(--nuit2)}
+.souffle b::before{content:"Inspirez";animation:mot 10s steps(1) infinite}
+@keyframes souf{0%,100%{transform:scale(.72)}50%{transform:scale(1.06)}}
+@keyframes mot{0%{content:"Inspirez"}50%{content:"Expirez"}}
+.rando .note{font-size:.8rem;color:#6d5f86;margin-top:.4rem}
+
+/* SOINS */
+.soins{background:var(--creme)}
+.cards{display:grid;gap:1rem;margin-top:1.6rem}
+.card{position:relative;background:#fff;border-radius:20px;padding:1.4rem 1.35rem 1.45rem;box-shadow:0 10px 28px rgba(36,22,56,.07);transition:transform .4s,box-shadow .4s;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--turq),var(--vio-c),var(--rose));transform:scaleX(.25);transform-origin:left;transition:transform .6s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(36,22,56,.14)}
+.card:hover::before,.card.on::before{transform:scaleX(1)}
+.card .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--lav);margin-bottom:.7rem}
+.card .ic svg{width:24px;height:24px;stroke:var(--vio);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.65rem;color:var(--nuit)}
+.card p{font-size:.94rem;margin-top:.3rem;color:#4a3d60}
+.card .q{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--turq);margin-top:.5rem}
+.card.star{background:linear-gradient(150deg,var(--nuit),var(--nuit2));color:#fff}
+.card.star h3{color:#fff}.card.star p{color:#ddd0f2}.card.star .q{color:var(--turq-c)}
+.card.star .ic{background:rgba(255,255,255,.1)}.card.star .ic svg{stroke:var(--turq-c)}
+.avec{margin-top:1.6rem;font-size:.92rem;color:#5b4d72}
+.avec b{color:var(--vio)}
+
+/* CITATION */
+.cit{background:radial-gradient(120% 90% at 50% 0%,var(--nuit2),var(--nuit) 70%);color:#f1eafb;text-align:center;overflow:hidden}
+.cit .eyebrow{color:var(--turq-c);justify-content:center}
+.cit .eyebrow::before{display:none}
+.cit blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.75rem,7vw,2.7rem);line-height:1.25;max-width:36rem;margin:1rem auto .9rem}
+.cit blockquote span{color:var(--turq-c)}
+.cit cite{font-style:normal;font-size:.8rem;font-weight:300;opacity:.85}
+.papi{width:64px;margin:0 auto .4rem;animation:flo 5s ease-in-out infinite}
+
+/* GALERIE */
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.3rem 1.6rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .gal::-webkit-scrollbar{display:none}
-.gal figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(44,29,74,.22);transition:transform .4s}
-.gal figure:hover{transform:scale(1.02)}
-.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
-.hint{text-align:center;font-size:.8rem;color:var(--vio);opacity:.8}
-.noel{background:linear-gradient(160deg,var(--vio-f),#4a2f7a);color:#fff;text-align:center;overflow:hidden}
-.noel h2 em{color:var(--turq-c)}
-.noel .eyebrow{color:var(--or)}
-.noel p{max-width:30rem;margin:0 auto 1.5rem;font-weight:300}
-.star{position:absolute;color:var(--or);opacity:.5;animation:tw 3.5s ease-in-out infinite;font-size:1.1rem}
-@keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.8;transform:scale(1.15)}}
-.ct{display:grid;gap:1.4rem;margin-top:1.5rem}
-.ct h3{font-size:1.5rem;color:var(--vio)}
-.ct a{color:var(--turq);font-weight:600}
-.ct small{opacity:.8}
-footer{background:var(--vio-f);color:var(--creme);text-align:center;padding:2rem 1.25rem;font-size:.8rem;font-weight:300}
-@media(min-width:760px){.duo{grid-template-columns:1fr 1fr;align-items:center}.cards{grid-template-columns:repeat(3,1fr)}.ct{grid-template-columns:repeat(3,1fr)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mark,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}canvas#fx{display:none}.marq span{padding-left:0}}
+.gal figure{flex:0 0 76%;max-width:320px;scroll-snap-align:center;border-radius:20px;overflow:hidden;box-shadow:0 14px 34px rgba(36,22,56,.2);background:#fff;transition:transform .45s}
+.gal figure:hover{transform:translateY(-4px)}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.gal figcaption{font-size:.82rem;padding:.65rem .95rem;color:#5b4d72}
+.dots{display:flex;justify-content:center;gap:.45rem}
+.dots i{width:7px;height:7px;border-radius:50%;background:#d6c8ec;transition:background .3s,transform .3s}
+.dots i.on{background:var(--vio);transform:scale(1.35)}
+
+/* MERCI */
+.merci{background:linear-gradient(180deg,#fff,var(--lav))}
+.merci .logo{max-width:320px;margin:0 auto;border-radius:28px;overflow:hidden;box-shadow:0 18px 44px rgba(110,74,163,.22);background:#fff;padding:.4rem}
+.merci .logo img{width:100%;aspect-ratio:1;object-fit:contain}
+.merci p.m{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;line-height:1.3;color:var(--nuit2);margin:.6rem 0}
+.merci small{color:#6d5f86;font-size:.8rem}
+
+/* NOEL */
+.noel{background:linear-gradient(165deg,var(--nuit) 0%,#3b2462 60%,#1d5f68 130%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--or);justify-content:center}.noel .eyebrow::before{display:none}
+.noel h2{color:#fff}.noel h2 em{color:var(--turq-c)}
+.noel p{max-width:33rem;margin:0 auto 1.4rem;font-weight:300;color:#e7ddf6}
+.bon{max-width:330px;margin:.6rem auto 2rem;aspect-ratio:1.62;border-radius:18px;background:linear-gradient(135deg,#fff 0%,#f3ecfc 48%,#dff4f3 100%);color:var(--nuit);display:flex;flex-direction:column;justify-content:center;align-items:center;box-shadow:0 22px 46px rgba(0,0,0,.4);position:relative;overflow:hidden;transform:rotate(-3deg);transition:transform .6s}
+.bon:hover{transform:rotate(0) scale(1.03)}
+.bon::before{content:"";position:absolute;left:0;right:0;top:62%;height:12px;background:linear-gradient(90deg,var(--turq),var(--vio))}
+.bon::after{content:"";position:absolute;top:0;bottom:0;right:18%;width:12px;background:linear-gradient(180deg,var(--vio),var(--turq))}
+.bon .t1{font-family:'Parisienne',cursive;font-size:1.9rem;color:var(--vio);line-height:1;position:relative;z-index:2}
+.bon .t2{font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;margin-top:.35rem;position:relative;z-index:2}
+.bon .t3{position:absolute;bottom:.7rem;left:1rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;z-index:2;background:#fff;padding:0 .4rem;border-radius:6px}
+.bon svg{position:absolute;top:.8rem;left:.9rem;width:34px;opacity:.85}
+.idees{display:grid;gap:.7rem;max-width:34rem;margin:0 auto 1.8rem;text-align:left;list-style:none}
+.idees li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:.8rem 1rem;font-size:.93rem;color:#efe6fb}
+.idees li b{color:var(--turq-c);font-weight:600}
+.noel .btn{background:#25a365}
+.noel .souv{font-size:.82rem;opacity:.8;margin:1.4rem auto 0}
+.sn{position:absolute;color:#fff;opacity:.4;animation:tw 3.4s ease-in-out infinite;font-size:.9rem}
+@keyframes tw{0%,100%{opacity:.12;transform:scale(.8)}50%{opacity:.75;transform:scale(1.15)}}
+
+/* CONTACT */
+.ct{display:grid;gap:1rem;margin-top:1.5rem}
+.ct>div{background:#fff;border-radius:18px;padding:1.3rem 1.3rem 1.4rem;box-shadow:0 10px 26px rgba(36,22,56,.07)}
+.ct h3{font-size:1.45rem;color:var(--vio);margin-bottom:.3rem}
+.ct a{color:var(--nuit);font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--turq);overflow-wrap:anywhere}
+.ct p+p{margin-top:.35rem}
+.ct .sm{font-size:.84rem;color:#6d5f86}
+footer{background:var(--nuit);color:#d9cdeb;text-align:center;padding:2.4rem 1.3rem 4.5rem;font-size:.8rem;font-weight:300;line-height:1.6}
+footer .f{font-family:'Parisienne',cursive;font-size:1.7rem;color:var(--turq-c);display:block;margin-bottom:.4rem}
+
+@media(min-width:760px){
+ .duo{grid-template-columns:1.05fr .95fr;align-items:center}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .ct{grid-template-columns:repeat(3,1fr)}
+ .gal figure{flex-basis:280px}
+ .merci .duo{grid-template-columns:.8fr 1.2fr}
+ .idees{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.mark,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}
+ canvas#fx{display:none}
+ .hero h1 em{color:var(--turq-c);background:none}
+}
 </style>
 </head>
 <body>
@@ -94,118 +195,193 @@ footer{background:var(--vio-f);color:var(--creme);text-align:center;padding:2rem
 <header class="hero">
   <div class="bg" role="img" aria-label="Bougies allumées, huile de massage, fleur rose et serviettes roulées"></div>
   <div class="in">
-    <div class="mark">L'envol du Bien-être · By Cilaos Zen</div>
-    <div class="kick">Massages bien-être · Cilaos</div>
-    <h1>Prenez votre <em>envol</em>,<br>le temps d'un massage</h1>
-    <p class="lead">Relaxant, décontractant, apaisant : un moment de douceur au cœur de Cilaos, depuis 2018.</p>
+    <div class="mark">L'envol du Bien-être<small>By Cilaos Zen</small></div>
+    <div class="kick">Massages bien-être · Cirque de Cilaos</div>
+    <h1>Prenez votre <em>envol</em>, le temps d'un massage</h1>
+    <p class="lead">Relaxant, décontractant, apaisant : à l'huile essentielle ou à la bougie, un salon de douceur au cœur de Cilaos, depuis 2018.</p>
     <div class="btns">
-      <a class="btn" href="https://rdv.itiaki.com/Massagelenvoldubienetre">Réserver en ligne</a>
-      <a class="btn ghost" href="#soins">Découvrir les massages</a>
+      <a class="btn" href="tel:+262693525159">Réserver au 0693 52 51 59</a>
+      <a class="btn ghost" href="#massages">Découvrir les massages</a>
     </div>
   </div>
+  <svg class="monts" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true">
+    <path id="m1" fill="#3a2560" fill-opacity=".55" d="M0 120 L120 70 L210 98 L330 30 L420 82 L520 52 L640 104 L760 22 L860 80 L980 46 L1090 96 L1200 40 L1320 88 L1440 60 V170 H0Z"/>
+    <path id="m2" fill="#1b9b9e" fill-opacity=".35" d="M0 140 L150 100 L260 128 L380 78 L500 120 L620 92 L740 132 L880 86 L1000 124 L1130 90 L1260 130 L1440 98 V170 H0Z"/>
+    <path fill="#fbf8fd" d="M0 160 C240 132 420 150 720 146 C1000 142 1220 128 1440 150 V170 H0Z"/>
+  </svg>
 </header>
 
-<div class="marq" aria-hidden="true"><span>Massage relaxant ✦ Massage californien ✦ Tuina ✦ Huile essentielle ✦ Cire de bougie ✦ Au cœur de Cilaos ✦ Depuis 2018 ✦ Avec ou sans rdv selon disponibilité ✦ &nbsp;</span></div>
+<div class="marq" aria-hidden="true"><span>Massage relaxant <i>✦</i> Californien <i>✦</i> Tuina <i>✦</i> À la bougie <i>✦</i> Huile essentielle <i>✦</i> Huile chaude <i>✦</i> Le massage Cilaos <i>✦</i> Avec ou sans rdv selon dispo <i>✦</i> Massage relaxant <i>✦</i> Californien <i>✦</i> Tuina <i>✦</i> À la bougie <i>✦</i> Huile essentielle <i>✦</i> Huile chaude <i>✦</i> Le massage Cilaos <i>✦</i> Avec ou sans rdv selon dispo <i>✦</i> </span></div>
 
-<section>
+<section id="salon">
   <div class="wrap duo">
     <div class="rv">
       <div class="eyebrow">Le salon</div>
-      <h2>Un cocon de <em>douceur</em> à Cilaos</h2>
-      <p>L'envol du Bien-être By Cilaos Zen vous accueille au 82 rue du Père Boiteau, porte 13, à l'Archipel des métiers. Une praticienne qualifiée vous fait découvrir ou redécouvrir le massage, avec ou sans rendez-vous selon les disponibilités.</p>
-      <p style="margin-top:.8rem">Réserver à l'avance reste le plus simple pour choisir votre moment.</p>
-      <ul class="chips"><li>Depuis 2018</li><li>Cœur de Cilaos</li><li>Archipel des métiers</li><li>Réservation conseillée</li></ul>
+      <h2>Un cocon de <em>douceur</em> au cœur du cirque</h2>
+      <p class="intro">« Praticienne en massage qualifiée, vous accueille en salon situé au cœur de Cilaos, pour découvrir ou re-découvrir le massage. »<small>Présentation du salon sur sa page Facebook</small></p>
+      <p>Rendez-vous au 82 rue du Père Boiteau, porte 13, à l'Archipel des métiers. Le salon vous reçoit avec ou sans rendez-vous selon les disponibilités ; réserver à l'avance vous assure le moment qui vous convient.</p>
+      <ul class="chips"><li>Depuis 2018</li><li>Archipel des métiers · porte 13</li><li>Réservation conseillée</li><li>Carte bancaire &amp; espèces</li></ul>
     </div>
-    <div class="ph rv"><img src="img/e2.webp" alt="Salle de massage du salon avec sa statue de Bouddha" loading="lazy"></div>
+    <div class="arch rv">
+      <div class="ph"><img src="img/salle-bouddha.webp" alt="Pièce apaisante aux tons gris avec une statue de Bouddha" loading="lazy" width="656" height="763"></div>
+      <div class="badge"><b>2018</b>massages<br>à Cilaos</div>
+    </div>
   </div>
 </section>
 
-<section class="soins" id="soins">
+<section class="rando">
+  <div class="wrap">
+    <div class="eyebrow rv" style="justify-content:center">Après la randonnée</div>
+    <h2 class="rv">Le cirque dans les jambes, <em>la légèreté</em> en sortant</h2>
+    <p class="rv">Les massages de relaxation sont « de précieux alliés » : ils aident à « évoluer sereinement dans les sociétés hyperactives, ou après une longue randonnée ». Une halte idéale entre deux sentiers de Cilaos.</p>
+    <div class="souffle rv" aria-hidden="true"><span></span><span></span><b></b></div>
+    <p class="note rv">Suivez la bulle quelques instants : le massage commence déjà.</p>
+  </div>
+</section>
+
+<section class="soins" id="massages">
   <div class="wrap">
     <div class="eyebrow rv">Les massages</div>
     <h2 class="rv">Relaxant, décontractant, <em>apaisant</em></h2>
-    <p class="rv">Des soins qui réunissent plusieurs techniques pour un corps et un esprit plus légers, après une longue randonnée comme après une semaine chargée.</p>
+    <p class="rv">Plusieurs techniques réunies pour un corps détendu et un esprit léger. Choisissez votre texture : huile chaude, huile essentielle ou cire de bougie.</p>
     <div class="cards">
-      <div class="card rv"><h3>Relaxant</h3><p>Un massage tout en douceur pour relâcher les tensions du quotidien.</p></div>
-      <div class="card rv"><h3>Californien</h3><p>Des gestes enveloppants et fluides, à l'huile chaude ou à l'huile essentielle.</p></div>
-      <div class="card rv"><h3>Tuina</h3><p>Une technique issue de la tradition chinoise, pour décontracter en profondeur.</p></div>
+      <article class="card star rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M2 20 L8 9 L12 15 L15 11 L22 20Z"/><circle cx="17" cy="5" r="2"/></svg></div>
+        <h3>Le massage Cilaos</h3>
+        <p>La création maison, pensée pour vous apaiser au cœur du cirque.</p>
+        <span class="q">« Le massage CILAOS est enfin là pour vous apaiser ! »</span>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9.5a5 5 0 0 1-10 0C7 9.5 9 7 12 3z"/></svg></div>
+        <h3>Relaxant &amp; décontractant</h3>
+        <p>Des gestes enveloppants pour relâcher les tensions du quotidien, à l'huile chaude ou à l'huile essentielle.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 11c0-3 1.5-5 4-6-1 3-2 5-4 6z"/><path d="M12 13c0-2.5-1.3-4.2-3.5-5 .8 2.6 1.7 4.2 3.5 5z"/><path d="M5 21h14"/></svg></div>
+        <h3>À la bougie</h3>
+        <p>La cire tiède d'une bougie de massage fond en une huile douce et chaude : un vrai cocon.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12c3-4 6-4 9 0s6 4 9 0"/><path d="M3 17c3-4 6-4 9 0s6 4 9 0"/><path d="M3 7c3-4 6-4 9 0s6 4 9 0"/></svg></div>
+        <h3>Californien</h3>
+        <p>De longs mouvements fluides et lents, pour une détente profonde de la tête aux pieds.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a4.5 4.5 0 0 1 0 9 4.5 4.5 0 0 0 0 9"/><circle cx="12" cy="7.5" r="1"/><circle cx="12" cy="16.5" r="1"/></svg></div>
+        <h3>Tuina &amp; acupression</h3>
+        <p>L'inspiration de la tradition chinoise : des pressions précises pour décontracter en profondeur.</p>
+      </article>
+      <article class="card rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M8 21c-2 0-3-1.5-3-4 0-4 2-8 5-8s4 3 4 6-2 6-6 6z"/><circle cx="15.5" cy="5" r="1.3"/><circle cx="18.5" cy="7" r="1.1"/><circle cx="20" cy="10.3" r="1"/></svg></div>
+        <h3>Réflexologie plantaire</h3>
+        <p>Proposée en appareil, en complément d'un massage, pour des jambes légères.</p>
+      </article>
     </div>
-    <ul class="chips rv"><li>Huile essentielle</li><li>Cire de bougie</li><li>Huile chaude</li><li>Récupération sportive</li></ul>
+    <p class="avec rv"><b>Bon à savoir :</b> massages de bien-être et de relaxation, avec ou sans rendez-vous selon les disponibilités. Réservation conseillée.</p>
   </div>
 </section>
 
 <section class="cit">
   <div class="wrap">
+    <svg class="papi rv" viewBox="0 0 64 48" aria-hidden="true"><defs><linearGradient id="pg" x1="0" x2="1"><stop offset="0" stop-color="#a8e6e4"/><stop offset=".5" stop-color="#b9a0ea"/><stop offset="1" stop-color="#e79cc9"/></linearGradient></defs><path fill="url(#pg)" d="M32 24C26 8 10 2 6 8s4 16 14 18c-8 2-12 10-8 14s14-2 20-14c6 12 16 18 20 14s0-12-8-14c10-2 18-12 14-18S38 8 32 24z"/><path stroke="#fff" stroke-width="1.4" d="M32 14v22"/></svg>
     <div class="eyebrow rv">Dans ses mots</div>
-    <blockquote class="rv">« Ma plus grande joie est de savoir mes clients épanouis, heureux et bien dans leur peau »</blockquote>
+    <blockquote class="rv">« Ma plus grande joie est de savoir mes clients <span>épanouis, heureux</span> et bien dans leur peau. »</blockquote>
     <cite class="rv">Présentation de L'envol du Bien-être sur reunion.fr</cite>
   </div>
 </section>
 
 <section id="ambiance">
   <div class="wrap">
-    <div class="eyebrow rv">L'ambiance</div>
+    <div class="eyebrow rv">L'univers du salon</div>
     <h2 class="rv">Bougies, fleurs et <em>gestes doux</em></h2>
+    <p class="rv">Les images partagées par le salon sur sa page, pour vous glisser déjà dans l'ambiance.</p>
   </div>
-  <div class="gal">
-    <figure><img src="img/e3.webp" alt="Huile dans un bocal, fleur de frangipanier et galets" loading="lazy"></figure>
-    <figure><img src="img/e5.webp" alt="Massage du dos entouré d'orchidées" loading="lazy"></figure>
-    <figure><img src="img/e4.webp" alt="Fleur de lotus rose arrosée d'un filet d'eau" loading="lazy"></figure>
-    <figure><img src="img/e9.webp" alt="Plateau avec bougie rose et douceur" loading="lazy"></figure>
-    <figure><img src="img/e7.webp" alt="Massage des épaules à la lumière chaude" loading="lazy"></figure>
-    <figure><img src="img/e8.webp" alt="Tasse posée sur un tapis clair" loading="lazy"></figure>
-    <figure><img src="img/e6.webp" alt="Massage du pied" loading="lazy"></figure>
+  <div class="gal" id="gal">
+    <figure><img src="img/massage-orchidees.webp" alt="Mains qui massent un dos, entourées d'orchidées" loading="lazy" width="693" height="693"><figcaption>Gestes enveloppants</figcaption></figure>
+    <figure><img src="img/huile-frangipanier.webp" alt="Huile dorée en bocal, fleur de frangipanier et galets" loading="lazy" width="498" height="622"><figcaption>Huile et frangipanier</figcaption></figure>
+    <figure><img src="img/lotus.webp" alt="Fleur de lotus rose sous un filet d'eau" loading="lazy" width="800" height="800"><figcaption>Le calme de l'eau</figcaption></figure>
+    <figure><img src="img/plateau-bougie.webp" alt="Plateau en osier avec bougies roses et douceurs" loading="lazy" width="960" height="720"><figcaption>Bougies et douceurs</figcaption></figure>
+    <figure><img src="img/massage-epaules.webp" alt="Mains qui massent les épaules, lumière chaude" loading="lazy" width="612" height="408"><figcaption>Épaules libérées</figcaption></figure>
   </div>
-  <p class="hint">Faites glisser pour voir l'ambiance →</p>
+  <div class="dots" id="dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i></div>
 </section>
 
-<section class="noel" id="noel">
-  <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:12%;animation-delay:.8s">✦</span><span class="star" style="left:18%;bottom:14%;animation-delay:1.6s">✦</span><span class="star" style="right:20%;bottom:20%;animation-delay:2.2s">✦</span>
-  <div class="wrap">
-    <div class="eyebrow rv">Offrir pour Noël</div>
-    <h2 class="rv">Offrez un moment <em>chez L'envol du Bien-être</em></h2>
-    <p class="rv">Un massage à offrir, c'est une parenthèse de douceur pour quelqu'un que vous aimez. Écrivez au salon sur WhatsApp pour préparer votre carte cadeau.</p>
-    <a class="btn rv" href="https://wa.me/262693525159?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20massage%20pour%20No%C3%ABl">Offrir un massage</a>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="eyebrow rv">Venir au salon</div>
-    <h2 class="rv">On vous <em>accueille</em> à Cilaos</h2>
-    <div class="ct">
-      <div class="rv"><h3>Adresse</h3><p>82 rue du Père Boiteau, porte 13<br>Archipel des métiers<br>97413 Cilaos</p></div>
-      <div class="rv"><h3>Rendez-vous</h3><p><a href="tel:+262693525159">0693 52 51 59</a><br><a href="https://rdv.itiaki.com/Massagelenvoldubienetre">Réserver en ligne</a></p></div>
-      <div class="rv"><h3>Suivre le salon</h3><p><a href="https://www.facebook.com/profile.php/?id=100088405459911">Facebook · L'envol du Bien-être</a></p></div>
+<section class="merci">
+  <div class="wrap duo">
+    <div class="logo rv"><img src="img/logo-merci.webp" alt="Logo aux papillons de L'envol du Bien-être : « Votre salon affiche complet jusqu'au samedi 10 janvier. Merci »" loading="lazy" width="720" height="720"></div>
+    <div class="rv">
+      <div class="eyebrow">La vie du salon</div>
+      <h2>Un début d'année <em>complet</em></h2>
+      <p class="m">« Merci de votre confiance ! »</p>
+      <p>En janvier 2026, le salon affichait complet jusqu'au samedi 10 janvier. Ses papillons turquoise et violets en disent long : légèreté, douceur, envol.</p>
+      <small>Publication du 7 janvier 2026 sur la page Facebook du salon</small>
     </div>
   </div>
 </section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de L'envol du Bien-être By Cilaos Zen.<br>Photos : publications du salon sur Facebook.</footer>
+<section class="noel" id="noel">
+  <span class="sn" style="left:7%;top:12%">✦</span><span class="sn" style="right:9%;top:9%;animation-delay:.9s">✧</span><span class="sn" style="left:13%;bottom:10%;animation-delay:1.7s">✦</span><span class="sn" style="right:15%;bottom:16%;animation-delay:2.4s">✧</span><span class="sn" style="left:48%;top:5%;animation-delay:1.2s">✦</span>
+  <div class="wrap">
+    <div class="eyebrow rv">Offrir pour Noël</div>
+    <h2 class="rv">Un Noël bien-être <em>enchanté</em></h2>
+    <div class="bon rv" aria-hidden="true">
+      <svg viewBox="0 0 64 48"><path fill="#9b7fd0" d="M32 24C26 8 10 2 6 8s4 16 14 18c-8 2-12 10-8 14s14-2 20-14c6 12 16 18 20 14s0-12-8-14c10-2 18-12 14-18S38 8 32 24z"/></svg>
+      <span class="t1">L'envol du Bien-être</span><span class="t2">Bon k'do massage</span><span class="t3">pour vous, avec douceur</span>
+    </div>
+    <p class="rv">Offrez une parenthèse magique à quelqu'un que vous aimez : un massage à Cilaos, à glisser sous le sapin. Écrivez au salon sur WhatsApp pour préparer votre bon k'do.</p>
+    <ul class="idees">
+      <li class="rv"><b>Massage à la bougie</b> · la chaleur d'une bougie de massage pour un cocon douillet.</li>
+      <li class="rv"><b>Massage à l'huile</b> · une bulle de sérénité, au rythme des gestes enveloppants.</li>
+    </ul>
+    <a class="btn rv" href="https://wa.me/262693525159?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20bon%20k%27do%20massage%20pour%20No%C3%ABl">Offrir un bon k'do sur WhatsApp</a>
+    <p class="souv rv">Un clin d'œil à « Noël bien-être enchanté », les formules de fêtes du salon : l'Écrin Douillet et la Bulle de Sérénité.</p>
+  </div>
+</section>
 
-<script src="/outils/cta.js" data-nom="L'envol du Bien-être By Cilaos Zen" defer></script>
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow rv">Venir au salon</div>
+    <h2 class="rv">On vous <em>accueille</em> à Cilaos</h2>
+    <div class="ct">
+      <div class="rv"><h3>Adresse</h3><p>82 rue du Père Boiteau, porte 13<br>L'Archipel des métiers<br>97413 Cilaos</p><p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.132818,55.472293">Itinéraire</a></p><p class="sm">Parking public à proximité</p></div>
+      <div class="rv"><h3>Rendez-vous</h3><p><a href="tel:+262693525159">0693 52 51 59</a></p><p><a href="https://wa.me/262693525159">WhatsApp</a></p><p class="sm">Avec ou sans rdv selon dispo · réservation conseillée</p></div>
+      <div class="rv"><h3>Suivre le salon</h3><p><a href="https://www.facebook.com/profile.php?id=100088405459911">Facebook · L'envol du Bien-être</a></p><p class="sm">Cartes bancaires et espèces acceptées</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><span class="f">L'envol du Bien-être</span>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de L'envol du Bien-être By Cilaos Zen.<br>Images : publications du salon sur sa page Facebook.</footer>
+
 <script>
 (function(){
 var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
 document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+var g=document.getElementById('gal'),d=document.querySelectorAll('#dots i');
+g.addEventListener('scroll',function(){var f=g.querySelector('figure'),w=f.offsetWidth+16,k=Math.min(d.length-1,Math.round(g.scrollLeft/w));d.forEach(function(x,j){x.classList.toggle('on',j===k)})},{passive:true});
 if(rm)return;
-var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true;
-function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+var m1=document.getElementById('m1'),m2=document.getElementById('m2');
+addEventListener('scroll',function(){var y=Math.min(scrollY,900);m1.style.transform='translateY('+(y*.08)+'px)';m2.style.transform='translateY('+(y*.04)+'px)'},{passive:true});
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],L=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
 size();addEventListener('resize',size);
-for(var i=0;i<18;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:Math.random()*5+5,v:Math.random()*.3+.15,p:Math.random()*6.28,f:Math.random()*.05+.03,k:i%2});
-function bf(q){var w=Math.abs(Math.sin(q.p*3.2)),s=q.s;
- x.save();x.translate(q.x,q.y);x.rotate(Math.sin(q.p)*.35);
- x.fillStyle=q.k?'rgba(31,163,168,.5)':'rgba(130,95,190,.5)';
- [-1,1].forEach(function(d){x.beginPath();x.ellipse(d*s*.55*w,-s*.2,s*.6*w+.4,s*.9,d*.5,0,6.28);x.fill();x.beginPath();x.ellipse(d*s*.4*w,s*.5,s*.4*w+.3,s*.55,-d*.5,0,6.28);x.fill()});
- x.restore()}
+var C=[['168,230,228','155,127,208'],['155,127,208','231,156,201'],['91,159,216','168,230,228']];
+for(var i=0;i<10;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:Math.random()*5+6,v:Math.random()*.35+.2,p:Math.random()*6.28,f:Math.random()*.08+.12,k:i%3,a:Math.random()*.25+.3});
+for(var j=0;j<16;j++)L.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.6,v:Math.random()*.2+.05,p:Math.random()*6.28});
+function bf(q){var w=.25+.75*Math.abs(Math.cos(q.p*2.2)),s=q.s,c0=C[q.k];
+ x.save();x.translate(q.x,q.y);x.rotate(Math.sin(q.p*.5)*.4);
+ var gr=x.createLinearGradient(-s,0,s,0);gr.addColorStop(0,'rgba('+c0[0]+','+q.a+')');gr.addColorStop(1,'rgba('+c0[1]+','+q.a+')');x.fillStyle=gr;
+ [-1,1].forEach(function(dd){x.beginPath();x.ellipse(dd*s*.62*w,-s*.25,s*.62*w+.3,s*.95,dd*.45,0,6.28);x.fill();x.beginPath();x.ellipse(dd*s*.45*w,s*.5,s*.42*w+.2,s*.55,-dd*.5,0,6.28);x.fill()});
+ x.fillStyle='rgba(58,37,96,'+(q.a+.15)+')';x.fillRect(-.6,-s*.6,1.2,s*1.3);x.restore()}
 function draw(){
  if(!run)return;x.clearRect(0,0,W,H);
- P.forEach(function(q){q.y-=q.v;q.p+=q.f*.4;q.x+=Math.sin(q.p*.7)*.6;if(q.y<-20){q.y=H+20;q.x=Math.random()*W}bf(q)});
+ L.forEach(function(q){q.y-=q.v;q.p+=.02;if(q.y<-5){q.y=H+5;q.x=Math.random()*W}var a=.15+.3*Math.abs(Math.sin(q.p));x.fillStyle='rgba(233,207,159,'+a+')';x.beginPath();x.arc(q.x+Math.sin(q.p)*6,q.y,q.r,0,6.28);x.fill()});
+ P.forEach(function(q){q.y-=q.v;q.p+=q.f*.5;q.x+=Math.sin(q.p*.6)*.7;if(q.y<-24){q.y=H+24;q.x=Math.random()*W}bf(q)});
  requestAnimationFrame(draw)}
-document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+document.addEventListener('visibilitychange',function(){var was=run;run=!document.hidden;if(run&&!was)draw()});
 draw();
 })();
 </script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="L'envol du Bien-être By Cilaos Zen" defer></script>
 </body>
 </html>

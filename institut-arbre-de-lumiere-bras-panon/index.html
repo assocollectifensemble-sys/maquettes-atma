@@ -4,235 +4,498 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Institut Arbre de Lumière · Bras-Panon</title>
-<meta name="description" content="Un espace de bien-être chaleureux et cocooning à Bras-Panon : soins du visage, épilation, ongles, maquillage, massages.">
+<title>Institut Arbre de Lumière · Institut de beauté à Bras-Panon</title>
+<meta name="description" content="Un espace de bien-être chaleureux et cocooning à Bras-Panon : Hydra SPA Face by Yumi, soins du visage, beauté du regard, ongles, épilation, massages et maquillage, avec Clarisse.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Institut Arbre de Lumière · Bras-Panon">
-<meta property="og:description" content="Un espace de bien-être chaleureux et cocooning, avec Clarisse, à Bras-Panon.">
-<meta property="og:image" content="https://maquettes.atma-digital.re/institut-arbre-de-lumiere-bras-panon/img/carte.jpg">
+<meta property="og:description" content="Un espace de bien-être, chaleureux et cocooning, avec Clarisse, au 4 rue des Jamalacs.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/institut-arbre-de-lumiere-bras-panon/img/og.jpg">
 <meta property="og:url" content="https://maquettes.atma-digital.re/institut-arbre-de-lumiere-bras-panon/">
+<meta name="theme-color" content="#4a2a3c">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#b8909f;--mauve:#9b6b7f;--fuchsia:#d4527f;--teal:#2d7a6f;--blush:#f5d5e0;--cream:#fbf5f3;--ink:#3a2c33;--wood:#c9a27a}
+:root{--peony:#d4547f;--rose:#c85a75;--mauve:#8b5a7d;--plum:#4a2a3c;--plum2:#2f1a27;--blush:#f6e4e8;--cream:#fbf6f2;--teal:#2d6f66;--gold:#d2ad5c;--wood:#b98a5e;--ink:#3a2a32;--mute:#86727c}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;font-size:16px}
-h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:400;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden;font-size:16px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08}
 img{max-width:100%;display:block}
 a{color:inherit}
-.ribbon{background:var(--teal);color:#fff;text-align:center;font-size:.78rem;padding:.5rem .8rem;letter-spacing:.02em}
-.ribbon b{font-weight:500}
-nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:rgba(251,245,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--blush)}
-nav .brand{display:flex;align-items:center;gap:.6rem;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.15rem;text-decoration:none;color:var(--teal)}
-nav .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover}
-nav .links{display:none;gap:1.4rem;font-size:.9rem}
-nav .links a{text-decoration:none}
-.btn{display:inline-block;background:var(--mauve);color:#fff;text-decoration:none;padding:.8rem 1.5rem;border-radius:99px;font-weight:500;font-size:.95rem;animation:breathe 3.5s ease-in-out infinite;transition:background .3s}
-.btn:hover{background:var(--teal)}
-.btn.ghost{background:transparent;border:1.5px solid #fff;animation:none}
-.btn.small{padding:.5rem 1rem;font-size:.85rem;animation:none}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-.hero{position:relative;min-height:min(84vh,640px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(img/carte.jpg) center/cover;animation:kb 22s ease-in-out infinite alternate}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,30,40,.35) 0%,rgba(45,30,40,.88) 100%)}
-.hero .in{position:relative;z-index:2;padding:2rem 1.3rem 3.2rem;max-width:760px}
-.hero small{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem;opacity:.9}
-.hero h1,.hero p{text-shadow:0 2px 14px rgba(30,15,25,.55)}
-.hero h1{font-size:2.9rem;margin:.5rem 0 .8rem;opacity:0;animation:rise 1.4s .3s forwards}
-.hero h1 em{color:var(--blush)}
-.hero p{max-width:34rem;opacity:0;animation:rise 1.4s .7s forwards}
-.hero .cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;opacity:0;animation:rise 1.4s 1.1s forwards}
-@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-canvas#petals{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
-section{padding:3.6rem 1.3rem;max-width:1000px;margin:auto}
-.kicker{color:var(--fuchsia);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:500}
-h2{font-size:2.15rem;margin:.4rem 0 1rem;color:var(--teal)}
-.wave{display:block;width:100%;height:46px;margin-bottom:-1px}
-.about{display:grid;gap:1.6rem}
-.about img{border-radius:200px 200px 18px 18px;aspect-ratio:3/4;object-fit:cover;width:100%;max-width:340px;margin:auto;box-shadow:0 18px 40px -18px rgba(155,107,127,.6)}
-.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--mauve);border-left:3px solid var(--rose);padding-left:1rem;margin-top:1.2rem}
-.band{background:var(--teal);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic}
-.band div{display:inline-block;animation:scroll 32s linear infinite}
-.band span{margin:0 1.6rem}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.menu-wrap{background:#fff;max-width:none;padding:3.6rem 1.3rem}
-.menu{max-width:1000px;margin:auto;display:grid;gap:1.4rem}
-.card{background:var(--cream);border:1px solid var(--blush);border-radius:18px;padding:1.4rem;transition:transform .35s,box-shadow .35s}
-.card:hover{transform:translateY(-5px);box-shadow:0 16px 30px -18px rgba(155,107,127,.7)}
-.card h3{font-size:1.5rem;color:var(--mauve);margin-bottom:.6rem}
-.card li{list-style:none;display:flex;justify-content:space-between;gap:.8rem;padding:.4rem 0;border-bottom:1px dashed var(--blush);font-size:.95rem}
-.card li b{color:var(--teal);font-weight:500;white-space:nowrap}
-.card li small{color:#8a7580;display:block;font-size:.76rem}
-.note{font-size:.8rem;color:#8a7580;text-align:center;margin-top:1.2rem}
-.gal{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.3rem 1rem;-webkit-overflow-scrolling:touch}
-.gal figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden}
-.gal img{width:100%;height:340px;object-fit:cover;transition:transform .6s}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.ruban{background:var(--plum2);color:var(--blush);text-align:center;font-size:.76rem;padding:.55rem 1rem;letter-spacing:.02em;position:relative;z-index:30}
+.ruban b{color:var(--gold);font-weight:500}
+/* nav */
+nav{position:sticky;top:0;z-index:25;background:rgba(251,246,242,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(200,90,117,.15)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:.8rem}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;min-width:0}
+.brand img{width:40px;height:40px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px #fff,0 0 0 3px rgba(212,84,127,.35)}
+.brand span{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.2rem;color:var(--plum);white-space:nowrap}
+.links{display:none;gap:1.4rem;font-size:.9rem}
+.links a{text-decoration:none;color:var(--mauve)}
+.links a:hover{color:var(--peony)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;text-decoration:none;font-weight:500;font-size:.95rem;border-radius:99px;padding:.85rem 1.45rem;background:var(--peony);color:#fff;border:0;cursor:pointer;transition:transform .3s,background .3s,box-shadow .3s;box-shadow:0 10px 24px -12px rgba(212,84,127,.9)}
+.btn:hover{transform:translateY(-2px);background:var(--rose)}
+.btn.breathe{animation:breathe 3.6s ease-in-out infinite}
+.btn.line{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.85)}
+.btn.line:hover{background:rgba(255,255,255,.12)}
+.btn.sm{padding:.5rem 1rem;font-size:.84rem;box-shadow:none}
+.btn.gold{background:var(--gold);color:var(--plum2);box-shadow:0 10px 26px -12px rgba(210,173,92,.9)}
+.btn.wa{background:#1f9d58;box-shadow:0 10px 26px -12px rgba(31,157,88,.9)}
+@keyframes breathe{0%,100%{box-shadow:0 10px 24px -12px rgba(212,84,127,.9),0 0 0 0 rgba(212,84,127,.35)}50%{box-shadow:0 10px 24px -12px rgba(212,84,127,.9),0 0 0 10px rgba(212,84,127,0)}}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 92px);max-height:900px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--plum2)}
+.hero .bg{position:absolute;inset:-4%;background:url(img/salon.webp) 30% center/cover;animation:kb 26s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.13) translate(2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 80% 10%,rgba(210,173,92,.22),transparent 60%),linear-gradient(180deg,rgba(47,26,39,.3) 0%,rgba(47,26,39,.62) 38%,rgba(47,26,39,.95) 100%)}
+.hero .in{position:relative;z-index:4;text-shadow:0 2px 16px rgba(30,12,22,.7);padding:2rem 1.25rem 3.4rem;width:100%;max-width:1060px;margin:0 auto}
+.tree{width:86px;height:86px;margin-bottom:.4rem}
+.tree path{fill:none;stroke:var(--gold);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:240;stroke-dashoffset:240;animation:draw 2.6s .2s ease-out forwards}
+.tree circle{fill:#ffe9b8;opacity:0;animation:glow 3s ease-in-out infinite;filter:drop-shadow(0 0 4px #ffd27a)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes glow{0%,100%{opacity:.25}50%{opacity:1}}
+.kick{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;font-weight:500}
+.hero .kick{color:var(--blush)}
+.hero h1{font-size:clamp(2.9rem,13vw,5.6rem);font-weight:500;margin:.35rem 0 .5rem;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:#ffd9e4}
+.hero .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;line-height:1.3;max-width:30rem}
+.hero .sub{font-size:.95rem;opacity:.9;margin-top:.7rem;max-width:32rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.3rem;font-size:.82rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:.4rem .85rem;border-radius:99px}
+.badge b{color:var(--gold);letter-spacing:.1em}
+.up{opacity:0;transform:translateY(22px);animation:rise 1.2s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.25s}.d2{animation-delay:.5s}.d3{animation-delay:.75s}.d4{animation-delay:1s}.d5{animation-delay:1.25s}
+@keyframes rise{to{opacity:1;transform:none}}
+.scrollhint{position:absolute;z-index:4;left:50%;bottom:.8rem;width:22px;height:34px;margin-left:-11px;border:1.5px solid rgba(255,255,255,.6);border-radius:12px}
+.scrollhint::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:sh 2s infinite}
+@keyframes sh{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.wave{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:4}
+/* sections */
+section{padding:4.2rem 0;position:relative}
+h2{font-size:clamp(2.1rem,8.6vw,3.3rem);color:var(--plum);margin:.45rem 0 1rem}
+h2 em{color:var(--peony);font-style:italic}
+.kick.c{color:var(--peony)}
+p+p{margin-top:.8rem}
+/* intro */
+.intro{display:grid;gap:2.2rem;align-items:center}
+.arch{position:relative;max-width:330px;margin:0 auto;width:100%}
+.arch img{border-radius:999px 999px 22px 22px;aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:0 30px 50px -28px rgba(74,42,60,.7)}
+.arch .mini{position:absolute;width:44%;right:-6%;bottom:-8%;border-radius:18px;aspect-ratio:1;border:5px solid var(--cream);box-shadow:0 18px 30px -18px rgba(74,42,60,.7)}
+.arch::before{content:"";position:absolute;inset:-14px -14px auto auto;width:90px;height:90px;border:1px solid var(--gold);border-radius:50%;opacity:.6}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.chip{font-size:.83rem;background:#fff;border:1px solid rgba(200,90,117,.25);color:var(--mauve);padding:.35rem .8rem;border-radius:99px}
+.signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.4rem;color:var(--mauve);line-height:1.35;margin-top:1.2rem;padding-left:1rem;border-left:2px solid var(--gold)}
+/* marquee */
+.band{background:var(--plum);color:var(--blush);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic}
+.band div{display:inline-block;animation:mq 38s linear infinite}
+.band span{margin:0 1.1rem}
+.band i{color:var(--gold);font-style:normal;font-size:.8rem;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* hydra */
+.hydra{background:radial-gradient(90% 60% at 85% 0%,rgba(212,84,127,.35),transparent 60%),linear-gradient(170deg,var(--plum) 0%,var(--plum2) 100%);color:#f3e6ea;overflow:hidden}
+.hydra h2{color:#fff}.hydra h2 em{color:#ffb8cd}
+.hydra .kick{color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1.6rem 0 2rem}
+.stat{border:1px solid rgba(210,173,92,.4);border-radius:18px;padding:.9rem .5rem;text-align:center;background:rgba(255,255,255,.04)}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:600;color:var(--gold);line-height:1}
+.stat span{font-size:.75rem;line-height:1.25;display:block;margin-top:.35rem;opacity:.85}
+.steps{list-style:none;counter-reset:s;display:grid;gap:.15rem;position:relative}
+.steps li{counter-increment:s;position:relative;padding:.75rem 0 .75rem 3.2rem;border-bottom:1px solid rgba(255,255,255,.09)}
+.steps li::before{content:counter(s);position:absolute;left:0;top:.7rem;width:2.2rem;height:2.2rem;border-radius:50%;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--plum2);background:linear-gradient(135deg,#f2d79a,var(--gold));box-shadow:0 0 0 0 rgba(210,173,92,.5)}
+.steps li.on::before{animation:ping 1.6s ease-out 1}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(210,173,92,.6)}100%{box-shadow:0 0 0 14px rgba(210,173,92,0)}}
+.steps b{color:#fff;font-weight:500}
+.steps small{display:block;opacity:.75;font-size:.85rem}
+.bienf{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.6rem 0}
+.bienf span{font-size:.82rem;padding:.35rem .8rem;border-radius:99px;background:rgba(255,184,205,.12);color:#ffd9e4;border:1px solid rgba(255,184,205,.25)}
+.formules{display:grid;gap:.6rem;margin-top:1.2rem}
+.formule{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 1rem;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);transition:transform .3s,background .3s}
+.formule:hover{transform:translateX(4px);background:rgba(255,255,255,.1)}
+.formule small{display:block;opacity:.7;font-size:.78rem}
+.formule b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);white-space:nowrap}
+.hydra .grid{display:grid;gap:2rem}
+.hydra .note{color:#cdb8c2}
+/* carte */
+.carte{background:#fff}
+.tabs{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);display:flex;gap:.45rem;overflow-x:auto;padding:.2rem .1rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.tabs::-webkit-scrollbar{display:none}
+.tabs::after{content:"";flex:0 0 2.5rem}
+.swipe{font-size:.75rem;color:var(--mute);margin:-.5rem 0 .8rem}
+.tab{flex:0 0 auto;font:500 .88rem 'Jost',sans-serif;padding:.55rem 1rem;border-radius:99px;border:1px solid rgba(139,90,125,.3);background:var(--cream);color:var(--mauve);cursor:pointer;transition:all .3s}
+.tab[aria-selected=true]{background:var(--plum);color:#fff;border-color:var(--plum)}
+.panel{display:none;animation:fade .5s ease}
+.panel.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel ul{list-style:none;background:var(--cream);border-radius:20px;padding:.4rem 1.1rem;border:1px solid var(--blush)}
+.panel li{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.8rem 0;border-bottom:1px dashed rgba(200,90,117,.25)}
+.panel li:last-child{border:0}
+.panel li span{min-width:0}
+.panel li small{display:block;color:var(--mute);font-size:.78rem}
+.panel li b{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--peony);white-space:nowrap}
+.note{font-size:.8rem;color:var(--mute);margin-top:1.1rem}
+/* galerie */
+.galhead{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem}
+.galnav{display:none;gap:.4rem}
+.galnav button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(139,90,125,.35);background:#fff;color:var(--plum);font-size:1.1rem;cursor:pointer}
+.gal{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.25rem 1.2rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 76%;max-width:330px;scroll-snap-align:center;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 20px 34px -24px rgba(74,42,60,.75);background:var(--blush)}
+.gal img{width:100%;height:400px;object-fit:cover;transition:transform 1s}
 .gal figure:hover img{transform:scale(1.06)}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.4rem .9rem .7rem;color:#fff;background:linear-gradient(transparent,rgba(45,30,40,.7));font-size:.85rem}
-.reviews{display:grid;gap:1rem}
-.rev{background:#fff;border-radius:16px;padding:1.2rem;border:1px solid var(--blush)}
-.rev p{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic}
-.rev span{display:block;margin-top:.5rem;font-size:.78rem;color:#8a7580}
-.stars{color:var(--fuchsia);letter-spacing:.15em}
-.noel{background:linear-gradient(135deg,#2d7a6f,#1f5a52);color:#fff;max-width:none;position:relative;overflow:hidden;text-align:center}
-.noel .box{max-width:620px;margin:auto;position:relative;z-index:2}
-.noel h2{color:#fff}
-.noel .btn{background:var(--fuchsia);margin-top:1rem}
-.star{position:absolute;color:#f5d5e0;opacity:.5;animation:tw 4s ease-in-out infinite}
-@keyframes tw{0%,100%{opacity:.15}50%{opacity:.7}}
-.contact{display:grid;gap:1.4rem}
-.hours li{list-style:none;display:flex;justify-content:space-between;padding:.35rem 0;border-bottom:1px dashed var(--blush);max-width:320px}
-.hours li.closed{color:#8a7580}
-footer{background:var(--ink);color:#d9c9d0;text-align:center;font-size:.8rem;padding:2rem 1.2rem}
-footer a{color:var(--blush)}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem 1rem .9rem;color:#fff;background:linear-gradient(transparent,rgba(47,26,39,.78));font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem}
+.dots{display:flex;justify-content:center;gap:.4rem}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(139,90,125,.25);transition:all .3s}
+.dots i.on{background:var(--peony);width:20px;border-radius:4px}
+/* avis */
+.avis{display:grid;gap:2rem;align-items:center}
+.score{text-align:center;background:#fff;border-radius:28px;padding:2rem 1.2rem;border:1px solid var(--blush);box-shadow:0 24px 40px -30px rgba(74,42,60,.6)}
+.score .big{font-family:'Cormorant Garamond',serif;font-size:5rem;line-height:1;color:var(--plum);font-weight:600}
+.stars{color:var(--gold);letter-spacing:.2em;font-size:1.2rem}
+.bars{margin-top:1.3rem;display:grid;gap:.7rem;text-align:left}
+.bar{font-size:.85rem}
+.bar div{display:flex;justify-content:space-between}
+.bar i{display:block;height:6px;border-radius:6px;background:var(--blush);margin-top:.3rem;overflow:hidden}
+.bar i::after{content:"";display:block;height:100%;width:0;border-radius:6px;background:linear-gradient(90deg,var(--peony),var(--gold));transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+.on .bar i::after{width:100%}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.75rem;line-height:1.25;color:var(--plum)}
+.quote::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--peony);opacity:.6}
+.quote small{display:block;font:400 .8rem 'Jost',sans-serif;color:var(--mute);margin-top:.8rem;font-style:normal}
+/* noel */
+.noel{background:linear-gradient(160deg,#1d4d47 0%,#173a36 55%,var(--plum2) 100%);color:#eef3ef;overflow:hidden}
+.noel h2{color:#fff}.noel h2 em{color:#ffc9d8}
+.noel .kick{color:var(--gold)}
+.noel .grid{display:grid;gap:2rem;align-items:center;position:relative;z-index:2}
+.noel figure{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 26px 50px -24px rgba(0,0,0,.7);border:1px solid rgba(210,173,92,.35)}
+.noel figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.noel figcaption{position:absolute;left:.7rem;bottom:.7rem;font-size:.74rem;background:rgba(23,58,54,.75);padding:.3rem .7rem;border-radius:99px}
+.gift{margin:1.4rem 0;display:grid;gap:.55rem}
+.gift div{display:flex;gap:.8rem;align-items:flex-start;font-size:.95rem}
+.gift div::before{content:"✦";color:var(--gold);flex:0 0 auto}
+.noel .cta{display:flex;flex-wrap:wrap;gap:.6rem}
+.noel .btn.line{color:#fff}
+.flake{position:absolute;color:var(--gold);opacity:.4;animation:tw 4.5s ease-in-out infinite;z-index:1;font-size:.9rem}
+@keyframes tw{0%,100%{opacity:.12;transform:scale(.8)}50%{opacity:.7;transform:scale(1.1)}}
+/* contact */
+.contact .grid{display:grid;gap:1.6rem}
+.card{background:#fff;border-radius:24px;padding:1.5rem 1.3rem;border:1px solid var(--blush);box-shadow:0 22px 40px -32px rgba(74,42,60,.6)}
+.card h3{font-size:1.6rem;color:var(--plum);margin-bottom:.8rem}
+.ln{display:flex;gap:.8rem;align-items:flex-start;padding:.55rem 0}
+.ln svg{flex:0 0 20px;width:20px;height:20px;margin-top:.2rem;stroke:var(--peony);fill:none;stroke-width:1.7}
+.ln a{text-decoration:none;color:var(--plum);font-weight:500}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:.5rem .6rem;border-radius:10px;font-size:.95rem}
+.hours li:nth-child(odd){background:var(--cream)}
+.hours li.today{background:var(--plum);color:#fff}
+.hours li.off span:last-child{color:var(--mute)}
+.hours li.today.off span:last-child{color:#f3d6df}
+.contact .btns{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+footer{background:var(--plum2);color:#cdb8c2;text-align:center;font-size:.8rem;padding:2.2rem 1.25rem 2.6rem;line-height:1.7}
+footer img{width:52px;height:52px;border-radius:50%;margin:0 auto .8rem;opacity:.95}
+footer a{color:var(--gold)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.7,.2,1)}
 .reveal.on{opacity:1;transform:none}
-@media(min-width:760px){
- nav .links{display:flex}
- .hero h1{font-size:4.4rem}
- .about{grid-template-columns:1fr 1.2fr;align-items:center}
- .menu{grid-template-columns:1fr 1fr}
- .gal{padding:0 max(1.3rem,calc((100vw - 1000px)/2))}
- .gal figure{flex-basis:30%}
- .reviews{grid-template-columns:1fr 1fr}
- .contact{grid-template-columns:1fr 1fr}
+@media(min-width:780px){
+ .links{display:flex}
+ .intro{grid-template-columns:.9fr 1.1fr;gap:4rem}
+ .hydra .grid{grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+ .avis{grid-template-columns:.8fr 1.2fr;gap:4rem}
+ .noel .grid{grid-template-columns:1.05fr .95fr;gap:3.5rem}
+ .contact .grid{grid-template-columns:1fr 1fr}
+ .gal{padding:.4rem max(1.25rem,calc((100vw - 1060px)/2 + 1.25rem)) 1.2rem}
+ .gal figure{flex-basis:31%}
+ .galnav{display:flex}
+ .panel ul{columns:2;column-gap:2.4rem}
+ .panel li{break-inside:avoid}
 }
-html.shot .hero h1,html.shot .hero p,html.shot .hero .cta{opacity:1!important;animation:none!important}
 @media(prefers-reduced-motion:reduce){
- *{animation:none!important;transition:none!important}
- .reveal,.hero h1,.hero p,.hero .cta{opacity:1;transform:none}
- canvas#petals{display:none}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .up,.reveal{opacity:1!important;transform:none!important}
+ .tree path{stroke-dashoffset:0}.tree circle{opacity:.8}
+ canvas#fx{display:none}
 }
 </style>
 </head>
 <body>
-<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Institut Arbre de Lumière</div>
-<nav>
- <a class="brand" href="#top"><img src="img/logo.jpg" alt="Logo Institut Arbre de Lumière">Arbre de Lumière</a>
- <div class="links"><a href="#institut">L'institut</a><a href="#soins">Soins</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#contact">Contact</a></div>
- <a class="btn small" href="tel:+262692390516">Appeler</a>
-</nav>
-<canvas id="petals" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Institut Arbre de Lumière</div>
+<nav><div class="wrap">
+ <a class="brand" href="#top"><img src="img/logo.webp" alt="Logo de l'Institut Arbre de Lumière" width="40" height="40"><span>Arbre de Lumière</span></a>
+ <div class="links"><a href="#institut">L'institut</a><a href="#hydra">Hydra SPA Face</a><a href="#carte">La carte</a><a href="#noel">Noël</a><a href="#contact">Contact</a></div>
+ <a class="btn sm" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Réserver</a>
+</div></nav>
+<canvas id="fx" aria-hidden="true"></canvas>
 
 <header class="hero" id="top">
- <div class="bg" role="img" aria-label="Carte fleurie Institut de Beauté posée sur du bois"></div>
+ <div class="bg" role="img" aria-label="Le salon d'accueil de l'institut : bois clair, herbes de la pampa et tapis tressé"></div>
  <div class="in">
-  <small>Institut de beauté · Bras-Panon</small>
-  <h1>Un espace de <em>bien-être</em> chaleureux et cocooning</h1>
-  <p>Chez Clarisse, chaque détail est pensé pour vous offrir un moment de douceur : soins du visage, épilation, ongles, maquillage et massages.</p>
-  <div class="cta"><a class="btn" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn ghost" href="#soins">Découvrir les soins</a></div>
+  <svg class="tree up" viewBox="0 0 100 100" aria-hidden="true">
+   <path d="M50 96V58M50 70C42 62 34 60 24 58M50 64C60 56 68 54 78 52M50 58C48 46 42 38 32 30M50 58C54 44 60 36 70 26M50 50C50 38 50 28 50 14M32 30C28 26 22 26 18 28M70 26C74 22 80 22 84 26"/>
+   <circle cx="50" cy="13" r="2.6"/><circle cx="31" cy="29" r="2.2" style="animation-delay:.6s"/><circle cx="71" cy="25" r="2.2" style="animation-delay:1.2s"/><circle cx="18" cy="28" r="1.8" style="animation-delay:1.8s"/><circle cx="84" cy="26" r="1.8" style="animation-delay:.9s"/><circle cx="23" cy="58" r="2" style="animation-delay:1.5s"/><circle cx="79" cy="52" r="2" style="animation-delay:.3s"/>
+  </svg>
+  <div class="kick up d1">Institut de beauté · Bras-Panon</div>
+  <h1 class="up d2">Arbre de <em>Lumière</em></h1>
+  <p class="lead up d3">Un espace de bien-être, chaleureux et cocooning.</p>
+  <p class="sub up d3">Au 4 rue des Jamalacs, Clarisse vous accueille pour un moment de douceur : soins du visage, beauté du regard, ongles, épilation, massages et maquillage.</p>
+  <div class="cta up d4">
+   <a class="btn breathe" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Prendre rendez-vous</a>
+   <a class="btn line" href="tel:+262692390516">0692 39 05 16</a>
+  </div>
+  <div class="badge up d5"><b>★★★★★</b> 5,0 · 65 avis sur Planity</div>
  </div>
+ <span class="scrollhint" aria-hidden="true"></span>
 </header>
+<svg class="wave" viewBox="0 0 1200 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22C160 2 320 0 470 14s330 30 480 14c100-10 180-14 250-8v22z" fill="#fbf6f2"/></svg>
 
-<svg class="wave" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20C150 0 300 0 450 14s300 28 450 14 200-16 300-6v24z" fill="#fbf5f3"/></svg>
-
-<section class="about reveal" id="institut">
- <img src="img/bain.jpg" alt="Savons et pots de produits de soin aux tons dorés" loading="lazy">
- <div>
-  <div class="kicker">L'institut</div>
-  <h2>Un véritable havre de beauté</h2>
-  <p>Situé à Bras-Panon, l'Institut Arbre de Lumière vous accueille dans une ambiance chaleureuse et conviviale, avec une décoration épurée et raffinée, propice à la détente et à la relaxation.</p>
-  <p style="margin-top:.8rem">Avec Clarisse : épilation à la cire ou au fil, manucure, vernis semi-permanent, soins du visage, maquillage, ongles en gel, mise en valeur des cils et sourcils.</p>
-  <p class="quote">« Clarisse est une personne douce et lumineuse. C'est elle qui illumine cet institut qui porte bien son nom. »<br><small style="font-family:Jost;font-style:normal;font-size:.78rem;color:#8a7580">Avis Planity, septembre 2024</small></p>
+<section id="institut"><div class="wrap intro">
+ <div class="arch reveal"><img src="img/bain.webp" alt="Produits de soin aux tons dorés dans l'institut" loading="lazy" width="674" height="1036"><img class="mini" src="img/carte.webp" alt="Carte fleurie de l'institut posée sur du bois" loading="lazy" width="1100" height="733"></div>
+ <div class="reveal">
+  <div class="kick c">L'institut</div>
+  <h2>Un véritable <em>havre de beauté</em></h2>
+  <p>À Bras-Panon, l'Institut Arbre de Lumière vous reçoit dans une ambiance chaleureuse et conviviale, avec une décoration épurée et raffinée, propice à la détente et à la relaxation.</p>
+  <p>Chaque détail est pensé pour vous offrir une expérience unique : des produits de qualité, une expertise attentive et le temps de prendre soin de vous, de la tête aux pieds.</p>
+  <p class="signature">« Clarisse sera ravie de vous accueillir et de vous chouchouter pour révéler votre beauté naturelle. »</p>
+  <div class="chips"><span class="chip">Avec Clarisse</span><span class="chip">Un institut dédié aux femmes</span><span class="chip">Réservation en ligne 24 h/24</span><span class="chip">Soins enfants Toofruit</span></div>
  </div>
+</div></section>
+
+<div class="band" aria-hidden="true"><div><span>Hydra SPA Face</span><i>✦</i><span>Manucure russe</span><i>✦</i><span>Browlift</span><i>✦</i><span>Réhaussement des cils</span><i>✦</i><span>Massage californien</span><i>✦</i><span>Modelage the foot shinzu</span><i>✦</i><span>Maquillage mariée</span><i>✦</i><span>Hydra SPA Face</span><i>✦</i><span>Manucure russe</span><i>✦</i><span>Browlift</span><i>✦</i><span>Réhaussement des cils</span><i>✦</i><span>Massage californien</span><i>✦</i><span>Modelage the foot shinzu</span><i>✦</i><span>Maquillage mariée</span><i>✦</i></div></div>
+
+<section class="hydra" id="hydra"><div class="wrap grid">
+ <div class="reveal">
+  <div class="kick">Le soin signature</div>
+  <h2>Hydra SPA Face <em>by Yumi</em></h2>
+  <p>Un soin du visage adapté à chaque peau, pour une peau plus nette et plus lumineuse dès la première séance.</p>
+  <div class="stats">
+   <div class="stat"><b data-count="8">8</b><span>techniques en 1 appareil</span></div>
+   <div class="stat"><b><span data-count="100" style="display:inline;font-size:inherit;margin:0;opacity:1">100</span>%</b><span>produits français</span></div>
+   <div class="stat"><b><span data-count="94" style="display:inline;font-size:inherit;margin:0;opacity:1">94</span>%</b><span>d'actifs naturels</span></div>
+  </div>
+  <div class="bienf"><span>Hydratation en profondeur</span><span>Points noirs éliminés</span><span>Peau repulpée et lissée</span><span>Rides adoucies</span><span>Teint unifié et lumineux</span></div>
+  <div class="formules">
+   <div class="formule"><span>Hydra Découverte<small>35 min · à la découverte d'Hydraspa</small></span><b>50 €</b></div>
+   <div class="formule"><span>Hydra SPA Face<small>1 h</small></span><b>95 €</b></div>
+   <div class="formule"><span>Hydra SPA Face complet<small>1 h 15 · avec masque alginate</small></span><b>130 €</b></div>
+   <div class="formule"><span>Complet relaxant<small>1 h 35 · avec modelage du visage</small></span><b>150 €</b></div>
+   <div class="formule"><span>Cure de 5 séances<small>5 × 1 h</small></span><b>590 €</b></div>
+  </div>
+ </div>
+ <div class="reveal">
+  <div class="kick">Le déroulé</div>
+  <ol class="steps">
+   <li><b>Caméra de diagnostic</b><small>une lecture complète de votre peau</small></li>
+   <li><b>Spatule peeling</b><small>nettoyage, extraction des comédons, excès de sébum</small></li>
+   <li><b>Hydradermabrasion</b><small>avec infusion de vitamines, pour activer le renouvellement cellulaire</small></li>
+   <li><b>Pulvérisateur d'oxygène</b><small>la peau fait le plein de vitamines, repulpée immédiatement</small></li>
+   <li><b>Ultrasons</b><small>pour faire pénétrer les actifs en profondeur</small></li>
+   <li><b>Radiofréquence</b><small>une douce chaleur qui stimule le collagène</small></li>
+   <li><b>Masque alginate</b><small>adapté à votre type de peau (soin complet)</small></li>
+   <li><b>Marteau froid</b><small>resserre les pores et donne un coup d'éclat final</small></li>
+  </ol>
+  <p class="note">Description et tarifs publiés par l'institut sur Planity.</p>
+ </div>
+</div></section>
+
+<section class="carte" id="carte"><div class="wrap">
+ <div class="reveal"><div class="kick c">La carte</div><h2>Toutes vos <em>envies beauté</em></h2></div>
+ <div class="tabs reveal" role="tablist">
+  <button class="tab" role="tab" aria-selected="true" data-p="p1">Regard</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p2">Visage</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p3">Ongles</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p4">Mains &amp; pieds</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p5">Corps</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p6">Épilation</button>
+  <button class="tab" role="tab" aria-selected="false" data-p="p7">Maquillage</button>
+ </div>
+ <p class="swipe">Faites glisser pour voir toutes les catégories →</p>
+ <div class="reveal">
+ <div class="panel on" id="p1" role="tabpanel"><ul>
+  <li><span>Sourcils à la cire<small>30 min</small></span><b>15 €</b></li>
+  <li><span>Sourcils au fil<small>30 min</small></span><b>18 €</b></li>
+  <li><span>Restructuration des sourcils à l'henné<small>1 h</small></span><b>55 €</b></li>
+  <li><span>Henné, entretien 3 semaines<small>45 min</small></span><b>38 €</b></li>
+  <li><span>Réhaussement des cils<small>1 h</small></span><b>80 €</b></li>
+  <li><span>Browlift<small>1 h</small></span><b>80 €</b></li>
+  <li><span>Forfait réhaussement des cils + browlift<small>2 h</small></span><b>130 €</b></li>
+ </ul></div>
+ <div class="panel" id="p2" role="tabpanel"><ul>
+  <li><span>Soin Express<small>30 min</small></span><b>40 €</b></li>
+  <li><span>Soin complet Yumi<small>1 h · tous types de peaux</small></span><b>70 €</b></li>
+  <li><span>Soin Esthemax + modelage Shinzu<small>1 h 20</small></span><b>85 €</b></li>
+  <li><span>Hydra SPA Face<small>1 h · le soin signature</small></span><b>95 €</b></li>
+  <li><span>Soin du visage enfant Toofruit<small>35 min</small></span><b>38 €</b></li>
+ </ul></div>
+ <div class="panel" id="p3" role="tabpanel"><ul>
+  <li><span>Semi-permanent couleur mains, manucure russe<small>1 h 20</small></span><b>50 €</b></li>
+  <li><span>Semi-permanent couleur pieds, manucure russe<small>1 h 20</small></span><b>50 €</b></li>
+  <li><span>Pose couleur mains ou pieds<small>1 h</small></span><b>39 €</b></li>
+  <li><span>Pose French mains ou pieds<small>1 h</small></span><b>42 €</b></li>
+  <li><span>Babyboomer mains<small>1 h 20</small></span><b>48 €</b></li>
+  <li><span>Gel couleur ongle naturel + manucure russe<small>2 h</small></span><b>62 €</b></li>
+  <li><span>Gel couleur extensions chablons<small>2 h</small></span><b>68 €</b></li>
+ </ul></div>
+ <div class="panel" id="p4" role="tabpanel"><ul>
+  <li><span>Beauté des mains<small>1 h · ongles, cuticules, gommage, trempage, modelage, masque</small></span><b>40 €</b></li>
+  <li><span>Beauté des pieds<small>1 h · ongles, cuticules, gommage, trempage, modelage, masque</small></span><b>45 €</b></li>
+  <li><span>Soin anti-callosités<small>45 min</small></span><b>50 €</b></li>
+ </ul></div>
+ <div class="panel" id="p5" role="tabpanel"><ul>
+  <li><span>Modelage crânien<small>15 min</small></span><b>35 €</b></li>
+  <li><span>Modelage dos<small>20 min</small></span><b>35 €</b></li>
+  <li><span>Massage relaxant californien<small>1 h</small></span><b>80 €</b></li>
+  <li><span>Modelage the foot shinzu<small>1 h 30</small></span><b>80 €</b></li>
+  <li><span>Massage prénatal<small>1 h 30</small></span><b>95 €</b></li>
+  <li><span>Soin relax corps enfant Toofruit<small>30 min</small></span><b>45 €</b></li>
+ </ul></div>
+ <div class="panel" id="p6" role="tabpanel"><ul>
+  <li><span>Lèvre à la cire<small>30 min</small></span><b>10 €</b></li>
+  <li><span>Aisselles<small>20 min</small></span><b>20 €</b></li>
+  <li><span>Sourcils + lèvres<small>30 min</small></span><b>22 €</b></li>
+  <li><span>Demi-bras<small>30 min</small></span><b>28 €</b></li>
+  <li><span>Maillot simple<small>20 min</small></span><b>30 €</b></li>
+  <li><span>Demi-jambes<small>30 min</small></span><b>32 €</b></li>
+  <li><span>1/2 jambes + aisselles + sourcils<small>45 min</small></span><b>40 €</b></li>
+ </ul></div>
+ <div class="panel" id="p7" role="tabpanel"><ul>
+  <li><span>Maquillage enfant<small>1 h</small></span><b>30 €</b></li>
+  <li><span>Maquillage soirée<small>1 h</small></span><b>80 €</b></li>
+  <li><span>Maquillage mariée, essai compris<small>1 h</small></span><b>160 €</b></li>
+  <li><span>Forfait mariée<small>3 h · soin So Universel, sourcils, essai et maquillage</small></span><b>220 €</b></li>
+  <li><span>Maquillage à domicile<small>2 h</small></span><b>sur devis</b></li>
+ </ul></div>
+ </div>
+ <p class="note reveal">Extrait de la carte publiée par l'institut sur Planity (consultée le 7 novembre 2026) · carte complète et réservation en ligne sur Planity.</p>
+</div></section>
+
+<section id="galerie" style="padding-bottom:2.6rem">
+ <div class="wrap galhead reveal"><div><div class="kick c">Dans l'institut</div><h2>Des détails <em>qui font du bien</em></h2></div><div class="galnav"><button type="button" data-d="-1" aria-label="Photo précédente">←</button><button type="button" data-d="1" aria-label="Photo suivante">→</button></div></div>
+ <div class="gal reveal" id="gal">
+  <figure><img src="img/pots.webp" alt="Pots de paillettes sombres et dorées" loading="lazy" width="1100" height="733"><figcaption>Éclats et paillettes</figcaption></figure>
+  <figure><img src="img/bougie.webp" alt="Bougie ajourée et petit cadre « Amour »" loading="lazy" width="1100" height="733"><figcaption>La lumière d'une bougie</figcaption></figure>
+  <figure><img src="img/soins.webp" alt="Flacons de sérums alignés" loading="lazy" width="1100" height="733"><figcaption>Des produits de qualité</figcaption></figure>
+  <figure><img src="img/pinceaux.webp" alt="Pinceaux de maquillage noirs" loading="lazy" width="699" height="1273"><figcaption>L'art du maquillage</figcaption></figure>
+  <figure><img src="img/bois.webp" alt="Étagère en bois clair et paniers tressés" loading="lazy" width="675" height="1036"><figcaption>Bois clair et douceur</figcaption></figure>
+  <figure><img src="img/carte.webp" alt="Carte fleurie de l'institut sur du bois" loading="lazy" width="1100" height="733"><figcaption>Des fleurs partout</figcaption></figure>
+ </div>
+ <div class="dots" id="dots" aria-hidden="true"></div>
 </section>
 
-<div class="band" aria-hidden="true"><div><span>✿ Douceur</span><span>✿ Sérénité</span><span>✿ Beauté du regard</span><span>✿ Soins du visage</span><span>✿ Manucure russe</span><span>✿ Hydra SPA Face</span><span>✿ Douceur</span><span>✿ Sérénité</span><span>✿ Beauté du regard</span><span>✿ Soins du visage</span><span>✿ Manucure russe</span><span>✿ Hydra SPA Face</span></div></div>
-
-<div class="menu-wrap" id="soins">
- <div style="max-width:1000px;margin:0 auto 1.6rem" class="reveal"><div class="kicker">Les soins</div><h2>Quelques-unes de vos envies</h2></div>
- <div class="menu">
-  <div class="card reveal"><h3>Soins du visage</h3><ul>
-   <li><span>Soin Express<small>30 min</small></span><b>40 €</b></li>
-   <li><span>Soin complet Yumi<small>1 h · tous types de peaux</small></span><b>70 €</b></li>
-   <li><span>Soin Esthemax + Modelage Shinzu<small>1 h 20</small></span><b>85 €</b></li>
-   <li><span>Hydra SPA Face complet<small>1 h 15</small></span><b>130 €</b></li></ul></div>
-  <div class="card reveal"><h3>Ongles &amp; vernis</h3><ul>
-   <li><span>Semi-permanent couleur mains, manucure russe<small>1 h 20</small></span><b>50 €</b></li>
-   <li><span>Pose French mains ou pieds<small>1 h</small></span><b>42 €</b></li>
-   <li><span>Babyboomer mains<small>1 h 20</small></span><b>48 €</b></li>
-   <li><span>Gel couleur extensions chablons<small>2 h</small></span><b>68 €</b></li></ul></div>
-  <div class="card reveal"><h3>Beauté du regard</h3><ul>
-   <li><span>Sourcils à la cire<small>30 min</small></span><b>15 €</b></li>
-   <li><span>Sourcils au fil<small>30 min</small></span><b>18 €</b></li>
-   <li><span>Restructuration des sourcils à l'henné<small>1 h</small></span><b>55 €</b></li>
-   <li><span>Réhaussement des cils<small>1 h</small></span><b>80 €</b></li></ul></div>
-  <div class="card reveal"><h3>Corps &amp; détente</h3><ul>
-   <li><span>Modelage dos<small>20 min</small></span><b>35 €</b></li>
-   <li><span>Massage relaxant californien<small>1 h</small></span><b>80 €</b></li>
-   <li><span>Massage prénatal<small>1 h 30</small></span><b>95 €</b></li>
-   <li><span>Maquillage mariée, essai compris<small>1 h</small></span><b>160 €</b></li></ul></div>
+<section id="avis" style="padding-top:2rem"><div class="wrap avis">
+ <div class="score reveal">
+  <div class="kick c">Avis Planity</div>
+  <div class="big">5,0</div>
+  <div class="stars">★★★★★</div>
+  <p style="font-size:.88rem;color:var(--mute)">65 clientes ont donné leur avis</p>
+  <div class="bars">
+   <div class="bar"><div><span>Accueil</span><span>5,0</span></div><i></i></div>
+   <div class="bar"><div><span>Propreté</span><span>5,0</span></div><i></i></div>
+   <div class="bar"><div><span>Cadre &amp; ambiance</span><span>5,0</span></div><i></i></div>
+   <div class="bar"><div><span>Qualité de la prestation</span><span>5,0</span></div><i></i></div>
+  </div>
  </div>
- <p class="note">Tarifs repris de la page Planity de l'institut (liste complète et réservation en ligne sur Planity).</p>
-</div>
-
-<section style="padding-bottom:1rem" class="reveal" id="galerie"><div class="kicker">Dans l'institut</div><h2>Des petits détails qui font du bien</h2></section>
-<div class="gal reveal">
- <figure><img src="img/pots.jpg" alt="Pots de paillettes sombres et dorées" loading="lazy"><figcaption>Paillettes &amp; éclats</figcaption></figure>
- <figure><img src="img/bougie.jpg" alt="Bougie ajourée et cadre « Amour »" loading="lazy"><figcaption>Lumière de bougie</figcaption></figure>
- <figure><img src="img/soins.jpg" alt="Sérums Soskin alignés" loading="lazy"><figcaption>Sérums Soskin</figcaption></figure>
- <figure><img src="img/pinceaux.jpg" alt="Pinceaux de maquillage noirs" loading="lazy"><figcaption>Maquillage</figcaption></figure>
- <figure><img src="img/bois.jpg" alt="Étagère en bois clair et paniers" loading="lazy"><figcaption>Un cadre en bois clair</figcaption></figure>
-</div>
-
-<section id="avis" class="reveal">
- <div class="kicker">Avis</div><h2>5,0 / 5 <span class="stars">★★★★★</span></h2>
- <p style="margin-bottom:1.2rem">65 avis sur Planity.</p>
- <div class="reviews">
-  <div class="rev"><p>« Une prestation exceptionnelle… de la douceur et un œil d'experte. Merci Clarisse. »</p><span>Avis Planity, 26 septembre 2026</span></div>
-  <div class="rev"><p>« Sérénité, calme et compétences. Lieu propice aux soins. »</p><span>Avis Planity, 28 novembre 2025</span></div>
-  <div class="rev"><p>« Cadre chaleureux et agréable. Très bon accueil pétillant et jovial. »</p><span>Avis Planity, 10 novembre 2025</span></div>
-  <div class="rev"><p>« Un soin de qualité, une peau de bébé garantie. Très bon moment. »</p><span>Avis Planity, 13 juillet 2025</span></div>
+ <div class="reveal">
+  <p class="quote">Sérénité, calme et compétences. Lieu propice aux soins.<small>Avis d'une cliente sur Planity, 28 novembre 2025</small></p>
+  <p style="margin-top:1.4rem">Le cadre, l'accueil et la qualité des soins : la note maximale sur chacun des critères.</p>
  </div>
-</section>
+</div></section>
 
 <section class="noel" id="noel">
- <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:30%;animation-delay:1.2s">✧</span><span class="star" style="left:20%;bottom:16%;animation-delay:2s">✦</span><span class="star" style="right:22%;bottom:12%;animation-delay:.6s">✧</span>
- <div class="box reveal">
-  <div class="kicker" style="color:var(--blush)">Offrir pour Noël</div>
-  <h2>Offrez un moment chez Arbre de Lumière</h2>
-  <p>Un soin du visage, un massage, un moment pour les ongles : offrez une parenthèse de douceur à quelqu'un que vous aimez.</p>
-  <a class="btn" href="https://wa.me/262692390516?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau par WhatsApp</a>
+ <span class="flake" style="left:6%;top:8%">✦</span><span class="flake" style="right:8%;top:14%;animation-delay:1.3s">✧</span><span class="flake" style="left:44%;top:4%;animation-delay:2.1s">✦</span><span class="flake" style="right:16%;bottom:10%;animation-delay:.7s">✧</span><span class="flake" style="left:12%;bottom:6%;animation-delay:2.8s">✦</span>
+ <div class="wrap grid">
+  <figure class="reveal"><img src="img/noel-institut.webp" alt="Le décor de Noël de l'institut : sapins, rennes blancs et lumières dorées" loading="lazy" width="960" height="540"><figcaption>Le Noël de l'institut, publié sur leur page Facebook</figcaption></figure>
+  <div class="reveal">
+   <div class="kick">Offrir pour Noël</div>
+   <h2>Offrez un moment <em>de lumière</em></h2>
+   <p>Cette année, glissez sous le sapin une parenthèse de douceur chez Arbre de Lumière : une carte cadeau pour le soin de son choix.</p>
+   <div class="gift">
+    <div>Un Hydra SPA Face pour une peau éclatante</div>
+    <div>Un massage relaxant californien</div>
+    <div>Une beauté des mains ou des pieds</div>
+    <div>Un réhaussement des cils ou un browlift</div>
+   </div>
+   <div class="cta">
+    <a class="btn wa" href="https://wa.me/262692390516?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl%20%C3%A0%20l%27Institut%20Arbre%20de%20Lumi%C3%A8re" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2Z"/></svg>Offrir une carte cadeau</a>
+    <a class="btn line" href="tel:+262692390516">Appeler l'institut</a>
+   </div>
+  </div>
  </div>
 </section>
 
-<section class="contact reveal" id="contact">
- <div>
-  <div class="kicker">Contact</div><h2>Venez nous voir</h2>
-  <p>4 Rue des Jamalacs<br>97412 Bras-Panon</p>
-  <p style="margin:.8rem 0"><a href="tel:+262692390516"><b>0692 39 05 16</b></a></p>
-  <p><a href="https://www.facebook.com/InstitutADL" target="_blank" rel="noopener">Facebook · Institut Arbre de Lumière</a></p>
-  <p style="margin-top:1rem"><a class="btn small" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Réserver sur Planity</a></p>
+<section class="contact" id="contact"><div class="wrap">
+ <div class="reveal"><div class="kick c">Contact</div><h2>Venez vous <em>ressourcer</em></h2></div>
+ <div class="grid">
+  <div class="card reveal">
+   <h3>Institut Arbre de Lumière</h3>
+   <div class="ln"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=4%20Rue%20des%20Jamalacs%2097412%20Bras-Panon" target="_blank" rel="noopener">4 rue des Jamalacs<br>97412 Bras-Panon</a></div>
+   <div class="ln"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><a href="tel:+262692390516">0692 39 05 16</a></div>
+   <div class="ln"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8Z"/></svg><a href="https://www.facebook.com/InstitutADL" target="_blank" rel="noopener">Institut Arbre de Lumière sur Facebook</a></div>
+   <div class="btns">
+    <a class="btn breathe" href="https://www.planity.com/institut-arbre-de-lumiere-97412-bras-panon" target="_blank" rel="noopener">Réserver sur Planity</a>
+    <a class="btn wa" href="https://wa.me/262692390516?text=Bonjour%2C%20je%20souhaiterais%20un%20renseignement" target="_blank" rel="noopener">WhatsApp</a>
+   </div>
+  </div>
+  <div class="card reveal">
+   <h3>Horaires</h3>
+   <ul class="hours" id="hours">
+    <li data-d="1"><span>Lundi</span><span>8 h 30 – 18 h</span></li>
+    <li data-d="2"><span>Mardi</span><span>8 h 30 – 18 h</span></li>
+    <li data-d="3"><span>Mercredi</span><span>9 h – 16 h</span></li>
+    <li data-d="4"><span>Jeudi</span><span>8 h 30 – 18 h</span></li>
+    <li data-d="5"><span>Vendredi</span><span>8 h 30 – 18 h</span></li>
+    <li data-d="6" class="off"><span>Samedi</span><span>repos</span></li>
+    <li data-d="0" class="off"><span>Dimanche</span><span>repos</span></li>
+   </ul>
+   <p class="note">Horaires publiés sur Planity · réservation en ligne 24 h/24.</p>
+  </div>
  </div>
- <div>
-  <h3 style="font-size:1.5rem;color:var(--mauve);margin-bottom:.5rem">Horaires</h3>
-  <ul class="hours"><li><span>Lundi</span><span>8h30 – 18h</span></li><li><span>Mardi</span><span>8h30 – 18h</span></li><li><span>Mercredi</span><span>9h – 16h</span></li><li><span>Jeudi</span><span>8h30 – 18h</span></li><li><span>Vendredi</span><span>8h30 – 18h</span></li><li class="closed"><span>Samedi</span><span>Fermé · ouvertures ponctuelles sur Planity</span></li><li class="closed"><span>Dimanche</span><span>Fermé</span></li></ul>
- </div>
-</section>
+</div></section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Institut Arbre de Lumière.</footer>
+<footer>
+ <img src="img/logo.webp" alt="" width="52" height="52" loading="lazy">
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Institut Arbre de Lumière.<br>Photos : publiées par l'institut sur sa page Facebook et sa fiche Planity.
+</footer>
 
 <script>
 (function(){
- var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
- document.querySelectorAll(".reveal").forEach(function(el){if(location.hash=="#shot"){el.classList.add("on");document.documentElement.classList.add("shot")};else io.observe(el)});
- if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
- var c=document.getElementById('petals'),x=c.getContext('2d'),W,H,P=[],N=22,run=true;
- function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
- function mk(i){return{x:Math.random()*W,y:i?-20:Math.random()*H,r:4+Math.random()*5,vy:.35+Math.random()*.6,vx:(Math.random()-.5)*.4,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:.25+Math.random()*.3,t:Math.random()*6.28}}
- for(var i=0;i<N;i++)P.push(mk(0));
- var cols=['#f5d5e0','#e8a9c0','#d4a5a5','#fff'];
- function draw(){if(!run)return;x.clearRect(0,0,W,H);
-  P.forEach(function(p,i){p.t+=.015;p.x+=p.vx+Math.sin(p.t)*.4;p.y+=p.vy;p.a+=p.va;
-   if(p.y>H+20)P[i]=mk(1);
-   x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=cols[i%4];
-   x.beginPath();x.ellipse(0,0,p.r,p.r*.55,0,0,6.28);x.fill();x.restore()});
-  requestAnimationFrame(draw)}
- draw();
- document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+var d=document,rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* apparitions */
+var els=d.querySelectorAll('.reveal');
+if('IntersectionObserver' in window&&!rm){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){io.observe(el)})}else els.forEach(function(el){el.classList.add('on')});
+/* étapes hydra */
+var st=d.querySelectorAll('.steps li');
+if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var i=[].indexOf.call(st,x.target);setTimeout(function(){x.target.classList.add('on')},i*120);io2.unobserve(x.target)}})},{threshold:.6});st.forEach(function(el){io2.observe(el)})}
+/* compteurs */
+var cs=d.querySelectorAll('[data-count]');
+if(!rm&&'IntersectionObserver' in window){var io3=new IntersectionObserver(function(e){e.forEach(function(x){if(!x.isIntersecting)return;io3.unobserve(x.target);var el=x.target,n=+el.dataset.count,t0=null;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)})},{threshold:.6});cs.forEach(function(el){io3.observe(el)})}
+/* onglets carte */
+var tabs=d.querySelectorAll('.tab');
+tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(o){o.setAttribute('aria-selected','false')});b.setAttribute('aria-selected','true');d.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.p)})})});
+/* galerie */
+var g=d.getElementById('gal'),figs=g.querySelectorAll('figure'),dots=d.getElementById('dots');
+figs.forEach(function(){dots.appendChild(d.createElement('i'))});
+function upd(){var c=g.scrollLeft+g.clientWidth/2,best=0,bd=1e9;figs.forEach(function(f,i){var m=f.offsetLeft+f.offsetWidth/2,k=Math.abs(m-c);if(k<bd){bd=k;best=i}});[].forEach.call(dots.children,function(o,i){o.classList.toggle('on',i===best)})}
+g.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});upd();
+d.querySelectorAll('.galnav button').forEach(function(b){b.addEventListener('click',function(){g.scrollBy({left:+b.dataset.d*figs[0].offsetWidth*1.05,behavior:'smooth'})})});
+/* horaires : jour courant */
+var td=new Date().getDay(),li=d.querySelector('#hours li[data-d="'+td+'"]');if(li)li.classList.add('today');
+/* lumière : grains dorés + pétales de pivoine */
+if(rm)return;
+var c=d.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(2,window.devicePixelRatio||1);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+var N=W<600?20:30;
+function mk(init){var light=Math.random()<.6;return{l:light,x:Math.random()*W,y:init?Math.random()*H:(light?H+10:-12),r:light?1+Math.random()*2.2:3.5+Math.random()*3.5,vy:light?-(.15+Math.random()*.35):(.3+Math.random()*.45),vx:(Math.random()-.5)*.25,a:Math.random()*6.28,va:(Math.random()-.5)*.025,t:Math.random()*6.28,o:light?.25+Math.random()*.35:.18+Math.random()*.2,col:['#f6c2d3','#e98aa8','#fbe0e8'][Math.floor(Math.random()*3)]}}
+for(var i=0;i<N;i++)P.push(mk(true));
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.t+=.016;p.x+=p.vx+Math.sin(p.t)*.3;p.y+=p.vy;p.a+=p.va;
+if((p.l&&p.y<-12)||(!p.l&&p.y>H+12)){P[i]=mk(false);continue}
+x.save();x.translate(p.x,p.y);
+if(p.l){var tw=.6+.4*Math.sin(p.t*2.2),gr=x.createRadialGradient(0,0,0,0,0,p.r*4);gr.addColorStop(0,'rgba(255,226,160,'+(p.o*tw)+')');gr.addColorStop(1,'rgba(255,226,160,0)');x.fillStyle=gr;x.beginPath();x.arc(0,0,p.r*4,0,6.283);x.fill()}
+else{x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.col;x.beginPath();x.moveTo(0,-p.r);x.bezierCurveTo(p.r*.9,-p.r*.6,p.r*.7,p.r*.7,0,p.r);x.bezierCurveTo(-p.r*.7,p.r*.7,-p.r*.9,-p.r*.6,0,-p.r);x.fill()}
+x.restore()}
+requestAnimationFrame(draw)}
+draw();
+d.addEventListener('visibilitychange',function(){var w=!run;run=!d.hidden;if(run&&w)draw()});
 })();
 </script>
-<script src="/outils/cta.js" data-nom="Institut Arbre de Lumière" defer></script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Institut Arbre de Lumière" defer></script>
 </body>
 </html>

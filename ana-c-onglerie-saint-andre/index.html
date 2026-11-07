@@ -2,182 +2,373 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Ana C Onglerie · Saint-André</title>
-<meta name="description" content="Pose de gel, capsules, extensions et vernis semi-permanent dans un salon cosy à Saint-André.">
+<title>Ana C Onglerie · Pose de gel, capsules et extensions à Saint-André</title>
+<meta name="description" content="Ana C Onglerie, salon de soins des ongles au 320 rue Rocade Sud à Saint-André : pose de gel, capsules, extensions, vernis semi-permanent. Une page imaginée pour Ana C Onglerie.">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Ana C Onglerie · Saint-André">
-<meta property="og:description" content="Pose de gel, capsules, extensions, vernis semi-permanent. Rocade Sud, Saint-André.">
-<meta property="og:image" content="https://maquettes.atma-digital.re/ana-c-onglerie-saint-andre/img/orchidee.jpg">
+<meta property="og:description" content="Pose de gel, capsules, extensions et vernis semi-permanent, rue Rocade Sud à Saint-André. Une page imaginée pour Ana C Onglerie.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ana-c-onglerie-saint-andre/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ana-c-onglerie-saint-andre/img/rouge-or-orchidee.webp">
+<meta name="theme-color" content="#3b1d33">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--mauve:#8e5a7a;--plum:#4a2640;--rose:#e8b4c4;--blush:#f8e6ec;--gold:#c9a24b;--cream:#fdf8f6;--ink:#35212f}
+:root{--prune:#3b1d33;--prune2:#5a2c4c;--orchid:#9b5f8f;--rose:#efc6d3;--blush:#fbecf0;--nude:#e9d3c4;--or:#c9a45a;--or2:#e7cf8f;--rouge:#b3243a;--creme:#fffaf7;--ink:#2e1b28}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
-h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;line-height:1.15}
+body{font-family:'Jost',sans-serif;background:var(--creme);color:var(--ink);font-size:17px;line-height:1.65;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit}
-.ribbon{background:var(--plum);color:#fff;text-align:center;font-size:.78rem;padding:.5rem .8rem}
-.ribbon b{font-weight:500;color:var(--rose)}
-nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:.65rem 1rem;background:rgba(253,248,246,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--blush)}
-nav .brand{font-family:'Playfair Display',serif;font-size:1.2rem;text-decoration:none;color:var(--plum)}
-nav .brand i{color:var(--gold)}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.ruban{background:var(--prune);color:var(--rose);font-size:.76rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:30}
+.ruban b{color:var(--or2);font-weight:500}
+nav{position:sticky;top:0;z-index:25;display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.6rem 1.1rem;background:rgba(255,250,247,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(155,95,143,.15)}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:.35rem;color:var(--prune)}
+.logo .s{font-family:'Pinyon Script',cursive;font-size:1.75rem;line-height:1;color:var(--orchid)}
+.logo .t{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase}
 nav .links{display:none;gap:1.4rem;font-size:.9rem}
-nav .links a{text-decoration:none}
-.btn{display:inline-block;background:var(--mauve);color:#fff;text-decoration:none;padding:.8rem 1.5rem;border-radius:99px;font-weight:500;font-size:.95rem;transition:background .3s,transform .3s}
-.btn:hover{background:var(--plum);transform:translateY(-2px)}
-.btn.gold{background:var(--gold);color:#2b1a25;animation:glow 3s ease-in-out infinite}
-.btn.ghost{background:transparent;border:1.5px solid #fff}
-.btn.small{padding:.5rem 1rem;font-size:.85rem}
-@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(201,162,75,.5)}50%{box-shadow:0 0 0 12px rgba(201,162,75,0)}}
-.hero{position:relative;min-height:min(86vh,680px);display:flex;align-items:flex-end;color:#fff;overflow:hidden}
-.hero .bg{position:absolute;inset:0;background:url(img/orchidee.jpg) center 35%/cover;animation:kb 24s ease-in-out infinite alternate}
-@keyframes kb{from{transform:scale(1)}to{transform:scale(1.1) translate(-1%,-1%)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(53,25,45,.3) 0%,rgba(53,25,45,.9) 100%)}
-.hero .in{position:relative;z-index:2;padding:2rem 1.3rem 3.2rem;max-width:780px}
-.hero small{letter-spacing:.25em;text-transform:uppercase;font-size:.72rem}
-.hero h1,.hero p{text-shadow:0 2px 14px rgba(30,10,25,.55)}
-.hero h1{font-size:2.9rem;margin:.5rem 0 .8rem;opacity:0;animation:rise 1.3s .3s forwards}
-.hero h1 em{color:var(--rose)}
-.hero p{max-width:34rem;opacity:0;animation:rise 1.3s .7s forwards}
-.hero .cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;opacity:0;animation:rise 1.3s 1.1s forwards}
-@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.sparkles{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
-.sparkles span{position:absolute;color:var(--gold);opacity:0;animation:twinkle 5s ease-in-out infinite}
-@keyframes twinkle{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:.75;transform:scale(1) rotate(20deg)}}
-section{padding:3.6rem 1.3rem;max-width:1000px;margin:auto}
-.kicker{color:var(--mauve);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;font-weight:500}
-h2{font-size:2.1rem;margin:.4rem 0 1rem;color:var(--plum)}
-.about{display:grid;gap:1.6rem}
-.about img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;max-width:360px;margin:auto;box-shadow:0 20px 40px -20px rgba(74,38,64,.6)}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
-.chips span{background:var(--blush);color:var(--plum);padding:.35rem .9rem;border-radius:99px;font-size:.85rem}
-.band{background:var(--plum);color:var(--rose);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem}
-.band div{display:inline-block;animation:scroll 30s linear infinite}
-.band span{margin:0 1.6rem}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.prest{display:grid;gap:1.1rem;margin-top:1.2rem}
-.pc{background:#fff;border:1px solid var(--blush);border-radius:18px;padding:1.4rem;transition:transform .35s,box-shadow .35s}
-.pc:hover{transform:translateY(-5px);box-shadow:0 16px 30px -18px rgba(74,38,64,.6)}
-.pc b{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--mauve);font-weight:500;display:block;margin-bottom:.3rem}
-.pc .ic{color:var(--gold);font-size:1.4rem}
-.note{font-size:.82rem;color:#8a7080;margin-top:1rem}
-.gal{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.3rem 1rem}
-.gal figure{flex:0 0 76%;max-width:330px;scroll-snap-align:center;position:relative;border-radius:16px;overflow:hidden}
-.gal img{width:100%;height:400px;object-fit:cover;transition:transform .6s}
-.gal figure:hover img{transform:scale(1.06)}
-.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .7rem;color:#fff;background:linear-gradient(transparent,rgba(53,25,45,.75));font-size:.85rem}
-.salon{display:grid;gap:1rem}
-.salon img{border-radius:18px;width:100%;height:300px;object-fit:cover}
-.noel{background:linear-gradient(135deg,#4a2640,#2e1428);color:#fff;max-width:none;text-align:center;position:relative;overflow:hidden}
-.noel .box{max-width:620px;margin:auto;position:relative;z-index:2}
-.noel h2{color:#fff}
-.noel .st{position:absolute;color:var(--gold);animation:twinkle 4s ease-in-out infinite}
-.contact{display:grid;gap:1.4rem}
-.contact h3{font-size:1.5rem;color:var(--mauve);margin-bottom:.4rem}
-footer{background:var(--ink);color:#d8c6d0;text-align:center;font-size:.8rem;padding:2rem 1.2rem}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
-.reveal.on{opacity:1;transform:none}
+nav .links a{text-decoration:none;opacity:.8}
+nav .links a:hover{opacity:1;color:var(--orchid)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.45rem;border-radius:99px;background:var(--prune);color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .25s,box-shadow .25s,background .25s;position:relative;overflow:hidden;border:0;cursor:pointer}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,62%{left:-60%}100%{left:130%}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(59,29,51,.35)}
+.btn.or{background:linear-gradient(135deg,var(--or2),var(--or));color:var(--prune);animation:breathe 3.6s ease-in-out infinite}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(201,164,90,.55)}50%{box-shadow:0 0 0 11px rgba(201,164,90,0)}}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.8);color:#fff}
+.btn.ghost::after{display:none}
+.btn.sm{padding:.5rem 1rem;font-size:.85rem}
+.btn svg{width:18px;height:18px;flex:none}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 90px);min-height:640px;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--prune)}
+.hero .bg{position:absolute;inset:-4%;background:url(img/rouge-or-orchidee.webp) center 38%/cover;animation:kb 28s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(59,29,51,.08) 0%,rgba(59,29,51,.25) 30%,rgba(40,16,34,.78) 55%,rgba(30,12,26,.96) 100%)}
+.hero .in{position:relative;z-index:3;padding:0 1.25rem 3.2rem;max-width:1060px;margin:0 auto;width:100%}
+.sig{font-family:'Pinyon Script',cursive;font-size:2.6rem;color:var(--or2);line-height:1;opacity:0;animation:up 1s .2s forwards}
+.kick{letter-spacing:.28em;text-transform:uppercase;font-size:.68rem;margin-top:.5rem;opacity:0;animation:up 1s .4s forwards}
+.hero h1{font-size:clamp(2.6rem,12vw,5rem);margin:.6rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards;text-shadow:0 2px 18px rgba(30,10,25,.5)}
+.hero h1 em{color:var(--rose);font-style:italic}
+.lead{max-width:31rem;font-weight:400;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards;text-shadow:0 1px 10px rgba(30,10,25,.6)}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.scroll{position:absolute;right:1.25rem;bottom:1.4rem;z-index:3;width:1px;height:54px;background:linear-gradient(var(--or2),transparent);animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:20}
+/* marquee */
+.marq{background:var(--prune);color:var(--rose);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem}
+.marq div{display:inline-block;animation:mq 32s linear infinite}
+.marq span{margin:0 1.1rem}.marq i{color:var(--or);font-style:normal;font-size:.8rem;vertical-align:middle}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:4.4rem 0;position:relative}
+.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.7rem;color:var(--orchid);font-weight:600;display:flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor}
+h2{font-size:clamp(2.2rem,8.5vw,3.3rem);margin:.5rem 0 1rem;color:var(--prune)}
+h2 em{color:var(--orchid);font-style:italic}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.on{opacity:1;transform:none}
+/* intro */
+.duo{display:grid;gap:2.2rem;align-items:center}
+.arch{position:relative;max-width:400px;margin:0 auto;width:100%}
+.arch .ph{border-radius:220px 220px 22px 22px;overflow:hidden;box-shadow:0 26px 60px -24px rgba(59,29,51,.55)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.arch:hover img{transform:scale(1.04)}
+.arch .badge{position:absolute;left:-.4rem;bottom:1.4rem;background:var(--creme);border-radius:16px;padding:.7rem 1rem;box-shadow:0 12px 30px rgba(59,29,51,.18);font-size:.8rem;line-height:1.35;max-width:62%}
+.arch .badge b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--prune)}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;color:var(--prune2);border-left:2px solid var(--or);padding:.2rem 0 .2rem 1rem;margin:1.2rem 0}
+.quote small{display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#8a6f80;margin-top:.3rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem;list-style:none}
+.chips li{border:1px solid var(--rose);background:#fff;color:var(--prune);padding:.35rem .95rem;border-radius:99px;font-size:.85rem}
+/* prestations */
+.presta{background:linear-gradient(180deg,var(--blush),var(--creme))}
+.wave{display:block;width:100%;height:46px}
+.cards{display:grid;gap:1rem;margin-top:1.6rem}
+.card{background:#fff;border-radius:20px;padding:1.4rem 1.3rem 1.3rem;box-shadow:0 10px 30px -14px rgba(59,29,51,.25);display:grid;grid-template-columns:52px 1fr;gap:1rem;align-items:start;transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 36px -16px rgba(59,29,51,.4)}
+.card::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(201,164,90,.18),transparent 70%)}
+.card svg{width:52px;height:52px}
+.card h3{font-size:1.55rem;color:var(--prune)}
+.card p{font-size:.95rem;color:#5d4757}
+.note{font-size:.85rem;color:#7a6271;margin-top:1.2rem}
+/* nuancier */
+.nuancier{background:var(--prune);color:#f6e8ee;overflow:hidden}
+.nuancier h2{color:#fff}.nuancier h2 em{color:var(--rose)}
+.nuancier .eyebrow{color:var(--or2)}
+.nn{display:grid;gap:1.6rem;margin-top:1.4rem}
+.stage{position:relative;max-width:420px;width:100%;margin:0 auto;aspect-ratio:4/5;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);border:1px solid rgba(231,207,143,.35)}
+.stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity .7s,transform 1.4s}
+.stage img.on{opacity:1;transform:none}
+.stage .cap{position:absolute;left:0;right:0;bottom:0;padding:3rem 1.1rem 1rem;background:linear-gradient(transparent,rgba(30,10,25,.92));text-shadow:0 1px 8px rgba(0,0,0,.6);font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff}
+.sw{display:grid;grid-template-columns:repeat(3,58px);gap:2.3rem 2.4rem;justify-content:center}
+.sw button{width:58px;height:58px;border-radius:50%;border:2px solid rgba(255,255,255,.2);cursor:pointer;position:relative;transition:transform .3s,border-color .3s;box-shadow:inset -6px -8px 14px rgba(0,0,0,.25),inset 5px 6px 10px rgba(255,255,255,.35)}
+.sw button:hover{transform:translateY(-3px)}
+.sw button.on{border-color:var(--or2);box-shadow:0 0 0 4px rgba(231,207,143,.3),inset -6px -8px 14px rgba(0,0,0,.25),inset 5px 6px 10px rgba(255,255,255,.35)}
+.sw button span{position:absolute;top:calc(100% + .4rem);left:50%;transform:translateX(-50%);font-size:.78rem;white-space:nowrap;letter-spacing:.06em;opacity:.75}
+.sw{padding-bottom:2rem}
+@media(min-width:760px){.sw{grid-template-columns:repeat(6,58px);gap:1rem 1.1rem}}
+.nn p.h{font-size:.9rem;text-align:center;opacity:.8}
+/* galerie */
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.25rem 1.4rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 72%;max-width:300px;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 16px 34px -16px rgba(59,29,51,.45);transition:transform .45s}
+.gal figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal figcaption{padding:.7rem 1rem .85rem;font-size:.86rem;color:#5d4757}
+.gal figcaption b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--prune);font-weight:600}
+.hint{font-size:.82rem;color:var(--orchid);padding:0 1.25rem;display:flex;align-items:center;gap:.4rem}
+.hint i{display:inline-block;animation:nudge 1.6s ease-in-out infinite;font-style:normal}
+@keyframes nudge{50%{transform:translateX(6px)}}
+.recent{margin:1.8rem 1.25rem 0;padding:1rem 1.2rem;border-radius:16px;background:var(--blush);font-size:.92rem;max-width:1060px}
+/* salon */
+.salon{background:linear-gradient(180deg,var(--creme),var(--blush))}
+.mosa{display:grid;grid-template-columns:1.15fr 1fr;grid-template-rows:auto auto;gap:.8rem;margin-top:1.4rem}
+.mosa figure{border-radius:20px;overflow:hidden;position:relative;box-shadow:0 14px 30px -16px rgba(59,29,51,.45)}
+.mosa img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.mosa figure:hover img{transform:scale(1.05)}
+.mosa .a{grid-row:span 2}
+.mosa .a img{aspect-ratio:3/5.1}
+.mosa .b img,.mosa .c img{aspect-ratio:1/1}
+.mosa figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(255,250,247,.9);font-size:.72rem;padding:.25rem .6rem;border-radius:99px;color:var(--prune)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.8rem}
+.stats div{background:#fff;border-radius:18px;padding:1rem .5rem;text-align:center;box-shadow:0 8px 24px -14px rgba(59,29,51,.3)}
+.stats b{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--orchid);line-height:1}
+.stats span{font-size:.82rem;color:#5d4757}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#5e2a4c 0%,var(--prune) 55%,#24101f 100%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--or2);justify-content:center}
+.noel .eyebrow::after{content:"";width:26px;height:1px;background:currentColor}
+.noel h2{color:#fff}.noel h2 em{color:var(--or2)}
+.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300}
+.gift{position:relative;max-width:330px;margin:1.4rem auto 2rem;aspect-ratio:1.62;border-radius:18px;background:linear-gradient(135deg,#f7dde6 0%,#fff6f0 46%,#e9c2d0 100%);color:var(--prune);box-shadow:0 26px 50px rgba(0,0,0,.45);transform:rotate(-3deg);transition:transform .6s;overflow:hidden;text-align:left;padding:1.1rem 1.2rem}
+.gift:hover{transform:rotate(0) scale(1.03)}
+.gift::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.75) 50%,transparent 65%);transform:translateX(-100%);animation:sheen 5s ease-in-out infinite}
+@keyframes sheen{0%,55%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.gift .n{font-family:'Pinyon Script',cursive;font-size:2.1rem;line-height:1;color:var(--orchid)}
+.gift .t{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;margin-top:.3rem}
+.gift .r{position:absolute;right:22%;top:0;bottom:0;width:12px;background:linear-gradient(var(--or2),var(--or))}
+.gift .bow{position:absolute;right:calc(22% - 20px);top:12px;width:52px}
+.gift .bottle{position:absolute;left:1.1rem;bottom:.9rem;width:40px}
+.gift .f{position:absolute;left:4.2rem;bottom:1.1rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem}
+.noel .btns2{display:flex;flex-direction:column;align-items:center;gap:.8rem}
+.noel .small{font-size:.8rem;opacity:.65;margin-top:1.4rem}
+.star{position:absolute;color:var(--or2);font-size:.9rem;animation:tw 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes tw{0%,100%{opacity:.12;transform:scale(.7)}50%{opacity:.85;transform:scale(1.15) rotate(25deg)}}
+/* contact */
+.ct{display:grid;gap:1rem;margin-top:1.4rem}
+.ct>div{background:#fff;border-radius:20px;padding:1.3rem 1.3rem 1.4rem;box-shadow:0 10px 28px -16px rgba(59,29,51,.3)}
+.ct h3{font-size:1.45rem;color:var(--prune);margin-bottom:.35rem}
+.ct a.l{color:var(--prune);font-weight:500;text-decoration:none;border-bottom:1px solid var(--or);overflow-wrap:anywhere}
+.ct .btn{margin-top:.9rem}
+footer{background:var(--prune);color:#e7d3de;text-align:center;padding:2.4rem 1.25rem 5rem;font-size:.82rem}
+footer .s{font-family:'Pinyon Script',cursive;font-size:2rem;color:var(--or2);display:block;margin-bottom:.5rem}
 @media(min-width:760px){
  nav .links{display:flex}
- .hero h1{font-size:4.3rem}
- .about{grid-template-columns:1fr 1.2fr;align-items:center}
- .prest{grid-template-columns:repeat(2,1fr)}
- .gal{padding:0 max(1.3rem,calc((100vw - 1000px)/2))}
- .gal figure{flex-basis:28%}
- .salon{grid-template-columns:1fr 1fr}
- .contact{grid-template-columns:1fr 1fr}
+ .duo{grid-template-columns:1fr 1.1fr}
+ .cards{grid-template-columns:1fr 1fr}
+ .nn{grid-template-columns:1fr 1fr;align-items:center}
+ .gal{padding-left:max(1.25rem,calc((100vw - 1060px)/2 + 1.25rem))}
+ .gal figure{flex-basis:270px}
+ .ct{grid-template-columns:repeat(3,1fr)}
+ .recent{margin-left:auto;margin-right:auto}
 }
-html.shot .hero h1,html.shot .hero p,html.shot .hero .cta{opacity:1!important;animation:none!important}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero h1,.hero p,.hero .cta{opacity:1;transform:none}.sparkles{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.sig,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}canvas#fx{display:none}}
 </style>
 </head>
 <body>
-<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ana C Onglerie</div>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ana C Onglerie</div>
 <nav>
- <a class="brand" href="#top">Ana C <i>Onglerie</i></a>
- <div class="links"><a href="#salon">Le salon</a><a href="#prestations">Prestations</a><a href="#galerie">Réalisations</a><a href="#contact">Contact</a></div>
- <a class="btn small" href="tel:+262692098562">Appeler</a>
+ <a class="logo" href="#top"><span class="s">Ana C</span><span class="t">Onglerie</span></a>
+ <div class="links"><a href="#prestations">Prestations</a><a href="#nuancier">Nuancier</a><a href="#realisations">Réalisations</a><a href="#salon">Le salon</a><a href="#contact">Contact</a></div>
+ <a class="btn sm" href="tel:+262692098562">Appeler</a>
 </nav>
-<div class="sparkles" aria-hidden="true">
- <span style="left:8%;top:20%;animation-delay:0s">✦</span><span style="left:84%;top:14%;animation-delay:1.2s">✧</span><span style="left:30%;top:62%;animation-delay:2.4s">✦</span><span style="left:70%;top:78%;animation-delay:.6s">✧</span><span style="left:92%;top:50%;animation-delay:3.1s">✦</span><span style="left:15%;top:88%;animation-delay:1.8s">✧</span>
-</div>
+<canvas id="fx" aria-hidden="true"></canvas>
 
 <header class="hero" id="top">
- <div class="bg" role="img" aria-label="Ongles rouges et dorés tenant une boule pailletée devant des orchidées"></div>
+ <div class="bg" role="img" aria-label="Main aux ongles rouges et dorés tenant une boule pailletée, devant des orchidées mauves"></div>
  <div class="in">
-  <small>Onglerie · Saint-André</small>
-  <h1>Des ongles qui <em>racontent</em> votre style</h1>
-  <p>Pose de gel, capsules, extensions et vernis semi-permanent, dans un salon cosy de Saint-André.</p>
-  <div class="cta"><a class="btn gold" href="https://wa.me/262692098562?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous" target="_blank" rel="noopener">Prendre rendez-vous</a><a class="btn ghost" href="#galerie">Voir les réalisations</a></div>
+  <div class="sig">Ana C Onglerie</div>
+  <div class="kick">Salon de soins des ongles · Saint-André</div>
+  <h1>Vos mains, <em>en version bijou</em></h1>
+  <p class="lead">Pose de gel, capsules, extensions et vernis semi-permanent, au 320 rue Rocade Sud à Saint-André.</p>
+  <div class="btns">
+   <a class="btn or" href="https://wa.me/262692098562?text=Bonjour%20Ana%20C%20Onglerie%2C%20je%20voudrais%20prendre%20rendez-vous%20pour%20une%20pose" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Prendre rendez-vous</a>
+   <a class="btn ghost" href="#realisations">Voir les réalisations</a>
+  </div>
  </div>
+ <span class="scroll" aria-hidden="true"></span>
 </header>
 
-<section class="about reveal" id="salon">
- <img src="img/nude.jpg" alt="Ongles nude pailletés devant des orchidées" loading="lazy">
- <div>
-  <div class="kicker">Le salon</div>
-  <h2>Votre bulle de douceur, au bout des doigts</h2>
-  <p>Chez Ana C Onglerie, chaque pose est pensée comme un petit bijou : formes, couleurs, paillettes et détails à votre image. Le salon, installé depuis juillet 2025 rue Rocade Sud, a été décoré pour que l'on s'y sente bien, avec ses teintes de rose, ses plantes et son bois chaud.</p>
-  <div class="chips"><span>Pose de gel</span><span>Capsules</span><span>Extensions</span><span>Vernis semi-permanent</span></div>
+<div class="marq" aria-hidden="true"><div>
+ <span>Pose de gel</span><i>✦</i><span>Capsules</span><i>✦</i><span>Extensions</span><i>✦</i><span>Vernis semi-permanent</span><i>✦</i><span>Strass &amp; paillettes</span><i>✦</i><span>Saint-André</span><i>✦</i>
+ <span>Pose de gel</span><i>✦</i><span>Capsules</span><i>✦</i><span>Extensions</span><i>✦</i><span>Vernis semi-permanent</span><i>✦</i><span>Strass &amp; paillettes</span><i>✦</i><span>Saint-André</span><i>✦</i>
+</div></div>
+
+<section id="intro">
+ <div class="wrap duo">
+  <div class="arch rv">
+   <div class="ph"><img src="img/nude-feuille-or.webp" alt="Ongles nude ornés de feuille d'or, devant des orchidées mauves" loading="lazy"></div>
+   <div class="badge"><b>Nude &amp; feuille d'or</b>une pose publiée par le salon</div>
+  </div>
+  <div class="rv">
+   <div class="eyebrow">Bienvenue chez Ana C</div>
+   <h2>Des ongles soignés, <em>pensés comme un bijou</em></h2>
+   <p>Rouge profond et paillettes d'or, nude délicat, vert néon pour l'été, dégradés pastel bordés de strass : chaque pose d'Ana C Onglerie est une petite création, photographiée avec soin au milieu des orchidées et des pivoines.</p>
+   <div class="quote">Pose de gel · capsules · extensions · vernis semi-permanent<small>La présentation du salon sur Facebook</small></div>
+   <p>Le salon vous accueille rue Rocade Sud, à Saint-André, dans un décor tout en rose, bois blond et fleurs.</p>
+   <ul class="chips"><li>Gel</li><li>Capsules</li><li>Extensions</li><li>Semi-permanent</li><li>Nail art</li></ul>
+  </div>
  </div>
 </section>
 
-<div class="band" aria-hidden="true"><div><span>✦ Gel</span><span>✦ Capsules</span><span>✦ Extensions</span><span>✦ Semi-permanent</span><span>✦ Nail art</span><span>✦ Gel</span><span>✦ Capsules</span><span>✦ Extensions</span><span>✦ Semi-permanent</span><span>✦ Nail art</span></div></div>
-
-<section id="prestations" class="reveal">
- <div class="kicker">Prestations</div><h2>Ce que fait Ana</h2>
- <div class="prest">
-  <div class="pc"><span class="ic">✦</span><b>Pose de gel</b>Des ongles solides et brillants, avec la couleur et la finition de votre choix.</div>
-  <div class="pc"><span class="ic">✦</span><b>Capsules</b>Longueur et forme au choix : amande, carré, ballerine.</div>
-  <div class="pc"><span class="ic">✦</span><b>Extensions</b>Un ongle plus long, tout en restant naturel et confortable.</div>
-  <div class="pc"><span class="ic">✦</span><b>Vernis semi-permanent</b>Une couleur éclatante qui tient, des mains soignées.</div>
+<section class="presta" id="prestations">
+ <div class="wrap">
+  <div class="eyebrow rv">Les prestations</div>
+  <h2 class="rv">Quatre savoir-faire, <em>une seule exigence</em></h2>
+  <div class="cards">
+   <div class="card rv"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#fbecf0"/><path d="M19 38V22c0-5 3-9 7-9s7 4 7 9v16z" fill="#b3243a"/><path d="M22 22c0-3 1.6-5.5 4-6" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".7"/></svg><div><h3>Pose de gel</h3><p>Des ongles solides et brillants, dans la couleur et la finition de votre choix.</p></div></div>
+   <div class="card rv"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#fbecf0"/><path d="M20 40V24l3-11h6l3 11v16z" fill="#e9d3c4" stroke="#c9a45a" stroke-width="1.4"/><path d="M23 13h6" stroke="#c9a45a" stroke-width="2"/></svg><div><h3>Capsules</h3><p>Pour gagner en longueur et choisir votre forme, en toute légèreté.</p></div></div>
+   <div class="card rv"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#fbecf0"/><path d="M21 40V20c0-6 2.2-10 5-10s5 4 5 10v20z" fill="#9b5f8f"/><circle cx="26" cy="33" r="1.6" fill="#fff"/><circle cx="26" cy="28" r="1.2" fill="#e7cf8f"/><circle cx="26" cy="23.5" r=".9" fill="#fff"/></svg><div><h3>Extensions</h3><p>Des ongles allongés et élégants, sculptés pour un résultat harmonieux.</p></div></div>
+   <div class="card rv"><svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#fbecf0"/><rect x="22" y="9" width="8" height="12" rx="1.5" fill="#3b1d33"/><rect x="16" y="21" width="20" height="21" rx="6" fill="#efc6d3"/><path d="M20 27c0-2 1.5-3 3-3" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><div><h3>Vernis semi-permanent</h3><p>Une couleur éclatante qui tient, pour des mains impeccables au quotidien.</p></div></div>
+  </div>
+  <p class="note rv">Tarifs et durées : renseignez-vous directement auprès du salon, par téléphone ou WhatsApp.</p>
  </div>
- <p class="note">Descriptions indicatives d'après la page Facebook ; tarifs à compléter avec Ana (aucun prix publié, aucun prix inventé).</p>
 </section>
 
-<section style="padding-bottom:1rem" class="reveal" id="galerie"><div class="kicker">Réalisations</div><h2>Un aperçu du travail</h2></section>
-<div class="gal reveal">
- <figure><img src="img/orchidee.jpg" alt="Ongles rouges et dorés avec boule pailletée" loading="lazy"><figcaption>Rouge &amp; or</figcaption></figure>
- <figure><img src="img/sable.jpg" alt="Ongles vert citron et mauve sur le sable" loading="lazy"><figcaption>Vert néon, sable de plage</figcaption></figure>
- <figure><img src="img/vase.jpg" alt="Ongles mauves pailletés avec strass" loading="lazy"><figcaption>Mauve &amp; strass</figcaption></figure>
- <figure><img src="img/bleu.jpg" alt="Ongles rouges et bleu clair pailletés" loading="lazy"><figcaption>Rouge, bleu &amp; paillettes</figcaption></figure>
- <figure><img src="img/nude.jpg" alt="Ongles nude et dorés devant des orchidées" loading="lazy"><figcaption>Nude &amp; feuille d'or</figcaption></figure>
-</div>
+<section class="nuancier" id="nuancier">
+ <div class="wrap">
+  <div class="eyebrow rv">Le nuancier d'Ana C</div>
+  <h2 class="rv">Choisissez une teinte, <em>découvrez la pose</em></h2>
+  <div class="nn">
+   <div class="stage rv" id="stage">
+    <img class="on" src="img/rouge-or-orchidee.webp" alt="Ongles rouges et dorés devant des orchidées" loading="lazy">
+    <img src="img/bordeaux-or-pivoines.webp" alt="Ongles bordeaux et nude pailletés d'or devant des pivoines" loading="lazy">
+    <img src="img/nude-pinceau.webp" alt="Ongles nude rosé tenant un pinceau, sur fond rose duveteux" loading="lazy">
+    <img src="img/mauve-strass.webp" alt="Ongles mauves pailletés avec strass, près d'un vase blanc" loading="lazy">
+    <img src="img/neon-sable.webp" alt="Ongles vert néon et mauve dans le sable" loading="lazy">
+    <img src="img/degrade-strass.webp" alt="Ongles en dégradé pastel bordés de strass" loading="lazy">
+    <div class="cap" id="cap">Rouge passion &amp; or</div>
+   </div>
+   <div>
+    <div class="sw rv" role="group" aria-label="Choisir une teinte">
+     <button class="on" style="background:radial-gradient(circle at 35% 30%,#e04a5c,#8f1426)" data-i="0" data-c="Rouge passion &amp; or" aria-label="Rouge et or"><span>Rouge</span></button>
+     <button style="background:radial-gradient(circle at 35% 30%,#9a3a55,#4c1027)" data-i="1" data-c="Bordeaux &amp; paillettes d'or" aria-label="Bordeaux"><span>Bordeaux</span></button>
+     <button style="background:radial-gradient(circle at 35% 30%,#f3dccd,#c79f8a)" data-i="2" data-c="Nude rosé, tout en douceur" aria-label="Nude"><span>Nude</span></button>
+     <button style="background:radial-gradient(circle at 35% 30%,#c79ad0,#7b4c86)" data-i="3" data-c="Mauve pailleté &amp; strass" aria-label="Mauve"><span>Mauve</span></button>
+     <button style="background:radial-gradient(circle at 35% 30%,#e4ff5a,#93b40f)" data-i="4" data-c="Vert néon, version plage" aria-label="Vert néon"><span>Néon</span></button>
+     <button style="background:conic-gradient(#f6c25b,#f39a7a,#f2a7c3,#b9a7d6,#f6c25b)" data-i="5" data-c="Dégradé pastel bordé de strass" aria-label="Dégradé pastel"><span>Dégradé</span></button>
+    </div>
+    <p class="h rv">Chaque teinte ouvre une vraie pose publiée par le salon.</p>
+   </div>
+  </div>
+ </div>
+</section>
 
-<section class="reveal">
- <div class="kicker">L'espace</div><h2>Un salon pensé pour la détente</h2>
- <div class="salon"><img src="img/salon.jpg" alt="Poste de manucure avec fauteuil et étagères en bois" loading="lazy"><img src="img/deco.jpg" alt="Bouquet de pivoines dans un vase doré" loading="lazy"></div>
+<section id="realisations">
+ <div class="wrap">
+  <div class="eyebrow rv">Les réalisations</div>
+  <h2 class="rv">Paillettes, strass <em>&amp; jolies couleurs</em></h2>
+ </div>
+ <div class="gal">
+  <figure><img src="img/coeur-fleurs-strass.webp" alt="Ongles rouges, nude et lavande ornés de fleurs blanches et de strass" loading="lazy"><figcaption><b>Fleurs &amp; strass</b>Une pose romantique, publiée en octobre 2026</figcaption></figure>
+  <figure><img src="img/degrade-strass.webp" alt="Ongles en dégradé jaune, orange, rose et lavande bordés de strass" loading="lazy"><figcaption><b>Dégradé pastel</b>Chaque doigt sa couleur, liseré de strass</figcaption></figure>
+  <figure><img src="img/rouge-or-orchidee.webp" alt="Ongles rouges et dorés avec boule pailletée et orchidées" loading="lazy"><figcaption><b>Rouge &amp; or</b>Le grand classique, version scintillante</figcaption></figure>
+  <figure><img src="img/bordeaux-or-pivoines.webp" alt="Ongles bordeaux et nude pailletés d'or devant des pivoines roses" loading="lazy"><figcaption><b>Bordeaux &amp; paillettes</b>Alternance mat-brillant, éclats dorés</figcaption></figure>
+  <figure><img src="img/neon-sable.webp" alt="Ongles vert néon et mauve sur le sable" loading="lazy"><figcaption><b>Vert néon</b>Une pose qui aime le soleil</figcaption></figure>
+  <figure><img src="img/mauve-strass.webp" alt="Ongles mauves pailletés avec strass" loading="lazy"><figcaption><b>Mauve &amp; strass</b>Paillettes fines et petits cristaux</figcaption></figure>
+  <figure><img src="img/nude-feuille-or.webp" alt="Ongles nude avec feuille d'or devant des orchidées" loading="lazy"><figcaption><b>Nude &amp; feuille d'or</b>L'élégance discrète</figcaption></figure>
+  <figure><img src="img/nude-pinceau.webp" alt="Ongles nude rosé tenant un pinceau sur fond rose" loading="lazy"><figcaption><b>Nude rosé</b>Le naturel sublimé</figcaption></figure>
+ </div>
+ <p class="hint">Faites glisser pour voir les poses <i>→</i></p>
+ <p class="recent rv">✦ Dernière publication du salon : le 6 octobre 2026, une pose aux fleurs blanches et strass, à retrouver sur la <a href="https://www.facebook.com/anaconglerie" target="_blank" rel="noopener">page Facebook d'Ana C Onglerie</a>.</p>
+</section>
+
+<section class="salon" id="salon">
+ <div class="wrap">
+  <div class="eyebrow rv">Le salon</div>
+  <h2 class="rv">Un cocon rose, bois blond <em>&amp; pivoines</em></h2>
+  <p class="rv">Fauteuil moelleux, coussins roses, étagères en bois, plantes et bouquets : un salon pensé pour que vous profitiez pleinement de votre moment.</p>
+  <div class="mosa rv">
+   <figure class="a"><img src="img/salon-poste.webp" alt="Poste de pose du salon, avec étagères en bois et décor rose" loading="lazy"><figcaption>Le poste de pose</figcaption></figure>
+   <figure class="b"><img src="img/salon-coin.webp" alt="Coin détente avec fauteuil gris et coussins roses" loading="lazy"><figcaption>Le coin détente</figcaption></figure>
+   <figure class="c"><img src="img/salon-pivoines.webp" alt="Bouquet de pivoines roses dans un vase doré" loading="lazy"><figcaption>Les pivoines</figcaption></figure>
+  </div>
+  <div class="stats">
+   <div class="rv"><b>2,3 K</b><span>abonnés sur Facebook</span></div>
+   <div class="rv"><b>86 %</b><span>de recommandations</span></div>
+   <div class="rv"><b>4</b><span>techniques de pose</span></div>
+  </div>
+ </div>
 </section>
 
 <section class="noel" id="noel">
- <span class="st" style="left:9%;top:20%">✦</span><span class="st" style="right:11%;top:34%;animation-delay:1.3s">✧</span><span class="st" style="left:22%;bottom:14%;animation-delay:2.2s">✦</span>
- <div class="box reveal">
-  <div class="kicker" style="color:var(--rose)">Spécial fêtes</div>
-  <h2>Des ongles de fête pour Noël</h2>
-  <p>Rouge, or, paillettes ou nude chic : prenez rendez-vous tôt pour être prête pour les fêtes.</p>
-  <p style="margin-top:1rem"><a class="btn gold" href="https://wa.me/262692098562?text=Bonjour%2C%20je%20voudrais%20un%20rendez-vous%20pour%20No%C3%ABl" target="_blank" rel="noopener">Réserver mes ongles de Noël</a></p>
+ <span class="star" style="left:7%;top:12%">✦</span><span class="star" style="right:9%;top:9%;animation-delay:.8s">✧</span><span class="star" style="left:12%;bottom:16%;animation-delay:1.6s">✦</span><span class="star" style="right:14%;bottom:22%;animation-delay:2.3s">✦</span><span class="star" style="left:48%;top:5%;animation-delay:1.1s">✧</span>
+ <div class="wrap">
+  <div class="eyebrow rv">Offrir pour Noël</div>
+  <h2 class="rv">Offrez des mains <em>de fête</em></h2>
+  <div class="gift rv" aria-hidden="true">
+   <div class="n">Ana C</div><div class="t">Carte cadeau · Onglerie</div>
+   <div class="r"></div>
+   <svg class="bow" viewBox="0 0 52 34"><path d="M26 17C18 3 4 4 6 14s14 6 20 3zM26 17c8-14 22-13 20-3s-14 6-20 3z" fill="#c9a45a"/><circle cx="26" cy="17" r="4" fill="#e7cf8f"/></svg>
+   <svg class="bottle" viewBox="0 0 40 60"><rect x="14" y="2" width="12" height="20" rx="2" fill="#3b1d33"/><rect x="6" y="22" width="28" height="36" rx="9" fill="#b3243a"/><path d="M11 30c0-3 2-5 5-5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/></svg>
+   <div class="f">un moment rien qu'à soi</div>
+  </div>
+  <p class="rv">Une jolie attention à glisser sous le sapin : une pose de gel, des capsules ou un vernis semi-permanent chez Ana C Onglerie. Écrivez au salon sur WhatsApp pour préparer ensemble votre carte cadeau.</p>
+  <div class="btns2 rv">
+   <a class="btn or" href="https://wa.me/262692098562?text=Bonjour%20Ana%20C%20Onglerie%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau</a>
+   <a class="btn ghost" href="https://wa.me/262692098562?text=Bonjour%20Ana%20C%20Onglerie%2C%20je%20voudrais%20r%C3%A9server%20une%20pose%20pour%20les%20f%C3%AAtes" target="_blank" rel="noopener">Réserver mes ongles de fête</a>
+  </div>
+  <p class="small rv">Rouge et or, bordeaux pailleté, nude chic : les teintes des fêtes sont déjà dans le nuancier.</p>
  </div>
 </section>
 
-<section class="contact reveal" id="contact">
- <div><div class="kicker">Contact</div><h2>Venez nous voir</h2>
-  <p>320 rue Rocade Sud<br>97440 Saint-André</p>
-  <p style="margin:.8rem 0"><a href="tel:+262692098562"><b>0692 09 85 62</b></a></p>
-  <p><a href="https://www.facebook.com/anaconglerie" target="_blank" rel="noopener">Facebook · Ana C Onglerie</a></p>
+<section id="contact">
+ <div class="wrap">
+  <div class="eyebrow rv">Contact</div>
+  <h2 class="rv">Votre prochaine pose <em>commence ici</em></h2>
+  <div class="ct">
+   <div class="rv"><h3>Le salon</h3><p>320 rue Rocade Sud<br>97440 Saint-André, La Réunion</p><a class="btn sm" href="https://www.google.com/maps/search/?api=1&amp;query=320%20rue%20Rocade%20Sud%2097440%20Saint-Andr%C3%A9" target="_blank" rel="noopener">Itinéraire</a></div>
+   <div class="rv"><h3>Rendez-vous</h3><p>Appelez ou écrivez au <a class="l" href="tel:+262692098562">0692 09 85 62</a></p><a class="btn sm or" href="https://wa.me/262692098562?text=Bonjour%20Ana%20C%20Onglerie%2C%20je%20voudrais%20prendre%20rendez-vous" target="_blank" rel="noopener">WhatsApp</a></div>
+   <div class="rv"><h3>Les nouveautés</h3><p>Toutes les dernières poses sont sur la page <a class="l" href="https://www.facebook.com/anaconglerie" target="_blank" rel="noopener">Facebook · Ana C Onglerie</a></p></div>
+  </div>
  </div>
- <div><h3>Prendre rendez-vous</h3><p>Écrivez-nous par WhatsApp ou par Messenger, ou appelez directement le salon.</p><p style="margin-top:1rem"><a class="btn" href="https://wa.me/262692098562" target="_blank" rel="noopener">WhatsApp</a></p></div>
 </section>
 
-<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Ana C Onglerie.</footer>
+<footer><span class="s">Ana C Onglerie</span>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Ana C Onglerie.<br>Photos : poses et salon publiés par Ana C Onglerie sur sa page Facebook.</footer>
+
 <script>
 (function(){
- var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
- document.querySelectorAll('.reveal').forEach(function(el){if(location.hash=='#shot'){el.classList.add('on');document.documentElement.classList.add('shot')}else io.observe(el)});
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+/* nuancier */
+var st=document.querySelectorAll('#stage img'),cap=document.getElementById('cap'),bt=document.querySelectorAll('.sw button'),cur=0,tm;
+function show(i){cur=i;st.forEach(function(m,k){m.classList.toggle('on',k==i)});bt.forEach(function(b,k){b.classList.toggle('on',k==i)});cap.innerHTML=bt[i].getAttribute('data-c')}
+bt.forEach(function(b){b.addEventListener('click',function(){clearInterval(tm);show(+b.getAttribute('data-i'))})});
+if(!rm)tm=setInterval(function(){show((cur+1)%bt.length)},4200);
+if(rm)return;
+/* paillettes */
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var cols=['231,207,143','239,198,211','201,164,90','255,255,255'];
+for(var i=0;i<24;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:Math.random()*2.2+1.2,v:Math.random()*.32+.1,a:Math.random()*6.28,r:(Math.random()-.5)*.04,p:Math.random()*6.28,k:i%4,h:i%5==0});
+var hi=document.querySelector('.hero .in');
+function draw(){
+ if(!run)return;x.clearRect(0,0,W,H);var b=hi.getBoundingClientRect();
+ P.forEach(function(q){q.y+=q.v;q.a+=q.r;q.p+=.03;q.x+=Math.sin(q.p*.6)*.25;if(q.y>H+10){q.y=-10;q.x=Math.random()*W}
+  var g=.1+.38*Math.abs(Math.sin(q.p)),col=cols[q.k];if(q.y>b.top-12&&q.y<b.bottom+12)g*=.2;
+  x.save();x.translate(q.x,q.y);x.rotate(q.a);
+  if(q.h){x.strokeStyle='rgba('+col+','+g+')';x.lineWidth=.8;x.beginPath();x.moveTo(-q.s*2.2,0);x.lineTo(q.s*2.2,0);x.moveTo(0,-q.s*2.2);x.lineTo(0,q.s*2.2);x.stroke()}
+  else{x.scale(1,Math.abs(Math.cos(q.p*1.3))+.15);x.fillStyle='rgba('+col+','+g+')';x.beginPath();for(var t=0;t<6;t++){var an=t*1.047;x.lineTo(Math.cos(an)*q.s,Math.sin(an)*q.s)}x.closePath();x.fill()}
+  x.restore()});
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
 })();
 </script>
-<script src="/outils/cta.js" data-nom="Ana C Onglerie" defer></script>
+<script src="https://maquettes.atma-digital.re/outils/cta.js" data-nom="Ana C Onglerie" defer></script>
 </body>
 </html>
