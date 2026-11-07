@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1e4fa0">
+<title>Le Souk · Artisanat marocain · 68 rue Jules Auber, Saint-Denis</title>
+<meta name="description" content="Maquette : Le Souk, artisanat marocain à Saint-Denis. Décoration, art de table fait main, cosmétiques, épices et prêt-à-porter, du Maroc à La Réunion.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le Souk · Du Maroc à La Réunion — une page imaginée pour vous">
+<meta property="og:description" content="Décoration, art de table fait main et trésors rapportés de Marrakech, rue Jules Auber à Saint-Denis. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-souk-reunion/img/souk-devanture.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-souk-reunion/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --majorelle:#1e4fa0;   /* l'enseigne bleue du Souk */
+  --majorelle-2:#163b7a;
+  --nuit:#0f2550;
+  --terre:#c2643a;       /* tajines en terre cuite */
+  --terre-2:#9e4a26;
+  --sable:#f5ecdf;       /* lin écru des cabas */
+  --sable-2:#ebdcc6;
+  --rose:#e8c8bb;        /* fond rose poudré des corbeilles */
+  --olive:#6f7240;       /* bracelets vert olive */
+  --or:#c9a24a;
+  --encre:#2a1d14;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+  --bar:62px;
+  --zellige:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Cg fill='none' stroke='%23c9a24a' stroke-width='1.1'%3E%3Crect x='20' y='20' width='24' height='24'/%3E%3Crect x='20' y='20' width='24' height='24' transform='rotate(45 32 32)'/%3E%3Ccircle cx='32' cy='32' r='5'/%3E%3Cpath d='M0 0l8 8M64 0l-8 8M0 64l8-8M64 64l-8-8'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.05rem;line-height:1.65;color:var(--encre);background:var(--sable);padding-bottom:var(--bar);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.02;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.etiquette{font-size:.78rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terre);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.etiquette::before{content:"";width:12px;height:12px;background:currentColor;clip-path:polygon(50% 0,63% 37%,100% 50%,63% 63%,50% 100%,37% 63%,0 50%,37% 37%)}
+
+/* ruban */
+.ruban{background:var(--nuit);color:#d7deef;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--or)}
+
+/* HÉRO */
+.hero{position:relative;color:var(--sable);overflow:hidden;background:var(--majorelle);padding:clamp(2rem,6vw,4.5rem) 0 clamp(3.5rem,8vw,6rem)}
+.hero::before{content:"";position:absolute;inset:0;background-image:var(--zellige);background-size:64px;opacity:.16;pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 80% 20%,rgba(201,162,74,.28),transparent 70%),linear-gradient(180deg,transparent 60%,rgba(15,37,80,.55));pointer-events:none}
+#poussiere{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:2.4rem;align-items:center}
+.kicker{font-size:.8rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+.hero h1{font-size:clamp(4.4rem,22vw,10rem);font-weight:700;margin:.4rem 0 .1rem;line-height:.92;letter-spacing:-.02em}
+.hero h1 span{display:block;font-style:italic;font-weight:500;font-size:.3em;letter-spacing:.01em;color:var(--rose);margin-top:.35em}
+.accroche{font-family:var(--serif);font-size:clamp(1.3rem,4.2vw,1.9rem);line-height:1.3;font-style:italic;max-width:28ch;margin-top:1.1rem;color:#fff}
+.accroche small{display:block;font-family:var(--sans);font-style:normal;font-size:.8rem;color:#c9d3ea;margin-top:.4rem;letter-spacing:.02em}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.8rem 1.45rem;border-radius:999px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .25s,background .25s,color .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-terre{background:var(--terre);color:#fff;box-shadow:0 8px 22px rgba(158,74,38,.45);animation:respire 3.2s ease-in-out infinite}
+.btn-terre:hover{transform:translateY(-2px);background:var(--terre-2)}
+@keyframes respire{50%{box-shadow:0 8px 30px rgba(201,162,74,.7)}}
+.btn-ligne{border:1.5px solid rgba(245,236,223,.75);color:var(--sable)}
+.btn-ligne:hover{background:var(--sable);color:var(--majorelle)}
+.arche{position:relative;justify-self:center;width:min(100%,400px)}
+.arche .cadre{border-radius:999px 999px 10px 10px;overflow:hidden;border:5px solid var(--sable);box-shadow:0 0 0 10px rgba(201,162,74,.35),0 26px 60px rgba(8,20,48,.55);aspect-ratio:3/4;background:var(--majorelle-2)}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;animation:kenburns 22s ease-in-out infinite alternate;transform-origin:50% 35%}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translateY(2%)}}
+.arche figcaption{font-size:.8rem;color:#c9d3ea;margin-top:1.1rem;text-align:center}
+.js .titre-in{opacity:0;transform:translateY(16px);animation:monte 1.1s .15s ease forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau défilant */
+.defile{background:var(--terre);color:var(--sable);overflow:hidden;white-space:nowrap;border-block:2px solid var(--or)}
+.defile .piste{display:inline-flex;gap:2.2rem;padding:.8rem 0;animation:defile 38s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
+.defile span::after{content:"✦";font-style:normal;color:var(--or);margin-left:2.2rem;font-size:.9rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ÂME */
+.ame{padding:clamp(3.5rem,9vw,7rem) 0;position:relative}
+.ame .wrap{display:grid;gap:2.6rem}
+.ame h2{font-size:clamp(2.4rem,8vw,4.4rem);margin-bottom:1.3rem;color:var(--majorelle)}
+.ame h2 em{color:var(--terre)}
+.manifeste{list-style:none;display:grid;gap:.9rem;margin:1.4rem 0}
+.manifeste li{font-family:var(--serif);font-size:1.35rem;line-height:1.3;padding-left:1.8rem;position:relative}
+.manifeste li::before{content:"";position:absolute;left:0;top:.45em;width:12px;height:12px;background:var(--or);clip-path:polygon(50% 0,63% 37%,100% 50%,63% 63%,50% 100%,37% 63%,0 50%,37% 37%)}
+.signe{font-size:.88rem;color:#7a6350}
+.duo{position:relative;min-height:400px}
+.duo figure{position:absolute;background:#fff;padding:6px;box-shadow:0 18px 40px rgba(42,29,20,.22)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .d1{left:0;top:0;width:64%;aspect-ratio:3/4;border-radius:999px 999px 6px 6px;overflow:hidden}
+.duo .d1 img{border-radius:999px 999px 3px 3px}
+.duo .d2{right:0;bottom:0;width:52%;aspect-ratio:3/4;transform:rotate(3deg)}
+.duo figcaption{position:absolute;left:0;right:0;bottom:-1.8rem;font-size:.75rem;color:#7a6350;text-align:center}
+
+/* NOUVEAUTÉS */
+.arrivages{background:var(--rose);padding:clamp(3.5rem,9vw,7rem) 0;position:relative}
+.arrivages::before{content:"";position:absolute;left:0;right:0;top:-1px;height:28px;background:var(--sable);clip-path:polygon(0 0,100% 0,100% 20%,95% 100%,90% 20%,85% 100%,80% 20%,75% 100%,70% 20%,65% 100%,60% 20%,55% 100%,50% 20%,45% 100%,40% 20%,35% 100%,30% 20%,25% 100%,20% 20%,15% 100%,10% 20%,5% 100%,0 20%)}
+.arrivages h2{font-size:clamp(2.3rem,7.5vw,4.2rem);color:var(--majorelle);max-width:16ch}
+.arrivages .intro{max-width:52ch;margin-top:1rem}
+.cartes{display:grid;gap:1.4rem;margin-top:2.4rem}
+.carte{background:var(--sable);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(42,29,20,.12);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 18px 40px rgba(42,29,20,.2)}
+.carte .ph{aspect-ratio:4/3;overflow:hidden}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.carte:hover .ph img{transform:scale(1.06)}
+.carte .tx{padding:1.2rem 1.3rem 1.4rem}
+.carte time{font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--terre)}
+.carte h3{font-size:1.75rem;margin:.25rem 0 .45rem;color:var(--majorelle)}
+.carte p{font-size:.97rem}
+.carte q{font-family:var(--serif);font-style:italic;font-size:1.1rem}
+
+/* RAYONS */
+.rayons{background:var(--nuit);color:var(--sable);padding:clamp(3.5rem,9vw,7rem) 0;position:relative;overflow:hidden}
+.rayons::before{content:"";position:absolute;inset:0;background-image:var(--zellige);background-size:80px;opacity:.08}
+.rayons .wrap{position:relative;display:grid;gap:2.4rem}
+.rayons h2{font-size:clamp(2.3rem,7.5vw,4.2rem)}
+.rayons .etiquette{color:var(--or)}
+.liste-rayons{list-style:none;display:grid;gap:0}
+.liste-rayons li{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(201,162,74,.3);font-family:var(--serif);font-size:clamp(1.6rem,5.6vw,2.4rem);line-height:1.1;transition:padding .3s,color .3s}
+.liste-rayons li:hover{padding-left:.6rem;color:var(--or)}
+.liste-rayons small{font-family:var(--sans);font-size:.8rem;color:#b8c3dd;text-align:right;max-width:22ch;line-height:1.35}
+.table{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.table figure{border-radius:16px;overflow:hidden;background:var(--sable)}
+.table img{width:100%;aspect-ratio:1;object-fit:cover}
+.table figcaption{font-size:.82rem;padding:.6rem .8rem;color:var(--encre)}
+.majorelle{margin-top:1.2rem;font-size:.95rem;color:#d7deef;border-left:3px solid var(--or);padding-left:1rem}
+
+/* GALERIE */
+.galerie{padding:clamp(3.5rem,9vw,6rem) 0 clamp(3rem,7vw,5rem)}
+.galerie h2{font-size:clamp(2.2rem,7vw,3.8rem);color:var(--majorelle)}
+.galerie .aide{font-size:.9rem;color:#7a6350;margin-top:.5rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 1.25rem 1rem;margin-top:.4rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:330px;scroll-snap-align:center;border-radius:999px 999px 14px 14px;overflow:hidden;background:var(--sable-2);box-shadow:0 12px 28px rgba(42,29,20,.15)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.rail figcaption{font-size:.82rem;padding:.6rem .9rem;background:#fff}
+
+/* NOËL */
+.noel{position:relative;overflow:hidden;color:var(--sable);padding:clamp(4rem,10vw,7.5rem) 0;background:radial-gradient(90% 70% at 50% 0,#2a5bb0 0,var(--majorelle) 40%,var(--nuit) 100%)}
+.noel::before{content:"";position:absolute;inset:0;background-image:var(--zellige);background-size:64px;opacity:.1}
+.lanternes{position:absolute;top:0;left:0;right:0;display:flex;justify-content:space-around;pointer-events:none}
+.lanterne{width:30px;transform-origin:50% 0;animation:balance 5s ease-in-out infinite alternate}
+.lanterne:nth-child(2){animation-delay:-1.6s;margin-top:-14px}
+.lanterne:nth-child(3){animation-delay:-3.1s}
+.lanterne:nth-child(4){animation-delay:-.8s;margin-top:-22px}
+@keyframes balance{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
+.lanterne .lueur{animation:lueur 2.6s ease-in-out infinite alternate}
+@keyframes lueur{from{opacity:.55}to{opacity:1}}
+.noel .wrap{position:relative;display:grid;gap:2.4rem;align-items:center;padding-top:5.5rem}
+.noel .etiquette{color:var(--or)}
+.noel h2{font-size:clamp(2.6rem,9vw,4.8rem)}
+.noel h2 em{color:var(--or)}
+.noel p.l{font-size:1.08rem;max-width:46ch;margin-top:1rem;color:#e6ebf6}
+.idees{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.idees li{border:1px solid rgba(201,162,74,.6);border-radius:999px;padding:.4rem .9rem;font-size:.92rem;background:rgba(15,37,80,.35)}
+.noel .cta{margin-top:2rem}
+.btn-or{background:var(--or);color:var(--nuit);box-shadow:0 8px 24px rgba(201,162,74,.4);animation:respire 3.2s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px);background:#d9b45d}
+.paquet{position:relative;justify-self:center;width:min(100%,360px)}
+.paquet .cadre{border-radius:999px 999px 12px 12px;overflow:hidden;border:4px solid var(--or);aspect-ratio:4/5}
+.paquet img{width:100%;height:100%;object-fit:cover}
+.paquet::after{content:"";position:absolute;left:50%;top:-14px;width:44px;height:44px;margin-left:-22px;background:var(--or);clip-path:polygon(50% 0,63% 37%,100% 50%,63% 63%,50% 100%,37% 63%,0 50%,37% 37%);animation:tourne 14s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.paquet figcaption{font-size:.8rem;color:#c9d3ea;text-align:center;margin-top:.8rem}
+.note-noel{font-size:.82rem;color:#b8c3dd;margin-top:1rem}
+
+/* VENIR */
+.venir{padding:clamp(3.5rem,9vw,7rem) 0;background:var(--sable)}
+.venir .wrap{display:grid;gap:2.4rem}
+.venir h2{font-size:clamp(2.3rem,7.5vw,4.2rem);color:var(--majorelle);margin-bottom:1.5rem}
+.dl{display:grid;gap:1.3rem}
+.dl dt{font-size:.76rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terre)}
+.dl dd{font-family:var(--serif);font-size:1.4rem;line-height:1.3;margin-top:.1rem}
+.dl dd small{display:block;font-family:var(--sans);font-size:.9rem;color:#7a6350;margin-top:.25rem}
+.dl a{text-decoration-thickness:1.5px;text-underline-offset:4px;text-decoration-color:var(--terre)}
+.reseaux{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
+.reseaux a{font-family:var(--sans);font-size:.95rem;border:1.5px solid var(--majorelle);color:var(--majorelle);border-radius:999px;padding:.45rem 1rem;text-decoration:none;transition:background .25s,color .25s}
+.reseaux a:hover{background:var(--majorelle);color:#fff}
+.plan{display:flex;flex-direction:column;justify-content:flex-end;min-height:300px;padding:1.6rem;border-radius:999px 999px 18px 18px;color:var(--sable);text-decoration:none;position:relative;overflow:hidden;background:var(--zellige) 0 0/56px,linear-gradient(160deg,var(--majorelle),var(--nuit))}
+.plan .note{position:absolute;top:2.6rem;left:50%;transform:translateX(-50%);text-align:center;font-family:var(--serif);font-size:3rem;line-height:1;color:var(--or)}
+.plan .note small{display:block;font-family:var(--sans);font-size:.8rem;color:#d7deef;margin-top:.3rem;letter-spacing:.04em}
+.plan strong{font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.plan span{margin-top:.4rem;font-size:.95rem;text-decoration:underline;text-underline-offset:4px}
+
+footer{background:var(--nuit);color:#b8c3dd;padding:2.4rem 0 2.6rem;font-size:.9rem}
+footer .nom{font-family:var(--serif);font-weight:700;color:var(--sable);font-size:1.7rem}
+footer p{margin-top:.5rem;max-width:62ch}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1.2fr 1fr 1fr;background:var(--nuit);border-top:2px solid var(--or);height:var(--bar)}
+.barre a{display:flex;align-items:center;justify-content:center;font-weight:600;text-decoration:none;color:var(--sable);font-size:.98rem;min-height:44px}
+.barre a:first-child{background:var(--terre);color:#fff}
+
+.js .rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rev.in{opacity:1;transform:none}
+
+@media (min-width:820px){
+  body{padding-bottom:0}
+  .barre{display:none}
+  .hero .wrap{grid-template-columns:1.25fr .85fr;gap:4rem}
+  .ame .wrap{grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .duo{min-height:560px}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .rayons .wrap{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:center}
+  .rail{padding-inline:max(1.25rem,calc((100% - 1120px)/2))}
+  .rail figure{flex-basis:300px}
+  .noel .wrap{grid-template-columns:1.2fr .8fr;gap:4rem}
+  .venir .wrap{grid-template-columns:1.1fr .9fr;gap:5rem;align-items:stretch}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rev,.js .titre-in{opacity:1;transform:none}
+  #poussiere{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Souk</div>
+
+<header class="hero">
+  <canvas id="poussiere" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="titre-in">
+      <p class="kicker">Artisanat marocain · Saint-Denis</p>
+      <h1>Le Souk<span>Du Maroc à La Réunion</span></h1>
+      <p class="accroche">« Vous faire voyager sans quitter votre intérieur. »<small>— Le Souk, sur Instagram</small></p>
+      <div class="cta">
+        <a class="btn btn-terre" href="https://wa.me/262692511411?text=Bonjour%20Le%20Souk%2C%20je%20voudrais%20un%20renseignement%20sur%20vos%20nouveaut%C3%A9s" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Écrire sur WhatsApp</a>
+        <a class="btn btn-ligne" href="#arrivages">Pousser la porte</a>
+      </div>
+    </div>
+    <figure class="arche">
+      <div class="cadre"><img src="img/souk-devanture.jpg" alt="La devanture du Souk : enseigne bleue « LE SOUK » et vitrine garnie de lanternes et de décoration marocaine" width="900" height="1349"></div>
+      <figcaption>68 rue Jules Auber, Saint-Denis</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Décoration</span><span>Art de table fait main</span><span>Cosmétiques</span><span>Épices</span><span>Prêt-à-porter</span><span>Idées cadeaux</span><span>Rapporté de Marrakech</span>
+  <span>Décoration</span><span>Art de table fait main</span><span>Cosmétiques</span><span>Épices</span><span>Prêt-à-porter</span><span>Idées cadeaux</span><span>Rapporté de Marrakech</span>
+</div></div>
+
+<section class="ame" id="ame">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Ce qui nous anime</p>
+      <h2>Bien plus que de la <em>décoration</em></h2>
+      <ul class="manifeste">
+        <li>Vous faire voyager sans quitter votre intérieur.</li>
+        <li>Mettre en lumière des artisans passionnés.</li>
+        <li>Sélectionner des pièces qui ont une âme, une histoire, un caractère.</li>
+        <li>Partager avec vous un Maroc chaleureux, vivant et inspirant.</li>
+      </ul>
+      <p class="signe">Les mots du Souk, publiés le 15 mai 2026 : « Voilà ce qui nous anime au quotidien. »</p>
+    </div>
+    <div class="duo rev" aria-label="Photos de la boutique">
+      <figure class="d1"><img src="img/souk-tajines.jpg" alt="Tajines et cruches en terre cuite posés sur une étagère en bois, à côté d'un livre de cuisine ouvert" width="975" height="1300" loading="lazy"></figure>
+      <figure class="d2"><img src="img/souk-corbeille-fruits.jpg" alt="Corbeille tressée à large plateau garnie de poires et de pommes, sur fond rose poudré" width="975" height="1300" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="arrivages" id="arrivages">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Tout juste arrivé</p>
+      <h2>Les nouveaux trésors rapportés de Marrakech</h2>
+      <p class="intro">Début octobre, la boutique a fermé quelques jours « pour une très bonne raison » : se remplir de nouvelles pièces, de nouvelles couleurs, de nouvelles matières, tout juste ramenées du Maroc. Le Souk a rouvert le 8 octobre. Voici ce qui est arrivé depuis.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-cabas-ecru.jpg" alt="Cabas en velours écru inspiré des tapis berbères" width="975" height="1300" loading="lazy"></div>
+        <div class="tx"><time datetime="2026-11-05">5 novembre 2026</time><h3>Cabas en velours</h3><p>Inspirés des tapis berbères : <q>un joli format fourre-tout, des boutons-pression sur les côtés et surtout, plein de place</q>.</p></div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-bracelets.jpg" alt="Bracelets fins dorés et vert olive posés sur un tissu écru" width="1000" height="827" loading="lazy"></div>
+        <div class="tx"><time datetime="2026-11-02">2 novembre 2026</time><h3>Bracelets fins</h3><p>À accumuler au poignet et à mélanger selon ses envies. <q>Entre le vert olive et l'écru, notre cœur balance…</q></p></div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-paniers.jpg" alt="Paniers en paille tressée garnis de fleurs rouges" width="360" height="640" loading="lazy" style="object-position:50% 60%"></div>
+        <div class="tx"><time datetime="2026-11-01">1er novembre 2026</time><h3>Paniers tressés</h3><p>De nouvelles formes, de nouveaux modèles : <q>On aurait peut-être dû prévoir un peu plus de place…</q></p></div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-corbeille-poires.jpg" alt="Corbeille tressée remplie de poires, sur fond rose" width="975" height="1300" loading="lazy"></div>
+        <div class="tx"><time datetime="2026-10-29">29 octobre 2026</time><h3>Corbeilles à fruits</h3><p>Tressées, avec leur large plateau, disponibles en plusieurs formats. <q>Et si on laissait les fruits s'occuper de la déco ?</q></p></div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-terre-cuite.jpg" alt="Ustensile de cuisson en terre cuite posé sur une planche en bois" width="480" height="640" loading="lazy"></div>
+        <div class="tx"><time datetime="2026-10-28">28 octobre 2026</time><h3>Terre cuite à cuisiner</h3><p>Poêles et tajines façonnés par des artisans marocains, pour une cuisine plus traditionnelle. Le conseil de la maison : privilégier une cuisson douce.</p></div>
+      </article>
+      <article class="carte rev">
+        <div class="ph"><img src="img/souk-cabas-vert.jpg" alt="Cabas en velours à motif berbère, autre coloris" width="443" height="590" loading="lazy"></div>
+        <div class="tx"><time datetime="2026-11-05">5 novembre 2026</time><h3>Plein de place</h3><p>Le cabas en velours existe en plusieurs coloris, <q>pour vous accompagner dans vos journées bien remplies</q>.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="rayons" id="rayons">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Dans la boutique</p>
+      <h2>Un petit coin de Maroc, rue Jules Auber</h2>
+      <ul class="liste-rayons" style="margin-top:1.4rem">
+        <li>Décoration <small>paniers, corbeilles</small></li>
+        <li>Art de table fait main <small>assiettes peintes, terre cuite</small></li>
+        <li>Cosmétiques</li>
+        <li>Épices</li>
+        <li>Prêt-à-porter <small>cabas, bracelets</small></li>
+      </ul>
+      <p class="majorelle">« Le bleu Majorelle s'invite à table » : les assiettes Fassia et le bol Apéritivo de la collection Empreinte bleu Majorelle de Chabi Chic, présentés en juillet 2026.</p>
+    </div>
+    <div class="table rev">
+      <figure><img src="img/souk-assiette-peinte.jpg" alt="Assiette blanche peinte à la main de motifs bleus" width="735" height="734" loading="lazy"><figcaption>Assiettes peintes à la main, en noir, vert, bleu et rouge</figcaption></figure>
+      <figure><img src="img/souk-dessous-de-plat.jpg" alt="Trois dessous de plat ronds à motifs colorés bleu, vert et violet" width="799" height="800" loading="lazy"><figcaption>Dessous de plat à motif</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap rev">
+    <p class="etiquette">Flâner</p>
+    <h2>Les allées du Souk</h2>
+    <p class="aide">Faites glisser du doigt →</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie de photos du Souk">
+    <figure><img src="img/souk-devanture.jpg" alt="La devanture bleue du Souk" width="900" height="1349" loading="lazy" style="object-position:50% 12%"><figcaption>La devanture, rue Jules Auber</figcaption></figure>
+    <figure><img src="img/souk-tajines.jpg" alt="Tajines en terre cuite" width="975" height="1300" loading="lazy"><figcaption>Tajines en terre cuite</figcaption></figure>
+    <figure><img src="img/souk-cabas-anis.jpg" alt="Cabas en velours à motif berbère" width="443" height="590" loading="lazy"><figcaption>Cabas en velours</figcaption></figure>
+    <figure><img src="img/souk-corbeille-fruits.jpg" alt="Corbeille à fruits tressée" width="975" height="1300" loading="lazy"><figcaption>Corbeille à large plateau</figcaption></figure>
+    <figure><img src="img/souk-paniers.jpg" alt="Paniers tressés et fleurs rouges" width="360" height="640" loading="lazy"><figcaption>Les nouveaux paniers</figcaption></figure>
+    <figure><img src="img/souk-bracelets.jpg" alt="Bracelets fins dorés et vert olive" width="1000" height="827" loading="lazy"><figcaption>Bracelets vert olive et écru</figcaption></figure>
+    <figure><img src="img/souk-cabas-vert.jpg" alt="Cabas en velours" width="443" height="590" loading="lazy"><figcaption>Cabas inspiré des tapis berbères</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="lanternes" aria-hidden="true">
+    <svg class="lanterne" viewBox="0 0 30 120"><line x1="15" y1="0" x2="15" y2="62" stroke="#c9a24a" stroke-width="1"/><path d="M9 62h12l3 8v26l-3 8H9l-3-8V70z" fill="#c9a24a" opacity=".9"/><path class="lueur" d="M10 72h10v22H10z" fill="#ffe3a3"/><path d="M12 104h6l-3 10z" fill="#c9a24a"/></svg>
+    <svg class="lanterne" viewBox="0 0 30 120"><line x1="15" y1="0" x2="15" y2="52" stroke="#c9a24a" stroke-width="1"/><path d="M15 52l9 10v30l-9 10-9-10V62z" fill="#c2643a"/><path class="lueur" d="M15 60l5 6v22l-5 6-5-6V66z" fill="#ffd27d"/></svg>
+    <svg class="lanterne" viewBox="0 0 30 120"><line x1="15" y1="0" x2="15" y2="70" stroke="#c9a24a" stroke-width="1"/><path d="M9 70h12l3 8v22l-3 8H9l-3-8V78z" fill="#c9a24a" opacity=".9"/><path class="lueur" d="M10 80h10v18H10z" fill="#ffe3a3"/></svg>
+    <svg class="lanterne" viewBox="0 0 30 120"><line x1="15" y1="0" x2="15" y2="58" stroke="#c9a24a" stroke-width="1"/><path d="M15 58l9 10v30l-9 10-9-10V68z" fill="#c2643a"/><path class="lueur" d="M15 66l5 6v22l-5 6-5-6V72z" fill="#ffd27d"/></svg>
+  </div>
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Offrir pour Noël</p>
+      <h2>Un cadeau qui fait <em>voyager</em></h2>
+      <p class="l">Cette année, glissez un peu de Maroc sous le sapin. Artisanat, décoration, cosmétiques, idées cadeaux : demandez conseil au Souk pour composer un cadeau avec ce qui vous plaît en boutique : une pièce d'art de table, une jolie corbeille, un cabas, quelques bracelets…</p>
+      <ul class="idees"><li>Cabas en velours</li><li>Bracelets à accumuler</li><li>Tajine en terre cuite</li><li>Corbeille tressée</li><li>Assiettes peintes à la main</li><li>Cosmétiques &amp; épices</li></ul>
+      <div class="cta">
+        <a class="btn btn-or" href="https://wa.me/262692511411?text=Bonjour%20Le%20Souk%2C%20je%20voudrais%20composer%20un%20cadeau%20%C3%A0%20offrir%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>Préparer mon cadeau de Noël</a>
+      </div>
+      <p class="note-noel">Réponse directe de la boutique sur WhatsApp, au 0692 51 14 11.</p>
+    </div>
+    <figure class="paquet rev">
+      <div class="cadre"><img src="img/souk-cabas-ecru.jpg" alt="Cabas en velours écru du Souk" width="975" height="1300" loading="lazy"></div>
+      <figcaption>Un cabas inspiré des tapis berbères</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="venir" id="venir">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiquette">Venir au Souk</p>
+      <h2>Poussez les portes du Souk</h2>
+      <dl class="dl">
+        <div><dt>Adresse</dt><dd>68 rue Jules Auber<br>97400 Saint-Denis</dd></div>
+        <div><dt>Téléphone &amp; WhatsApp</dt><dd><a href="tel:+262692511411">0692 51 14 11</a><small>Boutique : <a href="tel:+262262088322">0262 08 83 22</a></small></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:contact@lesouk.re">contact@lesouk.re</a></dd></div>
+        <div><dt>Horaires</dt><dd><a href="https://www.google.com/maps/place/LE+SOUK+REUNION/@-20.87843,55.4525658,17z/data=!4m6!3m5!1s0x21827fc34745c057:0xfa39b641d756da30!8m2!3d-20.87843!4d55.4525658" target="_blank" rel="noopener">Les horaires du jour</a><small>Toujours à jour sur la fiche Google du Souk.</small></dd></div>
+        <div><dt>Suivre les arrivages</dt><dd class="reseaux"><a href="https://www.instagram.com/lesoukreunionofficiel/" target="_blank" rel="noopener">Instagram @lesoukreunionofficiel</a><a href="https://www.facebook.com/people/Le-Souk-R%C3%A9union-Officiel/61550847674554/" target="_blank" rel="noopener">Facebook</a></dd></div>
+      </dl>
+    </div>
+    <a class="plan rev" href="https://www.google.com/maps/dir/?api=1&destination=-20.87843,55.4525658" target="_blank" rel="noopener">
+      <span class="note" style="text-decoration:none;margin:0">4,8 ★<small>note Google</small></span>
+      <strong>68 rue Jules Auber, Saint-Denis</strong>
+      <span>Ouvrir l'itinéraire dans Google Maps</span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="nom" style="margin-top:0">Le Souk</p>
+    <p>Artisanat marocain · Du Maroc à La Réunion · 68 rue Jules Auber, Saint-Denis · 0692 51 14 11</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Souk. Photos : page Facebook et Instagram du Souk.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="https://wa.me/262692511411?text=Bonjour%20Le%20Souk%20!" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="tel:+262692511411">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&destination=-20.87843,55.4525658" target="_blank" rel="noopener">Itinéraire</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* poussière d'or et petites étoiles de zellige qui flottent dans la lumière */
+(function(){
+  var c=document.getElementById('poussiere');
+  if(!c||!c.getContext||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true,vis=true;
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  for(var i=0;i<30;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.6,s:Math.random()*.25+.08,d:Math.random()*6.28,a:Math.random()*.45+.15,star:i%6==0,rot:Math.random()*6.28});
+  function star(p){x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.beginPath();for(var k=0;k<16;k++){var rr=k%2?p.r*1.6:p.r*4;var an=k*Math.PI/8;x.lineTo(Math.cos(an)*rr,Math.sin(an)*rr)}x.closePath();x.fill();x.restore()}
+  function f(){
+    if(!run||!vis)return;
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      p.y-=p.s;p.d+=.01;p.x+=Math.sin(p.d)*.25;p.rot+=.003;
+      if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+      x.globalAlpha=p.a*(.7+.3*Math.sin(p.d*3));
+      x.fillStyle=p.star?'#e8c97a':'#f3dca0';
+      if(p.star)star(p);else{x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+    });
+    requestAnimationFrame(f);
+  }
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){var was=vis;vis=e[0].isIntersecting;if(vis&&!was)requestAnimationFrame(f)}).observe(c);
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Souk" defer></script>
+</body>
+</html>

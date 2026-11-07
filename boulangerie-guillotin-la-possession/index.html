@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#161412">
+<title>Boulangerie Guillotin · Boulangerie-pâtisserie à La Possession</title>
+<meta name="description" content="Boulangerie Guillotin, boulangerie-pâtisserie de Damien Guillotin à La Possession : pains, pâtisseries, wraps frais et snacking, dans son nouvel écrin.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Boulangerie Guillotin · La Possession">
+<meta property="og:description" content="Succulentes pâtisseries et différents pains, dans un nouvel écrin à La Possession : une page imaginée pour la Boulangerie Guillotin.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/boulangerie-guillotin-la-possession/img/devanture.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/boulangerie-guillotin-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#161412;--noir2:#221e1a;
+  --or:#c8a14a;--or-c:#e6c77c;
+  --creme:#f8f3e9;--creme2:#efe5d2;
+  --croute:#b06d2a;
+  --vert:#8cbf3f;   /* façade du nouvel écrin */
+  --menthe:#8fcebb; /* bandeau bleu-vert de l'enseigne */
+  --encre:#231d17;
+  --serif:'Playfair Display',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;
+  --bar:62px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);font-size:1.05rem;line-height:1.65;color:var(--encre);background:var(--creme);overflow-x:hidden;padding-bottom:var(--bar)}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+p{text-wrap:pretty}
+.etiq{font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--croute);margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.etiq::before{content:"";width:28px;height:2px;background:currentColor}
+
+.ruban{background:var(--noir);color:#d8ccb4;font-size:.8rem;line-height:1.35;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--or-c)}
+
+/* HERO */
+.hero{position:relative;min-height:min(92svh,780px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:52% 50%;animation:kb 26s ease-in-out infinite alternate;transform-origin:55% 45%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,20,18,.25) 0%,rgba(22,20,18,.15) 35%,rgba(22,20,18,.82) 72%,rgba(22,20,18,.96) 100%)}
+#farine{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:7rem 0 3rem}
+.sceau{width:92px;height:92px;border-radius:50%;background:#fff;padding:5px;box-shadow:0 0 0 3px var(--or),0 10px 30px rgba(0,0,0,.45);margin-bottom:1.3rem;opacity:0;animation:monte 1s .2s ease forwards}
+.sceau img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.hero .kick{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or-c);font-weight:600;opacity:0;animation:monte 1s .35s ease forwards}
+.hero h1{font-size:clamp(2.9rem,13vw,6.6rem);font-weight:800;margin:.35rem 0 .8rem;opacity:0;animation:monte 1.1s .5s ease forwards}
+.hero h1 em{display:block;font-style:italic;font-weight:600;color:var(--or-c);font-size:.42em;margin-top:.2rem}
+.hero .acc{font-size:clamp(1.08rem,3.6vw,1.35rem);max-width:34ch;color:#f1e9da;opacity:0;animation:monte 1.1s .7s ease forwards}
+@keyframes monte{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem;opacity:0;animation:monte 1s .9s ease forwards}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:1.02rem;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--or);color:var(--noir);box-shadow:0 8px 24px rgba(200,161,74,.35);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 8px 24px rgba(200,161,74,.3)}50%{box-shadow:0 8px 34px rgba(200,161,74,.62)}}
+.btn-ligne{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-wa{background:#1f9d57;color:#fff}
+.legende{position:relative;z-index:2;font-size:.74rem;color:#bfb29a;margin-top:1.4rem}
+
+/* bandeau défilant */
+.defile{background:var(--noir);color:var(--or-c);overflow:hidden;border-block:1px solid rgba(200,161,74,.35)}
+.defile .piste{display:flex;width:max-content;animation:file 38s linear infinite}
+.defile span{font-family:var(--serif);font-style:italic;font-size:1.15rem;padding:.85rem 0;white-space:nowrap}
+.defile span::after{content:"✦";font-style:normal;color:var(--menthe);margin:0 1.2rem;font-size:.8rem;vertical-align:middle}
+@keyframes file{to{transform:translateX(-50%)}}
+
+/* ÉCRIN */
+.ecrin{padding:clamp(3.5rem,9vw,6.5rem) 0;position:relative}
+.ecrin .wrap{display:grid;gap:2.4rem;align-items:center}
+.ecrin h2{font-size:clamp(2.1rem,7vw,3.6rem);margin-bottom:1.1rem}
+.ecrin h2 span{color:var(--croute);font-style:italic}
+.citation{font-family:var(--serif);font-size:1.3rem;line-height:1.45;border-left:3px solid var(--or);padding:.2rem 0 .2rem 1.1rem;margin:1.2rem 0}
+.citation small{display:block;font-family:var(--sans);font-size:.82rem;color:#7d6c58;margin-top:.5rem}
+.ecrin p+p{margin-top:.9rem}
+.polaroid{background:#fff;padding:10px 10px 2.6rem;box-shadow:0 18px 40px rgba(35,29,23,.22);transform:rotate(-1.8deg);position:relative;max-width:520px;transition:transform .5s}
+.polaroid:hover{transform:rotate(0)}
+.polaroid img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:.7rem;text-align:center;font-family:var(--serif);font-style:italic;color:#5b4c3c;font-size:.95rem}
+.vague{display:block;width:100%;height:46px}
+
+/* CRÉATIONS */
+.creations{background:var(--noir);color:var(--creme);padding:clamp(3.2rem,8vw,6rem) 0 clamp(3.5rem,8vw,6rem)}
+.creations h2{font-size:clamp(2.1rem,7vw,3.6rem)}
+.creations .etiq{color:var(--or-c)}
+.creations .intro{color:#cfc3ad;max-width:46ch;margin-top:.8rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 1.25rem 1rem;margin-top:.4rem;scrollbar-width:thin;scrollbar-color:var(--or) transparent;-webkit-overflow-scrolling:touch}
+.carte{flex:0 0 min(76vw,300px);scroll-snap-align:center;background:var(--noir2);border-radius:18px;overflow:hidden;border:1px solid rgba(200,161,74,.22);transition:transform .35s,border-color .35s}
+.carte:hover{transform:translateY(-5px);border-color:var(--or)}
+.carte .ph{aspect-ratio:4/5;overflow:hidden;background:#0e0d0c}
+.carte img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.carte:hover img{transform:scale(1.05)}
+.carte .tx{padding:1rem 1.1rem 1.25rem}
+.carte h3{font-size:1.3rem;color:#fff}
+.carte p{font-size:.92rem;color:#bfb29a;margin-top:.35rem}
+.carte .date{display:inline-block;margin-top:.6rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--menthe)}
+.astuce{font-size:.8rem;color:#8f836f;text-align:center;margin-top:.4rem}
+
+/* SNACKING */
+.snack{padding:clamp(3.5rem,9vw,6.5rem) 0;background:linear-gradient(180deg,var(--creme) 0,var(--creme2) 100%)}
+.snack .wrap{display:grid;gap:2.2rem;align-items:center}
+.snack h2{font-size:clamp(2rem,6.5vw,3.3rem);margin-bottom:1rem}
+.liste{list-style:none;margin-top:1.2rem;display:grid;gap:.7rem}
+.liste li{display:flex;gap:.8rem;align-items:baseline;background:#fff;border-radius:12px;padding:.85rem 1rem;box-shadow:0 4px 14px rgba(35,29,23,.07)}
+.liste li b{font-family:var(--serif);font-size:1.12rem}
+.liste li::before{content:"";flex:0 0 10px;height:10px;border-radius:50%;background:var(--vert);transform:translateY(-1px)}
+.badge{display:inline-block;background:var(--vert);color:var(--noir);font-size:.7rem;font-weight:700;letter-spacing:.12em;padding:.2rem .55rem;border-radius:999px;margin-left:.3rem;vertical-align:middle}
+.snack figure img{border-radius:20px;width:100%;aspect-ratio:4/3;object-fit:cover;box-shadow:0 16px 36px rgba(35,29,23,.18)}
+.snack figcaption{font-size:.8rem;color:#7d6c58;margin-top:.6rem}
+
+/* NOËL */
+.noel{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 50% 0%,#2a2219 0,var(--noir) 70%);color:var(--creme);padding:clamp(3.8rem,9vw,6.5rem) 0}
+.noel::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(230,199,124,.55) 1px,transparent 1.6px);background-size:46px 46px;opacity:.25;pointer-events:none}
+.guirlande{position:absolute;top:0;left:0;right:0;height:18px;background:repeating-linear-gradient(90deg,transparent 0 22px,var(--or) 22px 26px,transparent 26px 48px);opacity:.5}
+.noel .wrap{position:relative;display:grid;gap:2.2rem;align-items:center}
+.noel .etiq{color:var(--or-c)}
+.noel h2{font-size:clamp(2.3rem,8vw,4rem);color:#fff}
+.noel h2 em{color:var(--or-c)}
+.noel p.l{color:#e3d8c3;max-width:44ch;margin-top:1rem}
+.noel .duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.noel .duo figure{border-radius:16px;overflow:hidden;border:1px solid rgba(200,161,74,.35)}
+.noel .duo figure:nth-child(2){transform:translateY(1.4rem)}
+.noel .duo img{width:100%;aspect-ratio:1;object-fit:cover}
+.noel .note{font-size:.82rem;color:#a99c85;margin-top:2.2rem}
+.noel .btn{margin-top:1.6rem}
+
+/* CONTACT */
+.contact{padding:clamp(3.5rem,9vw,6rem) 0;background:var(--creme)}
+.contact .wrap{display:grid;gap:2rem}
+.contact h2{font-size:clamp(2.1rem,7vw,3.5rem)}
+.fiches{display:grid;gap:1rem}
+.fiche{display:block;background:#fff;border-radius:16px;padding:1.2rem 1.3rem;text-decoration:none;box-shadow:0 6px 18px rgba(35,29,23,.08);border:1px solid #eadfca;transition:transform .25s,border-color .25s}
+.fiche:hover{transform:translateY(-3px);border-color:var(--or)}
+.fiche small{display:block;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--croute);font-weight:700}
+.fiche strong{font-family:var(--serif);font-size:1.3rem;word-break:break-word}
+
+footer{background:var(--noir);color:#b3a68f;padding:2.4rem 0 2.6rem;font-size:.88rem}
+footer .nom{font-family:var(--serif);color:#fff;font-size:1.4rem}
+footer p{margin-top:.5rem;max-width:62ch}
+
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;height:var(--bar);background:var(--noir);border-top:2px solid var(--or)}
+.barre a{display:flex;align-items:center;justify-content:center;font-weight:600;text-decoration:none;color:#fff}
+.barre a:first-child{background:var(--or);color:var(--noir)}
+
+.js .rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rev.in{opacity:1;transform:none}
+
+@media (min-width:860px){
+  body{padding-bottom:0}.barre{display:none}
+  .ecrin .wrap{grid-template-columns:1.05fr .95fr;gap:4.5rem}
+  .snack .wrap{grid-template-columns:1fr 1fr;gap:4rem}
+  .noel .wrap{grid-template-columns:1.1fr .9fr;gap:4rem}
+  .contact .wrap{grid-template-columns:.9fr 1.1fr;align-items:start}
+  .fiches{grid-template-columns:1fr 1fr}
+  .rail{padding-inline:max(1.25rem,calc((100% - 1120px)/2))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .hero .sceau,.hero .kick,.hero h1,.hero .acc,.cta{opacity:1}
+  .js .rev{opacity:1;transform:none}
+  #farine{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour la Boulangerie Guillotin</div>
+
+<header class="hero">
+  <div class="fond"><img src="img/devanture.webp" alt="La devanture verte et crème de la Boulangerie Guillotin, avec ses palmiers en pots et sa terrasse" width="1400" height="782" fetchpriority="high"></div>
+  <canvas id="farine" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="sceau"><img src="img/logo.webp" alt="Logo GD, Boulangerie Pâtisserie Damien Guillotin, La Possession" width="600" height="600"></div>
+    <p class="kick">Boulangerie · Pâtisserie · La Possession</p>
+    <h1>Boulangerie Guillotin<em>par Damien Guillotin</em></h1>
+    <p class="acc">« Venez goûter nos succulentes pâtisseries et nos différents pains. Il y en a pour tous les goûts. »</p>
+    <div class="cta">
+      <a class="btn btn-or" href="tel:+262693906557">Appeler · 0693 90 65 57</a>
+      <a class="btn btn-ligne" href="#creations">Voir les créations</a>
+    </div>
+    <p class="legende">La boulangerie dans son nouvel écrin · photo publiée par la boulangerie, août 2026</p>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Petits pains sportifs</span><span>Banoffee</span><span>Roll vanille chocolat</span><span>Flan sésame noir</span><span>Cake matcha bio</span><span>Wraps saumon / guacamole</span><span>Wrap poulet / sauce Pita</span><span>Galette des rois</span>
+  <span>Petits pains sportifs</span><span>Banoffee</span><span>Roll vanille chocolat</span><span>Flan sésame noir</span><span>Cake matcha bio</span><span>Wraps saumon / guacamole</span><span>Wrap poulet / sauce Pita</span><span>Galette des rois</span>
+</div></div>
+
+<section class="ecrin" id="ecrin">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiq">Le nouvel écrin</p>
+      <h2>Votre boulangerie, <span>tout en fraîcheur</span></h2>
+      <p>Depuis 2013, Damien Guillotin pétrit et façonne à La Possession. Cet été, la boulangerie s’est offert une nouvelle façade, verte et lumineuse, avec ses palmiers et sa petite terrasse.</p>
+      <blockquote class="citation">« Après 4 semaines de travaux. Nous sommes heureux de vous retrouver et de vous faire découvrir la boulangerie dans son nouvel écrin ! »<small>Publication de la boulangerie, 7 août 2026 · réouverture le samedi 8 août dès 5h00</small></blockquote>
+      <p>Pains du matin, pâtisseries du jour, wraps et sandwichs : toute l’équipe vous accueille avec la même envie de bien faire.</p>
+    </div>
+    <figure class="polaroid rev"><img src="img/devanture.webp" alt="Façade de la boulangerie : enseigne Boulangerie - Pâtisserie, vitrines et terrasse" width="1400" height="782" loading="lazy" style="object-position:55% 50%"><figcaption>Le nouvel écrin, août 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="creations" id="creations">
+  <div class="wrap rev">
+    <p class="etiq">Ce matin à la boulangerie</p>
+    <h2>Les créations du moment</h2>
+    <p class="intro">Ce que la boulangerie montre sur sa page : des douceurs de vitrine, des envies du jour et des pains pensés pour l’occasion.</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie des créations, faire défiler">
+    <article class="carte"><div class="ph"><img src="img/petits-pains-sportifs.webp" alt="Petits pains garnis de fruits secs, alignés sur une plaque" width="960" height="720" loading="lazy"></div><div class="tx"><h3>Petits pains sportifs</h3><p>« Pour faire le plein d’énergie des traileurs et des ravitailleurs ! »</p><span class="date">Grand Raid · octobre 2026</span></div></article>
+    <article class="carte"><div class="ph"><img src="img/banoffee.webp" alt="Banoffee de la boulangerie, crème et cacao" width="540" height="960" loading="lazy"></div><div class="tx"><h3>Banoffee</h3><p>« Banofee ce matin à la Boulangerie »</p><span class="date">Vidéo de la boulangerie</span></div></article>
+    <article class="carte"><div class="ph"><img src="img/roll-vanille-chocolat.webp" alt="Roll vanille chocolat nappé de chocolat" width="540" height="960" loading="lazy"></div><div class="tx"><h3>Roll vanille chocolat</h3><p>Une douceur du matin, présentée en vidéo par la boulangerie.</p><span class="date">Vidéo de la boulangerie</span></div></article>
+    <article class="carte"><div class="ph"><img src="img/flan-sesame-noir.webp" alt="Parts de flan au sésame noir" width="540" height="960" loading="lazy"></div><div class="tx"><h3>Flan sésame noir</h3><p>Le flan revisité au sésame noir.</p><span class="date">Vidéo de la boulangerie</span></div></article>
+    <article class="carte"><div class="ph"><img src="img/wraps.webp" alt="Deux wraps frais dans leur papier" width="960" height="728" loading="lazy"></div><div class="tx"><h3>Wraps frais</h3><p>Saumon / guacamole, poulet / sauce Pita.</p><span class="date">Chaque jour dès 8h00</span></div></article>
+  </div>
+  <p class="astuce">← faites glisser →</p>
+</section>
+
+<section class="snack" id="snacking">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiq">Le midi aussi</p>
+      <h2>Encore du nouveau dans votre boulangerie</h2>
+      <p>« Retrouvez quotidiennement les wraps frais dès 8h00 ainsi que notre gamme complète de sandwichs et snacking. »</p>
+      <ul class="liste">
+        <li><span><b>Wraps saumon / guacamole</b></span></li>
+        <li><span><b>Wrap poulet / sauce Pita</b></span></li>
+        <li><span><b>Cake matcha bio</b><span class="badge">NOUVEAU</span><br><small>« Idéal pour associer gourmandise et bienfaits du thé matcha. »</small></span></li>
+      </ul>
+    </div>
+    <figure class="rev"><img src="img/wraps.webp" alt="Wraps garnis de salade, tomate et poulet" width="960" height="728" loading="lazy"><figcaption>Les wraps du jour, en vidéo sur la page de la boulangerie</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <span class="guirlande" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiq">Offrir pour Noël</p>
+      <h2>Les fêtes se préparent <em>au fournil</em></h2>
+      <p class="l">Pour la table de Noël, le réveillon ou un cadeau gourmand, parlez de votre commande des fêtes directement avec l’équipe. L’an dernier, la galette et la couronne des rois sortaient déjà du four fin décembre.</p>
+      <a class="btn btn-wa" href="https://wa.me/262693906557?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl." target="_blank" rel="noopener">Commander pour les fêtes sur WhatsApp</a>
+    </div>
+    <div class="rev">
+      <div class="duo">
+        <figure><img src="img/galette-des-rois.webp" alt="Galette des rois dorée et ses couronnes" width="1200" height="901" loading="lazy"></figure>
+        <figure><img src="img/couronne-des-rois.webp" alt="Couronne des rois au sucre perlé et fruits confits" width="1200" height="865" loading="lazy"></figure>
+      </div>
+      <p class="note">Galette et couronne des rois publiées par la boulangerie, décembre 2025.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rev">
+      <p class="etiq">Passer nous voir</p>
+      <h2>À La Possession, dès le matin</h2>
+      <p style="margin-top:1rem;max-width:40ch">Une question, une commande, une envie du jour : un appel ou un message suffit.</p>
+    </div>
+    <div class="fiches rev">
+      <a class="fiche" href="tel:+262693906557"><small>Téléphone</small><strong>0693 90 65 57</strong></a>
+      <a class="fiche" href="https://wa.me/262693906557" target="_blank" rel="noopener"><small>WhatsApp</small><strong>Écrire un message</strong></a>
+      <a class="fiche" href="mailto:damienguillotin@yahoo.fr"><small>E-mail</small><strong>damienguillotin@yahoo.fr</strong></a>
+      <a class="fiche" href="https://www.facebook.com/p/Boulangerie-Guillotin-La-Possession-100054323688661" target="_blank" rel="noopener"><small>Facebook</small><strong>Les nouveautés du jour</strong></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="nom" style="margin-top:0">Boulangerie Guillotin</p>
+    <p>Boulangerie · Pâtisserie · La Possession · 0693 90 65 57</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de la Boulangerie Guillotin. Photos : page Facebook de la boulangerie.</p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Actions rapides">
+  <a href="tel:+262693906557">Appeler</a>
+  <a href="https://wa.me/262693906557" target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var els=document.querySelectorAll('.rev');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.05});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* farine et sucre glace qui tombent doucement */
+(function(){
+  var c=document.getElementById('farine');if(!c||!c.getContext)return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],N=28,run=true,id;
+  function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function mk(top){return{x:Math.random()*W,y:top?-10:Math.random()*H,r:.8+Math.random()*2.2,v:.15+Math.random()*.45,d:Math.random()*6.28,a:.25+Math.random()*.45,g:Math.random()<.25}}
+  size();for(var i=0;i<N;i++)P.push(mk(false));
+  function f(){
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.v;p.d+=.012;p.x+=Math.sin(p.d)*.3;
+      if(p.y>H+10){P[i]=mk(true);continue}
+      x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);
+      x.fillStyle=p.g?'rgba(230,199,124,'+p.a+')':'rgba(255,250,240,'+p.a+')';x.fill()}
+    if(run)id=requestAnimationFrame(f)}
+  f();
+  addEventListener('resize',size);
+  document.addEventListener('visibilitychange',function(){if(document.hidden){run=false;cancelAnimationFrame(id)}else if(!run){run=true;f()}});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Boulangerie Guillotin" defer></script>
+</body>
+</html>
