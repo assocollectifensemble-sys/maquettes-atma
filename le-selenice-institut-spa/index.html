@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Sélénice · Institut &amp; Spa à Saint-André</title>
+<meta name="description" content="Le Sélénice, institut de beauté et spa à Saint-André : piscine chauffée, jacuzzi, sauna, soins du visage Thalgo, massages et onglerie. Une page imaginée pour Le Sélénice.">
+<meta property="og:title" content="Le Sélénice · Institut &amp; Spa · Saint-André">
+<meta property="og:description" content="Un havre de paix au cœur de Saint-André : piscine chauffée, jacuzzi, sauna et soins Thalgo. Une page imaginée pour Le Sélénice.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-selenice-institut-spa/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-selenice-institut-spa/img/hero.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--lagon:#17a3a8;--lagon-c:#bfeceb;--abysse:#0d3b45;--abysse-2:#13505b;--or:#c9a25e;--or-c:#e9d3a3;--sable:#f7f1e6;--ecume:#eef8f7;--frangi:#f3a6b8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--sable);color:#1f3238;font-size:17px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{background:var(--abysse);color:var(--sable);font-size:.76rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:6}
+.ruban b{color:var(--or-c);font-weight:500}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--abysse)}
+.hero .bg{position:absolute;inset:0;background:url(img/hero.webp) center 60%/cover;animation:kb 28s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.13) translateY(-2%)}}
+.hero .shim{position:absolute;inset:0;background:radial-gradient(ellipse 40% 12% at 30% 70%,rgba(255,255,255,.18),transparent 70%),radial-gradient(ellipse 30% 9% at 70% 80%,rgba(191,236,235,.22),transparent 70%);mix-blend-mode:screen;animation:shim 7s ease-in-out infinite alternate}
+@keyframes shim{from{transform:translate(-3%,0) scaleX(1)}to{transform:translate(4%,-2%) scaleX(1.2)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,59,69,.25) 0%,rgba(13,59,69,.15) 35%,rgba(9,40,47,.93) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 1.25rem 3rem;max-width:1040px;margin:0 auto;width:100%}
+.mark{font-family:'Cormorant Garamond',serif;letter-spacing:.32em;text-transform:uppercase;font-size:.95rem;color:var(--or-c);opacity:0;animation:up 1s .2s forwards}
+.kick{letter-spacing:.24em;text-transform:uppercase;font-size:.7rem;opacity:0;animation:up 1s .4s forwards;margin-top:.3rem}
+.hero h1{font-size:clamp(2.7rem,11.5vw,5rem);margin:.5rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards}
+.hero h1 em{color:var(--or-c)}
+.lead{max-width:31rem;font-weight:300;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--or);color:var(--abysse);text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,162,94,.45)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);color:#fff;animation:none}
+.btn.ghost::after{display:none}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(233,211,163,.55)}50%{box-shadow:0 0 0 10px rgba(233,211,163,0)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+.marq{background:var(--abysse);color:var(--lagon-c);overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;position:relative;z-index:2}
+.marq span{display:inline-block;padding-left:100%;animation:mq 36s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+section{padding:4.2rem 0;position:relative}
+.eyebrow{letter-spacing:.26em;text-transform:uppercase;font-size:.72rem;color:var(--lagon);font-weight:600}
+h2{font-size:clamp(2.1rem,7vw,3.1rem);margin:.4rem 0 1rem;color:var(--abysse)}
+h2 em{color:var(--lagon)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+.duo{display:grid;gap:2rem}
+.arch{border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(13,59,69,.25)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover}
+blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--abysse-2);border-left:2px solid var(--or);padding-left:1rem;margin:1.2rem 0}
+cite{display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:.78rem;color:#5b7076;margin-top:.3rem}
+.spa{background:linear-gradient(180deg,var(--ecume),#dff2f1);overflow:hidden}
+.spa::before{content:"";position:absolute;left:0;right:0;top:-1px;height:40px;background:var(--sable);clip-path:ellipse(70% 100% at 50% 0)}
+.trio{display:grid;gap:1rem;margin-top:1.6rem}
+.trio li{list-style:none;background:rgba(255,255,255,.75);backdrop-filter:blur(4px);border:1px solid rgba(23,163,168,.25);border-radius:18px;padding:1.2rem 1.3rem;transition:transform .3s,border-color .3s}
+.trio li:hover{transform:translateY(-4px);border-color:var(--lagon)}
+.trio h3{font-size:1.6rem;color:var(--abysse)}
+.trio p{font-size:.95rem;color:#3a5157}
+.soins{background:var(--abysse);color:var(--sable)}
+.soins .eyebrow{color:var(--or-c)}
+.soins h2{color:#fff}.soins h2 em{color:var(--or-c)}
+.pg{display:grid;gap:.8rem;margin-top:1.4rem;list-style:none}
+.pg li{border:1px solid rgba(233,211,163,.3);border-radius:14px;padding:.9rem 1.1rem;transition:transform .3s,border-color .3s}
+.pg li:hover{transform:translateX(4px);border-color:var(--or)}
+.pg b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--or-c)}
+.pg span{font-size:.92rem;font-weight:300}
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 74%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(13,59,69,.2);transition:transform .4s;background:#fff}
+.gal figure:hover{transform:scale(1.02)}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal figcaption{font-size:.82rem;padding:.6rem .9rem;color:#3a5157}
+.hint{font-size:.8rem;color:#5b7076;padding:0 1.25rem}
+.noel{background:linear-gradient(160deg,var(--abysse),#1d6c74 85%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--or-c)}
+.noel h2{color:#fff}.noel h2 em{color:var(--or-c)}
+.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300}
+.noel .btn{background:var(--or-c);color:var(--abysse)}
+.star{position:absolute;color:var(--or-c);opacity:.5;font-size:1.1rem;animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.85;transform:scale(1.15)}}
+.ct{display:grid;gap:1.2rem;margin-top:1.4rem}
+.ct>div{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 8px 24px rgba(13,59,69,.08)}
+.ct h3{font-size:1.4rem;color:var(--abysse);margin-bottom:.3rem}
+.ct a{color:var(--abysse);font-weight:500;text-decoration:none;border-bottom:1px solid var(--lagon);overflow-wrap:anywhere}
+footer{background:var(--abysse);color:#cfe4e3;text-align:center;padding:2.2rem 1.25rem 4rem;font-size:.82rem}
+@media(min-width:760px){.duo{grid-template-columns:1fr 1fr;align-items:center}.ct,.trio{grid-template-columns:repeat(3,1fr)}.gal figure{flex-basis:270px}.pg{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mark,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}canvas#fx{display:none}.marq span{padding-left:0}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Sélénice Institut &amp; Spa</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="La piscine du Sélénice, eau turquoise parsemée de pétales, murets de pierre et palmiers"></div>
+  <div class="shim" aria-hidden="true"></div>
+  <div class="in">
+    <div class="mark">Le Sélénice</div>
+    <div class="kick">Institut &amp; Spa · Saint-André · Pour elle &amp; lui</div>
+    <h1>Un véritable <em>havre de paix</em></h1>
+    <p class="lead">Institut de beauté et spa, en plein cœur de Saint-André : piscine chauffée, jacuzzi, sauna, soins du visage d'exception et massages.</p>
+    <div class="btns">
+      <a class="btn" href="tel:+262692030574">Prendre rendez-vous</a>
+      <a class="btn ghost" href="#spa">Découvrir le spa</a>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><span>Piscine chauffée ✦ Jacuzzi ✦ Sauna ✦ Soins du visage Thalgo ✦ Soins Guinot ✦ Massages ✦ Onglerie ✦ Spa des pieds ✦ Institut &amp; spa unique dans l'Est ✦ &nbsp;</span></div>
+
+<main>
+<section>
+  <div class="wrap duo">
+    <div class="rv">
+      <div class="eyebrow">Bienvenue</div>
+      <h2>Dédié à la <em>relaxation</em> et à la beauté</h2>
+      <p>Au 1574 chemin Lagourgue, Le Sélénice réunit un institut de beauté et un espace spa, pensés pour elle et pour lui. Un cadre intimiste pour se ressourcer, entre l'eau turquoise, la douceur des cabines et les soins aux actifs marins.</p>
+      <blockquote>« Envie d'évasion et de lâcher-prise ? Offrez-vous une parenthèse hors du temps. »<cite>Le Sélénice, sur sa page Facebook</cite></blockquote>
+      <p>Une belle aventure qui a soufflé sa première bougie en octobre 2025.</p>
+    </div>
+    <div class="arch rv"><img src="img/eau.webp" alt="Fleur de frangipanier flottant sur l'eau turquoise de la piscine" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="spa" id="spa">
+  <div class="wrap">
+    <div class="eyebrow rv">L'espace détente</div>
+    <h2 class="rv">Piscine, jacuzzi <em>&amp;</em> sauna</h2>
+    <p class="rv">Réservez l'espace détente, accompagné d'une boisson rafraîchissante offerte : un moment rien que pour vous, à deux ou entre amies.</p>
+    <ul class="trio">
+      <li class="rv"><h3>Piscine chauffée</h3><p>Une eau douce et turquoise, au milieu des palmiers et des murets de pierre.</p></li>
+      <li class="rv"><h3>Jacuzzi</h3><p>Les bulles et la chaleur pour dénouer les tensions de la semaine.</p></li>
+      <li class="rv"><h3>Sauna</h3><p>Une pause chaleur pour se relâcher pleinement.</p></li>
+    </ul>
+    <p class="rv" style="margin-top:1.4rem">Le spa se privatise aussi pour vos événements, comme un EVJF : renseignements et devis au <a href="tel:+262692030574">0692 03 05 74</a>.</p>
+  </div>
+</section>
+
+<section class="soins">
+  <div class="wrap duo">
+    <div>
+      <div class="eyebrow rv">L'institut</div>
+      <h2 class="rv">Des soins <em>d'exception</em></h2>
+      <ul class="pg rv">
+        <li><b>Soins du visage Thalgo</b><span>Des soins experts enrichis en actifs marins, pour une véritable parenthèse de bien-être.</span></li>
+        <li><b>Soins Guinot</b><span>Les soins Guinot, à découvrir à l'institut.</span></li>
+        <li><b>Massages</b><span>Pour elle et pour lui, en solo ou en duo.</span></li>
+        <li><b>Onglerie &amp; spa des pieds</b><span>Pose de gel ou semi-permanent, French réinventée, nail art floral en relief.</span></li>
+        <li><b>Épilations</b><span>Sur rendez-vous à l'institut.</span></li>
+        <li><b>Strass dentaires Swarovski</b><span>Une touche de brillance pour le sourire.</span></li>
+      </ul>
+    </div>
+    <div class="arch rv"><img src="img/cabine.webp" alt="Cabine de soins du Sélénice, table de massage et linge plié" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="lieu">
+  <div class="wrap">
+    <div class="eyebrow rv">En images</div>
+    <h2 class="rv">Le Sélénice, <em>comme si vous y étiez</em></h2>
+  </div>
+  <div class="gal">
+    <figure><img src="img/entree.webp" alt="Entrée blanche de l'institut, dallage et plantes en pots" loading="lazy"><figcaption>L'entrée de l'institut</figcaption></figure>
+    <figure><img src="img/vasque.webp" alt="Vasque d'eau et de plantes dans le jardin, murets de pierre" loading="lazy"><figcaption>Le jardin et sa vasque</figcaption></figure>
+    <figure><img src="img/salon.webp" alt="Salon d'accueil, fauteuils crème et fleurs blanches" loading="lazy"><figcaption>Le coin accueil</figcaption></figure>
+    <figure><img src="img/serviette.webp" alt="Serviette turquoise brodée Le Sélénice Institut &amp; Spa et frangipanier" loading="lazy"><figcaption>La serviette brodée maison</figcaption></figure>
+    <figure><img src="img/thalgo.webp" alt="Soin de nuit Lift-Fermeté Thalgo posé sur un rondin de bois" loading="lazy"><figcaption>Soin de Nuit Lift-Fermeté, Thalgo</figcaption></figure>
+    <figure><img src="img/french.webp" alt="Main aux ongles French nude et blanc, fleurs en relief et touches dorées" loading="lazy"><figcaption>La French se réinvente avec élégance</figcaption></figure>
+    <figure><img src="img/bordeaux.webp" alt="Main aux ongles en gel rouge bordeaux brillant" loading="lazy"><figcaption>Pose en gel rouge bordeaux</figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour visiter →</p>
+</section>
+
+<section class="noel" id="noel">
+  <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:12%;animation-delay:.8s">✦</span><span class="star" style="left:18%;bottom:14%;animation-delay:1.6s">✦</span><span class="star" style="right:20%;bottom:20%;animation-delay:2.2s">✦</span>
+  <div class="wrap">
+    <div class="eyebrow rv">Offrir pour Noël</div>
+    <h2 class="rv">Offrez un moment <em>au Sélénice</em></h2>
+    <p class="rv">Une parenthèse au bord de l'eau, un soin du visage ou une belle pose d'ongles : la carte cadeau se prépare simplement, par message.</p>
+    <a class="btn rv" href="https://wa.me/262692030574?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Offrir une carte cadeau</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Contact</div>
+    <h2 class="rv">Prenez <em>rendez-vous</em></h2>
+    <div class="ct">
+      <div class="rv"><h3>Où</h3><p>1574 chemin Lagourgue<br>97440 Saint-André, La Réunion</p></div>
+      <div class="rv"><h3>Réservation</h3><p><a href="tel:+262692030574">0692 03 05 74</a><br><a href="https://wa.me/262692030574">WhatsApp</a><br><a href="mailto:leselenice@gmail.com">leselenice@gmail.com</a></p></div>
+      <div class="rv"><h3>Suivre</h3><p><a href="https://www.facebook.com/p/Le-Selenice-Institut-et-Spa-61567193493846/">Facebook · Le Sélénice Institut et Spa</a><br><a href="https://www.instagram.com/le_selenice_spa974/">Instagram · @le_selenice_spa974</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Sélénice Institut &amp; Spa.<br>Photos : publiées par Le Sélénice sur sa page Facebook.</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+if(rm)return;
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*4+2,v:Math.random()*.35+.15,p:Math.random()*6.28,s:Math.random()*.02+.008});
+function draw(){
+ if(!run)return;x.clearRect(0,0,W,H);
+ P.forEach(function(q){q.y-=q.v;q.p+=q.s;q.x+=Math.sin(q.p)*.35;if(q.y<-12){q.y=H+12;q.x=Math.random()*W}
+  var a=.12+.18*Math.abs(Math.sin(q.p));
+  x.strokeStyle='rgba(23,163,168,'+a+')';x.lineWidth=1;x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.stroke();
+  x.fillStyle='rgba(255,255,255,'+(a*1.6)+')';x.beginPath();x.arc(q.x-q.r*.35,q.y-q.r*.35,q.r*.25,0,6.28);x.fill()});
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Sélénice" defer></script>
+</body>
+</html>

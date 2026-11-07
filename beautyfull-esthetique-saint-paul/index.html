@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BeautyFull Esthétique · Institut et onglerie à Saint-Paul</title>
+<meta name="description" content="BeautyFull Esthétique, Saint-Paul : soins du visage et du corps, onglerie, maquillage, épilations et regard, dans une petite case créole chaleureuse. Une page imaginée pour BeautyFull Esthétique.">
+<meta property="og:title" content="BeautyFull Esthétique · Saint-Paul">
+<meta property="og:description" content="Votre parenthèse BeautyFull : soins visage et corps, onglerie et maquillage dans une ambiance chaleureuse, à Saint-Paul.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maquettes.atma-digital.re/beautyfull-esthetique-saint-paul/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/beautyfull-esthetique-saint-paul/img/hero-fleurs-or.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--taupe:#8b8079;--taupe-f:#5e534d;--cacao:#3a2e2a;--or:#c9a27a;--or-c:#ecd9c2;--nude:#f3e3dc;--rose:#e9c3bf;--creme:#fbf6f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--creme);color:#30262a;font-size:17px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{background:var(--cacao);color:var(--creme);font-size:.76rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--or-c);font-weight:500}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--cacao)}
+.hero .bg{position:absolute;inset:0;background:url(img/hero-fleurs-or.webp) 50% center/cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,46,42,.05) 0%,rgba(58,46,42,.2) 38%,rgba(40,30,27,.93) 100%)}
+.hero .in{position:relative;z-index:2;padding:0 1.25rem 3rem;max-width:1040px;margin:0 auto;width:100%}
+.mark{font-family:'Great Vibes',cursive;font-size:2.4rem;color:var(--or-c);line-height:1;opacity:0;animation:up 1s .2s forwards}
+.kick{letter-spacing:.24em;text-transform:uppercase;font-size:.7rem;margin-top:.5rem;opacity:0;animation:up 1s .4s forwards}
+.hero h1{font-size:clamp(2.7rem,11.5vw,5rem);margin:.4rem 0 .8rem;opacity:0;animation:up 1.1s .6s forwards}
+.hero h1 em{color:var(--or-c)}
+.lead{max-width:30rem;font-weight:300;font-size:1.05rem;opacity:0;animation:up 1.1s .85s forwards}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem;opacity:0;animation:up 1.1s 1.05s forwards}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:99px;background:var(--or);color:var(--cacao);text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .25s,box-shadow .25s;animation:breathe 3.6s ease-in-out infinite;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes shine{0%,60%{left:-60%}100%{left:130%}}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(201,162,122,.5)}
+.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.75);color:#fff;animation:none}
+.btn.ghost::after{display:none}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(201,162,122,.55)}50%{box-shadow:0 0 0 10px rgba(201,162,122,0)}}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+.marq{background:var(--cacao);color:var(--or-c);overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem}
+.marq span{display:inline-block;padding-left:100%;animation:mq 36s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+section{padding:4.2rem 0;position:relative}
+.eyebrow{letter-spacing:.24em;text-transform:uppercase;font-size:.72rem;color:var(--taupe-f);font-weight:600}
+h2{font-size:clamp(2.1rem,7vw,3.1rem);margin:.4rem 0 1rem;color:var(--cacao)}
+h2 em{color:#a87b52}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+.duo{display:grid;gap:2rem}
+.duo .ph{border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(58,46,42,.22)}
+.duo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.quote{margin-top:1.3rem;padding:1rem 1.2rem;border-left:3px solid var(--or);background:#fff;border-radius:0 14px 14px 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;color:var(--cacao)}
+.quote small{display:block;font-family:'Jost',sans-serif;font-style:normal;font-size:.75rem;color:var(--taupe-f);margin-top:.3rem;letter-spacing:.05em}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.chips li{list-style:none;border:1px solid var(--taupe);color:var(--cacao);padding:.35rem .9rem;border-radius:99px;font-size:.85rem;background:#fff}
+.presta{background:var(--cacao);color:var(--creme)}
+.presta .eyebrow{color:var(--or)}
+.presta h2{color:#fff}.presta h2 em{color:var(--or-c)}
+.cards{display:grid;gap:1rem;margin-top:1.4rem}
+.card{border:1px solid rgba(236,217,194,.3);border-radius:18px;padding:1.2rem 1.25rem;transition:transform .3s,border-color .3s,background .3s}
+.card:hover{transform:translateY(-3px);border-color:var(--or);background:rgba(236,217,194,.05)}
+.card h3{font-size:1.55rem;color:var(--or-c);margin-bottom:.4rem}
+.card ul{list-style:none;font-weight:300;font-size:.95rem}
+.card li{padding:.15rem 0 .15rem 1.2rem;position:relative}
+.card li::before{content:"✦";position:absolute;left:0;color:var(--or);font-size:.75rem;top:.35rem}
+.mariage{background:linear-gradient(180deg,var(--nude),var(--creme));text-align:center}
+.mariage .big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,6vw,2.3rem);font-style:italic;color:var(--cacao);max-width:36rem;margin:0 auto;line-height:1.3}
+.mariage .big b{font-style:normal;letter-spacing:.12em;color:#a87b52;font-weight:600}
+.mariage .src{font-size:.8rem;color:var(--taupe-f);margin-top:.8rem}
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(58,46,42,.2);transition:transform .4s;background:#fff}
+.gal figure:hover{transform:scale(1.02)}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal figcaption{font-size:.8rem;color:var(--taupe-f);padding:.55rem .8rem}
+.hint{font-size:.8rem;color:var(--taupe-f);padding:0 1.25rem}
+.motto{background:var(--or-c);text-align:center;padding:3rem 0}
+.motto p{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,7vw,2.6rem);color:var(--cacao);line-height:1.2}
+.motto small{display:block;font-size:.85rem;color:var(--taupe-f);margin-top:.6rem}
+.noel{background:linear-gradient(160deg,var(--cacao),#6b5146 85%);color:#fff;text-align:center;overflow:hidden}
+.noel .eyebrow{color:var(--or-c)}
+.noel h2{color:#fff}.noel h2 em{color:var(--or-c)}
+.noel p{max-width:34rem;margin:0 auto 1.4rem;font-weight:300}
+.noel .btn{background:#fff;color:var(--cacao);animation:none}
+.gift{width:140px;height:140px;margin:0 auto 1.4rem;border-radius:50%;overflow:hidden;border:3px solid var(--or-c);box-shadow:0 0 0 8px rgba(236,217,194,.15)}
+.gift img{width:100%;height:100%;object-fit:cover}
+.star{position:absolute;color:var(--or-c);opacity:.5;font-size:1.1rem;animation:tw 3s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.85;transform:scale(1.15)}}
+.ct{display:grid;gap:1.2rem;margin-top:1.4rem}
+.ct div{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 8px 24px rgba(58,46,42,.08)}
+.ct h3{font-size:1.4rem;color:var(--cacao);margin-bottom:.3rem}
+.ct a{color:var(--cacao);font-weight:500;text-decoration:none;border-bottom:1px solid var(--or);overflow-wrap:anywhere}
+footer{background:var(--cacao);color:#e6d9cc;text-align:center;padding:2.2rem 1.25rem 4rem;font-size:.82rem}
+@media(min-width:760px){.duo{grid-template-columns:1fr 1fr;align-items:center}.ct,.cards{grid-template-columns:repeat(3,1fr)}.gal figure{flex-basis:260px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.mark,.kick,.hero h1,.lead,.btns{opacity:1!important;transform:none!important}canvas#fx{display:none}.marq span{padding-left:0}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour BeautyFull Esthétique</div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Main aux ongles nude, fleurs peintes et filets dorés, réalisation de BeautyFull Esthétique"></div>
+  <div class="in">
+    <div class="mark">BeautyFull</div>
+    <div class="kick">Esthétique · Saint-Paul · La Réunion</div>
+    <h1>Votre parenthèse <em>BeautyFull</em></h1>
+    <p class="lead">Soins du visage et du corps, onglerie et maquillage, dans une ambiance chaleureuse.</p>
+    <div class="btns">
+      <a class="btn" href="tel:+262692935437">Appeler le 0692 93 54 37</a>
+      <a class="btn ghost" href="#creations">Voir les créations</a>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><span>Soins visage ✦ Onglerie ✦ Semi-permanent mains et pieds ✦ Maquillage ✦ Épilations ✦ Regard ✦ Soins corps ✦ Lomi Lomi ✦ Saint-Paul ✦ &nbsp;</span></div>
+
+<section>
+  <div class="wrap duo">
+    <div class="rv">
+      <div class="eyebrow">L'institut</div>
+      <h2>Une petite case créole <em>chaleureuse</em></h2>
+      <p>Florence, esthéticienne avec plus de 10 ans d'expérience, vous accueille à Saint-Paul, rue des Sables.</p>
+      <p style="margin-top:.8rem">En cabine : épilations, soins du visage et modelage du corps, pour un véritable moment suspendu rien que pour vous. Côté onglerie : une large gamme de manucures et la pose de semi-permanent, mains et pieds. Et pour vos événements, une mise en beauté maquillage.</p>
+      <div class="quote">« En toute simplicité et convivialité. »<small>BeautyFull Esthétique, page de réservation</small></div>
+      <ul class="chips"><li>Soins visage</li><li>Onglerie</li><li>Maquillage</li><li>Regard</li><li>Soins corps</li></ul>
+    </div>
+    <div class="ph rv"><img src="img/ombre-or.webp" alt="Mains aux ongles dégradé nude et blanc rehaussés de paillettes dorées"></div>
+  </div>
+</section>
+
+<section class="presta">
+  <div class="wrap">
+    <div class="eyebrow rv">La carte des soins</div>
+    <h2 class="rv">Du visage au bout des <em>ongles</em></h2>
+    <div class="cards">
+      <div class="card rv"><h3>Soins visage</h3><ul><li>L'expert jeunesse</li><li>L'expert pureté</li><li>L'hydratant</li><li>Le réconfortant</li><li>Le soin sublime</li></ul></div>
+      <div class="card rv"><h3>Onglerie</h3><ul><li>Manucures</li><li>Semi-permanent mains et pieds</li><li>French, techniques et décos</li><li>Dépose de gel ou de semi-permanent</li></ul></div>
+      <div class="card rv"><h3>Soins corps</h3><ul><li>Lomi Lomi, modelage hawaïen</li><li>Modelage 30 min, zone à choisir</li><li>Beauté des pieds</li></ul></div>
+      <div class="card rv"><h3>Regard</h3><ul><li>Restructuration des sourcils au henné végétal</li><li>Teinture des sourcils</li></ul></div>
+      <div class="card rv"><h3>Épilations</h3><ul><li>Visage et corps, en cabine</li></ul></div>
+      <div class="card rv"><h3>Maquillage</h3><ul><li>Mises en beauté pour vos événements</li><li>Mariées et convives</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="mariage">
+  <div class="wrap">
+    <div class="eyebrow rv">Saison des mariages</div>
+    <p class="big rv">« Cette année, encore une saison juillet/août riche en mariage. Nous avons eu des mariées <b>I-N-C-R-O-Y-A-B-L-E-S</b> ! Et leurs convives ont été au top ! »</p>
+    <p class="src rv">BeautyFull Esthétique sur Facebook, septembre 2026</p>
+  </div>
+</section>
+
+<section id="creations">
+  <div class="wrap">
+    <div class="eyebrow rv">Quelques créations</div>
+    <h2 class="rv">Nudes, fleurs et <em>éclats dorés</em></h2>
+  </div>
+  <div class="gal">
+    <figure><img src="img/hero-fleurs-or.webp" alt="Ongles amande nude aux fleurs peintes et filets dorés"><figcaption>Fleurs peintes et filets d'or</figcaption></figure>
+    <figure><img src="img/nude-feuilles-or.webp" alt="Ongles nude ornés de feuilles dorées et blanches"><figcaption>Feuillages dorés sur nude</figcaption></figure>
+    <figure><img src="img/jaune-vert-tropical.webp" alt="Ongles jaune, vert anis et motifs de feuilles turquoise"><figcaption>Jaune, vert et feuilles turquoise</figcaption></figure>
+    <figure><img src="img/pieds-fleurs-turquoise.webp" alt="Semi-permanent pieds turquoise avec fleurs roses peintes"><figcaption>Semi-permanent pieds, fleurs roses</figcaption></figure>
+    <figure><img src="img/nude-strass.webp" alt="Ongles nude aux paillettes argentées et strass"><figcaption>Paillettes et strass</figcaption></figure>
+    <figure><img src="img/paillettes-or.webp" alt="Ongles rose pâle pailletés posés sur un tissu à sequins dorés"><figcaption>Rose pâle et paillettes</figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir les créations →</p>
+</section>
+
+<div class="motto">
+  <div class="wrap rv">
+    <p>La qualité, le prix, <span class="script" style="color:#a87b52">le sourire !</span></p>
+    <small>« C'est notre formule secrète pour vous faire plaisir ! » — BeautyFull Esthétique</small>
+  </div>
+</div>
+
+<section class="noel" id="noel">
+  <span class="star" style="left:8%;top:18%">✦</span><span class="star" style="right:10%;top:12%;animation-delay:.8s">✦</span><span class="star" style="left:18%;bottom:14%;animation-delay:1.6s">✦</span><span class="star" style="right:20%;bottom:20%;animation-delay:2.2s">✦</span>
+  <div class="wrap">
+    <div class="gift rv"><img src="img/paillettes-or.webp" alt="Ongles pailletés sur sequins dorés"></div>
+    <div class="eyebrow rv">Offrir pour Noël</div>
+    <h2 class="rv">Offrez une parenthèse <em>BeautyFull</em></h2>
+    <p class="rv">Un soin du visage, un modelage, une jolie pose de semi-permanent… Offrez un moment chez BeautyFull Esthétique avec une carte cadeau, à préparer ensemble sur WhatsApp.</p>
+    <a class="btn rv" href="https://wa.me/262692935437?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Offrir une carte cadeau</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow rv">Contact</div>
+    <h2 class="rv">À très bientôt dans notre <em>univers</em></h2>
+    <div class="ct">
+      <div class="rv"><h3>Où</h3><p>7 rue des Sables<br>97460 Saint-Paul, La Réunion</p></div>
+      <div class="rv"><h3>Quand</h3><p>Mardi, jeudi, vendredi : 9h – 17h<br>Samedi : 9h30 – 17h</p><p style="margin-top:.5rem">Réservation en ligne : <a href="https://www.sumupbookings.com/beautyfull">sumupbookings.com/beautyfull</a></p></div>
+      <div class="rv"><h3>Nous joindre</h3><p><a href="tel:+262692935437">0692 93 54 37</a><br><a href="https://wa.me/262692935437">WhatsApp</a><br><a href="https://www.facebook.com/beautyfull974">Facebook · BeautyFull Esthétique</a><br><a href="https://www.instagram.com/beautyfull974/">Instagram · @beautyfull974</a></p></div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de BeautyFull Esthétique.<br>Photos : créations publiées par l'institut sur Facebook.</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*90+'ms';io.observe(el)});
+if(rm)return;
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+var cols=['201,162,122','236,217,194','233,195,191'];
+for(var i=0;i<30;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.8,v:Math.random()*.35+.12,p:Math.random()*6.28,s:Math.random()*.025+.01,k:i%3,pet:i%4===0,a:Math.random()*6.28});
+function draw(){
+ if(!run)return;x.clearRect(0,0,W,H);
+ P.forEach(function(q){q.p+=q.s;
+  if(q.pet){q.y+=q.v*.9;q.x+=Math.sin(q.p)*.5;q.a+=.01;if(q.y>H+12){q.y=-12;q.x=Math.random()*W}
+   x.save();x.translate(q.x,q.y);x.rotate(q.a);x.fillStyle='rgba(233,195,191,.42)';x.beginPath();x.ellipse(0,0,q.r*2.6,q.r*1.3,0,0,6.28);x.fill();x.restore();return}
+  q.y-=q.v;q.x+=Math.sin(q.p)*.3;if(q.y<-10){q.y=H+10;q.x=Math.random()*W}
+  var a=.15+.4*Math.abs(Math.sin(q.p*1.7)),col=cols[q.k];
+  x.fillStyle='rgba('+col+','+a+')';x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();
+  x.strokeStyle='rgba('+col+','+a*.7+')';x.lineWidth=.7;x.beginPath();x.moveTo(q.x-q.r*3.5,q.y);x.lineTo(q.x+q.r*3.5,q.y);x.moveTo(q.x,q.y-q.r*3.5);x.lineTo(q.x,q.y+q.r*3.5);x.stroke()});
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="BeautyFull Esthétique" defer></script>
+</body>
+</html>
