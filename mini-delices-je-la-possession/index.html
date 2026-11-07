@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mini Délices J&amp;E · La Possession — mignardises sucrées et petits fours salés</title>
+<meta name="description" content="Pâtissier avec plus de 40 ans d'expériences : mignardises sucrées et petits fours salés, box de 25 mignardises, à La Possession.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mini Délices J&amp;E · La Possession — une page imaginée pour vous">
+<meta property="og:description" content="Mignardises sucrées, petits fours salés et box de 25 mignardises, à La Possession. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mini-delices-je-la-possession/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mini-delices-je-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--choco:#4a2614;--caramel:#8b4a22;--or:#c9a24a;--or-clair:#e8cf8c;--creme:#fbf4ea;--creme2:#f4e6d2;--fraise:#c8364f;--marine:#1f2a44;--txt:#3a2518}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--txt);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--choco);line-height:1.15}
+h2{font-size:clamp(1.7rem,6vw,2.5rem);margin-bottom:.6rem}
+.kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:.4rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.2rem}
+section{padding:4.2rem 0;position:relative}
+.ruban{background:var(--choco);color:#f6e9d6;font-size:.82rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--or-clair)}
+/* hero */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff;padding:0}
+.hero-bg{position:absolute;inset:0;background:url(img/plateau-tartelettes.webp) center/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,18,8,.15) 0%,rgba(40,18,8,.35) 40%,rgba(40,18,8,.88) 100%)}
+#sucre{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding-bottom:3.2rem;padding-top:6rem;width:100%}
+.hero-logo{width:96px;height:96px;border-radius:50%;border:3px solid var(--or-clair);box-shadow:0 10px 30px rgba(0,0,0,.35);margin-bottom:1rem;background:#fff;object-fit:cover}
+.hero h1{color:#fff;font-size:clamp(2.3rem,10vw,4.4rem);opacity:0;transform:translateY(18px);animation:up 1.2s .3s forwards}
+.hero h1 em{font-style:italic;color:var(--or-clair);font-weight:500}
+.hero p.lead{font-size:1.1rem;max-width:34rem;margin:.8rem 0 1.4rem;opacity:0;animation:up 1.2s .7s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;opacity:0;animation:up 1.2s 1s forwards}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.btn-wa{background:#25a35a;color:#fff;animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(37,163,90,.45)}50%{box-shadow:0 0 0 10px rgba(37,163,90,0)}}
+.btn-or{background:var(--or-clair);color:var(--choco)}
+.btn-ligne{border:2px solid currentColor;color:var(--choco)}
+/* bandeau */
+.bandeau{background:var(--choco);color:var(--or-clair);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Playfair Display",serif;font-style:italic;font-size:1.15rem}
+.bandeau div{display:inline-block;animation:defile 30s linear infinite}
+.bandeau span{margin:0 1.2rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro-grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:800px){.intro-grid{grid-template-columns:1.1fr 1fr}}
+.intro blockquote{font-family:"Playfair Display",serif;font-size:1.35rem;color:var(--caramel);border-left:3px solid var(--or);padding-left:1rem;margin:1rem 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.duo img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:0 16px 36px rgba(74,38,20,.22)}
+.duo img:nth-child(2){margin-top:2rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.pastilles span{background:#fff;border:1px solid var(--creme2);padding:.35rem .8rem;border-radius:999px;font-size:.88rem;font-weight:600;color:var(--caramel)}
+/* box */
+.box{background:linear-gradient(180deg,var(--creme2),var(--creme))}
+.box-grid{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:800px){.box-grid{grid-template-columns:1fr 1fr}}
+.box-cartes{display:grid;gap:.8rem}
+.carte{background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 8px 24px rgba(74,38,20,.08);display:flex;gap:1rem;align-items:center;transition:transform .3s}
+.carte:hover{transform:translateY(-3px) rotate(-.4deg)}
+.carte b{font-family:"Playfair Display",serif;font-size:2rem;color:var(--fraise);min-width:2.6rem;text-align:center}
+.box-photo{position:relative}
+.box-photo img{border-radius:22px;box-shadow:0 20px 44px rgba(74,38,20,.25);aspect-ratio:1/1;object-fit:cover;width:100%}
+.box-photo .tag{position:absolute;left:1rem;bottom:1rem;background:var(--choco);color:var(--or-clair);padding:.4rem .9rem;border-radius:999px;font-size:.85rem;font-weight:700}
+.src{font-size:.82rem;opacity:.7;margin-top:.8rem}
+/* galerie */
+.galerie{background:var(--choco);color:#f6e9d6}
+.galerie h2{color:#fff}.galerie .kicker{color:var(--or-clair)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.2rem 1.4rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;transition:transform .3s}
+.rail figure:hover{transform:scale(1.02)}
+.rail img{border-radius:18px;aspect-ratio:1/1;object-fit:cover;width:100%;border:2px solid rgba(232,207,140,.35)}
+.rail figcaption{font-size:.88rem;margin-top:.5rem;opacity:.85}
+.glisser{font-size:.85rem;opacity:.7;padding:0 1.2rem}
+/* actu */
+.actu-grid{display:grid;gap:1.6rem;align-items:start}
+@media(min-width:800px){.actu-grid{grid-template-columns:.9fr 1.1fr}}
+.actu img{border-radius:18px;box-shadow:0 16px 36px rgba(31,42,68,.2)}
+.post{background:#fff;border-radius:20px;padding:1.4rem;border-top:4px solid var(--marine);box-shadow:0 8px 26px rgba(31,42,68,.08)}
+.post .date{font-size:.85rem;color:var(--marine);font-weight:700;margin-bottom:.4rem}
+.post p{margin:.5rem 0}
+.post .cite{font-family:"Playfair Display",serif;font-size:1.25rem;color:var(--choco)}
+.avis{margin-top:1rem;display:inline-block;background:var(--creme2);padding:.5rem .9rem;border-radius:12px;font-weight:700;color:var(--caramel)}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#6a1f2c 0%,#3d1a12 55%,#26120c 100%);color:#fbeee2;overflow:hidden}
+.noel h2{color:#fff}.noel .kicker{color:var(--or-clair)}
+#flocons{position:absolute;inset:0;pointer-events:none}
+.noel .wrap{position:relative;z-index:1}
+.noel-grid{display:grid;gap:1.4rem;align-items:center;margin-top:1rem}
+@media(min-width:800px){.noel-grid{grid-template-columns:1fr 1fr}}
+.noel-imgs{display:grid;grid-template-columns:1.2fr 1fr;gap:.7rem}
+.noel-imgs img{border-radius:16px;width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;border:2px solid rgba(232,207,140,.5);box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.noel ul{list-style:none;margin:.8rem 0 1.2rem}
+.noel li{padding:.25rem 0}
+.noel li::before{content:"✦ ";color:var(--or-clair)}
+.noel .note{font-size:.8rem;opacity:.7;margin-top:.9rem}
+/* contact */
+.contact-grid{display:grid;gap:1.2rem}
+@media(min-width:800px){.contact-grid{grid-template-columns:1fr 1fr}}
+.fiche{background:#fff;border-radius:20px;padding:1.4rem;box-shadow:0 8px 26px rgba(74,38,20,.08)}
+.fiche p{margin:.45rem 0;overflow-wrap:anywhere}
+.fiche a{color:var(--caramel);font-weight:700}
+.contact .btns{opacity:1;animation:none;margin-top:1rem}
+footer{background:var(--choco);color:#e9d8bf;text-align:center;font-size:.85rem;padding:1.6rem 1.2rem}
+/* vague */
+.vague{display:block;width:100%;height:46px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.hero h1,.hero p.lead,.btns,.rv{opacity:1;transform:none}#sucre,#flocons{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Mini Délices J&amp;E</div>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Plateau de tartelettes aux fraises de Mini Délices J&E"></div>
+  <canvas id="sucre" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="hero-logo" src="img/logo.webp" alt="Logo Mini Délices J&E">
+    <p class="kicker" style="color:var(--or-clair)">Pâtisserie · La Possession</p>
+    <h1>Mini Délices <em>J&amp;E</em></h1>
+    <p class="lead">Pâtissier avec plus de 40 ans d’expériences, pour vos mignardises sucrées et vos petits fours salés.</p>
+    <div class="btns">
+      <a class="btn btn-wa" href="https://wa.me/262693802129?text=Bonjour%20Mini%20D%C3%A9lices%20J%26E%2C%20je%20voudrais%20commander%20une%20box%20de%20mignardises." target="_blank" rel="noopener">💬 Commander sur WhatsApp</a>
+      <a class="btn btn-or" href="tel:+262693802129">📞 0693 80 21 29</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+<span>Mignardises sucrées</span>✦<span>Petits fours salés</span>✦<span>Tartes aux fraises</span>✦<span>Choux crème</span>✦<span>Chemin de fer</span>✦<span>Box de 25 mignardises</span>✦
+<span>Mignardises sucrées</span>✦<span>Petits fours salés</span>✦<span>Tartes aux fraises</span>✦<span>Choux crème</span>✦<span>Chemin de fer</span>✦<span>Box de 25 mignardises</span>✦
+</div></div>
+
+<section class="intro" id="maison">
+  <div class="wrap intro-grid">
+    <div class="rv">
+      <p class="kicker">La maison</p>
+      <h2>Le grand art des petites bouchées</h2>
+      <blockquote>« Pâtissier avec plus de 40 ans d’expériences vous propose : mignardises sucrées, petits fours salés. »</blockquote>
+      <p>À La Possession, Mini Délices J&amp;E prépare des plateaux de mignardises alignées au cordeau : tartelettes aux fraises brillantes, carrés nappés, éclairs, petits gâteaux poudrés de sucre glace. Des pièces de deux bouchées, pensées pour les tables qui se partagent.</p>
+      <div class="pastilles"><span>🍓 Tartes aux fraises</span><span>🥐 Choux crème</span><span>🍫 Chemin de fer</span><span>🥪 Petits fours salés</span></div>
+    </div>
+    <div class="duo rv">
+      <img src="img/tartelettes-fraises.webp" alt="Tartelettes aux fraises alignées sur un plateau" loading="lazy">
+      <img src="img/carres-zebres.webp" alt="Petits fours rectangulaires au décor chocolat en zigzag" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 30 C240 0 480 46 720 24 S1200 0 1440 26 V46 H0Z" fill="#f4e6d2"/></svg>
+<section class="box" id="box" style="padding-top:2.6rem">
+  <div class="wrap box-grid">
+    <div class="box-photo rv">
+      <img src="img/petits-fours-fruits.webp" alt="Petits carrés aux fruits, nappage doré et rouge, en plateau" loading="lazy">
+      <span class="tag">La box de 25 mignardises</span>
+    </div>
+    <div class="rv">
+      <p class="kicker">La spécialité</p>
+      <h2>La box de 25 mignardises</h2>
+      <p>Le format star de la page : 25 pièces assorties, prêtes à poser sur la table. Exemple d’une box publiée le samedi 22 juin 2024 :</p>
+      <div class="box-cartes" style="margin-top:1rem">
+        <div class="carte"><b>11</b><span>tartes aux fraises</span></div>
+        <div class="carte"><b>12</b><span>choux crème</span></div>
+        <div class="carte"><b>2</b><span>chemin de fer</span></div>
+      </div>
+      <p class="src">Composition et disponibilités changent selon les jours : la box du moment se découvre sur la page Facebook.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap"><p class="kicker">En vitrine</p><h2>Plateaux du pâtissier</h2></div>
+  <div class="rail">
+    <figure><img src="img/plateau-tartelettes.webp" alt="Grand plateau de tartelettes aux fraises" loading="lazy"><figcaption>Tartelettes aux fraises</figcaption></figure>
+    <figure><img src="img/eclairs.webp" alt="Petits éclairs glacés alignés" loading="lazy"><figcaption>Petits éclairs</figcaption></figure>
+    <figure><img src="img/carres-rouges.webp" alt="Carrés rouges brillants saupoudrés de sucre" loading="lazy"><figcaption>Carrés rouges au sucre cristallisé</figcaption></figure>
+    <figure><img src="img/carres-sucre-glace.webp" alt="Carrés chocolat poudrés de sucre glace" loading="lazy"><figcaption>Carrés chocolat, sucre glace</figcaption></figure>
+    <figure><img src="img/carres-zebres.webp" alt="Petits fours au décor chocolat" loading="lazy"><figcaption>Petits fours au décor chocolat</figcaption></figure>
+    <figure><img src="img/petits-fours-fruits.webp" alt="Petits carrés aux fruits" loading="lazy"><figcaption>Petits carrés aux fruits</figcaption></figure>
+    <figure><img src="img/tartelettes-fraises.webp" alt="Tartelettes aux fraises" loading="lazy"><figcaption>Tartes aux fraises, juin 2024</figcaption></figure>
+  </div>
+  <p class="glisser">← Faites glisser pour voir les plateaux →</p>
+</section>
+
+<section class="actu" id="actu">
+  <div class="wrap">
+    <p class="kicker">Dernière douceur publiée</p>
+    <h2>La fête des pères, version mignardises</h2>
+    <div class="actu-grid" style="margin-top:1rem">
+      <img class="rv" src="img/affiche-fete-des-peres-2026.webp" alt="Affiche Bonne fête des pères, box de 25 mignardises, dimanche 21 juin" loading="lazy">
+      <div class="post rv">
+        <p class="date">Publication du vendredi 12 juin 2026</p>
+        <p class="cite">« Parce que nos papas sont de grands gourmands et qu’ils méritent le meilleur. »</p>
+        <p>« Craquez pour notre Mignardises Box : composé de 25 mignardises. » Tarif publié pour l’occasion : 22 € la box de 25 pièces, pour le dimanche 21 juin 2026, réservations en message privé ou par téléphone.</p>
+        <p>« Faites-lui plaisir à coup sûr ! »</p>
+        <span class="avis">★ Recommandé par 100 % des avis Facebook</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <canvas id="flocons" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="kicker">Offrir pour Noël</p>
+    <h2>Des mignardises sur toutes les tables de fêtes</h2>
+    <div class="noel-grid">
+      <div class="noel-imgs rv">
+        <img src="img/tartelettes-fraises.webp" alt="Tartelettes aux fraises" loading="lazy">
+        <img src="img/carres-sucre-glace.webp" alt="Carrés poudrés de sucre glace" loading="lazy">
+      </div>
+      <div class="rv">
+        <p>Pour le réveillon, l’apéritif du 31 ou un cadeau à déposer chez ceux qu’on aime : une box de mignardises fait toujours plaisir.</p>
+        <ul>
+          <li>Mignardises sucrées en box</li>
+          <li>Petits fours salés pour l’apéritif</li>
+          <li>Commande à réserver auprès du pâtissier</li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/262693802129?text=Bonjour%20Mini%20D%C3%A9lices%20J%26E%2C%20je%20voudrais%20passer%20une%20commande%20de%20mignardises%20pour%20les%20f%C3%AAtes%20de%20fin%20d'ann%C3%A9e." target="_blank" rel="noopener">🎄 Réserver ma commande des fêtes</a>
+        <p class="note">Composition, tarifs et dates des fêtes : à voir directement avec Mini Délices J&amp;E.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Commander</p>
+    <h2>Une envie de petites douceurs ?</h2>
+    <div class="contact-grid" style="margin-top:1rem">
+      <div class="fiche rv">
+        <p>📍 La Possession, La Réunion</p>
+        <p>📞 <a href="tel:+262693802129">0693 80 21 29</a> · <a href="tel:+262693816736">0693 81 67 36</a></p>
+        <p>✉️ <a href="mailto:minidelicesje@gmail.com">minidelicesje@gmail.com</a></p>
+        <p>👍 <a href="https://www.facebook.com/MiniDelicesJE/" target="_blank" rel="noopener">Mini Délices J&amp;E à la Possession</a> · 3 000 abonnés</p>
+      </div>
+      <div class="fiche rv">
+        <p>Réservations en message privé sur la page Facebook, par WhatsApp ou par téléphone.</p>
+        <div class="btns">
+          <a class="btn btn-wa" href="https://wa.me/262693802129?text=Bonjour%20Mini%20D%C3%A9lices%20J%26E%2C%20je%20voudrais%20commander%20une%20box%20de%20mignardises." target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-ligne" href="tel:+262693802129">📞 Appeler</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Mini Délices J&amp;E.</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){rm?el.classList.add('on'):io.observe(el)});
+if(rm)return;
+function champ(id,n,draw,init){var c=document.getElementById(id);if(!c)return;var x=c.getContext('2d'),W,H,P=[],run=true,vis=true;
+ function rs(){var r=c.parentNode.getBoundingClientRect();W=c.width=r.width;H=c.height=r.height}
+ rs();addEventListener('resize',rs);for(var i=0;i<n;i++)P.push(init({},W,H,true));
+ new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(c);
+ document.addEventListener('visibilitychange',function(){run=!document.hidden});
+ (function f(){if(run&&vis){x.clearRect(0,0,W,H);P.forEach(function(p){draw(x,p,W,H,init)})}requestAnimationFrame(f)})();}
+champ('sucre',32,function(x,p,W,H,init){p.y+=p.v;p.x+=Math.sin(p.y/40+p.o)*.25;p.t+=.05;
+ var a=p.a*(.55+.45*Math.sin(p.t));x.fillStyle='rgba(255,240,205,'+a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();
+ if(p.r>1.6){x.strokeStyle='rgba(232,207,140,'+a*.8+')';x.lineWidth=.6;x.beginPath();x.moveTo(p.x-p.r*2.4,p.y);x.lineTo(p.x+p.r*2.4,p.y);x.moveTo(p.x,p.y-p.r*2.4);x.lineTo(p.x,p.y+p.r*2.4);x.stroke()}
+ if(p.y>H+5)init(p,W,H,false)},function(p,W,H,f){p.x=Math.random()*W;p.y=f?Math.random()*H:-5;p.r=Math.random()*1.8+.5;p.v=Math.random()*.35+.12;p.o=Math.random()*6;p.t=Math.random()*6;p.a=Math.random()*.5+.3;return p});
+champ('flocons',26,function(x,p,W,H,init){p.y+=p.v;p.x+=Math.sin(p.y/50+p.o)*.3;x.fillStyle='rgba(255,246,230,'+p.a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();if(p.y>H+5)init(p,W,H,false)},
+ function(p,W,H,f){p.x=Math.random()*W;p.y=f?Math.random()*H:-5;p.r=Math.random()*2+.8;p.v=Math.random()*.4+.15;p.o=Math.random()*6;p.a=Math.random()*.35+.15;return p});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Mini Délices J&amp;E" defer></script>
+</body>
+</html>

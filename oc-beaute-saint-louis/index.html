@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>O'C Beauté · Institut à Saint-Louis — « Des soins pour vous »</title>
+<meta name="description" content="O'C Beauté, institut à Saint-Louis (La Réunion) : soins du visage, épilations, extensions de cils, maquillage. Une page imaginée pour vous.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="O'C Beauté · Saint-Louis — une page imaginée pour vous">
+<meta property="og:description" content="Soins du visage, épilations, extensions de cils et maquillage, au 7 RN 5 à Saint-Louis. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/oc-beaute-saint-louis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/oc-beaute-saint-louis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--menthe:#a8d5d3;--menthe-clair:#e3f2f0;--sauge:#4a7c7c;--sauge-fonce:#2f5656;--rose:#e8c4c0;--rose-clair:#f8ebe8;--champagne:#d4c4a8;--creme:#fdfaf6;--encre:#263b3b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.12;color:var(--sauge-fonce)}
+h2{font-size:clamp(1.9rem,6.4vw,2.7rem);margin-bottom:.8rem}
+a{color:inherit}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.25rem}
+.ruban{background:var(--sauge-fonce);color:#eaf5f3;font-size:.8rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:6}
+.ruban b{color:var(--rose);font-weight:500}
+.kicker{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--sauge);font-weight:500;margin-bottom:.5rem}
+section{padding:4.2rem 0;position:relative}
+/* paillettes */
+#paillettes{position:fixed;inset:0;pointer-events:none;z-index:4}
+/* hero */
+.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;overflow:hidden;padding:0;color:#fff}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 45%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero-img img{object-position:50% 45%}
+@media(max-width:700px){.hero-img img{object-position:12% 50%;transform-origin:12% 50%}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,59,59,.08) 0%,rgba(38,59,59,.25) 38%,rgba(38,59,59,.9) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:3.2rem;padding-top:6rem}
+.hero .kicker{color:var(--rose)}
+.hero h1{color:#fff;font-size:clamp(2.8rem,12vw,5rem);font-weight:500;opacity:0;transform:translateY(18px);animation:up 1.4s .3s ease forwards}
+.hero h1 em{font-style:italic;color:var(--menthe)}
+.hero p.lead{max-width:34rem;font-size:1.06rem;margin:.9rem 0 1.5rem;opacity:0;animation:up 1.4s .8s ease forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--menthe);color:var(--sauge-fonce);box-shadow:0 8px 24px rgba(168,213,211,.4);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 8px 34px rgba(168,213,211,.75)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn-sauge{background:var(--sauge);color:#fff}
+.btn-rose{border:1.5px solid var(--sauge);color:var(--sauge-fonce)}
+/* bandeau */
+.marq{background:var(--sauge);color:var(--menthe-clair);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-style:italic}
+.marq div{display:inline-block;animation:defile 32s linear infinite}
+.marq span{margin:0 1.1rem}.marq i{color:var(--rose);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{background:var(--creme)}
+.intro-grid{display:grid;gap:2rem;align-items:center}
+@media(min-width:800px){.intro-grid{grid-template-columns:1fr 1.25fr}}
+.logo-rond{width:min(260px,70vw);aspect-ratio:1;border-radius:50%;overflow:hidden;margin:0 auto;box-shadow:0 0 0 10px var(--menthe-clair),0 20px 50px rgba(74,124,124,.25);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-8px)}}
+.citation{font-family:"Cormorant Garamond",serif;font-size:1.32rem;font-style:italic;color:var(--sauge-fonce);border-left:3px solid var(--rose);padding:.2rem 0 .2rem 1rem;margin:1.1rem 0}
+.chiffres{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.3rem}
+.chiffres div{background:#fff;border:1px solid var(--menthe);border-radius:16px;padding:.7rem 1rem;font-size:.86rem;flex:1 1 140px}
+.chiffres b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.6rem;color:var(--sauge);line-height:1.1}
+/* vague */
+.vague{display:block;width:100%;height:60px}
+/* soins */
+.soins{background:var(--menthe-clair)}
+.cartes{display:grid;gap:1rem;margin-top:1.6rem}
+@media(min-width:760px){.cartes{grid-template-columns:repeat(3,1fr)}}
+.carte{background:#fff;border-radius:22px;padding:1.5rem 1.35rem;box-shadow:0 10px 30px rgba(74,124,124,.1);transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(74,124,124,.18)}
+.carte svg{width:46px;height:46px;margin-bottom:.6rem}
+.carte h3{font-size:1.55rem;margin-bottom:.3rem}
+.carte ul{list-style:none;margin-top:.6rem;font-size:.93rem}
+.carte li{display:flex;justify-content:space-between;gap:.8rem;padding:.38rem 0;border-bottom:1px dashed var(--menthe)}
+.carte li span:last-child{white-space:nowrap;color:var(--sauge);font-weight:500}
+.mini{font-size:.8rem;opacity:.75;margin-top:1rem}
+/* regard */
+.regard{background:var(--creme)}
+.posts{display:grid;gap:1rem;margin-top:1.4rem}
+@media(min-width:760px){.posts{grid-template-columns:repeat(3,1fr)}}
+.post{background:linear-gradient(160deg,#fff 0%,var(--rose-clair) 100%);border-radius:20px;padding:1.3rem 1.2rem;border:1px solid var(--rose)}
+.post p{font-family:"Cormorant Garamond",serif;font-size:1.22rem;font-style:italic;color:var(--sauge-fonce)}
+.post small{display:block;margin-top:.6rem;font-size:.78rem;color:var(--sauge)}
+/* galerie */
+.galerie{background:var(--sauge-fonce);color:#eaf5f3}
+.galerie h2{color:#fff}.galerie .kicker{color:var(--menthe)}
+.rail{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.25rem 1rem;margin:0 -1.25rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center;border-radius:20px;overflow:hidden;background:#1f3c3c;position:relative}
+.rail img{width:100%;height:380px;object-fit:cover;transition:transform .8s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .9rem .8rem;font-size:.85rem;background:linear-gradient(transparent,rgba(20,40,40,.85))}
+.rail .illu{display:flex;align-items:center;justify-content:center;height:380px;background:radial-gradient(circle at 50% 40%,var(--menthe) 0%,var(--sauge) 75%)}
+.rail .illu svg{width:70%}
+.glisse{font-size:.8rem;opacity:.7}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#3d6b6a 0%,#284848 60%,#1c3535 100%);color:#eef7f5;overflow:hidden}
+.noel h2{color:#fff}.noel .kicker{color:var(--rose)}
+.noel-grid{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:780px){.noel-grid{grid-template-columns:1fr 1.1fr}}
+.carte-cadeau{position:relative;aspect-ratio:1.6;max-width:380px;width:100%;margin:0 auto;border-radius:20px;background:linear-gradient(135deg,var(--rose-clair) 0%,var(--rose) 55%,var(--champagne) 100%);box-shadow:0 24px 50px rgba(0,0,0,.35);padding:1.3rem 1.4rem;color:var(--sauge-fonce);overflow:hidden;transform:rotate(-3deg);animation:flotte 6s ease-in-out infinite}
+.carte-cadeau::before{content:"";position:absolute;top:0;bottom:0;left:62%;width:26px;background:linear-gradient(90deg,#4a7c7c,#5f9393);opacity:.9}
+.carte-cadeau::after{content:"";position:absolute;left:0;right:0;top:58%;height:22px;background:linear-gradient(#4a7c7c,#5f9393);opacity:.9}
+.carte-cadeau b{font-family:"Cormorant Garamond",serif;font-size:2rem;display:block;line-height:1;position:relative;z-index:1}
+.carte-cadeau span{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;position:relative;z-index:1}
+.carte-cadeau em{position:absolute;right:1.1rem;bottom:.8rem;font-family:"Cormorant Garamond",serif;font-size:1.1rem;z-index:1}
+.noel ul{list-style:none;margin:.9rem 0 1.3rem}
+.noel li{padding:.25rem 0}.noel li::before{content:"✧ ";color:var(--rose)}
+.noel .note{font-size:.8rem;opacity:.7;margin-top:.9rem}
+/* contact */
+.contact{background:var(--rose-clair)}
+.contact-grid{display:grid;gap:1.2rem;margin-top:1.2rem}
+@media(min-width:780px){.contact-grid{grid-template-columns:1fr 1fr}}
+.bloc{background:#fff;border-radius:20px;padding:1.4rem;box-shadow:0 10px 30px rgba(74,124,124,.1)}
+.bloc p{margin:.35rem 0}.bloc a{color:var(--sauge-fonce);font-weight:500}
+.reseaux{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.reseaux a{font-size:.88rem;padding:.45rem .9rem;border-radius:999px;background:var(--menthe-clair);text-decoration:none}
+footer{background:var(--sauge-fonce);color:#cfe3e0;text-align:center;font-size:.82rem;padding:1.8rem 1.2rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1,.hero p.lead{opacity:1;transform:none}#paillettes{display:none}}
+</style>
+</head>
+<body>
+<canvas id="paillettes" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour O'C Beauté</div>
+
+<header class="hero">
+  <div class="hero-img"><img src="img/univers-poudres-pinceaux.jpg" alt="Poudres roses et dorées, pinceaux et logo O'C Beauté sur fond menthe"></div>
+  <div class="wrap">
+    <div class="kicker">Institut · Saint-Louis · La Réunion</div>
+    <h1>O'C Beauté<br><em>des soins pour vous</em></h1>
+    <p class="lead">Soins du visage, épilations, extensions de cils et maquillage, au 7 RN 5 à Saint-Louis : un joli moment pour mettre en valeur votre regard et illuminer votre visage.</p>
+    <div class="btns">
+      <a class="btn btn-wa" href="https://wa.me/262692711273?text=Bonjour%20O'C%20Beaut%C3%A9%2C%20je%20voudrais%20prendre%20rendez-vous." target="_blank" rel="noopener">💬 Rendez-vous sur WhatsApp</a>
+      <a class="btn btn-line" href="#soins">Découvrir les soins</a>
+    </div>
+  </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+<span>Soins du visage</span><i>✦</i><span>Épilations</span><i>✦</i><span>Extensions de cils</span><i>✦</i><span>Maquillage soirée</span><i>✦</i><span>Mariées &amp; invitées</span><i>✦</i><span>Encres à lèvres</span><i>✦</i>
+<span>Soins du visage</span><i>✦</i><span>Épilations</span><i>✦</i><span>Extensions de cils</span><i>✦</i><span>Maquillage soirée</span><i>✦</i><span>Mariées &amp; invitées</span><i>✦</i><span>Encres à lèvres</span><i>✦</i>
+</div></div>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div class="logo-rond rv"><img src="img/logo-oc-beaute.jpg" alt="Logo O'C Beauté, des soins pour vous"></div>
+    <div class="rv">
+      <div class="kicker">Bienvenue</div>
+      <h2>Un institut de beauté à Saint-Louis</h2>
+      <p class="citation">« Un joli maquillage pour mettre en valeur son regard et illuminer son visage 🥰✨ »</p>
+      <p>Au 7 RN 5, O'C Beauté prend soin de vous du sourcil redessiné au maquillage de mariée, en passant par les soins du visage et les extensions de cils. Et les clientes fidèles sont toujours reçues avec plaisir.</p>
+      <div class="chiffres">
+        <div><b>5,0 / 5</b>la note sur Booksy</div>
+        <div><b>En ligne</b>réservation sur Booksy</div>
+        <div><b>7 RN 5</b>Saint-Louis</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 30 C240 60 480 0 720 26 C960 52 1200 8 1440 30 V60 H0Z" fill="#e3f2f0"/></svg>
+<section class="soins" id="soins" style="padding-top:2.6rem">
+  <div class="wrap">
+    <div class="kicker rv">Les soins</div>
+    <h2 class="rv">Soins du visage, regard, épilations, maquillage</h2>
+    <div class="cartes">
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#4a7c7c" stroke-width="1.6" aria-hidden="true"><path d="M24 6c8 0 13 7 13 16 0 10-6 20-13 20S11 32 11 22C11 13 16 6 24 6Z"/><path d="M18 20c1.5-1.5 3.5-1.5 5 0M25 20c1.5-1.5 3.5-1.5 5 0M20 31c2.5 2 5.5 2 8 0"/><circle cx="38" cy="10" r="2" fill="#e8c4c0" stroke="none"/></svg>
+        <h3>Soins du visage</h3>
+        <p>Hydratation, éclat, apaisement ou anti-âge : un soin pour chaque peau.</p>
+        <ul>
+          <li><span>HYDRABOSST</span><span>40 €</span></li>
+          <li><span>FJORD Oxygénation &amp; Hydratation</span><span>65 €</span></li>
+          <li><span>YUCANTA Apaisement</span><span>65 €</span></li>
+          <li><span>OCEAN Anti-âge</span><span>75 €</span></li>
+          <li><span>DUNES Éclat</span><span>80 €</span></li>
+        </ul>
+      </article>
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#4a7c7c" stroke-width="1.6" aria-hidden="true"><path d="M6 26c8-9 28-9 36 0"/><path d="M10 25l-3 6M16 22l-2 7M24 21v7M32 22l2 7M38 25l3 6"/><circle cx="40" cy="12" r="2" fill="#e8c4c0" stroke="none"/></svg>
+        <h3>Regard &amp; épilations</h3>
+        <p>Sourcils, extensions de cils et épilations du visage au corps.</p>
+        <ul>
+          <li><span>Épilation sourcils</span><span>12 €</span></li>
+          <li><span>Teinture sourcils</span><span>15 €</span></li>
+          <li><span>Sourcils + lèvres</span><span>20 €</span></li>
+          <li><span>Pose Y (effet très naturel)</span><span>dès 40 €</span></li>
+          <li><span>Pose Volume Russe / Mega Volume</span><span>dès 60 €</span></li>
+        </ul>
+      </article>
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#4a7c7c" stroke-width="1.6" aria-hidden="true"><rect x="19" y="20" width="10" height="22" rx="2"/><path d="M20 20v-6l8-6v12"/><path d="M8 40l8-8M36 8l4 4"/><circle cx="38" cy="30" r="2" fill="#e8c4c0" stroke="none"/></svg>
+        <h3>Maquillage</h3>
+        <p>Pour une soirée, un mariage, et même pour les plus jeunes.</p>
+        <ul>
+          <li><span>Maquillage soirée (institut)</span><span>47 €</span></li>
+          <li><span>Maquillage jeune (jusqu'à 17 ans)</span><span>25 €</span></li>
+          <li><span>Mise en beauté princesse</span><span>10 €</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="mini rv">Également : forfaits épilation et soin corps (80 €). Tarifs publiés par O'C Beauté sur sa page Booksy, à confirmer lors de la réservation.</p>
+    <div class="btns rv" style="margin-top:1.2rem">
+      <a class="btn btn-sauge" href="https://booksy.com/fr-fr/73737_oc-beaute_instituts-de-beaute_102766_saint-louis" target="_blank" rel="noopener">📅 Réserver sur Booksy</a>
+    </div>
+  </div>
+</section>
+
+<section class="regard">
+  <div class="wrap">
+    <div class="kicker rv">Sur la page O'C Beauté</div>
+    <h2 class="rv">Le regard, le teint, les lèvres</h2>
+    <p class="rv">Maquillages de soirée, mariées et leurs invitées : quelques mots tirés des reels de la page.</p>
+    <div class="posts">
+      <div class="post rv"><p>« Un petit mélange de deux encres à lèvres MAKE UP FOR EVER pour obtenir ce joli rouge ! »</p><small>Reel Facebook</small></div>
+      <div class="post rv"><p>« Un regard intense, un teint lumineux et une jolie touche de prune sur les lèvres 💜✨ »</p><small>Reel Facebook</small></div>
+      <div class="post rv"><p>« Hier, j'ai eu le plaisir de maquiller une mariée ainsi que ses invitées au Maïdo, dans un cadre magnifique 💍 »</p><small>Reel Facebook</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap">
+    <div class="kicker rv">L'univers</div>
+    <h2 class="rv">Poudres, pinceaux et douceur</h2>
+    <p class="glisse rv">Faites glisser →</p>
+    <div class="rail">
+      <figure><img src="img/univers-poudres-pinceaux.jpg" alt="Poudres et pinceaux autour du logo O'C Beauté" loading="lazy" style="object-position:48% 50%"><figcaption>Poudres, pinceaux et le logo O'C Beauté</figcaption></figure>
+      <figure><img src="img/palette-couleurs.jpg" alt="Palette de fards aux tons corail et rouge" loading="lazy"><figcaption>La palette des couleurs chaudes</figcaption></figure>
+      <figure><img src="img/gloss-en-main.jpg" alt="Gloss présenté entre deux mains manucurées" loading="lazy"><figcaption>Le gloss, présenté en vidéo</figcaption></figure>
+      <figure><img src="img/bouquet-douceur.jpg" alt="Bouquet de roses pêche et blanches sur un plateau" loading="lazy"><figcaption>Une note fleurie, en reel sur la page</figcaption></figure>
+      <figure><div class="illu"><svg viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#fdfaf6" stroke-width="2"><path d="M100 30c18 22 18 46 0 68-18-22-18-46 0-68Z"/><path d="M100 98c26-6 46 6 58 30-26 6-46-6-58-30Z"/><path d="M100 98c-26-6-46 6-58 30 26 6 46-6 58-30Z"/><path d="M100 98v72"/><circle cx="100" cy="98" r="6" fill="#e8c4c0" stroke="none"/></g></svg></div><figcaption>Illustration · la fleur du logo</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-grid">
+    <div class="rv"><div class="carte-cadeau"><span>Offrir</span><b>O'C Beauté</b><span>des soins pour vous</span><em>Joyeux Noël</em></div></div>
+    <div class="rv">
+      <div class="kicker">Offrir pour Noël</div>
+      <h2>Offrez un moment chez O'C Beauté</h2>
+      <p>Pour une maman, une sœur, une amie : un moment beauté à Saint-Louis, à glisser sous le sapin.</p>
+      <ul>
+        <li>Un soin du visage pour un teint lumineux</li>
+        <li>Une mise en beauté pour les soirées de fêtes</li>
+        <li>Un regard sublimé par une pose de cils</li>
+      </ul>
+      <a class="btn btn-wa" href="https://wa.me/262692711273?text=Bonjour%20O'C%20Beaut%C3%A9%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl." target="_blank" rel="noopener">🎁 Offrir une carte cadeau</a>
+      <p class="note">Une proposition à imaginer ensemble avec O'C Beauté.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="kicker rv">Venir</div>
+    <h2 class="rv">Prenez rendez-vous</h2>
+    <div class="contact-grid">
+      <div class="bloc rv">
+        <p><b>O'C Beauté</b></p>
+        <p>7 RN 5<br>97450 Saint-Louis, La Réunion</p>
+        <p>📞 <a href="tel:+262692711273">0692 71 12 73</a></p>
+        <p>✉️ <a href="mailto:ocbeaute@gmail.com">ocbeaute@gmail.com</a></p>
+        <div class="btns" style="margin-top:1rem">
+          <a class="btn btn-wa" href="https://wa.me/262692711273?text=Bonjour%20O'C%20Beaut%C3%A9%2C%20je%20voudrais%20prendre%20rendez-vous." target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-rose" href="https://booksy.com/fr-fr/73737_oc-beaute_instituts-de-beaute_102766_saint-louis" target="_blank" rel="noopener">📅 Booksy</a>
+        </div>
+      </div>
+      <div class="bloc rv">
+        <p><b>Suivre O'C Beauté</b></p>
+        <p>Maquillages, mariées et encres à lèvres, partagés en reels au fil des semaines.</p>
+        <div class="reseaux">
+          <a href="https://www.facebook.com/profile.php?id=100083598481132" target="_blank" rel="noopener">Facebook · O'C Beauté</a>
+          <a href="https://booksy.com/fr-fr/73737_oc-beaute_instituts-de-beaute_102766_saint-louis" target="_blank" rel="noopener">Booksy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de O'C Beauté.</footer>
+
+<script>
+(()=>{
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>rm?el.classList.add('vu'):io.observe(el));
+if(rm)return;
+const c=document.getElementById('paillettes'),x=c.getContext('2d');let W,H,P=[],run=true;
+const cols=['232,196,192','212,196,168','168,213,211','255,255,255'];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}
+rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*1.8,v:.15+Math.random()*.35,d:Math.random()*6.28,c:cols[i%4],t:Math.random()*6.28});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.3;p.t+=.04;if(p.y>H+5){p.y=-5;p.x=Math.random()*W}
+const a=.25+.35*Math.abs(Math.sin(p.t));x.fillStyle='rgba('+p.c+','+a+')';
+x.beginPath();x.moveTo(p.x,p.y-p.r*2);x.lineTo(p.x+p.r*.6,p.y);x.lineTo(p.x,p.y+p.r*2);x.lineTo(p.x-p.r*.6,p.y);x.closePath();x.fill();
+x.beginPath();x.moveTo(p.x-p.r*2,p.y);x.lineTo(p.x,p.y+p.r*.6);x.lineTo(p.x+p.r*2,p.y);x.lineTo(p.x,p.y-p.r*.6);x.closePath();x.fill()}
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="O&#x27;C Beauté" defer></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les soins d'Athéna — institut de beauté et bien-être à La Saline</title>
+<meta name="description" content="Soins visage &amp; corps Ella Baché, épilations, beauté des mains et des pieds, massages : votre institut au 256 rue Jean Albany, La Saline.">
+<meta property="og:title" content="Les soins d'Athéna — institut de beauté et bien-être, La Saline">
+<meta property="og:description" content="Soins visage &amp; corps Ella Baché, épilations, beauté des mains et des pieds, massages, au 256 rue Jean Albany à La Saline.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/soins-d-athena-la-saline/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/soins-d-athena-la-saline/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e4c0c1;--poudre:#f3e3e1;--creme:#fbf6f2;--taupe:#8b7b7b;--mauve:#6f5054;--prune:#3f2c30;--or:#c8a46b;--sauge:#8a9a7b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--prune);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.1}
+.ruban{position:relative;z-index:20;background:var(--prune);color:var(--poudre);font-size:.72rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--or);font-weight:500}
+#ciel{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero .fond{position:absolute;inset:0;background:url(img/salon-attente.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(63,44,48,.15) 0%,rgba(63,44,48,.25) 40%,rgba(63,44,48,.82) 100%)}
+.hero .in{position:relative;z-index:4;padding:2rem 1.4rem 3.6rem;max-width:760px;margin:0 auto;width:100%}
+.couronne{width:84px;height:84px;margin-bottom:1rem;animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.sur{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or)}
+.hero .sur{color:#f1d9b4}
+.hero h1{font-size:clamp(2.6rem,11vw,4.6rem);margin:.4rem 0 .5rem;letter-spacing:.01em;opacity:0;transform:translateY(18px);animation:monte 1.4s .3s forwards}
+.hero p.sous{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.35rem;opacity:0;animation:monte 1.4s .8s forwards}
+.hero p.chapo{max-width:34rem;margin:.8rem 0 1.4rem;font-size:.98rem;opacity:0;animation:monte 1.4s 1.1s forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;text-decoration:none;padding:.85rem 1.4rem;border-radius:99px;font-weight:500;font-size:.92rem;letter-spacing:.02em;transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(63,44,48,.25)}
+.btn-or{background:var(--or);color:var(--prune);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 9px rgba(200,164,107,.18)}}
+.btn-clair{border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn-prune{background:var(--prune);color:var(--poudre)}
+.bandeau{position:relative;z-index:4;background:var(--rose);color:var(--mauve);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-style:italic}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 1.2rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{position:relative;z-index:4;padding:4.2rem 1.4rem}
+.wrap{max-width:980px;margin:0 auto}
+h2{font-size:clamp(2rem,8vw,2.9rem);margin:.3rem 0 1rem;color:var(--mauve)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+.intro{background:var(--creme)}
+.intro .grille{display:grid;gap:1.6rem}
+.intro blockquote{font-family:"Cormorant Garamond",serif;font-size:1.32rem;font-style:italic;color:var(--mauve);border-left:2px solid var(--or);padding-left:1rem;margin:1rem 0}
+.intro .src{font-size:.78rem;color:var(--taupe)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.duo figure{border-radius:140px 140px 14px 14px;overflow:hidden;aspect-ratio:3/4.4}
+.duo figure:last-child{margin-top:2.2rem}
+.duo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.duo figure:hover img{transform:scale(1.06)}
+.vague{display:block;width:100%;height:46px;position:relative;z-index:4;margin-bottom:-1px}
+.soins{background:var(--poudre)}
+.cartes{display:grid;gap:1rem;margin-top:1.4rem}
+.carte{background:#fff;border-radius:18px;padding:1.4rem 1.3rem;box-shadow:0 8px 26px rgba(111,80,84,.08);transition:transform .4s,box-shadow .4s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(111,80,84,.16)}
+.carte h3{font-size:1.55rem;color:var(--mauve);margin-bottom:.2rem}
+.carte .ico{font-size:1.4rem}
+.carte p.d{font-size:.9rem;color:var(--taupe);margin-bottom:.7rem}
+.carte ul{list-style:none;font-size:.92rem}
+.carte li{display:flex;justify-content:space-between;gap:1rem;padding:.32rem 0;border-bottom:1px dotted #e6d3d1}
+.carte li b{font-weight:500;white-space:nowrap;color:var(--mauve)}
+.carte li i{font-style:normal;color:var(--taupe);font-size:.8rem}
+.note{font-size:.8rem;color:var(--taupe);margin-top:1.2rem}
+.galerie{background:var(--creme);padding-left:0;padding-right:0}
+.galerie .wrap{padding:0 1.4rem}
+.piste{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 1.4rem 1rem;scrollbar-width:none}
+.piste::-webkit-scrollbar{display:none}
+.piste figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--poudre)}
+.piste img{width:100%;height:100%;object-fit:cover}
+.piste figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;font-size:.82rem;color:#fff;background:linear-gradient(transparent,rgba(63,44,48,.75))}
+.glisse{font-size:.78rem;color:var(--taupe);text-align:center}
+.mot{background:var(--mauve);color:var(--poudre);text-align:center;overflow:hidden}
+.mot h2{color:#fff}
+.mot .sur{color:#f1d9b4}
+.mot .citation{font-family:"Cormorant Garamond",serif;font-size:clamp(1.5rem,6.4vw,2.1rem);font-style:italic;line-height:1.3;max-width:38rem;margin:1rem auto}
+.mot .src{font-size:.78rem;opacity:.8}
+.etoiles{font-size:1.6rem;color:var(--or);letter-spacing:.2em;margin-top:2.2rem}
+.note-bk{font-size:.95rem}
+.logo-rond{width:120px;height:120px;border-radius:50%;margin:0 auto 1.2rem;overflow:hidden;box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+.noel{background:radial-gradient(ellipse at 50% 0%,#55393e 0%,var(--prune) 75%);color:var(--poudre);overflow:hidden}
+.noel h2{color:#f6e4d6}
+.noel .sur{color:var(--or)}
+.bon{position:relative;margin:1.6rem auto 0;max-width:30rem;border:1px solid rgba(200,164,107,.55);border-radius:20px;padding:2rem 1.4rem;text-align:center;background:linear-gradient(145deg,rgba(228,192,193,.12),rgba(200,164,107,.08))}
+.bon .nom{font-family:"Cormorant Garamond",serif;font-size:1.9rem;color:#fff;margin:.4rem 0}
+.bon p{margin-bottom:1.2rem}
+.bon svg{position:absolute;right:-6px;top:-6px;width:80px;height:80px;opacity:.55}
+.noel .petit{font-size:.78rem;opacity:.75;margin-top:1rem}
+.contact{background:var(--poudre)}
+.infos{display:grid;gap:1rem;margin:1.4rem 0}
+.info{background:#fff;border-radius:16px;padding:1.1rem 1.2rem}
+.info h3{font-size:1.25rem;color:var(--mauve)}
+.info a{color:var(--mauve);font-weight:500}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.4rem}
+.reseaux a{font-size:.88rem;border:1px solid var(--rose);border-radius:99px;padding:.35rem .9rem;text-decoration:none}
+footer{position:relative;z-index:4;background:var(--prune);color:#dcc8c4;text-align:center;font-size:.8rem;padding:2rem 1.4rem 2.4rem}
+footer a{color:var(--or)}
+@media(min-width:760px){.intro .grille{grid-template-columns:1.1fr .9fr;align-items:center}.cartes{grid-template-columns:1fr 1fr}.infos{grid-template-columns:repeat(3,1fr)}.piste figure{flex-basis:300px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.hero h1,.hero p{opacity:1!important;transform:none!important}#ciel{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les soins d'Athéna</div>
+<canvas id="ciel" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Le coin détente de l'institut, banquette crème et grande baie vitrée"></div>
+  <div class="in">
+    <svg class="couronne" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#f1d9b4" stroke-width="1.3"><circle cx="50" cy="50" r="14"/><circle cx="50" cy="50" r="5"/><g id="r"><path d="M50 4 L53 30 L50 34 L47 30Z"/></g><use href="#r" transform="rotate(30 50 50)"/><use href="#r" transform="rotate(60 50 50)"/><use href="#r" transform="rotate(90 50 50)"/><use href="#r" transform="rotate(120 50 50)"/><use href="#r" transform="rotate(150 50 50)"/><use href="#r" transform="rotate(180 50 50)"/><use href="#r" transform="rotate(210 50 50)"/><use href="#r" transform="rotate(240 50 50)"/><use href="#r" transform="rotate(270 50 50)"/><use href="#r" transform="rotate(300 50 50)"/><use href="#r" transform="rotate(330 50 50)"/></g></svg>
+    <p class="sur">Votre nouvel institut · La Saline</p>
+    <h1>Les soins d'Athéna</h1>
+    <p class="sous">Institut de beauté et bien-être</p>
+    <p class="chapo">Un espace dédié à la détente et à la mise en valeur de votre beauté naturelle : soins visage &amp; corps Ella Baché, épilations, beauté des mains et des pieds.</p>
+    <div class="btns">
+      <a class="btn btn-or" href="https://booksy.com/fr-fr/73441_les-soins-d-athena_instituts-de-beaute_102722_la-saline" target="_blank" rel="noopener">Réserver sur Booksy</a>
+      <a class="btn btn-clair" href="tel:+262692075195">06 92 07 51 95</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div><span>🪷 Épilations</span><span>💅 Beauté mains et pieds</span><span>💆 Soins visage &amp; corps Ella Baché</span><span>🌸 Massages</span><span>✦ Semi-permanent</span><span>🪷 Épilations</span><span>💅 Beauté mains et pieds</span><span>💆 Soins visage &amp; corps Ella Baché</span><span>🌸 Massages</span><span>✦ Semi-permanent</span></div></div>
+
+<section class="intro">
+  <div class="wrap grille">
+    <div class="rv">
+      <p class="sur">Bienvenue</p>
+      <h2>Une parenthèse de douceur, rue Jean Albany</h2>
+      <blockquote>« Dans une ambiance chaleureuse et professionnelle, chaque soin est réalisé avec attention pour vous offrir un moment de bien-être unique. »</blockquote>
+      <p>Bois blond, rose poudré, plantes et lumière douce : l'institut réunit un coin accueil, une cabine de soins visage, une cabine de massage et un espace onglerie, au cœur de La Saline.</p>
+      <p class="src">Citation : présentation de l'institut sur sa page Booksy.</p>
+    </div>
+    <div class="duo rv">
+      <figure><img src="img/cabine-soin.jpg" alt="Cabine de soins, étagère de serviettes roulées et plantes" loading="lazy"></figure>
+      <figure><img src="img/vasque.jpg" alt="Vasque sur plan marbré, orchidées et produits de soin" loading="lazy" style="object-position:30% 50%"></figure>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 30 C240 60 480 0 720 26 S1200 58 1440 22 V60 H0Z" fill="#f3e3e1"/></svg>
+<section class="soins">
+  <div class="wrap">
+    <p class="sur rv">La carte des soins</p>
+    <h2 class="rv">Prendre soin de vous, de la tête aux pieds</h2>
+    <div class="cartes">
+      <article class="carte rv"><span class="ico">💆</span><h3>Soins du visage Ella Baché</h3><p class="d">Adaptés aux besoins de votre peau.</p>
+        <ul><li>Diagnostic de peau <span><i>15 min</i> <b>15 €</b></span></li><li>Soin visage express <span><i>30 min</i> <b>35 €</b></span></li><li>Nettoyage de peau <span><i>1 h 15</i> <b>45 €</b></span></li><li>Soin Hydratant <span><i>1 h</i> <b>60 €</b></span></li><li>Soin Lissage-Éclat <span><i>1 h 10</i> <b>65 €</b></span></li><li>Soin Relaxant SPA <span><i>1 h 30</i> <b>80 €</b></span></li></ul></article>
+      <article class="carte rv"><span class="ico">🌸</span><h3>Soins du corps</h3><p class="d">Modelages et gommages.</p>
+        <ul><li>Modelage 30 min <span><i>30 min</i> <b>30 €</b></span></li><li>Gommage <span><i>35 min</i> <b>35 €</b></span></li><li>Modelage Californien <span><i>1 h</i> <b>55 €</b></span></li><li>Modelage Sportif <span><i>1 h</i> <b>65 €</b></span></li></ul></article>
+      <article class="carte rv"><span class="ico">🪷</span><h3>Épilations</h3><p class="d">Des épilations soignées, du visage aux jambes.</p>
+        <ul><li>Lèvres <span><i>10 min</i> <b>6 €</b></span></li><li>Sourcils <span><i>20 min</i> <b>8 €</b></span></li><li>Aisselles <span><i>15 min</i> <b>12 €</b></span></li><li>Maillot intégral <span><i>40 min</i> <b>22 €</b></span></li><li>Jambes entières <span><i>35 min</i> <b>25 €</b></span></li></ul></article>
+      <article class="carte rv"><span class="ico">💅</span><h3>Beauté des mains et des pieds</h3><p class="d">Pour sublimer vos mains et vos pieds.</p>
+        <ul><li>Manucure <span><i>20 min</i> <b>15 €</b></span></li><li>Semi-permanent sans dépose <span><i>50 min</i> <b>30 €</b></span></li><li>Renfort gainant <span><i>1 h 10</i> <b>40 €</b></span></li><li>Soin complet pieds <span><i>1 h</i> <b>40 €</b></span></li></ul><p class="d" style="margin:.6rem 0 0">Soin complet pieds : trempage, gommage, massage, beauté des ongles.</p></article>
+    </div>
+    <p class="note rv">Extrait des tarifs publiés par l'institut sur Booksy, où se trouve la carte complète (teinture cils et sourcils, forfaits épilation, soins anti-âge…).</p>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#f3e3e1"><path d="M0 22 C300 0 520 58 760 30 S1180 4 1440 34 V60 H0Z" fill="#fbf6f2"/></svg>
+
+<section class="galerie">
+  <div class="wrap"><p class="sur rv">L'institut en images</p><h2 class="rv">Entrez, installez-vous</h2></div>
+  <div class="piste">
+    <figure><img src="img/cabine-massage.jpg" alt="Cabine de massage aux murs rose poudré" loading="lazy"><figcaption>La cabine de massage</figcaption></figure>
+    <figure><img src="img/onglerie.jpg" alt="Table d'onglerie et présentoirs de vernis" loading="lazy"><figcaption>L'espace onglerie et ses vernis</figcaption></figure>
+    <figure><img src="img/ella-bache.jpg" alt="Étagères de soins Ella Baché" loading="lazy"><figcaption>Les soins Ella Baché</figcaption></figure>
+    <figure><img src="img/accueil.jpg" alt="Étagères en bois de l'accueil garnies de produits" loading="lazy"><figcaption>L'accueil</figcaption></figure>
+    <figure><img src="img/cabine-soin.jpg" alt="Cabine de soins visage" loading="lazy"><figcaption>La cabine de soins</figcaption></figure>
+    <figure><img src="img/salon-attente.jpg" alt="Coin détente avec banquette et baie vitrée" loading="lazy"><figcaption>Le coin détente</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section class="mot">
+  <div class="wrap">
+    <div class="logo-rond rv"><img src="img/logo-athena.jpg" alt="Logo Les soins d'Athéna"></div>
+    <p class="sur rv">Le mot de l'institut</p>
+    <p class="citation rv">« Parce qu'une maman mérite le plus beau des moments de douceur. Éclat, détente, relaxation… »</p>
+    <p class="src rv">Publication Facebook de l'institut, 12 mai 2026 (offre Fête des Mères)</p>
+    <p class="etoiles rv" aria-hidden="true">★★★★★</p>
+    <p class="note-bk rv">Noté 4,9 / 5 par ses clientes et clients sur Booksy (26 avis)</p>
+  </div>
+</section>
+
+<section class="noel">
+  <div class="wrap" style="text-align:center">
+    <p class="sur rv">Offrir pour Noël</p>
+    <h2 class="rv">Un moment de douceur sous le sapin</h2>
+    <div class="bon rv">
+      <svg viewBox="0 0 80 80" aria-hidden="true"><path d="M40 0v80M0 40h80" stroke="#c8a46b" stroke-width="6"/><circle cx="40" cy="40" r="9" fill="none" stroke="#e4c0c1" stroke-width="3"/></svg>
+      <p class="sur">Carte cadeau</p>
+      <p class="nom">Les soins d'Athéna</p>
+      <p>« Pensez aux cartes cadeaux disponibles à l'institut ! » Offrez un soin visage, un modelage ou une mise en beauté des mains : un cadeau qui fait du bien.</p>
+      <a class="btn btn-or" href="https://wa.me/262692075195?text=Bonjour%20Les%20soins%20d%27Ath%C3%A9na%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une carte cadeau</a>
+    </div>
+    <p class="petit rv">Un message WhatsApp suffit pour préparer votre carte cadeau.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap">
+    <p class="sur rv">Rendez-vous</p>
+    <h2 class="rv">À bientôt à La Saline</h2>
+    <div class="infos">
+      <div class="info rv"><h3>Adresse</h3><p>256 rue Jean Albany<br>97422 La Saline, Saint-Paul</p><p><a href="https://www.google.com/maps/search/?api=1&query=-21.0824213,55.2701149" target="_blank" rel="noopener">Voir sur la carte</a></p></div>
+      <div class="info rv"><h3>Horaires</h3><p>Du lundi au vendredi<br>9 h – 18 h, sur rendez-vous</p></div>
+      <div class="info rv"><h3>Contact</h3><p>Renseignements par appel ou SMS :<br><a href="tel:+262692075195">06 92 07 51 95</a></p><div class="reseaux"><a href="https://www.facebook.com/profile.php?id=61561995008761" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/les_soins_d_athena/" target="_blank" rel="noopener">Instagram</a></div></div>
+    </div>
+    <div class="btns rv"><a class="btn btn-prune" href="https://booksy.com/fr-fr/73441_les-soins-d-athena_instituts-de-beaute_102722_la-saline" target="_blank" rel="noopener">Réserver en ligne sur Booksy</a></div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les soins d'Athéna.<br>Photos et textes : <a href="https://www.facebook.com/profile.php?id=61561995008761" target="_blank" rel="noopener">page Facebook</a> et <a href="https://booksy.com/fr-fr/73441_les-soins-d-athena_instituts-de-beaute_102722_la-saline" target="_blank" rel="noopener">page Booksy</a> de l'institut.</footer>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('ciel'),g=c.getContext('2d');let W,H,P=[],run=true;const dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+const N=W<600?18:28;
+function mk(top){const petale=Math.random()<.6;return{x:Math.random()*W,y:top?-20:Math.random()*H,r:petale?4+Math.random()*5:1+Math.random()*1.8,vy:.25+Math.random()*.5,vx:-.2+Math.random()*.4,a:Math.random()*6.28,va:-.02+Math.random()*.04,p:petale,o:.25+Math.random()*.35,t:Math.random()*6.28}}
+for(let i=0;i<N;i++)P.push(mk(false));
+function draw(){if(!run)return;g.clearRect(0,0,W,H);for(const q of P){q.y+=q.vy;q.x+=q.vx+Math.sin(q.t+=.012)*.3;q.a+=q.va;if(q.y>H+20){Object.assign(q,mk(true))}
+g.save();g.translate(q.x,q.y);g.rotate(q.a);g.globalAlpha=q.o;
+if(q.p){g.fillStyle='#e8bfc1';g.beginPath();g.ellipse(0,0,q.r,q.r*.55,0,0,6.28);g.fill();g.fillStyle='rgba(255,255,255,.45)';g.beginPath();g.ellipse(-q.r*.25,-q.r*.1,q.r*.4,q.r*.18,0,0,6.28);g.fill()}
+else{g.globalAlpha=q.o*(.6+.4*Math.sin(q.t*4));g.fillStyle='#d9b77e';g.beginPath();g.moveTo(0,-q.r*2.2);g.lineTo(q.r*.5,0);g.lineTo(0,q.r*2.2);g.lineTo(-q.r*.5,0);g.closePath();g.fill();g.rotate(1.57);g.beginPath();g.moveTo(0,-q.r*2.2);g.lineTo(q.r*.5,0);g.lineTo(0,q.r*2.2);g.lineTo(-q.r*.5,0);g.closePath();g.fill()}
+g.restore()}requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(draw)});requestAnimationFrame(draw)})();
+</script>
+<script src="/outils/cta.js" data-nom="Les soins d&#x27;Athéna" defer></script>
+</body>
+</html>

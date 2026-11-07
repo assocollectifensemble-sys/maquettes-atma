@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les P'tites Fantaisies de Do — créations faites main, Les Avirons</title>
+<meta name="description" content="Les P'tites Fantaisies de Do, aux Avirons : bijoux, cartes artisanales, objets de décoration et idées cadeaux faits main. Marché La Kour tous les samedis matin. 0692 30 34 65.">
+<meta property="og:title" content="Les P'tites Fantaisies de Do — fait main aux Avirons">
+<meta property="og:description" content="Des créations uniques, pleines de douceur et de poésie : bijoux, cartes, assiettes décoratives, noix de coco décorées… au Marché La Kour des Avirons.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ptites-fantaisies-de-do/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ptites-fantaisies-de-do/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--brun:#4a3426;--brun2:#6b4c3b;--creme:#fbf5ec;--sable:#efe3d2;--lin:#e3d3bd;--rose:#d9577f;--rose2:#f2c4d2;--sauge:#8fae7a;--sauge2:#dfe9d6;--turq:#3fa9a0;--blanc:#fff;--gris:#85736a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;font-weight:400;color:var(--brun);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+.script{font-family:'Dancing Script',cursive;font-weight:700}
+canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+.ruban{position:relative;z-index:10;background:var(--brun);color:var(--sable);font-size:.72rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--rose2);font-weight:700}
+/* HERO */
+.hero{position:relative;min-height:90vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--brun);color:var(--blanc)}
+.hero .bg{position:absolute;inset:0;background:url(img/assiettes-decoratives.webp) center 40%/cover no-repeat;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.15) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,52,38,.15) 0%,rgba(74,52,38,.25) 40%,rgba(52,34,24,.86) 100%)}
+.hero .in{position:relative;z-index:2;padding:2rem 1.4rem 3.6rem;max-width:760px;margin:0 auto;width:100%}
+.logo{width:84px;height:84px;border-radius:50%;border:3px solid var(--creme);box-shadow:0 6px 24px rgba(0,0,0,.25);margin-bottom:1.1rem;background:var(--creme)}
+.hero .sur{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose2);font-weight:700}
+.hero h1{font-size:clamp(2.4rem,11vw,4.2rem);margin:.35rem 0 .6rem;color:var(--blanc)}
+.hero h1 .script{display:block;font-size:.62em;color:var(--rose2);margin-bottom:.1rem}
+.hero p.lead{font-size:1.04rem;max-width:34rem;color:#fbeee6}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .25s,box-shadow .25s}
+.btn:active{transform:scale(.97)}
+.btn.p{background:var(--rose);color:var(--blanc);box-shadow:0 8px 24px rgba(217,87,127,.4);animation:breathe 3.2s ease-in-out infinite}
+.btn.g{background:rgba(255,255,255,.14);color:var(--blanc);border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(4px)}
+@keyframes breathe{0%,100%{box-shadow:0 8px 24px rgba(217,87,127,.35)}50%{box-shadow:0 8px 34px rgba(217,87,127,.65)}}
+.fade{opacity:0;transform:translateY(18px);animation:up 1.2s .2s ease forwards}
+.fade.d2{animation-delay:.55s}.fade.d3{animation-delay:.9s}
+@keyframes up{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:46px;margin-top:-45px;position:relative;z-index:3}
+/* sections */
+section{position:relative;z-index:5;padding:3.4rem 1.4rem}
+.wrap{max-width:760px;margin:0 auto}
+.k{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font-weight:700}
+h2{font-size:clamp(1.9rem,8vw,2.7rem);margin:.3rem 0 1rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.on{opacity:1;transform:none}
+.quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.32rem;line-height:1.45;color:var(--brun2);border-left:3px solid var(--rose2);padding-left:1rem}
+.src{font-size:.78rem;color:var(--gris);margin-top:.6rem}
+.visuel{margin-top:1.8rem;border-radius:22px;overflow:hidden;box-shadow:0 14px 40px rgba(74,52,38,.18)}
+/* marquee */
+.marq{overflow:hidden;background:var(--sauge2);border-block:1px solid #cfdcc3;padding:.8rem 0;position:relative;z-index:5}
+.marq .t{display:flex;width:max-content;animation:mq 34s linear infinite}
+.marq span{font-family:'Dancing Script',cursive;font-size:1.35rem;color:var(--brun2);padding:0 1.1rem;white-space:nowrap}
+.marq span::after{content:"✿";font-family:serif;color:var(--rose);margin-left:2.2rem;font-size:1rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* nouveautés */
+.nv{background:var(--sable)}
+.cards{display:grid;gap:1.2rem;margin-top:1.4rem}
+.card{background:var(--blanc);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(74,52,38,.1);transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 16px 34px rgba(74,52,38,.18)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card.tall img{aspect-ratio:4/5}
+.card .tx{padding:1rem 1.1rem 1.2rem}
+.card h3{font-size:1.45rem;margin-bottom:.25rem}
+.card .d{font-size:.74rem;color:var(--rose);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.card p{font-size:.95rem;margin-top:.35rem}
+.card q{font-style:italic;color:var(--brun2)}
+@media(min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+/* galerie */
+.gal{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.4rem 1.2rem;margin:1.2rem -1.4rem 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal figure{flex:0 0 72%;max-width:300px;scroll-snap-align:center;border-radius:18px;overflow:hidden;background:var(--blanc);box-shadow:0 8px 22px rgba(74,52,38,.12)}
+.gal img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{font-size:.82rem;padding:.6rem .8rem;color:var(--brun2)}
+.hint{font-size:.78rem;color:var(--gris);text-align:center}
+/* marché */
+.marche{background:var(--creme)}
+.box{background:var(--blanc);border-radius:22px;padding:1.5rem 1.3rem;box-shadow:0 8px 26px rgba(74,52,38,.08);border:1px dashed var(--lin)}
+.box ul{list-style:none;margin-top:.8rem}
+.box li{padding:.35rem 0 .35rem 1.6rem;position:relative}
+.box li::before{content:"✿";position:absolute;left:0;color:var(--sauge);}
+.rdv{display:flex;gap:1rem;align-items:center;margin-top:1.2rem;background:var(--sauge2);border-radius:16px;padding:1rem}
+.rdv .j{font-family:'Dancing Script',cursive;font-size:1.9rem;color:var(--rose);line-height:1}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0%,#6b4c3b 0%,var(--brun) 70%);color:var(--creme);overflow:hidden}
+.noel .k{color:var(--rose2)}
+.noel h2{color:var(--blanc)}
+.noel p{color:#f3e6da}
+.noel .guir{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.4rem;font-size:1.1rem}
+.noel .guir i{font-style:normal;animation:tw 2.6s ease-in-out infinite}
+.noel .guir i:nth-child(2n){animation-delay:.8s}.noel .guir i:nth-child(3n){animation-delay:1.5s}
+@keyframes tw{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+.noel .duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.5rem 0}
+.noel .duo img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%;border:2px solid rgba(242,196,210,.35)}
+/* contact */
+.contact{background:var(--sable)}
+.lignes{display:grid;gap:.8rem;margin-top:1rem}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;background:var(--blanc);border-radius:16px;padding:1rem 1.1rem;text-decoration:none;transition:transform .25s}
+.ligne:hover{transform:translateX(4px)}
+.ligne .ic{flex:0 0 38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--rose2);color:var(--brun);font-size:1.05rem}
+.ligne b{display:block}
+.ligne span{font-size:.92rem;color:var(--brun2)}
+footer{position:relative;z-index:5;background:var(--brun);color:var(--lin);text-align:center;font-size:.8rem;padding:1.8rem 1.4rem 2.2rem;line-height:1.7}
+footer a{color:var(--rose2)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.fade{opacity:1;transform:none}canvas#fx{display:none}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les P'tites Fantaisies de Do</div>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Assiettes décoratives fleuries des P'tites Fantaisies de Do"></div>
+  <div class="in">
+    <img class="logo fade" src="img/logo.webp" alt="Logo Les P'tites Fantaisies de Do, fait main, artisanal" width="84" height="84">
+    <p class="sur fade">Fait main · Les Avirons</p>
+    <h1 class="fade d2"><span class="script">Les P'tites</span>Fantaisies de Do</h1>
+    <p class="lead fade d3">Bijoux, cartes et petits trésors de décoration, faits main avec douceur et poésie, pour apporter une touche de fantaisie au quotidien.</p>
+    <div class="btns fade d3">
+      <a class="btn p" href="https://wa.me/262692303465?text=Bonjour%2C%20j%27ai%20d%C3%A9couvert%20vos%20cr%C3%A9ations%20et%20j%27aimerais%20en%20savoir%20plus%20%F0%9F%8C%BF">💬 Écrire sur WhatsApp</a>
+      <a class="btn g" href="#marche">Au Marché La Kour</a>
+    </div>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0,26 C240,52 480,0 720,18 C960,36 1200,8 1440,24 L1440,46 L0,46 Z" fill="#fbf5ec"/></svg>
+
+<section id="univers">
+  <div class="wrap">
+    <p class="k rv">Son univers</p>
+    <h2 class="rv">Amoureuse des belles choses</h2>
+    <p class="quote rv">« Amoureuse des belles choses et passionnée par le fait main, je donne vie à des créations uniques, pleines de douceur et de poésie. Chaque bijou, chaque carte, chaque détail est pensé pour apporter une touche de fantaisie au quotidien 🌿💖 »</p>
+    <p class="src rv">— Présentation de la page Facebook Les P'tites Fantaisies de Do</p>
+    <div class="visuel rv"><img src="img/fait-main-visuel.webp" alt="Visuel « Fait Main » des P'tites Fantaisies de Do : boucles d'oreilles, bague turquoise, bougie et papiers fleuris" width="1400" height="933" loading="lazy"></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="t">
+  <span>idées cadeaux originales</span><span>objets de décoration</span><span>cartes artisanales</span><span>bijoux et petites fantaisies</span><span>créations uniques réalisées avec passion</span>
+  <span>idées cadeaux originales</span><span>objets de décoration</span><span>cartes artisanales</span><span>bijoux et petites fantaisies</span><span>créations uniques réalisées avec passion</span>
+</div></div>
+
+<section class="nv" id="creations">
+  <div class="wrap">
+    <p class="k rv">Les nouveautés de l'atelier</p>
+    <h2 class="rv">Chaque pièce, une petite histoire</h2>
+    <div class="cards">
+      <article class="card tall rv">
+        <img src="img/assiettes-decoratives.webp" alt="Assiettes décoratives aux motifs fleuris suspendues" width="900" height="1125" loading="lazy">
+        <div class="tx"><span class="d">Nouveauté · 11 février 2026</span><h3>Assiettes décoratives</h3><p><q>pour embellir vos murs</q> : des fleurs roses, des feuillages tendres, une galerie à suspendre.</p></div>
+      </article>
+      <article class="card rv">
+        <img src="img/pense-bete-aimantes.webp" alt="Pense-bête aimantés aux motifs fleuris et rubans" width="1200" height="605" loading="lazy">
+        <div class="tx"><span class="d">Nouveauté · 18 février 2026</span><h3>Pense-bête aimantés</h3><p><q>Peur d'oublier un RDV important ? Vos petits « pense-bête » aimantés sont disponibles…</q></p></div>
+      </article>
+      <article class="card tall rv">
+        <img src="img/noix-de-coco-collection.webp" alt="Bougeoirs et vide-poches en noix de coco décorés" width="900" height="1125" loading="lazy">
+        <div class="tx"><span class="d">Nouveauté · 25 février 2026</span><h3>Noix de coco en fête</h3><p><q>petits bougeoirs et vides poches en noix de coco… venez découvrir</q></p></div>
+      </article>
+      <article class="card tall rv">
+        <img src="img/coeur-suspendu.webp" alt="Cœur suspendu au motif de feuillage, avec petits personnages en bois" width="900" height="1126" loading="lazy">
+        <div class="tx"><span class="d">Publié le 21 janvier 2026</span><h3>Un cœur à suspendre</h3><p>Feuillage vert, petits personnages en bois et ficelle rouge : une douceur à accrocher chez soi.</p></div>
+      </article>
+    </div>
+    <div class="gal" aria-label="Galerie de créations">
+      <figure><img src="img/noix-de-coco-trio.webp" alt="Trois noix de coco décorées" width="900" height="1125" loading="lazy"><figcaption>Bougeoirs et vide-poches en noix de coco</figcaption></figure>
+      <figure><img src="img/bocaux-decores.webp" alt="Bocaux décorés de fleurs rouges et nœud de raphia" width="900" height="1125" loading="lazy"><figcaption>Bocaux fleuris, nœud de raphia</figcaption></figure>
+      <figure><img src="img/fait-main-visuel.webp" alt="Boucles d'oreilles et bague turquoise du visuel Fait Main" width="1400" height="933" loading="lazy" style="object-position:72% 40%"><figcaption>Bijoux et petites fantaisies</figcaption></figure>
+      <figure><img src="img/pense-bete-aimantes.webp" alt="Pense-bête aimantés fleuris" width="1200" height="605" loading="lazy"><figcaption>Pense-bête aimantés</figcaption></figure>
+    </div>
+    <p class="hint">← faites glisser →</p>
+    <p class="quote rv" style="margin-top:1.6rem;font-size:1.15rem">« Wow. C'est magnifique »</p>
+    <p class="src rv">— un commentaire laissé sous les assiettes décoratives, février 2026</p>
+  </div>
+</section>
+
+<section class="marche" id="marche">
+  <div class="wrap">
+    <p class="k rv">Venez flâner</p>
+    <h2 class="rv">Au Marché La Kour, aux Avirons</h2>
+    <div class="box rv">
+      <p><b>« Grande nouvelle ! »</b> Depuis le samedi 4 juillet 2026, Les P'tites Fantaisies de Do vous attendent <b>tous les samedis matin</b> au Marché La Kour, pour <q>flâner, découvrir et craquer</q> pour leurs créations faites main :</p>
+      <ul>
+        <li>idées cadeaux originales</li>
+        <li>objets de décoration</li>
+        <li>cartes artisanales</li>
+        <li>bijoux et petites fantaisies</li>
+        <li>créations uniques réalisées avec passion</li>
+      </ul>
+      <div class="rdv"><span class="j">Samedi</span><span>matin · Marché La Kour – Les Avirons<br><small>« Chaque pièce est confectionnée avec amour pour apporter une touche de douceur, de couleur et de fantaisie à votre quotidien »</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="guir" aria-hidden="true"><i>✦</i><i>❄</i><i>✿</i><i>✦</i><i>❄</i><i>✿</i><i>✦</i></div>
+    <p class="k rv">Offrir pour Noël</p>
+    <h2 class="rv">Une création faite main sous le sapin</h2>
+    <p class="rv">Un bijou, une carte artisanale, une assiette fleurie ou une noix de coco décorée : offrez une pièce unique, pensée avec douceur aux Avirons. Écrivez à Do ce qui ferait plaisir, pour préparer ensemble une jolie surprise.</p>
+    <div class="duo rv">
+      <img src="img/bocaux-decores.webp" alt="Bocaux décorés à offrir" width="900" height="1125" loading="lazy">
+      <img src="img/noix-de-coco-trio.webp" alt="Noix de coco décorées à offrir" width="900" height="1125" loading="lazy">
+    </div>
+    <div class="btns rv">
+      <a class="btn p" href="https://wa.me/262692303465?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20des%20P%27tites%20Fantaisies%20de%20Do%20pour%20No%C3%ABl%20%F0%9F%8E%81">🎁 Préparer un cadeau sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="k rv">Rendez-vous</p>
+    <h2 class="rv">Retrouver Do</h2>
+    <div class="lignes">
+      <a class="ligne rv" href="tel:+262692303465"><span class="ic">✆</span><span><b>0692 30 34 65</b><span>Appeler ou écrire</span></span></a>
+      <a class="ligne rv" href="https://wa.me/262692303465?text=Bonjour%2C%20j%27ai%20d%C3%A9couvert%20vos%20cr%C3%A9ations%20%F0%9F%8C%BF"><span class="ic">💬</span><span><b>WhatsApp</b><span>Un message, une question, une commande</span></span></a>
+      <a class="ligne rv" href="https://www.google.com/maps/search/?api=1&query=127%20chemin%20Kerbel%2097425%20Les%20Avirons" target="_blank" rel="noopener"><span class="ic">⌂</span><span><b>127 chemin Kerbel</b><span>97425 Les Avirons, La Réunion</span></span></a>
+      <a class="ligne rv" href="#marche"><span class="ic">✿</span><span><b>Marché La Kour – Les Avirons</b><span>Tous les samedis matin</span></span></a>
+      <a class="ligne rv" href="https://www.facebook.com/profile.php?id=61583609460247" target="_blank" rel="noopener"><span class="ic">f</span><span><b>Facebook</b><span>Les P'tites Fantaisies de Do · nouveautés et rendez-vous</span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les P'tites Fantaisies de Do.<br>Photos et textes : <a href="https://www.facebook.com/profile.php?id=61583609460247" target="_blank" rel="noopener">page Facebook Les P'tites Fantaisies de Do</a></footer>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('fx'),g=c.getContext('2d');let W,H,run=true;const dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener('resize',rs);
+const cols=['#f2c4d2','#d9577f','#8fae7a','#3fa9a0','#f6dca8'];const P=[];
+for(let i=0;i<26;i++)P.push(np(true));
+function np(f){const fl=Math.random()<.55;return{x:Math.random()*W,y:f?Math.random()*H:-20,r:fl?3+Math.random()*4:1+Math.random()*1.6,fl,c:cols[Math.random()*cols.length|0],vy:.25+Math.random()*.45,vx:(Math.random()-.5)*.3,a:Math.random()*6.28,va:(Math.random()-.5)*.02,o:.25+Math.random()*.35,ph:Math.random()*6.28}}
+function flower(p){g.save();g.translate(p.x,p.y);g.rotate(p.a);g.globalAlpha=p.o;g.fillStyle=p.c;for(let k=0;k<5;k++){g.rotate(1.2566);g.beginPath();g.ellipse(0,p.r*.9,p.r*.55,p.r,0,0,6.28);g.fill()}g.fillStyle='#fbe7a6';g.beginPath();g.arc(0,0,p.r*.35,0,6.28);g.fill();g.restore()}
+function spark(p,t){g.save();g.globalAlpha=p.o*(.5+.5*Math.sin(t/500+p.ph));g.fillStyle='#fff6d8';g.translate(p.x,p.y);g.beginPath();for(let k=0;k<4;k++){g.rotate(1.5708);g.moveTo(0,0);g.lineTo(p.r*.6,p.r*.6);g.lineTo(0,p.r*3);}g.fill();g.restore()}
+function loop(t){if(!run)return;g.clearRect(0,0,W,H);for(let i=0;i<P.length;i++){const p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(t/1600+p.ph)*.25;p.a+=p.va;if(p.y>H+20)P[i]=np(false);p.fl?flower(p):spark(p,t)}requestAnimationFrame(loop)}
+requestAnimationFrame(loop);document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(loop)})})();
+</script>
+<script src="/outils/cta.js" data-nom="Les P&#x27;tites Fantaisies de Do" defer></script>
+</body>
+</html>
