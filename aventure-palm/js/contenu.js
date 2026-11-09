@@ -110,7 +110,7 @@ window.H = (function () {
         terrain: "dans l'application complète, la famille trouve ce repère près du potager (emplacement à choisir avec vous) et peut y découvrir ce qui pousse en ce moment." },
       { id: "chambre", lieu: "Ta suite au PALM", lieuCourt: "La chambre", titre: "Les 5 défis de Goutte", resume: "Trouve les défis cachés dans ta chambre", duree: "5 min", x: 76, y: 378,
         mission: "Goutte s'est cachée dans ta chambre… avec <b>5 défis</b> ! Trouve-les et relève-les en famille.",
-        regle: ["Touche un objet entouré de pointillés.", "Lis le défi… et accepte-le !", "5 défis acceptés = la goutte de la chambre."],
+        regle: ["Touche un objet entouré de pointillés.", "Fais le geste avec ton doigt : glisse, appuie, tourne !", "5 défis relevés = la goutte de la chambre."],
         boutonJeu: "🔎 Je cherche Goutte !",
         jeu: { type: "chambre", titreBarre: "🔎 Défis trouvés",
           palette: { mur: "#f6f1e6", sol: "#c9a77c", drap: "#9ed3a6", bois: "#9a7450", accent: "#f2b26b" }, vue,
@@ -118,13 +118,13 @@ window.H = (function () {
           msgReste: "Encore {n} défi(s) caché(s) !",
           msgGagne: "5 sur 5 ! Goutte saute de joie : plic, ploc, plic !",
           objets: [
-            { obj: "douche", x: 254, y: 106, s: .85, r: 34, icone: "🚿", titre: "Défi douche chanson", defi: "La douche du PALM a un réducteur de débit : elle mousse aussi bien ! Défi : une douche le temps d'une chanson. Laquelle choisis-tu ?", bravo: "Douche en chanson : bravo, la star !" },
-            { obj: "robinet", x: 318, y: 132, s: .8, r: 32, icone: "🪥", titre: "Défi brosse à dents", defi: "Robinet fermé pendant le brossage, et on compte jusqu'à 100 avec Goutte. Qui arrive au bout sans rire ?", bravo: "Dents qui brillent, robinet qui dort !" },
-            { obj: "clim", x: 98, y: 136, s: .85, r: 38, icone: "🌬️", titre: "Défi vent du large", defi: "Fenêtre ouverte ? La clim fait une pause et laisse entrer le vent de Grande Anse. Ferme la fenêtre et elle repart !", bravo: "Vent du large : 1, clim : au repos !" },
-            { obj: "serviette", x: 214, y: 370, couleur: "#2e9d6a", icone: "🧺", titre: "Défi serviette voyageuse", defi: "Suspends ta serviette pour qu'elle sèche au soleil. Demain, elle repart avec toi à la plage !", bravo: "Serviette prête pour l'aventure !" },
-            { obj: "tri", x: 112, y: 384, icone: "♻️", titre: "Défi du tri", defi: "Emballage, papier, épluchure : trouve le bon bac du premier coup. Les épluchures, elles, rêvent du potager !", bravo: "Tri parfait ! Les épluchures font la fête au potager !" }
+            { obj: "douche", x: 254, y: 106, s: .85, r: 34, icone: "🚿", titre: "Défi douche chanson", defi: "La douche du PALM a un réducteur de débit : elle mousse aussi bien ! Défi : une douche le temps d'une chanson. Laquelle choisis-tu ?", vrai: "Ce soir, fais pareil sous la vraie douche : le temps d'une chanson, puis on ferme. Laquelle choisis-tu ?", bravo: "Douche en chanson : bravo, la star !" },
+            { obj: "robinet", x: 318, y: 132, s: .8, r: 32, icone: "🪥", titre: "Défi brosse à dents", defi: "Robinet fermé pendant le brossage, et on compte jusqu'à 100 avec Goutte. Qui arrive au bout sans rire ?", vrai: "Ce soir, robinet fermé pour de vrai pendant le brossage, et on compte jusqu'à 100 avec Goutte. Qui arrive au bout sans rire ?", bravo: "Dents qui brillent, robinet qui dort !" },
+            { obj: "clim", x: 98, y: 136, s: .85, r: 38, icone: "🌬️", titre: "Défi vent du large", defi: "Fenêtre ouverte ? La clim fait une pause et laisse entrer le vent de Grande Anse. Ferme la fenêtre et elle repart !", vrai: "Dans ta vraie suite, c'est pareil : fenêtre ouverte, la clim fait une pause et le vent de Grande Anse entre. Fenêtre fermée, elle repart !", bravo: "Vent du large : 1, clim : au repos !" },
+            { obj: "serviette", x: 214, y: 370, couleur: "#2e9d6a", icone: "🧺", titre: "Défi serviette voyageuse", defi: "Suspends ta serviette pour qu'elle sèche au soleil. Demain, elle repart avec toi à la plage !", vrai: "Ce soir, fais pareil avec ta vraie serviette : suspends-la pour qu'elle sèche. Demain, elle repart avec toi à la plage. Goutte compte sur toi !", bravo: "Serviette prête pour l'aventure !" },
+            { obj: "tri", x: 112, y: 384, icone: "♻️", titre: "Défi du tri", defi: "Emballage, papier, épluchure : trouve le bon bac du premier coup. Les épluchures, elles, rêvent du potager !", vrai: "Pendant ton séjour, trie pour de vrai : emballage, papier, épluchure, chacun son bac. Les épluchures, elles, rêvent du potager !", tri: {"bacs": [{"id": "emb", "nom": "Emballages et papiers", "c": "jaune"}, {"id": "eplu", "nom": "Épluchures", "c": "marron"}], "dechets": [{"obj": "emballage", "nom": "emballage", "bac": "emb"}, {"obj": "papier", "nom": "papier", "bac": "emb"}, {"obj": "epluchure", "nom": "épluchure", "bac": "eplu"}]}, bravo: "Tri parfait ! Les épluchures font la fête au potager !" }
           ] },
-        bravo: { titre: "La chambre est au top !", gainIcone: "💧", gain: "Goutte d'or n°2 : la goutte de la chambre", gainSous: "5 défis acceptés en famille.", perso: "Grâce à toi, chaque goutte de la chambre a trouvé sa mission !" },
+        bravo: { titre: "La chambre est au top !", gainIcone: "💧", gain: "Goutte d'or n°2 : la goutte de la chambre", gainSous: "5 défis relevés en famille.", perso: "Grâce à toi, chaque goutte de la chambre a trouvé sa mission !" },
         savais: { titre: "Le savais-tu ?", texte: "Le PALM est le premier hôtel de l'île à avoir reçu l'Écolabel européen, en 2014. Et il le garde depuis !", src: "palm.re ; base Écolabel ADEME (licence FR/051/010)" },
         terrain: "dans la vraie suite, une petite carte ou un QR code lance la mission, par exemple le soir ou un jour de pluie (version chambre, à définir avec vous)." },
       { id: "badula", lieu: "Le jardin des plantes de l'île", lieuCourt: "Le jardin", titre: "Les plantes péï", resume: "Retrouve les plantes indigènes", x: 100, y: 212,
@@ -172,7 +172,7 @@ window.H = (function () {
       lots: [["🍹", "1 mocktail « Goutte » pour l'enfant", "au Kah Beach"], ["🍽️", "1 dessert offert avec le menu enfant", "au Makassar"], ["💆", "-10 % sur un soin pour les parents", "à Akea Spa"]],
       chambre: { texte: "Une mini-aventure se joue aussi dans la suite, le soir ou un jour de pluie. Les écogestes deviennent des défis, jamais des consignes :", defis: ["La douche le temps d'une chanson", "Brosse à dents : on compte jusqu'à 100, robinet fermé", "Le « vent du large » : fenêtre ouverte, clim au repos", "La serviette voyageuse, suspendue pour demain", "Le tri du premier coup"] },
       complete: ["5 étapes : le potager, la suite, le jardin, le Makassar, le Kah Beach (lieux à choisir avec vous)", "Une version spéciale pour le mini club des vacances scolaires", "Voix de Goutte en français, créole et anglais (option)", "Un repère à trouver sur place à chaque étape (panneau ou QR code)", "Une nouvelle aventure par saison, pour les familles qui reviennent", "Hors connexion, sans téléchargement, sans compte, sans donnée personnelle"],
-      stats: [["184", "familles ont terminé l'aventure"], ["52 min", "de jeu en moyenne"], ["88 %", "des défis « chambre » acceptés"], ["9,2/10", "note des enfants"]],
+      stats: [["184", "familles ont terminé l'aventure"], ["52 min", "de jeu en moyenne"], ["88 %", "des défis « chambre » relevés"], ["9,2/10", "note des enfants"]],
       barres: [["Étape potager", 95], ["Étape chambre", 88], ["Étape jardin", 74], ["Bons utilisés", 69]]
     }
   };

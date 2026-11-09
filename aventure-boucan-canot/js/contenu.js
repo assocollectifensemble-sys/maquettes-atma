@@ -92,7 +92,7 @@ window.H = (function () {
     etapes: [
       { id: "chambre", lieu: "Ta chambre à Boucan Canot", lieuCourt: "La chambre", titre: "La cabine du capitaine", resume: "Trouve les défis cachés dans ta chambre", duree: "5 min", x: 91, y: 296,
         mission: "Ta chambre est ta cabine de capitaine ! J'y ai caché <b>5 défis</b>. Trouve-les et relève-les avec ton équipage.",
-        regle: ["Touche un objet entouré de pointillés.", "Lis le défi… et accepte-le !", "5 défis acceptés = la clé verte de la cabine."],
+        regle: ["Touche un objet entouré de pointillés.", "Fais le geste avec ton doigt : glisse, appuie, tourne !", "5 défis relevés = la clé verte de la cabine."],
         boutonJeu: "🔎 J'inspecte la cabine !",
         jeu: { type: "chambre", titreBarre: "🔎 Défis trouvés",
           palette: { mur: "#f3f6f8", sol: "#c7a57a", drap: "#8cc3ea", bois: "#8f6a46", accent: "#f2694b" }, vue,
@@ -100,13 +100,13 @@ window.H = (function () {
           msgReste: "Encore {n} défi(s) caché(s) !",
           msgGagne: "5 défis sur 5 ! Cabine parée, capitaine. Ti Canot fait des bonds de joie !",
           objets: [
-            { obj: "robinet", x: 284, y: 112, icone: "🪥", titre: "Défi du pirate brosseur", defi: "Ce soir, robinet fermé pendant le brossage. En échange, tu as le droit de faire ta plus belle grimace de pirate dans le miroir. Arrr !", bravo: "Dents de pirate, robinet au repos !" },
-            { obj: "clim", x: 98, y: 136, s: .85, r: 38, icone: "🌬️", titre: "Défi brise marine", defi: "Fenêtre ouverte ? La clim se repose et la brise de Boucan Canot prend le relais. On ferme la fenêtre, et la clim reprend la barre !", bravo: "La brise et la clim font équipe !" },
-            { obj: "lampe", x: 177, y: 234, s: .85, r: 34, icone: "💡", titre: "Défi phare éteint", defi: "En quittant la cabine, le capitaine éteint tous les phares (les lumières !) en moins de 5 secondes. Top chrono !", bravo: "Mission éclair réussie !" },
-            { obj: "serviette", x: 214, y: 370, couleur: "#1f7fc4", icone: "🏴‍☠️", titre: "Défi drapeau du navire", defi: "Suspends ta serviette comme un drapeau de navire : elle sèche, et demain elle repart avec toi à la plage !", bravo: "Drapeau hissé, serviette prête !" },
-            { obj: "tri", x: 112, y: 384, icone: "♻️", titre: "Défi du tri", defi: "Emballage, bouteille, papier : trouve le bon bac du premier coup, comme un vrai matelot de la Clef Verte.", bravo: "Tri parfait, moussaillon !" }
+            { obj: "robinet", x: 284, y: 112, icone: "🪥", titre: "Défi du pirate brosseur", defi: "Ce soir, robinet fermé pendant le brossage. En échange, tu as le droit de faire ta plus belle grimace de pirate dans le miroir. Arrr !", vrai: "Ce soir, pour de vrai : robinet fermé pendant le brossage, et ta plus belle grimace de pirate dans le miroir en récompense. Arrr !", bravo: "Dents de pirate, robinet au repos !" },
+            { obj: "clim", x: 98, y: 136, s: .85, r: 38, icone: "🌬️", titre: "Défi brise marine", defi: "Fenêtre ouverte ? La clim se repose et la brise de Boucan Canot prend le relais. On ferme la fenêtre, et la clim reprend la barre !", vrai: "Dans ta vraie cabine, c'est pareil : fenêtre ouverte, la clim se repose et la brise prend le relais. Fenêtre fermée, la clim reprend la barre !", bravo: "La brise et la clim font équipe !" },
+            { obj: "lampe", x: 177, y: 234, s: .85, r: 34, icone: "💡", titre: "Défi phare éteint", defi: "En quittant la cabine, le capitaine éteint tous les phares (les lumières !) en moins de 5 secondes. Top chrono !", vrai: "En quittant ta vraie cabine, capitaine, fais pareil : tous les phares (les lumières !) éteints en moins de 5 secondes. Top chrono !", bravo: "Mission éclair réussie !" },
+            { obj: "serviette", x: 214, y: 370, couleur: "#1f7fc4", icone: "🏴‍☠️", titre: "Défi drapeau du navire", defi: "Suspends ta serviette comme un drapeau de navire : elle sèche, et demain elle repart avec toi à la plage !", vrai: "Ce soir, fais pareil avec ta vraie serviette : hisse-la comme un drapeau de navire pour qu'elle sèche. Ti Canot compte sur toi, moussaillon !", bravo: "Drapeau hissé, serviette prête !" },
+            { obj: "tri", x: 112, y: 384, icone: "♻️", titre: "Défi du tri", defi: "Bouteille, papier, épluchure : trouve le bon bac du premier coup, comme un vrai matelot de la Clef Verte.", vrai: "Pendant ton séjour, trie pour de vrai : bouteille, papier, épluchure, chacun son bac, comme un vrai matelot de la Clef Verte.", tri: {"bacs": [{"id": "emb", "nom": "Emballages et papiers", "c": "jaune"}, {"id": "eplu", "nom": "Épluchures", "c": "marron"}], "dechets": [{"obj": "bouteille", "nom": "bouteille", "bac": "emb"}, {"obj": "papier", "nom": "papier", "bac": "emb"}, {"obj": "epluchure", "nom": "épluchure", "bac": "eplu"}]}, bravo: "Tri parfait, moussaillon !" }
           ] },
-        bravo: { titre: "Cabine parée !", gainIcone: "🔑", gain: "Clé verte n°1 : la clé de la cabine", gainSous: "5 défis acceptés par tout l'équipage.", perso: "Quel équipage ! Ta cabine est la plus Clef Verte du port !" },
+        bravo: { titre: "Cabine parée !", gainIcone: "🔑", gain: "Clé verte n°1 : la clé de la cabine", gainSous: "5 défis relevés par tout l'équipage.", perso: "Quel équipage ! Ta cabine est la plus Clef Verte du port !" },
         savais: { titre: "Le savais-tu ?", texte: "La Clef Verte récompense les hôtels qui prennent soin de l'eau, de l'énergie et des déchets, et qui en parlent à leurs clients. L'hôtel Boucan Canot fait partie du palmarès 2026.", src: "Palmarès Clef Verte 2026 (laclefverte.org)" },
         terrain: "dans la vraie chambre, une petite carte ou un QR code lance la mission, par exemple le soir ou un jour de pluie (version chambre, à définir avec vous)." },
       { id: "plage", lieu: "La plage de Boucan Canot", lieuCourt: "La plage", titre: "Les trésors de la plage", resume: "Ramasse ce qui n'est pas de la plage", duree: "3 min", x: 160, y: 168,
@@ -173,7 +173,7 @@ window.H = (function () {
       lots: [["🍨", "1 dessert offert à l'enfant", "à La Table du Boucan"], ["🍹", "1 mocktail « Ti Canot » offert", "au moment de votre choix"], ["💆", "-10 % sur un massage pour les parents", "à l'espace massage"]],
       chambre: { texte: "Une mini-aventure se joue aussi dans la chambre, le soir ou un jour de pluie. Les écogestes deviennent des défis, jamais des consignes :", defis: ["Le pirate brosseur : robinet fermé, grimace autorisée", "La brise marine : fenêtre ouverte, clim au repos", "Le phare éteint en 5 secondes", "La serviette « drapeau du navire », suspendue pour demain", "Le tri du premier coup"] },
       complete: ["5 étapes : la chambre, la plage, La Table du Boucan, la piscine, l'accueil (lieux à choisir avec vous)", "Voix de Ti Canot en français, créole et anglais (option)", "Un repère à trouver sur place à chaque étape (panneau ou QR code)", "Une nouvelle aventure par saison : vos activités du critère 2.10", "Adaptable ensuite aux Créoles, du même groupe", "Hors connexion, sans téléchargement, sans compte, sans donnée personnelle"],
-      stats: [["167", "familles ont terminé l'aventure"], ["45 min", "de jeu en moyenne"], ["84 %", "des défis « chambre » acceptés"], ["9,0/10", "note des enfants"]],
+      stats: [["167", "familles ont terminé l'aventure"], ["45 min", "de jeu en moyenne"], ["84 %", "des défis « chambre » relevés"], ["9,0/10", "note des enfants"]],
       barres: [["Étape chambre", 93], ["Étape plage", 90], ["Étape Table", 76], ["Bons utilisés", 70]]
     }
   };

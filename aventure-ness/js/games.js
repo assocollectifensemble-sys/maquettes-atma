@@ -175,36 +175,80 @@
     return { resoudre() { let k = 0; items.filter(o => o.dechet && !o.pris).forEach(o => setTimeout(() => { if (!o.pris) range(o, svg.querySelector('.item[data-i="' + o.i + '"]')); }, 220 * k++)); } };
   }
 
-  /* ======================= CHAMBRE (défis cachés) ======================= */
+  /* ======================= CHAMBRE (défis cachés → micro-actions) =======================
+     1. la chambre : on touche un objet qui brille ;
+     2. le volet « action » : on FAIT le geste au doigt (Actions.scene, chambre.js) ;
+     3. « Bravo ! » + la phrase qui invite à faire pareil dans la vraie chambre (o.vrai). */
   function chambre(cfg, hote, opts) {
     const H = P(), objs = cfg.objets.map((o, i) => Object.assign({ i, fait: false }, o));
     let n = 0, finie = false, ouvert = null;
-    let s = '<svg viewBox="0 0 360 440" aria-label="La chambre : trouve les défis cachés">' + Obj.chambre(cfg.palette, cfg.vue);
+    let s = '<svg class="vue-chambre" viewBox="0 0 360 440" aria-label="La chambre : trouve les défis cachés">' + Obj.chambre(cfg.palette, cfg.vue);
     objs.forEach(o => {
-      s += '<g class="obj defi" data-i="' + o.i + '" transform="translate(' + o.x + ' ' + o.y + ')"><circle class="indice-pulse" r="' + (o.r || 40) + '" fill="none" stroke="' + H.couleurs.accent + '" stroke-width="3" stroke-dasharray="6 6"/>' +
-        '<g class="obj-in"><g class="dessin" transform="scale(' + (o.s || 1) + ')">' + Obj[o.obj]("avant", o.couleur) + '</g></g><circle class="cible" r="' + (o.r || 40) + '"/></g>';
+      s += '<g class="obj defi" data-i="' + o.i + '" tabindex="0" role="button" aria-label="' + o.titre + '" transform="translate(' + o.x + ' ' + o.y + ')"><circle class="indice-pulse" r="' + (o.r || 40) + '" fill="none" stroke="' + H.couleurs.accent + '" stroke-width="3" stroke-dasharray="6 6"/>' +
+        '<g class="obj-in"><g class="dessin" transform="scale(' + (o.s || 1) + ')">' + Obj[o.obj]("avant", o.couleur) + '</g></g><circle class="cible" r="' + Math.max(o.r || 40, 26) + '"/></g>';
     });
     s += '<g transform="translate(296 352) scale(.36)" class="flotte" pointer-events="none">' + H.perso("coucou") + '</g></svg>';
-    hote.innerHTML = '<div class="jeu">' + barre(cfg.titreBarre || "🔎 Défis trouvés", objs.length) + s + '</div><div class="carte-defi" hidden></div>';
-    const svg = hote.querySelector("svg"), carteD = hote.querySelector(".carte-defi");
+    hote.innerHTML = '<div class="jeu">' + barre(cfg.titreBarre || "🔎 Défis trouvés", objs.length) + s + '<div class="volet" hidden></div></div>';
+    const svg = hote.querySelector(".vue-chambre"), volet = hote.querySelector(".volet");
+    const vrai = o => o.vrai || o.defi;
+
     function ouvre(o) {
+      if (finie || o.fait) return;
       ouvert = o; S().bulle();
-      carteD.hidden = false;
-      carteD.innerHTML = '<div class="savais" style="margin-top:12px"><h3>' + o.icone + ' ' + o.titre + '</h3><p>' + o.defi + '</p></div><button class="btn grand" data-act="defi-ok">' + (o.bouton || "Défi accepté ✓") + '</button>';
-      carteD.querySelector("button").addEventListener("click", () => valide(o));
-      opts.say(o.indice || ""); carteD.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      const sc = window.Actions && Actions.scene(o, { palette: cfg.palette, vue: cfg.vue });
+      if (!sc) { valide(o); return; }
+      svg.style.display = "none"; volet.hidden = false;
+      volet.innerHTML = '<div class="volet-tete"><button class="ib" data-v="retour" aria-label="Revenir à la chambre">←</button><b>' + o.icone + ' ' + o.titre + '</b></div>' +
+        '<p class="volet-consigne" aria-live="polite">' + Actions.consigne(o) + '</p>' +
+        '<svg class="scene-action" viewBox="0 0 360 300" aria-label="' + o.titre + ' : ' + Actions.consigne(o).replace(/"/g, "") + '">' + sc.svg + '</svg>' +
+        '<div class="volet-bravo" hidden></div>';
+      const el = volet.querySelector(".scene-action"), cons = volet.querySelector(".volet-consigne");
+      volet.querySelector('[data-v="retour"]').addEventListener("click", ferme);
+      opts.say(o.indice || "");
+      sc.init(el, {
+        say: t => { cons.textContent = t; cons.classList.remove("secoue"); void cons.offsetWidth; cons.classList.add("secoue"); },
+        fini: () => reussi(o, el)
+      });
+      hote.querySelector(".jeu").scrollIntoView({ behavior: "smooth", block: "start" });
+      const cible = el.querySelector('[tabindex="0"]'); if (cible && document.activeElement && document.activeElement.closest && document.activeElement.closest(".defi")) cible.focus({ preventScroll: true });
     }
-    function valide(o) {
-      if (o.fait) return; o.fait = true; n++; ouvert = null;
+    function reussi(o, el) {
+      if (o.fait) return;
+      const f = el.querySelector(".fete-act"); if (f) f.classList.add("on");
+      el.classList.add("gagne"); S().ok(); try { if (window.Audio2) Audio2.vibre([30, 60, 30]); } catch (e) { /* rien */ }
+      valide(o, true);
+      const der = n === objs.length, b = volet.querySelector(".volet-bravo");
+      volet.querySelector(".volet-consigne").textContent = "✓ " + (o.bravo || "Réussi !");
+      b.hidden = false;
+      b.innerHTML = '<div class="bravo-act"><span class="bravo-titre">Bravo !</span><p class="bravo-sous">' + (o.bravo || "") + '</p></div>' +
+        '<div class="vrai-defi"><h3>🏠 Et maintenant, pour de vrai…</h3><p>' + vrai(o) + '</p></div>' +
+        '<button class="btn grand" data-v="suite">' + (der ? "🎉 Voir ma clé" : "➜ Retour à la chambre (" + (objs.length - n) + " défi" + (objs.length - n > 1 ? "s" : "") + " à trouver)") + '</button>';
+      if (der) b.querySelector("button").textContent = "🎉 " + (cfg.boutonFin || "Terminer la mission");
+      b.querySelector("button").addEventListener("click", () => { if (der) { finie = true; opts.say(cfg.msgGagne); fin(opts, 0, 200); } else ferme(); });
+      setTimeout(() => b.scrollIntoView({ behavior: "smooth", block: "nearest" }), 350);
+    }
+    function ferme() {
+      ouvert = null; volet.hidden = true; volet.innerHTML = ""; svg.style.display = "";
+      opts.say(n ? (cfg.msgReste || "Encore {n} défi(s) caché(s) !").replace("{n}", objs.length - n) : cfg.msgDebut);
+    }
+    function valide(o, silencieux) {
+      if (o.fait) return; o.fait = true; n++;
       const g = svg.querySelector('.defi[data-i="' + o.i + '"]');
-      g.querySelector(".dessin").innerHTML = Obj[o.obj]("apres", o.couleur); g.querySelector(".indice-pulse").remove(); g.classList.add("fait");
-      pastille(hote, n); S().ok(); carteD.hidden = true; carteD.innerHTML = "";
+      g.querySelector(".dessin").innerHTML = Obj[o.obj]("apres", o.couleur); const ip = g.querySelector(".indice-pulse"); if (ip) ip.remove(); g.classList.add("fait");
+      pastille(hote, n);
+      if (silencieux) return;
+      S().ok();
       if (n === objs.length) { finie = true; opts.say(cfg.msgGagne); fin(opts, 0, 1200); }
       else opts.say(o.bravo + " " + (cfg.msgReste || "Encore {n} défi(s) caché(s) !").replace("{n}", objs.length - n));
     }
-    svg.addEventListener("click", e => { const g = e.target.closest(".defi"); if (!g || finie) return; const o = objs[+g.dataset.i]; if (o.fait) { opts.say(o.bravo); return; } ouvre(o); });
+    const choisit = e => { const g = e.target.closest(".defi"); if (!g || finie) return; const o = objs[+g.dataset.i]; if (o.fait) { opts.say(o.bravo + " " + vrai(o)); return; } ouvre(o); };
+    svg.addEventListener("click", choisit);
+    svg.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choisit(e); } });
     opts.say(cfg.msgDebut);
-    return { resoudre() { let k = 0; objs.filter(o => !o.fait).forEach(o => setTimeout(() => valide(o), 250 * k++)); }, ouvre: i => ouvre(objs[i]) };
+    return {
+      resoudre() { if (ouvert) ferme(); let k = 0; objs.filter(o => !o.fait).forEach(o => setTimeout(() => valide(o), 250 * k++)); },
+      ouvre: i => ouvre(objs[i]), objets: () => objs.map(o => ({ obj: o.obj, fait: o.fait }))
+    };
   }
 
   window.Games = { mount(cfg, hote, opts) { return ({ chemin, tuyaux, plage, chambre })[cfg.type](cfg, hote, opts); } };

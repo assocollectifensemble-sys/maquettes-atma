@@ -39,11 +39,13 @@
         '<path d="M-20 -38 h40 v38 q-20 6 -40 0z" fill="' + c + '"/><path d="M-20 -14 h40 M-20 -8 h40" stroke="#fff" stroke-width="3" opacity=".7"/>' + etincelle(-14, -26) + coche(26, -44);
     },
     lampe(e) {
+      // états : « avant » (allumée), « eteinte » (éteinte, sans coche), « apres » (éteinte + lune + coche)
       let s = '';
       if (e === "avant") s += '<circle class="halo-lampe" cx="0" cy="-18" r="34" fill="#ffe27a" opacity=".45"/>';
       s += '<path d="M-16 -34 h32 l8 22 h-48z" fill="' + (e === "avant" ? "#ffe9a8" : "#d9d2c3") + '" stroke="#c9b98f" stroke-width="2"/>' +
         '<rect x="-2" y="-12" width="4" height="22" fill="#8a7a63"/><ellipse cx="0" cy="12" rx="14" ry="4" fill="#8a7a63"/>';
       if (e === "apres") s += '<path d="M14 -40 a9 9 0 1 0 8 12 a7 7 0 1 1 -8 -12z" fill="#9fb4ff"/>' + coche(24, -2);
+      if (e === "eteinte") s += '<rect x="14" y="-2" width="12" height="16" rx="3" fill="#e9e1cf" stroke="#8a7a63" stroke-width="1.5"/><rect x="17" y="6" width="6" height="5" rx="1.5" fill="#8a7a63"/>';
       return s;
     },
     carafe(e) {
@@ -72,6 +74,10 @@
       else s += '<path d="M0 0 v34" stroke="#8a6440" stroke-width="3"/>' + etincelle(-14, 16, "#bfe9ff") + coche(30, -38);
       return s;
     },
+
+    /* ---------- déchets du jeu de tri (chambre) ---------- */
+    papier() { return '<path d="M-14 -10 l8 -6 l9 4 l8 -5 l6 8 l-3 9 l5 8 l-9 7 l-8 -4 l-9 4 l-6 -9 l3 -7z" fill="#f4f1e8" stroke="#b8b09a" stroke-width="2" stroke-linejoin="round"/><path d="M-8 -4 l6 3 l7 -4 M-6 6 l7 -2 l6 4" fill="none" stroke="#cfc6ad" stroke-width="1.6"/>'; },
+    epluchure() { return '<path d="M0 -14 q4 -4 6 0 q-2 8 -1 12 q8 2 12 12 q-8 0 -13 -6 q-2 10 -6 14 q-2 -8 0 -15 q-8 4 -14 2 q6 -10 14 -11 q2 -4 2 -8z" fill="#ffd34d" stroke="#d9a520" stroke-width="2" stroke-linejoin="round"/><circle cx="2" cy="-15" r="2" fill="#7a5a12"/>'; },
 
     /* ---------- objets de plage ---------- */
     bouteille() { return '<g transform="rotate(-25)"><rect x="-8" y="-18" width="16" height="34" rx="6" fill="#bfe8f6" stroke="#6fb3cc" stroke-width="2"/><rect x="-4" y="-25" width="8" height="8" rx="2" fill="#2a7fd4"/><rect x="-8" y="-4" width="16" height="9" fill="#ff7a59"/></g>'; },
