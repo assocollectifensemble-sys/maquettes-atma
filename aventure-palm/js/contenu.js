@@ -94,7 +94,7 @@ window.H = (function () {
     etapes: [
       { id: "potager", lieu: "Des toits au potager", lieuCourt: "Le potager", titre: "Le chemin de l'eau", resume: "Guide l'eau de pluie jusqu'au potager", duree: "3 min", x: 256, y: 302,
         mission: "La pluie tombe sur le toit. Fais tourner les tuyaux pour qu'elle coule jusqu'au <b>potager</b>. Les tomates comptent sur toi !",
-        regle: ["Touche un tuyau pour le faire tourner.", "L'eau devient bleue quand elle passe.", "Relie le toit (en haut) au potager (en bas à droite)."],
+        regle: ["Pose ton doigt sur un tuyau et fais-le tourner en rond, comme une manivelle.", "L'eau devient bleue quand elle passe.", "Relie le toit (en haut) au potager (en bas à droite)."],
         boutonJeu: "🔧 Je fais couler l'eau !",
         jeu: { type: "tuyaux", titreBarre: "💧 Le chemin de l'eau", coupsMini: 7, decorHaut, decorBas,
           // [forme, rotation solution, rotation de départ, sur le chemin]
@@ -102,7 +102,7 @@ window.H = (function () {
                    ["L", 0, 2], ["L", 0, 3, 1], ["I", 1, 0, 1], ["L", 2, 1, 1],
                    ["T", 0, 2], ["I", 0, 0], ["L", 0, 1], ["I", 0, 1, 1],
                    ["I", 0, 1], ["T", 0, 3], ["L", 0, 0], ["I", 0, 1, 1]],
-          msgDebut: "Touche un tuyau gris pour le tourner. L'eau part du toit (en haut à gauche) et file vers la flèche jaune 💧",
+          msgDebut: "Fais tourner avec ton doigt : dessine un rond sur un tuyau gris. L'eau part du toit (en haut à gauche) et file vers la flèche jaune 💧",
           msgAide: "Astuce de Goutte : l'eau sort en haut à gauche et descend vers le coin en bas à droite.",
           msgGagne: "Plouf ! L'eau de pluie arrive au potager. Regarde, tout pousse !" },
         bravo: { titre: "Le potager est arrosé !", gainIcone: "💧", gain: "Goutte d'or n°1 : la goutte du potager", gainSous: "Grâce à toi, la pluie fait pousser les légumes.", perso: "Ouah ! Roi ou reine des tuyaux : c'est toi, sans hésiter !" },

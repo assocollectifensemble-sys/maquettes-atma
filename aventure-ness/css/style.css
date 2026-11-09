@@ -368,9 +368,23 @@ button.grand-perso { background: none; border: 0; padding: 0; cursor: pointer; d
 .note-chante { animation: flotte 2.4s ease-in-out infinite; }
 .eau-coule { transition: opacity .8s ease .2s; }
 .eau-coule.stop { opacity: 0; }
-.tourne-poignee { transition: transform .6s cubic-bezier(.3, 1.3, .5, 1); transform-box: fill-box; transform-origin: center; }
-.tourne-poignee.ferme { transform: rotate(90deg); }
-.fleche-tourne { animation: indice 1.2s ease-in-out infinite; transition: opacity .3s; }
+/* geste circulaire (Geste.rotation) : l'objet suit le doigt, la page ne défile pas */
+.act-tourne { cursor: grab; touch-action: none; }
+.act-tourne.tenu { cursor: grabbing; }
+.tourne-poignee { transition: transform .35s cubic-bezier(.3, 1.3, .5, 1); transform-box: fill-box; transform-origin: center; }
+.act-tourne.tenu .tourne-poignee { transition: none; }
+.indice-rond, .label-tourne { transition: opacity .3s; }
+.act-tourne.tenu .orbite, .tuile.tenu ~ .fantome .orbite { opacity: 0; }
+.orbite { animation: orbite 2.2s linear infinite; transform-origin: 0 0; transition: opacity .2s; }
+@keyframes orbite { to { transform: rotate(360deg); } }
+.progres { transition: stroke-dasharray .12s linear; }
+.tuile { touch-action: none; }
+.tuile.tenu { cursor: grabbing; }
+.tuile.tenu .rot { transition: none; }
+.tuile:focus { outline: none; }
+.tuile:focus-visible .fond-t { stroke: #0b57d0; stroke-width: 5; stroke-dasharray: 6 4; }
+.fantome { transition: opacity .4s; }
+.fantome.parti { opacity: 0; }
 .verre-eau { transform: scaleY(0); transform-box: fill-box; transform-origin: bottom; transition: transform 1.3s ease-out; }
 .verre-eau.plein { transform: scaleY(1); }
 .carafe-eau { transform-box: fill-box; transform-origin: bottom; transition: transform 1.3s ease-out; }
@@ -400,4 +414,5 @@ button.grand-perso { background: none; border: 0; padding: 0; cursor: pointer; d
 .volet-bravo .btn { background: var(--c1f, #134e5e); color: #fff; }
 .defi:focus { outline: none; }
 .defi:focus-visible .cible { stroke: #0b57d0; stroke-width: 4; stroke-dasharray: 6 4; }
-@media (prefers-reduced-motion: reduce) { .goutte-chute, .goutte-pluie, .note-chante, .souffle-l, .scintille { animation: none !important; } }
+@media (prefers-reduced-motion: reduce) { .goutte-chute, .goutte-pluie, .note-chante, .souffle-l, .scintille, .orbite { animation: none !important; } }
+.fantome .progres { display: none; }

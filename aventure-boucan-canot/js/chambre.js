@@ -3,8 +3,8 @@
    Chaque défi de la chambre ouvre un volet où l'enfant FAIT le geste au doigt :
      serviette → la glisser jusqu'au porte-serviettes (aimantation, elle se suspend)
      lampe     → appuyer : la lumière s'éteint, la pièce passe en mode nuit (lune, étoiles)
-     robinet   → tourner la poignée : les gouttes s'arrêtent
-     douche    → tourner le mitigeur : la douche s'arrête
+     robinet   → faire tourner la poignée au doigt (geste circulaire, ~1 tour) : les gouttes ralentissent puis s'arrêtent
+     douche    → même geste circulaire sur le mitigeur : la douche s'arrête
      carafe    → la glisser au-dessus du verre : elle verse, le verre se remplit
      tri       → glisser chaque déchet dans le bon bac
      clim      → ouvrir la fenêtre : la clim se met en pause
@@ -63,6 +63,39 @@
     let fait = false; const go = () => { if (fait) return; fait = true; faire(); };
     g.addEventListener("click", go); return go;
   }
+  // GESTE CIRCULAIRE : l'objet suit l'angle du doigt autour de son centre.
+  // Angle cumulé (sans saut à ±180°), capture du pointeur sur le <svg> (le doigt peut sortir de l'objet),
+  // zone morte au centre (atan2 instable). Un simple appui ne fait rien tourner : balaye ≈ 0°.
+  // o = { centre() → {x,y} (coord. svg), angle(cumul, delta), fin(cumul, balaye), debut(), bloque(), mort }
+  function rotation(svg, zone, o) {
+    let g = null;
+    zone.addEventListener("pointerdown", e => {
+      if (g || (o.bloque && o.bloque())) return;
+      const c = o.centre(), p = pt(svg, e), loin = Math.hypot(p.x - c.x, p.y - c.y) >= (o.mort || 8);
+      g = { c, a: loin ? Math.atan2(p.y - c.y, p.x - c.x) : null, cumul: 0, balaye: 0, id: e.pointerId };
+      try { svg.setPointerCapture(e.pointerId); } catch (err) { /* rien */ }
+      e.preventDefault(); if (o.debut) o.debut();
+    });
+    svg.addEventListener("pointermove", e => {
+      if (!g || e.pointerId !== g.id) return;
+      const p = pt(svg, e), dx = p.x - g.c.x, dy = p.y - g.c.y;
+      if (Math.hypot(dx, dy) < (o.mort || 8)) return;
+      const a = Math.atan2(dy, dx); if (g.a === null) { g.a = a; return; }
+      let d = (a - g.a) * 180 / Math.PI; if (d > 180) d -= 360; if (d < -180) d += 360;
+      g.a = a; g.cumul += d; g.balaye += Math.abs(d); o.angle(g.cumul, d);
+    });
+    const fin = e => {
+      if (!g || e.pointerId !== g.id) return; const r = g; g = null;
+      try { svg.releasePointerCapture(e.pointerId); } catch (err) { /* rien */ }
+      o.fin(r.cumul, r.balaye);
+    };
+    svg.addEventListener("pointerup", fin); svg.addEventListener("pointercancel", fin);
+  }
+  // indice animé : rond pointillé + flèche + doigt fantôme qui tourne autour du centre
+  const indiceRond = (r, couleur) => '<g class="indice-rond" pointer-events="none"><circle r="' + r + '" fill="none" stroke="' + couleur + '" stroke-width="3.5" stroke-dasharray="7 8" opacity=".75"/>' +
+    '<circle class="progres" r="' + r + '" fill="none" stroke="#2fbf71" stroke-width="7" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" transform="rotate(-90)"/>' +
+    '<path d="M' + (r - 9) + ' -10 l9 12 l9 -12" fill="none" stroke="' + couleur + '" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<g class="orbite"><g transform="translate(0 ' + (-r) + ')"><circle r="13" fill="rgba(255,255,255,.75)" stroke="' + couleur + '" stroke-width="2.5"/><text y="7" text-anchor="middle" font-size="18" font-family="system-ui,sans-serif">👆</text></g></g></g>';
 
   /* ---------------- SERVIETTE : glisser jusqu'au porte-serviettes ---------------- */
   function serviette(o, cfg) {
@@ -128,25 +161,56 @@
     };
   }
 
-  /* ---------------- ROBINET / DOUCHE : tourner pour fermer ---------------- */
-  function poignee(x, y, label) {
-    return '<g class="obj act-tap" data-act-tap="poignee" transform="translate(' + x + ' ' + y + ')"><g class="tourne-poignee"><circle r="20" fill="#9fb4c0" stroke="#6d8593" stroke-width="3"/>' +
+  /* ---------------- ROBINET / DOUCHE : tourner avec le doigt pour fermer ----------------
+     La poignée suit le doigt (geste circulaire). Environ un tour (330°) ferme l'eau :
+     les gouttes ralentissent puis s'arrêtent, l'anneau vert se remplit. Clavier : flèches = un quart de tour, Entrée = fermer. */
+  const TOUR = 330;
+  function poignee(x, y, label, ly, lx) {
+    return '<g class="obj act-tourne" data-act-tourne="poignee" transform="translate(' + x + ' ' + y + ')"><circle class="cible zone-tourne" r="76"/>' +
+      indiceRond(48, "#2f7fb5") +
+      '<g class="tourne-poignee"><circle r="20" fill="#9fb4c0" stroke="#6d8593" stroke-width="3"/>' +
       '<rect x="-30" y="-7" width="60" height="14" rx="7" fill="#7f97a5"/><circle r="6" fill="#dfe8ec"/></g>' +
-      '<path class="fleche-tourne" d="M-30 -24 a36 36 0 0 1 48 -10" fill="none" stroke="#2f7fb5" stroke-width="4" stroke-linecap="round"/><path class="fleche-tourne" d="M14 -42 l6 9 l-11 3" fill="none" stroke="#2f7fb5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>' +
-      '<text y="44" text-anchor="middle" font-size="13" font-weight="800" fill="#2f5966" font-family="system-ui,sans-serif">' + label + '</text>' + cible(40) + '</g>';
+      '<text class="label-tourne" x="' + (lx || 0) + '" y="' + (ly || 72) + '" text-anchor="middle" font-size="13" font-weight="800" fill="#2f5966" font-family="system-ui,sans-serif">' + label + '</text></g>';
   }
-  function fermer(svgEau, px, py, label, fx, fy) {
+  function fermer(svgEau, px, py, label, fx, fy, ly, lx) {
     return {
-      svg: svgEau + poignee(px, py, label) + fete(fx, fy),
+      svg: svgEau + poignee(px, py, label, ly, lx) + fete(fx, fy),
       init(el, api) {
-        const g = el.querySelector(".act-tap");
-        const faire = tapoter(g, () => {
+        const g = el.querySelector(".act-tourne"), h = g.querySelector(".tourne-poignee"), prog = g.querySelector(".progres"), ind = g.querySelector(".indice-rond");
+        const eau = Array.from(el.querySelectorAll(".eau-coule")), anims = () => eau.flatMap(e => [e, ...e.querySelectorAll("*")]).flatMap(e => e.getAnimations ? e.getAnimations() : []);
+        let total = 0, fini = false, quart = 0;
+        const montre = a => {
+          h.style.transform = "rotate(" + a + "deg)";
+          const p = Math.min(1, Math.abs(a) / TOUR);
+          prog.setAttribute("stroke-dasharray", (p * 100).toFixed(1) + " 100");
+          eau.forEach(e => e.style.opacity = String(1 - .55 * p));
+          anims().forEach(an => { try { an.playbackRate = Math.max(.12, 1 - .88 * p); } catch (err) { /* rien */ } });
+          const q = Math.trunc(a / 90); if (q !== quart) { quart = q; S().tap(); vibre(10); }
+          return p;
+        };
+        const ferme = () => {
+          if (fini) return; fini = true; g.classList.remove("tenu"); g.style.pointerEvents = "none";
+          h.style.transform = "rotate(" + (total >= 0 ? 360 : -360) + "deg)"; prog.setAttribute("stroke-dasharray", "100 0");
+          ind.style.opacity = "0"; el.querySelector(".label-tourne").style.opacity = "0";
+          eau.forEach(e => { e.style.opacity = "0"; e.classList.add("stop"); });
           S().tap(); vibre([15, 30, 15]);
-          g.querySelector(".tourne-poignee").classList.add("ferme"); g.querySelectorAll(".fleche-tourne").forEach(f => f.style.opacity = "0");
-          el.querySelectorAll(".eau-coule").forEach(e => e.classList.add("stop"));
           setTimeout(() => S().bulle(), 500); setTimeout(() => api.fini(), 900);
+        };
+        rotation(el, g, {
+          centre: () => ({ x: px, y: py }), mort: 10, bloque: () => fini,
+          debut: () => { g.classList.add("tenu"); },
+          angle: c => { if (montre(total + c) >= 1) ferme(); },
+          fin: (c, balaye) => {
+            if (fini) return; g.classList.remove("tenu"); total += c; montre(total);
+            if (balaye < 25) api.say("Fais tourner avec ton doigt : pose-le sur la poignée et dessine un grand rond ↻");
+            else api.say("Ça ralentit… continue de tourner, encore un peu ! ↻");
+          }
         });
-        bouton(g, label, faire);
+        bouton(g, label + " (flèches : un quart de tour, Entrée : fermer)", ferme);
+        g.addEventListener("keydown", e => {
+          if (e.key !== "ArrowRight" && e.key !== "ArrowLeft" && e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+          e.preventDefault(); total += (e.key === "ArrowLeft" || e.key === "ArrowUp") ? -90 : 90; if (montre(total) >= 1) ferme();
+        });
       }
     };
   }
@@ -159,7 +223,7 @@
       '<path d="M186 168 v-36 q0 -14 14 -14 h18 v16 h-8 v34z" fill="#9fb4c0" stroke="#6d8593" stroke-width="2"/>' +
       '<g class="eau-coule"><rect class="filet" x="205" y="150" width="7" height="58" rx="3.5" fill="#3aa7ff" opacity=".75"/>' + gouttes + '<ellipse class="filet" cx="208" cy="210" rx="14" ry="3.5" fill="#9fd8ff"/></g>' +
       '<g transform="translate(286 150)"><path d="M-12 -18 h24 l-3 34 h-18z" fill="rgba(200,230,240,.8)" stroke="#9cc7d9" stroke-width="2"/><rect x="-2" y="-46" width="5" height="40" rx="2.5" fill="' + cfg.accent + '" transform="rotate(10)"/><rect x="-6" y="-56" width="12" height="12" rx="3" fill="#fff" stroke="#c9dfe4" transform="rotate(10)"/></g>';
-    return fermer(svg, 112, 134, "tourne pour fermer", 208, 190);
+    return fermer(svg, 112, 134, "fais tourner avec ton doigt", 208, 190, -60);
   }
   function douche(o, cfg) {
     const filets = [0, 1, 2, 3, 4, 5].map(i => '<rect class="goutte-pluie" style="animation-delay:-' + (i * .17).toFixed(2) + 's" x="' + (196 + i * 14) + '" y="80" width="4" height="22" rx="2" fill="#3aa7ff"/>').join("");
@@ -168,7 +232,7 @@
       '<path d="M330 10 v26 q0 10 -10 10 h-46" fill="none" stroke="#7f97a5" stroke-width="8" stroke-linecap="round"/><path d="M196 52 h104 l-12 18 h-80z" fill="#9fb4c0" stroke="#6d8593" stroke-width="2"/>' +
       '<g class="eau-coule">' + filets + '<g>' + notes + '</g></g>' +
       '<rect x="160" y="250" width="180" height="16" rx="6" fill="#dfe8ec" stroke="#b9c9d2" stroke-width="2"/><ellipse cx="250" cy="250" rx="70" ry="6" fill="#bfe6ff" class="eau-coule"/>';
-    return fermer(svg, 92, 160, "tourne pour fermer", 248, 150);
+    return fermer(svg, 92, 160, "fais tourner avec ton doigt", 248, 150, 74, 22);
   }
 
   /* ---------------- CARAFE : la verser dans le verre ---------------- */
@@ -282,12 +346,13 @@
   const CONSIGNES = {
     serviette: "Glisse la serviette avec ton doigt jusqu'au porte-serviettes 👆",
     lampe: "Appuie sur la lampe pour l'éteindre 💡",
-    robinet: "Tourne la poignée pour fermer le robinet 🚰",
-    douche: "Tourne le mitigeur pour couper la douche 🚿",
+    robinet: "Fais tourner la poignée avec ton doigt, en rond, pour fermer le robinet 🚰",
+    douche: "Fais tourner le mitigeur avec ton doigt, en rond, pour couper la douche 🚿",
     carafe: "Glisse la carafe au-dessus du verre pour le remplir 💧",
     tri: "Glisse chaque déchet dans le bon bac ♻️",
     clim: "Ouvre la fenêtre et regarde bien la clim 🌬️"
   };
+  window.Geste = { rotation, indiceRond, pt };
   window.Actions = {
     scene(o, cfg) { const f = SCENES[o.obj]; return f ? f(o, Object.assign({ accent: "#ff9f80" }, cfg, { accent: (cfg.palette && cfg.palette.accent) || "#ff9f80" })) : null; },
     consigne: o => o.consigne || CONSIGNES[o.obj] || "À toi de jouer !"

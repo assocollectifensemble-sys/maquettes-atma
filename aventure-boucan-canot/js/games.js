@@ -97,15 +97,19 @@
         return;
       }
       let tracé = t.f === "I" ? "M36 0 V72" : t.f === "L" ? "M36 0 V36 H72" : "M36 0 V72 M36 36 H72";
-      s += '<g class="tuile" data-i="' + i + '" transform="translate(' + x + ' ' + y + ')"><rect x="3" y="6" width="66" height="66" rx="12" fill="rgba(0,0,0,.18)"/><rect class="fond-t" x="3" y="3" width="66" height="66" rx="12" fill="#fff" stroke="#2a6f97" stroke-width="3"/><text x="62" y="18" font-size="12" text-anchor="end" fill="#2a6f97" font-weight="900" aria-hidden="true">↻</text>' +
+      s += '<g class="tuile" data-i="' + i + '" tabindex="0" role="button" aria-label="Tuyau : fais-le tourner (flèches ou Entrée)" transform="translate(' + x + ' ' + y + ')"><rect x="3" y="6" width="66" height="66" rx="12" fill="rgba(0,0,0,.18)"/><rect class="fond-t" x="3" y="3" width="66" height="66" rx="12" fill="#fff" stroke="#2a6f97" stroke-width="3"/><text x="62" y="18" font-size="12" text-anchor="end" fill="#2a6f97" font-weight="900" aria-hidden="true">↻</text>' +
         '<g class="rot" style="transform:rotate(' + (t.rot * 90) + 'deg)"><path class="tuyau" d="' + tracé + '" stroke-width="16" stroke-linecap="butt" fill="none"/><circle cx="36" cy="36" r="9" fill="#cfd8de"/></g></g>';
     });
+    // indice animé : doigt fantôme qui dessine un rond sur le premier tuyau à tourner
+    const i0 = tuiles.findIndex(t => t.chemin && t.rot % 4 !== t.sol % 4);
+    if (i0 >= 0 && window.Geste) s += '<g class="fantome" transform="translate(' + (ox + (i0 % N) * T + 36) + ' ' + (oy + Math.floor(i0 / N) * T + 36) + ')">' + Geste.indiceRond(30, "#ff7a3d") + '</g>';
     // repère d'arrivée : là où l'eau doit sortir
     const ax = ox + (N - 1) * T + 36, ay = oy + N * T;
     s += (cfg.decorBas || "") + '<g class="arrivee" aria-hidden="true"><circle class="indice-pulse" cx="' + ax + '" cy="' + (ay + 2) + '" r="13" fill="none" stroke="#ffd166" stroke-width="4"/><path d="M' + (ax - 7) + ' ' + (ay - 4) + ' l7 9 l7 -9" fill="none" stroke="#ffd166" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg>';
     hote.innerHTML = '<div class="jeu">' + barre(cfg.titreBarre || "💧 Le chemin de l'eau", 3) + s + '</div>';
     const svg = hote.querySelector("svg");
-    const masque = t => t.chemin ? tourne(FORME[t.f], t.rot % 4) : 0;
+    const m4 = x => ((x % 4) + 4) % 4;
+    const masque = t => t.chemin ? tourne(FORME[t.f], m4(t.rot)) : 0;
     function coule() {
       const vu = new Set(); const pile = [];
       if (masque(tuiles[0]) & 1) { vu.add(0); pile.push(0); }
@@ -126,14 +130,39 @@
       svg.classList.add("pousse"); const sortie = svg.querySelector("#sortie"); if (sortie) sortie.style.opacity = 1;
       opts.say(cfg.msgGagne); const minimum = cfg.coupsMini || 8; fin(opts, coups <= minimum + 2 ? 0 : coups <= minimum + 8 ? 2 : 3, 1500);
     }
-    svg.addEventListener("click", e => {
-      const g = e.target.closest(".tuile"); if (!g || finie) return;
-      const t = tuiles[+g.dataset.i]; t.rot++; coups++; g.querySelector(".rot").style.transform = "rotate(" + (t.rot * 90) + "deg)"; S().tap();
+    // GESTE CIRCULAIRE : le tuyau suit le doigt autour de son centre, puis s'aimante au quart de tour le plus proche.
+    // Un simple appui ne tourne rien (il faut balayer au moins ~45°). Clavier : flèches ou Entrée = un quart de tour.
+    const fantome = svg.querySelector(".fantome");
+    let rates = 0;
+    const vibre = p => { if (window.Audio2) Audio2.vibre(p); };
+    function applique(g, t, k) {
+      const rot = g.querySelector(".rot");
+      if (!k) { rot.style.transform = "rotate(" + (t.rot * 90) + "deg)"; return; }
+      t.rot += k; coups += Math.abs(k); rot.style.transform = "rotate(" + (t.rot * 90) + "deg)"; vibre(12);
+      if (fantome) fantome.classList.add("parti");
       if (coule()) gagne(); else if (coups === 6 || coups % 14 === 0) opts.say(cfg.msgAide);
+    }
+    svg.querySelectorAll(".tuile").forEach(g => {
+      const i = +g.dataset.i, t = tuiles[i], rot = g.querySelector(".rot"), c = { x: ox + (i % N) * T + 36, y: oy + Math.floor(i / N) * T + 36 };
+      let quart = 0;
+      if (window.Geste) Geste.rotation(svg, g, {
+        centre: () => c, mort: 7, bloque: () => finie,
+        debut: () => { g.classList.add("tenu"); quart = 0; },
+        angle: a => { rot.style.transform = "rotate(" + (t.rot * 90 + a) + "deg)"; const q = Math.round(a / 90); if (q !== quart) { quart = q; S().tap(); } },
+        fin: (a, balaye) => {
+          g.classList.remove("tenu"); applique(g, t, Math.round(a / 90));
+          if (balaye < 25 && !finie) { rates++; opts.say(cfg.msgTap || "Fais tourner avec ton doigt : pose-le sur un tuyau et dessine un rond, comme une manivelle ↻"); if (fantome) fantome.classList.remove("parti"); }
+        }
+      });
+      g.addEventListener("keydown", e => {
+        if (finie) return;
+        if (e.key === "Enter" || e.key === " " || e.key === "ArrowRight" || e.key === "ArrowDown") { e.preventDefault(); S().tap(); applique(g, t, 1); }
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") { e.preventDefault(); S().tap(); applique(g, t, -1); }
+      });
     });
     coule(); opts.say(cfg.msgDebut);
     return {
-      resoudre() { if (finie) return; tuiles.forEach((t, i) => { if (t.chemin) { while (t.rot % 4 !== t.sol % 4 && !(t.f === "I" && (t.rot - t.sol) % 2 === 0)) t.rot++; svg.querySelector('.tuile[data-i="' + i + '"] .rot').style.transform = "rotate(" + (t.rot * 90) + "deg)"; } }); if (coule()) gagne(); }
+      resoudre() { if (finie) return; tuiles.forEach((t, i) => { if (t.chemin) { while (m4(t.rot) !== m4(t.sol) && !(t.f === "I" && m4(t.rot - t.sol) % 2 === 0)) t.rot++; svg.querySelector('.tuile[data-i="' + i + '"] .rot').style.transform = "rotate(" + (t.rot * 90) + "deg)"; } }); if (coule()) gagne(); }
     };
   }
 
