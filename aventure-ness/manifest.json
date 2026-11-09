@@ -1,0 +1,20 @@
+{
+  "name": "Le secret de Nessa · Ness by D-Ocean",
+  "short_name": "Nessa",
+  "description": "Une aventure pour toute la famille, du lagon à ta chambre.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06394a",
+  "theme_color": "#06394a",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

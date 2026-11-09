@@ -1,0 +1,20 @@
+{
+  "name": "Le voyage de Goutte · PALM Hotel & Spa",
+  "short_name": "Goutte",
+  "description": "Une aventure en famille, du toit du PALM jusqu'à la plage de Grande Anse.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#103a33",
+  "theme_color": "#103a33",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
