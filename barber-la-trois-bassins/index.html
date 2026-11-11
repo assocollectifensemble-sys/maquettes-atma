@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barber LA · Barbier à Trois-Bassins · Viens frais, repars carré</title>
+<meta name="description" content="Barber LA, salon barber pour tous à Trois-Bassins : coupe, dégradé, taille de barbe, soins cheveux et freestyle. Sans rendez-vous, 6 rue Victor Hugo, côté PMU.">
+<meta property="og:title" content="Barber LA · Viens frais, repars carré">
+<meta property="og:description" content="Une page imaginée pour Barber LA, barbier à Trois-Bassins. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/barber-la-trois-bassins/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/barber-la-trois-bassins/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#14100c; --cuir:#231a13; --brun:#3a2a1d; --or:#c9a45c; --or-clair:#e6c98a;
+  --creme:#f1e6d0; --texte:#e9dfcc; --doux:#b8a88d;
+  --rouge:#b3262d; --bleu:#22508f; --blanc:#fbf8f2;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--nuit);color:var(--texte);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{position:relative;z-index:5;background:var(--or);color:var(--nuit);font-size:.8rem;text-align:center;padding:.5rem 1rem;line-height:1.4}
+.ruban b{font-weight:600}
+/* poteau de barbier animé */
+.poteau{height:10px;background:repeating-linear-gradient(-45deg,var(--rouge) 0 14px,var(--blanc) 14px 28px,var(--bleu) 28px 42px,var(--blanc) 42px 56px);background-size:79px 10px;animation:pole 2.4s linear infinite}
+@keyframes pole{to{background-position:79px 0}}
+canvas#cheveux{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,header,footer,section{position:relative;z-index:2}
+
+/* HERO */
+.hero{min-height:min(92vh,820px);display:grid;align-items:end;overflow:hidden;isolation:isolate}
+.hero .fond{position:absolute;inset:0;z-index:-2;background:url(img/degrade-boucles.webp) center 30%/cover no-repeat;animation:kb 22s ease-in-out infinite alternate;transform-origin:50% 35%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,16,12,.25) 0%,rgba(20,16,12,.55) 45%,var(--nuit) 96%)}
+.hero .in{padding:7rem 1.4rem 3rem;max-width:880px;margin:0 auto;width:100%}
+.enseigne{display:inline-block;background:var(--creme);border-radius:14px;padding:.55rem .9rem;box-shadow:0 10px 30px rgba(0,0,0,.45),inset 0 0 0 2px var(--or);margin-bottom:1.3rem}
+.enseigne img{width:150px;height:auto}
+.surtitre{font-family:Oswald,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--or-clair);font-size:.85rem}
+h1{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(2.4rem,11vw,4.6rem);line-height:1.02;color:var(--blanc);margin:.4rem 0 .8rem}
+h1 em{font-style:italic;color:var(--or)}
+.hero p.chapo{font-size:1.05rem;max-width:34rem;color:var(--creme)}
+.etoiles{color:var(--or);letter-spacing:.3em;font-size:.8rem;margin:.2rem 0 1rem;font-family:Oswald,sans-serif}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.3rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:var(--or);color:var(--nuit);box-shadow:0 0 0 0 rgba(201,164,92,.6);animation:respire 2.8s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 10px rgba(201,164,92,0)}}
+.btn.ligne{border:1.5px solid var(--or);color:var(--or-clair)}
+.badge{display:inline-block;margin-top:1.4rem;font-family:Oswald,sans-serif;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;border:1px dashed var(--or);color:var(--or-clair);padding:.35rem .8rem;border-radius:6px}
+
+/* bandeau défilant */
+.defile{background:var(--cuir);border-block:1px solid rgba(201,164,92,.35);overflow:hidden;white-space:nowrap}
+.defile .piste{display:inline-flex;gap:2.2rem;padding:.9rem 0;animation:defile 26s linear infinite;font-family:Oswald,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--or-clair);font-size:.95rem}
+.defile .piste span::after{content:"✂";margin-left:2.2rem;color:var(--rouge)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 1.4rem}
+.wrap{max-width:980px;margin:0 auto}
+h2{font-family:"Playfair Display",serif;font-size:clamp(1.9rem,7vw,2.8rem);line-height:1.1;color:var(--blanc);margin-bottom:1rem}
+h2 small{display:block;font-family:Oswald,sans-serif;font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);margin-bottom:.5rem}
+.lead{color:var(--doux);max-width:38rem}
+
+/* salon */
+.salon{background:radial-gradient(ellipse at 80% 0%,rgba(201,164,92,.12),transparent 60%),var(--nuit)}
+.citation{margin-top:1.8rem;background:var(--cuir);border-left:4px solid var(--or);border-radius:0 var(--r) var(--r) 0;padding:1.4rem 1.3rem;font-size:1.02rem;color:var(--creme)}
+.citation p+p{margin-top:.4rem}
+.citation cite{display:block;margin-top:.9rem;font-style:normal;font-size:.8rem;color:var(--doux)}
+.faits{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem;margin-top:1.8rem}
+.fait{border:1px solid rgba(201,164,92,.3);border-radius:14px;padding:1rem;text-align:center}
+.fait b{display:block;font-family:"Playfair Display",serif;font-size:1.35rem;color:var(--or)}
+.fait span{font-size:.85rem;color:var(--doux)}
+
+/* prestations */
+.presta{background:var(--cuir);position:relative}
+.presta::before{content:"";position:absolute;left:0;right:0;top:-1px;height:40px;background:var(--nuit);clip-path:polygon(0 0,100% 0,100% 20%,0 100%)}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem;margin-top:2rem}
+.carte{background:linear-gradient(160deg,var(--brun),var(--cuir));border:1px solid rgba(201,164,92,.25);border-radius:var(--r);padding:1.4rem 1.2rem;transition:transform .35s,border-color .35s}
+.carte:hover{transform:translateY(-5px) rotate(-.4deg);border-color:var(--or)}
+.carte svg{width:38px;height:38px;color:var(--or);margin-bottom:.8rem}
+.carte h3{font-family:Oswald,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--blanc);font-size:1.1rem;margin-bottom:.35rem}
+.carte p{color:var(--doux);font-size:.93rem}
+.mots{margin-top:1.8rem;font-family:"Playfair Display",serif;font-style:italic;color:var(--or-clair);font-size:1.15rem;text-align:center}
+
+/* galerie */
+.galerie{background:var(--nuit)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 1.4rem 1rem;margin:0 -1.4rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--or) transparent}
+.rail figure{flex:0 0 72%;max-width:330px;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;background:var(--cuir);border:1px solid rgba(201,164,92,.25)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{padding:.75rem .9rem;font-size:.86rem;color:var(--doux)}
+.rail figcaption b{color:var(--creme);font-weight:600;display:block}
+.astuce{font-size:.8rem;color:var(--doux);text-align:center;margin-top:.4rem}
+
+/* publication */
+.post{background:linear-gradient(180deg,var(--nuit),var(--cuir))}
+.bulle{position:relative;max-width:560px;margin:1.6rem auto 0;background:var(--creme);color:var(--nuit);border-radius:22px;padding:1.5rem 1.4rem;font-size:1.12rem;line-height:1.5;box-shadow:0 18px 40px rgba(0,0,0,.4)}
+.bulle::after{content:"";position:absolute;left:34px;bottom:-14px;border:14px solid transparent;border-top-color:var(--creme);border-bottom:0}
+.bulle .qui{display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem;font-size:.82rem;color:#6b5a44}
+.bulle .qui img{width:44px;height:auto;background:#fff;border-radius:8px;padding:3px}
+.bulle .qui b{color:var(--nuit);display:block;font-size:.95rem}
+
+/* horaires */
+.horaires{background:var(--cuir)}
+.table{margin-top:1.6rem;border:1px solid rgba(201,164,92,.35);border-radius:var(--r);overflow:hidden}
+.ligne-h{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.1rem;border-bottom:1px solid rgba(201,164,92,.15)}
+.ligne-h:last-child{border-bottom:0}
+.ligne-h:nth-child(odd){background:rgba(255,255,255,.025)}
+.ligne-h .j{font-family:Oswald,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--or-clair)}
+.ligne-h .h{text-align:right;color:var(--creme);font-size:.95rem}
+.ligne-h .h small{display:block;color:var(--doux);font-size:.78rem}
+.note{margin-top:1rem;font-size:.85rem;color:var(--doux)}
+
+/* contact */
+.contact{background:radial-gradient(ellipse at 50% 120%,rgba(179,38,45,.25),transparent 60%),var(--nuit);text-align:center}
+.contact .cta{justify-content:center}
+.adresse{margin-top:1.2rem;color:var(--creme)}
+.adresse b{color:var(--or)}
+.reseaux{margin-top:1.4rem;display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;font-size:.9rem}
+.reseaux a{color:var(--or-clair)}
+.idee{max-width:620px;margin:3rem auto 0;border:1px dashed rgba(201,164,92,.5);border-radius:var(--r);padding:1.2rem 1.3rem;font-size:.9rem;color:var(--doux);text-align:left}
+.idee b{color:var(--or-clair)}
+footer{background:#0d0a07;color:var(--doux);font-size:.8rem;text-align:center;padding:1.8rem 1.4rem 2.4rem;line-height:1.6}
+
+/* apparitions */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rev.vu{opacity:1;transform:none}
+.hero .in>*{opacity:0;transform:translateY(18px);animation:monte 1s ease forwards}
+.hero .in>*:nth-child(2){animation-delay:.15s}.hero .in>*:nth-child(3){animation-delay:.3s}.hero .in>*:nth-child(4){animation-delay:.45s}.hero .in>*:nth-child(5){animation-delay:.6s}.hero .in>*:nth-child(6){animation-delay:.75s}.hero .in>*:nth-child(7){animation-delay:.9s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+@media (min-width:760px){
+  .rail figure{flex-basis:300px}
+  .split{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rev,.hero .in>*{opacity:1;transform:none}
+  canvas#cheveux{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Barber LA</b></div>
+<div class="poteau" aria-hidden="true"></div>
+<canvas id="cheveux" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Dégradé net et boucles sur le dessus, réalisé chez Barber LA"></div>
+  <div class="in">
+    <div class="enseigne"><img src="img/logo.png" alt="Logo Barber LA, avec ses deux poteaux de barbier" width="150" height="84"></div>
+    <div class="surtitre">Salon barber · Trois-Bassins</div>
+    <h1>Viens frais,<br><em>repars carré.</em></h1>
+    <p class="chapo">Coupe, dégradé, taille de barbe et soins cheveux, dans une ambiance conviviale. Barber LA lé là !</p>
+    <div class="cta">
+      <a class="btn or" href="tel:+262692623055">📞 0692 62 30 55</a>
+      <a class="btn ligne" href="https://www.google.com/maps/search/?api=1&query=6+rue+Victor+Hugo+97426+Les+Trois-Bassins">📍 Itinéraire</a>
+    </div>
+    <span class="badge">✅ Sans rendez-vous · passe quand tu veux</span>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Coupe</span><span>Dégradé</span><span>Taille de barbe</span><span>Contour</span><span>Freestyle</span><span>Soins cheveux</span><span>Viens frais, repars carré</span>
+  <span>Coupe</span><span>Dégradé</span><span>Taille de barbe</span><span>Contour</span><span>Freestyle</span><span>Soins cheveux</span><span>Viens frais, repars carré</span>
+</div></div>
+
+<main>
+<section class="salon" id="salon">
+  <div class="wrap split">
+    <div class="rev">
+      <h2><small>Le salon</small>Un barber pour tous, au cœur de Trois-Bassins</h2>
+      <p class="lead">Depuis mai 2025, Barber LA accueille petits et grands au 6 rue Victor Hugo, côté PMU. On y entre comme on est, on en ressort le look soigné.</p>
+      <div class="faits">
+        <div class="fait"><b>2025</b><span>ouverture du salon</span></div>
+        <div class="fait"><b>Sans RDV</b><span>sauf le mardi matin</span></div>
+        <div class="fait"><b>684</b><span>abonnés sur Facebook</span></div>
+      </div>
+    </div>
+    <blockquote class="citation rev">
+      <p>✂️ « Salon barber pour tous : coupe, dégradé, taille de barbe et soins cheveux. »</p>
+      <p>💈 « Ambiance conviviale, résultat précis, look soigné. Hésite pas BARBER LA lé là ! »</p>
+      <cite>— la présentation de Barber LA sur Facebook</cite>
+    </blockquote>
+  </div>
+</section>
+
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <h2 class="rev"><small>Au fauteuil</small>Ce que Loïc fait de mieux</h2>
+    <div class="cartes">
+      <article class="carte rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6 20 18M8.6 16.4 20 6"/></svg>
+        <h3>Coupes</h3><p>Modernes &amp; classiques, pour tous.</p>
+      </article>
+      <article class="carte rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 20h16M6 16h12M8 12h8M10 8h4M11.5 4h1"/></svg>
+        <h3>Dégradés</h3><p>Des transitions nettes, du plus court au plus long, finies au contour.</p>
+      </article>
+      <article class="carte rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 8c0 7 3 12 7 12s7-5 7-12"/><path d="M8 10c1 1.5 2.4 2 4 2s3-.5 4-2"/></svg>
+        <h3>Barbe</h3><p>Taille de barbe &amp; rasage précis.</p>
+      </article>
+      <article class="carte rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>
+        <h3>Freestyle</h3><p>Motifs tracés à la tondeuse : une étoile, un cœur… à toi de choisir.</p>
+      </article>
+      <article class="carte rev">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg>
+        <h3>Soins cheveux</h3><p>Au salon, pour des cheveux au top.</p>
+      </article>
+    </div>
+    <p class="mots rev">« Style, propreté, perfection. »</p>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <h2 class="rev"><small>Sorti du fauteuil</small>Les coupes du salon</h2>
+    <p class="lead rev">Quelques réalisations publiées par Barber LA sur sa page.</p>
+    <div class="rail">
+      <figure><img src="img/motif-etoile.webp" alt="Étoile tracée à la tondeuse à l'arrière de la tête" loading="lazy" width="646" height="655"><figcaption><b>L'étoile</b>Un freestyle tout en finesse.</figcaption></figure>
+      <figure><img src="img/motif-coeur.webp" alt="Cœur tracé dans la nuque, boucles blondes sur le dessus" loading="lazy" width="691" height="983"><figcaption><b>Le cœur</b>Boucles sur le dessus, motif dans la nuque.</figcaption></figure>
+      <figure><img src="img/degrade-boucles.webp" alt="Dégradé avec boucles sur le dessus, vu de dos" loading="lazy" width="576" height="942"><figcaption><b>Dégradé &amp; boucles</b>Le volume en haut, la netteté sur les côtés.</figcaption></figure>
+      <figure><img src="img/contour-net.webp" alt="Contour de nuque net, vu de dos" loading="lazy" width="576" height="1024"><figcaption><b>Contour</b>« Un ti contour » : la finition qui change tout.</figcaption></figure>
+      <figure><img src="img/degrade-nuque.webp" alt="Dégradé de nuque, vu de dos" loading="lazy" width="320" height="578"><figcaption><b>Nuque</b>Propre, précis, carré.</figcaption></figure>
+    </div>
+    <p class="astuce">← fais glisser pour voir les coupes →</p>
+  </div>
+</section>
+
+<section class="post" id="actu">
+  <div class="wrap">
+    <h2 class="rev" style="text-align:center"><small>Dernière publication</small>Barber LA lé là !</h2>
+    <div class="bulle rev">
+      <div class="qui"><img src="img/logo.png" alt="" width="44" height="25"><div><b>Barber La</b>26 octobre 2026 · Les Trois-Bassins</div></div>
+      « Barber La lé là ! Besoin un ti contour, un ti barbe ? Un ti freestyle passe voit amwin trois bassins côté pmu »
+    </div>
+  </div>
+</section>
+
+<section class="horaires" id="horaires">
+  <div class="wrap split">
+    <div class="rev">
+      <h2><small>Horaires du salon</small>Passe quand tu veux</h2>
+      <p class="lead">Sans rendez-vous ni réservation, sauf le mardi matin.</p>
+      <p class="note">Horaires affichés par le salon ; ils peuvent varier, un coup d'œil à la page Facebook avant de venir.</p>
+    </div>
+    <div class="table rev">
+      <div class="ligne-h"><span class="j">Lundi</span><span class="h">Repos</span></div>
+      <div class="ligne-h"><span class="j">Mardi</span><span class="h">Matin sur rendez-vous<br>13h30 – 17h30<small>fermé le 1er mardi du mois</small></span></div>
+      <div class="ligne-h"><span class="j">Mercredi</span><span class="h">9h00 – 12h00 · 13h00 – 17h30</span></div>
+      <div class="ligne-h"><span class="j">Jeudi</span><span class="h">9h00 – 12h00 · 13h00 – 17h30</span></div>
+      <div class="ligne-h"><span class="j">Vendredi</span><span class="h">8h30 – 12h00 · 13h00 – 18h00</span></div>
+      <div class="ligne-h"><span class="j">Samedi</span><span class="h">8h30 – 12h00 · 13h00 – 18h00</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap rev">
+    <h2><small>Venir au salon</small>On t'attend au fauteuil</h2>
+    <p class="adresse"><b>Barber LA</b><br>6 rue Victor Hugo, côté PMU<br>97426 Les Trois-Bassins</p>
+    <div class="cta">
+      <a class="btn or" href="tel:+262692623055">📞 Appeler le 0692 62 30 55</a>
+      <a class="btn ligne" href="https://wa.me/262692623055?text=Bonjour%20Barber%20LA%2C%20je%20voudrais%20passer%20pour%20une%20coupe">💬 WhatsApp</a>
+      <a class="btn ligne" href="https://www.google.com/maps/search/?api=1&query=6+rue+Victor+Hugo+97426+Les+Trois-Bassins">📍 Itinéraire</a>
+    </div>
+    <div class="reseaux"><a href="https://www.facebook.com/profile.php?id=61551994780530" target="_blank" rel="noopener">Facebook · Barber La</a></div>
+    <div class="idee">
+      <b>Une idée en plus :</b> cette page peut aussi relier une fiche Google (pour être trouvé en tapant « barbier Trois-Bassins »), proposer la réservation en ligne des mardis matin, ou partager automatiquement les nouvelles coupes sur les réseaux.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Barber LA.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</footer>
+
+<script>
+(()=>{
+const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// apparitions au scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rev').forEach(el=>reduit?el.classList.add('vu'):io.observe(el));
+if(reduit)return;
+// petites mèches de cheveux qui tombent doucement
+const c=document.getElementById('cheveux'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),run=true,mech=[];
+function taille(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+taille();addEventListener('resize',taille);
+const n=W<600?20:32,teintes=['rgba(201,164,92,','rgba(230,201,138,','rgba(241,230,208,'];
+function neuf(top){return{x:Math.random()*W,y:top?-20:Math.random()*H,l:4+Math.random()*9,a:Math.random()*6.28,va:(Math.random()-.5)*.03,vy:.25+Math.random()*.55,vx:(Math.random()-.5)*.25,o:.18+Math.random()*.3,t:teintes[Math.random()*3|0],ph:Math.random()*6.28}}
+for(let i=0;i<n;i++)mech.push(neuf(false));
+function tour(){if(!run)return;x.clearRect(0,0,W,H);
+ for(const m of mech){m.ph+=.015;m.y+=m.vy;m.x+=m.vx+Math.sin(m.ph)*.25;m.a+=m.va;
+  if(m.y>H+20)Object.assign(m,neuf(true));
+  x.save();x.translate(m.x,m.y);x.rotate(m.a);x.strokeStyle=m.t+m.o+')';x.lineWidth=1.1;x.lineCap='round';
+  x.beginPath();x.moveTo(-m.l/2,0);x.quadraticCurveTo(0,m.l*.25,m.l/2,0);x.stroke();x.restore()}
+ requestAnimationFrame(tour)}
+tour();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tour()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Barber LA" defer></script>
+</body>
+</html>

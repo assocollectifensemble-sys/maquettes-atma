@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Trendy Men Barber Shop · Barber à Bras-Panon</title>
+<meta name="description" content="Trendy Men Barber Shop, barber à Bras-Panon : coupe homme et enfants, barbe, avec ou sans rendez-vous, du mardi au samedi de 9h à 18h.">
+<meta property="og:title" content="Trendy Men Barber Shop · Barber à Bras-Panon">
+<meta property="og:description" content="Une page imaginée pour Trendy Men Barber Shop : coupe homme et enfants, barbe, avec ou sans RDV. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/trendy-men-barber-shop-bras-panon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/trendy-men-barber-shop-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Yellowtail&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0d1b36;--navy2:#13264a;--nuit:#081225;--rouge:#c8202f;--rouge2:#e2384a;--creme:#f6f1e7;--blanc:#fff;--gris:#aab4c8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--nuit);color:var(--creme);line-height:1.6;overflow-x:hidden;font-size:16px}
+img{display:block;max-width:100%}
+a{color:inherit}
+#coupes{position:fixed;inset:0;pointer-events:none;z-index:4}
+.ruban{background:var(--rouge);color:#ffe9eb;font-size:12.5px;text-align:center;padding:8px 14px;position:relative;z-index:6}.ruban b{color:#fff;font-weight:600}
+/* HERO */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;z-index:2}
+.hero .fond{position:absolute;inset:0;background:url(img/degrade-nuque.webp) center 20%/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:50% 35%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,18,37,.15) 0%,rgba(8,18,37,.35) 40%,rgba(8,18,37,.96) 88%)}
+.hero .in{position:relative;z-index:3;padding:0 22px 44px;max-width:760px;width:100%;margin:0 auto}
+.badge{width:118px;height:118px;border-radius:50%;background:var(--blanc);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45);margin-bottom:18px;animation:monte 1s .1s both}
+.badge img{width:92px;height:auto}
+.surt{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);animation:monte 1s .25s both}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(52px,15vw,104px);line-height:.9;letter-spacing:.01em;margin:6px 0 10px;animation:monte 1s .4s both}
+h1 .s{font-family:Yellowtail,cursive;font-size:.62em;color:var(--rouge2);display:block;letter-spacing:0;line-height:1.1}
+.sous{font-size:17px;max-width:30em;color:#e5e9f2;animation:monte 1s .55s both}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;animation:monte 1s .7s both}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:40px;font-weight:600;text-decoration:none;font-size:15px;transition:transform .2s,box-shadow .2s}
+.btn.r{background:var(--rouge);color:#fff;box-shadow:0 6px 22px rgba(200,32,47,.45);animation:respire 3.2s ease-in-out infinite}
+.btn.b{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);color:#fff;backdrop-filter:blur(4px)}
+.btn:hover{transform:translateY(-2px)}
+@keyframes respire{0%,100%{box-shadow:0 6px 22px rgba(200,32,47,.4)}50%{box-shadow:0 6px 34px rgba(226,56,74,.75)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* Poteau de barbier */
+.poteau{position:absolute;right:22px;top:26px;z-index:3;width:22px;height:120px;border-radius:12px;overflow:hidden;border:3px solid #e9edf5;box-shadow:0 0 0 2px rgba(0,0,0,.25),0 8px 20px rgba(0,0,0,.4);background:repeating-linear-gradient(-45deg,var(--rouge) 0 10px,#fff 10px 20px,var(--navy2) 20px 30px,#fff 30px 40px);background-size:100% 56.57px;animation:tourne 1.6s linear infinite}
+@keyframes tourne{to{background-position:0 56.57px}}
+/* bandeau défilant */
+.bandeau{background:var(--blanc);color:var(--navy);overflow:hidden;white-space:nowrap;position:relative;z-index:2;border-top:4px solid var(--rouge);border-bottom:4px solid var(--navy2)}
+.bandeau .piste{display:inline-block;padding:12px 0;font-family:"Bebas Neue";font-size:22px;letter-spacing:.06em;animation:defile 28s linear infinite}
+.bandeau span{margin:0 18px}.bandeau i{color:var(--rouge);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{position:relative;z-index:2;padding:72px 22px}
+.w{max-width:980px;margin:0 auto}
+.kick{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rouge2);font-weight:600}
+h2{font-family:"Bebas Neue";font-weight:400;font-size:clamp(38px,10vw,64px);line-height:1;margin:8px 0 16px;color:#fff}
+.lead{font-size:17px;color:#d8deea;max-width:36em}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}.reveal.vu{opacity:1;transform:none}
+/* intro */
+.intro{background:linear-gradient(180deg,var(--nuit),var(--navy))}
+.citation{margin-top:28px;border-left:4px solid var(--rouge);padding:4px 0 4px 18px;font-family:Yellowtail,cursive;font-size:30px;line-height:1.25;color:#fff}
+.citation small{display:block;font-family:Inter;font-size:12.5px;color:var(--gris);margin-top:6px}
+/* services */
+.services{background:var(--navy)}
+.cartes{display:grid;gap:16px;margin-top:30px;grid-template-columns:1fr}
+@media(min-width:700px){.cartes{grid-template-columns:repeat(3,1fr)}}
+.carte{background:var(--navy2);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px 22px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.carte:hover{transform:translateY(-4px);border-color:rgba(226,56,74,.6)}
+.carte::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:repeating-linear-gradient(-45deg,var(--rouge) 0 6px,#fff 6px 12px,var(--navy) 12px 18px,#fff 18px 24px)}
+.carte svg{width:38px;height:38px;color:var(--rouge2);margin-bottom:12px}
+.carte h3{font-family:"Bebas Neue";font-weight:400;font-size:30px;letter-spacing:.03em;color:#fff;line-height:1}
+.carte p{color:#cdd5e4;margin-top:8px;font-size:15px}
+.note{margin-top:22px;display:inline-block;background:rgba(200,32,47,.14);border:1px dashed rgba(226,56,74,.6);border-radius:12px;padding:12px 16px;font-size:15px}
+/* galerie */
+.galerie{background:linear-gradient(180deg,var(--navy),var(--nuit));padding-left:0;padding-right:0}
+.galerie .w{padding:0 22px}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:26px 22px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative;background:#000;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s}
+.rail figure:hover img{transform:scale(1.06)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(8,18,37,.92));font-size:14px;color:#fff}
+.doigt{font-size:13px;color:var(--gris);padding:0 22px;text-align:center}
+.doigt b{color:var(--rouge2)}
+/* affiche */
+.vie{background:var(--nuit)}
+.vie .grid{display:grid;gap:28px;align-items:center}
+@media(min-width:760px){.vie .grid{grid-template-columns:1fr 1fr}}
+.affiche{border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.5);transform:rotate(-2deg);max-width:420px;margin:0 auto;border:6px solid #fff}
+.posts{list-style:none;display:grid;gap:12px;margin-top:16px}
+.posts li{background:var(--navy2);border-radius:14px;padding:14px 16px;font-size:15px;color:#e1e6f0}
+.posts li small{display:block;color:var(--gris);font-size:12px;margin-top:4px}
+/* horaires */
+.infos{background:var(--creme);color:var(--navy)}
+.infos h2{color:var(--navy)}.infos .kick{color:var(--rouge)}
+.infos .grid{display:grid;gap:22px;margin-top:22px}
+@media(min-width:760px){.infos .grid{grid-template-columns:1.1fr 1fr}}
+.horaires{background:#fff;border-radius:18px;padding:8px 20px;box-shadow:0 10px 30px rgba(13,27,54,.12)}
+.horaires div{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #e7e2d6;font-size:16px}
+.horaires div:last-child{border:0}
+.horaires .ferme{color:#8c93a3}
+.horaires .auj{font-weight:600;color:var(--rouge)}
+.adresse{background:var(--navy);color:#fff;border-radius:18px;padding:24px 22px}
+.adresse p{color:#d8deea;margin:6px 0 14px}
+.adresse .btn{margin:6px 6px 0 0}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--rouge) 0%,#9f1622 100%);text-align:center}
+.contact h2{color:#fff}
+.contact .lead{margin:0 auto;color:#ffe3e6}
+.contact .tel{display:block;font-family:"Bebas Neue";font-size:clamp(46px,13vw,80px);color:#fff;text-decoration:none;margin:18px 0 6px;letter-spacing:.03em}
+.contact .btns{justify-content:center;animation:none}
+.contact .btn.r{background:#fff;color:var(--rouge);animation:none}
+.reseaux{margin-top:26px;font-size:15px}.reseaux a{color:#fff;margin:0 10px;font-weight:500}
+footer{position:relative;z-index:2;background:var(--nuit);color:var(--gris);text-align:center;font-size:13px;padding:30px 22px 100px}
+/* barre mobile */
+.barre{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;transform:translateY(140%);transition:transform .4s}
+.barre.on{transform:none}
+.barre a{flex:1;text-align:center;padding:14px;border-radius:40px;font-weight:600;text-decoration:none;font-size:15px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.barre .a1{background:var(--rouge);color:#fff}.barre .a2{background:#fff;color:var(--navy)}
+@media(min-width:900px){.barre{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#coupes{display:none}}
+</style>
+</head>
+<body>
+<canvas id="coupes" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Trendy Men Barber Shop</b></div>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Dégradé net vu de dos, réalisé chez Trendy Men Barber Shop"></div>
+  <div class="poteau" aria-hidden="true"></div>
+  <div class="in">
+    <div class="badge"><img src="img/logo.webp" alt="Logo Trendy Men Barber Shop"></div>
+    <div class="surt">💈 Barber Shop 974 🇷🇪 · Bras-Panon</div>
+    <h1><span class="s">Trendy Men</span>Barber Shop</h1>
+    <p class="sous">Coupe homme et enfants, barbe. Du mardi au samedi, de 9h à 18h, <b>avec ou sans rendez-vous</b>.</p>
+    <div class="btns">
+      <a class="btn r" href="tel:+262692618190">📞 06 92 61 81 90</a>
+      <a class="btn b" href="https://wa.me/262692618190?text=Bonjour%2C%20je%20voudrais%20passer%20pour%20une%20coupe%20chez%20Trendy%20Men." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+<span>Coupe homme</span><i>✦</i><span>Coupe enfants</span><i>✦</i><span>Barbe</span><i>✦</i><span>Avec ou sans RDV</span><i>✦</i><span>Mardi → samedi · 9h-18h</span><i>✦</i><span>Bras-Panon 974</span><i>✦</i>
+<span>Coupe homme</span><i>✦</i><span>Coupe enfants</span><i>✦</i><span>Barbe</span><i>✦</i><span>Avec ou sans RDV</span><i>✦</i><span>Mardi → samedi · 9h-18h</span><i>✦</i><span>Bras-Panon 974</span><i>✦</i>
+</div></div>
+
+<section class="intro">
+  <div class="w reveal">
+    <div class="kick">Le salon</div>
+    <h2>Le barber de Bras-Panon</h2>
+    <p class="lead">Au cœur de Bras-Panon, Trendy Men accueille les hommes et les enfants pour une coupe, un dégradé ou une barbe bien taillée. On passe quand on veut, ou on appelle pour caler son créneau : le fauteuil vous attend.</p>
+    <p class="citation">« Le style se construit dans les détails ✂️ »<small>Trendy Men Barber Shop, publication Instagram du 30 juillet 2026</small></p>
+  </div>
+</section>
+
+<section class="services">
+  <div class="w">
+    <div class="reveal"><div class="kick">Au fauteuil</div><h2>Les prestations</h2></div>
+    <div class="cartes">
+      <article class="carte reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.6 20 18M8.6 16.4 20 6"/></svg>
+        <h3>Coupe homme</h3><p>Dégradés, contours nets, tresses et dégradé, blond… la coupe qui vous ressemble.</p>
+      </article>
+      <article class="carte reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M5 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg>
+        <h3>Coupe enfants</h3><p>Les petits aussi ont droit à leur style.</p>
+      </article>
+      <article class="carte reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 15h13l5-4H8z"/><path d="M6 15v3M10 15v3M14 15v3"/></svg>
+        <h3>Barbe</h3><p>Taille et contours pour une barbe bien dessinée.</p>
+      </article>
+    </div>
+    <p class="note reveal">💈 Avec ou sans rendez-vous, du mardi au samedi de 9h à 18h.</p>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="w reveal"><div class="kick">Au salon</div><h2>« Pour ceux qui aiment sortir du lot »</h2>
+  <p class="lead">Quelques coupes réalisées au salon, tirées de leurs publications.</p></div>
+  <div class="rail" id="rail">
+    <figure><img src="img/degrade-nuque.webp" alt="Dégradé vu de dos" loading="lazy"><figcaption>Dégradé net, côté nuque</figcaption></figure>
+    <figure><img src="img/tresses-degrade.webp" alt="Tresses et dégradé" loading="lazy"><figcaption>Tresses &amp; dégradé</figcaption></figure>
+    <figure><img src="img/blond.webp" alt="Coupe blonde" loading="lazy"><figcaption>#BlondHaiir</figcaption></figure>
+    <figure><img src="img/contour.webp" alt="Contour de coupe" loading="lazy"><figcaption>Le détail des contours</figcaption></figure>
+    <figure><img src="img/texture.webp" alt="Texture et volume" loading="lazy"><figcaption>Texture &amp; volume</figcaption></figure>
+    <figure><img src="img/locks.webp" alt="Cheveux longs texturés" loading="lazy"><figcaption>Du volume, avec style</figcaption></figure>
+  </div>
+  <p class="doigt">Faites glisser <b>→</b></p>
+</section>
+
+<section class="vie">
+  <div class="w grid">
+    <div class="reveal"><img class="affiche" src="img/affiche-rentree.webp" alt="Affiche Spécial rentrée scolaire de Trendy Men Barber Shop" loading="lazy"></div>
+    <div class="reveal">
+      <div class="kick">La vie du salon</div>
+      <h2>Toujours dans le coup</h2>
+      <p class="lead">Ouvertures spéciales pour la rentrée, nouvelles coupes publiées au fil des semaines : le salon partage son quotidien sur Facebook et Instagram.</p>
+      <ul class="posts">
+        <li>« Salon ouvert du mardi au samedi, 9h - 18h avec ou sans rdv »<small>Facebook, 10 novembre 2026</small></li>
+        <li>« Paré pour la rentrée ? »<small>Instagram, 11 août 2026</small></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="w">
+    <div class="reveal"><div class="kick">Infos pratiques</div><h2>Horaires &amp; accès</h2></div>
+    <div class="grid">
+      <div class="horaires reveal" id="horaires">
+        <div data-j="1"><span>Lundi</span><span class="ferme">Fermé</span></div>
+        <div data-j="2"><span>Mardi</span><span>9h – 18h</span></div>
+        <div data-j="3"><span>Mercredi</span><span>9h – 18h</span></div>
+        <div data-j="4"><span>Jeudi</span><span>9h – 18h</span></div>
+        <div data-j="5"><span>Vendredi</span><span>9h – 18h</span></div>
+        <div data-j="6"><span>Samedi</span><span>9h – 18h</span></div>
+        <div data-j="0"><span>Dimanche</span><span class="ferme">Fermé</span></div>
+      </div>
+      <div class="adresse reveal">
+        <div class="kick">Le salon</div>
+        <h3 style="font-family:'Bebas Neue';font-weight:400;font-size:32px;margin-top:6px">Bras-Panon</h3>
+        <p>Immeuble Narassiguin, local n°4<br>97412 Bras-Panon, La Réunion</p>
+        <a class="btn r" style="animation:none" href="https://www.google.com/maps/search/?api=1&amp;query=Trendy%20Men%20Barber%20Shop%20Bras-Panon" target="_blank" rel="noopener">Itinéraire</a>
+        <a class="btn b" href="tel:+262692618190">Appeler</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="w reveal">
+    <div class="kick" style="color:#ffd3d8">On vous attend</div>
+    <h2>Un seul numéro</h2>
+    <p class="lead">Passez au salon ou appelez pour réserver votre créneau.</p>
+    <a class="tel" href="tel:+262692618190">06 92 61 81 90</a>
+    <div class="btns">
+      <a class="btn r" href="tel:+262692618190">Appeler le salon</a>
+      <a class="btn b" href="https://wa.me/262692618190?text=Bonjour%2C%20je%20voudrais%20passer%20pour%20une%20coupe%20chez%20Trendy%20Men." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+    </div>
+    <p class="reseaux"><a href="https://www.facebook.com/people/Trendy-Men-Barber-Shop/100063719163938/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/trendymenbarbershop/" target="_blank" rel="noopener">Instagram @trendymenbarbershop</a></p>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Trendy Men Barber Shop.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</footer>
+
+<div class="barre" id="barre"><a class="a1" href="tel:+262692618190">Appeler</a><a class="a2" href="https://wa.me/262692618190?text=Bonjour%2C%20je%20voudrais%20passer%20pour%20une%20coupe%20chez%20Trendy%20Men." target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const b=document.getElementById('barre');addEventListener('scroll',()=>b.classList.toggle('on',scrollY>innerHeight*.7),{passive:true});
+const j=new Date().getDay(),l=document.querySelector('#horaires [data-j="'+j+'"]');if(l)l.classList.add('auj');
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+/* fines mèches coupées qui tombent doucement, et quelques reflets de lame */
+const c=document.getElementById('coupes'),x=c.getContext('2d');let W,H,P=[],run=true;const dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+const N=W<600?20:32,cols=['#e9edf5','#c8202f','#aab4c8','#ffffff'];
+function neuf(t){return{x:Math.random()*W,y:t?Math.random()*H:-20,l:4+Math.random()*9,vy:.3+Math.random()*.5,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:Math.random()*6.28,c:cols[Math.random()*cols.length|0],al:.12+Math.random()*.22,eclat:Math.random()<.18}}
+for(let i=0;i<N;i++)P.push(neuf(1));
+function d(p){x.save();x.translate(p.x+Math.sin(p.o)*14,p.y);x.rotate(p.a);x.globalAlpha=p.al;
+ if(p.eclat){const s=2+Math.sin(p.o*3)*1.5;x.strokeStyle='#fff';x.lineWidth=1;x.beginPath();x.moveTo(-s*2,0);x.lineTo(s*2,0);x.moveTo(0,-s*2);x.lineTo(0,s*2);x.stroke()}
+ else{x.strokeStyle=p.c;x.lineWidth=1.2;x.lineCap='round';x.beginPath();x.moveTo(-p.l/2,0);x.quadraticCurveTo(0,p.l*.25,p.l/2,0);x.stroke()}x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.vy;p.o+=.015;p.a+=p.va;if(p.y>H+20)Object.assign(p,neuf(0));d(p)}requestAnimationFrame(f)}f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()})})();
+</script>
+<script src="/outils/cta.js" data-nom="Trendy Men Barber Shop" defer></script>
+</body>
+</html>
