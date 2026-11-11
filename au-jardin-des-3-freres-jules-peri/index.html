@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Au jardin des 3 frères Jules-Péri · Ferme de découverte · Saint-Paul</title>
+<meta name="description" content="La famille Glamport vous accueille sur son exploitation de l'ouest de l'île : fraises, patates douces, salades, visites de ferme et dégustation. Chemin Villentroy, Saint-Paul.">
+<meta property="og:title" content="Au jardin des 3 frères Jules-Péri · Saint-Paul">
+<meta property="og:description" content="Nout jardin, nout fierté ! Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/au-jardin-des-3-freres-jules-peri/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/au-jardin-des-3-freres-jules-peri/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#2d6a3e;--vert-f:#173a24;--feuille:#7cb342;--rouge:#d32f2f;--soleil:#feb114;--terre:#6b4423;--creme:#fbf6ea;--sable:#f2e6cc;--texte:#25301f;--doux:#66705c;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.1;font-weight:800}
+h2{font-size:clamp(1.9rem,7vw,2.8rem);margin-bottom:.6rem;color:var(--vert-f)}
+.ruban{background:var(--vert-f);color:#fff;font-size:.8rem;text-align:center;padding:.5rem 1rem}
+#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer,nav,.galerie,.bandeau{position:relative;z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.55rem 1.1rem;background:rgba(251,246,234,.94);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5;box-shadow:0 6px 20px -16px rgba(23,58,36,.6)}
+.nav .marque{display:flex;align-items:center;gap:.55rem;text-decoration:none;font-family:'Fraunces',serif;font-weight:800;font-size:1.02rem;color:var(--vert);line-height:1.1}
+.nav img{width:44px;height:44px;border-radius:12px;object-fit:cover;background:#fff;border:2px solid var(--sable)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;background:var(--rouge);color:#fff;text-decoration:none;font-weight:800;font-size:.95rem;box-shadow:0 10px 24px -12px rgba(211,47,47,.9);transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.wa{background:#25a35a;box-shadow:0 10px 24px -12px rgba(37,163,90,.9)}
+.btn.contour{background:transparent;border:2px solid currentColor;box-shadow:none}
+.nav .btn{padding:.5rem 1rem;font-size:.85rem;white-space:nowrap}
+.pulse{animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(211,47,47,.14),0 10px 24px -12px rgba(211,47,47,.9)}}
+.btn.wa.pulse{animation-name:pulsev}
+@keyframes pulsev{50%{box-shadow:0 0 0 10px rgba(37,163,90,.16),0 10px 24px -12px rgba(37,163,90,.9)}}
+.hero{min-height:90vh;display:grid;align-items:end;overflow:hidden;color:#fff;background:var(--vert-f)}
+.hero .fond{position:absolute;inset:0;background:url(img/champ.webp) center 40%/cover;animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.13) translateY(-2%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,58,36,.05),rgba(23,58,36,.3) 38%,rgba(15,38,23,.94))}
+.hero .soleil{position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(254,177,20,.55),rgba(254,177,20,0) 70%);z-index:1;animation:respire 7s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.15);opacity:.7}}
+.hero .contenu{position:relative;z-index:2;padding:2rem 1.3rem 4rem;max-width:760px}
+.hero h1{font-size:clamp(2.4rem,11vw,4.8rem)}
+.hero h1 em{font-style:italic;font-weight:600;color:var(--soleil)}
+.hero p{font-size:1.08rem;max-width:34rem;margin:.9rem 0 1.4rem;color:#eef3e6}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.surtitre{display:inline-block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rouge);font-weight:800;margin-bottom:.5rem}
+.hero .surtitre{color:var(--soleil)}
+.main{font-family:'Caveat',cursive;font-size:1.7rem;color:var(--rouge);line-height:1.2}
+.apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.apparait.vu{opacity:1;transform:none}
+.bandeau{background:var(--soleil);color:var(--vert-f);overflow:hidden;white-space:nowrap;padding:.75rem 0;font-family:'Caveat',cursive;font-size:1.6rem}
+.bandeau div{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 1.1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+.bloc{padding:4rem 1.3rem;max-width:1080px;margin:0 auto}
+.histoire{display:grid;gap:2rem;align-items:center}
+.histoire .logo{background:#fff;border-radius:28px;width:min(80vw,340px);margin:0 auto;padding:10px;box-shadow:0 30px 60px -30px rgba(23,58,36,.55);position:relative;transform:rotate(-2deg)}
+.histoire .logo img{border-radius:20px}
+.histoire .logo:before{content:"";position:absolute;inset:-12px;border:2px dashed #c9dcb0;border-radius:34px;z-index:-1}
+.histoire blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.3rem;color:var(--vert);margin:1rem 0;border-left:4px solid var(--soleil);padding-left:1rem}
+.notes{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.notes span{background:#fff;border:1px solid #d9e6c6;border-radius:999px;padding:.35rem .9rem;font-size:.88rem;font-weight:600;color:var(--vert)}
+.vague{display:block;width:100%;height:50px}
+.produits{background:var(--vert-f);color:#e7efdc}
+.produits h2{color:#fff}
+.produits .intro{max-width:40rem;color:#c9d8b8}
+.grille{display:grid;gap:1rem;margin-top:1.8rem;grid-template-columns:repeat(2,1fr)}
+.legume{background:rgba(255,255,255,.06);border:1px solid rgba(254,177,20,.2);border-radius:var(--r);padding:1.1rem;text-align:center;transition:transform .3s,border-color .3s}
+.legume:hover{transform:translateY(-4px) rotate(-1deg);border-color:var(--soleil)}
+.legume svg{width:58px;height:58px;margin:0 auto .4rem}
+.legume h3{color:#fff;font-size:1.12rem}
+.legume p{font-size:.85rem;color:#b8c9a6}
+.ou{display:grid;gap:.8rem;margin-top:2rem}
+.ou div{background:rgba(255,255,255,.07);border-radius:14px;padding:.9rem 1.1rem;border-left:4px solid var(--soleil)}
+.ou b{color:#fff}
+.petit{font-size:.82rem;color:var(--doux)}
+.produits .petit{color:#a9ba98;margin-top:1rem}
+.prix-cartes{display:grid;gap:1rem;margin-top:1.6rem}
+.prix-c{background:var(--creme);color:var(--texte);border-radius:var(--r);padding:1.2rem 1.3rem;display:flex;gap:1rem;align-items:center}
+.prix-c .p{font-family:'Caveat',cursive;font-size:2.2rem;color:var(--rouge);line-height:1;white-space:nowrap}
+.prix-c h3{font-size:1.1rem;color:var(--vert-f)}
+.visite .cadre{display:grid;gap:2rem;align-items:center}
+.visite .photo{border-radius:24px;overflow:hidden;box-shadow:0 26px 50px -28px rgba(23,58,36,.6);transform:rotate(1.5deg)}
+.etapes{list-style:none;counter-reset:e;margin-top:1.2rem}
+.etapes li{counter-increment:e;position:relative;padding:0 0 1.1rem 3.2rem}
+.etapes li:before{content:counter(e);position:absolute;left:0;top:0;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--vert);color:#fff;font-weight:800;display:grid;place-items:center}
+.etapes li:after{content:"";position:absolute;left:1.08rem;top:2.3rem;bottom:.2rem;border-left:2px dotted #b9cf9c}
+.etapes li:last-child:after{display:none}
+.chiffres{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.6rem}
+.chiffres div{background:#fff;border-radius:16px;padding:.7rem 1rem;box-shadow:0 12px 28px -22px rgba(23,58,36,.6);text-align:center;flex:1 1 110px}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:1.7rem;color:var(--rouge)}
+.enfants{background:linear-gradient(180deg,#fff4d6,var(--creme))}
+.enfants .boite{background:#fff;border-radius:26px;padding:2rem 1.4rem;box-shadow:0 26px 50px -34px rgba(107,68,35,.6);border:2px dashed var(--soleil);max-width:760px;margin:0 auto}
+.enfants ul{list-style:none;display:grid;gap:.5rem;margin:1rem 0}
+.enfants li:before{content:"🌱 "}
+.recette{display:grid;gap:1.6rem}
+.recette .carte{background:#fff;border-radius:var(--r);padding:1.5rem;box-shadow:0 18px 40px -28px rgba(23,58,36,.6);border-top:5px solid #8e44ad}
+.recette h3{color:#5b2a72;font-size:1.3rem;margin-bottom:.6rem}
+.recette ul{padding-left:1.1rem}
+.recette ol{padding-left:1.3rem}
+.recette li{margin:.25rem 0}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.4rem 1.3rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 76%;max-width:340px;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 18px 40px -26px rgba(23,58,36,.6)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{padding:.7rem 1rem;font-size:.9rem;color:var(--doux)}
+.avis{background:var(--sable)}
+.avis .liste{display:grid;gap:1rem;margin-top:1.4rem}
+.avi{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 14px 34px -24px rgba(23,58,36,.45);border-top:4px solid var(--feuille)}
+.avi q{display:block;font-family:'Fraunces',serif;font-style:italic;font-size:1.1rem;margin:.2rem 0 .5rem;color:var(--vert-f)}
+.avi cite{font-style:normal;font-size:.85rem;color:var(--doux)}
+.fetes{background:radial-gradient(circle at 20% 0%,#2f6a40 0,var(--vert-f) 70%);color:#e9f1df;text-align:center;overflow:hidden}
+.fetes h2{color:#fff}
+.fetes .boite{max-width:660px;margin:0 auto;border:1px solid rgba(254,177,20,.45);border-radius:26px;padding:2.4rem 1.4rem;background:rgba(255,255,255,.04)}
+.fetes p{margin:.8rem auto 1.4rem;max-width:31rem;color:#d3e2c4}
+.fetes .idees{display:grid;gap:.6rem;max-width:30rem;margin:0 auto 1.6rem;text-align:left}
+.fetes .idees div{background:rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem;font-size:.95rem}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1rem}
+.guirlande i{width:10px;height:10px;border-radius:50%;background:var(--soleil);animation:brille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--rouge);animation-delay:.6s}.guirlande i:nth-child(3n){background:var(--feuille);animation-delay:1.2s}
+@keyframes brille{50%{opacity:.25;transform:scale(.7)}}
+.contact-g{display:grid;gap:1.4rem}
+.contact p{margin:.5rem 0}
+.contact a{color:var(--rouge);font-weight:800}
+.carte-map{border-radius:var(--r);overflow:hidden;min-height:280px;background:#e8eede;box-shadow:0 14px 34px -24px rgba(23,58,36,.45)}
+.carte-map iframe{border:0;width:100%;height:100%;min-height:280px}
+footer{background:var(--vert-f);color:#bfd0ae;text-align:center;padding:2.4rem 1.3rem;font-size:.85rem}
+footer img{width:90px;height:90px;border-radius:18px;margin:0 auto 1rem;background:#fff;object-fit:cover}
+footer b{color:#fff}
+@media(min-width:760px){.histoire,.visite .cadre,.recette,.contact-g{grid-template-columns:1fr 1fr}.grille{grid-template-columns:repeat(4,1fr)}.prix-cartes,.ou{grid-template-columns:repeat(2,1fr)}.galerie{justify-content:center}.galerie figure{flex-basis:250px}.hero .contenu{padding:3rem 3rem 6rem}.avis .liste{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.apparait{opacity:1;transform:none}#feuilles{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Au jardin des 3 frères Jules-Péri</b></div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<nav class="nav">
+  <a class="marque" href="#"><img src="img/logo-petit.jpg" alt="Logo du Jardin des 3 frères Jules-Péri">Jardin des<br>3 frères</a>
+  <a class="btn pulse" href="#visite">Visiter la ferme</a>
+</nav>
+<header class="hero">
+  <div class="fond" role="img" aria-label="Les cultures du Jardin des 3 frères, avec une caisse de récolte au premier plan"></div>
+  <div class="soleil" aria-hidden="true"></div>
+  <div class="contenu apparait">
+    <span class="surtitre">Ferme de découverte · Saint-Paul</span>
+    <h1>Au jardin des 3 frères <em>Jules-Péri</em></h1>
+    <p>La famille Glamport vous ouvre son exploitation de l'ouest de l'île : maraîchage, arboriculture, visites, dégustation… et l'envie de partager sa passion pour l'agriculture.</p>
+    <div class="actions">
+      <a class="btn" href="#visite">Découvrir la visite</a>
+      <a class="btn contour" style="color:#fff" href="tel:+262692288096">0692 28 80 96</a>
+    </div>
+  </div>
+</header>
+<div class="bandeau" aria-hidden="true"><div>
+<span>Nout jardin, nout fierté !</span>🌿<span>Produits péi</span>🌿<span>Partage ansanm</span>🌿<span>Respect nout natir</span>🌿<span>Convivialité</span>🌿<span>Nout jardin, nout fierté !</span>🌿<span>Produits péi</span>🌿<span>Partage ansanm</span>🌿<span>Respect nout natir</span>🌿<span>Convivialité</span>🌿
+</div></div>
+<section class="bloc histoire">
+  <div class="logo apparait"><img src="img/logo.webp" alt="Logo : le Jardin des 3 frères Jules Péri, montagnes, légumes péi et marmite au feu de bois"></div>
+  <div class="apparait">
+    <span class="surtitre">La famille Glamport</span>
+    <h2>Une ferme qui se partage</h2>
+    <blockquote>« Une immersion unique dans une exploitation agricole de l'ouest de l'île. »</blockquote>
+    <p>Pascal et Béatrice Glamport cultivent leurs légumes et leurs fruits chemin Villentroy, à Saint-Paul. Ils ont à cœur de partager leur passion : on vient y cueillir, goûter, apprendre le nom des plantes médicinales et repartir avec de bons produits péi.</p>
+    <p class="main" style="margin-top:.8rem">Viv ansanm, manj péi !</p>
+    <div class="notes"><span>🥬 Maraîchage</span><span>🌳 Arboriculture</span><span>👣 Ferme de découverte</span><span>🍓 Cueillette</span><span>🏡 Bienvenue à la ferme</span><span>🎓 Visite pédagogique</span></div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50V22c180-26 360 26 540 10s360-34 540-14 270 24 360 8v24z" fill="#173a24"/></svg>
+<section class="produits" id="produits">
+  <div class="bloc" style="padding-top:2.4rem">
+    <span class="surtitre apparait" style="color:var(--soleil)">Les produits de la ferme</span>
+    <h2 class="apparait">Ce qui pousse au jardin</h2>
+    <p class="intro apparait">Cultivé avec soin, récolté au fil des saisons. Dégustation gratuite à la ferme.</p>
+    <div class="grille">
+      <article class="legume apparait"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 18c-12 0-18 10-16 22 2 10 10 18 16 18s14-8 16-18c2-12-4-22-16-22z" fill="#e53935"/><path d="M24 14l8 6 8-6-4 8h-8z" fill="#7cb342"/><g fill="#ffe08a"><circle cx="26" cy="30" r="1.4"/><circle cx="36" cy="28" r="1.4"/><circle cx="31" cy="38" r="1.4"/><circle cx="40" cy="38" r="1.4"/><circle cx="24" cy="42" r="1.4"/><circle cx="32" cy="48" r="1.4"/></g></svg><h3>Fraises</h3><p>À cueillir sur réservation</p></article>
+      <article class="legume apparait"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 36c4-12 18-18 30-14 10 4 12 14 8 20-6 8-22 10-32 6-6-3-8-7-6-12z" fill="#efe1c6"/><path d="M14 38c6 4 20 6 30 0" stroke="#c9a77a" stroke-width="2" fill="none"/><path d="M50 30l8-6" stroke="#7cb342" stroke-width="3"/></svg><h3>Patates douces</h3><p>Dont la patate douce blanche</p></article>
+      <article class="legume apparait"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="40" r="14" fill="#d81b60"/><path d="M32 54v6" stroke="#d81b60" stroke-width="2"/><path d="M32 26c-4-8-10-12-14-12 2 6 8 10 14 12zm0 0c4-8 10-12 14-12-2 6-8 10-14 12zm0 0V10" stroke="#558b2f" stroke-width="3" fill="#7cb342"/></svg><h3>Radis &amp; navets</h3><p>Récoltés au jardin</p></article>
+      <article class="legume apparait"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="36" r="20" fill="#8bc34a"/><path d="M32 16c-8 8-8 32 0 40M32 16c8 8 8 32 0 40M14 32c10 4 26 4 36 0" stroke="#558b2f" stroke-width="2" fill="none"/></svg><h3>Choux &amp; salades</h3><p>Et bien d'autres légumes</p></article>
+    </div>
+    <div class="prix-cartes">
+      <div class="prix-c apparait"><div class="p">4 €<br><small style="font-size:1.1rem">le kg</small></div><div><h3>Haricot rouge</h3><p class="petit" style="color:var(--doux)">« Cultivé avec soin dans notre jardin pour vous offrir le meilleur de la terre ! » Cari, rougail, daube, soupe, salade…</p></div></div>
+      <div class="prix-c apparait"><div class="p">2,50 €<br><small style="font-size:1.1rem">le kilo</small></div><div><h3>Patate douce blanche</h3><p class="petit" style="color:var(--doux)">« Fraîche, locale &amp; savoureuse ! » 100 % péi, 100 % bon, 100 % plaisir.</p></div></div>
+    </div>
+    <p class="petit apparait">Prix repris des publications Facebook de juillet et août 2026, à titre d'exemple : demandez les produits du moment.</p>
+    <div class="ou">
+      <div class="apparait"><b>🏡 À la ferme</b><br>Vente et cueillette sur réservation</div>
+      <div class="apparait"><b>🎪 Au marché</b><br>Marché du Théâtre, Saint-Gilles-les-Bains</div>
+      <div class="apparait"><b>🛒 Dans les magasins</b><br>En grandes et moyennes surfaces de l'île</div>
+      <div class="apparait"><b>📱 Pour réserver</b><br>Appel, SMS ou WhatsApp : « Mi répond a zot ! »</div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)"><path d="M0 50V22c180-26 360 26 540 10s360-34 540-14 270 24 360 8v24z" fill="#173a24"/></svg>
+<section class="bloc visite" id="visite">
+  <div class="cadre">
+    <div class="photo apparait"><img src="img/collation.webp" alt="La collation servie à la ferme : légumes cuisinés, citronnade et agrumes sur une nappe fleurie" loading="lazy"></div>
+    <div class="apparait">
+      <span class="surtitre">Ferme de découverte</span>
+      <h2>Une heure au cœur du jardin</h2>
+      <p>Seul, en famille ou en groupe, venez découvrir une exploitation agricole, ses activités et son environnement. La visite est encadrée par l'agriculteur.</p>
+      <ol class="etapes">
+        <li><b>L'accueil</b> et la présentation du parcours</li>
+        <li><b>La collation</b> : citronnade, gâteau patate, confiture patate douce ou fraise</li>
+        <li><b>Les échanges</b> et la découverte des plantes médicinales</li>
+        <li><b>Les cultures en place</b>, au fil des rangs</li>
+      </ol>
+      <div class="chiffres"><div><b>1 h</b>de visite</div><div><b>20</b>personnes max.</div><div><b>Sur</b>réservation</div></div>
+      <p style="margin-top:1.3rem"><a class="btn wa pulse" href="https://wa.me/262692288096?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20visite%20de%20la%20ferme">Réserver une visite</a></p>
+    </div>
+  </div>
+</section>
+<section class="enfants">
+  <div class="bloc">
+    <div class="boite apparait">
+      <span class="surtitre">Ça s'est passé cet été</span>
+      <h2>Les journées découverte agricole</h2>
+      <p><span class="main" style="font-size:1.5rem">« Vos enfants veulent mettre les mains dans la terre… mais pas dans le canapé toute la journée ? »</span></p>
+      <p style="margin-top:.6rem">Les 7 et 8 août, de 8 h 30 à 17 h, les enfants de 6 à 13 ans étaient invités à passer la journée au jardin :</p>
+      <ul>
+        <li>Découverte du monde agricole</li>
+        <li>Initiation aux activités agricoles</li>
+        <li>Jeux, ateliers et moments de partage en pleine nature</li>
+      </ul>
+      <p>Petit-déjeuner, repas du midi et activités inclus, 10 places par journée. <b>« Souvenirs garantis ! »</b></p>
+      <p class="petit" style="margin-top:.8rem">D'après l'affiche publiée sur Facebook en août 2026. Prochaines dates : à demander à la ferme.</p>
+    </div>
+  </div>
+</section>
+<section class="bloc recette" id="recette">
+  <div class="apparait">
+    <span class="surtitre">La recette partagée par Béatrice</span>
+    <h2>Le gâteau patate douce</h2>
+    <p class="main">« Un gâteau bien moelleux, fondant, qui sent bon la maison ! »</p>
+    <p style="margin-top:.8rem">Le gâteau patate fait aussi partie de la collation de la visite. « Laissez tiédir… et régalez toute la famille ! »</p>
+    <img src="img/affiche-patate-douce.webp" alt="L'affiche de la patate douce blanche avec la recette du gâteau" loading="lazy" style="border-radius:var(--r);margin-top:1.2rem;max-width:300px;box-shadow:0 18px 40px -28px rgba(23,58,36,.6)">
+  </div>
+  <div class="carte apparait">
+    <h3>Ingrédients</h3>
+    <ul>
+      <li>500 g de patates douces blanches cuites</li><li>3 œufs</li><li>150 g de sucre</li><li>100 g de beurre fondu</li><li>150 g de farine</li><li>1 sachet de levure chimique</li><li>1 sachet de sucre vanillé</li><li>1 pincée de sel</li><li>Vanille ou cannelle selon le goût</li>
+    </ul>
+    <h3 style="margin-top:1.2rem">Préparation</h3>
+    <ol>
+      <li>Faites cuire les patates douces et écrasez-les en purée.</li>
+      <li>Mélangez les œufs avec le sucre et le sucre vanillé.</li>
+      <li>Ajoutez le beurre fondu puis la purée de patate douce.</li>
+      <li>Incorporez la farine, la levure et le sel.</li>
+      <li>Parfumez avec vanille ou cannelle.</li>
+      <li>Versez dans un moule beurré.</li>
+      <li>Enfournez 40 à 45 min à 180 °C.</li>
+    </ol>
+  </div>
+</section>
+<div class="galerie" aria-label="Le jardin en images">
+  <figure class="apparait"><img src="img/champ.webp" alt="Les rangs de cultures et une caisse de récolte" loading="lazy"><figcaption>Les rangs du jardin, chemin Villentroy</figcaption></figure>
+  <figure class="apparait"><img src="img/panier.webp" alt="Caisse de légumes frais : salade, carottes, radis, aubergine" loading="lazy"><figcaption>Le panier de légumes</figcaption></figure>
+  <figure class="apparait"><img src="img/collation.webp" alt="La collation de la visite" loading="lazy"><figcaption>La collation de la visite</figcaption></figure>
+  <figure class="apparait"><img src="img/affiche-patate-douce.webp" alt="Affiche patate douce blanche" loading="lazy"><figcaption>L'affiche de la patate douce blanche</figcaption></figure>
+  <figure class="apparait"><img src="img/logo.webp" alt="Logo du Jardin des 3 frères Jules Péri" loading="lazy" style="object-fit:contain;background:#fff"><figcaption>Produits péi, partage ansanm</figcaption></figure>
+</div>
+<section class="avis">
+  <div class="bloc">
+    <span class="surtitre apparait">Ils sont venus au jardin</span>
+    <h2 class="apparait">« Merveilleuse journée »</h2>
+    <div class="liste">
+      <div class="avi apparait"><q>Très bon souvenir du zarlor du 19 juillet chez Pascal et Béatrice, merveilleuse journée.</q><cite>Brigitte et Alain, commentaire Facebook, août 2026</cite></div>
+      <div class="avi apparait"><q>Merci pour la recette Béatrice, le gâteau patate excellent.</q><cite>Brigitte, « les Lyonnais », commentaire Facebook, août 2026</cite></div>
+    </div>
+  </div>
+</section>
+<section class="fetes" id="noel">
+  <div class="bloc">
+    <div class="boite apparait">
+      <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="surtitre" style="color:var(--soleil)">Idées cadeaux pour Noël</span>
+      <h2>Offrez un morceau du jardin</h2>
+      <p>Pour la table des fêtes ou pour faire plaisir : des produits péi cultivés avec amour, ou un moment à la ferme à partager en famille.</p>
+      <div class="idees">
+        <div>🧺 Un panier de légumes du jardin</div>
+        <div>🍠 De la patate douce pour le gâteau des fêtes</div>
+        <div>👣 Une visite de la ferme à offrir, sur réservation</div>
+      </div>
+      <a class="btn wa pulse" href="https://wa.me/262692288096?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20panier%20ou%20une%20visite%20de%20la%20ferme%20pour%20No%C3%ABl">Préparer un cadeau</a>
+    </div>
+  </div>
+</section>
+<section class="bloc" id="contact">
+  <span class="surtitre apparait">Venir au jardin</span>
+  <h2 class="apparait">On vous attend à Saint-Paul</h2>
+  <div class="contact-g">
+    <div class="contact apparait">
+      <p>📍 178 bis chemin Villentroy, 97422 Saint-Paul</p>
+      <p>📱 <a href="tel:+262692288096">0692 28 80 96</a> · appel, SMS ou WhatsApp</p>
+      <p>🎪 Au marché du Théâtre, Saint-Gilles-les-Bains</p>
+      <p>👍 <a href="https://www.facebook.com/aujardindes3freresjulesperi" target="_blank" rel="noopener">La page Facebook du jardin</a></p>
+      <p>🏡 Adhérents du réseau <a href="https://www.bienvenue-a-la-ferme.com/fr/reunion/la-reunion/saint-paul/ferme/le-jardin-des-3-freres-jules-peri/679539" target="_blank" rel="noopener">Bienvenue à la ferme</a></p>
+      <p style="margin-top:1.2rem"><a class="btn wa" href="https://wa.me/262692288096?text=Bonjour%2C%20quels%20sont%20vos%20produits%20du%20moment%20%3F">Demander les produits du moment</a></p>
+    </div>
+    <div class="carte-map apparait"><iframe title="Plan d'accès au Jardin des 3 frères" loading="lazy" src="https://www.google.com/maps?q=-21.094543,55.297638&z=15&output=embed"></iframe></div>
+  </div>
+</section>
+<footer>
+  <img src="img/logo-petit.jpg" alt="">
+  <p><b>Au jardin des 3 frères Jules-Péri</b> · Pascal et Béatrice Glamport · Saint-Paul</p>
+  <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du <b>Jardin des 3 frères Jules-Péri</b>.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</p>
+</footer>
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('feuilles'),g=c.getContext('2d');let W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+const N=innerWidth<700?16:28,cols=['124,179,66','85,139,47','254,177,20','160,200,90'];
+function nouv(i){const lum=Math.random()<.35;return{x:Math.random()*W,y:i?Math.random()*H:-30,lum,r:lum?2+Math.random()*3:6+Math.random()*7,v:lum?.12+Math.random()*.2:.35+Math.random()*.5,t:Math.random()*6.28,s:(Math.random()-.5)*.03,a:Math.random()*6.28,c:lum?'254,214,120':cols[Math.floor(Math.random()*4)]}}
+for(let i=0;i<N;i++)P.push(nouv(true));
+function feuille(p,al){g.save();g.translate(p.x,p.y);g.rotate(p.a);g.fillStyle='rgba('+p.c+','+al+')';g.beginPath();g.moveTo(0,-p.r);g.quadraticCurveTo(p.r*.8,0,0,p.r);g.quadraticCurveTo(-p.r*.8,0,0,-p.r);g.fill();g.strokeStyle='rgba(23,58,36,'+al*.5+')';g.lineWidth=.8;g.beginPath();g.moveTo(0,-p.r);g.lineTo(0,p.r);g.stroke();g.restore()}
+function tour(){if(!run)return;g.clearRect(0,0,W,H);for(const p of P){p.t+=.015;if(p.lum){p.y-=p.v;p.x+=Math.sin(p.t)*.3;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}const al=.25+.2*Math.sin(p.t*2);const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);gr.addColorStop(0,'rgba('+p.c+','+al+')');gr.addColorStop(1,'rgba('+p.c+',0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,p.r*4,0,6.28);g.fill()}
+else{p.y+=p.v;p.x+=Math.sin(p.t)*.7;p.a+=p.s+Math.sin(p.t)*.01;if(p.y>H+30)Object.assign(p,nouv(false));feuille(p,.32)}}requestAnimationFrame(tour)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tour()});tour();})();
+</script>
+<script src="/outils/cta.js" data-nom="Au jardin des 3 frères Jules-Péri" defer></script>
+</body>
+</html>

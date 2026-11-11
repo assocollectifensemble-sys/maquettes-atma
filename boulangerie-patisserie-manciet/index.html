@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Boulangerie Pâtisserie Manciet — artisanale depuis 1978, Saint-Pierre</title>
+<meta name="description" content="Boulangerie pâtisserie artisanale depuis 1978 au 64 rue Victor le Vigoureux à Saint-Pierre : pains, viennoiseries, pâtisseries et salé, labellisée Halal.">
+<meta property="og:title" content="Manciet — boulangerie pâtisserie artisanale à Saint-Pierre">
+<meta property="og:description" content="Pains, viennoiseries, pâtisseries et salé préparés avec passion depuis 1978, 64 rue Victor le Vigoureux. Labellisée Halal.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/boulangerie-patisserie-manciet/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/boulangerie-patisserie-manciet/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Great+Vibes&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --choco:#3B2416; --choco-2:#5A3A24; --caramel:#B9773A; --or:#D9A75B; --creme:#FBF5EC; --farine:#F3EADC; --ink:#2A1B12; --muted:#7A6656;
+  --line:rgba(59,36,22,.14); --serif:'Fraunces',Georgia,serif; --sans:'Manrope',system-ui,sans-serif; --script:'Great Vibes',cursive;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--creme);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px;border-radius:6px}
+.ribbon{background:var(--ink);color:var(--farine);font-size:13px;padding:9px var(--pad);line-height:1.45}
+.ribbon b{color:var(--or)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel);font-weight:700}
+h1,h2,h3{font-family:var(--serif);font-weight:700;letter-spacing:-.01em}
+h2{font-size:clamp(32px,5.4vw,56px);line-height:1.04;margin:10px 0 16px}
+h2 em{font-style:italic;font-weight:500;color:var(--caramel)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:14px;font-weight:700;text-decoration:none;border:2px solid currentColor;transition:transform .25s,background .25s,color .25s}
+.btn.main{background:var(--or);border-color:var(--or);color:var(--ink)}
+.btn.main:hover{transform:translateY(-2px);background:#fff;border-color:#fff}
+.btn.ghost{color:var(--farine)}
+.btn.ghost:hover{background:var(--farine);color:var(--ink)}
+/* HERO */
+.hero{position:relative;min-height:min(94svh,860px);display:grid;align-items:end;color:var(--farine);overflow:hidden;background:var(--choco)}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:50% 30%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,27,18,.25) 0%,rgba(42,27,18,.55) 45%,rgba(42,27,18,.94) 100%)}
+#farine{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .in{position:relative;z-index:2;padding:0 var(--pad) clamp(40px,7vw,80px);max-width:1180px;width:100%;margin:0 auto}
+.hero .script{font-family:var(--script);font-size:clamp(70px,15vw,150px);line-height:.9;color:#fff;display:block;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.hero h1{font-size:clamp(20px,3vw,28px);font-weight:500;letter-spacing:.14em;text-transform:uppercase;margin:6px 0 18px;color:var(--or)}
+.hero p{max-width:44ch;font-size:clamp(17px,2.1vw,20px);color:#F1E4D2}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.badges span{border:1px solid rgba(217,167,91,.55);border-radius:999px;padding:5px 14px;font-size:13.5px;color:#F1E4D2;background:rgba(42,27,18,.35);backdrop-filter:blur(4px)}
+.hero .in>*{opacity:0;transform:translateY(18px);animation:up 1s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .in>*:nth-child(2){animation-delay:.12s}.hero .in>*:nth-child(3){animation-delay:.24s}.hero .in>*:nth-child(4){animation-delay:.36s}.hero .in>*:nth-child(5){animation-delay:.48s}
+@keyframes up{to{opacity:1;transform:none}}
+/* bandeau */
+.band{background:var(--or);color:var(--ink);overflow:hidden;padding:14px 0;border-block:2px solid var(--choco)}
+.band .track{display:flex;gap:40px;width:max-content;animation:defile 36s linear infinite;font-family:var(--serif);font-weight:700;font-size:clamp(19px,2.6vw,26px);white-space:nowrap}
+.band .track span::after{content:"✦";margin-left:40px;color:var(--choco-2);font-size:.7em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison{max-width:1180px;margin:0 auto;padding:clamp(70px,10vw,120px) var(--pad);display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.maison{grid-template-columns:1.05fr .95fr}}
+.maison p{color:#4E3B2E;max-width:50ch}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.chiffres div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 12px;text-align:center}
+.chiffres b{display:block;font-family:var(--serif);font-size:clamp(24px,4vw,34px);color:var(--choco)}
+.chiffres span{font-size:13px;color:var(--muted);line-height:1.3;display:block}
+.maison .photo{position:relative}
+.maison .photo img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 40px 70px -40px rgba(59,36,22,.7)}
+.maison .photo .stamp{position:absolute;right:-6px;bottom:-18px;width:118px;height:118px;border-radius:50%;background:var(--choco);color:var(--or);display:grid;place-items:center;text-align:center;font-family:var(--serif);font-size:13px;line-height:1.15;padding:14px;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);animation:spin 26s linear infinite}
+.maison .photo .stamp b{font-size:26px;display:block;color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+/* vitrine */
+.vitrine{background:var(--choco);color:var(--farine);padding:clamp(70px,10vw,120px) 0}
+.vitrine .head{padding:0 var(--pad);max-width:1180px;margin:0 auto}
+.vitrine .head p{color:#D8C6B2;max-width:50ch}
+.vitrine .kicker{color:var(--or)}
+.vitrine h2 em{color:var(--or)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:24px var(--pad) 0;max-width:1180px;margin:0 auto}
+.tabs button{font:inherit;font-weight:700;font-size:15px;border:1.5px solid rgba(217,167,91,.5);background:transparent;color:var(--farine);border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .25s,color .25s}
+.tabs button[aria-selected=true],.tabs button:hover{background:var(--or);color:var(--ink);border-color:var(--or)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:26px var(--pad) 0;max-width:1180px;margin:0 auto}
+@media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr)}}
+.grid figure{position:relative;border-radius:18px;overflow:hidden;background:var(--choco-2);transition:opacity .35s,transform .35s}
+.grid figure.off{display:none}
+.grid img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.grid figure:hover img{transform:scale(1.07)}
+.grid figcaption{position:absolute;inset:auto 0 0 0;padding:28px 12px 10px;background:linear-gradient(transparent,rgba(42,27,18,.92));font-family:var(--serif);font-size:17px;line-height:1.2}
+.grid figcaption small{display:block;font-family:var(--sans);font-size:12px;color:var(--or);letter-spacing:.05em}
+.vitrine .note{padding:18px var(--pad) 0;max-width:1180px;margin:0 auto;color:#BFA98F;font-size:14px}
+/* pain */
+.pain{max-width:1180px;margin:0 auto;padding:clamp(70px,10vw,120px) var(--pad);display:grid;gap:36px;align-items:center}
+@media(min-width:900px){.pain{grid-template-columns:.9fr 1.1fr}}
+.pain img{border-radius:24px;width:100%;aspect-ratio:16/10;object-fit:cover}
+.pain ul{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.pain li{padding-left:34px;position:relative;color:#4E3B2E}
+.pain li::before{content:"";position:absolute;left:0;top:7px;width:20px;height:12px;border-radius:50%;background:var(--caramel);box-shadow:inset -3px -3px 0 rgba(0,0,0,.18);transform:rotate(-20deg)}
+.avis{margin-top:26px;background:var(--farine);border-left:4px solid var(--caramel);border-radius:0 16px 16px 0;padding:18px 20px;font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5}
+.avis cite{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--muted);margin-top:8px}
+/* noel */
+.noel{max-width:1180px;margin:0 auto clamp(60px,9vw,110px);padding:0 var(--pad)}
+.noel .box{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(circle at 80% 0%,#6E1F24,#3B1416 70%);color:#fff;display:grid}
+@media(min-width:820px){.noel .box{grid-template-columns:1fr 1fr}}
+.noel .box img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.noel .t{padding:clamp(28px,5vw,54px);position:relative;z-index:1}
+.noel .kicker{color:var(--or)}
+.noel p{color:#F1D9D0}
+.noel .btn{margin-top:22px}
+.noel small{display:block;margin-top:12px;color:#D9B3A8;font-size:13px}
+.flake{position:absolute;top:-10px;color:rgba(255,255,255,.7);font-size:14px;animation:neige linear infinite;pointer-events:none}
+@keyframes neige{to{transform:translateY(560px) rotate(200deg)}}
+/* infos */
+.infos{background:var(--farine);padding:clamp(60px,9vw,100px) var(--pad)}
+.infos .in{max-width:1180px;margin:0 auto;display:grid;gap:18px}
+@media(min-width:860px){.infos .in{grid-template-columns:repeat(3,1fr)}}
+.infos .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
+.infos h3{font-size:24px;margin-bottom:8px}
+.infos table{width:100%;border-collapse:collapse;font-size:15.5px}
+.infos td{padding:5px 0;border-bottom:1px dashed var(--line)}
+.infos td:last-child{text-align:right;font-weight:700}
+.infos .s{font-size:12.5px;color:var(--muted);margin-top:10px}
+.infos a.l{color:var(--choco-2);font-weight:700;text-decoration:none;border-bottom:2px solid var(--or)}
+footer{background:var(--ink);color:#CDB9A2;text-align:center;padding:40px var(--pad) 30px;font-size:14px}
+footer .script{font-family:var(--script);font-size:54px;color:#fff;display:block;line-height:1}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(42,27,18,.95);backdrop-filter:blur(6px);border-radius:18px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.45)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:13px;text-decoration:none;font-weight:700;font-size:15px;color:var(--farine)}
+.bar a.m{background:var(--or);color:var(--ink)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero .in>*{opacity:1;transform:none}#farine{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour la Boulangerie Pâtisserie Manciet</div>
+
+<header class="hero">
+  <div class="bg"><img src="img/mur-a-pain.webp" alt="Le mur à pain de la boulangerie Manciet : boules, bâtards et pains spéciaux sur étagères en bois"></div>
+  <canvas id="farine" aria-hidden="true"></canvas>
+  <div class="in">
+    <span class="script">Manciet</span>
+    <h1>Boulangerie · Pâtisserie · Saint-Pierre</h1>
+    <p>Votre boulangerie pâtisserie artisanale depuis 1978, au 64 rue Victor le Vigoureux : pains, viennoiseries et pâtisseries préparés avec passion.</p>
+    <div class="cta">
+      <a class="btn main" href="https://wa.me/262693226329?text=Bonjour%20Manciet%2C%20je%20souhaite%20passer%20une%20commande">Commander sur WhatsApp</a>
+      <a class="btn ghost" href="#vitrine">Voir la vitrine</a>
+    </div>
+    <div class="badges"><span>Artisanale depuis 1978</span><span>Labellisée Halal</span><span>Baguette Bagatelle</span></div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>Pains</span><span>Viennoiseries</span><span>Pâtisseries</span><span>Salé</span><span>Halal</span><span>Saint-Pierre</span>
+  <span>Pains</span><span>Viennoiseries</span><span>Pâtisseries</span><span>Salé</span><span>Halal</span><span>Saint-Pierre</span>
+</div></div>
+
+<main>
+<section class="maison">
+  <div class="reveal">
+    <p class="kicker">La maison</p>
+    <h2>Une boulangerie <em>de Saint-Pierre</em>, depuis 1978</h2>
+    <p>Rue Victor le Vigoureux, en plein centre de Saint-Pierre, Manciet prépare chaque jour pains, viennoiseries, pâtisseries et salé. La maison est labellisée Halal, jusque dans ses sandwichs et croques.</p>
+    <div class="chiffres">
+      <div><b>1978</b><span>boulangerie artisanale</span></div>
+      <div><b>Halal</b><span>maison labellisée</span></div>
+      <div><b>7 j/7</b><span>ouvert tous les jours</span></div>
+    </div>
+  </div>
+  <div class="photo reveal">
+    <img src="img/choux-tartelettes.webp" alt="Assortiment de choux et de tartelettes colorés de la pâtisserie Manciet" loading="lazy">
+    <div class="stamp"><span>depuis<b>1978</b>Saint-Pierre</span></div>
+  </div>
+</section>
+
+<section class="vitrine" id="vitrine">
+  <div class="head reveal">
+    <p class="kicker">La vitrine</p>
+    <h2>Sucré ou salé, <em>tout est fait maison</em></h2>
+    <p>Un aperçu des gourmandises publiées ces derniers jours par la boulangerie.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Filtrer la vitrine">
+    <button role="tab" aria-selected="true" data-f="all">Tout</button>
+    <button role="tab" aria-selected="false" data-f="sucre">Sucré</button>
+    <button role="tab" aria-selected="false" data-f="sale">Salé</button>
+  </div>
+  <div class="grid">
+    <figure data-c="sucre"><img src="img/cookie-banoffee.webp" alt="Cookies banoffee, banane et chocolat noir" loading="lazy"><figcaption><small>Sucré</small>Cookie Banoffee</figcaption></figure>
+    <figure data-c="sucre"><img src="img/grille-pommes.webp" alt="Grillés aux pommes dorés sur plateau" loading="lazy"><figcaption><small>Sucré</small>Grillé aux pommes</figcaption></figure>
+    <figure data-c="sucre"><img src="img/brownie.webp" alt="Brownies au chocolat et éclats de noisettes" loading="lazy"><figcaption><small>Sucré</small>Brownie aux noisettes</figcaption></figure>
+    <figure data-c="sucre"><img src="img/choux-tartelettes.webp" alt="Choux et tartelettes" loading="lazy"><figcaption><small>Sucré</small>Choux &amp; tartelettes</figcaption></figure>
+    <figure data-c="sale"><img src="img/croque.webp" alt="Croque monsieur au jambon de poulet halal, tomate et herbes" loading="lazy"><figcaption><small>Salé · halal</small>Croque monsieur</figcaption></figure>
+    <figure data-c="sale"><img src="img/sandwich-magret.webp" alt="Sandwichs au magret de canard halal" loading="lazy"><figcaption><small>Salé · halal</small>Sandwich magret</figcaption></figure>
+    <figure data-c="sale"><img src="img/sandwichs.webp" alt="Sandwichs en pain aux graines" loading="lazy"><figcaption><small>Salé</small>Sandwichs du jour</figcaption></figure>
+    <figure data-c="sale"><img src="img/mur-a-pain.webp" alt="Pains spéciaux sur le mur à pain" loading="lazy"><figcaption><small>Boulangerie</small>Le mur à pain</figcaption></figure>
+  </div>
+  <p class="note">Disponibilités selon la fournée du jour : demandez sur WhatsApp.</p>
+</section>
+
+<section class="pain">
+  <img class="reveal" src="img/og.jpg" alt="Boules et bâtards dorés, farinés et grignés" loading="lazy">
+  <div class="reveal">
+    <p class="kicker">Notre mur à pain</p>
+    <h2>Le pain, <em>chaque matin</em></h2>
+    <p>Boules farinées, bâtards, pains spéciaux et baguette Bagatelle : le mur à pain de Manciet se remplit dès l'ouverture.</p>
+    <ul>
+      <li>Pains spéciaux et baguette Bagatelle</li>
+      <li>Viennoiseries et pâtisseries</li>
+      <li>Sandwichs, croques et salé, labellisés Halal</li>
+    </ul>
+    <blockquote class="avis">« Choix important de gâteaux, de viennoiseries et de pains délicieux. »<cite>Véronique C., avis Google</cite></blockquote>
+  </div>
+</section>
+
+<section class="noel">
+  <div class="box reveal" id="neige">
+    <img src="img/choux-tartelettes.webp" alt="Pâtisseries de la maison Manciet" loading="lazy">
+    <div class="t">
+      <p class="kicker">Noël &amp; fêtes de fin d'année</p>
+      <h2 style="color:#fff">Vos desserts de fêtes, <em style="color:var(--or)">réservés à l'avance</em></h2>
+      <p>Pour le réveillon ou le repas en famille, réservez vos pâtisseries et vos pains auprès de Manciet et passez les récupérer le jour J, sans attendre.</p>
+      <a class="btn main" href="https://wa.me/262693226329?text=Bonjour%20Manciet%2C%20je%20souhaite%20r%C3%A9server%20pour%20les%20f%C3%AAtes">Réserver pour les fêtes</a>
+      <small>Proposition de rubrique, à adapter avec la boulangerie.</small>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="venir">
+  <div class="in">
+    <div class="card reveal"><h3>Horaires</h3>
+      <table><tr><td>Lundi – samedi</td><td>6h – 19h</td></tr><tr><td>Dimanche</td><td>6h – 12h</td></tr></table>
+      <p class="s">Horaires indiqués sur Boutic Saint-Pierre et Halal Réunion, à confirmer avec la boulangerie.</p></div>
+    <div class="card reveal"><h3>Adresse</h3><p>64 rue Victor le Vigoureux<br>97410 Saint-Pierre</p><p style="margin-top:8px"><a class="l" href="https://www.google.com/maps/search/?api=1&query=Boulangerie%20Patisserie%20Manciet%2064%20rue%20Victor%20le%20Vigoureux%20Saint-Pierre">Itinéraire</a></p></div>
+    <div class="card reveal"><h3>Commander</h3><p><a class="l" href="tel:+262693226329">0693 22 63 29</a><br><a class="l" href="https://wa.me/262693226329">WhatsApp</a> · <a class="l" href="https://www.facebook.com/BoulangeriePatisserieManciet/">Facebook</a></p></div>
+  </div>
+</section>
+</main>
+
+<footer><span class="script">Manciet</span>Boulangerie · Pâtisserie artisanale depuis 1978 · Saint-Pierre<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de la boulangerie.</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="https://wa.me/262693226329?text=Bonjour%20Manciet%2C%20je%20souhaite%20passer%20une%20commande">Commander</a>
+  <a href="tel:+262693226329">Appeler</a>
+  <a href="#venir">Venir</a>
+</nav>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  var tabs=document.querySelectorAll(".tabs button"),figs=document.querySelectorAll(".grid figure");
+  tabs.forEach(function(b){b.addEventListener("click",function(){tabs.forEach(function(t){t.setAttribute("aria-selected",t===b)});var f=b.dataset.f;figs.forEach(function(g){g.classList.toggle("off",f!=="all"&&g.dataset.c!==f)})})});
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var box=document.getElementById("neige");
+  for(var i=0;i<14;i++){var s=document.createElement("span");s.className="flake";s.textContent="✻";s.style.left=(Math.random()*100)+"%";s.style.animationDuration=(7+Math.random()*7)+"s";s.style.animationDelay=(-Math.random()*10)+"s";s.style.fontSize=(9+Math.random()*10)+"px";box.appendChild(s)}
+  /* farine qui flotte dans la lumière */
+  var c=document.getElementById("farine"),x=c.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener("resize",size);
+  var n=W<600?45:90;
+  for(var k=0;k<n;k++)P.push({x:Math.random()*W,y:Math.random()*H,r:.6+Math.random()*2.2,vy:-.08-Math.random()*.25,vx:-.15+Math.random()*.3,ph:Math.random()*6.3,a:.15+Math.random()*.45});
+  function f(t){if(!run)return;x.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(t/2000+p.ph)*.15;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}if(p.x<-5)p.x=W+5;if(p.x>W+5)p.x=-5;x.globalAlpha=p.a*(.6+.4*Math.sin(t/900+p.ph));x.fillStyle="#FFF4E2";x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill()}requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Boulangerie Pâtisserie Manciet" defer></script>
+</body>
+</html>

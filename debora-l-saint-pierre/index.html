@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Salon Débora L · Coiffeuse visagiste & coloriste à Saint-Pierre</title>
+<meta name="description" content="Salon at home de Débora L, coiffeuse diplômée, visagiste et styliste coloriste, 80 chemin de la Salette, Ligne Paradis, Saint-Pierre. Consultation morpho-visagiste, coupes, couleurs, lissage, coiffure de mariée.">
+<meta property="og:title" content="Le Salon Débora L · Saint-Pierre">
+<meta property="og:description" content="Coiffeuse diplômée, visagiste et styliste coloriste, dans son salon at home de Ligne Paradis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maquettes.atma-digital.re/debora-l-saint-pierre/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/debora-l-saint-pierre/img/salon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#161412;--encre:#2a2622;--creme:#f6f0e6;--lin:#ece2d2;--miel:#c8955a;--caramel:#a8743f;--gris:#6d665e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.ruban{background:var(--noir);color:#efe6d8;font-size:.78rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--miel);font-weight:500}
+/* hero */
+.hero{position:relative;min-height:92vh;display:grid;align-items:end;background:var(--noir);color:#fff;overflow:hidden}
+.hero .fond{position:absolute;inset:0;background:url(img/salon.webp) center/cover;filter:saturate(.9);animation:kb 24s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14) translateX(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,20,18,.1),rgba(22,20,18,.35) 45%,rgba(22,20,18,.94) 85%)}
+.hero .txt{position:relative;z-index:2;padding:2rem 1.4rem 3rem;max-width:760px}
+.hero small{letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;color:var(--miel);font-weight:500}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(2.7rem,12vw,4.6rem);line-height:1;margin-top:.5rem}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(20px);animation:monte .9s ease forwards}
+.hero h1 i{font-style:italic;color:var(--miel)}
+@keyframes monte{to{opacity:1;transform:none}}
+.hero p{margin-top:1rem;font-size:1.06rem;color:#e9e0d2;max-width:36ch;opacity:0;animation:monte 1s 1s ease forwards}
+.ciseaux{position:absolute;right:1.2rem;top:1.4rem;z-index:2;width:58px;height:58px;opacity:.85}
+.ciseaux .l1{transform-origin:24px 30px;animation:coupe 2.4s ease-in-out infinite}
+.ciseaux .l2{transform-origin:24px 30px;animation:coupe2 2.4s ease-in-out infinite}
+@keyframes coupe{0%,60%,100%{transform:rotate(0)}30%{transform:rotate(-12deg)}}
+@keyframes coupe2{0%,60%,100%{transform:rotate(0)}30%{transform:rotate(12deg)}}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;opacity:0;animation:monte 1s 1.3s ease forwards}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.85rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-m{background:var(--miel);color:var(--noir)}
+.btn-l{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-n{border:1px solid var(--encre);color:var(--encre)}
+.titres{background:var(--miel);color:var(--noir);display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 1.2rem;padding:.9rem 1rem;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+section{padding:4.3rem 1.4rem;max-width:1080px;margin:0 auto}
+.titre{text-align:center;margin-bottom:2.2rem}
+.titre small{display:block;color:var(--caramel);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem;font-weight:500}
+.titre h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(2rem,8vw,2.9rem);line-height:1.1;margin-top:.3rem}
+.titre h2 i{color:var(--caramel)}
+.meche{display:block;width:120px;height:18px;margin:.7rem auto 0}
+.meche path{fill:none;stroke:var(--miel);stroke-width:1.5;stroke-dasharray:160;stroke-dashoffset:160;transition:stroke-dashoffset 1.6s ease}
+.vu .meche path,.vu.meche path{stroke-dashoffset:0}
+/* intro */
+.intro{display:grid;gap:1.8rem;align-items:center}
+.intro p{font-size:1.06rem}
+.intro p+p{margin-top:.8rem}
+.intro .pastilles{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.pastilles span{border:1px solid var(--miel);border-radius:999px;padding:.35rem .8rem;font-size:.85rem;background:#fff}
+.intro figure img{border-radius:200px 200px 18px 18px;aspect-ratio:3/4;object-fit:cover;width:min(330px,85%);height:auto;margin:0 auto}
+figcaption{font-size:.76rem;color:var(--gris);text-align:center;margin-top:.5rem}
+/* savoir-faire */
+.sf{background:var(--noir);color:#e9e0d2;max-width:none}
+.sf .in{max-width:1080px;margin:0 auto}
+.sf .titre h2{color:#fff}.sf .titre small{color:var(--miel)}
+.metiers{display:grid;gap:1rem}
+.met{border:1px solid rgba(200,149,90,.3);border-radius:18px;padding:1.4rem 1.3rem;background:linear-gradient(160deg,#221e1a,#161412);transition:transform .35s,border-color .35s}
+.met:hover{transform:translateY(-5px);border-color:var(--miel)}
+.met svg{width:42px;height:42px}
+.met h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.55rem;color:#fff;margin-top:.4rem}
+.met p{font-size:.95rem;color:#c9bfb1}
+.met .src{display:block;font-size:.76rem;color:var(--miel);margin-top:.6rem;font-style:italic}
+/* consultation */
+.consult{display:grid;gap:1.4rem;background:var(--lin);border-radius:28px;padding:2.2rem 1.5rem;position:relative;overflow:hidden}
+.consult h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(1.9rem,7vw,2.6rem);line-height:1.1}
+.consult small{color:var(--caramel);letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:500}
+.etapes{list-style:none;display:grid;gap:.8rem;margin-top:.4rem;counter-reset:e}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:2.4rem 1fr;gap:.7rem;align-items:start;font-size:.97rem}
+.etapes li::before{content:counter(e);width:2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--caramel);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:1.25rem;color:var(--caramel)}
+.visage{width:150px;height:170px;margin:0 auto}
+.visage path,.visage ellipse{fill:none;stroke:var(--caramel);stroke-width:1.4}
+.visage .g{stroke-dasharray:4 5;animation:tourne 8s linear infinite}
+@keyframes tourne{to{stroke-dashoffset:-90}}
+/* nuancier */
+.nuancier{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.nu{position:relative;border-radius:18px;overflow:hidden;background:#ddd;cursor:pointer}
+.nu img{width:100%;aspect-ratio:3/4;object-fit:cover;height:auto;transition:transform 1.2s ease}
+.nu:hover img{transform:scale(1.06)}
+.nu .eti{position:absolute;left:.6rem;bottom:.6rem;right:.6rem;display:flex;align-items:center;gap:.5rem;background:rgba(246,240,230,.94);border-radius:999px;padding:.35rem .7rem .35rem .4rem;font-size:.82rem;font-weight:500}
+.nu .eti i{width:22px;height:22px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 2px #fff}
+.nu.large{grid-column:1/-1}
+.nu.large img{aspect-ratio:4/3}
+.note{text-align:center;color:var(--gris);font-size:.8rem;margin-top:1rem}
+/* noel */
+.noel{background:radial-gradient(130% 110% at 50% 0%,#2e2620,#161412 70%);color:#efe6d8;border-radius:30px;text-align:center;padding:3rem 1.5rem;position:relative;overflow:hidden}
+.noel h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;color:var(--miel);font-size:clamp(2.3rem,10vw,3.3rem);line-height:1.05}
+.noel p{max-width:38ch;margin:1rem auto 0}
+.idees{display:grid;gap:.8rem;margin:1.8rem auto 0;max-width:760px;text-align:left}
+.idees div{border:1px solid rgba(200,149,90,.35);border-radius:14px;padding:1rem 1.1rem;background:rgba(255,255,255,.04)}
+.idees b{color:var(--miel);font-weight:500}
+.noel .cta{justify-content:center;opacity:1;animation:none}
+.neige{position:absolute;inset:0;pointer-events:none}
+.neige i{position:absolute;top:-10px;width:5px;height:5px;border-radius:50%;background:rgba(200,149,90,.7);animation:tombe linear infinite}
+@keyframes tombe{to{transform:translateY(560px)}}
+/* infos */
+.infos{display:grid;gap:1.2rem}
+.bloc{background:#fff;border-radius:18px;padding:1.5rem;border:1px solid var(--lin)}
+.bloc h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:1.6rem;margin-bottom:.5rem}
+.bloc .btn{margin:.35rem .3rem 0 0}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td{padding:.42rem 0;border-bottom:1px dashed var(--lin)}
+td+td{text-align:right}
+tr.auj td{color:var(--caramel);font-weight:500}
+tr.ferme td{color:#8a8178}
+footer{text-align:center;padding:2.5rem 1.4rem 3rem;font-size:.82rem;color:#b9ae9f;background:var(--noir)}
+footer .sig{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:2rem;color:var(--miel)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .intro{grid-template-columns:1.1fr .9fr}
+ .metiers{grid-template-columns:repeat(3,1fr)}
+ .consult{grid-template-columns:1.3fr .7fr;align-items:center;padding:3rem}
+ .nuancier{grid-template-columns:repeat(3,1fr)}
+ .nu.large{grid-column:span 2}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .infos{grid-template-columns:1fr 1fr}
+ .hero .txt{padding:3rem 3rem 4rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span,.hero p,.cta{opacity:1!important;transform:none!important}.meche path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour le Salon Débora L</div>
+<main>
+<header class="hero">
+  <div class="fond" role="img" aria-label="Le salon de Débora L : miroirs ronds, fauteuil noir et plan de travail en bois"></div>
+  <svg class="ciseaux" viewBox="0 0 48 60" aria-hidden="true"><g fill="none" stroke="#c8955a" stroke-width="1.8"><g class="l1"><path d="M24 30 L14 4"/><circle cx="30" cy="46" r="7"/><path d="M24 30 L28 40"/></g><g class="l2"><path d="M24 30 L34 4"/><circle cx="18" cy="46" r="7"/><path d="M24 30 L20 40"/></g></g></svg>
+  <div class="txt">
+    <small>Salon at home · Ligne Paradis · Saint-Pierre</small>
+    <h1><span>Le Salon</span> <span style="animation-delay:.25s"><i>Débora L</i></span></h1>
+    <p>Coiffeuse diplômée, visagiste et styliste coloriste : une coupe et une couleur pensées pour votre visage.</p>
+    <div class="cta">
+      <a class="btn btn-m" href="tel:+262692393814">Réserver · 0692 39 38 14</a>
+      <a class="btn btn-l" href="#couleurs">Voir les réalisations</a>
+    </div>
+  </div>
+</header>
+<div class="titres"><span>Coiffeuse diplômée</span><span>Visagiste</span><span>Styliste coloriste</span></div>
+
+<section>
+  <div class="titre rv"><small>Bienvenue</small><h2>Chez Débora, <i>comme à la maison</i></h2>
+  <svg class="meche" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 9c15-12 25 12 40 0s25 12 40 0 25 12 36 0"/></svg></div>
+  <div class="intro">
+    <div class="rv">
+      <p>Le salon de Débora est installé chez elle, au 80 chemin de la Salette, à Ligne Paradis : un espace clair et calme, ses grands miroirs ronds, son plan de travail en bois posé sur un vieux vélo.</p>
+      <p>On y prend le temps : regarder la forme du visage, parler de vos envies, choisir la coupe et la nuance qui vous ressemblent.</p>
+      <div class="pastilles"><span>Sur rendez-vous</span><span>Du lundi au samedi</span><span>Morpho-visagiste</span></div>
+    </div>
+    <figure class="rv">
+      <img src="img/carre-plongeant.webp" alt="Carré plongeant réalisé par Débora L, vu de dos" width="720" height="960">
+      <figcaption>« Le carré plongeant. By Debora.L » · janvier 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sf"><div class="in">
+  <div class="titre rv"><small>Savoir-faire</small><h2>Coupe, couleur, grands jours</h2>
+  <svg class="meche" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 9c15-12 25 12 40 0s25 12 40 0 25 12 36 0"/></svg></div>
+  <div class="metiers">
+    <article class="met rv">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c8955a" stroke-width="1.6"><circle cx="14" cy="36" r="6"/><circle cx="34" cy="36" r="6"/><path d="M18 31 36 6M30 31 12 6"/></g></svg>
+      <h3>Coupes</h3><p>Carré plongeant, dégradé long « pour un effet mode branché », coupes courtes : la coupe se décide avec votre visage.</p>
+    </article>
+    <article class="met rv">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c8955a" stroke-width="1.6"><path d="M10 40c4-10 6-22 6-32M18 40c3-10 4-22 4-32M26 40c2-10 2-22 2-32"/><path d="M32 8h8v12h-8z"/><path d="M36 20v20"/></g></svg>
+      <h3>Couleurs</h3><p>Styliste coloriste : dégradé caramel, brun doré, gris assumé… la nuance juste, de la racine aux pointes.</p>
+    </article>
+    <article class="met rv">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#c8955a" stroke-width="1.6"><circle cx="24" cy="18" r="9"/><path d="M15 18c-4 6-2 14 4 18M33 18c4 6 2 14-4 18"/><path d="M20 8c2-4 6-4 8 0"/><circle cx="35" cy="9" r="2.5"/><circle cx="13" cy="9" r="2.5"/></g></svg>
+      <h3>Lissage & mariée</h3><p>Lissage, soin botox capillaire, et coiffures de mariée, jusqu'aux chignons fleuris de mariée tahitienne.</p>
+    </article>
+  </div>
+</div></section>
+
+<section>
+  <div class="consult rv">
+    <div>
+      <small>Le petit plus de Débora</small>
+      <h2>Consultation morpho-visagiste</h2>
+      <p style="margin:.7rem 0 1rem">Débora a suivi la méthode Contreras : avant de couper, elle regarde votre visage pour trouver ce qui le met en valeur.</p>
+      <ol class="etapes">
+        <li>On observe ensemble la forme du visage et la nature du cheveu.</li>
+        <li>On parle de vos envies, de votre quotidien, du temps que vous voulez y passer.</li>
+        <li>Débora vous propose la coupe et la couleur qui vous vont.</li>
+      </ol>
+      <div class="cta" style="opacity:1;animation:none"><a class="btn btn-n" href="https://wa.me/262692393814?text=Bonjour%20D%C3%A9bora%2C%20je%20voudrais%20prendre%20rendez-vous%20pour%20une%20consultation" target="_blank" rel="noopener">Prendre rendez-vous pour une consultation</a></div>
+    </div>
+    <svg class="visage" viewBox="0 0 150 170" aria-hidden="true"><ellipse cx="75" cy="88" rx="44" ry="58"/><ellipse class="g" cx="75" cy="88" rx="60" ry="74"/><path d="M58 78q6-5 12 0M80 78q6-5 12 0M75 84v18l-5 4M64 120q11 7 22 0"/><path d="M31 70c4-40 84-40 88 0" /></svg>
+  </div>
+</section>
+
+<section id="couleurs">
+  <div class="titre rv"><small>Réalisations</small><h2>Le <i>nuancier</i> de Débora</h2>
+  <svg class="meche" viewBox="0 0 120 18" aria-hidden="true"><path d="M2 9c15-12 25 12 40 0s25 12 40 0 25 12 36 0"/></svg></div>
+  <div class="nuancier">
+    <figure class="nu large rv"><img src="img/degrade-caramel.webp" alt="Dégradé caramel sur cheveux longs, réalisation Débora L" width="720" height="701"><div class="eti"><i style="background:linear-gradient(#4a3020,#c8955a)"></i>Dégradé long caramel</div></figure>
+    <figure class="nu rv"><img src="img/brun-dore.webp" alt="Brun aux reflets dorés, réalisation Débora L" width="720" height="978"><div class="eti"><i style="background:#7a5233"></i>Brun doré</div></figure>
+    <figure class="nu rv"><img src="img/gris-perle.webp" alt="Gris perle, réalisation Débora L" width="720" height="720"><div class="eti"><i style="background:#c9c5bd"></i>Gris perle</div></figure>
+    <figure class="nu rv"><img src="img/poivre-sel.webp" alt="Poivre et sel, réalisation Débora L" width="720" height="720"><div class="eti"><i style="background:linear-gradient(135deg,#4b4038 50%,#b5aea4 50%)"></i>Poivre & sel</div></figure>
+    <figure class="nu rv"><img src="img/carre-plongeant.webp" alt="Carré plongeant châtain, réalisation Débora L" width="720" height="960"><div class="eti"><i style="background:#8a6240"></i>Carré plongeant</div></figure>
+  </div>
+  <p class="note">Photos publiées par le Salon Débora L sur Facebook et Instagram.</p>
+</section>
+
+<section id="noel">
+  <div class="noel rv">
+    <div class="neige" aria-hidden="true"><i style="left:8%;animation-duration:9s"></i><i style="left:22%;animation-duration:12s;animation-delay:2s"></i><i style="left:40%;animation-duration:10s;animation-delay:4s"></i><i style="left:58%;animation-duration:13s;animation-delay:1s"></i><i style="left:74%;animation-duration:9.5s;animation-delay:3s"></i><i style="left:90%;animation-duration:11s;animation-delay:5s"></i></div>
+    <small style="color:var(--miel);letter-spacing:.3em;text-transform:uppercase;font-size:.72rem">Pour les fêtes</small>
+    <h2>Offrez un moment chez Débora</h2>
+    <p>Une nouvelle coupe, une couleur, une consultation visagiste : un cadeau qui se voit, et qui fait du bien.</p>
+    <div class="idees">
+      <div><b>Pour se sentir belle</b><br>Une couleur ou un dégradé pour arriver au réveillon toute neuve.</div>
+      <div><b>Pour changer de tête</b><br>Une consultation morpho-visagiste et la coupe qui va avec.</div>
+      <div><b>Pour une future mariée</b><br>Sa coiffure du grand jour, signée Débora.</div>
+    </div>
+    <div class="cta"><a class="btn btn-m" href="https://wa.me/262692393814?text=Bonjour%20D%C3%A9bora%2C%20je%20voudrais%20offrir%20un%20moment%20au%20salon%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir un moment chez Débora</a></div>
+  </div>
+</section>
+
+<section id="infos">
+  <div class="titre rv"><small>Venir</small><h2>Ligne Paradis, Saint-Pierre</h2></div>
+  <div class="infos">
+    <div class="bloc rv">
+      <h3>Horaires</h3>
+      <table id="horaires">
+        <tr data-j="1"><td>Lundi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="2"><td>Mardi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="3"><td>Mercredi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="4"><td>Jeudi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="5"><td>Vendredi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="6"><td>Samedi</td><td>8 h 30 – 19 h</td></tr>
+        <tr data-j="0" class="ferme"><td>Dimanche</td><td>Fermé</td></tr>
+      </table>
+      <p style="font-size:.85rem;color:var(--gris);margin-top:.7rem">Sur rendez-vous.</p>
+    </div>
+    <div class="bloc rv">
+      <h3>Le Salon Débora L</h3>
+      <p>80 chemin de la Salette<br>Ligne Paradis<br>97410 Saint-Pierre</p>
+      <div style="margin-top:.6rem">
+        <a class="btn btn-m" href="tel:+262692393814">0692 39 38 14</a>
+        <a class="btn btn-n" href="https://wa.me/262692393814" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-n" href="https://www.instagram.com/lesalon_debora_l/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn-n" href="https://www.facebook.com/61557282280300" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-n" href="https://www.google.com/maps/search/?api=1&query=80+chemin+de+la+Salette+97410+Saint-Pierre" target="_blank" rel="noopener">Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="sig">Débora L</div>
+  <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Salon Débora L.</p>
+</footer>
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv,.meche').forEach(el=>io.observe(el));
+const j=new Date().getDay();const tr=document.querySelector('#horaires tr[data-j="'+j+'"]');if(tr)tr.classList.add('auj');
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Salon Débora L" defer></script>
+</body>
+</html>

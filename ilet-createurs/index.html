@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:,">
+<title>Ilet Créateurs — artisanat 100 % fabriqué à La Réunion, Saint-Leu</title>
+<meta name="description" content="Boutique associative du marché artisanal de Saint-Leu : souvenirs et objets artisanaux fabriqués uniquement à La Réunion.">
+<meta property="og:title" content="Ilet Créateurs — 100 % création locale à Saint-Leu">
+<meta property="og:description" content="Toupies, tote bags, pin's, céramique, bougies, savons… La boutique associative des créateurs réunionnais, au marché artisanal de Saint-Leu.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/ilet-createurs/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/ilet-createurs/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF7F0; --paper-2:#F3ECDF;
+  --ink:#1D2433; --muted:#5B6272;
+  --lagon:#1F7FA6; --turq:#2BB3A3; --violet:#5B3F8C;
+  --soleil:#F4B93F; --corail:#EF6A4C; --vert:#7DBB4A;
+  --line:rgba(29,36,51,.12);
+  --title:'Bricolage Grotesque',system-ui,sans-serif; --sans:'Nunito Sans',system-ui,sans-serif; --hand:'Caveat',cursive;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--corail);outline-offset:3px;border-radius:6px}
+#pois{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+main,header,footer,section,.ribbon{position:relative;z-index:1}
+.ribbon{background:var(--ink);color:var(--paper);font-size:13px;padding:9px var(--pad);line-height:1.45}
+.ribbon b{color:var(--soleil)}
+/* HERO */
+.hero{max-width:1180px;margin:0 auto;padding:clamp(26px,6vw,78px) var(--pad) clamp(40px,6vw,70px);display:grid;gap:38px;align-items:center}
+@media(min-width:920px){.hero{grid-template-columns:1.05fr .95fr}}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:74px;height:74px;border-radius:50%;object-fit:cover;background:#fff;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--turq)}
+.brand span{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lagon);font-weight:800;line-height:1.4}
+.hand{font-family:var(--hand);font-size:clamp(26px,3.4vw,34px);color:var(--corail);margin-top:24px;transform:rotate(-2deg);display:inline-block}
+h1{font-family:var(--title);font-weight:800;font-size:clamp(40px,8.6vw,86px);line-height:.98;letter-spacing:-.02em;margin:4px 0 18px}
+h1 .c{background:linear-gradient(90deg,var(--violet),var(--lagon) 35%,var(--turq) 60%,var(--soleil) 80%,var(--corail));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero h1,.hero .lede,.hero .cta,.hero .hand{opacity:0;transform:translateY(16px);animation:up .9s ease forwards}
+.hero .hand{animation-delay:.1s}.hero h1{animation-delay:.25s}.hero .lede{animation-delay:.45s}.hero .cta{animation-delay:.6s}
+@keyframes up{to{opacity:1;transform:none}}
+.hero .hand{transform:rotate(-2deg) translateY(16px)}
+.lede{max-width:40ch;font-size:clamp(17px,2.1vw,20px);color:#39404F}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 24px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.main{background:var(--ink);color:var(--paper)}
+.btn.main:hover{transform:translateY(-2px);background:var(--violet);border-color:var(--violet)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper)}
+.breathe{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.04)}}
+/* collage */
+.stage{position:relative;aspect-ratio:1/1.05;max-width:520px;width:100%;justify-self:center}
+.card{position:absolute;border-radius:22px;overflow:hidden;background:#fff;padding:8px;box-shadow:0 26px 50px -26px rgba(29,36,51,.55);transition:transform .5s}
+.card img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+.card.a{inset:0 24% 24% 0;transform:rotate(-4deg)}
+.card.b{inset:30% 0 0 34%;transform:rotate(3deg)}
+.card.a img{animation:kb 16s ease-in-out infinite alternate}
+.card.b img{animation:kb 18s ease-in-out infinite alternate-reverse}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-2%,-2%)}}
+.stage:hover .card.a{transform:rotate(-6deg) translate(-6px,-6px)}
+.stage:hover .card.b{transform:rotate(5deg) translate(6px,6px)}
+.toupie{position:absolute;left:-2%;bottom:2%;width:28%;aspect-ratio:1;animation:spin 7s linear infinite;filter:drop-shadow(0 10px 12px rgba(0,0,0,.18))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.badge{position:absolute;right:-1%;top:4%;background:var(--soleil);color:var(--ink);font-family:var(--hand);font-size:26px;line-height:1;padding:16px 14px;border-radius:50%;width:112px;height:112px;display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 12px 24px -12px rgba(0,0,0,.45);animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:rotate(6deg) translateY(-6px)}}
+/* marquee */
+.band{background:var(--ink);color:var(--paper);overflow:hidden;padding:15px 0;transform:rotate(-1.2deg);margin:0 -10px}
+.band .track{display:flex;gap:30px;width:max-content;animation:defile 38s linear infinite;font-family:var(--title);font-weight:700;font-size:clamp(18px,2.6vw,24px);white-space:nowrap}
+.band .track span:nth-child(4n+1)::after{color:var(--soleil)}.band .track span:nth-child(4n+2)::after{color:var(--turq)}.band .track span:nth-child(4n+3)::after{color:var(--corail)}.band .track span:nth-child(4n)::after{color:#B79BE8}
+.band .track span::after{content:"●";margin-left:30px;font-size:.6em;vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* sections */
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--lagon)}
+h2{font-family:var(--title);font-weight:800;font-size:clamp(32px,5.4vw,54px);line-height:1.02;letter-spacing:-.015em;margin:10px 0 16px}
+.asso{max-width:1120px;margin:0 auto;padding:clamp(64px,10vw,120px) var(--pad);display:grid;gap:40px;align-items:center}
+@media(min-width:880px){.asso{grid-template-columns:.9fr 1.1fr}}
+.asso .shop{position:relative;max-width:420px;justify-self:center;width:100%}
+.asso .shop img{border-radius:24px;aspect-ratio:510/630;object-fit:cover;box-shadow:0 30px 60px -30px rgba(29,36,51,.6)}
+.asso .shop figcaption{position:absolute;left:-10px;bottom:22px;background:var(--turq);color:#fff;font-weight:800;font-size:14px;padding:9px 16px;border-radius:999px;box-shadow:0 10px 20px -10px rgba(0,0,0,.4)}
+.asso p{color:#39404F;max-width:56ch}.asso p+p{margin-top:14px}
+.mats{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;padding:0;list-style:none}
+.mats li{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font-weight:700;font-size:14px;transition:transform .2s,border-color .2s}
+.mats li:hover{transform:translateY(-3px) rotate(-2deg);border-color:var(--corail)}
+/* nouveautes */
+.news{background:linear-gradient(180deg,var(--paper-2),var(--paper));padding:clamp(64px,10vw,110px) 0}
+.news .head{max-width:1120px;margin:0 auto;padding:0 var(--pad);display:grid;gap:24px}
+@media(min-width:880px){.news .head{grid-template-columns:1fr 1fr;align-items:end}}
+.post{background:#fff;border-radius:20px;padding:20px 22px;border:1px solid var(--line);box-shadow:0 20px 40px -32px rgba(29,36,51,.6);position:relative}
+.post::before{content:"";position:absolute;left:22px;top:-9px;width:18px;height:18px;background:#fff;border-left:1px solid var(--line);border-top:1px solid var(--line);transform:rotate(45deg)}
+.post q{font-size:18px;font-weight:600;quotes:"« " " »"}
+.post small{display:block;color:var(--muted);margin-top:10px;font-size:13px}
+.strip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px var(--pad) 20px;scrollbar-width:thin;max-width:1400px;margin:0 auto}
+.strip figure{flex:0 0 min(70vw,280px);scroll-snap-align:start}
+.strip img{aspect-ratio:4/5;object-fit:cover;border-radius:20px;transition:transform .35s;box-shadow:0 18px 34px -24px rgba(29,36,51,.6)}
+.strip figure:nth-child(odd) img{transform:rotate(-1.2deg)}.strip figure:nth-child(even) img{transform:rotate(1.2deg)}
+.strip figure:hover img{transform:translateY(-6px) rotate(0)}
+.strip figcaption{font-family:var(--hand);font-size:24px;margin-top:8px;line-height:1.1}
+.strip figcaption small{display:block;font-family:var(--sans);font-size:13px;color:var(--muted)}
+.hint{text-align:center;color:var(--muted);font-size:13px}
+/* avis */
+.avis{max-width:860px;margin:0 auto;padding:clamp(60px,9vw,100px) var(--pad);text-align:center}
+.avis blockquote{font-family:var(--title);font-weight:700;font-size:clamp(24px,3.6vw,36px);line-height:1.2}
+.avis blockquote::before{content:"“";display:block;font-size:2.6em;line-height:.6;color:var(--turq)}
+.avis cite{display:block;font-style:normal;color:var(--muted);margin-top:14px;font-size:15px}
+/* exposer */
+.expo{background:var(--lagon);color:#fff;padding:clamp(64px,10vw,110px) var(--pad);clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
+.expo .in{max-width:1080px;margin:0 auto;display:grid;gap:34px}
+@media(min-width:880px){.expo .in{grid-template-columns:1fr 1fr;align-items:start}}
+.expo .kicker{color:var(--soleil)}
+.expo p{color:#E4F1F7;max-width:50ch}
+.steps{list-style:none;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:14px 16px 14px 58px;position:relative;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--soleil);color:var(--ink);font-weight:800;display:grid;place-items:center}
+.steps b{display:block}
+.expo .btn{border-color:#fff;color:#fff;margin-top:22px}
+.expo .btn:hover{background:#fff;color:var(--lagon)}
+/* noel */
+.noel{max-width:1080px;margin:clamp(60px,9vw,100px) auto;padding:0 var(--pad)}
+.noel .box{position:relative;overflow:hidden;border-radius:28px;background:radial-gradient(120% 140% at 0% 0%,#2C3550 0%,var(--ink) 60%);color:var(--paper);padding:clamp(30px,6vw,60px);display:grid;gap:26px}
+@media(min-width:820px){.noel .box{grid-template-columns:1.2fr .8fr;align-items:center}}
+.noel .kicker{color:var(--soleil)}
+.noel p{color:#D5D9E2;max-width:48ch}
+.noel .btn{background:var(--soleil);border-color:var(--soleil);color:var(--ink);margin-top:20px}
+.noel .btn:hover{background:#fff;border-color:#fff}
+.noel .gift{justify-self:center;width:min(240px,60vw)}
+.noel .gift img{border-radius:20px;aspect-ratio:1;object-fit:cover;transform:rotate(3deg);box-shadow:0 0 0 8px rgba(255,255,255,.08)}
+.noel .garland{position:absolute;inset:0 0 auto 0;height:10px;background:repeating-linear-gradient(90deg,var(--corail) 0 18px,var(--soleil) 18px 36px,var(--turq) 36px 54px,#B79BE8 54px 72px);opacity:.9}
+.noel small{display:block;margin-top:10px;color:#A9B0BF;font-size:13px}
+/* infos */
+.info{background:var(--paper-2);padding:clamp(56px,9vw,100px) var(--pad)}
+.info .in{max-width:1080px;margin:0 auto;display:grid;gap:26px}
+@media(min-width:820px){.info .in{grid-template-columns:repeat(3,1fr)}}
+.info .c{background:#fff;border-radius:20px;padding:24px;border:1px solid var(--line)}
+.info h3{font-family:var(--title);font-size:24px;margin-bottom:8px}
+.info p{color:#39404F}
+.info a.l{font-weight:800;color:var(--lagon);text-decoration:none;border-bottom:2px solid var(--turq)}
+.info small{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+footer{text-align:center;padding:36px var(--pad) 30px;color:var(--muted);font-size:14px}
+footer b{font-family:var(--title);font-size:22px;color:var(--ink);display:block;margin-bottom:4px}
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:flex;gap:8px;background:rgba(251,247,240,.96);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;padding:6px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35)}
+.bar a{flex:1;min-height:46px;display:flex;align-items:center;justify-content:center;border-radius:999px;text-decoration:none;font-weight:800;font-size:15px}
+.bar a.m{background:var(--ink);color:var(--paper)}
+@media(min-width:900px){.bar{left:auto;right:24px;width:400px}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.seen{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal,.hero h1,.hero .lede,.hero .cta,.hero .hand{opacity:1;transform:none}#pois{display:none}}
+</style>
+</head>
+<body>
+<canvas id="pois" aria-hidden="true"></canvas>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ilet Créateurs</div>
+
+<header class="hero">
+  <div>
+    <div class="brand"><img src="img/logo.webp" alt="Logo Ilet Créateurs"><span>Boutique associative<br>Marché artisanal de Saint-Leu</span></div>
+    <p class="hand">100 % création locale</p>
+    <h1>Des créations <span class="c">gaies, colorées et made in Réunion</span></h1>
+    <p class="lede">Souvenirs et objets artisanaux fabriqués uniquement à La Réunion : lampes en calebasse, couteaux, céramique, impression 3D, bougies, savons, vannerie…</p>
+    <div class="cta">
+      <a class="btn main breathe" href="#nouveautes">Voir les nouveautés</a>
+      <a class="btn ghost" href="#venir">Venir à la boutique</a>
+    </div>
+  </div>
+  <div class="stage" aria-hidden="true">
+    <div class="card a"><img src="img/toupies.webp" alt=""></div>
+    <div class="card b"><img src="img/totebag.webp" alt=""></div>
+    <svg class="toupie" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#F4B93F"/><path d="M50 4a46 46 0 0 1 46 46H50z" fill="#EF6A4C"/><path d="M96 50a46 46 0 0 1-46 46V50z" fill="#2BB3A3"/><path d="M50 96A46 46 0 0 1 4 50h46z" fill="#5B3F8C"/><circle cx="50" cy="50" r="30" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="4 6"/><circle cx="50" cy="50" r="9" fill="#1D2433"/></svg>
+    <div class="badge">Made in<br>Réunion</div>
+  </div>
+</header>
+
+<div class="band" aria-hidden="true"><div class="track">
+  <span>lampes en calebasse</span><span>couteaux</span><span>objets en bois</span><span>céramique</span><span>porcelaine</span><span>impression 3D</span><span>accessoires textile</span><span>maroquinerie</span><span>bougies</span><span>savons</span><span>vannerie</span>
+  <span>lampes en calebasse</span><span>couteaux</span><span>objets en bois</span><span>céramique</span><span>porcelaine</span><span>impression 3D</span><span>accessoires textile</span><span>maroquinerie</span><span>bougies</span><span>savons</span><span>vannerie</span>
+</div></div>
+
+<main>
+<section class="asso">
+  <figure class="shop reveal"><img src="img/boutique.webp" alt="La devanture turquoise de la boutique Ilet Créateurs au marché artisanal de Saint-Leu" loading="lazy"><figcaption>Local 1 · Marché artisanal</figcaption></figure>
+  <div class="reveal">
+    <p class="kicker">L’association</p>
+    <h2>Un îlet de créateurs réunionnais</h2>
+    <p>Ilet Créateurs est une boutique associative installée au local 1 du marché artisanal de Saint-Leu, rue du Général Lambert. Sa promesse : un artisanat de qualité, entièrement fabriqué sur l’île.</p>
+    <p>Des bijoux et magnets jusqu’aux pièces plus insolites, comme les insectes en papier et fil de cuivre : chaque objet raconte le savoir-faire d’un artisan d’ici.</p>
+    <ul class="mats">
+      <li>bois</li><li>cuir</li><li>céramique</li><li>plastique recyclé</li><li>lave</li><li>métal</li>
+    </ul>
+  </div>
+</section>
+
+<section class="news" id="nouveautes">
+  <div class="head">
+    <div class="reveal">
+      <p class="kicker">Tout juste arrivé</p>
+      <h2>Les nouveautés d’octobre</h2>
+    </div>
+    <div class="post reveal">
+      <q>Les nouveautés des créateurs Poluplu by O2 et Des ronds dans l’eau ! Tote bag, stickers, toupies, pins… Des créations gaies, colorées et made in Réunion !</q>
+      <small>Ilet Créateurs sur Facebook, 8 octobre 2026</small>
+    </div>
+  </div>
+  <div class="strip">
+    <figure><img src="img/toupies.webp" alt="Toupies colorées aux motifs peints" loading="lazy"><figcaption>Les toupies<small>Nouveautés d’octobre</small></figcaption></figure>
+    <figure><img src="img/totebag.webp" alt="Tote bag illustré en rouge et noir" loading="lazy"><figcaption>Le tote bag<small>Nouveautés d’octobre</small></figcaption></figure>
+    <figure><img src="img/pins.webp" alt="Pin's en bois peints" loading="lazy"><figcaption>Les pin’s<small>Nouveautés d’octobre</small></figcaption></figure>
+    <figure><img src="img/motifs.webp" alt="Créations aux motifs rouges et noirs" loading="lazy"><figcaption>Motifs rouge et noir<small>Nouveautés d’octobre</small></figcaption></figure>
+    <figure><img src="img/etoiles.webp" alt="Étoiles noires à pois multicolores sur baguette en bois" loading="lazy"><figcaption>Étoiles à pois<small>Nouveautés d’octobre</small></figcaption></figure>
+    <figure><img src="img/porte-cles.webp" alt="Porte-clés en perles peintes en petits personnages" loading="lazy"><figcaption>Petits personnages porte-clés<small>Juillet 2026</small></figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir toutes les créations →</p>
+</section>
+
+<section class="avis reveal">
+  <p class="kicker">Ils en parlent</p>
+  <blockquote>Une belle boutique où l’on peut retrouver 13 artisans-créateurs. Des créations originales et variées.</blockquote>
+  <cite>Valérie F., recommandation sur la page Facebook d’Ilet Créateurs (2020)</cite>
+</section>
+
+<section class="expo">
+  <div class="in">
+    <div class="reveal">
+      <p class="kicker">Vous êtes créateur ?</p>
+      <h2>Exposez vos créations au marché artisanal</h2>
+      <p>La boutique propose un espace d’exposition éphémère : environ 0,75 m de large sur 2 m de haut, avec une grille d’exposition et des étagères. Durée d’exposition : 1 mois, tarif selon la période, en dépôt-vente. Produits éligibles : l’artisanat, hors secteur bijoux.</p>
+      <a class="btn" href="mailto:liletcreateurs@gmail.com?subject=Candidature%20espace%20d%E2%80%99exposition">Envoyer ma candidature</a>
+    </div>
+    <ol class="steps reveal">
+      <li><b>Votre nom et votre marque</b>pour faire connaissance</li>
+      <li><b>Les produits proposés</b>ce que vous fabriquez, et comment</li>
+      <li><b>Des photos et vos prix</b>par e-mail à l’association</li>
+    </ol>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="box reveal">
+    <div class="garland" aria-hidden="true"></div>
+    <div>
+      <p class="kicker">Offrir pour Noël</p>
+      <h2>Un cadeau 100 % péi, choisi avec le cœur</h2>
+      <p>Une toupie pour les marmailles, une céramique, une bougie, un savon, un tote bag illustré… À Ilet Créateurs, chaque cadeau est fabriqué à La Réunion. Dites-nous pour qui vous cherchez : l’équipe vous aide à composer une création à offrir.</p>
+      <a class="btn" href="https://wa.me/262693779973?text=Bonjour%2C%20je%20cherche%20une%20id%C3%A9e%20cadeau%20fabriqu%C3%A9e%20%C3%A0%20La%20R%C3%A9union%20pour%20No%C3%ABl">Demander une idée cadeau sur WhatsApp</a>
+      <small>Proposition de rubrique, à adapter avec l’association.</small>
+    </div>
+    <div class="gift"><img src="img/etoiles.webp" alt="Étoiles à pois multicolores" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="info" id="venir">
+  <div class="in">
+    <div class="c reveal"><h3>Venir</h3><p>Marché artisanal de Saint-Leu<br>Local 1 · 112 rue du Général Lambert<br>97436 Saint-Leu</p></div>
+    <div class="c reveal"><h3>Horaires du marché</h3><p>Du mardi au samedi : 9h – 18h<br>Le dimanche : 9h – 13h</p><small>Horaires du marché artisanal (site de la ville de Saint-Leu)</small></div>
+    <div class="c reveal"><h3>Contact</h3><p><a class="l" href="tel:+262693779973">0693 77 99 73</a><br><a class="l" href="mailto:liletcreateurs@gmail.com">liletcreateurs@gmail.com</a><br><a class="l" href="https://www.facebook.com/iletcreateurs/">Facebook</a></p></div>
+  </div>
+</section>
+</main>
+
+<footer><b>Ilet Créateurs</b>Boutique associative · 100 % création locale · Saint-Leu<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d’Ilet Créateurs.</footer>
+
+<nav class="bar" aria-label="Actions rapides">
+  <a class="m" href="tel:+262693779973">Appeler</a>
+  <a href="https://wa.me/262693779973">WhatsApp</a>
+  <a href="#venir">Venir</a>
+</nav>
+
+<script>
+(function(){
+  var rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("seen");io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(function(el){io.observe(el)});
+  if(rm)return;
+  /* pois flottants, comme les etoiles a pois de la boutique */
+  var c=document.getElementById("pois"),x=c.getContext("2d"),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+  var col=["#F4B93F","#EF6A4C","#2BB3A3","#5B3F8C","#1F7FA6","#7DBB4A"];
+  function size(){W=c.clientWidth;H=c.clientHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener("resize",size);
+  var n=W<600?18:30;
+  for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:2+Math.random()*5,c:col[i%col.length],vy:.12+Math.random()*.3,ph:Math.random()*6.3,a:.18+Math.random()*.22});
+  function f(t){
+    if(!run)return;
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.vy;var px=p.x+Math.sin(t/1800+p.ph)*14;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+      x.globalAlpha=p.a;x.fillStyle=p.c;x.beginPath();x.arc(px,p.y,p.r,0,6.283);x.fill()}
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Ilet Créateurs" defer></script>
+</body>
+</html>

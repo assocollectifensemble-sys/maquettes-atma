@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les ciseaux de Lydie · Salon de coiffure mixte · Saint-Joseph</title>
+<meta name="description" content="Salon de coiffure mixte à Saint-Joseph (Langevin) : coupes, balayages, mèches et couleurs, dans la bonne humeur et la convivialité.">
+<meta property="og:title" content="Les ciseaux de Lydie · Saint-Joseph">
+<meta property="og:description" content="Salon de coiffure mixte, dans la bonne humeur et la convivialité. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/les-ciseaux-de-lydie-saint-joseph/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/les-ciseaux-de-lydie-saint-joseph/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--beige:#e8d4b8;--sable:#f6eee3;--creme:#fbf7f1;--brun:#6b5344;--brun2:#3f3027;--or:#c49a5a;--rose:#e8c4d0;--rose2:#c9798f;--texte:#3a2e27;--doux:#7d6c61;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,7vw,3rem);margin-bottom:.6rem;color:var(--brun2)}
+.script{font-family:'Great Vibes',cursive;font-weight:400}
+.ruban{background:var(--brun);color:#fff;font-size:.8rem;text-align:center;padding:.5rem 1rem}
+#petales{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer,nav,.galerie,.bandeau{position:relative;z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.6rem 1.1rem;background:rgba(251,247,241,.92);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5;border-bottom:1px solid rgba(196,154,90,.25)}
+.nav .marque{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--brun2);font-family:'Great Vibes',cursive;font-size:1.55rem;white-space:nowrap}
+.nav img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--or)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;background:var(--brun);color:#fff;text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.02em;box-shadow:0 10px 24px -12px rgba(63,48,39,.8);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:var(--or);color:#fff}
+.btn.clair{background:#fff;color:var(--brun2)}
+.btn.contour{background:transparent;border:1.5px solid currentColor;box-shadow:none}
+.nav .btn{padding:.5rem 1rem;font-size:.85rem}
+.respire{animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 10px rgba(196,154,90,.18),0 10px 24px -12px rgba(63,48,39,.8)}}
+.hero{min-height:88vh;display:grid;align-items:end;overflow:hidden;color:#fff;background:var(--brun2)}
+.hero .fond{position:absolute;inset:0;background:url(img/balayage-dore.webp) center 25%/cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translateY(-2%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(63,48,39,.1),rgba(63,48,39,.3) 40%,rgba(43,32,26,.9))}
+.hero .contenu{position:relative;z-index:2;padding:2rem 1.3rem 4rem;max-width:760px}
+.hero h1{font-size:clamp(3.2rem,15vw,6rem);color:#fff;font-family:'Great Vibes',cursive;font-weight:400;line-height:1}
+.hero p{font-size:1.08rem;max-width:33rem;margin:.9rem 0 1.4rem;color:#f6ece2}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.surtitre{display:inline-block;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:.5rem}
+.hero .surtitre{color:var(--beige)}
+.apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.apparait.vu{opacity:1;transform:none}
+.bandeau{background:var(--beige);color:var(--brun);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 1.3rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+.bloc{padding:4rem 1.3rem;max-width:1080px;margin:0 auto}
+.intro{display:grid;gap:2.2rem;align-items:center}
+.intro .photo{position:relative;margin:0 12px}
+.intro .photo img{border-radius:200px 200px var(--r) var(--r);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 30px 60px -30px rgba(63,48,39,.6)}
+.intro .photo:before{content:"";position:absolute;inset:-12px 12px 12px -12px;border:1.5px solid var(--or);border-radius:200px 200px var(--r) var(--r);z-index:-1}
+.intro blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--brun);margin:1rem 0;border-left:2px solid var(--rose2);padding-left:1rem}
+.vague{display:block;width:100%;height:46px}
+.presta{background:var(--sable)}
+.grille{display:grid;gap:1rem;margin-top:1.6rem}
+.carte{background:#fff;border:1px solid rgba(196,154,90,.25);border-radius:var(--r);padding:1.4rem 1.3rem;transition:transform .3s,border-color .3s,box-shadow .3s}
+.carte:hover{transform:translateY(-4px);border-color:var(--rose2);box-shadow:0 18px 34px -24px rgba(63,48,39,.5)}
+.carte .ico{width:44px;height:44px;border-radius:50%;background:var(--rose);display:grid;place-items:center;font-size:1.25rem}
+.carte h3{font-size:1.5rem;margin:.5rem 0 .2rem;color:var(--brun2)}
+.carte p{color:var(--doux);font-size:.95rem}
+.galerie-titre{text-align:center;padding:3.5rem 1.3rem 0}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 1.3rem 2.6rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 74%;max-width:320px;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 18px 40px -26px rgba(63,48,39,.6)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{padding:.7rem 1rem;font-size:.9rem;color:var(--doux)}
+.astuce{text-align:center;font-size:.8rem;color:var(--doux);margin-top:-1.6rem;padding-bottom:1rem}
+.avis{background:var(--brun2);color:#efe4da;text-align:center}
+.avis h2{color:#fff}
+.avis .note{font-family:'Cormorant Garamond',serif;font-size:3.6rem;color:var(--beige);line-height:1}
+.avis blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;max-width:36rem;margin:1.6rem auto .6rem;color:#fff}
+.avis cite{font-size:.85rem;color:#cdbcaf;font-style:normal}
+.ecole{display:grid;gap:1.4rem;align-items:center}
+.ecole .badge{background:#fff;border-radius:var(--r);padding:1.6rem;text-align:center;border:1px dashed var(--or)}
+.ecole .badge b{display:block;font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--rose2);line-height:1}
+.noel{background:radial-gradient(circle at 30% 0%,#fff 0,var(--sable) 60%,var(--beige) 100%);text-align:center}
+.noel .boite{max-width:660px;margin:0 auto;border:1px solid rgba(196,154,90,.5);border-radius:28px;padding:2.6rem 1.4rem;background:rgba(255,255,255,.65);box-shadow:0 30px 60px -40px rgba(63,48,39,.6);position:relative;overflow:hidden}
+.noel .boite:before,.noel .boite:after{content:"✦";position:absolute;color:var(--or);font-size:1.4rem;opacity:.7;animation:scint 2.8s ease-in-out infinite}
+.noel .boite:before{top:1rem;left:1.2rem}.noel .boite:after{bottom:1rem;right:1.2rem;animation-delay:1.4s}
+@keyframes scint{50%{opacity:.15;transform:scale(.7)}}
+.noel h2 .script{font-size:1.2em;color:var(--rose2)}
+.noel p{margin:.8rem auto 1.2rem;max-width:31rem;color:var(--doux)}
+.noel ul{list-style:none;display:grid;gap:.5rem;max-width:26rem;margin:0 auto 1.6rem;text-align:left}
+.noel li:before{content:"🎁 "}
+.noel .actions{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center}
+.contact{display:grid;gap:1.4rem}
+.contact p{margin:.45rem 0}
+.contact a{color:var(--brun);font-weight:600}
+.carte-map{border-radius:var(--r);overflow:hidden;min-height:260px;background:#eee;box-shadow:0 14px 34px -24px rgba(63,48,39,.45)}
+.carte-map iframe{border:0;width:100%;height:100%;min-height:260px}
+footer{background:var(--brun2);color:#cdbcaf;text-align:center;padding:2.4rem 1.3rem;font-size:.85rem}
+footer img{width:84px;height:84px;border-radius:50%;margin:0 auto 1rem;border:1px solid var(--or)}
+footer b{color:#fff}
+@media(min-width:760px){.intro{grid-template-columns:1.1fr .9fr}.grille{grid-template-columns:repeat(2,1fr)}.ecole{grid-template-columns:2fr 1fr}.contact{grid-template-columns:1fr 1fr}.galerie{justify-content:flex-start}.galerie figure{flex-basis:270px}.hero .contenu{padding:3rem 3rem 6rem}}
+@media(min-width:1000px){.grille{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.apparait{opacity:1;transform:none}#petales{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Les ciseaux de Lydie</b></div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<nav class="nav">
+  <a class="marque" href="#"><img src="img/logo.jpg" alt="Logo Les ciseaux de Lydie">Ciseaux de Lydie</a>
+  <a class="btn respire" href="tel:+262692763944">Prendre RDV</a>
+</nav>
+<header class="hero">
+  <div class="fond" role="img" aria-label="Balayage doré réalisé au salon Les ciseaux de Lydie"></div>
+  <div class="contenu apparait">
+    <span class="surtitre">Salon de coiffure mixte · Saint-Joseph</span>
+    <h1>Les ciseaux de Lydie</h1>
+    <p>Coupes, balayages, mèches et couleurs pour femmes et hommes, à Langevin. On vous accueille dans la bonne humeur et la convivialité, avec des produits de qualité.</p>
+    <div class="actions">
+      <a class="btn or" href="tel:+262692763944">Appeler le salon</a>
+      <a class="btn contour" style="color:#fff" href="#realisations">Voir les réalisations</a>
+    </div>
+  </div>
+</header>
+<div class="bandeau" aria-hidden="true"><div>
+<span>Bonne humeur</span>✿<span>Convivialité</span>✿<span>Produits de qualité</span>✿<span>Balayage miel</span>✿<span>Coiffure mixte</span>✿<span>Lissage tanin</span>✿<span>Bonne humeur</span>✿<span>Convivialité</span>✿<span>Produits de qualité</span>✿<span>Balayage miel</span>✿<span>Coiffure mixte</span>✿
+</div></div>
+<section class="bloc intro">
+  <div class="apparait">
+    <span class="surtitre">Bienvenue au salon</span>
+    <h2>Envie de changement ?</h2>
+    <blockquote>« Je vous accueille dans la bonne humeur et la convivialité, avec des produits de qualité. »</blockquote>
+    <p>Au 12 chemin de la source, à Langevin, Lydie coiffe toute la famille : une coupe qui vous ressemble, un balayage lumineux, des mèches blondes ou une couleur qui ose.</p>
+    <p style="margin-top:.6rem">Dernière envie réalisée au salon : un <b>balayage miel sur base naturelle</b>, tout en douceur.</p>
+  </div>
+  <div class="photo apparait"><img src="img/balayage-caramel.webp" alt="Balayage caramel sur cheveux mi-longs, vu de dos" loading="lazy"></div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20c180-26 360-26 540 0s360 26 540 0 270-20 360-6v32z" fill="#f6eee3"/></svg>
+<section class="presta" id="prestations">
+  <div class="bloc" style="padding-top:2.4rem">
+    <span class="surtitre apparait">Au salon</span>
+    <h2 class="apparait">Coupe, couleur, lumière</h2>
+    <div class="grille">
+      <article class="carte apparait"><div class="ico">✂️</div><h3>Coupes femmes & hommes</h3><p>Un salon mixte : du carré aux longues longueurs, des coupes courtes aux boucles.</p></article>
+      <article class="carte apparait"><div class="ico">🍯</div><h3>Balayages</h3><p>Balayage miel sur base naturelle, reflets caramel, blond doré : la lumière là où il faut.</p></article>
+      <article class="carte apparait"><div class="ico">🌸</div><h3>Mèches blondes</h3><p>Du blond lumineux au blond polaire, pour un vrai changement de tête.</p></article>
+      <article class="carte apparait"><div class="ico">🍷</div><h3>Couleurs</h3><p>Bordeaux profond, cuivré, argenté : des couleurs franches et brillantes.</p></article>
+    </div>
+  </div>
+</section>
+<div class="galerie-titre" id="realisations">
+  <span class="surtitre apparait">Réalisations du salon</span>
+  <h2 class="apparait">Avant de partir, on admire</h2>
+</div>
+<div class="galerie" aria-label="Réalisations du salon">
+  <figure class="apparait"><img src="img/long-miel.webp" alt="Longueurs lisses couleur miel" loading="lazy"><figcaption>Longueurs lisses, couleur miel</figcaption></figure>
+  <figure class="apparait"><img src="img/boucles-miel.webp" alt="Boucles aux reflets miel" loading="lazy"><figcaption>Boucles et reflets miel</figcaption></figure>
+  <figure class="apparait"><img src="img/carre-bordeaux.webp" alt="Coupe courte couleur bordeaux" loading="lazy"><figcaption>Coupe courte, bordeaux profond</figcaption></figure>
+  <figure class="apparait"><img src="img/blond-polaire.webp" alt="Longueurs blond polaire" loading="lazy"><figcaption>Blond polaire lumineux</figcaption></figure>
+  <figure class="apparait"><img src="img/ondulations-caramel.webp" alt="Ondulations aux reflets caramel" loading="lazy"><figcaption>Ondulations caramel</figcaption></figure>
+  <figure class="apparait"><img src="img/coupe-courte-argent.webp" alt="Coupe courte texturée argentée" loading="lazy"><figcaption>Coupe courte, gris assumé</figcaption></figure>
+  <figure class="apparait"><img src="img/longueurs-balayage.webp" alt="Longues ondulations balayées" loading="lazy"><figcaption>Balayage sur longues ondulations</figcaption></figure>
+</div>
+<p class="astuce">← faites glisser →</p>
+<section class="avis">
+  <div class="bloc">
+    <span class="surtitre apparait" style="color:var(--beige)">Ils en parlent</span>
+    <div class="note apparait">100 %</div>
+    <h2 class="apparait">de recommandations</h2>
+    <p class="apparait" style="color:#cdbcaf">sur Facebook (7 avis)</p>
+    <blockquote class="apparait">« Mes cheveux avaient clairement besoin d'un petit passage entre des mains expertes… et quoi de mieux que ma coiffeuse depuis que je suis toute petite ? »</blockquote>
+    <cite class="apparait">Une cliente, sur Instagram (août 2026)</cite>
+  </div>
+</section>
+<section class="bloc ecole">
+  <div class="apparait">
+    <span class="surtitre">Transmettre le métier</span>
+    <h2>Une passion qui se partage</h2>
+    <p>Lydie transmet aussi sa passion. En juillet 2026, avec l'école Esthetic & Company, elle partageait : « Une année supplémentaire avec 100 % de réussites CAP coiffure ! Hésitez pas à venir vous inscrire en contrat d'apprentissage ou en formation continue. »</p>
+  </div>
+  <div class="badge apparait"><b>100 %</b>de réussite<br>CAP coiffure</div>
+</section>
+<section class="noel" id="noel">
+  <div class="bloc">
+    <div class="boite apparait">
+      <span class="surtitre">Offrir pour Noël</span>
+      <h2>Un moment <span class="script">chez Lydie</span></h2>
+      <p>Cette année, glissez sous le sapin un vrai moment pour soi : une coupe, un balayage, une nouvelle couleur.</p>
+      <ul>
+        <li>Un bon cadeau coiffure à glisser sous le sapin</li>
+        <li>Votre coiffure pour les repas de fêtes</li>
+        <li>Un balayage lumineux pour commencer l'année</li>
+      </ul>
+      <div class="actions">
+        <a class="btn respire" href="https://wa.me/262692763944?text=Bonjour%20Lydie%2C%20je%20voudrais%20offrir%20un%20bon%20cadeau%20coiffure%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir un bon cadeau (WhatsApp)</a>
+        <a class="btn clair" href="tel:+262692763944">Réserver ma coiffure de fête</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bloc contact" id="contact">
+  <div class="apparait">
+    <span class="surtitre">Venez nous voir</span>
+    <h2>Le salon</h2>
+    <p>📍 12 chemin de la source, Langevin, 97480 Saint-Joseph</p>
+    <p>📱 <a href="tel:+262692763944">0692 76 39 44</a></p>
+    <p>✉️ <a href="mailto:lesciseauxdelydie@gmail.com">lesciseauxdelydie@gmail.com</a></p>
+    <p>👍 <a href="https://www.facebook.com/people/Les-ciseaux-de-Lydie/100046139239563/" target="_blank" rel="noopener">Les ciseaux de Lydie sur Facebook</a></p>
+    <p>📸 <a href="https://www.instagram.com/les_ciseaux_de_lydie_/" target="_blank" rel="noopener">@les_ciseaux_de_lydie_</a></p>
+    <p style="margin-top:1.2rem"><a class="btn" style="color:#fff" href="tel:+262692763944">Prendre rendez-vous</a></p>
+  </div>
+  <div class="carte-map apparait"><iframe title="Plan d'accès" loading="lazy" src="https://www.google.com/maps?q=12+chemin+de+la+source,+Langevin,+97480+Saint-Joseph,+La+R%C3%A9union&output=embed"></iframe></div>
+</section>
+<footer>
+  <img src="img/logo.jpg" alt="">
+  <p><b>Les ciseaux de Lydie</b> · Coiffure mixte · Saint-Joseph</p>
+  <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de <b>Les ciseaux de Lydie</b>.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</p>
+</footer>
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('petales'),g=c.getContext('2d');let W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+const N=innerWidth<700?18:30;
+function nouv(i){const m=Math.random()<.45;return{x:Math.random()*W,y:i?Math.random()*H:-20,s:m?14+Math.random()*16:4+Math.random()*4,v:.25+Math.random()*.45,t:Math.random()*6.28,r:Math.random()*6.28,m:m,c:m?'196,154,90':(Math.random()<.5?'232,196,208':'201,121,143')}}
+for(let i=0;i<N;i++)P.push(nouv(true));
+function tour(){if(!run)return;g.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.t+=.02;p.r+=.006;p.x+=Math.sin(p.t)*.35;if(p.y>H+30)Object.assign(p,nouv(false));
+g.save();g.translate(p.x,p.y);g.rotate(p.r+Math.sin(p.t)*.4);const a=.22+.18*Math.abs(Math.sin(p.t));
+if(p.m){g.strokeStyle='rgba('+p.c+','+a+')';g.lineWidth=1.1;g.beginPath();g.moveTo(0,0);g.bezierCurveTo(p.s*.4,-p.s*.3,p.s*.6,p.s*.4,p.s,0);g.stroke()}
+else{g.fillStyle='rgba('+p.c+','+(a+.15)+')';g.beginPath();g.ellipse(0,0,p.s,p.s*.55,0,0,6.28);g.fill()}
+g.restore()}requestAnimationFrame(tour)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tour()});tour();})();
+</script>
+<script src="/outils/cta.js" data-nom="Les ciseaux de Lydie" defer></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>D'iva Délices · Repas à emporter et snacking · La Possession</title>
+<meta name="description" content="D'iva Délices, fast food familial et artisanal au 18 avenue Raymond Vergès à La Possession : menu du jour créole en barquette, pains, gratinés, américains et paninis.">
+<meta property="og:title" content="D'iva Délices · La Possession">
+<meta property="og:description" content="Saveurs, fraîcheur et plaisir, fait maison avec amour. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/diva-delices-la-possession/img/og.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/diva-delices-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0f1e3a;--nuit2:#16294d;--turq:#1fb5b0;--turq-c:#7fe0d8;--or:#f5c242;--hib:#e2403b;--creme:#fff9ee;--texte:#1c2436;--doux:#5d6578;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.15}
+h2{font-size:clamp(1.8rem,7vw,2.6rem);font-weight:800;color:var(--nuit);margin-bottom:.6rem}
+.script{font-family:'Pacifico',cursive;font-weight:400}
+.ruban{background:var(--nuit);color:#fff;font-size:.8rem;text-align:center;padding:.5rem 1rem}
+#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+header,section,footer,nav,.galerie,.bandeau{position:relative;z-index:2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;padding:.6rem 1.1rem;background:rgba(15,30,58,.95);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
+.nav .marque{text-decoration:none;color:#fff;font-family:'Pacifico',cursive;font-size:1.35rem;line-height:1}
+.nav .marque b{color:var(--turq-c);font-weight:400}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:999px;background:var(--or);color:var(--nuit);text-decoration:none;font-weight:800;font-size:.95rem;box-shadow:0 10px 24px -12px rgba(245,194,66,.9);transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.turq{background:var(--turq);color:#fff;box-shadow:0 10px 24px -12px rgba(31,181,176,.9)}
+.btn.vert{background:#25a35a;color:#fff}
+.btn.clair{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4);box-shadow:none}
+.nav .btn{padding:.5rem 1rem;font-size:.85rem}
+.respire{animation:respire 3s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 10px rgba(245,194,66,.18)}}
+.hero{min-height:88vh;display:grid;align-items:end;overflow:hidden;color:#fff;background:var(--nuit)}
+.hero .fond{position:absolute;inset:0;background:url(img/devanture.webp) center/cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,1%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,58,.2),rgba(15,30,58,.45) 40%,rgba(15,30,58,.96))}
+.hero .contenu{position:relative;z-index:2;padding:2rem 1.3rem 4rem;max-width:760px}
+.hero h1{font-family:'Pacifico',cursive;font-weight:400;font-size:clamp(3rem,14vw,5.6rem);line-height:1.1}
+.hero h1 b{color:var(--turq-c);font-weight:400}
+.hero .slogan{font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--or);font-size:.95rem;margin-top:.3rem}
+.hero p{font-size:1.05rem;max-width:33rem;margin:1rem 0 1.4rem;color:#e6ecf6}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.7rem}
+.surtitre{display:inline-block;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--turq);font-weight:800;margin-bottom:.5rem}
+.apparait{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.apparait.vu{opacity:1;transform:none}
+.bandeau{background:var(--turq);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.92rem}
+.bandeau div{display:inline-block;animation:defile 30s linear infinite}
+.bandeau span{margin:0 1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+.bloc{padding:4rem 1.3rem;max-width:1080px;margin:0 auto}
+.atouts{display:grid;gap:1rem;margin-top:1.6rem}
+.atout{background:#fff;border-radius:var(--r);padding:1.3rem;box-shadow:0 14px 34px -24px rgba(15,30,58,.5);border-top:4px solid var(--turq);transition:transform .3s}
+.atout:hover{transform:translateY(-4px)}
+.atout .ico{font-size:1.7rem}
+.atout h3{font-size:1.05rem;margin:.35rem 0 .2rem;color:var(--nuit);text-transform:uppercase;letter-spacing:.04em}
+.atout p{color:var(--doux);font-size:.95rem}
+.menu-jour{background:var(--nuit);color:#e6ecf6;overflow:hidden}
+.menu-jour h2{color:#fff}
+.menu-jour .surtitre{color:var(--turq-c)}
+.prix{display:flex;gap:1rem;flex-wrap:wrap;margin:1.4rem 0}
+.prix div{flex:1 1 140px;background:var(--nuit2);border:1px solid rgba(127,224,216,.35);border-radius:var(--r);padding:1.1rem;text-align:center}
+.prix b{display:block;font-size:2.2rem;color:var(--or);line-height:1.1}
+.prix small{color:#b5c2d8}
+.jours{display:grid;gap:1rem;margin-top:1rem}
+.jour{background:var(--nuit2);border-radius:var(--r);padding:1.2rem 1.3rem;border-left:4px solid var(--or)}
+.jour h3{font-family:'Pacifico',cursive;font-weight:400;color:var(--turq-c);font-size:1.4rem}
+.jour ul{list-style:none;margin-top:.3rem}
+.jour li:before{content:"• ";color:var(--or);font-weight:800}
+.menu-jour .petit{color:#9fb0cc;font-size:.82rem;margin-top:1.2rem}
+.affiches{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:2rem}
+.affiches img{border-radius:14px;box-shadow:0 20px 40px -24px #000;transition:transform .4s}
+.affiches img:hover{transform:rotate(-1.5deg) scale(1.02)}
+.carte-snack{display:grid;gap:1.6rem;align-items:start}
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.cat{background:#fff;border-radius:16px;padding:1rem;box-shadow:0 12px 30px -22px rgba(15,30,58,.6)}
+.cat h3{font-size:1rem;color:var(--nuit)}
+.cat .de{color:var(--hib);font-weight:800;font-size:1.25rem}
+.cat p{font-size:.82rem;color:var(--doux)}
+.cat.star{background:var(--or)}
+.cat.star p{color:var(--nuit)}
+.cat.star .de{color:var(--nuit)}
+.affiche-grande img{border-radius:18px;box-shadow:0 26px 50px -28px rgba(15,30,58,.8)}
+.petit{font-size:.82rem;color:var(--doux)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.6rem 1.3rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:0 18px 40px -26px rgba(15,30,58,.7)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{padding:.7rem 1rem;font-size:.9rem;color:var(--doux)}
+.noel{background:radial-gradient(circle at 30% 0%,#1f3d6e 0,var(--nuit) 70%);color:#e6ecf6;text-align:center}
+.noel h2{color:#fff}
+.noel .surtitre{color:var(--or)}
+.noel .boite{max-width:660px;margin:0 auto;border:1px dashed rgba(245,194,66,.6);border-radius:26px;padding:2.4rem 1.4rem}
+.noel p{margin:.8rem auto 1.4rem;max-width:31rem;color:#cfd9ea}
+.noel .idees{display:grid;gap:.6rem;max-width:30rem;margin:0 auto 1.6rem;text-align:left}
+.noel .idees div{background:rgba(255,255,255,.08);border-radius:12px;padding:.7rem 1rem}
+.etoiles-n{font-size:1.4rem;letter-spacing:.6rem;margin-bottom:.6rem}
+.etoiles-n span{display:inline-block;animation:scint 2.2s ease-in-out infinite}
+.etoiles-n span:nth-child(2){animation-delay:.5s}.etoiles-n span:nth-child(3){animation-delay:1s}
+@keyframes scint{50%{opacity:.3;transform:scale(.8) rotate(20deg)}}
+.venir{display:grid;gap:1.4rem}
+.contact p{margin:.5rem 0}
+.contact a{color:#0d7f7b;font-weight:800}
+.carte-map{border-radius:var(--r);overflow:hidden;min-height:280px;background:#e8eef5}
+.carte-map iframe{border:0;width:100%;height:100%;min-height:280px}
+footer{background:var(--nuit);color:#aebbd2;text-align:center;padding:2.4rem 1.3rem;font-size:.85rem}
+footer .script{color:var(--turq-c);font-size:2.2rem}
+footer b{color:#fff}
+@media(min-width:760px){.atouts{grid-template-columns:repeat(4,1fr)}.jours{grid-template-columns:repeat(2,1fr)}.carte-snack{grid-template-columns:1.1fr 1fr}.cats{grid-template-columns:repeat(3,1fr)}.venir{grid-template-columns:1fr 1fr}.affiches{grid-template-columns:repeat(4,1fr)}.galerie{justify-content:center}.galerie figure{flex-basis:280px}.hero .contenu{padding:3rem 3rem 6rem}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.apparait{opacity:1;transform:none}#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>D'iva Délices</b></div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<nav class="nav">
+  <a class="marque" href="#">D'iva <b>Délices</b></a>
+  <a class="btn respire" href="tel:+262693609307">Commander</a>
+</nav>
+<header class="hero">
+  <div class="fond" role="img" aria-label="La devanture turquoise de D'iva Délices, avenue Raymond Vergès"></div>
+  <div class="contenu apparait">
+    <span class="surtitre" style="color:var(--turq-c)">La Possession · fast food familial et artisanal</span>
+    <h1>D'iva <b>Délices</b></h1>
+    <div class="slogan">Saveurs, fraîcheur &amp; plaisir !</div>
+    <p>Le menu du jour créole en barquette, des pains garnis, gratinés, américains et paninis. Fait maison avec amour, au 18 avenue Raymond Vergès.</p>
+    <div class="actions">
+      <a class="btn" href="#menu">Le menu du jour</a>
+      <a class="btn clair" href="#snack">La carte snacking</a>
+    </div>
+  </div>
+</header>
+<div class="bandeau" aria-hidden="true"><div>
+<span>Fait maison avec amour</span>★<span>Bon goût, bon prix</span>★<span>Frais &amp; savoureux</span>★<span>Repas à emporter</span>★<span>Recettes réunionnaises authentiques</span>★<span>Fait maison avec amour</span>★<span>Bon goût, bon prix</span>★<span>Frais &amp; savoureux</span>★<span>Repas à emporter</span>★<span>Recettes réunionnaises authentiques</span>★
+</div></div>
+<section class="bloc">
+  <span class="surtitre apparait">Votre restaurant à emporter</span>
+  <h2 class="apparait">Commandez, on s'occupe du reste !</h2>
+  <div class="atouts">
+    <div class="atout apparait"><div class="ico">🍲</div><h3>Plats faits maison</h3><p>Avec des produits frais et de qualité.</p></div>
+    <div class="atout apparait"><div class="ico">⏱️</div><h3>Rapide &amp; pratique</h3><p>Gagnez du temps au quotidien !</p></div>
+    <div class="atout apparait"><div class="ico">❤️</div><h3>Généreux &amp; savoureux</h3><p>Des portions copieuses et pleines de goût !</p></div>
+    <div class="atout apparait"><div class="ico">€</div><h3>Prix malin</h3><p>Des repas gourmands à petits prix !</p></div>
+  </div>
+</section>
+<section class="menu-jour" id="menu">
+  <div class="bloc">
+    <span class="surtitre apparait">Chaque jour, une nouvelle affiche</span>
+    <h2 class="apparait">Le menu du jour, en barquette</h2>
+    <p class="apparait">Accompagnements : riz blanc, grains, rougail.</p>
+    <div class="prix apparait">
+      <div><b>7,00 €</b><small>barquette 650 ml</small></div>
+      <div><b>9,00 €</b><small>barquette 1000 ml</small></div>
+    </div>
+    <div class="jours">
+      <div class="jour apparait"><h3>Jeudi</h3><ul><li>Zembrocal pomme de terre</li><li>Rougail saucisse poulet</li><li>Rougail poitrine salée</li></ul></div>
+      <div class="jour apparait"><h3>Vendredi</h3><ul><li>Civet zourite</li><li>Sauté poulet gros piment</li></ul></div>
+      <div class="jour apparait"><h3>Un autre jour</h3><ul><li>Coq massalé</li><li>Rougail chevaquine</li></ul></div>
+      <div class="jour apparait"><h3>Et encore</h3><ul><li>Carry coq</li><li>Carry bichique</li></ul></div>
+    </div>
+    <div class="affiches">
+      <img class="apparait" src="img/affiche-29.webp" alt="Affiche du menu de la semaine : reprise des repas à emporter à partir de jeudi" loading="lazy" width="900" height="900">
+      <img class="apparait" src="img/affiche-01.webp" alt="Affiche du menu du jour : sauté poulet aux poivrons vert, barquette 650 ml 7 €, 1000 ml 9 €" loading="lazy" width="900" height="900">
+      <img class="apparait" src="img/affiche-21.webp" alt="Affiche du menu du jour : coq massalé, rougail chevaquine" loading="lazy" width="900" height="1350">
+      <img class="apparait" src="img/affiche-23.webp" alt="Affiche du menu du jour : carry coq, carry bichique" loading="lazy" width="900" height="1350">
+    </div>
+    <p class="petit apparait">Menus et prix repris des affiches publiées sur la page Facebook de D'iva Délices, à titre d'exemple : le menu du jour est sur la page, ou au téléphone.</p>
+  </div>
+</section>
+<section class="bloc" id="snack">
+  <span class="surtitre apparait">La carte snacking</span>
+  <h2 class="apparait">Pains, gratinés, américains, paninis</h2>
+  <div class="carte-snack">
+    <div>
+      <div class="cats">
+        <div class="cat apparait"><h3>Pain froid</h3><div class="de">dès 2,50 €</div><p>Base pain blanc ou normal : salami, rosette, jambon, poulet, sarcive, cordon bleu…</p></div>
+        <div class="cat apparait"><h3>Gratinés</h3><div class="de">dès 3,00 €</div><p>Pain + fromage : jambon, poulet, merguez poulet, museau porc, nuggets…</p></div>
+        <div class="cat apparait"><h3>Américain</h3><div class="de">dès 3,50 €</div><p>Pain + frite + fromage, jusqu'à l'Outremer.</p></div>
+        <div class="cat apparait"><h3>Américain spécial</h3><div class="de">dès 7,00 €</div><p>+ salade, tomate, oignon.</p></div>
+        <div class="cat star apparait"><h3>Panini</h3><div class="de">tous à 5,00 €</div><p>Salade, tomate, oignon, fromage + 1 viande, ou 3 fromages.</p></div>
+        <div class="cat apparait"><h3>Suppléments</h3><div class="de">0,50 € / 1,50 €</div><p>Légumes ou frite 0,50 € · viande 1,50 €.</p></div>
+      </div>
+      <p class="petit apparait" style="margin-top:1rem">Prix de l'affiche « Bonne rentrée 2026 » publiée sur la page Facebook.</p>
+    </div>
+    <div class="affiche-grande apparait"><img src="img/affiche-30.webp" alt="Affiche de la carte snacking D'iva Délices, Bonne rentrée 2026" loading="lazy" width="900" height="985"></div>
+  </div>
+</section>
+<div class="galerie" aria-label="En cuisine chez D'iva Délices">
+  <figure class="apparait"><img src="img/plat-2.webp" alt="Un wok de nouilles sautées aux légumes" loading="lazy"><figcaption>Sauté au wok, tout juste prêt</figcaption></figure>
+  <figure class="apparait"><img src="img/plat-1.webp" alt="Une sauteuse de viande mijotée et pommes de terre" loading="lazy"><figcaption>Mijoté maison, pommes de terre</figcaption></figure>
+  <figure class="apparait"><img src="img/affiche-03.webp" alt="Affiche du menu du jour : shop suey poulet" loading="lazy"><figcaption>L'affiche du jour : shop suey poulet</figcaption></figure>
+</div>
+<section class="noel">
+  <div class="bloc">
+    <div class="boite apparait">
+      <div class="etoiles-n" aria-hidden="true"><span>✨</span><span>🎄</span><span>✨</span></div>
+      <span class="surtitre">Pour les fêtes de fin d'année</span>
+      <h2>Vos commandes des fêtes</h2>
+      <p>Un repas de famille, un apéro entre collègues ? Commandez vos barquettes et vos paninis à l'avance, D'iva Délices s'occupe du reste.</p>
+      <div class="idees">
+        <div>🍛 Des barquettes créoles pour toute la tablée</div>
+        <div>🥪 Paninis et américains pour les grandes faims</div>
+        <div>📅 Votre jour et vos quantités, par téléphone</div>
+      </div>
+      <a class="btn vert respire" href="https://wa.me/262693609307?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes">Commander pour les fêtes</a>
+    </div>
+  </div>
+</section>
+<section class="bloc" id="contact">
+  <span class="surtitre apparait">Retrait des repas à emporter</span>
+  <h2 class="apparait">Passez commande</h2>
+  <div class="venir">
+    <div class="contact apparait">
+      <p>📍 18 avenue Raymond Vergès, 97419 La Possession</p>
+      <p>📞 Commandes : <a href="tel:+262693609307">0693 60 93 07</a></p>
+      <p>📱 <a href="tel:+262693638849">0693 63 88 49</a></p>
+      <p>✉️ <a href="mailto:d.ivadelices420@gmail.com">d.ivadelices420@gmail.com</a></p>
+      <p>📘 <a href="https://www.facebook.com/profile.php?id=100064859595883" target="_blank" rel="noopener">Le menu du jour sur Facebook</a></p>
+      <p style="margin-top:1.3rem"><a class="btn turq" href="tel:+262693609307">Réserver ma barquette</a></p>
+    </div>
+    <div class="carte-map apparait"><iframe title="Plan d'accès" loading="lazy" src="https://www.google.com/maps?q=18+avenue+Raymond+Verg%C3%A8s,+97419+La+Possession&z=16&output=embed"></iframe></div>
+  </div>
+</section>
+<footer>
+  <div class="script">D'iva Délices</div>
+  <p>« D'iva Délices, le goût qui fait la différence ! » · <b>Merci pour votre fidélité !</b></p>
+  <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de <b>D'iva Délices</b>.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</p>
+</footer>
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.apparait').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('vapeur'),g=c.getContext('2d');let W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+const N=innerWidth<700?14:26;
+function nouv(i){const grain=Math.random()<.35;return{x:Math.random()*W,y:i?Math.random()*H:H+30,r:grain?1.5+Math.random()*1.5:14+Math.random()*22,v:grain?.5+Math.random()*.6:.25+Math.random()*.35,t:Math.random()*6.28,grain}}
+for(let i=0;i<N;i++)P.push(nouv(true));
+function tour(){if(!run)return;g.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.t+=.01;p.x+=Math.sin(p.t)*.4;if(p.y<-40)Object.assign(p,nouv(false));
+const a=Math.min(1,p.y/H);if(p.grain){g.fillStyle='rgba(245,194,66,'+(.5*a)+')';g.beginPath();g.arc(p.x,p.y,p.r,0,6.28);g.fill()}
+else{const gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);gr.addColorStop(0,'rgba(127,224,216,'+(.14*a)+')');gr.addColorStop(1,'rgba(127,224,216,0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,p.r,0,6.28);g.fill()}}requestAnimationFrame(tour)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tour()});tour();})();
+</script>
+<script src="/outils/cta.js" data-nom="D&#x27;iva Délices" defer></script>
+</body>
+</html>
