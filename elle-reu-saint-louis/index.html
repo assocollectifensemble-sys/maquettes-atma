@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>.ELLE. · Coiffure, Esthétique, Onglerie · Saint-Louis, La Réunion</title>
+<meta name="description" content="Elle.reu, votre espace beauté à Saint-Louis : coiffure, esthétique et onglerie. Beauté du regard & K-Beauty, soins profonds & balayages, manucure russe & nail art.">
+<meta property="og:title" content=".ELLE. · Votre espace beauté à Saint-Louis">
+<meta property="og:description" content="Coiffure · Esthétique · Onglerie, au 235 N1C à Saint-Louis. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/elle-reu-saint-louis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/elle-reu-saint-louis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#141414;--noir2:#1f1d1b;--creme:#f5f1ed;--creme2:#fbf8f5;--taupe:#d4c4b0;--taupe2:#8b7355;--bordeaux:#5c2e3a;--ardoise:#2c3e50;--or:#c9a96a;--texte:#2a2724;--doux:#6e655c;--r:4px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.65;overflow-x:hidden;font-size:15.5px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,8vw,3rem);margin-bottom:.8rem;letter-spacing:.01em}
+.cap{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--taupe2);font-weight:600;display:block;margin-bottom:.6rem}
+.ruban{background:var(--noir);color:var(--taupe);font-size:.78rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:3;border-bottom:1px solid rgba(212,196,176,.25)}
+.ruban b{color:#fff;font-weight:600}
+#paillettes{position:fixed;inset:0;pointer-events:none;z-index:1}
+main,header,footer,section,.defile{position:relative;z-index:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.3rem}
+/* HERO */
+.hero{min-height:94vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--noir)}
+.hero .bg{position:absolute;inset:0;background:url(img/devanture.webp) center 22%/cover;animation:kb 28s ease-in-out infinite alternate;transform-origin:50% 25%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,20,.15) 0%,rgba(20,20,20,.35) 40%,rgba(20,20,20,.93) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:5rem;padding-bottom:3.2rem;width:100%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14)}}
+.hero .cap{color:var(--taupe)}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(3.5rem,18vw,8rem);line-height:.95;letter-spacing:.06em;margin-bottom:.5rem}
+.logo i{font-style:normal;color:var(--taupe)}
+.piliers{font-size:.86rem;letter-spacing:.22em;text-transform:uppercase;color:var(--creme);margin-bottom:1rem}
+.lead{font-size:1.05rem;max-width:32rem;color:#ece5dd;margin-bottom:1.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;border-radius:var(--r);padding:.95rem 1.35rem;transition:transform .25s,background .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.taupe{background:var(--taupe);color:var(--noir);animation:souffle 3.4s ease-in-out infinite}
+.btn.ligne{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn.noir{background:var(--noir);color:#fff}
+.btn.wa{background:#1f9d55;color:#fff}
+.btn.ligne-noire{border:1px solid var(--noir);color:var(--noir)}
+@keyframes souffle{0%,100%{box-shadow:0 0 0 0 rgba(212,196,176,.0)}50%{box-shadow:0 0 0 7px rgba(212,196,176,.22)}}
+.apparait{animation:monte 1.3s .2s both ease-out}
+@keyframes monte{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+/* DEFILE */
+.defile{background:var(--noir2);color:var(--taupe);overflow:hidden;white-space:nowrap;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;padding:.8rem 0;border-top:1px solid rgba(212,196,176,.2)}
+.defile div{display:inline-block;animation:defile 38s linear infinite}
+.defile span{margin:0 1.1rem}
+.defile b{color:var(--or);font-weight:400}
+@keyframes defile{to{transform:translateX(-50%)}}
+.bloc{padding:4.4rem 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+/* INTRO */
+.intro p{max-width:40rem;margin-bottom:1rem}
+.citation{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.55rem;line-height:1.35;color:var(--noir);border-left:2px solid var(--taupe2);padding-left:1.1rem;margin:1.5rem 0;max-width:38rem}
+.citation small{display:block;font-family:'Montserrat',sans-serif;font-style:normal;font-size:.75rem;color:var(--doux);margin-top:.5rem;letter-spacing:.04em}
+.trio{display:grid;gap:.8rem;margin-top:1.6rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.trio div{background:var(--creme2);border:1px solid #e7ddd2;padding:1.1rem 1.2rem;border-radius:var(--r);transition:transform .3s,box-shadow .3s}
+.trio div:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(20,20,20,.08)}
+.trio b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--noir)}
+/* UNIVERS */
+.univers{background:var(--noir);color:#fff;padding:4.4rem 0}
+.univers .cap{color:var(--taupe)}
+.univers .sous{color:#cfc6bc;max-width:36rem;margin-bottom:2rem}
+.cartes{display:grid;gap:1.3rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.carte{background:var(--creme);color:var(--texte);border-radius:var(--r);overflow:hidden;display:grid;grid-template-columns:42% 1fr;min-height:300px;transition:transform .35s}
+.carte:hover{transform:translateY(-4px)}
+.carte img{width:100%;height:100%;object-fit:cover}
+.carte .txt{padding:1.1rem 1rem}
+.carte h3{font-size:1.65rem;letter-spacing:.08em;text-transform:uppercase;font-weight:500;margin-bottom:.3rem}
+.carte p{font-size:.86rem;color:var(--doux);margin-bottom:.7rem}
+.carte ul{list-style:none;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.carte li{padding:.22rem 0;border-bottom:1px solid #e3d9cd}
+.carte li:last-child{border:0}
+.signes{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.signes span{border:1px solid rgba(212,196,176,.45);border-radius:99px;padding:.35rem .9rem;font-size:.82rem;color:var(--taupe)}
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.3rem 1.3rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 76%;max-width:330px;scroll-snap-align:center;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 10px 26px rgba(20,20,20,.1);transition:transform .35s}
+.galerie figure:hover{transform:translateY(-4px)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie figcaption{padding:.75rem 1rem;font-size:.84rem;color:var(--doux)}
+.galerie figcaption b{display:block;color:var(--noir);font-family:'Cormorant Garamond',serif;font-size:1.2rem}
+/* ETE */
+.ete{background:linear-gradient(180deg,var(--creme) 0%,#efe5da 100%)}
+.duo{display:grid;gap:1.8rem;align-items:center}
+@media(min-width:820px){.duo{grid-template-columns:1fr 1fr}.galerie figure{flex-basis:290px}}
+.cadre{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px rgba(20,20,20,.16)}
+.cadre img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.cadre::after{content:"";position:absolute;inset:10px;border:1px solid rgba(255,255,255,.5);pointer-events:none}
+/* RESA */
+.resa{background:var(--ardoise);color:#fff;padding:4.4rem 0}
+.resa .cap{color:var(--taupe)}
+.etapes{list-style:none;counter-reset:e;display:grid;gap:.8rem;margin:1.6rem 0 2rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.etapes li{counter-increment:e;border:1px solid rgba(212,196,176,.35);border-radius:var(--r);padding:1rem 1.1rem 1rem 3.4rem;position:relative;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase}
+.etapes li::before{content:counter(e);position:absolute;left:1rem;top:50%;transform:translateY(-50%);width:1.8rem;height:1.8rem;border-radius:50%;background:var(--taupe);color:var(--noir);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600}
+.resa p{color:#dbe2e8;max-width:36rem}
+.resa .signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--taupe);margin-top:1.4rem}
+/* NOEL */
+.noel{padding:4.6rem 0}
+.carte-cadeau{background:var(--noir);color:#fff;border-radius:6px;padding:2.3rem 1.5rem;position:relative;overflow:hidden;box-shadow:0 24px 50px rgba(20,20,20,.28)}
+.carte-cadeau::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,rgba(201,169,106,.28),transparent 42%),radial-gradient(circle at 90% 90%,rgba(92,46,58,.55),transparent 50%)}
+.carte-cadeau::after{content:"";position:absolute;inset:12px;border:1px solid rgba(212,196,176,.35);pointer-events:none}
+.carte-cadeau>*{position:relative}
+.carte-cadeau .cap{color:var(--or)}
+.carte-cadeau h2{color:var(--creme)}
+.carte-cadeau p{color:#e6dfd7;max-width:36rem;margin-bottom:1rem}
+.ruban-cadeau{display:flex;gap:.5rem;margin:.2rem 0 1.2rem}
+.ruban-cadeau i{width:7px;height:7px;transform:rotate(45deg);background:var(--or);animation:scintille 2.6s ease-in-out infinite}
+.ruban-cadeau i:nth-child(2n){background:var(--taupe);animation-delay:.7s}.ruban-cadeau i:nth-child(3n){animation-delay:1.4s}
+@keyframes scintille{0%,100%{opacity:.3}50%{opacity:1}}
+.idees{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:1.2rem 0 1.7rem}
+.idees div{border:1px solid rgba(212,196,176,.35);border-radius:var(--r);padding:.85rem 1rem;font-size:.88rem;color:#e6dfd7}
+.idees b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--taupe);font-weight:600}
+/* CONTACT */
+.contact{padding:4.4rem 0 3.2rem}
+.infos{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:1.4rem 0}
+.info{background:var(--creme2);border:1px solid #e7ddd2;border-radius:var(--r);padding:1.2rem;overflow-wrap:anywhere}
+.info h3{font-size:1.3rem;margin-bottom:.3rem}
+.info a{font-weight:600;color:var(--noir)}
+.info small{color:var(--doux);font-size:.8rem}
+.reseaux{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.6rem}
+footer{background:var(--noir);color:#bdb3a8;text-align:center;padding:2.4rem 1.3rem;font-size:.82rem}
+footer .logo{font-size:2.6rem;color:#fff;display:block;margin-bottom:.3rem}
+@media (max-width:420px){.carte{grid-template-columns:38% 1fr}.carte h3{font-size:1.25rem;letter-spacing:.04em}.carte .txt{padding:1rem .85rem}.carte ul{letter-spacing:.06em}}
+.carte .txt,.btn{overflow-wrap:anywhere;min-width:0}.btn{text-align:center}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#paillettes{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Elle.reu</div>
+<canvas id="paillettes" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="La devanture du salon .ELLE. à Saint-Louis, avec son enseigne lumineuse Coiffure Esthétique Onglerie"></div>
+  <div class="wrap apparait">
+    <span class="cap">Votre espace beauté à Saint-Louis</span>
+    <h1 class="logo"><i>.</i>ELLE<i>.</i></h1>
+    <p class="piliers">Coiffure · Esthétique · Onglerie</p>
+    <p class="lead">Beauté du regard &amp; K-Beauty 🇰🇷, soins profonds &amp; balayages 💇🏻‍♀️, manucure russe &amp; nail art ✨ : tout votre univers beauté réuni au 235 N1C.</p>
+    <div class="btns">
+      <a class="btn taupe" href="tel:+262693050540">Appeler · 0693 05 05 40</a>
+      <a class="btn ligne" href="#reserver">Prendre rendez-vous</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div><span>Korean LashLift</span><b>✦</b><span>Extensions de cils</span><b>✦</b><span>Hydrafacial</span><b>✦</b><span>Onglerie</span><b>✦</b><span>Esthétique</span><b>✦</b><span>Épilation</span><b>✦</b><span>HeadSpa</span><b>✦</b><span>Coupe femme</span><b>✦</b><span>Balayage</span><b>✦</b><span>Coiffure femme</span><b>✦</b><span>Korean LashLift</span><b>✦</b><span>Extensions de cils</span><b>✦</b><span>Hydrafacial</span><b>✦</b><span>Onglerie</span><b>✦</b><span>Esthétique</span><b>✦</b><span>Épilation</span><b>✦</b><span>HeadSpa</span><b>✦</b><span>Coupe femme</span><b>✦</b><span>Balayage</span><b>✦</b><span>Coiffure femme</span><b>✦</b></div></div>
+
+<main>
+<section class="bloc intro">
+  <div class="wrap reveal">
+    <span class="cap">L'esprit .ELLE.</span>
+    <h2>Une petite parenthèse qui change l'allure</h2>
+    <p class="citation">«&nbsp;Parce qu'il y a des jours où on a juste besoin de se retrouver belle. Prendre un moment pour soi, se regarder dans le miroir et se dire&nbsp;: ça, ça me fait du bien.&nbsp;»<small>— Elle.reu, publication du 28 septembre 2026</small></p>
+    <p>Chez .ELLE., l'idée est simple&nbsp;: vous offrir cette petite parenthèse qui change l'allure… et souvent l'humeur avec. Coiffure, soins du visage et du regard, mains et pieds&nbsp;: tout se passe sous le même toit, à Saint-Louis.</p>
+    <div class="trio">
+      <div><b>Beauté du regard &amp; K-Beauty</b>Korean LashLift, browlift, extensions de cils et soins coréens.</div>
+      <div><b>Soins profonds &amp; balayages</b>Coupe, balayage, lissage, curly, HeadSpa et coiffure de mariage.</div>
+      <div><b>Manucure russe &amp; nail art</b>Gainage, rallongement, semi-permanent, manucure japonaise.</div>
+    </div>
+  </div>
+</section>
+
+<section class="univers" id="univers">
+  <div class="wrap reveal">
+    <span class="cap">Trois univers</span>
+    <h2>Coiffure, Esthétique, Onglerie</h2>
+    <p class="sous">Les prestations telles que présentées par .ELLE. sur ses affiches de novembre 2026.</p>
+    <div class="cartes">
+      <article class="carte"><img src="img/coiffure.webp" alt="Longs cheveux noirs lissés, ornés d'une fleur blanche et de pinces, vus de dos" loading="lazy"><div class="txt"><h3>Coiffure</h3><p>Un salon privé dédié à la beauté de vos cheveux.</p><ul><li>Balayage</li><li>Coupe</li><li>Curly</li><li>Lissage</li><li>Botox</li><li>Soins profonds</li><li>Mariage</li></ul></div></article>
+      <article class="carte"><img src="img/esthetique.webp" alt="Peau scintillante de gouttelettes, sur fond noir" loading="lazy"><div class="txt"><h3>Esthétique</h3><p>Des soins 100% K-beauty pensés pour sublimer votre peau et votre bien-être.</p><ul><li>Épilations</li><li>Korean Hydraface</li><li>Peeling</li><li>Microneedling</li><li>Soins du visage</li><li>Korean LashLift</li><li>Browlift</li><li>Massages</li></ul></div></article>
+      <article class="carte"><img src="img/onglerie.webp" alt="Pose de vernis bordeaux sur des ongles longs, sur fond noir" loading="lazy"><div class="txt"><h3>Onglerie</h3><p>Un espace dédié à la beauté des mains et des pieds.</p><ul><li>Gainage</li><li>Rallongement</li><li>Semi-permanent</li><li>Manucure russe</li><li>Manucure japonaise</li><li>Soin des mains</li><li>Soin anti callosité</li></ul></div></article>
+    </div>
+    <div class="signes"><span>Korean LashLift</span><span>Extensions de cils</span><span>Hydrafacial</span><span>HeadSpa</span><span>Épilation</span><span>Coiffure femme</span></div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="wrap reveal"><span class="cap">Réalisations</span><h2>Sortis du salon</h2><p style="color:var(--doux)">Photos publiées par Elle.reu sur Facebook. Faites défiler&nbsp;→</p></div>
+  <div class="galerie reveal">
+    <figure><img src="img/brushing-ondule.webp" alt="Longue chevelure brune aux ondulations souples, vue de dos" loading="lazy"><figcaption><b>Ondulations souples</b>Publiées le 28 septembre 2026</figcaption></figure>
+    <figure><img src="img/reflets.webp" alt="Longs cheveux bruns aux reflets chauds et aux boucles travaillées, vus de dos" loading="lazy"><figcaption><b>Reflets chauds</b>Publiés le 28 septembre 2026</figcaption></figure>
+    <figure><img src="img/ondulations.webp" alt="Cheveux longs texturés et ondulés, vus de dos" loading="lazy"><figcaption><b>Longueurs texturées</b>Publiées le 28 septembre 2026</figcaption></figure>
+    <figure><img src="img/gris-polaire.webp" alt="Longue chevelure très claire et lumineuse, vue de dos" loading="lazy"><figcaption><b>Lumière sur les longueurs</b>Publiée le 25 août 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="bloc ete">
+  <div class="wrap duo reveal">
+    <div class="cadre"><img src="img/manucure.webp" alt="Ongles soignés et bague dorée, photo publiée par Elle.reu" loading="lazy"></div>
+    <div>
+      <span class="cap">Publication du 20 octobre 2026</span>
+      <h2>L'été approche à La Réunion</h2>
+      <p class="citation" style="margin-top:.6rem">«&nbsp;Les sandales retrouvent leur place, les journées s'allongent et les envies d'évasion se multiplient. L'occasion de s'accorder une attention jusque dans les moindres détails.&nbsp;»<small>— Elle.reu</small></p>
+      <p>Préparez vos pieds pour la belle saison&nbsp;: soin anti callosité, semi-permanent, nail art… l'onglerie de .ELLE. s'occupe des mains comme des pieds.</p>
+      <div class="btns" style="margin-top:1.3rem"><a class="btn noir" href="#reserver">Réserver mon soin</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="resa" id="reserver">
+  <div class="wrap reveal">
+    <span class="cap">Réservation en ligne</span>
+    <h2>Vos rendez-vous en quelques clics</h2>
+    <p>Prenez soin de vous, réservez directement en ligne sur Book In Beautiful&nbsp;: choisissez votre prestation, le jour et l'horaire qui vous conviennent selon les disponibilités. Le lien est dans la bio Instagram.</p>
+    <ol class="etapes">
+      <li>Confirmez votre inscription</li>
+      <li>Sélectionnez votre prestation</li>
+      <li>Choisissez le jour et l'horaire</li>
+    </ol>
+    <div class="btns">
+      <a class="btn taupe" href="https://www.instagram.com/elle_reunion/" target="_blank" rel="noopener">Réserver via le lien en bio</a>
+      <a class="btn ligne" href="tel:+262693050540">0693 05 05 40</a>
+    </div>
+    <p class="signature">À très vite chez .ELLE. ♡</p>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap reveal">
+    <div class="carte-cadeau">
+      <span class="cap">Offrir pour Noël</span>
+      <h2>Une carte cadeau .ELLE.</h2>
+      <div class="ruban-cadeau" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>Pour une maman, une sœur, une amie&nbsp;: offrez-lui sa petite parenthèse beauté à Saint-Louis. Un moment pour elle, qui change l'allure… et souvent l'humeur avec.</p>
+      <div class="idees">
+        <div><b>Le regard</b>Korean LashLift, browlift, extensions de cils</div>
+        <div><b>La peau</b>Hydrafacial, soins du visage K-Beauty</div>
+        <div><b>Les cheveux</b>Balayage, soins profonds, HeadSpa</div>
+        <div><b>Les mains</b>Manucure russe &amp; nail art</div>
+      </div>
+      <div class="btns">
+        <a class="btn wa" href="https://wa.me/262693050540?text=Bonjour%20Elle.reu%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl" target="_blank" rel="noopener">Demander sur WhatsApp</a>
+        <a class="btn ligne" href="tel:+262693050540">0693 05 05 40</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <span class="cap">Venir chez .ELLE.</span>
+    <h2>235 N1C, Saint-Louis</h2>
+    <div class="infos">
+      <div class="info"><h3>Adresse</h3>235 N1C<br>97450 Saint-Louis, La Réunion<br><a href="https://www.google.com/maps/search/?api=1&amp;query=235%20N1C%2097450%20Saint-Louis%20R%C3%A9union" target="_blank" rel="noopener">Ouvrir l'itinéraire</a></div>
+      <div class="info"><h3>Horaires</h3>Du mardi au samedi<br>8h30 – 18h30<br><small>Tels que publiés sur la page le 5 septembre 2026</small></div>
+      <div class="info"><h3>Contact</h3><a href="tel:+262693050540">0693 05 05 40</a><br><a href="mailto:sascoquette@gmail.com">sascoquette@gmail.com</a></div>
+    </div>
+    <div class="reseaux">
+      <a class="btn wa" href="https://wa.me/262693050540" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn noir" href="https://www.instagram.com/elle_reunion/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn ligne-noire" href="https://www.facebook.com/p/Ellereu-61578479155741/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span class="logo">.ELLE.</span>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Elle.reu.</footer>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('paillettes'),x=c.getContext('2d');let W,H,P=[],run=true;
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener('resize',sz);
+const cols=['201,169,106','212,196,176','255,255,255'];
+function n(){return{x:Math.random()*W,y:-10-Math.random()*H*.3,s:1+Math.random()*2.2,v:.15+Math.random()*.35,ph:Math.random()*6.28,tw:.02+Math.random()*.04,c:cols[Math.floor(Math.random()*3)]}}
+for(let i=0;i<30;i++){const p=n();p.y=Math.random()*H;P.push(p)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.ph+=p.tw;p.x+=Math.sin(p.ph*.5)*.2;const a=.18+.32*Math.abs(Math.sin(p.ph));
+x.fillStyle='rgba('+p.c+','+a+')';x.beginPath();x.moveTo(p.x,p.y-p.s*2);x.lineTo(p.x+p.s*.6,p.y);x.lineTo(p.x,p.y+p.s*2);x.lineTo(p.x-p.s*.6,p.y);x.closePath();x.fill();
+if(p.y>H+10)Object.assign(p,n())}requestAnimationFrame(f)}f()})();
+</script>
+<script src="/outils/cta.js" data-nom="Elle.reu" defer></script>
+</body>
+</html>
