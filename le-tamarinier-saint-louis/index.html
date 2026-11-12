@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Tamarinier · Bistro &amp; bar · Saint-Louis (974)</title>
+<meta name="description" content="Le Tamarinier, bistro et bar au 34b chemin Sainte-Thérèse à Saint-Louis : menu du jour sur place ou à emporter, planches à partager, soirées karaoké et stand-up.">
+<meta property="og:title" content="Le Tamarinier · Bistro &amp; bar · Saint-Louis">
+<meta property="og:description" content="Ici, fraîcheur, gourmandise et bonne humeur sont au menu. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-tamarinier-saint-louis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-tamarinier-saint-louis/">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--or:#f5af59;--or-clair:#fbd9a4;--gousse:#c9822e;--sarcelle:#1b5e5e;--sarcelle-f:#123f40;--turquoise:#4dbfb8;--creme:#fff7ea;--encre:#173434;--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--creme);color:var(--encre);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Outfit,sans-serif;line-height:1.15;letter-spacing:.01em}
+.ruban{background:var(--sarcelle-f);color:#f6ead2;font-size:.8rem;text-align:center;padding:.5rem 1rem;position:relative;z-index:5}
+#feuilles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/hero.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;will-change:transform}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,63,64,.15) 0%,rgba(18,63,64,.35) 45%,rgba(18,63,64,.92) 100%)}
+.hero-in{position:relative;z-index:2;padding:2rem 1.3rem 3.2rem;max-width:760px;margin:0 auto;width:100%}
+.sceau{width:104px;height:104px;border-radius:50%;border:3px solid var(--or);box-shadow:0 8px 30px rgba(0,0,0,.35);margin-bottom:1.1rem;animation:respire 5s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.05) rotate(-3deg)}}
+.hero h1{font-size:clamp(2.5rem,11vw,4.4rem);font-weight:800;text-transform:uppercase;opacity:0;transform:translateY(18px);animation:monte 1.1s .2s forwards}
+.hero h1 span{color:var(--or)}
+.hero .sous{font-family:Outfit;font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:var(--or-clair);margin:.4rem 0 1rem;opacity:0;animation:monte 1s .5s forwards}
+.hero p.accroche{font-size:1.15rem;max-width:32ch;opacity:0;animation:monte 1s .8s forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;opacity:0;animation:monte 1s 1.1s forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:700;text-decoration:none;font-family:Outfit;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--or);color:var(--sarcelle-f);box-shadow:0 0 0 0 rgba(245,175,89,.6);animation:pulse 2.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 14px rgba(245,175,89,0)}100%{box-shadow:0 0 0 0 rgba(245,175,89,0)}}
+.btn-ligne{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-sar{background:var(--sarcelle);color:#fff}
+/* bandeau */
+.bandeau{background:var(--or);color:var(--sarcelle-f);overflow:hidden;white-space:nowrap;font-family:Outfit;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;padding:.7rem 0;position:relative;z-index:2}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 1.1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* sections */
+section{padding:4.2rem 1.3rem;position:relative;z-index:2}
+.wrap{max-width:1040px;margin:0 auto}
+.eyebrow{font-family:Caveat,cursive;font-size:1.6rem;color:var(--gousse);display:block;margin-bottom:.1rem}
+h2{font-size:clamp(1.8rem,7vw,2.6rem);color:var(--sarcelle);margin-bottom:1rem}
+.lead{font-size:1.1rem;max-width:60ch}
+.grille2{display:grid;gap:2rem;align-items:center}
+@media(min-width:820px){.grille2{grid-template-columns:1fr 1fr}}
+.cadre{border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px rgba(18,63,64,.18);position:relative}
+.cadre figcaption,.leg{font-size:.82rem;color:#4f6c6c;margin-top:.5rem;font-style:italic}
+.citation{border-left:4px solid var(--or);padding:.4rem 0 .4rem 1rem;margin:1.2rem 0;font-size:1.15rem;font-style:italic;color:var(--sarcelle)}
+.citation small{display:block;font-style:normal;font-size:.8rem;color:#5c7777;margin-top:.3rem}
+.puces{list-style:none;margin-top:1rem;display:grid;gap:.5rem}
+.puces li{padding-left:1.7rem;position:relative}
+.puces li::before{content:"";position:absolute;left:0;top:.45rem;width:14px;height:14px;border-radius:60% 40% 60% 40%;background:var(--turquoise)}
+/* vague */
+.vague{display:block;width:100%;height:48px}
+/* menu */
+.menu-sec{background:var(--sarcelle);color:#f5ecd9}
+.menu-sec h2{color:var(--or)}
+.menu-sec .eyebrow{color:var(--or-clair)}
+.ardoise{background:var(--or);color:var(--sarcelle-f);border-radius:var(--r);padding:1.6rem 1.4rem;box-shadow:0 20px 50px rgba(0,0,0,.25);transform:rotate(-1deg);transition:transform .4s}
+.ardoise:hover{transform:rotate(0) scale(1.01)}
+.ardoise h3{font-size:1.5rem;text-transform:uppercase}
+.ardoise .date{font-family:Caveat;font-size:1.4rem}
+.ardoise ul{list-style:none;margin:1rem 0;display:grid;gap:.35rem}
+.ardoise li{font-weight:700;font-size:1.08rem;border-bottom:1px dashed rgba(18,63,64,.35);padding-bottom:.35rem}
+.ardoise .acc{font-size:.95rem}
+.autres{margin-top:2rem;display:grid;gap:1rem}
+@media(min-width:700px){.autres{grid-template-columns:1fr 1fr}}
+.carte{background:rgba(255,255,255,.08);border:1px solid rgba(245,175,89,.35);border-radius:16px;padding:1.1rem 1.2rem;transition:transform .3s,background .3s}
+.carte:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+.carte b{color:var(--or)}
+/* soir */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.5rem}
+.duo .cadre:nth-child(2){margin-top:2.2rem}
+/* agenda */
+.agenda{background:linear-gradient(180deg,var(--creme),#fde9c7)}
+.evts{display:grid;gap:1.2rem;margin-top:1.5rem}
+@media(min-width:760px){.evts{grid-template-columns:1fr 1fr}}
+.evt{background:#fff;border-radius:var(--r);padding:1.4rem;box-shadow:0 12px 30px rgba(201,130,46,.18);position:relative;overflow:hidden;transition:transform .3s}
+.evt:hover{transform:translateY(-4px)}
+.evt .jour{display:inline-block;background:var(--sarcelle);color:var(--or);font-family:Outfit;font-weight:800;padding:.35rem .8rem;border-radius:10px;text-transform:uppercase;font-size:.85rem}
+.evt h3{color:var(--sarcelle);font-size:1.35rem;margin:.7rem 0 .4rem}
+.evt::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(var(--or-clair),transparent 70%);opacity:.7}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem .2rem 1.2rem;-webkit-overflow-scrolling:touch}
+.galerie figure{flex:0 0 74%;max-width:330px;scroll-snap-align:center}
+.galerie img{border-radius:16px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 10px 26px rgba(18,63,64,.2)}
+.galerie figcaption{font-size:.8rem;color:#56706f;margin-top:.4rem}
+/* noel */
+.noel{background:radial-gradient(circle at 20% 10%,#1f6b6a,var(--sarcelle-f) 70%);color:#f6ead2;overflow:hidden}
+.noel h2{color:var(--or)}
+.noel .eyebrow{color:var(--or-clair)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:26px;display:flex;justify-content:space-around}
+.guirlande i{width:10px;height:10px;border-radius:50%;background:var(--or);margin-top:10px;box-shadow:0 0 12px var(--or);animation:scint 2.4s infinite alternate}
+.guirlande i:nth-child(even){background:var(--turquoise);box-shadow:0 0 12px var(--turquoise);animation-delay:1.2s}
+@keyframes scint{from{opacity:.35}to{opacity:1}}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0}
+@media(min-width:760px){.idees{grid-template-columns:repeat(3,1fr)}}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(245,175,89,.4);border-radius:16px;padding:1.1rem}
+.idee h3{color:var(--or);font-size:1.1rem;margin-bottom:.3rem}
+/* contact */
+.contact{background:var(--creme)}
+.infos{display:grid;gap:1rem;margin-top:1.2rem}
+.info{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border-radius:16px;padding:1rem 1.1rem;box-shadow:0 8px 20px rgba(18,63,64,.08)}
+.info .ico{flex:0 0 40px;height:40px;border-radius:12px;background:var(--or);display:grid;place-items:center;color:var(--sarcelle-f);font-weight:800}
+.info a{font-weight:700;color:var(--sarcelle);word-break:break-word}
+.reseaux{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+footer{background:var(--sarcelle-f);color:#cfe1dc;text-align:center;padding:2rem 1.3rem 2.6rem;font-size:.85rem;position:relative;z-index:2}
+footer img{width:64px;margin:0 auto .8rem;border-radius:50%}
+/* apparition */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+.illu{font-size:.75rem;color:#7a8f8e;font-style:italic}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1,.hero .sous,.hero p.accroche,.btns{opacity:1;transform:none}#feuilles{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Le Tamarinier</b></div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Planche de beignets et sauces servie au Tamarinier"></div>
+  <div class="hero-in">
+    <img class="sceau" src="img/logo.webp" alt="Logo du Tamarinier : un tamarinier et ses gousses" width="104" height="104">
+    <h1>Le <span>Tamarinier</span></h1>
+    <p class="sous">Bistro · Restaurant-bar · Saint-Louis</p>
+    <p class="accroche">Ici, fraîcheur, gourmandise et bonne humeur sont au menu&nbsp;😋</p>
+    <div class="btns">
+      <a class="btn btn-or" href="tel:+262692062588">📞 0692 06 25 88</a>
+      <a class="btn btn-ligne" href="#menu">Le menu du jour</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+<span>Sur place ou à emporter</span>🌳<span>Menu du jour</span>🌳<span>Planches à partager</span>🌳<span>Camembert rôti</span>🌳<span>Vendredi karaoké</span>🌳<span>34b chemin Sainte-Thérèse</span>🌳
+<span>Sur place ou à emporter</span>🌳<span>Menu du jour</span>🌳<span>Planches à partager</span>🌳<span>Camembert rôti</span>🌳<span>Vendredi karaoké</span>🌳<span>34b chemin Sainte-Thérèse</span>🌳
+</div></div>
+
+<section id="bienvenue">
+  <div class="wrap grille2">
+    <div class="rv">
+      <span class="eyebrow">Bienvenue sous le tamarinier</span>
+      <h2>Un lieu chaleureux, à Saint-Louis</h2>
+      <p class="lead">Un lieu chaleureux où vous pourrez partager de bons moments en famille ou entre amis.</p>
+      <p class="citation">« Un immense MERCI à toutes les personnes qui ont participé et qui nous accompagnent dans cette belle aventure depuis maintenant 1 an ! »<small>Le Tamarinier, tombola anniversaire, 11 octobre 2026</small></p>
+      <ul class="puces">
+        <li>Cuisine du jour, sur place ou à emporter</li>
+        <li>Planches gourmandes à partager et camembert rôti</li>
+        <li>Soirées karaoké, DJ et stand-up</li>
+        <li>Recommandé par 100&nbsp;% des avis Facebook (7 avis)</li>
+      </ul>
+    </div>
+    <figure class="cadre rv"><img src="img/enseigne.webp" alt="Création « 974 » fleurie aux couleurs du Tamarinier, publiée pour son premier anniversaire" loading="lazy" width="800" height="944"><figcaption>La création « 974 » publiée pour le premier anniversaire (octobre 2026)</figcaption></figure>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0 48V22c160-26 320-26 480 0s320 26 480 0 320-26 480 0v26z" fill="#1b5e5e"/></svg>
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <span class="eyebrow rv">Chaque jour, une nouvelle ardoise</span>
+    <h2 class="rv">Le menu du jour</h2>
+    <div class="grille2">
+      <div class="ardoise rv">
+        <h3>Menu du jour</h3>
+        <p class="date">Mardi 10 novembre 2026 · sur place ou à emporter</p>
+        <ul>
+          <li>Rôti poulet au four</li>
+          <li>Sauté magret canard</li>
+          <li>Civet zourite</li>
+          <li>Sauce poisson grenadier</li>
+          <li>Ti jack boucané</li>
+        </ul>
+        <p class="acc">Petite ou grande barquette, accompagnée de riz, grain, légumes rôtis, rougail.</p>
+        <p class="acc"><b>Commandes / réservation conseillée</b></p>
+        <p style="margin-top:1rem"><a class="btn btn-sar" href="tel:+262692062588">Commander au 0692 06 25 88</a></p>
+      </div>
+      <figure class="rv"><div class="cadre"><img src="img/menu-du-jour.webp" alt="Affiche du menu du jour du 10 novembre 2026" loading="lazy" width="900" height="1125"></div><figcaption style="color:#cfe1dc">L'affiche publiée le 9 novembre 2026</figcaption></figure>
+    </div>
+    <div class="autres">
+      <div class="carte rv"><b>Repas du jour, 22 septembre</b><br>Riz cantonais poulet · Cari porc ti pois mange-tout · Rougail sounouk avec mangue · Rôti poulet au four</div>
+      <div class="carte rv"><b>Menu du jour, 28 avril</b><br>Rôti poulet au four · Cari la patte cochon · Riz cantonais · Cari poisson frais carangue</div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)"><path d="M0 48V22c160-26 320-26 480 0s320 26 480 0 320-26 480 0v26z" fill="#1b5e5e"/></svg>
+
+<section id="soir">
+  <div class="wrap grille2">
+    <div class="rv">
+      <span class="eyebrow">Quand le soleil se couche</span>
+      <h2>Planches à partager &amp; vendredi karaoké</h2>
+      <p class="lead">Le soir, le Tamarinier se fait restaurant-bar : <b>planches gourmandes</b> à partager, un bon <b>camembert rôti</b> « bien fondant et gourmand ! », et le vendredi, place au <b>karaoké convivial</b> à partir de 19h30.</p>
+      <p class="citation">« Le Tamarinier te propose un moment karaoké convivial ! »<small>Affiche « Vendredi karaoké », 5 novembre 2026</small></p>
+    </div>
+    <div class="duo rv">
+      <figure class="cadre"><img src="img/planche.webp" alt="Planche apéritive garnie servie au Tamarinier" loading="lazy" width="800" height="888"></figure>
+      <figure class="cadre"><img src="img/hero.webp" alt="Beignets, rondelles et trois sauces, sur planche en bois" loading="lazy" width="800" height="990"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <span class="eyebrow rv">Les prochaines soirées</span>
+    <h2 class="rv">À l'agenda du Tamarinier</h2>
+    <div class="evts">
+      <article class="evt rv">
+        <span class="jour">Vendredi 11 décembre · 20h</span>
+        <h3>Back to Return</h3>
+        <p>Les plus grands tubes des années 80, 90 et 2000, aux platines : DJ Bruno. « Sortez vos meilleurs pas de danse ! »</p>
+        <p style="margin-top:.6rem"><b>Réservations : <a href="tel:+262692062588">0692 06 25 88</a></b></p>
+      </article>
+      <article class="evt rv">
+        <span class="jour">Samedi 12 décembre · 20h</span>
+        <h3>Soirée stand-up</h3>
+        <p>Sur scène : Kanageek, Nounours, Grand Farid, Latchou et Malika. Entrée 5&nbsp;€, sortie au chapeau pour soutenir les artistes.</p>
+        <p style="margin-top:.6rem"><b>Les places sont limitées, pensez à réserver !</b></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="galerie" style="padding-top:2rem">
+  <div class="wrap">
+    <span class="eyebrow rv">En images</span>
+    <h2 class="rv">La vie au Tamarinier</h2>
+    <div class="galerie">
+      <figure><img src="img/planche-zoom.webp" alt="Détail d'une planche apéritive" loading="lazy"><figcaption>Planche apéritive</figcaption></figure>
+      <figure><img src="img/affiche-tapas.webp" alt="Affiche planches tapas et camembert rôti" loading="lazy"><figcaption>Affiche : planches tapas &amp; camembert rôti</figcaption></figure>
+      <figure><img src="img/affiche-karaoke.webp" alt="Affiche Vendredi karaoké au Tamarinier" loading="lazy"><figcaption>Affiche : vendredi karaoké, dès 19h30</figcaption></figure>
+      <figure><img src="img/menu-avril.webp" alt="Affiche du menu du jour du 28 avril 2026" loading="lazy"><figcaption>Affiche : menu du jour du 28 avril</figcaption></figure>
+      <figure><img src="img/affiche-decembre.webp" alt="Affiche : des événements se préparent pour décembre" loading="lazy"><figcaption>Affiche : « Des événements se préparent pour le mois de décembre »</figcaption></figure>
+    </div>
+    <p class="leg">Faites glisser pour voir plus →</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <span class="eyebrow rv">Noël sous le tamarinier</span>
+    <h2 class="rv">Offrir pour Noël</h2>
+    <p class="lead rv">Pour les fêtes, offrez un bon moment au Tamarinier : une table entre amis, un repas de fin d'année en famille ou entre collègues, une soirée à partager.</p>
+    <div class="idees">
+      <div class="idee rv"><h3>Un repas à offrir</h3><p>Une table au Tamarinier pour quelqu'un qui vous est cher.</p></div>
+      <div class="idee rv"><h3>Votre repas de fin d'année</h3><p>Entre collègues ou en famille, sur place ou à emporter : on en parle ensemble.</p></div>
+      <div class="idee rv"><h3>Une soirée en décembre</h3><p>Back to Return le 11, stand-up le 12 : de belles idées de sorties à partager.</p></div>
+    </div>
+    <a class="btn btn-or rv" href="https://wa.me/262692062588?text=Bonjour%20le%20Tamarinier%2C%20je%20voudrais%20organiser%20un%20repas%20pour%20les%20f%C3%AAtes" target="_blank" rel="noopener">💬 Écrire au Tamarinier sur WhatsApp</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grille2">
+    <div class="rv">
+      <span class="eyebrow">On vous attend</span>
+      <h2>Venir au Tamarinier</h2>
+      <div class="infos">
+        <div class="info"><span class="ico">📍</span><div>34b chemin Sainte-Thérèse<br>97450 Saint-Louis, La Réunion<br><a href="https://www.google.com/maps/search/?api=1&query=34b+chemin+Sainte-Th%C3%A9r%C3%A8se+97450+Saint-Louis" target="_blank" rel="noopener">Ouvrir l'itinéraire</a></div></div>
+        <div class="info"><span class="ico">📞</span><div>Commandes &amp; réservations<br><a href="tel:+262692062588">0692 06 25 88</a></div></div>
+        <div class="info"><span class="ico">✉️</span><div><a href="mailto:letamarinier974@gmail.com">letamarinier974@gmail.com</a></div></div>
+      </div>
+      <div class="reseaux">
+        <a class="btn btn-sar" href="https://www.facebook.com/p/Le-Tamarinier-61583043219193/" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn btn-sar" href="https://www.instagram.com/letamarinier/" target="_blank" rel="noopener">Instagram @letamarinier</a>
+      </div>
+    </div>
+    <figure class="cadre rv"><img src="img/logo.webp" alt="Logo du Tamarinier" loading="lazy" width="480" height="480"></figure>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo.webp" alt="" width="64" height="64">
+  <p>Le Tamarinier · Bistro · 34b chemin Sainte-Thérèse, Saint-Louis</p>
+  <p style="margin-top:.6rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Tamarinier.</p>
+</footer>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('feuilles'),x=c.getContext('2d');let W,H,run=true;const dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}rs();addEventListener('resize',rs);
+const cols=['#1b5e5e','#4dbfb8','#f5af59','#7fa84a'];const N=W<600?18:28;
+const P=Array.from({length:N},()=>nv(true));
+function nv(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,s:3+Math.random()*5,v:.25+Math.random()*.45,a:Math.random()*6.28,r:.01+Math.random()*.02,o:.18+Math.random()*.3,c:cols[Math.random()*4|0],g:Math.random()<.12}}
+function leaf(p){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.g?'#c9822e':p.c;x.beginPath();
+if(p.g){x.ellipse(0,0,p.s*2.4,p.s*.7,0,0,6.28)}else{x.ellipse(0,0,p.s,p.s*.45,0,0,6.28)}x.fill();x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.x+=Math.sin(p.a)*.4;p.a+=p.r;if(p.y>H+20)Object.assign(p,nv(false));leaf(p)}requestAnimationFrame(f)}f();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Tamarinier" defer></script>
+</body>
+</html>

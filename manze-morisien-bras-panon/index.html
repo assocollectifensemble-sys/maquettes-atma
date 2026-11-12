@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Manze Morisien · Cuisine réunionnaise, mauricienne & chinoise · Bras-Panon</title>
+<meta name="description" content="Manze Morisien, 9 rue des Limites à Bras-Panon : briani, mine frit, riz frit, dholl puri, chop-suey et menus fête pour 10 personnes. Commandes au 0693 64 89 66.">
+<meta property="og:title" content="Manze Morisien · Saveurs de l'île Maurice à Bras-Panon">
+<meta property="og:description" content="Le goût du soleil dans votre assiette. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/manze-morisien-bras-panon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/manze-morisien-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#15110d;--noir2:#221a12;--or:#e3b341;--or2:#f6d77a;--rouge:#d7372f;--vert:#2f8f45;--bleu:#1b4fa0;--creme:#fbf4e4;--texte:#2a2118}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--texte);background:var(--creme);overflow-x:hidden;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ruban{background:var(--noir);color:var(--or2);font-size:.8rem;text-align:center;padding:.5rem 1rem;border-bottom:2px solid var(--or)}
+.drapeau{display:flex;height:6px}.drapeau i{flex:1}.drapeau i:nth-child(1){background:var(--rouge)}.drapeau i:nth-child(2){background:var(--bleu)}.drapeau i:nth-child(3){background:#f2c230}.drapeau i:nth-child(4){background:var(--vert)}
+/* HERO */
+.hero{position:relative;min-height:clamp(560px,92vh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:#fff}
+.hero .fond{position:absolute;inset:0;background:url(img/mine-frit.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,17,13,.25) 0%,rgba(21,17,13,.15) 35%,rgba(21,17,13,.88) 78%,var(--noir) 100%)}
+#vapeur{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .contenu{position:relative;z-index:2;padding:2rem 1.25rem 2.6rem;max-width:760px;margin:0 auto;width:100%}
+.logo{width:118px;height:118px;border-radius:50%;border:3px solid var(--or);box-shadow:0 8px 30px rgba(0,0,0,.5);margin-bottom:1rem;animation:respire 4s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.04)}}
+.hero h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(2.7rem,12vw,5.2rem);line-height:.95;letter-spacing:.02em;text-transform:uppercase}
+.hero h1 span{display:block;font-family:"Dancing Script",cursive;text-transform:none;color:var(--or);font-size:.8em;letter-spacing:0;margin-top:.1em}
+.hero .sous{margin:.9rem 0 .4rem;font-weight:800;font-size:1.05rem}
+.hero .slogan{color:var(--or2);font-style:italic}
+.apparait{opacity:0;transform:translateY(18px);animation:monte 1.1s .2s forwards}
+.apparait.d2{animation-delay:.5s}.apparait.d3{animation-delay:.8s}
+@keyframes monte{to{opacity:1;transform:none}}
+.boutons{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.8rem 1.2rem;border-radius:999px;font-weight:800;text-decoration:none;background:var(--or);color:var(--noir);transition:transform .2s,box-shadow .2s;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.btn.wa{background:#25d366;color:#08311a}
+.btn.ligne{background:transparent;color:inherit;border:2px solid currentColor;box-shadow:none}
+.btn.pulse{animation:pulse 2.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(227,179,65,.55)}50%{box-shadow:0 0 0 12px rgba(227,179,65,0)}}
+.infos-hero{margin-top:1rem;font-size:.92rem;opacity:.92}
+/* BANDEAU */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;font-family:Anton,Impact,sans-serif;letter-spacing:.06em;font-size:1.1rem;padding:.7rem 0}
+.bandeau div{display:inline-block;animation:defile 38s linear infinite}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* SECTIONS */
+section{padding:4rem 1.25rem}
+.wrap{max-width:1060px;margin:0 auto}
+.kicker{font-family:"Dancing Script",cursive;color:var(--rouge);font-size:1.6rem;font-weight:700}
+h2{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(1.9rem,7vw,3rem);line-height:1.05;margin:.2rem 0 1rem;color:var(--noir)}
+.sombre{background:var(--noir);color:#f4eadb}.sombre h2{color:var(--or)}.sombre .kicker{color:var(--or2)}
+.grille2{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:820px){.grille2{grid-template-columns:1fr 1fr}}
+.photo{border-radius:18px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.18);position:relative}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.photo:hover img{transform:scale(1.05)}
+.legende{position:absolute;left:.7rem;bottom:.7rem;background:rgba(21,17,13,.78);color:#fff;font-size:.75rem;padding:.25rem .6rem;border-radius:99px}
+.trio{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.trio span{background:var(--noir);color:var(--or2);padding:.35rem .8rem;border-radius:99px;font-weight:800;font-size:.85rem}
+.trio span:nth-child(2){background:var(--vert);color:#fff}.trio span:nth-child(3){background:var(--rouge);color:#fff}
+blockquote{margin-top:1.4rem;padding:1rem 1.2rem;border-left:5px solid var(--or);background:#fff;border-radius:0 14px 14px 0;font-style:italic;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+blockquote cite{display:block;margin-top:.4rem;font-style:normal;font-size:.82rem;color:#7a6a55}
+/* PLATS */
+.plats{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:1.4rem}
+.plat{background:var(--noir2);border:1px solid rgba(227,179,65,.25);border-radius:16px;padding:1.1rem 1.2rem;transition:transform .25s,border-color .25s}
+.plat:hover{transform:translateY(-4px);border-color:var(--or)}
+.plat h3{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.04em;color:var(--or2);font-size:1.25rem;text-transform:uppercase}
+.plat p{font-size:.92rem;opacity:.85;margin-top:.3rem}
+.note{font-size:.82rem;opacity:.75;margin-top:1.2rem}
+.livraison{margin-top:1.6rem;background:linear-gradient(90deg,var(--vert),#246f37);color:#fff;border-radius:16px;padding:1.1rem 1.3rem;font-weight:600}
+/* MENU FETE */
+.menu{display:grid;gap:.2rem;margin-top:1.2rem;background:#fff;border-radius:18px;padding:1.2rem 1.2rem;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.ligne-menu{display:flex;align-items:baseline;gap:.5rem;padding:.55rem 0;border-bottom:1px dashed #e2d3b4}
+.ligne-menu:last-child{border:0}
+.ligne-menu b{font-weight:800}
+.ligne-menu small{display:block;color:#7a6a55;font-size:.8rem}
+.ligne-menu .pts{flex:1;border-bottom:2px dotted #d9c79f;transform:translateY(-4px);min-width:12px}
+.prix{font-family:Anton,Impact,sans-serif;color:var(--rouge);font-size:1.15rem;white-space:nowrap}
+.cat{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--vert);margin-top:.8rem;font-size:1.05rem}
+.occasions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.occasions span{border:2px solid var(--or);padding:.3rem .8rem;border-radius:99px;font-weight:700;font-size:.85rem;background:#fffaf0}
+/* NOEL */
+.noel{background:radial-gradient(circle at 20% 10%,#3a2a14 0,var(--noir) 60%);color:#f4eadb;position:relative;overflow:hidden}
+.noel h2{color:var(--or)}
+.noel .etoiles{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 10% 20%,var(--or2) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 80% 30%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 60% 80%,var(--or2) 50%,transparent 51%),radial-gradient(1.5px 1.5px at 30% 70%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 90% 85%,var(--or) 50%,transparent 51%);animation:scint 5s ease-in-out infinite alternate;opacity:.6}
+@keyframes scint{to{opacity:.2}}
+.noel .wrap{position:relative}
+.carte-noel{border:1px solid rgba(227,179,65,.4);border-radius:20px;padding:1.4rem;margin-top:1.2rem;background:rgba(255,255,255,.03)}
+.carte-noel ul{list-style:none;margin:.8rem 0}
+.carte-noel li{padding:.3rem 0 .3rem 1.6rem;position:relative}
+.carte-noel li::before{content:"✦";position:absolute;left:0;color:var(--or)}
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 1.25rem 1.2rem;margin:0 -1.25rem;-webkit-overflow-scrolling:touch}
+.galerie figure{flex:0 0 78%;max-width:360px;scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:4/5;box-shadow:0 10px 26px rgba(0,0,0,.18);background:#000}
+.galerie img{width:100%;height:100%;object-fit:cover}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;font-size:.88rem;font-weight:600}
+.astuce{font-size:.8rem;color:#7a6a55;text-align:center}
+/* FIDELITE */
+.fidelite .photo{max-width:420px;margin:0 auto}
+/* RENDEZ-VOUS */
+.rdv{display:grid;gap:1rem;margin-top:1.2rem}
+@media(min-width:820px){.rdv{grid-template-columns:1fr 1fr}}
+.rdv div{background:#fff;border-radius:16px;padding:1.1rem 1.2rem;border-top:5px solid var(--or);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.rdv div:nth-child(2){border-color:var(--vert)}
+.rdv b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:1.1rem}
+/* CONTACT */
+.contact{background:var(--noir);color:#f4eadb}
+.contact h2{color:var(--or)}
+.coord{display:grid;gap:.8rem;margin:1.2rem 0}
+.coord a,.coord p{display:block;background:var(--noir2);border-radius:14px;padding:.9rem 1.1rem;text-decoration:none;border:1px solid rgba(227,179,65,.2);word-break:break-word}
+.coord small{display:block;color:var(--or2);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+.carte{border-radius:16px;overflow:hidden;margin-top:1rem;border:2px solid rgba(227,179,65,.35)}
+.carte iframe{width:100%;height:260px;border:0;display:block;filter:saturate(.9)}
+footer{background:#0d0a07;color:#bfae93;text-align:center;font-size:.85rem;padding:2rem 1.25rem 2.6rem}
+footer b{color:var(--or2)}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:46px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour <b>Manze Morisien</b></div>
+<div class="drapeau" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Nouilles sautées de Manze Morisien, servies à emporter"></div>
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <div class="contenu">
+    <img class="logo apparait" src="img/logo.webp" alt="Logo Manze Morisien" width="118" height="118">
+    <h1 class="apparait">Manze<span>Morisien</span></h1>
+    <p class="sous apparait d2">Cuisine réunionnaise, mauricienne &amp; chinoise · Bras-Panon</p>
+    <p class="slogan apparait d2">« Le goût du soleil dans votre assiette »</p>
+    <div class="boutons apparait d3">
+      <a class="btn pulse" href="tel:+262693648966">📞 0693 64 89 66</a>
+      <a class="btn wa" href="https://wa.me/262693648966?text=Bonjour%20Manze%20Morisien%2C%20je%20voudrais%20passer%20une%20commande">WhatsApp</a>
+      <a class="btn ligne" href="#carte">Voir les plats</a>
+    </div>
+    <p class="infos-hero apparait d3">📍 9 rue des Limites, 97412 Bras-Panon · commandes par appel, SMS ou WhatsApp</p>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>BRIANI POULET ★ BRIANI CERF ★ MINE FRIT ★ RIZ FRIT ★ DHOLL PURI ★ FARATA ★ CHOP-SUEY ★ AIGRE-DOUX ★ VINDAYE DE POISSON ★ BROCHETTES ★ TI PATÉ ★ BRIANI POULET ★ BRIANI CERF ★ MINE FRIT ★ RIZ FRIT ★ DHOLL PURI ★ FARATA ★ CHOP-SUEY ★ AIGRE-DOUX ★ VINDAYE DE POISSON ★ BROCHETTES ★ TI PATÉ ★&nbsp;</div></div>
+
+<section id="histoire">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="kicker">Saveurs de l'île Maurice</p>
+      <h2>Un mélange de cultures, un seul plaisir</h2>
+      <p>À Bras-Panon, Manze Morisien mijote une cuisine <b>authentique et faite maison</b>, au carrefour de trois traditions : les plats de La Réunion, les saveurs de l'île Maurice et les classiques chinois qu'on aime partager.</p>
+      <div class="trio"><span>Réunionnaise</span><span>Mauricienne</span><span>Chinoise</span></div>
+      <p>Des plats généreux, faits avec passion : briani, mine frit, dholl puri, farata… à emporter, livrés au local ou aux alentours, ou en grandes quantités pour vos fêtes.</p>
+      <blockquote>« Y aller, découvrir et manger mauricien avec des plats fabuleux. »<cite>Stéphane G. · recommandation sur la page Facebook (septembre 2025)</cite></blockquote>
+    </div>
+    <div class="photo rv" style="aspect-ratio:4/5"><img src="img/devanture.webp" alt="La devanture de Manze Morisien, avec ses grandes photos de plats" loading="lazy"><span class="legende">La devanture · photo de la page Facebook</span></div>
+  </div>
+</section>
+
+<section id="carte" class="sombre">
+  <div class="wrap">
+    <p class="kicker rv">Au menu</p>
+    <h2 class="rv">Les plats de Manze Morisien</h2>
+    <p class="rv">Les plats annoncés sur la page ces dernières semaines. Le menu change selon le jour : le plus simple est d'appeler ou d'écrire pour connaître le plat du moment.</p>
+    <div class="plats">
+      <div class="plat rv"><h3>Briani poulet</h3><p>Le grand classique, cuit en marmite. Existe aussi en briani poisson.</p></div>
+      <div class="plat rv"><h3>Briani cerf</h3><p>Au menu du jour, comme la brochette de poulet et sa salade.</p></div>
+      <div class="plat rv"><h3>Mine frit &amp; riz frit</h3><p>Nouilles sautées et riz frit au poulet, ou en version spéciale.</p></div>
+      <div class="plat rv"><h3>Dholl puri &amp; farata</h3><p>Les galettes de l'île Maurice ; farata légumes et poulet.</p></div>
+      <div class="plat rv"><h3>Chop-suey &amp; aigre-doux</h3><p>Poulet, poisson ou crevettes, avec salade, riz et piment.</p></div>
+      <div class="plat rv"><h3>Civet &amp; vindaye</h3><p>Civet manchon canard, vindaye de poisson, spaghetti aux légumes.</p></div>
+    </div>
+    <div class="livraison rv">🛵 « Vous souhaitez commander ? C'est possible dès maintenant et on vous livre au local ou aux alentours. » — publication du 11 novembre 2026</div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 0h1440v16c-240 30-480 30-720 8S240-6 0 22z" fill="#15110d"/></svg>
+
+<section id="galerie" style="padding-top:2.5rem">
+  <div class="wrap">
+    <p class="kicker rv">En cuisine</p>
+    <h2 class="rv">Ça mijote à Bras-Panon</h2>
+    <div class="galerie rv">
+      <figure><img src="img/briani.webp" alt="Briani poulet en marmite sur le feu" loading="lazy"><figcaption>Le briani poulet sur le feu</figcaption></figure>
+      <figure><img src="img/mine-frit.webp" alt="Nouilles sautées à emporter" loading="lazy"><figcaption>Nouilles sautées, prêtes à emporter</figcaption></figure>
+      <figure><img src="img/brochettes.webp" alt="Brochettes grillées sur la grille" loading="lazy"><figcaption>Les brochettes sur le grill</figcaption></figure>
+      <figure><img src="img/nouilles.webp" alt="Bol de nouilles garni" loading="lazy"><figcaption>Un bol de nouilles bien garni</figcaption></figure>
+      <figure><img src="img/dipavali.webp" alt="Le stand Manze Morisien décoré pour Dipavali" loading="lazy" style="object-position:30% 50%"><figcaption>Habillé de lumières pour Dipavali</figcaption></figure>
+      <figure><img src="img/plaque.webp" alt="Plaque peinte Manze Morisien avec un dodo" loading="lazy"><figcaption>Un clin d'œil à l'île Maurice</figcaption></figure>
+    </div>
+    <p class="astuce">← Faites glisser pour voir les photos · photos de la page Facebook Manze Morisien →</p>
+  </div>
+</section>
+
+<section id="fetes">
+  <div class="wrap">
+    <p class="kicker rv">Pour vos événements</p>
+    <h2 class="rv">Menu fête pour 10 personnes</h2>
+    <p class="rv">Anniversaire, mariage, baptême, repas en famille ou entre amis : Manze Morisien prépare de grands plats à partager. <b>« On s'adapte à votre budget aussi : contactez-nous et on lance le devis. »</b></p>
+    <div class="occasions rv"><span>Mariage</span><span>Baptême</span><span>Anniversaire</span><span>Fête de famille</span><span>Repas entre amis</span></div>
+    <div class="menu rv">
+      <p class="cat">Grill</p>
+      <div class="ligne-menu"><span><b>Menu grill</b><small>10 cuisses, 30 saucisses, salade crudités</small></span><span class="pts"></span><span class="prix">100 €</span></div>
+      <div class="ligne-menu"><span><b>Menu grill</b><small>3 poulets entiers grillés, 30 saucisses, salade crudités ou gratin</small></span><span class="pts"></span><span class="prix">100 €</span></div>
+      <p class="cat">Aigre-doux &amp; chop-suey</p>
+      <div class="ligne-menu"><span><b>Poulet aigre-doux</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">85 €</span></div>
+      <div class="ligne-menu"><span><b>Poisson aigre-doux</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">95 €</span></div>
+      <div class="ligne-menu"><span><b>Crevettes aigre-doux</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">110 €</span></div>
+      <div class="ligne-menu"><span><b>Chop-suey poulet</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">85 €</span></div>
+      <div class="ligne-menu"><span><b>Chop-suey poisson</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">95 €</span></div>
+      <div class="ligne-menu"><span><b>Chop-suey crevettes</b><small>salade, riz, piment</small></span><span class="pts"></span><span class="prix">110 €</span></div>
+      <div class="ligne-menu"><span><b>Chop-suey spéciale</b><small>poisson, crevettes</small></span><span class="pts"></span><span class="prix">130 €</span></div>
+      <p class="cat">Briani, mine &amp; riz frit</p>
+      <div class="ligne-menu"><span><b>Briani poulet</b></span><span class="pts"></span><span class="prix">75 €</span></div>
+      <div class="ligne-menu"><span><b>Briani poisson</b></span><span class="pts"></span><span class="prix">85 €</span></div>
+      <div class="ligne-menu"><span><b>Mine frit / riz frit poulet</b></span><span class="pts"></span><span class="prix">70 €</span></div>
+      <div class="ligne-menu"><span><b>Mine frit / riz frit spéciale</b></span><span class="pts"></span><span class="prix">90 €</span></div>
+      <p class="cat">Apéro</p>
+      <div class="ligne-menu"><span><b>Ti pâté</b><small>poulet 0,80 € · poisson 0,90 €</small></span><span class="pts"></span><span class="prix">l'unité</span></div>
+      <div class="ligne-menu"><span><b>Brochette poulet grill</b><small>mini 1,50 € · grande 3 €</small></span><span class="pts"></span><span class="prix">l'unité</span></div>
+      <div class="ligne-menu"><span><b>Gratin divers</b><small>10 personnes</small></span><span class="pts"></span><span class="prix">40 €</span></div>
+      <div class="ligne-menu"><span><b>Tourte poulet forestière</b><small>10 personnes</small></span><span class="pts"></span><span class="prix">65 €</span></div>
+      <div class="ligne-menu"><span><b>Samoussas congelés</b><small>poisson, poulet, fromage</small></span><span class="pts"></span><span class="prix">sur demande</span></div>
+    </div>
+    <p class="note rv" style="color:#7a6a55">Tarifs de l'affiche « Menu fête » publiée le 29 octobre 2026 sur la page Facebook, à confirmer à la commande.</p>
+    <div class="boutons rv"><a class="btn" href="tel:+262693648966">Appeler pour un devis</a><a class="btn wa" href="https://wa.me/262693648966?text=Bonjour%20Manze%20Morisien%2C%20je%20voudrais%20un%20devis%20pour%20un%20menu%20f%C3%AAte">Demander un devis</a><a class="btn ligne" href="mailto:mmorisien@gmail.com?subject=Demande%20de%20devis%20traiteur">Par e-mail</a></div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="etoiles" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker">Les fêtes approchent</p>
+    <h2>Le repas de Noël, version Manze Morisien</h2>
+    <div class="carte-noel rv">
+      <p>Pour Noël et le Nouvel An, faites préparer le repas de toute la tablée : un grand briani, un chop-suey ou un menu grill pour 10 personnes, et l'apéro avec les ti pâtés et les brochettes.</p>
+      <ul>
+        <li>Menus fête pour 10 personnes, à partir de 70 €</li>
+        <li>Devis adapté à votre budget</li>
+        <li>Commande par appel, SMS ou WhatsApp</li>
+      </ul>
+      <div class="boutons"><a class="btn wa pulse" href="https://wa.me/262693648966?text=Bonjour%20Manze%20Morisien%2C%20je%20voudrais%20commander%20un%20menu%20f%C3%AAte%20pour%20No%C3%ABl">Commander pour Noël</a><a class="btn ligne" href="tel:+262693648966">0693 64 89 66</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="fidelite" id="fidelite">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="kicker">Tout en un seul QR code</p>
+      <h2>La carte de fidélité est arrivée</h2>
+      <p>« Avec tant de demandes, tant d'attente : voilà enfin notre carte de fidélité ! » Un scan, et vous avez :</p>
+      <ul style="margin:1rem 0 1rem 1.2rem">
+        <li>la carte de fidélité,</li><li>les menus,</li><li>le numéro pour les réservations,</li><li>l'e-mail pour vos devis traiteur,</li><li>et bientôt des offres spéciales.</li>
+      </ul>
+      <a class="btn" href="https://myqr.re/x/manze-morisien" target="_blank" rel="noopener">Ouvrir la carte de fidélité</a>
+    </div>
+    <div class="photo rv" style="aspect-ratio:3/4"><img src="img/carte-fidelite.webp" alt="Carte de fidélité Manze Morisien avec son QR code" loading="lazy"><span class="legende">Publication du 17 septembre 2026</span></div>
+  </div>
+</section>
+
+<section id="rendez-vous" style="background:#f3e7cc">
+  <div class="wrap">
+    <p class="kicker rv">Cette année</p>
+    <h2 class="rv">Les rendez-vous de l'année</h2>
+    <div class="rdv">
+      <div class="rv"><b>Foire agricole de Bras-Panon</b>Du 8 au 17 mai : repas, samoussas, nems, poulet croustillant, beignets de légumes et tiramisu. « On vous attend nombreux, nombreuses ! »</div>
+      <div class="rv"><b>Marché de nuit du Dipavali</b>Mardi 10 novembre, place Michel-Debré face à la mairie : l'affiche partagée sur la page le 5 novembre, avec la devanture habillée de lumières et de guirlandes de fleurs. Happy Dipavali !</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="kicker">Passer commande</p>
+      <h2>Allez, passe ta commande avant rupture !</h2>
+      <div class="coord">
+        <a href="tel:+262693648966"><small>Appel ou SMS</small>0693 64 89 66</a>
+        <a href="https://wa.me/262693648966?text=Bonjour%20Manze%20Morisien%2C%20je%20voudrais%20passer%20une%20commande"><small>WhatsApp</small>Écrire sur WhatsApp</a>
+        <a href="mailto:mmorisien@gmail.com"><small>E-mail · devis traiteur</small>mmorisien@gmail.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=9+rue+des+Limites+97412+Bras-Panon" target="_blank" rel="noopener"><small>Adresse</small>9 rue des Limites, 97412 Bras-Panon</a>
+        <a href="https://www.facebook.com/ManzeMoris" target="_blank" rel="noopener"><small>Facebook</small>MANZE morisien · le menu du jour</a>
+      </div>
+    </div>
+    <div class="rv">
+      <a class="btn" style="margin-top:.4rem" href="https://www.google.com/maps/search/?api=1&query=9+rue+des+Limites+97412+Bras-Panon" target="_blank" rel="noopener">📍 Itinéraire vers Manze Morisien</a>
+      <p class="note">Livraison au local ou aux alentours, selon la publication du 11 novembre 2026.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Manze Morisien</b> · Qualité • Goût • Partage</p>
+  <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de <b>Manze Morisien</b>.<br>Page non référencée, visible uniquement par vous. Un simple « non merci » et nous la retirons aussitôt.</p>
+</footer>
+
+<script>
+(()=>{
+const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>reduit?el.classList.add('vu'):io.observe(el));
+if(reduit)return;
+const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,parts=[],actif=true;
+function taille(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+taille();addEventListener('resize',taille);
+function neuf(i){const epice=i%3===0;return{x:Math.random()*W,y:H+Math.random()*H*.5,r:epice?1.2+Math.random()*1.8:18+Math.random()*30,v:epice?.35+Math.random()*.5:.25+Math.random()*.35,d:Math.random()*6.28,o:epice?.55:.06+Math.random()*.06,e:epice}}
+for(let i=0;i<30;i++){const p=neuf(i);p.y=Math.random()*H;parts.push(p)}
+function boucle(){if(!actif)return;x.clearRect(0,0,W,H);
+for(let i=0;i<parts.length;i++){const p=parts[i];p.y-=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.3;
+if(p.y<-60)parts[i]=neuf(i);
+x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);
+if(p.e){x.fillStyle='rgba(246,215,122,'+p.o*Math.min(1,p.y/H*2)+')'}else{x.fillStyle='rgba(255,255,255,'+p.o+')'}
+x.fill()}
+requestAnimationFrame(boucle)}
+boucle();
+document.addEventListener('visibilitychange',()=>{actif=!document.hidden;if(actif)boucle()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Manze Morisien" defer></script>
+</body>
+</html>

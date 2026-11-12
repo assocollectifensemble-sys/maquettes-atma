@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Parenthèse · Restaurant créole & chinois · Champ Fleuri, Saint-Denis</title>
+<meta name="description" content="La Parenthèse, restaurant sympa à Champ Fleuri (Saint-Denis) : cuisine créole et chinoise sur place ou à emporter, menu du jour, service traiteur, salle pour vos réceptions et soirées karaoké.">
+<meta property="og:title" content="La Parenthèse · Champ Fleuri, Saint-Denis">
+<meta property="og:description" content="Cuisine créole & chinoise, sur place ou à emporter, et service traiteur. Maquette offerte par Jonathan · ATMA Digital.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-parenthese-champ-fleuri/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-parenthese-champ-fleuri/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1a2b22;--nuit2:#24402f;--or:#e2b24c;--or2:#f6d78b;--orange:#f2892b;--creme:#fbf3e6;--creme2:#fffaf2;--bois:#c98f4e;--texte:#22302a;--doux:#5f6b62;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;font-weight:800}
+h2{font-size:clamp(1.8rem,7vw,2.7rem);margin-bottom:.7rem}
+.script{font-family:'Dancing Script',cursive;font-weight:700}
+.ruban{background:var(--nuit);color:var(--or2);font-size:.8rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:3;border-bottom:1px solid rgba(226,178,76,.35)}
+.ruban b{color:#fff}
+#ambiance{position:fixed;inset:0;pointer-events:none;z-index:1}
+main,header,footer,section,.defile{position:relative;z-index:2}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+/* HERO */
+.hero{min-height:92vh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--nuit)}
+.hero .bg{position:absolute;inset:0;background:url(img/buffet.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,43,34,.25) 0%,rgba(26,43,34,.55) 45%,rgba(26,43,34,.94) 100%)}
+.hero .wrap{position:relative;z-index:2;padding-top:4rem;padding-bottom:3.2rem;width:100%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.sur{display:inline-block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or2);border:1px solid rgba(246,215,139,.5);border-radius:99px;padding:.3rem .8rem;margin-bottom:1rem;background:rgba(26,43,34,.35)}
+.hero h1{font-family:'Dancing Script',cursive;font-size:clamp(3.4rem,17vw,6.4rem);font-weight:700;line-height:1;margin-bottom:.4rem;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+.hero h1 .par{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;color:var(--or);font-size:.8em;vertical-align:.06em;opacity:.9}
+.lead{font-size:1.08rem;max-width:34rem;color:#f4ece0;margin-bottom:1.5rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;font-weight:700;border-radius:99px;padding:.85rem 1.35rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:var(--or);color:var(--nuit);box-shadow:0 8px 24px rgba(226,178,76,.35);animation:souffle 3.2s ease-in-out infinite}
+.btn.blanc{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.45)}
+.btn.nuit{background:var(--nuit);color:#fff}
+.btn.vert{background:#1f9d55;color:#fff}
+@keyframes souffle{0%,100%{box-shadow:0 8px 24px rgba(226,178,76,.30)}50%{box-shadow:0 8px 34px rgba(226,178,76,.6)}}
+.apparait{animation:monte 1.2s .2s both ease-out}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* DEFILE */
+.defile{background:var(--or);color:var(--nuit);overflow:hidden;white-space:nowrap;font-weight:700;font-size:.95rem;padding:.65rem 0}
+.defile div{display:inline-block;animation:defile 32s linear infinite}
+.defile span{margin:0 1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* BLOCS */
+.bloc{padding:4.2rem 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+.intro p{max-width:40rem;margin-bottom:1rem}
+.citation{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--nuit2);line-height:1.3;border-left:4px solid var(--or);padding-left:1rem;margin:1.4rem 0}
+.citation small{display:block;font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--doux);margin-top:.3rem}
+.puces{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.9rem;margin-top:1.6rem}
+.puce{background:var(--creme2);border:1px solid #efe1c8;border-radius:var(--r);padding:1.1rem 1.2rem;transition:transform .3s,box-shadow .3s}
+.puce:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(36,64,47,.10)}
+.puce b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;color:var(--nuit2);margin-bottom:.2rem}
+/* MENU */
+.menu{background:var(--nuit);color:#fff;padding:4.2rem 0;overflow:hidden}
+.menu .sous{color:var(--or2);margin-bottom:1.6rem}
+.ardoise{background:linear-gradient(160deg,#24402f,#1b3226);border:1px solid rgba(226,178,76,.4);border-radius:22px;padding:1.6rem 1.4rem;max-width:34rem;position:relative}
+.ardoise::before,.ardoise::after{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;position:absolute;font-size:5rem;color:rgba(226,178,76,.18);top:50%;transform:translateY(-50%)}
+.ardoise::before{content:"(";left:.3rem}.ardoise::after{content:")";right:.3rem}
+.ardoise h3{font-family:'Dancing Script',cursive;font-size:2rem;color:var(--or);margin-bottom:.6rem}
+.ardoise ul{list-style:none}
+.ardoise li{padding:.55rem 0;border-bottom:1px dashed rgba(246,215,139,.25);font-size:1.08rem}
+.ardoise li:last-child{border:0}
+.ardoise li::before{content:"✦";color:var(--or);margin-right:.6rem;font-size:.8rem}
+.menu .note{color:#d6e3d8;font-size:.92rem;margin-top:1.2rem;max-width:36rem}
+.aussi{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.aussi span{border:1px solid rgba(246,215,139,.45);border-radius:99px;padding:.3rem .8rem;font-size:.88rem;color:var(--or2)}
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.25rem 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 78%;max-width:340px;scroll-snap-align:center;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 10px 28px rgba(36,64,47,.12);transition:transform .35s}
+.galerie figure:hover{transform:translateY(-4px) rotate(-.4deg)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie figcaption{padding:.75rem 1rem;font-size:.92rem;color:var(--doux)}
+.galerie figcaption b{color:var(--nuit2);display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.02rem}
+/* SALLE / TRAITEUR */
+.duo{display:grid;gap:1.6rem;align-items:center}
+@media(min-width:820px){.duo{grid-template-columns:1fr 1fr}.galerie figure{flex-basis:300px}}
+.photo-cadre{border-radius:24px;overflow:hidden;box-shadow:0 18px 40px rgba(36,64,47,.18);position:relative}
+.photo-cadre img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.etiquettes{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.4rem}
+.etiquettes span{background:var(--nuit2);color:var(--or2);border-radius:99px;padding:.35rem .85rem;font-size:.9rem;font-weight:500}
+.traiteur{background:linear-gradient(180deg,var(--creme) 0%,#f6e6cc 100%)}
+/* SOIREES */
+.soirees{background:var(--nuit2);color:#fff;padding:4.2rem 0;clip-path:polygon(0 3%,100% 0,100% 97%,0 100%)}
+.soirees .sous{color:#d6e6da;margin-bottom:1.6rem;max-width:38rem}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.carte{background:rgba(255,255,255,.06);border:1px solid rgba(246,215,139,.3);border-radius:var(--r);padding:1.3rem;transition:transform .3s,background .3s}
+.carte:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.carte .date{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.carte h3{font-size:1.3rem;margin:.35rem 0 .5rem;color:var(--or2)}
+.carte p{font-size:.95rem;color:#e9f1ea}
+/* NOEL */
+.noel{padding:4.4rem 0;position:relative;overflow:hidden}
+.noel .boite{background:var(--nuit);color:#fff;border-radius:28px;padding:2.2rem 1.5rem;position:relative;overflow:hidden;box-shadow:0 22px 50px rgba(26,43,34,.3)}
+.noel .boite::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(226,178,76,.25),transparent 40%),radial-gradient(circle at 85% 85%,rgba(242,137,43,.2),transparent 45%)}
+.noel .boite>*{position:relative}
+.noel h2{color:var(--or2)}
+.noel .eyebrow{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--or)}
+.noel p{color:#eef4ef;max-width:38rem;margin-bottom:1rem}
+.guirlande{display:flex;gap:.55rem;margin:.2rem 0 1.2rem}
+.guirlande i{width:9px;height:9px;border-radius:50%;background:var(--or);animation:scintille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--orange);animation-delay:.6s}.guirlande i:nth-child(3n){animation-delay:1.2s}
+@keyframes scintille{0%,100%{opacity:.35}50%{opacity:1}}
+.noel .idees{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem;margin:1.2rem 0 1.6rem}
+.noel .idees div{border:1px solid rgba(246,215,139,.35);border-radius:14px;padding:.8rem 1rem;font-size:.95rem}
+.noel .idees b{color:var(--or2);display:block}
+/* CONTACT */
+.contact{padding:4.2rem 0 3rem}
+.infos{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin:1.4rem 0}
+.info{background:var(--creme2);border:1px solid #efe1c8;border-radius:var(--r);padding:1.2rem}
+.info h3{font-size:1.05rem;color:var(--nuit2);margin-bottom:.35rem}
+.info a{font-weight:700;color:var(--nuit2)}
+.reseaux{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.6rem}
+footer{background:var(--nuit);color:#cfdcd2;text-align:center;padding:2.2rem 1.25rem;font-size:.85rem}
+footer .script{display:block;font-size:2rem;color:var(--or);margin-bottom:.3rem}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}#ambiance{display:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Parenthèse</div>
+<canvas id="ambiance" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Bacs du menu du jour : nouilles, sauté, viande en sauce et riz cantonais, photo de La Parenthèse"></div>
+  <div class="wrap apparait">
+    <div class="sur">Restaurant · Snack · Champ Fleuri</div>
+    <h1><span class="par">(</span>La Parenthèse<span class="par">)</span></h1>
+    <p class="lead">Restaurant sympa sur Saint-Denis&nbsp;: cuisine créole &amp; chinoise, sur place ou à emporter, et service traiteur pour vos grandes occasions.</p>
+    <div class="btns">
+      <a class="btn or" href="tel:+262693228698">Appeler · 0693 22 86 98</a>
+      <a class="btn blanc" href="#menu">Le menu du jour</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div><span>Cuisine créole</span>✦<span>Cuisine chinoise</span>✦<span>Sur place ou à emporter</span>✦<span>Service traiteur</span>✦<span>Grand parking</span>✦<span>Soirées karaoké</span>✦<span>Cuisine créole</span>✦<span>Cuisine chinoise</span>✦<span>Sur place ou à emporter</span>✦<span>Service traiteur</span>✦<span>Grand parking</span>✦<span>Soirées karaoké</span>✦</div></div>
+
+<main>
+<section class="bloc intro">
+  <div class="wrap reveal">
+    <h2>Une parenthèse gourmande à Champ Fleuri</h2>
+    <p>Rue Christol de Sigoyer, à Champ Fleuri, La Parenthèse sert chaque midi une cuisine créole et chinoise généreuse, dans de grands bacs fumants&nbsp;: on choisit, on s'installe… ou on emporte.</p>
+    <p class="citation">«&nbsp;Bien situé, grand parking 🚗&nbsp;»<small>— la présentation de La Parenthèse sur Facebook</small></p>
+    <div class="puces">
+      <div class="puce"><b>Du lundi au vendredi</b>De 9h à 14h30, pour le déjeuner sur place ou à emporter.</div>
+      <div class="puce"><b>Créole &amp; chinois</b>Riz cantonais, sautés, poisson frit, poulet gingembre… deux cuisines dans la même assiette.</div>
+      <div class="puce"><b>Service traiteur</b>Baptêmes, communions, anniversaires, repas de famille et d'entreprise.</div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap reveal">
+    <h2>Le menu du jour</h2>
+    <p class="sous">Tel que publié par La Parenthèse sur sa page Facebook le mardi 10 novembre 2026.</p>
+    <div class="ardoise">
+      <h3>Bonjour&nbsp;!</h3>
+      <ul>
+        <li>Sauté poulet</li>
+        <li>Poisson frit grenadier</li>
+        <li>Riz cantonais</li>
+        <li>Poulet frit sauce d'huître</li>
+      </ul>
+    </div>
+    <p class="note">Le menu change chaque jour&nbsp;: il est publié le matin sur la page Facebook. Déjà vus à l'ardoise&nbsp;:</p>
+    <div class="aussi"><span>Poisson gingembre</span><span>Poulet gingembre</span><span>Nouilles sautées</span></div>
+  </div>
+</section>
+
+<section class="bloc">
+  <div class="wrap reveal"><h2>Dans les bacs</h2><p style="color:var(--doux)">Photos publiées par La Parenthèse sur Facebook et Instagram. Faites défiler&nbsp;→</p></div>
+  <div class="galerie reveal">
+    <figure><img src="img/riz-cantonais.webp" alt="Grand bac de riz cantonais aux œufs, carottes et maïs" loading="lazy"><figcaption><b>Riz cantonais</b>Un incontournable du menu du jour</figcaption></figure>
+    <figure><img src="img/nouilles-sautees.webp" alt="Nouilles sautées à la viande et aux légumes" loading="lazy"><figcaption><b>Nouilles sautées</b>Viande, carottes et cives</figcaption></figure>
+    <figure><img src="img/poulet-gingembre.webp" alt="Poulet gingembre aux poivrons et purée" loading="lazy"><figcaption><b>Poulet gingembre</b>Poivrons rouges et verts, sauce caramélisée</figcaption></figure>
+    <figure><img src="img/saucisses.webp" alt="Saucisses aux oignons et poivrons dans un grand plat" loading="lazy"><figcaption><b>Saucisses</b>Oignons fondants, poivrons et cives</figcaption></figure>
+      </div>
+</section>
+
+<section class="bloc traiteur" id="traiteur">
+  <div class="wrap duo reveal">
+    <div class="photo-cadre"><img src="img/salle.webp" alt="La salle de La Parenthèse : murs en bois, grandes fenêtres, tables dressées" loading="lazy"></div>
+    <div>
+      <h2>Le traiteur et la salle pour vos fêtes</h2>
+      <p>«&nbsp;LA PARENTHÈSE vous propose son service traiteur 🥘😋&nbsp;» pour vos baptêmes, communions, anniversaires et repas de famille ou d'entreprise.</p>
+      <div class="etiquettes"><span>Baptême</span><span>Communion</span><span>Anniversaire</span><span>Repas de famille</span><span>Repas d'entreprise</span></div>
+      <p>Et pour recevoir sur place&nbsp;: «&nbsp;Location de notre salle pour vos petites réceptions&nbsp;! Jusqu'à 60 personnes&nbsp;» 🎉</p>
+      <div class="btns" style="margin-top:1.3rem">
+        <a class="btn nuit" href="tel:+262693228698">Demander un devis</a>
+        <a class="btn vert" href="https://wa.me/262693228698?text=Bonjour%20La%20Parenth%C3%A8se%2C%20je%20voudrais%20des%20infos%20sur%20votre%20service%20traiteur" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soirees">
+  <div class="wrap reveal">
+    <h2>Et le soir, l'ambiance&nbsp;!</h2>
+    <p class="sous">La Parenthèse ouvre aussi ses portes pour des soirées et après-midis festifs. Les dernières annonces publiées sur la page&nbsp;:</p>
+    <div class="cartes">
+      <div class="carte"><div class="date">Novembre 2026</div><h3>Soirée karaoké</h3><p>«&nbsp;Envie de chanter, de rire et de passer une excellente soirée&nbsp;?&nbsp;» Un moment de convivialité et de musique.</p></div>
+      <div class="carte"><div class="date">Fin octobre 2026</div><h3>Soirée dansante</h3><p>De 19h à minuit. «&nbsp;On vous attend nombreux&nbsp;»</p></div>
+      <div class="carte"><div class="date">Juillet 2026</div><h3>Après-midi dansante</h3><p>«&nbsp;Après midi dansante 💃🕺&nbsp;», annoncée sur Instagram.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap reveal">
+    <div class="boite">
+      <div class="eyebrow">Noël &amp; fin d'année</div>
+      <h2>Les repas de fin d'année chez La Parenthèse</h2>
+      <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>«&nbsp;Vous souhaitez partager un moment convivial entre collègues, amis ou organiser votre repas d'entreprise&nbsp;? La Parenthèse vous accueille pour célébrer la fin d'année autour d'un bon repas, dans une ambiance chaleureuse et festive&nbsp;!&nbsp;»</p>
+      <div class="idees">
+        <div><b>Bon repas</b>Cuisine créole &amp; chinoise</div>
+        <div><b>Entre collègues ou amis</b>Repas d'entreprise ou de groupe</div>
+        <div><b>Ambiance festive</b>Karaoké et soirées dansantes au fil de l'année</div>
+        <div><b>Le traiteur pour Noël</b>Pour le repas de famille à la maison</div>
+      </div>
+      <div class="btns">
+        <a class="btn or" href="https://wa.me/262693228698?text=Bonjour%20La%20Parenth%C3%A8se%2C%20je%20voudrais%20organiser%20un%20repas%20de%20fin%20d%27ann%C3%A9e" target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+        <a class="btn blanc" href="tel:+262693228698">0693 22 86 98</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>Venir à La Parenthèse</h2>
+    <div class="infos">
+      <div class="info"><h3>Adresse</h3>5 rue Christol de Sigoyer<br>Champ Fleuri, Saint-Denis<br><a href="https://www.google.com/maps/search/?api=1&amp;query=La%20Parenth%C3%A8se%20rue%20Christol%20de%20Sigoyer%20Saint-Denis%20R%C3%A9union" target="_blank" rel="noopener">Ouvrir l'itinéraire</a></div>
+      <div class="info"><h3>Horaires</h3>Du lundi au vendredi<br>9h – 14h30<br><span style="color:var(--doux);font-size:.9rem">Soirées annoncées sur la page Facebook</span></div>
+      <div class="info"><h3>Contact</h3><a href="tel:+262693228698">0693 22 86 98</a><br><a href="mailto:laparenthese786@gmail.com">laparenthese786@gmail.com</a></div>
+    </div>
+    <div class="reseaux">
+      <a class="btn nuit" href="https://www.facebook.com/profile.php?id=100092836628965" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn nuit" href="https://www.instagram.com/la_parenthesebylfa/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn vert" href="https://wa.me/262693228698" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span class="script">La Parenthèse</span>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Parenthèse.</footer>
+
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('ambiance'),x=c.getContext('2d');let W,H,P=[],run=true;
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener('resize',sz);
+const notes=['♪','♫','✦'];
+function n(k){return k<18?{t:0,x:Math.random()*W,y:H+Math.random()*H*.4,r:18+Math.random()*30,v:.25+Math.random()*.4,ph:Math.random()*6.28}
+:{t:1,x:Math.random()*W,y:H+Math.random()*H*.4,s:11+Math.random()*9,v:.3+Math.random()*.35,ph:Math.random()*6.28,g:notes[Math.floor(Math.random()*3)]}}
+for(let i=0;i<26;i++){const p=n(i);p.y=Math.random()*H;P.push(p)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(let i=0;i<P.length;i++){const p=P[i];p.y-=p.v;p.ph+=.012;p.x+=Math.sin(p.ph)*.35;const t=Math.min(1,Math.max(0,1-p.y/H)),a=Math.sin(Math.PI*t);
+if(p.t===0){const al=.09*a;const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,226,180,'+al+')');g.addColorStop(1,'rgba(255,226,180,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+else{x.globalAlpha=.32*a;x.fillStyle='#e2b24c';x.font=p.s+'px serif';x.fillText(p.g,p.x,p.y);x.globalAlpha=1}
+if(p.y<-40)Object.assign(p,n(i))}requestAnimationFrame(f)}f()})();
+</script>
+<script src="/outils/cta.js" data-nom="La Parenthèse" defer></script>
+</body>
+</html>
