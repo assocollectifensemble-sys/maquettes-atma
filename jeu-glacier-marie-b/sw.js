@@ -1,4 +1,4 @@
-const V='glacier-marie-b-8539467',F=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "img/hero.webp", "img/logo.png", "img/table.webp"];
+const V='glacier-marie-b-23017947',F=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "img/hero.webp", "img/logo.png", "img/table.webp", "runner.js", "sons/CREDITS.json", "sons/abeille.mp3", "sons/applaudissements.mp3", "sons/baleine.mp3", "sons/bateau.mp3", "sons/bulbul.mp3", "sons/cabri.mp3", "sons/chat.mp3", "sons/conque.mp3", "sons/coq.mp3", "sons/dauphin.mp3", "sons/feu.mp3", "sons/friture.mp3", "sons/hochet.mp3", "sons/margouillat.mp3", "sons/martin.mp3", "sons/orage.mp3", "sons/pivert.mp3", "sons/tambour.mp3", "sons/tourterelle.mp3", "sons/ukulele.mp3", "sons/vagues.mp3"];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>c.addAll(F)).catch(()=>{}))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);
