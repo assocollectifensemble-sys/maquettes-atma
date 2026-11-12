@@ -1,0 +1,716 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Böma Beach · La Légende des 4 éléments (maquette)</title>
+<meta name="description" content="Maquette de jeu pour Böma Beach, Boucan Canot. Réalisée par ATMA Digital, page non référencée.">
+<meta name="theme-color" content="#0e2329">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0e2329;--ocean:#174650;--lagon:#3f8f8c;--sable:#f5eee2;--sable2:#ebe0cc;--or:#caaa6d;--or2:#e7cf98;--feu:#e3743c;--texte:#1d2b2f;--doux:#6b7a7c;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font-family:Raleway,system-ui,sans-serif;background:#0b1c21;color:var(--texte);display:flex;justify-content:center;gap:40px;align-items:flex-start}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.serif{font-family:"Cormorant Garamond",Georgia,serif}
+#app{width:100%;max-width:440px;min-height:100vh;background:var(--sable);position:relative;overflow-x:hidden;box-shadow:0 0 60px #0008}
+/* barre démo */
+.demo{position:sticky;top:0;z-index:50;background:var(--nuit);color:#fff;padding:8px 10px 0;}
+.demo .top{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--or2);padding:0 4px 6px}
+.demo .top img{height:22px}
+.tabs{display:flex;gap:4px}
+.tabs button{flex:1;padding:8px 2px 10px;font-size:11.5px;font-weight:600;color:#ffffffa0;border-bottom:3px solid transparent;line-height:1.15}
+.tabs button.on{color:#fff;border-color:var(--or)}
+.tabs button small{display:block;font-weight:400;font-size:10px;opacity:.8}
+.view{display:none;padding-bottom:40px}.view.on{display:block}
+/* communs */
+.pad{padding:18px}
+.btn{display:block;width:100%;padding:16px;border-radius:999px;background:var(--nuit);color:#fff;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:13.5px;text-align:center;transition:transform .15s}
+.btn:active{transform:scale(.97)}
+.btn.or{background:linear-gradient(135deg,var(--or),#b38f4c);color:#1d1609}
+.btn.feu{background:linear-gradient(135deg,#f08a46,#c9502a)}
+.btn.ghost{background:transparent;border:1.5px solid currentColor;color:var(--nuit)}
+.btn+.btn{margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:#ffffff1f;font-size:12px;font-weight:600}
+.card{background:#fff;border-radius:var(--r);padding:18px;box-shadow:0 6px 24px #0e232914}
+h2{font-weight:800;font-size:24px;line-height:1.15;color:var(--nuit)}
+h3{font-weight:800;font-size:17px;color:var(--nuit)}
+p.l{font-size:15px;line-height:1.5;color:#33454a}
+.kicker{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--or)}
+.mute{color:var(--doux);font-size:12.5px;line-height:1.45}
+.why{margin:22px 18px 0;border-radius:14px;background:#fff;border:1px dashed var(--or);font-size:13px}
+.why summary{padding:12px 14px;font-weight:800;color:#8a6a2c;cursor:pointer;list-style:none}
+.why summary::before{content:"✦ "}
+.why ul{padding:0 16px 14px 32px;line-height:1.5;color:#33454a}
+.why li{margin:4px 0}
+/* hero V1 */
+.hero{position:relative;min-height:560px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px 20px 26px;background:#0e2329 url(img/sunset.webp) center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0e232900 20%,#0e2329cc 62%,#0e2329 100%)}
+.hero>*{position:relative}
+.hero .logo{position:absolute;top:22px;left:50%;transform:translateX(-50%);height:46px}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:40px;line-height:1.02;margin:10px 0 10px}
+.hero h1 i{color:var(--or2)}
+.hero p{font-size:15px;line-height:1.5;color:#ffffffd9}
+.lang{position:absolute;top:22px;right:16px;display:flex;background:#0006;border-radius:999px;padding:3px}
+.lang button{padding:5px 9px;font-size:11px;font-weight:800;border-radius:999px;color:#fffc}
+.lang button.on{background:#fff;color:var(--nuit)}
+.facts{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 18px}
+.crew{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 16px}
+.crew button{background:#ffffff14;border:1.5px solid #ffffff40;border-radius:14px;padding:12px 4px;color:#fff;font-size:12.5px;font-weight:600}
+.crew button span{display:block;font-size:24px;margin-bottom:4px}
+.crew button.on{background:#fff;color:var(--nuit);border-color:#fff}
+/* carte */
+.mapwrap{background:var(--nuit);padding:16px 14px 18px;color:#fff}
+.elements{display:flex;justify-content:space-between;margin:12px 4px 0}
+.el{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.45}
+.el b{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--or);display:grid;place-items:center;font-size:20px}
+.el.done{opacity:1}.el.done b{background:var(--or);color:var(--nuit)}
+.el.now{opacity:1}.el.now b{box-shadow:0 0 0 4px #caaa6d55;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 9px #caaa6d11}}
+svg.map{width:100%;display:block;border-radius:14px}
+/* station */
+.station{min-height:calc(100vh - 70px);padding:22px 18px 30px;color:#fff;background:linear-gradient(180deg,var(--ocean),var(--nuit))}
+.station.vent{background:linear-gradient(180deg,#4f7d86,#173b44)}
+.station.terre{background:linear-gradient(180deg,#7b5b3a,#2e2117)}
+.station.feu{background:radial-gradient(circle at 50% 70%,#5a2412,#120807 70%)}
+.station h2{color:#fff;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:34px}
+.station .story{font-size:15px;line-height:1.55;color:#ffffffd0;margin:8px 0 18px}
+.qopt{display:block;width:100%;text-align:left;padding:14px 16px;border-radius:14px;background:#ffffff14;border:1.5px solid #ffffff30;margin:8px 0;font-size:15px;color:#fff}
+.qopt.ok{background:#2f8f6b;border-color:#2f8f6b}.qopt.ko{background:#ffffff08;opacity:.55}
+.fact{background:#00000030;border-left:3px solid var(--or);padding:12px 14px;border-radius:10px;font-size:14px;line-height:1.5;margin:14px 0}
+/* vague */
+.wave{position:relative;height:120px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#5fb3b1,#1f5f68);margin:6px 0 14px}
+.wave .zone{position:absolute;top:0;bottom:0;left:42%;width:16%;background:#ffffff2a;border-left:2px dashed #fff8;border-right:2px dashed #fff8}
+.wave .w{position:absolute;bottom:0;width:70px;height:90px;margin-left:-35px;font-size:56px;line-height:90px;text-align:center;filter:drop-shadow(0 4px 6px #0005)}
+.wave .lbl{position:absolute;top:8px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+/* cartes kréol */
+.flip{perspective:900px;height:200px;margin:10px 0 14px}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.r .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center}
+.flip .f{background:var(--sable);color:var(--nuit)}
+.flip .f .w{font-family:"Cormorant Garamond",serif;font-size:46px;font-style:italic}
+.flip .b{background:var(--or);color:var(--nuit);transform:rotateY(180deg);font-size:16px;line-height:1.45;font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.wind{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.wind i{position:absolute;height:1.5px;background:linear-gradient(90deg,transparent,#fff7,transparent);width:120px;animation:wind 3s linear infinite}
+@keyframes wind{from{transform:translateX(-140px)}to{transform:translateX(520px)}}
+/* matching */
+.match{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.match button{padding:14px 8px;border-radius:14px;background:#ffffff14;border:1.5px solid #ffffff35;color:#fff;font-size:14px;font-weight:600;min-height:62px}
+.match button.sel{border-color:var(--or2);background:#caaa6d40}
+.match button.ok{background:#2f8f6b;border-color:#2f8f6b;opacity:.85}
+.match button.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+/* feu */
+.fire{position:relative;width:230px;height:230px;margin:26px auto 16px;border-radius:50%;border:1.5px solid #caaa6d80;display:grid;place-items:center;touch-action:none;user-select:none;-webkit-user-select:none}
+.fire .ring{position:absolute;inset:-9px}
+.fire .fl{font-size:30px;transition:font-size .08s,filter .08s}
+.fire .hint{position:absolute;bottom:-34px;left:0;right:0;text-align:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#ffffffb0}
+.spark{position:absolute;width:6px;height:6px;border-radius:50%;background:#ffb35c;pointer-events:none;animation:spark 1s ease-out forwards}
+@keyframes spark{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+/* lot */
+.reveal{background:var(--nuit);color:#fff;padding:26px 18px 30px;text-align:center}
+.ticket{position:relative;margin:18px 0;border-radius:22px;background:var(--sable);color:var(--nuit);overflow:hidden;text-align:left}
+.ticket .band{height:10px;background:var(--day,#caaa6d)}
+.ticket .tb{padding:18px}
+.ticket .prize{font-family:"Cormorant Garamond",serif;font-size:30px;line-height:1.05;margin:6px 0 4px}
+.ticket .row{display:flex;justify-content:space-between;align-items:center;margin-top:14px;gap:10px}
+.ticket .code{font-family:ui-monospace,monospace;font-weight:700;font-size:18px;letter-spacing:.12em}
+.ticket .live{display:flex;align-items:center;gap:8px;font-weight:800;font-variant-numeric:tabular-nums}
+.ticket .flame{font-size:26px;display:inline-block;animation:dance 1.2s ease-in-out infinite}
+@keyframes dance{0%,100%{transform:rotate(-6deg) scale(1)}50%{transform:rotate(6deg) scale(1.15)}}
+.ticket .perf{border-top:2px dashed #0e232930;margin:0 14px}
+.ticket .staff{padding:14px 18px;background:#fff;font-size:13px}
+.hold{position:relative;overflow:hidden;width:100%;padding:14px;border-radius:12px;background:var(--nuit);color:#fff;font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+.hold i{position:absolute;left:0;top:0;bottom:0;width:0;background:#2f8f6b}
+.hold span{position:relative}
+.used .flame{animation:none;filter:grayscale(1)}
+.used .stamp{display:block}
+.stamp{display:none;position:absolute;top:56px;right:14px;transform:rotate(-12deg);border:3px solid #2f8f6b;color:#2f8f6b;font-weight:800;padding:6px 10px;border-radius:10px;font-size:14px;background:#fffd}
+.sun{margin:16px 0 0;padding:14px;border-radius:16px;background:linear-gradient(135deg,#f3a35f,#c4573a);color:#fff;text-align:left;font-size:14px;line-height:1.45}
+.sun b{font-size:20px}
+/* V2 */
+.v2head{position:relative;height:190px;background:url(img/salle.webp) center/cover;display:flex;align-items:flex-end;padding:16px;color:#fff}
+.v2head::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0e232900,#0e2329e6)}
+.v2head>*{position:relative}
+.v2head img{height:30px;margin-bottom:6px;display:block}
+.menu-cat{display:flex;gap:6px;overflow-x:auto;padding:12px 16px;background:#fff;position:sticky;top:76px;z-index:5;border-bottom:1px solid var(--sable2)}
+.menu-cat span{white-space:nowrap;padding:7px 12px;border-radius:999px;background:var(--sable);font-size:12.5px;font-weight:600}
+.menu-cat span.on{background:var(--nuit);color:#fff}
+.dish{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--sable2)}
+.dish b{font-size:15px}.dish p{font-size:13px;color:var(--doux);margin-top:3px;line-height:1.4}
+.dish em{font-style:normal;font-weight:800;white-space:nowrap}
+.gamecard{margin:16px;border-radius:20px;padding:18px;background:linear-gradient(135deg,var(--nuit),#215560);color:#fff;position:relative;overflow:hidden}
+.gamecard::after{content:"🔥";position:absolute;right:-6px;top:-10px;font-size:90px;opacity:.15}
+.gamecard h3{color:#fff;font-size:19px;margin:6px 0}
+.progress{height:6px;border-radius:9px;background:#ffffff25;margin:12px 0;overflow:hidden}
+.progress i{display:block;height:100%;background:var(--or);transition:width .4s}
+.stars{display:flex;justify-content:space-between;margin:12px 0}
+.stars button{font-size:34px;filter:grayscale(1);opacity:.5;transition:.2s}
+.stars button.on{filter:none;opacity:1;transform:scale(1.1)}
+textarea,input[type=email],input[type=text]{width:100%;font:inherit;font-size:15px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--sable2);background:#fff;margin:8px 0}
+label.ck{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.4;color:#33454a;margin:8px 0}
+label.ck input{margin-top:3px;width:18px;height:18px;flex:none}
+/* V3 */
+.v3top{background:linear-gradient(180deg,#f3a35f,#c4573a 55%,#173b44);color:#fff;padding:20px 18px 18px}
+.v3top h2{color:#fff;font-family:"Cormorant Garamond",serif;font-weight:500;font-size:34px}
+canvas#surf{display:block;width:100%;border-radius:16px;background:#5fb3b1;touch-action:manipulation}
+.hud{display:flex;justify-content:space-between;font-weight:800;margin:10px 2px;font-variant-numeric:tabular-nums}
+.ethic{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.ethic span{font-size:11.5px;padding:5px 10px;border-radius:999px;background:#0e232914;color:var(--nuit);font-weight:600}
+.lb{list-style:none}
+.lb li{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--sable2);font-size:14.5px}
+.lb li .rk{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--sable);font-weight:800;font-size:13px}
+.lb li:nth-child(1) .rk{background:var(--or)}.lb li:nth-child(2) .rk{background:#cfd6d8}.lb li:nth-child(3) .rk{background:#d9a77a}
+.lb li.me{background:#caaa6d22;border-radius:10px;padding-left:6px}
+.lb li em{margin-left:auto;font-style:normal;font-weight:800}
+.paliers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.paliers div{background:var(--sable);border-radius:12px;padding:10px 6px;text-align:center;font-size:12px;line-height:1.3}
+.paliers b{display:block;font-size:18px}
+/* V4 */
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:#fff;border-radius:16px;padding:14px}
+.kpi b{display:block;font-size:26px;color:var(--nuit)}
+.kpi span{font-size:12px;color:var(--doux)}
+.bars{display:flex;align-items:flex-end;gap:5px;height:90px;margin-top:10px}
+.bars i{flex:1;background:var(--lagon);border-radius:5px 5px 0 0;position:relative}
+.bars i.hc{background:var(--or)}
+.toggle{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--sable2)}
+.toggle div b{display:block;font-size:14.5px}
+.toggle div span{font-size:12.5px;color:var(--doux);line-height:1.35;display:block;margin-top:2px}
+.sw{position:relative;width:50px;height:30px;flex:none;border-radius:999px;background:#c9cfd0;transition:.2s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:.2s}
+.sw.on{background:#2f8f6b}.sw.on::after{left:23px}
+select{width:100%;font:inherit;font-size:15px;padding:12px;border-radius:12px;border:1.5px solid var(--sable2);background:#fff;margin-top:8px}
+.review{padding:12px 0;border-bottom:1px solid var(--sable2);font-size:13.5px;line-height:1.45}
+.review b{font-size:12px;color:var(--doux)}
+.fict{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#fff2d6;color:#8a6a2c;padding:4px 8px;border-radius:6px;display:inline-block}
+.foot{text-align:center;font-size:11.5px;color:var(--doux);padding:26px 18px 10px;line-height:1.5}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);background:var(--nuit);color:#fff;padding:12px 18px;border-radius:999px;font-size:13.5px;font-weight:600;z-index:99;transition:.3s;max-width:90vw;text-align:center}
+.toast.on{transform:translateX(-50%) translateY(0)}
+.fade{animation:fade .45s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}}
+/* panneau latéral grand écran */
+.side{display:none;max-width:380px;padding:60px 0;color:#e8e1d3;position:sticky;top:0}
+.side h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:40px;line-height:1.05;color:#fff}
+.side .kicker{margin-bottom:12px}
+.side p{font-size:15px;line-height:1.6;margin:14px 0;color:#d6cfc1}
+.side ol{padding-left:20px;line-height:1.6;font-size:14.5px}
+.side li{margin:8px 0}
+.side b{color:var(--or2)}
+@media(min-width:960px){.side{display:block}#app{margin:24px 0;min-height:auto;border-radius:30px;overflow:hidden;height:calc(100vh - 48px);overflow-y:auto}.demo{border-radius:0}}
+</style>
+</head>
+<body>
+<aside class="side">
+  <div class="kicker">Maquette · Böma Beach · Boucan Canot</div>
+  <h1>Un jeu qui amène la plage jusqu'à votre table.</h1>
+  <p>Ce qui se fait ailleurs : une roue de la fortune sur un QR code, souvent contre un avis Google. Ici, c'est <b>une histoire à votre image</b>, celle des quatre éléments de Böma, que l'on vit en trois minutes sur la promenade.</p>
+  <ol>
+    <li><b>Sur la plage</b> : 4 petits panneaux QR, 4 gestes différents, et tout le monde gagne un bon à utiliser chez vous.</li>
+    <li><b>À table</b> : votre carte, avec un quiz pendant l'attente. Le bon vaut pour la prochaine visite, et l'avis arrive d'abord chez vous.</li>
+    <li><b>Le défi du mois</b> : 45 secondes de surf, 3 essais par jour, sans téléchargement, avec un classement affiché au bar.</li>
+    <li><b>Côté Böma</b> : vous choisissez le lot, vous coupez les bons quand la salle est pleine et vous les remettez aux heures creuses.</li>
+  </ol>
+  <p class="mute" style="color:#9fb0b2">Photos et carte : bomabeach.re. Lots et chiffres donnés en exemple. Maquette ATMA Digital, page non référencée.</p>
+</aside>
+
+<div id="app">
+  <header class="demo">
+    <div class="top"><img src="img/logo-blanc.png" alt="Böma Beach"><span>Maquette de démonstration</span></div>
+    <nav class="tabs">
+      <button data-v="v1" class="on">① Plage<small>parcours QR</small></button>
+      <button data-v="v2">② À table<small>carte + jeu</small></button>
+      <button data-v="v3">③ Défi<small>du mois</small></button>
+      <button data-v="v4">④ Côté Böma<small>réglages</small></button>
+    </nav>
+  </header>
+
+  <section class="view on" id="v1"></section>
+  <section class="view" id="v2"></section>
+  <section class="view" id="v3"></section>
+  <section class="view" id="v4"></section>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= utilitaires ================= */
+const $=s=>document.querySelector(s);
+const LS={get(k,d){try{return JSON.parse(localStorage.getItem('boma_'+k))??d}catch(e){return d}},set(k,v){localStorage.setItem('boma_'+k,JSON.stringify(v))}};
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)}
+function buzz(p){try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}}
+const today=()=>new Date().toISOString().slice(0,10);
+const pad=n=>String(n).padStart(2,'0');
+const hm=d=>pad(d.getHours())+' h '+pad(d.getMinutes());
+
+/* Coucher du soleil réel à Boucan Canot (algorithme NOAA simplifié) */
+function sunset(date=new Date()){
+  const lat=-21.0277,lng=55.2267,rad=Math.PI/180;
+  const start=new Date(date.getFullYear(),0,0),N=Math.floor((date-start)/864e5);
+  const lngH=lng/15,t=N+((18-lngH)/24);
+  const M=(0.9856*t)-3.289;
+  let L=M+(1.916*Math.sin(M*rad))+(0.020*Math.sin(2*M*rad))+282.634;L=(L+360)%360;
+  let RA=Math.atan(0.91764*Math.tan(L*rad))/rad;RA=(RA+360)%360;
+  RA=(RA+(Math.floor(L/90)*90-Math.floor(RA/90)*90))/15;
+  const sinDec=0.39782*Math.sin(L*rad),cosDec=Math.cos(Math.asin(sinDec));
+  const cosH=(Math.cos(90.833*rad)-(sinDec*Math.sin(lat*rad)))/(cosDec*Math.cos(lat*rad));
+  const H=Math.acos(cosH)/rad/15;
+  const T=H+RA-(0.06571*t)-6.622;
+  let UT=(T-lngH+24)%24;
+  const local=(UT+4)%24; // La Réunion = UTC+4
+  const d=new Date(date);d.setHours(Math.floor(local),Math.round((local%1)*60),0,0);return d;
+}
+
+/* Réglages partagés avec l'écran "Côté Böma" */
+const CFG=Object.assign({lot:'agua',full:false,creuse:true,pluie:false},LS.get('cfg',{}));
+function saveCfg(){LS.set('cfg',CFG)}
+const LOTS={
+  agua:{fr:'Une Agua de Jamaïca offerte',en:'A free Agua de Jamaïca',sub:{fr:'infusion d\'hibiscus glacée, menthe, cannelle',en:'iced hibiscus, mint, cinnamon'}},
+  citron:{fr:'Une citronnade maison offerte',en:'A free homemade lemonade',sub:{fr:'citron, miel, gingembre',en:'lemon, honey, ginger'}},
+  sirop:{fr:'Les sirops des marmay offerts',en:'Free syrups for the kids',sub:{fr:'pour tous les enfants de la table',en:'for every child at the table'}},
+  gateau:{fr:'Une part de gâteau patate offerte',en:'A free slice of sweet-potato cake',sub:{fr:'le classique péi, fait maison',en:'the local classic, homemade'}}
+};
+
+/* ================= onglets ================= */
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===b.dataset.v));
+  ({v1:V1.render,v2:V2.render,v3:V3.render,v4:V4.render})[b.dataset.v]();
+  $('#app').scrollTop=0;window.scrollTo(0,0);
+});
+
+/* ================= V1 : LA LÉGENDE DES 4 ÉLÉMENTS ================= */
+const TXT={
+ fr:{
+  k:'Boucan Canot · 3 minutes · 100 % gagnant',
+  h:'La légende<br>des <i>4 éléments</i>',
+  p:'Le soir, au Böma, on allume le feu et on se rassemble. Mais il faut d\'abord retrouver l\'eau, le vent et la terre, cachés le long de la plage. Suivez les 4 petits panneaux : chaque équipe qui va au bout repart avec un cadeau.',
+  who:'Vous jouez…',crew:['En famille','Entre amis','À deux'],
+  go:'Commencer l\'aventure',free:'Gratuit · sans achat · sans appli · 1 partie par jour',
+  sunset:'Coucher du soleil ce soir',
+  map:'Votre chemin sur la plage',scan:'Simuler le scan du panneau',real:'En vrai : un petit panneau QR à chaque étape, posé chez des voisins partenaires.',
+  els:['Eau','Vent','Terre','Feu'],
+  next:'Continuer',
+  eauT:'L\'Eau',eauS:'Pour gagner l\'eau, il faut d\'abord lire la mer. Appuyez quand la vague passe sur la ligne d\'écume.',now:'Maintenant !',almost:'Presque ! La vague revient…',gift:'La mer est généreuse aujourd\'hui 🌊',caught:'Vague attrapée !',
+  eauQ:'Sur la plage, le drapeau vert veut dire…',eauO:['Baignade surveillée, pas de danger particulier','Baignade interdite','Fin de la surveillance'],
+  eauF:'Vert, c\'est la baignade surveillée. Jaune ou orange : baignade surveillée mais dangereuse. Rouge : baignade interdite. À Boucan, on se baigne dans la zone surveillée.',
+  ventT:'Le Vent',ventS:'Le vent d\'ici parle kréol. Devinez ce que veulent dire ces trois mots, puis retournez la carte.',
+  ventC:[['marmay','les enfants','les mariés','« Marmay » = les enfants. Au Böma, les marmay sont rois.'],['zourite','le poulpe','l\'oursin','« Zourite » = le poulpe. Il est grillé au chalumeau dans l\'assiette du Böma.'],['dakatine','beurre de cacahuète','confiture coco','« Dakatine » = le beurre de cacahuète. Il est dans le Böma Bol du matin.']],
+  terreT:'La Terre',terreS:'La terre nourrit la cuisine du Böma. Associez chaque recette de la carte à son ingrédient.',
+  terreP:[['Agua de Jamaïca','hibiscus'],['Flamant Rose','pitaya'],['Gâteau patate','patate douce'],['Böma Bol','dakatine']],
+  terreOk:'Le panier est complet !',
+  feuT:'Le Feu',feuS:'Vous avez l\'eau, le vent et la terre. Il ne manque que le feu. Posez le doigt et gardez-le appuyé pour allumer le boma.',hold:'Gardez appuyé',lit:'Le boma est allumé !',
+  win:'Vous avez réuni les 4 éléments',lotfor:'Votre cadeau vous attend au Böma',
+  valid:'Valable aujourd\'hui jusqu\'à 22 h 30 · 1 par table',validTom:'Salle complète ce soir : valable demain, toute la journée',
+  staff:'Équipe Böma : appui long pour valider',used:'Utilisé à',
+  sunT:'Golden hour',sunP:t=>`Le soleil se couche ce soir à <b>${t}</b> à Boucan Canot. Il se voit très bien depuis les sunbeds.`,
+  goBtn:'M\'y emmener · 3 min à pied',share:'Défier mes amis',replay:'Rejouer la démo',
+  shareTxt:'On a allumé le boma à Boucan Canot 🔥 À ton tour : 3 minutes, et tout le monde gagne.',
+  creuse:'Bonus heure calme (15 h–18 h) : un cookie maison avec votre boisson',
+  pluie:'Il pleut ? Le bon vaut aussi pour un chocolat chaud.'
+ },
+ en:{
+  k:'Boucan Canot · 3 minutes · everyone wins',
+  h:'The legend<br>of the <i>4 elements</i>',
+  p:'At night, at Böma, we light the fire and gather around it. But first, water, wind and earth must be found along the beach. Follow the 4 small signs: every team that finishes gets a gift.',
+  who:'You are playing…',crew:['As a family','With friends','As a couple'],
+  go:'Start the adventure',free:'Free · no purchase · no app · 1 game per day',
+  sunset:'Sunset tonight',
+  map:'Your path along the beach',scan:'Simulate scanning the sign',real:'For real: a small QR sign at each step, placed with partner neighbours.',
+  els:['Water','Wind','Earth','Fire'],
+  next:'Continue',
+  eauT:'Water',eauS:'To earn the water, you must read the sea. Tap when the wave crosses the foam line.',now:'Now!',almost:'Almost! The wave is coming back…',gift:'The sea is generous today 🌊',caught:'Wave caught!',
+  eauQ:'On the beach, a green flag means…',eauO:['Lifeguarded swimming, no particular danger','Swimming forbidden','Lifeguards are off duty'],
+  eauF:'Green: lifeguarded swimming. Yellow/orange: lifeguarded but dangerous. Red: no swimming. In Boucan, swim inside the lifeguarded zone.',
+  ventT:'Wind',ventS:'The wind here speaks Creole. Guess these three words, then flip the card.',
+  ventC:[['marmay','the kids','the newlyweds','“Marmay” = kids. At Böma, kids rule.'],['zourite','octopus','sea urchin','“Zourite” = octopus, torch-grilled at Böma.'],['dakatine','peanut butter','coconut jam','“Dakatine” = peanut butter, in the morning Böma Bowl.']],
+  terreT:'Earth',terreS:'The land feeds Böma\'s kitchen. Match each recipe from the menu with its ingredient.',
+  terreP:[['Agua de Jamaïca','hibiscus'],['Flamant Rose','pitaya'],['Gâteau patate','sweet potato'],['Böma Bowl','peanut butter']],
+  terreOk:'The basket is full!',
+  feuT:'Fire',feuS:'You have water, wind and earth. Only the fire is missing. Press and hold to light the boma.',hold:'Press and hold',lit:'The boma is lit!',
+  win:'You gathered the 4 elements',lotfor:'Your gift is waiting at Böma',
+  valid:'Valid today until 10:30 pm · 1 per table',validTom:'Fully booked tonight: valid tomorrow, all day',
+  staff:'Böma team: long press to validate',used:'Used at',
+  sunT:'Golden hour',sunP:t=>`Sunset tonight in Boucan Canot is at <b>${t}</b>, best seen from the sunbeds.`,
+  goBtn:'Take me there · 3 min walk',share:'Challenge my friends',replay:'Replay the demo',
+  shareTxt:'We lit the boma in Boucan Canot 🔥 Your turn: 3 minutes, everyone wins.',
+  creuse:'Quiet-hours bonus (3–6 pm): a homemade cookie with your drink',
+  pluie:'Raining? The voucher also works for a hot chocolate.'
+ }
+};
+const V1={
+ st:Object.assign({lang:'fr',crew:0,step:-1,screen:'home',code:null,used:null},LS.get('v1',{})),
+ save(){LS.set('v1',this.st)},
+ t(k){return TXT[this.st.lang][k]},
+ el:()=>$('#v1'),
+ render(){const s=V1.st;({home:V1.home,map:V1.map,station:V1.station,win:V1.win})[s.screen].call(V1)},
+ go(screen){this.st.screen=screen;this.save();this.render();window.scrollTo(0,0);$('#app').scrollTop=0},
+ home(){
+  const s=this.st,t=k=>this.t(k),ss=sunset();
+  this.el().innerHTML=`<div class="hero fade">
+   <img class="logo" src="img/logo-blanc.png" alt="Böma Beach">
+   <div class="lang">${['fr','en'].map(l=>`<button class="${s.lang===l?'on':''}" data-l="${l}">${l.toUpperCase()}</button>`).join('')}</div>
+   <div class="kicker">${t('k')}</div>
+   <h1>${t('h')}</h1>
+   <p>${t('p')}</p>
+   <div class="facts"><span class="chip">🌅 ${t('sunset')} · ${hm(ss)}</span><span class="chip">📍 Boucan Canot</span></div>
+   <div class="kicker" style="color:#fff;opacity:.8">${t('who')}</div>
+   <div class="crew">${t('crew').map((c,i)=>`<button class="${s.crew===i?'on':''}" data-c="${i}"><span>${['👨‍👩‍👧','🤙','🌅'][i]}</span>${c}</button>`).join('')}</div>
+   <button class="btn or" id="go">${t('go')}</button>
+   <p class="mute" style="color:#ffffffa0;text-align:center;margin-top:10px">${t('free')}</p>
+  </div>
+  ${why([
+   'Ailleurs, on fait tourner une roue au hasard. Ici, on vit l\'histoire du Böma (feu, eau, vent, terre), tirée de votre page « Zistwar La ».',
+   'Le jeu se lance en 1 seconde depuis l\'appareil photo du téléphone : rien à télécharger.',
+   'Il existe en français et en anglais pour les touristes, et chaque équipe (famille, amis, couple) a son propre cadeau.',
+   'L\'heure du coucher du soleil est calculée chaque jour pour Boucan Canot : une bonne raison de venir maintenant.'])}`;
+  this.el().querySelectorAll('[data-l]').forEach(b=>b.onclick=()=>{s.lang=b.dataset.l;this.save();this.home()});
+  this.el().querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{s.crew=+b.dataset.c;this.save();this.home()});
+  $('#go').onclick=()=>{s.step=0;this.go('map')};
+ },
+ map(){
+  const s=this.st,t=k=>this.t(k),icons=['🌊','🍃','🌿','🔥'];
+  const pts=[[78,58],[150,92],[228,112],[300,100]];
+  this.el().innerHTML=`<div class="mapwrap fade">
+   <div class="kicker">${t('map')}</div>
+   <svg class="map" viewBox="0 0 360 200" aria-hidden="true">
+    <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d7f86"/><stop offset="1" stop-color="#5fb3b1"/></linearGradient></defs>
+    <rect width="360" height="200" fill="url(#sea)"/>
+    <path d="M0 70 C70 40 130 95 200 95 S320 75 360 85 L360 200 L0 200Z" fill="#efe2c6"/>
+    <path d="M0 64 C70 34 130 89 200 89 S320 69 360 79" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 7" opacity=".8"/>
+    <path d="M0 150 C80 140 160 165 360 150" fill="none" stroke="#c8b590" stroke-width="10" stroke-linecap="round"/>
+    <text x="10" y="22" fill="#fff" font-size="11" font-family="Raleway" letter-spacing="2">OCÉAN INDIEN</text>
+    <text x="250" y="172" fill="#6b5a3a" font-size="10" font-family="Raleway" letter-spacing="1.5">PROMENADE</text>
+    <polyline points="${pts.map(p=>p.join(',')).join(' ')} 330,150" fill="none" stroke="#0e2329" stroke-width="2" stroke-dasharray="3 5"/>
+    ${pts.map((p,i)=>`<g><circle cx="${p[0]}" cy="${p[1]}" r="${i===s.step?17:14}" fill="${i<s.step?'#caaa6d':i===s.step?'#0e2329':'#ffffffcc'}" stroke="#caaa6d" stroke-width="2"/><text x="${p[0]}" y="${p[1]+5}" text-anchor="middle" font-size="14">${i<s.step?'✓':icons[i]}</text></g>`).join('')}
+    <g><circle cx="330" cy="150" r="20" fill="#0e2329"/><text x="330" y="154" text-anchor="middle" fill="#fff" font-size="9" font-family="Raleway" font-weight="800">BÖMA</text></g>
+   </svg>
+   <div class="elements">${t('els').map((e,i)=>`<div class="el ${i<s.step?'done':i===s.step?'now':''}"><b>${i<s.step?'✓':icons[i]}</b>${e}</div>`).join('')}</div>
+  </div>
+  <div class="pad fade">
+   <button class="btn" id="scan">📷 ${t('scan')} ${s.step+1}</button>
+   <p class="mute" style="text-align:center;margin-top:10px">${t('real')}</p>
+   <button class="btn ghost" id="reset" style="margin-top:22px;font-size:11px;padding:10px">${t('replay')}</button>
+  </div>`;
+  $('#scan').onclick=()=>{buzz(30);this.go('station')};
+  $('#reset').onclick=()=>this.reset();
+ },
+ station(){[this.eau,this.vent,this.terre,this.feu][this.st.step].call(this)},
+ done(){buzz([40,40,80]);this.st.step++;this.save();if(this.st.step>=4){this.win0()}else this.go('map')},
+ eau(){
+  const t=k=>this.t(k);
+  this.el().innerHTML=`<div class="station fade"><div class="kicker">1 / 4 · 🌊</div><h2>${t('eauT')}</h2><p class="story">${t('eauS')}</p>
+   <div class="wave"><div class="zone"></div><div class="lbl">ligne d'écume</div><div class="w" id="w">🌊</div></div>
+   <button class="btn or" id="tap">${t('now')}</button><p id="msg" class="mute" style="color:#fff;text-align:center;margin-top:10px;min-height:20px"></p><div id="q"></div></div>`;
+  let x=0,dir=1,miss=0,run=true;const w=$('#w');
+  const loop=()=>{if(!run)return;x+=dir*1.25;if(x>100||x<0)dir*=-1;w.style.left=x+'%';requestAnimationFrame(loop)};loop();
+  $('#tap').onclick=()=>{
+   if(!run)return;
+   if(x>42&&x<58||miss>=2){run=false;$('#msg').textContent=miss>=2&&!(x>42&&x<58)?t('gift'):t('caught');buzz(60);$('#tap').style.display='none';setTimeout(()=>this.quiz('#q',t('eauQ'),t('eauO'),0,t('eauF')),500)}
+   else{miss++;$('#msg').textContent=t('almost');buzz(20)}
+  };
+ },
+ quiz(sel,q,opts,good,fact){
+  const box=$(sel),order=opts.map((o,i)=>i).sort(()=>Math.random()-.5);
+  box.innerHTML=`<div class="fade"><h3 style="color:#fff;margin:6px 0 4px">${q}</h3>${order.map(i=>`<button class="qopt" data-i="${i}">${opts[i]}</button>`).join('')}</div>`;
+  box.querySelectorAll('.qopt').forEach(b=>b.onclick=()=>{
+   box.querySelectorAll('.qopt').forEach(x=>{x.disabled=true;x.classList.add(+x.dataset.i===good?'ok':'ko')});
+   box.insertAdjacentHTML('beforeend',`<div class="fact fade">${+b.dataset.i===good?'✓ ':'Pas tout à fait. '}${fact}</div><button class="btn or fade" id="nx">${this.t('next')}</button>`);
+   $('#nx').onclick=()=>this.done();
+  });
+ },
+ vent(){
+  const t=k=>this.t(k),C=t('ventC');let i=0;
+  const draw=()=>{
+   const c=C[i],opts=Math.random()<.5?[c[1],c[2]]:[c[2],c[1]];
+   $('#vc').innerHTML=`<div class="flip" id="fl"><div class="in"><div class="f"><div class="mute">${i+1} / 3</div><div class="w">${c[0]}</div></div><div class="b">${c[3]}</div></div></div>
+    <div class="two">${opts.map(o=>`<button class="qopt" style="text-align:center" data-o="${o}">${o}</button>`).join('')}</div>`;
+   $('#vc').querySelectorAll('.qopt').forEach(b=>b.onclick=()=>{
+    const ok=b.dataset.o===c[1];b.classList.add(ok?'ok':'ko');buzz(ok?40:15);$('#fl').classList.add('r');
+    $('#vc').querySelectorAll('.qopt').forEach(x=>x.disabled=true);
+    setTimeout(()=>{i++;if(i<3)draw();else{$('#vc').insertAdjacentHTML('beforeend',`<button class="btn or fade" id="nx" style="margin-top:14px">${t('next')}</button>`);$('#nx').onclick=()=>this.done()}},1700);
+   });
+  };
+  this.el().innerHTML=`<div class="station vent fade" style="position:relative"><div class="wind">${Array.from({length:9},(_,k)=>`<i style="top:${8+k*11}%;animation-delay:${k*.37}s;animation-duration:${2.4+k%3*.6}s"></i>`).join('')}</div>
+   <div class="kicker">2 / 4 · 🍃</div><h2>${t('ventT')}</h2><p class="story">${t('ventS')}</p><div id="vc"></div></div>`;
+  draw();
+ },
+ terre(){
+  const t=k=>this.t(k),P=t('terreP');let pick=null,found=0;
+  const right=P.map((p,i)=>i).sort(()=>Math.random()-.5);
+  this.el().innerHTML=`<div class="station terre fade"><div class="kicker">3 / 4 · 🌿</div><h2>${t('terreT')}</h2><p class="story">${t('terreS')}</p>
+   <div class="match">${P.map((p,i)=>`<button data-l="${i}">${p[0]}</button><button data-r="${right[i]}">${P[right[i]][1]}</button>`).join('')}</div><div id="tm"></div></div>`;
+  const all=this.el().querySelectorAll('.match button');
+  all.forEach(b=>b.onclick=()=>{
+   if(b.classList.contains('ok'))return;
+   if(b.dataset.l!==undefined){all.forEach(x=>x.classList.remove('sel'));b.classList.add('sel');pick=b;return}
+   if(!pick){toast(this.st.lang==='fr'?'Choisissez d\'abord une recette 👈':'Pick a recipe first 👈');return}
+   if(pick.dataset.l===b.dataset.r){pick.classList.remove('sel');pick.classList.add('ok');b.classList.add('ok');buzz(40);pick=null;found++;
+    if(found===4){$('#tm').innerHTML=`<div class="fact fade">✓ ${t('terreOk')}</div><button class="btn or fade" id="nx">${t('next')}</button>`;$('#nx').onclick=()=>this.done()}}
+   else{b.classList.add('shake');buzz(15);setTimeout(()=>b.classList.remove('shake'),400)}
+  });
+ },
+ feu(){
+  const t=k=>this.t(k);
+  this.el().innerHTML=`<div class="station feu fade"><div class="kicker">4 / 4 · 🔥</div><h2>${t('feuT')}</h2><p class="story">${t('feuS')}</p>
+   <div class="fire" id="fire"><svg class="ring" viewBox="0 0 248 248"><circle cx="124" cy="124" r="118" fill="none" stroke="#ffffff15" stroke-width="5"/><circle id="arc" cx="124" cy="124" r="118" fill="none" stroke="#f08a46" stroke-width="5" stroke-linecap="round" stroke-dasharray="741" stroke-dashoffset="741" transform="rotate(-90 124 124)"/></svg><span class="fl" id="fl">🔥</span><div class="hint" id="hint">${t('hold')}</div></div></div>`;
+  let p=0,down=false,doneF=false;const f=$('#fire'),arc=$('#arc'),fl=$('#fl');
+  const st=e=>{e.preventDefault();down=true;buzz(10)},en=()=>{down=false};
+  f.addEventListener('pointerdown',st);['pointerup','pointerleave','pointercancel'].forEach(ev=>f.addEventListener(ev,en));
+  const loop=()=>{if(doneF)return;
+   p=Math.max(0,Math.min(1,p+(down?.016:-.02)));
+   arc.style.strokeDashoffset=741*(1-p);fl.style.fontSize=(30+p*110)+'px';fl.style.filter=`drop-shadow(0 0 ${p*40}px #ff8a3c)`;
+   if(down&&Math.random()<.5){const s=document.createElement('i');s.className='spark';s.style.left=(100+Math.random()*30)+'px';s.style.top=(110+Math.random()*20)+'px';s.style.setProperty('--dx',(Math.random()*160-80)+'px');s.style.setProperty('--dy',(-60-Math.random()*120)+'px');f.appendChild(s);setTimeout(()=>s.remove(),1000)}
+   if(p>=1){doneF=true;buzz([80,60,160]);$('#hint').textContent=t('lit');setTimeout(()=>this.done(),900);return}
+   requestAnimationFrame(loop)};loop();
+ },
+ win0(){
+  const a='ABCDEFGHJKMNPQRSTUVWXYZ23456789',r=n=>Array.from({length:n},()=>a[Math.floor(Math.random()*a.length)]).join('');
+  this.st.code=r(2)+'-'+r(3);this.st.used=null;this.st.date=today();this.go('win');
+ },
+ win(){
+  const s=this.st,t=k=>this.t(k),L=s.lang,ss=sunset();
+  const lotKey=s.crew===0&&CFG.lot==='agua'?'sirop':CFG.lot,lot=LOTS[lotKey];
+  const dayCol=['#e3743c','#3f8f8c','#caaa6d','#7a5ea8','#d4566b','#4f86c6','#5b9b4a'][new Date().getDay()];
+  const h=new Date().getHours();
+  this.el().innerHTML=`<div class="reveal fade">
+   <div class="kicker">🌊 🍃 🌿 🔥</div>
+   <h2 style="color:#fff;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px;margin-top:8px">${t('win')}</h2>
+   <p class="mute" style="color:#ffffffb0;margin-top:6px">${t('lotfor')}</p>
+   <div class="ticket ${s.used?'used':''}" id="tk" style="--day:${dayCol}">
+    <div class="band"></div><div class="stamp">✓ ${t('used')} ${s.used||''}</div>
+    <div class="tb">
+     <img src="img/logo-blanc.png" alt="" style="height:22px;filter:invert(1) brightness(.2)">
+     <div class="prize">${lot[L]}</div><div class="mute">${lot.sub[L]}</div>
+     ${CFG.creuse&&h>=15&&h<18?`<div class="fact" style="background:#caaa6d22;color:var(--nuit)">☕ ${t('creuse')}</div>`:''}
+     ${CFG.pluie?`<div class="fact" style="background:#4f86c622;color:var(--nuit)">🌧️ ${t('pluie')}</div>`:''}
+     <div class="row"><span class="code">${s.code}</span><span class="live"><span class="flame">🔥</span><span id="clk">--:--:--</span></span></div>
+     <div class="mute" style="margin-top:8px">${CFG.full?t('validTom'):t('valid')}</div>
+    </div>
+    <div class="perf"></div>
+    <div class="staff">${s.used?`<b>✓ ${t('used')} ${s.used}</b>`:`<button class="hold" id="hold"><i></i><span>🔒 ${t('staff')}</span></button>`}
+     <div class="mute" style="margin-top:8px">La flamme bouge et l'heure défile : une capture d'écran ne passe pas. La couleur de la bande change chaque jour.</div></div>
+   </div>
+   <div class="sun">🌅 ${t('sunT')}<br>${t('sunP')(hm(ss))}</div>
+   <a class="btn or" style="margin-top:16px" href="https://www.google.com/maps/dir/?api=1&destination=-21.027663,55.226661&travelmode=walking" target="_blank" rel="noopener">📍 ${t('goBtn')}</a>
+   <button class="btn" style="background:#ffffff1a" id="share">🤙 ${t('share')}</button>
+   <button class="btn" style="background:transparent;font-size:11px" id="reset">${t('replay')}</button>
+  </div>
+  ${why([
+   'Pas de roue au hasard : chaque équipe qui va au bout gagne, et le lot récompense une réussite, pas un tirage. C\'est l\'approche la plus sûre côté règles des jeux (à faire valider par un juriste).',
+   'Le bon est vivant : la flamme bouge et l\'heure défile, ce qui bloque les captures d\'écran partagées sur les réseaux.',
+   'Le lot se règle depuis l\'onglet « Côté Böma ». Quand la salle est pleine, le bon passe automatiquement au lendemain.',
+   'Le bouton « Défier mes amis » fait circuler le jeu : chaque ami joue et gagne son propre bon.',
+   'Le lot n\'est jamais lié à un avis Google (c\'est interdit par Google) et ce n\'est jamais de l\'alcool (loi Évin).'])}`;
+  const tick=()=>{const c=$('#clk');if(!c)return;const d=new Date();c.textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());setTimeout(tick,1000)};tick();
+  const hb=$('#hold');if(hb){let p=0,dn=false;const bar=hb.querySelector('i');
+   hb.addEventListener('pointerdown',e=>{e.preventDefault();dn=true});['pointerup','pointerleave','pointercancel'].forEach(v=>hb.addEventListener(v,()=>dn=false));
+   const lp=()=>{if(!$('#hold'))return;p=Math.max(0,Math.min(1,p+(dn?.025:-.05)));bar.style.width=p*100+'%';if(p>=1){const d=new Date();s.used=pad(d.getHours())+' h '+pad(d.getMinutes());this.save();buzz([60,40,120]);toast('Bon validé ✓');this.win();return}requestAnimationFrame(lp)};lp()}
+  $('#share').onclick=async()=>{const txt=t('shareTxt');try{if(navigator.share){await navigator.share({title:'Böma Beach',text:txt,url:location.href});return}}catch(e){}try{await navigator.clipboard.writeText(txt+' '+location.href);toast('Lien copié ✓')}catch(e){toast(txt)}};
+  $('#reset').onclick=()=>this.reset();
+ },
+ reset(){Object.assign(this.st,{step:-1,screen:'home',code:null,used:null});this.save();this.render();window.scrollTo(0,0)}
+};
+
+function why(items){return `<details class="why"><summary>Pourquoi c'est différent</summary><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul></details>`}
+
+/* ================= V2 : À TABLE ================= */
+const V2={
+ st:Object.assign({screen:'menu',q:0,score:0,stars:0,mail:''},LS.get('v2',{})),
+ save(){LS.set('v2',this.st)},
+ Q:[
+  ['Au Böma, le « boma », c\'est…',['Le feu autour duquel on se rassemble','Une danse du maloya','Un poisson du lagon'],0,'Le boma, c\'est le feu du partage : l\'esprit du lieu, avec une touche sud-africaine.'],
+  ['Les cocktails signatures du Böma s\'inspirent…',['Des 4 éléments : terre, eau, feu, air','Des 4 saisons','Des 4 cirques'],0,'Terre, eau, feu, air : chaque création part d\'un élément.'],
+  ['Le Flamant Rose, c\'est un smoothie à base de…',['Pitaya (fruit du dragon)','Goyavier','Letchi'],0,'Ananas, banane, pitaya, lait de coco et fraises. Il est disponible jusqu\'à 18 h.'],
+  ['Le brunch du Böma est servi…',['Tous les jours de 8 h à 11 h','Le dimanche seulement','De 11 h à 15 h'],0,'Du lundi au dimanche, de 8 h à 11 h, face au lagon.']
+ ],
+ render(){({menu:V2.menu,quiz:V2.quiz,lot:V2.lot,avis:V2.avis,fin:V2.fin})[V2.st.screen].call(V2)},
+ go(s){this.st.screen=s;this.save();this.render();window.scrollTo(0,0);$('#app').scrollTop=0},
+ menu(){
+  $('#v2').innerHTML=`<div class="v2head fade"><div><img src="img/logo-blanc.png" alt="Böma Beach"><div class="kicker">Table 12 · La carte Au fil du temps</div></div></div>
+  <div class="menu-cat"><span class="on">Brunch</span><span>Tapas</span><span>Déjeuner</span><span>Dîner</span><span>Boissons fraîches</span><span>Desserts</span></div>
+  <div class="gamecard fade"><div class="kicker">Pendant qu'on prépare votre assiette</div><h3>Le quiz Zistwar La · 4 questions · 1 min</h3><p style="font-size:14px;line-height:1.45;opacity:.85">Testez ce que vous savez du Böma. Toute la table gagne un café offert pour la prochaine fois.</p><button class="btn or" style="margin-top:14px" id="play">Jouer à table</button></div>
+  <div class="pad" style="padding-top:4px">
+   <div class="dish"><div><b>Le Böma Bol</b><p>Beurre de dakatine, bananes, lait d'amande, cannelle, crunchy choco, coco râpée</p></div><em>14,5 €</em></div>
+   <div class="dish"><div><b>Le Pudding chia</b><p>Crème de coco, graines de chia, vanille Bourbon, bananes, spéculos, fruits rouges</p></div><em>15 €</em></div>
+   <div class="dish"><div><b>Notre p'tit dèj continental</b><p>Pain spécial, beurre, confiture maison ou miel, boisson chaude, jus frais maison</p></div><em>15 €</em></div>
+   <div class="dish"><div><b>Formule Böma brunch</b><p>Boisson chaude, jus, tartine ou œuf brouillé, banana bread ou gâteau patate, salade de fruits</p></div><em>22 €</em></div>
+   <div class="dish"><div><b>Le Zourite</b><p>Zourite grillée au chalumeau, sauce teriyaki, riz, gingembre</p></div><em>13 €</em></div>
+   <div class="dish"><div><b>Agua de Jamaïca</b><p>Infusion d'hibiscus glacée, menthe fraîche, cannelle</p></div><em>6 €</em></div>
+   <p class="mute" style="margin-top:10px">Extraits et prix lus sur la carte en ligne du Böma (novembre 2026). Votre carte complète s'affiche ici, et le serveur la met à jour lui-même.</p>
+  </div>
+  ${why(['Le jeu est dans la carte que le client a déjà ouverte : pas de deuxième QR code, pas d\'application.',
+   'Il occupe l\'attente, le moment où la note se joue, et parle de vous (votre histoire, votre carte).',
+   'Le lot vaut pour la prochaine visite : il fait revenir les clients au lieu d\'offrir un cadeau à quelqu\'un qui a déjà payé.'])}`;
+  $('#play').onclick=()=>{this.st.q=0;this.st.score=0;this.go('quiz')};
+ },
+ quiz(){
+  const s=this.st,[q,o,g,f]=this.Q[s.q],ord=o.map((x,i)=>i).sort(()=>Math.random()-.5);
+  $('#v2').innerHTML=`<div class="gamecard fade" style="margin-top:18px"><div class="kicker">Question ${s.q+1} / 4</div><div class="progress"><i style="width:${s.q*25}%"></i></div><h3>${q}</h3><div id="ops">${ord.map(i=>`<button class="qopt" data-i="${i}">${o[i]}</button>`).join('')}</div><div id="fx"></div></div>`;
+  $('#ops').querySelectorAll('.qopt').forEach(b=>b.onclick=()=>{
+   const ok=+b.dataset.i===g;if(ok)s.score++;buzz(ok?40:15);
+   $('#ops').querySelectorAll('.qopt').forEach(x=>{x.disabled=true;x.classList.add(+x.dataset.i===g?'ok':'ko')});
+   $('#fx').innerHTML=`<div class="fact fade">${ok?'✓ ':''}${f}</div><button class="btn or fade" id="nx">${s.q<3?'Question suivante':'Voir mon cadeau'}</button>`;
+   $('#nx').onclick=()=>{s.q++;this.save();s.q<4?this.quiz():this.go('lot')};
+  });
+ },
+ lot(){
+  const s=this.st,d=new Date(Date.now()+30*864e5);
+  $('#v2').innerHTML=`<div class="reveal fade"><div class="kicker">${s.score}/4 · bravo la table 12</div>
+   <h2 style="color:#fff;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:30px;margin-top:6px">Votre prochain café est pour nous</h2>
+   <div class="ticket" style="--day:#3f8f8c"><div class="band"></div><div class="tb"><div class="prize">1 café offert par personne</div><div class="mute">à votre prochaine visite · jusqu'au ${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}</div>
+   <div class="row"><span class="code">T12-${Math.random().toString(36).slice(2,5).toUpperCase()}</span><span class="live"><span class="flame">☕</span></span></div></div></div>
+   <div class="card" style="text-align:left;color:var(--texte)">
+    <h3>Le garder sur votre téléphone</h3>
+    <p class="mute">Recevez le bon par e-mail pour ne pas le perdre. Facultatif : le bon est déjà à vous.</p>
+    <input type="email" id="em" placeholder="votre@email.com" value="${s.mail}">
+    <label class="ck"><input type="checkbox" id="nl"> J'accepte aussi de recevoir les nouveautés du Böma (soirées, cartes de saison). Désinscription en un clic.</label>
+    <button class="btn" id="send">Recevoir mon bon</button>
+    <button class="btn ghost" id="skip">Non merci, je fais une capture</button>
+   </div></div>
+   ${why(['La case « nouveautés » n\'est jamais pré-cochée, conformément aux règles de la CNIL : les e-mails collectés sont propres et utilisables.',
+    'Le bon est donné avant toute question sur l\'avis : aucun lien entre cadeau et avis Google, donc aucun risque que Google supprime vos avis.'])}`;
+  $('#send').onclick=()=>{const v=$('#em').value.trim();if(!/^\S+@\S+\.\S+$/.test(v)){toast('Adresse e-mail à vérifier');return}s.mail=v;this.save();toast('Bon envoyé ✓ (démo : rien n\'est envoyé)');this.go('avis')};
+  $('#skip').onclick=()=>this.go('avis');
+ },
+ avis(){
+  const s=this.st,face=['😞','😕','🙂','😊','🤩'];
+  $('#v2').innerHTML=`<div class="pad fade"><div class="kicker">Avant de partir · 10 secondes</div><h2 style="margin:6px 0 4px">Comment s'est passé votre moment ?</h2><p class="mute">Votre réponse arrive directement chez l'équipe du Böma. Elle ne change rien à votre cadeau.</p>
+   <div class="stars">${face.map((f,i)=>`<button data-s="${i+1}" class="${s.stars===i+1?'on':''}">${f}</button>`).join('')}</div><div id="next"></div></div>`;
+  $('#v2').querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{s.stars=+b.dataset.s;this.save();
+   $('#v2').querySelectorAll('[data-s]').forEach(x=>x.classList.toggle('on',x===b));
+   $('#next').innerHTML=s.stars>=4?`<div class="card fade"><h3>Merci, ça nous touche 🙏</h3><p class="mute" style="margin:6px 0 12px">Si vous en avez envie, quelques mots sur Google aident beaucoup une adresse indépendante. C'est facultatif et ça ne donne droit à rien de plus.</p><a class="btn or" href="https://www.google.com/maps/search/?api=1&query=B%C3%B6ma+Beach+Boucan+Canot" target="_blank" rel="noopener">Laisser un avis Google</a><button class="btn ghost" id="fin">Plus tard</button></div>`
+   :`<div class="card fade"><h3>Dites-nous ce qui a coincé</h3><p class="mute">Seule l'équipe lira votre message. Le responsable vous répond si vous laissez un contact.</p><textarea id="tx" rows="4" placeholder="Attente, plat, accueil…"></textarea><button class="btn" id="fin">Envoyer à l'équipe</button></div>`;
+   $('#fin').onclick=()=>this.go('fin');
+  });
+ },
+ fin(){
+  $('#v2').innerHTML=`<div class="reveal fade" style="min-height:60vh;display:flex;flex-direction:column;justify-content:center"><div style="font-size:60px">🌅</div><h2 style="color:#fff;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:32px">À très vite au Böma</h2><p class="mute" style="color:#ffffffb0;margin:10px 0 20px">Votre café vous attend pour la prochaine fois.</p><button class="btn or" id="again">Rejouer la démo</button></div>`;
+  $('#again').onclick=()=>{Object.assign(this.st,{screen:'menu',q:0,score:0,stars:0});this.save();this.render()};
+ }
+};
+
+/* ================= V3 : DÉFI DU MOIS (SURF DE BOUCAN) ================= */
+const V3={
+ st:Object.assign({day:'',tries:3,best:0},LS.get('v3',{})),
+ save(){LS.set('v3',this.st)},
+ running:false,
+ render(){
+  const s=V3.st;if(s.day!==today()){s.day=today();s.tries=3;V3.save()}
+  const mois=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'][new Date().getMonth()];
+  const board=[['Kévin_974',61],['MarieSurf',58],['Ti Loïc',55],['Ness',49],['Aurore.r',44],['Papa Jo',40]];
+  if(s.best)board.push(['Vous',s.best]);board.sort((a,b)=>b[1]-a[1]);
+  $('#v3').innerHTML=`<div class="v3top fade"><div class="kicker" style="color:#fff">Le défi de ${mois}</div><h2>Le surf de Boucan</h2><p style="font-size:14.5px;line-height:1.5;opacity:.9;margin-top:6px">Touchez l'écran pour sauter par-dessus les oursins et ramassez les coquillages. Une partie dure 45 secondes, pas une de plus.</p></div>
+  <div class="pad" style="padding-top:14px">
+   <div class="hud"><span>🐚 <span id="sc">0</span></span><span>⏱ <span id="tm">45</span> s</span><span>Essais : <span id="tr">${s.tries}</span>/3</span></div>
+   <canvas id="surf" width="720" height="420"></canvas>
+   <button class="btn feu" id="start" style="margin-top:12px">${s.tries>0?'Lancer une vague (45 s)':'Revenez demain : 3 nouveaux essais'}</button>
+   <div class="ethic"><span>⏱ 45 s par partie</span><span>3 essais / jour</span><span>Sans pub</span><span>Sans achat</span><span>Sans téléchargement</span><span>Pseudo, pas de nom</span></div>
+   <div class="card" style="margin-top:16px"><h3>Ce qu'on gagne</h3><div class="paliers"><div><b>25 🐚</b>un sirop ou un café</div><div><b>45 🐚</b>un dessert</div><div><b>Top 3</b>brunch pour 2 en fin de mois</div></div><p class="mute" style="margin-top:10px">Tout le monde peut gagner en dépassant un palier. Le top 3 du mois est révélé sur l'écran du bar lors du jeudi du Böma.</p></div>
+   <div class="card" style="margin-top:12px"><h3 style="margin-bottom:6px">Classement de ${mois} <span class="fict">exemple</span></h3><ol class="lb">${board.slice(0,7).map((b,i)=>`<li class="${b[0]==='Vous'?'me':''}"><span class="rk">${i+1}</span>${b[0]}<em>${b[1]} 🐚</em></li>`).join('')}</ol></div>
+   <button class="btn ghost" id="rz" style="margin-top:14px;font-size:11px;padding:10px">Démo : remettre 3 essais</button>
+  </div>
+  ${why(['Votre idée de jeu infini type Subway Surfers, sans ses défauts : la partie est courte et fixe, avec 3 essais par jour. On revient pour le Böma, pas pour le jeu.',
+   'Rien à installer : le jeu tourne dans le navigateur, donc pas de compte Apple au nom du restaurant ni de mises à jour à publier.',
+   'Un nouveau thème chaque mois (surf, tortues, Grand Raid, Dipavali…) avec la même mécanique : c\'est ce qui permet un prix bas.',
+   'Le classement passe sur l\'écran du bar le soir : c\'est l\'événement qui fait venir les joueurs au restaurant.'])}`;
+  V3.drawIdle();
+  $('#start').onclick=()=>{if(V3.running||s.tries<=0)return;s.tries--;V3.save();$('#tr').textContent=s.tries;V3.play()};
+  $('#rz').onclick=()=>{s.tries=3;V3.save();V3.render();toast('3 essais rechargés (démo)')};
+ },
+ sky(c,W,H,tt){
+  const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,'#f6b46b');g.addColorStop(.45,'#e9805a');g.addColorStop(.46,'#2d7f86');g.addColorStop(1,'#163f47');
+  c.fillStyle=g;c.fillRect(0,0,W,H);
+  c.fillStyle='#ffd27a';c.beginPath();c.arc(W*.78,H*.4,40,0,7);c.fill();
+  for(let k=0;k<4;k++){c.strokeStyle=`rgba(255,255,255,${.25-k*.05})`;c.lineWidth=3;c.beginPath();for(let x=0;x<=W;x+=10){const y=H*.52+k*28+Math.sin((x+tt*(2+k))/40)*6;x?c.lineTo(x,y):c.moveTo(x,y)}c.stroke()}
+ },
+ surfer(c,x,y,rot){c.save();c.translate(x,y);c.rotate(rot);c.fillStyle='#f5eee2';c.beginPath();c.ellipse(0,18,46,8,0,0,7);c.fill();c.fillStyle='#caaa6d';c.fillRect(-40,16,80,3);
+  c.strokeStyle='#0e2329';c.lineWidth=7;c.lineCap='round';c.beginPath();c.moveTo(-10,14);c.lineTo(0,-14);c.lineTo(12,14);c.moveTo(0,-14);c.lineTo(0,-34);c.moveTo(-16,-26);c.lineTo(16,-30);c.stroke();
+  c.fillStyle='#0e2329';c.beginPath();c.arc(0,-46,10,0,7);c.fill();c.restore()},
+ drawIdle(){const cv=$('#surf');if(!cv)return;const c=cv.getContext('2d');V3.sky(c,720,420,0);V3.surfer(c,150,300,0);c.fillStyle='#fff';c.font='800 30px Raleway';c.textAlign='center';c.fillText('Touchez pour sauter',360,120)},
+ play(){
+  const cv=$('#surf'),c=cv.getContext('2d'),W=720,H=420,G=322;
+  let y=G,vy=0,obs=[],shells=[],score=0,t0=performance.now(),last=t0,tt=0,hit=0,spd=6;
+  V3.running=true;$('#start').disabled=true;$('#start').style.opacity=.5;
+  const jump=e=>{e&&e.preventDefault();if(y>=G-1){vy=-17;buzz(8)}};
+  cv.onpointerdown=jump;
+  const step=now=>{
+   const dt=Math.min(2,(now-last)/16.7);last=now;tt+=dt*4;const el=(now-t0)/1000,rest=Math.max(0,45-el);
+   $('#tm').textContent=Math.ceil(rest);spd=6+el*.12;
+   vy+=0.9*dt;y=Math.min(G,y+vy*dt);if(y>=G)vy=0;
+   if(Math.random()<.018*dt&&(!obs.length||obs[obs.length-1].x<W-260))obs.push({x:W+30});
+   if(Math.random()<.035*dt)shells.push({x:W+20,y:G-30-Math.random()*150});
+   obs.forEach(o=>o.x-=spd*dt);shells.forEach(s=>s.x-=spd*dt);
+   V3.sky(c,W,H,tt);
+   shells=shells.filter(s=>{if(Math.abs(s.x-150)<38&&Math.abs(s.y-(y-20))<46){score++;$('#sc').textContent=score;return false}return s.x>-30});
+   obs=obs.filter(o=>{if(!o.hit&&Math.abs(o.x-150)<34&&y>G-34){o.hit=1;hit=30;score=Math.max(0,score-3);$('#sc').textContent=score;buzz(40)}return o.x>-40});
+   c.font='34px serif';c.textAlign='center';shells.forEach(s=>c.fillText('🐚',s.x,s.y));
+   obs.forEach(o=>{c.fillStyle='#1b1020';c.beginPath();c.arc(o.x,G+16,18,0,7);c.fill();c.strokeStyle='#1b1020';c.lineWidth=3;for(let a=0;a<12;a++){const r=a*Math.PI/6;c.beginPath();c.moveTo(o.x,G+16);c.lineTo(o.x+Math.cos(r)*30,G+16+Math.sin(r)*30);c.stroke()}});
+   if(hit>0)hit-=dt;
+   if(!(hit>0&&Math.floor(hit/4)%2))V3.surfer(c,150,y,vy*0.015);
+   if(rest<=0){V3.end(score);return}
+   requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+ },
+ end(score){
+  const s=V3.st;V3.running=false;const cv=$('#surf');cv.onpointerdown=null;
+  const c=cv.getContext('2d');c.fillStyle='#0e2329d9';c.fillRect(0,0,720,420);c.fillStyle='#fff';c.textAlign='center';c.font='800 64px Raleway';c.fillText(score+' 🐚',360,190);
+  c.font='600 28px Raleway';const pal=score>=45?'Palier dessert atteint !':score>=25?'Palier sirop / café atteint !':`Encore ${25-score} 🐚 pour le 1er palier`;c.fillText(pal,360,250);
+  c.font='22px Raleway';c.fillText(s.tries>0?`${s.tries} essai(s) restant(s) aujourd'hui`:'C\'est fini pour aujourd\'hui. À demain !',360,300);
+  if(score>s.best){s.best=score;V3.save()}
+  buzz([60,40,60]);
+  setTimeout(()=>{if($('#v3').classList.contains('on')){V3.render();const c2=$('#surf').getContext('2d');c2.fillStyle='#0e2329d9';c2.fillRect(0,0,720,420);c2.fillStyle='#fff';c2.textAlign='center';c2.font='800 64px Raleway';c2.fillText(score+' 🐚',360,200);c2.font='600 28px Raleway';c2.fillText(pal,360,260)}},2600);
+ }
+};
+
+/* ================= V4 : CÔTÉ BÖMA ================= */
+const V4={
+ render(){
+  const days=[42,38,51,47,63,88,95,40,36,55,49,71,92,99];
+  const tg=(k,t,d)=>`<div class="toggle"><div><b>${t}</b><span>${d}</span></div><button class="sw ${CFG[k]?'on':''}" data-k="${k}" aria-label="${t}"></button></div>`;
+  $('#v4').innerHTML=`<div class="pad fade">
+   <div class="kicker">Espace Böma · réservé à l'équipe</div><h2 style="margin:6px 0 2px">Bonjour Olivier 👋</h2><p class="mute">Les 30 derniers jours <span class="fict">chiffres fictifs pour la démo</span></p>
+   <div class="kpis" style="margin-top:14px">
+    <div class="kpi"><b>1 284</b><span>parties lancées sur la plage</span></div>
+    <div class="kpi"><b>1 031</b><span>équipes allées au bout</span></div>
+    <div class="kpi"><b>402</b><span>bons utilisés au Böma (39 %)</span></div>
+    <div class="kpi"><b>4,6 / 5</b><span>note privée moyenne à table</span></div>
+    <div class="kpi"><b>187</b><span>e-mails avec accord pour les nouveautés</span></div>
+    <div class="kpi"><b>27 %</b><span>des joueurs en anglais (touristes)</span></div>
+   </div>
+   <div class="card" style="margin-top:14px"><h3>Bons utilisés par jour</h3><div class="bars">${days.map((d,i)=>`<i style="height:${d}%" class="${[2,3,9,10].includes(i)?'hc':''}"></i>`).join('')}</div><p class="mute" style="margin-top:8px">En or : jours où le bonus heure calme était actif.</p></div>
+   <div class="card" style="margin-top:14px"><h3>Le cadeau de la plage</h3><p class="mute">Ce que gagnent les équipes qui vont au bout. Le changement est immédiat (onglet ① pour voir).</p>
+    <select id="lot">${Object.entries(LOTS).map(([k,v])=>`<option value="${k}" ${CFG.lot===k?'selected':''}>${v.fr}</option>`).join('')}</select>
+    <p class="mute" style="margin-top:8px">Les familles reçoivent automatiquement les sirops des enfants quand le lot est l'Agua de Jamaïca.</p></div>
+   <div class="card" style="margin-top:14px"><h3>Piloter l'affluence</h3>
+    ${tg('full','Salle complète ce soir','Les nouveaux bons passent à demain. Personne n\'est refusé, la cuisine respire.')}
+    ${tg('creuse','Bonus heure calme (15 h–18 h)','Un petit plus pour remplir l\'après-midi, entre le déjeuner et le coucher du soleil.')}
+    ${tg('pluie','Mode pluie','Le bon vaut aussi pour une boisson chaude les jours gris.')}
+   </div>
+   <div class="card" style="margin-top:14px"><h3>Avis privés reçus à table <span class="fict">exemples</span></h3>
+    <div class="review"><b>😕 · mardi 13 h 10 · table 7</b><br>« 25 minutes d'attente pour les boissons, dommage car la vue est folle. »</div>
+    <div class="review"><b>🤩 · samedi 18 h 40 · table 3</b><br>« Coucher de soleil + zourite = parfait. Les enfants ont adoré le jeu de la plage. »</div>
+    <div class="review" style="border:0"><b>🙂 · dimanche 9 h 15 · table 12</b><br>« Brunch top, il manquait du pain sans gluten. »</div>
+    <button class="btn ghost" id="csv" style="margin-top:8px">Télécharger les e-mails (fichier tableur)</button>
+   </div>
+   <div class="card" style="margin-top:14px"><h3>Le défi du mois</h3><p class="mute" style="margin-bottom:8px">Un thème différent chaque mois, prêt à l'emploi.</p>
+    <div class="review"><b>Novembre</b> · Le surf de Boucan</div><div class="review"><b>Décembre</b> · La tortue qui rentre au lagon (vacances)</div><div class="review" style="border:0"><b>Janvier</b> · La course des marmay (Nouvel An)</div></div>
+  </div>
+  ${why(['Les autres outils vous donnent un compteur. Celui-ci vous laisse décider de l\'affluence : vous coupez les bons quand la salle est pleine et vous les remettez aux heures creuses.',
+   'Les mauvais avis arrivent ici, en privé, avant de finir sur Google. Les bons clients sont invités à publier sur Google, sans contrepartie.',
+   'Les e-mails sont collectés avec un vrai accord, donc utilisables pour vos soirées et vos cartes de saison.'])}
+  <p class="foot">Maquette réalisée pour Böma Beach par ATMA Digital · page non référencée<br>Photos, textes et carte : bomabeach.re · lots, chiffres et classements donnés en exemple</p>`;
+  $('#v4').querySelectorAll('.sw').forEach(b=>b.onclick=()=>{const k=b.dataset.k;CFG[k]=!CFG[k];saveCfg();b.classList.toggle('on',CFG[k]);toast(CFG[k]?'Activé ✓':'Désactivé')});
+  $('#lot').onchange=e=>{CFG.lot=e.target.value;saveCfg();toast('Cadeau mis à jour ✓')};
+  $('#csv').onclick=()=>toast('Démo : le fichier contient seulement les e-mails avec accord');
+ }
+};
+
+V1.render();
+</script>
+</body>
+</html>
