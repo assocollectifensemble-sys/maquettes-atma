@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="robots" content="noindex,nofollow">
+<title>La Case Bambou · le jeu (version test)</title>
+<meta name="theme-color" content="#21402f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="La Case Bambou">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&family=Fredoka:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0e2329;--acc:#caaa6d;--acc2:#e7cf98;--fond:#f5eee2;--chaud:#e3743c;--ok:#2f8f6b;--txt:#1d2b2f;--doux:#66777a;--titre:'Cormorant Garamond',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overscroll-behavior:none}
+body{font-family:Raleway,system-ui,sans-serif;background:#0b1518;color:var(--txt);display:flex;justify-content:center;align-items:center;gap:48px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+#app{position:relative;width:100%;max-width:460px;height:100vh;height:100dvh;display:grid;grid-template-rows:auto 1fr auto;background:var(--fond);overflow:hidden}
+/* ---- en-tête ---- */
+.hd{display:flex;align-items:center;gap:8px;padding:calc(env(safe-area-inset-top) + 8px) 12px 8px;background:var(--nuit);color:#fff;min-height:50px}
+.hd .lg{height:26px;max-width:110px;object-fit:contain}
+.hd .nm{font-family:var(--titre);font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:130px}
+.hd .sp{flex:1}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.pill.test{background:#ffffff1c;color:var(--acc2)}
+.pill.inst{background:var(--acc);color:var(--nuit)}
+/* ---- barre du bas ---- */
+.nav{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:6px 8px calc(env(safe-area-inset-bottom) + 6px);background:#fff;box-shadow:0 -6px 20px #0e232912;position:relative;z-index:5}
+.nav button{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;padding:7px 2px 6px;border-radius:14px;font-size:10.5px;font-weight:700;color:var(--doux);line-height:1.1}
+.nav button .ic{font-size:21px;line-height:1;filter:grayscale(.5);opacity:.75;transition:.2s}
+.nav button .n{position:absolute;top:3px;left:calc(50% - 22px);width:16px;height:16px;border-radius:50%;background:var(--doux);color:#fff;font-size:9.5px;display:grid;place-items:center}
+.nav button.on{background:var(--nuit);color:#fff}
+.nav button.on .ic{filter:none;opacity:1;transform:scale(1.12)}
+.nav button.on .n{background:var(--acc);color:var(--nuit)}
+.nav button.next::after{content:"à voir";position:absolute;top:-9px;right:2px;background:var(--chaud);color:#fff;font-size:9px;padding:2px 6px;border-radius:999px;animation:bob 1.2s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-3px)}}
+/* ---- écrans ---- */
+main{position:relative;overflow:hidden}
+.scr{position:absolute;inset:0;display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateX(18px)}}
+.scr.back{animation:inb .3s ease}@keyframes inb{from{opacity:0;transform:translateX(-18px)}}
+.dark{background:var(--nuit);color:#fff}
+.pad{padding:16px 18px}
+.grow{flex:1}
+.k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--acc)}
+.t1{font-family:var(--titre);font-weight:600;font-size:clamp(30px,8.6vw,40px);line-height:1.02}
+.t1 i{color:var(--acc2);font-style:italic}
+.t2{font-family:var(--titre);font-weight:600;font-size:clamp(25px,7vw,31px);line-height:1.08}
+.t3{font-weight:800;font-size:16px;line-height:1.3}
+.p{font-size:14.5px;line-height:1.48}
+.m{font-size:12.5px;line-height:1.42;color:var(--doux)}
+.dark .m{color:#ffffffa8}
+.btn{display:block;width:100%;padding:15px 14px;border-radius:999px;background:var(--nuit);color:#fff;font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:13px;text-align:center;text-decoration:none;transition:transform .12s}
+.btn:active{transform:scale(.96)}
+.btn.a{background:var(--acc);color:var(--nuit)}
+.btn.c{background:var(--chaud);color:#fff}
+.btn.g{background:transparent;border:1.5px solid currentColor;color:inherit}
+.btn.s{padding:10px;font-size:11px}
+.btn+.btn{margin-top:9px}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:6px 11px;border-radius:999px;background:#ffffff1f;font-size:12px;font-weight:600}
+.row{display:flex;gap:8px;align-items:center}
+.wrap{flex-wrap:wrap}
+.card{background:#fff;border-radius:18px;padding:15px;box-shadow:0 6px 22px #0e232912}
+.toast{position:absolute;left:50%;bottom:86px;transform:translate(-50%,30px);opacity:0;background:var(--nuit);color:#fff;padding:11px 16px;border-radius:999px;font-size:13px;font-weight:600;z-index:60;transition:.3s;width:max-content;max-width:90%;text-align:center;pointer-events:none}
+.toast.on{transform:translate(-50%,0);opacity:1}
+.nextbar{display:flex;align-items:center;gap:10px;margin-top:12px;padding:11px 14px;border-radius:16px;background:var(--chaud);color:#fff;font-weight:700;font-size:13.5px;text-align:left;width:100%}
+.nextbar b{font-size:20px}.nextbar span{flex:1}
+/* ---- accueil ---- */
+.hero{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;padding:18px;color:#fff;background:var(--nuit) center/cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#00000010 0%,#0000 25%,var(--nuit) 78%)}
+.hero>*{position:relative}
+.lang{display:flex;background:#0005;border-radius:999px;padding:3px;margin-left:auto}
+.lang button{padding:5px 10px;font-size:11px;font-weight:800;border-radius:999px;color:#fffc}
+.lang button.on{background:#fff;color:var(--nuit)}
+.from{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:#ffffff17;border:1px solid #ffffff30;text-align:left;width:100%;color:#fff}
+.from b{font-size:22px}.from div{flex:1;font-size:12.5px;line-height:1.3}.from strong{display:block;font-size:14px}
+.bonbanner{display:flex;align-items:center;gap:10px;padding:12px;border-radius:14px;background:var(--acc);color:var(--nuit);font-weight:800;font-size:14px;width:100%;text-align:left}
+/* qui joue */
+.crew{display:grid;gap:10px;margin-top:14px}
+.crew button{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;background:#ffffff12;border:1.5px solid #ffffff30;text-align:left;color:#fff}
+.crew button b{font-size:34px}
+.crew button strong{display:block;font-size:17px}
+.crew button span{font-size:12.5px;opacity:.75}
+.crew button:active{background:#fff;color:var(--nuit)}
+/* carte */
+.els{display:flex;justify-content:space-between;gap:4px;margin:10px 0}
+.el{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.45;text-align:center}
+.el b{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--acc);display:grid;place-items:center;font-size:21px}
+.el.d{opacity:1}.el.d b{background:var(--acc);color:var(--nuit)}
+.el.n{opacity:1}.el.n b{animation:pulse 1.6s infinite;background:#ffffff18}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #ffffff60}50%{box-shadow:0 0 0 9px #ffffff00}}
+svg.map{width:100%;display:block;border-radius:16px;max-height:30vh}
+/* station */
+.st{background:linear-gradient(180deg,var(--s1,#174650),var(--s2,#0e2329));color:#fff}
+.dots{display:flex;gap:5px}.dots i{flex:1;height:4px;border-radius:9px;background:#ffffff30}.dots i.d{background:var(--acc)}
+.qo{display:block;width:100%;text-align:left;padding:13px 15px;border-radius:14px;background:#ffffff14;border:1.5px solid #ffffff2e;margin:7px 0;font-size:15px;color:#fff}
+.qo.ok{background:var(--ok);border-color:var(--ok)}.qo.ko{opacity:.45}
+.fact{background:#0000002e;border-left:3px solid var(--acc);padding:11px 13px;border-radius:10px;font-size:13.5px;line-height:1.45;margin:10px 0}
+.gz{position:relative;flex:1;min-height:180px;border-radius:18px;overflow:hidden;margin:12px 0;touch-action:none;user-select:none;-webkit-user-select:none}
+/* vague */
+.wave{background:linear-gradient(180deg,#6cc0bd,#1f5f68)}
+.wave .zone{position:absolute;top:0;bottom:0;left:41%;width:18%;background:#ffffff26;border-left:2px dashed #fff9;border-right:2px dashed #fff9}
+.wave .w{position:absolute;top:50%;width:70px;margin:-40px 0 0 -35px;font-size:60px;text-align:center}
+.wave .lb{position:absolute;top:10px;left:0;right:0;text-align:center;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+/* mots */
+.flip{perspective:900px;flex:1;min-height:150px;margin:12px 0}
+.flip .in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.r .in{transform:rotateY(180deg)}
+.flip .f,.flip .b{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;text-align:center}
+.flip .f{background:var(--fond);color:var(--nuit)}
+.flip .f .w{font-family:var(--titre);font-size:46px;font-style:italic}
+.flip .b{background:var(--acc);color:var(--nuit);transform:rotateY(180deg);font-size:16px;line-height:1.4;font-weight:700}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.two .qo{text-align:center;margin:0}
+/* paires */
+.match{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.match button{padding:12px 6px;border-radius:14px;background:#ffffff14;border:1.5px solid #ffffff35;color:#fff;font-size:13.5px;font-weight:700;min-height:58px}
+.match button.sel{border-color:var(--acc2);background:#ffffff30;transform:scale(1.03)}
+.match button.ok{background:var(--ok);border-color:var(--ok)}
+.shake{animation:shake .35s}@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+/* feu */
+.hold{display:grid;place-items:center}
+.ring{position:relative;width:min(58vw,230px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0}
+.ring .fl{font-size:34px;transition:font-size .08s}
+.spark{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--acc2);pointer-events:none;animation:spk 1s ease-out forwards}
+@keyframes spk{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+/* gratte */
+.scratch{background:var(--fond);color:var(--nuit);display:grid;place-items:center;text-align:center;padding:20px}
+.scratch .rv{font-family:var(--titre);font-size:24px;line-height:1.2;font-weight:600}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+/* attrape */
+.catch{background:linear-gradient(180deg,#8fd3d0,#2a7d84)}
+.catch .it{position:absolute;font-size:40px;line-height:1;padding:8px;transform:translate(-50%,0);will-change:top}
+.catch .pop{position:absolute;font-weight:800;font-size:20px;pointer-events:none;animation:pop .7s forwards;color:#fff;text-shadow:0 2px 6px #0006}
+@keyframes pop{to{transform:translateY(-40px);opacity:0}}
+.bar{height:8px;border-radius:9px;background:#ffffff30;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc);transition:width .2s}
+/* bon */
+.ticket{position:relative;border-radius:22px;background:var(--fond);color:var(--nuit);overflow:hidden;margin:12px 0 0}
+.ticket .band{height:9px;background:var(--day)}
+.ticket .tb{padding:15px 16px 12px}
+.ticket .pr{font-family:var(--titre);font-weight:600;font-size:clamp(25px,7vw,30px);line-height:1.04;margin:6px 0 3px}
+.ticket .cd{font-family:ui-monospace,monospace;font-weight:800;font-size:19px;letter-spacing:.12em}
+.ticket .lv{display:flex;align-items:center;gap:7px;font-weight:800;font-variant-numeric:tabular-nums;font-size:15px}
+.ticket .flm{font-size:26px;display:inline-block;animation:dance 1.2s ease-in-out infinite}
+@keyframes dance{0%,100%{transform:rotate(-7deg) scale(1)}50%{transform:rotate(7deg) scale(1.17)}}
+.ticket .perf{border-top:2px dashed #0e232930;margin:0 14px}
+.ticket .stf{padding:11px 14px;background:#fff}
+.holdb{position:relative;overflow:hidden;width:100%;padding:13px;border-radius:12px;background:var(--nuit);color:#fff;font-weight:800;font-size:12px;letter-spacing:.05em;text-transform:uppercase;touch-action:none;user-select:none;-webkit-user-select:none}
+.holdb i{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--ok)}.holdb span{position:relative}
+.used .flm{animation:none;filter:grayscale(1)}
+.stamp{position:absolute;top:48px;right:12px;transform:rotate(-12deg);border:3px solid var(--ok);color:var(--ok);font-weight:800;padding:5px 9px;border-radius:10px;font-size:13px;background:#fffe}
+.mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
+.mini3>*{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 4px;border-radius:14px;background:#ffffff14;font-size:11px;font-weight:700;color:#fff;text-decoration:none;text-align:center;line-height:1.2}
+.mini3 b{font-size:20px}
+/* à table */
+.th{position:relative;min-height:118px;display:flex;align-items:flex-end;padding:14px 16px;color:#fff;background:var(--nuit) center/cover}
+.th::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0000,var(--nuit) 92%)}
+.th>*{position:relative}
+.gc{margin:12px 14px 4px;border-radius:18px;padding:15px;background:linear-gradient(135deg,var(--nuit),color-mix(in srgb,var(--nuit) 70%,var(--acc)));color:#fff}
+.dish{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #0e232912}
+.dish b{font-size:14.5px}.dish p{font-size:12.5px;color:var(--doux);margin-top:2px;line-height:1.35}
+.dish em{font-style:normal;font-weight:800;white-space:nowrap}
+.faces{display:flex;justify-content:space-between;margin:14px 0}
+.faces button{font-size:38px;filter:grayscale(1);opacity:.5;transition:.2s}
+.faces button.on{filter:none;opacity:1;transform:scale(1.15)}
+input[type=email],input[type=text],input[type=number],textarea,select{width:100%;font-size:15px;padding:11px 13px;border-radius:12px;border:1.5px solid #0e23291f;background:#fff;margin:7px 0}
+label.ck{display:flex;gap:9px;align-items:flex-start;font-size:12.5px;line-height:1.4;color:#33454a;margin:6px 0}
+label.ck input{margin-top:2px;width:18px;height:18px;flex:none}
+.prog{height:5px;border-radius:9px;background:#ffffff25;margin:10px 0;overflow:hidden}.prog i{display:block;height:100%;background:var(--acc)}
+/* défi */
+.dfh{padding:12px 16px 8px;color:#fff;background:linear-gradient(135deg,var(--chaud),var(--nuit))}
+.cvw{position:relative;flex:1;min-height:200px;margin:0 12px;border-radius:18px;overflow:hidden;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.cvw canvas{position:absolute;inset:0;width:100%;height:100%}
+.hud{display:flex;justify-content:space-between;font-weight:800;padding:8px 16px;font-variant-numeric:tabular-nums;font-size:14px}
+.ov{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#0e2329b8;color:#fff;text-align:center;padding:20px}
+.ov .big{font-family:var(--titre);font-size:52px;font-weight:600;line-height:1}
+.eth{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;padding:8px 12px 0}
+.eth span{font-size:10.5px;padding:4px 9px;border-radius:999px;background:#0e232912;color:var(--nuit);font-weight:700}
+.lb{list-style:none}
+.lb li{display:flex;align-items:center;gap:10px;padding:9px 6px;border-bottom:1px solid #0e232912;font-size:14.5px}
+.lb .rk{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--fond);font-weight:800;font-size:13px}
+.lb li:nth-child(1) .rk{background:var(--acc)}.lb li:nth-child(2) .rk{background:#cfd6d8}.lb li:nth-child(3) .rk{background:#d9a77a}
+.lb li.me{background:color-mix(in srgb,var(--acc) 25%,transparent);border-radius:10px}
+.lb em{margin-left:auto;font-style:normal;font-weight:800}
+/* côté resto */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:4px;margin:0 14px;border-radius:14px;background:#0e232910}
+.seg button{padding:9px 4px;border-radius:11px;font-size:12px;font-weight:800;color:var(--doux)}
+.seg button.on{background:#fff;color:var(--nuit);box-shadow:0 2px 8px #0e232918}
+.tg{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #0e232912}
+.tg b{display:block;font-size:14px}.tg span{font-size:12px;color:var(--doux);line-height:1.35;display:block;margin-top:2px}
+.sw{position:relative;width:48px;height:28px;flex:none;border-radius:999px;background:#c9cfd0;transition:.2s}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:.2s}
+.sw.on{background:var(--ok)}.sw.on::after{left:23px}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kp div{background:#fff;border-radius:14px;padding:11px}
+.kp b{display:block;font-size:22px;color:var(--nuit)}.kp span{font-size:11.5px;color:var(--doux);line-height:1.3;display:block}
+.fict{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:#fff2d6;color:#8a6a2c;padding:3px 7px;border-radius:6px;display:inline-block;vertical-align:middle}
+.steps{counter-reset:s;list-style:none}
+.steps li{position:relative;padding:0 0 14px 40px;font-size:13.5px;line-height:1.45}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--nuit);font-weight:800;display:grid;place-items:center}
+.steps b{display:block;font-size:14.5px}
+.pk{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid #0e232912;font-size:13.5px}
+.pk b{font-size:22px}
+/* accueil démo (surcouche) */
+.intro{position:absolute;inset:0;z-index:40;background:var(--nuit) center/cover;color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.intro::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0003,var(--nuit) 55%)}
+.intro>*{position:relative}
+.intro ol{list-style:none;margin:12px 0 16px;display:grid;gap:8px}
+.intro li{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:14px;background:#ffffff14;font-size:13.5px;line-height:1.3}
+.intro li b{font-size:24px}.intro li strong{display:block;font-size:14.5px}
+.sheet{position:absolute;inset:0;z-index:50;background:#0008;display:flex;align-items:flex-end}
+.sheet>div{background:#fff;border-radius:22px 22px 0 0;padding:20px 18px calc(env(safe-area-inset-bottom) + 18px);width:100%;animation:up .3s ease}
+@keyframes up{from{transform:translateY(100%)}}
+/* grand écran */
+.side{display:none;max-width:400px;color:#ddd5c6}
+.side h1{font-family:var(--titre);font-weight:600;font-size:42px;line-height:1.05;color:#fff;margin:10px 0 14px}
+.side p{font-size:15px;line-height:1.6;margin:12px 0}
+.side b{color:var(--acc2)}
+.side .qr{background:#fff;padding:12px;border-radius:16px;display:inline-block;margin-top:10px}
+@media(min-width:980px){.side{display:block}#app{height:min(860px,calc(100vh - 40px));border-radius:34px;box-shadow:0 30px 80px #0009,0 0 0 10px #1c2a2e}}
+@media(max-height:700px){.ticket .tb{padding:11px 14px 9px}.mini3>*{padding:7px 4px}.mini3{margin-top:7px}.qo{padding:10px 13px;margin:5px 0}.fact{margin:7px 0;padding:8px 11px}.nextbar{margin-top:8px;padding:9px 12px}.pad{padding:12px 16px}}
+@media(max-height:640px){.t1{font-size:28px}.crew button{padding:11px}.el b{width:40px;height:40px}}
+</style>
+</head>
+<body>
+<aside class="side" id="side"></aside>
+<div id="app">
+ <header class="hd" id="hd"></header>
+ <main id="main"></main>
+ <nav class="nav" id="nav"></nav>
+ <div class="toast" id="toast"></div>
+</div>
+<script>
+const C={"slug": "case-bambou", "nom": "La Case Bambou", "commune": "Saint-Paul", "zone": "Boucan Canot", "coords": [-21.0282335, 55.2263177], "couleurs": {"nuit": "#21402f", "accent": "#ef7aa0", "accent2": "#ffd7e2", "fond": "#fff8ef", "chaud": "#f2a03d"}, "police_titre": "Fredoka", "logo": null, "photos": {"hero": "img/hero.webp", "table": "img/table.webp"}, "coucher_soleil": true, "aventure": {"titre_html": "Le margouillat<br>et le <i>cornet géant</i>", "accroche": "Un margouillat farceur s'est glissé dans la case en bambou et a éparpillé la recette du cornet géant. Retrouvez le sable, les fruits, les mots et la glace en 3 minutes, et gagnez une douceur à la Case Bambou.", "elements": [{"nom": "Sable", "emoji": "🏖️", "jeu": "gratte", "titre": "Le Sable", "consigne": "Le margouillat a enterré le premier indice sous le sable de Boucan. Grattez l'écran pour le retrouver."}, {"nom": "Fruits", "emoji": "🍓", "jeu": "attrape", "titre": "Les Fruits", "consigne": "Il faut des fruits pour les parfums. Attrapez-les au vol, mais attention : le margouillat a glissé des piments dans le lot !"}, {"nom": "Mots", "emoji": "🦎", "jeu": "mots", "titre": "Les Mots du margouillat", "consigne": "Le margouillat ne parle que kréol. Devinez ce que veulent dire ses trois mots pour qu'il rende la recette."}, {"nom": "Glace", "emoji": "🍦", "jeu": "feu", "titre": "Le Cornet", "consigne": "Dernière étape : gardez le doigt appuyé pour remplir le cornet géant, sans le faire déborder."}]}, "mots_kreol": [["margouillat", "le petit lézard des maisons", "le chat du voisin", "« Margouillat » = le petit lézard (gecko) qui court sur les murs. Celui du jeu adore la glace."], ["bertel", "le sac à dos tressé", "le chapeau de paille", "« Bertel » = le sac à dos traditionnel tressé en vacoa. Pratique pour descendre à la plage."], ["baba", "le bébé", "le grand-père", "« Baba » = le bébé. À la Case Bambou, même les babas regardent les glaces."]], "paires": [["Crêpe chocolat-amandes", "amandes effilées"], ["Milkshake", "glace + lait"], ["Pizza au feu de bois", "four à bois"], ["Bouchon", "cuisson vapeur"]], "attrape": {"bon": "🍓", "mauvais": "🌶️", "consigne": "Attrapez les fraises, évitez les piments."}, "gratte": {"cache": "Grattez le sable", "revele": "À la Case Bambou, crêpes et glaces sont servies toute la journée, dès 7 h 30, face à la plage de Boucan."}, "questions": {"famille": [["Pourquoi une glace fond plus vite à la plage ?", ["Parce qu'il fait chaud au soleil", "Parce qu'elle a peur des vagues", "Parce que le sable la chatouille"], "La chaleur fait fondre la glace. Astuce : on la mange à l'ombre, et vite !"], ["Combien de pattes a un crabe, pinces comprises ?", ["10", "6", "4"], "Huit pattes pour marcher de côté, plus deux pinces : ça fait dix."], ["Qui va réclamer une deuxième boule de glace ? Le jeu a deviné…", ["Papa, même s'il dit non 😄", "Le margouillat", "Personne, promis"], "Vérification au comptoir de la Case Bambou.", true], ["Une « case », à La Réunion, c'est…", ["Une maison", "Une boîte de crayons", "Un bateau"], "La « case », c'est la maison. La Case Bambou, c'est donc la maison en bambou !"]], "amis": [["Défi : qui finit sa glace avant qu'elle coule ?", ["Personne, à Boucan il fait trop chaud 😅", "Moi, facile", "Le margouillat"], "Le soleil de l'Ouest gagne à tous les coups. Prenez des serviettes.", true], ["Un « bonbon piment », c'est…", ["Un petit beignet épicé", "Un bonbon sucré au piment", "Une glace pimentée"], "Rien de sucré : c'est un beignet salé et relevé, à grignoter à l'apéro."], ["Un samoussa a la forme…", ["D'un triangle", "D'un carré", "D'un rond"], "Triangle obligatoire. On en trouve côté snack à la Case Bambou."], ["Le sable de Boucan Canot est plutôt…", ["Clair et fin", "Noir", "Rose"], "À Boucan, le sable est clair. Pour le sable noir, il faut aller à l'Étang-Salé."]], "couple": [["Le meilleur dessert à deux face à la mer ?", ["Une crêpe à partager", "Deux crêpes, chacun la sienne", "Une salade de chou"], "La crêpe se partage très bien. En théorie.", true], ["Qui a choisi le parfum le plus bizarre la dernière fois ? Désignez-vous…", ["Toi, sans hésiter", "Moi, j'assume", "On ne s'en souvient plus (menteurs)"], "Prochain essai à la vitrine de la Case Bambou.", true], ["« Mon ti kèr », ça veut dire…", ["Mon petit cœur", "Mon petit cousin", "Mon petit chat"], "Bonus si vous le dites en vrai, là, maintenant."], ["Le soleil se couche face à Boucan Canot parce que la plage est sur la côte…", ["Ouest", "Est", "Sud"], "Côte ouest : le coucher de soleil se regarde depuis la terrasse. L'heure de ce soir est sur votre bon."]]}, "lots": {"famille": ["Une boule de glace offerte", "pour chaque enfant de la table"], "amis": ["Un topping offert", "sur chaque crêpe ou glace du groupe"], "couple": ["Une crêpe au sucre offerte", "à partager face à la mer"]}, "partenaires": [{"nom": "Hôtel Boucan Canot", "emoji": "🏨", "pourquoi": "juste à côté sur l'esplanade : les clients cherchent un goûter après la plage"}, {"nom": "Boucan Beach Tennis (ARTVBT)", "emoji": "🎾", "pourquoi": "après un match au soleil, tout le monde rêve d'une glace"}, {"nom": "Le Saint-Alexis Hotel & Spa", "emoji": "🌴", "pourquoi": "les familles en vacances cherchent une sortie crêpes à pied"}], "carte": {"source": "Aucune carte en ligne avec prix (site casebambou.re « en construction ») — plats cités par ouest-lareunion.com, reunion.fr, Tripadvisor, Facebook ; prix à relever sur place", "plats": [["Crêpe chocolat-amandes (exemple)", "Chocolat, crème, amandes effilées (vue en photo sur ouest-lareunion.com)", "prix à vérifier"], ["Coupe glacée (exemple)", "Glaces faites maison, parfums à confirmer", "prix à vérifier"], ["Milkshake (exemple)", "Glace et lait mixés", "prix à vérifier"], ["Pizza au feu de bois", "Cuite au feu de bois", "prix à vérifier"], ["Samoussas et bouchons", "Le snack créole, sur place ou à emporter", "prix à vérifier"]]}, "quiz_table": [["La Case Bambou sert ses crêpes et ses glaces…", ["Toute la journée, dès 7 h 30", "Le dimanche seulement", "Uniquement le soir"], "Ouvert tous les jours dès 7 h 30, crêpes et glaces toute la journée."], ["La Case Bambou est installée…", ["Sur l'esplanade, face à la plage de Boucan Canot", "Dans les Hauts de Saint-Paul", "Au port de Saint-Gilles"], "Les pieds presque dans le sable, face à la mer."], ["Côté snack, on trouve aussi…", ["Samoussas, bouchons et pains gratinés", "Sushis et ramens", "Raclette et fondue"], "Le snack créole, sur place ou à emporter pour la plage."], ["Les pizzas de la Case Bambou cuisent…", ["Au feu de bois", "Au micro-ondes", "Au soleil de Boucan"], "Pizzas et grillades au feu de bois, face à la plage."]], "lot_table": ["Une boule de glace offerte par personne", "à votre prochaine visite, pendant 30 jours"], "defi": {"titre": "La course du margouillat", "joueur": "🦎", "obstacle": "🦀", "bonus": "🍦", "ciel": ["#9ad8f0", "#ffe3b0"], "mer": ["#38b6c4", "#1b6f86"], "consigne": "Touchez pour sauter, touchez deux fois pour un double saut. Évitez les crabes, ramassez les glaces.", "paliers": ["25 🍦 : un topping offert", "45 🍦 : une boule de glace", "Top 3 du mois : une crêpe pour 2"]}, "sources": ["https://www.ouest-lareunion.com/sur-la-cote/glacier-boucan-canot/case-bambou", "https://www.reunion.fr/offres/case-bambou-saint-gilles-les-bains-saint-paul-fr-560232", "https://www.tripadvisor.fr/Restaurant_Review-g298470-d3522219-Reviews-La_Case_Bambou-Saint_Gilles_Les_Bains_Arrondissement_of_Saint_Paul.html", "https://www.facebook.com/casebambou", "https://fr.mappy.com/poi/52fbb8e6e4b00993c7bf9c3e", "https://nominatim.openstreetmap.org (Crêperie Case Bambou, ARTVBT - Boucan Beach Tennis, Hôtel Boucan Canot)", "Photo hero : https://www.ouest-lareunion.com/2020-Assets/img-pages/2368/boucan-canot-1131460552-974.jpg (plage de Boucan Canot, page OT)", "Photo table : https://www.ouest-lareunion.com/2020-Assets/img-restaurants/1539/case-bambou-boucan-canot-974.jpg (crêpe chocolat-amandes, fiche Case Bambou OT)"], "a_verifier": ["Aucun prix trouvé en ligne : plats marqués (exemple) et prix à relever sur place", "Parfums de glace non listés en ligne (vitrine visible en photo OT : vanille, chocolat, cookies, caramel, pistache probables)", "Paires Milkshake / Bouchon / Pizza : plats cités par Tripadvisor et avis, ingrédients génériques", "Horaires divergents : OT 7 h 30–23 h, Tripadvisor 7 h 30–22 h, Mappy/PagesJaunes 12–15 h et 19–23 h", "Lots proposés en exemple, à choisir par la Case Bambou", "Partenaires réels (OSM/Tripadvisor) mais non sollicités ; Boucan Beach Tennis à confirmer (club actif ?)", "Photo hero : nom de fichier type banque d'images (iStock 1131460552), droits à vérifier avant usage hors maquette", "Logo introuvable (site casebambou.re en construction) : logo null", "Tripadvisor mentionne aussi « Bambou Bar Restaurant » : vérifier si même maison / même enseigne"]};
+/* ================= socle ================= */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const KEY='jeu_'+C.slug+'_';
+const LS={get(k,d){try{const v=JSON.parse(localStorage.getItem(KEY+k));return v===null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(KEY+k,JSON.stringify(v))}catch(e){}},del(k){localStorage.removeItem(KEY+k)}};
+const pad=n=>String(n).padStart(2,'0'),hm=d=>pad(d.getHours())+' h '+pad(d.getMinutes());
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2600)}
+(function theme(){const r=document.documentElement.style,c=C.couleurs||{};
+ [['--nuit',c.nuit],['--acc',c.accent],['--acc2',c.accent2],['--fond',c.fond],['--chaud',c.chaud]].forEach(([k,v])=>v&&r.setProperty(k,v));
+ if(C.police_titre)r.setProperty('--titre',`'${C.police_titre}',Georgia,serif`)})();
+const IMG={hero:C.photos&&C.photos.hero,table:C.photos&&C.photos.table};
+const logo=(h=26,cls='lg')=>C.logo?`<img class="${cls}" src="${C.logo}" alt="${esc(C.nom)}" style="height:${h}px">`:`<span class="nm">${esc(C.nom)}</span>`;
+function sunset(date=new Date()){
+ const [lat,lng]=C.coords,rad=Math.PI/180,N=Math.floor((date-new Date(date.getFullYear(),0,0))/864e5),lngH=lng/15,t=N+((18-lngH)/24),M=.9856*t-3.289;
+ let L=(M+1.916*Math.sin(M*rad)+.02*Math.sin(2*M*rad)+282.634+360)%360,RA=(Math.atan(.91764*Math.tan(L*rad))/rad+360)%360;
+ RA=(RA+(Math.floor(L/90)*90-Math.floor(RA/90)*90))/15;
+ const sd=.39782*Math.sin(L*rad),cd=Math.cos(Math.asin(sd)),cH=(Math.cos(90.833*rad)-sd*Math.sin(lat*rad))/(cd*Math.cos(lat*rad));
+ const H=Math.acos(cH)/rad/15,T=H+RA-.06571*t-6.622,loc=((T-lngH+24)%24+4)%24;
+ const d=new Date(date);d.setHours(Math.floor(loc),Math.round((loc%1)*60),0,0);return d}
+
+/* ---- réglages du restaurant (onglet 4) ---- */
+const CFG=Object.assign({full:false,auto:true,seuil:40,creuse:true,pluie:false,lots:{famille:C.lots.famille[0],amis:C.lots.amis[0],couple:C.lots.couple[0]},
+ choix:{dehors:true,table:true,defi:true,mails:true,avis:true}},LS.get('cfg',{}));
+const saveCfg=()=>LS.set('cfg',CFG);
+const SOIR=34; // bons utilisés ce soir (exemple)
+const reportDemain=()=>CFG.full||(CFG.auto&&SOIR>=CFG.seuil);
+
+/* ================= navigation : le bouton retour reste dans l'appli ================= */
+const TABS=[['v1','①','🗺️','Dehors'],['v2','②','🍽️','À table'],['v3','③','🏆','Défi'],['v4','④','⚙️','Côté resto']];
+let S={tab:'v1',scr:'home'},lastRoot=0,dir=1;
+const seen=new Set(LS.get('seen',['v1']));
+function go(tab,scr,mode='push'){dir=1;S={tab,scr};const st={app:1,tab,scr};
+ if(mode==='push')history.pushState(st,'');else history.replaceState(st,'');render()}
+addEventListener('popstate',e=>{const st=e.state;dir=-1;
+ if(!st||!st.app){ if(Date.now()-lastRoot<2500){history.back();return}
+  lastRoot=Date.now();history.pushState({app:1,tab:'v1',scr:'home'},'');S={tab:'v1',scr:'home'};render();toast('Accueil du jeu · faites retour encore une fois pour quitter');return}
+ S={tab:st.tab,scr:st.scr};render()});
+function render(){
+ seen.add(S.tab);LS.set('seen',[...seen]);
+ const nextTab=TABS.find(t=>!seen.has(t[0]));
+ $('#nav').innerHTML=TABS.map(([id,n,ic,lb])=>`<button data-t="${id}" class="${S.tab===id?'on':''} ${nextTab&&nextTab[0]===id?'next':''}"><span class="n">${'①②③④'.indexOf(n)+1}</span><span class="ic">${ic}</span>${lb}</button>`).join('');
+ $$('#nav button').forEach(b=>b.onclick=()=>{if(b.dataset.t!==S.tab){const first={v1:V1.start(),v2:'menu',v3:'play',v4:'set'}[b.dataset.t];go(b.dataset.t,first)}});
+ const el=document.createElement('section');el.className='scr'+(dir<0?' back':'');
+ $('#main').innerHTML='';$('#main').appendChild(el);
+ ({v1:V1,v2:V2,v3:V3,v4:V4})[S.tab][S.scr](el);
+}
+function nextStep(cur){const i=TABS.findIndex(t=>t[0]===cur),n=TABS[(i+1)%4];
+ return `<button class="nextbar" data-next="${n[0]}"><b>${n[2]}</b><span>Découvrir l'étape ${i+2>4?1:i+2} : ${n[3]}</span><b>→</b></button>`}
+function bindNext(el){el.querySelectorAll('[data-next]').forEach(b=>b.onclick=()=>{const t=b.dataset.next;go(t,{v1:V1.start(),v2:'menu',v3:'play',v4:'set'}[t])})}
+
+/* ================= en-tête + installation ================= */
+let deferred=null;
+const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferred=e;header()});
+addEventListener('appinstalled',()=>{LS.set('installed',1);header();toast('C\'est installé : retrouvez le jeu sur votre écran d\'accueil ✓')});
+function header(){
+ const showInst=!standalone()&&!LS.get('installed',0);
+ $('#hd').innerHTML=`${logo(26)}<span class="sp"></span>${showInst?'<button class="pill inst" id="inst">📲 Installer</button>':''}<span class="pill test">VERSION TEST</span>`;
+ const b=$('#inst');if(b)b.onclick=install;
+}
+async function install(){
+ if(deferred){deferred.prompt();const r=await deferred.userChoice;deferred=null;if(r.outcome==='accepted'){LS.set('installed',1);header()}return}
+ const ios=isIOS;
+ sheet(`<div class="t3" style="margin-bottom:8px">📲 Mettre le jeu sur l'écran d'accueil</div>
+  <ol class="steps" style="margin-top:12px">${ios?`<li><b>Touchez Partager</b>le carré avec une flèche, en bas de Safari</li><li><b>« Sur l'écran d'accueil »</b>faites défiler la liste pour le trouver</li><li><b>Ajouter</b>l'icône ${esc(C.nom)} apparaît avec vos applis</li>`
+  :`<li><b>Ouvrez le menu ⋮</b>en haut à droite du navigateur</li><li><b>« Installer l'application »</b>ou « Ajouter à l'écran d'accueil »</li><li><b>Confirmez</b>l'icône ${esc(C.nom)} apparaît avec vos applis</li>`}</ol>
+  <button class="btn" id="shok">C'est fait</button>`);
+ $('#shok').onclick=()=>{LS.set('installed',1);header();closeSheet()};
+}
+function sheet(html){closeSheet();const d=document.createElement('div');d.className='sheet';d.id='sheet';d.innerHTML=`<div>${html}</div>`;d.onclick=e=>{if(e.target===d)closeSheet()};$('#app').appendChild(d)}
+function closeSheet(){const s=$('#sheet');s&&s.remove()}
+
+/* ================= ① DEHORS : l'aventure ================= */
+const T={fr:{go:'Commencer l\'aventure',who:'Qui joue ?',crews:[['famille','👨‍👩‍👧','En famille','questions et jeux pour les enfants'],['amis','🤙','Entre amis','défis et petites piques'],['couple','💛','À deux','complicité et coucher de soleil']],
+ free:'Gratuit · ouvert à tous · 1 partie par jour · 3 minutes',from:'Vous avez scanné le QR chez',chg:'touchez pour changer (démo)',
+ scan:'Simuler le scan du panneau',next:'Continuer',win:'Bravo, l\'aventure est réussie',wait:'Votre cadeau vous attend chez '+C.nom,
+ vt:'Valable aujourd\'hui jusqu\'à 22 h 30 · 1 par table',vd:'Valable demain toute la journée · 1 par table',stf:'Équipe : appui long pour valider',used:'Utilisé à',
+ there:'Y aller',dare:'Défier',sun:'Coucher du soleil',mybon:'Votre bon vous attend',see:'voir',replay:'Rejouer la démo',now:'Maintenant !',almost:'Presque ! La vague revient…',gift:'La mer est généreuse aujourd\'hui',caught:'Bien joué !',hold:'Gardez appuyé',done:'Réussi !',scr:'Frottez avec le doigt',tapgood:'Touchez',creuse:'Bonus heure calme (15 h – 18 h) : un petit plus avec votre cadeau',pluie:'Jour de pluie : le bon vaut aussi pour une boisson chaude',live:'La flamme bouge et l\'heure défile : le bon est vivant, une capture d\'écran se repère tout de suite.'},
+ en:{go:'Start the adventure',who:'Who\'s playing?',crews:[['famille','👨‍👩‍👧','Family','games for the kids'],['amis','🤙','Friends','challenges and teasing'],['couple','💛','Couple','sweet and sunset']],
+ free:'Free · open to all · 1 game per day · 3 minutes',from:'You scanned the QR at',chg:'tap to change (demo)',
+ scan:'Simulate scanning the sign',next:'Continue',win:'Well done, adventure complete',wait:'Your gift is waiting at '+C.nom,
+ vt:'Valid today until 10:30 pm · 1 per table',vd:'Valid tomorrow all day · 1 per table',stf:'Staff: long press to validate',used:'Used at',
+ there:'Go there',dare:'Challenge',sun:'Sunset',mybon:'Your voucher is waiting',see:'see',replay:'Replay the demo',now:'Now!',almost:'Almost! The wave is coming back…',gift:'The sea is generous today',caught:'Nice!',hold:'Press and hold',done:'Done!',scr:'Rub with your finger',tapgood:'Tap',creuse:'Quiet-hours bonus (3–6 pm): a little extra with your gift',pluie:'Rainy day: the voucher also works for a hot drink',live:'The flame moves and the clock runs: the voucher is alive, a screenshot is easy to spot.'}};
+const V1={
+ st:Object.assign({lang:'fr',crew:null,step:0,partner:0},LS.get('v1',{})),
+ save(){LS.set('v1',this.st)},
+ t(k){return T[this.st.lang][k]},
+ bon(){const b=LS.get('bon',null);if(b&&Date.now()>b.exp){LS.del('bon');return null}return b},
+ start(){return this.bon()?'win':'home'},
+ home(el){
+  const s=this.st,t=k=>this.t(k),P=C.partenaires||[],p=P[s.partner%Math.max(1,P.length)],b=this.bon();
+  el.className+=' dark';
+  el.innerHTML=`<div class="hero" style="${IMG.hero?`background-image:url(${IMG.hero})`:''}">
+   <div class="row" style="position:absolute;top:14px;left:18px;right:18px">${C.coucher_soleil?`<span class="chip">🌅 ${t('sun')} · ${hm(sunset())}</span>`:`<span class="chip">📍 ${esc(C.zone)}</span>`}
+    <div class="lang">${['fr','en'].map(l=>`<button class="${s.lang===l?'on':''}" data-l="${l}">${l.toUpperCase()}</button>`).join('')}</div></div>
+   <div class="k">${esc(C.zone)} · 3 min · 100 % gagnant</div>
+   <h1 class="t1">${C.aventure.titre_html}</h1>
+   <p class="p" style="color:#ffffffd6">${esc(C.aventure.accroche)}</p>
+   ${p?`<button class="from" id="from"><b>${p.emoji}</b><div>${t('from')}<strong>${esc(p.nom)}</strong><span style="opacity:.6">${t('chg')}</span></div></button>`:''}
+   ${b?`<button class="bonbanner" id="bb">🎟️ <span style="flex:1">${t('mybon')}</span>${t('see')} →</button>`:`<button class="btn a" id="go">${t('go')}</button>`}
+   <p class="m" style="text-align:center">${t('free')}</p>
+  </div>`;
+  el.querySelectorAll('[data-l]').forEach(x=>x.onclick=()=>{s.lang=x.dataset.l;this.save();render()});
+  const f=el.querySelector('#from');if(f)f.onclick=()=>{s.partner++;this.save();render()};
+  const g=el.querySelector('#go');if(g)g.onclick=()=>go('v1','crew');
+  const bb=el.querySelector('#bb');if(bb)bb.onclick=()=>go('v1','win');
+ },
+ crew(el){
+  const t=k=>this.t(k);el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column;justify-content:center">
+   <div class="k">Étape 1 sur 5</div><h2 class="t2" style="margin-top:6px">${t('who')}</h2>
+   <p class="m" style="margin-top:6px">Les questions et les mini-jeux s'adaptent à votre groupe.</p>
+   <div class="crew">${t('crews').map(c=>`<button data-c="${c[0]}"><b>${c[1]}</b><div><strong>${c[2]}</strong><span>${c[3]}</span></div></button>`).join('')}</div></div>`;
+  el.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{this.st.crew=b.dataset.c;this.st.step=0;this.save();buzz(20);go('v1','map')});
+ },
+ map(el){
+  const s=this.st;if(s.step>=4&&this.bon()){go('v1','win','replace');return}
+  const E=C.aventure.elements,pts=[[70,62],[140,96],[220,110],[292,96]];el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column">
+   <div class="k">Votre parcours · ${s.step}/4</div>
+   <svg class="map" viewBox="0 0 360 190" style="margin-top:10px"><defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d7f86"/><stop offset="1" stop-color="#6cc0bd"/></linearGradient></defs>
+    <rect width="360" height="190" fill="url(#sea)"/><path d="M0 72 C70 42 130 98 200 98 S320 78 360 88 L360 190 L0 190Z" fill="#efe2c6"/>
+    <path d="M0 66 C70 36 130 92 200 92 S320 72 360 82" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="6 7" opacity=".85"/>
+    <polyline points="${pts.map(p=>p.join(',')).join(' ')} 328,150" fill="none" stroke="#0e2329" stroke-width="2" stroke-dasharray="3 5"/>
+    ${pts.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="${i===s.step?18:14}" fill="${i<s.step?'var(--acc)':i===s.step?'var(--nuit)':'#ffffffd0'}" stroke="var(--acc)" stroke-width="2"/><text x="${p[0]}" y="${p[1]+5}" text-anchor="middle" font-size="14">${i<s.step?'✓':E[i].emoji}</text>`).join('')}
+    <circle cx="328" cy="150" r="24" fill="var(--nuit)" stroke="var(--acc)" stroke-width="2"/><text x="328" y="154" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Raleway" font-weight="800">${esc(C.nom.split(' ')[0].toUpperCase().slice(0,9))}</text></svg>
+   <div class="els">${E.map((e,i)=>`<div class="el ${i<s.step?'d':i===s.step?'n':''}"><b>${i<s.step?'✓':e.emoji}</b>${esc(e.nom)}</div>`).join('')}</div>
+   <div class="grow"></div>
+   <button class="btn a" id="scan">📷 ${this.t('scan')} ${s.step+1}</button>
+   <p class="m" style="text-align:center;margin-top:8px">En vrai, chaque étape se joue là où l'on se trouve : le QR suffit pour lancer la suivante.</p>
+  </div>`;
+  el.querySelector('#scan').onclick=()=>{buzz(30);go('v1','station')};
+ },
+ station(el){
+  const s=this.st;if(s.step>3){go('v1','win','replace');return}
+  const e=C.aventure.elements[s.step],grad={vague:['#2f8a92','#123b44'],mots:['#4f7d86','#173b44'],paires:['#7b5b3a','#2e2117'],feu:['#5a2412','#120807'],gratte:['#8a6a3c','#2b2014'],attrape:['#2f8a92','#0f3a40']}[e.jeu]||['#174650','#0e2329'];
+  el.className+=' st';el.style.setProperty('--s1',grad[0]);el.style.setProperty('--s2',grad[1]);
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column">
+   <div class="dots">${[0,1,2,3].map(i=>`<i class="${i<=s.step?'d':''}"></i>`).join('')}</div>
+   <div class="k" style="margin-top:12px">${s.step+1} / 4 · ${e.emoji}</div><h2 class="t2" style="margin:2px 0 4px">${esc(e.titre)}</h2>
+   <p class="p" style="color:#ffffffd0">${esc(e.consigne)}</p><div id="gm" class="grow" style="display:flex;flex-direction:column"></div></div>`;
+  const gm=el.querySelector('#gm');
+  GAMES[e.jeu](gm,()=>this.question(gm));
+ },
+ question(gm){
+  const s=this.st,q=(C.questions[s.crew]||C.questions.famille)[s.step];
+  if(!q){this.done();return}
+  const fun=q[3]===true,ord=shuffle([0,1,2]);
+  gm.innerHTML=`<div class="grow" style="display:flex;flex-direction:column;justify-content:center"><div class="k" style="color:#fff;opacity:.7">${fun?'Question pour rire 😄':'La question du groupe'}</div><div class="t3" style="margin:6px 0 4px;font-size:18px">${esc(q[0])}</div>
+   ${ord.map(i=>`<button class="qo" data-i="${i}">${esc(q[1][i])}</button>`).join('')}<div id="fx"></div></div>`;
+  gm.querySelectorAll('.qo').forEach(b=>b.onclick=()=>{
+   const ok=fun||+b.dataset.i===0;buzz(ok?40:15);
+   gm.querySelectorAll('.qo').forEach(x=>{x.disabled=true;x.classList.add(fun?(x===b?'ok':'ko'):(+x.dataset.i===0?'ok':'ko'))});
+   gm.querySelector('#fx').innerHTML=`<div class="fact">${fun?'😄 ':ok?'✓ ':'Presque ! '}${esc(q[2])}</div><button class="btn a" id="nx">${this.t('next')}</button>`;
+   gm.querySelector('#nx').onclick=()=>this.done();
+  });
+ },
+ done(){buzz([40,40,80]);this.st.step++;this.save();
+  if(this.st.step>=4){this.makeBon();go('v1','win','replace')}else history.back()},
+ makeBon(){const a='ABCDEFGHJKMNPQRSTUVWXYZ23456789',r=n=>Array.from({length:n},()=>a[Math.floor(Math.random()*a.length)]).join('');
+  const rep=reportDemain(),d=new Date();if(rep){d.setDate(d.getDate()+1);d.setHours(23,59,0,0)}else d.setHours(22,30,0,0);
+  if(d<new Date())d.setDate(d.getDate()+1);
+  const crew=this.st.crew||'famille';
+  LS.set('bon',{code:r(2)+'-'+r(3),lot:CFG.lots[crew]||C.lots[crew][0],sub:C.lots[crew][1],exp:+d,rep,used:null,crew})},
+ win(el){
+  const b=this.bon();if(!b){go('v1','home','replace');return}
+  const t=k=>this.t(k),dayCol=['#e3743c','#3f8f8c','#caaa6d','#7a5ea8','#d4566b','#4f86c6','#5b9b4a'][new Date().getDay()],h=new Date().getHours();
+  const extra=(CFG.creuse&&h>=15&&h<18?`<div class="m" style="margin-top:6px;color:var(--nuit)">☕ ${t('creuse')}</div>`:'')+(CFG.pluie?`<div class="m" style="margin-top:6px;color:var(--nuit)">🌧️ ${t('pluie')}</div>`:'');
+  el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column">
+   <div class="k">${C.aventure.elements.map(e=>e.emoji).join(' ')}</div>
+   <h2 class="t2" style="margin-top:4px">${t('win')}</h2><p class="m">${t('wait')}</p>
+   <div class="ticket ${b.used?'used':''}" style="--day:${dayCol}">
+    <div class="band"></div>${b.used?`<div class="stamp">✓ ${t('used')} ${b.used}</div>`:''}
+    <div class="tb"><div class="pr">${esc(b.lot)}</div><div class="m" style="color:var(--doux)">${esc(b.sub)}</div>${extra}
+     <div class="row" style="justify-content:space-between;margin-top:10px"><span class="cd">${b.code}</span><span class="lv"><span class="flm">🔥</span><span id="clk">--:--:--</span></span></div>
+     <div class="m" style="margin-top:6px;color:var(--doux)">${b.rep?t('vd'):t('vt')}</div></div>
+    <div class="perf"></div>
+    <div class="stf">${b.used?`<b>✓ ${t('used')} ${b.used}</b>`:`<button class="holdb" id="hb"><i></i><span>🔒 ${t('stf')}</span></button>`}</div>
+   </div>
+   <p class="m" style="margin-top:8px">${t('live')}</p>
+   <div class="mini3">
+    <a href="https://www.google.com/maps/dir/?api=1&destination=${C.coords.join(',')}&travelmode=walking" target="_blank" rel="noopener"><b>📍</b>${t('there')}</a>
+    <button id="sh"><b>🤙</b>${t('dare')}</button>
+    ${C.coucher_soleil?`<div><b>🌅</b>${t('sun')} ${hm(sunset())}</div>`:`<button id="rp"><b>🔁</b>${t('replay')}</button>`}
+   </div>
+   <div class="grow"></div>
+   ${nextStep('v1')}
+   ${C.coucher_soleil?`<button class="btn g s" id="rp" style="margin-top:10px;color:#ffffffa0">${t('replay')}</button>`:''}
+  </div>`;
+  const tick=()=>{const c=document.getElementById('clk');if(!c)return;const d=new Date();c.textContent=pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());setTimeout(tick,1000)};tick();
+  const hb=el.querySelector('#hb');if(hb)holdBtn(hb,()=>{const d=new Date();b.used=pad(d.getHours())+' h '+pad(d.getMinutes());LS.set('bon',b);buzz([60,40,120]);toast('Bon validé ✓');render()});
+  el.querySelector('#sh').onclick=share;
+  el.querySelector('#rp').onclick=()=>{LS.del('bon');this.st.step=0;this.save();go('v1','home','replace')};
+  bindNext(el);
+ }
+};
+async function share(){const txt=`On a réussi l'aventure ${C.nom} ${C.aventure.elements.map(e=>e.emoji).join('')} À ton tour : 3 minutes, et chaque équipe gagne.`;
+ try{if(navigator.share){await navigator.share({title:C.nom,text:txt,url:location.href});return}}catch(e){return}
+ try{await navigator.clipboard.writeText(txt+' '+location.href);toast('Lien copié ✓')}catch(e){toast(txt)}}
+function holdBtn(btn,cb){let p=0,dn=false;const bar=btn.querySelector('i');
+ btn.addEventListener('pointerdown',e=>{e.preventDefault();dn=true});['pointerup','pointerleave','pointercancel'].forEach(v=>btn.addEventListener(v,()=>dn=false));
+ btn.addEventListener('contextmenu',e=>e.preventDefault());
+ const lp=()=>{if(!btn.isConnected)return;p=Math.max(0,Math.min(1,p+(dn?.022:-.05)));bar.style.width=p*100+'%';if(p>=1){cb();return}requestAnimationFrame(lp)};lp()}
+
+/* ---- les mini-jeux tactiles ---- */
+const GAMES={
+ vague(gm,next){const t=k=>V1.t(k);
+  gm.innerHTML=`<div class="gz wave" id="wz"><div class="zone"></div><div class="lb">ligne d'écume</div><div class="w" id="w">🌊</div></div><p class="m" id="msg" style="text-align:center;min-height:18px;color:#fff"></p><button class="btn a" id="tap" style="margin-top:8px">${t('now')}</button>`;
+  let x=0,d=1,miss=0,run=true;const w=gm.querySelector('#w');
+  const lp=()=>{if(!run||!w.isConnected)return;x+=d*1.3;if(x>100||x<0)d*=-1;w.style.left=x+'%';requestAnimationFrame(lp)};lp();
+  const hit=()=>{if(!run)return;const inZ=x>41&&x<59;
+   if(inZ||miss>=2){run=false;buzz(60);gm.querySelector('#msg').textContent=inZ?t('caught'):t('gift');setTimeout(next,700)}else{miss++;buzz(15);gm.querySelector('#msg').textContent=t('almost')}};
+  gm.querySelector('#tap').onclick=hit;gm.querySelector('#wz').onpointerdown=hit},
+ mots(gm,next){const W=C.mots_kreol;let i=0;
+  const draw=()=>{const c=W[i],o=shuffle([c[1],c[2]]);
+   gm.innerHTML=`<div class="flip" id="fl"><div class="in"><div class="f"><div class="m">${i+1} / ${W.length} · ça veut dire…</div><div class="w">${esc(c[0])}</div></div><div class="b">${esc(c[3])}</div></div></div><div class="two">${o.map(x=>`<button class="qo" data-o="${esc(x)}">${esc(x)}</button>`).join('')}</div>`;
+   gm.querySelectorAll('.qo').forEach(b=>b.onclick=()=>{const ok=b.dataset.o===c[1];b.classList.add(ok?'ok':'ko');buzz(ok?40:15);gm.querySelector('#fl').classList.add('r');gm.querySelectorAll('.qo').forEach(x=>x.disabled=true);
+    setTimeout(()=>{i++;i<W.length?draw():next()},1900)})};draw()},
+ paires(gm,next){const P=C.paires,R=shuffle(P.map((p,i)=>i));let pick=null,found=0;
+  gm.innerHTML=`<div class="match">${P.map((p,i)=>`<button data-l="${i}">${esc(p[0])}</button><button data-r="${R[i]}">${esc(P[R[i]][1])}</button>`).join('')}</div><p class="m" style="text-align:center;color:#fff">Touchez une recette, puis son ingrédient</p>`;
+  const all=gm.querySelectorAll('.match button');
+  all.forEach(b=>b.onclick=()=>{if(b.classList.contains('ok'))return;
+   if(b.dataset.l!==undefined){all.forEach(x=>x.classList.remove('sel'));b.classList.add('sel');pick=b;return}
+   if(!pick){toast('Choisissez d\'abord une recette 👈');return}
+   if(pick.dataset.l===b.dataset.r){pick.classList.remove('sel');pick.classList.add('ok');b.classList.add('ok');buzz(40);pick=null;if(++found===P.length)setTimeout(next,600)}
+   else{b.classList.add('shake');buzz(15);setTimeout(()=>b.classList.remove('shake'),400)}})},
+ feu(gm,next){const e=C.aventure.elements[V1.st.step];
+  gm.innerHTML=`<div class="gz hold" id="hz"><div class="ring" id="rg"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#ffffff20" stroke-width="3"/><circle id="arc" cx="50" cy="50" r="46" fill="none" stroke="var(--acc)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289" transform="rotate(-90 50 50)"/></svg><span class="fl" id="fl">${e.emoji}</span></div></div><p class="k" id="hn" style="text-align:center;color:#fff">${V1.t('hold')}</p>`;
+  let p=0,dn=false,ok=false;const z=gm.querySelector('#hz'),arc=gm.querySelector('#arc'),fl=gm.querySelector('#fl'),rg=gm.querySelector('#rg');
+  z.addEventListener('pointerdown',ev=>{ev.preventDefault();try{z.setPointerCapture(ev.pointerId)}catch(e){}dn=true;buzz(10)});['pointerup','pointercancel'].forEach(v=>z.addEventListener(v,()=>dn=false));z.addEventListener('contextmenu',ev=>ev.preventDefault());
+  const lp=()=>{if(ok||!z.isConnected)return;p=Math.max(0,Math.min(1,p+(dn?.015:-.02)));arc.style.strokeDashoffset=289*(1-p);fl.style.fontSize=(34+p*100)+'px';fl.style.filter=`drop-shadow(0 0 ${p*36}px var(--acc))`;
+   if(dn&&Math.random()<.45){const s=document.createElement('i');s.className='spark';s.style.left='50%';s.style.top='50%';s.style.setProperty('--dx',(Math.random()*180-90)+'px');s.style.setProperty('--dy',(-50-Math.random()*130)+'px');rg.appendChild(s);setTimeout(()=>s.remove(),1000)}
+   if(p>=1){ok=true;buzz([80,60,160]);gm.querySelector('#hn').textContent=V1.t('done');setTimeout(next,900);return}requestAnimationFrame(lp)};lp()},
+ gratte(gm,next){const g=C.gratte||{cache:'Grattez',revele:'Bravo !'};
+  gm.innerHTML=`<div class="gz scratch"><div class="rv">${esc(g.revele)}</div><canvas id="cv"></canvas></div><p class="k" id="hn" style="text-align:center;color:#fff">${V1.t('scr')}</p>`;
+  const cv=gm.querySelector('#cv'),r=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;cv.width=r.width*dpr;cv.height=r.height*dpr;const c=cv.getContext('2d');c.scale(dpr,dpr);
+  const gr=c.createLinearGradient(0,0,r.width,r.height);gr.addColorStop(0,getComputedStyle(document.documentElement).getPropertyValue('--acc'));gr.addColorStop(1,getComputedStyle(document.documentElement).getPropertyValue('--acc2'));
+  c.fillStyle=gr;c.fillRect(0,0,r.width,r.height);c.fillStyle='#0e232960';for(let i=0;i<260;i++){c.fillRect(Math.random()*r.width,Math.random()*r.height,2,2)}
+  c.fillStyle='#0e2329';c.font='800 20px Raleway';c.textAlign='center';c.fillText(g.cache+' ✋',r.width/2,r.height/2);
+  c.globalCompositeOperation='destination-out';let dn=false,ok=false,n=0;
+  const at=ev=>{const b=cv.getBoundingClientRect();return[ev.clientX-b.left,ev.clientY-b.top]};
+  const rub=ev=>{if(!dn||ok)return;const [x,y]=at(ev);c.beginPath();c.arc(x,y,24,0,7);c.fill();if(++n%12===0){buzz(5);check()}};
+  const check=()=>{const d=c.getImageData(0,0,cv.width,cv.height).data;let cl=0;for(let i=3;i<d.length;i+=64)if(d[i]===0)cl++;if(cl/(d.length/64)>.5){ok=true;cv.style.transition='opacity .5s';cv.style.opacity=0;buzz([40,30,80]);gm.querySelector('#hn').textContent=V1.t('done');setTimeout(next,1500)}};
+  cv.addEventListener('pointerdown',ev=>{ev.preventDefault();try{cv.setPointerCapture(ev.pointerId)}catch(e){}dn=true;rub(ev)});cv.addEventListener('pointermove',rub);['pointerup','pointercancel'].forEach(v=>cv.addEventListener(v,()=>dn=false))},
+ attrape(gm,next){const A=C.attrape||{bon:'⭐',mauvais:'💣',consigne:''},GOAL=8;
+  gm.innerHTML=`<p class="m" style="color:#fff">${esc(A.consigne)}</p><div class="row" style="margin-top:8px"><div class="bar grow"><i id="pb" style="width:0"></i></div><b id="ct" style="font-size:14px">0/${GOAL} ${A.bon}</b></div><div class="gz catch" id="cz"></div>`;
+  const z=gm.querySelector('#cz');let got=0,end=false,its=[],last=performance.now(),spawn=0,t0=last;
+  const pop=(x,y,txt)=>{const p=document.createElement('div');p.className='pop';p.style.left=x+'px';p.style.top=y+'px';p.textContent=txt;z.appendChild(p);setTimeout(()=>p.remove(),700)};
+  const lp=now=>{if(end||!z.isConnected)return;const dt=Math.min(50,now-last);last=now;spawn-=dt;const H=z.clientHeight,W=z.clientWidth;
+   if(spawn<=0){spawn=520;const good=Math.random()<.68,e=document.createElement('button');e.className='it';e.textContent=good?A.bon:A.mauvais;e.dataset.g=good?1:0;e.style.left=(12+Math.random()*76)+'%';e.style.top='-50px';z.appendChild(e);const o={e,y:-50,v:.11+Math.random()*.07};its.push(o);
+    e.onpointerdown=ev=>{ev.preventDefault();ev.stopPropagation();const r=e.getBoundingClientRect(),zr=z.getBoundingClientRect();if(e.dataset.g==='1'){got++;buzz(25);pop(r.left-zr.left,r.top-zr.top,'+1')}else{got=Math.max(0,got-1);buzz([20,20,20]);z.classList.add('shake');setTimeout(()=>z.classList.remove('shake'),350);pop(r.left-zr.left,r.top-zr.top,'−1')}
+     e.remove();o.dead=1;gm.querySelector('#pb').style.width=(got/GOAL*100)+'%';gm.querySelector('#ct').textContent=got+'/'+GOAL+' '+A.bon;
+     if(got>=GOAL){end=true;buzz([40,30,80]);setTimeout(next,500)}}}
+   its.forEach(o=>{if(o.dead)return;o.y+=o.v*dt;o.e.style.top=o.y+'px';if(o.y>H){o.e.remove();o.dead=1}});its=its.filter(o=>!o.dead);
+   if(now-t0>30000&&!end){end=true;toast(V1.t('gift'));setTimeout(next,600);return}
+   requestAnimationFrame(lp)};requestAnimationFrame(lp)}
+};
+
+/* ================= ② À TABLE ================= */
+const V2={
+ st:Object.assign({q:0,score:0,stars:0,mail:''},LS.get('v2',{})),
+ save(){LS.set('v2',this.st)},
+ menu(el){
+  const P=(C.carte&&C.carte.plats)||[];
+  el.innerHTML=`<div class="th" style="${IMG.table?`background-image:url(${IMG.table})`:''}"><div><div class="k">Table 12 · la carte de ${esc(C.nom)}</div><div class="t2" style="margin-top:4px">Bon appétit !</div></div></div>
+  <div class="gc"><div class="k">Pendant qu'on prépare votre assiette</div><div class="t3" style="margin:5px 0;font-size:18px">Le quiz de la maison · 4 questions · 1 min</div>
+   <p class="m">Toute la table gagne : ${esc(C.lot_table[0]).toLowerCase()} ${esc(C.lot_table[1])}.</p><button class="btn a" id="play" style="margin-top:12px">Jouer à table</button></div>
+  <div class="pad" style="padding-top:6px">${P.map(d=>`<div class="dish"><div><b>${esc(d[0])}</b><p>${esc(d[1])}</p></div><em>${esc(d[2])}</em></div>`).join('')}
+   <p class="m" style="margin-top:8px">Extraits de la carte. Votre carte complète s'affiche ici, et l'équipe la met à jour elle-même.</p></div>`;
+  el.querySelector('#play').onclick=()=>{this.st.q=0;this.st.score=0;this.save();go('v2','quiz')};
+ },
+ quiz(el){
+  const s=this.st,Q=C.quiz_table,q=Q[s.q];if(!q){go('v2','lot','replace');return}
+  const ord=shuffle([0,1,2]);el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column;justify-content:center"><div class="k">Question ${s.q+1} / ${Q.length}</div><div class="prog"><i style="width:${s.q/Q.length*100}%"></i></div>
+   <div class="t3" style="font-size:19px;margin:6px 0">${esc(q[0])}</div>${ord.map(i=>`<button class="qo" data-i="${i}">${esc(q[1][i])}</button>`).join('')}<div id="fx"></div></div>`;
+  el.querySelectorAll('.qo').forEach(b=>b.onclick=()=>{const ok=+b.dataset.i===0;if(ok)s.score++;buzz(ok?40:15);
+   el.querySelectorAll('.qo').forEach(x=>{x.disabled=true;x.classList.add(+x.dataset.i===0?'ok':'ko')});
+   el.querySelector('#fx').innerHTML=`<div class="fact">${ok?'✓ ':''}${esc(q[2])}</div><button class="btn a" id="nx">${s.q<Q.length-1?'Question suivante':'Voir notre cadeau'}</button>`;
+   el.querySelector('#nx').onclick=()=>{s.q++;this.save();s.q<Q.length?go('v2','quiz','replace'):go('v2','lot','replace')}});
+ },
+ lot(el){
+  const s=this.st;el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column"><div class="k">${s.score}/${C.quiz_table.length} · bravo la table 12</div>
+   <div class="ticket" style="--day:var(--acc)"><div class="band"></div><div class="tb"><div class="pr">${esc(C.lot_table[0])}</div><div class="m" style="color:var(--doux)">${esc(C.lot_table[1])}</div>
+    <div class="row" style="justify-content:space-between;margin-top:8px"><span class="cd">T12-${Math.random().toString(36).slice(2,5).toUpperCase()}</span><span class="lv"><span class="flm">✨</span></span></div></div></div>
+   <div class="card" style="margin-top:12px;color:var(--txt)"><div class="t3">Le garder sur votre téléphone</div>
+    <input type="email" id="em" placeholder="votre@email.com" value="${esc(s.mail)}" autocomplete="email">
+    <label class="ck"><input type="checkbox" id="nl"> J'accepte aussi de recevoir les nouveautés de ${esc(C.nom)}. Désinscription en un clic.</label>
+    <button class="btn" id="send">Recevoir mon bon</button><button class="btn g s" id="skip" style="color:var(--nuit)">Je garde l'écran, merci</button></div></div>`;
+  el.querySelector('#send').onclick=()=>{const v=el.querySelector('#em').value.trim();if(!/^\S+@\S+\.\S+$/.test(v)){toast('Adresse e-mail à vérifier');return}s.mail=v;this.save();toast('Bon envoyé ✓ (démo)');go('v2','avis')};
+  el.querySelector('#skip').onclick=()=>go('v2','avis');
+ },
+ avis(el){
+  const s=this.st,F=['😞','😕','😐','😊','🤩'];
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column;justify-content:center"><div class="k">Avant de partir · 10 secondes</div><h2 class="t2" style="margin:6px 0 4px">Comment s'est passé votre moment ?</h2><p class="m">Votre réponse arrive directement chez l'équipe. Votre cadeau reste le même, quelle que soit la note.</p>
+   <div class="faces">${F.map((f,i)=>`<button data-s="${i+1}" class="${s.stars===i+1?'on':''}">${f}</button>`).join('')}</div><div id="nx"></div></div>`;
+  el.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{s.stars=+b.dataset.s;this.save();el.querySelectorAll('[data-s]').forEach(x=>x.classList.toggle('on',x===b));
+   el.querySelector('#nx').innerHTML=s.stars>=4?`<div class="card"><div class="t3">Merci, ça nous touche 😉</div><p class="m" style="margin:6px 0 12px">Si l'envie vous prend, quelques mots sur Google aident beaucoup une maison indépendante. C'est libre, simplement pour le plaisir de partager.</p><a class="btn a" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(C.nom+' '+C.zone)}" target="_blank" rel="noopener">Laisser un avis Google</a><button class="btn g s" id="fin" style="color:var(--nuit)">Plus tard</button></div>`
+   :`<div class="card"><div class="t3">Dites-nous tout</div><p class="m">Seule l'équipe lit votre message, et le responsable vous répond si vous laissez un contact.</p><textarea id="tx" rows="3" placeholder="Attente, plat, accueil…"></textarea><button class="btn" id="fin">Envoyer à l'équipe</button></div>`;
+   el.querySelector('#fin').onclick=()=>go('v2','fin','replace')})},
+ fin(el){el.className+=' dark';
+  el.innerHTML=`<div class="pad grow" style="display:flex;flex-direction:column;justify-content:center;text-align:center"><div style="font-size:58px">${C.coucher_soleil?'🌅':'✨'}</div><h2 class="t2">À très vite chez ${esc(C.nom)}</h2><p class="m" style="margin:8px 0 18px">Votre cadeau vous attend pour la prochaine visite.</p>
+   ${nextStep('v2')}<button class="btn g s" id="ag" style="margin-top:12px;color:#ffffffa0">Rejouer la démo</button></div>`;
+  el.querySelector('#ag').onclick=()=>{Object.assign(this.st,{q:0,score:0,stars:0});this.save();go('v2','menu','replace')};bindNext(el)}
+};
+
+/* ================= ③ DÉFI DU MOIS ================= */
+const MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+const V3={
+ st:Object.assign({day:'',tries:3,best:0,last:null},LS.get('v3',{})),
+ save(){LS.set('v3',this.st)},run:false,
+ play(el){
+  const s=this.st,D=C.defi;if(s.day!==today()){s.day=today();s.tries=3;this.save()}
+  el.innerHTML=`<div class="dfh"><div class="k" style="color:#fff;opacity:.85">Le défi de ${MOIS[new Date().getMonth()]}</div><div class="t2">${esc(D.titre)}</div><p class="m" style="color:#ffffffd0;margin-top:2px">${esc(D.consigne)}</p></div>
+   <div class="hud"><span>${D.bonus} <span id="sc">0</span></span><span>⏱ <span id="tm">45</span> s</span><span>⚡ <span id="sp">x1.0</span></span><span>🎯 <span id="tr">${s.tries}</span>/3</span></div>
+   <div class="cvw" id="cw"><canvas id="cv"></canvas><div class="ov" id="ov"></div></div>
+   <div class="eth"><span>45 s par partie</span><span>3 essais par jour</span><span>100 % gratuit</span><span>dans le navigateur</span><span>pseudo au choix</span></div>
+   <div class="pad" style="padding-top:10px"><div class="row"><button class="btn g s" id="lbb" style="color:var(--nuit)">🏆 Classement et cadeaux</button></div></div>`;
+  this.idle(el);
+  el.querySelector('#lbb').onclick=()=>go('v3','board');
+ },
+ idle(el){const s=this.st,ov=el.querySelector('#ov');this.size();this.drawScene(0,null);
+  ov.innerHTML=s.tries>0?`${s.last!==null?`<div class="big">${s.last} ${C.defi.bonus}</div><div class="m" style="color:#fff">${this.palier(s.last)}</div>`:`<div style="font-size:52px">${C.defi.joueur}</div><div class="t3">1 touche = saut · 2 touches = double saut</div><div class="m" style="color:#ffffffc0">La vitesse monte au fil des secondes</div>`}<button class="btn c" id="go" style="max-width:260px">${s.last!==null?'Rejouer':'Lancer la partie'} · ${s.tries} essai${s.tries>1?'s':''}</button>`
+   :`<div class="big">${s.best} ${C.defi.bonus}</div><div class="t3">Votre meilleur score du jour</div><p class="m" style="color:#ffffffc0">Rendez-vous demain pour 3 nouveaux essais.</p><button class="btn a s" id="rz" style="max-width:240px">Démo : recharger 3 essais</button>`;
+  const g=ov.querySelector('#go');if(g)g.onclick=e=>{e.stopPropagation();s.tries--;this.save();el.querySelector('#tr').textContent=s.tries;ov.style.display='none';this.start(el)};
+  const r=ov.querySelector('#rz');if(r)r.onclick=()=>{s.tries=3;s.last=null;this.save();render()}},
+ palier(n){const P=C.defi.paliers||[];const th=[25,45];return n>=th[1]?'Palier 2 atteint : '+(P[1]||''):n>=th[0]?'Palier 1 atteint : '+(P[0]||''):`Encore ${th[0]-n} ${C.defi.bonus} pour le premier cadeau`},
+ size(){const cv=$('#cv');if(!cv)return;const r=cv.parentElement.getBoundingClientRect(),d=devicePixelRatio||1;cv.width=r.width*d;cv.height=r.height*d;this.W=r.width;this.H=r.height;this.c=cv.getContext('2d');this.c.setTransform(d,0,0,d,0,0)},
+ drawScene(tt,g){const c=this.c,W=this.W,H=this.H,D=C.defi,sky=D.ciel||['#f6b46b','#e9805a'],sea=D.mer||['#2d7f86','#163f47'];
+  const gr=c.createLinearGradient(0,0,0,H);gr.addColorStop(0,sky[0]);gr.addColorStop(.5,sky[1]);gr.addColorStop(.501,sea[0]);gr.addColorStop(1,sea[1]);c.fillStyle=gr;c.fillRect(0,0,W,H);
+  c.fillStyle='#ffe2a0';c.beginPath();c.arc(W*.78,H*.44,H*.09,0,7);c.fill();
+  for(let k=0;k<4;k++){c.strokeStyle=`rgba(255,255,255,${.28-k*.06})`;c.lineWidth=2.5;c.beginPath();for(let x=0;x<=W;x+=8){const y=H*.56+k*H*.07+Math.sin((x+tt*(2+k))/38)*5;x?c.lineTo(x,y):c.moveTo(x,y)}c.stroke()}
+  c.fillStyle='#ffffff30';c.fillRect(0,H*.86,W,2);
+  if(!g){c.font=`${H*.14}px serif`;c.textAlign='center';c.textBaseline='alphabetic';c.fillText(D.joueur,W*.24,H*.86);return}},
+ start(el){
+  const D=C.defi,W=this.W,H=this.H,c=this.c,G=H*.86,px=W*.24,sz=H*.13;
+  let y=G,vy=0,jumps=0,obs=[],bon=[],score=0,t0=performance.now(),last=t0,tt=0,hurt=0,nextObs=900,nextBon=400,trail=[];
+  const grav=H*.0021,jv=-H*.034;this.run=true;
+  const jump=e=>{e&&e.preventDefault();if(jumps<2){vy=jumps?jv*.92:jv;jumps++;buzz(jumps>1?[8,20,8]:8);if(jumps===2)for(let i=0;i<8;i++)trail.push({x:px,y:y-sz*.4,vx:(Math.random()-.5)*3,vy:Math.random()*2,l:1})}};
+  const cw=el.querySelector('#cw');cw.onpointerdown=jump;
+  const key=e=>{if(e.code==='Space'||e.code==='ArrowUp')jump(e)};addEventListener('keydown',key);
+  const step=now=>{if(!cw.isConnected){this.run=false;removeEventListener('keydown',key);return}
+   const dt=Math.min(2.2,(now-last)/16.7);last=now;const el2=(now-t0)/1000,rest=Math.max(0,45-el2);
+   const mult=1+el2*0.055+(el2>30?(el2-30)*0.03:0);const spd=W*.0095*mult;tt+=dt*4*mult;
+   $('#tm').textContent=Math.ceil(rest);$('#sp').textContent='x'+mult.toFixed(1);
+   vy+=grav*dt;y=Math.min(G,y+vy*dt);if(y>=G){vy=0;jumps=0}
+   nextObs-=dt*16.7*mult;nextBon-=dt*16.7;
+   if(nextObs<=0){obs.push({x:W+30,h:Math.random()<.25&&el2>12?2:1});nextObs=(1150-Math.min(500,el2*12))*(.75+Math.random()*.6)}
+   if(nextBon<=0){bon.push({x:W+20,y:G-sz*.6-Math.random()*H*.42});nextBon=420+Math.random()*380}
+   obs.forEach(o=>o.x-=spd*dt);bon.forEach(b=>b.x-=spd*dt);
+   this.drawScene(tt,1);
+   c.textAlign='center';c.textBaseline='alphabetic';
+   bon=bon.filter(b=>{if(Math.abs(b.x-px)<sz*.6&&Math.abs(b.y-(y-sz*.45))<sz*.65){score++;$('#sc').textContent=score;buzz(6);return false}c.font=`${sz*.62}px serif`;c.fillText(D.bonus,b.x,b.y);return b.x>-30});
+   obs=obs.filter(o=>{const oh=sz*.75*o.h;if(!o.hit&&Math.abs(o.x-px)<sz*.42&&y>G-oh*.85){o.hit=1;hurt=40;score=Math.max(0,score-3);$('#sc').textContent=score;buzz(50)}
+    c.font=`${sz*.75}px serif`;for(let k=0;k<o.h;k++)c.fillText(D.obstacle,o.x,G-k*sz*.62);return o.x>-40});
+   trail.forEach(p=>{p.x+=p.vx-spd*.3;p.y+=p.vy;p.l-=.04;c.fillStyle=`rgba(255,255,255,${Math.max(0,p.l)})`;c.beginPath();c.arc(p.x,p.y,3,0,7);c.fill()});trail=trail.filter(p=>p.l>0);
+   if(hurt>0)hurt-=dt;
+   if(!(hurt>0&&Math.floor(hurt/4)%2)){c.save();c.translate(px,y);c.rotate(Math.max(-.4,Math.min(.4,vy*.02)));c.font=`${sz}px serif`;c.fillText(D.joueur,0,0);c.restore()}
+   if(rest<=0){this.end(el,score);removeEventListener('keydown',key);return}
+   requestAnimationFrame(step)};requestAnimationFrame(step)},
+ end(el,score){const s=this.st;this.run=false;s.last=score;if(score>s.best)s.best=score;this.save();buzz([60,40,60]);
+  const ov=el.querySelector('#ov');if(!ov)return;ov.style.display='flex';this.idle(el)},
+ board(el){
+  const s=this.st,b=[['Kévin_974',61],['MarieSurf',58],['Ti Loïc',55],['Ness',49],['Aurore.r',44],['Papa Jo',40]];if(s.best)b.push(['Vous',s.best]);b.sort((x,y)=>y[1]-x[1]);
+  el.innerHTML=`<div class="pad"><div class="k">${esc(C.defi.titre)} · ${MOIS[new Date().getMonth()]}</div><h2 class="t2" style="margin:4px 0 10px">Classement et cadeaux</h2>
+   <div class="card"><div class="t3" style="margin-bottom:6px">Ce qu'on gagne</div>${(C.defi.paliers||[]).map(p=>`<div class="pk"><b>🎁</b>${esc(p)}</div>`).join('')}<p class="m" style="margin-top:8px">Chaque palier atteint donne un cadeau. Le top 3 du mois est révélé sur l'écran de la salle, lors d'une soirée.</p></div>
+   <div class="card" style="margin-top:10px"><div class="t3">Top du mois <span class="fict">exemple</span></div><ol class="lb">${b.slice(0,7).map((x,i)=>`<li class="${x[0]==='Vous'?'me':''}"><span class="rk">${i+1}</span>${esc(x[0])}<em>${x[1]} ${C.defi.bonus}</em></li>`).join('')}</ol></div>
+   ${nextStep('v3')}</div>`;bindNext(el)}
+};
+addEventListener('resize',()=>{if(S.tab==='v3'&&S.scr==='play'&&!V3.run)render()});
+
+/* ================= ④ CÔTÉ RESTO : la version test, à construire ensemble ================= */
+const V4={seg:'set',
+ set(el){this.shell(el,'set')},res(el){this.shell(el,'res')},ens(el){this.shell(el,'ens')},
+ shell(el,seg){
+  el.innerHTML=`<div class="pad" style="padding-bottom:8px"><div class="k">Espace ${esc(C.nom)} · réservé à l'équipe</div><h2 class="t2" style="margin-top:4px">Votre version test</h2></div>
+   <div class="seg">${[['set','⚙️ Réglages'],['res','📊 Résultats'],['ens','🤝 Ensemble']].map(([k,l])=>`<button data-s="${k}" class="${seg===k?'on':''}">${l}</button>`).join('')}</div>
+   <div class="pad" id="bd"></div>`;
+  el.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{if(b.dataset.s!==seg)go('v4',b.dataset.s,'replace')});
+  const bd=el.querySelector('#bd');this['_'+seg](bd);
+ },
+ tg(k,t,d){return `<div class="tg"><div><b>${t}</b><span>${d}</span></div><button class="sw ${CFG[k]?'on':''}" data-k="${k}" aria-label="${esc(t)}"></button></div>`},
+ _set(bd){
+  bd.innerHTML=`<div class="card"><div class="t3">Les cadeaux de l'aventure</div><p class="m">Un cadeau par groupe. Modifiez le texte : le jeu se met à jour tout de suite.</p>
+   ${[['famille','👨‍👩‍👧 Familles'],['amis','🤙 Amis'],['couple','💛 Couples']].map(([k,l])=>`<label class="m" style="display:block;margin-top:8px;font-weight:700;color:var(--nuit)">${l}</label><input type="text" data-lot="${k}" value="${esc(CFG.lots[k])}">`).join('')}</div>
+   <div class="card" style="margin-top:10px"><div class="t3">Piloter l'affluence</div>
+    ${this.tg('full','Salle complète ce soir','Les nouveaux bons passent au lendemain. Tout le monde garde son cadeau et la cuisine respire.')}
+    ${this.tg('auto','Report automatique','Les bons passent au lendemain dès que le seuil de la soirée est atteint.')}
+    <div class="tg" style="${CFG.auto?'':'opacity:.4'}"><div><b>Seuil : <span id="sv">${CFG.seuil}</span> bons ce soir</b><span>Ce soir (exemple) : ${SOIR} bons utilisés · ${reportDemain()?'les nouveaux bons vont à demain':'les bons restent valables ce soir'}</span></div></div>
+    <input type="range" min="10" max="80" step="5" value="${CFG.seuil}" id="sl" style="width:100%;accent-color:var(--ok)" ${CFG.auto?'':'disabled'}>
+    ${this.tg('creuse','Bonus heure calme (15 h – 18 h)','Un petit plus pour remplir l\'après-midi.')}
+    ${this.tg('pluie','Mode pluie','Le bon vaut aussi pour une boisson chaude les jours gris.')}</div>
+   <p class="m" style="margin-top:10px">Chaque réglage se teste en direct dans l'onglet ① : jouez une partie et regardez le bon.</p>`;
+  bd.querySelectorAll('.sw').forEach(b=>b.onclick=()=>{const k=b.dataset.k;CFG[k]=!CFG[k];saveCfg();toast(CFG[k]?'Activé ✓':'Désactivé');render()});
+  bd.querySelectorAll('[data-lot]').forEach(i=>i.onchange=()=>{CFG.lots[i.dataset.lot]=i.value.trim()||C.lots[i.dataset.lot][0];saveCfg();toast('Cadeau mis à jour ✓')});
+  const sl=bd.querySelector('#sl');sl.oninput=()=>{bd.querySelector('#sv').textContent=sl.value};sl.onchange=()=>{CFG.seuil=+sl.value;saveCfg();render()}},
+ _res(bd){const days=[42,38,51,47,63,88,95,40,36,55,49,71,92,99];
+  bd.innerHTML=`<p class="m" style="margin-bottom:8px">Les 30 derniers jours <span class="fict">chiffres fictifs</span></p>
+   <div class="kp"><div><b>1 284</b><span>parties lancées dehors</span></div><div><b>1 031</b><span>équipes allées au bout</span></div><div><b>402</b><span>bons utilisés chez vous</span></div><div><b>4,6 / 5</b><span>note privée à table</span></div><div><b>187</b><span>e-mails avec accord</span></div><div><b>27 %</b><span>joueurs en anglais</span></div></div>
+   <div class="card" style="margin-top:10px"><div class="t3">Bons utilisés par jour</div><div style="display:flex;align-items:flex-end;gap:4px;height:70px;margin-top:8px">${days.map((d,i)=>`<i style="flex:1;height:${d}%;border-radius:4px 4px 0 0;background:${[2,3,9,10].includes(i)?'var(--acc)':'var(--nuit)'}"></i>`).join('')}</div><p class="m" style="margin-top:6px">En couleur : jours avec le bonus heure calme.</p></div>
+   <div class="card" style="margin-top:10px"><div class="t3">Avis privés reçus <span class="fict">exemples</span></div>
+    <div class="pk"><b>😕</b>« 25 minutes d'attente pour les boissons, dommage car la vue est folle. »</div><div class="pk"><b>🤩</b>« Les enfants ont adoré le jeu dehors. On reviendra ! »</div>
+    <button class="btn g s" style="color:var(--nuit);margin-top:10px" onclick="toast('Démo : le fichier contient les e-mails avec accord')">Télécharger les e-mails (tableur)</button></div>`},
+ _ens(bd){const P=C.partenaires||[];
+  bd.innerHTML=`<div class="card"><div class="t3">Une version test, à construire avec vous</div><p class="m" style="margin:6px 0 12px">Cette maquette est une première idée, faite pour ${esc(C.nom)}. Tout reste ouvert : vous gardez ce qui vous ressemble et on ajuste ensemble.</p>
+   <ol class="steps"><li><b>On en parle 30 minutes</b>chez vous, maquette en main</li><li><b>Vous choisissez</b>les jeux, les cadeaux, les partenaires</li><li><b>Un mois de test offert</b>avec 2 ou 3 panneaux QR</li><li><b>On regarde les résultats ensemble</b>et vous décidez de la suite</li></ol></div>
+   <div class="card" style="margin-top:10px"><div class="t3">Ce qui vous plaît</div><p class="m">Cochez pour composer votre version.</p>
+    ${[['dehors','🗺️ L\'aventure dehors (QR chez des partenaires)'],['table','🍽️ Le quiz à table'],['defi','🏆 Le défi du mois'],['mails','✉️ Les e-mails des clients'],['avis','💬 Les avis privés']].map(([k,l])=>`<div class="tg"><div><b>${l}</b></div><button class="sw ${CFG.choix[k]?'on':''}" data-c="${k}"></button></div>`).join('')}</div>
+   ${P.length?`<div class="card" style="margin-top:10px"><div class="t3">Des partenaires possibles <span class="fict">idées</span></div><p class="m">Le QR se place là où les gens attendent : ils jouent sur place, puis viennent chercher leur cadeau.</p>${P.map(p=>`<div class="pk"><b>${p.emoji}</b><div><strong>${esc(p.nom)}</strong><div class="m">${esc(p.pourquoi)}</div></div></div>`).join('')}</div>`:''}
+   ${nextStep('v4')}`;
+  bd.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{const k=b.dataset.c;CFG.choix[k]=!CFG.choix[k];saveCfg();b.classList.toggle('on',CFG.choix[k])});bindNext(bd)}
+};
+
+/* ================= accueil de la démo ================= */
+function intro(){
+ if(LS.get('intro',0))return;
+ const d=document.createElement('div');d.className='intro';if(IMG.hero)d.style.backgroundImage=`url(${IMG.hero})`;
+ d.innerHTML=`<div class="pad"><div style="margin-bottom:12px">${logo(34)}</div><div class="k">Version test · imaginée pour ${esc(C.nom)}</div>
+  <h1 class="t2" style="margin:6px 0 6px">Un jeu à votre image, à construire ensemble</h1>
+  <p class="m" style="color:#ffffffc8">Voici une première idée. Découvrez-la en 4 étapes avec la barre du bas, puis gardez ce qui vous ressemble.</p>
+  <ol><li><b>🗺️</b><div><strong>① Dehors</strong>un QR chez un voisin lance l'aventure</div></li><li><b>🍽️</b><div><strong>② À table</strong>un quiz dans votre carte</div></li><li><b>🏆</b><div><strong>③ Défi du mois</strong>45 secondes, 3 essais par jour</div></li><li><b>⚙️</b><div><strong>④ Côté resto</strong>vos réglages et vos choix</div></li></ol>
+  <button class="btn a" id="ok">Découvrir la maquette</button></div>`;
+ $('#app').appendChild(d);d.querySelector('#ok').onclick=()=>{LS.set('intro',1);d.remove()};
+}
+function side(){const u=location.href.split('?')[0];
+ $('#side').innerHTML=`<div class="k">Version test · ${esc(C.nom)} · ${esc(C.zone)}</div><h1>Un jeu à votre image, à construire ensemble.</h1>
+  <p>Une aventure courte qui part de chez vos voisins et se termine chez vous, avec un cadeau pour chaque équipe. Un quiz à table, un défi du mois, et vos réglages.</p>
+  <p>Cette maquette est <b>une première idée</b> : on la façonne avec vous, vous gardez ce qui vous ressemble.</p>
+  <p class="m" style="color:#9fb0b2">Le plus parlant : scannez ce code avec votre téléphone.</p>
+  <div class="qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&margin=0&data=${encodeURIComponent(u)}" width="160" height="160" alt="QR code de la maquette"></div>
+  <p class="m" style="color:#7f9295;margin-top:16px">Maquette ATMA Digital · page non référencée · lots et chiffres donnés en exemple</p>`}
+
+/* ================= démarrage ================= */
+header();side();
+history.replaceState({root:1},'');
+S={tab:'v1',scr:V1.start()};history.pushState({app:1,tab:'v1',scr:S.scr},'');
+render();intro();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script>
+</body>
+</html>
