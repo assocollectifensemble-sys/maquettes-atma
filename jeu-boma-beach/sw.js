@@ -1,4 +1,4 @@
-const V='boma-beach-73263215',F=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "img/assiettes.webp", "img/crevettes.webp", "img/gambas.webp", "img/lieu.webp", "img/logo-blanc.png", "img/plage.webp", "img/salle.webp", "img/soir.webp", "img/sunbed.webp", "img/sunset.webp", "img/vue.webp"];
+const V='boma-beach-51783605',F=["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "img/assiettes.webp", "img/crevettes.webp", "img/gambas.webp", "img/lieu.webp", "img/logo-blanc.png", "img/plage.webp", "img/salle.webp", "img/soir.webp", "img/sunbed.webp", "img/sunset.webp", "img/vue.webp"];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(V).then(c=>c.addAll(F)).catch(()=>{}))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;const u=new URL(e.request.url);
