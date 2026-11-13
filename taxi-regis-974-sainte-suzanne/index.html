@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Taxi Régis 974 · Taxi à Sainte-Suzanne, partout sur l'île</title>
+<meta name="description" content="Taxi Régis 974, La Marine à Sainte-Suzanne : une équipe à votre service qui se déplace dans toute l'île. Toujours ouvert. 0692 86 23 63.">
+<meta property="og:title" content="Taxi Régis 974 · Sainte-Suzanne">
+<meta property="og:description" content="Une équipe à votre service qui se déplace dans toute l'île ! Toujours ouvert, 0692 86 23 63.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/taxi-regis-974-sainte-suzanne/img/flotte-ocean.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/taxi-regis-974-sainte-suzanne/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#12161d;--route:#1f252e;--asphalte:#2b323d;--rouge:#d21f2d;--rouge-f:#a3141f;--ambre:#ffc23d;--ocean:#1d6fb5;--ciel:#e8f1fa;--blanc:#fbfaf6;--gris:#6b7380;--txt:#232a33}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--txt);background:var(--blanc);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Oswald',Impact,sans-serif;font-weight:600;line-height:1.05;letter-spacing:.01em;color:var(--nuit)}
+h2{font-size:clamp(2.1rem,7vw,3.4rem);text-transform:uppercase;margin:.4rem 0 1rem}
+h3{font-size:1.35rem;text-transform:uppercase;letter-spacing:.03em}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:700;color:var(--rouge)}
+.eyebrow::before{content:"";width:22px;height:3px;background:repeating-linear-gradient(90deg,currentColor 0 6px,transparent 6px 10px)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:#cfd6df;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+#jauge{position:fixed;left:0;right:0;z-index:61;height:4px;background:var(--asphalte);top:var(--rh,30px)}
+#jauge i{position:absolute;inset:0;transform-origin:left;transform:scaleX(0);background:repeating-linear-gradient(90deg,var(--ambre) 0 14px,transparent 14px 22px)}
+canvas#phares{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.02em;transition:transform .3s,background .3s,box-shadow .3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -14px rgba(210,31,45,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f);transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(210,31,45,.7)}}
+.btn-wa{background:#1fa855;color:#fff}
+.btn-wa:hover{background:#178a45;transform:translateY(-2px)}
+.btn-line{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-dark{border:1.5px solid var(--nuit);color:var(--nuit)}
+.btn-dark:hover{background:var(--nuit);color:#fff}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+/* lumineux taxi (illustration CSS) */
+.lumineux{display:inline-flex;flex-direction:column;align-items:center;background:linear-gradient(180deg,#fffdf6,#f1ece0);border-radius:12px 12px 6px 6px;padding:.4rem 1.1rem .35rem;box-shadow:0 0 0 3px #1b1f26,0 0 28px 4px rgba(255,194,61,.55);animation:allume 4s ease-in-out infinite}
+.lumineux b{font-family:'Oswald',sans-serif;font-weight:700;color:var(--rouge);font-size:1.05rem;letter-spacing:.06em;line-height:1.1}
+.lumineux small{font-family:'Oswald',sans-serif;font-size:.62rem;letter-spacing:.2em;color:#1b1f26;border:1px solid #1b1f26;border-radius:3px;padding:0 .45rem;margin-top:.15rem;background:#fff}
+@keyframes allume{50%{box-shadow:0 0 0 3px #1b1f26,0 0 44px 10px rgba(255,194,61,.75)}}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:28% 60%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.17) translate(2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,29,.15) 0%,rgba(18,22,29,.25) 35%,rgba(18,22,29,.92) 78%,var(--nuit) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 3.6rem}
+.hero .eyebrow{color:var(--ambre)}
+.hero h1{color:#fff;font-size:clamp(3.6rem,17vw,8rem);text-transform:uppercase;margin:.9rem 0 .3rem;font-weight:700;letter-spacing:.005em}
+.hero h1 span{color:var(--ambre)}
+.hero .lead{font-size:1.18rem;max-width:32rem;margin:.6rem 0 1.8rem;color:#eef2f6;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .lead q{font-weight:600;color:#fff}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.badges span{font-size:.8rem;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.3rem .85rem;background:rgba(18,22,29,.45);backdrop-filter:blur(4px)}
+.badges span b{color:var(--ambre)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:.95s}.apparait.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* route (separateur) */
+.route{height:56px;background:var(--nuit);position:relative;overflow:hidden}
+.route::after{content:"";position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,#f4f1e6 0 34px,transparent 34px 64px);background-size:64px 4px;animation:roule 1.4s linear infinite;opacity:.85}
+@keyframes roule{to{background-position:-64px 0}}
+/* bandeau */
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Oswald',sans-serif;font-size:1.15rem;text-transform:uppercase;letter-spacing:.08em}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ambre);margin-left:2.2rem;vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* bord */
+.bord{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.bord p+p{margin-top:1rem}
+.devise{font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,4.4vw,1.9rem);color:var(--nuit);border-left:4px solid var(--ambre);padding-left:1.1rem;margin:1.5rem 0;line-height:1.25}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
+.chiffres div{background:#fff;border-radius:16px;padding:1rem .8rem;box-shadow:0 18px 40px -30px rgba(18,22,29,.6);text-align:center}
+.chiffres b{display:block;font-family:'Oswald',sans-serif;font-size:2rem;color:var(--rouge);line-height:1}
+.chiffres span{font-size:.78rem;color:var(--gris);line-height:1.3;display:block;margin-top:.35rem}
+.photo-bord{position:relative}
+.photo-bord img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;box-shadow:0 40px 80px -40px rgba(18,22,29,.7)}
+.photo-bord figcaption{position:absolute;left:1rem;bottom:-1.2rem;background:var(--nuit);color:#fff;padding:.6rem 1rem;border-radius:12px;font-size:.84rem;box-shadow:0 18px 40px -20px rgba(18,22,29,.6)}
+.photo-bord .lumineux{position:absolute;top:-1.1rem;right:1.2rem;transform:rotate(4deg)}
+/* flotte */
+.flotte{background:var(--nuit);color:#d9dee5}
+.flotte h2{color:#fff}
+.flotte .eyebrow{color:var(--ambre)}
+.flotte .intro{max-width:36rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:thin;scrollbar-color:var(--asphalte) transparent}
+.galerie figure{flex:0 0 min(82%,420px);scroll-snap-align:center;border-radius:20px;overflow:hidden;background:var(--route);box-shadow:0 30px 60px -36px rgba(0,0,0,.9);transition:transform .4s}
+.galerie figure:hover{transform:translateY(-6px)}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.9rem}
+.galerie figcaption b{display:block;font-family:'Oswald',sans-serif;color:#fff;font-size:1.15rem;text-transform:uppercase;letter-spacing:.03em;font-weight:500}
+.glisse{font-size:.8rem;color:#8e98a6;text-align:right}
+/* carnet */
+.carnet{background:linear-gradient(180deg,var(--ciel),var(--blanc))}
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2rem}
+.post{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 26px 60px -40px rgba(18,22,29,.65);transition:transform .4s}
+.post:hover{transform:translateY(-6px)}
+.post img{width:100%;aspect-ratio:16/11;object-fit:cover}
+.post div{padding:1.2rem 1.3rem 1.4rem}
+.post time{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ocean);font-weight:700}
+.post blockquote{font-family:'Oswald',sans-serif;font-size:1.3rem;color:var(--nuit);margin:.4rem 0 .5rem;line-height:1.25}
+.post p{font-size:.93rem;color:#4a5260}
+.carte-ile{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center;margin-top:3.5rem}
+.carte-ile figure{background:var(--nuit);border-radius:26px;padding:1.2rem 1rem .8rem;box-shadow:0 30px 70px -40px rgba(18,22,29,.8)}
+.carte-ile svg{width:100%;height:auto;display:block}
+.carte-ile figcaption{text-align:center;font-size:.75rem;color:#8e98a6;margin-top:.3rem;letter-spacing:.08em}
+#trace{stroke-dasharray:6 7}
+.ile-txt ul{list-style:none;margin-top:1rem;display:grid;gap:.6rem}
+.ile-txt li{display:flex;gap:.7rem;align-items:flex-start}
+.ile-txt li::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;margin-top:.45rem;background:var(--rouge);box-shadow:0 0 0 4px rgba(210,31,45,.18)}
+/* etapes */
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;counter-reset:e}
+.etape{background:#fff;border-radius:20px;padding:1.5rem 1.4rem;box-shadow:0 22px 50px -38px rgba(18,22,29,.6);position:relative;overflow:hidden;transition:transform .4s}
+.etape:hover{transform:translateY(-5px)}
+.etape::before{counter-increment:e;content:counter(e);font-family:'Oswald',sans-serif;font-size:3.2rem;line-height:1;color:var(--ambre);display:block;margin-bottom:.4rem}
+.etape::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:repeating-linear-gradient(90deg,var(--nuit) 0 12px,transparent 12px 20px)}
+.etape p{font-size:.95rem;margin-top:.4rem;color:#4a5260}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#24304a 0%,var(--nuit) 70%);color:#dfe5ec;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--ambre)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:60px;pointer-events:none}
+.guirlande svg{width:100%;height:100%}
+.guirlande circle{animation:scintille 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes scintille{50%{opacity:.25}}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.noel p{max-width:34rem}
+.noel p+p{margin-top:1rem}
+.idees{display:grid;gap:.8rem;margin:1.6rem 0 2rem}
+.idees div{border:1px solid rgba(255,194,61,.35);border-radius:16px;padding:1rem 1.1rem;background:rgba(255,255,255,.03)}
+.idees b{font-family:'Oswald',sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.04em;font-weight:500;font-size:1.1rem;display:block}
+.bon{position:relative;border-radius:22px;padding:1.6rem 1.4rem;background:linear-gradient(135deg,#fffdf6,#f2ead8);color:var(--nuit);box-shadow:0 40px 70px -40px rgba(0,0,0,.9);transform:rotate(-2deg);text-align:center}
+.bon::before{content:"";position:absolute;inset:8px;border:1.5px dashed rgba(210,31,45,.45);border-radius:16px}
+.bon .lumineux{margin-bottom:1rem}
+.bon h3{font-size:1.7rem;color:var(--rouge)}
+.bon p{font-size:.9rem;margin:.5rem auto 0;color:#4a5260}
+.bon small{display:block;margin-top:.9rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.fiche{background:#fff;border-radius:22px;padding:1.6rem 1.4rem;box-shadow:0 26px 60px -40px rgba(18,22,29,.65);display:grid;gap:1.1rem}
+.fiche div{display:flex;gap:.9rem;align-items:flex-start}
+.fiche svg{width:22px;height:22px;flex:none;color:var(--rouge);margin-top:.15rem}
+.fiche small{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gris);font-weight:700}
+.fiche a{text-decoration:none;font-weight:600;overflow-wrap:anywhere}
+.fiche a:hover{color:var(--rouge)}
+.ouvert{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:#178a45}
+.ouvert::before{content:"";width:10px;height:10px;border-radius:50%;background:#1fa855;box-shadow:0 0 0 0 rgba(31,168,85,.6);animation:pouls 2s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 10px rgba(31,168,85,0)}100%{box-shadow:0 0 0 0 rgba(31,168,85,0)}}
+footer{background:var(--nuit);color:#9aa3b0;text-align:center;padding:2.6rem 1rem 6.5rem;font-size:.85rem}
+footer b{color:#fff}
+/* barre d'appel mobile */
+.appel{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:55;display:flex;gap:.5rem;background:rgba(18,22,29,.92);backdrop-filter:blur(8px);padding:.45rem;border-radius:18px;box-shadow:0 20px 40px -18px rgba(0,0,0,.8)}
+.appel a{min-height:46px;padding:.6rem 1rem;font-size:.88rem;border-radius:12px}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .bord,.carte-ile,.noel-in,.contact-in{grid-template-columns:1fr}
+ .posts,.etapes{grid-template-columns:1fr}
+ .chiffres b{font-size:1.7rem}
+ .photo-bord{margin-top:1rem}
+}
+@media (min-width:821px){.appel{display:none}footer{padding-bottom:2.6rem}}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .reveal,.apparait{opacity:1;transform:none}
+ canvas#phares{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon" id="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Taxi Régis 974</div>
+<div id="jauge" aria-hidden="true"><i></i></div>
+<canvas id="phares" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond"><img src="img/flotte-ocean.webp" alt="Taxis garés face à l'océan, lumineux TAXI sur le toit" fetchpriority="high"></div>
+ <div class="wrap hero-in">
+  <div class="apparait"><span class="lumineux" aria-hidden="true"><b>TAXI REGIS</b><small>974</small></span></div>
+  <p class="eyebrow apparait d2" style="margin-top:1.4rem">Service de taxi · La Marine, Sainte-Suzanne</p>
+  <h1 class="apparait d2">Taxi Régis <span>974</span></h1>
+  <p class="lead apparait d3"><q>Une équipe à votre service qui se déplace dans toute l'île !</q></p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-main" href="tel:+262692862363"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>0692 86 23 63</a>
+   <a class="btn btn-line" href="https://wa.me/262692862363?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20un%20taxi%20%3A%20d%C3%A9part%2C%20arriv%C3%A9e%2C%20jour%20et%20heure%20%3A%20">Réserver sur WhatsApp</a>
+  </div>
+  <div class="badges apparait d4"><span><b>●</b> Toujours ouvert</span><span>Recommandé à <b>100 %</b> · 5 avis</span><span>Partout sur l'île</span></div>
+ </div>
+</header>
+
+<div class="route" aria-hidden="true"></div>
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Sainte-Suzanne</span><span>La Marine</span><span>Saint-Denis</span><span>Col des Bœufs</span><span>Mafate</span><span>Cascade Niagara</span><span>Toute l'île</span>
+ <span>Sainte-Suzanne</span><span>La Marine</span><span>Saint-Denis</span><span>Col des Bœufs</span><span>Mafate</span><span>Cascade Niagara</span><span>Toute l'île</span>
+</div></div>
+
+<section id="bord">
+ <div class="wrap bord">
+  <div class="reveal">
+   <p class="eyebrow">Bienvenue à bord</p>
+   <h2>De La Marine à tout le 974</h2>
+   <p>Taxi Régis, c'est la Société Transport Régis, installée rue de la Source, à La Marine, Sainte-Suzanne. Une équipe à votre service, des berlines et un minibus, et une envie simple : vous emmener là où vous allez, d'un bout à l'autre de La Réunion.</p>
+   <p>Une virée vers une cascade de l'Est, un groupe d'amis à déposer au départ d'une randonnée, un aller le samedi matin et un retour le dimanche après-midi : on s'organise avec vous, à l'heure qui vous arrange.</p>
+   <p class="devise">Toujours ouvert, partout sur l'île : l'équipe Taxi Régis est à votre service.</p>
+   <div class="chiffres">
+    <div><b>24/7</b><span>Toujours ouvert</span></div>
+    <div><b>100 %</b><span>recommandé (5 avis)</span></div>
+    <div><b>974</b><span>toute l'île desservie</span></div>
+   </div>
+  </div>
+  <figure class="photo-bord reveal">
+   <span class="lumineux" aria-hidden="true"><b>TAXI</b><small>RÉGIS</small></span>
+   <img src="img/octavia.webp" alt="Skoda Octavia blanche de Taxi Régis, lumineux TAXI sur le toit" loading="lazy">
+   <figcaption>La Skoda Octavia blanche, prête à partir</figcaption>
+  </figure>
+ </div>
+</section>
+
+<div class="route" aria-hidden="true"></div>
+<section class="flotte" id="flotte">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">La flotte</p>
+   <h2>Berlines &amp; minibus</h2>
+   <p class="intro">Seul, en famille ou en groupe : chaque trajet trouve son véhicule. Voici quelques photos publiées par l'équipe sur sa page.</p>
+  </div>
+  <div class="galerie reveal" tabindex="0" aria-label="Galerie des véhicules">
+   <figure><img src="img/i30.webp" alt="Hyundai i30 blanche avec lumineux taxi Sainte-Suzanne" loading="lazy"><figcaption><b>Hyundai i30</b>Lumineux « Taxi Sainte-Suzanne » sur le toit, sous le ciel bleu de l'Est.</figcaption></figure>
+   <figure><img src="img/vectra-minibus.webp" alt="Berline taxi et minibus Transport Régis garés face aux montagnes" loading="lazy"><figcaption><b>Berline + minibus</b>Les deux véhicules côte à côte, face aux montagnes : de quoi emmener toute la troupe.</figcaption></figure>
+   <figure><img src="img/minibus-col-des-boeufs.webp" alt="Minibus Transport Régis au Col des Bœufs, près du panneau de Mafate" loading="lazy"><figcaption><b>Le minibus Transport Régis</b>Au Col des Bœufs, juste à côté du grand panneau de Mafate.</figcaption></figure>
+   <figure><img src="img/flotte-ocean.webp" alt="Taxis garés face à l'océan" loading="lazy"><figcaption><b>Face à l'océan</b>Les taxis alignés au bord de l'eau, lumineux « Taxi Sainte-Suzanne » sur le toit.</figcaption></figure>
+  </div>
+  <p class="glisse">Faites glisser →</p>
+ </div>
+</section>
+
+<section class="carnet" id="carnet">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Carnet de route</p>
+   <h2>Des trajets qui racontent l'île</h2>
+  </div>
+  <div class="posts">
+   <article class="post reveal">
+    <img src="img/minibus-col-des-boeufs.webp" alt="Minibus Transport Régis au Col des Bœufs dans la brume" loading="lazy">
+    <div><time datetime="2018-02-18">Février 2018 · Col des Bœufs</time>
+    <blockquote>« Samedi matin l'aller et le dimanche après-midi le retour ! »</blockquote>
+    <p>Un aller-retour depuis Saint-Denis jusqu'au Col des Bœufs, pour une randonnée à Mafate entre amies, à l'occasion d'un enterrement de vie de jeune fille.</p></div>
+   </article>
+   <article class="post reveal">
+    <img src="img/cascade-niagara.webp" alt="La Cascade Niagara à Sainte-Suzanne, en pleine eau" loading="lazy">
+    <div><time datetime="2018-01-04">Janvier 2018 · Sainte-Suzanne</time>
+    <blockquote>« Magnifique la Cascade Niagara aujourd'hui ! »</blockquote>
+    <p>La cascade de Sainte-Suzanne en pleine forme, photographiée par l'équipe lors d'une course. Un joli but de balade, à deux pas de La Marine.</p></div>
+   </article>
+  </div>
+
+  <div class="carte-ile">
+   <figure class="reveal">
+    <svg viewBox="0 0 400 330" role="img" aria-label="Carte stylisée de La Réunion avec Sainte-Suzanne, Saint-Denis, Cascade Niagara et Col des Bœufs">
+     <defs><radialGradient id="mer" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#1d6fb5" stop-opacity=".35"/><stop offset="1" stop-color="#1d6fb5" stop-opacity="0"/></radialGradient></defs>
+     <ellipse cx="200" cy="170" rx="195" ry="160" fill="url(#mer)"/>
+     <path d="M165 34 C190 30 215 40 240 52 C262 64 282 86 300 112 C318 140 338 170 356 206 C368 236 352 270 326 286 C298 300 262 304 228 302 C200 300 178 296 156 284 C130 268 108 248 92 226 C74 200 60 176 50 148 C42 124 50 98 70 78 C92 56 128 38 165 34 Z" fill="#2b323d" stroke="#ffc23d" stroke-opacity=".55" stroke-width="2"/>
+     <path d="M120 120 C150 100 190 104 215 130 C232 150 226 182 205 196 C178 212 140 206 122 186 C106 166 104 136 120 120 Z" fill="#33503f" opacity=".55"/>
+     <path id="trace" d="M238 56 C215 44 190 38 166 40 C160 70 158 100 160 128" fill="none" stroke="#ffc23d" stroke-width="3" stroke-linecap="round"/>
+     <circle r="6" fill="#ffc23d"><animateMotion dur="7s" repeatCount="indefinite" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="linear"><mpath href="#trace"/></animateMotion></circle>
+     <g font-family="Oswald,sans-serif" font-size="13" fill="#fff" letter-spacing=".5">
+      <circle cx="238" cy="56" r="7" fill="#d21f2d" stroke="#fff" stroke-width="2"/><text x="250" y="48">LA MARINE</text><text x="250" y="62" fill="#9aa3b0" font-size="10">Sainte-Suzanne</text>
+      <circle cx="232" cy="78" r="4.5" fill="#fff"/><text x="242" y="88" font-size="11">Cascade Niagara</text>
+      <circle cx="166" cy="40" r="5" fill="#fff"/><text x="92" y="24">SAINT-DENIS</text>
+      <circle cx="160" cy="128" r="5" fill="#fff"/><text x="94" y="152">Col des Bœufs</text><text x="94" y="166" fill="#9aa3b0" font-size="10">porte de Mafate</text>
+     </g>
+    </svg>
+    <figcaption>Illustration · trajets tirés des publications de Taxi Régis</figcaption>
+   </figure>
+   <div class="ile-txt reveal">
+    <p class="eyebrow">Partout sur l'île</p>
+    <h3 style="font-size:1.8rem;margin:.5rem 0">Au départ de La Marine</h3>
+    <p>L'équipe se déplace dans toute l'île. Quelques étapes déjà partagées sur sa page :</p>
+    <ul>
+     <li><span><b>Sainte-Suzanne</b>, la maison : La Marine et la Cascade Niagara.</span></li>
+     <li><span><b>Saint-Denis</b>, point de départ d'un week-end rando.</span></li>
+     <li><span><b>Col des Bœufs</b>, la porte d'entrée vers Mafate.</span></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="reserver">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Réserver</p>
+   <h2>Votre course en 3 étapes</h2>
+  </div>
+  <div class="etapes">
+   <div class="etape reveal"><h3>Appelez ou écrivez</h3><p>Par téléphone au 0692 86 23 63, sur WhatsApp ou par e-mail, à toute heure.</p></div>
+   <div class="etape reveal"><h3>Donnez votre trajet</h3><p>Point de départ, destination, jour et heure, nombre de passagers : l'équipe s'organise.</p></div>
+   <div class="etape reveal"><h3>Profitez de la route</h3><p>Installez-vous, votre taxi vous emmène, partout sur l'île.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><svg viewBox="0 0 400 60" preserveAspectRatio="none"><path d="M0 8 Q50 40 100 14 T200 14 T300 14 T400 10" fill="none" stroke="#3a4558" stroke-width="1.5"/>
+  <g><circle cx="20" cy="18" r="3.5" fill="#ffc23d"/><circle cx="55" cy="30" r="3.5" fill="#d21f2d"/><circle cx="90" cy="20" r="3.5" fill="#fff"/><circle cx="125" cy="22" r="3.5" fill="#ffc23d"/><circle cx="160" cy="30" r="3.5" fill="#1fa855"/><circle cx="200" cy="16" r="3.5" fill="#d21f2d"/><circle cx="240" cy="28" r="3.5" fill="#fff"/><circle cx="275" cy="22" r="3.5" fill="#ffc23d"/><circle cx="315" cy="24" r="3.5" fill="#d21f2d"/><circle cx="350" cy="28" r="3.5" fill="#1fa855"/><circle cx="385" cy="14" r="3.5" fill="#fff"/></g></svg></div>
+ <div class="wrap noel-in">
+  <div class="reveal">
+   <p class="eyebrow">Offrir pour Noël</p>
+   <h2>Les fêtes, en taxi</h2>
+   <p>Réveillon en famille, repas chez les amis, sortie au grand air pendant les vacances : réservez votre trajet dès maintenant et profitez de la soirée l'esprit léger.</p>
+   <div class="idees">
+    <div><b>Vos trajets des fêtes</b>Aller et retour réservés à l'avance, pour vous et vos invités.</div>
+    <div><b>Offrir un trajet</b>Une belle idée cadeau : une balade vers la Cascade Niagara ou un départ de randonnée pour un proche.</div>
+   </div>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262692862363?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20un%20trajet%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl%20%3A%20"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver mes trajets des fêtes</a>
+    <a class="btn btn-line" href="https://wa.me/262692862363?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20trajet%20en%20taxi%20pour%20No%C3%ABl%20%3A%20">Offrir un trajet</a>
+   </div>
+  </div>
+  <div class="bon reveal" aria-hidden="true">
+   <span class="lumineux"><b>TAXI REGIS</b><small>974</small></span>
+   <h3>Bon pour un trajet</h3>
+   <p>Offert avec le cœur, à utiliser pour une belle balade sur l'île.</p>
+   <small>Joyeux Noël · Taxi Régis 974</small>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-in">
+  <div class="reveal">
+   <p class="eyebrow">Contact</p>
+   <h2>On vous attend à bord</h2>
+   <p><span class="ouvert">Toujours ouvert</span></p>
+   <p style="margin-top:1rem">Un appel, un message, et votre taxi s'organise pour vous, depuis La Marine jusqu'à l'autre bout de l'île.</p>
+   <div class="ctas" style="margin-top:1.6rem">
+    <a class="btn btn-main" href="tel:+262692862363">Appeler le 0692 86 23 63</a>
+    <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=19+rue+de+la+Source+La+Marine+97441+Sainte-Suzanne+R%C3%A9union">Itinéraire</a>
+   </div>
+  </div>
+  <div class="fiche reveal">
+   <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><p><small>Adresse</small>19 rue de la Source, « La Marine »<br>97441 Sainte-Suzanne, La Réunion</p></div>
+   <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><p><small>Téléphone · WhatsApp</small><a href="tel:+262692862363">0692 86 23 63</a></p></div>
+   <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg><p><small>E-mail</small><a href="mailto:societe.transportregis@gmail.com">societe.transportregis@gmail.com</a></p></div>
+   <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg><p><small>Facebook</small><a href="https://www.facebook.com/taxiregis974/">TAXI REGIS 974</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <p><b>Taxi Régis 974</b> · Société Transport Régis · La Marine, Sainte-Suzanne</p>
+ <p style="margin-top:.6rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Taxi Régis 974.</p>
+</footer>
+
+<div class="appel">
+ <a class="btn btn-main" href="tel:+262692862363">Appeler</a>
+ <a class="btn btn-wa" href="https://wa.me/262692862363?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20un%20taxi%20%3A%20">WhatsApp</a>
+</div>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var rub=document.getElementById('ruban');
+function rh(){document.documentElement.style.setProperty('--rh',rub.offsetHeight+'px')}
+rh();addEventListener('resize',rh);
+var j=document.querySelector('#jauge i');
+function sc(){var h=document.documentElement.scrollHeight-innerHeight;j.style.transform='scaleX('+(h>0?scrollY/h:0)+')'}
+addEventListener('scroll',sc,{passive:true});sc();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+if(rm)return;
+/* lumieres de route : feux et phares qui glissent doucement */
+var c=document.getElementById('phares'),x=c.getContext('2d'),W,H,P=[],run=true,cols=['255,194,61','210,31,45','255,250,235'];
+function size(){var d=Math.min(devicePixelRatio||1,2);W=c.width=innerWidth*d;H=c.height=innerHeight*d}
+size();addEventListener('resize',size);
+for(var i=0;i<26;i++)P.push({x:Math.random(),y:Math.random(),r:4+Math.random()*12,v:(.00025+Math.random()*.0007)*(Math.random()<.5?-1:1),a:.05+Math.random()*.13,c:cols[i%3],t:Math.random()*6});
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+ for(var k=0;k<P.length;k++){var p=P[k];p.x+=p.v;p.t+=.012;if(p.x>1.05)p.x=-.05;if(p.x<-.05)p.x=1.05;
+  var px=p.x*W,py=p.y*H+Math.sin(p.t)*8,r=p.r*(W/innerWidth),g=x.createRadialGradient(px,py,0,px,py,r*2.4);
+  g.addColorStop(0,'rgba('+p.c+','+p.a+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.beginPath();x.arc(px,py,r*2.4,0,7);x.fill()}
+ requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Taxi Régis 974" defer></script>
+</body>
+</html>
