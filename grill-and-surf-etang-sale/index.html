@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Grill and Surf · Rôtisserie à Étang-Salé les Bains</title>
+<meta name="description" content="Grill and Surf, rôtisserie sur place et à emporter à Étang-Salé les Bains : poulet rôti, gigot d'agneau, brochettes, samoussas. Terrasse de 24 couverts, du mercredi au dimanche.">
+<meta property="og:title" content="Grill and Surf · Rôtisserie, Étang-Salé les Bains">
+<meta property="og:description" content="Rôtisserie sur place et à emporter, terrasse de 24 couverts face à la grande vague.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/grill-and-surf-etang-sale/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/grill-and-surf-etang-sale/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{--bordeaux:#8a1b2c;--bordeaux-f:#5e0f1c;--ocean:#1f6fc4;--ocean-f:#0f3f78;--ecume:#e9f4fc;--citron:#9bc23c;--ardoise:#202429;--ardoise-c:#2c3238;--braise:#f2892b;--sable:#f7f1e7;--txt:#2a2626;--doux:#6f6863}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--sable);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.98;color:var(--ardoise)}
+h2{font-size:clamp(2.6rem,9vw,4.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.7rem}
+.craie{font-family:'Caveat',cursive;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--bordeaux);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--bordeaux-f);color:#f6d9c4;text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.04em;font-size:.92rem;transition:.3s}
+.btn-main{background:var(--braise);color:#1d1408;box-shadow:0 14px 30px -14px rgba(242,137,43,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:#ffa04a}
+@keyframes souffle{50%{box-shadow:0 12px 42px -6px rgba(242,137,43,.75)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{border:1.5px solid var(--ardoise);color:var(--ardoise)}
+.btn-dark:hover{background:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ocean-f);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,30,55,.2) 0%,rgba(15,30,55,.45) 28%,rgba(20,14,18,.82) 52%,rgba(20,14,18,.96) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 5rem}
+.badge{display:inline-block;background:var(--bordeaux);color:#fff;font-family:'Bebas Neue';font-size:1.25rem;letter-spacing:.14em;padding:.25rem .9rem .1rem;border-radius:4px;box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+.hero h1{color:#fff;font-size:clamp(4.4rem,21vw,9rem);margin:.6rem 0 .2rem;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero h1 em{font-style:normal;color:#8fd0ff}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:.8rem 0 1.8rem;color:#f3efe9;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.ardoise-mini{display:inline-block;margin-top:1.8rem;rotate:-2deg;background:var(--ardoise);border:3px solid #6b3b22;border-radius:6px;padding:.5rem 1rem;color:#fff;font-size:1.35rem;line-height:1.1;box-shadow:0 18px 30px -16px rgba(0,0,0,.8)}
+.ardoise-mini small{display:block;font-family:'Nunito Sans';font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#bfc6cc;margin-top:.25rem}
+.apparait{animation:monte 1.2s .2s both}.apparait.d2{animation-delay:.4s}.apparait.d3{animation-delay:.6s}.apparait.d4{animation-delay:.8s}
+@keyframes monte{from{transform:translateY(22px)}to{transform:none}}
+/* vagues */
+.vague{display:block;width:100%;height:60px;position:relative;z-index:3}
+.vague.haut{margin-top:-59px}
+.vague path{animation:houle 7s ease-in-out infinite alternate}
+@keyframes houle{to{transform:translateX(-40px)}}
+/* bandeau */
+.bande{background:var(--ocean);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Bebas Neue';font-size:1.45rem;letter-spacing:.06em}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"";display:inline-block;width:.42rem;height:.42rem;border-radius:50%;background:var(--braise);margin-left:2.2rem;vertical-align:.25rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.cite{margin:1.4rem 0;padding:1.2rem 1.4rem;background:#fff;border-left:4px solid var(--braise);border-radius:0 16px 16px 0;font-size:1.02rem;box-shadow:0 20px 40px -32px rgba(0,0,0,.5)}
+.cite small{display:block;margin-top:.5rem;color:var(--doux);font-size:.8rem}
+.photo{border-radius:22px;overflow:hidden;box-shadow:0 34px 60px -34px rgba(20,20,30,.6);position:relative}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.3s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(32,36,41,.86);color:#fff;font-size:.8rem;padding:.3rem .8rem;border-radius:999px}
+.chiffres{display:flex;gap:1.6rem;margin-top:1.6rem;flex-wrap:wrap}
+.chiffres div{font-size:.85rem;color:var(--doux);line-height:1.3}
+.chiffres b{display:block;font-family:'Bebas Neue';font-size:2.4rem;color:var(--bordeaux);font-weight:400;line-height:1}
+/* carte ardoise */
+.carte-sec{background:var(--ardoise);color:#e9ecef;background-image:radial-gradient(circle at 20% 10%,rgba(255,255,255,.05),transparent 40%),radial-gradient(circle at 80% 90%,rgba(255,255,255,.04),transparent 45%)}
+.carte-sec h2{color:#fff}
+.carte-sec .eyebrow{color:var(--braise)}
+.carte-sec .chapo{max-width:40rem;color:#c6ccd2}
+.ardoises{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.4rem}
+.ard{background:var(--ardoise-c);border:2px solid rgba(255,255,255,.08);border-radius:16px;padding:1.4rem 1.3rem;transition:transform .4s,border-color .4s;position:relative}
+.ard:hover{transform:translateY(-6px) rotate(-.6deg);border-color:rgba(242,137,43,.6)}
+.ard h3{font-family:'Caveat';font-weight:700;font-size:2rem;color:var(--citron);letter-spacing:0;line-height:1;margin-bottom:.7rem}
+.ard ul{list-style:none;font-family:'Caveat';font-size:1.38rem;line-height:1.3;color:#fbe1c8}
+.ard li::before{content:"· ";color:var(--braise)}
+.note{margin-top:1.8rem;font-size:.86rem;color:#9aa3ab;text-align:center}
+/* galerie */
+.gal-tete{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 0 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 min(78%,420px);scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 22px 40px -30px rgba(0,0,0,.55)}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{padding:.7rem 1rem;font-size:.86rem;color:var(--doux)}
+.glisse{font-family:'Caveat';font-size:1.4rem;color:var(--ocean)}
+/* surf */
+.surf{background:linear-gradient(180deg,var(--ecume),#d6ebfa);overflow:hidden}
+.surf-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.surf .eyebrow{color:var(--ocean)}
+.fresque{position:relative;max-width:400px;margin:auto}
+.fresque img{width:100%;aspect-ratio:620/820;object-fit:cover;border-radius:200px 200px 22px 22px;box-shadow:0 0 0 10px rgba(255,255,255,.7),0 40px 70px -30px rgba(15,63,120,.65)}
+.fresque figcaption{text-align:center;margin-top:1rem;font-size:.84rem;color:var(--ocean-f)}
+.happy{margin-top:1.6rem;background:var(--ardoise);color:#fff;border-radius:16px;padding:1.2rem 1.4rem;display:flex;gap:1rem;align-items:center}
+.happy .craie{font-size:2rem;color:var(--citron);line-height:1;flex:0 0 auto}
+.happy p{font-size:.95rem;color:#d6dbe0}
+.puces{display:grid;gap:.6rem;margin-top:1.2rem}
+.puces p{display:flex;gap:.7rem;align-items:flex-start}
+.puces p::before{content:"";flex:0 0 .7rem;height:.7rem;margin-top:.5rem;border-radius:50%;background:var(--citron);box-shadow:0 0 0 4px rgba(155,194,60,.25)}
+/* reserver */
+.resa{background:var(--bordeaux);color:#fff;text-align:center;overflow:hidden}
+.resa h2{color:#fff}
+.resa .eyebrow{color:#ffd2a8}
+.resa p.l{max-width:36rem;margin:0 auto 1.8rem;color:#f6dfe0}
+.resa .ctas{justify-content:center}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:0 auto 2rem;max-width:40rem}
+.tags span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:.35rem 1rem;font-size:.92rem}
+/* fêtes */
+.fetes{background:var(--sable);overflow:hidden}
+.fetes-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.idee{background:#fff;border-radius:16px;padding:1.1rem 1.3rem;border:1px solid #eadfcd}
+.idee h3{font-size:1.5rem;color:var(--bordeaux);margin-bottom:.2rem}
+.idee p{font-size:.95rem}
+.etiquette{aspect-ratio:1.2;max-width:380px;width:100%;margin:auto;border-radius:22px;background:var(--ardoise);border:6px solid #6b3b22;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.4rem;padding:1.6rem;transform:rotate(-3deg);transition:transform .6s;box-shadow:0 40px 70px -35px rgba(0,0,0,.7);position:relative;overflow:hidden}
+.etiquette:hover{transform:rotate(0)}
+.etiquette .craie{font-size:clamp(2.4rem,9vw,3.2rem);color:var(--citron);line-height:1}
+.etiquette .c2{font-size:1.6rem;color:#fbe1c8}
+.etiquette small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:#aab2b9}
+.guirlande{position:absolute;top:10px;left:0;right:0;display:flex;justify-content:space-around}
+.guirlande i{width:8px;height:8px;border-radius:50%;background:var(--braise);box-shadow:0 0 10px var(--braise);animation:clign 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:#8fd0ff;box-shadow:0 0 10px #8fd0ff;animation-delay:1.2s}
+@keyframes clign{50%{opacity:.35}}
+.mini{font-size:.82rem;color:var(--doux);margin-top:1rem}
+/* contact */
+.contact{background:#fff}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.horaires{background:var(--ardoise);color:#fff;border-radius:18px;padding:1.4rem 1.5rem;margin:1.2rem 0}
+.horaires h3{color:var(--citron);font-family:'Caveat';font-weight:700;font-size:1.9rem;letter-spacing:0}
+.horaires p{font-size:1rem;margin-top:.3rem;color:#e3e7ea}
+.infos .horaires b{color:#fff}
+.infos p{margin:.45rem 0;overflow-wrap:anywhere}
+.infos b{color:var(--ardoise)}
+.infos p a{color:var(--bordeaux);font-weight:700}
+.contact figure img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.contact figcaption{font-size:.82rem;color:var(--doux);margin-top:.5rem}
+footer{text-align:center;padding:2.4rem 1.2rem 6rem;font-size:.82rem;color:#b9b2ab;background:var(--ardoise)}
+footer b{color:#fff;font-family:'Bebas Neue';font-size:1.5rem;letter-spacing:.06em;font-weight:400}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .intro-in,.surf-in,.fetes-in,.contact-in{grid-template-columns:1fr}
+ .ardoises{grid-template-columns:1fr 1fr}
+ .surf-in .fresque{order:-1}
+}
+@media (max-width:560px){
+ .ardoises{grid-template-columns:1fr}
+ .ribbon{font-size:.68rem}
+ .hero-in{padding-top:6rem}
+ .happy{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Grill and Surf</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/terrasse-vague.webp" alt="La terrasse de Grill and Surf, ses chaises vertes et bleues devant la grande fresque de vague" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <span class="badge apparait">Rôtisserie</span>
+    <h1 class="rv apparait d2">Grill <em>&amp;</em> Surf</h1>
+    <p class="lead apparait d3">Rôtisserie sur place et à emporter, terrasse de 24 couverts à Étang-Salé les Bains. Le bon poulet rôti, le gigot d'agneau et les brochettes, face à la grande vague.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="tel:+33645702481">Réserver mon poulet</a>
+      <a class="btn btn-line" href="#carte">Voir la vitrine</a>
+    </div>
+    <div class="ardoise-mini craie apparait d4">Pensez à réserver vos poulets !<small>L'ardoise de la terrasse</small></div>
+  </div>
+</header>
+<svg class="vague haut" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path fill="#1f6fc4" d="M-60 30 C140 0 300 60 500 30 S860 0 1060 30 S1340 60 1500 26 V60 H-60Z"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Poulet rôti</span><span>Gigot d'agneau</span><span>Souris d'agneau</span><span>Brochettes</span><span>Rôti d'échine</span><span>Travers de porc</span><span>Croquettes</span><span>Cordons bleus</span><span>Samoussas</span><span>Nems</span><span>Lasagnes</span>
+<span>Poulet rôti</span><span>Gigot d'agneau</span><span>Souris d'agneau</span><span>Brochettes</span><span>Rôti d'échine</span><span>Travers de porc</span><span>Croquettes</span><span>Cordons bleus</span><span>Samoussas</span><span>Nems</span><span>Lasagnes</span>
+</div></div>
+
+<section id="maison">
+  <div class="wrap intro-in">
+    <div class="rv">
+      <p class="eyebrow">Avenue de Bretagne · Étang-Salé les Bains</p>
+      <h2>Ça tourne à la broche, ça sent bon la plage</h2>
+      <p>Chez Grill and Surf, la rôtisserie dore volailles et rôtis dès 10h30, et la terrasse accueille celles et ceux qui aiment savourer sur place, au soleil d'Étang-Salé les Bains. Pour la plage, le bureau ou la famille : tout se prend aussi à emporter.</p>
+      <div class="cite">« Au menu ce jour, brochettes, croquettes, cordons bleus, gigot d'agneau, rôti d'échine et bien sûr le bon poulet rôti 🤗 »<small>Grill and Surf, sur sa page Facebook</small></div>
+      <div class="chiffres">
+        <div><b>24</b>couverts en terrasse</div>
+        <div><b>5 jours</b>du mercredi au dimanche</div>
+        <div><b>2 services</b>midi et soir</div>
+      </div>
+    </div>
+    <figure class="photo rv"><img src="img/vitrine-rotisserie.webp" alt="La vitrine chaude : poulets rôtis, brochettes, gigot, travers et cordons bleus" loading="lazy"><figcaption>La vitrine chaude du jour</figcaption></figure>
+  </div>
+</section>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">Les ardoises de la vitrine</p>
+    <h2 class="rv">Ce qui dore chez Grill and Surf</h2>
+    <p class="chapo rv">Tout est écrit à la craie, comme en boutique. La vitrine change au fil des jours : un coup de fil et on vous dit ce qui sort de la broche.</p>
+    <div class="ardoises">
+      <div class="ard rv"><h3>À la broche</h3><ul><li>Poulet rôti</li><li>Gigot d'agneau</li><li>Rôti de porc échine</li><li>Travers de porc</li><li>Mignon farci</li><li>Saucisses grillées</li></ul></div>
+      <div class="ard rv"><h3>Côté poulet</h3><ul><li>Paupiettes de poulet</li><li>Cuisses de poulet</li><li>Ailes de poulet</li><li>Brochettes de poulet</li><li>Tenders et croquettes</li><li>Cordon bleu</li></ul></div>
+      <div class="ard rv"><h3>Petits creux</h3><ul><li>Samoussas pdt morue piment</li><li>Samoussas poulet sarcive</li><li>Fromage jambon dinde</li><li>Trois fromages</li><li>Dakatine</li><li>Nems porc, crevette, légumes</li></ul></div>
+      <div class="ard rv"><h3>Plats &amp; accompagnements</h3><ul><li>Pommes de terre rôties</li><li>Trio de légumes</li><li>Lasagne poulet</li><li>Gratin brocolis</li><li>Tartiflette</li><li>Salades composées</li></ul></div>
+    </div>
+    <p class="note rv">Ardoises relevées sur les photos de la vitrine publiées par Grill and Surf.</p>
+  </div>
+</section>
+
+<section id="vitrine">
+  <div class="wrap">
+    <div class="gal-tete rv">
+      <div><p class="eyebrow">En photos</p><h2>Un tour de vitrine</h2></div>
+      <span class="glisse">glissez →</span>
+    </div>
+    <div class="galerie rv">
+      <figure><img src="img/vitrine-poulets.webp" alt="Poulets rôtis, brochettes, travers et cordons bleus en vitrine" loading="lazy"><figcaption>Poulets rôtis, brochettes et cordons bleus</figcaption></figure>
+      <figure><img src="img/samoussas.webp" alt="Vitrine de samoussas et de nems" loading="lazy"><figcaption>Samoussas et nems, quatre parfums</figcaption></figure>
+      <figure><img src="img/saucisses.webp" alt="Saucisses grillées bien dorées" loading="lazy"><figcaption>Les saucisses grillées</figcaption></figure>
+      <figure><img src="img/plats-chauds.webp" alt="Pommes de terre rôties, trio de légumes, gratin brocolis et lasagnes" loading="lazy"><figcaption>Pommes de terre rôties, légumes, gratins</figcaption></figure>
+      <figure><img src="img/vitrine-du-jour.webp" alt="Vitrine avec paupiettes, croquettes de poulet et poulets rôtis" loading="lazy"><figcaption>Paupiettes, tenders et croquettes</figcaption></figure>
+      <figure><img src="img/tartiflette.webp" alt="Tartiflette en barquettes et trio de légumes" loading="lazy"><figcaption>Tartiflette en barquettes</figcaption></figure>
+      <figure><img src="img/salades.webp" alt="Salades composées en bols à emporter" loading="lazy"><figcaption>Les salades à emporter</figcaption></figure>
+      <figure><img src="img/samoussas-nems.webp" alt="Samoussas dorés et nems dans la vitrine chauffante" loading="lazy"><figcaption>Samoussas dorés, tout juste sortis</figcaption></figure>
+      <figure><img src="img/vitrine-fraiche.webp" alt="Vitrine fraîche : desserts, salades et poulet" loading="lazy"><figcaption>La vitrine fraîche : desserts et salades</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--sable)"><path fill="#e9f4fc" d="M-60 34 C160 4 320 60 520 32 S880 2 1080 32 S1340 58 1500 28 V60 H-60Z"/></svg>
+<section class="surf" id="terrasse">
+  <div class="wrap surf-in">
+    <figure class="fresque rv"><img src="img/fresque-vague.webp" alt="La grande fresque de vague peinte sur le mur de la terrasse" loading="lazy"><figcaption>La grande vague peinte de la terrasse</figcaption></figure>
+    <div class="rv">
+      <p class="eyebrow">Le côté Surf</p>
+      <h2>Une terrasse qui prend la vague</h2>
+      <p>Chaises vert citron et bleu ciel, tables à l'ombre de la voile, et sur le mur un surfeur dans le tube : la terrasse de Grill and Surf donne le ton, celui des fins de journée à Étang-Salé les Bains.</p>
+      <div class="puces">
+        <p>24 couverts pour manger sur place, midi et soir</p>
+        <p>Tout à emporter, pour la plage ou la maison</p>
+        <p>Service du soir de 17h00 à 19h30</p>
+      </div>
+      <div class="happy"><span class="craie">Happy Hour</span><p>Le 31 octobre, la rôtisserie a fêté le Happy Halloween Happy Hour de 17h à 19h : suivez la page Facebook pour les prochains rendez-vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="resa" id="reserver">
+  <div class="wrap rv">
+    <p class="eyebrow">Le bon réflexe</p>
+    <h2>Pensez à réserver !</h2>
+    <p class="l">C'est écrit sur l'ardoise de la terrasse : pensez à réserver vos poulets ! Le gigot d'agneau rôti et la souris d'agneau se réservent aussi. Un appel, et votre commande vous attend bien dorée.</p>
+    <div class="tags"><span>Poulet rôti</span><span>Gigot d'agneau rôti</span><span>Souris d'agneau</span><span>Brochettes</span></div>
+    <div class="ctas">
+      <a class="btn btn-main" href="tel:+33645702481">Appeler la rôtisserie</a>
+      <a class="btn btn-line" href="mailto:contact@grill-and-surf.re?subject=R%C3%A9servation%20Grill%20and%20Surf">Écrire un e-mail</a>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap fetes-in">
+    <div class="rv">
+      <p class="eyebrow">Noël à la rôtisserie</p>
+      <h2>Vos tablées de fêtes, rôties à point</h2>
+      <p>Pour Noël et le jour de l'an, Grill and Surf prépare vos pièces rôties : vous passez les récupérer bien chaudes, et vous profitez de vos invités.</p>
+      <div class="idees">
+        <div class="idee"><h3>Le gigot d'agneau rôti</h3><p>La pièce du repas de fête, à réserver pour le jour J.</p></div>
+        <div class="idee"><h3>Les poulets rôtis</h3><p>Pour les grandes tablées en famille, commandés à l'avance.</p></div>
+        <div class="idee"><h3>L'apéro des fêtes</h3><p>Samoussas, nems et brochettes pour lancer la soirée.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-main" href="tel:+33645702481">Réserver pour les fêtes</a>
+        <a class="btn btn-dark" href="mailto:contact@grill-and-surf.re?subject=Commande%20pour%20les%20f%C3%AAtes&amp;body=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e%20%3A%20">Commander par e-mail</a>
+      </div>
+    </div>
+    <div class="etiquette rv" aria-hidden="true">
+      <div class="guirlande"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <small>Commande des fêtes</small>
+      <span class="craie">Joyeux Noël</span>
+      <span class="craie c2">à la broche !</span>
+      <small>Grill and Surf · Étang-Salé</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir · Réserver</p>
+      <h2>Rendez-vous à la rôtisserie</h2>
+      <div class="horaires">
+        <h3>Horaires</h3>
+        <p><b>Du mercredi au dimanche</b></p>
+        <p>Midi · 10h30 – 14h30</p>
+        <p>Soir · 17h00 – 19h30</p>
+      </div>
+      <p><b>Adresse</b> · 15 avenue de Bretagne, Étang-Salé les Bains, 97424 L'Étang-Salé</p>
+      <p><b>Téléphone</b> · <a href="tel:+33645702481">06 45 70 24 81</a></p>
+      <p><b>E-mail</b> · <a href="mailto:contact@grill-and-surf.re">contact@grill-and-surf.re</a></p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="tel:+33645702481">Appeler</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=15%20avenue%20de%20Bretagne%2097424%20%C3%89tang-Sal%C3%A9%20les%20Bains">Itinéraire</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/profile.php?id=61587080644713">Facebook</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/terrasse-vague.webp" alt="L'enseigne Rôtisserie et la terrasse de Grill and Surf" loading="lazy" style="object-position:30% 20%"><figcaption>L'enseigne bordeaux et la terrasse, 15 avenue de Bretagne</figcaption></figure>
+  </div>
+</section>
+
+<footer><b>Grill and Surf</b><br>Rôtisserie sur place et à emporter · Étang-Salé les Bains, La Réunion<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Grill and Surf.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* braises de rôtisserie qui montent doucement */
+const c=document.getElementById('braises'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.6+.6,v:Math.random()*.35+.12,a:Math.random()*6.28,d:Math.random()*.5-.25});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.03;p.x+=Math.sin(p.a)*.35+p.d*.2;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+ const o=.22+Math.sin(p.a*1.3)*.16;x.globalAlpha=Math.max(o,.05);
+ const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*3.2);g.addColorStop(0,'#ffd18a');g.addColorStop(.4,'#f2892b');g.addColorStop(1,'rgba(242,137,43,0)');
+ x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*3.2,0,6.28);x.fill()}
+x.globalAlpha=1;requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Grill and Surf" defer></script>
+</body>
+</html>
