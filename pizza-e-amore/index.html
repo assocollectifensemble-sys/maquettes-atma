@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizza e Amore · Pizzas artisanales à Saint-André</title>
+<meta name="description" content="Pizza e Amore, Pizza &amp; Pasta Corner à Saint-André (La Réunion) : pizzas artisanales, saveurs italiennes, bowls en pâte à pizza et douceurs maison. Tous les soirs dès 18h. 0693 43 20 83.">
+<meta property="og:title" content="Pizza e Amore · Pizza &amp; Pasta Corner, Saint-André">
+<meta property="og:description" content="Pizzas artisanales, saveurs italiennes, 2657 chemin Lefaguyes à Saint-André. Commande sur WhatsApp au 0693 43 20 83.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/pizza-e-amore/img/suprema-salmone.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/pizza-e-amore/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@500;600&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#1d5732;--vert-f:#0f3a20;--rose:#f3b4ae;--rose-c:#fbe3df;--kraft:#c79c6b;--kraft-c:#ead6bb;--tomate:#c9342c;--creme:#fbf6ee;--nuit:#15241a;--txt:#2d2a26;--doux:#7a6f63}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;color:var(--vert);line-height:1.08;letter-spacing:.02em}
+h2{font-size:clamp(2rem,7.4vw,3.2rem);margin:.3rem 0 1.1rem;text-transform:uppercase}
+h3{font-size:1.3rem;text-transform:uppercase}
+.script{font-family:'Dancing Script',cursive;font-weight:600;color:var(--tomate);line-height:1}
+.eyebrow{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--tomate);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--rose);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#farine{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.tricolore{display:flex;gap:4px;width:56px;margin-bottom:1rem}
+.tricolore i{flex:1;height:5px;border-radius:3px;background:var(--vert)}
+.tricolore i:nth-child(2){background:#fff;box-shadow:inset 0 0 0 1px #ddd}
+.tricolore i:nth-child(3){background:var(--tomate)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--vert);color:#fff;box-shadow:0 14px 30px -14px rgba(29,87,50,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-wa:hover{background:var(--vert-f)}
+@keyframes souffle{50%{box-shadow:0 14px 42px -6px rgba(29,87,50,.6);transform:scale(1.02)}}
+.btn-rose{background:var(--rose);color:var(--nuit)}
+.btn-rose:hover{background:#fff}
+.btn-line{border:1.5px solid var(--rose);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,36,26,.25) 0%,rgba(21,36,26,.35) 35%,rgba(21,36,26,.93) 78%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.5rem}
+.hero .marque{font-family:'Dancing Script',cursive;color:var(--rose);font-size:1.7rem;font-weight:600}
+.hero h1{color:var(--rose);font-size:clamp(3rem,14vw,7rem);text-transform:uppercase;margin:.2rem 0 .3rem;text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.hero h1 .e{display:inline-block;position:relative;font-size:.62em;vertical-align:.2em;padding:0 .08em}
+.hero h1 .e::after{content:"";position:absolute;left:.1em;right:.1em;bottom:-.06em;height:.08em;background:var(--rose);border-radius:2px}
+.hero .est{letter-spacing:.35em;font-size:.8rem;color:var(--kraft-c);text-transform:uppercase}
+.hero .lead{font-size:1.15rem;max-width:32rem;margin:1.1rem 0 1.8rem;color:var(--creme);text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--kraft-c)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .25s forwards}
+.d2{animation-delay:.45s}.d3{animation-delay:.65s}.d4{animation-delay:.85s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--vert);color:var(--rose);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Dancing Script',cursive;font-size:1.45rem;font-weight:600}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-size:.8rem;color:var(--kraft-c)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison .grid{display:grid;gap:2.4rem;align-items:center}
+.maison p{margin-bottom:1rem}
+.maison .cartouche{background:#fff;border-radius:22px;padding:1.4rem 1.5rem;box-shadow:0 20px 50px -30px rgba(21,36,26,.45);border-left:6px solid var(--vert)}
+.trois{display:grid;gap:.7rem;margin:1.2rem 0}
+.trois div{display:flex;gap:.8rem;align-items:baseline}
+.trois b{font-family:'Alfa Slab One',serif;font-weight:400;color:var(--tomate);font-size:.95rem;text-transform:uppercase;min-width:7.5rem}
+.boite{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(21,36,26,.6)}
+.boite img{width:100%;aspect-ratio:1/1;object-fit:cover}
+figcaption{font-size:.8rem;color:var(--doux);margin-top:.6rem;font-style:italic}
+/* signatures */
+.signatures{background:var(--rose-c)}
+.cartes{display:grid;gap:1.6rem;margin-top:2rem}
+.carte{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 22px 50px -30px rgba(21,36,26,.55);transition:transform .45s,box-shadow .45s}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 30px 60px -28px rgba(21,36,26,.6)}
+.carte .ph{overflow:hidden;aspect-ratio:4/3.4}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.carte:hover .ph img{transform:scale(1.07) rotate(2deg)}
+.carte .txt{padding:1.3rem 1.4rem 1.6rem}
+.carte .tag{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;background:var(--vert);color:#fff;border-radius:99px;padding:.2rem .75rem;margin-bottom:.7rem}
+.carte ul{list-style:none;margin-top:.6rem}
+.carte li{padding-left:1.2rem;position:relative;font-size:.97rem}
+.carte li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--tomate)}
+/* nouveautes */
+.nouv{display:grid;gap:1.2rem;margin-top:1.6rem}
+.nouv article{border:1.5px dashed var(--kraft);border-radius:20px;padding:1.3rem 1.4rem;background:rgba(255,255,255,.6)}
+.nouv h3{font-size:1.1rem;color:var(--tomate);margin-bottom:.4rem}
+/* bowl */
+.bowl{background:var(--vert);color:var(--creme);overflow:hidden}
+.bowl h2{color:var(--rose)}
+.bowl .grid{display:grid;gap:2rem;align-items:center}
+.bowl .eyebrow{color:var(--kraft-c)}
+.bowl svg.illu{width:min(320px,80%);margin:auto;display:block;animation:flotte 6s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(-2deg)}}
+.bowl figcaption{color:var(--kraft-c);text-align:center}
+.bowl .recette{background:rgba(255,255,255,.08);border-radius:18px;padding:1.1rem 1.3rem;margin-top:1.2rem;border:1px solid rgba(243,180,174,.35)}
+.bowl .recette b{font-family:'Alfa Slab One',serif;font-weight:400;color:var(--rose);letter-spacing:.03em}
+/* douceurs */
+.douceurs .grid{display:grid;gap:2rem;align-items:center}
+.douceurs .ph{border-radius:24px;overflow:hidden;box-shadow:0 26px 60px -32px rgba(21,36,26,.6)}
+.douceurs .ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.liste-d{list-style:none;margin:1rem 0 1.4rem}
+.liste-d li{display:flex;gap:.7rem;align-items:center;padding:.65rem 0;border-bottom:1px solid var(--kraft-c);font-weight:700;color:var(--nuit)}
+.liste-d li span{font-family:'Dancing Script',cursive;color:var(--tomate);font-size:1.5rem;line-height:1}
+/* galerie */
+.galerie{background:var(--nuit);color:var(--creme);padding-bottom:3rem}
+.galerie h2{color:var(--rose)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.2rem 5vw 1.5rem;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 78%;max-width:380px;scroll-snap-align:center}
+.rail img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px}
+.rail figcaption{color:var(--kraft-c)}
+.astuce{text-align:center;font-size:.85rem;color:var(--kraft-c)}
+/* noel */
+.noel{background:linear-gradient(170deg,#0f3a20 0%,#1d5732 70%,#24683c 100%);color:var(--creme);overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--rose)}
+.noel .boule{position:absolute;border-radius:50%;opacity:.9}
+.noel .carte-n{background:rgba(251,246,238,.08);border:1px solid rgba(243,180,174,.4);border-radius:24px;padding:1.6rem 1.4rem;margin:1.6rem 0;backdrop-filter:blur(2px)}
+.noel .carte-n p{margin-bottom:.8rem}
+.noel .duo{display:grid;gap:.8rem;margin:1rem 0 1.2rem}
+.noel .duo div{background:rgba(255,255,255,.07);border-radius:16px;padding:.9rem 1rem}
+.noel .duo b{display:block;font-family:'Alfa Slab One',serif;font-weight:400;color:var(--rose);letter-spacing:.03em}
+.guirlande{display:block;width:100%;height:40px}
+.note{font-size:.82rem;color:var(--kraft-c)}
+/* contact */
+.contact .grid{display:grid;gap:1.6rem}
+.bloc{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 20px 50px -34px rgba(21,36,26,.5)}
+.bloc h3{font-size:1.05rem;margin-bottom:.7rem}
+.horaires div{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed var(--kraft-c)}
+.horaires div:last-child{border:0}
+.horaires b{color:var(--vert)}
+.liens{display:grid;gap:.7rem;margin-top:.4rem}
+.liens a{display:flex;gap:.7rem;align-items:center;text-decoration:none;font-weight:700;padding:.7rem .9rem;border-radius:14px;background:var(--creme);transition:.3s}
+.liens a:hover{background:var(--rose-c)}
+.liens svg{width:22px;height:22px;flex:none;color:var(--vert)}
+footer{background:var(--nuit);color:var(--kraft-c);text-align:center;padding:2.6rem 1.2rem 3rem;font-size:.86rem}
+footer .logo{font-family:'Alfa Slab One',serif;color:var(--rose);font-size:1.5rem;letter-spacing:.04em}
+footer .logo + p{font-family:'Dancing Script',cursive;font-size:1.25rem;color:var(--rose);margin-bottom:1rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .maison .grid,.bowl .grid,.douceurs .grid{grid-template-columns:1.1fr .9fr}
+ .cartes{grid-template-columns:repeat(3,1fr)}
+ .nouv{grid-template-columns:1fr 1fr}
+ .contact .grid{grid-template-columns:1fr 1fr}
+ .noel .duo{grid-template-columns:1fr 1fr}
+ .rail figure{flex-basis:32%}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.apparait{opacity:1;transform:none}canvas#farine{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Pizza e Amore</div>
+<canvas id="farine" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond"><img src="img/pollo-croccante-zoom.webp" alt="Gros plan sur la Pollo Croccante de Pizza e Amore : poulet croustillant et fromage fondant sur pâte dorée"></div>
+ <div class="hero-in wrap">
+  <p class="marque apparait">Pizza &amp; Pasta Corner</p>
+  <h1 class="apparait d2">Pizza <span class="e">e</span> Amore</h1>
+  <p class="est apparait d2">Saint-André · Est 2024</p>
+  <p class="lead apparait d3">Pizzas artisanales, saveurs italiennes. Des classiques, des gourmandes et des signatures, préparées chaque soir avec une touche d'amore.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-wa" href="https://wa.me/262693432083?text=Bonjour%20Pizza%20e%20Amore%2C%20je%20voudrais%20passer%20commande%20ce%20soir%20%F0%9F%8D%95"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Commander sur WhatsApp</a>
+   <a class="btn btn-line" href="tel:+262693432083">Appeler le 0693 43 20 83</a>
+  </div>
+  <p class="adr apparait d4">📍 2657 chemin Lefaguyes, Saint-André · ⏰ tous les soirs dès 18h</p>
+ </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22C180 2 360 0 540 14s360 30 540 18 270-28 360-26v16Z" fill="#1d5732"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Mortadella Pistachio</span><span>Carbonara</span><span>Pollo Croccante</span><span>Suprema Salmone</span><span>Suprema d'Anatra</span><span>Truff'Amore</span><span>Tiramisu</span><span>Panna Cotta</span><span>Cioccolato</span><span>Mèla</span>
+ <span>Mortadella Pistachio</span><span>Carbonara</span><span>Pollo Croccante</span><span>Suprema Salmone</span><span>Suprema d'Anatra</span><span>Truff'Amore</span><span>Tiramisu</span><span>Panna Cotta</span><span>Cioccolato</span><span>Mèla</span>
+</div></div>
+
+<section class="maison">
+ <div class="wrap grid">
+  <div class="reveal">
+   <div class="tricolore"><i></i><i></i><i></i></div>
+   <p class="eyebrow">Benvenuti !</p>
+   <h2>La pizzeria du chemin Lefaguyes</h2>
+   <p>Depuis 2024, Pizza e Amore régale Saint-André avec des pizzas artisanales aux saveurs italiennes : des classiques aux signatures, avec des recettes qui se renouvellent : une pizza spéciale du mois, des nouveautés à la carte et des créations pour les fêtes.</p>
+   <div class="cartouche">
+    <p style="margin:0 0 .3rem">Sur la carte, il y en a pour tous les goûts :</p>
+    <div class="trois">
+     <div><b>Classiques</b><span>celles qui mettent tout le monde d'accord</span></div>
+     <div><b>Gourmandes</b><span>pour les vrais passionnés</span></div>
+     <div><b>Signatures</b><span>pour les amateurs de nouveautés</span></div>
+    </div>
+    <p style="margin:0">Une soirée entre amis, en famille ou en amoureux : le vendredi, c'est soirée pizza&nbsp;!</p>
+   </div>
+   <p style="margin-top:1.2rem">Et la boîte aux trois bandes vert, blanc, rouge voyage dans toute l'île : avec l'<b>Amore Game</b>, la page invite ses abonnés à deviner où la photo a été prise, une pizza au choix à la clé.</p>
+  </div>
+  <figure class="reveal">
+   <div class="boite"><img src="img/boite.webp" alt="Boîte à pizza kraft Pizza e Amore, Pizza &amp; Pasta Corner, Est 2024, avec ses bandes vert, blanc, rouge" loading="lazy"></div>
+   <figcaption>La boîte Pizza e Amore, photo publiée pour l'Amore Game</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="signatures">
+ <div class="wrap">
+  <div class="reveal">
+   <div class="tricolore"><i></i><i></i><i></i></div>
+   <p class="eyebrow">Le meilleur de la page</p>
+   <h2>Les créations signées Amore</h2>
+   <p>Des recettes dévoilées sur leur page, photographiées tout juste sorties du four.</p>
+  </div>
+  <div class="cartes">
+   <article class="carte reveal">
+    <div class="ph"><img src="img/pollo-croccante.webp" alt="La Pollo Croccante entière, poulet croustillant et oignons frits" loading="lazy"></div>
+    <div class="txt"><span class="tag">Ça croustille</span><h3>La Pollo Croccante</h3>
+     <ul><li>Poulet croustillant façon tenders</li><li>Fromage fondant</li><li>Oignons frits pour un croquant parfait</li><li>Et toujours la touche amore</li></ul></div>
+   </article>
+   <article class="carte reveal">
+    <div class="ph"><img src="img/suprema-salmone.webp" alt="La Suprema Salmone : saumon, buffala, pousses vertes, œufs de lompe et citron" loading="lazy"></div>
+    <div class="txt"><span class="tag">Fraîche et élégante</span><h3>La Suprema Salmone</h3>
+     <ul><li>Base crème, mozzarella fondante</li><li>Saumon frais</li><li>Buffala crémeuse</li><li>Œufs de lompe et une touche de citron</li></ul></div>
+   </article>
+   <article class="carte reveal">
+    <div class="ph"><img src="img/suprema-anatra.webp" alt="La Suprema d'Anatra : magret de canard, foie gras, oignons confits et buffala" loading="lazy"></div>
+    <div class="txt"><span class="tag">Création d'exception</span><h3>La Suprema d'Anatra</h3>
+     <ul><li>Magret de canard</li><li>Foie gras fondant</li><li>Oignons confits maison</li><li>Buffala crémeuse</li></ul></div>
+   </article>
+  </div>
+  <div class="nouv">
+   <article class="reveal"><h3>Mortadella Pistachio</h3><p>Crème fraîche, mozzarella fior di latte, mortadelle, crème de pistache, burrata, pistache concassée, zeste de citron.</p></article>
+   <article class="reveal"><h3>Carbonara</h3><p>Crème fraîche, mozzarella fior di latte, lard, jaune d'œuf.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="bowl">
+ <div class="wrap grid">
+  <div class="reveal">
+   <p class="eyebrow">Pizza ➝ bowl ➝ pasta</p>
+   <h2>Le bowl en pâte à pizza</h2>
+   <p>Un bol croustillant façonné dans la pâte à pizza, garni de pâtes maison. Croustillant + gourmand = combo parfait&nbsp;! Une exclusivité unique dans l'Est, en deux recettes gourmandes.</p>
+   <div class="recette"><b>Truff'Amore</b><br>Penne à la crème de truffe, jambon cru ou poulet, parmesan, champignons.</div>
+  </div>
+  <figure class="reveal">
+   <svg class="illu" viewBox="0 0 320 240" role="img" aria-label="Illustration d'un bowl en pâte à pizza garni de pâtes">
+    <defs><linearGradient id="pate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d7a8"/><stop offset="1" stop-color="#c79c6b"/></linearGradient></defs>
+    <ellipse cx="160" cy="215" rx="120" ry="14" fill="#0f3a20" opacity=".5"/>
+    <path d="M40 110 Q44 205 160 210 Q276 205 280 110 Z" fill="url(#pate)"/>
+    <ellipse cx="160" cy="110" rx="120" ry="30" fill="#f6e3bf"/>
+    <g fill="#8a5a2b" opacity=".55"><circle cx="70" cy="150" r="5"/><circle cx="240" cy="165" r="6"/><circle cx="120" cy="190" r="4"/><circle cx="210" cy="190" r="4"/></g>
+    <g fill="#fbe7b0" stroke="#e2bf73" stroke-width="2">
+     <rect x="78" y="88" width="46" height="13" rx="6" transform="rotate(-18 101 94)"/>
+     <rect x="128" y="78" width="46" height="13" rx="6" transform="rotate(12 151 84)"/>
+     <rect x="176" y="88" width="46" height="13" rx="6" transform="rotate(-8 199 94)"/>
+     <rect x="104" y="104" width="46" height="13" rx="6" transform="rotate(22 127 110)"/>
+     <rect x="160" y="104" width="46" height="13" rx="6" transform="rotate(-24 183 110)"/>
+    </g>
+    <g fill="#f3b4ae"><path d="M142 92c10-8 26-6 30 4-12 6-22 4-30-4Z"/></g>
+    <g fill="#2f7a46"><path d="M150 70c6-14 22-16 28-8-8 10-18 12-28 8Z"/><path d="M196 80c10-6 22-2 22 6-10 4-18 2-22-6Z"/></g>
+    <g fill="#fffaf0"><circle cx="118" cy="82" r="3"/><circle cx="214" cy="98" r="3"/><circle cx="160" cy="118" r="3"/></g>
+   </svg>
+   <figcaption>Illustration</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="douceurs">
+ <div class="wrap grid">
+  <figure class="reveal"><div class="ph"><img src="img/douceurs.webp" alt="Les douceurs de Pizza e Amore : moelleux au chocolat, tiramisu spéculoos en verrines et grand cookie aux pépites" loading="lazy"></div></figure>
+  <div class="reveal">
+   <div class="tricolore"><i></i><i></i><i></i></div>
+   <p class="eyebrow">Dolce vita</p>
+   <h2>Les douceurs signées Pizza e Amore</h2>
+   <p>Parce qu'une pizza, c'est bien… mais avec un dessert, c'est encore mieux&nbsp;!</p>
+   <ul class="liste-d">
+    <li><span>❦</span>Moelleux chocolat &amp; pépites</li>
+    <li><span>❦</span>Cooki'pizz fondant</li>
+    <li><span>❦</span>Tiramisu Spéculoos maison</li>
+    <li><span>❦</span>Pizzas sucrées Cioccolato et Mèla</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="galerie">
+ <div class="wrap reveal"><p class="eyebrow" style="color:var(--kraft-c)">Tout chaud du four</p><h2>En images</h2></div>
+ <div class="rail">
+  <figure><img src="img/suprema-salmone.webp" alt="Suprema Salmone vue de dessus" loading="lazy"><figcaption>Suprema Salmone</figcaption></figure>
+  <figure><img src="img/pollo-croccante-zoom.webp" alt="Pollo Croccante en gros plan" loading="lazy"><figcaption>Pollo Croccante, de tout près</figcaption></figure>
+  <figure><img src="img/suprema-anatra.webp" alt="Suprema d'Anatra vue de dessus" loading="lazy"><figcaption>Suprema d'Anatra</figcaption></figure>
+  <figure><img src="img/douceurs.webp" alt="Desserts maison" loading="lazy"><figcaption>Les douceurs</figcaption></figure>
+  <figure><img src="img/pollo-croccante.webp" alt="Pollo Croccante entière" loading="lazy"><figcaption>Pollo Croccante</figcaption></figure>
+  <figure><img src="img/boite.webp" alt="Boîte Pizza e Amore" loading="lazy"><figcaption>La boîte qui voyage</figcaption></figure>
+ </div>
+ <p class="astuce">← faites glisser →</p>
+</section>
+
+<section class="noel" id="noel">
+ <svg class="guirlande" viewBox="0 0 390 40" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;top:0;left:0">
+  <path d="M0 6 Q48 30 97 6 T195 6 T292 6 T390 6" fill="none" stroke="#f3b4ae" stroke-width="1.2" opacity=".6"/>
+  <g><circle cx="48" cy="18" r="5" fill="#c9342c"/><circle cx="146" cy="18" r="5" fill="#fbf6ee"/><circle cx="243" cy="18" r="5" fill="#c9342c"/><circle cx="341" cy="18" r="5" fill="#f3b4ae"/></g>
+ </svg>
+ <div class="wrap reveal">
+  <p class="eyebrow">Natale con amore</p>
+  <h2>Les pizzas des fêtes</h2>
+  <div class="carte-n">
+   <p>Pour les soirées de décembre, les repas de famille ou la soirée entre amis du réveillon, commandez vos pizzas à l'avance et profitez de la fête&nbsp;: Pizza e Amore s'occupe du four.</p>
+   <p>L'an dernier, la maison avait dévoilé deux nouveautés de Noël, en édition limitée&nbsp;:</p>
+   <div class="duo">
+    <div><b>Suprema Salmone</b>saumon frais, buffala crémeuse, œufs de lompe, citron</div>
+    <div><b>Suprema d'Anatra</b>magret de canard, foie gras fondant, oignons confits maison</div>
+   </div>
+   <a class="btn btn-rose" href="https://wa.me/262693432083?text=Bonjour%20Pizza%20e%20Amore%2C%20je%20voudrais%20commander%20des%20pizzas%20pour%20les%20f%C3%AAtes%20%F0%9F%8E%84"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Réserver ma commande des fêtes</a>
+  </div>
+  <p class="note">Les créations des fêtes se découvrent sur WhatsApp au 0693 43 20 83.</p>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <div class="reveal"><div class="tricolore"><i></i><i></i><i></i></div><p class="eyebrow">A presto !</p><h2>Ce soir, c'est pizza</h2></div>
+  <div class="grid">
+   <div class="bloc reveal horaires">
+    <h3>Horaires</h3>
+    <div><span>Lundi → jeudi</span><b>18h – 21h</b></div>
+    <div><span>Vendredi → dimanche</span><b>18h – 22h</b></div>
+    <p style="margin-top:1rem">📍 2657 chemin Lefaguyes<br>97440 Saint-André</p>
+   </div>
+   <div class="bloc reveal">
+    <h3>Commander</h3>
+    <div class="liens">
+     <a href="https://wa.me/262693432083?text=Bonjour%20Pizza%20e%20Amore%2C%20je%20voudrais%20passer%20commande%20%F0%9F%8D%95"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp · 0693 43 20 83</a>
+     <a href="tel:+262693432083"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>Appeler</a>
+     <a href="https://www.google.com/maps/search/?api=1&amp;query=2657+chemin+Lefaguyes+97440+Saint-Andr%C3%A9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Itinéraire</a>
+     <a href="https://www.facebook.com/profile.php?id=61570475592001"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3c-3 0-4 2-4 4.3V8H7.5v3.5H10V22h4V11.5h2.7L17 8Z"/></svg>Facebook</a>
+     <a href="https://www.instagram.com/pizza_eamore/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram · pizza_eamore</a>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <p class="logo">PIZZA E AMORE</p>
+ <p>Pizza &amp; Pasta Corner</p>
+ <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Pizza e Amore.</p>
+</footer>
+<script>
+(function(){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('farine'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+ function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2+.8,v:Math.random()*.35+.12,d:Math.random()*6.28,leaf:i%6==0,a:Math.random()*6.28});
+ function leaf(p){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle='rgba(47,122,70,.38)';x.beginPath();x.moveTo(0,-7);x.quadraticCurveTo(6,0,0,7);x.quadraticCurveTo(-6,0,0,-7);x.fill();x.restore()}
+ function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.y+=p.v;p.d+=.012;p.x+=Math.sin(p.d)*.3;p.a+=.006;if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+   if(p.leaf)leaf(p);else{x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba(255,250,240,.55)';x.fill()}});
+  requestAnimationFrame(f)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+ f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Pizza e Amore" defer></script>
+</body>
+</html>
