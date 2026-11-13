@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Petite Peste · Vêtements femme cousus main à La Réunion, by Gigi</title>
+<meta name="description" content="La Petite Peste, marque de vêtements pour femmes pétillantes, créée et cousue main à La Réunion par Gigi : la robe Gigi du 36 au 50, la collection bonbonnière, les barboteuses et ensembles LPP.">
+<meta property="og:title" content="La Petite Peste · by Gigi, with Love">
+<meta property="og:description" content="Vêtements pour femmes pétillantes, créés et cousus main à La Réunion : robe Gigi du 36 au 50, collection bonbonnière, pièces uniques.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-petite-peste/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-petite-peste/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{--cerise:#a3123a;--framboise:#c2386a;--bonbon:#f2a3bf;--rosepale:#fbdbe6;--creme:#fff6f0;--lait:#fffaf6;--feuille:#5d7a57;--sauge:#a9bd9c;--encre:#4a2a36;--doux:#86606c;--or:#d9a75b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:500;color:var(--cerise);line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.4rem}
+.script{font-family:Parisienne,cursive;font-weight:400;color:var(--framboise);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--framboise);font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--cerise);color:var(--rosepale);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#coeurs{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.vichy{background-color:var(--lait);background-image:linear-gradient(90deg,rgba(236,120,160,.32) 50%,transparent 50%),linear-gradient(rgba(236,120,160,.32) 50%,transparent 50%);background-size:28px 28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.92rem;transition:.35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--cerise);color:#fff;box-shadow:0 14px 30px -14px rgba(163,18,58,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--framboise)}
+@keyframes souffle{50%{box-shadow:0 16px 40px -8px rgba(242,163,191,.95);transform:scale(1.03)}}
+.btn-line{border:1.5px solid var(--bonbon);color:var(--cerise);background:rgba(255,255,255,.6)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* froufrou : bord festonné */
+.feston{height:22px;background:radial-gradient(circle at 11px 0,transparent 10px,var(--c,var(--rosepale)) 11px) 0 0/22px 22px repeat-x}
+.feston.haut{background:radial-gradient(circle at 11px 22px,transparent 10px,var(--c,var(--rosepale)) 11px) 0 0/22px 22px repeat-x}
+/* hero */
+.hero{min-height:min(100svh,880px);display:flex;align-items:center;overflow:hidden;padding:6rem 0 3.5rem;background:radial-gradient(90% 60% at 90% 5%,var(--rosepale) 0%,transparent 65%),radial-gradient(80% 60% at 0% 100%,#fde8ef 0%,transparent 60%),var(--creme)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero h1{font-size:clamp(3.1rem,13vw,6.4rem);font-style:italic;letter-spacing:-.01em}
+.hero h1 .script{display:block;font-style:normal;font-size:.5em;margin-top:.35rem}
+.hero .lead{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.2rem,3.6vw,1.6rem);color:var(--encre);margin:1.3rem 0 .8rem;max-width:30rem;line-height:1.4}
+.hero .tags{font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux);margin-bottom:1.8rem}
+.cintre{position:relative;max-width:380px;width:100%;margin:auto}
+.cintre .cadre{border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(163,18,58,.5);position:relative;border:6px solid #fff}
+.cintre .cadre svg{position:absolute;left:50%;top:6%;width:78%;transform-origin:50% 2%;margin-left:-39%;animation:balance 6s ease-in-out infinite}
+@keyframes balance{0%,100%{transform:rotate(-2.4deg)}50%{transform:rotate(2.4deg)}}
+.cintre figcaption,.legende{position:absolute;left:.9rem;bottom:.9rem;background:rgba(255,250,246,.95);padding:.25rem .8rem;border-radius:999px;font-size:.74rem;letter-spacing:.06em;color:var(--doux)}
+.badge6{position:absolute;right:-12px;top:-14px;width:112px;height:112px;border-radius:50%;background:var(--cerise);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Playfair Display',serif;font-style:italic;line-height:1.05;box-shadow:0 18px 30px -16px rgba(163,18,58,.8);animation:tourne 18s linear infinite;z-index:3}
+.badge6 b{display:block;font-size:2.2rem;font-style:normal}
+.badge6 span{font-size:.85rem}
+@keyframes tourne{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--cerise);color:var(--rosepale);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"♥";margin-left:2.4rem;font-style:normal;font-size:.8rem;color:var(--bonbon)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* robe gigi */
+.gigi{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.planche{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 36px 70px -40px rgba(163,18,58,.55);border:6px solid #fff}
+.planche svg{position:absolute;inset:6% 12%;width:76%;height:88%}
+.citation{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.35rem,3.6vw,1.85rem);color:var(--cerise);border-left:3px solid var(--bonbon);padding-left:1.1rem;margin:1.4rem 0;line-height:1.35}
+.citation small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);margin-top:.5rem;letter-spacing:.05em}
+.puces{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.4rem 0 1.8rem}
+.puces span{border:1.5px solid var(--bonbon);border-radius:999px;padding:.3rem .95rem;font-size:.88rem;background:rgba(255,255,255,.7)}
+.gigi p+p{margin-top:.9rem}
+/* collection */
+.collection{background:var(--rosepale)}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.2rem}
+.carte{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 22px 50px -36px rgba(163,18,58,.6);transition:transform .45s,box-shadow .45s;display:flex;flex-direction:column}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 30px 60px -32px rgba(163,18,58,.6)}
+.carte .visu{aspect-ratio:5/4;position:relative;overflow:hidden}
+.carte .visu svg{position:absolute;left:50%;top:50%;height:86%;transform:translate(-50%,-48%);transition:transform .8s}
+.carte:hover .visu svg{transform:translate(-50%,-48%) rotate(3deg) scale(1.04)}
+.carte .corps{padding:1.3rem 1.4rem 1.6rem}
+.carte h3{margin-bottom:.45rem}
+.carte p{font-size:.96rem}
+.carte .taille{display:inline-block;margin-top:.8rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--framboise);font-weight:500}
+.bonbon-txt{max-width:40rem;font-size:1.05rem}
+/* atelier */
+.atelier{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.atelier p+p{margin-top:.9rem}
+.lettre{background:var(--lait);border-radius:6px 26px 6px 26px;padding:2rem 1.7rem;box-shadow:0 30px 60px -40px rgba(74,42,54,.6);position:relative;border:1px solid #f3d6e0}
+.lettre::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(242,163,191,.7);transform:rotate(-3deg)}
+.lettre p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;line-height:1.55;color:var(--encre)}
+.lettre .sign{font-family:Parisienne,cursive;font-style:normal;font-size:2rem;color:var(--framboise);margin-top:1rem;display:block;text-align:right}
+/* marchés */
+.marches{background:var(--cerise);color:var(--rosepale)}
+.marches h2{color:#fff}
+.marches .eyebrow{color:var(--bonbon)}
+.lieux{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2.2rem 0}
+.lieu{background:rgba(255,255,255,.08);border:1px solid rgba(242,163,191,.35);border-radius:22px;padding:1.3rem 1.1rem;transition:.4s}
+.lieu:hover{background:rgba(255,255,255,.15);transform:translateY(-4px)}
+.lieu b{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:1.2rem;color:#fff;line-height:1.25;margin-bottom:.3rem}
+.lieu span{font-size:.86rem;letter-spacing:.08em;text-transform:uppercase;color:var(--bonbon)}
+.marches .btn-line{color:#fff;border-color:var(--bonbon);background:transparent}
+.marches .btn-line:hover{background:rgba(255,255,255,.12)}
+/* avis */
+.avis{text-align:center}
+.duo-avis{display:grid;grid-template-columns:1.4fr 1fr;gap:1.3rem;margin-top:2rem;text-align:left}
+.avis blockquote{background:#fff;border-radius:24px;padding:1.8rem 1.6rem;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;line-height:1.5;box-shadow:0 22px 50px -38px rgba(163,18,58,.6);position:relative}
+.avis blockquote::before{content:"“";position:absolute;top:-.3rem;left:1rem;font-size:4rem;color:var(--bonbon);line-height:1}
+.avis cite{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.8rem;color:var(--doux);margin-top:.8rem;letter-spacing:.05em}
+/* noël */
+.noel{background:linear-gradient(180deg,var(--creme),#fde8ef)}
+.boite{background:#fff;border-radius:32px;padding:clamp(2rem,5vw,3.2rem);box-shadow:0 40px 80px -50px rgba(163,18,58,.7);position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+.boite::before,.boite::after{content:"";position:absolute;background:var(--cerise);opacity:.9}
+.boite::before{top:0;bottom:0;right:22%;width:14px}
+.boite::after{left:0;right:0;top:64%;height:14px}
+.boite>*{position:relative;z-index:2}
+.boite .txt{background:rgba(255,255,255,.94);border-radius:20px;padding:.4rem .2rem}
+.noeud{width:100%;max-width:220px;margin:auto}
+.noeud svg{width:100%;height:auto;animation:balance 5s ease-in-out infinite;transform-origin:50% 40%}
+.idees{list-style:none;margin:1rem 0 1.6rem}
+.idees li{padding-left:1.5rem;position:relative;margin:.3rem 0}
+.idees li::before{content:"♥";position:absolute;left:0;color:var(--framboise);font-size:.85rem;top:.15rem}
+.note{font-size:.82rem;color:var(--doux);margin-top:1rem}
+/* contact */
+.contact{background:var(--rosepale)}
+.fiches{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:2rem 0}
+.fiche{background:#fff;border-radius:22px;padding:1.3rem 1.2rem;text-decoration:none;transition:.35s;display:block;box-shadow:0 18px 40px -34px rgba(163,18,58,.7);min-width:0}
+.fiche:hover{transform:translateY(-4px)}
+.fiche small{display:block;text-transform:uppercase;letter-spacing:.18em;font-size:.68rem;color:var(--framboise);font-weight:500}
+.fiche b{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:1.1rem;color:var(--cerise);overflow-wrap:anywhere;margin-top:.2rem}
+footer{background:var(--encre);color:#f3d6e0;text-align:center;padding:2.4rem 1rem 2.8rem;font-size:.85rem}
+footer .script{font-size:2.2rem;color:var(--bonbon);display:block;margin-bottom:.5rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+.wa-flottant{position:fixed;right:16px;bottom:16px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 26px -10px rgba(0,0,0,.45)}
+.wa-flottant svg{width:28px;height:28px}
+@media (max-width:860px){
+ .hero-in,.gigi,.atelier,.boite,.duo-avis{grid-template-columns:1fr}
+ .cartes{grid-template-columns:1fr}
+ .lieux,.fiches{grid-template-columns:1fr 1fr}
+ .hero{padding-top:5.4rem}
+ .cintre{max-width:300px}
+ .boite::before{display:none}
+ .boite::after{top:auto;bottom:118px}
+ .noeud{max-width:170px}
+}
+@media (max-width:560px){.fiches{grid-template-columns:1fr}}
+@media (max-width:420px){.lieux,.fiches{grid-template-columns:1fr}.badge6{right:-4px;width:96px;height:96px}.badge6 b{font-size:1.8rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal,.apparait{opacity:1;transform:none}canvas#coeurs{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Petite Peste</div>
+<canvas id="coeurs" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <defs>
+  <pattern id="pVichy" width="16" height="16" patternUnits="userSpaceOnUse"><rect width="16" height="16" fill="#fff"/><rect width="8" height="16" fill="#f2a3bf" opacity=".55"/><rect width="16" height="8" fill="#f2a3bf" opacity=".55"/></pattern>
+  <pattern id="pCoeurs" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#fdeef3"/><path d="M11 15.5c-3-2.2-4.6-3.7-4.6-5.4 0-1.2.9-2.1 2.1-2.1.9 0 1.6.5 2.5 1.4.9-.9 1.6-1.4 2.5-1.4 1.2 0 2.1.9 2.1 2.1 0 1.7-1.6 3.2-4.6 5.4z" fill="#c2386a"/></pattern>
+  <pattern id="pLiberty" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#fff4ee"/><g fill="#e98aa9"><circle cx="8" cy="8" r="2.4"/><circle cx="11.2" cy="9.6" r="2.4"/><circle cx="10.6" cy="13" r="2.4"/><circle cx="7" cy="13.2" r="2.4"/><circle cx="5.6" cy="10.2" r="2.4"/></g><circle cx="8.5" cy="10.8" r="1.4" fill="#d9a75b"/><path d="M20 22c3-1 5 0 6 2-3 1-5 0-6-2z" fill="#5d7a57"/><path d="M18 4c2 1 2.5 3 1.5 5-2-1-2.5-3-1.5-5z" fill="#a9bd9c"/><circle cx="24" cy="10" r="1.6" fill="#c2386a"/><circle cx="4" cy="25" r="1.6" fill="#f2a3bf"/></pattern>
+  <pattern id="pRose" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="#f8bfd2"/><circle cx="7" cy="7" r="1.3" fill="#fff" opacity=".8"/></pattern>
+  <!-- robe Gigi -->
+  <symbol id="robe" viewBox="0 0 200 270">
+   <path d="M100 4a8 8 0 1 1 8 8c-4 0-8 3-8 8v8" fill="none" stroke="#86606c" stroke-width="3" stroke-linecap="round"/>
+   <path d="M100 28 34 52h132z" fill="none" stroke="#86606c" stroke-width="3" stroke-linejoin="round"/>
+   <path d="M76 50c6 10 18 16 24 16s18-6 24-16l8 6-6 54H74l-6-54z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M72 108h56l52 128c-24 14-136 14-160 0z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M20 236c8 10 16 10 24 0 8 10 16 10 24 0 8 10 16 10 24 0 8 10 16 10 24 0 8 10 16 10 24 0 8 10 16 10 24 0 8 10 16 10 24 0" fill="none" stroke="#a3123a" stroke-width="2"/>
+   <path d="M72 108h56v9H72z" fill="#a3123a"/>
+   <path d="M100 112c-10-10-22-8-20 2 2 8 14 4 20-2zm0 0c10-10 22-8 20 2-2 8-14 4-20-2zm-4 4-8 20m12-20 8 20" fill="#c2386a" stroke="#a3123a" stroke-width="1.5"/>
+  </symbol>
+  <!-- robe qui tourne -->
+  <symbol id="tourne" viewBox="0 0 220 240">
+   <path d="M88 20c6 8 16 12 22 12s16-4 22-12l8 6-6 52H86l-6-52z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M86 78h48l36 52c-36 12-84 12-120 0z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M50 130c40 12 80 12 120 0l24 46c-56 18-112 18-168 0z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M26 176c56 18 112 18 168 0l20 40c-70 22-138 22-208 0z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M10 222c66 20 134 20 200 0" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 5"/>
+  </symbol>
+  <!-- barboteuse -->
+  <symbol id="barbo" viewBox="0 0 200 220">
+   <ellipse cx="62" cy="40" rx="22" ry="12" fill="var(--f)" stroke="#a3123a" stroke-width="2" transform="rotate(-18 62 40)"/>
+   <ellipse cx="138" cy="40" rx="22" ry="12" fill="var(--f)" stroke="#a3123a" stroke-width="2" transform="rotate(18 138 40)"/>
+   <path d="M70 34c10 12 20 16 30 16s20-4 30-16l6 10-4 70H68l-4-70z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M68 114h64l16 74h-42l-6-30-6 30H52z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M68 114h64v8H68z" fill="#a3123a"/>
+   <path d="M50 188c4 6 8 6 12 0 4 6 8 6 12 0 4 6 8 6 12 0 4 6 8 6 10 0m20 0c4 6 8 6 12 0 4 6 8 6 12 0 4 6 8 6 12 0" fill="none" stroke="#a3123a" stroke-width="2"/>
+  </symbol>
+  <!-- ensemble shorty + top à nouer -->
+  <symbol id="ensemble" viewBox="0 0 200 230">
+   <path d="M64 20c12 10 24 14 36 14s24-4 36-14l10 12-6 46H60l-6-46z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M100 80c-10-10-22-8-20 2 2 8 14 4 20-2zm0 0c10-10 22-8 20 2-2 8-14 4-20-2zm-4 4-10 22m14-22 10 22" fill="#c2386a" stroke="#a3123a" stroke-width="1.5"/>
+   <path d="M62 120h76l14 64h-44l-8-26-8 26H48z" fill="var(--f)" stroke="#a3123a" stroke-width="2"/>
+   <path d="M44 184c6 9 12 9 16 0 5 9 11 9 16 0 5 9 11 9 16 0 4 8 9 8 12 0m8 0c4 8 9 8 12 0 5 9 11 9 16 0 5 9 11 9 16 0 4 9 10 9 16 0" fill="none" stroke="#a3123a" stroke-width="2"/>
+   <path d="M62 120h76v8H62z" fill="#a3123a"/>
+  </symbol>
+ </defs>
+</svg>
+
+<main>
+<header class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <p class="eyebrow apparait">Créatrice péi · La Réunion</p>
+   <h1 class="apparait d2">La Petite Peste <span class="script">by Gigi, with Love</span></h1>
+   <p class="lead apparait d2">Des vêtements pour femmes pétillantes, créés et cousus main à La Réunion.</p>
+   <p class="tags apparait d3">Pièces uniques · Du 36 au 50 · Fait main</p>
+   <div class="ctas apparait d3">
+    <a class="btn btn-main" href="https://wa.me/262692708983?text=Bonjour%20Gigi%2C%20j%27ai%20vu%20vos%20cr%C3%A9ations%20La%20Petite%20Peste%20et%20j%27aimerais%20en%20savoir%20plus%20%F0%9F%92%96"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>Écrire à Gigi</a>
+    <a class="btn btn-line" href="#robe-gigi">Découvrir la robe Gigi</a>
+   </div>
+  </div>
+  <figure class="cintre apparait d2">
+   <div class="badge6"><div><b>6</b><span>ans de<br>créations</span></div></div>
+   <div class="cadre vichy">
+    <svg viewBox="0 0 200 270" role="img" aria-label="Illustration d'une robe sur un cintre"><use href="#robe" style="--f:url(#pCoeurs)"/></svg>
+   </div>
+   <figcaption>Illustration</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Créée et cousue main à La Réunion</span><span>La robe Gigi, du 36 au 50</span><span>Collection bonbonnière</span><span>Rose bonbon, petits cœurs, vichy &amp; froufrous</span><span>Un jour une tenue</span><span>by Gigi, with Love</span>
+ <span>Créée et cousue main à La Réunion</span><span>La robe Gigi, du 36 au 50</span><span>Collection bonbonnière</span><span>Rose bonbon, petits cœurs, vichy &amp; froufrous</span><span>Un jour une tenue</span><span>by Gigi, with Love</span>
+</div></div>
+
+<section id="robe-gigi">
+ <div class="wrap gigi">
+  <figure class="planche vichy reveal">
+   <svg viewBox="0 0 200 270" role="img" aria-label="Illustration de la robe Gigi en viscose fleurie"><use href="#robe" style="--f:url(#pLiberty)"/></svg>
+   <figcaption class="legende">Illustration</figcaption>
+  </figure>
+  <div class="reveal">
+   <p class="eyebrow">La pièce préférée</p>
+   <h2>La robe Gigi</h2>
+   <p>La toute première robe imaginée par Gigi, bien avant la naissance de La Petite Peste, il y a déjà 6 ans. Une robe pensée pour se sentir bien à chaque saison de la vie, même enceinte, et pour être tout à fait canon dès le matin.</p>
+   <p class="citation">« Le parfait compromis du sophistiqué largué. »<small>Gigi, sur sa page Facebook</small></p>
+   <p>Elle revient en viscose liberty fleurie, « un brin japonisant », et Gigi l'ajuste volontiers à votre envie : un peu plus longue, un dos plus sage… on en parle en message.</p>
+   <div class="puces"><span>Du 36 au 50</span><span>Viscose liberty fleurie</span><span>Ajustable à votre envie</span></div>
+   <a class="btn btn-main" href="https://wa.me/262692708983?text=Bonjour%20Gigi%2C%20je%20voudrais%20ma%20robe%20Gigi%20%F0%9F%92%83"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Je veux ma Gigi</a>
+  </div>
+ </div>
+</section>
+
+<div class="feston haut" style="--c:var(--rosepale)"></div>
+<section class="collection">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Nouvelle collection</p>
+   <h2>Collection bonbonnière <span class="script" style="font-size:.8em">à croquer</span></h2>
+   <p class="bonbon-txt">Du rose bonbon, des petits cœurs, du vichy et des froufrous : des tenues qui donnent l'eau à la bouche, présentées une à une dans la série « Un jour une tenue ».</p>
+  </div>
+  <div class="cartes">
+   <article class="carte reveal">
+    <div class="visu vichy"><svg viewBox="0 0 200 220" role="img" aria-label="Illustration d'une combi short"><use href="#barbo" style="--f:url(#pCoeurs)"/></svg><span class="legende">Illustration</span></div>
+    <div class="corps"><h3>Les Barboteuses LPP</h3><p>La combi short en double gaze cœur, en coton rose ou en viscose fleurie.</p><span class="taille">Taille 36/42</span></div>
+   </article>
+   <article class="carte reveal">
+    <div class="visu" style="background:#fdeef3"><svg viewBox="0 0 200 230" role="img" aria-label="Illustration d'un ensemble shorty et top à nouer"><use href="#ensemble" style="--f:url(#pVichy)"/></svg><span class="legende">Illustration</span></div>
+    <div class="corps"><h3>Les ensembles LPP</h3><p>Le shorty à volants et son top à nouer réversible, pour deux looks au choix.</p><span class="taille">Ensemble deux pièces</span></div>
+   </article>
+   <article class="carte reveal">
+    <div class="visu vichy"><svg viewBox="0 0 220 240" role="img" aria-label="Illustration d'une robe à volants"><use href="#tourne" style="--f:url(#pRose)"/></svg><span class="legende">Illustration</span></div>
+    <div class="corps"><h3>La robe qui tourne</h3><p>3 mètres de tissu, 6 mètres de volants : la robe faite pour virevolter.</p><span class="taille">Pièce unique</span></div>
+   </article>
+  </div>
+ </div>
+</section>
+<div class="feston" style="--c:var(--rosepale)"></div>
+
+<section>
+ <div class="wrap atelier">
+  <div class="reveal">
+   <p class="eyebrow">L'atelier</p>
+   <h2>Là où tout a commencé</h2>
+   <p>Pour les 6 ans de La Petite Peste, Gigi a installé son atelier dans sa maison d'enfance, à Bellepierre : la maison où sa maman cousait. Aujourd'hui, c'est elle derrière la machine, au même endroit.</p>
+   <p>Chaque tissu est choisi pour l'histoire qu'il raconte : les draps dépareillés de Mémé, la chemise d'un père, la nappe ancienne du guéridon. Des pièces uniques, pleines de souvenirs et de tendresse.</p>
+  </div>
+  <div class="lettre reveal">
+   <p>« Quand je choisis un tissu, je me demande ce qu'il m'évoque… quelle histoire il me raconte. »</p>
+   <span class="sign">Gigi, with Love</span>
+  </div>
+ </div>
+</section>
+
+<section class="marches">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Sur les marchés péi</p>
+   <h2>Retrouver Gigi et ses portants</h2>
+   <p>Gigi pose ses portants sur les marchés de créateurs de toute l'île : l'occasion d'essayer, de papoter et de craquer sur une création LPP.</p>
+  </div>
+  <div class="lieux">
+   <div class="lieu reveal"><b>Village artisanal de l'Éperon</b><span>Saint-Paul</span></div>
+   <div class="lieu reveal"><b>Carré Cathédrale</b><span>Saint-Denis</span></div>
+   <div class="lieu reveal"><b>Hôtel Villa Delisle</b><span>Saint-Pierre</span></div>
+   <div class="lieu reveal"><b>Halle des Manifestations</b><span>Le Port</span></div>
+  </div>
+  <div class="ctas reveal">
+   <a class="btn btn-line" href="https://www.facebook.com/106759190798759">Les prochaines dates sur Facebook</a>
+   <a class="btn btn-line" href="https://www.instagram.com/la_petite_peste_with_love/">Sur Instagram</a>
+  </div>
+ </div>
+</section>
+
+<section class="avis">
+ <div class="wrap">
+  <p class="eyebrow reveal">Elles en parlent</p>
+  <h2 class="reveal">Un univers doux et poétique</h2>
+  <div class="duo-avis">
+   <blockquote class="reveal">Travail fait intégralement à la main, cent pour cent à la Réunion dans un univers doux et poétique. J'adore !<cite>Avis publié sur la page Facebook</cite></blockquote>
+   <blockquote class="reveal">Tout est dans le détail.<cite>Avis publié sur la page Facebook</cite></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="noel">
+ <div class="wrap">
+  <div class="boite reveal">
+   <div class="txt">
+    <p class="eyebrow">Offrir pour Noël</p>
+    <h2>Une pépite à glisser sous le sapin</h2>
+    <p>Une création cousue main à La Réunion, pensée avec amour : le plus joli des cadeaux pour une femme pétillante.</p>
+    <ul class="idees"><li>La robe Gigi, du 36 au 50</li><li>Une barboteuse ou un ensemble de la collection bonbonnière</li><li>Une pièce unique choisie avec Gigi</li></ul>
+    <a class="btn btn-main" href="https://wa.me/262692708983?text=Bonjour%20Gigi%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20La%20Petite%20Peste%20pour%20No%C3%ABl%20%F0%9F%8E%81"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Préparer mon cadeau</a>
+   </div>
+   <div class="noeud">
+    <svg viewBox="0 0 200 150" role="img" aria-label="Illustration d'un nœud de ruban"><path d="M100 70C70 20 20 20 30 60s50 20 70 10zm0 0c30-50 80-50 70-10s-50 20-70 10z" fill="#c2386a" stroke="#a3123a" stroke-width="3"/><path d="M92 76 60 140l18-6 10 14 12-70zm16 0 32 64-18-6-10 14-12-70z" fill="#a3123a"/><circle cx="100" cy="72" r="14" fill="#a3123a"/></svg>
+   </div>
+  </div>
+  <p class="note reveal">Illustration · idée de cadeau à composer avec Gigi.</p>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <p class="eyebrow reveal">Contact</p>
+  <h2 class="reveal">On papote ?</h2>
+  <p class="reveal">Une question de taille, un tissu coup de cœur, une envie de sur-mesure : Gigi répond en message.</p>
+  <div class="fiches">
+   <a class="fiche reveal" href="https://wa.me/262692708983"><small>WhatsApp</small><b>0692 70 89 83</b></a>
+   <a class="fiche reveal" href="tel:+262692708983"><small>Téléphone</small><b>Appeler Gigi</b></a>
+   <a class="fiche reveal" href="mailto:lapetitepeste974@gmail.com"><small>E-mail</small><b>lapetitepeste974@gmail.com</b></a>
+   <a class="fiche reveal" href="https://www.instagram.com/la_petite_peste_with_love/"><small>Instagram</small><b>@la_petite_peste_with_love</b></a>
+  </div>
+  <div class="ctas reveal">
+   <a class="btn btn-main" href="https://wa.me/262692708983?text=Bonjour%20Gigi%20%F0%9F%92%96">Écrire sur WhatsApp</a>
+   <a class="btn btn-line" href="https://www.facebook.com/106759190798759">Page Facebook</a>
+  </div>
+  <p class="reveal" style="margin-top:1.6rem;font-size:.92rem;color:var(--doux)">Atelier à Bellepierre, Saint-Denis · Marchés de créateurs dans toute l'île</p>
+ </div>
+</section>
+</main>
+
+<footer>
+ <span class="script">with Love</span>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Petite Peste.
+</footer>
+
+<a class="wa-flottant" href="https://wa.me/262692708983" aria-label="Écrire à Gigi sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg></a>
+
+<script>
+(function(){
+ var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var els=document.querySelectorAll('.reveal');
+ if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+ else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+ if(rm)return;
+ var c=document.getElementById('coeurs'),g=c.getContext('2d'),W,H,P=[],run=true;
+ var cols=['#f2a3bf','#c2386a','#fbdbe6','#e98aa9'];
+ function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+ size();addEventListener('resize',size);
+ for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:4+Math.random()*7,v:.25+Math.random()*.5,a:Math.random()*6,w:.01+Math.random()*.02,c:cols[i%4],h:i%3!==0,o:.25+Math.random()*.35});
+ function heart(x,y,s){g.beginPath();g.moveTo(x,y+s*.3);g.bezierCurveTo(x,y,x-s*.5,y,x-s*.5,y+s*.3);g.bezierCurveTo(x-s*.5,y+s*.6,x,y+s*.8,x,y+s);g.bezierCurveTo(x,y+s*.8,x+s*.5,y+s*.6,x+s*.5,y+s*.3);g.bezierCurveTo(x+s*.5,y,x,y,x,y+s*.3);g.fill()}
+ function tick(){if(!run)return;g.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;p.a+=p.w;p.x+=Math.sin(p.a)*.4;if(p.y>H+12){p.y=-12;p.x=Math.random()*W}g.globalAlpha=p.o;g.fillStyle=p.c;if(p.h)heart(p.x,p.y,p.s*1.6);else{g.beginPath();g.ellipse(p.x,p.y,p.s*.5,p.s*.9,p.a,0,6.3);g.fill()}});requestAnimationFrame(tick)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick()});
+ tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Petite Peste" defer></script>
+</body>
+</html>
