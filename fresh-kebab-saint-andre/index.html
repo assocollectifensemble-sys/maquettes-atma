@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Fresh Kebab · La passion du grill · Cambuston, Saint-André</title>
+<meta name="description" content="Fresh Kebab, stand de restauration au 877 avenue des Mascareignes, Cambuston, Saint-André (La Réunion). Kebab pain, galette, salades, assiettes, veggie. Sur place et à emporter. 0693 45 15 22.">
+<meta property="og:title" content="Fresh Kebab · La passion du grill">
+<meta property="og:description" content="Venez déguster nos délicieux kebabs ! Sur place et à emporter, avenue des Mascareignes à Saint-André.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/fresh-kebab-saint-andre/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/fresh-kebab-saint-andre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;700&family=Caveat+Brush&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#141211;--charbon:#221f1d;--gris:#2e2a27;--orange:#e4572e;--orange-f:#c4431e;--braise:#f28b2c;--creme:#f6efe6;--sable:#efe3d3;--txt:#2a2522;--doux:#8a7f77}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.6;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95}
+h2{font-size:clamp(2.6rem,9vw,4.4rem);margin:.3rem 0 1rem;color:var(--noir)}
+h2 em{font-style:normal;color:var(--orange)}
+h3{font-size:1.8rem}
+.brush{font-family:'Caveat Brush',cursive;color:var(--orange);font-size:1.5rem;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:700;color:var(--orange)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:#e9d6c4;text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4;border-bottom:2px solid var(--orange)}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;transition:.3s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--orange);color:#fff;box-shadow:0 12px 30px -12px rgba(228,87,46,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--orange-f)}
+@keyframes souffle{50%{box-shadow:0 12px 42px -6px rgba(242,139,44,.85)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:2px solid var(--noir);color:var(--noir)}
+.btn-dark:hover{background:var(--noir);color:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,780px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,17,.4) 0%,rgba(20,18,17,.62) 32%,rgba(20,18,17,.86) 64%,var(--noir) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4rem}
+.logo{display:inline-flex;align-items:stretch;font-family:'Bebas Neue',Impact,sans-serif;font-size:clamp(4rem,19vw,8.5rem);line-height:.86;letter-spacing:.03em;box-shadow:0 20px 50px -20px rgba(0,0,0,.8)}
+.logo span{padding:.12em .14em .02em}
+.logo .f{background:var(--charbon);color:#fff}
+.logo .k{background:var(--orange);color:#fff}
+.slogan{display:block;margin-top:.9rem;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,5.4vw,2.2rem);letter-spacing:.18em;color:var(--braise)}
+.hero .lead{font-size:1.15rem;max-width:32rem;margin:1rem 0 1.8rem;color:#f3e7da}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:#d8c6b5}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--orange);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.08em;transform:rotate(-1.2deg);margin:-1rem -2vw 0;position:relative;z-index:3;box-shadow:0 10px 30px -14px rgba(0,0,0,.6)}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;color:var(--noir);font-size:1rem;vertical-align:.15em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* passion */
+.passion{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.passion p+p{margin-top:.9rem}
+.cadre{position:relative}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;box-shadow:0 40px 70px -36px rgba(20,18,17,.75)}
+.cadre::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--orange);border-radius:10px;z-index:-1}
+.cadre figcaption{position:absolute;left:-.4rem;bottom:1.3rem;background:var(--noir);color:#fff;padding:.55rem 1rem;border-radius:6px;font-size:.85rem;max-width:80%}
+.chiffres{display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Bebas Neue',sans-serif;font-size:3rem;font-weight:400;color:var(--orange);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.citation{font-family:'Caveat Brush',cursive;font-size:clamp(1.5rem,5vw,2rem);color:var(--charbon);border-left:4px solid var(--orange);padding-left:1rem;margin:1.4rem 0;line-height:1.15}
+/* ingredients */
+.ingr{background:var(--noir);padding:0}
+.ingr img{width:100%;height:auto;filter:saturate(1.1)}
+.ingr p{color:#cbb8a6;font-size:.82rem;text-align:center;padding:.6rem 1rem}
+/* carte */
+.carte-sec{background:var(--charbon);color:#efe3d6;overflow:hidden}
+.carte-sec::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px);pointer-events:none}
+.carte-sec h2{color:#fff}
+.carte-sec .intro{max-width:36rem;color:#d4c3b3}
+.rubriques{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.4rem}
+.rub{background:var(--gris);border-radius:10px;overflow:hidden;box-shadow:0 26px 50px -30px rgba(0,0,0,.9);transition:transform .4s;position:relative}
+.rub:hover{transform:translateY(-6px)}
+.rub img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.rub .txt{padding:1.1rem 1.2rem 1.3rem}
+.rub h3{color:#fff;background:var(--orange);display:inline-block;padding:.2rem .6rem .05rem;border-radius:3px;font-size:1.6rem;margin-bottom:.8rem}
+.rub ul{list-style:none}
+.rub li{display:flex;justify-content:space-between;gap:.8rem;padding:.38rem 0;border-bottom:1px dashed rgba(255,255,255,.12);font-weight:500}
+.rub li:last-child{border:0}
+.rub li b{color:var(--braise);white-space:nowrap}
+.rub .sans{padding-top:1.3rem}
+.note{margin-top:1.8rem;font-size:.88rem;color:#a99686;text-align:center}
+/* veggie */
+.veggie{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.veggie figure img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 10px var(--sable),0 0 0 13px var(--orange),0 40px 70px -30px rgba(20,18,17,.7);animation:tourne 30s linear infinite}
+@keyframes tourne{50%{transform:rotate(3deg) scale(1.02)}}
+.veggie figcaption{text-align:center;margin-top:1.4rem;font-size:.85rem;color:var(--doux)}
+/* galerie */
+.galerie-sec{background:var(--sable);padding-bottom:4rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;border-radius:10px;overflow:hidden;background:var(--noir);position:relative}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .9rem;background:linear-gradient(transparent,rgba(20,18,17,.9));color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.04em}
+.astuce{text-align:center;font-size:.85rem;color:var(--doux)}
+/* match */
+.match{background:var(--noir);color:#efe3d6;text-align:center;overflow:hidden}
+.match h2{color:#fff}
+.match .terrain{position:absolute;inset:0;opacity:.09;background:radial-gradient(circle at 50% 50%,transparent 0 70px,#fff 71px 73px,transparent 74px),linear-gradient(90deg,transparent calc(50% - 1px),#fff calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px));pointer-events:none}
+.match p{max-width:34rem;margin:0 auto 1.6rem}
+.match .brush{font-size:1.8rem;margin-bottom:1.6rem;color:var(--braise)}
+.match .ctas{justify-content:center}
+/* noel */
+.noel{background:linear-gradient(180deg,var(--creme),#f8e9da);overflow:hidden}
+.noel-in{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.6rem}
+.idee{background:#fff;border-radius:10px;padding:1.1rem 1.2rem;border-left:5px solid var(--orange);box-shadow:0 20px 40px -30px rgba(20,18,17,.6);transition:transform .35s}
+.idee:hover{transform:translateX(5px)}
+.idee h3{font-size:1.55rem;color:var(--noir);margin-bottom:.2rem}
+.boite{background:var(--noir);border-radius:14px;padding:2rem 1.4rem 1.4rem;text-align:center;color:#fff;position:relative;box-shadow:0 40px 70px -30px rgba(20,18,17,.8)}
+.boite svg{width:120px;height:auto;margin:0 auto .6rem;display:block}
+.boite .brush{font-size:2.2rem;color:var(--braise)}
+.boite small{display:block;font-size:.75rem;color:#bfae9f;margin-top:.8rem;letter-spacing:.06em}
+.flocon{position:absolute;color:var(--braise);opacity:.55;animation:scint 3s ease-in-out infinite}
+@keyframes scint{50%{opacity:.15;transform:scale(.8)}}
+/* contact */
+.contact{background:var(--charbon);color:#efe3d6}
+.contact h2{color:#fff}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.ligne{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.ligne svg{width:22px;height:22px;flex:none;color:var(--braise);margin-top:.15rem}
+.ligne b{display:block;color:#fff;font-weight:700;letter-spacing:.04em}
+.ligne a{color:var(--braise);font-weight:700;text-decoration:none}
+.contact .ctas{margin-top:1.6rem}
+.contact .btn-dark{border-color:#efe3d6;color:#efe3d6}
+.contact .btn-dark:hover{background:#efe3d6;color:var(--noir)}
+.plan{border-radius:12px;overflow:hidden;background:var(--gris);padding:1.6rem;position:relative}
+.plan svg{width:100%;height:auto}
+.plan p{font-size:.88rem;color:#bfae9f;margin-top:.8rem}
+footer{text-align:center;padding:2.2rem 1rem 6.5rem;font-size:.82rem;color:#a99686;background:var(--noir)}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;gap:.5rem;padding:.6rem;background:rgba(20,18,17,.94);backdrop-filter:blur(6px)}
+.barre a{flex:1}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .passion,.veggie,.noel-in,.contact-in{grid-template-columns:1fr}
+ .rubriques{grid-template-columns:1fr}
+ .barre{display:flex}
+ .cadre::before{inset:10px -8px -10px 10px}
+ .veggie figure{max-width:330px;margin:0 auto}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.apparait{opacity:1;transform:none}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Fresh Kebab</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/hero.webp" alt="Kebab pain garni de salade, tomate, oignon rouge, chou et frites, servi sur un plateau chez Fresh Kebab"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait" style="color:var(--braise)">Stand de restauration · Cambuston, Saint-André</p>
+    <h1 class="apparait d2" style="margin-top:.8rem"><span class="logo" aria-label="Fresh Kebab"><span class="f">Fresh</span><span class="k">Kebab</span></span><span class="slogan">La passion du grill</span></h1>
+    <p class="lead apparait d3">Venez déguster nos délicieux kebabs ! Sur place ou à emporter, le soir, avenue des Mascareignes.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="tel:+262693451522"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>0693 45 15 22</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+    <p class="adr apparait d3">877 avenue des Mascareignes · Cambuston · 97440 Saint-André</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Kebab pain</span><span>Kebab galette</span><span>Salade &amp; assiette</span><span>Veggie</span><span>Berlinois</span><span>Tenders crispy</span><span>Sur place &amp; à emporter</span><span>La passion du grill</span>
+  <span>Kebab pain</span><span>Kebab galette</span><span>Salade &amp; assiette</span><span>Veggie</span><span>Berlinois</span><span>Tenders crispy</span><span>Sur place &amp; à emporter</span><span>La passion du grill</span>
+</div></div>
+
+<section>
+  <div class="wrap passion">
+    <div class="rv">
+      <p class="eyebrow">Le kebab de Cambuston</p>
+      <h2>Du grill <em>à votre plateau</em></h2>
+      <p>Chez Fresh Kebab, chaque kebab sort du grill bien garni : salade croquante, tomate, oignon rouge, chou, frites dorées et la viande grillée qui fait la réputation de la maison.</p>
+      <p class="citation">« La passion du grill, dans chaque kebab ! »</p>
+      <p>Pain ou galette, poulet, agneau ou mixte, salade ou assiette : on compose son repas comme on l'aime, à déguster sur place ou à emporter pour la soirée.</p>
+      <div class="chiffres">
+        <div><b>96 %</b><span>de recommandations<br>(22 avis Facebook)</span></div>
+        <div><b>5,4 K</b><span>abonnés<br>sur Facebook</span></div>
+        <div><b>18h</b><span>ouverture<br>le soir</span></div>
+      </div>
+    </div>
+    <figure class="cadre rv">
+      <img src="img/kebab-pain.webp" alt="Kebab pain garni, servi sur plateau au comptoir de Fresh Kebab" loading="lazy">
+      <figcaption>Photo publiée par Fresh Kebab, avril 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="ingr">
+  <img src="img/ingredients.webp" alt="Oignon rouge, salade, viande grillée, frites et poivron : bandeau de la page Fresh Kebab" loading="lazy">
+  <p>Oignon, salade, viande grillée, frites, poivron : les couleurs fraîches de Fresh Kebab</p>
+</div>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--braise)">La carte</p>
+    <h2>Faites <em>votre choix</em></h2>
+    <p class="intro">Toute la carte publiée par Fresh Kebab sur sa page, pour choisir tranquillement avant de passer.</p>
+    <div class="rubriques">
+      <article class="rub rv"><img src="img/kebab-planche.webp" alt="Kebab pain au poulet grillé, frites et crudités" loading="lazy"><div class="txt"><h3>Kebab pain</h3><ul><li>Poulet<b>10 €</b></li><li>Agneau<b>11,50 €</b></li><li>Mixte<b>12,50 €</b></li><li>Veggie<b>7,50 €</b></li></ul></div></article>
+      <article class="rub rv"><div class="txt sans"><h3>Kebab galette</h3><ul><li>Poulet<b>10 €</b></li><li>Agneau<b>11,50 €</b></li><li>Mixte<b>12,50 €</b></li><li>Tenders<b>9 €</b></li><li>Nuggets<b>9 €</b></li><li>Cordon bleu<b>10 €</b></li></ul></div></article>
+      <article class="rub rv"><img src="img/assiette.webp" alt="Salade de viande grillée, sauce blanche, tomates, oignons et chou" loading="lazy"><div class="txt"><h3>Salade / Assiette</h3><ul><li>Salade poulet<b>9 €</b></li><li>Salade agneau<b>10,50 €</b></li><li>Salade mixte<b>12,50 €</b></li><li>Salade tenders<b>8,50 €</b></li><li>Assiette poulet<b>15,50 €</b></li><li>Assiette agneau<b>17 €</b></li><li>Assiette mixte<b>18,50 €</b></li></ul></div></article>
+      <article class="rub rv"><img src="img/barquette.webp" alt="Barquette de viande grillée et frites" loading="lazy"><div class="txt"><h3>Pour les enfants</h3><ul><li>Barquette poulet<b>8 €</b></li><li>Barquette agneau<b>9,50 €</b></li><li>Menu nuggets<b>6,90 €</b></li><li>Menu tenders<b>7,90 €</b></li></ul></div></article>
+      <article class="rub rv"><img src="img/nuggets.webp" alt="Nuggets et frites en barquette" loading="lazy"><div class="txt"><h3>Petites faims</h3><ul><li>Portion nuggets (6)<b>5,50 €</b></li><li>Tenders crispy (4)<b>7 €</b></li><li>Petite frite<b>1 €</b></li><li>Moyenne frite<b>2 €</b></li><li>Grande frite<b>3 €</b></li></ul></div></article>
+      <article class="rub rv"><div class="txt sans"><h3>Suppléments</h3><ul><li>Berlinois (légumes grillés)<b>2,50 €</b></li><li>Cheddar (tranches)<b>2,50 €</b></li><li>Viande poulet<b>3 €</b></li><li>Viande agneau<b>3 €</b></li><li>Viande mixte<b>3,50 €</b></li></ul></div></article>
+    </div>
+    <p class="note">Carte publiée par Fresh Kebab le 20 septembre 2026 sur sa page Facebook.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap veggie">
+    <figure class="rv">
+      <img src="img/veggie.webp" alt="Kebab veggie aux légumes grillés : aubergine, poivrons, tomate, salade et frites" loading="lazy">
+      <figcaption>Le kebab veggie, photo publiée par Fresh Kebab</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">Côté légumes</p>
+      <h2>Un berlinois ? <em>Un veggie ?</em></h2>
+      <p class="citation">« Les légumes grillés sont de nouveau disponibles ! Un Berlinois ? Un veggie ? C'est possible ! »</p>
+      <p>Aubergine et poivrons passés au grill, salade, tomate, frites et sauce : le kebab veggie a sa place à la carte, et les légumes grillés s'invitent aussi dans votre kebab préféré, en version « berlinois ». Les légumes grillés partent vite : un petit appel pour réserver le vôtre !</p>
+      <div class="ctas" style="margin-top:1.6rem"><a class="btn btn-dark" href="tel:+262693451522">Réserver mon veggie</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie-sec">
+  <div class="wrap"><p class="eyebrow">En images</p><h2>Ça sort <em>du grill</em></h2></div>
+  <div class="galerie">
+    <figure><img src="img/kebab-pain.webp" alt="Kebab pain sur plateau" loading="lazy"><figcaption>Kebab pain</figcaption></figure>
+    <figure><img src="img/barquette.webp" alt="Barquette viande grillée et frites" loading="lazy"><figcaption>Barquette viande &amp; frites</figcaption></figure>
+    <figure><img src="img/salade-frites.webp" alt="Assiette frites, viande et crudités" loading="lazy"><figcaption>Assiette complète</figcaption></figure>
+    <figure><img src="img/nuggets.webp" alt="Nuggets et frites" loading="lazy"><figcaption>Nuggets &amp; frites</figcaption></figure>
+    <figure><img src="img/veggie.webp" alt="Kebab veggie aux légumes grillés" loading="lazy"><figcaption>Kebab veggie</figcaption></figure>
+    <figure><img src="img/kebab-planche.webp" alt="Kebab pain au poulet grillé" loading="lazy"><figcaption>Kebab poulet</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="match">
+  <div class="terrain" aria-hidden="true"></div>
+  <div class="wrap rv" style="position:relative">
+    <p class="eyebrow" style="color:var(--braise)">Soirée match</p>
+    <h2>Un kebab pour accompagner <em>vos soirées match ?</em></h2>
+    <p class="brush">Prêt à vibrer ? Restez connectés, on s'occupe du reste !</p>
+    <p>Un coup de fil, et vos kebabs vous attendent à emporter : toute la bande se régale devant l'écran.</p>
+    <div class="ctas"><a class="btn btn-main" href="tel:+262693451522">Commander au 0693 45 15 22</a></div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <span class="flocon" style="top:12%;left:6%;font-size:1.4rem" aria-hidden="true">✦</span>
+  <span class="flocon" style="top:30%;right:8%;font-size:1rem;animation-delay:1s" aria-hidden="true">✦</span>
+  <span class="flocon" style="bottom:14%;left:46%;font-size:1.2rem;animation-delay:2s" aria-hidden="true">✦</span>
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Noël chez Fresh Kebab</p>
+      <h2>Des fêtes <em>bien garnies</em></h2>
+      <div class="idees">
+        <div class="idee"><h3>La soirée kebab en famille</h3><p>Pour une veillée détendue entre cousins ou entre amis : commandez vos kebabs, salades et assiettes à emporter, chacun choisit le sien.</p></div>
+        <div class="idee"><h3>Les petits aussi</h3><p>Barquettes, menus nuggets et menus tenders : de quoi régaler toute la tablée, des plus grands aux plus petits.</p></div>
+        <div class="idee"><h3>Offrir un repas chez Fresh Kebab</h3><p>Un kebab offert, un vrai cadeau de bon goût : demandez comment l'offrir à vos proches.</p></div>
+      </div>
+      <p style="margin-bottom:1.4rem">Les horaires des fêtes sont annoncés sur la page Facebook : un message, et Fresh Kebab vous répond avec plaisir.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262693451522?text=Bonjour%20Fresh%20Kebab%2C%20je%20voudrais%20commander%20des%20kebabs%20%C3%A0%20emporter%20pour%20une%20soir%C3%A9e%20des%20f%C3%AAtes">Commander sur WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262693451522">Appeler</a>
+      </div>
+    </div>
+    <figure class="boite rv">
+      <svg viewBox="0 0 120 170" aria-hidden="true">
+        <line x1="60" y1="6" x2="60" y2="164" stroke="#bfae9f" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="60" cy="12" r="7" fill="none" stroke="#bfae9f" stroke-width="4"/>
+        <g fill="#e4572e"><path d="M30 34h60l-4 16H34z"/><path d="M28 54h64l-5 17H33z" fill="#f28b2c"/><path d="M30 75h60l-5 17H35z"/><path d="M33 96h54l-5 16H38z" fill="#f28b2c"/><path d="M37 116h46l-6 15H43z"/></g>
+        <g fill="#fff" opacity=".85"><circle cx="96" cy="30" r="2.5"/><circle cx="20" cy="62" r="2"/><circle cx="100" cy="98" r="2"/></g>
+      </svg>
+      <span class="brush">Joyeuses fêtes</span>
+      <small>Illustration · la broche Fresh Kebab</small>
+    </figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="rv">
+      <p class="eyebrow" style="color:var(--braise)">Venir</p>
+      <h2>On vous attend <em>ce soir !</em></h2>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><div><b>Adresse</b>877 avenue des Mascareignes, Cambuston, 97440 Saint-André</div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><div><b>Téléphone</b><a href="tel:+262693451522">0693 45 15 22</a></div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm.8 10.4 3.6 2.1-.8 1.3-4.4-2.6V6.5h1.6z"/></svg><div><b>Le soir</b>Du samedi au jeudi, à partir de 18h (jusqu'à 20h30 selon les dernières annonces). Les horaires du moment sont sur la page Facebook.</div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4h10l1 4H6zm-1 6h12l-1.5 10h-9z"/></svg><div><b>Formules</b>Sur place &amp; à emporter</div></div>
+      <div class="ctas">
+        <a class="btn btn-main" href="tel:+262693451522">Appeler</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=877%20avenue%20des%20Mascareignes%2097440%20Saint-Andr%C3%A9%20R%C3%A9union">Itinéraire</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/FreshKebab974/">Facebook</a>
+      </div>
+    </div>
+    <div class="plan rv">
+      <svg viewBox="0 0 320 220" aria-hidden="true">
+        <rect width="320" height="220" rx="10" fill="#2e2a27"/>
+        <path d="M-10 150 C80 120 150 160 330 90" stroke="#4a433e" stroke-width="22" fill="none"/>
+        <path d="M-10 150 C80 120 150 160 330 90" stroke="#f28b2c" stroke-width="2" stroke-dasharray="8 8" fill="none"/>
+        <path d="M120 -10 C130 60 150 120 160 230" stroke="#3b3531" stroke-width="12" fill="none"/>
+        <g transform="translate(196 108)"><circle r="22" fill="#e4572e" opacity=".25"><animate attributeName="r" values="14;26;14" dur="2.6s" repeatCount="indefinite"/></circle><circle r="9" fill="#e4572e"/></g>
+        <text x="20" y="200" fill="#bfae9f" font-family="Barlow,Arial" font-size="13">Avenue des Mascareignes · Cambuston</text>
+      </svg>
+      <p>Illustration · Fresh Kebab, au 877 avenue des Mascareignes, à Cambuston (Saint-André).</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>Fresh Kebab · La passion du grill · Cambuston, Saint-André, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Fresh Kebab.</footer>
+<nav class="barre"><a class="btn btn-main" href="tel:+262693451522">Appeler</a><a class="btn btn-line" href="#carte">La carte</a></nav>
+<script>
+(function(){
+var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){calme?el.classList.add('vu'):io.observe(el)});
+if(calme)return;
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],N=28,on=true;
+function taille(){W=c.width=innerWidth;H=c.height=innerHeight}
+taille();addEventListener('resize',taille);
+function neuf(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+10;p.r=.8+Math.random()*2.2;p.v=.35+Math.random()*.9;p.d=Math.random()*6.28;p.a=.25+Math.random()*.45;p.h=20+Math.random()*25;return p}
+for(var i=0;i<N;i++)P.push(neuf({},true));
+document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(boucle)});
+function boucle(){if(!on)return;x.clearRect(0,0,W,H);
+for(var i=0;i<N;i++){var p=P[i];p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.4;var f=Math.max(0,p.y/H);
+x.beginPath();x.fillStyle='hsla('+p.h+',95%,58%,'+(p.a*f).toFixed(3)+')';x.shadowColor='rgba(242,139,44,.8)';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.28);x.fill();
+if(p.y<-10)neuf(p)}
+requestAnimationFrame(boucle)}
+requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Fresh Kebab" defer></script>
+</body>
+</html>
