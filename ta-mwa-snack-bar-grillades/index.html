@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TA MWA · Snack-bar &amp; grillades à Petite-Île</title>
+<meta name="description" content="TA MWA, snack-bar et grillades à Petite-Île (La Réunion) : brochettes sur la braise, poulet grillé, américains gratinés, macatias bouchon et terrasse avec vue sur la mer. Réservations au 0692 00 23 06.">
+<meta property="og:title" content="TA MWA · Snack-bar & grillades, Petite-Île">
+<meta property="og:description" content="Brochettes sur la braise, poulet grillé, américains gratinés et terrasse avec vue sur la mer.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ta-mwa-snack-bar-grillades/img/grill-feu-de-bois.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ta-mwa-snack-bar-grillades/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;800&family=Gochi+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#e4ea3c;--jaune-c:#f4f6a8;--marine:#1c2547;--marine-f:#121834;--bois:#7b4a2b;--bois-c:#b07a52;--braise:#ff7a1a;--turquoise:#1aa3b5;--bleu:#2066b8;--creme:#fbf8ec;--txt:#2a2a33;--doux:#6c6a72}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;color:var(--marine);line-height:1.08;letter-spacing:.01em}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem}
+.main{font-family:'Gochi Hand',cursive}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:800;color:var(--bois)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--marine-f);color:var(--jaune-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#braise{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:800;font-size:.98rem;transition:.3s;letter-spacing:.02em}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-jaune{background:var(--jaune);color:var(--marine);box-shadow:0 6px 0 var(--marine-f);animation:souffle 3.4s ease-in-out infinite}
+.btn-jaune:hover{transform:translateY(2px);box-shadow:0 4px 0 var(--marine-f)}
+@keyframes souffle{50%{box-shadow:0 6px 0 var(--marine-f),0 0 36px rgba(228,234,60,.55)}}
+.btn-wa{background:#1f9d55;color:#fff;box-shadow:0 6px 0 #10582f}
+.btn-wa:hover{transform:translateY(2px);box-shadow:0 4px 0 #10582f}
+.btn-line{border:2px solid var(--jaune);color:var(--jaune)}
+.ctas{display:flex;gap:.9rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--marine-f);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14) translate(-1%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,24,52,.05) 0%,rgba(18,24,52,.25) 35%,rgba(18,24,52,.92) 78%,var(--marine-f) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.6rem}
+.hero .eyebrow{color:var(--jaune)}
+.enseigne{display:inline-block;background:var(--jaune);color:var(--marine);padding:.25rem 1.1rem .4rem;margin:.6rem 0 .2rem;transform:rotate(-2deg);box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.enseigne h1{color:var(--marine);font-size:clamp(3.6rem,17vw,7.5rem);line-height:1}
+.enseigne small{display:block;font-family:'Alfa Slab One';font-size:clamp(1rem,4.4vw,1.6rem);letter-spacing:.12em;text-align:center;margin-top:-.2rem}
+.hero .lead{font-size:1.15rem;max-width:34rem;margin:1.4rem 0 1.8rem;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:var(--jaune-c)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.d2{animation-delay:.7s}.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--jaune);color:var(--marine);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Alfa Slab One';font-size:1.1rem;border-block:4px solid var(--marine)}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;color:var(--braise)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* braise */
+.braise{background:linear-gradient(180deg,var(--marine-f),#241a26 70%,#2b1b16);color:#f3eee4}
+.braise h2{color:var(--jaune)}
+.braise .eyebrow{color:var(--braise)}
+.braise p{color:#e6dfd2}
+.grid2{display:grid;gap:1.6rem;align-items:center}
+.photo{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(0,0,0,.7)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(18,24,52,.82);color:var(--jaune-c);font-size:.8rem;padding:.25rem .7rem;border-radius:999px}
+.grill{aspect-ratio:4/3}
+.glow{position:absolute;inset:auto 0 0 0;height:45%;background:radial-gradient(ellipse at 50% 100%,rgba(255,122,26,.35),transparent 70%);mix-blend-mode:screen;animation:flamme 2.6s ease-in-out infinite;pointer-events:none}
+@keyframes flamme{50%{opacity:.55}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.6rem}
+.duo .photo{aspect-ratio:3/4}
+.une{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.une span{border:1.5px solid var(--jaune);color:var(--jaune);border-radius:999px;padding:.25rem .9rem;font-weight:800;font-size:.85rem}
+/* carte */
+.carte{background:var(--creme)}
+.ardoises{display:grid;gap:1.1rem;margin-top:1.6rem}
+.ardoise{background:#fff;border-radius:28px 22px 30px 20px;padding:1.3rem 1.4rem;box-shadow:0 0 0 2px var(--marine),6px 7px 0 var(--marine);transition:transform .35s}
+.ardoise:hover{transform:rotate(-1deg) translateY(-3px)}
+.ardoise h3{font-family:'Gochi Hand';font-size:1.75rem;color:var(--marine);line-height:1.1;text-decoration:underline wavy #ff8fb1 2px;text-underline-offset:7px}
+.ardoise p{margin-top:.5rem;font-size:1rem}
+.panneau{margin-top:2.4rem;background:var(--jaune);border-radius:10px;padding:1.6rem 1.4rem;box-shadow:0 0 0 6px var(--bois),0 20px 40px -20px rgba(0,0,0,.5)}
+.panneau h3{font-size:1.3rem;margin-bottom:.2rem}
+.panneau .base{font-size:.9rem;color:#3d3d1a;margin-bottom:.4rem}
+.panneau ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-bottom:1.2rem}
+.panneau li{background:rgba(255,255,255,.75);border-radius:8px;padding:.15rem .6rem;font-weight:600;font-size:.92rem}
+.panneau .bon{font-family:'Gochi Hand';font-size:2.1rem;color:var(--marine);text-align:right;line-height:1}
+.note{font-size:.86rem;color:var(--doux);margin-top:1rem}
+/* galerie */
+.galerie{background:var(--marine);color:#fff;padding-bottom:4.5rem}
+.galerie h2{color:var(--jaune)}
+.galerie .eyebrow{color:var(--turquoise)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 5vw 1.2rem;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:340px;scroll-snap-align:center;aspect-ratio:3/4;border-radius:18px;overflow:hidden;position:relative}
+.rail img{width:100%;height:100%;object-fit:cover}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem .9rem .8rem;background:linear-gradient(transparent,rgba(18,24,52,.9));font-family:'Gochi Hand';font-size:1.35rem;color:var(--jaune-c)}
+.glisse{text-align:center;font-size:.85rem;color:var(--jaune-c)}
+/* terrasse */
+.terrasse{background:linear-gradient(180deg,#e9f6f7,var(--creme))}
+.terrasse .eyebrow{color:var(--bleu)}
+.terrasse .photo{aspect-ratio:1/1}
+.tourets{display:flex;gap:.5rem;margin-top:1rem}
+.tourets i{width:34px;height:34px;border-radius:50%;background:var(--bleu);box-shadow:inset 0 0 0 5px rgba(255,255,255,.25)}
+.tourets i:nth-child(2){background:var(--turquoise)}.tourets i:nth-child(3){background:#1d4f9a}
+/* infos */
+.infos{background:var(--creme)}
+.cartes-info{display:grid;gap:1rem;margin-top:1.4rem}
+.ci{background:#fff;border-radius:18px;padding:1.3rem 1.3rem;border-left:7px solid var(--jaune);box-shadow:0 10px 30px -18px rgba(28,37,71,.45)}
+.ci h3{font-size:1.1rem;margin-bottom:.35rem}
+.ci a{font-weight:800;color:var(--bleu)}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0%,#2d3a6e,var(--marine-f) 70%);color:#fff;text-align:center;overflow:hidden}
+.noel h2{color:var(--jaune)}
+.noel .eyebrow{color:#ffb38a}
+.noel p{max-width:36rem;margin:0 auto 1.6rem;color:#e7e9f5}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.4rem}
+.guirlande i{width:12px;height:12px;border-radius:50%;background:var(--jaune);box-shadow:0 0 12px var(--jaune);animation:clign 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--braise);box-shadow:0 0 12px var(--braise);animation-delay:.6s}
+.guirlande i:nth-child(3n){background:var(--turquoise);box-shadow:0 0 12px var(--turquoise);animation-delay:1.2s}
+@keyframes clign{50%{opacity:.35}}
+.noel .ctas{justify-content:center}
+.noel small{display:block;margin-top:1.2rem;color:#aeb4d6;font-size:.82rem}
+/* contact */
+.contact{background:var(--jaune);text-align:center}
+.contact h2{font-size:clamp(2.2rem,9vw,3.6rem)}
+.contact .tel{font-family:'Alfa Slab One';font-size:clamp(1.7rem,8vw,2.6rem);color:var(--marine);text-decoration:none;display:block;margin:.6rem 0 .2rem}
+.contact p{max-width:34rem;margin:0 auto}
+.contact .ctas{justify-content:center;margin-top:1.4rem}
+.contact .btn-line{border-color:var(--marine);color:var(--marine)}
+footer{text-align:center;padding:2.2rem 1rem 6.5rem;font-size:.82rem;color:#c9cbe0;background:var(--marine-f)}
+.flottant{position:fixed;right:14px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1f9d55;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.55);animation:souffle2 3s ease-in-out infinite}
+.flottant svg{width:30px;height:30px}
+@keyframes souffle2{50%{transform:scale(1.07)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .grid2{grid-template-columns:1.1fr 1fr;gap:3rem}
+ .ardoises{grid-template-columns:repeat(3,1fr)}
+ .cartes-info{grid-template-columns:repeat(3,1fr)}
+ .rail figure{flex-basis:300px}
+ .rail{padding-inline:max(5vw,calc((100vw - 1120px)/2))}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#braise{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour TA MWA</div>
+<canvas id="braise" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/devanture.webp" alt="Le snack TA MWA à Petite-Île : enseigne jaune, comptoir en bois et palmiers"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Snack-bar &amp; grillades · Petite-Île</p>
+    <div class="enseigne apparait d2"><h1>TA MWA</h1><small>SNACK - BAR</small></div>
+    <p class="lead apparait d2">Brochettes sur la braise, poulet grillé, américains gratinés, macatias bouchon et salades fraîches, à savourer sur la terrasse avec vue sur la mer.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-jaune" href="tel:+262692002306"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Réserver : 0692 00 23 06</a>
+      <a class="btn btn-wa" href="https://wa.me/262692002306?text=Bonjour%20TA%20MWA%2C%20je%20voudrais%20r%C3%A9server"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp</a>
+    </div>
+    <p class="adr apparait d3">2 rue des Pamplemousses (entrée Prefabloc) · 97429 Petite-Île</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Poulet grillé</span><span>Brochettes sur la braise</span><span>Américain spéciale</span><span>Macatia bouchon</span><span>Bouchon porc combava artisanal</span><span>Cheezy fries</span><span>Salade du jour</span><span>Bon appétit !</span>
+  <span>Poulet grillé</span><span>Brochettes sur la braise</span><span>Américain spéciale</span><span>Macatia bouchon</span><span>Bouchon porc combava artisanal</span><span>Cheezy fries</span><span>Salade du jour</span><span>Bon appétit !</span>
+</div></div>
+
+<section class="braise" id="grillades">
+  <div class="wrap grid2">
+    <div class="rv">
+      <p class="eyebrow">Le cœur de TA MWA</p>
+      <h2>Ça grille sur la braise</h2>
+      <p>Le grand grill de TA MWA se remplit de brochettes aux herbes, alignées sur les grilles au-dessus du charbon, avec la réserve de bois juste en dessous. Résultat : des grillades dorées et parfumées, servies en assiette avec frites et salade fraîche.</p>
+      <div class="une"><span>Poulet grillé</span><span>Grillade</span><span>Soirée Halloween</span></div>
+      <p class="note" style="color:#bdb3a4">Les trois rubriques « À la une » de la page TA MWA.</p>
+    </div>
+    <figure class="photo grill rv"><img src="img/grill-feu-de-bois.webp" alt="Brochettes alignées sur le grand grill au-dessus des braises" loading="lazy"><span class="glow"></span><figcaption>Le grill, publié le 20 juin 2026</figcaption></figure>
+  </div>
+  <div class="wrap duo">
+    <figure class="photo rv"><img src="img/brochettes.webp" alt="Bac de brochettes grillées aux herbes" loading="lazy"><figcaption>Brochettes</figcaption></figure>
+    <figure class="photo rv"><img src="img/assiette-grillade.webp" alt="Assiette de grillades, frites et salade avec deux sauces" loading="lazy"><figcaption>Assiette grillade</figcaption></figure>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">Les ardoises du comptoir</p>
+    <h2 class="rv">La carte de TA MWA</h2>
+    <p class="rv">Écrites à la main au feutre, avec des petits cœurs et des soleils : voici les spécialités affichées au comptoir.</p>
+    <div class="ardoises">
+      <div class="ardoise rv"><h3>½ Poulet grillé</h3><p>Avec frite et salade.</p></div>
+      <div class="ardoise rv"><h3>Américain Spéciale</h3><p>1 viande au choix, salade, tomate, oignon et persillade maison.</p></div>
+      <div class="ardoise rv"><h3>Américain Tenders</h3><p>En version classique, Big ou Spéciale, persillade au choix.</p></div>
+      <div class="ardoise rv"><h3>Macatia bouchon</h3><p>Salade, tomate, oignon, fromage, avec frite ou salade.</p></div>
+      <div class="ardoise rv"><h3>Salade de pâtes</h3><p>Olive noire, épaule, noix de cajou, huile d'olive et fromage de chèvre.</p></div>
+      <div class="ardoise rv"><h3>Salade du jour</h3><p>Selon les légumes, avec 1 viande au choix.</p></div>
+    </div>
+
+    <div class="panneau rv">
+      <h3>Gratiné</h3>
+      <p class="base">Base : pain, viande, fromage</p>
+      <ul><li>Bouchon porc combava ou poulet</li><li>Poulet</li><li>Épaule</li><li>Hot dog poulet</li><li>Thon maïs</li><li>Merguez poulet</li><li>Saumon</li><li>Surimi</li><li>Sarcive</li></ul>
+      <h3>Américain</h3>
+      <p class="base">Base : pain, épaule, viande, frite, fromage · en grand ou en mini</p>
+      <ul><li>Bouchon</li><li>Poulet</li><li>Épaule</li><li>Hot dog poulet</li><li>Thon maïs</li><li>Merguez poulet</li><li>Saumon</li><li>Surimi</li><li>Steack haché</li><li>Sarcive</li></ul>
+      <h3>Crudité</h3>
+      <p class="base">Base : salade, tomate, œuf, oignon, pain</p>
+      <ul><li>Saumon</li><li>Poulet</li><li>Épaule</li><li>Brie</li><li>Bouchon</li><li>Merguez</li><li>Hot dog poulet</li><li>Thon maïs</li><li>Surimi</li><li>Sarcive</li></ul>
+      <h3>Et aussi</h3>
+      <ul><li>Croc monsieur</li><li>Pain froid : jambon beurre, sardine, jambon dakatine, thon maïs, pain bouchon</li><li>Cheezy fries</li><li>Nuggets</li><li>Frites</li><li>Bouchons porc combava et poulet artisanaux</li><li>Dessert : boudou, glace</li></ul>
+      <p class="bon">Bon Appétit…</p>
+    </div>
+    <p class="note rv">D'après le panneau et les ardoises publiés sur la page Facebook TA MWA (mai et juin 2026). Tarifs affichés au comptoir.</p>
+  </div>
+</section>
+
+<section class="galerie" id="photos">
+  <div class="wrap">
+    <p class="eyebrow rv">Tout juste sorti de la cuisine</p>
+    <h2 class="rv">Ça donne faim</h2>
+  </div>
+  <div class="rail">
+    <figure><img src="img/americain.webp" alt="Américain gratiné frites, salade et fromage fondu dans son sachet kraft" loading="lazy"><figcaption>L'américain gratiné</figcaption></figure>
+    <figure><img src="img/gratine.webp" alt="Pain gratiné au fromage, frites et tranches panées" loading="lazy"><figcaption>Le gratiné généreux</figcaption></figure>
+    <figure><img src="img/camembert-roti.webp" alt="Camembert rôti aux herbes, frites, salade et mouillettes grillées" loading="lazy"><figcaption>Camembert rôti, frites &amp; salade</figcaption></figure>
+    <figure><img src="img/assiette-grillade.webp" alt="Assiette de grillades et frites" loading="lazy"><figcaption>L'assiette grillade</figcaption></figure>
+    <figure><img src="img/brochettes.webp" alt="Brochettes grillées" loading="lazy"><figcaption>Les brochettes</figcaption></figure>
+  </div>
+  <p class="glisse">← glissez pour voir la suite →</p>
+</section>
+
+<section class="terrasse" id="terrasse">
+  <div class="wrap grid2">
+    <figure class="photo rv"><img src="img/terrasse-vue-mer.webp" alt="Terrasse de TA MWA : tables en tourets bleus, palissade en bois, champs de cannes et mer au loin" loading="lazy"><figcaption>La terrasse, publiée le 21 mai 2026</figcaption></figure>
+    <div class="rv">
+      <p class="eyebrow">Sur place ou à emporter</p>
+      <h2>Une terrasse face au bleu</h2>
+      <p>Tables en tourets peints en bleu et turquoise, palissade en bois, papayers, champs de cannes et l'océan au bout de la route : la terrasse de TA MWA invite à prendre son temps à Petite-Île.</p>
+      <div class="tourets" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p style="margin-top:1rem">Et quand l'ambiance s'y prête, TA MWA organise ses soirées : la dernière en date, la soirée Halloween, avec sa tombola, s'est conclue par un grand merci à tous.</p>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Pratique</p>
+    <h2 class="rv">Venir, réserver, se faire livrer</h2>
+    <div class="cartes-info">
+      <div class="ci rv"><h3>Horaires du jour</h3><p>Service du midi et du soir, et certains jours en continu jusqu'à 21h30 ou 22h. Les horaires du jour sont annoncés régulièrement sur la <a href="https://www.facebook.com/people/TA-MWA/61559239832807/" target="_blank" rel="noopener">page Facebook</a>.</p></div>
+      <div class="ci rv"><h3>Réservations</h3><p><a href="tel:+262692002306">0692 00 23 06</a><br><a href="tel:+262692499153">0692 49 91 53</a><br><a href="mailto:tamwa974@gmail.com">tamwa974@gmail.com</a></p></div>
+      <div class="ci rv"><h3>Livraison à Grand Anse</h3><p>Le dimanche de 11h à 15h, TA MWA livre à Grand Anse : de quoi pique-niquer face à la plage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow">Pour les fêtes</p>
+    <h2>Un Noël grillé à la créole</h2>
+    <p>Brochettes, poulet grillé, bouchons artisanaux : pour un repas de famille ou une tablée entre amis, réservez vos grillades des fêtes auprès de TA MWA, qui s'occupe de la braise pendant que vous profitez de vos invités.</p>
+    <div class="ctas">
+      <a class="btn btn-jaune" href="https://wa.me/262692002306?text=Bonjour%20TA%20MWA%2C%20je%20voudrais%20commander%20des%20grillades%20pour%20No%C3%ABl">Commander pour Noël</a>
+      <a class="btn btn-line" href="tel:+262692002306">0692 00 23 06</a>
+    </div>
+    <small>Quantités et menus de fêtes à convenir directement avec TA MWA.</small>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">À tout de suite</p>
+    <h2>On se retrouve chez TA MWA ?</h2>
+    <a class="tel" href="tel:+262692002306">0692 00 23 06</a>
+    <p>2 rue des Pamplemousses, entrée Prefabloc · 97429 Petite-Île</p>
+    <div class="ctas">
+      <a class="btn btn-wa" href="https://wa.me/262692002306?text=Bonjour%20TA%20MWA%2C%20je%20voudrais%20r%C3%A9server">Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=2%20rue%20des%20Pamplemousses%2097429%20Petite-%C3%8Ele" target="_blank" rel="noopener">Itinéraire</a>
+      <a class="btn btn-line" href="https://www.facebook.com/people/TA-MWA/61559239832807/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>TA MWA · Snack-bar &amp; grillades · Petite-Île, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de TA MWA.</footer>
+<a class="flottant" href="https://wa.me/262692002306?text=Bonjour%20TA%20MWA%2C%20je%20voudrais%20r%C3%A9server" aria-label="Écrire à TA MWA sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+<script>
+(function(){
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('braise'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+function mk(r){return{x:Math.random()*W,y:r?Math.random()*H:H+10,r:.8+Math.random()*2.2,v:.25+Math.random()*.7,o:Math.random()*6.28,a:.25+Math.random()*.45,h:Math.random()<.75?'255,140,40':'228,234,60'}}
+size();for(var i=0;i<28;i++)P.push(mk(1));
+addEventListener('resize',size);
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.o+=.03;p.x+=Math.sin(p.o)*.35;
+var fl=p.a*(.7+.3*Math.sin(p.o*3));
+x.beginPath();x.fillStyle='rgba('+p.h+','+fl+')';x.arc(p.x,p.y,p.r,0,6.28);x.fill();
+if(p.y<-10)P[i]=mk(0)}
+requestAnimationFrame(f)}
+setTimeout(function(){requestAnimationFrame(f)},2500);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="TA MWA" defer></script>
+</body>
+</html>
