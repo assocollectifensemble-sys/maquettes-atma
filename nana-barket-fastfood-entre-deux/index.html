@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NANA barket &amp; fastfood · Snack à l'Entre-Deux</title>
+<meta name="description" content="NANA barket & fastfood, snack à l'Entre-Deux (La Réunion) : les cary et plats du jour le midi, le fastfood le soir, sur place, à emporter ou en livraison. 0692 76 90 50.">
+<meta property="og:title" content="NANA barket &amp; fastfood · Entre-Deux">
+<meta property="og:description" content="Les cary le midi, le fastfood le soir, au 10 rue du Commerce à l'Entre-Deux.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/nana-barket-fastfood-entre-deux/img/devanture.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/nana-barket-fastfood-entre-deux/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--violet:#4a2577;--violet-f:#2a1446;--nuit:#1b1028;--jaune:#f5d33c;--jaune-f:#e0b81c;--teal:#2f8f83;--bleu:#2c5bd8;--creme:#fff8e6;--sable:#f7ecd0;--txt:#2b2035;--doux:#6e6178;--piment:#e2541c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Baloo 2',system-ui;line-height:1.02;color:var(--violet-f)}
+h2{font-size:clamp(2.1rem,8vw,3.4rem);margin:.3rem 0 1rem}
+h3{font-size:1.45rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:700;color:var(--teal)}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--violet-f);color:var(--jaune);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-jaune{background:var(--jaune);color:var(--violet-f);box-shadow:0 12px 28px -12px rgba(245,211,60,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-jaune:hover{background:var(--jaune-f)}
+@keyframes souffle{50%{transform:scale(1.035);box-shadow:0 14px 38px -8px rgba(245,211,60,.75)}}
+.btn-ligne{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-ligne:hover{background:rgba(255,255,255,.14)}
+.btn-violet{background:var(--violet);color:#fff}
+.btn-violet:hover{background:var(--violet-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* logo typographique */
+.logo{display:inline-flex;align-items:center;gap:.6rem}
+.logo .rond{width:58px;height:58px;border-radius:50%;background:#fff;border:3px solid var(--jaune);display:grid;place-items:center;position:relative;flex:none}
+.logo .rond::before{content:"";position:absolute;inset:7px 7px 22px;border-radius:50% 50% 8px 8px;background:var(--violet)}
+.logo .rond svg{position:relative;width:20px;height:30px;margin-top:-10px}
+.logo .rond i{position:absolute;bottom:8px;font-style:normal;font:800 .62rem 'Baloo 2';color:var(--violet);letter-spacing:.06em}
+.logo .mots{font:800 1rem/1 'Baloo 2';color:#fff;letter-spacing:.04em}
+.logo .mots small{display:block;font-weight:600;font-size:.72rem;color:var(--jaune);letter-spacing:.14em}
+/* hero */
+.hero{position:relative;min-height:min(100svh,820px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:46% 50%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.17) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,16,40,.6) 0%,rgba(27,16,40,.2) 16%,rgba(27,16,40,.72) 34%,rgba(27,16,40,.93) 62%,rgba(27,16,40,.97) 100%)}
+.hero-top{position:absolute;top:3.2rem;left:4vw;z-index:3}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.6rem}
+.hero .eyebrow{color:var(--jaune)}
+.hero h1{color:#fff;font-size:clamp(3.2rem,15vw,7.4rem);font-weight:800;letter-spacing:.01em;margin-top:.4rem}
+.hero h1 span{display:block;font-size:.42em;color:var(--jaune);font-weight:700;letter-spacing:.04em;margin-top:.15em}
+.hero .lead{font-size:1.18rem;max-width:33rem;margin:1.1rem 0 1.8rem;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+.hero .lead b{color:var(--jaune)}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:#f3e7c4;display:flex;align-items:center;gap:.4rem}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bandeau{background:var(--jaune);color:var(--violet-f);overflow:hidden;white-space:nowrap;padding:.85rem 0;font:800 1.15rem 'Baloo 2';border-block:3px solid var(--violet-f)}
+.bandeau .piste{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau .eclair{display:inline-block;width:14px;height:20px;vertical-align:-3px}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* midi / soir */
+.duo{display:grid;gap:1.2rem;margin-top:2rem}
+.carte{border-radius:26px;padding:1.8rem 1.6rem;position:relative;overflow:hidden;transition:transform .35s}
+.carte:hover{transform:translateY(-4px)}
+.carte .heure{font:800 2.4rem/1 'Baloo 2'}
+.carte h3{margin:.5rem 0 .4rem;font-size:1.6rem}
+.carte.midi{background:var(--jaune);color:var(--violet-f)}
+.carte.midi .heure{color:var(--violet)}
+.carte.soir{background:var(--violet);color:#fff}
+.carte.soir h3,.carte.soir .heure{color:var(--jaune)}
+.carte .deco{position:absolute;right:-18px;top:-18px;width:120px;height:120px;opacity:.18}
+.plus{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem}
+.plus span{background:#fff;border:2px solid var(--sable);border-radius:999px;padding:.45rem 1rem;font-weight:700;font-size:.92rem;color:var(--violet)}
+/* plats du jour */
+.plats{background:var(--nuit);color:#f6ecd6}
+.plats h2{color:#fff}
+.plats .eyebrow{color:var(--jaune)}
+.plats p.intro{max-width:36rem;color:#e6dcc6}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 4vw 1rem;margin:0 -4vw;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.plat{flex:0 0 78%;max-width:340px;scroll-snap-align:center;border-radius:24px;overflow:hidden;background:#2a1c3c;position:relative;transition:transform .35s}
+.plat:hover{transform:translateY(-6px) rotate(-.6deg)}
+.plat img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.plat figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.1rem 1rem;background:linear-gradient(0deg,rgba(27,16,40,.95),rgba(27,16,40,0));font:800 1.35rem/1.1 'Baloo 2';color:#fff}
+.plat figcaption small{display:block;font:600 .78rem 'Nunito';color:var(--jaune);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem}
+.glisse{font-size:.82rem;color:#bfb2cf;display:flex;align-items:center;gap:.4rem}
+.glisse svg{width:34px;height:12px;animation:glisse 2.4s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(8px)}}
+/* soir fastfood */
+.soir-grid{display:grid;gap:2rem;align-items:start}
+.photo-cadre{border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(42,20,70,.55);position:relative}
+.photo-cadre img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.photo-cadre .tag{position:absolute;left:12px;top:12px;background:var(--jaune);color:var(--violet-f);font-weight:800;font-size:.78rem;padding:.3rem .8rem;border-radius:999px}
+.menu{display:grid;gap:.9rem}
+.ligne{background:#fff;border-radius:20px;padding:1.1rem 1.2rem;display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;border:2px solid var(--sable);transition:border-color .3s,transform .3s}
+.ligne:hover{border-color:var(--jaune);transform:translateX(4px)}
+.ligne h3{font-size:1.3rem;color:var(--violet)}
+.ligne .prix{font:800 1.2rem 'Baloo 2';color:var(--piment);white-space:nowrap}
+.ligne p{grid-column:1/-1;font-size:.95rem;color:var(--doux)}
+.ligne p em{color:var(--teal);font-style:normal;font-weight:700}
+.americains{background:var(--violet-f);color:#fff;border-radius:24px;padding:1.4rem 1.3rem}
+.americains h3{color:var(--jaune);font-size:1.5rem}
+.americains .base{font-size:.9rem;color:#d9cdea;margin:.3rem 0 1rem}
+.americains ul{list-style:none;display:grid;gap:.7rem}
+.americains li{display:grid;grid-template-columns:1fr auto;gap:0 .8rem;border-top:1px dashed rgba(245,211,60,.35);padding-top:.7rem}
+.americains li b{font:800 1.12rem 'Baloo 2';color:#fff}
+.americains li .prix{font:800 1.1rem 'Baloo 2';color:var(--jaune)}
+.americains li span.d{grid-column:1/-1;font-size:.9rem;color:#d9cdea}
+.note{font-size:.8rem;color:var(--doux);margin-top:.9rem}
+/* le snack */
+.snack{background:var(--sable)}
+.snack-grid{display:grid;gap:2rem;align-items:center}
+.snack .photo-cadre img{aspect-ratio:4/3}
+.points{list-style:none;display:grid;gap:.8rem;margin-top:1.2rem}
+.points li{display:flex;gap:.8rem;align-items:flex-start}
+.points svg{width:26px;height:26px;flex:none;margin-top:.1rem}
+/* fêtes */
+.fetes{background:radial-gradient(120% 90% at 50% 0%,#3a1f5e 0%,var(--nuit) 70%);color:#f3e9d6;overflow:hidden}
+.fetes h2{color:#fff}
+.fetes .eyebrow{color:var(--jaune)}
+.fetes-box{position:relative;z-index:2;max-width:40rem}
+.fetes p{margin-bottom:1rem}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:60px;z-index:1}
+.guirlande circle{animation:brille 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(2n){animation-delay:.8s}.guirlande circle:nth-child(3n){animation-delay:1.5s}
+@keyframes brille{50%{opacity:.35}}
+.etoile{position:absolute;right:6vw;bottom:2rem;width:110px;opacity:.22;z-index:1}
+/* contact */
+.contact{background:var(--creme)}
+.c-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.c-item{background:#fff;border-radius:20px;padding:1.2rem 1.3rem;border:2px solid var(--sable);display:flex;gap:1rem;align-items:flex-start;text-decoration:none;transition:.3s}
+a.c-item:hover{border-color:var(--jaune);transform:translateY(-3px)}
+.c-item svg{width:30px;height:30px;flex:none;color:var(--violet)}
+.c-item b{display:block;font:800 1.1rem 'Baloo 2';color:var(--violet-f)}
+.c-item span{font-size:.94rem;color:var(--doux)}
+footer{background:var(--violet-f);color:#d9cdea;text-align:center;font-size:.82rem;padding:2.2rem 6vw 6rem;line-height:1.6}
+footer b{color:var(--jaune)}
+.flottant{position:fixed;right:14px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.5);animation:souffle2 3.2s ease-in-out infinite}
+.flottant svg{width:30px;height:30px}
+@keyframes souffle2{50%{transform:scale(1.08)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .duo{grid-template-columns:1fr 1fr}
+ .soir-grid{grid-template-columns:1.05fr 1fr}
+ .snack-grid{grid-template-columns:1fr 1fr}
+ .c-grid{grid-template-columns:1fr 1fr}
+ .plat{flex-basis:300px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour NANA barket &amp; fastfood</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/devanture.webp" alt="Le kiosque jaune de NANA barket & fastfood et sa terrasse aux tables bleues, rue du Commerce à l'Entre-Deux" fetchpriority="high"></div>
+  <div class="hero-top apparait">
+    <div class="logo"><div class="rond"><svg viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#f5d33c" stroke="#2a1446" stroke-width="1"/></svg><i>NANA</i></div><div class="mots">NANA BARKET<small>&amp; FASTFOOD</small></div></div>
+  </div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Snack · Entre-Deux · La Réunion</p>
+    <h1 class="apparait d2">NANA barket<span>&amp; fastfood</span></h1>
+    <p class="lead apparait d3"><b>Les cary le midi, le fastfood le soir</b> : sur place, à emporter ou en livraison, à l'Entre-Deux.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-jaune" href="https://wa.me/262692769050?text=Bonjour%20NANA%20barket%2C%20je%20voudrais%20commander%20%3A%20"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3Z"/></svg>Commander sur WhatsApp</a>
+      <a class="btn btn-ligne" href="tel:+262692769050"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>0692 76 90 50</a>
+    </div>
+    <p class="adr apparait d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="#f5d33c"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>10 rue du Commerce, 97414 Entre-Deux</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22C180 2 360 2 540 18s360 22 540 6 270-22 360-10v28Z" fill="#f5d33c"/></svg>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+<span>Riz cantonnais</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Sauté mines</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Cary poulet</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Porc braisé</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Toasty Crousty</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Pain pizza</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>La Kréol</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Le 974</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg>
+<span>Riz cantonnais</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Sauté mines</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Cary poulet</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Porc braisé</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Toasty Crousty</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Pain pizza</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>La Kréol</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg><span>Le 974</span><svg class="eclair" viewBox="0 0 20 30"><path d="M12 0 3 17h6l-3 13 11-19h-6l4-11z" fill="#4a2577"/></svg>
+</div></div>
+
+<section id="horaires">
+  <div class="wrap">
+    <p class="eyebrow rv">Deux ambiances, un même snack</p>
+    <h2 class="rv">Le midi les cary,<br>le soir le fastfood</h2>
+    <div class="duo">
+      <div class="carte midi rv">
+        <svg class="deco" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#2a1446" stroke-width="8"/><path d="M50 22v28l18 12" stroke="#2a1446" stroke-width="8" fill="none" stroke-linecap="round"/></svg>
+        <p class="heure">11h – 14h</p>
+        <h3>Repas le midi</h3>
+        <p>Les cary et les plats du jour, servis sur place ou à emporter. Le menu du jour est partagé sur la page.</p>
+      </div>
+      <div class="carte soir rv">
+        <svg class="deco" viewBox="0 0 100 100"><path d="M60 12a38 38 0 1 0 28 56A30 30 0 0 1 60 12Z" fill="#f5d33c"/></svg>
+        <p class="heure">18h – 21h</p>
+        <h3>Fastfood le soir</h3>
+        <p>Toasty Crousty, pain pizza et américains spéciaux bien chargés, à savourer en terrasse ou à la maison.</p>
+      </div>
+    </div>
+    <div class="plus rv"><span>Sur place</span><span>À emporter</span><span>Livraison repas</span><span>Terrasse</span></div>
+  </div>
+</section>
+
+<section class="plats" id="plats">
+  <div class="wrap">
+    <p class="eyebrow rv">Les marmites du midi</p>
+    <h2 class="rv">Le menu du jour, fumant</h2>
+    <p class="intro rv">Ici, tout part de la marmite : riz cantonnais, sauté mines, cary poulet… Voici les plats publiés sur la page ces derniers jours, en vraies photos.</p>
+    <div class="rail" id="rail">
+      <figure class="plat"><img src="img/cary-poulet.webp" alt="Cary poulet dans la marmite" loading="lazy"><figcaption><small>Publié le 11 nov.</small>Cary poulet</figcaption></figure>
+      <figure class="plat"><img src="img/saute-mines.webp" alt="Sauté mines aux légumes dans la marmite" loading="lazy"><figcaption><small>Publié le 12 nov.</small>Sauté mines</figcaption></figure>
+      <figure class="plat"><img src="img/riz-cantonnais.webp" alt="Riz cantonnais dans la marmite" loading="lazy"><figcaption><small>Publié le 12 nov.</small>Riz cantonnais</figcaption></figure>
+      <figure class="plat"><img src="img/saute-saucisse.webp" alt="Sauté saucisse gros piment et oignons rouges" loading="lazy"><figcaption><small>Publié le 9 nov.</small>Sauté saucisse gros piment</figcaption></figure>
+      <figure class="plat"><img src="img/porc-braise.webp" alt="Porc braisé caramélisé" loading="lazy"><figcaption><small>Publié le 8 nov.</small>Porc braisé</figcaption></figure>
+    </div>
+    <p class="glisse"><svg viewBox="0 0 34 12" fill="none" stroke="#f5d33c" stroke-width="2" stroke-linecap="round"><path d="M1 6h30M26 1l5 5-5 5"/></svg>Faites glisser pour voir tous les plats</p>
+  </div>
+</section>
+
+<section id="fastfood">
+  <div class="wrap soir-grid">
+    <div class="rv">
+      <p class="eyebrow">Le soir</p>
+      <h2>Ultra crousty, maxi goût</h2>
+      <div class="photo-cadre"><img src="img/sandwich.webp" alt="Sandwich garni de frites, fromage fondu et crudités" loading="lazy"><span class="tag">Publié le 8 nov.</span></div>
+      <p class="note">« Crousty à l'extérieur, fondant à l'intérieur ! » : la promesse des nouveautés du snack.</p>
+    </div>
+    <div class="menu">
+      <div class="ligne rv"><h3>Toasty Crousty</h3><span class="prix">8,50 €</span><p>Au choix <em>tenders poulet</em> ou <em>poulet kebab</em>, sauce fromagère maison, sauce thaï chili, oignons frits et riz.</p></div>
+      <div class="ligne rv"><h3>Pain pizza</h3><span class="prix">7 €</span><p>Sauce tomate maison, jambon, champignons de Paris, emmental-mozza, olives et herbes de Provence.</p></div>
+      <div class="americains rv">
+        <h3>Nos américains spéciaux</h3>
+        <p class="base">Les nouveaux sandwichs maison, bien chargés. Base : salade, tomate, oignons frits, mozzarella et emmental, frites.</p>
+        <ul>
+          <li><b>La Kréol</b><span class="prix">9,50 €</span><span class="d">Boucané, gros piment, oignon · le goût péi la Réunion</span></li>
+          <li><b>La Nordik</b><span class="prix">9 €</span><span class="d">Saumon, sauce fromagère, citron · doux, fondant et ultra gourmand</span></li>
+          <li><b>Le Crousty</b><span class="prix">9,50 €</span><span class="d">Crunchy poulet, cheddar · du croustillant, du fromage…</span></li>
+          <li><b>Le Piton</b><span class="prix">9 €</span><span class="d">Lardons, reblochon, sauce fromagère · le plus montagnard, le plus gourmand</span></li>
+          <li><b>Le 974</b><span class="prix">9 €</span><span class="d">Bouchon artisanal, bacon, cheddar · généreux, terriblement savoureux</span></li>
+        </ul>
+      </div>
+      <p class="note">Carte et tarifs repris des affiches publiées par le snack en novembre 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="snack" id="snack">
+  <div class="wrap snack-grid">
+    <div class="photo-cadre rv"><img src="img/devanture.webp" alt="Le kiosque jaune, la terrasse et ses tables bleues" loading="lazy"></div>
+    <div class="rv">
+      <p class="eyebrow">Le snack</p>
+      <h2>Un kiosque jaune, une terrasse bleue</h2>
+      <p>Repérez le comptoir jaune, le drapeau « SNACK » et les tables bleues de la terrasse : vous y êtes, au 10 rue du Commerce.</p>
+      <ul class="points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f8f83" stroke-width="2.2" stroke-linecap="round"><path d="M4 12h3l3 7 4-14 3 7h3"/></svg><span>En cuisine, le chef <b>@rodolphe_fit_boy</b>.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f8f83" stroke-width="2.2" stroke-linecap="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.1M17 19a2 2 0 1 0 0-.1"/></svg><span>Livraison repas sur l'Entre-Deux.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="#2f8f83" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v18M5 8c3 0 4-3 7-3s4 3 7 3M5 16c3 0 4-3 7-3s4 3 7 3"/></svg><span>Des soirées qui rassemblent : la Fèt Kaf se fête aussi au snack.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <svg class="guirlande" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8Q50 40 100 14T200 14T300 14T400 8" fill="none" stroke="#f5d33c" stroke-opacity=".35" stroke-width="1.2"/><circle cx="30" cy="22" r="3.2" fill="#f5d33c"/><circle cx="75" cy="26" r="3.2" fill="#2f8f83"/><circle cx="125" cy="22" r="3.2" fill="#e2541c"/><circle cx="170" cy="18" r="3.2" fill="#f5d33c"/><circle cx="230" cy="22" r="3.2" fill="#2f8f83"/><circle cx="275" cy="21" r="3.2" fill="#e2541c"/><circle cx="330" cy="20" r="3.2" fill="#f5d33c"/><circle cx="375" cy="13" r="3.2" fill="#2f8f83"/></svg>
+  <svg class="etoile" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4l12 32 34 2-27 21 10 33-29-19-29 19 10-33L4 38l34-2z" fill="#f5d33c"/></svg>
+  <div class="wrap fetes-box">
+    <p class="eyebrow rv">Pour les fêtes</p>
+    <h2 class="rv">Noël chez NANA barket</h2>
+    <p class="rv">L'an dernier, le snack lançait son <b>Burger de Noël en édition limitée</b>. Cette année, régalez la famille, les collègues ou les copains avec les cary et le fastfood de NANA barket.</p>
+    <p class="rv">Un repas de groupe ou une belle commande pour le réveillon : demandez en un message.</p>
+    <div class="ctas rv"><a class="btn btn-jaune" href="https://wa.me/262692769050?text=Bonjour%20NANA%20barket%2C%20je%20voudrais%20commander%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3Z"/></svg>Commander pour les fêtes</a></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">On vous attend</p>
+    <h2 class="rv">Passez, appelez, commandez</h2>
+    <div class="c-grid">
+      <a class="c-item rv" href="tel:+262692769050"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><div><b>0692 76 90 50</b><span>Appel ou WhatsApp, pour commander et réserver</span></div></a>
+      <a class="c-item rv" href="https://www.google.com/maps/search/?api=1&query=NANA+barket+%26+fastfood+10+rue+du+Commerce+Entre-Deux"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7.5 7-13a7 7 0 0 0-14 0c0 5.5 7 13 7 13Z"/><circle cx="12" cy="9" r="2.5"/></svg><div><b>10 rue du Commerce</b><span>97414 Entre-Deux · itinéraire</span></div></a>
+      <div class="c-item rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Midi 11h–14h · Soir 18h–21h</b><span>Le programme du jour est partagé sur la page Facebook</span></div></div>
+      <a class="c-item rv" href="https://www.facebook.com/rodolphe97414/"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg><div><b>Facebook</b><span>NANA barket &amp; fastfood · menus et nouveautés</span></div></a>
+      <a class="c-item rv" href="https://www.instagram.com/nana.barket/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><b>Instagram</b><span>@nana.barket</span></div></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>NANA barket &amp; fastfood · Snack, cary et fastfood · Entre-Deux, La Réunion<br>Maquette privée imaginée par Jonathan, <b>ATMA Digital</b>, à partir des publications de NANA barket &amp; fastfood.</footer>
+<a class="flottant" href="https://wa.me/262692769050?text=Bonjour%20NANA%20barket%2C%20je%20voudrais%20commander%20%3A%20" aria-label="Commander sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3Z"/></svg></a>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(i){var ember=i%4===0;return{e:ember,x:Math.random()*W,y:H+Math.random()*H*.6,r:ember?1+Math.random()*1.6:14+Math.random()*26,v:ember?.5+Math.random()*.7:.25+Math.random()*.35,a:Math.random()*6.28,s:.004+Math.random()*.008,o:ember?.55:.05+Math.random()*.05}}
+for(var i=0;i<28;i++){var p=mk(i);p.y=Math.random()*H;P.push(p)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.a+=p.s;p.x+=Math.sin(p.a)*(p.e?.6:.35);
+var life=Math.min(1,p.y/H*1.4);
+if(p.e){x.fillStyle='rgba(245,170,60,'+(p.o*life)+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+else{var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,250,240,'+(p.o*life)+')');g.addColorStop(1,'rgba(255,250,240,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();p.r+=.03}
+if(p.y<-40){P[i]=mk(i)}}
+requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="NANA barket &amp; fastfood" defer></script>
+</body>
+</html>
