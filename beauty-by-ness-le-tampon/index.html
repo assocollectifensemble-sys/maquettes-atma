@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Beauty By Ness · Skin Studio & K-Beauty au Tampon</title>
+<meta name="description" content="Beauty By Ness, institut au Tampon (La Réunion) : soins du visage coréens K-Beauty, Korean Lash Lift, Brow Lift, onglerie. 5 rue du Docteur Henri Roussel. En institut et à domicile.">
+<meta property="og:title" content="Beauty By Ness · Skin Studio au Tampon">
+<meta property="og:description" content="Soins coréens, technologie esthétique, beauté du regard et onglerie, dans un nouvel espace chaleureux et intimiste au Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/beauty-by-ness-le-tampon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/beauty-by-ness-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f7f1ea;--nacre:#fbf8f4;--lin:#ede3d7;--sable:#e2d2bf;--pampa:#c9a27a;--chene:#b98a5e;--taupe:#9a7469;--mauve:#b78f88;--rose:#e9cfc8;--sauge:#a9bdb2;--encre:#2c2421;--txt:#4a3f3a;--doux:#86766e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:16.5px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:400;color:var(--encre);line-height:1.08}
+h2{font-size:clamp(2rem,6.4vw,3.2rem);margin:.4rem 0 1.1rem}
+h2 em,h1 em{font-style:italic;color:var(--taupe)}
+h3{font-size:1.4rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.68rem;color:var(--chene);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--encre);color:var(--sable);text-align:center;font-size:.74rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#glow{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.08em;font-size:.82rem;text-transform:uppercase;transition:.35s}
+.btn-main{background:var(--encre);color:var(--nacre);box-shadow:0 14px 30px -14px rgba(44,36,33,.8);animation:souffle 5s ease-in-out infinite}
+.btn-main:hover{background:var(--taupe)}
+@keyframes souffle{50%{box-shadow:0 16px 40px -8px rgba(201,162,122,.85);transform:scale(1.025)}}
+.btn-line{border:1px solid var(--pampa);color:var(--encre);background:rgba(255,255,255,.5)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,900px);display:flex;align-items:center;overflow:hidden;padding:6.5rem 0 4rem;background:radial-gradient(90% 60% at 90% 0%,#fff 0%,transparent 60%),radial-gradient(80% 60% at 0% 100%,var(--rose) 0%,transparent 65%),var(--creme)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero .studio{font-size:.78rem;letter-spacing:.55em;text-transform:uppercase;color:var(--chene);font-weight:600;margin-bottom:.9rem}
+.hero h1{font-size:clamp(3.1rem,13vw,6.4rem);font-weight:400;letter-spacing:-.01em;opacity:0;transform:translateY(18px);animation:monte 1.4s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 em{display:block;font-size:.5em;margin-top:.3rem;letter-spacing:.02em}
+@keyframes monte{to{opacity:1;transform:none}}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.5rem 0 1.4rem}
+.tags span{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--sable);background:rgba(255,255,255,.55);padding:.35rem .8rem;border-radius:999px}
+.hero .lead{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(1.15rem,3.6vw,1.45rem);color:var(--taupe);margin-bottom:1.8rem;max-width:30rem}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:var(--doux)}
+.arche{position:relative;max-width:410px;margin:auto;width:100%}
+.arche .cadre{border-radius:220px 220px 22px 22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(44,36,33,.55)}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:35% center;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.arche::before{content:"";position:absolute;inset:-12px;border:1px solid var(--pampa);border-radius:232px 232px 30px 30px;opacity:.55}
+.arche figcaption{position:absolute;left:-.4rem;bottom:1.3rem;background:var(--nacre);padding:.55rem .95rem;border-radius:14px;font-size:.78rem;box-shadow:0 18px 40px -20px rgba(44,36,33,.45)}
+.perle{position:absolute;right:-18px;top:8%;width:112px;height:112px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#fff 0%,#f6ece4 35%,var(--rose) 70%,var(--mauve) 100%);box-shadow:0 20px 40px -18px rgba(154,116,105,.7);display:grid;place-items:center;text-align:center;font-family:'Bodoni Moda',serif;font-style:italic;font-size:.95rem;color:var(--encre);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px)}}
+/* bandeau */
+.bandeau{background:var(--encre);color:var(--sable);overflow:hidden;padding:1rem 0;position:relative;z-index:2}
+.bandeau .piste{display:flex;gap:2.4rem;width:max-content;animation:defile 34s linear infinite;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.15rem;white-space:nowrap}
+.bandeau .piste span::after{content:"✦";font-style:normal;color:var(--pampa);margin-left:2.4rem;font-size:.8rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* espace */
+.espace-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;align-items:end}
+.duo figure{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(44,36,33,.6)}
+.duo figure:first-child{transform:translateY(-1.6rem)}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.duo figure:hover img{transform:scale(1.06)}
+.duo figcaption,.legende{font-size:.74rem;color:var(--doux);padding:.5rem .2rem 0;letter-spacing:.04em}
+.citation{margin-top:1.6rem;padding:1.2rem 1.3rem;border-left:2px solid var(--pampa);background:rgba(255,255,255,.55);border-radius:0 16px 16px 0;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.1rem;color:var(--encre)}
+.citation small{display:block;font-family:Manrope,sans-serif;font-style:normal;font-size:.72rem;color:var(--doux);margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase}
+.puces{list-style:none;margin-top:1.2rem;display:grid;gap:.45rem}
+.puces li::before{content:"✦";color:var(--pampa);margin-right:.6rem;font-size:.75rem}
+/* univers */
+.univers{background:linear-gradient(180deg,var(--creme),var(--nacre) 30%,var(--lin))}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.2rem}
+.carte{background:rgba(255,255,255,.72);border:1px solid rgba(201,162,122,.35);border-radius:26px;padding:1.8rem 1.5rem;position:relative;overflow:hidden;transition:transform .45s,box-shadow .45s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(154,116,105,.65)}
+.carte::after{content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(233,207,200,.75),transparent 70%)}
+.carte .num{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--pampa);font-size:1.05rem}
+.carte h3{margin:.5rem 0 .7rem}
+.carte p{font-size:.95rem}
+.carte ul{list-style:none;margin-top:.9rem;display:grid;gap:.35rem;font-size:.9rem}
+.carte li{padding-left:1rem;position:relative}
+.carte li::before{content:"";position:absolute;left:0;top:.7em;width:5px;height:5px;border-radius:50%;background:var(--mauve)}
+.aussi{margin-top:1.6rem;text-align:center;font-size:.92rem;color:var(--doux)}
+/* citation sourcils */
+.manifeste{background:var(--encre);color:var(--sable);text-align:center;overflow:hidden}
+.manifeste p.grand{font-family:'Bodoni Moda',serif;font-size:clamp(1.8rem,6vw,3.2rem);line-height:1.2;color:var(--nacre);max-width:44rem;margin:.8rem auto 1rem}
+.manifeste p.grand em{color:var(--pampa)}
+.manifeste .eyebrow{color:var(--pampa)}
+.manifeste small{font-size:.8rem;letter-spacing:.1em}
+.manifeste svg{display:block;margin:0 auto 1rem;width:120px;opacity:.85}
+/* carnet */
+.carnet-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.ongles{border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(44,36,33,.6)}
+.ongles img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:60% center}
+.notes{display:grid;gap:1rem}
+.note{background:var(--nacre);border-radius:20px;padding:1.3rem 1.4rem;border:1px solid var(--lin)}
+.note .date{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--chene);font-weight:600}
+.note h3{font-size:1.2rem;margin:.35rem 0 .45rem}
+.note p{font-size:.93rem}
+/* tarifs */
+.tarifs{background:var(--lin)}
+.liste{max-width:640px;margin:1.8rem auto 0;display:grid;gap:.2rem}
+.ligne{display:flex;align-items:baseline;gap:.6rem;padding:.85rem 0;border-bottom:1px dashed rgba(154,116,105,.45)}
+.ligne span:first-child{flex:0 1 auto}
+.ligne i{flex:1;min-width:1rem}
+.ligne b{font-family:'Bodoni Moda',serif;font-weight:500;color:var(--encre);font-size:1.15rem;white-space:nowrap}
+.ligne small{display:block;color:var(--doux);font-size:.78rem}
+.tarifs .centre{text-align:center}
+.tarifs .mention{text-align:center;font-size:.8rem;color:var(--doux);margin-top:1.2rem}
+/* noel */
+.noel{background:radial-gradient(70% 60% at 85% 20%,rgba(233,207,200,.7),transparent 70%),radial-gradient(60% 60% at 0% 100%,rgba(201,162,122,.35),transparent 70%),var(--nacre);overflow:hidden}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.idees{display:grid;gap:.8rem;margin:1.4rem 0 1.8rem}
+.idee{background:rgba(255,255,255,.75);border-radius:18px;padding:1rem 1.2rem;border:1px solid var(--lin)}
+.idee h3{font-size:1.1rem;margin-bottom:.2rem}
+.idee p{font-size:.92rem}
+.bon{position:relative;aspect-ratio:1.6/1;border-radius:22px;padding:1.4rem 1.5rem;background:linear-gradient(135deg,#2c2421 0%,#4a3a34 55%,#6d5148 100%);color:var(--sable);box-shadow:0 40px 70px -36px rgba(44,36,33,.8);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;transform:rotate(-3deg);transition:transform .6s}
+.bon:hover{transform:rotate(0) scale(1.02)}
+.bon::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.18) 45%,transparent 60%);background-size:250% 100%;animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{from{background-position:120% 0}to{background-position:-120% 0}}
+.bon small{font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;color:var(--pampa)}
+.bon .titre{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(1.5rem,5.5vw,2.1rem);color:var(--nacre);line-height:1.1}
+.bon .ruban{position:absolute;right:1.4rem;top:0;bottom:0;width:14px;background:linear-gradient(var(--pampa),var(--chene));opacity:.85}
+.bon .noeud{position:absolute;right:.55rem;top:38%;width:46px;height:30px}
+.bon .legende{color:var(--sable);opacity:.7;padding:0;font-size:.62rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.infos p{margin-bottom:.55rem}
+.infos b{font-weight:600;color:var(--encre)}
+.horaires{list-style:none;margin:.4rem 0 1rem;display:grid;gap:.15rem;font-size:.93rem;max-width:330px}
+.horaires li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dotted var(--sable);padding:.25rem 0}
+.plan{border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(44,36,33,.6)}
+.plan img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.btn-dark{background:transparent;border:1px solid var(--encre);color:var(--encre)}
+.btn-dark:hover{background:var(--encre);color:var(--nacre)}
+footer{text-align:center;padding:2.6rem 1rem 3rem;font-size:.8rem;color:var(--doux);background:var(--lin);position:relative;z-index:2}
+/* apparitions */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:46px}
+@media (max-width:820px){
+ .hero-in,.espace-in,.carnet-in,.noel-in,.contact-in{grid-template-columns:1fr}
+ .cartes{grid-template-columns:1fr}
+ .hero{padding-top:5.6rem}
+ .arche{max-width:330px;margin-top:.5rem}
+ .perle{width:92px;height:92px;right:-6px;font-size:.82rem}
+ .duo figure:first-child{transform:translateY(-.8rem)}
+ .bon{transform:rotate(-2deg)}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Beauty By Ness</div>
+<canvas id="glow" aria-hidden="true"></canvas>
+<main>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="studio">Skin Studio · Le Tampon</p>
+      <h1>Beauty By Ness<em>votre beauté, votre peau</em></h1>
+      <div class="tags"><span>Soins coréens</span><span>Technologie esthétique</span><span>Regard</span><span>Onglerie</span></div>
+      <p class="lead">Un nouvel espace dédié à votre beauté et à votre peau, au cœur du Tampon.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://www.fresha.com/a/beauty-by-ness-skin-studio-le-tampon-5-rue-du-docteur-henri-roussel-pvf0tlk6">Réserver mon moment</a>
+        <a class="btn btn-line" href="https://wa.me/262693479734?text=Bonjour%20Beauty%20By%20Ness%2C%20je%20voudrais%20prendre%20rendez-vous">WhatsApp</a>
+      </div>
+      <p class="adr">📍 5 rue du Docteur Henri Roussel, Le Tampon · Institut &amp; à domicile</p>
+    </div>
+    <figure class="arche rv">
+      <div class="cadre"><img src="img/institut-salle.webp" alt="L'espace de Beauty By Ness au Tampon : parquet clair, plaid rose, table d'onglerie et bouquet de pampa"></div>
+      <div class="perle">K-Beauty<br>glow</div>
+      <figcaption>L'institut, 5 rue du Dr Henri Roussel</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Glow Express</span><span>Korean Lash Lift</span><span>Brow Lift</span><span>Épilation au fil</span><span>Extensions de cils</span><span>Onglerie</span><span>Sélection K-Beauty</span>
+  <span>Glow Express</span><span>Korean Lash Lift</span><span>Brow Lift</span><span>Épilation au fil</span><span>Extensions de cils</span><span>Onglerie</span><span>Sélection K-Beauty</span>
+</div></div>
+
+<section class="espace" id="espace">
+  <div class="wrap espace-in">
+    <div class="rv">
+      <p class="eyebrow">Ouvert en octobre 2026</p>
+      <h2>Beauty By Ness <em>s'installe</em> au Tampon</h2>
+      <p>Dans un espace chaleureux et intimiste, profitez d'une véritable parenthèse de beauté et de bien-être, avec des prestations personnalisées et adaptées à vos besoins.</p>
+      <ul class="puces">
+        <li>Soins visage K-Beauty &amp; technologies esthétiques</li>
+        <li>Beauté du regard</li>
+        <li>Onglerie</li>
+        <li>Sélection de produits K-Beauty</li>
+      </ul>
+      <blockquote class="citation">« Cocooning, intime, apaisant… un véritable petit havre de paix. »<small>Avis d'une cliente · Fresha</small></blockquote>
+    </div>
+    <div class="duo rv">
+      <figure><img src="img/institut-detail.webp" alt="Bouquet de pampa dans un vase de verre vert d'eau, fauteuil bouclette et plateau en bois" loading="lazy"><figcaption>Fauteuil bouclette &amp; pampa</figcaption></figure>
+      <figure><img src="img/institut-cabine.webp" style="object-position:30% center" alt="La cabine de soin, lit habillé de blanc et lumière douce" loading="lazy"><figcaption>La cabine de soin</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="univers" id="univers">
+  <div class="wrap">
+    <div class="rv" style="text-align:center">
+      <p class="eyebrow">L'univers Beauty By Ness</p>
+      <h2>Les rituels coréens, <em>au service de votre peau</em></h2>
+      <p style="max-width:40rem;margin:auto">Spécialisé dans les soins du visage K-Beauty, l'institut associe les rituels coréens aux technologies esthétiques avancées pour sublimer votre peau.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte rv">
+        <span class="num">01</span>
+        <h3>Soins visage K-Beauty</h3>
+        <p>Pour une première découverte, le <b>Glow Express</b> : les soins du visage coréens en 30 minutes.</p>
+        <ul><li>K-Beauty · Soins Flash</li><li>K-Beauty · Rituels Glow</li><li>Soins Experts Haute Technologie</li></ul>
+      </article>
+      <article class="carte rv">
+        <span class="num">02</span>
+        <h3>Beauté du regard</h3>
+        <p>Des cils naturellement recourbés avec le <b>Korean Lash Lift</b>, et des sourcils restructurés avec le <b>Brow Lift</b>.</p>
+        <ul><li>Korean Lash Lift</li><li>Brow Lift &amp; teinture</li><li>Extensions de cils</li><li>Épilation au fil</li></ul>
+      </article>
+      <article class="carte rv">
+        <span class="num">03</span>
+        <h3>Onglerie</h3>
+        <p>Des poses féminines et lumineuses, du nail art chic : reverse délicate, finitions scintillantes, touche de léopard.</p>
+        <ul><li>Vernis semi-permanent</li><li>Nail art</li></ul>
+      </article>
+    </div>
+    <p class="aussi rv">Et aussi : épilations, maquillage, modelage et soins du corps.</p>
+  </div>
+</section>
+
+<section class="manifeste">
+  <div class="wrap rv">
+    <svg viewBox="0 0 120 30" aria-hidden="true"><path d="M4 22 C 30 4, 80 2, 116 16" fill="none" stroke="#c9a27a" stroke-width="2.2" stroke-linecap="round"/><path d="M14 27 C 40 14, 78 13, 108 22" fill="none" stroke="#e2d2bf" stroke-width="1" stroke-linecap="round" opacity=".7"/></svg>
+    <p class="eyebrow">Brow Lift</p>
+    <p class="grand">On ne change pas vos sourcils.<br><em>On révèle leur potentiel.</em></p>
+    <small>Beauty By Ness · publication du 24 octobre 2026</small>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap carnet-in">
+    <figure class="rv">
+      <div class="ongles"><img src="img/ongles-reverse.webp" alt="Pose d'ongles rose nude en reverse, finitions à paillettes dorées" loading="lazy"></div>
+      <figcaption class="legende">« Reverse délicate &amp; finitions scintillantes » · Beauty By Ness</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">Le carnet de l'institut</p>
+      <h2>Chaque détail <em>compte</em></h2>
+      <div class="notes">
+        <div class="note"><span class="date">14 octobre 2026</span><h3>Reverse délicate &amp; finitions scintillantes</h3><p>Une pose féminine, élégante et lumineuse, parfaite pour sublimer les mains avec finesse.</p></div>
+        <div class="note"><span class="date">19 octobre 2026</span><h3>Des sourcils qui retrouvent du caractère</h3><p>Pour retrouver épaisseur et intensité avec un résultat naturel : une restructuration grâce au Brow Lift associé à une teinture, pour redonner du caractère au regard.</p></div>
+        <div class="note"><span class="date">21 octobre 2026</span><h3>Une touche de léopard sur ongles courts</h3><p>Noir intense, nude et détails léopard pour une manucure chic et tendance.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs" id="tarifs">
+  <div class="wrap">
+    <div class="centre rv"><p class="eyebrow">Quelques prestations</p><h2>Le regard, <em>sublimé</em></h2></div>
+    <div class="liste rv">
+      <div class="ligne"><span>Sourcils · fil<small>15 min</small></span><i></i><b>12 €</b></div>
+      <div class="ligne"><span>Brow Lift + teinture<small>1 h 15</small></span><i></i><b>45 €</b></div>
+      <div class="ligne"><span>Korean Lash Lift + teinture<small>1 h 15</small></span><i></i><b>55 €</b></div>
+      <div class="ligne"><span>Combo Korean Lash Lift + Brow Lift + teinture<small>2 h</small></span><i></i><b>85 €</b></div>
+    </div>
+    <p class="mention">Tarifs publiés sur la page de réservation en ligne de Beauty By Ness.</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment <em>chez Beauty By Ness</em></h2>
+      <p>Un regard sublimé, une peau qui rayonne, des mains qui brillent : la carte cadeau, c'est l'idée douce à glisser sous le sapin.</p>
+      <div class="idees">
+        <div class="idee"><h3>Une carte cadeau</h3><p>Pour une maman, une sœur, une amie : demandez votre carte cadeau par WhatsApp.</p></div>
+        <div class="idee"><h3>Une découverte K-Beauty</h3><p>Le Glow Express, pour découvrir les soins du visage coréens en 30 minutes.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262693479734?text=Bonjour%20Beauty%20By%20Ness%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Demander une carte cadeau</a>
+    </div>
+    <div class="rv">
+      <div class="bon">
+        <small>Carte cadeau</small>
+        <span class="titre">Un moment beauté<br>juste pour vous</span>
+        <small>Beauty By Ness · Le Tampon</small>
+        <span class="ruban"></span>
+        <svg class="noeud" viewBox="0 0 46 30" aria-hidden="true"><path d="M23 15 C 10 0, 0 6, 6 15 C 0 24, 10 30, 23 15Z M23 15 C 36 0, 46 6, 40 15 C 46 24, 36 30, 23 15Z" fill="#c9a27a"/><circle cx="23" cy="15" r="4" fill="#b98a5e"/></svg>
+      </div>
+      <p class="legende" style="text-align:center;margin-top:1rem">Illustration</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Rendez-vous</p>
+      <h2>Votre parenthèse <em>vous attend</em></h2>
+      <p><b>Adresse</b> · 5 rue du Docteur Henri Roussel, 97430 Le Tampon</p>
+      <p><b>En institut &amp; à domicile</b> · parking disponible</p>
+      <p><b>Téléphone</b> · <a href="tel:+262693479734">0693 47 97 34</a></p>
+      <ul class="horaires">
+        <li><span>Lundi, mardi</span><span>8h – 17h</span></li>
+        <li><span>Mercredi</span><span>8h – 16h</span></li>
+        <li><span>Jeudi, vendredi</span><span>8h – 17h</span></li>
+        <li><span>Samedi</span><span>8h – 16h</span></li>
+      </ul>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="https://www.fresha.com/a/beauty-by-ness-skin-studio-le-tampon-5-rue-du-docteur-henri-roussel-pvf0tlk6">Réserver en ligne</a>
+        <a class="btn btn-dark" href="https://wa.me/262693479734?text=Bonjour%20Beauty%20By%20Ness%2C%20je%20voudrais%20prendre%20rendez-vous">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262693479734">Appeler</a>
+      </div>
+      <div class="ctas" style="margin-top:.7rem">
+        <a class="btn btn-dark" href="https://www.facebook.com/105113842102312">Facebook</a>
+        <a class="btn btn-dark" href="https://www.instagram.com/beautybyness_aesthetic/">Instagram</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=5%20rue%20du%20Docteur%20Henri%20Roussel%2097430%20Le%20Tampon">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="plan rv"><img src="img/institut-cabine.webp" style="object-position:28% center" alt="La cabine de soin de Beauty By Ness" loading="lazy"></figure>
+  </div>
+</section>
+
+<footer>Beauty By Ness · Skin Studio &amp; K-Beauty · Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Beauty By Ness.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* reflets nacrés et paillettes dorées, comme une peau qui rayonne */
+const c=document.getElementById('glow'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const cols=['201,162,122','233,207,200','255,250,244','183,143,136'];
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:1+Math.random()*2.6,v:.12+Math.random()*.3,a:Math.random()*6.28,t:Math.random()*6.28,c:cols[i%4],e:i%3==0});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.008;p.t+=.03;p.x+=Math.sin(p.a)*.35;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+const o=.18+Math.sin(p.t)*.14;
+if(p.e){x.save();x.translate(p.x,p.y);x.fillStyle='rgba('+p.c+','+(o+.08)+')';const s=p.r*2.4;x.beginPath();x.moveTo(0,-s);x.quadraticCurveTo(0,0,s,0);x.quadraticCurveTo(0,0,0,s);x.quadraticCurveTo(0,0,-s,0);x.quadraticCurveTo(0,0,0,-s);x.fill();x.restore()}
+else{const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*3);g.addColorStop(0,'rgba('+p.c+','+o+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*3,0,6.28);x.fill()}}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Beauty By Ness" defer></script>
+</body>
+</html>
