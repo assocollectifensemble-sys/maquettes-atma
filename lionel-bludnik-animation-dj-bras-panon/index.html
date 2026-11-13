@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lionel Bludnik Animation DJ · Son & lumière à Bras-Panon</title>
+<meta name="description" content="Lionel Bludnik Animation DJ, disc-jockey professionnel à Bras-Panon (La Réunion) : animation DJ son & lumière pour mariages, anniversaires, soirées privées, baptêmes et événements d'entreprises. Tarifs sur demande au 0692 11 42 11.">
+<meta property="og:title" content="Lionel Bludnik Animation DJ · Son & lumière">
+<meta property="og:description" content="Animation DJ son & lumière pour tous vos événements : mariages, anniversaires, soirées privées, CSE et entreprises. Recommandé par 100 % (12 avis).">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lionel-bludnik-animation-dj-bras-panon/img/cabine-jaune.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lionel-bludnik-animation-dj-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat+Brush&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#ffe500;--jaune2:#fff27a;--or:#d9b04c;--noir:#0a0a0c;--nuit:#121218;--ardoise:#1c1c25;--bleu:#2f6bff;--blanc:#f6f4ee;--gris:#a9a9b4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,Arial;font-weight:300;color:var(--blanc);background:var(--noir);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1.02}
+h2{font-size:clamp(2.2rem,8vw,3.8rem);margin:.4rem 0 1.2rem}
+h3{font-size:1.35rem;letter-spacing:.04em}
+.main{font-family:'Caveat Brush',cursive;color:var(--jaune);text-transform:none;letter-spacing:0;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--jaune);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--jaune);color:#111;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{font-weight:600}
+canvas#scene{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.85rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.05em;font-size:.92rem;transition:.3s;text-align:center}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--jaune);color:#111;box-shadow:0 0 0 0 rgba(255,229,0,.6);animation:pulse 2.6s ease-in-out infinite}
+.btn-main:hover{background:#fff}
+@keyframes pulse{50%{box-shadow:0 0 0 12px rgba(255,229,0,0),0 0 34px 4px rgba(255,229,0,.35)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-line:hover{border-color:var(--jaune);color:var(--jaune)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,920px);display:flex;align-items:center;padding:6.5rem 0 4rem;overflow:hidden;background:radial-gradient(70% 50% at 50% 0%,rgba(255,229,0,.13),transparent 70%),radial-gradient(60% 50% at 100% 100%,rgba(47,107,255,.18),transparent 70%)}
+.hero-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.logo{width:96px;height:96px;border-radius:50%;object-fit:cover;margin-bottom:1.2rem;animation:spin 18s linear infinite;box-shadow:0 0 40px rgba(255,229,0,.35)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero h1{font-size:clamp(3.6rem,15vw,7rem);opacity:0;animation:monte 1.2s .2s ease forwards}
+.hero h1 .main{display:block;font-size:.62em;margin-top:.15rem;transform:rotate(-3deg);transform-origin:left}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero .lead{font-size:clamp(1.05rem,3.6vw,1.3rem);margin:1.1rem 0 .4rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.hero .sous{color:var(--gris);margin-bottom:1.8rem;max-width:30rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.6rem;font-size:.9rem;color:var(--gris)}
+.badge b{color:var(--jaune);font-weight:600}
+.scene{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/3.1;box-shadow:0 30px 80px -30px rgba(255,229,0,.45);border:1px solid rgba(255,229,0,.25)}
+.scene img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.13) translate(-1.5%,-1%)}}
+.scene figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(10,10,12,.78);padding:.4rem .8rem;border-radius:10px;font-size:.78rem}
+.eq{position:absolute;right:.9rem;bottom:.9rem;display:flex;gap:4px;align-items:flex-end;height:34px}
+.eq i{width:5px;background:var(--jaune);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.45s}.eq i:nth-child(4){animation-delay:.1s}.eq i:nth-child(5){animation-delay:.3s}
+@keyframes eq{0%,100%{height:20%}50%{height:100%}}
+/* bandeau */
+.bandeau{background:var(--jaune);color:#111;overflow:hidden;padding:.9rem 0;transform:rotate(-1.5deg);margin:0 -2vw;position:relative;z-index:3}
+.bandeau .piste{display:flex;gap:2.4rem;width:max-content;animation:defile 30s linear infinite;font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:1.25rem;letter-spacing:.06em;white-space:nowrap}
+.bandeau span::after{content:"✦";margin-left:2.4rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* citation */
+.citation{text-align:center}
+.citation blockquote{font-family:'Caveat Brush',cursive;font-size:clamp(2rem,8vw,3.6rem);line-height:1.15;color:#fff;max-width:20ch;margin:auto}
+.citation blockquote em{color:var(--jaune);font-style:normal}
+.citation p{margin-top:1.3rem;color:var(--gris);font-size:.95rem}
+/* prestations */
+.grille{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.carte{background:linear-gradient(160deg,var(--ardoise),var(--nuit));border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.6rem 1.3rem;transition:.35s}
+.carte:hover{transform:translateY(-6px);border-color:rgba(255,229,0,.5);box-shadow:0 20px 40px -20px rgba(255,229,0,.35)}
+.carte svg{width:46px;height:46px;margin-bottom:1rem;color:var(--jaune)}
+.carte p{color:var(--gris);font-size:.95rem;margin-top:.5rem}
+/* evenements */
+.evts{background:linear-gradient(180deg,transparent,rgba(47,107,255,.08) 40%,transparent)}
+.ev{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center;margin-top:3rem}
+.ev:nth-of-type(even) .ev-img{order:2}
+.ev-img{border-radius:20px;overflow:hidden;aspect-ratio:4/3;border:1px solid rgba(255,255,255,.1)}
+.ev-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.ev:hover .ev-img img{transform:scale(1.06)}
+.ev h3{font-size:clamp(1.6rem,6vw,2.3rem);margin:.3rem 0 .8rem}
+.ev p{color:#d9d8dc}
+.puces{list-style:none;margin-top:1rem;display:grid;gap:.45rem}
+.puces li{padding-left:1.6rem;position:relative}
+.puces li::before{content:"";position:absolute;left:0;top:.62em;width:.7rem;height:.7rem;border-radius:50%;background:var(--jaune);box-shadow:0 0 12px var(--jaune)}
+.horaires{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.horaires span{border:1px solid var(--jaune);color:var(--jaune);border-radius:999px;padding:.3rem .9rem;font-weight:600;font-size:.9rem}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 5vw 1.5rem;margin-top:1rem;scrollbar-width:thin;scrollbar-color:var(--jaune) transparent}
+.galerie figure{flex:0 0 min(78vw,340px);scroll-snap-align:center;position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:var(--ardoise)}
+.galerie img{width:100%;height:100%;object-fit:cover}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .9rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.85rem}
+.galerie figcaption b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--jaune);font-size:1.05rem}
+.astuce{text-align:center;color:var(--gris);font-size:.85rem}
+/* fetes */
+.fetes{overflow:hidden}
+.fetes-in{background:radial-gradient(80% 90% at 0% 0%,rgba(255,229,0,.16),transparent 60%),radial-gradient(70% 80% at 100% 100%,rgba(217,176,76,.18),transparent 60%),var(--nuit);border:1px solid rgba(255,229,0,.35);border-radius:28px;padding:clamp(2rem,6vw,4rem);display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:center;position:relative}
+.guirlande{position:absolute;top:0;left:6%;right:6%;height:26px;display:flex;justify-content:space-between}
+.guirlande i{width:9px;height:9px;border-radius:50%;margin-top:10px;background:var(--jaune);box-shadow:0 0 12px var(--jaune);animation:clign 2.4s ease-in-out infinite}
+.guirlande i:nth-child(3n){background:#fff;box-shadow:0 0 12px #fff;animation-delay:.8s}
+.guirlande i:nth-child(3n+1){background:var(--or);box-shadow:0 0 12px var(--or);animation-delay:1.6s}
+@keyframes clign{50%{opacity:.25}}
+.dates{display:flex;gap:.8rem;margin:1.4rem 0}
+.dates div{flex:1;max-width:96px;background:var(--noir);border:1px solid var(--jaune);border-radius:16px;text-align:center;padding:.7rem .3rem;box-shadow:0 0 22px -6px rgba(255,229,0,.6)}
+.dates b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:2.3rem;color:var(--jaune);line-height:1}
+.dates small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gris)}
+.idees{display:grid;gap:.9rem;margin:1.2rem 0 1.6rem}
+.idee{border-left:3px solid var(--jaune);padding:.2rem 0 .2rem 1rem}
+.idee h3{font-size:1.1rem}
+.idee p{color:var(--gris);font-size:.95rem}
+.ticket{background:var(--jaune);color:#111;border-radius:20px;padding:1.8rem 1.4rem;text-align:center;transform:rotate(3deg);box-shadow:0 30px 60px -25px rgba(255,229,0,.6);position:relative}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--nuit);transform:translateY(-50%)}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket small{display:block;text-transform:uppercase;letter-spacing:.2em;font-size:.68rem;font-weight:600}
+.ticket .main{color:#111;font-size:2.5rem;display:block;margin:.5rem 0}
+.ticket hr{border:0;border-top:2px dashed rgba(0,0,0,.35);margin:.9rem 0}
+/* avis */
+.avis{text-align:center}
+.score{font-family:Anton,Impact,sans-serif;font-size:clamp(5rem,26vw,9rem);line-height:1;color:var(--jaune);text-shadow:0 0 40px rgba(255,229,0,.35)}
+.avis h3{margin-top:.8rem}
+.avis p{color:#d9d8dc;max-width:34rem;margin:.6rem auto 0}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.infos p{margin:.35rem 0;color:#d9d8dc}
+.infos b{color:var(--jaune);font-weight:600}
+.infos a{text-decoration-color:rgba(255,229,0,.5)}
+.contact .ctas{margin-top:1.6rem}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.mini img{border-radius:16px;aspect-ratio:1;object-fit:cover;width:100%}
+.mini img:first-child{grid-column:1/3;aspect-ratio:16/10}
+footer{text-align:center;padding:3rem 5vw 6rem;color:var(--gris);font-size:.85rem;border-top:1px solid rgba(255,255,255,.08)}
+footer img{width:56px;margin:0 auto 1rem;border-radius:50%}
+.flottant{position:fixed;right:1rem;bottom:1rem;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.7)}
+.flottant svg{width:30px;height:30px;color:#fff}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.ev,.fetes-in,.contact-in{grid-template-columns:1fr}
+ .ev:nth-of-type(even) .ev-img{order:0}
+ .grille{grid-template-columns:1fr 1fr}
+ .ticket{transform:rotate(-2deg);max-width:320px;margin:auto}
+}
+@media (max-width:420px){.grille{grid-template-columns:1fr}.btn{width:100%}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.hero h1{opacity:1}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Lionel Bludnik Animation DJ</div>
+<canvas id="scene" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <img class="logo" src="img/logo.webp" alt="Logo Lionel Bludnik : disque jaune et casque de DJ" width="96" height="96">
+      <p class="eyebrow">Disc-jockey professionnel · Bras-Panon</p>
+      <h1>Lionel Bludnik <span class="main">Animation DJ</span></h1>
+      <p class="lead">Son &amp; lumière pour tous vos événements</p>
+      <p class="sous">Prestataire de mariage, anniversaires, soirées privées et repas d'entreprise : la musique, la sono et le show lumière, réunis par un seul professionnel.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692114211?text=Bonjour%20Lionel%2C%20je%20souhaite%20un%20devis%20pour%20une%20animation%20DJ"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>Demander un devis</a>
+        <a class="btn btn-line" href="tel:+262692114211">Appeler le 0692 11 42 11</a>
+      </div>
+      <p class="badge"><b>★ Recommandé par 100 %</b> · 12 avis sur Facebook</p>
+    </div>
+    <figure class="scene rv">
+      <img src="img/cabine-jaune.webp" alt="Cabine DJ blanche de Lionel Bludnik, deux lyres projetant des faisceaux jaunes" width="1200" height="686">
+      <figcaption>La cabine de Lionel, faisceaux jaunes</figcaption>
+      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    </figure>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Mariages</span><span>Anniversaires</span><span>Soirées privées</span><span>Événements d'entreprises</span><span>CSE</span><span>Baptêmes</span><span>Communions</span><span>Confirmations</span>
+  <span>Mariages</span><span>Anniversaires</span><span>Soirées privées</span><span>Événements d'entreprises</span><span>CSE</span><span>Baptêmes</span><span>Communions</span><span>Confirmations</span>
+</div></div>
+
+<section class="citation">
+  <div class="wrap rv">
+    <p class="eyebrow">Sa devise</p>
+    <blockquote>Le mariage dure une journée… <em>les souvenirs durent toute une vie</em></blockquote>
+    <p>« Faites le bon choix et confiez votre animation DJ à un professionnel. » · Lionel, août 2026</p>
+  </div>
+</section>
+
+<section id="prestations">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">On vous propose</p>
+      <h2>Une soirée complète, <span class="main">clé en main</span></h2>
+    </div>
+    <div class="grille">
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="5"/><path d="M24 7a17 17 0 0 1 17 17M30 4l6 8"/></svg>
+        <h3>Prestation DJ</h3>
+        <p>La musique qui fait danser vos invités, choisie pour votre public.</p>
+      </article>
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="12" y="5" width="24" height="38" rx="4"/><circle cx="24" cy="30" r="7"/><circle cx="24" cy="14" r="3"/></svg>
+        <h3>Sonorisation</h3>
+        <p>Un son clair et puissant, réglé pour votre salle de réception.</p>
+      </article>
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6h12v8H18zM24 14v4"/><path d="M20 18h8l10 24H10z" opacity=".55"/></svg>
+        <h3>Éclairage &amp; show lumière</h3>
+        <p>Show lumière sur la piste de danse, éclairage d'ambiance et éclairage thématique de la salle.</p>
+      </article>
+      <article class="carte rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 42h20M17 42l2-10h10l2 10"/><path d="M24 28V12M18 24l-4-12M30 24l4-12M24 8v-2M13 8l-1-2M35 8l1-2"/></svg>
+        <h3>Machines à effets</h3>
+        <p>Étincelles froides et effets de scène pour sublimer les grands moments de la soirée.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="evts" id="evenements">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Pour quels événements ?</p>
+      <h2>Chaque fête a <span class="main">sa musique</span></h2>
+    </div>
+
+    <div class="ev rv">
+      <div class="ev-img"><img src="img/creolia-arche.webp" alt="Table d'honneur sous une arche fleurie, drapés blancs et vert d'eau" loading="lazy" width="472" height="640"></div>
+      <div>
+        <p class="eyebrow">Prestataire de mariage</p>
+        <h3>Mariages</h3>
+        <p>Pour le plus beau jour, Lionel réunit tout ce qui fait vibrer la soirée, sur la base d'une prestation de 18h à 2h :</p>
+        <ul class="puces">
+          <li>Animation DJ</li>
+          <li>Sonorisation intérieure</li>
+          <li>Show lumière sur la piste de danse</li>
+          <li>Éclairage d'ambiance de la salle</li>
+          <li>Étincelles froides</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ev rv">
+      <div class="ev-img"><img src="img/saint-ignace-table.webp" alt="Table ronde dressée en blanc, bleu roi et rubans dorés, centre de table fleuri" loading="lazy" width="727" height="810"></div>
+      <div>
+        <p class="eyebrow">Vous célébrez</p>
+        <h3>Baptême, communion, confirmation</h3>
+        <p>Animation DJ son &amp; lumière pour les fêtes de famille, en journée ou en soirée, selon votre programme :</p>
+        <div class="horaires"><span>12h – 18h</span><span>ou</span><span>19h – 2h</span></div>
+      </div>
+    </div>
+
+    <div class="ev rv">
+      <div class="ev-img"><img src="img/salle-reception.webp" alt="Salle de réception dressée, tables rondes et chaises habillées de blanc" loading="lazy" width="636" height="520"></div>
+      <div>
+        <p class="eyebrow">Entreprises · CSE · Services · Administrations</p>
+        <h3>Repas de fin d'année</h3>
+        <p>Déjeuner dansant ou dîner dansant : Lionel anime les repas de fin d'année de votre entreprise avec prestation DJ, sonorisation, show lumière, éclairage thématique et machines à effets.</p>
+        <p style="margin-top:.8rem;color:var(--jaune)">Pensez dès maintenant à réserver votre date.</p>
+      </div>
+    </div>
+
+    <div class="ev rv">
+      <div class="ev-img"><img src="img/cabine-jardin.webp" alt="Cabine DJ drapée de blanc devant de grandes baies vitrées sur jardin tropical" loading="lazy" width="524" height="308"></div>
+      <div>
+        <p class="eyebrow">Et toutes vos fêtes</p>
+        <h3>Anniversaires &amp; soirées privées</h3>
+        <p>Une sono, des lumières et un DJ qui lit la piste : votre anniversaire ou votre soirée entre amis prend des airs de grande fête.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="soirees">
+  <div class="wrap rv">
+    <p class="eyebrow">Ses dernières soirées</p>
+    <h2>Wedding party · <span class="main">Music life</span></h2>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/creolia-salle.webp" alt="Salle de mariage avec arche fleurie et drapés blancs" loading="lazy"><figcaption><b>08.08.26</b>Wedding party · Hôtel Exsel Créolia, Saint-Denis</figcaption></figure>
+    <figure><img src="img/saint-ignace-cabine.webp" alt="Cabine DJ, enceintes et lyres sous lumière bleue" loading="lazy"><figcaption><b>14.08.26</b>Wedding party · Le Saint-Ignace, Sainte-Marie</figcaption></figure>
+    <figure><img src="img/creolia-table.webp" alt="Centre de table fleuri, bougies et chiffre de table" loading="lazy"><figcaption><b>08.08.26</b>Tables vert d'eau au Créolia</figcaption></figure>
+    <figure><img src="img/saint-ignace-cadeaux.webp" alt="Table des cadeaux d'invités, vélo blanc décoratif et fleurs bleues" loading="lazy"><figcaption><b>14.08.26</b>Bleu roi et doré au Saint-Ignace</figcaption></figure>
+    <figure><img src="img/chapiteau.webp" alt="Chapiteau illuminé de guirlandes et projections dorées, tables dressées" loading="lazy"><figcaption><b>Sous chapiteau</b>Guirlandes et projections dorées</figcaption></figure>
+    <figure><img src="img/love.webp" alt="Lettres lumineuses LOVE devant la table d'honneur, rideau de lumières" loading="lazy"><figcaption><b>Love</b>Lettres lumineuses et rideau étoilé</figcaption></figure>
+    <figure><img src="img/table-rose.webp" alt="Table dressée rose et fuchsia, grand vase fleuri" loading="lazy"><figcaption><b>En rose</b>Ambiance fuchsia et rideau lumineux</figcaption></figure>
+    <figure><img src="img/table-honneur.webp" alt="Table d'honneur, fauteuils rouges capitonnés et composition de lys" loading="lazy"><figcaption><b>Table d'honneur</b>Fauteuils rouges et lys</figcaption></figure>
+    <figure><img src="img/cabine-blanche.webp" alt="Cabine DJ blanche et faisceaux de lumière blanche" loading="lazy"><figcaption><b>En blanc</b>Lyres et faisceaux</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="fetes" id="noel">
+  <div class="wrap">
+    <div class="fetes-in rv">
+      <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div>
+        <p class="eyebrow">Offrir pour Noël</p>
+        <h2>Des réveillons <span class="main">qui dansent</span></h2>
+        <p>Lionel a ouvert ses dates de fin d'année pour vos animations DJ :</p>
+        <div class="dates">
+          <div><b>24</b><small>déc.</small></div>
+          <div><b>25</b><small>déc.</small></div>
+          <div><b>31</b><small>déc.</small></div>
+        </div>
+        <div class="idees">
+          <div class="idee"><h3>Le réveillon en famille</h3><p>Offrez aux vôtres une vraie piste de danse, avec le son et les lumières.</p></div>
+          <div class="idee"><h3>La Saint-Sylvestre</h3><p>Le compte à rebours et le passage à 2027 en musique.</p></div>
+          <div class="idee"><h3>Le repas d'entreprise</h3><p>Un déjeuner ou un dîner dansant pour remercier vos équipes.</p></div>
+        </div>
+        <a class="btn btn-main" href="https://wa.me/262692114211?text=Bonjour%20Lionel%2C%20je%20souhaite%20r%C3%A9server%20une%20animation%20DJ%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e">Réserver ma date sur WhatsApp</a>
+      </div>
+      <div class="ticket">
+        <small>Invitation</small>
+        <span class="main">Soirée de fête</span>
+        <small>Animation DJ son &amp; lumière</small>
+        <hr>
+        <small>Lionel Bludnik · Tarifs &amp; infos sur demande</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap rv">
+    <p class="eyebrow">Ce qu'en disent ses clients</p>
+    <div class="score">100 %</div>
+    <h3>Recommandé par 12 avis sur Facebook</h3>
+    <p>Les 12 personnes qui ont donné leur avis sur sa page le recommandent toutes. Une belle preuve de confiance pour votre prochaine fête.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Réservations 2026/2027 ouvertes</p>
+      <h2>Réservez <span class="main">votre date</span></h2>
+      <p>Tarifs &amp; devis sur simple demande : racontez votre événement, Lionel vous répond avec plaisir.</p>
+      <p style="margin-top:1rem"><b>Téléphone</b> · <a href="tel:+262692114211">0692 11 42 11</a></p>
+      <p><b>E-mail</b> · <a href="mailto:bludnik.lionel@gmail.com">bludnik.lionel@gmail.com</a></p>
+      <p><b>Adresse</b> · 9 rue Roberto, 97412 Bras-Panon</p>
+      <p><b>Facebook</b> · <a href="https://www.facebook.com/profile.php?id=100048655518884">Lionel Bludnik Animation DJ</a></p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692114211?text=Bonjour%20Lionel%2C%20je%20souhaite%20r%C3%A9server%20une%20date%20pour%20une%20animation%20DJ">Écrire sur WhatsApp</a>
+        <a class="btn btn-line" href="mailto:bludnik.lionel@gmail.com?subject=Demande%20de%20devis%20animation%20DJ">Envoyer un e-mail</a>
+      </div>
+    </div>
+    <div class="mini rv">
+      <img src="img/cabine-blanche.webp" alt="Cabine DJ blanche sous faisceaux lumineux" loading="lazy">
+      <img src="img/saint-ignace-cabine.webp" alt="Installation DJ sous lumière bleue" loading="lazy">
+      <img src="img/table-honneur.webp" alt="Table d'honneur fleurie" loading="lazy">
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <img src="img/logo.webp" alt="" width="56" height="56">
+  <p><b style="color:var(--jaune)">Lionel Bludnik Animation DJ</b> · Disc-jockey professionnel · Bras-Panon, La Réunion · SIRET 527 528 095 00013</p>
+  <p style="margin-top:.8rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Lionel Bludnik Animation DJ.</p>
+</footer>
+<a class="flottant" href="https://wa.me/262692114211?text=Bonjour%20Lionel%2C%20je%20souhaite%20un%20devis%20pour%20une%20animation%20DJ" aria-label="Écrire à Lionel sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg></a>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const c=document.getElementById('scene'),x=c.getContext('2d');let W,H,run=true,t=0;
+function rs(){W=c.width=innerWidth;H=c.height=Math.min(innerHeight,1100)}rs();addEventListener('resize',rs);
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+const B=[{x:.08,c:'255,229,0',s:.0007,p:0},{x:.92,c:'255,229,0',s:.0009,p:2},{x:.5,c:'90,140,255',s:.0005,p:4}];
+const S=Array.from({length:30},()=>({x:Math.random(),y:Math.random(),v:.0006+Math.random()*.0012,r:.6+Math.random()*1.6,o:.25+Math.random()*.5}));
+function f(){if(!run)return;t+=16;x.clearRect(0,0,W,H);x.globalCompositeOperation='lighter';
+for(const b of B){const a=Math.PI/2+Math.sin(t*b.s+b.p)*.55,L=H*1.3,ox=b.x*W,w=.07;
+const g=x.createLinearGradient(ox,0,ox+Math.cos(a)*L,Math.sin(a)*L);g.addColorStop(0,'rgba('+b.c+',.16)');g.addColorStop(1,'rgba('+b.c+',0)');
+x.fillStyle=g;x.beginPath();x.moveTo(ox,0);x.lineTo(ox+Math.cos(a-w)*L,Math.sin(a-w)*L);x.lineTo(ox+Math.cos(a+w)*L,Math.sin(a+w)*L);x.closePath();x.fill()}
+for(const p of S){p.y-=p.v;if(p.y<-.02){p.y=1.02;p.x=Math.random()}const fl=p.o*(.6+.4*Math.sin(t*.01+p.x*40));
+x.fillStyle='rgba(255,236,120,'+fl+')';x.beginPath();x.arc(p.x*W,p.y*H,p.r,0,7);x.fill()}
+x.globalCompositeOperation='source-over';requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Lionel Bludnik Animation DJ" defer></script>
+</body>
+</html>
