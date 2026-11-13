@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Saveurs d'Erika · Repas créole sur place ou à emporter, La Plaine-des-Palmistes</title>
+<meta name="description" content="Les Saveurs d'Erika, stand de restauration au 250 rue de la République, La Plaine-des-Palmistes : repas créole, sarcives, porc pété, poulet croustillant, américains. Sur place ou à emporter. 0692 98 97 50.">
+<meta property="og:title" content="Les Saveurs d'Erika · La Plaine-des-Palmistes">
+<meta property="og:description" content="Repas créole, sarcives, porc pété, poulet croustillant, américains : sur place ou à emporter, 250 rue de la République.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-saveurs-d-erika-plaine-des-palmistes/img/tacos-coupe.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-saveurs-d-erika-plaine-des-palmistes/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@500;600&family=Nunito:wght@400;600;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#d9161f;--rouge-f:#a10f16;--rose:#e8336d;--orange:#f39200;--soleil:#ffc93c;--ardoise:#1d1c1b;--ardoise2:#2a2826;--craie:#f6f1e7;--papier:#fbf3e6;--kraft:#d8b48a;--txt:#2d2523;--doux:#7a6a64}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--papier);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Oswald',Impact,sans-serif;font-weight:600;line-height:1.08;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.3rem 0 1rem;color:var(--ardoise)}
+.script{font-family:'Kaushan Script',cursive;text-transform:none;font-weight:400;letter-spacing:0}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:800;color:var(--rouge)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--ardoise);color:#f3d9a8;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.95rem;letter-spacing:.02em;transition:transform .3s,background .3s,box-shadow .3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -12px rgba(217,22,31,.85);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(243,146,0,.75)}}
+.btn-wa{background:#1fae5b;color:#fff}
+.btn-wa:hover{background:#178a48}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ardoise);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.17) translate(-2%,-2%)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(29,28,27,.55) 0%,rgba(29,28,27,.25) 30%,rgba(29,28,27,.82) 68%,rgba(29,28,27,.97) 100%)}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-1px;height:60px;z-index:3;background:var(--papier);clip-path:polygon(0 60%,8% 40%,17% 62%,27% 35%,38% 58%,49% 38%,60% 64%,71% 36%,82% 60%,92% 42%,100% 58%,100% 100%,0 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 6.5rem}
+.logo{display:inline-block;position:relative;padding:.2rem .1rem 0}
+.logo .les{font-family:'Kaushan Script',cursive;font-size:clamp(1.6rem,6vw,2.4rem);color:#fff;display:block;margin-left:.2rem;line-height:1}
+.logo .sav{font-family:'Kaushan Script',cursive;font-size:clamp(3.6rem,17vw,7.4rem);line-height:.95;color:var(--rouge);-webkit-text-stroke:2px #fff;paint-order:stroke fill;text-shadow:0 6px 0 rgba(0,0,0,.35);display:block}
+.logo .de{font-family:'Kaushan Script',cursive;font-size:clamp(2.6rem,12vw,5.2rem);line-height:1;color:#fff;display:block;margin-left:clamp(1.5rem,8vw,4rem)}
+.logo svg.couverts{position:absolute;right:-.4rem;top:-.4rem;width:clamp(42px,11vw,70px);opacity:.95}
+.title-in{opacity:0;transform:translateY(24px);animation:monte 1.1s .25s cubic-bezier(.2,.7,.2,1) forwards}
+.title-in.d2{animation-delay:.6s}.title-in.d3{animation-delay:.9s}
+@keyframes monte{to{opacity:1;transform:none}}
+.hero .tag{display:inline-flex;gap:.5rem;align-items:center;background:linear-gradient(90deg,var(--rouge),var(--rose) 55%,var(--orange));padding:.4rem 1rem;border-radius:999px;font-weight:800;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;margin:1.2rem 0 1rem}
+.hero p.lead{font-size:1.08rem;max-width:34rem;color:#f3ece4;margin-bottom:1.6rem}
+.hero p.lead b{color:var(--soleil)}
+/* bandeau */
+.bandeau{background:linear-gradient(90deg,var(--rouge),var(--rose) 50%,var(--orange));color:#fff;overflow:hidden;padding:.9rem 0;transform:rotate(-1.5deg);margin:-1rem -2vw 0;position:relative;z-index:4;box-shadow:0 10px 30px -14px rgba(217,22,31,.6)}
+.piste{display:flex;gap:2.2rem;width:max-content;animation:defile 32s linear infinite;font-family:'Oswald',sans-serif;font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.piste span::after{content:"✦";margin-left:2.2rem;color:var(--soleil)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* spécialités */
+.intro p{max-width:40rem;font-size:1.06rem}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.9rem;margin-top:2rem}
+.carte{background:#fff;border-radius:18px;padding:1.2rem 1rem 1.1rem;box-shadow:0 12px 30px -18px rgba(45,37,35,.45);border-top:5px solid var(--rouge);transition:transform .35s,box-shadow .35s}
+.carte:nth-child(3n+2){border-top-color:var(--orange)}.carte:nth-child(3n){border-top-color:var(--rose)}
+.carte:hover{transform:translateY(-5px) rotate(-.6deg);box-shadow:0 20px 36px -18px rgba(217,22,31,.5)}
+.carte svg{width:38px;height:38px;margin-bottom:.6rem}
+.carte h3{font-size:1.12rem;color:var(--ardoise)}
+.carte p{font-size:.86rem;color:var(--doux);margin-top:.2rem}
+.formule{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.formule span{background:var(--ardoise);color:#fff;border-radius:999px;padding:.45rem 1rem;font-weight:800;font-size:.85rem}
+.formule span:nth-child(2){background:var(--rouge)}
+/* ardoise */
+.ardoise-sec{background:var(--ardoise);color:var(--craie);overflow:hidden}
+.ardoise-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 20% 10%,rgba(255,255,255,.06),transparent 60%),radial-gradient(ellipse at 80% 90%,rgba(243,146,0,.08),transparent 55%)}
+.ardoise-sec h2{color:#fff}
+.ardoise-sec .eyebrow{color:var(--soleil)}
+.ardoise-sec .intro p{color:#d9d1c6}
+.jours{display:flex;gap:.45rem;margin:1.6rem 0 1.2rem;flex-wrap:wrap;position:relative}
+.jours button{font:inherit;font-weight:800;font-size:.86rem;border:2px solid rgba(246,241,231,.35);background:transparent;color:var(--craie);border-radius:999px;padding:.45rem .95rem;cursor:pointer;transition:.3s;min-height:42px}
+.jours button[aria-selected="true"]{background:var(--soleil);border-color:var(--soleil);color:var(--ardoise)}
+.tableau{position:relative;max-width:560px;background:linear-gradient(160deg,#2f2d2a,#1f1e1c);border:12px solid #8a5a32;border-radius:10px;box-shadow:inset 0 0 40px rgba(0,0,0,.6),0 30px 50px -25px rgba(0,0,0,.8);padding:1.6rem 1.3rem 1.5rem;font-family:'Caveat',cursive;text-align:center}
+.tableau::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.015) 0 2px,transparent 2px 9px);pointer-events:none}
+.tableau .entete{font-size:1.45rem;color:#ffd6d8;line-height:1.2}
+.tableau .entete b{color:#fff}
+.tableau .heure{font-size:1.25rem;color:var(--soleil);margin-top:.7rem}
+.tableau ul{list-style:none;font-size:1.65rem;line-height:1.22;color:#fff;margin:.2rem 0}
+.tableau li{opacity:0;transform:translateY(6px);animation:craie .5s forwards}
+@keyframes craie{to{opacity:1;transform:none}}
+.tableau .pied{font-size:1.3rem;color:#ffd6d8;margin-top:.8rem;line-height:1.2}
+.tableau .pied b{color:var(--soleil)}
+.legende{font-size:.8rem;color:#bdb3a7;margin-top:1rem;max-width:560px}
+.semaine{margin-top:2.4rem}
+.semaine h3{font-size:1.1rem;color:var(--soleil);margin-bottom:.8rem}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem}
+.puces span{border:1px dashed rgba(246,241,231,.4);border-radius:8px;padding:.3rem .7rem;font-family:'Caveat',cursive;font-size:1.25rem;color:#fff}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 5vw 1.5rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;background:#fff;padding:.7rem .7rem .9rem;border-radius:6px;box-shadow:0 18px 36px -20px rgba(45,37,35,.6);transform:rotate(-1.5deg);transition:transform .4s}
+.galerie figure:nth-child(2){transform:rotate(1.2deg)}
+.galerie figure:hover{transform:rotate(0) scale(1.02)}
+.galerie img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:3px}
+.galerie figcaption{font-family:'Caveat',cursive;font-size:1.35rem;color:var(--ardoise);margin-top:.45rem;text-align:center}
+.glisse{font-size:.82rem;color:var(--doux);text-align:center}
+/* avis */
+.avis{background:#fff}
+.score{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.rond{width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--rouge),var(--rose),var(--orange),var(--rouge));display:grid;place-items:center;flex:none;animation:tourne 14s linear infinite}
+.rond div{width:96px;height:96px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:'Oswald',sans-serif;font-size:1.9rem;color:var(--rouge);animation:tourne 14s linear infinite reverse}
+@keyframes tourne{to{transform:rotate(360deg)}}
+blockquote{margin-top:2rem;padding:1.4rem 1.4rem 1.2rem;background:var(--papier);border-radius:18px;border-left:6px solid var(--orange);font-size:1.08rem;max-width:40rem}
+blockquote cite{display:block;font-style:normal;font-size:.82rem;color:var(--doux);margin-top:.6rem}
+/* noël */
+.noel{background:linear-gradient(160deg,#7d0d13,var(--rouge) 55%,#e14b1c);color:#fff;overflow:hidden}
+.noel::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.55) 1.4px,transparent 1.6px);background-size:46px 46px;opacity:.22}
+.noel .eyebrow{color:var(--soleil)}
+.noel h2{color:#fff}
+.noel h2 .script{color:var(--soleil);font-size:1.15em}
+.noel p{max-width:36rem;color:#ffe9e0;margin-bottom:1.4rem}
+.noel .boite{position:relative;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.25);border-radius:22px;padding:1.6rem 1.3rem}
+.noel ul{list-style:none;display:grid;gap:.5rem;margin:0 0 1.5rem}
+.noel li{display:flex;gap:.6rem;align-items:flex-start}
+.noel li::before{content:"★";color:var(--soleil)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:26px;display:flex;justify-content:space-around}
+.guirlande i{width:10px;height:10px;border-radius:50%;background:var(--soleil);margin-top:8px;box-shadow:0 0 12px var(--soleil);animation:clign 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:#fff;box-shadow:0 0 12px #fff;animation-delay:1.2s}
+@keyframes clign{50%{opacity:.35}}
+.note-noel{font-size:.78rem;color:#ffd8cc;margin-top:1rem}
+/* infos */
+.infos-grid{display:grid;gap:1rem;margin-top:1.8rem}
+.info{background:#fff;border-radius:18px;padding:1.3rem 1.2rem;box-shadow:0 12px 30px -20px rgba(45,37,35,.5);display:flex;gap:1rem;align-items:flex-start}
+.info svg{width:34px;height:34px;flex:none;color:var(--rouge)}
+.info h3{font-size:1rem;color:var(--ardoise);margin-bottom:.25rem}
+.info p{font-size:.95rem}
+.info a{font-weight:800;color:var(--rouge);text-decoration:none}
+.horaires{display:grid;grid-template-columns:auto 1fr;gap:.15rem .9rem;font-size:.95rem}
+.horaires b{color:var(--rouge-f)}
+.final{background:var(--ardoise);color:#fff;text-align:center}
+.final h2{color:#fff}
+.final .script{color:var(--soleil);font-size:1.2em}
+.final .ctas{justify-content:center;margin-top:1.5rem}
+.final p{color:#d9d1c6;max-width:32rem;margin:auto}
+footer{background:#121110;color:#a99f94;text-align:center;font-size:.8rem;padding:2rem 1rem 6rem}
+footer a{color:#f3d9a8}
+.flotte{position:fixed;right:14px;bottom:16px;z-index:55;width:58px;height:58px;border-radius:50%;background:#1fae5b;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.5);animation:souffle2 3s ease-in-out infinite}
+.flotte svg{width:30px;height:30px}
+@keyframes souffle2{50%{transform:scale(1.07)}}
+.rev{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rev.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .infos-grid{grid-template-columns:repeat(3,1fr)}
+ .ardoise-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+ .semaine{margin-top:6.5rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rev,.title-in,.tableau li{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les Saveurs d'Erika</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond"><img src="img/tacos-hero.webp" alt="Tacos grillé coupé en deux, garni de frites et de fromage fondu, posé sur son papier kraft"></div>
+ <div class="wrap hero-in">
+  <div class="logo title-in" role="img" aria-label="Les Saveurs d'Erika">
+   <span class="les">Les</span><span class="sav">Saveurs</span><span class="de">d'Erika</span>
+   <svg class="couverts" viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path d="M22 8v14a6 6 0 0 0 12 0V8M28 8v48"/><path d="M44 8c-5 4-6 14-6 20h6v28"/></svg>
+  </div>
+  <div class="title-in d2"><span class="tag">Stand de restauration · La Plaine-des-Palmistes</span></div>
+  <p class="lead title-in d3">Repas créole, sarcives, porc pété, poulet croustillant, américains… <b>sur place ou à emporter</b>, au 250 rue de la République.</p>
+  <div class="ctas title-in d3">
+   <a class="btn btn-main" href="tel:+262692989750"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Commander : 0692 98 97 50</a>
+   <a class="btn btn-line" href="#ardoise">L'ardoise du jour</a>
+  </div>
+ </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+ <span>Repas créole</span><span>Sarcives</span><span>Porc pété</span><span>Poulet croustillant</span><span>Américains</span><span>Salade composée</span><span>Glace</span><span>Sandwichs variés</span><span>Tacos</span><span>Panini</span>
+ <span>Repas créole</span><span>Sarcives</span><span>Porc pété</span><span>Poulet croustillant</span><span>Américains</span><span>Salade composée</span><span>Glace</span><span>Sandwichs variés</span><span>Tacos</span><span>Panini</span>
+</div></div>
+
+<section id="specialites">
+ <div class="wrap">
+  <div class="intro rev">
+   <span class="eyebrow">Nos spécialités</span>
+   <h2>Le goût de <span class="script" style="color:var(--rouge)">nout' île</span>, au bord de la route</h2>
+   <p>Un stand de restauration à La Plaine-des-Palmistes où l'on vient chercher son repas créole, son américain ou son poulet croustillant, à déguster sur place ou à emporter.</p>
+  </div>
+  <div class="grille">
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#d9161f" stroke-width="2.5" stroke-linecap="round"><path d="M6 24h36a18 12 0 0 1-36 0z"/><path d="M18 18c0-3 3-3 3-6M26 18c0-3 3-3 3-6"/></svg><h3>Repas créole</h3><p>Le plat du jour, change chaque jour</p></article>
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#f39200" stroke-width="2.5" stroke-linecap="round"><rect x="8" y="16" width="32" height="18" rx="9"/><path d="M14 22h20M14 28h20"/></svg><h3>Sarcives</h3><p>Une des spécialités de la maison</p></article>
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#e8336d" stroke-width="2.5" stroke-linecap="round"><path d="M10 30c2-10 26-10 28 0"/><path d="M8 30h32v4H8z"/><path d="M24 12v6M18 14l2 4M30 14l-2 4"/></svg><h3>Porc pété</h3><p>Une spécialité de la maison</p></article>
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#d9161f" stroke-width="2.5" stroke-linecap="round"><path d="M16 34c-6-2-8-12 0-18 8-6 20-2 20 8 0 8-10 12-16 10"/><path d="M16 34l-6 6M12 38l-2-2"/></svg><h3>Poulet croustillant</h3><p>Présent sur l'ardoise jour après jour</p></article>
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#f39200" stroke-width="2.5" stroke-linecap="round"><path d="M6 22c0-8 36-8 36 0z"/><path d="M6 27h36M8 32h32c0 4-32 4-32 0z"/></svg><h3>Américains</h3><p>Sur place ou à emporter</p></article>
+   <article class="carte rev"><svg viewBox="0 0 48 48" fill="none" stroke="#e8336d" stroke-width="2.5" stroke-linecap="round"><path d="M14 20h20l-10 22z"/><circle cx="20" cy="15" r="6"/><circle cx="29" cy="14" r="6"/></svg><h3>Salade &amp; glace</h3><p>Salade composée, et une glace pour finir</p></article>
+  </div>
+  <div class="formule rev"><span>Sur place</span><span>À emporter</span><span>Sandwichs variés dès 5h</span></div>
+ </div>
+</section>
+
+<section class="ardoise-sec" id="ardoise">
+ <div class="wrap ardoise-wrap">
+  <div>
+   <div class="intro rev">
+    <span class="eyebrow">L'ardoise du jour</span>
+    <h2>Chaque soir, le menu de demain</h2>
+    <p>Chaque soir, la page Facebook annonce le menu du lendemain. Choisissez un jour pour relire une ardoise publiée début novembre.</p>
+   </div>
+   <div class="jours" role="tablist" aria-label="Choisir un jour">
+    <button role="tab" data-j="0">Lundi</button><button role="tab" data-j="1">Mardi</button><button role="tab" data-j="2">Mercredi</button><button role="tab" data-j="3">Jeudi</button><button role="tab" data-j="4" aria-selected="true">Vendredi</button>
+   </div>
+   <div class="tableau rev" aria-live="polite">
+    <div class="entete">Bonsoir ! Demain <b id="jdate">vendredi 13 novembre</b>,<br>Les Saveurs d'Erika vous proposent</div>
+    <div class="heure">à partir de 5h00 : sandwichs variés</div>
+    <div class="heure">à partir de 8h30 :</div>
+    <ul id="plats"></ul>
+    <div class="pied">Vous pouvez passer commande<br><b>de 5h00 à 13h00</b></div>
+   </div>
+   <p class="legende">Menus recopiés des ardoises publiées sur la page Facebook de Les Saveurs d'Erika (du 3 au 13 novembre 2026).</p>
+  </div>
+  <div class="semaine rev">
+   <h3>Déjà passés à l'ardoise ce mois-ci</h3>
+   <div class="puces">
+    <span>Carry espadon</span><span>Civet canard</span><span>Rougail p'tit cousins</span><span>Carry poulet vermouth</span><span>Massalé marlin</span><span>Rôti porc</span><span>Sauté poulet ananas</span><span>Massalé le thon</span><span>Poisson gingembre</span><span>Rôti poulet</span><span>Porc aux oignons</span><span>P'tit jaque poulet fumé</span><span>Porc gros piment</span><span>Civet aile dinde</span><span>Sauté poisson</span><span>Saucisse poulet bringelle sauce crevette</span><span>Rougail boucané porc</span><span>Riz cantonnais au porc</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="galerie">
+ <div class="wrap">
+  <div class="intro rev">
+   <span class="eyebrow">Tout chaud, bien emballé</span>
+   <h2>Sortis de la plaque, prêts à partir</h2>
+   <p>Tacos et panini bien grillés, servis dans leur papier kraft : de quoi bien démarrer la journée.</p>
+  </div>
+ </div>
+ <div class="wrap"><div class="galerie rev">
+  <figure><img src="img/tacos-coupe.webp" alt="Tacos coupé : frites, viande et fromage fondu" loading="lazy"><figcaption>Le tacos, bien garni</figcaption></figure>
+  <figure><img src="img/panini.webp" alt="Panini grillé coupé, fromage fondant" loading="lazy"><figcaption>Le panini, bien doré</figcaption></figure>
+  <figure><img src="img/tacos-papier.webp" alt="Tacos grillé dans son papier kraft" loading="lazy"><figcaption>Prêt à emporter</figcaption></figure>
+ </div>
+ <p class="glisse">← glissez pour voir la suite →</p></div>
+</section>
+
+<section class="avis">
+ <div class="wrap">
+  <div class="score rev">
+   <div class="rond"><div>100 %</div></div>
+   <div><span class="eyebrow">Ce qu'en disent les clients</span><h2 style="margin-bottom:.2rem">Recommandé à 100 %</h2><p>sur 10 avis laissés sur la page Facebook.</p></div>
+  </div>
+  <blockquote class="rev">« On a eu l'occasion de goûter au sauté de sarcive brède, vraiment trop bon et très bien servis ! Belle découverte… »<cite>Un avis publié sur la page Facebook</cite></blockquote>
+ </div>
+</section>
+
+<section class="noel" id="fetes">
+ <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <div class="wrap">
+  <div class="boite rev">
+   <span class="eyebrow">Pour Noël et les fêtes</span>
+   <h2>Une tablée de fête <span class="script">aux saveurs péi</span></h2>
+   <p>Repas de famille, pot du bureau, réunion entre amis : parlez-nous de votre envie, et on regarde ensemble ce que Les Saveurs d'Erika peuvent vous préparer pour les fêtes.</p>
+   <ul>
+    <li>Les plats créoles de l'ardoise, à emporter pour toute la tablée</li>
+    <li>Commandes de 5h à 13h, retrait au stand, rue de la République</li>
+    <li>Une question, une envie ? On vous répond sur WhatsApp</li>
+   </ul>
+   <a class="btn btn-wa" href="https://wa.me/262692989750?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Commander pour les fêtes</a>
+  </div>
+ </div>
+</section>
+
+<section id="infos">
+ <div class="wrap">
+  <div class="intro rev"><span class="eyebrow">Infos pratiques</span><h2>Passer au stand</h2></div>
+  <div class="infos-grid">
+   <div class="info rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><div><h3>Adresse</h3><p>250 rue de la République<br>97431 La Plaine-des-Palmistes</p><p><a href="https://www.google.com/maps/search/?api=1&query=250+rue+de+la+R%C3%A9publique+97431+La+Plaine-des-Palmistes" target="_blank" rel="noopener">Itinéraire →</a></p></div></div>
+   <div class="info rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>Horaires</h3><div class="horaires"><b>Lun → ven</b><span>ouvert en semaine</span><b>Dès 5h00</b><span>sandwichs variés</span><b>Dès 8h30</b><span>les plats du jour</span><b>5h → 13h</b><span>commandes</span></div></div></div>
+   <div class="info rev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><div><h3>Commander</h3><p><a href="tel:+262692989750">0692 98 97 50</a></p><p>Retrouvez l'ardoise chaque soir sur <a href="https://www.facebook.com/lessaveursderika" target="_blank" rel="noopener">Facebook</a></p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="final">
+ <div class="wrap rev">
+  <h2>Votre repas de demain <span class="script">vous attend</span></h2>
+  <p>Un appel ou un message, et votre commande est prête au stand.</p>
+  <div class="ctas">
+   <a class="btn btn-main" href="tel:+262692989750">Appeler le 0692 98 97 50</a>
+   <a class="btn btn-wa" href="https://wa.me/262692989750?text=Bonjour%2C%20je%20voudrais%20passer%20commande" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer>Les Saveurs d'Erika · 250 rue de la République, La Plaine-des-Palmistes · <a href="https://www.facebook.com/lessaveursderika" target="_blank" rel="noopener">Facebook</a><br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les Saveurs d'Erika.</footer>
+<a class="flotte" href="https://wa.me/262692989750?text=Bonjour%2C%20je%20voudrais%20passer%20commande" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+<script>
+(function(){
+var M=[
+ ["lundi 9 novembre",["P'tit jaque poulet fumé","Poulet croustillant","Carry espadon","Porc gros piment","Tacos","Panini","Américains"]],
+ ["mardi 10 novembre",["Sauté poulet ananas","Poulet croustillant","Massalé le thon","Carry porc","Tacos","Panini","Américains"]],
+ ["mercredi 4 novembre",["Civet aile dinde","Sauté poisson","Poulet croustillant","Riz cantonnais au porc","Américains"]],
+ ["jeudi 12 novembre",["Rôti poulet","Poulet croustillant","Poisson gingembre","Porc aux oignons","Américains","Tacos","Panini"]],
+ ["vendredi 13 novembre",["Massalé cerf pomme de terre","Poulet croustillant","Rougail morue","Porc pété","Américains","Tacos","Panini"]]];
+var ul=document.getElementById('plats'),jd=document.getElementById('jdate'),bs=document.querySelectorAll('.jours button');
+function show(i){jd.textContent=M[i][0];ul.innerHTML='';M[i][1].forEach(function(p,k){var li=document.createElement('li');li.textContent=p;li.style.animationDelay=(k*.09)+'s';ul.appendChild(li)});bs.forEach(function(b){b.setAttribute('aria-selected',b.dataset.j==i?'true':'false')})}
+bs.forEach(function(b){b.addEventListener('click',function(){show(+b.dataset.j)})});show(4);
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+function np(y){return{x:Math.random()*W,y:y==null?H+20:y,r:14+Math.random()*26,v:.25+Math.random()*.45,a:0,t:Math.random()*6.28,s:Math.random()<.25}}
+for(var i=0;i<26;i++)P.push(np(Math.random()*H));
+function f(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p,i){p.y-=p.v;p.t+=.012;p.x+=Math.sin(p.t)*.35;var life=p.y/H;p.a=Math.min(.09,Math.max(0,Math.sin(life*3.14)*.09));
+ if(p.s){x.fillStyle='rgba(243,146,0,'+(p.a*5)+')';x.beginPath();x.arc(p.x,p.y,1.6,0,6.28);x.fill()}
+ else{var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+p.a+')');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+ if(p.y<-40)P[i]=np()});requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les Saveurs d&#x27;Erika" defer></script>
+</body>
+</html>
