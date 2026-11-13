@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Séb le vélociste · Atelier vélo à Petite-Île</title>
+<meta name="description" content="Séb le vélociste, atelier vélo à Petite-Île (La Réunion) : réparation, entretien et révision, pièces détachées, location de vélos de route. 176 rue Mahé de Labourdonnais. 0692 88 66 30.">
+<meta property="og:title" content="Séb le vélociste · Votre vélociste à Petite-Île">
+<meta property="og:description" content="Un atelier de quartier pour tous ceux qui roulent dans le Sud : réparation, révision, pièces détachées et location de vélos de route.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/seb-le-velociste-petite-ile/img/atelier-pieces.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/seb-le-velociste-petite-ile/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#0b4220;--vert:#0e5a2a;--pomme:#1fc23c;--menthe:#e7f6ea;--osb:#c99652;--osb2:#f3e3c8;--creme:#fbf8f1;--txt:#1d2a21;--doux:#5d6b61;--asphalte:#1a1f1c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;color:var(--foret);line-height:1.08;font-weight:800}
+h2{font-size:clamp(2rem,6.2vw,3.2rem);margin:.4rem 0 1rem}
+h3{font-size:1.3rem;font-weight:600}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:700;color:var(--pomme)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--foret);color:#cfe8d5;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#pignons{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:transform .3s,background .3s,box-shadow .3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--pomme);color:#06240f;box-shadow:0 14px 30px -12px rgba(31,194,60,.75);animation:souffle 4.5s ease-in-out infinite}
+.btn-main:hover{transform:translateY(-2px);background:#3bd856}
+@keyframes souffle{50%{box-shadow:0 16px 40px -6px rgba(31,194,60,.85);transform:scale(1.03)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{background:var(--foret);color:#fff}
+.btn-dark:hover{background:var(--vert)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:clamp(600px,100svh,880px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;padding:7rem 0 3.4rem;background:var(--foret)}
+.hero-bg{position:absolute;inset:0;background:url(img/mur-pieces.webp) center 30%/cover;animation:kenburns 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,66,32,.2) 0%,rgba(11,66,32,.5) 38%,rgba(8,40,20,.93) 72%)}
+.hero .wrap{position:relative;z-index:2}
+.logo{width:120px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35));margin-bottom:1rem;opacity:0;animation:monte 1s .1s forwards}
+.hero h1{text-shadow:0 3px 22px rgba(0,0,0,.45);color:#fff;font-size:clamp(3rem,13vw,6rem);letter-spacing:-.01em;opacity:0;animation:monte 1.1s .3s forwards}
+.hero h1 span{display:block;font-style:italic;font-weight:600;color:#5fe077;font-size:.5em;margin-bottom:.15rem;letter-spacing:0}
+.hero .lead{font-size:clamp(1.12rem,3.6vw,1.4rem);max-width:34rem;margin:1rem 0 1.6rem;color:#e9f5ec;opacity:0;animation:monte 1.1s .55s forwards}
+.hero .lead b{color:#fff}
+.hero .ctas{opacity:0;animation:monte 1.1s .8s forwards}
+.hero small{display:block;margin-top:1.4rem;font-size:.8rem;color:#bcd9c3;opacity:0;animation:monte 1s 1s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.roue{position:absolute;right:-70px;top:90px;width:230px;height:230px;z-index:2;opacity:.5}
+/* route animée */
+.route{z-index:1;height:46px;background:var(--asphalte);position:relative;overflow:hidden}
+.route::before{content:"";position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,#fff 0 34px,transparent 34px 68px);animation:roule 1.6s linear infinite;width:calc(100% + 68px)}
+@keyframes roule{to{transform:translateX(-68px)}}
+.marquee{position:relative;background:var(--pomme);color:#06240f;overflow:hidden;white-space:nowrap;font-weight:700;font-size:.95rem;padding:.75rem 0}
+.marquee div{display:inline-block;animation:defile 30s linear infinite}
+.marquee span{margin:0 1.1rem}
+.marquee i{font-style:normal;opacity:.55}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{background:var(--creme)}
+.intro-grid{display:grid;gap:2rem;align-items:center}
+.intro p{font-size:1.08rem;color:var(--txt);margin-bottom:1rem}
+.quote{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(1.3rem,4.4vw,1.75rem);color:var(--vert);border-left:4px solid var(--pomme);padding:.2rem 0 .2rem 1.1rem;line-height:1.35}
+.quote cite{display:block;font-family:Inter,sans-serif;font-style:normal;font-weight:500;font-size:.8rem;color:var(--doux);margin-top:.7rem}
+/* services */
+.services{background:var(--menthe)}
+.cards{display:grid;gap:1rem;margin-top:1.6rem}
+.card{background:#fff;border-radius:20px;padding:1.5rem 1.4rem;box-shadow:0 10px 30px -18px rgba(11,66,32,.45);transition:transform .35s,box-shadow .35s;border-top:5px solid var(--pomme)}
+.card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:0 22px 40px -20px rgba(11,66,32,.6)}
+.card .ico{width:52px;height:52px;border-radius:50%;background:var(--menthe);display:grid;place-items:center;margin-bottom:.9rem;transition:transform .8s}
+.card:hover .ico{transform:rotate(180deg)}
+.card .ico svg{width:30px;height:30px;stroke:var(--vert)}
+.card p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+.card q{display:block;margin-top:.7rem;font-style:italic;color:var(--vert);font-size:.95rem}
+/* pièces */
+.pieces{background:var(--osb2);background-image:radial-gradient(rgba(201,150,82,.22) 1.5px,transparent 1.6px),radial-gradient(rgba(150,100,40,.12) 1px,transparent 1.2px);background-size:22px 22px,13px 13px;background-position:0 0,7px 9px}
+.photo-pieces{border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(60,40,10,.6);border:6px solid #fff;margin:1.6rem 0 .6rem}
+.photo-pieces img{width:100%;height:auto;transition:transform 6s ease}
+.photo-pieces:hover img{transform:scale(1.06)}
+.legende{font-size:.78rem;color:#7a6440}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.tags span{background:#fff;border:1px solid #e3cfa9;border-radius:999px;padding:.4rem .9rem;font-size:.88rem;font-weight:500;color:#5a4320}
+.duo{display:grid;gap:1.4rem;align-items:center}
+.duo .mini img{width:100%;aspect-ratio:4/3;object-fit:cover}.duo .mini{border-radius:20px;overflow:hidden;border:6px solid #fff;box-shadow:0 18px 40px -22px rgba(60,40,10,.6)}
+/* check-list */
+.check{background:var(--foret);color:#e3f2e7;overflow:hidden}
+.check h2{color:#fff}
+.check .eyebrow{color:var(--pomme)}
+.liste{list-style:none;margin-top:1.5rem;display:grid;gap:.7rem}
+.liste label{display:flex;gap:1rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem 1.1rem;cursor:pointer;transition:background .3s,border-color .3s}
+.liste input{position:absolute;opacity:0}
+.liste .num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--pomme);color:#06240f;font-weight:700;display:grid;place-items:center;transition:transform .4s}
+.liste b{display:block;color:#fff;font-family:'Playfair Display',serif;font-size:1.15rem}
+.liste small{font-size:.92rem;color:#bcd9c3}
+.liste input:checked+label{background:rgba(31,194,60,.18);border-color:var(--pomme)}
+.liste input:checked+label .num{transform:rotate(360deg)}
+.liste input:checked+label .num::after{content:"✓"}
+.liste input:checked+label .num em{display:none}
+.liste em{font-style:normal}
+.score{margin-top:1.2rem;font-weight:700;color:var(--pomme);min-height:1.6em}
+.chaine{margin-top:2.4rem;background:#fff;color:var(--txt);border-radius:22px;padding:1.6rem 1.4rem}
+.chaine h3{color:var(--foret)}
+.chaine ol{margin:.8rem 0 0 1.2rem}
+.chaine li{margin:.3rem 0}
+.chaine p{color:var(--doux);font-size:.95rem;margin-top:.5rem}
+/* sud */
+.sud{background:linear-gradient(180deg,var(--creme),#eef6ee)}
+.carte-sud{margin-top:1.4rem;background:#fff;border-radius:24px;padding:1rem;box-shadow:0 18px 40px -26px rgba(11,66,32,.5)}
+.carte-sud svg{width:100%;height:auto;display:block}
+.carte-sud figcaption{font-size:.76rem;color:var(--doux);padding:.5rem .4rem 0}
+#trace{stroke-dasharray:1400;stroke-dashoffset:1400;transition:stroke-dashoffset 3.2s ease}
+.sud.vu #trace{stroke-dashoffset:0}
+.choix{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.choix button{font:inherit;font-size:.92rem;font-weight:500;border:2px solid var(--vert);background:#fff;color:var(--vert);border-radius:999px;padding:.5rem 1rem;cursor:pointer;transition:.3s}
+.choix button.on,.choix button:hover{background:var(--vert);color:#fff}
+/* méca */
+.meca{background:var(--asphalte);color:#dfe9e2;text-align:center}
+.meca .grand{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(1.5rem,5.4vw,2.4rem);line-height:1.3;color:#fff;max-width:46rem;margin:1rem auto}
+.meca .grand em{color:var(--pomme);font-style:italic}
+.meca cite{font-size:.82rem;color:#9fb5a6;font-style:normal}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#145f31 0%,var(--foret) 70%);color:#e6f4ea;overflow:hidden;text-align:center}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#f2c766}
+.guirlande{display:flex;justify-content:center;gap:clamp(.8rem,4vw,1.6rem);margin-bottom:1.6rem}
+.guirlande i{width:12px;height:12px;border-radius:50%;background:#f2c766;box-shadow:0 0 14px #f2c766;animation:brille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--pomme);box-shadow:0 0 14px var(--pomme);animation-delay:.6s}
+.guirlande i:nth-child(3n){background:#fff;box-shadow:0 0 12px #fff;animation-delay:1.2s}
+@keyframes brille{50%{opacity:.35;transform:scale(.8)}}
+.noel p{max-width:36rem;margin:0 auto 1rem;font-size:1.05rem}
+.idees{display:grid;gap:.8rem;max-width:44rem;margin:1.6rem auto 1.8rem;text-align:left}
+.idees div{background:rgba(255,255,255,.08);border:1px solid rgba(242,199,102,.35);border-radius:16px;padding:1rem 1.2rem}
+.idees b{color:#f2c766;font-family:'Playfair Display',serif;font-size:1.1rem}
+.idees span{display:block;font-size:.93rem;color:#c9e2cf;margin-top:.2rem}
+.noel .btn-main{background:#f2c766;color:#3a2a05;box-shadow:0 14px 30px -12px rgba(242,199,102,.7)}
+/* contact */
+.contact{background:var(--creme)}
+.contact-grid{display:grid;gap:1.4rem;margin-top:1.4rem}
+.bloc{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;box-shadow:0 12px 34px -22px rgba(11,66,32,.5)}
+.horaires{width:100%;border-collapse:collapse;margin-top:.6rem;font-size:.98rem}
+.horaires td{padding:.55rem 0;border-bottom:1px dashed #d7e3d9}
+.horaires td+td{text-align:right;font-weight:500}
+.horaires tr.today td{color:var(--vert);font-weight:700}
+.horaires tr.repos td+td{color:var(--doux);font-weight:400}
+.coord p{margin:.55rem 0}
+.coord a{font-weight:700;color:var(--vert);text-decoration:none}.coord .btn{color:#fff}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.reseaux a{border:1px solid #cfe0d3;border-radius:999px;padding:.45rem 1rem;font-size:.9rem;text-decoration:none;font-weight:500}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#a9c3b0;background:var(--foret)}
+footer img{width:54px;margin:0 auto .8rem;opacity:.9}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .intro-grid{grid-template-columns:1.1fr .9fr}
+ .cards{grid-template-columns:1fr 1fr}
+ .duo{grid-template-columns:1fr 1fr}
+ .contact-grid{grid-template-columns:1fr 1fr}
+ .idees{grid-template-columns:1fr 1fr}
+ .roue{right:6%;top:120px;width:300px;height:300px}
+ .logo{width:150px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.logo,.hero h1,.hero .lead,.hero .ctas,.hero small{opacity:1;transform:none}#trace{stroke-dashoffset:0}canvas#pignons{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Séb le vélociste</div>
+<canvas id="pignons" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Le mur de pièces détachées de l'atelier de Séb le vélociste"></div>
+  <svg class="roue" viewBox="0 0 200 200" aria-hidden="true"><g id="rayons" fill="none" stroke="#fff" stroke-width="1.4"><circle cx="100" cy="100" r="92" stroke-width="7" stroke="#1fc23c" opacity=".8"/><circle cx="100" cy="100" r="84" stroke-width="2"/><circle cx="100" cy="100" r="9" fill="#fff"/></g></svg>
+  <div class="wrap">
+    <img class="logo" src="img/logo-cycliste-blanc.webp" alt="Logo de Séb le vélociste : un cycliste sur son vélo de route" width="332" height="270">
+    <h1><span>Moi, c'est Séb,</span>votre vélociste à Petite-Île</h1>
+    <p class="lead">Un atelier de quartier pour <b>tous ceux qui roulent dans le Sud</b> : réparation, entretien et révision, pièces détachées et location de vélos de route.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692886630?text=Bonjour%20S%C3%A9b%2C%20je%20voudrais%20prendre%20rendez-vous%20pour%20mon%20v%C3%A9lo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3a.5.5 0 0 0 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692886630">0692 88 66 30</a>
+    </div>
+    <small>176 rue Mahé de Labourdonnais · Petite-Île · lundi, mardi, jeudi, vendredi · 9h–12h / 13h–17h</small>
+  </div>
+</header>
+
+<div class="route" aria-hidden="true"></div>
+<div class="marquee" aria-hidden="true"><div>
+<span>Réparation</span><i>●</i><span>Entretien et révision</span><i>●</i><span>Pièces détachées</span><i>●</i><span>Location vélo de route</span><i>●</i><span>Vélo de route, VTT ou vélo du quotidien</span><i>●</i>
+<span>Réparation</span><i>●</i><span>Entretien et révision</span><i>●</i><span>Pièces détachées</span><i>●</i><span>Location vélo de route</span><i>●</i><span>Vélo de route, VTT ou vélo du quotidien</span><i>●</i>
+</div></div>
+
+<section class="intro">
+  <div class="wrap intro-grid">
+    <div class="rv">
+      <span class="eyebrow">Enchanté</span>
+      <h2>Vélo de route, VTT ou vélo du quotidien : passez me voir, on en parle.</h2>
+      <p>Séb répare, entretient et fournit des pièces, dans son atelier de la rue Mahé de Labourdonnais. Chaque vélo repart réglé avec soin, et vous savez exactement ce qui a été fait.</p>
+    </div>
+    <blockquote class="quote rv">« Je remets votre vélo en forme, et je vous explique clairement ce qui a été fait. »<cite>Séb, sur sa page Facebook</cite></blockquote>
+  </div>
+</section>
+
+<section class="services" id="atelier">
+  <div class="wrap">
+    <span class="eyebrow rv">L'atelier</span>
+    <h2 class="rv">Révision, réparation, pièces détachées.</h2>
+    <p class="rv">Freins, vitesses, pneus, transmission : on remet votre vélo en forme, avec des conseils clairs.</p>
+    <div class="cards">
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8 6.2 21l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+        <h3>Réparation</h3>
+        <p>Des freins qui serrent franchement, des vitesses qui passent net, des pneus qui tiennent la route : Séb remet chaque vélo en forme.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></div>
+        <h3>Entretien et révision</h3>
+        <p>Un vélo resté au garage depuis des mois ? Apportez-le, on le remet en route.</p>
+        <q>Avant toute intervention, je vous dis ce qu'il faut faire.</q>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 3.5v4.5M12 16v4.5M3.5 12H8M16 12h4.5"/></svg></div>
+        <h3>Pièces détachées</h3>
+        <p>Pneus, dérailleurs, disques de frein, chaînes, cassettes, lubrifiants : un mur entier de pièces, à portée de main.</p>
+      </article>
+      <article class="card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linejoin="round"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 9h7l2.5 7.5M9 9l3.5 7.5h-7M15 6h2.5l-1.5 3"/></svg></div>
+        <h3>Location vélo de route</h3>
+        <p>Envie de goûter aux routes du Sud sur un vélo de route ? Séb en propose à la location : écrivez-lui pour réserver le vôtre.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="pieces" id="pieces">
+  <div class="wrap">
+    <div class="duo">
+      <div class="rv">
+        <span class="eyebrow" style="color:#a0692a">Le coin pièces</span>
+        <h2>Tout ce qu'il faut pour rouler, sur un mur d'OSB.</h2>
+        <p>Chez Séb, les pièces sont rangées comme dans un atelier de passionné : pneus route et VTT en haut, dérailleurs et poignées au centre, disques de frein et chaînes sur la droite, huiles et lubrifiants sur l'étagère du bas.</p>
+        <div class="tags"><span>Pneus</span><span>Chambres à air</span><span>Dérailleurs</span><span>Disques de frein</span><span>Chaînes</span><span>Cassettes</span><span>Éclairage</span><span>Lubrifiants</span></div>
+      </div>
+      <figure class="mini rv"><img src="img/pneus-derailleurs.webp" alt="Pneus, dérailleurs et accessoires accrochés au mur de l'atelier" width="1000" height="1000" loading="lazy"></figure>
+    </div>
+    <figure class="photo-pieces rv"><img src="img/atelier-pieces.webp" alt="Le coin pièces détachées de l'atelier de Séb le vélociste à Petite-Île" loading="lazy" width="1400" height="945"></figure>
+    <figcaption class="legende rv">Photos publiées par Séb le vélociste sur sa page Facebook.</figcaption>
+  </div>
+</section>
+
+<section class="check" id="conseils">
+  <div class="wrap">
+    <span class="eyebrow rv">Avant de rouler</span>
+    <h2 class="rv">5 points à vérifier en 2 minutes</h2>
+    <p class="rv">La petite routine de Séb avant chaque sortie. Cochez au fur et à mesure 😉</p>
+    <ul class="liste">
+      <li class="rv"><input type="checkbox" id="c1"><label for="c1"><span class="num"><em>1</em></span><span><b>Les freins</b><small>Ils serrent franchement, en silence.</small></span></label></li>
+      <li class="rv"><input type="checkbox" id="c2"><label for="c2"><span class="num"><em>2</em></span><span><b>Les pneus</b><small>Bien gonflés et intacts.</small></span></label></li>
+      <li class="rv"><input type="checkbox" id="c3"><label for="c3"><span class="num"><em>3</em></span><span><b>La chaîne</b><small>Propre et légèrement graissée.</small></span></label></li>
+      <li class="rv"><input type="checkbox" id="c4"><label for="c4"><span class="num"><em>4</em></span><span><b>Les serrages</b><small>Roues, guidon et selle bien fixés.</small></span></label></li>
+      <li class="rv"><input type="checkbox" id="c5"><label for="c5"><span class="num"><em>5</em></span><span><b>L'éclairage</b><small>Avant et arrière qui fonctionnent.</small></span></label></li>
+    </ul>
+    <p class="score" id="score" aria-live="polite"></p>
+    <div class="chaine rv">
+      <span class="eyebrow">Le conseil de Séb</span>
+      <h3>Une chaîne bien entretenue protège aussi vos pignons.</h3>
+      <ol>
+        <li>Nettoyez-la avec un chiffon.</li>
+        <li>Mettez un peu de lubrifiant, maillon par maillon.</li>
+        <li>Essuyez le surplus.</li>
+      </ol>
+      <p>Graissez-la légèrement, surtout après une sortie sous la pluie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sud" id="sud">
+  <div class="wrap">
+    <span class="eyebrow rv">On roule dans le Sud</span>
+    <h2 class="rv">Et vous, c'est quoi votre route préférée ?</h2>
+    <p class="rv">Le littoral de Petite-Île, les hauts, le Sud sauvage… Séb partage les plus belles idées de sortie.</p>
+    <div class="choix rv" id="choix"><button type="button">Le littoral de Petite-Île</button><button type="button">Les hauts</button><button type="button">Le Sud sauvage</button></div>
+    <figure class="carte-sud rv">
+      <svg viewBox="0 0 600 300" role="img" aria-label="Illustration : une route qui serpente entre les hauts et l'océan">
+        <defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7f6ea"/><stop offset="1" stop-color="#fbf8f1"/></linearGradient></defs>
+        <rect width="600" height="300" rx="16" fill="url(#ciel)"/>
+        <path d="M0 150 L80 70 L150 120 L230 40 L320 115 L400 60 L480 120 L560 80 L600 110 V300 H0Z" fill="#cfe7d5"/>
+        <path d="M0 190 Q120 140 220 175 T430 160 T600 175 V300 H0Z" fill="#8fcf9e"/>
+        <path d="M0 250 Q150 225 300 240 T600 235 V300 H0Z" fill="#1d6e8f" opacity=".85"/>
+        <path d="M0 262 Q150 240 300 254 T600 250" stroke="#fff" stroke-width="2" fill="none" opacity=".6"/>
+        <path id="trace" d="M40 238 C120 200 150 230 210 196 S300 150 340 175 S430 205 470 150 S540 100 575 95" stroke="#0b4220" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="1400"/>
+        <path d="M40 238 C120 200 150 230 210 196 S300 150 340 175 S430 205 470 150 S540 100 575 95" stroke="#fff" stroke-width="1.6" fill="none" stroke-dasharray="8 10"/>
+        <circle cx="40" cy="238" r="8" fill="#1fc23c"/><circle cx="575" cy="95" r="8" fill="#f2c766" stroke="#0b4220" stroke-width="3"/>
+        <text x="24" y="282" font-family="Inter,Arial" font-size="15" font-weight="700" fill="#fff">Petite-Île</text>
+        <text x="470" y="80" font-family="Inter,Arial" font-size="15" font-weight="700" fill="#0b4220">les hauts</text>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="meca">
+  <div class="wrap rv">
+    <span class="eyebrow">Mécanicien cycle</span>
+    <p class="grand">« Un vélo bien entretenu, c'est un cycliste <em>plus confiant, plus rapide</em> et surtout, plus heureux sur les routes et les chemins. »</p>
+    <cite>Séb le vélociste, publication Facebook du 10 novembre 2024</cite>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <span class="eyebrow rv">Offrir pour Noël</span>
+    <h2 class="rv">Un cadeau qui fait rouler</h2>
+    <p class="rv">Pour un cycliste du Sud, le plus beau cadeau tient parfois dans une révision ou une belle pièce choisie avec Séb.</p>
+    <div class="idees">
+      <div class="rv"><b>Une révision à offrir</b><span>Freins, vitesses, pneus, transmission : un vélo remis en forme pour les sorties de l'été austral.</span></div>
+      <div class="rv"><b>Une pièce ou un accessoire</b><span>Pneus, éclairage, lubrifiants… Séb vous conseille la pièce qui fera plaisir.</span></div>
+    </div>
+    <a class="btn btn-main rv" href="https://wa.me/262692886630?text=Bonjour%20S%C3%A9b%2C%20je%20voudrais%20offrir%20une%20r%C3%A9vision%20ou%20un%20accessoire%20v%C3%A9lo%20pour%20No%C3%ABl">Préparer mon cadeau avec Séb</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow rv">Passez à l'atelier</span>
+    <h2 class="rv">On en parle ?</h2>
+    <div class="contact-grid">
+      <div class="bloc rv">
+        <h3>Horaires</h3>
+        <table class="horaires" id="horaires">
+          <tr data-j="1"><td>Lundi</td><td>9h–12h · 13h–17h</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>9h–12h · 13h–17h</td></tr>
+          <tr data-j="3" class="repos"><td>Mercredi</td><td>Jour de repos</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>9h–12h · 13h–17h</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>9h–12h · 13h–17h</td></tr>
+        </table>
+      </div>
+      <div class="bloc coord rv">
+        <h3>Séb le vélociste</h3>
+        <p>176 rue Mahé de Labourdonnais<br>97429 Petite-Île, La Réunion</p>
+        <p>Téléphone : <a href="tel:+262692886630">0692 88 66 30</a></p>
+        <p>E-mail : <a href="mailto:seblevelociste@gmail.com">seblevelociste@gmail.com</a></p>
+        <div class="ctas" style="margin-top:1rem">
+          <a class="btn btn-dark" href="https://wa.me/262692886630?text=Bonjour%20S%C3%A9b%2C%20je%20voudrais%20prendre%20rendez-vous%20pour%20mon%20v%C3%A9lo">WhatsApp</a>
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=176+rue+Mah%C3%A9+de+Labourdonnais+Petite-%C3%8Ele">Itinéraire</a>
+        </div>
+        <div class="reseaux">
+          <a href="https://m.me/Seblevelociste">Messenger</a>
+          <a href="https://www.facebook.com/Seblevelociste">Facebook</a>
+          <a href="https://www.instagram.com/seblevelociste">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <img src="img/logo-cycliste-blanc.webp" alt="" width="332" height="270">
+  Séb le vélociste · Réparation, entretien, pièces détachées et location vélo de route · Petite-Île, La Réunion<br>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Séb le vélociste.
+</footer>
+<script>
+(function(){
+var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// rayons de la roue
+var g=document.getElementById('rayons');
+for(var i=0;i<16;i++){var a=i*Math.PI/8,l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',100+9*Math.cos(a));l.setAttribute('y1',100+9*Math.sin(a));l.setAttribute('x2',100+84*Math.cos(a+.35));l.setAttribute('y2',100+84*Math.sin(a+.35));g.appendChild(l);}
+var roue=document.querySelector('.roue');
+if(!calme){var ang=0;(function t(){ang+=.25+scrollY*.0006;roue.style.transform='rotate('+ang+'deg)';requestAnimationFrame(t)})();}
+// apparitions
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,.sud').forEach(function(el){io.observe(el)});
+// check-list
+var boxes=document.querySelectorAll('.liste input'),sc=document.getElementById('score');
+boxes.forEach(function(b){b.addEventListener('change',function(){var n=0;boxes.forEach(function(x){if(x.checked)n++});sc.textContent=n==5?'Tout est prêt : bonne route dans le Sud ! 🚴':n?n+' / 5 vérifiés':'';})});
+// routes
+document.querySelectorAll('#choix button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#choix button').forEach(function(x){x.classList.remove('on')});b.classList.add('on')})});
+// jour du jour
+var j=new Date().getDay();var tr=document.querySelector('#horaires tr[data-j="'+j+'"]');if(tr)tr.classList.add('today');
+// pignons flottants
+if(calme)return;
+var c=document.getElementById('pignons'),x=c.getContext('2d'),W,H,P=[],dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+for(var k=0;k<22;k++)P.push({x:Math.random()*W,y:Math.random()*H,r:6+Math.random()*12,d:Math.random()*6.28,v:(Math.random()-.5)*.012,vy:.12+Math.random()*.25,dx:(Math.random()-.5)*.2,t:6+Math.round(Math.random()*6),o:.08+Math.random()*.14});
+function pignon(p){x.save();x.translate(p.x,p.y);x.rotate(p.d);x.beginPath();for(var i=0;i<p.t*2;i++){var a=i*Math.PI/p.t,R=i%2?p.r:p.r*1.25;x.lineTo(Math.cos(a)*R,Math.sin(a)*R)}x.closePath();x.strokeStyle='rgba(31,194,60,'+p.o+')';x.lineWidth=1.5;x.stroke();x.beginPath();x.arc(0,0,p.r*.4,0,6.28);x.stroke();x.restore()}
+var on=true;document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)loop()});
+function loop(){if(!on)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.d+=p.v*3;p.y-=p.vy;p.x+=p.dx;if(p.y<-30){p.y=H+30;p.x=Math.random()*W}pignon(p)});requestAnimationFrame(loop)}
+loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Séb le vélociste" defer></script>
+</body>
+</html>
