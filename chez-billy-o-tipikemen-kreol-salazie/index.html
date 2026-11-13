@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Billy Ô Tipikemen Kreol · Restaurant créole et chinois à Hell-Bourg, Salazie</title>
+<meta name="description" content="Chez Billy Ô Tipikemen Kreol, à Hell-Bourg (Salazie) : une cuisine du terroir typiquement créole et une cuisine chinoise, des menus variés tous les jours. 0693 30 30 74.">
+<meta property="og:title" content="Chez Billy Ô Tipikemen Kreol · Hell-Bourg, Salazie">
+<meta property="og:description" content="Cuisine du terroir typiquement créole et cuisine chinoise, au cœur du cirque de Salazie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-billy-o-tipikemen-kreol-salazie/img/og-devanture.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-billy-o-tipikemen-kreol-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Nunito+Sans:wght@300;400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#f2b81c;--jaune-c:#ffd75e;--rouge:#a8322c;--rouge-f:#7c211d;--bois:#5a2416;--nuit:#1d1511;--vert:#2f4a2c;--vert-c:#5f8a4f;--creme:#fbf3df;--sable:#f3e4c2;--txt:#3a2a20;--doux:#7d6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:800;color:var(--nuit);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.3rem;font-weight:600}
+.main{font-family:'Caveat',cursive;font-weight:600;color:var(--rouge);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--rouge);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--jaune-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.35s}
+.btn-main{background:var(--jaune);color:var(--nuit);box-shadow:0 14px 30px -14px rgba(242,184,28,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--jaune-c)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(242,184,28,.75)}}
+.btn-line{border:1.5px solid rgba(255,215,94,.8);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-rouge{background:var(--rouge);color:#fff}
+.btn-rouge:hover{background:var(--rouge-f)}
+.btn-dark{border:1.5px solid var(--bois);color:var(--bois)}
+.btn-dark:hover{background:var(--sable)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:40% 45%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,21,17,.25) 0%,rgba(29,21,17,.35) 35%,rgba(29,21,17,.93) 78%,var(--nuit) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.5rem}
+.hero .eyebrow{color:var(--jaune-c)}
+.hero h1{color:#fff;font-size:clamp(3.4rem,15vw,7.4rem);letter-spacing:-.01em;margin-top:.3rem}
+.hero h1 .main{display:block;font-size:.5em;color:var(--jaune);margin-top:.1em;letter-spacing:.01em}
+.hero .lead{text-shadow:0 1px 12px rgba(0,0,0,.5);font-size:1.12rem;max-width:33rem;margin:1.2rem 0 1.9rem;color:var(--creme)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--jaune-c)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau tôle */
+.bande{background:var(--jaune);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-weight:600;font-size:1.12rem;border-top:4px solid var(--rouge);border-bottom:4px solid var(--rouge)}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;font-size:.75rem;color:var(--rouge)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* lieu */
+.lieu{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.lieu p+p{margin-top:1rem}
+.cadre{position:relative}
+.cadre img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 40px 70px -40px rgba(29,21,17,.7)}
+.cadre::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--jaune);border-radius:22px;z-index:-1}
+.cadre figcaption{font-size:.84rem;color:var(--doux);margin-top:1.4rem}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2.3rem;font-weight:800;color:var(--rouge);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.citation{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:clamp(1.25rem,3.4vw,1.7rem);color:var(--bois);border-left:3px solid var(--jaune);padding-left:1.1rem;margin:1.5rem 0}
+/* cuisine */
+.cuisine{background:var(--nuit);color:var(--creme);position:relative;overflow:hidden}
+.cuisine h2,.cuisine h3{color:#fff}
+.cuisine .eyebrow{color:var(--jaune)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2.2rem 0 2.6rem}
+.monde{border-radius:22px;padding:1.6rem 1.5rem;position:relative;overflow:hidden;transition:transform .4s}
+.monde:hover{transform:translateY(-5px)}
+.monde.kreol{background:linear-gradient(140deg,var(--rouge),var(--rouge-f))}
+.monde.chinoise{background:linear-gradient(140deg,#3a2a1e,#241a13);border:1px solid rgba(242,184,28,.4)}
+.monde small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune-c);font-weight:700;margin-bottom:.4rem}
+.monde p{font-size:.98rem;margin-top:.5rem;color:#f6ead2}
+.monde .main{position:absolute;right:1rem;top:.6rem;font-size:3.2rem;color:rgba(255,215,94,.18)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--jaune) transparent}
+.galerie figure{flex:0 0 min(78%,340px);scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#000;position:relative}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.3s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:3rem 1.1rem 1rem;background:linear-gradient(180deg,transparent,rgba(29,21,17,.92));font-size:.92rem;color:#fff}
+.astuce{font-size:.85rem;color:#c9b799;margin-top:.6rem}
+.vague{display:block;width:100%;height:40px}
+/* comptoir */
+.comptoir-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.lampes{display:flex;justify-content:space-between;width:100%;max-width:340px;margin-bottom:1.4rem}
+.lampe{width:34px;height:42px;position:relative;transform-origin:50% 0;animation:balance 5s ease-in-out infinite}
+.lampe:nth-child(2){animation-delay:-1.2s}.lampe:nth-child(3){animation-delay:-2.6s}.lampe:nth-child(4){animation-delay:-3.4s}
+.lampe::before{content:"";position:absolute;left:50%;top:0;width:1px;height:20px;background:var(--bois)}
+.lampe::after{content:"";position:absolute;left:0;top:20px;width:34px;height:12px;border-radius:18px 18px 4px 4px;background:var(--bois);box-shadow:0 14px 22px 4px rgba(242,184,28,.55)}
+@keyframes balance{50%{transform:rotate(4deg)}}
+.duo{display:grid;grid-template-columns:1fr;gap:1rem}
+.duo figure{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(29,21,17,.7)}
+.duo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.duo figcaption{background:var(--bois);color:var(--jaune-c);font-size:.84rem;padding:.6rem 1rem}
+/* groupes */
+.groupes{background:linear-gradient(180deg,var(--sable),var(--creme))}
+.groupes-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.plateau img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:200px 200px 22px 22px;box-shadow:0 40px 80px -40px rgba(29,21,17,.7)}
+.plateau figcaption{font-size:.84rem;color:var(--doux);margin-top:.7rem;text-align:center}
+.tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.tags span{border:1.5px solid var(--vert-c);color:var(--vert);border-radius:999px;padding:.35rem .95rem;font-size:.9rem;font-weight:700;transition:.3s}
+.tags span:hover{background:var(--vert);color:#fff}
+/* noel */
+.noel{background:var(--vert);color:var(--creme);position:relative;overflow:hidden}
+.noel h2,.noel h3{color:#fff}
+.noel .eyebrow{color:var(--jaune-c)}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0 2rem}
+.idee{background:rgba(255,255,255,.08);border:1px solid rgba(255,215,94,.3);border-radius:18px;padding:1.1rem 1.3rem}
+.idee h3{font-size:1.15rem;margin-bottom:.2rem}
+.idee p{font-size:.96rem;color:#e9e3cf}
+.bon{aspect-ratio:1.5;border-radius:20px;background:var(--jaune);color:var(--nuit);padding:1.4rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -35px rgba(0,0,0,.7);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden;border:3px dashed rgba(124,33,29,.45);outline:6px solid var(--jaune);max-width:420px;margin:auto;width:100%}
+.bon:hover{transform:rotate(0)}
+.bon::after{content:"";position:absolute;top:-50%;left:-60%;width:35%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.bon small{letter-spacing:.2em;text-transform:uppercase;font-size:.68rem;font-weight:700;color:var(--rouge-f)}
+.bon .grand{font-family:'Fraunces',serif;font-weight:800;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1}
+.bon .grand em{display:block;font-family:'Caveat',cursive;font-style:normal;color:var(--rouge);font-size:.8em}
+.etoile{position:absolute;color:var(--jaune-c);opacity:.5;animation:scint 3s ease-in-out infinite}
+@keyframes scint{50%{opacity:.1;transform:scale(.7)}}
+/* contact */
+.contact{background:var(--creme)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.45rem 0}
+.infos b{font-weight:700;color:var(--nuit)}
+.infos p a{color:var(--rouge);font-weight:700;overflow-wrap:anywhere}
+.acces{background:#fff;border-radius:16px;padding:1rem 1.2rem;margin-top:1.2rem;font-size:.95rem;border-left:4px solid var(--jaune)}
+.contact figure img{border-radius:20px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.contact figcaption{font-size:.84rem;color:var(--doux);margin-top:.5rem}
+footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--sable);background:var(--nuit)}
+footer b{color:var(--jaune)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .lieu,.comptoir-in,.groupes-in,.noel-in,.contact-in,.deux{grid-template-columns:1fr}
+ .hero-in{padding-top:6.5rem}
+ .ribbon{font-size:.7rem}
+ .galerie{margin-right:-5vw}
+ .plateau{max-width:340px;margin:auto}
+ .cadre::before{inset:10px -8px -10px 8px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Billy Ô Tipikemen Kreol</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/comptoir-rhums.webp" alt="Le comptoir en bois verni sous les lampes suspendues, avec les bocaux de rhum arrangé"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Restaurant · Hell-Bourg, cirque de Salazie</p>
+    <h1 class="apparait d2">Chez Billy<span class="main">Ô Tipikemen Kreol</span></h1>
+    <p class="lead apparait d3">Une cuisine du terroir typiquement créole et une cuisine chinoise, avec des menus variés chaque jour, au cœur du village de Hell-Bourg.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="tel:+262693303074">Appeler Billy</a>
+      <a class="btn btn-line" href="https://wa.me/262693303074?text=Bonjour%2C%20je%20voudrais%20venir%20manger%20chez%20Billy">WhatsApp</a>
+    </div>
+    <p class="adr apparait d3">10 impasse des Aubépines, Hell-Bourg · <a href="tel:+262693303074">0693 30 30 74</a></p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Cuisine créole</span><span>Cuisine chinoise</span><span>Massalé cabri au massalé maison</span><span>Riz à l'indienne</span><span>Menus variés tous les jours</span><span>Terrasse</span><span>Vente à emporter</span><span>Réception de groupes</span>
+<span>Cuisine créole</span><span>Cuisine chinoise</span><span>Massalé cabri au massalé maison</span><span>Riz à l'indienne</span><span>Menus variés tous les jours</span><span>Terrasse</span><span>Vente à emporter</span><span>Réception de groupes</span>
+</div></div>
+
+<section class="wrap lieu" id="lieu">
+  <figure class="cadre rv">
+    <img src="img/devanture.webp" alt="La façade rouge et l'enseigne jaune Ô Tipikemen Kréol, au milieu des grands arbres" loading="lazy">
+    <figcaption>La case rouge et l'enseigne jaune, sous les grands arbres de Hell-Bourg.</figcaption>
+  </figure>
+  <div class="rv">
+    <p class="eyebrow">Le lieu</p>
+    <h2>Une case rouge sous les grands arbres</h2>
+    <p>Juste en haut de la route qui monte à Hell-Bourg, la case rouge de Chez Billy vous attend avec sa terrasse, ses piliers en pierre et sa salle de 40 couverts.</p>
+    <p class="citation">« Une cuisine du terroir typiquement créole et une cuisine chinoise. »</p>
+    <p>Un parking privé, une salle accessible aux personnes à mobilité réduite et des sentiers de randonnée tout autour : la halte idéale au cœur du cirque de Salazie.</p>
+    <div class="chiffres">
+      <div><b>40</b><span>couverts</span></div>
+      <div><b>100 %</b><span>recommandé sur Facebook</span></div>
+      <div><b>1,3 K</b><span>abonnés</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cuisine" id="cuisine">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">La cuisine</p><h2>Deux cuisines, une seule table</h2><p>Des menus variés et différents chaque jour, entre la marmite créole et le wok.</p></div>
+    <div class="deux">
+      <div class="monde kreol rv"><span class="main">Kréol</span><small>Le terroir</small><h3>Massalé cabri</h3><p>Le massalé cabri, préparé avec le massalé maison et servi avec du riz à l'indienne.</p></div>
+      <div class="monde chinoise rv"><span class="main">Wok</span><small>L'autre saveur</small><h3>Cuisine chinoise</h3><p>Nouilles sautées, sautés aux légumes croquants et champignons noirs, pour varier les plaisirs.</p></div>
+    </div>
+    <div class="galerie rv">
+      <figure><img src="img/nouilles.webp" alt="Nouilles sautées, légumes verts et basilic" loading="lazy"><figcaption>Nouilles sautées, légumes verts et basilic</figcaption></figure>
+      <figure><img src="img/saute-champignons.webp" alt="Sauté aux champignons noirs, oignons et légumes" loading="lazy"><figcaption>Sauté aux champignons noirs et légumes</figcaption></figure>
+      <figure><img src="img/plat-dore.webp" alt="Morceau doré et laqué, entouré de légumes fondants" loading="lazy"><figcaption>Doré, laqué et fondant</figcaption></figure>
+      <figure><img src="img/poivrons-epices.webp" alt="Plat aux poivrons rouges et verts et graines d'épices" loading="lazy"><figcaption>Poivrons, oignons et graines d'épices</figcaption></figure>
+    </div>
+    <p class="astuce">Faites glisser pour voir les plats · photos publiées par Ô Tipikemen Kréol</p>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-1px"><path d="M0 0h1440v14c-140 20-300 26-480 14S600 0 420 6 120 30 0 22z" fill="#1d1511"/></svg>
+
+<section class="wrap" id="comptoir">
+  <div class="comptoir-in">
+    <div class="rv">
+      <div class="lampes" aria-hidden="true"><span class="lampe"></span><span class="lampe"></span><span class="lampe"></span><span class="lampe"></span></div>
+      <p class="eyebrow">Le comptoir</p>
+      <h2>Sous les lampes, les bocaux</h2>
+      <p>Un long comptoir en bois verni, des murs en tôle, une guirlande de lampes qui réchauffe la salle… et, posés en rang, les grands bocaux où macèrent les rhums arrangés.</p>
+      <p style="margin-top:1rem">Une ambiance de case créole, chaleureuse et simple, pour prolonger le repas en douceur.</p>
+    </div>
+    <div class="duo rv">
+      <figure><img src="img/bar.webp" alt="La salle et le bar, lampes suspendues et murs en tôle" loading="lazy"><figcaption>La salle et le bar, prêts pour le service</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="groupes" id="groupes">
+  <div class="wrap groupes-in">
+    <figure class="plateau rv"><img src="img/plat-a-partager.webp" alt="Grand plat à partager : riz safrané, crevettes, moules, poivrons et rosaces de chorizo" loading="lazy"><figcaption>Un grand plat à partager, tout en couleurs</figcaption></figure>
+    <div class="rv">
+      <p class="eyebrow">Groupes &amp; événements</p>
+      <h2>Régalez toute la tablée</h2>
+      <p>Chez Billy accueille les groupes, prépare la vente à emporter et vient aussi restaurer vos convives lors de vos événements.</p>
+      <p class="citation">« Merci de la confiance accordée pour restaurer vos convives à l'occasion de ce magnifique événement. »</p>
+      <p style="font-size:.88rem;color:var(--doux)">Publié sur la page Chez Billy, le 9 août 2026</p>
+      <div class="tags"><span>Réception de groupes</span><span>Repas d'événement</span><span>Vente à emporter</span><span>Terrasse</span><span>Parking privé</span><span>Accès PMR</span></div>
+      <div class="ctas" style="margin-top:1.8rem"><a class="btn btn-rouge" href="https://wa.me/262693303074?text=Bonjour%2C%20je%20voudrais%20organiser%20un%20repas%20de%20groupe%20chez%20Billy">Organiser mon repas de groupe</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <span class="etoile" style="top:4%;right:22%">✦</span><span class="etoile" style="top:2.5%;right:8%;animation-delay:-1s">✦</span><span class="etoile" style="bottom:14%;left:46%;animation-delay:-2s">✦</span>
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un Noël au goût de Hell-Bourg</h2>
+      <div class="idees">
+        <div class="idee"><h3>Un repas chez Billy à offrir</h3><p>Une journée dans le cirque, une table créole ou chinoise : le cadeau qui se savoure à deux ou en famille.</p></div>
+        <div class="idee"><h3>Votre repas de fêtes en groupe</h3><p>Famille, collègues, amis : réunissez toute la tablée à Hell-Bourg.</p></div>
+        <div class="idee"><h3>Les plats à emporter</h3><p>La cuisine de Billy à partager à la maison, pour une table de fête toute simple.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262693303074?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20repas%20chez%20Billy%20pour%20No%C3%ABl">Offrir un repas sur WhatsApp</a>
+    </div>
+    <div class="bon rv" aria-label="Bon cadeau Chez Billy"><small>Bon cadeau</small><span class="grand">Un repas<em>chez Billy</em></span><small>Ô Tipikemen Kreol · Hell-Bourg</small></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir chez Billy</p>
+      <h2>À l'entrée de Hell-Bourg</h2>
+      <p><b>Adresse</b> · 10 impasse des Aubépines, Hell-Bourg, 97433 Salazie</p>
+      <p><b>Téléphone</b> · <a href="tel:+262693303074">0693 30 30 74</a></p>
+      <p><b>E-mail</b> · <a href="mailto:billy.benoit974@gmail.com">billy.benoit974@gmail.com</a></p>
+      <p><b>Service</b> · le midi, horaires du jour au téléphone</p>
+      <p class="acces"><b>Pour venir</b> · prendre la sortie de Salazie, suivre la route principale jusqu'à Hell-Bourg : le restaurant se trouve juste en haut, première à droite.</p>
+      <div class="ctas" style="margin-top:1.5rem">
+        <a class="btn btn-rouge" href="tel:+262693303074">Appeler</a>
+        <a class="btn btn-dark" href="https://wa.me/262693303074">WhatsApp</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Billy%20%C3%94%20Tipikemen%20Kreol%2C%2010%20impasse%20des%20Aub%C3%A9pines%2C%2097433%20Salazie">Itinéraire</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/p/Chez-Billy-O-Tipikemen-Kreol-100068285460551/">Facebook</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/entree-hell-bourg.webp" alt="Le restaurant vu depuis la route, à côté du panneau d'entrée Hell-Bourg" loading="lazy"><figcaption>Le restaurant, juste à côté du panneau Hell-Bourg.</figcaption></figure>
+  </div>
+</section>
+
+<footer><b>Chez Billy Ô Tipikemen Kreol</b> · Cuisine créole et chinoise · Hell-Bourg, Salazie<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chez Billy Ô Tipikemen Kreol.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* vapeur de marmite + éclats chauds des lampes */
+const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push(nv(true,i<18));
+function nv(init,v){return{v:v,x:Math.random()*innerWidth,y:init?Math.random()*innerHeight:innerHeight+40,r:v?Math.random()*26+18:Math.random()*1.6+.7,s:v?Math.random()*.35+.15:Math.random()*.4+.15,a:Math.random()*6.28,o:v?Math.random()*.05+.025:Math.random()*.45+.25}}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(let i=0;i<P.length;i++){const p=P[i];p.y-=p.s;p.a+=.012;p.x+=Math.sin(p.a)*.35;
+ if(p.y<-60){P[i]=nv(false,p.v);continue}
+ if(p.v){const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,248,232,'+p.o+')');g.addColorStop(1,'rgba(255,248,232,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+ else{x.globalAlpha=Math.max(.05,p.o*(.6+Math.sin(p.a*3)*.4));x.fillStyle='#ffc93c';x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();x.globalAlpha=1}}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Billy Ô Tipikemen Kreol" defer></script>
+</body>
+</html>
