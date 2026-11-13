@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jardi Pierrefonds · Jardinerie et pépinière à Saint-Pierre</title>
+<meta name="description" content="Jardi Pierrefonds, jardinerie et pépinière à Pierrefonds, Saint-Pierre (La Réunion) : orchidées, anthuriums, plantes fleuries, plantes vertes, succulentes et plantes exotiques. 51 chemin Mourgapamodely.">
+<meta property="og:title" content="Jardi Pierrefonds · Des plantes pour embellir votre quotidien">
+<meta property="og:description" content="Orchidées, anthuriums, plantes fleuries, vertes, succulentes et exotiques, sous la serre de Pierrefonds à Saint-Pierre.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/jardi-pierrefonds-saint-pierre/img/serre-orchidees.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/jardi-pierrefonds-saint-pierre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#17482b;--vert:#1f6b3a;--feuille:#5d9b3e;--anis:#b5d37a;--hibiscus:#e0457b;--rose:#f6b9cf;--orchidee:#9b4fa8;--creme:#fbf7ee;--sable:#f1e6d2;--bois:#c9a77c;--txt:#23352a;--doux:#5f6f63}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--foret);line-height:1.1}
+h2{font-size:clamp(2rem,6.4vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.35rem}
+.script{font-family:'Dancing Script',cursive;font-weight:700;color:var(--hibiscus)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--feuille);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:#dcebd3;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#jardin{position:fixed;inset:0;pointer-events:none;z-index:3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--vert);color:#fff;box-shadow:0 14px 28px -14px rgba(23,72,43,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--hibiscus)}
+@keyframes souffle{50%{transform:scale(1.03);box-shadow:0 18px 36px -10px rgba(93,155,62,.75)}}
+.btn-line{border:2px solid var(--vert);color:var(--vert);background:rgba(255,255,255,.75)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);position:relative;display:flex;align-items:flex-end;overflow:hidden;padding:7rem 0 3.5rem;color:#fff}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,45,27,.15) 0%,rgba(15,45,27,.2) 35%,rgba(15,45,27,.8) 62%,rgba(15,45,27,.95) 100%)}
+.hero .wrap{position:relative;z-index:2;margin:0 auto}
+.hero h1{color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.35);font-family:'Dancing Script',cursive;font-size:clamp(3.6rem,15vw,7rem);line-height:.95;font-weight:700}
+.hero h1 span{display:block;font-family:'Nunito Sans',sans-serif;font-weight:700;font-size:.34em;letter-spacing:.06em;margin-top:.35rem;color:var(--anis)}
+.hero .lead{font-family:Fraunces,serif;font-size:clamp(1.3rem,4.6vw,1.8rem);margin:1.1rem 0 .4rem;max-width:32rem}
+.hero .lieu{font-size:.95rem;opacity:.9;margin-bottom:1.6rem}
+.hero .btn-line{border-color:#fff;color:#fff;background:rgba(255,255,255,.12)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .3s ease forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bandeau{background:var(--foret);color:#fff;overflow:hidden;padding:.9rem 0;position:relative;z-index:2}
+.bandeau .piste{display:flex;gap:2.2rem;white-space:nowrap;width:max-content;animation:defile 32s linear infinite;font-family:'Dancing Script',cursive;font-size:1.5rem}
+.bandeau .piste span::after{content:"✿";margin-left:2.2rem;color:var(--rose);font-family:sans-serif;font-size:1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{display:grid;gap:2.5rem;align-items:center}
+.intro p{font-size:1.08rem;margin-bottom:1rem}
+.intro .cadre{border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 30px 60px -30px rgba(23,72,43,.6);max-width:380px;margin:auto;width:100%}
+.intro .cadre img{width:100%;height:100%;object-fit:cover}
+.intro .citation{font-family:'Dancing Script',cursive;font-size:1.7rem;color:var(--hibiscus);line-height:1.2;margin:1.2rem 0}
+figcaption{font-size:.8rem;color:var(--doux);margin-top:.5rem;text-align:center}
+/* familles */
+.familles{background:var(--sable)}
+.familles::before,.contact::before{content:"";position:absolute;left:0;right:0;top:-1px;height:48px;background:var(--creme);clip-path:ellipse(60% 100% at 50% 0)}
+.grille{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.8rem}
+.carte{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 18px 36px -24px rgba(23,72,43,.55);transition:.35s}
+.carte:hover{transform:translateY(-6px) rotate(-.6deg)}
+.carte .ph{aspect-ratio:1;overflow:hidden;position:relative}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.carte:hover .ph img{transform:scale(1.07)}
+.carte .ph svg{width:100%;height:100%}
+.carte .tag{position:absolute;left:.6rem;bottom:.6rem;background:rgba(255,255,255,.88);font-size:.68rem;padding:.15rem .55rem;border-radius:99px;color:var(--doux)}
+.carte div.t{padding:.8rem .9rem 1rem}
+.carte h3{font-size:1.1rem}
+.carte p{font-size:.86rem;color:var(--doux);line-height:1.45;margin-top:.25rem}
+.pastille{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:.35rem;vertical-align:middle}
+/* serre */
+.serre-txt{max-width:40rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 5vw 1.2rem;margin-top:.5rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 72%;max-width:330px;scroll-snap-align:center}
+.galerie .ph{border-radius:22px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 22px 40px -26px rgba(23,72,43,.7)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{text-align:left;padding:0 .3rem}
+.glisse{font-size:.85rem;color:var(--doux);text-align:center}
+/* metier */
+.metier{background:var(--foret);color:#e6f0df}
+.metier h2{color:#fff}
+.metier .eyebrow{color:var(--anis)}
+.gestes{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin:2rem 0 1.4rem;list-style:none}
+.gestes li{background:rgba(255,255,255,.07);border:1px solid rgba(181,211,122,.25);border-radius:18px;padding:1rem;font-weight:600}
+.gestes li svg{width:42px;height:42px;display:block;margin-bottom:.5rem}
+.metier .src{font-size:.82rem;opacity:.75}
+.metier .src a{color:var(--anis)}
+/* duo photos */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
+.duo .ph{border-radius:20px;overflow:hidden;aspect-ratio:3/4}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo figure:nth-child(2){margin-top:2.5rem}
+/* noel */
+.noel{background:radial-gradient(90% 60% at 100% 0,#fde3ec 0,transparent 60%),radial-gradient(80% 60% at 0 100%,#e3efd6 0,transparent 60%),var(--creme);overflow:hidden}
+.noel-in{display:grid;gap:2.2rem;align-items:center}
+.noel .ph{border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -30px rgba(23,72,43,.6);position:relative;max-width:400px;margin:auto;width:100%}
+.noel .ph img{width:100%;height:100%;object-fit:cover}
+.noel .ruban-noel{position:absolute;top:1rem;right:-2.6rem;transform:rotate(35deg);background:var(--hibiscus);color:#fff;font-weight:700;font-size:.75rem;letter-spacing:.14em;padding:.35rem 3rem;text-transform:uppercase}
+.noel ul{list-style:none;margin:1.2rem 0 1.6rem}
+.noel li{padding:.55rem 0 .55rem 2rem;position:relative;border-bottom:1px dashed rgba(23,72,43,.18)}
+.noel li::before{content:"";position:absolute;left:0;top:.85rem;width:18px;height:18px;background:var(--hibiscus);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.etoiles{position:absolute;inset:0;pointer-events:none}
+.etoiles i{position:absolute;width:6px;height:6px;border-radius:50%;background:#f4c95d;opacity:.0;animation:scintille 4s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.9;transform:scale(1.4)}}
+.note{font-size:.82rem;color:var(--doux);margin-top:.9rem}
+/* contact */
+.contact{background:var(--sable)}
+.contact-in{display:grid;gap:2rem}
+.fiche{background:#fff;border-radius:24px;padding:1.6rem 1.4rem;box-shadow:0 20px 40px -28px rgba(23,72,43,.6)}
+.fiche dl{display:grid;gap:1rem}
+.fiche dt{font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;color:var(--feuille);font-weight:700}
+.fiche dd{font-size:1.02rem;word-break:break-word}
+.fiche dd a{color:var(--vert);font-weight:700;text-decoration:none}
+.carte-svg{border-radius:24px;overflow:hidden;background:#e7efdc;min-height:240px;position:relative}
+.carte-svg svg{width:100%;height:100%;display:block}
+.carte-svg a{position:absolute;left:50%;bottom:1rem;transform:translateX(-50%);white-space:nowrap}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.84rem;color:#cfe0c6;background:var(--foret)}
+footer .script{font-size:1.8rem;color:#fff;display:block;margin-bottom:.4rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media (min-width:820px){
+ .intro{grid-template-columns:1fr .8fr}
+ .grille{grid-template-columns:repeat(4,1fr)}
+ .noel-in{grid-template-columns:.9fr 1.1fr}
+ .contact-in{grid-template-columns:1fr 1fr}
+ .gestes{grid-template-columns:repeat(4,1fr)}
+ .galerie figure{flex-basis:300px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#jardin{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Jardi Pierrefonds</div>
+<canvas id="jardin" aria-hidden="true"></canvas>
+
+<header class="hero">
+ <div class="hero-img"><img src="img/serre-orchidees.webp" alt="L'allée de la serre de Jardi Pierrefonds, bordée d'orchidées roses, blanches et mauves"></div>
+ <div class="wrap">
+  <p class="eyebrow apparait" style="color:var(--anis)">Jardinerie · Pépinière · Pierrefonds</p>
+  <h1 class="apparait">Jardi <span>PIERREFONDS</span></h1>
+  <p class="lead apparait d2">Des plantes pour embellir votre quotidien.</p>
+  <p class="lieu apparait d2">Vente de plantes diverses, au 51 chemin Mourgapamodely, à Saint-Pierre.</p>
+  <div class="ctas apparait d3">
+   <a class="btn btn-main" href="https://wa.me/262692669164?text=Bonjour%20Jardi%20Pierrefonds%2C%20je%20voudrais%20un%20renseignement%20sur%20vos%20plantes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z"/></svg>WhatsApp</a>
+   <a class="btn btn-line" href="tel:+262692669164">0692 66 91 64</a>
+  </div>
+ </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+ <span>Plantes fleuries</span><span>Plantes vertes</span><span>Succulentes</span><span>Plantes exotiques</span><span>Orchidées</span><span>Anthuriums</span><span>Callas</span>
+ <span>Plantes fleuries</span><span>Plantes vertes</span><span>Succulentes</span><span>Plantes exotiques</span><span>Orchidées</span><span>Anthuriums</span><span>Callas</span>
+</div></div>
+
+<main>
+<section class="wrap intro">
+ <div class="rv">
+  <p class="eyebrow">Bienvenue à Pierrefonds</p>
+  <h2>Une serre où l'on flâne entre les fleurs</h2>
+  <p>Sous la grande serre de Jardi Pierrefonds, les allées se colorent d'orchidées roses, mauves, jaunes et mouchetées, d'anthuriums rouge vif et de callas pourpres. Plus loin, les plantes vertes et les suspensions fleuries attendent leur nouveau jardin, leur terrasse ou leur salon.</p>
+  <p class="citation">« Des plantes pour embellir votre quotidien »</p>
+  <p>Plantes fleuries, plantes vertes, succulentes, plantes exotiques : chacun repart avec la plante qui lui ressemble.</p>
+ </div>
+ <figure class="rv"><div class="cadre"><img src="img/orchidees-jaunes.webp" alt="Orchidées jaunes et orchidées mouchetées sous la serre" loading="lazy"></div><figcaption>Orchidées jaunes et mouchetées, sous la serre</figcaption></figure>
+</section>
+
+<section class="familles" id="plantes">
+ <div class="wrap">
+  <div class="rv"><p class="eyebrow">Nos plantes</p><h2>Quatre familles à découvrir</h2>
+  <p>Les quatre familles de plantes présentées par Jardi Pierrefonds sur sa page.</p></div>
+  <div class="grille">
+   <article class="carte rv"><div class="ph"><img src="img/orchidee-rose.webp" alt="Orchidée rose en fleur" loading="lazy"></div><div class="t"><h3><span class="pastille" style="background:var(--hibiscus)"></span>Plantes fleuries</h3><p>Orchidées, géraniums, suspensions fleuries.</p></div></article>
+   <article class="carte rv"><div class="ph"><img src="img/feuillages-orchidees.webp" alt="Feuillages panachés vert et jaune devant des orchidées" loading="lazy"></div><div class="t"><h3><span class="pastille" style="background:var(--feuille)"></span>Plantes vertes</h3><p>De beaux feuillages pour la maison et le jardin.</p></div></article>
+   <article class="carte rv"><div class="ph">
+    <svg viewBox="0 0 300 300" role="img" aria-label="Illustration de succulentes en pot"><rect width="300" height="300" fill="#f3ead8"/><circle cx="230" cy="70" r="46" fill="#fde3ec"/><path d="M95 205h110l-14 70H109z" fill="#c97b4a"/><rect x="88" y="196" width="124" height="16" rx="6" fill="#b5683a"/>
+     <g fill="#7fae5a"><ellipse cx="150" cy="160" rx="16" ry="44"/><ellipse cx="150" cy="160" rx="16" ry="44" transform="rotate(50 150 196)"/><ellipse cx="150" cy="160" rx="16" ry="44" transform="rotate(-50 150 196)"/></g>
+     <g fill="#5d9b3e"><ellipse cx="150" cy="170" rx="13" ry="34" transform="rotate(25 150 196)"/><ellipse cx="150" cy="170" rx="13" ry="34" transform="rotate(-25 150 196)"/><ellipse cx="150" cy="178" rx="11" ry="24"/></g>
+     <g fill="#b5d37a"><ellipse cx="150" cy="182" rx="7" ry="15" transform="rotate(40 150 196)"/><ellipse cx="150" cy="182" rx="7" ry="15" transform="rotate(-40 150 196)"/></g>
+     <circle cx="150" cy="190" r="5" fill="#e0457b"/></svg>
+    <span class="tag">Illustration</span></div><div class="t"><h3><span class="pastille" style="background:#e9a23b"></span>Succulentes</h3><p>Des plantes graphiques aux formes étonnantes.</p></div></article>
+   <article class="carte rv"><div class="ph"><img src="img/anthuriums-rouges.webp" alt="Anthuriums rouge vif au cœur jaune" loading="lazy"></div><div class="t"><h3><span class="pastille" style="background:#2a9d9b"></span>Plantes exotiques</h3><p>Anthuriums, callas et couleurs tropicales.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="serre">
+ <div class="wrap serre-txt rv"><p class="eyebrow">Sous la serre</p><h2>Le petit monde des orchidées</h2>
+ <p>Phalaenopsis roses, mauves, panachées ou mouchetées, grappes vert anis et pourpre : un aperçu des plantes photographiées par Jardi Pierrefonds dans ses allées.</p></div>
+ <div class="galerie" tabindex="0" aria-label="Galerie photo, faire glisser">
+  <figure><div class="ph"><img src="img/orchidees-roses.webp" alt="Orchidées rose tendre" loading="lazy"></div><figcaption>Rose tendre</figcaption></figure>
+  <figure><div class="ph"><img src="img/orchidee-mouchetee.webp" alt="Orchidée mouchetée de pourpre" loading="lazy"></div><figcaption>Mouchetée de pourpre</figcaption></figure>
+  <figure><div class="ph"><img src="img/orchidees-panachees.webp" alt="Petites orchidées blanc et pourpre parmi les feuillages" loading="lazy"></div><figcaption>Blanc et pourpre, parmi les feuillages</figcaption></figure>
+  <figure><div class="ph"><img src="img/dendrobium.webp" alt="Grappe d'orchidées vert anis au cœur pourpre" loading="lazy"></div><figcaption>Vert anis et pourpre</figcaption></figure>
+  <figure><div class="ph"><img src="img/orchidee-mauve.webp" alt="Orchidées mauves" loading="lazy"></div><figcaption>Mauve lumineux</figcaption></figure>
+  <figure><div class="ph"><img src="img/compositions-orchidees.webp" alt="Orchidées en pot emballées, prêtes à partir" loading="lazy"></div><figcaption>Prêtes à partir</figcaption></figure>
+ </div>
+ <p class="glisse">Faites glisser pour flâner dans la serre →</p>
+</section>
+
+<section class="metier">
+ <div class="wrap">
+  <div class="rv"><p class="eyebrow">Le métier de pépiniériste</p><h2>Des gestes de pépiniériste, transmis aux marmailles</h2>
+  <p>En juillet et août 2022, les pépiniéristes de Jardi Pierrefonds ont animé des ateliers à la Cité des métiers de Saint-Pierre pour faire découvrir leur métier aux enfants de 6 à 10 ans, les mains dans la terre.</p></div>
+  <ul class="gestes rv">
+   <li><svg viewBox="0 0 40 40" fill="none" stroke="#b5d37a" stroke-width="2.2" stroke-linecap="round"><path d="M6 30h28"/><path d="M10 30c2-6 6-8 10-8s8 2 10 8"/><circle cx="15" cy="26" r="1"/><circle cx="24" cy="25" r="1"/></svg>Préparer la terre</li>
+   <li><svg viewBox="0 0 40 40" fill="none" stroke="#b5d37a" stroke-width="2.2" stroke-linecap="round"><path d="M20 34V16"/><path d="M20 20c-6 0-9-4-9-9 5 0 9 3 9 9z"/><path d="M20 17c5 0 8-3 8-8-5 0-8 3-8 8z"/></svg>Choisir les plantes</li>
+   <li><svg viewBox="0 0 40 40" fill="none" stroke="#b5d37a" stroke-width="2.2" stroke-linecap="round"><path d="M11 22h18l-3 12H14z"/><path d="M20 22v-8"/><path d="M20 15c-4 0-6-3-6-6 3 0 6 2 6 6zM20 15c4 0 6-3 6-6-3 0-6 2-6 6z"/></svg>Rempoter</li>
+   <li><svg viewBox="0 0 40 40" fill="none" stroke="#b5d37a" stroke-width="2.2" stroke-linecap="round"><path d="M8 18h16l4 4"/><path d="M8 18v10h16V18"/><path d="M28 22l6-4"/><path d="M33 26v1M30 29v1M34 31v1"/></svg>Entretenir</li>
+  </ul>
+  <p class="src">Source : <a href="https://imazpress.com/saint-pierre-actualite/cite-des-metiers-faire-re-decouvrir-le-metier-de-pepinieriste-aux-marmailles" target="_blank" rel="noopener">Imaz Press, juillet 2022</a></p>
+  <div class="duo">
+   <figure class="rv"><div class="ph"><img src="img/geraniums-suspensions.webp" alt="Géraniums roses et rouges en suspensions de fer blanc" loading="lazy"></div><figcaption style="color:#cfe0c6">Géraniums en suspensions</figcaption></figure>
+   <figure class="rv"><div class="ph"><img src="img/callas-pourpres.webp" alt="Callas pourpres en pots" loading="lazy"></div><figcaption style="color:#cfe0c6">Callas pourpres</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="offrir">
+ <div class="etoiles" aria-hidden="true"><i style="left:8%;top:12%"></i><i style="left:86%;top:8%;animation-delay:1s"></i><i style="left:70%;top:46%;animation-delay:2s"></i><i style="left:14%;top:78%;animation-delay:3s"></i><i style="left:92%;top:88%;animation-delay:1.5s"></i></div>
+ <div class="wrap noel-in">
+  <figure class="rv"><div class="ph"><img src="img/compositions-a-offrir.webp" alt="Orchidées en pots rouges, emballées et nouées d'un ruban rouge" loading="lazy"><span class="ruban-noel">Noël</span></div><figcaption>Orchidées en pots rouges, nouées d'un ruban</figcaption></figure>
+  <div class="rv">
+   <p class="eyebrow" style="color:var(--hibiscus)">Offrir pour Noël</p>
+   <h2>Une plante qui fleurit longtemps après les fêtes</h2>
+   <p>Une orchidée emballée, un anthurium rouge vif, une suspension fleurie : à Noël, offrez un cadeau vivant qui embellit le quotidien de ceux que vous aimez.</p>
+   <ul>
+    <li>Orchidées en pot, prêtes à offrir</li>
+    <li>Anthuriums et plantes exotiques aux couleurs de fête</li>
+    <li>Une plante à choisir selon la personne à gâter</li>
+   </ul>
+   <a class="btn btn-main" href="https://wa.me/262692669164?text=Bonjour%20Jardi%20Pierrefonds%2C%20je%20voudrais%20offrir%20une%20plante%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 7h-2.2A3 3 0 0 0 12 4.4 3 3 0 0 0 6.2 7H4a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8h1a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM15 5.5A1.5 1.5 0 1 1 15 8.5h-2A2.5 2.5 0 0 1 15 5.5zM9 5.5A2.5 2.5 0 0 1 11 8.5H9a1.5 1.5 0 0 1 0-3zM11 19H7v-7h4zm0-9H5V9h6zm6 9h-4v-7h4zm2-9h-6V9h6z"/></svg>Préparer mon cadeau sur WhatsApp</a>
+   <p class="note">Une réponse directe de la jardinerie, au 0692 66 91 64.</p>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <div class="rv"><p class="eyebrow">Nous trouver</p><h2>À très bientôt <span class="script">à Pierrefonds</span></h2></div>
+  <div class="contact-in">
+   <div class="fiche rv"><dl>
+    <div><dt>Adresse</dt><dd>51 chemin Mourgapamodely<br>Pierrefonds, 97410 Saint-Pierre</dd></div>
+    <div><dt>Téléphone · WhatsApp</dt><dd><a href="tel:+262692669164">0692 66 91 64</a></dd></div>
+    <div><dt>E-mail</dt><dd><a href="mailto:yasmine.mour@gmail.com">yasmine.mour@gmail.com</a></dd></div>
+    <div><dt>Actualités et horaires</dt><dd><a href="https://www.facebook.com/JARDIPIERREFONDS" target="_blank" rel="noopener">Page Facebook Jardi Pierrefonds</a></dd></div>
+   </dl>
+   <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-main" href="tel:+262692669164">Appeler la jardinerie</a></div></div>
+   <div class="carte-svg rv">
+    <svg viewBox="0 0 400 300" role="img" aria-label="Illustration : plan stylisé de Pierrefonds"><rect width="400" height="300" fill="#e7efdc"/><path d="M0 230C80 200 140 250 220 220S340 170 400 190V300H0z" fill="#cfe0b8"/><path d="M-10 90C90 120 170 60 260 100S370 160 410 130" stroke="#fff" stroke-width="14" fill="none"/><path d="M150 300C170 220 200 170 260 100" stroke="#fff" stroke-width="9" fill="none"/>
+     <g fill="#5d9b3e" opacity=".7"><circle cx="60" cy="170" r="14"/><circle cx="82" cy="182" r="10"/><circle cx="330" cy="230" r="15"/><circle cx="350" cy="214" r="10"/><circle cx="300" cy="60" r="12"/></g>
+     <path d="M232 80c0-16 12-26 26-26s26 10 26 26c0 20-26 44-26 44s-26-24-26-44z" fill="#e0457b"/><circle cx="258" cy="80" r="9" fill="#fff"/></svg>
+    <span class="tag" style="position:absolute;left:.8rem;top:.8rem;background:rgba(255,255,255,.88);font-size:.68rem;padding:.15rem .55rem;border-radius:99px;color:var(--doux)">Illustration</span><a class="btn btn-main" href="https://www.google.com/maps/search/?api=1&query=51%20chemin%20Mourgapamodely%2C%2097410%20Saint-Pierre%2C%20La%20R%C3%A9union" target="_blank" rel="noopener">Ouvrir l'itinéraire</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer><span class="script">Jardi Pierrefonds</span>Jardinerie · Pépinière · Pierrefonds, Saint-Pierre, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Jardi Pierrefonds.</footer>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('jardin'),g=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var cols=['rgba(93,155,62,.55)','rgba(181,211,122,.6)','rgba(224,69,123,.45)','rgba(246,185,207,.6)','rgba(155,79,168,.4)'];
+function nouv(top){return{x:Math.random()*W,y:top?-20:Math.random()*H,s:6+Math.random()*9,vy:.25+Math.random()*.5,vx:(Math.random()-.5)*.3,a:Math.random()*6.28,va:(Math.random()-.5)*.02,ph:Math.random()*6.28,c:cols[Math.floor(Math.random()*cols.length)],f:Math.random()<.55}}
+var n=W<600?18:28;for(var i=0;i<n;i++)P.push(nouv(false));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function tick(){if(!run)return;g.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.ph+=.012;p.x+=p.vx+Math.sin(p.ph)*.4;p.y+=p.vy;p.a+=p.va;
+g.save();g.translate(p.x,p.y);g.rotate(p.a);g.fillStyle=p.c;g.beginPath();
+if(p.f){g.moveTo(0,-p.s);g.quadraticCurveTo(p.s*.7,0,0,p.s);g.quadraticCurveTo(-p.s*.7,0,0,-p.s)}else{g.ellipse(0,0,p.s*.55,p.s*.38,0,0,6.28)}
+g.fill();g.restore();if(p.y>H+20)P[i]=nouv(true)});
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Jardi Pierrefonds" defer></script>
+</body>
+</html>

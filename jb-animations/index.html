@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>JB Animations · DJ & animation de vos événements à La Réunion</title>
+<meta name="description" content="JB Animations, au cœur de vos événements : mariage, communion, baptême, soirée privée, comité d'entreprise, animation commerciale. DJ, lumières et ambiance à La Réunion. 0692 11 33 71.">
+<meta property="og:title" content="JB Animations · Au cœur de vos événements">
+<meta property="og:description" content="DJ et animation pour vos événements familiaux & professionnels à La Réunion : mariage, communion, baptême, soirée privée, comité d'entreprise.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/jb-animations/img/salle-reception.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/jb-animations/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0b0b0f;--nuit2:#15141b;--ardoise:#1f1d26;--or:#c9a24a;--or2:#e8cf8a;--or3:#8a6a26;--argent:#d9d9e0;--bleu:#4f7dff;--violet:#a25cff;--rose:#ff4f9a;--txt:#e9e6ee;--doux:#a9a5b4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Montserrat,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--nuit);line-height:1.7;font-size:16.5px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Cinzel,serif;font-weight:500;line-height:1.1;letter-spacing:.04em}
+h2{font-size:clamp(1.9rem,6vw,3rem);margin:.4rem 0 1.1rem;color:#fff}
+h3{font-size:1.15rem;color:var(--or2)}
+.or{background:linear-gradient(100deg,var(--or3),var(--or2) 35%,#fff6d8 50%,var(--or2) 65%,var(--or3));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:220% 100%;animation:brille 7s linear infinite}
+@keyframes brille{to{background-position:-220% 0}}
+.script{font-family:Allura,cursive;font-weight:400;color:var(--or2);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.7rem;color:var(--or);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,#000,#1b1710,#000);color:var(--argent);text-align:center;font-size:.74rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4;border-bottom:1px solid rgba(201,162,74,.35)}
+.ribbon b{color:var(--or2);font-weight:600}
+canvas#paillettes{position:fixed;inset:0;pointer-events:none;z-index:1;width:100%;height:100%}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.06em;font-size:.86rem;transition:.35s;text-transform:uppercase}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:linear-gradient(135deg,var(--or2),var(--or) 55%,var(--or3));color:#17130a;box-shadow:0 14px 34px -14px rgba(201,162,74,.8);animation:pulse 3.2s ease-in-out infinite}
+.btn-or:hover{filter:brightness(1.1)}
+@keyframes pulse{50%{box-shadow:0 14px 44px -6px rgba(232,207,138,.75);transform:scale(1.03)}}
+.btn-ligne{border:1px solid rgba(232,207,138,.55);color:var(--or2);background:rgba(255,255,255,.03)}
+.btn-ligne:hover{background:rgba(232,207,138,.1)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,940px);display:flex;align-items:center;overflow:hidden;padding:6.5rem 0 4rem;background:radial-gradient(70% 50% at 50% 0%,rgba(79,125,255,.22),transparent 70%),radial-gradient(60% 50% at 100% 100%,rgba(162,92,255,.18),transparent 70%),var(--nuit)}
+.faisceaux{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.faisceaux i{position:absolute;top:-10%;width:34vmax;height:120vmax;transform-origin:50% 0;opacity:.32;filter:blur(6px);mix-blend-mode:screen}
+.faisceaux i:nth-child(1){left:-6vmax;background:linear-gradient(180deg,rgba(79,125,255,.9),transparent 75%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);animation:balaie 9s ease-in-out infinite alternate}
+.faisceaux i:nth-child(2){right:-6vmax;background:linear-gradient(180deg,rgba(162,92,255,.9),transparent 75%);clip-path:polygon(46% 0,54% 0,100% 100%,0 100%);animation:balaie2 11s ease-in-out infinite alternate}
+.faisceaux i:nth-child(3){left:35%;background:linear-gradient(180deg,rgba(232,207,138,.7),transparent 70%);clip-path:polygon(47% 0,53% 0,80% 100%,20% 100%);animation:balaie 13s ease-in-out infinite alternate-reverse;opacity:.2}
+@keyframes balaie{from{transform:rotate(-24deg)}to{transform:rotate(14deg)}}
+@keyframes balaie2{from{transform:rotate(22deg)}to{transform:rotate(-16deg)}}
+.hero-in{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero h1{margin-top:.9rem;font-size:clamp(2.9rem,12.5vw,6rem);font-weight:700;letter-spacing:.06em;line-height:.95}
+.hero h1 small{display:block;font-size:.42em;letter-spacing:.42em;color:var(--argent);font-weight:500;margin-bottom:.5rem}
+.hero .script{font-size:clamp(2.3rem,9vw,3.6rem);display:block;margin:.6rem 0 .4rem;transform:rotate(-3deg);transform-origin:left}
+.hero .lead{font-size:clamp(1rem,3.6vw,1.2rem);color:var(--argent);margin:.8rem 0 1.8rem;max-width:32rem}
+.hero .lead b{color:#fff;font-weight:500}
+.chiffres{display:flex;gap:1.6rem;margin-top:2rem;flex-wrap:wrap}
+.chiffres div{border-left:2px solid var(--or);padding-left:.8rem}
+.chiffres b{font-family:Cinzel,serif;font-size:1.6rem;color:#fff;display:block;line-height:1.1}
+.chiffres span{font-size:.75rem;color:var(--doux);letter-spacing:.08em;text-transform:uppercase}
+.platine{position:relative;max-width:420px;width:100%;margin:auto}
+.platine .cadre{border-radius:28px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 40px 90px -30px rgba(79,125,255,.55),0 0 0 1px rgba(232,207,138,.35)}
+.platine img{width:100%;height:100%;object-fit:cover;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
+.platine figcaption{position:absolute;left:-.4rem;bottom:1.2rem;background:rgba(11,11,15,.9);border:1px solid rgba(232,207,138,.4);padding:.5rem .9rem;border-radius:12px;font-size:.78rem;color:var(--argent);backdrop-filter:blur(6px)}
+.disque{position:absolute;right:-22px;top:-22px;width:96px;height:96px;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1c22 2px 4px);border:2px solid var(--or);display:grid;place-items:center;animation:tourne 6s linear infinite;box-shadow:0 10px 30px -8px rgba(0,0,0,.8)}
+.disque::after{content:"JB";font-family:Cinzel,serif;font-weight:700;font-size:.95rem;color:#17130a;background:var(--or2);width:34px;height:34px;border-radius:50%;display:grid;place-items:center}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}.apparait.d4{animation-delay:1.4s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* EQUALIZER */
+.eq{display:flex;align-items:flex-end;gap:4px;height:34px;margin-bottom:1rem}
+.eq span{width:5px;border-radius:3px;background:linear-gradient(0deg,var(--or3),var(--or2));animation:eq 1.1s ease-in-out infinite alternate}
+.eq span:nth-child(2){animation-delay:-.3s}.eq span:nth-child(3){animation-delay:-.7s}.eq span:nth-child(4){animation-delay:-.15s}.eq span:nth-child(5){animation-delay:-.5s}.eq span:nth-child(6){animation-delay:-.9s}.eq span:nth-child(7){animation-delay:-.4s}
+@keyframes eq{from{height:18%}to{height:100%}}
+/* BANDE */
+.bande{background:linear-gradient(90deg,var(--or3),var(--or) 50%,var(--or3));color:#17130a;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Cinzel,serif;font-weight:700;font-size:1rem;letter-spacing:.12em;position:relative;z-index:2}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"♪";margin-left:2.2rem;font-size:.9rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* AMBIANCE */
+.ambiance{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.ambiance p+p{margin-top:1rem}
+.ambiance p{color:var(--argent)}
+.citation{font-family:Allura,cursive;font-size:clamp(2rem,7vw,2.6rem);color:var(--or2);line-height:1.15;margin:1.6rem 0 .4rem}
+.citation+small{display:block;font-size:.75rem;color:var(--doux);letter-spacing:.05em}
+.photo{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 40px 80px -40px rgba(0,0,0,.9),0 0 0 1px rgba(232,207,138,.25)}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption,.legende{position:absolute;left:.7rem;bottom:.7rem;background:rgba(11,11,15,.85);padding:.3rem .8rem;border-radius:999px;font-size:.74rem;color:var(--or2);border:1px solid rgba(232,207,138,.3)}
+/* VAGUE / TRANSITIONS */
+.onde{display:block;width:100%;height:50px}
+/* PRESTATIONS */
+.prestations{background:linear-gradient(180deg,var(--nuit2),var(--ardoise))}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.carte{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(232,207,138,.22);border-radius:22px;padding:1.5rem 1.3rem 1.4rem;transition:transform .45s,border-color .45s,box-shadow .45s;overflow:hidden}
+.carte::before{content:"";position:absolute;inset:auto -40% -60% -40%;height:120%;background:radial-gradient(closest-side,rgba(201,162,74,.18),transparent);opacity:0;transition:.5s}
+.carte:hover{transform:translateY(-6px);border-color:rgba(232,207,138,.6);box-shadow:0 24px 50px -30px rgba(201,162,74,.6)}
+.carte:hover::before{opacity:1}
+.carte svg{width:44px;height:44px;margin-bottom:.8rem;stroke:var(--or2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.carte p{font-size:.92rem;color:var(--doux);margin-top:.35rem}
+.famille{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+.famille span{border:1px solid rgba(232,207,138,.4);border-radius:999px;padding:.3rem .9rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--or2)}
+/* LUMIERE */
+.lumiere{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.duo .photo img{aspect-ratio:3/4.4}
+.duo .photo:nth-child(2){margin-top:2.4rem}
+.lumiere ul{list-style:none;margin-top:1.3rem}
+.lumiere li{padding:.55rem 0 .55rem 1.8rem;position:relative;border-bottom:1px solid rgba(255,255,255,.07);color:var(--argent)}
+.lumiere li::before{content:"";position:absolute;left:0;top:1.05rem;width:.75rem;height:.75rem;border-radius:50%;background:radial-gradient(circle,#fff,var(--or2) 40%,transparent 72%);box-shadow:0 0 12px var(--or2)}
+/* GALERIE */
+.galerie{background:var(--nuit2)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 5vw 1.6rem;margin-top:1.4rem;scrollbar-width:thin;scrollbar-color:var(--or3) transparent}
+.rail figure{flex:0 0 min(78vw,380px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(232,207,138,.2)}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;background:linear-gradient(transparent,rgba(0,0,0,.85));font-size:.82rem;color:var(--argent)}
+.rail figcaption b{display:block;color:var(--or2);font-weight:500}
+.astuce{text-align:center;font-size:.75rem;color:var(--doux);letter-spacing:.12em;text-transform:uppercase}
+/* AGENDA */
+.agenda ol{list-style:none;margin-top:2rem;position:relative;max-width:720px}
+.agenda ol::before{content:"";position:absolute;left:11px;top:.4rem;bottom:.4rem;width:2px;background:linear-gradient(var(--or),rgba(201,162,74,.1))}
+.agenda li{position:relative;padding:0 0 1.7rem 2.6rem}
+.agenda li::before{content:"";position:absolute;left:3px;top:.35rem;width:18px;height:18px;border-radius:50%;background:var(--nuit);border:2px solid var(--or2);box-shadow:0 0 0 4px rgba(201,162,74,.15)}
+.agenda time{font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--or)}
+.agenda h3{margin:.2rem 0 .2rem;font-size:1.08rem;color:#fff}
+.agenda p{color:var(--doux);font-size:.93rem}
+.agenda .eyebrow{color:var(--or)}
+.agenda q{font-style:italic;color:var(--argent)}
+.dimanche{margin-top:1rem;border-radius:22px;padding:1.6rem 1.4rem;background:linear-gradient(135deg,rgba(79,125,255,.18),rgba(162,92,255,.16));border:1px solid rgba(162,92,255,.35);max-width:720px}
+.dimanche .script{font-size:2.2rem;display:block;margin-bottom:.2rem}
+/* NOEL */
+.noel{background:radial-gradient(80% 60% at 50% 0%,rgba(201,162,74,.22),transparent 70%),linear-gradient(180deg,#0f0d09,#17130b);overflow:hidden;text-align:center}
+.guirlande{position:absolute;top:0;left:0;right:0;height:46px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande i{width:9px;height:9px;border-radius:50%;margin-top:22px;background:var(--or2);box-shadow:0 0 14px 3px rgba(232,207,138,.75);animation:scintille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(odd){margin-top:30px;animation-delay:-1.2s;background:#fff}
+.guirlande i:nth-child(3n){animation-delay:-.6s;background:var(--rose);box-shadow:0 0 14px 3px rgba(255,79,154,.6)}
+@keyframes scintille{50%{opacity:.25;transform:scale(.7)}}
+.noel .script{font-size:clamp(2.6rem,10vw,3.8rem);display:block}
+.noel p{color:var(--argent);max-width:36rem;margin:0 auto}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:2rem auto 2.2rem;max-width:860px;text-align:left}
+.idees div{background:rgba(255,255,255,.04);border:1px solid rgba(232,207,138,.28);border-radius:18px;padding:1.2rem 1.1rem}
+.idees b{display:block;font-family:Cinzel,serif;color:var(--or2);font-weight:500;margin-bottom:.25rem}
+.idees span{font-size:.88rem;color:var(--doux)}
+.noel .ctas{justify-content:center}
+.etoile{position:absolute;color:var(--or2);opacity:.5;font-size:1.2rem;animation:scintille 3s ease-in-out infinite}
+/* CONTACT */
+.contact{background:var(--nuit)}
+.coord{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem;margin-top:2rem}
+.coord a{display:flex;flex-direction:column;gap:.3rem;text-decoration:none;padding:1.3rem 1.1rem;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(232,207,138,.22);transition:.35s;min-width:0}
+.coord a:hover{border-color:var(--or2);transform:translateY(-4px)}
+.coord small{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.coord b{font-weight:500;color:#fff;overflow-wrap:anywhere;font-size:.98rem}
+.zones{margin-top:1.8rem;color:var(--doux);font-size:.92rem}
+footer{position:relative;z-index:2;text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.8rem;color:var(--doux);border-top:1px solid rgba(232,207,138,.15);background:#070709}
+footer .script{font-size:1.9rem;display:block;margin-bottom:.4rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.ambiance,.lumiere{grid-template-columns:1fr}
+ .platine{max-width:360px}
+ .grille,.idees{grid-template-columns:1fr 1fr}
+ .coord{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+ body{font-size:16px}
+ .grille,.idees,.coord{grid-template-columns:1fr}
+ .platine{max-width:300px;margin-top:.6rem}
+ .disque{width:74px;height:74px;right:-10px;top:-16px}
+ .ctas .btn{flex:1 1 100%}
+ .ribbon{font-size:.68rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#paillettes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour JB Animations</div>
+<canvas id="paillettes" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="faisceaux" aria-hidden="true"><i></i><i></i><i></i></div>
+ <div class="wrap hero-in">
+  <div>
+   <p class="eyebrow apparait">Son · Lumières · Ambiance — La Réunion</p>
+   <h1 class="apparait d2"><small>DJ &amp; animateur</small><span class="or">JB Animations</span></h1>
+   <span class="script apparait d3">Au cœur de vos événements</span>
+   <p class="lead apparait d3">Pour vos événements <b>familiaux &amp; professionnels</b> : mariage, communion, baptême, soirée privée, comité d'entreprise, animation commerciale…</p>
+   <div class="ctas apparait d4">
+    <a class="btn btn-or" href="https://wa.me/262692113371?text=Bonjour%20JB%20Animations%2C%20je%20voudrais%20r%C3%A9server%20une%20date%20pour%20mon%20%C3%A9v%C3%A9nement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>Réserver ma date</a>
+    <a class="btn btn-ligne" href="tel:+262692113371">0692 11 33 71</a>
+   </div>
+   <div class="chiffres apparait d4">
+    <div><b>14 K</b><span>abonnés Facebook</span></div>
+    <div><b>242 K</b><span>vues sur un reel</span></div>
+   </div>
+  </div>
+  <figure class="platine apparait d3">
+   <div class="disque" aria-hidden="true"></div>
+   <div class="cadre"><img src="img/dj-installation.webp" alt="Installation DJ de JB Animations : enceintes, lyres et colonnes lumineuses bleues autour de la régie" width="900" height="908"></div>
+   <figcaption>Installation prête, Jardin des roses · 16 oct. 2026</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Mariage</span><span>Communion</span><span>Baptême</span><span>Soirée privée</span><span>Comité d'entreprise</span><span>Animation commerciale</span><span>C partiii !</span>
+ <span>Mariage</span><span>Communion</span><span>Baptême</span><span>Soirée privée</span><span>Comité d'entreprise</span><span>Animation commerciale</span><span>C partiii !</span>
+</div></div>
+
+<section>
+ <div class="wrap ambiance">
+  <div class="rv">
+   <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+   <p class="eyebrow">L'ambiance JB</p>
+   <h2>Une piste qui s'allume, une salle qui chante</h2>
+   <p>Mariages, anniversaires, soirées du dimanche : semaine après semaine, JB Animations partage ses soirées avec plus de 14 000 abonnés, et ses reels font danser jusqu'à 242 000 personnes.</p>
+   <p>Une seule envie à chaque date : une belle ambiance, du premier verre à la dernière chanson.</p>
+   <p class="citation">« Vive les nouveaux mariés, C partiii pour une ambiance de folie »</p>
+   <small>Publication de JB Animations, 23 octobre 2026</small>
+  </div>
+  <figure class="photo rv">
+   <img src="img/salle-reception.webp" alt="Salle de réception drapée de voilages blancs, lustre de cristal et guirlandes lumineuses, tables dressées" width="1200" height="900" loading="lazy">
+   <figcaption>Salle prête pour la soirée · 29 août 2026</figcaption>
+  </figure>
+ </div>
+</section>
+
+<svg class="onde" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 Q90 0 180 30 T360 30 T540 30 T720 30 T900 30 T1080 30 T1260 30 T1440 30 V50 H0Z" fill="#15141b"/></svg>
+<section class="prestations">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Prestations</p>
+   <h2>Pour vos événements familiaux <span class="or">&amp;</span> professionnels</h2>
+   <div class="famille"><span>En famille</span><span>Entre collègues</span><span>Pour votre commerce</span></div>
+  </div>
+  <div class="grille">
+   <article class="carte rv"><svg viewBox="0 0 48 48"><circle cx="18" cy="28" r="10"/><circle cx="30" cy="28" r="10"/><path d="M20 10l4-5 4 5-4 4z"/></svg><h3>Mariage</h3><p>Des nouveaux mariés à la dernière danse.</p></article>
+   <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M24 6v36M14 16h20"/><circle cx="24" cy="16" r="2.5"/></svg><h3>Communion</h3><p>Une belle fête en famille.</p></article>
+   <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M24 40c-9-6-14-11-14-18a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 7-5 12-14 18z"/></svg><h3>Baptême</h3><p>La musique pour accueillir le petit dernier.</p></article>
+   <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M14 8h20l-10 16z"/><path d="M24 24v14M16 40h16"/></svg><h3>Soirée privée</h3><p>Anniversaire, 30 ans, retrouvailles : votre soirée, votre playlist.</p></article>
+   <article class="carte rv"><svg viewBox="0 0 48 48"><rect x="8" y="16" width="32" height="22" rx="3"/><path d="M18 16v-5h12v5M8 26h32"/></svg><h3>Comité d'entreprise</h3><p>Une soirée qui rassemble toute l'équipe.</p></article>
+   <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M8 20l26-10v28L8 28z"/><path d="M34 18a6 6 0 0 1 0 12M14 28l3 10h5l-2-9"/></svg><h3>Animation commerciale</h3><p>Du son et de l'ambiance pour faire vivre votre enseigne.</p></article>
+  </div>
+ </div>
+</section>
+<svg class="onde" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1);background:var(--nuit)"><path d="M0 30 Q90 0 180 30 T360 30 T540 30 T720 30 T900 30 T1080 30 T1260 30 T1440 30 V50 H0Z" fill="#1f1d26"/></svg>
+
+<section>
+ <div class="wrap lumiere">
+  <div class="rv">
+   <p class="eyebrow">Son &amp; lumière</p>
+   <h2>La lumière fait partie de la fête</h2>
+   <p style="color:var(--argent)">Sur les photos de ses soirées, la salle change de couleur au fil de la nuit et la piste se pare de motifs lumineux.</p>
+   <ul>
+    <li>Lyres et colonnes lumineuses autour de la régie</li>
+    <li>Projection lumineuse sur la piste, avec les prénoms des mariés</li>
+    <li>Micro sur pied à la régie, prêt pour les annonces</li>
+    <li>Ambiance bleue, violette ou rose selon le moment</li>
+   </ul>
+  </div>
+  <div class="duo">
+   <figure class="photo rv"><img src="img/projection-florale.webp" alt="Motif floral projeté en lumière blanche sur le carrelage d'une piste de danse violette" width="680" height="1200" loading="lazy"><figcaption>Projection sur la piste</figcaption></figure>
+   <figure class="photo rv"><img src="img/table-honneur.webp" alt="Table d'honneur dorée devant un grand décor ajouré or et argent, bougies et pétales de roses" width="900" height="1112" loading="lazy"><figcaption>Table d'honneur · 29 août</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="galerie">
+ <div class="wrap rv">
+  <p class="eyebrow">En images</p>
+  <h2>Les dernières soirées</h2>
+ </div>
+ <div class="rail rv" tabindex="0" aria-label="Galerie de photos, faire défiler">
+  <figure><img src="img/dj-installation.webp" alt="Régie DJ entre deux enceintes et deux lyres" loading="lazy" width="900" height="908"><figcaption><b>La régie avant la fête</b>Jardin des roses · 16 octobre 2026</figcaption></figure>
+  <figure><img src="img/table-fleurie.webp" alt="Table ronde fleurie de roses pêche et feuilles de palmier, piste de danse éclairée en bleu au fond" loading="lazy" width="1000" height="598"><figcaption><b>Les tables, la piste au fond</b>Jardin des roses · 16 octobre 2026</figcaption></figure>
+  <figure><img src="img/terrasse-reception.webp" alt="Grande terrasse de réception dressée, tables blanches, fougères et serviettes fleuries" loading="lazy" width="1200" height="1084"><figcaption><b>Réception en terrasse</b>28 août 2026</figcaption></figure>
+  <figure><img src="img/salle-reception.webp" alt="Salle aux voilages blancs et lustre de cristal" loading="lazy" width="1200" height="900"><figcaption><b>Sous les voilages</b>29 août 2026</figcaption></figure>
+  <figure><img src="img/table-honneur.webp" alt="Table d'honneur dorée et décor lumineux" loading="lazy" width="900" height="1112"><figcaption><b>Table d'honneur</b>29 août 2026</figcaption></figure>
+  <figure><img src="img/projection-florale.webp" alt="Projection florale sur la piste" loading="lazy" width="680" height="1200"><figcaption><b>Fleurs de lumière</b>Mariage du 29 août 2026</figcaption></figure>
+ </div>
+ <p class="astuce">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="agenda">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Sur la piste</p>
+   <h2>Dernièrement avec JB Animations</h2>
+  </div>
+  <ol>
+   <li class="rv"><time>25 octobre 2026</time><h3>Saint-André</h3><p><q>Du côté de St André pour ce dimanche, 30 ans à célébrer</q></p></li>
+   <li class="rv"><time>23 octobre 2026</time><h3>Mariage</h3><p><q>Vive les nouveaux mariés, C partiii pour une ambiance de folie</q></p></li>
+   <li class="rv"><time>17 octobre 2026</time><h3>Domaine des Autruches</h3><p>Grosse soirée pour le 6<sup>e</sup> anniversaire de Mansard Barbershop, animée par JB.</p></li>
+   <li class="rv"><time>16 octobre 2026</time><h3>Jardin des roses</h3><p>Installation son et lumière pour une réception.</p></li>
+   <li class="rv"><time>9 octobre 2026</time><h3>Candin Klub, Sainte-Clotilde</h3><p><q>Très belle soirée qui s'annonce… C partiii</q></p></li>
+  </ol>
+  <div class="dimanche rv">
+   <span class="script">Le rendez-vous du dimanche</span>
+   <p style="color:var(--argent)">Au Candin Klub : <q>La belle ambiance tous les dimanches</q>.</p>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <span class="etoile" style="left:6%;top:12%" aria-hidden="true">✦</span><span class="etoile" style="right:7%;top:16%;animation-delay:-1.5s" aria-hidden="true">✦</span><span class="etoile" style="left:10%;bottom:5%;animation-delay:-.7s" aria-hidden="true">✧</span>
+ <div class="wrap rv">
+  <p class="eyebrow">Noël &amp; fin d'année</p>
+  <span class="script">Des fêtes qui dansent</span>
+  <h2>Réservez l'ambiance de vos fêtes</h2>
+  <p>Repas de Noël entre collègues, réveillon en famille, soirée du Nouvel An : JB Animations met le son et la lumière, vous profitez de la fête.</p>
+  <div class="idees">
+   <div><b>Comité d'entreprise</b><span>La soirée de fin d'année de toute l'équipe.</span></div>
+   <div><b>Réveillon en famille</b><span>Les grands classiques et la piste pour tous.</span></div>
+   <div><b>Soirée privée</b><span>Votre fête, votre playlist, vos lumières.</span></div>
+  </div>
+  <div class="ctas">
+   <a class="btn btn-or" href="https://wa.me/262692113371?text=Bonjour%20JB%20Animations%2C%20je%20voudrais%20r%C3%A9server%20une%20animation%20pour%20une%20soir%C3%A9e%20de%20No%C3%ABl%20%2F%20fin%20d%27ann%C3%A9e" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Réserver ma soirée des fêtes</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Contact</p>
+   <h2>Parlons de <span class="or">votre date</span></h2>
+   <p style="color:var(--argent);max-width:36rem">Un message suffit pour vérifier la disponibilité et imaginer ensemble l'ambiance de votre événement.</p>
+  </div>
+  <div class="coord">
+   <a class="rv" href="https://wa.me/262692113371?text=Bonjour%20JB%20Animations%2C%20je%20voudrais%20des%20informations%20pour%20mon%20%C3%A9v%C3%A9nement" target="_blank" rel="noopener"><small>WhatsApp</small><b>0692 11 33 71</b></a>
+   <a class="rv" href="tel:+262692113371"><small>Téléphone</small><b>0692 11 33 71</b></a>
+   <a class="rv" href="mailto:jbanimations@hotmail.fr"><small>E-mail</small><b>jbanimations@hotmail.fr</b></a>
+   <a class="rv" href="https://www.facebook.com/profile.php?id=100063116866210" target="_blank" rel="noopener"><small>Facebook</small><b>JB Animations · 14 K abonnés</b></a>
+  </div>
+  <p class="zones rv">Dernières soirées : Saint-André, Sainte-Clotilde, Beaumont-les-Hauts… JB Animations se déplace là où la fête l'appelle.</p>
+ </div>
+</section>
+</main>
+
+<footer>
+ <span class="script">JB Animations · Au cœur de vos événements</span>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de JB Animations.
+</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.rv');
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+if(rm)return;
+var c=document.getElementById('paillettes'),g=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+var cols=['232,207,138','201,162,74','255,246,216','162,92,255','79,125,255'];
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var N=W<600?22:34;
+for(var i=0;i<N;i++)P.push(nv(true));
+function nv(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:Math.random()*2.2+.6,v:Math.random()*.35+.12,d:Math.random()*6.28,s:Math.random()*.02+.005,c:cols[Math.random()<.75?Math.floor(Math.random()*3):3+Math.floor(Math.random()*2)],a:Math.random()*.45+.15,t:Math.random()*6.28}}
+function f(){if(!run)return;g.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.d+=p.s;p.t+=.05;p.x+=Math.sin(p.d)*.3;
+var a=p.a*(.55+.45*Math.sin(p.t));
+var gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);gr.addColorStop(0,'rgba('+p.c+','+a+')');gr.addColorStop(1,'rgba('+p.c+',0)');
+g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,p.r*4,0,6.28);g.fill();
+if(p.y<-12)P[i]=nv(false);}
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="JB Animations" defer></script>
+</body>
+</html>
