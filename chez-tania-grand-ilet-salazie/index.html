@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Tania Grand Ilet · Restaurant traditionnel & hébergements à Salazie</title>
+<meta name="description" content="Au Cœur de Grand Ilet, Chez Tania : restaurant traditionnel et hébergements à Grand Ilet, dans le cirque de Salazie (La Réunion). Réservation au 0692 57 67 15.">
+<meta property="og:title" content="Chez Tania Grand Ilet · Au Cœur de Grand Ilet">
+<meta property="og:description" content="Restaurant traditionnel & hébergements à Grand Ilet, au cœur du cirque de Salazie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-tania-grand-ilet-salazie/img/logo-chez-tania.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-tania-grand-ilet-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--turq:#0dc0e1;--turq-f:#0790ab;--turq-c:#c9f1f9;--jaune:#ffee02;--jaune-d:#f5c400;--braise:#e5481c;--encre:#141414;--vert:#1f6b4f;--vert-f:#123f2f;--creme:#fffbe8;--txt:#1d2a2c;--doux:#5b6b6e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;color:var(--encre);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Pacifico',cursive;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:800;color:var(--braise)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--encre);color:var(--jaune);text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.95rem;letter-spacing:.02em;transition:transform .3s,background .3s,box-shadow .3s}
+.btn svg{width:20px;height:20px;flex:0 0 20px}
+.btn:hover{transform:translateY(-2px)}
+.btn-jaune{background:var(--jaune);color:var(--encre);box-shadow:0 14px 30px -14px rgba(0,0,0,.55);animation:souffle 3.4s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 0 0 8px rgba(255,238,2,.25),0 14px 30px -14px rgba(0,0,0,.55)}}
+.btn-blanc{background:#fff;color:var(--encre)}
+.btn-noir{background:var(--encre);color:#fff}
+.btn-wa{background:#1f9d55;color:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:linear-gradient(180deg,#7fdcef 0%,var(--turq) 45%,#0aa7c4 100%);color:#fff}
+.paysage{position:absolute;inset:0;width:100%;height:100%}
+.paysage .loin{animation:derive 30s ease-in-out infinite alternate}
+.paysage .brume{animation:brume 22s ease-in-out infinite alternate}
+.paysage .brume2{animation:brume 28s ease-in-out infinite alternate-reverse}
+.paysage .soleil{animation:luit 6s ease-in-out infinite;transform-origin:1160px 150px}
+@keyframes derive{to{transform:translateX(-30px)}}
+@keyframes brume{from{transform:translateX(-80px)}to{transform:translateX(80px)}}
+@keyframes luit{50%{transform:scale(1.06)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 70% 45% at 50% 58%,rgba(6,50,60,.45),rgba(6,50,60,0) 75%)}
+.hero-in{position:relative;z-index:3;padding:7.5rem 0 3.2rem;text-align:center}
+.medaille{width:min(46vw,190px);margin:0 auto 1.3rem;border-radius:50%;box-shadow:0 0 0 6px rgba(255,255,255,.55),0 24px 50px -18px rgba(0,0,0,.55);animation:flotte 6s ease-in-out infinite;aspect-ratio:1;overflow:hidden}
+.medaille img{width:100%;height:100%;object-fit:cover;transform:scale(1.42)}
+@keyframes flotte{50%{transform:translateY(-8px) rotate(-2deg)}}
+.hero .eyebrow{color:var(--jaune);text-shadow:0 1px 6px rgba(0,0,0,.35)}
+.hero h1{color:#fff;font-size:clamp(2.5rem,10.5vw,5.6rem);text-shadow:0 3px 20px rgba(0,40,50,.45);margin:.5rem 0 .2rem}
+.hero h1 .script{display:block;color:var(--jaune);font-size:.62em;margin-top:.15em;line-height:1.3}
+.hero .lead{font-size:1.12rem;max-width:32rem;margin:1rem auto 1.7rem;text-shadow:0 1px 10px rgba(0,40,50,.6);font-weight:600}
+.hero .ctas{justify-content:center}
+.hero .legende{position:absolute;right:.8rem;bottom:.6rem;z-index:3;font-size:.68rem;color:rgba(255,255,255,.85)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--jaune);color:var(--encre);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Pacifico',cursive;font-size:1.15rem;border-top:3px solid var(--encre);border-bottom:3px solid var(--encre)}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-family:Nunito;color:var(--braise);font-size:.8rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.maison p+p{margin-top:1rem}
+.citation{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.75rem);color:var(--turq-f);border-left:4px solid var(--jaune-d);padding-left:1.1rem;margin:1.5rem 0}
+.logo-carte{position:relative;max-width:380px;margin:auto;width:100%}
+.logo-carte img{width:100%;border-radius:28px;box-shadow:0 36px 70px -34px rgba(7,144,171,.85);transform:rotate(-2.5deg);transition:transform .6s}
+.logo-carte:hover img{transform:rotate(0) scale(1.02)}
+.logo-carte figcaption{text-align:center;font-size:.84rem;color:var(--doux);margin-top:1rem}
+.symboles{display:grid;gap:.9rem;margin-top:1.8rem}
+.symbole{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:18px;padding:.9rem 1.1rem;box-shadow:0 16px 36px -28px rgba(0,0,0,.45)}
+.symbole svg{flex:0 0 44px;width:44px;height:44px}
+.symbole b{display:block;font-family:'Fraunces',serif;font-size:1.08rem;color:var(--encre)}
+.symbole span{font-size:.92rem;color:var(--doux)}
+/* table */
+.table-sec{background:var(--turq);color:#fff;overflow:hidden}
+.table-sec h2{color:#fff}
+.table-sec .eyebrow{color:var(--jaune)}
+.vague{display:block;width:100%;height:50px}
+.vague-haut{margin-bottom:-1px}
+.vague-bas{margin-top:-1px}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.carte{background:#fff;color:var(--txt);border-radius:24px;padding:1.6rem 1.5rem 1.5rem;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s;box-shadow:0 26px 50px -34px rgba(0,0,0,.55)}
+.carte:hover{transform:translateY(-6px)}
+.carte::before{content:"";position:absolute;top:-40px;right:-40px;width:110px;height:110px;border-radius:50%;background:var(--jaune);opacity:.9}
+.carte .ico{position:relative;width:52px;height:52px;margin-bottom:1rem}
+.carte h3{margin-bottom:.4rem;position:relative}
+.carte p{font-size:.96rem;position:relative}
+.carte a.lien{display:inline-block;margin-top:.9rem;font-weight:800;color:var(--turq-f);text-decoration:none;border-bottom:2px solid var(--jaune-d)}
+.marmite-fig{max-width:360px;margin:2.6rem auto 0;text-align:center}
+.marmite-fig figcaption{font-size:.78rem;color:var(--turq-c);margin-top:.4rem}
+.fumee path{animation:fume 4s ease-in-out infinite;opacity:.0}
+.fumee path:nth-child(2){animation-delay:1.3s}.fumee path:nth-child(3){animation-delay:2.6s}
+@keyframes fume{0%{opacity:0;transform:translateY(10px)}40%{opacity:.85}100%{opacity:0;transform:translateY(-26px)}}
+/* village */
+.village{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.route{position:relative;padding-left:1.6rem;margin-top:1.4rem}
+.route::before{content:"";position:absolute;left:.45rem;top:.4rem;bottom:.4rem;border-left:3px dotted var(--turq)}
+.route li{list-style:none;position:relative;margin:.9rem 0}
+.route li::before{content:"";position:absolute;left:-1.55rem;top:.35rem;width:14px;height:14px;border-radius:50%;background:var(--jaune);box-shadow:0 0 0 3px var(--encre)}
+.route li b{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--encre)}
+.carte-ill{border-radius:28px;overflow:hidden;box-shadow:0 34px 60px -36px rgba(0,0,0,.6);background:#e8f8fb}
+.carte-ill + p{font-size:.78rem;color:var(--doux);margin-top:.5rem;text-align:center}
+/* noel */
+.noel{background:linear-gradient(180deg,var(--vert-f),#0c2c21);color:#f2f7ea;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.noel-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0 1.9rem}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(255,238,2,.35);border-radius:18px;padding:1.1rem 1.3rem}
+.idee h3{color:var(--jaune);font-size:1.15rem;margin-bottom:.2rem}
+.bon{position:relative;aspect-ratio:1.55;border-radius:22px;background:var(--turq);padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;color:var(--encre);box-shadow:0 40px 70px -30px rgba(0,0,0,.8);transform:rotate(-3deg);transition:transform .6s;overflow:hidden;max-width:420px;margin:auto;width:100%}
+.bon:hover{transform:rotate(0)}
+.bon::before{content:"";position:absolute;right:-18%;top:-30%;width:75%;aspect-ratio:1;border-radius:50%;background:var(--jaune)}
+.bon::after{content:"";position:absolute;top:-50%;left:-60%;width:35%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:rotate(20deg);animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{to{left:140%}}
+.bon>*{position:relative;z-index:1}
+.bon small{font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem}
+.bon .script{font-size:clamp(1.6rem,6.4vw,2.3rem);line-height:1.25}
+.bon .bas{display:flex;justify-content:space-between;align-items:flex-end;font-size:.82rem;font-weight:700}
+.bon .ruban{position:absolute;top:0;bottom:0;right:24%;width:16px;background:var(--braise);z-index:0}
+.bon .noeud{position:absolute;right:24%;top:30%;width:56px;height:34px;margin:0 -20px 0 0;z-index:1}
+.flocons span{position:absolute;color:rgba(255,255,255,.55);font-size:.9rem;animation:tombe linear infinite;top:-20px}
+@keyframes tombe{to{transform:translateY(900px) rotate(200deg)}}
+/* contact */
+.contact{background:var(--creme)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.infos p{margin:.55rem 0}
+.infos b{color:var(--encre)}
+.infos a{color:var(--turq-f);font-weight:800}
+.panneau{background:var(--jaune);border:3px solid var(--encre);border-radius:26px;padding:1.6rem;box-shadow:8px 8px 0 var(--encre)}
+.panneau h3{font-size:1.5rem;margin-bottom:.6rem}
+.panneau .ctas{flex-direction:column}
+.panneau .btn{width:100%}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--creme);border-top:1px solid #efe6bf}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .maison,.village,.noel-in,.contact-in{grid-template-columns:1fr}
+ .cartes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:0 0 1rem;margin-right:-5vw;-webkit-overflow-scrolling:touch}
+ .cartes .carte{flex:0 0 80%;scroll-snap-align:start}
+ .ribbon{font-size:.68rem}
+ .village .carte-ill{order:-1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#vapeur,.flocons{display:none}.fumee path{opacity:.7}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Tania Grand Ilet</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <svg class="paysage" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fb7a5"/><stop offset="1" stop-color="#2f8b74"/></linearGradient>
+      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d8a63"/><stop offset="1" stop-color="#1f6b4f"/></linearGradient>
+      <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c5f45"/><stop offset="1" stop-color="#0f3a2b"/></linearGradient>
+      <radialGradient id="sol" cx=".5" cy=".5" r=".5"><stop offset=".6" stop-color="#ffee02"/><stop offset="1" stop-color="#ffee02" stop-opacity="0"/></radialGradient>
+    </defs>
+    <circle class="soleil" cx="1160" cy="150" r="120" fill="url(#sol)"/>
+    <g class="loin"><path d="M-60 560 L60 330 L130 420 L230 210 L330 380 L420 300 L520 470 L640 260 L740 400 L860 230 L960 360 L1060 280 L1170 420 L1280 250 L1380 380 L1500 300 L1500 1000 L-60 1000Z" fill="url(#m1)" opacity=".75"/></g>
+    <path class="brume2" d="M-200 520 C 100 470 300 560 600 510 S 1100 470 1640 520 L1640 600 L-200 600Z" fill="#fff" opacity=".35"/>
+    <path d="M-40 680 L80 470 L170 560 L260 400 L380 590 L470 500 L560 640 L700 450 L820 600 L930 470 L1050 620 L1170 460 L1300 600 L1480 500 L1480 1000 L-40 1000Z" fill="url(#m2)"/>
+    <g stroke="#e9fbff" stroke-width="3" opacity=".75" fill="none"><path d="M490 520 C 494 560 486 600 492 640"/><path d="M1172 470 C 1176 520 1168 560 1174 610"/></g>
+    <path class="brume" d="M-200 690 C 150 650 350 720 700 680 S 1200 650 1640 700 L1640 760 L-200 760Z" fill="#fff" opacity=".45"/>
+    <path d="M-40 1000 L-40 780 C 200 730 420 790 720 760 S 1200 720 1480 770 L1480 1000Z" fill="url(#m3)"/>
+    <g transform="translate(905 880) scale(.7)">
+      <rect x="0" y="40" width="110" height="64" fill="#fffbe8"/>
+      <path d="M-14 46 L55 -6 L124 46Z" fill="#e5481c"/>
+      <rect x="44" y="64" width="22" height="40" fill="#0790ab"/>
+      <rect x="12" y="58" width="20" height="18" fill="#ffee02"/><rect x="78" y="58" width="20" height="18" fill="#ffee02"/>
+    </g>
+  </svg>
+  <div class="wrap hero-in">
+    <div class="medaille apparait"><img src="img/logo-chez-tania.webp" alt="Logo Au Coeur de Grand Ilet Chez Tania : cuillère et fourchette croisées au-dessus d'une case, sur fond jaune et turquoise"></div>
+    <p class="eyebrow apparait">Restaurant & Hébergements · Grand Ilet, Salazie</p>
+    <h1 class="apparait d2">Au Cœur de Grand Ilet<span class="script">Chez Tania !</span></h1>
+    <p class="lead apparait d3">Une table traditionnelle et un toit pour la nuit, là-haut, dans le cirque de Salazie.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-jaune" href="tel:+262692576715"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Réserver une table</a>
+      <a class="btn btn-blanc" href="#maison">Découvrir</a>
+    </div>
+  </div>
+  <span class="legende">Illustration · le cirque de Salazie</span>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Au Cœur de Grand Ilet</span><span>Restaurant traditionnel</span><span>Hébergements</span><span>Cirque de Salazie</span><span>Chez Tania !</span>
+<span>Au Cœur de Grand Ilet</span><span>Restaurant traditionnel</span><span>Hébergements</span><span>Cirque de Salazie</span><span>Chez Tania !</span>
+</div></div>
+
+<section id="maison">
+  <div class="wrap maison">
+    <div class="rv">
+      <p class="eyebrow">La maison</p>
+      <h2>Bienvenue chez Tania, au cœur du village</h2>
+      <p>Chez Tania, c'est un restaurant traditionnel installé à Grand Ilet, le village perché du cirque de Salazie. Ici, on monte pour la route, les sommets et les cascades… et on s'attable pour un vrai repas de chez nous.</p>
+      <p class="citation">« Restaurant &amp; Hébergements » : une table pour se régaler, un toit pour prolonger le séjour.</p>
+      <div class="symboles">
+        <div class="symbole"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#ffee02"/><path d="M15 33 L33 15 M31 13 l4 4 M30 12 l6 6 M14 14 c4 0 7 3 7 7 l-6 0 c-2-2-2-5-1-7z M20 20 L34 34" stroke="#141414" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg><div><b>La cuillère et la fourchette</b><span>Le restaurant traditionnel, cœur de la maison.</span></div></div>
+        <div class="symbole"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#0dc0e1"/><path d="M11 25 L24 14 L37 25" stroke="#141414" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="16" y="24" width="16" height="11" fill="#fffbe8" stroke="#141414" stroke-width="2"/><path d="M24 24v11M16 29.5h16" stroke="#141414" stroke-width="1.6"/></svg><div><b>La case</b><span>Les hébergements, pour rester une nuit dans le cirque.</span></div></div>
+        <div class="symbole"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1f6b4f"/><path d="M8 34 L18 18 L24 26 L30 16 L40 34Z" fill="#fffbe8"/><circle cx="34" cy="13" r="3.5" fill="#ffee02"/></svg><div><b>Grand Ilet</b><span>Le village des hauts, au cœur du cirque de Salazie.</span></div></div>
+      </div>
+    </div>
+    <figure class="logo-carte rv">
+      <img src="img/logo-chez-tania.webp" alt="Logo du restaurant : Au Coeur de Grand Ilet Chez Tania, Restaurant et Hébergements" loading="lazy">
+      <figcaption>Le logo de la maison, publié sur la page Facebook de Chez Tania Grand Ilet.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="table-sec" style="padding-top:0;padding-bottom:0">
+  <svg class="vague vague-haut" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v20c-160 26-320 30-480 14S640 0 480 8 160 40 0 26z" fill="#fffbe8"/></svg>
+  <div class="wrap" style="padding:clamp(3rem,8vw,5.5rem) 0">
+    <div class="rv">
+      <p class="eyebrow">Votre venue</p>
+      <h2>À table, au cœur du cirque</h2>
+      <p style="max-width:40rem">Un repas après la balade, une nuit pour profiter du lever du jour sur les remparts : trois façons simples de préparer votre passage chez Tania.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#0dc0e1"/><path d="M16 36 L36 16 M34 14 l4 4 M33 13 l6 6 M16 16 c4 0 7 3 7 7 h-6 c-2-2-2-5-1-7z M22 22 L37 37" stroke="#141414" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>
+        <h3>Réserver une table</h3>
+        <p>Un coup de fil et votre table vous attend : idéal pour connaître le menu du jour et l'heure qui vous arrange.</p>
+        <a class="lien" href="tel:+262692576715">0692 57 67 15</a>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#0dc0e1"/><path d="M12 27 L26 15 L40 27" stroke="#141414" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="17" y="26" width="18" height="12" fill="#fffbe8" stroke="#141414" stroke-width="2"/><path d="M26 26v12" stroke="#141414" stroke-width="1.6"/></svg>
+        <h3>Dormir sur place</h3>
+        <p>Prolongez la journée à Grand Ilet : demandez les disponibilités des hébergements directement à la maison.</p>
+        <a class="lien" href="https://wa.me/262692576715?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20pour%20l%27h%C3%A9bergement">Demander sur WhatsApp</a>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="25" fill="#0dc0e1"/><path d="M26 12c-6 0-10 4.5-10 10 0 7.5 10 18 10 18s10-10.5 10-18c0-5.5-4-10-10-10z" fill="#fffbe8" stroke="#141414" stroke-width="2.4"/><circle cx="26" cy="22" r="3.6" fill="#e5481c"/></svg>
+        <h3>Venir à Grand Ilet</h3>
+        <p>Cap sur Salazie, puis la route de Grand Ilet jusqu'au village : l'itinéraire s'ouvre en un geste.</p>
+        <a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=Au%20coeur%20de%20Grand%20Ilet%20chez%20Tania%20Salazie">Ouvrir l'itinéraire</a>
+      </article>
+    </div>
+    <figure class="marmite-fig rv">
+      <svg viewBox="0 0 240 170" aria-hidden="true">
+        <g class="fumee" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"><path d="M90 60 c-10-14 10-22 0-38"/><path d="M120 56 c-10-14 10-22 0-38"/><path d="M150 60 c-10-14 10-22 0-38"/></g>
+        <ellipse cx="120" cy="78" rx="78" ry="12" fill="#141414"/>
+        <path d="M44 80 h152 c0 44-30 70-76 70 s-76-26-76-70z" fill="#141414"/>
+        <path d="M30 88 h18 M192 88 h18" stroke="#141414" stroke-width="8" stroke-linecap="round"/>
+        <path d="M60 108 c20 8 100 8 120 0" stroke="#ffee02" stroke-width="3" fill="none" opacity=".8"/>
+        <path d="M70 162 c10-10 20-10 30 0 c10-10 20-10 30 0 c10-10 20-10 30 0" stroke="#e5481c" stroke-width="5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <figcaption>Illustration · la marmite sur le feu</figcaption>
+    </figure>
+  </div>
+  <svg class="vague vague-bas" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50h1440V24c-160-26-320-30-480-14S640 50 480 42 160 10 0 24z" fill="#fffbe8"/></svg>
+</section>
+
+<section>
+  <div class="wrap village">
+    <div class="rv">
+      <p class="eyebrow">Le chemin</p>
+      <h2>Monter jusqu'à Grand Ilet</h2>
+      <p>Le plaisir commence dès la route : on quitte le littoral, on entre dans le cirque, et les cascades accompagnent la montée jusqu'au village.</p>
+      <ul class="route">
+        <li><b>Salazie</b><br>La porte d'entrée du cirque.</li>
+        <li><b>La route de Grand Ilet</b><br>Virages, verdure et vue sur les remparts.</li>
+        <li><b>Au Cœur de Grand Ilet</b><br>Chez Tania, la table et les hébergements vous accueillent.</li>
+      </ul>
+      <div class="ctas" style="margin-top:1.6rem"><a class="btn btn-noir" href="https://www.google.com/maps/search/?api=1&amp;query=Au%20coeur%20de%20Grand%20Ilet%20chez%20Tania%20Salazie">Itinéraire Google Maps</a></div>
+    </div>
+    <div class="rv">
+      <div class="carte-ill">
+        <svg viewBox="0 0 400 300" aria-hidden="true">
+          <rect width="400" height="300" fill="#c9f1f9"/>
+          <path d="M0 230 L50 120 L90 170 L140 80 L190 160 L240 70 L290 150 L340 90 L400 170 L400 300 L0 300Z" fill="#2d8a63"/>
+          <path d="M0 260 C 80 230 160 270 240 245 S 360 230 400 250 L400 300 L0 300Z" fill="#1f6b4f"/>
+          <path d="M40 285 C 90 250 70 220 130 210 S 200 230 230 190 S 290 160 300 140" stroke="#ffee02" stroke-width="5" fill="none" stroke-dasharray="10 9" stroke-linecap="round"/>
+          <circle cx="40" cy="285" r="8" fill="#fffbe8" stroke="#141414" stroke-width="3"/>
+          <circle cx="300" cy="140" r="16" fill="#ffee02" stroke="#141414" stroke-width="3"/>
+          <path d="M292 141 l8-7 8 7 M294 140 v8 h12 v-8" stroke="#141414" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
+          <path d="M140 82 c2 30-3 50 1 78" stroke="#fff" stroke-width="2.5" fill="none" opacity=".85"/>
+          <text x="24" y="270" font-family="Nunito,Arial" font-weight="800" font-size="14" fill="#fffbe8">Salazie</text>
+          <text x="232" y="118" font-family="Pacifico,cursive" font-size="17" fill="#141414">Chez Tania</text>
+        </svg>
+      </div>
+      <p>Illustration · la montée vers Grand Ilet</p>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="flocons" aria-hidden="true"></div>
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment chez Tania</h2>
+      <p>Un repas au cœur du cirque, une nuit à Grand Ilet : un cadeau qui fait voyager, à vivre ensemble.</p>
+      <div class="idees">
+        <div class="idee"><h3>Un repas à offrir</h3><p>Une belle table traditionnelle à partager, au cœur du village.</p></div>
+        <div class="idee"><h3>Une escapade à Grand Ilet</h3><p>Un séjour dans le cirque de Salazie, avec repas et hébergement chez Tania.</p></div>
+        <div class="idee"><h3>Votre tablée des fêtes</h3><p>Famille, amis, collègues : réservez votre grande tablée pour fêter la fin d'année.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-jaune" href="https://wa.me/262692576715?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20moment%20chez%20Tania%20pour%20No%C3%ABl">Préparer mon cadeau sur WhatsApp</a>
+        <a class="btn btn-blanc" href="tel:+262692576715">Appeler la maison</a>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="bon" role="img" aria-label="Illustration d'un bon cadeau Chez Tania">
+        <span class="ruban"></span>
+        <svg class="noeud" viewBox="0 0 56 34" aria-hidden="true"><path d="M28 17 C 12 0 0 6 6 17 C 0 28 12 34 28 17 C 44 34 56 28 50 17 C 56 6 44 0 28 17Z" fill="#e5481c" stroke="#141414" stroke-width="2"/><circle cx="28" cy="17" r="5" fill="#ffee02" stroke="#141414" stroke-width="2"/></svg>
+        <small>Bon cadeau</small>
+        <span class="script">Chez Tania !</span>
+        <div class="bas"><span>Au Cœur de Grand Ilet</span><span>Salazie</span></div>
+      </div>
+      <p style="text-align:center;font-size:.78rem;margin-top:1rem;color:#bcd8c9">Illustration · bon cadeau</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Contact</p>
+      <h2>On vous attend à Grand Ilet</h2>
+      <p><b>Au Cœur de Grand Ilet · Chez Tania</b><br>Restaurant traditionnel &amp; hébergements</p>
+      <p><b>Adresse</b><br>2 route de Roche à Jacquot, Grand Ilet, 97433 Salazie</p>
+      <p><b>Téléphone &amp; WhatsApp</b><br><a href="tel:+262692576715">0692 57 67 15</a></p>
+      <p><b>Facebook</b><br><a href="https://www.facebook.com/100078701898592/">Chez Tania Grand Ilet</a></p>
+      <p style="color:var(--doux);font-size:.92rem;margin-top:1rem">Un appel suffit pour connaître le menu du jour et réserver votre table.</p>
+    </div>
+    <div class="panneau rv">
+      <h3>Réservez votre table</h3>
+      <p style="margin-bottom:1.2rem">Repas en famille, pause après la randonnée ou nuit dans le cirque : la maison vous répond au téléphone et sur WhatsApp.</p>
+      <div class="ctas">
+        <a class="btn btn-noir" href="tel:+262692576715">Appeler le 0692 57 67 15</a>
+        <a class="btn btn-wa" href="https://wa.me/262692576715?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20table%20chez%20Tania"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.3 0 .5l-.4.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Écrire sur WhatsApp</a>
+        <a class="btn btn-blanc" style="border:2px solid var(--encre)" href="https://www.facebook.com/100078701898592/">Suivre sur Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chez Tania Grand Ilet.</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var fl=document.querySelector('.flocons');
+if(!reduit&&fl){for(var i=0;i<14;i++){var s=document.createElement('span');s.textContent='✦';s.style.left=(Math.random()*100)+'%';s.style.animationDuration=(9+Math.random()*9)+'s';s.style.animationDelay=(-Math.random()*15)+'s';s.style.fontSize=(.5+Math.random()*.7)+'rem';fl.appendChild(s)}}
+if(reduit)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+function taille(){W=c.width=innerWidth;H=c.height=innerHeight}
+taille();addEventListener('resize',taille);
+function nv(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+30;p.r=14+Math.random()*30;p.v=.25+Math.random()*.45;p.a=0;p.max=.05+Math.random()*.07;p.o=Math.random()*6.28;return p}
+for(var i=0;i<24;i++)P.push(nv({},true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.o+=.012;p.x+=Math.sin(p.o)*.35;p.r+=.03;
+var t=p.y/H;p.a=Math.min(p.max,p.a+.002)*(t>.08?1:t/.08);
+var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+p.a+')');g.addColorStop(1,'rgba(255,255,255,0)');
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();
+if(p.y<-p.r)nv(p,false)}
+requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Tania Grand Ilet" defer></script>
+</body>
+</html>
