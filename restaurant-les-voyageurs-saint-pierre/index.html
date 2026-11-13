@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurant les voyageurs · Chinois, créole et pizzas à emporter · Saint-Pierre</title>
+<meta name="description" content="Restaurant les voyageurs, Ligne Paradis à Saint-Pierre : repas à emporter en cuisine chinoise et créole, et pizzas le soir. Commandes au 0693 02 72 40.">
+<meta property="og:title" content="Restaurant les voyageurs · Saint-Pierre">
+<meta property="og:description" content="Repas à emporter en cuisine chinoise et créole, et pizzas le soir. Commandes au 0693 02 72 40.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/restaurant-les-voyageurs-saint-pierre/img/porc-sesame.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/restaurant-les-voyageurs-saint-pierre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&family=Caveat:wght@600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--laque:#b3291f;--laque-f:#7e1a13;--curcuma:#e9a23b;--curcuma-c:#f6d08a;--nuit:#1c1411;--brun:#33231c;--creme:#fbf3e6;--papier:#f3e6cf;--ciboule:#5f8a36;--txt:#3a2a22;--doux:#8a7465}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.05;color:var(--nuit)}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.4rem 0 1rem}
+h3{font-size:1.3rem}
+.main-script{font-family:'Caveat',cursive;color:var(--laque);font-size:1.6rem;line-height:1}
+.eyebrow{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;color:var(--laque);font-weight:700}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--curcuma-c);text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--laque);color:#fff;box-shadow:0 14px 30px -14px rgba(179,41,31,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--laque-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(233,162,59,.75)}}
+.btn-wa{background:#1f8f4e;color:#fff}
+.btn-wa:hover{background:#17703c}
+.btn-line{border:1.5px solid var(--curcuma-c);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:var(--creme);padding:6rem 0 3rem}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
+.hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,20,17,.2) 0%,rgba(28,20,17,.5) 32%,rgba(28,20,17,.88) 62%,var(--nuit) 100%)}
+.hero .wrap{position:relative}
+.billet{display:inline-flex;align-items:stretch;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.2rem;animation:monte 1.2s .2s both}
+.billet span{background:var(--curcuma);color:var(--nuit);padding:.4rem .7rem;font-weight:700}
+.billet span+span{background:var(--creme);border-left:2px dashed var(--nuit)}
+.hero h1{color:#fff;font-size:clamp(2.7rem,12vw,5.6rem);letter-spacing:-.02em;animation:monte 1.2s .4s both}
+.hero h1 em{display:block;font-style:italic;font-weight:500;color:var(--curcuma);font-size:.55em;letter-spacing:0}
+.hero p.bio{max-width:34rem;margin:1.1rem 0 1.6rem;font-size:1.08rem;color:#f1e4d2;animation:monte 1.2s .6s both}
+.hero .ctas{animation:monte 1.2s .8s both}
+.cred{position:absolute;right:4vw;bottom:.8rem;font-size:.66rem;color:rgba(255,255,255,.6)}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* bandeau */
+.bandeau{background:var(--laque);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;position:relative;z-index:2}
+.bandeau div{display:inline-block;animation:defile 34s linear infinite}
+.bandeau i{color:var(--curcuma-c);font-style:normal;margin:0 1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* deux voyages */
+.voyages{display:grid;gap:1.4rem;margin-top:2rem}
+.ticket{position:relative;background:#fff;border-radius:18px;display:grid;grid-template-columns:1fr;overflow:hidden;box-shadow:0 24px 50px -30px rgba(51,35,28,.55);transition:transform .35s}
+.ticket:hover{transform:translateY(-4px) rotate(-.3deg)}
+.ticket .haut{padding:1.5rem 1.4rem 1.2rem}
+.ticket .bas{position:relative;padding:1.1rem 1.4rem 1.4rem;border-top:2px dashed #e2cfb2;background:var(--papier)}
+.ticket .bas::before,.ticket .bas::after{content:"";position:absolute;top:-13px;width:24px;height:24px;border-radius:50%;background:var(--creme)}
+.ticket .bas::before{left:-12px}.ticket .bas::after{right:-12px}
+.ticket .code{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.14em;color:var(--doux);text-transform:uppercase;display:flex;justify-content:space-between;gap:1rem}
+.ticket h3{font-size:1.7rem;margin:.6rem 0 .5rem}
+.ticket .grand{font-family:'Space Mono',monospace;font-weight:700;font-size:1.5rem;color:var(--laque)}
+.ticket.soir{background:var(--nuit);color:#efe2cf}
+.ticket.soir h3{color:#fff}
+.ticket.soir .bas{background:var(--brun);border-color:#5c4337}
+.ticket.soir .grand{color:var(--curcuma)}
+
+/* menu du jour */
+.jours{display:grid;gap:1rem;margin-top:2rem}
+.jour{background:#fff;border-radius:16px;padding:1.3rem 1.3rem 1.2rem;border-left:6px solid var(--curcuma);box-shadow:0 18px 40px -30px rgba(51,35,28,.6)}
+.jour:nth-child(2){border-color:var(--laque)}
+.jour:nth-child(3){border-color:var(--ciboule)}
+.jour .date{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux)}
+.jour ul{list-style:none;margin-top:.6rem}
+.jour li{font-family:'Fraunces',serif;font-size:1.15rem;padding:.3rem 0;border-bottom:1px dotted #e3d2b8}
+.jour li:last-child{border:0}
+.note{font-size:.9rem;color:var(--doux);margin-top:1.2rem}
+
+/* galerie */
+.galerie-sec{background:var(--nuit);color:#efe2cf;overflow:hidden}
+.galerie-sec h2{color:#fff}
+.galerie-sec .main-script{color:var(--curcuma)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 5vw 1rem;margin:0 -5vw;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:330px;scroll-snap-align:center;position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:var(--brun)}
+.rail img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.rail figure:hover img{transform:scale(1.06)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .9rem .8rem;background:linear-gradient(transparent,rgba(28,20,17,.88));font-size:.82rem;color:#f4e6d3}
+.rail figcaption b{display:block;font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.12em;color:var(--curcuma);text-transform:uppercase;font-weight:700}
+.astuce{font-size:.8rem;color:#b9a48f;margin-top:.4rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.tags span{font-family:'Space Mono',monospace;font-size:.72rem;padding:.35rem .7rem;border:1px solid #5c4337;border-radius:999px;color:var(--curcuma-c)}
+
+/* pizzas */
+.pizzas .photos{display:grid;grid-template-columns:1fr;gap:1rem;margin:2rem 0}
+.pizzas .photos figure{border-radius:18px;overflow:hidden;position:relative}
+.pizzas .photos figure.haute{aspect-ratio:4/5}
+.pizzas .photos img{width:100%;height:100%;object-fit:cover}
+.pizzas .photos figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(251,243,230,.92);color:var(--nuit);font-size:.75rem;padding:.3rem .65rem;border-radius:999px}
+.carte{display:grid;gap:.9rem}
+.pz{background:#fff;border-radius:14px;padding:1rem 1.1rem;display:grid;grid-template-columns:auto 1fr;gap:.2rem .9rem;align-items:start;box-shadow:0 14px 30px -26px rgba(51,35,28,.7);transition:transform .3s}
+.pz:hover{transform:translateX(4px)}
+.pz .rond{grid-row:span 2;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 50% 50%,#f6d08a 0 46%,#e9a23b 47% 58%,#c27a2a 59% 100%);position:relative}
+.pz .rond::before,.pz .rond::after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--laque);top:13px;left:14px;box-shadow:12px 8px 0 var(--laque),3px 15px 0 #2a1d18}
+.pz h3{font-size:1.2rem;letter-spacing:.02em}
+.pz p{font-size:.9rem;color:var(--doux)}
+.pz.star{border:2px solid var(--curcuma)}
+.pz.star h3::after{content:" · la pizza maison du nom";font-family:'Caveat',cursive;color:var(--laque);font-weight:600;font-size:1.05rem}
+.familles{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.familles span{background:var(--papier);padding:.35rem .8rem;border-radius:999px;font-size:.82rem;font-weight:500}
+
+/* commander */
+.commander{background:linear-gradient(180deg,var(--creme),var(--papier))}
+.etapes{display:grid;gap:1rem;margin:2rem 0}
+.etape{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:16px;padding:1.2rem}
+.etape .n{flex:none;width:52px;height:52px;border-radius:14px;background:var(--nuit);color:var(--curcuma);display:grid;place-items:center;font-family:'Space Mono',monospace;font-weight:700;font-size:.95rem}
+.etape h3{font-size:1.15rem;margin-bottom:.2rem}
+.avis{margin-top:2.4rem;background:var(--nuit);color:#f1e4d2;border-radius:20px;padding:1.6rem 1.4rem;position:relative;overflow:hidden}
+.avis .pct{font-family:'Fraunces',serif;font-size:3.2rem;color:var(--curcuma);line-height:1}
+.avis blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;margin-top:.8rem;color:#fff}
+.avis small{display:block;margin-top:.5rem;color:#b9a48f;font-size:.78rem}
+
+/* fêtes */
+.fetes{background:radial-gradient(120% 80% at 50% 0%,#8f2219 0%,var(--laque-f) 45%,#4c0f0b 100%);color:#fbe9d2;overflow:hidden;text-align:center}
+.fetes h2{color:#fff}
+.fetes .main-script{color:var(--curcuma-c)}
+.lanternes{display:flex;justify-content:center;gap:clamp(1.2rem,8vw,3.5rem);margin-bottom:1.6rem}
+.lanterne{width:34px;height:48px;position:relative;animation:balance 4s ease-in-out infinite;transform-origin:50% -30px}
+.lanterne:nth-child(2){animation-delay:-1.3s}.lanterne:nth-child(3){animation-delay:-2.6s}
+.lanterne::before{content:"";position:absolute;left:50%;top:-30px;width:1px;height:30px;background:rgba(246,208,138,.6)}
+.lanterne span{position:absolute;inset:0;border-radius:45%;background:radial-gradient(circle at 50% 40%,#ffd98a,#e9a23b 55%,#b3291f);box-shadow:0 0 26px rgba(246,208,138,.55)}
+.lanterne span::before,.lanterne span::after{content:"";position:absolute;left:30%;right:30%;height:5px;background:#3a1a12;border-radius:2px}
+.lanterne span::before{top:-3px}.lanterne span::after{bottom:-3px}
+@keyframes balance{50%{transform:rotate(6deg)}}
+.fetes p{max-width:33rem;margin:0 auto 1.6rem}
+.fetes .ctas{justify-content:center}
+.fetes .legende{font-size:.72rem;color:rgba(251,233,210,.6);margin-top:1.4rem}
+
+/* contact */
+.contact-grid{display:grid;gap:1rem;margin-top:2rem}
+.carte-c{background:#fff;border-radius:16px;padding:1.2rem 1.3rem;text-decoration:none;display:block;transition:.3s;box-shadow:0 14px 30px -26px rgba(51,35,28,.7)}
+.carte-c:hover{transform:translateY(-3px)}
+.carte-c .eyebrow{display:block;margin-bottom:.3rem}
+.carte-c strong{font-family:'Fraunces',serif;font-size:1.2rem;word-break:break-word}
+footer{background:var(--nuit);color:#b9a48f;text-align:center;padding:2.4rem 6vw 3rem;font-size:.82rem;line-height:1.7}
+footer b{color:var(--curcuma-c);font-weight:500}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+
+@media (min-width:760px){
+ .voyages{grid-template-columns:1fr 1fr}
+ .jours{grid-template-columns:repeat(3,1fr)}
+ .carte{grid-template-columns:1fr 1fr}
+ .pizzas .photos{grid-template-columns:1fr 1.6fr;align-items:stretch}
+ .etapes{grid-template-columns:repeat(3,1fr)}
+ .contact-grid{grid-template-columns:repeat(2,1fr)}
+ .rail figure{flex-basis:300px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv{opacity:1;transform:none}
+ canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Restaurant les voyageurs</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond"><img src="img/porc-sesame.webp" alt="Morceaux de porc caramélisés au sésame et à la ciboule, plat publié par Restaurant les voyageurs" fetchpriority="high"></div>
+ <div class="wrap">
+  <div class="billet"><span>Saint-Pierre</span><span>Ligne Paradis</span></div>
+  <h1>Restaurant les voyageurs<em>chinois · créole · pizzas</em></h1>
+  <p class="bio">« Les voyageurs » vous propose ses repas à emporter en cuisine chinoise et créole et ses pizzas&nbsp;🍕</p>
+  <div class="ctas">
+   <a class="btn btn-main" href="tel:+262693027240"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>0693 02 72 40</a>
+   <a class="btn btn-line" href="#menu">Voir le menu du jour</a>
+  </div>
+ </div>
+ <span class="cred">Photo publiée par Restaurant les voyageurs, 3 novembre 2026</span>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>Bon appétit les kiffers <i>✦</i> Hello les pizzalovers <i>✦</i> #faitmaison974 <i>✦</i> #cuisineartisanale974 <i>✦</i> #cuisinechinoise974 <i>✦</i> #biensenourrirestunchoix <i>✦</i> Bon appétit les kiffers <i>✦</i> Hello les pizzalovers <i>✦</i> #faitmaison974 <i>✦</i> #cuisineartisanale974 <i>✦</i> #cuisinechinoise974 <i>✦</i> #biensenourrirestunchoix <i>✦</i> </div></div>
+
+<section id="voyages">
+ <div class="wrap">
+  <p class="eyebrow rv">Votre billet du jour</p>
+  <h2 class="rv">Deux voyages, une même cuisine faite maison</h2>
+  <p class="rv">De la cuisine chinoise et créole avec le menu du jour, puis les pizzas le soir : tout se commande et s'emporte depuis l'allée Rico Carpaye, à Ligne Paradis.</p>
+  <div class="voyages">
+   <article class="ticket rv">
+    <div class="haut">
+     <div class="code"><span>Escale n°1</span><span>Chinois · créole</span></div>
+     <h3>Le menu du jour</h3>
+     <p>Chaque matin, le menu arrive sur la page Facebook : rougails, civets, poulet frit, shop suey… à emporter.</p>
+    </div>
+    <div class="bas"><div class="code"><span>Embarquement</span><span>Chaque jour</span></div><div class="grand">Menu publié le matin</div></div>
+   </article>
+   <article class="ticket soir rv">
+    <div class="haut">
+     <div class="code"><span>Escale n°2</span><span>Pizzas</span></div>
+     <h3>Les pizzas du soir</h3>
+     <p>« Hello les pizzalovers » : commandes au 0693 02 72 40 à partir de 18h00, ouverture de 18h45 à 21h00.</p>
+    </div>
+    <div class="bas"><div class="code"><span>Commandes</span><span>Retrait</span></div><div class="grand">18h00 → 18h45 · 21h00</div></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="menu" style="padding-top:0">
+ <div class="wrap">
+  <p class="eyebrow rv">Escale n°1 · le menu du jour</p>
+  <h2 class="rv">Ce qui mijotait début novembre</h2>
+  <p class="rv">Trois menus publiés sur la page, pour vous donner l'eau à la bouche. Le menu change chaque jour : la page Facebook donne celui du moment.</p>
+  <div class="jours">
+   <div class="jour rv"><span class="date">Mercredi 4 novembre</span><ul><li>Ti jack boucané</li><li>Poulet frit</li><li>Shop suey poulet</li></ul></div>
+   <div class="jour rv"><span class="date">Jeudi 5 novembre</span><ul><li>Rougail saucisse fumée</li><li>Civet poulet aux olives</li><li>Poulet sauté aux champignons / brèdes</li></ul></div>
+   <div class="jour rv"><span class="date">Vendredi 6 novembre</span><ul><li>Rougail morue</li><li>Rougail morue aux gros piments</li><li>Poulet frit</li></ul></div>
+  </div>
+  <p class="note rv">Extraits des menus publiés par Restaurant les voyageurs sur Facebook.</p>
+ </div>
+</section>
+
+<section class="galerie-sec">
+ <div class="wrap">
+  <p class="main-script rv">Bon appétit les kiffers</p>
+  <h2 class="rv">Tout droit sortis de la cuisine</h2>
+  <p class="rv">Les plats publiés jour après jour sur la page, prêts à partir avec vous.</p>
+  <div class="rail">
+   <figure><img src="img/nouilles-sautees.webp" alt="Nouilles sautées garnies de lamelles d'omelette, de viande et de ciboule" loading="lazy"><figcaption><b>13 novembre</b>Nouilles sautées, omelette et ciboule · #cuisinechinoise974</figcaption></figure>
+   <figure><img src="img/porc-sesame.webp" alt="Porc caramélisé au sésame et ciboule" loading="lazy"><figcaption><b>3 novembre</b>Sésame et ciboule · #faitmaison974</figcaption></figure>
+   <figure><img src="img/plat-du-jour-4-nov.webp" alt="Plat mijoté aux herbes dans son bac" loading="lazy"><figcaption><b>4 novembre</b>Le plat du jour · #cuisineartisanale974</figcaption></figure>
+   <figure><img src="img/plat-du-jour-30-oct.webp" alt="Plat émietté aux piments verts" loading="lazy"><figcaption><b>30 octobre</b>Aux piments verts · #cuisinedujour974</figcaption></figure>
+   <figure><img src="img/poulet-27-oct.webp" alt="Poulet mijoté avec feuille de laurier et oignons" loading="lazy"><figcaption><b>27 octobre</b>Poulet mijoté, feuille de laurier</figcaption></figure>
+   <figure><img src="img/plat-27-oct.webp" alt="Plat créole mijoté en sauce" loading="lazy"><figcaption><b>27 octobre</b>Un mijoté qui sent bon la marmite</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour voyager d'un plat à l'autre →</p>
+  <div class="tags"><span>#cuisineartisanale974</span><span>#faitmaison974</span><span>#cuisinedujour974</span><span>#cuisinechinoise974</span><span>#biensenourrirestunchoix</span></div>
+ </div>
+</section>
+
+<section class="pizzas" id="pizzas">
+ <div class="wrap">
+  <p class="eyebrow rv">Escale n°2 · le soir</p>
+  <h2 class="rv">Hello les pizzalovers</h2>
+  <p class="rv">Une grande carte en deux tailles (P et G) : classiques, végétariennes, poissons, pastas, fromagères, gourmandes et calzones. Et des recettes qui mêlent les voyages, avec la sarcive poulet maison, le bouchon et le curry Madras.</p>
+  <div class="photos">
+   <figure class="haute rv"><img src="img/pizzas-preparation.webp" alt="Pizzas en préparation sur le plan de travail, mozzarella et olives noires" loading="lazy"><figcaption>En préparation · 7 novembre</figcaption></figure>
+   <figure class="rv"><img src="img/pizza-cuite.webp" alt="Pizza dorée aux olives noires et à l'ananas dans sa boîte" loading="lazy" style="aspect-ratio:2/1"><figcaption>Prête à emporter · 6 novembre</figcaption></figure>
+  </div>
+  <div class="carte">
+   <div class="pz star rv"><span class="rond"></span><h3>Voyageur</h3><p>Sauce tomate, épaule, bacon, poivron, crème, œuf, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Sarcive</h3><p>Sauce tomate, sarcive poulet maison, champignons, poivron, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Asia</h3><p>Sauce tomate, sarcive poulet maison, bouchon poulet, champignons, œuf, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Exotik</h3><p>Sauce tomate, sarcive poulet maison, ananas, gros piments, oignons frits, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Métisse</h3><p>Sauce tomate, bouchon poulet, gros piments, oignons, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Bourbonnaise</h3><p>Sauce tomate, saucisse fumée, oignons, gros piments, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Goa</h3><p>Sauce tomate au curry Madras, aubergine grillée, oignon, pomme de terre, oignons frits, crème, cheddar, mozza, olives</p></div>
+   <div class="pz rv"><span class="rond"></span><h3>Ma pizza</h3><p>Votre base, sauce tomate ou crème, et 4 ingrédients au choix : faites-vous plaisir&nbsp;!</p></div>
+  </div>
+  <div class="familles rv"><span>Classiques</span><span>Végétariennes</span><span>Poissons</span><span>Pastas</span><span>Fromagères</span><span>Gourmandes</span><span>Calzones 33 cm</span></div>
+ </div>
+</section>
+
+<section class="commander" id="commander">
+ <div class="wrap">
+  <p class="eyebrow rv">Votre trajet</p>
+  <h2 class="rv">Commander, c'est simple</h2>
+  <div class="etapes">
+   <div class="etape rv"><span class="n">01</span><div><h3>On appelle</h3><p>Au <a href="tel:+262693027240"><b>0693 02 72 40</b></a>, dès 18h00 pour les pizzas.</p></div></div>
+   <div class="etape rv"><span class="n">02</span><div><h3>On choisit</h3><p>Le menu du jour sur la page, ou une pizza de la carte.</p></div></div>
+   <div class="etape rv"><span class="n">03</span><div><h3>On récupère</h3><p>Allée Rico Carpaye, Ligne Paradis. Pizzas de 18h45 à 21h00.</p></div></div>
+  </div>
+  <div class="ctas rv">
+   <a class="btn btn-main" href="tel:+262693027240">Appeler le restaurant</a>
+   <a class="btn btn-wa" href="https://wa.me/262693027240?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>WhatsApp</a>
+  </div>
+  <div class="avis rv">
+   <div class="pct">100 %</div>
+   <p>de recommandations sur Facebook (8 avis)</p>
+   <blockquote>« accueil sympathique et plats savoureux »</blockquote>
+   <small>Extrait d'un avis publié sur la page Facebook du restaurant</small>
+  </div>
+ </div>
+</section>
+
+<section class="fetes" id="fetes">
+ <div class="wrap">
+  <div class="lanternes" aria-hidden="true"><div class="lanterne"><span></span></div><div class="lanterne"><span></span></div><div class="lanterne"><span></span></div></div>
+  <p class="main-script rv">Noël avec les voyageurs</p>
+  <h2 class="rv">Vos repas des fêtes, prêts à emporter</h2>
+  <p class="rv">Une grande tablée en famille, une soirée entre amis ? Réservez vos plats chinois et créoles ou vos pizzas pour les fêtes, et profitez pleinement de vos invités.</p>
+  <div class="ctas rv">
+   <a class="btn btn-wa" href="https://wa.me/262693027240?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 13.9c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>Commander pour les fêtes</a>
+   <a class="btn btn-line" href="tel:+262693027240">0693 02 72 40</a>
+  </div>
+  <p class="legende">Illustration : lanternes</p>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <p class="eyebrow rv">Terminus</p>
+  <h2 class="rv">Rendez-vous à Ligne Paradis</h2>
+  <div class="contact-grid">
+   <a class="carte-c rv" href="tel:+262693027240"><span class="eyebrow">Téléphone</span><strong>0693 02 72 40</strong></a>
+   <a class="carte-c rv" href="https://www.google.com/maps/search/?api=1&query=all%C3%A9e%20Rico%20Carpaye%20Ligne%20Paradis%2097410%20Saint-Pierre" target="_blank" rel="noopener"><span class="eyebrow">Adresse</span><strong>Allée Rico Carpaye, Ligne Paradis, 97410 Saint-Pierre</strong></a>
+   <a class="carte-c rv" href="mailto:voyageurdaf@gmail.com"><span class="eyebrow">E-mail</span><strong>voyageurdaf@gmail.com</strong></a>
+   <a class="carte-c rv" href="https://www.facebook.com/restaurantlesvoyageurs974" target="_blank" rel="noopener"><span class="eyebrow">Facebook · menu du jour</span><strong>Restaurant les voyageurs</strong></a>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer><b>Restaurant les voyageurs</b> · Cuisine chinoise et créole, pizzas à emporter · Ligne Paradis, Saint-Pierre, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Restaurant les voyageurs.</footer>
+
+<script>
+(function(){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+ function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ function nouveau(p,init){p.t=Math.random()<.4?'v':'s';p.x=Math.random()*W;p.y=init?Math.random()*H:H+30;p.v=.25+Math.random()*.45;p.ph=Math.random()*6.3;p.r=p.t=='v'?18+Math.random()*26:1.6+Math.random()*1.4;p.a=p.t=='v'?.05+Math.random()*.05:.25+Math.random()*.25;p.rot=Math.random()*3;return p}
+ for(var i=0;i<30;i++)P.push(nouveau({},true));
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.y-=p.v;p.ph+=.012;var dx=Math.sin(p.ph)*(p.t=='v'?.6:.3);p.x+=dx;
+   if(p.t=='v'){var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,248,236,'+p.a+')');g.addColorStop(1,'rgba(255,248,236,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()}
+   else{x.save();x.translate(p.x,p.y);x.rotate(p.rot+p.ph*.3);x.fillStyle='rgba(233,200,140,'+p.a+')';x.beginPath();x.ellipse(0,0,p.r*1.7,p.r,0,0,6.3);x.fill();x.restore()}
+   if(p.y<-40)nouveau(p,false)});
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Restaurant les voyageurs" defer></script>
+</body>
+</html>
