@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>L'arche des songes · Berger et jardin Lacour à Grand Coude, Saint-Joseph</title>
+<meta name="description" content="L'arche des songes, à Grand Coude (Saint-Joseph, La Réunion) : le troupeau du berger, Tao et Adèle, et les légumes du jardin Lacour (citron, bringelle, salade, piment, chou-fleur, brèdes songe) sur réservation au 0693 61 56 01.">
+<meta property="og:title" content="L'arche des songes · Grand Coude, Saint-Joseph">
+<meta property="og:description" content="Quand le berger rencontre son étoile alors tout devient possible. Le troupeau, les chiens et le jardin Lacour, à Grand Coude.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/larche-des-songes-saint-joseph/img/enseigne-arche-des-songes.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/larche-des-songes-saint-joseph/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#16213a;--nuit2:#24365a;--etoile:#f3d98b;--bambou:#c99a45;--miel:#e2b866;--chaume:#5b3d1f;--terre:#7a4f26;--feuille:#4f6b3a;--sauge:#a9b98f;--creme:#faf4e8;--lin:#f0e5cf;--txt:#3a2c1c;--doux:#7b6a55}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial,sans-serif;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;color:var(--chaume)}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.3rem 0 1rem}
+h3{font-size:1.35rem}
+.main-note{font-family:Caveat,cursive;font-size:1.5rem;color:var(--terre);line-height:1.2}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;font-weight:600;color:var(--terre)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--chaume);color:var(--lin);text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#ciel{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.3s}
+.btn-or{background:var(--miel);color:var(--nuit);box-shadow:0 12px 30px -12px rgba(226,184,102,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-or:hover{background:var(--etoile)}
+@keyframes souffle{50%{transform:scale(1.03);box-shadow:0 16px 40px -8px rgba(243,217,139,.85)}}
+.btn-clair{border:1px solid rgba(250,244,232,.55);color:var(--creme)}
+.btn-clair:hover{background:rgba(250,244,232,.12)}
+.btn-terre{background:var(--chaume);color:var(--creme)}
+.btn-terre:hover{background:var(--terre)}
+.btn-ligne{border:1px solid var(--bambou);color:var(--chaume);background:rgba(255,255,255,.5)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:100svh;padding:6.2rem 0 3.5rem;background:radial-gradient(120% 70% at 80% 0%,var(--nuit2) 0%,transparent 65%),linear-gradient(180deg,var(--nuit) 0%,#1d2b47 60%,#3a3a3c 100%);color:var(--creme);display:flex;align-items:center;overflow:hidden}
+.hero-in{display:grid;gap:2.4rem;align-items:center}
+.hero .eyebrow{color:var(--miel)}
+.hero h1{color:var(--creme);font-size:clamp(3rem,13vw,6.2rem);font-weight:400;letter-spacing:-.01em;margin:.5rem 0 .2rem}
+.hero h1 em{font-style:italic;color:var(--etoile)}
+.devise{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.2rem,4.4vw,1.6rem);color:#e9dfc8;max-width:32rem;margin:.6rem 0 1.8rem;line-height:1.4}
+.devise::before{content:"✦ ";color:var(--etoile);font-style:normal}
+.enseigne{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(243,217,139,.3)}
+.enseigne img{width:100%;aspect-ratio:1400/758;object-fit:cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,1%)}}
+.enseigne figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(22,33,58,.82);color:var(--lin);font-size:.78rem;padding:.3rem .8rem;border-radius:999px}
+.hero .lieu{margin-top:1.4rem;font-size:.9rem;color:#cbbfa7}
+.monte{opacity:0;transform:translateY(22px);animation:monte 1.3s .2s forwards}
+.monte.d2{animation-delay:.6s}.monte.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--bambou);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Fraunces,serif;font-style:italic;font-size:1.25rem}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";font-style:normal;margin-left:2.4rem;font-size:.75rem;color:var(--chaume)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* jardin */
+.split{display:grid;gap:2.2rem;align-items:center}
+.photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(58,44,28,.7)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.3s}
+.photo:hover img{transform:scale(1.04)}
+.photo figcaption{position:absolute;left:.7rem;bottom:.7rem;right:.7rem;background:rgba(250,244,232,.94);padding:.4rem .9rem;border-radius:14px;font-size:.82rem;color:var(--chaume)}
+.photo figcaption i{font-family:Caveat,cursive;font-style:normal;font-size:1.15rem}
+.produits{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;margin:1.4rem 0}
+.produit{background:#fff;border-radius:16px;padding:.9rem 1rem;display:flex;align-items:center;gap:.7rem;box-shadow:0 14px 30px -26px rgba(58,44,28,.8);transition:.35s;font-weight:600;color:var(--chaume);font-size:.98rem}
+.produit:hover{transform:translateY(-4px)}
+.produit svg{width:30px;height:30px;flex:none}
+.resa{background:var(--lin);border-left:3px solid var(--bambou);border-radius:0 16px 16px 0;padding:1rem 1.2rem;margin:1.2rem 0 1.6rem;font-size:.97rem}
+.resa b{color:var(--chaume)}
+/* vague */
+.vague{display:block;width:100%;height:56px}
+/* troupeau */
+.troupeau{background:var(--nuit);color:var(--lin)}
+.troupeau h2{color:var(--creme)}
+.troupeau .eyebrow{color:var(--miel)}
+.troupeau p{color:#ddd2bb}
+.citation{font-family:Caveat,cursive;font-size:clamp(1.8rem,6vw,2.4rem);color:var(--etoile);line-height:1.15;margin:1rem 0 .3rem}
+.citation small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.8rem;color:#b9ad95;margin-top:.4rem}
+.chiens{display:grid;gap:1.2rem;margin-top:2.4rem}
+.chien{background:rgba(255,255,255,.05);border:1px solid rgba(243,217,139,.18);border-radius:22px;overflow:hidden;transition:.4s}
+.chien:hover{transform:translateY(-5px);border-color:rgba(243,217,139,.45)}
+.chien img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.chien div{padding:1.1rem 1.3rem 1.3rem}
+.chien h3{color:var(--etoile);font-size:1.5rem}
+.chien p{font-size:.95rem;margin-top:.3rem}
+/* fleurs */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 0 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 78%;max-width:420px;scroll-snap-align:start;position:relative;border-radius:20px;overflow:hidden;box-shadow:0 22px 40px -30px rgba(58,44,28,.8)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(250,244,232,.92);font-size:.8rem;padding:.25rem .8rem;border-radius:999px;color:var(--chaume)}
+.glisse{font-size:.85rem;color:var(--doux)}
+/* rendez-vous */
+.rdv{background:var(--lin)}
+.cartes{display:grid;gap:1.1rem;margin-top:1.6rem}
+.carte{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;box-shadow:0 20px 44px -34px rgba(58,44,28,.8);position:relative;overflow:hidden;transition:.35s}
+.carte:hover{transform:translateY(-4px)}
+.carte .date{display:inline-block;background:var(--nuit);color:var(--etoile);border-radius:999px;padding:.2rem .85rem;font-size:.78rem;font-weight:600;letter-spacing:.06em;margin-bottom:.7rem}
+.carte p{font-size:.96rem;color:var(--doux);margin-top:.4rem}
+.avis{margin-top:2rem;font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.25rem,4.2vw,1.6rem);color:var(--chaume);line-height:1.4;text-align:center;max-width:40rem;margin-inline:auto}
+.avis small{display:block;font-family:'Nunito Sans',sans-serif;font-style:normal;font-size:.8rem;color:var(--doux);margin-top:.6rem}
+/* noel */
+.noel{background:radial-gradient(90% 70% at 50% 0%,#2d4068 0%,var(--nuit) 70%);color:var(--lin);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--miel)}
+.noel p{max-width:36rem;margin:0 auto 1rem;color:#e0d6c0}
+.panier{width:min(220px,60vw);margin:0 auto 1rem}
+.panier figcaption{font-size:.72rem;color:#a99d86;letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem}
+.noel ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin:1.2rem auto 1.8rem;max-width:34rem}
+.noel li{border:1px solid rgba(243,217,139,.4);border-radius:999px;padding:.3rem .9rem;font-size:.9rem;color:var(--etoile)}
+.noel .ctas{justify-content:center}
+.noel .note{font-size:.82rem;color:#a99d86;margin-top:1.2rem}
+.guirlande{position:absolute;top:0;left:0;right:0;height:40px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande i{width:7px;height:7px;border-radius:50%;background:var(--etoile);margin-top:16px;box-shadow:0 0 12px 3px rgba(243,217,139,.55);animation:luit 3s ease-in-out infinite}
+.guirlande i:nth-child(2n){animation-delay:1.2s;margin-top:24px}
+.guirlande i:nth-child(3n){animation-delay:2s}
+@keyframes luit{50%{opacity:.25}}
+/* contact */
+.contact .bloc{background:#fff;border-radius:24px;padding:1.8rem 1.5rem;box-shadow:0 26px 50px -38px rgba(58,44,28,.8)}
+.contact dl{display:grid;gap:1rem;margin:1.2rem 0 1.6rem}
+.contact dt{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terre);font-weight:600}
+.contact dd{font-size:1.05rem}
+.contact dd a{text-decoration:none;border-bottom:1px solid var(--bambou)}
+footer{background:var(--chaume);color:var(--lin);text-align:center;padding:2.2rem 1rem 2.6rem;font-size:.85rem}
+footer .nom{font-family:Fraunces,serif;font-size:1.5rem;color:var(--etoile);margin-bottom:.4rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .hero-in{grid-template-columns:1fr 1.05fr}
+ .split{grid-template-columns:1fr 1fr}
+ .split.inv .photo{order:2}
+ .chiens{grid-template-columns:1fr 1fr}
+ .cartes{grid-template-columns:1fr 1fr}
+ .produits{grid-template-columns:repeat(3,1fr)}
+ .galerie figure{flex-basis:32%}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .monte,.reveal{opacity:1;transform:none}
+ canvas#ciel{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour L'arche des songes</div>
+<canvas id="ciel" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <p class="eyebrow monte">Grand Coude · Saint-Joseph · La Réunion</p>
+   <h1 class="monte d2">L'arche <em>des songes</em></h1>
+   <p class="devise monte d3">Quand le berger rencontre son étoile alors tout devient possible</p>
+   <div class="ctas monte d3">
+    <a class="btn btn-or" href="tel:+262693615601">Réserver au 0693 61 56 01</a>
+    <a class="btn btn-clair" href="https://wa.me/262693615601?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20des%20l%C3%A9gumes%20du%20jardin%20Lacour">WhatsApp</a>
+   </div>
+   <p class="lieu monte d3">Le troupeau, les chiens du berger et le jardin Lacour, dans les hauts de Saint-Joseph.</p>
+  </div>
+  <figure class="enseigne monte d2">
+   <img src="img/enseigne-arche-des-songes.webp" alt="L'enseigne en bois gravé « L'arche des songes », avec un mouton, une poule et un cheval, suspendue sous un toit de bambou et de feuilles tressées" width="1400" height="758">
+   <figcaption>L'enseigne, sous le toit de bambou</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Citron</span><span>Bringelle</span><span>Salade</span><span>Piment</span><span>Chou-fleur</span><span>Brèdes songe</span><span>Courge cireuse</span><span>Le troupeau</span><span>Tao &amp; Adèle</span>
+ <span>Citron</span><span>Bringelle</span><span>Salade</span><span>Piment</span><span>Chou-fleur</span><span>Brèdes songe</span><span>Courge cireuse</span><span>Le troupeau</span><span>Tao &amp; Adèle</span>
+</div></div>
+
+<section id="jardin">
+ <div class="wrap split">
+  <figure class="photo reveal" style="aspect-ratio:3/4">
+   <img src="img/courges-cireuses-jardin-lacour.webp" alt="Une récolte de courges cireuses vert pâle posées sur la terre volcanique noire, au bord des fougères" width="825" height="1100" loading="lazy">
+   <figcaption><i>« Sa mem labondance courge cireuse »</i> · août 2026</figcaption>
+  </figure>
+  <div class="reveal">
+   <p class="eyebrow">Le jardin Lacour</p>
+   <h2>Produit la cour, à Grand Coude</h2>
+   <p>Au jardin Lacour, les légumes poussent sur la bonne terre noire des hauts de Saint-Joseph. Voici ce que le jardin vous propose :</p>
+   <div class="produits">
+    <div class="produit"><svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="10" fill="#e9d35a"/><path d="M16 7c2-4 6-4 7-3-2 2-4 3-7 3z" fill="#4f6b3a"/></svg>Citron</div>
+    <div class="produit"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="19" rx="7" ry="10" fill="#5a2f6a"/><path d="M11 9h10l-2 3h-6z" fill="#4f6b3a"/></svg>Bringelle</div>
+    <div class="produit"><svg viewBox="0 0 32 32"><path d="M16 27C6 25 4 15 9 9c3 4 5 4 7 0 2 4 4 4 7 0 5 6 3 16-7 18z" fill="#8fb35a"/></svg>Salade</div>
+    <div class="produit"><svg viewBox="0 0 32 32"><path d="M12 9c6 0 12 8 10 17-6-3-12-9-10-17z" fill="#c63a2a"/><path d="M12 9c0-3 2-5 4-5" stroke="#4f6b3a" stroke-width="2" fill="none"/></svg>Piment</div>
+    <div class="produit"><svg viewBox="0 0 32 32"><circle cx="16" cy="15" r="8" fill="#f2ead2"/><path d="M5 18c3 8 19 8 22 0-6 3-16 3-22 0z" fill="#6f8f4a"/></svg>Chou-fleur</div>
+    <div class="produit"><svg viewBox="0 0 32 32"><path d="M16 28V14" stroke="#4f6b3a" stroke-width="2"/><path d="M16 15C8 15 4 9 6 4c5 0 10 4 10 11zM16 15c8 0 12-6 10-11-5 0-10 4-10 11z" fill="#6f9a4a"/></svg>Brèdes songe</div>
+   </div>
+   <div class="resa"><b>Réservation uniquement par téléphone</b>, pour une meilleure organisation : un appel au 0693 61 56 01 et votre panier vous attend.</div>
+   <div class="ctas"><a class="btn btn-terre" href="tel:+262693615601">Appeler pour réserver</a></div>
+  </div>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 56V30c160-26 320-30 480-14s320 34 480 22 320-38 480-28v46z" fill="#16213a"/></svg>
+<section class="troupeau" id="troupeau" style="margin-top:-1px">
+ <div class="wrap split inv">
+  <figure class="photo reveal" style="aspect-ratio:4/3">
+   <img src="img/belier-tondu-pompons.webp" alt="Un bélier aux cornes enroulées, fraîchement tondu, avec trois pompons de laine sur le dos, devant le troupeau" width="1400" height="1050" loading="lazy">
+   <figcaption>Le bélier, tondu… avec ses pompons</figcaption>
+  </figure>
+  <div class="reveal">
+   <p class="eyebrow">Le troupeau du berger</p>
+   <h2>Tounu toubo, ponpouné</h2>
+   <p class="citation">« Tounu toubo et ponpouné qui fé lé joli »<small>Publication de L'arche des songes, octobre 2026</small></p>
+   <p>Des brebis blanches, une brebis noire, et ce bélier qui porte fièrement ses trois pompons de laine : à L'arche des songes, le troupeau a de l'allure.</p>
+  </div>
+ </div>
+ <div class="wrap chiens">
+  <article class="chien reveal">
+   <img src="img/tao-montagne-des-pyrenees.webp" alt="Tao, grand chien blanc Montagne des Pyrénées, couché dans l'herbe, la gueule souriante" width="1200" height="1031" loading="lazy">
+   <div><h3>Tao</h3><p>Montagne des Pyrénées, chien de protection : il accompagne le troupeau.</p></div>
+  </article>
+  <article class="chien reveal">
+   <img src="img/adele-chienne-du-berger.webp" alt="Adèle, chienne noire et feu au collier rose, debout devant l'enclos paillé où mangent les chevaux" width="1200" height="900" loading="lazy">
+   <div><h3>Adèle</h3><p>Chienne de guide, fidèle compagne du berger.</p></div>
+  </article>
+ </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1);margin-top:-1px"><path d="M0 56V30c160-26 320-30 480-14s320 34 480 22 320-38 480-28v46z" fill="#16213a"/></svg>
+
+<section id="fleurs">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Le jardin en fleurs</p>
+   <h2>Un lieu qui fleurit</h2>
+   <p style="max-width:36rem">Entre deux récoltes, le jardin se couvre de couleurs : marguerites du Cap, hibiscus rouge, violettes et pensées.</p>
+  </div>
+  <div class="galerie reveal" tabindex="0" aria-label="Galerie du jardin, faites glisser">
+   <figure><img src="img/fleurs-du-jardin.webp" alt="Un massif de marguerites du Cap blanches et mauves dans l'herbe" width="1100" height="825" loading="lazy"><figcaption>Marguerites du Cap</figcaption></figure>
+   <figure><img src="img/hibiscus-du-jardin.webp" alt="Un hibiscus rouge couvert de gouttes de pluie" width="750" height="1000" loading="lazy"><figcaption>Hibiscus après la pluie</figcaption></figure>
+   <figure><img src="img/violettes-et-pensees.webp" alt="Des pensées violettes au cœur jaune parmi les feuilles de violettes" width="1100" height="825" loading="lazy"><figcaption>Violettes et pensées</figcaption></figure>
+  </div>
+  <p class="glisse">Faites glisser pour voir la suite →</p>
+ </div>
+</section>
+
+<section class="rdv" id="rendez-vous">
+ <div class="wrap">
+  <div class="reveal">
+   <p class="eyebrow">Les rendez-vous</p>
+   <h2>On se retrouve à Grand Coude</h2>
+  </div>
+  <div class="cartes">
+   <article class="carte reveal">
+    <span class="date">Grand Coude · chemin Mahot</span>
+    <h3>Marché Lacour</h3>
+    <p>Le marché du jardin Lacour, à Grand Coude : un rendez-vous qui rassemble déjà beaucoup de monde sur la page Facebook.</p>
+   </article>
+   <article class="carte reveal">
+    <span class="date">Dimanche 29 novembre</span>
+    <h3>Déjeuner Karaoké</h3>
+    <p>Un déjeuner en chansons, annoncé sur la page de L'arche des songes. Les détails sont sur Facebook.</p>
+   </article>
+  </div>
+  <p class="avis reveal">« L'arche des songes… Un lieu inspirant rempli d'amour. »<small>Un avis laissé sur la page Facebook de L'arche des songes</small></p>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <div class="wrap reveal">
+  <figure class="panier">
+   <svg viewBox="0 0 220 170" aria-hidden="true">
+    <path d="M60 70c0-40 100-40 100 0" stroke="#c99a45" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <circle cx="82" cy="66" r="15" fill="#e9d35a"/><ellipse cx="112" cy="62" rx="11" ry="18" fill="#5a2f6a"/><path d="M128 72c-8-14 2-30 18-28-2 16-8 24-18 28z" fill="#6f9a4a"/><path d="M146 58c6 0 12 6 10 16-6-3-10-9-10-16z" fill="#c63a2a"/>
+    <path d="M38 74h144l-14 70a12 12 0 0 1-12 10H64a12 12 0 0 1-12-10z" fill="#7a4f26"/>
+    <path d="M44 92h132M48 112h124M52 132h116" stroke="#c99a45" stroke-width="3" opacity=".7"/>
+    <path d="M110 6l3 8 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1z" fill="#f3d98b"/>
+   </svg>
+   <figcaption>Illustration</figcaption>
+  </figure>
+  <p class="eyebrow">Pour les fêtes</p>
+  <h2>Un panier du jardin pour Noël</h2>
+  <p>Pour les repas de fin d'année, réservez votre panier du jardin Lacour : les légumes de Grand Coude, prêts à mettre sur la table ou à offrir.</p>
+  <ul><li>Citron</li><li>Bringelle</li><li>Salade</li><li>Piment</li><li>Chou-fleur</li><li>Brèdes songe</li></ul>
+  <div class="ctas">
+   <a class="btn btn-or" href="https://wa.me/262693615601?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20un%20panier%20du%20jardin%20pour%20No%C3%ABl">Réserver mon panier sur WhatsApp</a>
+   <a class="btn btn-clair" href="tel:+262693615601">0693 61 56 01</a>
+  </div>
+  <p class="note">Selon les récoltes du moment, sur réservation.</p>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap split">
+  <div class="reveal">
+   <p class="eyebrow">Venir &amp; réserver</p>
+   <h2>Rendez-vous à Grand Coude</h2>
+   <p class="main-note">Un appel, et le jardin vous prépare votre panier.</p>
+  </div>
+  <div class="bloc reveal">
+   <dl>
+    <div><dt>Téléphone &amp; WhatsApp</dt><dd><a href="tel:+262693615601">0693 61 56 01</a></dd></div>
+    <div><dt>Lieu</dt><dd>Grand Coude, Saint-Joseph, La Réunion · <a href="https://www.google.com/maps?q=-21.292227,55.628113" target="_blank" rel="noopener">voir sur la carte</a></dd></div>
+    <div><dt>Réservation</dt><dd>Par téléphone, pour une meilleure organisation</dd></div>
+    <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/p/Larche-des-songes-61552635584789/" target="_blank" rel="noopener">L'arche des songes</a></dd></div>
+   </dl>
+   <div class="ctas">
+    <a class="btn btn-terre" href="tel:+262693615601">Appeler</a>
+    <a class="btn btn-ligne" href="https://wa.me/262693615601?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20des%20l%C3%A9gumes%20du%20jardin%20Lacour">WhatsApp</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <p class="nom">L'arche des songes</p>
+ <p>Grand Coude · Saint-Joseph · La Réunion</p>
+ <p style="margin-top:1rem;opacity:.8">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de L'arche des songes.</p>
+</footer>
+<script>
+(function(){
+var io='IntersectionObserver'in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+document.querySelectorAll('.reveal').forEach(function(el){io?io.observe(el):el.classList.add('vu')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('ciel'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.2,v:.12+Math.random()*.25,p:Math.random()*6.3,s:Math.random()<.45});
+function draw(t){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(o){o.y-=o.v;o.x+=Math.sin(t/2400+o.p)*.2;if(o.y<-10){o.y=H+10;o.x=Math.random()*W}
+var a=.25+.3*Math.sin(t/900+o.p);
+if(o.s){x.fillStyle='rgba(243,217,139,'+a+')';x.beginPath();var r=o.r*1.6;x.moveTo(o.x,o.y-r);x.lineTo(o.x+r*.3,o.y-r*.3);x.lineTo(o.x+r,o.y);x.lineTo(o.x+r*.3,o.y+r*.3);x.lineTo(o.x,o.y+r);x.lineTo(o.x-r*.3,o.y+r*.3);x.lineTo(o.x-r,o.y);x.lineTo(o.x-r*.3,o.y-r*.3);x.fill()}
+else{x.fillStyle='rgba(250,244,232,'+(a*.8)+')';x.beginPath();x.arc(o.x,o.y,o.r,0,6.3);x.arc(o.x+o.r*.9,o.y+o.r*.3,o.r*.8,0,6.3);x.fill()}});
+requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(draw)});
+requestAnimationFrame(draw);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="L&#x27;arche des songes" defer></script>
+</body>
+</html>
