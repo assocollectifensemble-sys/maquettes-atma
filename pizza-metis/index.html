@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizza Métis’ · Pizzeria à emporter à Beauséjour, Sainte-Marie</title>
+<meta name="description" content="Pizza Métis’, pizzeria à Beauséjour (Sainte-Marie, La Réunion) : pizzas faites avec passion, à emporter, du mardi au samedi dès 16h30. Commandes au 0693 94 53 83.">
+<meta property="og:title" content="Pizza Métis’ · Vivre d’amour et de pizza">
+<meta property="og:description" content="Pizzeria à emporter à Beauséjour, Sainte-Marie. Commandes dès 16h30 au 0693 94 53 83.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/pizza-metis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/pizza-metis/">
+<meta name="theme-color" content="#0f4d2c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Oswald:wght@500;600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#0f6b3a;--vert-f:#0b3d24;--nuit:#121614;--ardoise:#1d211f;--kraft:#e8d9bb;--kraft-c:#f6eedd;--piment:#c9302a;--or:#c9a24a;--basilic:#5fae4e;--txt:#2a2420;--doux:#6f6458}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--txt);background:var(--kraft-c);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+.script{font-family:'Kaushan Script',cursive;font-weight:400}
+.cap{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+.ruban{position:relative;z-index:10;background:var(--nuit);color:#eadfc8;font-size:.78rem;text-align:center;padding:.5rem 1rem}
+.ruban b{color:var(--or)}
+/* HERO */
+.hero{position:relative;color:#fff;background:var(--nuit)}
+.hero .ph-h{position:relative;height:clamp(380px,64vh,620px);overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/terrasse-coucher-soleil.webp) center 30%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14) translate(-2%,-1%)}}
+.hero .ph-h::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,22,20,0) 55%,var(--nuit) 100%)}
+.hero .in{position:relative;z-index:2;padding:.4rem 1.4rem 3rem;margin:-2.6rem auto 0;max-width:720px;width:100%}
+.hero h1{font-family:'Kaushan Script',cursive;font-weight:400;font-size:clamp(2.9rem,13vw,5rem);line-height:1;text-shadow:0 4px 18px rgba(0,0,0,.5)}
+.hero .tag{font-family:'Kaushan Script',cursive;font-size:1.45rem;color:var(--or);margin:.4rem 0 .6rem}
+.hero p.lead{font-size:1.02rem;max-width:30rem;color:#f1ebe0}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.3rem;border-radius:999px;font-weight:800;text-decoration:none;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.vert{background:var(--vert);color:#fff;box-shadow:0 6px 18px rgba(15,107,58,.45)}
+.btn.rouge{background:var(--piment);color:#fff;box-shadow:0 6px 18px rgba(201,48,42,.4);animation:breathe 3.2s ease-in-out infinite}
+.btn.clair{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(4px)}
+@keyframes breathe{50%{box-shadow:0 6px 26px rgba(201,48,42,.7);transform:scale(1.03)}}
+.cap-photo{position:absolute;right:.8rem;top:.8rem;z-index:2;font-size:.7rem;color:rgba(255,255,255,.75);background:rgba(0,0,0,.3);padding:.15rem .5rem;border-radius:6px}
+/* MARQUEE */
+.marq{background:var(--vert-f);color:var(--kraft);overflow:hidden;white-space:nowrap;padding:.75rem 0;border-top:3px solid var(--or)}
+.marq div{display:inline-block;animation:mq 30s linear infinite}
+.marq span{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;margin:0 1rem}
+.marq span.p{color:var(--piment)}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{position:relative;padding:4.2rem 1.4rem}
+.wrap{max-width:980px;margin:0 auto}
+.kick{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:.8rem;color:var(--piment)}
+h2{font-family:'Kaushan Script',cursive;font-weight:400;font-size:clamp(2.1rem,9vw,3.2rem);line-height:1.1;color:var(--vert-f);margin:.3rem 0 1rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.on{opacity:1;transform:none}
+/* HISTOIRE */
+.hist{background:var(--kraft-c)}
+.quote{position:relative;background:#fff;border-radius:18px;padding:1.6rem 1.4rem 1.4rem;box-shadow:0 10px 30px rgba(60,40,10,.1);border-left:5px solid var(--vert);margin:1.4rem 0}
+.quote p{font-size:1.08rem}
+.quote small{display:block;margin-top:.7rem;color:var(--doux);font-size:.8rem}
+.duo{display:grid;gap:1rem;margin-top:1.4rem}
+.ph{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(40,25,5,.18)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.ph:hover img{transform:scale(1.05)}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .6rem;font-size:.82rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.6rem;text-align:center}
+.chiffres div{background:var(--vert-f);color:var(--kraft);border-radius:14px;padding:1rem .4rem}
+.chiffres b{display:block;font-family:'Oswald',sans-serif;font-size:1.5rem;color:var(--or)}
+.chiffres span{font-size:.78rem;line-height:1.3;display:block}
+/* CARTE ardoise */
+.carte{background:var(--ardoise) radial-gradient(circle at 20% 10%,#2a302c,transparent 60%);color:#e9e4da}
+.carte::before{content:"";position:absolute;left:0;right:0;top:-1px;height:34px;background:var(--kraft-c);clip-path:polygon(0 0,100% 0,100% 30%,90% 70%,78% 35%,64% 80%,50% 40%,36% 85%,22% 40%,10% 75%,0 35%)}
+.carte h2{color:#fff}
+.carte .kick{color:var(--or)}
+.intro-c{color:#cfc8bb;max-width:36rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.4rem 0 1rem}
+.tabs button{font:600 .9rem 'Nunito';border:1px solid #4a514c;background:transparent;color:#e9e4da;padding:.5rem 1rem;border-radius:999px;cursor:pointer;transition:.25s}
+.tabs button.on{background:var(--basilic);border-color:var(--basilic);color:#0b1a10}
+.list{display:grid;gap:.2rem}
+.list[hidden]{display:none}
+.it{padding:.75rem 0;border-bottom:1px dashed #3d443f}
+.it b{font-size:1.05rem;color:#9ad27f;font-weight:800}
+.it span{display:block;font-size:.9rem;color:#cdc6b8}
+.it.star b{color:#ffb4a9}
+.taille{display:flex;gap:.6rem;margin-top:1.3rem;flex-wrap:wrap}
+.taille div{border:1px solid var(--or);color:var(--or);border-radius:12px;padding:.55rem .9rem;font-family:'Oswald';letter-spacing:.06em;font-size:.95rem}
+.note-c{font-size:.8rem;color:#9f998d;margin-top:1rem}
+.ardoise-sp{display:grid;gap:1rem;margin-top:2.2rem}
+.sp{background:#262b28;border-radius:16px;overflow:hidden;border:1px solid #39403b}
+.sp img{aspect-ratio:16/10;object-fit:cover;width:100%;height:auto}
+.sp div{padding:.9rem 1rem 1.1rem}
+.sp h3{font-family:'Kaushan Script',cursive;font-weight:400;font-size:1.5rem;color:#fff}
+.sp p{font-size:.88rem;color:#cfc8bb}
+/* GALERIE */
+.gal{background:var(--kraft);padding-left:0;padding-right:0}
+.gal .wrap{padding:0 1.4rem}
+.rail{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.4rem 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 78%;max-width:380px;scroll-snap-align:center;margin:0;position:relative;border-radius:16px;overflow:hidden;box-shadow:0 10px 22px rgba(40,25,5,.2);aspect-ratio:4/5}
+.rail img{width:100%;height:100%;object-fit:cover}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.5rem .9rem .6rem;color:#fff;font-size:.82rem;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.hint{font-size:.8rem;color:var(--doux);padding:0 1.4rem}
+/* INFOS */
+.infos{background:var(--kraft-c)}
+.cards{display:grid;gap:1rem;margin-top:1.2rem}
+.card{background:#fff;border-radius:18px;padding:1.3rem 1.2rem;box-shadow:0 8px 24px rgba(60,40,10,.08);border-top:4px solid var(--vert);transition:transform .3s}
+.card:hover{transform:translateY(-3px)}
+.card h3{font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:1rem;color:var(--vert-f);margin-bottom:.4rem}
+.card p{font-size:.96rem}
+.card .big{font-family:'Oswald';font-size:1.6rem;color:var(--piment)}
+.card a.lien{color:var(--vert);font-weight:800}
+/* NOEL */
+.noel{background:linear-gradient(160deg,var(--vert-f),#0a2b1a);color:#f3ecdf;overflow:hidden}
+.noel h2{color:#fff}
+.noel .kick{color:var(--or)}
+.noel p{max-width:34rem}
+.guirl{display:block;width:100%;max-width:520px;height:auto;margin:0 auto 1.2rem}
+.boite{margin-top:1.4rem;background:rgba(255,255,255,.07);border:1px solid rgba(201,162,74,.5);border-radius:18px;padding:1.2rem}
+.boite li{list-style:none;padding:.35rem 0 .35rem 1.6rem;position:relative}
+.boite li::before{content:"";position:absolute;left:0;top:.75rem;width:.75rem;height:.75rem;border-radius:50%;background:var(--piment);box-shadow:0 0 0 3px rgba(201,48,42,.25)}
+.ill{font-size:.72rem;color:#a9b8ac;text-align:center;margin-top:-.6rem;margin-bottom:1rem}
+/* CONTACT */
+.contact{background:var(--nuit);color:#ece6da;text-align:center}
+.contact h2{color:#fff}
+.contact .ctas{justify-content:center}
+.signe{max-width:640px;margin:1.6rem auto 0;border-radius:16px;overflow:hidden}
+footer{background:#0a0d0b;color:#9e978a;font-size:.8rem;text-align:center;padding:1.6rem 1.2rem 5.5rem}
+footer a{color:var(--or)}
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:20;display:flex;align-items:center;gap:.45rem;background:var(--vert);color:#fff;text-decoration:none;font-weight:800;padding:.8rem 1.1rem;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.35)}
+@media(min-width:760px){
+ .duo{grid-template-columns:1.2fr 1fr}
+ .ardoise-sp{grid-template-columns:1fr 1fr}
+ .cards{grid-template-columns:repeat(3,1fr)}
+ .list{grid-template-columns:1fr 1fr;column-gap:2rem}
+ .rail figure{flex-basis:32%}
+ .hero .in{padding-bottom:4.5rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .reveal{opacity:1!important;transform:none!important}
+ #fx{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Pizza Métis’</div>
+
+<header class="hero">
+ <div class="ph-h"><div class="bg" role="img" aria-label="La terrasse de Pizza Métis’ au coucher du soleil, enseigne verte et vue sur la mer"></div>
+ <span class="cap-photo">La terrasse, Beauséjour · photo Pizza Métis’</span></div>
+ <div class="in">
+
+  <h1>Pizza Métis’</h1>
+  <div class="tag">« Vivre d’amour et de pizza »</div>
+  <p class="lead">Votre pizzeria de Beauséjour, à Sainte-Marie : des pizzas faites avec passion, toutes chaudes, à venir chercher dès 16h30, du mardi au samedi.</p>
+  <div class="ctas">
+   <a class="btn rouge" href="tel:+262693945383">📞 Commander : 0693 94 53 83</a>
+   <a class="btn clair" href="#carte">Voir la carte</a>
+  </div>
+ </div>
+</header>
+
+<div class="marq" aria-hidden="true"><div>
+ <span>Pizzas faites avec passion</span><span class="p">●</span><span>À emporter</span><span class="p">●</span><span>Beauséjour · Sainte-Marie</span><span class="p">●</span><span>Commandes dès 16h30</span><span class="p">●</span><span>33 cm ou 40 cm</span><span class="p">●</span><span>Moitié / moitié</span><span class="p">●</span>
+ <span>Pizzas faites avec passion</span><span class="p">●</span><span>À emporter</span><span class="p">●</span><span>Beauséjour · Sainte-Marie</span><span class="p">●</span><span>Commandes dès 16h30</span><span class="p">●</span><span>33 cm ou 40 cm</span><span class="p">●</span><span>Moitié / moitié</span><span class="p">●</span>
+</div></div>
+
+<section class="hist">
+ <div class="wrap">
+  <div class="kick reveal">Notre histoire</div>
+  <h2 class="reveal">Un rêve sorti du four</h2>
+  <div class="quote reveal">
+   <p>« Il y a 3 ans, on allumait notre premier four, un rêve devenait réalité ! Depuis, des milliers de pizzas sont sorties du four… et des milliers de sourires sont entrés dans notre pizzeria. »</p>
+   <small>Publication de Pizza Métis’, novembre 2025</small>
+  </div>
+  <p class="reveal">Ici, la pâte se travaille sur place, les pâtons lèvent sur le plan de travail et chaque pizza part dans sa boîte kraft, prête à être dégustée. Sous la pergola de Beauséjour, la terrasse regarde la mer : la plus belle des salles d’attente.</p>
+  <div class="duo">
+   <figure class="ph reveal"><img src="img/patons.webp" alt="Pâtons de pizza posés sur la semoule, prêts à être étalés" loading="lazy" width="890" height="718"><figcaption>Les pâtons, étalés à la main</figcaption></figure>
+   <figure class="ph reveal"><img src="img/pate-maison.webp" alt="Un pâton de pizza tenu dans la main, au comptoir" loading="lazy" width="656" height="640"><figcaption>La pâte, préparée au comptoir</figcaption></figure>
+  </div>
+  <div class="chiffres reveal">
+   <div><b>2022</b><span>le premier four s’allume</span></div>
+   <div><b>100 %</b><span>recommandé sur Facebook</span></div>
+   <div><b>4,4 K</b><span>abonnés sur la page</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="carte" id="carte">
+ <div class="wrap">
+  <div class="kick reveal">La carte</div>
+  <h2 class="reveal">Classiques & saveurs créoles</h2>
+  <p class="intro-c reveal">Bringelle, sarcive, boudin, saucisse fumée, gros piment… la carte marie l’Italie et La Réunion. Et pour les indécis : la moitié / moitié, deux choix sur une seule pizza.</p>
+  <div class="tabs reveal" role="tablist">
+   <button class="on" data-t="veg" role="tab">Végétarien</button>
+   <button data-t="porc" role="tab">Porc</button>
+   <button data-t="poulet" role="tab">Poulet</button>
+   <button data-t="poisson" role="tab">Poisson</button>
+  </div>
+  <div class="list" data-l="veg">
+   <div class="it"><b>Margarita</b><span>tomate, emmental, olives</span></div>
+   <div class="it star"><b>Bringelle</b><span>tomate, emmental, aubergine, olives</span></div>
+   <div class="it"><b>Chèvre Miel</b><span>crème, emmental, chèvre, miel, oignons, origan</span></div>
+   <div class="it"><b>Quatre fromages</b><span>tomate, emmental, chèvre, roquefort, raclette</span></div>
+  </div>
+  <div class="list" data-l="porc" hidden>
+   <div class="it star"><b>Marmaille</b><span>tomate, emmental, jambon supérieur</span></div>
+   <div class="it"><b>Reine</b><span>tomate, emmental, jambon supérieur, champignons frais, olives</span></div>
+   <div class="it"><b>Chorizo</b><span>tomate, emmental, chorizo, gros piment, oignons, olives</span></div>
+   <div class="it star"><b>Boudin</b><span>tomate, emmental, boudin noir, gros piment, oignons, olives</span></div>
+   <div class="it star"><b>Créole</b><span>tomate, emmental, saucisse de porc fumée, gros piment, oignons, olives</span></div>
+   <div class="it star"><b>Sarcive</b><span>tomate, emmental, sarcive de porc, oignons, olives</span></div>
+   <div class="it"><b>Carbonara</b><span>crème, emmental, œuf, lardons, oignons, poivre</span></div>
+   <div class="it"><b>Raclette</b><span>crème, emmental, jambon supérieur, raclette, pomme de terre, oignons</span></div>
+   <div class="it"><b>Reblochon</b><span>crème, emmental, jambon Serrano, reblochon, croûtons, gros piment</span></div>
+  </div>
+  <div class="list" data-l="poulet" hidden>
+   <div class="it"><b>Poulet</b><span>tomate, emmental, poulet, gros piments, oignons, olives noires</span></div>
+   <div class="it star"><b>Créole poulet</b><span>tomate, emmental, saucisse de poulet, gros piment, oignons, olives</span></div>
+   <div class="it"><b>Poulet Crème</b><span>crème, emmental, poulet, champignons frais, oignons</span></div>
+   <div class="it"><b>Hawaïenne</b><span>tomate, crème, emmental, poulet, ananas, gros piments, oignons, olives</span></div>
+  </div>
+  <div class="list" data-l="poisson" hidden>
+   <div class="it"><b>Thon</b><span>tomate, crème, emmental, thon, oignons, gros piments, citron, olives</span></div>
+   <div class="it"><b>Norvégienne</b><span>tomate, crème, emmental, saumon fumé, citron, olives</span></div>
+   <div class="it star"><b>Crevette</b><span>crème, emmental, crevette au beurre d’ail, oignons, olives, cannelle</span></div>
+   <div class="it"><b>Pêcheur</b><span>crème, emmental, saumon fumé, crevette au beurre d’ail, citron, piment, oignons</span></div>
+  </div>
+  <div class="taille reveal"><div>33 cm</div><div>40 cm</div><div>Moitié / moitié</div><div>Suppléments au choix</div></div>
+  <p class="note-c">Extrait de la carte publiée sur la page Facebook de Pizza Métis’ ; la carte du jour se confirme au moment de la commande.</p>
+
+  <div class="ardoise-sp">
+   <article class="sp reveal"><img src="img/tartiflette.webp" alt="Pizza tartiflette dans sa boîte" loading="lazy" width="1000" height="540"><div><h3>La tartiflette</h3><p>Vue à l’ardoise de Pizza Métis’, une pizza toute gourmande, coupée à la roulette au comptoir.</p></div></article>
+   <article class="sp reveal"><img src="img/pizza-anchois-capres.webp" alt="Pizza anchois câpres tomate crème" loading="lazy" width="1200" height="1100"><div><h3>Anchois, câpres, tomate, crème</h3><p>Une pizza de la semaine, avec ses filets d’anchois disposés en étoile autour d’une olive.</p></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="gal">
+ <div class="wrap">
+  <div class="kick reveal">Tout chaud, tout juste sorti du four</div>
+  <h2 class="reveal">En boîte, prêtes à partir</h2>
+ </div>
+ <div class="rail">
+  <figure><img src="img/pizza-jambon-cru.webp" alt="Grande pizza crème, jambon cru, piments verts et ananas" loading="lazy" width="1200" height="730"><figcaption>Crème, jambon cru, piments, ananas</figcaption></figure>
+  <figure><img src="img/pizza-piments.webp" alt="Pizza tomate, piments verts et olives noires dans sa boîte" loading="lazy" width="1100" height="923"><figcaption>Piments verts & olives noires</figcaption></figure>
+  <figure><img src="img/pizza-chorizo-olives.webp" alt="Pizza au chorizo, piments et olives" loading="lazy" width="1080" height="750"><figcaption>Chorizo, gros piment, olives</figcaption></figure>
+  <figure><img src="img/pizza-anchois-capres.webp" alt="Pizza aux anchois et câpres" loading="lazy" width="1200" height="1100"><figcaption>Anchois & câpres</figcaption></figure>
+  <figure><img src="img/patons.webp" alt="Pâtons sur la semoule" loading="lazy" width="890" height="718"><figcaption>Les pâtons du soir</figcaption></figure>
+ </div>
+ <p class="hint">Faites glisser pour voir la suite →</p>
+</section>
+
+<section class="infos" id="infos">
+ <div class="wrap">
+  <div class="kick reveal">Infos pratiques</div>
+  <h2 class="reveal">On vous attend à Beauséjour</h2>
+  <div class="cards">
+   <div class="card reveal"><h3>Horaires</h3><p class="big">Mardi → samedi</p><p>Commandes dès <b>16h30</b>. Les fermetures exceptionnelles et jours fériés sont annoncés sur la page Facebook.</p></div>
+   <div class="card reveal"><h3>À emporter</h3><p>Venez chercher vos pizzas toutes chaudes, prêtes à être dégustées. Commandez par téléphone pour gagner du temps : <a class="lien" href="tel:+262693945383">0693 94 53 83</a></p></div>
+   <div class="card reveal"><h3>Adresse</h3><p>Rue Belle Vue sur Mer<br>Beauséjour, Sainte-Marie<br>La Réunion</p><p style="margin-top:.5rem"><a class="lien" href="https://www.google.com/maps/search/?api=1&query=Pizza+M%C3%A9tis+Beaus%C3%A9jour+Sainte-Marie" target="_blank" rel="noopener">Itinéraire →</a> · <a class="lien" href="https://www.facebook.com/pizzametis" target="_blank" rel="noopener">Facebook</a></p></div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="fetes">
+ <div class="wrap">
+  <svg class="guirl reveal" viewBox="0 0 520 70" aria-hidden="true">
+   <path d="M10 14 Q130 62 260 22 T510 14" fill="none" stroke="#c9a24a" stroke-width="1.6" stroke-dasharray="4 5"/>
+   <g fill="#5fae4e"><path d="M70 36c8-12 22-12 26-4-10 6-18 8-26 4z"/><path d="M200 34c8-12 22-12 26-4-10 6-18 8-26 4z"/><path d="M330 26c8-12 22-12 26-4-10 6-18 8-26 4z"/><path d="M450 22c8-12 22-12 26-4-10 6-18 8-26 4z"/></g>
+   <g fill="#c9302a"><path d="M130 44c4 10 14 16 22 14-6-6-10-12-12-18z"/><path d="M262 24c4 10 14 16 22 14-6-6-10-12-12-18z"/><path d="M392 22c4 10 14 16 22 14-6-6-10-12-12-18z"/></g>
+   <g fill="#f3e2b0"><circle cx="40" cy="22" r="3"/><circle cx="168" cy="48" r="3"/><circle cx="300" cy="20" r="3"/><circle cx="420" cy="20" r="3"/><circle cx="500" cy="16" r="3"/></g>
+  </svg>
+  <p class="ill">Illustration</p>
+  <div class="kick reveal">Noël chez Pizza Métis’</div>
+  <h2 class="reveal">Les soirées des fêtes, version pizza</h2>
+  <p class="reveal">Un repas en famille, une soirée entre amis, des marmailles en vacances : réservez vos pizzas à partager et profitez de la soirée pendant que le four travaille pour vous.</p>
+  <div class="boite reveal">
+   <ul>
+    <li>Vos pizzas préférées, en 33 ou 40 cm</li>
+    <li>La moitié / moitié pour faire plaisir à tout le monde</li>
+    <li>Commande par téléphone ou WhatsApp, retrait à Beauséjour</li>
+   </ul>
+  </div>
+  <div class="ctas" style="opacity:1;animation:none">
+   <a class="btn rouge" href="https://wa.me/262693945383?text=Bonjour%20Pizza%20M%C3%A9tis%2C%20je%20voudrais%20r%C3%A9server%20des%20pizzas%20pour%20une%20soir%C3%A9e%20des%20f%C3%AAtes" target="_blank" rel="noopener">💬 Réserver sur WhatsApp</a>
+   <a class="btn clair" href="tel:+262693945383">📞 0693 94 53 83</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact">
+ <div class="wrap">
+  <div class="kick reveal" style="color:var(--or)">À très vite</div>
+  <h2 class="reveal">Toute l’équipe vous attend</h2>
+  <p class="reveal">Avec de bonnes pizzas faites avec passion, à Beauséjour, Sainte-Marie.</p>
+  <div class="ctas" style="margin-top:1.4rem">
+   <a class="btn rouge" href="tel:+262693945383">📞 Appeler</a>
+   <a class="btn vert" href="https://wa.me/262693945383" target="_blank" rel="noopener">💬 WhatsApp</a>
+   <a class="btn clair" href="https://www.facebook.com/pizzametis" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <figure class="signe reveal"><img src="img/vivre-d-amour.webp" alt="Panneau de la terrasse : « Vivre d’amour et de pizza »" loading="lazy" width="1100" height="546"></figure>
+ </div>
+</section>
+
+<footer>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Pizza Métis’.<br>
+ Photos et textes : <a href="https://www.facebook.com/pizzametis" target="_blank" rel="noopener">page Facebook Pizza Métis’</a>.
+</footer>
+
+<a class="fab" href="tel:+262693945383" aria-label="Appeler Pizza Métis’">📞 Commander</a>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var bs=document.querySelectorAll('.tabs button');
+bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.querySelectorAll('.list').forEach(function(l){l.hidden=l.dataset.l!==b.dataset.t})})});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+function mk(i){var t=i%5;return{x:Math.random()*W,y:H+Math.random()*H,r:t<3?1+Math.random()*2:2.5+Math.random()*2,v:.25+Math.random()*.6,s:Math.random()*6.28,k:t<3?'e':(t<4?'f':'b'),a:.25+Math.random()*.4}}
+for(var i=0;i<28;i++){var p=mk(i);p.y=Math.random()*H;P.push(p)}
+function d(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.y-=p.v;p.s+=.02;p.x+=Math.sin(p.s)*.35;
+if(p.y<-20){var n=mk(i);n.y=H+10;P[i]=n;return}
+x.globalAlpha=p.a;
+if(p.k==='e'){var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*3);g.addColorStop(0,'rgba(255,190,90,1)');g.addColorStop(1,'rgba(201,48,42,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*3,0,6.28);x.fill()}
+else if(p.k==='f'){x.fillStyle='#f4ecd8';x.beginPath();x.arc(p.x,p.y,p.r*.6,0,6.28);x.fill()}
+else{x.save();x.translate(p.x,p.y);x.rotate(p.s);x.fillStyle='#5fae4e';x.beginPath();x.ellipse(0,0,p.r*1.6,p.r*.8,0,0,6.28);x.fill();x.restore()}});
+x.globalAlpha=1;requestAnimationFrame(d)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(d)});
+requestAnimationFrame(d);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Pizza Métis’" defer></script>
+</body>
+</html>
