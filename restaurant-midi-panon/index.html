@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurant Midi-Panon · Buffet du midi à Bras-Panon</title>
+<meta name="description" content="Restaurant Midi-Panon, 99 rue des Limites à Bras-Panon : buffet du midi du lundi au samedi, cuisine créole, chinoise et internationale, plats à emporter. 0262 11 05 76.">
+<meta property="og:title" content="Restaurant Midi-Panon · Bras-Panon">
+<meta property="og:description" content="Le buffet du midi, du lundi au samedi, et l'ardoise du jour à emporter.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/restaurant-midi-panon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/restaurant-midi-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Outfit:wght@300;400;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--moutarde:#d39a2b;--moutarde-f:#a8741a;--turquoise:#5aa7a3;--turq-f:#2f7471;--olive:#77793a;--or:#c8a45e;--or-c:#ead3a0;--bleu:#2f4fae;--marbre:#f8f5ef;--sable:#efe8dc;--ardoise:#242629;--ardoise-2:#2f3236;--craie:#f2eee4;--rose:#d98aa6;--txt:#33302b;--doux:#7d756a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--marbre);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.1;color:var(--ardoise)}
+h2{font-size:clamp(2rem,5.6vw,3.2rem);margin:.35rem 0 1.1rem}
+.craie{font-family:'Caveat',cursive;font-weight:700;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--turq-f);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ardoise);color:var(--or-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;letter-spacing:.03em;transition:.35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--moutarde);color:#fff;box-shadow:0 14px 30px -14px rgba(168,116,26,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--moutarde-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(211,154,43,.75)}}
+.btn-line{border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{border:1px solid var(--ardoise);color:var(--ardoise)}
+.btn-dark:hover{background:var(--sable)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ardoise);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:55% 50%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,38,41,.25) 0%,rgba(36,38,41,.35) 35%,rgba(36,38,41,.93) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.6rem}
+.hero .eyebrow{color:var(--or-c)}
+.hero h1{color:#fff;font-size:clamp(3.3rem,13vw,7.4rem);letter-spacing:-.01em;margin:.5rem 0 .2rem}
+.hero h1 small{display:block;font-family:'Caveat',cursive;font-weight:700;font-size:.42em;color:var(--or-c);letter-spacing:0;margin-bottom:-.12em}
+.hero .lead{font-size:1.15rem;max-width:33rem;margin:1rem 0 2rem;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--or-c)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .15s forwards}
+.apparait.d2{animation-delay:.35s}.apparait.d3{animation-delay:.55s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--ardoise);color:var(--craie);overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Caveat',cursive;font-size:1.65rem;font-weight:500;border-top:3px solid var(--moutarde)}
+.track{display:inline-block;animation:defile 50s linear infinite}
+.track span{margin:0 1rem}
+.track span::after{content:"✳";margin-left:2rem;color:var(--rose);font-size:1rem;vertical-align:.25em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.intro p+p{margin-top:1rem}
+.devise{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.35rem,3.6vw,1.9rem);color:var(--turq-f);border-left:3px solid var(--moutarde);padding-left:1.1rem;margin:1.6rem 0;line-height:1.3}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2.3rem;font-weight:500;color:var(--moutarde-f);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.cadre{position:relative;margin:0}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 22px 22px;box-shadow:0 40px 80px -40px rgba(36,38,41,.6)}
+.cadre::before{content:"";position:absolute;inset:-12px;border:1px solid var(--or);border-radius:212px 212px 30px 30px;opacity:.7;pointer-events:none}
+.cadre figcaption{position:absolute;left:-.3rem;bottom:1.3rem;background:#fff;padding:.65rem 1rem;border-radius:14px;font-size:.84rem;box-shadow:0 18px 40px -20px rgba(36,38,41,.5);max-width:80%}
+/* ardoise */
+.ardoise-sec{background:linear-gradient(180deg,var(--marbre),var(--sable))}
+.jours{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.4rem 0 1.6rem}
+.jours button{font:inherit;font-size:.88rem;font-weight:600;border:1px solid var(--ardoise);background:transparent;color:var(--ardoise);border-radius:999px;padding:.45rem .95rem;min-height:40px;cursor:pointer;transition:.3s}
+.jours button[aria-pressed=true]{background:var(--ardoise);color:var(--craie)}
+.rail{display:grid;align-items:start;grid-auto-flow:column;grid-auto-columns:min(340px,82vw);gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1.6rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.tableau{scroll-snap-align:center;position:relative;background:radial-gradient(120% 90% at 30% 20%,var(--ardoise-2),var(--ardoise) 70%);border:10px solid #c9a46a;border-radius:6px;box-shadow:inset 0 0 40px rgba(0,0,0,.55),0 28px 50px -28px rgba(36,38,41,.8);color:var(--craie);padding:1.3rem 1.2rem 1.1rem;transition:transform .5s}
+.tableau:hover{transform:rotate(-.6deg) translateY(-4px)}
+.tableau::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.018) 0 3px,transparent 3px 9px);pointer-events:none}
+.tableau .date{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or-c);font-family:'Outfit',sans-serif;font-weight:600}
+.tableau h3{font-family:'Caveat',cursive;font-weight:700;color:var(--rose);font-size:2rem;letter-spacing:.06em;border-bottom:2px solid rgba(217,138,166,.5);padding-bottom:.2rem;margin:.2rem 0 .7rem}
+.tableau ul{list-style:none;font-family:'Caveat',cursive;font-size:1.55rem;line-height:1.15}
+.tableau li{position:relative;padding-left:1.3rem;margin:.35rem 0}
+.tableau li::before{content:"✳";position:absolute;left:0;top:.2em;font-size:.8rem;color:var(--rose)}
+.tableau .pied{font-family:'Caveat',cursive;font-size:1.25rem;color:var(--rose);margin-top:.8rem;text-decoration:underline;text-underline-offset:4px}
+.glisse{font-size:.85rem;color:var(--doux);display:flex;align-items:center;gap:.4rem}
+.commande{margin-top:1.6rem;display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center;background:#fff;border-radius:22px;padding:1.4rem 1.5rem;box-shadow:0 22px 50px -36px rgba(36,38,41,.55);border-top:4px solid var(--moutarde)}
+.commande p{font-size:.98rem}
+.commande b{font-weight:600}
+/* buffet / specialites */
+.buffet{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.photo{border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(36,38,41,.7);background:var(--ardoise);margin:0}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{padding:.8rem 1.2rem;color:var(--or-c);font-size:.88rem}
+.cuisines{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:1.6rem 0}
+.cuisine{background:#fff;border-radius:18px;padding:1.1rem .9rem;text-align:center;box-shadow:0 18px 40px -32px rgba(36,38,41,.6);transition:transform .4s}
+.cuisine:hover{transform:translateY(-5px)}
+.cuisine svg{width:34px;height:34px;margin:0 auto .45rem;display:block}
+.cuisine b{font-family:'Fraunces',serif;font-weight:500;font-size:1.05rem;display:block}
+.specs{display:grid;gap:.9rem;margin-top:1.4rem}
+.spec{display:flex;gap:1rem;align-items:center;background:linear-gradient(90deg,rgba(90,167,163,.12),transparent);border-radius:16px;padding:.9rem 1.1rem}
+.spec .rond{flex:none;width:46px;height:46px;border-radius:50%;background:var(--turquoise);display:grid;place-items:center;color:#fff;font-family:'Caveat',cursive;font-size:1.6rem;font-weight:700}
+.spec b{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;display:block;line-height:1.2}
+.spec span{font-size:.88rem;color:var(--doux)}
+/* salle */
+.salle{background:var(--ardoise);color:var(--craie);overflow:hidden}
+.salle h2{color:#fff}
+.salle .eyebrow{color:var(--or-c)}
+.salle-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.palette{display:flex;gap:.6rem;margin:1.4rem 0}
+.palette i{width:44px;height:44px;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.12);display:block}
+.salle .photo{background:#111}
+.salle .photo img{aspect-ratio:4/3}
+.salle .photo figcaption{color:var(--or-c)}
+.feuilles{position:absolute;right:-30px;top:30px;width:180px;opacity:.16;pointer-events:none;animation:balance 7s ease-in-out infinite alternate;transform-origin:50% 100%}
+@keyframes balance{to{transform:rotate(6deg)}}
+/* noel */
+.noel{background:radial-gradient(120% 80% at 50% 0%,#fff 0%,var(--sable) 70%);text-align:center;overflow:hidden}
+.noel .carte-noel{position:relative;max-width:640px;margin:auto;background:var(--ardoise);color:var(--craie);border-radius:28px;padding:2.6rem 1.5rem 2.2rem;box-shadow:0 40px 80px -40px rgba(36,38,41,.8);border:2px solid var(--or)}
+.noel h2{color:#fff;font-size:clamp(1.9rem,6vw,2.8rem)}
+.noel .eyebrow{color:var(--or-c)}
+.noel p{max-width:30rem;margin:0 auto 1.6rem}
+.noel .ctas{justify-content:center}
+.guirlande{position:absolute;left:0;right:0;top:-6px;height:40px;pointer-events:none}
+.guirlande circle{animation:brille 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(2n){animation-delay:.8s}.guirlande circle:nth-child(3n){animation-delay:1.6s}
+@keyframes brille{50%{opacity:.3}}
+.idees{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:0 0 1.8rem}
+.idees span{border:1px solid rgba(234,211,160,.5);border-radius:999px;padding:.35rem .95rem;font-size:.9rem}
+.noel .note{font-size:.78rem;color:var(--or-c);margin-top:1.2rem;opacity:.85}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+.infos{display:grid;gap:1rem}
+.info{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 18px 40px -32px rgba(36,38,41,.6);text-decoration:none;transition:transform .35s}
+a.info:hover{transform:translateX(4px)}
+.info svg{width:26px;height:26px;flex:none;color:var(--turq-f);margin-top:.15rem}
+.info b{display:block;font-weight:600}
+.info span{font-size:.92rem;color:var(--doux);word-break:break-word}
+.horaire{background:var(--ardoise);color:var(--craie);border-radius:22px;padding:1.8rem 1.6rem;position:relative;overflow:hidden}
+.horaire h3{color:var(--rose);font-family:'Caveat',cursive;font-size:2.2rem;font-weight:700}
+.horaire .gros{font-family:'Caveat',cursive;font-size:1.9rem;line-height:1.2;margin:.6rem 0 1rem}
+.horaire p{font-size:.95rem}
+.semaine{display:grid;grid-template-columns:repeat(7,1fr);gap:.35rem;margin:1.2rem 0}
+.semaine span{text-align:center;padding:.5rem 0;border-radius:10px;font-weight:600;font-size:.85rem;background:rgba(255,255,255,.07);color:rgba(242,238,228,.45)}
+.semaine span.on{background:var(--moutarde);color:#fff}
+footer{background:#1b1c1f;color:#bdb5a6;text-align:center;padding:2.4rem 1rem 6rem;font-size:.85rem}
+footer b{color:var(--or-c);font-weight:600}
+.flottant{position:fixed;right:14px;bottom:14px;z-index:40;width:58px;height:58px;border-radius:50%;background:var(--moutarde);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(36,38,41,.6);animation:souffle 3.6s ease-in-out infinite}
+.flottant svg{width:26px;height:26px;color:#fff}
+.rev{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rev.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .intro,.buffet,.salle-in,.contact-in{grid-template-columns:1fr}
+ .commande{grid-template-columns:1fr}
+ .cadre{max-width:420px;margin:1rem auto 0}
+ .buffet .photo{max-width:440px}
+}
+@media (max-width:400px){.cuisines{grid-template-columns:1fr 1fr 1fr;gap:.5rem}.cuisine{padding:1rem .4rem}.cuisine b{font-size:.95rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.apparait,.rev{opacity:1;transform:none}html{scroll-behavior:auto}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Restaurant Midi-Panon</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+ <div class="fond"><img src="img/salle.webp" alt="La salle du restaurant Midi-Panon : tables en marbre blanc, fauteuils moutarde et turquoise, suspensions cuivrées" fetchpriority="high"></div>
+ <div class="wrap hero-in">
+  <p class="eyebrow apparait">Bras-Panon · La Réunion</p>
+  <h1 class="apparait d2"><small>Restaurant</small>Midi-Panon</h1>
+  <p class="lead apparait d2">Le buffet du midi, du lundi au samedi : cuisine créole, chinoise et internationale, et chaque matin une nouvelle ardoise de plats à emporter.</p>
+  <div class="ctas apparait d3">
+   <a class="btn btn-main" href="#ardoise"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M7 21l2-3m8 3l-2-3M7 9h7M7 13h10"/></svg>L'ardoise du jour</a>
+   <a class="btn btn-line" href="tel:+262262110576"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>0262 11 05 76</a>
+  </div>
+  <p class="adr apparait d3">99 rue des Limites, 97412 Bras-Panon · ouvert du lundi au samedi midi</p>
+ </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22C180 2 360 2 540 18s360 26 540 10S1300 4 1440 16v28z" fill="#242629"/></svg>
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Carry poulet frais calebasse</span><span>Civet canard frais</span><span>Boucané bringelle</span><span>Rougail graton</span><span>Poulet à la chinoise</span><span>Filet de poisson crème combava</span><span>Massalé porc</span><span>Chop suey poulet</span><span>Daube chouchou</span>
+ <span>Carry poulet frais calebasse</span><span>Civet canard frais</span><span>Boucané bringelle</span><span>Rougail graton</span><span>Poulet à la chinoise</span><span>Filet de poisson crème combava</span><span>Massalé porc</span><span>Chop suey poulet</span><span>Daube chouchou</span>
+</div></div>
+
+<section id="maison">
+ <div class="wrap intro">
+  <div class="rev">
+   <p class="eyebrow">Midi-Panon bonjour !</p>
+   <h2>La pause du midi, version Bras-Panon</h2>
+   <p>Au 99 rue des Limites, Midi-Panon ouvre ses portes chaque midi, du lundi au samedi, autour d'un buffet aux trois saveurs : <b>créole</b>, <b>chinoise</b> et <b>internationale</b>.</p>
+   <p>Et pour ceux qui filent au travail, l'ardoise « À emporter » change tous les jours : elle part sur la page Facebook dès 7 heures du matin, écrite à la craie, à la main.</p>
+   <p class="devise">« Midi-panon bonjour, menu du jour »</p>
+   <div class="chiffres">
+    <div><b>6 j/7</b><span>du lundi au samedi midi</span></div>
+    <div><b>3</b><span>cuisines au buffet</span></div>
+    <div><b>5,4 K</b><span>abonnés sur Facebook</span></div>
+   </div>
+  </div>
+  <figure class="cadre rev">
+   <img src="img/deco.webp" alt="Suspensions cuivrées, feuilles dorées au mur et tables dressées de serviettes bleues" loading="lazy">
+   <figcaption>Feuilles dorées, cuivre et velours : la salle de Midi-Panon</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="ardoise-sec" id="ardoise">
+ <div class="wrap">
+  <div class="rev">
+   <p class="eyebrow">À emporter · chaque matin sur Facebook</p>
+   <h2>L'ardoise du jour</h2>
+   <p>Voici quelques ardoises publiées ces dernières semaines, recopiées telles quelles. Choisissez un jour ou faites glisser du doigt.</p>
+  </div>
+  <div class="jours" role="group" aria-label="Choisir une ardoise">
+   <button type="button" data-i="0" aria-pressed="true">Jeu. 12 nov.</button>
+   <button type="button" data-i="1" aria-pressed="false">Mar. 10 nov.</button>
+   <button type="button" data-i="2" aria-pressed="false">Lun. 9 nov.</button>
+   <button type="button" data-i="3" aria-pressed="false">Ven. 6 nov.</button>
+   <button type="button" data-i="4" aria-pressed="false">Sam. 31 oct.</button>
+   <button type="button" data-i="5" aria-pressed="false">Mar. 27 oct.</button>
+  </div>
+  <div class="rail" id="rail">
+   <article class="tableau"><p class="date">Jeudi 12 novembre</p><h3>À emporter</h3><ul><li>Carry poulet frais calebasse</li><li>Poitrine de porc frais grillée</li><li>Poulet à la chinoise</li><li>Sauté porc vermouth</li><li>Poisson frit'</li></ul><p class="pied">Rougail à part 1 €</p></article>
+   <article class="tableau"><p class="date">Mardi 10 novembre</p><h3>À emporter</h3><ul><li>Carry coq frais</li><li>Boucané (porc) bringelle</li><li>Poulet miel</li><li>Sauté porc gingembre</li><li>Sauté poisson</li></ul><p class="pied">Rougail à part 1 €</p></article>
+   <article class="tableau"><p class="date">Lundi 9 novembre</p><h3>À emporter</h3><ul><li>Carry poulet fumé pomme de terre</li><li>Saucisse frit' (porc) + riz chauffé</li><li>Sauté poulet</li><li>Porc sauce barbecue</li><li>Poisson sauce piquante</li><li>Fricassé brède chou de Chine</li></ul><p class="pied">Rougail à part 1 €</p></article>
+   <article class="tableau"><p class="date">Vendredi 6 novembre</p><h3>À emporter</h3><ul><li>Civet canard frais</li><li>Rôti porc</li><li>Riz chauffé morue</li><li>Chop suey poulet</li><li>Rougail graton</li></ul><p class="pied">Rougail à part 1 €</p></article>
+   <article class="tableau"><p class="date">Samedi 31 octobre</p><h3>À emporter</h3><ul><li>Rôti canard frais</li><li>Civet patte cochon</li><li>Poulet sauce grand-mère</li><li>Chop suey porc</li><li>Poisson aigre doux</li></ul><p class="pied">Rougail à part 1 €</p></article>
+   <article class="tableau"><p class="date">Mardi 27 octobre</p><h3>À emporter</h3><ul><li>Civet poulet frais</li><li>Rougail boucané (porc)</li><li>Émincé de poulet sauce dakatine</li><li>Sauté porc oignons</li><li>Filet de poisson crème combava</li><li>Daube chouchou</li></ul><p class="pied">Rougail à part 1 €</p></article>
+  </div>
+  <p class="glisse"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-4-4 4 4-4 4"/></svg>Faites glisser pour voir les autres jours</p>
+  <div class="commande rev">
+   <p><b>Pour réserver votre plat à emporter :</b> un SMS au <b>0692 26 40 80 jusqu'à 11h30</b>, ou un appel au 0262 11 05 76. Sur l'ardoise, la plupart des plats sont à 8 €.</p>
+   <a class="btn btn-main" href="sms:+262692264080?body=Bonjour%20Midi-Panon%2C%20je%20voudrais%20r%C3%A9server%20un%20plat%20%C3%A0%20emporter%20%3A%20"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Commander par SMS</a>
+  </div>
+ </div>
+</section>
+
+<section id="buffet">
+ <div class="wrap buffet">
+  <figure class="photo rev">
+   <img src="img/buffet.webp" alt="Le coin buffet de Midi-Panon, avec la grande cuillère et la grande fourchette au mur et un vase rouge" loading="lazy">
+   <figcaption>Le coin buffet, sous la grande cuillère et la grande fourchette</figcaption>
+  </figure>
+  <div class="rev">
+   <p class="eyebrow">Le buffet du midi</p>
+   <h2>Trois cuisines, un seul buffet</h2>
+   <p>Au buffet du midi, les recettes de l'île côtoient les saveurs chinoises et les classiques d'ailleurs.</p>
+   <div class="cuisines">
+    <div class="cuisine"><svg viewBox="0 0 40 40" fill="none" stroke="#a8741a" stroke-width="2"><path d="M6 20h28a14 14 0 0 1-28 0z"/><path d="M14 13c0-3 3-3 3-6m4 6c0-3 3-3 3-6m4 6c0-3 3-3 3-6" stroke="#5aa7a3"/></svg><b>Créole</b></div>
+    <div class="cuisine"><svg viewBox="0 0 40 40" fill="none" stroke="#a8741a" stroke-width="2"><path d="M7 22h26l-3 11H10z"/><path d="M12 6l14 13M17 5l12 13" stroke="#5aa7a3"/></svg><b>Chinoise</b></div>
+    <div class="cuisine"><svg viewBox="0 0 40 40" fill="none" stroke="#a8741a" stroke-width="2"><circle cx="20" cy="20" r="13"/><path d="M7 20h26M20 7c5 5 5 21 0 26M20 7c-5 5-5 21 0 26" stroke="#5aa7a3"/></svg><b>Internationale</b></div>
+   </div>
+   <p class="eyebrow" style="margin-top:1.4rem">Les spécialités de la maison</p>
+   <div class="specs">
+    <div class="spec"><span class="rond">1</span><div><b>Cari poulet palmiste</b><span>Au cœur de palmiste, spécialité de la maison</span></div></div>
+    <div class="spec"><span class="rond">2</span><div><b>Bouillon de fruits de mer</b><span>Spécialité de la maison</span></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="salle" id="salle">
+ <svg class="feuilles" viewBox="0 0 100 200" aria-hidden="true"><path d="M50 195C46 140 48 80 50 5c4 60 6 120 0 190z" fill="#c8a45e"/><g stroke="#c8a45e" stroke-width="3" fill="none"><path d="M50 40 20 20M50 60 15 40M50 80 12 62M50 100 14 84M50 120 18 106M50 40 80 20M50 60 85 40M50 80 88 62M50 100 86 84M50 120 82 106"/></g></svg>
+ <div class="wrap salle-in">
+  <div class="rev">
+   <p class="eyebrow">La salle</p>
+   <h2>Marbre blanc, velours et feuilles d'or</h2>
+   <p>Tables en marbre cerclées de doré, fauteuils moutarde et turquoise, serviettes bleu roi pliées à chaque place, suspensions cuivrées et feuilles dorées au mur : une salle lumineuse pour la pause du midi.</p>
+   <div class="palette" aria-label="Les couleurs de la salle"><i style="background:#d39a2b"></i><i style="background:#5aa7a3"></i><i style="background:#77793a"></i><i style="background:#2f4fae"></i><i style="background:#f8f5ef"></i></div>
+   <p style="font-size:.9rem;color:var(--or-c)">Les couleurs de ce site viennent tout droit de votre salle.</p>
+  </div>
+  <figure class="photo rev">
+   <img src="img/salle.webp" alt="Vue d'ensemble de la salle de Midi-Panon" loading="lazy">
+   <figcaption>Photo publiée par Midi-Panon le 14 août 2025</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="wrap">
+  <div class="carte-noel rev">
+   <svg class="guirlande" viewBox="0 0 640 40" preserveAspectRatio="none" aria-hidden="true"><path d="M10 6Q170 38 320 10T630 6" stroke="#c8a45e" stroke-width="1.5" fill="none"/><circle cx="70" cy="18" r="4" fill="#d39a2b"/><circle cx="140" cy="27" r="4" fill="#5aa7a3"/><circle cx="210" cy="24" r="4" fill="#d98aa6"/><circle cx="280" cy="14" r="4" fill="#d39a2b"/><circle cx="360" cy="12" r="4" fill="#5aa7a3"/><circle cx="430" cy="20" r="4" fill="#d98aa6"/><circle cx="500" cy="19" r="4" fill="#d39a2b"/><circle cx="570" cy="10" r="4" fill="#5aa7a3"/></svg>
+   <p class="eyebrow">Noël &amp; fin d'année</p>
+   <h2>Fêtez Noël chez <span style="white-space:nowrap">Midi-Panon</span></h2>
+   <p>Le repas de Noël entre collègues, la famille réunie un midi de décembre, ou des plats à emporter pour la tablée des fêtes : parlez-en à l'équipe par SMS ou au téléphone.</p>
+   <div class="idees"><span>Repas de Noël d'équipe</span><span>Midi en famille</span><span>Plats à emporter des fêtes</span></div>
+   <div class="ctas">
+    <a class="btn btn-main" href="sms:+262692264080?body=Bonjour%20Midi-Panon%2C%20je%20voudrais%20organiser%20un%20repas%20de%20No%C3%ABl%20%3A%20"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Écrire par SMS</a>
+    <a class="btn btn-line" href="tel:+262262110576">Appeler le restaurant</a>
+   </div>
+   <p class="note">Bloc de Noël proposé dans cette maquette, à ajuster avec vous.</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="rev"><p class="eyebrow">Venir à Midi-Panon</p><h2>À tout à l'heure, à midi</h2></div>
+  <div class="contact-in">
+   <div class="infos rev">
+    <a class="info" href="https://www.google.com/maps/search/?api=1&query=99+rue+des+Limites+97412+Bras-Panon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>99 rue des Limites</b><span>97412 Bras-Panon · ouvrir l'itinéraire</span></div></a>
+    <a class="info" href="tel:+262262110576"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>0262 11 05 76</b><span>Le restaurant</span></div></a>
+    <a class="info" href="sms:+262692264080"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div><b>0692 26 40 80 (SMS)</b><span>Commandes à emporter jusqu'à 11h30</span></div></a>
+    <a class="info" href="mailto:restaurant.midipanon@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>E-mail</b><span>restaurant.midipanon@gmail.com</span></div></a>
+    <a class="info" href="https://www.facebook.com/100057624722690" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a5 5 0 0 0-5 5v2H7v4h2v7h4v-7h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg><div><b>Facebook</b><span>L'ardoise du jour, chaque matin</span></div></a>
+   </div>
+   <div class="horaire rev">
+    <h3>Les horaires</h3>
+    <div class="semaine" aria-label="Jours d'ouverture"><span class="on">L</span><span class="on">M</span><span class="on">M</span><span class="on">J</span><span class="on">V</span><span class="on">S</span><span>D</span></div>
+    <p class="gros">Ouvert du lundi au samedi midi</p>
+    <p>Buffet sur place le midi, et plats à emporter à réserver par SMS jusqu'à 11h30.</p>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+<footer>
+ <p>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Restaurant Midi-Panon.</p>
+ <p style="margin-top:.5rem;font-size:.78rem">Photos : page Facebook de Restaurant Midi-Panon · icônes et décor : illustrations</p>
+</footer>
+<a class="flottant" href="tel:+262262110576" aria-label="Appeler Midi-Panon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+<script>
+(function(){
+var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+var rail=document.getElementById('rail'),bs=document.querySelectorAll('.jours button'),cartes=rail.children;
+bs.forEach(function(b){b.addEventListener('click',function(){var c=cartes[+b.dataset.i];rail.scrollTo({left:c.offsetLeft-rail.offsetLeft-(rail.clientWidth-c.clientWidth)/2,behavior:reduit?'auto':'smooth'});marque(+b.dataset.i)})});
+function marque(i){bs.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')})}
+var t;rail.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){var m=rail.scrollLeft+rail.clientWidth/2,best=0,d=1e9;for(var k=0;k<cartes.length;k++){var c=cartes[k],x=c.offsetLeft-rail.offsetLeft+c.clientWidth/2;if(Math.abs(x-m)<d){d=Math.abs(x-m);best=k}}marque(best)},120)});
+if(reduit)return;
+var cv=document.getElementById('vapeur'),cx=cv.getContext('2d'),W,H,ps=[],on=true;
+function taille(){W=cv.width=innerWidth;H=cv.height=innerHeight}taille();addEventListener('resize',taille);
+for(var i=0;i<26;i++)ps.push(neuf(true));
+function neuf(debut){return{x:Math.random()*W,y:debut?Math.random()*H:H+40,r:18+Math.random()*38,v:.25+Math.random()*.45,o:.05+Math.random()*.08,p:Math.random()*6.28,g:Math.random()<.3}}
+document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(f)});
+function f(){if(!on)return;cx.clearRect(0,0,W,H);for(var i=0;i<ps.length;i++){var p=ps[i];p.y-=p.v;p.p+=.012;p.x+=Math.sin(p.p)*.35;var a=p.o*Math.min(1,p.y/(H*.6));if(p.y<-60){ps[i]=neuf(false);continue}
+var gr=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);var c=p.g?'211,154,43':'200,190,170';gr.addColorStop(0,'rgba('+c+','+a+')');gr.addColorStop(1,'rgba('+c+',0)');cx.fillStyle=gr;cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.28);cx.fill()}requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Restaurant Midi-Panon" defer></script>
+</body>
+</html>
