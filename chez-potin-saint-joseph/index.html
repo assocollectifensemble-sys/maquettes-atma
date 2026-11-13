@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Potin · Fruits &amp; Légumes, Épicerie à Saint-Joseph</title>
+<meta name="description" content="Fruits et Légumes CHEZ POTIN, rue du Maréchal Leclerc à Saint-Joseph (La Réunion) : fruits et légumes, épicerie et bien plus. Qualité, fraîcheur, péi.">
+<meta property="og:title" content="Chez Potin · Fruits &amp; Légumes, Épicerie · Saint-Joseph">
+<meta property="og:description" content="Qualité • Fraîcheur • Péi : les arrivages du moment, rue du Maréchal Leclerc à Saint-Joseph.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-potin-saint-joseph/img/etal-radis-bredes.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-potin-saint-joseph/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--olive:#4f6128;--olive-f:#33401a;--feuille:#7a9a3a;--creme:#f8f1e4;--lin:#efe4cf;--orange:#e07a2c;--orange-f:#c2621a;--or:#c99a3f;--txt:#33361f;--doux:#6f6f55}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--olive-f);line-height:1.12}
+h2{font-size:clamp(1.9rem,5.4vw,3rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Dancing Script',cursive;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;color:var(--orange-f);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(3.6rem,9vw,6.5rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--olive-f);color:#e9dfc4;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s}
+.btn-main{background:var(--orange);color:#fff;box-shadow:0 14px 30px -14px rgba(224,122,44,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--orange-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(224,122,44,.7)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-olive{background:var(--olive);color:#fff}
+.btn-olive:hover{background:var(--olive-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:clamp(600px,100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--olive-f);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,43,15,.25) 0%,rgba(35,43,15,.35) 38%,rgba(35,43,15,.93) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4.6rem}
+.hero .eyebrow{color:#f3c58f}
+.hero h1{color:#fff;font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(4.2rem,17vw,8rem);line-height:.95;margin:.4rem 0 .2rem;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 small{display:block;font-family:'Fraunces',serif;font-size:.24em;font-weight:500;letter-spacing:.04em;color:#f1ead6;margin-top:.5rem}
+.devise-hero{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin:1.1rem 0 1.9rem;font-weight:700;font-size:1.05rem}
+.devise-hero span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);padding:.3rem .9rem;border-radius:999px}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:#efe2c2}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--olive);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"❦";margin-left:2.4rem;font-style:normal;font-size:.85rem;color:#f3c58f}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.maison p+p{margin-top:1rem}
+.logo-carte{background:#fffaf0;border-radius:24px;padding:1.2rem;box-shadow:0 30px 60px -38px rgba(51,64,26,.6);transform:rotate(-1.2deg);transition:transform .5s}
+.logo-carte:hover{transform:rotate(0) scale(1.02)}
+.logo-carte img{border-radius:14px;width:100%}
+.logo-carte figcaption{font-size:.82rem;color:var(--doux);text-align:center;margin-top:.6rem}
+.trio{display:grid;gap:.7rem;margin-top:1.6rem}
+.trio div{display:flex;gap:.9rem;align-items:center;background:#fff;border-radius:16px;padding:.8rem 1rem;box-shadow:0 16px 36px -30px rgba(51,64,26,.7)}
+.trio svg{flex:none;width:38px;height:38px}
+.trio b{display:block;font-family:'Fraunces',serif;font-size:1.08rem;color:var(--olive-f)}
+.trio span{font-size:.9rem;color:var(--doux)}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.6rem}
+.chiffres b{display:block;font-family:'Dancing Script',cursive;font-size:2.6rem;color:var(--orange);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+/* arrivages */
+.arr{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem 5vw 1.4rem;margin:1.6rem 0 0;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(68vw,300px);scroll-snap-align:center;border-radius:22px;overflow:hidden;position:relative;background:var(--olive-f);box-shadow:0 24px 50px -32px rgba(51,64,26,.8)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem .9rem;background:linear-gradient(180deg,transparent,rgba(35,43,15,.88));color:#fff;font-family:'Fraunces',serif;font-size:1.08rem}
+.glisse{font-size:.85rem;color:var(--doux);text-align:center}
+.citation{font-family:'Dancing Script',cursive;font-size:clamp(1.7rem,5vw,2.4rem);color:var(--olive);text-align:center;margin-top:1.4rem}
+/* du moment */
+.moment{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2rem}
+.post{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 26px 56px -38px rgba(51,64,26,.75);transition:transform .4s;display:flex;flex-direction:column}
+.post:hover{transform:translateY(-6px)}
+.post img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.post-in{padding:1.2rem 1.3rem 1.4rem;flex:1}
+.post small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-f);font-weight:700;margin-bottom:.35rem}
+.post blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:var(--olive-f);margin:.2rem 0 .5rem}
+.post p{font-size:.95rem;color:var(--doux)}
+.post.texte{background:var(--olive);color:#fff;justify-content:center;position:relative}
+.post.texte blockquote{color:#fff;font-size:1.3rem}
+.post.texte small{color:#f3c58f}
+.post.texte p{color:#e5e9cf}
+.post.texte .deco{position:absolute;right:-18px;bottom:-18px;width:120px;opacity:.18}
+/* mosaique */
+.mosaique{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:2.2rem}
+.mosaique figure{border-radius:18px;overflow:hidden;position:relative}
+.mosaique img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;transition:transform 1.2s}
+.mosaique figure:hover img{transform:scale(1.07)}
+.mosaique figcaption{position:absolute;left:.5rem;bottom:.5rem;background:rgba(255,250,240,.92);color:var(--olive-f);font-size:.78rem;font-weight:700;padding:.2rem .6rem;border-radius:999px}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#5b7030 0%,var(--olive-f) 70%);color:#f4ecd8;position:relative;overflow:hidden;text-align:center}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#f3c58f}
+.noel p{max-width:36rem;margin:0 auto}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.4rem}
+.guirlande i{width:12px;height:12px;border-radius:50%;background:var(--or);box-shadow:0 0 14px 3px rgba(201,154,63,.65);animation:brille 2.6s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--orange);animation-delay:.6s}
+.guirlande i:nth-child(3n){animation-delay:1.2s}
+@keyframes brille{50%{opacity:.35;box-shadow:none}}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 2.2rem;text-align:left}
+.idees div{background:rgba(255,255,255,.08);border:1px solid rgba(243,197,143,.35);border-radius:20px;padding:1.2rem 1.2rem 1.3rem}
+.idees b{display:block;font-family:'Fraunces',serif;font-size:1.15rem;color:#fff;margin-bottom:.3rem}
+.idees span{font-size:.93rem;color:#e5e9cf}
+.noel .ctas{justify-content:center}
+.noel .mini{font-size:.8rem;color:#cfd3b6;margin-top:1.2rem}
+/* infos */
+.infos{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.fiche{background:#fff;border-radius:24px;padding:1.6rem;box-shadow:0 26px 56px -38px rgba(51,64,26,.75)}
+.ligne{display:flex;gap:.9rem;padding:.9rem 0;border-bottom:1px dashed #d9cfb6}
+.ligne:last-child{border:0}
+.ligne svg{flex:none;width:26px;height:26px;margin-top:.15rem}
+.ligne b{display:block;font-family:'Fraunces',serif;color:var(--olive-f)}
+.ligne a{color:var(--orange-f);font-weight:700;overflow-wrap:anywhere}
+.ligne p{font-size:.95rem}
+.carte-illu{border-radius:24px;overflow:hidden;background:var(--lin);position:relative}
+.carte-illu svg{display:block;width:100%;height:auto}
+.carte-illu figcaption{font-size:.78rem;color:var(--doux);padding:.6rem 1rem}
+footer{background:var(--olive-f);color:#d9d6bc;text-align:center;padding:2.6rem 5vw 3rem;font-size:.86rem}
+footer .script{font-size:2.4rem;color:#fff;display:block;margin-bottom:.4rem}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .mosaique figure:last-child{grid-column:span 2}
+ .mosaique figure:last-child img{aspect-ratio:2/1}
+ .maison,.infos{grid-template-columns:1fr}
+ .moment{grid-template-columns:1fr}
+ .idees{grid-template-columns:1fr}
+ .mosaique{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#feuilles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Fruits et Légumes CHEZ POTIN</div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/etal-radis-bredes.webp" alt="L'étal Chez Potin : bottes de radis, salades, brèdes et aubergines"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Fruits &amp; Légumes · Épicerie · Saint-Joseph</p>
+    <h1 class="apparait d2">Chez Potin<small>Fruits et Légumes, épicerie et bien plus…</small></h1>
+    <p class="devise-hero apparait d3"><span>Qualité</span><span>Fraîcheur</span><span>Péi</span></p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="#arrivages">Voir les arrivages</a>
+      <a class="btn btn-line" href="#venir">Venir au magasin</a>
+    </div>
+    <p class="adr apparait d3">Rue du Maréchal Leclerc, 97480 Saint-Joseph</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22c120-18 240-24 360-12s240 30 360 24 240-30 360-30 240 12 360 18v22z" fill="#4f6128"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Brèdes</span><span>Fleurs d'oignons</span><span>Courgettes rondes</span><span>Mangues</span><span>Margozes</span><span>Patates douces</span><span>Radis</span><span>Carottes</span><span>Citrons</span><span>Endives</span><span>Tomates</span><span>Épicerie</span>
+<span>Brèdes</span><span>Fleurs d'oignons</span><span>Courgettes rondes</span><span>Mangues</span><span>Margozes</span><span>Patates douces</span><span>Radis</span><span>Carottes</span><span>Citrons</span><span>Endives</span><span>Tomates</span><span>Épicerie</span>
+</div></div>
+
+<section class="wrap maison">
+  <div class="rv">
+    <p class="eyebrow">Le magasin</p>
+    <h2>Le bon goût du marché, rue du Maréchal Leclerc</h2>
+    <p>À Saint-Joseph, Chez Potin réunit sous le même toit les fruits et légumes du moment, une épicerie et bien plus encore. Chaque semaine, les arrivages sont annoncés sur la page du magasin, en photos, dès le matin.</p>
+    <p>Trois mots guident la maison : <b>qualité, fraîcheur et péi</b>.</p>
+    <div class="trio">
+      <div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#eef2dc"/><path d="M20 30c-6 0-9-5-8-10 1-4 5-6 8-4 3-2 7 0 8 4 1 5-2 10-8 10z" fill="#7a9a3a"/><path d="M20 16c0-3 1-5 4-6" stroke="#4f6128" stroke-width="2" fill="none" stroke-linecap="round"/></svg><p><b>Fruits &amp; légumes frais</b><span>Brèdes, racines, fruits du moment</span></p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#fbe9d6"/><rect x="13" y="15" width="14" height="15" rx="3" fill="#e07a2c"/><rect x="12" y="11" width="16" height="5" rx="2" fill="#c99a3f"/><path d="M16 22h8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><p><b>Épicerie</b><span>Une large gamme à découvrir</span></p></div>
+      <div><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#eef2dc"/><path d="M11 18h18l-2 11H13z" fill="#c99a3f"/><path d="M15 18c0-4 2-7 5-7s5 3 5 7" stroke="#4f6128" stroke-width="2" fill="none"/></svg><p><b>Et bien plus…</b><span>Jusqu'aux barquettes, en cas de besoin</span></p></div>
+    </div>
+    <div class="chiffres">
+      <div><b>3,2 K</b><span>abonnés sur Facebook</span></div>
+      <div><b>Péi</b><span>dans la devise du magasin</span></div>
+    </div>
+  </div>
+  <figure class="logo-carte rv">
+    <img src="img/logo-chez-potin.webp" alt="Logo Chez Potin : un panier de fruits et légumes, Fruits &amp; Légumes · Épicerie">
+    <figcaption>Le panier Chez Potin, tel qu'il s'affiche sur la page du magasin</figcaption>
+  </figure>
+</section>
+
+<section class="arr" id="arrivages">
+  <div class="wrap rv">
+    <p class="eyebrow">Les arrivages</p>
+    <h2>Ce matin sur les étals</h2>
+    <p>Les photos publiées par Chez Potin pour son arrivage du 5 novembre 2026 : de la couleur à chaque cagette.</p>
+  </div>
+  <div class="galerie" tabindex="0" aria-label="Galerie des arrivages">
+    <figure><img src="img/carottes-fanes.webp" alt="Bottes de carottes avec leurs fanes" loading="lazy"><figcaption>Carottes en botte</figcaption></figure>
+    <figure><img src="img/mangues-vertes.webp" alt="Mangues vertes avec feuilles et tiges" loading="lazy"><figcaption>Mangues vertes</figcaption></figure>
+    <figure><img src="img/tomates-margozes.webp" alt="Tomates rouges et margozes" loading="lazy"><figcaption>Tomates &amp; margozes</figcaption></figure>
+    <figure><img src="img/patates-douces.webp" alt="Patates douces blanches et rouges" loading="lazy"><figcaption>Patates douces</figcaption></figure>
+    <figure><img src="img/citrons.webp" alt="Cagettes de citrons jaunes et de citrons verts" loading="lazy"><figcaption>Citrons jaunes &amp; verts</figcaption></figure>
+    <figure><img src="img/radis-blancs.webp" alt="Radis blancs avec leurs feuilles" loading="lazy"><figcaption>Radis blancs</figcaption></figure>
+    <figure><img src="img/petits-piments.webp" alt="Petits piments verts en vrac" loading="lazy"><figcaption>Petits piments verts</figcaption></figure>
+    <figure><img src="img/endives.webp" alt="Endives blanches et jaunes en cagette" loading="lazy"><figcaption>Endives</figcaption></figure>
+  </div>
+  <p class="glisse">Faites glisser pour voir tout l'arrivage →</p>
+  <p class="citation rv">« Nos arrivages Chez Potin ! »</p>
+</section>
+
+<section class="wrap">
+  <div class="rv">
+    <p class="eyebrow">Du moment</p>
+    <h2>Les dernières nouvelles du magasin</h2>
+    <p>Repris mot pour mot des publications de Chez Potin.</p>
+  </div>
+  <div class="moment">
+    <article class="post rv"><img src="img/fleurs-oignons.webp" alt="Cagette de fleurs d'oignons" loading="lazy"><div class="post-in"><small>4 novembre 2026</small><blockquote>« Fleurs oignons disponible Chez Potin ! »</blockquote><p>Les belles tiges vertes et leurs boutons, prêtes pour la marmite.</p></div></article>
+    <article class="post rv"><img src="img/etal-radis-bredes.webp" alt="Bottes de brèdes et radis sur l'étal" loading="lazy" style="object-position:center 75%"><div class="post-in"><small>4 novembre 2026</small><blockquote>« Large variété de brèdes, disponible Chez Potin »</blockquote><p>De quoi composer un bon cari brèdes, selon les envies du jour.</p></div></article>
+    <article class="post texte rv"><div class="post-in"><small>5 novembre 2026</small><blockquote>« Courgettes rondes, parfaites pour réaliser de délicieuses courgettes farcies ! »</blockquote><p>L'idée recette du magasin, à emporter avec le panier.</p></div><svg class="deco" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="55" r="40" fill="#fff"/><path d="M50 15c0-8 6-12 12-12" stroke="#fff" stroke-width="6" fill="none"/></svg></article>
+    <article class="post texte rv" style="background:var(--orange-f)"><div class="post-in"><small style="color:#fff3e0">7 octobre 2026</small><blockquote>« Besoin de barquettes ? On a ce qu'il vous faut ! »</blockquote><p style="color:#fff3e0">Chez Potin pense aussi aux petits à-côtés du quotidien.</p></div></article>
+  </div>
+  <div class="mosaique">
+    <figure class="rv"><img src="img/tomates.webp" alt="Tomates rouges en vrac" loading="lazy"><figcaption>Tomates</figcaption></figure>
+    <figure class="rv"><img src="img/carottes.webp" alt="Carottes alignées" loading="lazy"><figcaption>Carottes</figcaption></figure>
+    <figure class="rv"><img src="img/germes-soja.webp" alt="Germes de soja en cagette" loading="lazy"><figcaption>Germes de soja</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap rv">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow">Offrir pour Noël</p>
+    <h2>Le panier des fêtes Chez Potin</h2>
+    <p>Pour le repas de Noël ou pour faire plaisir, préparez vos courses de fête avec les fruits, les légumes et l'épicerie du magasin. Dites-nous ce qui vous ferait plaisir, on s'occupe du reste.</p>
+    <div class="idees">
+      <div><b>Un panier à offrir</b><span>Fruits du moment et douceurs de l'épicerie, réunis pour quelqu'un que vous aimez.</span></div>
+      <div><b>La table du réveillon</b><span>Légumes et brèdes pour vos caris et vos gratins de fête.</span></div>
+      <div><b>Votre commande des fêtes</b><span>Écrivez-nous ce qu'il vous faut, on vous répond avec plaisir.</span></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-main" href="mailto:chezpotin@gmail.com?subject=Mon%20panier%20de%20No%C3%ABl%20Chez%20Potin&amp;body=Bonjour%2C%20je%20voudrais%20pr%C3%A9parer%20un%20panier%20pour%20No%C3%ABl%20%3A%20">Préparer mon panier de Noël</a>
+      <a class="btn btn-line" href="https://www.facebook.com/people/Fruits-et-L%C3%A9gumes-CHEZ-POTIN/100031961396463/">Écrire sur Facebook</a>
+    </div>
+    <p class="mini">Paniers et horaires des fêtes à confirmer avec le magasin.</p>
+  </div>
+</section>
+
+<section class="wrap" id="venir">
+  <div class="infos">
+    <div class="rv">
+      <p class="eyebrow">Venir au magasin</p>
+      <h2>On vous attend à Saint-Joseph</h2>
+      <div class="fiche">
+        <div class="ligne"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z" fill="#e07a2c"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></svg><p><b>Adresse</b>Rue du Maréchal Leclerc, 97480 Saint-Joseph<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Potin%20rue%20du%20Mar%C3%A9chal%20Leclerc%20Saint-Joseph%20R%C3%A9union">Ouvrir l'itinéraire</a></p></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#7a9a3a"/><path d="M12 7v5l3 2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg><p><b>Horaires</b>Annoncés au fil des semaines sur la page du magasin. Récemment : le samedi en journée continue jusqu'à 18h45, et le mercredi 11 novembre de 7h30 à 12h.</p></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3" fill="#c99a3f"/><path d="M3 7l9 6 9-6" stroke="#fff" stroke-width="1.8" fill="none"/></svg><p><b>E-mail</b><a href="mailto:chezpotin@gmail.com">chezpotin@gmail.com</a></p></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#4f6128"/><path d="M13.2 18v-5.2h1.8l.3-2.1h-2.1V9.4c0-.6.2-1 1-1h1.1V6.5c-.2 0-.9-.1-1.6-.1-1.6 0-2.7 1-2.7 2.8v1.5H9.2v2.1H11V18z" fill="#fff"/></svg><p><b>Facebook</b><a href="https://www.facebook.com/people/Fruits-et-L%C3%A9gumes-CHEZ-POTIN/100031961396463/">Fruits et Légumes CHEZ POTIN</a><br>Les arrivages du jour, en photos.</p></div>
+      </div>
+    </div>
+    <figure class="carte-illu rv">
+      <svg viewBox="0 0 400 420" role="img" aria-label="Illustration : un panier de fruits et légumes">
+        <rect width="400" height="420" fill="#efe4cf"/>
+        <g opacity=".35" stroke="#d6c8a8" stroke-width="2"><path d="M0 70h400M0 140h400M0 210h400M0 280h400M0 350h400"/></g>
+        <circle cx="200" cy="190" r="120" fill="#f8f1e4"/>
+        <path d="M120 200c0-60 160-60 160 0" stroke="#a97a3c" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <g class="balance">
+          <path d="M150 165c-10-30 5-55 25-60-2 25-8 45-25 60z" fill="#7a9a3a"/>
+          <path d="M170 160c5-35 30-50 50-48-10 22-25 40-50 48z" fill="#5f7d2a"/>
+          <ellipse cx="160" cy="205" rx="14" ry="38" fill="#e07a2c" transform="rotate(-25 160 205)"/>
+          <circle cx="205" cy="200" r="26" fill="#d9442b"/>
+          <path d="M205 176c2-8 8-12 14-12" stroke="#4f6128" stroke-width="4" fill="none"/>
+          <circle cx="245" cy="205" r="20" fill="#e9c547"/>
+          <rect x="255" y="150" width="18" height="50" rx="6" fill="#c99a3f"/>
+          <rect x="258" y="140" width="12" height="14" rx="3" fill="#8a6a2c"/>
+        </g>
+        <path d="M110 205h180l-18 85c-2 10-10 16-20 16H148c-10 0-18-6-20-16z" fill="#c9954d"/>
+        <g stroke="#a97a3c" stroke-width="3" opacity=".7"><path d="M118 230h164M124 255h152M130 280h140"/><path d="M150 205l8 100M180 205l4 100M220 205l-4 100M250 205l-8 100"/></g>
+        <text x="200" y="370" text-anchor="middle" font-family="Dancing Script, cursive" font-size="40" font-weight="700" fill="#4f6128">Chez Potin</text>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+<footer>
+  <span class="script">Chez Potin</span>
+  Fruits &amp; Légumes · Épicerie · Rue du Maréchal Leclerc, Saint-Joseph<br><br>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Fruits et Légumes CHEZ POTIN.
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('feuilles'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+var cols=['#7a9a3a','#5f7d2a','#9bb556','#e07a2c','#c99a3f'];
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;c.style.width=W+'px';c.style.height=H+'px';x.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+var n=W<600?16:26;
+for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:5+Math.random()*7,v:.25+Math.random()*.55,a:Math.random()*6.28,r:.01+Math.random()*.02,o:.18+Math.random()*.25,c:cols[i%cols.length],w:Math.random()*6.28});
+function leaf(p){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;x.beginPath();x.moveTo(0,-p.s);x.quadraticCurveTo(p.s*.8,0,0,p.s);x.quadraticCurveTo(-p.s*.8,0,0,-p.s);x.fill();x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.w+=.012;p.y+=p.v;p.x+=Math.sin(p.w)*.45;p.a+=p.r;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}leaf(p)});requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Potin" defer></script>
+</body>
+</html>
