@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Jardin Pays · Aménagement paysager à La Possession, sur toute l'île</title>
+<meta name="description" content="Jardin Pays, aménagement paysager et entretien de parc et jardin depuis 2009 à La Possession (La Réunion) : végétalisation, arrosage automatique, récupération d'eau de pluie, terrasse, pergola, clôture. 0692 95 23 08.">
+<meta property="og:title" content="Jardin Pays · Aménagement paysager, La Possession">
+<meta property="og:description" content="Des jardins naturels et durables, sur toute l'île, depuis 2009.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/jardin-pays-la-possession/img/apres-27m2.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/jardin-pays-la-possession/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#163222;--foret2:#1f4430;--feuille:#4f7d3a;--tendre:#a9c47f;--orange:#e07b24;--orange-f:#bf6115;--creme:#f7f2e7;--galet:#ece4d3;--bambou:#c9a56a;--txt:#24342a;--doux:#6c776c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--foret);line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Caveat',cursive;color:var(--orange);font-weight:600}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--feuille);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:var(--tendre);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#feuilles{position:fixed;inset:0;pointer-events:none;z-index:4}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--orange);color:#fff;box-shadow:0 14px 30px -14px rgba(224,123,36,.95);animation:souffle 3.8s ease-in-out infinite}
+.btn-main:hover{background:var(--orange-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(224,123,36,.65)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-vert{background:var(--foret);color:#fff}
+.btn-vert:hover{background:var(--feuille)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--foret);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,50,34,.45) 0%,rgba(22,50,34,.55) 30%,rgba(22,50,34,.95) 80%)}
+.rayons{position:absolute;inset:-20%;z-index:1;background:repeating-linear-gradient(115deg,rgba(255,240,190,0) 0 60px,rgba(255,240,190,.09) 60px 90px,rgba(255,240,190,0) 90px 170px);mix-blend-mode:screen;animation:rayons 14s ease-in-out infinite alternate}
+@keyframes rayons{from{transform:translateX(-4%);opacity:.5}to{transform:translateX(4%);opacity:1}}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.hero .eyebrow{color:#d6eab2;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.hero h1{color:#fff;font-size:clamp(3.4rem,15vw,7.5rem);letter-spacing:.01em;margin-top:.4rem}
+.hero h1 .script{display:block;font-size:.42em;color:#ffb36b;margin-top:.15em;line-height:1}
+.hero .lead{font-size:1.1rem;max-width:34rem;margin:1.1rem 0 1.8rem;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:var(--tendre)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--feuille);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"❦";margin-left:2.4rem;font-style:normal;color:var(--tendre)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.intro p+p{margin-top:1rem}
+.devise{font-family:'Caveat',cursive;font-size:clamp(1.7rem,6vw,2.3rem);color:var(--orange);line-height:1.15;margin:1.4rem 0 .4rem}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--feuille);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.arche{position:relative;margin:0}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 22px 22px;box-shadow:0 40px 80px -40px rgba(22,50,34,.7)}
+.arche::before{content:"";position:absolute;inset:-12px;border:1.5px solid var(--bambou);border-radius:210px 210px 30px 30px;opacity:.7}
+.arche figcaption{position:absolute;left:-.3rem;bottom:1.2rem;background:#fff;padding:.6rem 1rem;border-radius:14px;font-size:.84rem;box-shadow:0 18px 40px -20px rgba(22,50,34,.55)}
+/* avant apres */
+.aa-sec{background:linear-gradient(180deg,var(--creme),var(--galet))}
+.aa-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.aa{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 34px 70px -36px rgba(22,50,34,.75);user-select:none;touch-action:pan-y}
+.aa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.aa .apres{clip-path:inset(0 0 0 var(--p,50%))}
+.aa .ligne{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.35)}
+.aa .poignee{position:absolute;top:50%;left:var(--p,50%);width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);font-weight:700;font-size:1.1rem}
+.aa .tag{position:absolute;top:1rem;padding:.25rem .8rem;border-radius:999px;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:rgba(22,50,34,.8);color:#fff}
+.aa .t1{left:1rem}.aa .t2{right:1rem;background:var(--orange)}
+.aa input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.indice{font-size:.85rem;color:var(--doux);margin-top:.8rem;text-align:center}
+.liste{list-style:none;margin-top:1.2rem;display:grid;gap:.55rem}
+.liste li{padding-left:1.8rem;position:relative}
+.liste li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:0 70% 0 70%;background:var(--feuille)}
+.date{display:inline-block;background:#fff;border-radius:999px;padding:.25rem .9rem;font-size:.8rem;color:var(--feuille);font-weight:700;box-shadow:0 6px 18px -10px rgba(22,50,34,.5)}
+/* savoir-faire */
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.carte{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 22px 50px -36px rgba(22,50,34,.6);transition:transform .4s,box-shadow .4s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(22,50,34,.6)}
+.carte::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:0 100% 0 100%;background:var(--tendre);opacity:.18;transition:transform .6s}
+.carte:hover::after{transform:rotate(25deg) scale(1.2)}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--galet);display:grid;place-items:center;margin-bottom:.9rem}
+.ico svg{width:26px;height:26px;stroke:var(--feuille);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.carte h3{margin-bottom:.35rem}
+.carte p{font-size:.95rem}
+/* chantiers */
+.chantiers{background:var(--foret);color:var(--creme);overflow:hidden}
+.chantiers h2{color:#fff}.chantiers .eyebrow{color:var(--tendre)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 calc(50% - 50vw);scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;border-radius:22px;overflow:hidden;background:var(--foret2);box-shadow:0 30px 60px -34px rgba(0,0,0,.8)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figure.l{flex-basis:min(88vw,520px)}
+.galerie figure.l img{aspect-ratio:4/3;height:calc(100% - 4.2rem)}
+.galerie figcaption{padding:.8rem 1.1rem 1rem;font-size:.88rem;line-height:1.45}
+.galerie figcaption b{display:block;color:var(--tendre);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+.fleches{font-size:.85rem;color:var(--tendre)}
+.journal{display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(2,1fr)}
+.entree{border-left:2px solid var(--orange);padding:.2rem 0 .2rem 1.1rem}
+.entree b{font-family:'Fraunces',serif;font-weight:400;font-size:1.1rem;color:#fff}
+.entree small{display:block;color:var(--tendre);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700}
+.entree p{font-size:.95rem;margin-top:.2rem}
+/* engagements */
+.engag{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+.eng{text-align:center;padding:1.3rem .8rem;border-radius:20px;background:#fff;box-shadow:0 18px 40px -32px rgba(22,50,34,.6)}
+.eng .rond{width:58px;height:58px;margin:0 auto .7rem;border-radius:50%;background:var(--foret);display:grid;place-items:center}
+.eng svg{width:28px;height:28px;stroke:var(--tendre);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.eng h3{font-size:1rem;margin-bottom:.25rem}
+.eng p{font-size:.86rem;color:var(--doux);line-height:1.5}
+.slogan{text-align:center;margin-top:2.6rem;font-family:'Caveat',cursive;font-size:clamp(1.9rem,6vw,2.6rem);color:var(--feuille);line-height:1.15}
+.etapes{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.etapes span{border:1px solid var(--bambou);border-radius:999px;padding:.3rem 1rem;font-size:.88rem;background:var(--creme)}
+/* zone */
+.zone{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.ile{max-width:420px;margin:auto}
+.ile svg{width:100%;height:auto}
+.ile figcaption{text-align:center;font-size:.8rem;color:var(--doux);margin-top:.4rem}
+.pt{animation:pulse 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes pulse{50%{transform:scale(1.5);opacity:.6}}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#24543a,var(--foret) 70%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#ffcf94}
+.guirl{width:100%;height:auto;display:block;margin:-1rem 0 1.6rem}
+.guirl .lp{animation:luit 2.4s ease-in-out infinite}
+.guirl .lp:nth-of-type(2n){animation-delay:.8s}.guirl .lp:nth-of-type(3n){animation-delay:1.5s}
+@keyframes luit{50%{opacity:.35}}
+.noel p.lead{max-width:38rem;margin:0 auto 1.6rem}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:900px;margin:0 auto 2rem;text-align:left}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(255,207,148,.3);border-radius:20px;padding:1.2rem 1.3rem}
+.idee b{font-family:'Fraunces',serif;font-weight:400;font-size:1.15rem;color:#fff;display:block;margin-bottom:.2rem}
+.idee p{font-size:.93rem}
+.noel .ctas{justify-content:center}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.coord{list-style:none;display:grid;gap:1rem;margin-top:1.2rem}
+.coord li{display:flex;gap:.9rem;align-items:flex-start}
+.coord svg{width:22px;height:22px;stroke:var(--feuille);fill:none;stroke-width:1.7;flex:none;margin-top:.25rem;stroke-linecap:round;stroke-linejoin:round}
+.coord a{text-decoration:none;font-weight:700;color:var(--foret);word-break:break-word}
+.boite{background:#fff;border-radius:24px;padding:1.8rem;box-shadow:0 30px 60px -40px rgba(22,50,34,.7)}
+.boite .ctas{flex-direction:column;margin-top:1.2rem}
+.boite .btn{width:100%}
+footer{text-align:center;padding:2.4rem 1rem 6.5rem;font-size:.82rem;color:var(--doux);background:var(--galet)}
+.flottant{position:fixed;right:1rem;bottom:1rem;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);animation:souffle2 3s ease-in-out infinite}
+.flottant svg{width:30px;height:30px;fill:#fff}
+@keyframes souffle2{50%{transform:scale(1.07)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .intro,.aa-grid,.zone,.contact{grid-template-columns:1fr}
+ .cartes,.idees,.journal{grid-template-columns:1fr}
+ .engag{grid-template-columns:1fr 1fr}
+ .engag .eng:last-child{grid-column:1/-1}
+ .arche{max-width:360px;margin:0 auto}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#feuilles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Jardin Pays</div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/apres-27m2.webp" alt="Petit jardin de 27 m² aménagé par Jardin Pays : galets clairs, canisses, guirlande de suspensions tressées et palmiers" fetchpriority="high"></div>
+  <div class="rayons" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Aménagement paysager · La Possession · depuis 2009</p>
+    <h1 class="apparait d2">Jardin Pays<span class="script">des jardins naturels et durables</span></h1>
+    <p class="lead apparait d3">Aménagement paysager, entretien de parc et jardin, sur toute l'île. Végétalisation, arrosage automatique, récupération d'eau de pluie, terrasse, pergola, clôture et maçonnerie paysagère.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20je%20voudrais%20parler%20de%20mon%20jardin"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>Parler de mon jardin</a>
+      <a class="btn btn-line" href="tel:+262692952308">0692 95 23 08</a>
+    </div>
+    <p class="adr apparait d3">Dos d'Âne, La Possession · intervention sur toute l'île</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22c120-14 240-22 360-14s240 26 360 22 240-24 360-26 240 10 360 18v22z" fill="#4f7d3a"/></svg>
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Végétalisation</span><span>Arrosage automatique</span><span>Récupération d'eau de pluie</span><span>Terrasse</span><span>Pergola</span><span>Clôture</span><span>Maçonnerie paysagère</span><span>Entretien de parc et jardin</span>
+  <span>Végétalisation</span><span>Arrosage automatique</span><span>Récupération d'eau de pluie</span><span>Terrasse</span><span>Pergola</span><span>Clôture</span><span>Maçonnerie paysagère</span><span>Entretien de parc et jardin</span>
+</div></div>
+
+<section id="maison">
+  <div class="wrap intro">
+    <div class="rv">
+      <p class="eyebrow">La maison</p>
+      <h2>Des extérieurs pensés pour le climat de La Réunion</h2>
+      <p>Depuis 2009, Jardin Pays aménage et entretient parcs et jardins. Une société de service d'architecture paysagère installée à Dos d'Âne, sur les hauteurs de La Possession, qui intervient sur toute l'île.</p>
+      <p>Du coin de cour à transformer jusqu'au système d'arrosage complet : la même équipe conçoit, réalise et entretient, avec des végétaux adaptés et une eau bien gérée.</p>
+      <p class="devise">« Cultivons ensemble des espaces qui vous ressemblent. »</p>
+      <div class="chiffres">
+        <div><b>2009</b><span>en activité depuis</span></div>
+        <div><b>3 K</b><span>abonnés sur Facebook</span></div>
+        <div><b>974</b><span>toute l'île</span></div>
+      </div>
+    </div>
+    <figure class="arche rv"><img src="img/pergola-galets.webp" alt="Pergola habillée de canisses, suspensions tressées, pas japonais sur galets blancs" loading="lazy"><figcaption>Réalisation Jardin Pays</figcaption></figure>
+  </div>
+</section>
+
+<section class="aa-sec" id="avant-apres">
+  <div class="wrap aa-grid">
+    <div class="rv">
+      <div class="aa" id="aa" style="--p:50%">
+        <img src="img/avant-27m2.webp" alt="Le jardin de 27 m² avant le chantier" loading="lazy">
+        <img class="apres" src="img/apres-27m2.webp" alt="Le même jardin de 27 m² après le chantier Jardin Pays" loading="lazy">
+        <span class="tag t1">Avant</span><span class="tag t2">Après</span>
+        <span class="ligne"></span><span class="poignee" aria-hidden="true">⇆</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après">
+      </div>
+      <p class="indice">Faites glisser pour voir la transformation</p>
+    </div>
+    <div class="rv">
+      <span class="date">Publié le 18 septembre 2026</span>
+      <p class="eyebrow" style="margin-top:1.2rem">Fin de chantier</p>
+      <h2>27 m² devenus un vrai coin de vie</h2>
+      <p>« Fin de chantier pour ce petit espace de jardin de 27 m² » : une cour du quotidien devenue une terrasse lumineuse où l'on a envie de s'attabler.</p>
+      <ul class="liste">
+        <li>Un lit de galets clairs et des pas japonais</li>
+        <li>Une pergola habillée de canisses</li>
+        <li>Une guirlande de suspensions tressées pour les soirées</li>
+        <li>Des palmiers et feuillages tropicaux en bordure</li>
+      </ul>
+      <a class="btn btn-main" style="margin-top:1.6rem" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20j%27ai%20vu%20votre%20jardin%20de%2027%20m2%20et%20j%27aimerais%20transformer%20le%20mien">Transformer mon extérieur</a>
+    </div>
+  </div>
+</section>
+
+<section id="savoir-faire">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Savoir-faire</p><h2>Du premier coup de pioche à l'entretien</h2></div>
+    <div class="cartes">
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 11C12 6 8 3 4 3c0 5 3 8 8 8z"/><path d="M12 14c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg></div><h3>Végétalisation</h3><p>Des plantes choisies pour s'épanouir sous le climat réunionnais, du massif à la bordure tropicale.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg></div><h3>Arrosage automatique</h3><p>Installation de systèmes d'arrosage et d'irrigation automatique : un jardin toujours bien hydraté.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 9h16l-2 11H6z"/><path d="M8 5l1 4M16 5l-1 4"/><path d="M12 2v3"/></svg></div><h3>Récupération d'eau de pluie</h3><p>Chaque averse devient une réserve pour le jardin : une eau gérée avec bon sens.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8h18"/><path d="M5 8v12M19 8v12"/><path d="M3 5h18"/><path d="M8 5v3M12 5v3M16 5v3"/></svg></div><h3>Terrasse, pergola, clôture</h3><p>Des espaces à vivre dehors : terrasse, pergola pour l'ombre, clôture pour l'intimité.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="14" width="8" height="6" rx="1"/><rect x="13" y="14" width="8" height="6" rx="1"/><rect x="8" y="8" width="8" height="6" rx="1"/></svg></div><h3>Maçonnerie paysagère</h3><p>Dalles, bordures et aménagements maçonnés, jusqu'à la dalle prête à recevoir un abri de jardin.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 21l9-9"/><path d="M14 4l6 6-3 3-6-6z"/><path d="M3 18l3 3"/></svg></div><h3>Entretien de parc et jardin</h3><p>Un suivi régulier pour garder un extérieur net et verdoyant toute l'année.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="chantiers" id="chantiers">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Sur le terrain</p><h2>Les chantiers récents</h2><p class="fleches">Faites défiler les photos →</p></div>
+  </div>
+  <div class="galerie" aria-label="Photos de chantiers Jardin Pays">
+    <figure><img src="img/chantier-terre.webp" alt="Chantier à Saint-Paul : terre préparée et allée dallée" loading="lazy"><figcaption><b>Saint-Paul · 4 sept.</b>Terre préparée le long de l'allée dallée.</figcaption></figure>
+    <figure><img src="img/chantier-carrelage.webp" alt="Pose de lames effet bois sur la terrasse" loading="lazy"><figcaption><b>Saint-Paul · 4 sept.</b>La terrasse prend forme, lame après lame.</figcaption></figure>
+    <figure><img src="img/chantier-croisillons.webp" alt="Pose soignée avec cales de nivellement" loading="lazy"><figcaption><b>Saint-Paul · 4 sept.</b>Pose au cordeau, cales de nivellement en place.</figcaption></figure>
+    <figure class="l"><img src="img/arrosage-electrovannes.webp" alt="Regard d'électrovannes d'un arrosage automatique" loading="lazy"><figcaption><b>Arrosage · 24 juil.</b>Le cœur d'un arrosage automatique : électrovannes en place.</figcaption></figure>
+    <figure class="l"><img src="img/jardin-tropical.webp" alt="Jardin tropical avec allamanda jaune et crotons" loading="lazy"><figcaption><b>Couverture de la page</b>Allamanda jaune, crotons et allée de pas japonais.</figcaption></figure>
+  </div>
+  <div class="wrap">
+    <div class="journal">
+      <div class="entree rv"><small>20 juillet 2026 · Saint-Denis</small><b>Arrosage automatique</b><p>Travaux du côté de Mongaillard : installation d'un système d'arrosage automatique.</p></div>
+      <div class="entree rv"><small>20 juillet 2026 · La Possession</small><b>Abri de jardin</b><p>Une dalle de béton pour accueillir un abri : Jardin Pays accompagne aussi vos abris et mobilier de jardin.</p></div>
+      <div class="entree rv"><small>4 septembre 2026 · Saint-Paul</small><b>Terrasse en cours</b><p>Préparation du sol et pose de la terrasse, photos à l'appui.</p></div>
+      <div class="entree rv"><small>18 septembre 2026</small><b>Fin de chantier, 27 m²</b><p>Un petit espace de jardin entièrement transformé.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="engagements">
+  <div class="wrap">
+    <div class="rv" style="text-align:center"><p class="eyebrow">Nos engagements</p><h2>Des jardins <span class="script" style="font-size:1.15em">naturels</span> et durables</h2></div>
+    <div class="engag">
+      <div class="eng rv"><div class="rond"><svg viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 11C12 6 8 3 4 3c0 5 3 8 8 8z"/></svg></div><h3>Végétaux adaptés</h3><p>Plantes locales et adaptées au climat réunionnais.</p></div>
+      <div class="eng rv"><div class="rond"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Gestion durable de l'eau</h3><p>Solutions économes et responsables.</p></div>
+      <div class="eng rv"><div class="rond"><svg viewBox="0 0 24 24"><path d="M12 6v14"/><path d="M12 9c-2-4-7-4-8-1 0 3 4 5 8 5"/><path d="M12 9c2-4 7-4 8-1 0 3-4 5-8 5"/></svg></div><h3>Biodiversité</h3><p>Favoriser la vie du sol et les écosystèmes naturels.</p></div>
+      <div class="eng rv"><div class="rond"><svg viewBox="0 0 24 24"><path d="M3 16c3-3 6-3 9 0s6 3 9 0"/><path d="M3 20c3-3 6-3 9 0s6 3 9 0"/><path d="M12 12V4"/><path d="M9 7l3-3 3 3"/></svg></div><h3>Protection des sols</h3><p>Des sols vivants et préservés.</p></div>
+      <div class="eng rv"><div class="rond"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"/></svg></div><h3>Respect de l'environnement</h3><p>Des choix durables pour aujourd'hui et demain.</p></div>
+    </div>
+    <p class="slogan rv">Cultivons ensemble des espaces qui vous ressemblent</p>
+    <div class="etapes rv"><span>Conseil</span><span>Conception</span><span>Réalisation</span><span>Entretien</span></div>
+  </div>
+</section>
+
+<section class="aa-sec" id="zone">
+  <div class="wrap zone">
+    <div class="rv">
+      <p class="eyebrow">Zone d'intervention</p>
+      <h2>Basé à Dos d'Âne, présent sur toute l'île</h2>
+      <p>Les chantiers récents de Jardin Pays passent par La Possession, Saint-Denis et Saint-Paul. Où que soit votre jardin, l'équipe se déplace.</p>
+      <a class="btn btn-vert" style="margin-top:1.4rem" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20pouvez-vous%20intervenir%20chez%20moi%20%3F%20Je%20suis%20%C3%A0%20">Demander un passage</a>
+    </div>
+    <figure class="ile rv">
+      <svg viewBox="0 0 400 330" role="img" aria-label="Illustration : carte stylisée de La Réunion">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a9c47f"/><stop offset="1" stop-color="#4f7d3a"/></linearGradient></defs>
+        <path id="ilep" d="M210 52 Q240 50 268 70 Q300 92 330 128 Q352 160 354 196 Q352 232 318 262 Q290 284 248 286 Q205 286 178 268 Q150 252 132 220 Q116 190 112 160 Q108 128 112 104 Q116 86 132 76 Q150 66 172 58 Q192 52 210 52z" fill="url(#g)"/>
+        <path d="M210 52 Q240 50 268 70 Q300 92 330 128 Q352 160 354 196 Q352 232 318 262 Q290 284 248 286 Q205 286 178 268 Q150 252 132 220 Q116 190 112 160 Q108 128 112 104 Q116 86 132 76 Q150 66 172 58 Q192 52 210 52z" fill="none" stroke="#163222" stroke-width="1.5" stroke-dasharray="3 6" transform="translate(0 0) scale(1)" opacity=".6"/>
+        <path d="M150 64 L150 30" stroke="#163222" stroke-width="1"/><path d="M210 52 L240 22" stroke="#163222" stroke-width="1"/><path d="M114 120 L60 120" stroke="#163222" stroke-width="1"/>
+        <circle class="pt" cx="210" cy="56" r="7" fill="#e07b24"/><text x="244" y="22" font-family="Nunito Sans,Arial" font-size="17" fill="#163222" font-weight="700">Saint-Denis</text>
+        <circle cx="150" cy="66" r="10" fill="#163222"/><circle class="pt" cx="150" cy="66" r="5.5" fill="#ffb36b"/><text x="150" y="22" text-anchor="middle" font-family="Nunito Sans,Arial" font-size="17" fill="#163222" font-weight="700">La Possession</text>
+        <circle class="pt" cx="116" cy="120" r="7" fill="#e07b24"/><text x="56" y="113" text-anchor="end" font-family="Nunito Sans,Arial" font-size="17" fill="#163222" font-weight="700">Saint-</text><text x="56" y="132" text-anchor="end" font-family="Nunito Sans,Arial" font-size="17" fill="#163222" font-weight="700">Paul</text>
+        <text x="236" y="190" text-anchor="middle" font-family="Caveat,cursive" font-size="40" fill="#fff">toute l'île</text>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirl" viewBox="0 0 400 44" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <path d="M0 8 Q50 40 100 8 Q150 40 200 8 Q250 40 300 8 Q350 40 400 8" fill="none" stroke="#c9a56a" stroke-width="1.2"/>
+    <g fill="#ffcf94"><line x1="25" y1="20" x2="25" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="25" cy="32" r="4.5"/><line x1="50" y1="24" x2="50" y2="31" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="50" cy="36" r="4.5"/><line x1="75" y1="20" x2="75" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="75" cy="32" r="4.5"/><line x1="125" y1="20" x2="125" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="125" cy="32" r="4.5"/><line x1="150" y1="24" x2="150" y2="31" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="150" cy="36" r="4.5"/><line x1="175" y1="20" x2="175" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="175" cy="32" r="4.5"/><line x1="225" y1="20" x2="225" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="225" cy="32" r="4.5"/><line x1="250" y1="24" x2="250" y2="31" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="250" cy="36" r="4.5"/><line x1="275" y1="20" x2="275" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="275" cy="32" r="4.5"/><line x1="325" y1="20" x2="325" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="325" cy="32" r="4.5"/><line x1="350" y1="24" x2="350" y2="31" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="350" cy="36" r="4.5"/><line x1="375" y1="20" x2="375" y2="27" stroke="#c9a56a" stroke-width="1"/><circle class="lp" cx="375" cy="32" r="4.5"/></g>
+  </svg>
+  <div class="wrap">
+    <p class="eyebrow rv">Pour Noël</p>
+    <h2 class="rv">Un jardin prêt à recevoir pour les fêtes</h2>
+    <p class="lead rv">Le repas de Noël sous la pergola, l'apéritif au jardin en famille : offrez-vous un extérieur remis en beauté pour la fin d'année, ou faites ce cadeau à quelqu'un que vous aimez.</p>
+    <div class="idees">
+      <div class="idee rv"><b>Un coup de frais avant les fêtes</b><p>Entretien du jardin, tailles et massifs nets pour accueillir vos invités.</p></div>
+      <div class="idee rv"><b>Un coin à vivre dehors</b><p>Terrasse, pergola, galets : le petit espace qui change tout pour les soirées d'été.</p></div>
+      <div class="idee rv"><b>Une idée cadeau</b><p>Offrir à vos parents ou à un proche une remise en beauté de leur jardin.</p></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20je%20voudrais%20pr%C3%A9parer%20mon%20jardin%20pour%20No%C3%ABl">Préparer mon jardin pour Noël</a>
+      <a class="btn btn-line" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20je%20voudrais%20offrir%20une%20prestation%20de%20jardin%20%C3%A0%20un%20proche%20pour%20No%C3%ABl">Offrir un jardin à un proche</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="rv">
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de votre jardin</h2>
+      <p>Un message, une photo de votre extérieur, et le projet démarre.</p>
+      <ul class="coord">
+        <li><svg viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>31 T rue Père Lucien Courteaud, Dos d'Âne<br>97419 La Possession</span></li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+262692952308">0692 95 23 08</a></li>
+        <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:jardinpays@hotmail.com">jardinpays@hotmail.com</a></li>
+        <li><svg viewBox="0 0 24 24"><path d="M15 3h-3a4 4 0 0 0-4 4v3H5v4h3v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><a href="https://www.facebook.com/profile.php?id=100057590524358">Jardin Pays sur Facebook</a></li>
+      </ul>
+    </div>
+    <div class="boite rv">
+      <h3>Un projet, une question ?</h3>
+      <p style="margin-top:.4rem">Aménagement, arrosage, terrasse ou entretien régulier : écrivez directement à Jardin Pays.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays%2C%20j%27ai%20un%20projet%20pour%20mon%20jardin">Écrire sur WhatsApp</a>
+        <a class="btn btn-vert" href="tel:+262692952308">Appeler</a>
+        <a class="btn" style="border:1.5px solid var(--foret);color:var(--foret)" href="https://www.facebook.com/profile.php?id=100057590524358">Prendre RDV sur Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Jardin Pays · Aménagement paysager, entretien de parc et jardin · La Possession, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Jardin Pays.</footer>
+<a class="flottant" href="https://wa.me/262692952308?text=Bonjour%20Jardin%20Pays" aria-label="WhatsApp Jardin Pays"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+<script>
+(function(){
+var aa=document.getElementById('aa');if(aa){var r=aa.querySelector('input');r.addEventListener('input',function(){aa.style.setProperty('--p',r.value+'%')});}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('feuilles'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),run=true,F=[];
+var cols=['#4f7d3a','#6f9a45','#a9c47f','#c9a56a','#2f5a37'];
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var n=W<600?16:26;
+function mk(top){return{x:Math.random()*W,y:top?-30:Math.random()*H,s:6+Math.random()*9,v:.35+Math.random()*.6,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:Math.random()*6.28,c:cols[(Math.random()*cols.length)|0],al:.25+Math.random()*.35}}
+for(var i=0;i<n;i++)F.push(mk(false));
+function leaf(f){x.save();x.translate(f.x,f.y);x.rotate(f.a);x.globalAlpha=f.al;x.fillStyle=f.c;x.beginPath();x.moveTo(0,-f.s);x.quadraticCurveTo(f.s*.8,0,0,f.s);x.quadraticCurveTo(-f.s*.8,0,0,-f.s);x.fill();x.strokeStyle='rgba(255,255,255,.35)';x.lineWidth=.7;x.beginPath();x.moveTo(0,-f.s*.8);x.lineTo(0,f.s*.8);x.stroke();x.restore()}
+function tick(){if(!run)return;x.clearRect(0,0,W,H);for(var i=0;i<F.length;i++){var f=F[i];f.o+=.012;f.y+=f.v;f.x+=Math.sin(f.o)*.6;f.a+=f.va;if(f.y>H+30)F[i]=mk(true);leaf(f)}requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick()});
+tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Jardin Pays" defer></script>
+</body>
+</html>
