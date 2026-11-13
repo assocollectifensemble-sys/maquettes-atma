@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Pizza la mifa K · Pizzeria à emporter à Sainte-Anne, Saint-Benoît</title>
+<meta name="description" content="Pizza la mifa K, pizzeria à emporter au 4 rue Jonas Bègue, Sainte-Anne (Saint-Benoît). Pizzas 33 ou 40 cm, base tomate ou base crème. Commandes au 0693 668 777.">
+<meta property="og:title" content="Pizza la mifa K · Pizzeria à Sainte-Anne">
+<meta property="og:description" content="Pizzas 33 ou 40 cm, base tomate ou base crème, à emporter. Commandes au 0693 668 777.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/pizza-la-mifa-k-sainte-anne/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/pizza-la-mifa-k-sainte-anne/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#d3262c;--rouge-f:#9e161b;--braise:#f08a2c;--or:#f6c453;--basilic:#3d7b3a;--four:#25140f;--four-2:#3a2018;--creme:#fff8ee;--farine:#f6ead8;--txt:#3a2620;--doux:#7d665d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.05;color:var(--four)}
+h2{font-size:clamp(2.1rem,7vw,3.3rem);margin:.3rem 0 1rem}
+h2 em{color:var(--rouge);font-style:italic}
+.main-note{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--rouge);line-height:1.1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:800;color:var(--rouge)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--four);color:#f3d9b8;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.98rem;transition:transform .3s,background .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -12px rgba(211,38,44,.85);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(240,138,44,.75)}}
+.btn-clair{background:#fff;color:var(--four)}
+.btn-wa{background:#1f9d55;color:#fff}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+/* vichy */
+.vichy{height:14px;background-color:#fff;background-image:linear-gradient(90deg,rgba(211,38,44,.75) 50%,transparent 50%),linear-gradient(rgba(211,38,44,.75) 50%,transparent 50%);background-size:14px 14px;opacity:.9}
+/* hero */
+.hero{min-height:clamp(600px,100svh,900px);display:flex;align-items:flex-end;position:relative;overflow:hidden;background:var(--four);color:#fff;padding:7rem 0 3.2rem}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.18) translate(-2%,2%)}}
+.hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(37,20,15,.25) 0%,rgba(37,20,15,.35) 40%,rgba(37,20,15,.93) 78%,var(--four) 100%)}
+.hero .wrap{position:relative}
+.hero .main-note{color:var(--or);font-size:1.7rem}
+.hero h1{color:#fff;font-size:clamp(3.2rem,15vw,7rem);margin:.2rem 0 .6rem;letter-spacing:-.01em}
+.hero h1 .nw{white-space:nowrap;font-weight:400}
+.hero h1 span{color:var(--rouge);display:inline-block;background:#fff;padding:0 .18em;border-radius:.12em;transform:rotate(-4deg);margin-left:.08em}
+.hero p.lead{font-size:1.12rem;max-width:34rem;color:#f6e7d6;margin-bottom:1.6rem}
+.hero .num{display:block;font-family:'DM Serif Display',serif;font-size:clamp(1.9rem,8vw,2.6rem);color:var(--or);text-decoration:none;margin:.3rem 0 1.3rem;letter-spacing:.02em}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.apparait:nth-child(2){animation-delay:.15s}.apparait:nth-child(3){animation-delay:.3s}.apparait:nth-child(4){animation-delay:.45s}.apparait:nth-child(5){animation-delay:.6s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* marquee */
+.defile{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'DM Serif Display',serif;font-size:1.35rem}
+.defile .piste{display:inline-block;animation:defile 38s linear infinite}
+.defile span{margin:0 1.1rem}
+.defile i{color:var(--or);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{background:var(--creme)}
+.intro .grid{display:grid;gap:2.2rem;align-items:center}
+.intro p{color:var(--txt);margin-bottom:1rem}
+.atouts{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.4rem}
+.atout{background:#fff;border-radius:18px;padding:1rem;box-shadow:0 10px 28px -20px rgba(58,38,32,.6);transition:transform .3s}
+.atout:hover{transform:translateY(-4px) rotate(-.5deg)}
+.atout b{display:block;font-family:'DM Serif Display',serif;font-weight:400;font-size:1.6rem;color:var(--rouge);line-height:1}
+.atout small{font-size:.86rem;color:var(--doux)}
+.photo-tilt{border-radius:50%;overflow:hidden;aspect-ratio:1;box-shadow:0 30px 60px -30px rgba(37,20,15,.8);border:10px solid #fff;max-width:420px;margin:auto;animation:tourne 60s linear infinite}
+.photo-tilt img{width:100%;height:100%;object-fit:cover}
+@keyframes tourne{to{transform:rotate(360deg)}}
+/* four / galerie */
+.four{background:var(--four);color:#f6e7d6;overflow:hidden}
+.four h2{color:#fff}
+.four .eyebrow{color:var(--or)}
+.four .intro-g{max-width:36rem;color:#e9d3bd}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5vw 1.4rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.carte-p{flex:0 0 78%;max-width:340px;scroll-snap-align:center;background:var(--four-2);border-radius:22px;overflow:hidden;transition:transform .35s}
+.carte-p:hover{transform:translateY(-6px)}
+.carte-p .im{aspect-ratio:4/5;overflow:hidden}
+.carte-p img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.carte-p:hover img{transform:scale(1.07)}
+.carte-p .cap{padding:1rem 1.1rem 1.2rem}
+.carte-p h3{color:#fff;font-size:1.45rem}
+.carte-p p{font-size:.92rem;color:#d9c2ab;margin-top:.25rem}
+.glisse{font-family:'Caveat',cursive;font-size:1.35rem;color:var(--or)}
+.source-g{font-size:.82rem;color:#bfa58e;margin-top:.4rem}
+/* vague */
+.vague{display:block;width:100%;height:46px}
+/* carte / menu */
+.menu{background:var(--farine)}
+.onglets{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem 0 1rem;scrollbar-width:none}
+.onglets::-webkit-scrollbar{display:none}
+.onglets button{flex:none;font:inherit;font-weight:800;font-size:.9rem;border:2px solid var(--rouge);color:var(--rouge);background:transparent;border-radius:999px;padding:.55rem 1rem;cursor:pointer;transition:.25s}
+.onglets button[aria-selected=true]{background:var(--rouge);color:#fff}
+.panneau{display:none;background:#fff;border-radius:22px;padding:1.3rem 1.2rem;box-shadow:0 18px 40px -28px rgba(58,38,32,.6)}
+.panneau.on{display:block;animation:monte2 .5s ease}
+@keyframes monte2{from{opacity:0;transform:translateY(10px)}}
+.plat{padding:.85rem 0;border-bottom:1px dashed #e6d3bd}
+.plat:last-child{border:0}
+.plat h3{font-size:1.3rem;color:var(--four)}
+.plat p{font-size:.93rem;color:var(--doux)}
+.tailles{display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;margin:1.4rem 0 .4rem}
+.taille{display:flex;align-items:center;gap:.6rem;background:#fff;border-radius:999px;padding:.4rem 1rem .4rem .4rem;font-weight:800}
+.taille i{display:grid;place-items:center;border-radius:50%;background:var(--rouge);color:#fff;font-style:normal;font-size:.8rem}
+.astuces{display:grid;gap:.8rem;margin-top:1.6rem}
+.astuce{background:var(--creme);border-left:5px solid var(--basilic);border-radius:12px;padding:.9rem 1rem;font-size:.95rem}
+.astuce b{color:var(--basilic)}
+.note-carte{font-size:.84rem;color:var(--doux);margin-top:1rem}
+/* fêtes */
+.fetes{background:linear-gradient(160deg,var(--rouge-f),var(--rouge) 60%,#e2452a);color:#fff;overflow:hidden}
+.fetes h2{color:#fff}
+.fetes h2 em{color:var(--or)}
+.fetes .eyebrow{color:var(--or)}
+.fetes p{color:#ffe9e0;max-width:34rem;margin-bottom:1rem}
+.fetes .boite{position:relative;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:26px;padding:1.6rem 1.3rem}
+.idees{display:grid;gap:.6rem;margin:1.2rem 0 1.6rem;list-style:none}
+.idees li{display:flex;gap:.7rem;align-items:flex-start}
+.idees li::before{content:"";flex:none;width:.7rem;height:.7rem;margin-top:.45rem;border-radius:50%;background:var(--or);box-shadow:0 0 12px var(--or)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:26px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande span{width:9px;height:9px;border-radius:50%;background:var(--or);margin-top:8px;animation:scintille 2.4s ease-in-out infinite;box-shadow:0 0 10px var(--or)}
+.guirlande span:nth-child(2n){animation-delay:1.2s;background:#fff;box-shadow:0 0 10px #fff}
+@keyframes scintille{50%{opacity:.25}}
+.prop{font-size:.8rem;color:#ffd8cc;margin-top:1rem}
+/* infos */
+.infos .grid{display:grid;gap:1rem}
+.bloc{background:#fff;border-radius:22px;padding:1.4rem 1.3rem;box-shadow:0 18px 40px -30px rgba(58,38,32,.7)}
+.bloc h3{font-size:1.45rem;margin-bottom:.4rem;color:var(--rouge)}
+.bloc p{color:var(--txt)}
+.bloc a.lien{color:var(--rouge);font-weight:800}
+.contact-fin{background:var(--four);color:#f6e7d6;text-align:center}
+.contact-fin h2{color:#fff}
+.contact-fin .num{display:block;font-family:'DM Serif Display',serif;font-size:clamp(2.2rem,10vw,3.4rem);color:var(--or);text-decoration:none;margin:.4rem 0 1.4rem}
+.contact-fin .ctas{justify-content:center}
+footer{background:#160b08;color:#b49b88;text-align:center;font-size:.8rem;padding:1.6rem 1rem 2.2rem;line-height:1.6;position:relative;z-index:2}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .intro .grid{grid-template-columns:1.1fr .9fr}
+ .carte-p{flex-basis:31%}
+ .infos .grid{grid-template-columns:repeat(3,1fr)}
+ .astuces{grid-template-columns:repeat(3,1fr)}
+ .fetes .boite{padding:2.4rem 2.2rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Pizza la mifa K</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/pizza-sesame-chevre.webp" alt="Pizza La Sésame avec supplément chèvre : courgettes, champignons, tranches de tomate et sésame, sur sa grille" fetchpriority="high"></div>
+  <div class="wrap">
+    <p class="main-note apparait">Pizzeria à emporter · Sainte-Anne</p>
+    <h1 class="apparait">Pizza <b class="nw">la mifa <span>K</span></b></h1>
+    <p class="lead apparait">Des pizzas généreuses en 33 ou 40 cm, base tomate ou base crème, préparées rue Jonas Bègue pour toute la mifa.</p>
+    <div class="apparait">
+      <span class="eyebrow" style="color:#f6e7d6">Passez vos commandes au</span>
+      <a class="num" href="tel:+262693668777">0693 668 777</a>
+    </div>
+    <div class="ctas apparait">
+      <a class="btn btn-main" href="tel:+262693668777"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Appeler pour commander</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Paysanne</span><i>✦</i><span>Créole</span><i>✦</i><span>Tropical</span><i>✦</i><span>La Frite</span><i>✦</i><span>Chèvre Miel</span><i>✦</i><span>Pêcheur</span><i>✦</i><span>La Sésame</span><i>✦</i><span>La Fermière</span><i>✦</i><span>La Rachel</span><i>✦</i><span>Tartiflette</span><i>✦</i>
+  <span>Paysanne</span><i>✦</i><span>Créole</span><i>✦</i><span>Tropical</span><i>✦</i><span>La Frite</span><i>✦</i><span>Chèvre Miel</span><i>✦</i><span>Pêcheur</span><i>✦</i><span>La Sésame</span><i>✦</i><span>La Fermière</span><i>✦</i><span>La Rachel</span><i>✦</i><span>Tartiflette</span><i>✦</i>
+</div></div>
+
+<section class="intro">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Bienvenue chez la mifa</p>
+      <h2>La pizza qui rassemble <em>toute la famille</em></h2>
+      <p>Au cœur de Sainte-Anne, Pizza la mifa K prépare des pizzas à emporter avec une carte qui fait voyager : sarcives et gros piments pour la Créole, saumon et citron pour le Pêcheur, frites fondantes pour La Royale, miel et Fourme d'Ambert pour la Chèvre Miel.</p>
+      <p>Un coup de fil, et votre pizza vous attend, bien chaude, prête à partager.</p>
+      <div class="atouts">
+        <div class="atout"><b>30+</b><small>recettes à la carte</small></div>
+        <div class="atout"><b>33 · 40</b><small>centimètres, au choix</small></div>
+        <div class="atout"><b>½ · ½</b><small>pizzas moitié / moitié</small></div>
+        <div class="atout"><b>1,4 K</b><small>abonnés sur Facebook</small></div>
+      </div>
+    </div>
+    <div class="rv"><div class="photo-tilt"><img src="img/pizza-boite.webp" alt="Pizza base crème au thon, gros piments et oignons, dans sa boîte à emporter" loading="lazy"></div></div>
+  </div>
+</section>
+
+<div class="vichy" aria-hidden="true"></div>
+
+<section class="four" id="four">
+  <div class="wrap">
+    <p class="eyebrow rv">Tout juste sorties du four</p>
+    <h2 class="rv">Vos pizzas, <em style="color:var(--or)">à la demande</em></h2>
+    <p class="intro-g rv">Ici, chacun compose à son goût : un supplément, une base crème, un ingrédient échangé. Voici quelques commandes partagées par la pizzeria sur sa page.</p>
+    <div class="galerie" tabindex="0" aria-label="Galerie des pizzas, faites glisser">
+      <figure class="carte-p"><div class="im"><img src="img/pizza-frite-base-creme.webp" alt="Pizza Frite base crème avec supplément sarcive et pomme de terre" loading="lazy"></div><figcaption class="cap"><h3>Une Frite base crème</h3><p>supplément sarcive et pomme de terre</p></figcaption></figure>
+      <figure class="carte-p"><div class="im"><img src="img/pizza-poulet-poivrons-chevre.webp" alt="Pizza poulet, poivrons et chèvre avant cuisson" loading="lazy"></div><figcaption class="cap"><h3>Une Poulet</h3><p>poivrons, chèvre</p></figcaption></figure>
+      <figure class="carte-p"><div class="im"><img src="img/pizza-fermiere-jambon.webp" alt="Pizza Fermière au jambon, poireaux, oignons et olives" loading="lazy"></div><figcaption class="cap"><h3>Une Fermière</h3><p>jambon (à la place du saumon), supplément oignons</p></figcaption></figure>
+      <figure class="carte-p"><div class="im"><img src="img/pizza-sesame-chevre.webp" alt="Pizza La Sésame avec supplément chèvre" loading="lazy"></div><figcaption class="cap"><h3>Une Sésame</h3><p>supplément chèvre</p></figcaption></figure>
+      <figure class="carte-p"><div class="im"><img src="img/pizza-pecheur.webp" alt="Pizza Pêcheur au saumon fumé, citron et mozzarella avant cuisson" loading="lazy"></div><figcaption class="cap"><h3>Un Pêcheur</h3><p>supplément mozzarella en boule, quand elle est disponible</p></figcaption></figure>
+      <figure class="carte-p"><div class="im"><img src="img/pizza-boite.webp" alt="Pizza base crème au thon et gros piments dans sa boîte" loading="lazy"></div><figcaption class="cap"><h3>Prête à emporter</h3><p>base crème, thon, gros piments, oignons</p></figcaption></figure>
+    </div>
+    <p class="glisse">← faites glisser →</p>
+    <p class="source-g">Photos et légendes publiées par Pizza la mifa K sur Facebook.</p>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--four)"><path d="M0 46V18c120 18 240 26 360 18S600 4 720 4s240 24 360 30 240-6 360-20v32z" fill="#f6ead8"/></svg>
+
+<section class="menu" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">La carte</p>
+    <h2 class="rv">Nos <em>pizzas</em></h2>
+    <div class="tailles rv">
+      <div class="taille"><i style="width:2.1rem;height:2.1rem">33</i>33 cm</div>
+      <div class="taille"><i style="width:2.6rem;height:2.6rem">40</i>40 cm</div>
+    </div>
+    <div class="onglets rv" role="tablist">
+      <button role="tab" aria-selected="true" data-p="viandes">Viandes</button>
+      <button role="tab" aria-selected="false" data-p="frites">Frites</button>
+      <button role="tab" aria-selected="false" data-p="creme">Base crème</button>
+      <button role="tab" aria-selected="false" data-p="fromages">Fromages</button>
+      <button role="tab" aria-selected="false" data-p="mer">De la mer</button>
+      <button role="tab" aria-selected="false" data-p="vege">Végétariennes</button>
+    </div>
+    <div class="panneau on" id="viandes" role="tabpanel">
+      <div class="plat"><h3>Paysanne</h3><p>Tomate, gruyère, lardons, poivrons, olives</p></div>
+      <div class="plat"><h3>Créole</h3><p>Tomate, gruyère, saucisses, gros piments, oignons, olives</p></div>
+      <div class="plat"><h3>Tropical</h3><p>Tomate, gruyère, sarcives, champignons, ananas, olives</p></div>
+      <div class="plat"><h3>Reine</h3><p>Tomate, gruyère, jambon, champignons, olives</p></div>
+      <div class="plat"><h3>Marguarita</h3><p>Tomate, gruyère, tranche de tomate, olives</p></div>
+      <div class="plat"><h3>Chorizo</h3><p>Tomate, gruyère, chorizo, champignons, gros piments, olives</p></div>
+      <div class="plat"><h3>Tandoori</h3><p>Sauce tandoori, gruyère, poulet, pomme de terre, gros piments, oignons</p></div>
+      <div class="plat"><h3>Spécial</h3><p>Tomate, gruyère, jambon, saucisses, sarcives, chorizo, lardons</p></div>
+      <div class="plat"><h3>Kebab</h3><p>Tomate, gruyère, poulet kebab, concombre, tomates, oignons</p></div>
+    </div>
+    <div class="panneau" id="frites" role="tabpanel">
+      <div class="plat"><h3>La Frite</h3><p>Tomate, gruyère, frites, olives</p></div>
+      <div class="plat"><h3>La Royale</h3><p>Tomate, gruyère, jambon, champignons, frites, olives</p></div>
+      <div class="plat"><h3>Américaine</h3><p>Tomate, gruyère, jambon, frites, olives</p></div>
+      <div class="plat"><h3>Campagnarde</h3><p>Tomate, gruyère, lardons, frites, crème fraîche, olives</p></div>
+      <div class="plat"><h3>Chicken</h3><p>Tomate, gruyère, poulet, champignons, frites, oignons</p></div>
+      <div class="plat"><h3>Bouchons</h3><p>Tomate, gruyère, bouchons, frites, olives</p></div>
+    </div>
+    <div class="panneau" id="creme" role="tabpanel">
+      <div class="plat"><h3>La Fermière</h3><p>Base crème, gruyère, pomme de terre, poireaux, saumon, olives</p></div>
+      <div class="plat"><h3>La Rachel</h3><p>Base crème, gruyère, pomme de terre, courgettes, poivrons, tomates, oignons, saumon, olives</p></div>
+      <div class="plat"><h3>La Rafael</h3><p>Base crème, gruyère, pomme de terre, thon, gros piments, oignons, olives</p></div>
+      <div class="plat"><h3>La Poulette</h3><p>Base crème, gruyère, poulet, jambon de poulet, poivrons, ananas, oignons, olives</p></div>
+      <div class="plat"><h3>Raclette</h3><p>Base crème, gruyère, raclette, bacon, pomme de terre, olives</p></div>
+      <div class="plat"><h3>Tartiflette</h3><p>Base crème, gruyère, reblochon, lardons, pomme de terre, olives</p></div>
+      <div class="plat"><h3>Flammekueche</h3><p>Base crème, gruyère, poulet, reblochon, oignons, champignons, olives</p></div>
+    </div>
+    <div class="panneau" id="fromages" role="tabpanel">
+      <div class="plat"><h3>2 Fromages</h3><p>Tomate, gruyère, mozzarella, bleu d'Auvergne, olives</p></div>
+      <div class="plat"><h3>3 Fromages</h3><p>Tomate, gruyère, mozzarella, cheddar, bleu d'Auvergne, olives</p></div>
+      <div class="plat"><h3>Chèvre Miel</h3><p>Tomate, gruyère, chèvre, mozzarella, Fourme d'Ambert, miel, olives</p></div>
+    </div>
+    <div class="panneau" id="mer" role="tabpanel">
+      <div class="plat"><h3>Océane</h3><p>Tomate, gruyère, crevettes, crabe, crème, citrons, olives</p></div>
+      <div class="plat"><h3>Pêcheur</h3><p>Tomate, gruyère, saumon fumé, citrons, crème, olives</p></div>
+      <div class="plat"><h3>Moule-Frite</h3><p>Tomate, gruyère, moules, frites, crème, olives</p></div>
+      <div class="plat"><h3>Niçoise</h3><p>Tomate, gruyère, thon, citrons, crème, olives</p></div>
+    </div>
+    <div class="panneau" id="vege" role="tabpanel">
+      <div class="plat"><h3>Jardinière</h3><p>Tomate, gruyère, champignons, ananas, oignons, tranche de tomate, olives</p></div>
+      <div class="plat"><h3>La Sésame</h3><p>Tomate, gruyère, courgettes, champignons, poivrons, tranches de tomate, sésame, olives</p></div>
+      <div class="plat"><h3>Fraîcheur</h3><p>Tomate, gruyère, chou-fleur, pomme de terre, poivrons, tranches de tomate, olives</p></div>
+    </div>
+    <div class="astuces">
+      <div class="astuce rv"><b>Moitié / moitié</b> : deux recettes sur une même pizza, pour contenter tout le monde.</div>
+      <div class="astuce rv"><b>Base crème au choix</b> : chaque pizza peut se commander en base crème à la place de la sauce tomate.</div>
+      <div class="astuce rv"><b>Version volaille</b> : saucisses fumées, jambon et sarcives de volaille disponibles.</div>
+    </div>
+    <p class="note-carte">Carte publiée par la pizzeria sur sa page Facebook. Tarifs et suppléments du moment au 0693 668 777.</p>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap">
+    <div class="boite rv">
+      <div class="guirlande" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <p class="eyebrow">Les fêtes avec la mifa</p>
+      <h2>Une soirée pizzas <em>pour Noël</em></h2>
+      <p>Pour le réveillon, un repas entre cousins ou une soirée devant un film, réservez vos grandes pizzas de 40 cm et régalez toute la famille.</p>
+      <ul class="idees">
+        <li>Des pizzas moitié / moitié pour faire goûter plusieurs recettes</li>
+        <li>Une Chèvre Miel ou une Tartiflette pour une soirée gourmande</li>
+        <li>Une commande passée tôt pour récupérer vos pizzas à l'heure qui vous arrange</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-clair" href="tel:+262693668777"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Réserver par téléphone</a>
+        <a class="btn btn-wa" href="https://wa.me/262693668777?text=Bonjour%2C%20je%20voudrais%20commander%20des%20pizzas%20pour%20une%20soir%C3%A9e%20des%20f%C3%AAtes%20en%20famille"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>Écrire sur WhatsApp</a>
+      </div>
+      <p class="prop">Commandes des fêtes : horaires et disponibilités directement auprès de la pizzeria.</p>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Infos pratiques</p>
+    <h2 class="rv">On vous <em>attend</em></h2>
+    <div class="grid">
+      <div class="bloc rv"><h3>Adresse</h3><p>4 rue Jonas Bègue<br>Sainte-Anne, 97437 Saint-Benoît<br>La Réunion</p><p style="margin-top:.6rem"><a class="lien" href="https://www.google.com/maps/search/?api=1&amp;query=4%20rue%20Jonas%20B%C3%A8gue%2097437%20Sainte-Anne%20R%C3%A9union">Ouvrir l'itinéraire →</a></p></div>
+      <div class="bloc rv"><h3>À emporter</h3><p>Commandez par téléphone, votre pizza vous attend à la pizzeria, prête à partir avec vous.</p></div>
+      <div class="bloc rv"><h3>Le bon réflexe</h3><p>Quand il y a du monde, la pizzeria conseille de prendre de l'avance et de commander tôt. Les nouvelles du jour sont sur <a class="lien" href="https://www.facebook.com/profile.php?id=100064748863439">la page Facebook</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-fin">
+  <div class="wrap rv">
+    <p class="main-note" style="color:var(--or)">Une petite faim ?</p>
+    <h2>Passez vos commandes au</h2>
+    <a class="num" href="tel:+262693668777">0693 668 777</a>
+    <div class="ctas">
+      <a class="btn btn-main" href="tel:+262693668777">Appeler la pizzeria</a>
+      <a class="btn btn-line" href="https://www.facebook.com/profile.php?id=100064748863439">Suivre sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>Pizza la mifa K · Pizzeria à emporter · 4 rue Jonas Bègue, Sainte-Anne, Saint-Benoît, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Pizza la mifa K.</footer>
+
+<script>
+(function(){
+// onglets
+var bs=document.querySelectorAll('.onglets button');
+bs.forEach(function(b){b.addEventListener('click',function(){
+ bs.forEach(function(x){x.setAttribute('aria-selected','false')});
+ document.querySelectorAll('.panneau').forEach(function(p){p.classList.remove('on')});
+ b.setAttribute('aria-selected','true');document.getElementById(b.dataset.p).classList.add('on');
+})});
+// apparitions
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}else{rv.forEach(function(el){el.classList.add('vu')})}
+// braises et herbes qui montent du four
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function rs(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+rs();addEventListener('resize',rs);
+function nv(init){var herbe=Math.random()<.3;return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:herbe?2+Math.random()*2:1+Math.random()*2.2,v:.25+Math.random()*.55,a:Math.random()*6.28,h:herbe,o:.25+Math.random()*.4}}
+for(var i=0;i<28;i++)P.push(nv(true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+ P.forEach(function(p,i){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.35;
+  if(p.y<-10)P[i]=nv(false);
+  x.globalAlpha=p.o*(Math.min(1,p.y/(H*.4)));
+  if(p.h){x.fillStyle='#3d7b3a';x.beginPath();x.ellipse(p.x,p.y,p.r*1.6,p.r*.7,p.a,0,6.28);x.fill()}
+  else{x.fillStyle='#f08a2c';x.shadowColor='#f6c453';x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();x.shadowBlur=0}
+ });requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Pizza la mifa K" defer></script>
+</body>
+</html>
