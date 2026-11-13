@@ -104,6 +104,10 @@ main{position:relative;z-index:2}
 .photo-cadre{border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(42,20,70,.55);position:relative}
 .photo-cadre img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .photo-cadre .tag{position:absolute;left:12px;top:12px;background:var(--jaune);color:var(--violet-f);font-weight:800;font-size:.78rem;padding:.3rem .8rem;border-radius:999px}
+.illu{margin-top:.4rem}
+.illu svg{width:100%;height:auto;display:block;border-radius:28px;box-shadow:0 30px 60px -30px rgba(42,20,70,.55)}
+.illu figcaption{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-top:.5rem;text-align:right}
+.illu .etoiles circle{animation:brille 2.8s ease-in-out infinite}.illu .etoiles circle:nth-child(2n){animation-delay:1.1s}
 .menu{display:grid;gap:.9rem}
 .ligne{background:#fff;border-radius:20px;padding:1.1rem 1.2rem;display:grid;grid-template-columns:1fr auto;gap:.2rem 1rem;border:2px solid var(--sable);transition:border-color .3s,transform .3s}
 .ligne:hover{border-color:var(--jaune);transform:translateX(4px)}
@@ -233,7 +237,23 @@ footer b{color:var(--jaune)}
     <div class="rv">
       <p class="eyebrow">Le soir</p>
       <h2>Ultra crousty, maxi goût</h2>
-      <div class="photo-cadre"><img src="img/sandwich.webp" alt="Sandwich garni de frites, fromage fondu et crudités" loading="lazy"><span class="tag">Publié le 8 nov.</span></div>
+      <figure class="illu">
+        <svg viewBox="0 0 320 220" role="img" aria-label="Illustration d'un américain garni de frites">
+          <defs><radialGradient id="lune" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#5b2f8f"/><stop offset="1" stop-color="#2a1446"/></radialGradient></defs>
+          <rect width="320" height="220" rx="28" fill="url(#lune)"/>
+          <g class="etoiles" fill="#f5d33c"><circle cx="40" cy="36" r="2"/><circle cx="276" cy="30" r="2.4"/><circle cx="250" cy="70" r="1.6"/><circle cx="66" cy="78" r="1.4"/><circle cx="292" cy="112" r="1.8"/></g>
+          <path d="M158 22 140 58h14l-8 30 26-40h-14l10-26z" fill="#f5d33c"/>
+          <g transform="translate(36 96)">
+            <path d="M8 62c0-30 52-44 124-44s116 14 116 44z" fill="#e9a54a"/>
+            <g stroke="#f5d33c" stroke-width="9" stroke-linecap="round"><path d="M40 52l-14-26"/><path d="M70 50l-4-34"/><path d="M104 50l8-36"/><path d="M150 50l16-30"/><path d="M190 52l24-22"/><path d="M128 50l-2-38"/></g>
+            <path d="M6 58q30 10 60 0t62 0 62 0 60 0v10H6z" fill="#7cc36a"/>
+            <path d="M10 64h236c4 0 6 6 2 9-28 22-210 22-240 0-4-3-2-9 2-9z" fill="#fff1c7"/>
+            <path d="M14 70c30 6 200 6 228 0l-6 14c-50 14-166 14-216 0z" fill="#f0c03a"/>
+            <path d="M8 84c4 22 236 22 240 0 2 16-10 30-120 30S6 100 8 84z" fill="#d98a3a"/>
+          </g>
+        </svg>
+        <figcaption>Illustration</figcaption>
+      </figure>
       <p class="note">« Crousty à l'extérieur, fondant à l'intérieur ! » : la promesse des nouveautés du snack.</p>
     </div>
     <div class="menu">
