@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snack Le Paradise · Snack-bar à Mare Longue, Saint-Philippe</title>
+<meta name="description" content="Snack Le Paradise, snack-bar au 57 A route de Mare Longue à Saint-Philippe (La Réunion) : burgers, barquettes, kebabs, pains crudités et woks. Commande au 0692 14 10 67.">
+<meta property="og:title" content="Snack Le Paradise · Mare Longue, Saint-Philippe">
+<meta property="og:description" content="Nouvelle page, nouvelle carte : burgers, barquettes, kebabs, pains crudités et woks. La team du paradise vous attend !">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-le-paradise-saint-philippe/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-le-paradise-saint-philippe/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0b0b;--noir2:#171313;--charbon:#221c1b;--rouge:#e3121b;--rouge-f:#a10c12;--braise:#ff5a1f;--frite:#f7b733;--blanc:#fff8f2;--gris:#b9aca6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:'Poppins',system-ui,Arial;font-weight:300;color:var(--blanc);background:var(--noir);line-height:1.65;font-size:16.5px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.marker{font-family:'Permanent Marker',cursive;font-weight:400;line-height:1.05}
+h2{font-size:clamp(2.1rem,7vw,3.4rem);margin:.3rem 0 1rem;color:#fff}
+h2 em{font-style:normal;color:var(--rouge)}
+h3{font-size:1.45rem;color:#fff}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--frite);font-weight:600}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:#000;color:var(--gris);text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4;border-bottom:2px solid var(--rouge)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:800;letter-spacing:.04em;font-size:.95rem;text-transform:uppercase;transition:.3s}
+.btn svg{width:20px;height:20px;flex:0 0 20px}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 0 0 2px #fff inset,0 14px 34px -12px rgba(227,18,27,.95);animation:souffle 3.2s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 0 0 2px #fff inset,0 10px 46px -4px rgba(255,90,31,.85)}}
+.btn-line{border:2px solid var(--frite);color:var(--frite)}
+.btn-line:hover{background:rgba(247,183,51,.12)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:clamp(600px,100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,11,.55) 0%,rgba(13,11,11,.25) 30%,rgba(13,11,11,.8) 66%,var(--noir) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 3.6rem}
+.couronne{width:74px;height:auto;color:var(--rouge);filter:drop-shadow(0 4px 14px rgba(227,18,27,.6));margin-bottom:.3rem}
+.hero h1{font-size:clamp(3.3rem,15vw,7.4rem);color:#fff;text-shadow:4px 4px 0 var(--rouge),0 10px 40px rgba(0,0,0,.6);transform:rotate(-2deg);transform-origin:left}
+.hero h1 small{display:block;font-size:.42em;color:var(--frite);text-shadow:2px 2px 0 #000;margin-bottom:.15em}
+.hero .lead{font-size:1.1rem;max-width:33rem;margin:1.4rem 0 1.8rem;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.hero .lead b{font-weight:800;color:#fff}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:var(--gris)}
+.hero .adr a{color:#fff;font-weight:600}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.hero h1.apparait{animation-name:monteTitre}
+@keyframes monteTitre{to{opacity:1;transform:rotate(-2deg)}}
+/* bande */
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Permanent Marker',cursive;font-size:1.2rem;transform:rotate(-1.5deg);margin:1rem -2vw 0;box-shadow:0 10px 30px -10px rgba(227,18,27,.7)}
+.track{display:inline-block;animation:defile 45s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"★";margin-left:2.2rem;color:var(--frite);font-size:.8rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* nouvelle page */
+.np{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.np p+p{margin-top:1rem}
+.post{background:var(--noir2);border:2px solid var(--rouge);border-radius:20px;padding:1.4rem 1.4rem 1.2rem;position:relative;box-shadow:10px 10px 0 -2px var(--rouge-f)}
+.post .entete{display:flex;align-items:center;gap:.7rem;margin-bottom:.8rem}
+.post .avatar{width:42px;height:42px;border-radius:50%;background:var(--rouge);display:grid;place-items:center;flex:0 0 42px}
+.post .avatar svg{width:26px;color:#fff}
+.post .entete b{display:block;font-weight:600;font-size:.95rem}
+.post .entete span{font-size:.78rem;color:var(--gris)}
+.post p.titre{font-family:'Permanent Marker',cursive;font-size:1.35rem;color:var(--frite);line-height:1.2}
+.post p{font-size:.95rem}
+.post .sig{color:#fff;font-weight:600}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.6rem}
+.chiffres b{display:block;font-family:'Permanent Marker',cursive;font-size:2.3rem;color:var(--rouge);line-height:1}
+.chiffres span{font-size:.82rem;color:var(--gris)}
+/* woks */
+.woks{background:linear-gradient(180deg,var(--noir),var(--charbon) 40%,var(--noir))}
+.woks-tete{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end}
+.saveurs{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.saveurs span{border:2px solid var(--frite);color:var(--frite);border-radius:999px;padding:.35rem 1rem;font-weight:600;font-size:.92rem;transition:.3s}
+.saveurs span:hover{background:var(--frite);color:var(--noir)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 4vw 1.2rem;margin:0 -4vw;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78%,340px);scroll-snap-align:center;border-radius:22px;overflow:hidden;position:relative;background:#000;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);transition:transform .4s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-1deg)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem .9rem;background:linear-gradient(180deg,transparent,rgba(0,0,0,.88));font-size:.82rem;color:var(--gris)}
+.galerie figcaption b{display:block;color:#fff;font-weight:600;font-size:.95rem}
+.glisse{font-size:.8rem;color:var(--gris);text-align:center}
+.glisse span{display:inline-block;animation:glisse 1.8s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(8px)}}
+/* carte */
+.carte-sec{background:var(--noir)}
+.onglets{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem 0 1rem;scrollbar-width:none;margin-top:1.4rem}
+.onglets::-webkit-scrollbar{display:none}
+.onglets button{flex:0 0 auto;font:inherit;font-weight:600;font-size:.9rem;background:transparent;color:#fff;border:2px solid #3a3130;border-radius:999px;padding:.5rem 1.1rem;cursor:pointer;transition:.25s;min-height:44px}
+.onglets button[aria-selected=true]{background:var(--rouge);border-color:var(--rouge)}
+.panneau{display:none;background:var(--noir2);border:2px solid var(--rouge);border-radius:22px;padding:1.6rem 1.3rem;position:relative;overflow:hidden;animation:monte .5s forwards}
+.panneau.actif{display:block}
+.panneau::before{content:"";position:absolute;inset:6px;border:1px solid rgba(227,18,27,.35);border-radius:16px;pointer-events:none}
+.panneau h3{font-size:clamp(1.8rem,7vw,2.6rem);color:#fff;text-shadow:3px 3px 0 var(--rouge);margin-bottom:.3rem}
+.panneau .sous{color:var(--frite);font-size:.92rem;margin-bottom:1.2rem}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:.55rem 1.4rem;list-style:none}
+.items li{position:relative;padding-left:1.2rem;font-weight:400}
+.items li::before{content:"✱";position:absolute;left:0;color:var(--rouge);font-size:.85rem;top:.1rem}
+.items.une{grid-template-columns:1fr}
+.items li small{display:block;color:var(--gris);font-size:.8rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.duo div{border:1px dashed rgba(247,183,51,.5);border-radius:14px;padding:.8rem 1rem}
+.duo b{font-family:'Permanent Marker',cursive;font-weight:400;font-size:1.25rem;color:var(--frite);display:block}
+.duo span{font-size:.85rem;color:var(--gris)}
+.burger-pan{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center}
+.burger-pan figure{width:150px;text-align:center}
+.burger-pan figcaption{font-size:.7rem;color:var(--gris);margin-top:.3rem}
+.burger-pan svg{width:150px;height:auto;animation:flotte 4s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-8px) rotate(2deg)}}
+.slogan{font-family:'Permanent Marker',cursive;font-size:clamp(1.5rem,6vw,2.1rem);color:var(--frite);line-height:1.15;margin:.4rem 0 1rem}
+.note{margin-top:1.4rem;font-size:.86rem;color:var(--gris)}
+.note a{color:var(--frite);font-weight:600}
+/* fetes */
+.fetes{background:radial-gradient(120% 80% at 50% 0%,#3a0a0d 0%,var(--noir) 70%);overflow:hidden}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:46px}
+.guirlande circle{animation:clignote 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes clignote{50%{opacity:.25}}
+.fetes-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.idee{background:rgba(255,255,255,.04);border:1px solid rgba(247,183,51,.35);border-radius:16px;padding:1rem 1.2rem;transition:.3s}
+.idee:hover{border-color:var(--frite);transform:translateX(4px)}
+.idee h3{font-size:1.2rem;color:var(--frite);margin-bottom:.2rem}
+.idee p{font-size:.93rem}
+.ticket{background:var(--blanc);color:var(--noir);border-radius:18px;padding:1.6rem 1.4rem;transform:rotate(2.5deg);box-shadow:0 30px 60px -25px rgba(227,18,27,.7);position:relative;max-width:360px;margin:auto;transition:transform .5s}
+.ticket:hover{transform:rotate(0)}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--noir);margin-top:-13px}
+.ticket::before{left:-13px}.ticket::after{right:-13px}
+.ticket .couronne{color:var(--rouge);width:52px;filter:none;display:block;margin:0 auto .4rem}
+.ticket p.marker{font-size:1.7rem;text-align:center;color:var(--rouge);line-height:1.1}
+.ticket hr{border:0;border-top:2px dashed #d8c9c2;margin:1rem 0}
+.ticket ul{list-style:none;font-size:.9rem;font-weight:400}
+.ticket li{display:flex;justify-content:space-between;gap:.6rem;padding:.2rem 0}
+.ticket li span:last-child{color:var(--rouge-f);font-weight:600}
+.ticket small{display:block;text-align:center;font-size:.72rem;color:#7b6c66;margin-top:.8rem}
+/* contact */
+.contact{background:var(--charbon)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.55rem 0}
+.infos b{font-weight:600;color:var(--frite)}
+.infos a{color:#fff;font-weight:600}
+.tel-geant{display:block;font-family:'Permanent Marker',cursive;font-size:clamp(2.2rem,10vw,3.4rem);color:#fff;text-decoration:none;text-shadow:3px 3px 0 var(--rouge);margin:.4rem 0 1rem}
+.contact figure img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%;border:2px solid var(--rouge)}
+.contact figcaption{font-size:.8rem;color:var(--gris);margin-top:.5rem}
+footer{text-align:center;padding:2.2rem 1rem 6.5rem;font-size:.8rem;color:var(--gris);background:#000}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(0,0,0,.92);border-top:2px solid var(--rouge)}
+.barre a{flex:1;min-height:48px;font-size:.85rem;padding:.6rem .5rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .np,.fetes-in,.contact-in,.woks-tete{grid-template-columns:1fr}
+ .barre{display:flex}
+ .hero-in{padding-top:6.5rem}
+ .ribbon{font-size:.68rem}
+}
+@media (max-width:430px){
+ .items{grid-template-columns:1fr}
+ .burger-pan{grid-template-columns:1fr}
+ .burger-pan figure{margin:auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}.hero h1.apparait{transform:rotate(-2deg)}canvas#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snack Le Paradise</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="crown" viewBox="0 0 64 40"><path d="M4 34 2 8l15 13L32 2l15 19L62 8l-2 26z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/><path d="M6 38h52" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></symbol>
+ <symbol id="tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+ <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+</svg>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/wok-legumes.webp" alt="Barquette de wok sur riz : carottes, courgettes, brocoli, oignon rouge et sauce brune"></div>
+  <div class="wrap hero-in">
+    <svg class="couronne apparait" aria-hidden="true"><use href="#crown"/></svg>
+    <p class="eyebrow apparait">Snack-bar · Mare Longue, Saint-Philippe</p>
+    <h1 class="apparait d2"><small>Snack</small>Le Paradise</h1>
+    <p class="lead apparait d3"><b>Nouvelle page, nouvelle carte !</b> Burgers, barquettes de frites, kebabs, pains crudités et woks, à commander d'un simple coup de fil.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="tel:+262692141067"><svg aria-hidden="true"><use href="#tel"/></svg>Commander : 0692 14 10 67</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+    <p class="adr apparait d3">57 A route de Mare Longue, 97442 Saint-Philippe</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Burgers</span><span>Frites cheddar oignon frit</span><span>Frites bacon cheddar</span><span>Frites patates douces</span><span>Kebab agneau</span><span>Kebab poulet</span><span>Pains crudités</span><span>Wok poulet brèdes</span><span>Wok poulet gros piment</span><span>Bouchons</span><span>Tenders</span>
+<span>Burgers</span><span>Frites cheddar oignon frit</span><span>Frites bacon cheddar</span><span>Frites patates douces</span><span>Kebab agneau</span><span>Kebab poulet</span><span>Pains crudités</span><span>Wok poulet brèdes</span><span>Wok poulet gros piment</span><span>Bouchons</span><span>Tenders</span>
+</div></div>
+
+<section class="wrap np">
+  <div class="rv">
+    <p class="eyebrow">La team du paradise</p>
+    <h2>Un snack qui <em>repart en grand</em></h2>
+    <p>Sur la route de Mare Longue, à Saint-Philippe, le Snack Le Paradise régale le Sud sauvage avec une carte généreuse : burgers, barquettes de frites gourmandes, kebabs, pains crudités gratinés ou non, et des woks servis sur riz.</p>
+    <p>En septembre 2026, le snack a lancé sa nouvelle page avec une toute nouvelle carte : nouveaux produits, nouvelles barquettes et nouveaux tarifs. Une belle occasion de faire grandir à nouveau la communauté du Paradise.</p>
+    <div class="chiffres">
+      <div><b>235</b><span>abonnés sur la nouvelle page</span></div>
+      <div><b>15.09</b><span>lancement de la nouvelle carte</span></div>
+    </div>
+  </div>
+  <article class="post rv" aria-label="Extrait de la publication du 15 septembre 2026">
+    <div class="entete"><div class="avatar"><svg viewBox="0 0 64 40" aria-hidden="true"><use href="#crown"/></svg></div><div><b>Snack Le Paradise</b><span>15 septembre 2026</span></div></div>
+    <p class="titre">📢🔥 Nouvelle page, nouvelle carte ! 🔥📢</p>
+    <p>« Découvrez dès maintenant nos nouveaux produits, nos nouvelles barquettes et nos nouveaux tarifs ! 👀🔥 »</p>
+    <p>« Merci à tous pour votre soutien et votre fidélité ! 🫶🏽 »</p>
+    <p class="sig">🍟🔥 La team du paradise vous attend ! 🔥🍟</p>
+  </article>
+</section>
+
+<section class="woks" id="woks">
+  <div class="wrap">
+    <div class="woks-tete rv">
+      <div>
+        <p class="eyebrow">Au wok, sur riz</p>
+        <h2>Les woks <em>du soir</em></h2>
+      </div>
+      <div>
+        <p>« Ce soir les wok sont disponibles aussi donc n'hésitez pas !! » : le Paradise annonce ses woks sur sa page, servis en barquette sur un lit de riz.</p>
+        <div class="saveurs"><span>Poulet brèdes</span><span>Poulet légumes</span><span>Poulet gros piment</span></div>
+      </div>
+    </div>
+    <div class="galerie" tabindex="0" aria-label="Photos des woks publiées par Snack Le Paradise">
+      <figure><img src="img/wok-poulet-oignon.webp" alt="Wok de poulet doré, oignon rouge et tiges de légumes verts sur riz" loading="lazy"><figcaption><b>Poulet, oignon rouge &amp; légumes verts</b>Photo publiée par Snack Le Paradise</figcaption></figure>
+      <figure><img src="img/wok-piment-vert.webp" alt="Wok de poulet aux piments verts et oignon sur riz blanc" loading="lazy"><figcaption><b>Poulet &amp; piments verts</b>Photo publiée par Snack Le Paradise</figcaption></figure>
+      <figure><img src="img/wok-oignon-rouge.webp" alt="Wok de viande émincée, oignon rouge et piments verts sur riz" loading="lazy"><figcaption><b>Émincé, oignon rouge &amp; piment</b>Photo publiée par Snack Le Paradise</figcaption></figure>
+      <figure><img src="img/wok-legumes.webp" alt="Wok de légumes : carottes, courgettes et brocoli sur riz" loading="lazy"><figcaption><b>Carottes, courgettes &amp; brocoli</b>Photo publiée par Snack Le Paradise</figcaption></figure>
+      <figure><img src="img/wok-plan-travail.webp" alt="Barquette de wok au poulet et piments verts posée sur un plan de travail en granit" loading="lazy"><figcaption><b>Tout juste sorti du wok</b>Photo publiée par Snack Le Paradise</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser <span>→</span></p>
+  </div>
+</section>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">La nouvelle carte</p>
+      <h2>Ton envie de burger <em>commence ici</em></h2>
+      <p>Les produits de la nouvelle carte, tels que le Paradise les publie sur sa page.</p>
+    </div>
+    <div class="onglets rv" role="tablist" aria-label="Familles de la carte">
+      <button role="tab" aria-selected="true" aria-controls="p-burgers" id="t-burgers">Burgers</button>
+      <button role="tab" aria-selected="false" aria-controls="p-barquettes" id="t-barquettes">Barquettes</button>
+      <button role="tab" aria-selected="false" aria-controls="p-kebabs" id="t-kebabs">Kebabs</button>
+      <button role="tab" aria-selected="false" aria-controls="p-pains" id="t-pains">Pains crudités</button>
+    </div>
+    <div class="panneau actif" role="tabpanel" id="p-burgers" aria-labelledby="t-burgers">
+      <div class="burger-pan">
+        <div>
+          <h3>Burgers</h3>
+          <p class="sous">Nouvelle carte burgers, publiée le 15 septembre 2026</p>
+          <p class="slogan">« TON ENVIE DE BURGER COMMENCE ICI ! 🍔 »</p>
+          <p>Toute la carte burgers est à découvrir sur la page du Paradise, et la commande se passe par téléphone.</p>
+        </div>
+        <figure>
+          <svg viewBox="0 0 160 130" aria-hidden="true">
+            <path d="M20 58c0-28 27-44 60-44s60 16 60 44z" fill="#e8962e"/><path d="M28 54c4-22 26-34 52-34" fill="none" stroke="#f7c46b" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+            <g fill="#fff3cf"><ellipse cx="56" cy="34" rx="3" ry="1.6" transform="rotate(-20 56 34)"/><ellipse cx="80" cy="28" rx="3" ry="1.6"/><ellipse cx="102" cy="36" rx="3" ry="1.6" transform="rotate(20 102 36)"/><ellipse cx="70" cy="44" rx="3" ry="1.6"/><ellipse cx="92" cy="46" rx="3" ry="1.6"/></g>
+            <path d="M14 64c10 8 18-4 28 4s18-6 28 2 18-6 28 2 20-6 30 0 14 2 18-2l-2 6H14z" fill="#4caf3d"/>
+            <path d="M18 70h124l-8 12H26z" fill="#f7b733"/><path d="M60 70l-6 16M100 70l8 16" stroke="#f7b733" stroke-width="6"/>
+            <rect x="16" y="80" width="128" height="16" rx="8" fill="#5a2a17"/>
+            <rect x="22" y="96" width="116" height="6" rx="3" fill="#e3121b"/>
+            <path d="M20 102h120c0 14-14 20-60 20s-60-6-60-20z" fill="#d9842a"/>
+          </svg>
+          <figcaption>Illustration</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="panneau" role="tabpanel" id="p-barquettes" aria-labelledby="t-barquettes">
+      <h3>Les barquettes</h3>
+      <p class="sous">En petite, moyenne ou grande</p>
+      <ul class="items">
+        <li>Frites</li><li>Frites cheddar oignon frit</li><li>Frites bacon cheddar</li><li>Frites patates douces</li>
+        <li>Bouchons <small>à l'unité</small></li><li>Tenders <small>à l'unité</small></li><li>Nuggets <small>à l'unité</small></li>
+      </ul>
+    </div>
+    <div class="panneau" role="tabpanel" id="p-kebabs" aria-labelledby="t-kebabs">
+      <h3>Kebabs</h3>
+      <p class="sous">Frites, salade, tomates, oignons</p>
+      <div class="duo"><div><b>Kebab agneau</b><span>seul ou en menu</span></div><div><b>Kebab poulet</b><span>poulet kebab, seul ou en menu</span></div></div>
+      <p>Menu = kebab + boisson.</p>
+    </div>
+    <div class="panneau" role="tabpanel" id="p-pains" aria-labelledby="t-pains">
+      <h3>Pains crudités</h3>
+      <p class="sous">Salade, tomates, oignons, carottes, œufs · non gratinés ou gratinés</p>
+      <ul class="items">
+        <li>Jambon</li><li>Poulet</li><li>Bouchon</li><li>Merguez</li><li>Steak</li><li>Hot dog</li><li>Lardon</li><li>Bacon</li><li>Créole</li><li>Sarcive</li><li>Agneau</li><li>Poulet kebab</li><li>Chorizo</li><li>Tenders</li><li>Cordon bleu</li><li>Nuggets</li><li>Saumon</li><li>Surimi</li><li>Frite</li><li>Légumes</li>
+      </ul>
+    </div>
+    <p class="note rv">Tous les tarifs sont sur la nouvelle carte publiée sur <a href="https://www.facebook.com/p/Snack-Le-Paradise-61594475932873/" target="_blank" rel="noopener">la page Facebook du Paradise</a>.</p>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <svg class="guirlande" viewBox="0 0 400 46" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 6 Q50 36 100 10 T200 10 T300 10 T400 8" fill="none" stroke="#5a4a45" stroke-width="1.5"/>
+    <circle cx="20" cy="17" r="3.5" fill="#e3121b"/><circle cx="50" cy="21" r="3.5" fill="#f7b733"/><circle cx="80" cy="16" r="3.5" fill="#fff8f2"/><circle cx="120" cy="16" r="3.5" fill="#e3121b"/><circle cx="150" cy="21" r="3.5" fill="#f7b733"/><circle cx="180" cy="15" r="3.5" fill="#fff8f2"/><circle cx="220" cy="16" r="3.5" fill="#e3121b"/><circle cx="250" cy="21" r="3.5" fill="#f7b733"/><circle cx="280" cy="15" r="3.5" fill="#fff8f2"/><circle cx="320" cy="16" r="3.5" fill="#e3121b"/><circle cx="350" cy="20" r="3.5" fill="#f7b733"/><circle cx="380" cy="14" r="3.5" fill="#fff8f2"/>
+  </svg>
+  <div class="wrap fetes-in">
+    <div class="rv">
+      <p class="eyebrow">Les fêtes au Paradise</p>
+      <h2>Votre commande <em>des fêtes</em></h2>
+      <p>Soirée entre amis, veillée en famille, fin d'année avec les collègues : le Paradise régale toute la tablée. Une commande par téléphone ou par WhatsApp, et la fête commence.</p>
+      <div class="idees">
+        <div class="idee"><h3>Les barquettes à partager</h3><p>Frites cheddar oignon frit, bacon cheddar, patates douces, bouchons, tenders et nuggets pour l'apéro.</p></div>
+        <div class="idee"><h3>Burgers, kebabs &amp; pains crudités</h3><p>Chacun choisit son préféré sur la nouvelle carte.</p></div>
+        <div class="idee"><h3>Les woks</h3><p>Poulet brèdes, poulet légumes ou poulet gros piment, sur riz.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692141067?text=Bonjour%20Snack%20Le%20Paradise%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes"><svg aria-hidden="true"><use href="#wa"/></svg>Commander pour les fêtes</a>
+        <a class="btn btn-line" href="tel:+262692141067">Appeler le snack</a>
+      </div>
+    </div>
+    <div class="ticket rv" aria-hidden="true">
+      <svg class="couronne"><use href="#crown"/></svg>
+      <p class="marker">Commande des fêtes</p>
+      <hr>
+      <ul><li><span>Barquettes à partager</span><span>✱</span></li><li><span>Burgers &amp; kebabs</span><span>✱</span></li><li><span>Pains crudités</span><span>✱</span></li><li><span>Woks sur riz</span><span>✱</span></li></ul>
+      <hr>
+      <p class="marker" style="font-size:1.15rem;color:#0d0b0b">0692 14 10 67</p>
+      <small>Snack Le Paradise · Mare Longue</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Pour passer commande</p>
+      <h2>Appelez <em>la team</em></h2>
+      <a class="tel-geant" href="tel:+262692141067">0692 14 10 67</a>
+      <p><b>Adresse</b><br>57 A route de Mare Longue<br>97442 Saint-Philippe, La Réunion</p>
+      <p><b>Itinéraire</b><br><a href="https://www.google.com/maps/search/?api=1&amp;query=57A%20route%20de%20Mare%20Longue%2097442%20Saint-Philippe" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></p>
+      <p><b>Actualités &amp; carte</b><br><a href="https://www.facebook.com/p/Snack-Le-Paradise-61594475932873/" target="_blank" rel="noopener">Page Facebook Snack Le Paradise</a></p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="tel:+262692141067"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+        <a class="btn btn-line" href="https://wa.me/262692141067?text=Bonjour%20Snack%20Le%20Paradise%2C%20je%20voudrais%20passer%20commande"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/wok-poulet-oignon.webp" alt="Barquette de wok au poulet fumante" loading="lazy" style="object-position:center 60%"><figcaption>Photo publiée par Snack Le Paradise</figcaption></figure>
+  </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Snack Le Paradise.</footer>
+<nav class="barre" aria-label="Commander">
+  <a class="btn btn-main" href="tel:+262692141067"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+  <a class="btn btn-line" href="https://wa.me/262692141067?text=Bonjour%20Snack%20Le%20Paradise%2C%20je%20voudrais%20passer%20commande"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+</nav>
+<script>
+(function(){
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var tabs=document.querySelectorAll('[role=tab]');
+tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(o){o.setAttribute('aria-selected','false');document.getElementById(o.getAttribute('aria-controls')).classList.remove('actif')});t.setAttribute('aria-selected','true');document.getElementById(t.getAttribute('aria-controls')).classList.add('actif')})});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function nouvelle(init){var vap=Math.random()<.3;return{x:Math.random()*W,y:init?Math.random()*H:H+20,r:vap?14+Math.random()*22:1+Math.random()*2.2,v:vap?.25+Math.random()*.3:.5+Math.random()*1.1,d:Math.random()*6.28,vap:vap,a:vap?.05+Math.random()*.05:.45+Math.random()*.45,h:Math.random()<.5?'255,90,31':(Math.random()<.5?'247,183,51':'227,18,27')}}
+for(var i=0;i<32;i++)P.push(nouvelle(true));
+function tick(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*(p.vap?.3:.6);
+if(p.vap){var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+p.a+')');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();p.r+=.04}
+else{x.fillStyle='rgba('+p.h+','+(p.a*(.6+.4*Math.sin(p.d*3)))+')';x.shadowColor='rgba('+p.h+',.9)';x.shadowBlur=8;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();x.shadowBlur=0}
+if(p.y<-40)P[i]=nouvelle(false)});
+requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick()});
+tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Snack Le Paradise" defer></script>
+</body>
+</html>
