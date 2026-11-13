@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Virginie C. · Salon de coiffure à Saint-Denis</title>
+<meta name="description" content="Virginie C., salon de coiffure au 61 rue Pasteur à Saint-Denis : coupes, balayages, colorations Inoa, brushings. Femmes, hommes, enfants.">
+<meta property="og:title" content="Virginie C. · Salon de coiffure à Saint-Denis">
+<meta property="og:description" content="Coupes, balayages et colorations sur mesure, rue Pasteur.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/virginie-c-coiffure-saint-denis/img/blond-ondule.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/virginie-c-coiffure-saint-denis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1d1a18;--encre:#2b2623;--champ:#c9a675;--miel:#e7cfa4;--creme:#f7f1e8;--sable:#efe5d6;--txt:#3a332e;--doux:#7a6e64}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--encre);line-height:1.1}
+h2{font-size:clamp(2.1rem,5vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.5rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--champ);font-weight:500}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--miel);text-align:center;font-size:.78rem;padding:.45rem 1rem;letter-spacing:.04em}
+.ribbon b{color:#fff;font-weight:500}
+canvas#reflets{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.55}
+main{position:relative;z-index:2}
+/* HERO */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;background:var(--nuit);color:var(--creme);padding-top:2rem}
+.hero-txt{display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,6vw,6rem)}
+.hero-txt .logo{width:150px;border-radius:50%;margin-bottom:2rem;box-shadow:0 0 0 1px rgba(201,166,117,.4)}
+.hero h1{color:#fff;font-size:clamp(3.2rem,8vw,6rem);letter-spacing:.01em}
+.hero h1 em{color:var(--champ);font-style:italic}
+.hero p.lead{font-size:1.15rem;max-width:30rem;margin:1.2rem 0 2rem;color:#e9e0d3}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;animation:zoom 18s ease-in-out infinite alternate}
+@keyframes zoom{to{transform:scale(1.08)}}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.03em;transition:.3s}
+.btn-main{background:var(--champ);color:var(--nuit)}
+.btn-main:hover{background:var(--miel)}
+.btn-ghost{border:1px solid rgba(231,207,164,.5);color:var(--miel)}
+.btn-ghost:hover{background:rgba(231,207,164,.1)}
+.adr{margin-top:2rem;font-size:.9rem;color:#b9ad9f}
+.adr b{color:var(--miel);font-weight:500}
+/* marquee */
+.marquee{background:var(--champ);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.6rem}
+.track span::after{content:"✦";margin-left:3.2rem;font-style:normal;font-size:.8rem;vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* salon */
+.salon{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.duo img{border-radius:200px 200px 14px 14px;aspect-ratio:3/4;object-fit:cover}
+.duo img:last-child{margin-top:3rem}
+.lead2{font-size:1.2rem;color:var(--encre)}
+.chiffres{display:flex;gap:2.4rem;margin-top:2rem;flex-wrap:wrap}
+.chiffres div{font-size:.9rem;color:var(--doux)}
+.chiffres strong{display:block;font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--encre);font-weight:600;line-height:1}
+/* carte */
+.carte{background:var(--sable)}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0 2rem}
+.tab{border:1px solid var(--champ);background:transparent;padding:.6rem 1.2rem;border-radius:999px;font:inherit;font-weight:400;cursor:pointer;min-height:44px;color:var(--encre)}
+.tab[aria-selected=true]{background:var(--encre);color:var(--miel);border-color:var(--encre)}
+.panel{display:none;background:#fff;border-radius:18px;padding:clamp(1.4rem,4vw,2.6rem);box-shadow:0 20px 50px -30px rgba(43,38,35,.35)}
+.panel.on{display:block;animation:monte .5s ease}
+@keyframes monte{from{opacity:0;transform:translateY(12px)}}
+.panel ul{list-style:none}
+.panel li{display:flex;align-items:baseline;gap:.6rem;padding:.75rem 0;border-bottom:1px dashed #e5d9c6}
+.panel li:last-child{border:0}
+.panel li span{flex:1;border-bottom:1px dotted #d6c6ad;transform:translateY(-4px)}
+.panel li em{font-style:normal;color:var(--doux);font-size:.85rem;min-width:4.5rem;text-align:right}
+.panel li b{font-weight:500;color:var(--encre);min-width:4rem;text-align:right}
+.note-carte{font-size:.85rem;color:var(--doux);margin-top:1rem}
+/* galerie */
+.galerie{background:var(--nuit);color:var(--creme)}
+.galerie h2{color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:2rem}
+.grid figure{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:3/4}
+.grid figure:nth-child(1),.grid figure:nth-child(6){grid-row:span 2;aspect-ratio:auto}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.grid figure:hover img{transform:scale(1.06)}
+.grid figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.2rem .9rem .7rem;background:linear-gradient(transparent,rgba(0,0,0,.65));font-size:.85rem;color:#f3e9da}
+/* noel */
+.fetes{background:radial-gradient(circle at 80% 20%,#3a2f27,var(--nuit));color:var(--creme);text-align:left}
+.fetes-in{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center}
+.fetes h2{color:#fff}
+.fetes h2 em{color:var(--champ)}
+.idees{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.idee{border:1px solid rgba(201,166,117,.35);border-radius:14px;padding:1rem 1.2rem}
+.idee h3{color:var(--miel);font-size:1.3rem}
+.idee p{font-size:.95rem;color:#ddd2c4}
+.fetes img{border-radius:999px 999px 18px 18px;aspect-ratio:3/4;object-fit:cover}
+/* avis */
+.avis .score{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.avis .score strong{font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--encre);line-height:1}
+.st{color:var(--champ);letter-spacing:.15em}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem}
+.q{background:#fff;border-radius:16px;padding:1.6rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:var(--encre)}
+.q cite{display:block;margin-top:.8rem;font-family:Jost,sans-serif;font-style:normal;font-size:.8rem;color:var(--doux);letter-spacing:.05em}
+/* contact */
+.contact{background:var(--sable)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.infos p{margin:.5rem 0}
+.infos b{font-weight:500;color:var(--encre)}
+.map{border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:#ddd}
+.map iframe{width:100%;height:100%;border:0;filter:sepia(.25) saturate(.8)}
+footer{background:var(--nuit);color:#a99d8f;text-align:center;padding:2.4rem 1rem 6rem;font-size:.85rem}
+footer img{width:70px;border-radius:50%;margin:0 auto 1rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero{grid-template-columns:1fr;padding-top:1.8rem}
+ .hero-img{order:-1;height:56svh}
+ .hero-txt{padding:2rem 6vw 3rem}
+ .hero-txt .logo{width:96px;margin:-5rem 0 1.4rem;position:relative;border:3px solid var(--nuit)}
+ .salon,.fetes-in,.contact-in{grid-template-columns:1fr}
+ .grid{grid-template-columns:1fr 1fr}
+ .grid figure:nth-child(1),.grid figure:nth-child(6){grid-row:auto;aspect-ratio:3/4}
+ .quotes{grid-template-columns:1fr}
+ .fetes img{max-width:320px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}canvas#reflets{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Virginie C.</div>
+<canvas id="reflets" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="hero-txt">
+    <img class="logo rv" src="img/logo.webp" alt="Logo Virginie C. Coiffure">
+    <p class="eyebrow rv">Salon de coiffure · Saint-Denis</p>
+    <h1 class="rv">Virginie <em>C.</em></h1>
+    <p class="lead rv">Une coiffure sur mesure, dans une ambiance douce et cocooning, au cœur de Saint-Denis. Balayages lumineux, colorations, coupes et brushings pour femmes, hommes et enfants.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://booksy.com/fr-fr/52823_virginie-c_salon-de-coiffure_102695_saint-denis-tadar">Prendre rendez-vous</a>
+      <a class="btn btn-ghost" href="https://wa.me/262692107624?text=Bonjour%20Virginie%2C%20je%20souhaiterais%20un%20rendez-vous%20au%20salon.">Écrire sur WhatsApp</a>
+    </div>
+    <p class="adr rv"><b>61 rue Pasteur</b>, Saint-Denis · <b>0692 10 76 24</b></p>
+  </div>
+  <div class="hero-img"><img src="img/blond-ondule.webp" alt="Blond ondulé lumineux réalisé au salon Virginie C."></div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+<span>Balayages</span><span>Colorations Inoa</span><span>Soin metal detox</span><span>Coupes transformation</span><span>Brushings</span><span>Pastélisations</span><span>Femmes · Hommes · Enfants</span>
+<span>Balayages</span><span>Colorations Inoa</span><span>Soin metal detox</span><span>Coupes transformation</span><span>Brushings</span><span>Pastélisations</span><span>Femmes · Hommes · Enfants</span>
+</div></div>
+
+<section id="salon">
+  <div class="wrap salon">
+    <div class="duo rv">
+      <img src="img/caramel-boucles.webp" alt="Boucles caramel réalisées au salon" loading="lazy">
+      <img src="img/brun-ondes.webp" alt="Brun ondulé brillant réalisé au salon" loading="lazy">
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Rue Pasteur, depuis 7 ans</p>
+      <h2>Prendre le temps de bien vous coiffer</h2>
+      <p class="lead2">Chez Virginie C., chaque rendez-vous commence par l'écoute : votre envie, votre style, votre quotidien.</p>
+      <p style="margin-top:1rem">Le salon a fêté ses 7 ans en octobre, avec un grand jeu concours partagé par toute sa communauté. Balayage, coloration racine avec soin metal detox, coupe transformation : chaque prestation se fait dans le calme, avec le souci du détail.</p>
+      <div class="chiffres">
+        <div><strong>7 ans</strong>de salon en centre-ville</div>
+        <div><strong>5,0</strong>sur Booksy</div>
+        <div><strong>92 %</strong>recommandent sur Facebook</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Prestations & tarifs</p>
+      <h2>La carte du salon</h2>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="femme">Coupe femme</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="couleur">Coloration Inoa</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="brushing">Brushing</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="homme">Hommes & enfants</button>
+    </div>
+    <div class="panel on" id="femme"><ul>
+      <li>Shampoing coupe très court<span></span><em>30 min</em><b>30 €</b></li>
+      <li>Shampoing coupe courte<span></span><em>35 min</em><b>50 €</b></li>
+      <li>Coupe brushing mi-long<span></span><em>1 h</em><b>55 €</b></li>
+      <li>Coupe brushing cheveux longs<span></span><em>1 h</em><b>62 €</b></li>
+      <li>Coupe brushing très longs<span></span><em>1 h 30</em><b>69 €</b></li>
+      <li>Coupe transformation<span></span><em>1 h</em><b>65 €</b></li>
+      <li>Frange<span></span><em>5 min</em><b>10 €</b></li>
+    </ul></div>
+    <div class="panel" id="couleur"><ul>
+      <li>Racine + brushing courts, soin metal detox<span></span><em>1 h 35</em><b>71 €</b></li>
+      <li>Racine + brushing mi-longs, soin metal detox<span></span><em>1 h 50</em><b>76 €</b></li>
+      <li>Racine + brushing longs, soin metal detox<span></span><em>2 h 05</em><b>86 €</b></li>
+      <li>Racine + coupe brushing mi-longs<span></span><em>2 h</em><b>88 €</b></li>
+      <li>Racine + coupe brushing longs<span></span><em>2 h</em><b>95 €</b></li>
+      <li>Pastélisation<span></span><em>30 min</em><b>31 €</b></li>
+    </ul></div>
+    <div class="panel" id="brushing"><ul>
+      <li>Brushing cheveux courts<span></span><em>30 min</em><b>28 €</b></li>
+      <li>Brushing cheveux mi-longs<span></span><em>45 min</em><b>33 €</b></li>
+      <li>Brushing cheveux longs<span></span><em>1 h</em><b>40 €</b></li>
+      <li>Forfait mensuel brushing courts<span></span><em>au mois</em><b>102 €</b></li>
+    </ul></div>
+    <div class="panel" id="homme"><ul>
+      <li>Forfait coupe homme<span></span><em>30 min</em><b>26 €</b></li>
+      <li>Coupe homme tondeuse<span></span><em>30 min</em><b>19 €</b></li>
+      <li>Coupe garçon −16 ans<span></span><em>30 min</em><b>18 €</b></li>
+      <li>Coupe fille −10 ans<span></span><em>30 min</em><b>28 €</b></li>
+      <li>Coupe brushing fille ado<span></span><em>50 min</em><b>55 €</b></li>
+    </ul></div>
+    <p class="note-carte rv">Tarifs relevés sur la page de réservation du salon. Réservation en ligne 24h/24 sur Booksy.</p>
+  </div>
+</section>
+
+<section class="galerie" id="realisations">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Réalisations</p><h2>Des cheveux qui captent la lumière</h2></div>
+    <div class="grid">
+      <figure class="rv"><img src="img/platine.webp" alt="Blond platine ondulé" loading="lazy"><figcaption>Blond platine</figcaption></figure>
+      <figure class="rv"><img src="img/brun-long.webp" alt="Brun long brillant" loading="lazy"><figcaption>Brun long, effet miroir</figcaption></figure>
+      <figure class="rv"><img src="img/brun-degrade.webp" alt="Dégradé brun" loading="lazy"><figcaption>Dégradé travaillé</figcaption></figure>
+      <figure class="rv"><img src="img/lisse-brun.webp" alt="Brushing lisse brun" loading="lazy"><figcaption>Brushing lisse</figcaption></figure>
+      <figure class="rv"><img src="img/boucles-profil.webp" alt="Boucles sombres" loading="lazy"><figcaption>Boucles définies</figcaption></figure>
+      <figure class="rv"><img src="img/caramel-boucles.webp" alt="Boucles caramel" loading="lazy"><figcaption>Reflets caramel</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap fetes-in">
+    <div class="rv">
+      <p class="eyebrow">Pour les fêtes de fin d'année</p>
+      <h2>Briller pour les fêtes, <em>ou faire briller quelqu'un</em></h2>
+      <div class="idees">
+        <div class="idee"><h3>Un bon cadeau coiffure</h3><p>Un balayage, une coupe transformation ou un brushing à offrir : demandez votre bon cadeau directement à Virginie.</p></div>
+        <div class="idee"><h3>Votre brushing de réveillon</h3><p>Les créneaux de décembre partent vite : réservez dès maintenant votre mise en beauté pour les repas de fêtes.</p></div>
+        <div class="idee"><h3>Le forfait mensuel</h3><p>Un brushing chaque semaine, tout le mois de décembre, pour être prête à chaque invitation.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692107624?text=Bonjour%20Virginie%2C%20je%20souhaiterais%20offrir%20un%20bon%20cadeau%20coiffure.">Demander un bon cadeau</a>
+    </div>
+    <img class="rv" src="img/blond-ondule.webp" alt="Ondulations blondes pour les fêtes" loading="lazy">
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Elles et ils en parlent</p>
+      <div class="score"><strong>5,0</strong><span class="st">★★★★★</span><span>sur Booksy · 92 % de recommandations sur Facebook</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="q rv">« Virginie est à l'écoute. Respect de la demande du client. Super échange. »<cite>Avis Facebook</cite></figure>
+      <figure class="q rv">« Virginie est très pro et efficace. C'est toujours un plaisir de me faire couper les cheveux. »<cite>Avis Facebook</cite></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir au salon</p>
+      <h2>Rue Pasteur, Saint-Denis</h2>
+      <p><b>Adresse</b> · 61 rue Pasteur, 97400 Saint-Denis</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692107624">0692 10 76 24</a></p>
+      <p><b>Rendez-vous</b> · en ligne sur Booksy, ou par WhatsApp</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://booksy.com/fr-fr/52823_virginie-c_salon-de-coiffure_102695_saint-denis-tadar">Réserver en ligne</a>
+        <a class="btn btn-ghost" style="color:var(--encre);border-color:var(--champ)" href="https://www.facebook.com/VirginieC974">Facebook</a>
+        <a class="btn btn-ghost" style="color:var(--encre);border-color:var(--champ)" href="https://www.instagram.com/virginie___c/">Instagram</a>
+      </div>
+    </div>
+    <div class="map rv"><iframe title="Plan d'accès" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=55.444%2C-20.884%2C55.458%2C-20.874&amp;layer=mapnik"></iframe></div>
+  </div>
+</section>
+
+<footer><img src="img/logo.webp" alt="">Virginie C. · Salon de coiffure · 61 rue Pasteur, Saint-Denis<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Virginie C.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',b===t));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('on',p.id===t.dataset.p))}));
+/* reflets dorés qui flottent comme la lumière dans les cheveux */
+const c=document.getElementById('reflets'),x=c.getContext('2d');let W,H,P=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<26;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*2+.6,v:Math.random()*.35+.1,a:Math.random()*6.28});
+(function f(){x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.3;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*5);g.addColorStop(0,'rgba(231,207,164,.9)');g.addColorStop(1,'rgba(231,207,164,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*5,0,6.28);x.fill()}requestAnimationFrame(f)})();
+</script>
+<script src="/outils/cta.js" data-nom="Virginie C." defer></script>
+</body>
+</html>
