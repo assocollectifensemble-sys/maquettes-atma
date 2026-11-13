@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Harini Coiffure · Coiffeuse à domicile, Nord, Est et Ouest de La Réunion</title>
+<meta name="description" content="Harini Coiffure, coiffeuse à domicile depuis 2017 : chignons de mariée et de soirée, lissages brésiliens, relooking. Nord, Est et Ouest de La Réunion, du lundi au samedi sur rendez-vous.">
+<meta property="og:title" content="Harini Coiffure · Coiffeuse à domicile">
+<meta property="og:description" content="Chignons de mariée et de soirée, lissages brésiliens, relooking : 38 ans de métier, chez vous.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/harini-coiffure-saint-denis/img/chignon-bijou.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/harini-coiffure-saint-denis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--encre:#1d1714;--brun:#3b2a22;--cuivre:#b4683a;--cuivre-clair:#d99a6c;--sable:#e9d9c8;--ivoire:#fbf6f0;--txt:#3a302a;--doux:#7d6e63}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--ivoire);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:400;color:var(--encre);line-height:1.08}
+h2{font-size:clamp(2rem,5.2vw,3.2rem);margin:.4rem 0 1.1rem}
+h2 em,h1 em{font-style:italic;color:var(--cuivre)}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--cuivre);font-weight:500}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--encre);color:var(--sable);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#fils{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.08em;font-size:.88rem;text-transform:uppercase;transition:.35s}
+.btn-main{background:var(--cuivre);color:#fff;box-shadow:0 14px 30px -14px rgba(180,104,58,.9)}
+.btn-main:hover{background:var(--brun)}
+.btn-line{border:1px solid rgba(233,217,200,.6);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero en diptyque */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.1fr .9fr;background:var(--encre);color:var(--sable);padding:0}
+.hero-txt{display:flex;flex-direction:column;justify-content:flex-end;padding:8rem clamp(1.5rem,6vw,5rem) 4.5rem}
+.hero h1{color:#fff;font-size:clamp(3rem,9vw,6.2rem);font-weight:400}
+.hero h1 em{display:block;font-size:.5em;color:var(--cuivre-clair);margin-top:.4rem}
+.hero .lead{font-size:1.12rem;max-width:30rem;margin:1.4rem 0 2rem}
+.hero .zone{margin-top:1.8rem;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cuivre-clair)}
+.hero-img{position:relative;overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;animation:lent 24s ease-in-out infinite alternate}
+@keyframes lent{from{transform:scale(1.03)}to{transform:scale(1.13) translateY(-2%)}}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--encre) 0%,rgba(29,23,20,0) 30%)}
+.monte{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}.d2{animation-delay:.6s}.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* chiffres */
+.metier{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.metier figure{position:relative}
+.metier figure img{border-radius:220px 220px 6px 6px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.metier figure figcaption{position:absolute;bottom:-1.2rem;right:-1rem;background:var(--ivoire);border:1px solid var(--sable);padding:.9rem 1.2rem;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.05rem}
+.reperes{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.8rem;border-top:1px solid var(--sable);padding-top:1.4rem}
+.reperes b{display:block;font-family:'Bodoni Moda',serif;font-weight:400;font-size:2.4rem;color:var(--cuivre);line-height:1}
+.reperes span{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+/* signature */
+.signature{background:var(--brun);color:var(--sable)}
+.signature h2{color:#fff}
+.signature .intro{max-width:40rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.2rem 4vw 1rem;margin:0 -4vw;scrollbar-width:thin}
+.rail figure{flex:0 0 min(300px,72vw);scroll-snap-align:start}
+.rail img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:4px;transition:transform .6s}
+.rail figure:hover img{transform:scale(1.02)}
+.rail figcaption{font-size:.85rem;margin-top:.6rem;color:var(--cuivre-clair);font-style:italic;font-family:'Bodoni Moda',serif}
+/* prestations */
+.presta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--sable)}
+.presta article{padding:2.2rem 1.6rem 2.2rem 0;border-bottom:1px solid var(--sable)}
+.presta article+article{padding-left:1.6rem;border-left:1px solid var(--sable)}
+.presta .n{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--cuivre);font-size:1.1rem}
+.presta h3{font-size:1.6rem;margin:.4rem 0 .6rem}
+.lissage{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:3rem}
+.lissage img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:4px}
+/* fêtes */
+.fetes{background:var(--sable)}
+.fetes-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.fetes ul{list-style:none;margin:1.2rem 0 2rem}
+.fetes li{padding:.7rem 0;border-bottom:1px solid rgba(59,42,34,.18)}
+.fetes li::before{content:"—";color:var(--cuivre);margin-right:.7rem}
+.fetes img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:4px}
+.note{font-size:.8rem;color:var(--doux);margin-top:1rem}
+/* contact */
+.contact{background:var(--encre);color:var(--sable);text-align:left}
+.contact h2{color:#fff}
+.contact-in{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:end}
+.infos p{margin:.3rem 0}.infos b{color:#fff;font-weight:500}
+.tel{font-family:'Bodoni Moda',serif;font-size:clamp(2rem,6vw,3.2rem);color:var(--cuivre-clair);text-decoration:none;display:inline-block;margin:.6rem 0 1.6rem}
+footer{background:var(--encre);color:var(--doux);font-size:.78rem;padding:1.6rem 0 6rem;border-top:1px solid rgba(233,217,200,.12)}
+.rev{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}.rev.vu{opacity:1;transform:none}
+@media(max-width:820px){
+ .hero{grid-template-columns:1fr;grid-template-rows:62svh auto}
+ .hero-img{order:-1}.hero-img::after{background:linear-gradient(0deg,var(--encre) 0%,rgba(29,23,20,0) 40%)}
+ .hero-txt{padding:1rem 6vw 3.5rem}
+ .metier,.fetes-in,.contact-in{grid-template-columns:1fr}
+ .metier figure figcaption{right:.5rem}
+ .presta{grid-template-columns:1fr}.presta article+article{padding-left:0;border-left:0}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev,.monte{opacity:1;transform:none}canvas#fils{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> · page privée, visible seulement par vous</div>
+<canvas id="fils" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+ <div class="hero-txt">
+  <p class="eyebrow monte">Coiffeuse à domicile depuis 2017</p>
+  <h1 class="monte d2">Harini <em>Coiffure</em></h1>
+  <p class="lead monte d3">Chignons de mariée et de soirée, lissages brésiliens, relooking : 38 ans de métier, mis au service de votre plus belle version, chez vous.</p>
+  <div class="ctas monte d3"><a class="btn btn-main" href="https://wa.me/262692648844">Prendre rendez-vous</a><a class="btn btn-line" href="#signature">Le chignon signature</a></div>
+  <p class="zone monte d3">Nord · Est · Ouest de La Réunion</p>
+ </div>
+ <div class="hero-img"><img src="img/chignon-bijou.webp" alt="Chignon bas orné d'un bijou, réalisé par Harini Coiffure"></div>
+</header>
+
+<section class="wrap metier">
+ <figure class="rev"><img src="img/chignon-profil.webp" alt="Chignon travaillé vu de profil" loading="lazy"><figcaption>Le geste, affiné depuis 38 ans</figcaption></figure>
+ <div class="rev">
+  <p class="eyebrow">Le métier</p>
+  <h2>La coiffeuse <em>qui vient à vous</em></h2>
+  <p>Depuis 2017, Harini se déplace à domicile pour coiffer ses clientes là où elles se sentent bien : à la maison, le matin d'un mariage, juste avant une soirée.</p>
+  <p style="margin-top:1rem">Un savoir-faire de 38 ans, une écoute attentive, et une passion intacte pour les belles coiffures.</p>
+  <div class="reperes"><div><b>38</b><span>ans de métier</span></div><div><b>2017</b><span>à domicile</span></div><div><b>100 %</b><span>de recommandations</span></div></div>
+ </div>
+</section>
+
+<section class="signature" id="signature">
+ <div class="wrap">
+  <p class="eyebrow" style="color:var(--cuivre-clair)">Chignon Signature</p>
+  <h2>Une marque <em>de fabrique</em></h2>
+  <p class="intro">En mai 2026, Harini a validé sa formation au Chignon Signature : des volumes sculptés, des torsades nettes et un bijou posé au bon endroit. Faites défiler, ce sont ses réalisations.</p>
+  <div class="rail">
+   <figure><img src="img/chignon-arriere.webp" alt="Chignon sculpté vu de dos" loading="lazy"><figcaption>Volume et torsades</figcaption></figure>
+   <figure><img src="img/chignon-fleur.webp" alt="Chignon orné d'un accessoire" loading="lazy"><figcaption>L'accessoire en lumière</figcaption></figure>
+   <figure><img src="img/chignon-tresse.webp" alt="Chignon tressé de profil" loading="lazy"><figcaption>La tresse qui enveloppe</figcaption></figure>
+   <figure><img src="img/chignon-bijou.webp" alt="Chignon bas avec bijou" loading="lazy"><figcaption>Le bijou du grand jour</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="wrap" id="prestations">
+ <p class="eyebrow rev">Prestations</p>
+ <h2 class="rev">Trois savoir-faire, <em>une même attention</em></h2>
+ <div class="presta rev">
+  <article><span class="n">i.</span><h3>Mariée &amp; soirée</h3><p>Chignons de mariée et de soirée, pensés avec vous pour votre tenue, vos accessoires et votre journée.</p></article>
+  <article><span class="n">ii.</span><h3>Lissage brésilien</h3><p>Des cheveux lisses, souples et brillants, réalisés à domicile.</p></article>
+  <article><span class="n">iii.</span><h3>Relooking</h3><p>Une nouvelle coupe, une nouvelle allure : on en parle ensemble pour trouver ce qui vous ressemble.</p></article>
+ </div>
+ <div class="lissage">
+  <img class="rev" src="img/boucles-nuque.webp" alt="Chevelure bouclée vue de dos" loading="lazy">
+  <img class="rev" src="img/texture-dos.webp" alt="Chevelure travaillée vue de dos" loading="lazy">
+ </div>
+</section>
+
+<section class="fetes" id="fetes">
+ <div class="wrap fetes-in">
+  <div class="rev">
+   <p class="eyebrow">Les fêtes de fin d'année</p>
+   <h2>Votre chignon <em>pour les fêtes</em></h2>
+   <p>Réveillons, repas de famille, soirées du Nouvel An : réservez votre créneau à domicile pour arriver coiffée et sereine.</p>
+   <ul><li>Chignon de soirée</li><li>Lissage brésilien avant les fêtes</li><li>Un moment coiffure à offrir : demandez à Harini</li></ul>
+   <a class="btn btn-main" href="https://wa.me/262692648844?text=Bonjour%20Harini%2C%20je%20souhaite%20r%C3%A9server%20pour%20les%20f%C3%AAtes">Réserver ma date</a>
+   <p class="note">Bloc proposé pour la maquette, à ajuster avec vous.</p>
+  </div>
+  <img class="rev" src="img/chignon-fleur.webp" alt="Chignon orné, idéal pour une soirée" loading="lazy">
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap contact-in">
+  <div>
+   <p class="eyebrow" style="color:var(--cuivre-clair)">Rendez-vous</p>
+   <h2>On se donne <em>rendez-vous ?</em></h2>
+   <a class="tel" href="tel:+262692648844">0692 64 88 44</a>
+   <div class="ctas"><a class="btn btn-main" href="https://wa.me/262692648844">Écrire sur WhatsApp</a><a class="btn btn-line" href="https://www.facebook.com/profile.php?id=819464204792068">Page Facebook</a></div>
+  </div>
+  <div class="infos">
+   <p><b>Du lundi au samedi</b>, sur rendez-vous</p>
+   <p><b>À domicile</b> : Nord, Est et Ouest de La Réunion</p>
+   <p>Chignons · Lissages brésiliens · Relooking</p>
+  </div>
+ </div>
+</section>
+<footer><div class="wrap">Harini Coiffure · Coiffeuse à domicile, La Réunion · Maquette offerte par Aurélie &amp; Jonathan</div></footer>
+</main>
+<script>
+// fils de soie qui ondulent doucement (univers coiffure)
+(()=>{const c=document.getElementById('fils');if(!c)return;const x=c.getContext('2d');let w,h,t=0;
+function r(){w=c.width=innerWidth;h=c.height=innerHeight}r();addEventListener('resize',r);
+const F=[...Array(innerWidth<700?4:7)].map((_,i)=>({y:Math.random(),a:20+Math.random()*40,f:.002+Math.random()*.003,p:Math.random()*6,o:.05+Math.random()*.07}));
+(function d(){x.clearRect(0,0,w,h);t+=1;F.forEach(s=>{x.beginPath();for(let i=0;i<=w;i+=12){const yy=s.y*h+Math.sin(i*s.f+t*.01+s.p)*s.a+Math.sin(i*.0007+t*.004)*30;i?x.lineTo(i,yy):x.moveTo(i,yy)}x.strokeStyle=`rgba(180,104,58,${s.o})`;x.lineWidth=1.2;x.stroke()});requestAnimationFrame(d)})()})();
+const io=new IntersectionObserver(e=>e.forEach(v=>{if(v.isIntersecting){v.target.classList.add('vu');io.unobserve(v.target)}}),{threshold:.15});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+</script>
+<script src="/outils/cta.js" data-nom="Harini Coiffure" defer></script>
+</body>
+</html>
