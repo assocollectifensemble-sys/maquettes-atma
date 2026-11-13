@@ -50,9 +50,9 @@ main{position:relative;z-index:2}
 .hero .lead{font-size:1.08rem;max-width:32rem;margin:1rem 0 1.9rem;color:var(--txt);text-shadow:0 1px 14px rgba(0,0,0,.6)}
 .hero .adr{margin-top:1.5rem;font-size:.86rem;color:var(--doux)}
 .hero .adr a{color:var(--lum)}
-.apparait{opacity:0;transform:translateY(22px);filter:blur(6px);animation:monte 1.5s .3s forwards}
-.apparait.d2{animation-delay:.75s}.apparait.d3{animation-delay:1.15s}
-@keyframes monte{to{opacity:1;transform:none;filter:none}}
+.apparait{animation:eclot 1.4s .3s both}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes eclot{from{opacity:0;transform:translateY(22px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
 /* bandeau */
 .bande{border-top:1px solid rgba(246,207,134,.2);border-bottom:1px solid rgba(246,207,134,.2);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--lum);background:var(--nuit2)}
 .track{display:inline-block;animation:defile 38s linear infinite}
@@ -143,7 +143,11 @@ footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--d
  .metiers .metier:last-child{grid-column:1/-1}
  .duo{grid-template-columns:1fr}
  .halo{max-width:300px}
- .hero-in{padding-top:6rem}
+ .hero{flex-direction:column;align-items:stretch;min-height:0}
+ .hero .fond{position:relative;height:64svh;min-height:420px;max-height:640px;overflow:hidden}
+ .hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,11,8,.55) 0%,rgba(15,11,8,0) 22%,rgba(15,11,8,0) 62%,var(--nuit) 100%)}
+ .hero::after{display:none}
+ .hero-in{padding:0 0 3.2rem;margin-top:-3.2rem}
  .ribbon{font-size:.68rem}
  .etoile{max-width:260px}
 }
@@ -262,7 +266,7 @@ footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--d
       <h2>Offrez <em>une lumière</em> faite à Saint-Paul</h2>
       <div class="idees">
         <div class="idee"><h3>Une lampe en calebasse</h3><p>Une pièce unique, qui réchauffe un salon ou une chambre dès la tombée de la nuit.</p></div>
-        <div class="idee"><h3>Un motif qui lui ressemble</h3><p>Lion, arbre, madone, caméléon : parlez-en avec MARC B pour trouver le motif qui fera briller les yeux.</p></div>
+        <div class="idee"><h3>Le motif qui lui ressemble</h3><p>Lion, arbre, madone, écailles, caméléon : choisissez parmi les créations de MARC B le motif qui fera briller les yeux.</p></div>
         <div class="idee"><h3>Un bijou</h3><p>Une petite création à glisser sous le sapin.</p></div>
       </div>
       <p style="margin-bottom:1.4rem">Écrivez dès maintenant pour préparer votre cadeau tranquillement.</p>
