@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>KenzaBlanka · Maisons de beauté à Saint-Denis, La Réunion</title>
+<meta name="description" content="KenzaBlanka, maisons de beauté à Sainte-Clotilde et Saint-Denis centre-ville : coiffure, head spa, onglerie, extensions de cils, épilation, maquillage, et KenzaBlanka Academy.">
+<meta property="og:title" content="KenzaBlanka · Maison de Beauté">
+<meta property="og:description" content="L'élégance dans les moindres détails : onglerie, coiffure, head spa, cils et maquillage, à Sainte-Clotilde et Saint-Denis.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/kenza-blanka-saint-denis/img/ongles-joaillerie.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/kenza-blanka-saint-denis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f3ece5;--lin:#ebe1d7;--poudre:#d8b0a8;--rose:#c4968d;--or:#b8926a;--orc:#d9bf93;--bordeaux:#6b2430;--noir:#1c1517;--txt:#3d3133;--doux:#857571}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Helvetica,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--noir);line-height:1.08}
+h2{font-size:clamp(2.1rem,5.4vw,3.4rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.45rem}
+.script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--rose)}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--or);font-weight:500}
+.wrap{width:min(1140px,92vw);margin:auto}
+section{padding:clamp(4.2rem,9vw,7.5rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:var(--orc);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em}
+.ribbon b{color:#fff;font-weight:500}
+canvas#paillettes{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.85rem 1.7rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.06em;font-size:.9rem;transition:transform .3s,background .3s,box-shadow .3s}
+.btn-or{background:linear-gradient(135deg,var(--orc),var(--or));color:var(--noir);box-shadow:0 14px 34px -16px rgba(184,146,106,.9);animation:souffle 3.6s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 18px 44px -12px rgba(184,146,106,1)}}
+.btn-ligne{border:1px solid rgba(217,191,147,.7);color:#fff}
+.btn-ligne:hover{background:rgba(255,255,255,.08)}
+.btn-sombre{background:var(--noir);color:var(--creme)}
+.btn-sombre:hover{background:var(--bordeaux)}
+.btn-trait{border:1px solid var(--or);color:var(--noir)}
+.btn-trait:hover{background:var(--lin)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--noir);color:#fff;padding-top:1.9rem}
+.hero-img{position:relative;height:min(64svh,620px);overflow:hidden}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;animation:kenburns 22s ease-in-out infinite alternate;transform-origin:50% 30%}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,21,23,.1) 0%,rgba(28,21,23,0) 40%,rgba(28,21,23,.75) 78%,var(--noir) 100%)}
+.hero-in{position:relative;z-index:2;margin-top:-5.5rem;padding:0 0 4.5rem}
+.hero .logo{width:min(250px,62vw);filter:brightness(1.12);background:#fff;border-radius:16px;padding:.5rem 1rem;margin-bottom:1.6rem;opacity:0;animation:monte 1.2s .2s forwards}
+.hero h1{color:#fff;font-size:clamp(3rem,10vw,6.4rem);letter-spacing:.02em;opacity:0;animation:monte 1.3s .45s forwards}
+.hero h1 .script{display:block;color:var(--poudre);font-size:.52em;margin-top:.2rem}
+.hero .lead{max-width:34rem;margin:1.2rem 0 2rem;color:#efe5dc;font-size:1.08rem;opacity:0;animation:monte 1.3s .75s forwards}
+.hero .ctas{opacity:0;animation:monte 1.3s 1s forwards}
+.hero .adr{margin-top:1.6rem;font-size:.85rem;color:var(--orc);letter-spacing:.04em}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--noir);color:var(--orc);overflow:hidden;white-space:nowrap;padding:1rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;border-top:1px solid rgba(217,191,147,.25)}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.3rem}
+.track span::after{content:"✦";margin-left:2.6rem;font-style:normal;font-size:.7rem;color:var(--poudre)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* vague */
+.vague{display:block;width:100%;height:60px;background:var(--noir)}
+/* signature */
+.sig-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:2.6rem}
+.sig-head .accroche{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;color:var(--bordeaux)}
+.galerie{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;max-width:780px;margin:auto}
+.galerie figure{position:relative;overflow:hidden;border-radius:20px;aspect-ratio:3/4;background:var(--lin);box-shadow:0 30px 60px -40px rgba(28,21,23,.6)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.07)}
+.galerie figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;background:rgba(243,236,229,.93);padding:.35rem .8rem;border-radius:999px;font-size:.76rem;font-weight:500;color:var(--noir);text-align:center}
+.galerie figure:nth-child(even){transform:translateY(1.8rem)}
+.pov{margin-top:3.6rem;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(1.6rem,5vw,4rem);align-items:center}
+.pov img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:999px 999px 24px 24px;box-shadow:0 40px 80px -40px rgba(107,36,48,.6)}
+.pov blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.25;color:var(--bordeaux)}
+.pov blockquote small{display:block;margin-top:1rem;font-family:Jost,Helvetica,Arial;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+/* prestations */
+.presta{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.carte{background:#fff;border-radius:22px;padding:1.7rem 1.6rem;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s;box-shadow:0 22px 50px -38px rgba(28,21,23,.55)}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(107,36,48,.5)}
+.carte::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--poudre),var(--or))}
+.carte .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--or);font-size:1.1rem}
+.carte h3{margin:.2rem 0 .5rem}
+.carte p{font-size:.95rem}
+/* academy */
+.academy{background:var(--noir);color:#e9dfd6}
+.academy h2,.academy h3{color:#fff}
+.academy .eyebrow{color:var(--orc)}
+.acad-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.acad-in .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--poudre);line-height:1.35;margin-bottom:1.2rem}
+.forma{border:1px solid rgba(217,191,147,.3);border-radius:22px;padding:1.6rem 1.7rem;margin-bottom:1.1rem;background:rgba(255,255,255,.03)}
+.forma h3{font-size:1.5rem;margin-bottom:.6rem}
+.forma ul{list-style:none;display:grid;gap:.4rem}
+.forma li{padding-left:1.5rem;position:relative;font-size:.95rem}
+.forma li::before{content:"✦";position:absolute;left:0;color:var(--or);font-size:.75rem;top:.25em}
+.academy .note{font-size:.9rem;color:var(--orc);margin:1rem 0 1.6rem}
+/* fêtes */
+.fetes-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.6rem 0 2rem}
+.idee{background:#fff;border-radius:18px;padding:1.1rem 1.4rem;border-left:3px solid var(--poudre)}
+.idee h3{font-size:1.25rem;margin-bottom:.2rem}
+.idee p{font-size:.94rem}
+.ecrin{aspect-ratio:1.6;border-radius:24px;background:radial-gradient(circle at 25% 20%,#3a2a2d,var(--noir) 70%);color:var(--orc);padding:2rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 44px 80px -36px rgba(28,21,23,.8);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.ecrin:hover{transform:rotate(0)}
+.ecrin::after{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 40%,rgba(217,191,147,.25) 50%,transparent 60%);animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{from{transform:translateX(-40%)}to{transform:translateX(40%)}}
+.ecrin .script{color:var(--poudre);font-size:clamp(2.2rem,7vw,3rem);line-height:1}
+.ecrin small{letter-spacing:.22em;text-transform:uppercase;font-size:.68rem}
+/* adresses */
+.adresses{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:2rem 0}
+.adresse{background:#fff;border-radius:22px;padding:1.7rem;box-shadow:0 22px 50px -38px rgba(28,21,23,.55)}
+.adresse h3{margin-bottom:.4rem}
+.adresse a{color:var(--bordeaux);font-weight:500;text-decoration:none;font-size:.9rem;letter-spacing:.04em}
+.infos p{margin:.4rem 0}
+.infos b{font-weight:500;color:var(--noir)}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--lin)}
+footer img{width:150px;margin:0 auto 1rem;mix-blend-mode:multiply}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+.galerie figure.rv.vu:nth-child(even){transform:translateY(1.8rem)}
+@media (max-width:860px){
+ .sig-head,.pov,.acad-in,.fetes-in,.adresses{grid-template-columns:1fr}
+ .galerie{grid-template-columns:repeat(2,1fr)}
+ .cartes{grid-template-columns:1fr}
+ .pov img{max-width:380px;margin:auto}
+}
+@media (max-width:480px){
+ body{font-size:16px}
+ .galerie figure:nth-child(even),.galerie figure.rv.vu:nth-child(even){transform:translateY(1.2rem)}
+ .hero-in{padding:0 0 3.5rem}
+ .btn{width:100%}
+ .ribbon{font-size:.68rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .logo,.hero h1,.hero .lead,.hero .ctas{opacity:1;transform:none}canvas#paillettes{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan · ATMA Digital</b> — créée avec plaisir pour KenzaBlanka</div>
+<canvas id="paillettes" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="hero-img"><img src="img/ongles-bijoux.webp" alt="Deux mains manucurées KenzaBlanka, ongles rose poudré et noirs, fleurs peintes et bagues"></div>
+  <div class="wrap hero-in">
+    <img class="logo" src="img/logo.webp" alt="Logo KenzaBlanka">
+    <p class="eyebrow">Maisons de beauté à l'île de La Réunion</p>
+    <h1>KenzaBlanka<span class="script">Maison de Beauté</span></h1>
+    <p class="lead">Coiffure, head spa, onglerie, extensions de cils, épilation et maquillage : deux adresses à Saint-Denis pour prendre soin de vous, du bout des ongles aux pointes des cheveux.</p>
+    <div class="ctas">
+      <a class="btn btn-or" href="https://wa.me/262692641065?text=Bonjour%20KenzaBlanka%2C%20je%20souhaite%20r%C3%A9server%20un%20rendez-vous">Réserver sur WhatsApp</a>
+      <a class="btn btn-ligne" href="#signature">Découvrir la maison</a>
+    </div>
+    <p class="adr">Sainte-Clotilde · Saint-Denis centre-ville · 0692 64 10 65</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Onglerie</span><span>Coiffure</span><span>Head spa</span><span>Extensions de cils</span><span>Épilation au fil</span><span>Maquillage</span><span>Lissages &amp; soins HLC</span><span>KenzaBlanka Academy</span>
+<span>Onglerie</span><span>Coiffure</span><span>Head spa</span><span>Extensions de cils</span><span>Épilation au fil</span><span>Maquillage</span><span>Lissages &amp; soins HLC</span><span>KenzaBlanka Academy</span>
+</div></div>
+
+<section class="wrap" id="signature">
+  <div class="sig-head">
+    <div class="rv"><p class="eyebrow">La signature onglerie</p><h2>L'élégance dans les moindres détails</h2></div>
+    <p class="accroche rv">« Une manucure pensée comme un véritable accessoire. » Pierres serties, motifs léopard, fleurs peintes et éclats dorés : chaque pose est une petite pièce de joaillerie.</p>
+  </div>
+  <div class="galerie">
+    <figure class="rv"><img src="img/ongles-bordeaux.webp" alt="Ongles amande bordeaux, motif léopard et éclats dorés" loading="lazy"><figcaption>Bordeaux &amp; léopard doré</figcaption></figure>
+    <figure class="rv"><img src="img/ongles-stiletto.webp" alt="Ongles stiletto rose poudré et noir, léopard et cristaux" loading="lazy"><figcaption>Stiletto &amp; cristaux</figcaption></figure>
+  </div>
+  <div class="pov">
+    <img class="rv" src="img/ongles-joaillerie.webp" alt="Ongles ornés de pierres turquoise et améthyste serties d'or" loading="lazy">
+    <blockquote class="rv">« POV : ton anniversaire avec Bollywood comme DA… et tes ongles doivent être à la hauteur. »<small>Publication KenzaBlanka · octobre 2026</small></blockquote>
+  </div>
+</section>
+
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">La maison</p><h2>Tout votre rituel beauté, au même endroit</h2><p>Une équipe complète, des cheveux au regard, à Sainte-Clotilde comme au centre-ville de Saint-Denis.</p></div>
+    <div class="cartes">
+      <div class="carte rv"><span class="num">01</span><h3>Onglerie</h3><p>Poses, nail art et finitions premium, sur rendez-vous du lundi au samedi dans les deux maisons.</p></div>
+      <div class="carte rv"><span class="num">02</span><h3>Coiffure</h3><p>Balayages transformation, couleurs, coupes et coiffages, pour un vrai changement de style.</p></div>
+      <div class="carte rv"><span class="num">03</span><h3>Lissages &amp; soins HLC</h3><p>Des soins profonds pour des cheveux lisses et brillants, adaptés aux femmes enceintes et allaitantes.</p></div>
+      <div class="carte rv"><span class="num">04</span><h3>Head spa</h3><p>Un moment de détente consacré au cuir chevelu, pour souffler et repartir légère.</p></div>
+      <div class="carte rv"><span class="num">05</span><h3>Regard</h3><p>Extensions de cils, épilation des sourcils au fil et teinture, pour un regard dessiné.</p></div>
+      <div class="carte rv"><span class="num">06</span><h3>Maquillage &amp; épilation</h3><p>Une mise en beauté pour vos grands jours, et des épilations soignées.</p></div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--lin)"><path d="M0 60V30C240 0 480 0 720 26s480 30 720 4v30z" fill="#1c1517"/></svg>
+<section class="academy" id="academy">
+  <div class="wrap acad-in">
+    <div class="rv">
+      <p class="eyebrow">KenzaBlanka Academy</p>
+      <h2>Et si c'était le début de ta nouvelle carrière ?</h2>
+      <p class="lead">De l'initiation au perfectionnement, KenzaBlanka Academy t'accompagne pour développer ton savoir-faire et révéler ton talent.</p>
+      <p>Les formations se déroulent dans un cadre professionnel, avec une formatrice de la maison, et chaque journée se termine par la remise d'une attestation de formation.</p>
+      <p class="note">Nouvelles dates annoncées régulièrement sur la page de la maison.</p>
+      <a class="btn btn-or" href="https://wa.me/262692641065?text=Bonjour%2C%20je%20souhaite%20des%20infos%20sur%20KenzaBlanka%20Academy">Demander les prochaines dates</a>
+    </div>
+    <div>
+      <div class="forma rv"><p class="eyebrow">Débutante et/ou perfectionnement</p><h3>Formation prothésiste ongulaire</h3><ul><li>Programme complet sur 4 jours</li><li>Techniques professionnelles</li><li>Pratique sur modèles</li><li>Accompagnement personnalisé</li></ul></div>
+      <div class="forma rv"><p class="eyebrow">3 modules · 1 journée</p><h3>Technique &amp; Performance</h3><ul><li>Nail art express</li><li>Déco &amp; finitions premium</li><li>Rapidité &amp; rentabilité</li></ul></div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1);background:var(--creme)"><path d="M0 60V30C240 0 480 0 720 26s480 30 720 4v30z" fill="#1c1517"/></svg>
+
+<section class="wrap" id="offrir">
+  <div class="fetes-in">
+    <div class="rv">
+      <p class="eyebrow">Pour Noël</p>
+      <h2>Offrir un moment chez KenzaBlanka</h2>
+      <p>Une jolie idée à glisser sous le sapin, pour une maman, une sœur, une amie. Demandez-nous, on prépare ça avec vous.</p>
+      <div class="idees">
+        <div class="idee"><h3>Une pose d'ongles</h3><p>Pour briller à toutes les soirées de fin d'année.</p></div>
+        <div class="idee"><h3>Un head spa</h3><p>Une vraie parenthèse de détente à offrir.</p></div>
+        <div class="idee"><h3>Un soin des cheveux</h3><p>Lissage ou soin HLC, pour commencer l'année en beauté.</p></div>
+      </div>
+      <a class="btn btn-sombre" href="https://wa.me/262692641065?text=Bonjour%20KenzaBlanka%2C%20je%20voudrais%20offrir%20un%20moment%20chez%20vous%20pour%20No%C3%ABl">Demander sur WhatsApp</a>
+    </div>
+    <div class="ecrin rv"><small>À offrir</small><span class="script">Un moment pour toi</span><small>KenzaBlanka · Maison de Beauté</small></div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="rv"><p class="eyebrow">Deux adresses pour vous accueillir</p><h2>Venir chez KenzaBlanka</h2></div>
+  <div class="adresses">
+    <div class="adresse rv"><p class="eyebrow">Sainte-Clotilde · Moufia</p><h3>1 rue du Béarn</h3><p>97490 Sainte-Clotilde</p><p style="margin-top:.8rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=1%20rue%20du%20B%C3%A9arn%2097490%20Sainte-Clotilde">Itinéraire →</a></p></div>
+    <div class="adresse rv"><p class="eyebrow">Saint-Denis · Centre-ville</p><h3>33 rue Monseigneur de Beaumont</h3><p>97400 Saint-Denis</p><p style="margin-top:.8rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=33%20rue%20Monseigneur%20de%20Beaumont%2097400%20Saint-Denis">Itinéraire →</a></p></div>
+  </div>
+  <div class="infos rv">
+    <p><b>Rendez-vous</b> · <a href="tel:+262692641065">0692 64 10 65</a>, par WhatsApp ou en message privé</p>
+    <p><b>Onglerie</b> · du lundi au samedi</p>
+    <div class="ctas" style="margin-top:1.6rem">
+      <a class="btn btn-or" href="https://wa.me/262692641065?text=Bonjour%20KenzaBlanka%2C%20je%20souhaite%20r%C3%A9server%20un%20rendez-vous">WhatsApp</a>
+      <a class="btn btn-trait" href="tel:+262692641065">Appeler</a>
+      <a class="btn btn-trait" href="https://www.instagram.com/kenzablanka_reunion/">Instagram</a>
+      <a class="btn btn-trait" href="https://www.facebook.com/KenzaBlankainstitut">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer><img src="img/logo.webp" alt="KenzaBlanka">KenzaBlanka · Maisons de beauté · Sainte-Clotilde &amp; Saint-Denis, La Réunion<br>Maquette privée imaginée par Aurélie et Jonathan, ATMA Digital, à partir des publications de KenzaBlanka.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* paillettes dorées et rose poudré, comme un nail art en suspension */
+const c=document.getElementById('paillettes'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const col=['217,191,147','216,176,168','184,146,106'];
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*2.2+.8,v:Math.random()*.3+.08,a:Math.random()*6.28,t:Math.random()*6.28,c:col[i%3]});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.a+=.012;p.t+=.05;p.x+=Math.sin(p.a)*.3;if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+const o=.25+.35*(1+Math.sin(p.t))/2;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle='rgba('+p.c+','+o+')';x.beginPath();x.moveTo(0,-p.s*2);x.lineTo(p.s*.6,0);x.lineTo(0,p.s*2);x.lineTo(-p.s*.6,0);x.closePath();x.fill();x.restore()}requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="KenzaBlanka" defer></script>
+</body>
+</html>

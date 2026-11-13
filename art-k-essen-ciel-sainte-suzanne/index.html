@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Art K Essen Ciel · Centre de bien-être et LPG à Sainte-Suzanne</title>
+<meta name="description" content="Art K Essen Ciel, centre de bien-être et LPG corps et visage réservé aux femmes à Sainte-Suzanne : Kobido, head spa, massage bien-être, drainage lympho minceur. Sur rendez-vous au 0693 31 88 39.">
+<meta property="og:title" content="Art K Essen Ciel · L'art de l'essentiel">
+<meta property="og:description" content="Centre de bien-être et LPG corps et visage, réservé aux femmes, à Sainte-Suzanne.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/art-k-essen-ciel-sainte-suzanne/img/massage-bougie.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/art-k-essen-ciel-sainte-suzanne/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Nunito:wght@300;400;700&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1d2766;--indigo:#3d2e8c;--pervenche:#8ba3d9;--brume:#e9edf8;--perle:#f7f6fc;--turquoise:#3fb5ad;--citron:#c8ea4a;--soleil:#f6c445;--corail:#ef7a5a;--orchidee:#a64fc4;--txt:#2c2f4a;--doux:#6b6f8d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--perle);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--nuit);line-height:1.1}
+h2{font-size:clamp(2.1rem,5.4vw,3.3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.5rem}
+.script{font-family:Parisienne,cursive;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--indigo);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.arc-line{height:4px;background:linear-gradient(90deg,var(--corail),var(--soleil),var(--citron),var(--turquoise),var(--pervenche),var(--orchidee));border-radius:4px}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--brume);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em}
+.ribbon b{color:#fff;font-weight:700}
+canvas#papillons{position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.75}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.92rem;transition:.3s}
+.btn-main{background:var(--turquoise);color:#fff;animation:souffle 4s ease-in-out infinite}
+.btn-main:hover{background:var(--indigo)}
+.btn-line{border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:1px solid var(--indigo);color:var(--indigo)}
+.btn-dark:hover{background:var(--brume)}
+@keyframes souffle{50%{box-shadow:0 0 0 10px rgba(63,181,173,.0),0 10px 30px -10px rgba(63,181,173,.7)}}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:6rem 0 4rem;overflow:hidden;color:#fff;background:var(--nuit)}
+.hero .fond{position:absolute;inset:0;overflow:hidden}
+.hero .fond img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,39,102,.25) 0%,rgba(29,39,102,.35) 40%,rgba(29,39,102,.92) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero svg.arc{width:clamp(120px,22vw,190px);height:auto;margin-bottom:1rem;opacity:0;animation:monte 1.4s .2s ease forwards}
+.hero h1{color:#fff;font-size:clamp(3rem,10vw,6.2rem);opacity:0;animation:monte 1.4s .4s ease forwards}
+.hero h1 .script{display:block;font-size:.5em;color:var(--citron);margin-top:.3rem}
+.hero .lead{font-size:1.12rem;max-width:34rem;margin:1.2rem 0 2rem;color:#eef0fb;opacity:0;animation:monte 1.4s .7s ease forwards}
+.hero .ctas{opacity:0;animation:monte 1.4s 1s ease forwards}
+.hero .adr{margin-top:1.6rem;font-size:.88rem;color:#d7dcf3}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--indigo);color:#fff;overflow:hidden;white-space:nowrap;padding:1rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;position:relative;z-index:2}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.4rem}
+.track span::after{content:"🦋";margin-left:2.8rem;font-style:normal;font-size:.9rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* univers */
+.univers{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.univers p+p{margin-top:1rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.pastilles span{background:#fff;border:1px solid var(--brume);border-radius:999px;padding:.35rem .9rem;font-size:.84rem;font-weight:400;color:var(--indigo)}
+.cadre{position:relative}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 24px 24px;box-shadow:0 40px 80px -40px rgba(29,39,102,.55)}
+.cadre::before{content:"";position:absolute;inset:-12px;border-radius:230px 230px 30px 30px;padding:3px;background:linear-gradient(160deg,var(--soleil),var(--citron),var(--turquoise),var(--pervenche),var(--orchidee));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.8}
+.cadre .tag{position:absolute;left:-.6rem;bottom:1.6rem;background:#fff;padding:.8rem 1.1rem;border-radius:14px;box-shadow:0 18px 40px -20px rgba(29,39,102,.45);font-size:.85rem;max-width:15rem}
+.cadre .tag b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--indigo);font-weight:500;line-height:1.2}
+.citation{margin-top:2rem;background:var(--brume);border-radius:22px;padding:1.6rem 1.8rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--nuit)}
+.citation cite{display:block;margin-top:.7rem;font-family:Nunito,Arial;font-style:normal;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux)}
+/* soins */
+.soins{background:linear-gradient(180deg,var(--perle),var(--brume))}
+.soins-head{max-width:40rem}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.4rem}
+.soin{background:#fff;border-radius:22px;padding:1.7rem 1.6rem;box-shadow:0 20px 50px -38px rgba(29,39,102,.5);transition:transform .5s,box-shadow .5s;position:relative;overflow:hidden}
+.soin::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--c,var(--turquoise))}
+.soin:hover{transform:translateY(-6px);box-shadow:0 30px 60px -36px rgba(29,39,102,.6)}
+.soin .duree{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--c,var(--turquoise));margin-bottom:.5rem}
+.soin h3{margin-bottom:.5rem}
+.soin p{font-size:.95rem;color:var(--doux)}
+.soin ul{list-style:none;margin-top:.8rem;font-size:.9rem}
+.soin li{padding-left:1.2rem;position:relative}
+.soin li::before{content:"✦";position:absolute;left:0;color:var(--c,var(--turquoise));font-size:.7rem;top:.35em}
+/* instant */
+.instant{padding:0;position:relative;overflow:hidden}
+.instant img{width:100%;height:clamp(340px,60vw,620px);object-fit:cover}
+.instant .voile{position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,39,102,.85),rgba(29,39,102,.1) 70%);display:flex;align-items:center}
+.instant blockquote{color:#fff;font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4.6vw,3rem);max-width:30rem;line-height:1.2}
+.instant blockquote small{display:block;font-family:Nunito,Arial;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-top:1rem;color:var(--citron)}
+/* offrir */
+.offrir{background:radial-gradient(circle at 20% 10%,#2f3a8a,var(--nuit) 70%);color:#eef0fb;overflow:hidden}
+.offrir h2{color:#fff}
+.offrir .eyebrow{color:var(--soleil)}
+.offrir-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.offrir .carte{background:linear-gradient(140deg,#fff,#f1f3fc);color:var(--nuit);border-radius:24px;padding:2rem;position:relative;transform:rotate(-2deg);box-shadow:0 40px 80px -30px rgba(0,0,0,.5);transition:transform .6s}
+.offrir .carte:hover{transform:rotate(0) scale(1.02)}
+.offrir .carte .arc-line{margin-bottom:1.2rem}
+.offrir .carte b{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:500;display:block;line-height:1.1}
+.offrir .carte .script{font-size:1.6rem;color:var(--orchidee)}
+.offrir .carte p{font-size:.92rem;color:var(--doux);margin-top:.8rem}
+.etoile{position:absolute;color:var(--soleil);opacity:.5;animation:scintille 3.5s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.1;transform:scale(.7)}}
+.offrir p.note{font-size:.85rem;color:#c3c9ea;margin-top:1rem}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+.bloc{background:#fff;border-radius:22px;padding:1.8rem;box-shadow:0 20px 50px -40px rgba(29,39,102,.5)}
+.bloc h3{margin-bottom:.8rem}
+.bloc p+p{margin-top:.5rem}
+.bloc a{color:var(--indigo);font-weight:700;text-decoration:none;word-break:break-word}
+footer{background:var(--nuit);color:#c3c9ea;text-align:center;padding:2.4rem 1rem 3rem;font-size:.85rem}
+footer .script{font-size:1.8rem;color:#fff;display:block;margin-bottom:.5rem}
+/* reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .univers,.offrir-grid,.contact-grid{grid-template-columns:1fr}
+ .grille{grid-template-columns:1fr 1fr}
+ .cadre{max-width:420px;margin:auto}
+}
+@media (max-width:560px){
+ body{font-size:16px}
+ .grille{grid-template-columns:1fr}
+ .ribbon{font-size:.68rem}
+ .hero{padding-top:5rem}
+ .cadre .tag{left:.4rem}
+ .instant .voile{background:linear-gradient(0deg,rgba(29,39,102,.9),rgba(29,39,102,.15) 80%);align-items:flex-end;padding-bottom:2rem}
+ .offrir .carte{transform:none}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .hero svg.arc,.hero h1,.hero .lead,.hero .ctas{opacity:1}
+ .reveal{opacity:1;transform:none}
+ canvas#papillons{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan · ATMA Digital</b> — créée avec plaisir pour Art K Essen Ciel</div>
+<canvas id="papillons" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+ <div class="fond"><img src="img/massage-bougie.webp" alt="Massage bien-être à la lueur d'une bougie"></div>
+ <div class="wrap">
+  <svg class="arc" viewBox="0 0 200 100" aria-hidden="true"><g fill="none" stroke-width="7" stroke-linecap="round"><path d="M14 96a86 86 0 0 1 172 0" stroke="#ef7a5a"/><path d="M24 96a76 76 0 0 1 152 0" stroke="#f6c445"/><path d="M34 96a66 66 0 0 1 132 0" stroke="#c8ea4a"/><path d="M44 96a56 56 0 0 1 112 0" stroke="#3fb5ad"/><path d="M54 96a46 46 0 0 1 92 0" stroke="#8ba3d9"/><path d="M64 96a36 36 0 0 1 72 0" stroke="#a64fc4"/></g></svg>
+  <h1>Art K Essen Ciel<span class="script">L'art de l'essentiel</span></h1>
+  <p class="lead">Centre de bien-être et LPG corps et visage à Sainte-Suzanne, réservé aux femmes. Massages bien-être, Kobido, head spa, drainage lympho minceur : juste le temps d'un instant à soi.</p>
+  <div class="ctas">
+   <a class="btn btn-main" href="https://wa.me/262693318839?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20Art%20K%20Essen%20Ciel">Réserver sur WhatsApp</a>
+   <a class="btn btn-line" href="tel:+262693318839">0693 31 88 39</a>
+  </div>
+  <p class="adr">Sur rendez-vous, du mardi au samedi · 7 rue Ambroise Croizat, ZAC Commune Bègue, Sainte-Suzanne</p>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Lâcher prise</span><span>Déconnexion du quotidien</span><span>Détente profonde</span><span>Effet bonne mine immédiat</span><span>Juste le temps d'un instant à soi</span><span>L'art de l'essentiel</span>
+ <span>Lâcher prise</span><span>Déconnexion du quotidien</span><span>Détente profonde</span><span>Effet bonne mine immédiat</span><span>Juste le temps d'un instant à soi</span><span>L'art de l'essentiel</span>
+</div></div>
+
+<section id="univers">
+ <div class="wrap univers">
+  <div class="reveal">
+   <span class="eyebrow">🦋 Centre de bien-être · Sainte-Suzanne</span>
+   <h2>Un cocon pensé pour les femmes</h2>
+   <p>Chez Art K Essen Ciel, chaque soin est une parenthèse : des gestes doux et précis pour détendre profondément le corps, apaiser l'esprit et réduire le stress quotidien.</p>
+   <p>Du massage bien-être du corps au rituel japonais du Kobido, du head spa aux cures LPG corps et visage, l'institut réunit sous un même toit la détente et le soin de la silhouette.</p>
+   <div class="pastilles"><span>Massage bien-être</span><span>LPG corps et visage</span><span>Kobido</span><span>Head spa</span><span>Drainage lympho minceur</span><span>Réservée aux femmes</span></div>
+   <blockquote class="citation">« Je recommande, très professionnelle et masse très bien. J'ai beaucoup apprécié le moment de détente chez Art K Essen Ciel. »<cite>Avis publié sur la page Facebook</cite></blockquote>
+  </div>
+  <div class="cadre reveal">
+   <img src="img/mains-massage.webp" alt="Mains en plein massage bien-être" loading="lazy">
+   <div class="tag"><b>Sur rendez-vous</b>du mardi au samedi</div>
+  </div>
+ </div>
+</section>
+
+<section class="soins" id="soins">
+ <div class="wrap">
+  <div class="soins-head reveal">
+   <span class="eyebrow">La carte des soins</span>
+   <h2>Des rituels pour chaque envie</h2>
+   <p>Les soins présentés par Art K Essen Ciel dans ses publications.</p>
+  </div>
+  <div class="grille">
+   <article class="soin reveal" style="--c:var(--orchidee)"><span class="duree">60 min</span><h3>Kobido visage</h3><p>Art ancestral japonais du massage bien-être facial, pour un lifting du visage naturel.</p><ul><li>Effet bonne mine immédiat</li><li>Tonicité et fermeté</li><li>Détente profonde</li></ul></article>
+   <article class="soin reveal" style="--c:var(--turquoise)"><span class="duree">45 ou 60 min</span><h3>Head spa</h3><p>Une parenthèse sensorielle pour le cuir chevelu, inspirée des rituels japonais : massage doux, gommage, bain de vapeur, plantes naturelles, masque.</p><ul><li>Lâcher prise</li><li>Beauté des cheveux</li></ul></article>
+   <article class="soin reveal" style="--c:var(--corail)"><span class="duree">1 h 15</span><h3>Massage bien-être relaxant corps</h3><p>Pour détendre profondément le corps, apaiser l'esprit et procurer une détente globale.</p><ul><li>Réduire le stress quotidien</li><li>Un instant à soi</li></ul></article>
+   <article class="soin reveal" style="--c:var(--pervenche)"><span class="duree">60 min · en cure</span><h3>Drainage lympho minceur</h3><p>La méthode Vodder, avec des mouvements doux et lents, pour stimuler la circulation de la lymphe.</p><ul><li>Silhouette harmonieuse</li><li>Bien-être et harmonie corporelle</li></ul></article>
+   <article class="soin reveal" style="--c:var(--indigo)"><span class="duree">Cures</span><h3>LPG Infinity corps et visage</h3><p>La technologie LPG pour lisser la cellulite, raffermir la peau et redessiner la silhouette.</p><ul><li>Perte en centimètre</li><li>Peau visiblement plus ferme</li></ul></article>
+   <article class="soin reveal" style="--c:var(--soleil)"><span class="duree">1 h 30</span><h3>Abhyanga &amp; pieds « Thaï »</h3><p>Massage indien traditionnel de la tête et du visage, associé à une détente des pieds et des mollets.</p><ul><li>Libérer les tensions accumulées</li><li>Détente des pieds et mollets</li></ul></article>
+  </div>
+ </div>
+</section>
+
+<div class="instant reveal">
+ <img src="img/soin-jambes.webp" alt="Soin bien-être des jambes" loading="lazy">
+ <div class="voile"><div class="wrap"><blockquote>Juste le temps d'un instant à soi.<small>Art K Essen Ciel · Sainte-Suzanne</small></blockquote></div></div>
+</div>
+
+<section class="offrir" id="offrir">
+ <span class="etoile" style="top:12%;left:8%">✦</span><span class="etoile" style="top:30%;right:10%;animation-delay:1s">✦</span><span class="etoile" style="bottom:14%;left:46%;animation-delay:2s">✧</span>
+ <div class="wrap offrir-grid">
+  <div class="reveal">
+   <span class="eyebrow">✦ À offrir pour Noël</span>
+   <h2>Offrez un moment chez Art K Essen Ciel</h2>
+   <p>Un Kobido, un head spa, un massage bien-être… Pour faire plaisir à une femme qui compte pour vous, offrez-lui une vraie parenthèse de détente. Demandez-nous : on vous explique tout sur WhatsApp ou au téléphone.</p>
+   <div class="ctas" style="margin-top:1.6rem">
+    <a class="btn btn-main" href="https://wa.me/262693318839?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20moment%20de%20d%C3%A9tente%20chez%20Art%20K%20Essen%20Ciel%20pour%20No%C3%ABl">Demander sur WhatsApp</a>
+    <a class="btn btn-line" href="tel:+262693318839">Appeler</a>
+   </div>
+  </div>
+  <div class="carte reveal">
+   <div class="arc-line"></div>
+   <span class="script">Un instant à soi</span>
+   <b>Art K Essen Ciel</b>
+   <p>Massage bien-être · Kobido · Head spa · LPG<br>Sainte-Suzanne, sur rendez-vous</p>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <div class="reveal">
+   <span class="eyebrow">Prendre rendez-vous</span>
+   <h2>Venez souffler un peu</h2>
+   <p>Les soins se font sur rendez-vous, du mardi au samedi.</p>
+  </div>
+  <div class="contact-grid">
+   <div class="bloc reveal">
+    <h3>Nous trouver</h3>
+    <p>7 rue Ambroise Croizat<br>ZAC Commune Bègue<br>97441 Sainte-Suzanne, La Réunion</p>
+    <p><a href="https://www.google.com/maps/search/?api=1&amp;query=7%20rue%20Ambroise%20Croizat%2097441%20Sainte-Suzanne">Ouvrir l'itinéraire →</a></p>
+   </div>
+   <div class="bloc reveal">
+    <h3>Nous écrire</h3>
+    <p>Téléphone : <a href="tel:+262693318839">0693 31 88 39</a></p>
+    <p>WhatsApp : <a href="https://wa.me/262693318839">écrire un message</a></p>
+    <p>E-mail : <a href="mailto:akec.sas@gmail.com">akec.sas@gmail.com</a></p>
+    <p>Facebook : <a href="https://www.facebook.com/482800195505757/">Art k Essen ciel</a></p>
+   </div>
+  </div>
+  <div class="ctas reveal" style="margin-top:2rem"><a class="btn btn-main" href="https://wa.me/262693318839?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20Art%20K%20Essen%20Ciel">Réserver sur WhatsApp</a><a class="btn btn-dark" href="tel:+262693318839">0693 31 88 39</a></div>
+ </div>
+</section>
+</main>
+<footer>
+ <span class="script">L'art de l'essentiel</span>
+ Maquette privée imaginée par Aurélie et Jonathan, ATMA Digital, à partir des publications de Art K Essen Ciel.
+</footer>
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('papillons'),x=c.getContext('2d');
+const cols=['#ef7a5a','#f6c445','#c8ea4a','#3fb5ad','#8ba3d9','#a64fc4'];
+let W,H,P=[],run=true;
+function size(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+size();addEventListener('resize',size);
+const n=innerWidth<600?10:18;
+for(let i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,s:5+Math.random()*6,a:Math.random()*6.28,v:.25+Math.random()*.45,f:Math.random()*6.28,c:cols[i%cols.length],o:.35+Math.random()*.35});
+function wing(s,k){x.beginPath();x.ellipse(-s*.55*k,-s*.35,s*.6*k,s*.75,-.5,0,6.28);x.ellipse(-s*.45*k,s*.45,s*.42*k,s*.5,.6,0,6.28);x.ellipse(s*.55*k,-s*.35,s*.6*k,s*.75,.5,0,6.28);x.ellipse(s*.45*k,s*.45,s*.42*k,s*.5,-.6,0,6.28);x.fill()}
+function tick(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.a+=(Math.random()-.5)*.08;p.x+=Math.cos(p.a)*p.v;p.y+=Math.sin(p.a)*p.v-.15;p.f+=.18;
+if(p.x<-20)p.x=W+20;if(p.x>W+20)p.x=-20;if(p.y<-20)p.y=H+20;if(p.y>H+20)p.y=-20;
+x.save();x.translate(p.x,p.y);x.rotate(p.a+1.57);x.globalAlpha=p.o;x.fillStyle=p.c;wing(p.s,.35+.65*Math.abs(Math.sin(p.f)));x.restore()}
+requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tick()});
+tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Art K Essen Ciel" defer></script>
+</body>
+</html>

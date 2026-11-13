@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lo Élégance Institut · Institut de beauté à Saint-Louis</title>
+<meta name="description" content="Lo Élégance Institut, l'institut de Laurence à Bois de Nèfles Coco, Saint-Louis : soins du visage, extensions de cils, épilations, drainage lymphatique, massages, sur rendez-vous.">
+<meta property="og:title" content="Lo Élégance Institut · Saint-Louis">
+<meta property="og:description" content="Prendre soin de vous depuis 9 ans : soins du visage, regard, épilations, drainage lymphatique et massages.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lo-elegance/img/og.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lo-elegance/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f6f0e8;--lin:#ece2d6;--taupe:#d4c5b9;--or:#c9a961;--or-d:#a8873f;--bronze:#8b6f47;--encre:#1f1b17;--txt:#4a4038;--doux:#8b7d70}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Helvetica,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--encre);line-height:1.1}
+h2{font-size:clamp(2.1rem,6vw,3.3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.45rem}
+.script{font-family:'Great Vibes',cursive;color:var(--or-d);font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--bronze);font-weight:500}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--encre);color:var(--taupe);text-align:center;font-size:.76rem;padding:.45rem .8rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:var(--or);font-weight:500}
+canvas#or{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.06em;font-size:.9rem;transition:.35s;text-align:center}
+.btn-or{background:linear-gradient(135deg,var(--or),var(--or-d));color:#fff;box-shadow:0 14px 30px -14px rgba(139,111,71,.8);animation:souffle 3.2s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 14px 40px -8px rgba(201,169,97,.85)}}
+.btn-or:hover{transform:translateY(-2px)}
+.btn-ligne{border:1px solid var(--bronze);color:var(--encre)}
+.btn-ligne:hover{background:var(--lin)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;padding:5.5rem 0 3.5rem}
+.hero-bg{position:absolute;inset:0;background:url(img/univers.webp) center 30%/cover;animation:kb 26s ease-in-out infinite alternate;filter:saturate(.85)}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,240,232,.78),rgba(246,240,232,.9) 55%,var(--creme))}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,5.6rem);font-weight:400}
+.hero h1 .script{display:block;font-size:.62em;margin-top:.2rem}
+.hero h1 span.l{display:inline-block;opacity:0;transform:translateY(20px);animation:monte 1.1s forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.lead{font-size:1.15rem;max-width:32rem;margin:1.3rem 0 2rem}
+.adr{margin-top:1.6rem;font-size:.9rem;color:var(--doux)}
+.medaillon{position:relative;justify-self:center;width:min(340px,72vw);aspect-ratio:1;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 40px 80px -40px rgba(31,27,23,.45)}
+.medaillon img{width:78%;border-radius:50%}
+.medaillon::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px solid var(--or);opacity:.7}
+.medaillon::after{content:"";position:absolute;inset:-28px;border-radius:50%;border:1px dashed rgba(201,169,97,.5);animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+/* bandeau */
+.bande{background:var(--encre);color:var(--taupe);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.3rem}
+.track span::after{content:"✦";margin-left:2.6rem;font-style:normal;font-size:.7rem;color:var(--or)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.neuf{font-family:'Cormorant Garamond',serif;font-size:clamp(8rem,26vw,15rem);line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--or);text-align:center;position:relative}
+.neuf small{display:block;-webkit-text-stroke:0;color:var(--bronze);font-family:Jost,Helvetica,Arial;font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;margin-top:1.2rem}
+.mot{background:#fff;border-radius:24px;padding:clamp(1.6rem,4vw,2.6rem);box-shadow:0 30px 60px -45px rgba(31,27,23,.5);margin-top:1.6rem;border-left:3px solid var(--or)}
+.mot p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--encre);line-height:1.45}
+.mot cite{display:block;margin-top:1rem;font-style:normal;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+.mot cite .script{font-size:1.8rem;letter-spacing:0;text-transform:none;margin-right:.4rem}
+/* soins */
+.soins{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.4rem}
+.carte{background:rgba(255,255,255,.82);border-radius:22px;padding:1.8rem 1.6rem;position:relative;overflow:hidden;transition:transform .5s,box-shadow .5s;border:1px solid rgba(201,169,97,.25)}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(139,111,71,.6)}
+.carte .ico{width:46px;height:46px;margin-bottom:1rem;color:var(--or-d)}
+.carte h3{margin-bottom:.5rem}
+.carte ul{list-style:none;font-size:.95rem}
+.carte li{padding:.25rem 0 .25rem 1.2rem;position:relative}
+.carte li::before{content:"";position:absolute;left:0;top:.95em;width:.6rem;height:1px;background:var(--or)}
+.carte.vedette{background:var(--encre);color:var(--taupe)}
+.carte.vedette h3{color:#fff}
+.carte.vedette p{font-size:.95rem}
+.carte.vedette .tag{display:inline-block;margin-top:1rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.note{margin-top:1.8rem;font-size:.9rem;color:var(--doux);text-align:center}
+/* lieu */
+.lieu{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.arche{position:relative;max-width:420px;width:100%;justify-self:center}
+.arche img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:999px 999px 22px 22px;box-shadow:0 40px 80px -40px rgba(31,27,23,.5)}
+.arche::before{content:"";position:absolute;inset:-12px;border:1px solid var(--or);border-radius:999px 999px 30px 30px;opacity:.6}
+.arche figcaption{margin-top:1.4rem;text-align:center;font-size:.82rem;color:var(--doux);letter-spacing:.06em}
+.etapes{display:grid;gap:1rem;margin-top:1.4rem}
+.etapes div{display:flex;gap:1rem;align-items:flex-start}
+.etapes b{flex:0 0 2.4rem;height:2.4rem;border-radius:50%;border:1px solid var(--or);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--or-d);font-weight:500}
+/* offrir */
+.offrir{background:var(--encre);color:var(--taupe);overflow:hidden}
+.offrir h2{color:#fff}
+.offrir .eyebrow{color:var(--or)}
+.offrir-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.6rem 0 2rem}
+.idee{border:1px solid rgba(201,169,97,.3);border-radius:18px;padding:1.1rem 1.3rem}
+.idee h3{color:#fff;font-size:1.3rem;margin-bottom:.2rem}
+.idee p{font-size:.95rem}
+.bon{aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,#f6f0e8,#e4d6c3);color:var(--encre);padding:clamp(1.3rem,4vw,2rem);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -30px rgba(0,0,0,.7);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.bon:hover{transform:rotate(0)}
+.bon::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{60%,100%{left:130%}}
+.bon .script{font-size:clamp(2.2rem,8vw,3rem);line-height:1}
+.bon small{letter-spacing:.22em;text-transform:uppercase;font-size:.68rem;color:var(--bronze)}
+.bon .ruban{position:absolute;right:1.4rem;top:0;bottom:0;width:14px;background:linear-gradient(var(--or),var(--or-d));opacity:.85}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.infos p{margin:.55rem 0}
+.infos b{font-weight:500;color:var(--encre)}
+.map iframe{width:100%;aspect-ratio:4/3;border:0;border-radius:22px}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:var(--doux)}
+footer .script{font-size:2rem;display:block;margin-bottom:.4rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.histoire,.lieu,.offrir-in,.contact-in{grid-template-columns:1fr}
+ .medaillon{order:-1;width:min(230px,60vw)}
+ .grille{grid-template-columns:1fr}
+ .hero{padding-top:6rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span.l{opacity:1;transform:none}canvas#or{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan · ATMA Digital</b> — créée avec plaisir pour Lo Élégance Institut</div>
+<canvas id="or" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Institut de beauté · Saint-Louis</p>
+      <h1><span class="l">Lo Élégance</span><span class="script l" style="animation-delay:.5s">prendre soin de vous</span></h1>
+      <p class="lead rv">Mon univers, ma passion, mon quotidien : depuis 9 ans, Laurence vous accueille dans une ambiance chaleureuse et intimiste pour un vrai moment de bien-être, de douceur et de beauté.</p>
+      <div class="ctas rv">
+        <a class="btn btn-or" href="https://wa.me/262693973110?text=Bonjour%20Laurence%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20Lo%20%C3%89l%C3%A9gance">Prendre rendez-vous</a>
+        <a class="btn btn-ligne" href="#soins">Découvrir les soins</a>
+      </div>
+      <p class="adr rv">8 chemin Grenat, Bois de Nèfles Coco, Saint-Louis · sur rendez-vous · <a href="tel:+262693973110">0693 97 31 10</a></p>
+    </div>
+    <div class="medaillon"><img src="img/logo.webp" alt="Logo Lo Élégance Institut : un visage de femme couronné de fleurs dorées"></div>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Soins du visage</span><span>Extensions de cils</span><span>Épilation au fil et à la cire</span><span>Drainage lymphatique</span><span>Massage californien</span><span>Beauté des pieds</span><span>Pressothérapie</span>
+<span>Soins du visage</span><span>Extensions de cils</span><span>Épilation au fil et à la cire</span><span>Drainage lymphatique</span><span>Massage californien</span><span>Beauté des pieds</span><span>Pressothérapie</span>
+</div></div>
+
+<section class="wrap histoire">
+  <div class="neuf rv">9<small>ans de passion</small></div>
+  <div class="rv">
+    <p class="eyebrow">L'histoire</p>
+    <h2>9 ans de belles rencontres</h2>
+    <p>Lo Élégance fête ses 9 ans cet automne. Neuf années de fidélité, de confiance et de rendez-vous partagés, que Laurence célèbre avec ses clientes à travers un jeu concours anniversaire.</p>
+    <figure class="mot"><p>« 9 ans de passion, de belles rencontres, de moments de partage et surtout de bonheur à prendre soin de vous ! »</p><cite><span class="script">Laurence</span>Lo Élégance Institut</cite></figure>
+  </div>
+</section>
+
+<section class="soins" id="soins">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">La carte</p><h2>Votre beauté, notre passion</h2><p>Des soins pensés pour le visage, le regard et le corps, à réserver auprès de Laurence.</p></div>
+    <div class="grille">
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="22" r="13"/><path d="M18 20c1 1.2 2.2 1.2 3 0M27 20c1 1.2 2.2 1.2 3 0M20 28c2.5 2 5.5 2 8 0"/><path d="M8 40c4-4 10-5 16-5s12 1 16 5"/></svg>
+        <h3>Soins du visage</h3>
+        <ul><li>Consultation de peau</li><li>Soin classique</li><li>Soins spécifiques</li><li>Nettoyage, hydratation, éclat</li></ul>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 26c8-10 28-10 36 0-8 10-28 10-36 0z"/><circle cx="24" cy="26" r="5"/><path d="M12 19l-2-5M18 16l-1-5M24 15v-5M30 16l1-5M36 19l2-5"/></svg>
+        <h3>Beauté du regard</h3>
+        <ul><li>Extensions de cils cil à cil</li><li>Hybride et volume russe</li><li>Teinture et restructuration des sourcils</li><li>Épilation des sourcils au fil ou à la cire</li></ul>
+      </article>
+      <article class="carte vedette rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 6c-6 9-12 15-12 22a12 12 0 0024 0c0-7-6-13-12-22z"/><path d="M18 30a6 6 0 006 6"/></svg>
+        <h3>Drainage lymphatique</h3>
+        <p>Une peau plus légère et un corps en harmonie : le drainage relance la circulation, soulage les jambes lourdes et aide à retrouver un sommeil apaisé. À la séance ou en cure de 4 séances.</p>
+        <span class="tag">Votre bien-être entre de bonnes mains</span>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M10 34c6-2 8-10 14-10s8 8 14 10"/><path d="M14 14c2 3 6 3 8 0M26 14c2 3 6 3 8 0"/><circle cx="24" cy="40" r="2"/></svg>
+        <h3>Massages &amp; bien-être</h3>
+        <ul><li>Massage relaxant californien</li><li>Modelage et gommage du corps</li><li>Massage détente des mains</li><li>Massage détente des pieds</li><li>Soin relaxation avec bottes de pressothérapie</li></ul>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 30c6-6 10-14 16-14s10 8 16 14"/><path d="M8 30h32M14 36h20"/></svg>
+        <h3>Épilations</h3>
+        <ul><li>Visage : sourcils, lèvres, menton</li><li>Aisselles et bras</li><li>Maillot simple, échancré ou intégral</li><li>Jambes entières ou demi-jambes</li></ul>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 8c-2 10-2 20 2 28 2 4 8 5 12 3s5-6 3-10c-3-6-5-12-4-21"/><circle cx="33" cy="9" r="1.5"/><circle cx="37" cy="12" r="1.2"/></svg>
+        <h3>Beauté des pieds</h3>
+        <ul><li>Soin anti-callosités</li><li>Massage des pieds détente</li><li>Des pieds tout doux, prêts pour les sandales</li></ul>
+      </article>
+    </div>
+    <p class="note rv">Prestations publiées par l'institut sur sa page Facebook · tarifs et disponibilités auprès de Laurence.</p>
+  </div>
+</section>
+
+<section class="wrap lieu">
+  <figure class="arche rv"><img src="img/univers.webp" alt="Suspensions végétales et couronnes dorées, la décoration de Lo Élégance" loading="lazy"><figcaption>L'univers Lo Élégance, tout en douceur végétale</figcaption></figure>
+  <div class="rv">
+    <p class="eyebrow">Une nouvelle adresse</p>
+    <h2>Une nouvelle étape, au 8 chemin Grenat</h2>
+    <p>Depuis le 1<sup>er</sup> octobre, votre institut vous accueille dans son nouvel espace à Bois de Nèfles Coco, Saint-Louis, avec la même envie de vous offrir un moment de bien-être, de douceur et de beauté.</p>
+    <div class="etapes">
+      <div><b>1</b><p>Écrivez à Laurence sur WhatsApp ou par message privé Facebook.</p></div>
+      <div><b>2</b><p>Choisissez votre soin et votre créneau, tout se fait sur rendez-vous.</p></div>
+      <div><b>3</b><p>Venez profiter de votre moment, dans une ambiance calme et intimiste réservée aux adultes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="offrir" id="offrir">
+  <div class="wrap offrir-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment chez Lo Élégance</h2>
+      <p>Les soins de l'institut sont disponibles en bon cadeau : une jolie attention pour une maman, une sœur, une amie, ou pour vous-même.</p>
+      <div class="idees">
+        <div class="idee"><h3>Un soin du visage</h3><p>Une heure de détente pour une peau éclatante.</p></div>
+        <div class="idee"><h3>Un massage californien</h3><p>Pour relâcher les tensions après une année bien remplie.</p></div>
+        <div class="idee"><h3>Un regard sublimé</h3><p>Une pose d'extensions de cils pour briller pendant les fêtes.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-or" href="https://wa.me/262693973110?text=Bonjour%20Laurence%2C%20je%20voudrais%20offrir%20un%20bon%20cadeau%20Lo%20%C3%89l%C3%A9gance%20pour%20No%C3%ABl">Demander un bon cadeau</a>
+        <a class="btn btn-ligne" style="color:var(--taupe);border-color:var(--or)" href="tel:+262693973110">Appeler l'institut</a>
+      </div>
+    </div>
+    <div class="bon rv"><span class="ruban"></span><small>Bon cadeau</small><span class="script">Prendre soin de soi est une belle attention</span><small>Lo Élégance Institut · Saint-Louis</small></div>
+  </div>
+</section>
+
+<section class="wrap contact-in" id="contact">
+  <div class="infos rv">
+    <p class="eyebrow">Rendez-vous</p>
+    <h2>Venir à l'institut</h2>
+    <p><b>Adresse</b> · 8 chemin Grenat, Bois de Nèfles Coco, 97450 Saint-Louis</p>
+    <p><b>Téléphone et WhatsApp</b> · <a href="tel:+262693973110">0693 97 31 10</a></p>
+    <p><b>E-mail</b> · <a href="mailto:loeleganceinstitut@gmail.com">loeleganceinstitut@gmail.com</a></p>
+    <p><b>Accueil</b> · sur rendez-vous, au téléphone ou en message privé</p>
+    <div class="ctas" style="margin-top:1.6rem">
+      <a class="btn btn-or" href="https://wa.me/262693973110?text=Bonjour%20Laurence%2C%20je%20voudrais%20prendre%20rendez-vous">WhatsApp</a>
+      <a class="btn btn-ligne" href="https://www.facebook.com/1681278601918432">Facebook</a>
+    </div>
+  </div>
+  <div class="map rv"><iframe title="Plan : Saint-Louis, La Réunion" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=55.38%2C-21.29%2C55.47%2C-21.23&amp;layer=mapnik"></iframe></div>
+</section>
+
+<footer><span class="script">Lo Élégance</span>Lo Élégance Institut · 8 chemin Grenat, Bois de Nèfles Coco, Saint-Louis<br>Maquette privée imaginée par Aurélie et Jonathan, ATMA Digital, à partir des publications de Lo Élégance Institut.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* paillettes et petites feuilles dorées, comme dans le logo */
+const c=document.getElementById('or'),x=c.getContext('2d');let W,H,P=[],on=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*2.2+.8,v:Math.random()*.3+.08,a:Math.random()*6.28,r:Math.random()*6.28,f:i%4==0});
+document.addEventListener('visibilitychange',()=>{on=!document.hidden;if(on)loop()});
+function loop(){if(!on)return;x.clearRect(0,0,W,H);for(const p of P){p.y+=p.v;p.a+=.02;p.r+=.01;p.x+=Math.sin(p.a)*.3;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=.35+Math.sin(p.a*2)*.2;
+if(p.f){x.fillStyle='#c9a961';x.beginPath();x.ellipse(0,0,p.s*3,p.s*1.2,0,0,6.28);x.fill()}
+else{x.fillStyle='#d9bd7a';x.beginPath();x.moveTo(0,-p.s*2);x.lineTo(p.s*.5,0);x.lineTo(0,p.s*2);x.lineTo(-p.s*.5,0);x.fill()}
+x.restore()}requestAnimationFrame(loop)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)loop();
+</script>
+<script src="/outils/cta.js" data-nom="Lo Élégance Institut" defer></script>
+</body>
+</html>

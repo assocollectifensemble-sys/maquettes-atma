@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Leela Beauty · Institut de beauté à Sainte-Clotilde</title>
+<meta name="description" content="Leela Beauty, institut de beauté au 2 A rue Pitel à Sainte-Clotilde : soins du visage Sothys, onglerie, extensions de cils, Powderbrows certifié PhiAcademy, épilations et maquillage.">
+<meta property="og:title" content="Leela Beauty · Beauté, bien-être, harmonie à Sainte-Clotilde">
+<meta property="og:description" content="Soins Sothys, ongles, cils et Powderbrows, rue Pitel à Sainte-Clotilde.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/leela-beauty-sainte-clotilde/img/cat-eyes-rouge-passion.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/leela-beauty-sainte-clotilde/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f6f1eb;--lin:#ece2d6;--sable:#dfcfbf;--taupe:#c9b8a8;--or:#b9925f;--or2:#d8b77e;--rose:#e3c4b4;--passion:#8e1b2a;--encre:#1f1a17;--txt:#3f3530;--doux:#85776d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Jost,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--encre);line-height:1.1}
+h2{font-size:clamp(2.1rem,6vw,3.3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.4rem}
+.script{font-family:'Great Vibes',cursive;color:var(--or);font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--or);font-weight:500}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--encre);color:var(--sable);text-align:center;font-size:.76rem;padding:.45rem .8rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:var(--or2);font-weight:500}
+canvas#paillettes{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.9rem;transition:.35s}
+.btn-or{background:linear-gradient(135deg,var(--or),#9c7546);color:#fff;box-shadow:0 14px 30px -14px rgba(156,117,70,.8);animation:respire 3.2s ease-in-out infinite}
+.btn-or:hover{filter:brightness(1.08)}
+.btn-ligne{border:1px solid var(--or);color:var(--encre)}
+.btn-ligne:hover{background:var(--lin)}
+.btn-clair{border:1px solid var(--or2);color:#fff}
+.btn-clair:hover{background:rgba(216,183,126,.15)}
+@keyframes respire{50%{transform:scale(1.035)}}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(2rem,5vw,5rem);padding:6rem 0 3rem}
+.hero .logo{width:96px;height:96px;border-radius:50%;object-fit:cover;box-shadow:0 10px 30px -12px rgba(31,26,23,.45);margin-bottom:1.4rem}
+.hero h1{font-size:clamp(3.2rem,11vw,6rem);letter-spacing:.02em;opacity:0;transform:translateY(20px);animation:monte 1.4s .2s forwards}
+.hero h1 .script{display:block;font-size:.5em;margin-top:.2rem;color:var(--or)}
+.hero .devise{letter-spacing:.32em;text-transform:uppercase;font-size:.74rem;color:var(--doux);margin-top:1rem;opacity:0;animation:monte 1.4s .6s forwards}
+.hero .lead{font-size:1.12rem;max-width:32rem;margin:1.4rem 0 2rem;opacity:0;animation:monte 1.4s .9s forwards}
+.hero .ctas{opacity:0;animation:monte 1.4s 1.1s forwards}
+.hero .adr{margin-top:1.6rem;font-size:.88rem;color:var(--doux)}
+@keyframes monte{to{opacity:1;transform:none}}
+.ecrin{position:relative;max-width:460px;justify-self:center;width:100%}
+.ecrin .cadre{overflow:hidden;border-radius:240px 240px 24px 24px;aspect-ratio:3/4;box-shadow:0 50px 90px -45px rgba(31,26,23,.6)}
+.ecrin .cadre img{width:100%;height:100%;object-fit:cover;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.14) translateY(-2%)}}
+.ecrin::before{content:"";position:absolute;inset:-14px;border:1px solid var(--or2);border-radius:254px 254px 32px 32px;opacity:.7}
+.ecrin .tag{position:absolute;left:-1rem;bottom:2.2rem;background:var(--creme);padding:.9rem 1.2rem;border-radius:16px;box-shadow:0 18px 40px -20px rgba(31,26,23,.45);font-size:.82rem;max-width:15rem}
+.ecrin .tag b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--passion);font-weight:600;line-height:1.2}
+/* bandeau */
+.bande{background:var(--encre);color:var(--sable);overflow:hidden;white-space:nowrap;padding:1rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem}
+.track{display:inline-block;animation:defile 45s linear infinite}
+.track span{margin:0 1.3rem}
+.track span::after{content:"✦";margin-left:2.6rem;font-style:normal;font-size:.7rem;color:var(--or2)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.esprit p+p{margin-top:1rem}
+.citation{background:var(--lin);border-radius:28px;padding:clamp(1.6rem,4vw,2.6rem);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--encre);position:relative}
+.citation::before{content:"“";position:absolute;top:-.6rem;left:1.2rem;font-size:5rem;color:var(--or2);line-height:1}
+.citation cite{display:block;margin-top:1rem;font-family:Jost,Arial;font-style:normal;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+/* ongles */
+.ongles{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.ongles-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:2.4rem}
+.galerie{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.galerie figure{position:relative;overflow:hidden;border-radius:20px;aspect-ratio:3/4;background:var(--sable)}
+.galerie figure:nth-child(even){transform:translateY(2rem)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.07)}
+.galerie figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;background:rgba(246,241,235,.93);padding:.35rem .8rem;border-radius:999px;font-size:.76rem;font-weight:500;color:var(--encre);text-align:center}
+.mots{margin-top:4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.mot{border-left:2px solid var(--or);padding:.4rem 0 .4rem 1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;color:var(--encre)}
+.mot small{display:block;font-family:Jost,Arial;font-style:normal;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-top:.3rem}
+/* regard */
+.regard{background:var(--encre);color:var(--sable)}
+.regard h2,.regard h3{color:#fff}
+.regard .eyebrow{color:var(--or2)}
+.regard-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.cartes3{display:grid;gap:1rem}
+.carte{border:1px solid rgba(216,183,126,.35);border-radius:20px;padding:1.4rem 1.5rem;transition:.4s}
+.carte:hover{background:rgba(216,183,126,.08);transform:translateY(-3px)}
+.carte h3{font-size:1.35rem;margin-bottom:.35rem}
+.carte p{font-size:.95rem}
+.retention{background:rgba(255,255,255,.04);border-radius:24px;padding:1.8rem;margin-top:1.6rem}
+.retention b{color:var(--or2);font-weight:500}
+/* carte des soins */
+.soins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.soin{background:#fff;border-radius:22px;padding:1.6rem 1.6rem 1.4rem;box-shadow:0 24px 50px -38px rgba(31,26,23,.5);transition:.4s}
+.soin:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(31,26,23,.55)}
+.soin .ico{font-size:1.4rem;color:var(--or)}
+.soin h3{margin:.4rem 0 .5rem}
+.soin ul{list-style:none;font-size:.94rem}
+.soin li{padding:.25rem 0 .25rem 1.1rem;position:relative}
+.soin li::before{content:"";position:absolute;left:0;top:.95em;width:.5rem;height:1px;background:var(--or)}
+.note-resa{margin-top:1.8rem;font-size:.92rem;color:var(--doux)}
+/* avis */
+.avis{background:var(--lin)}
+.scores{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.score{background:var(--creme);border-radius:20px;padding:1.4rem;text-align:center}
+.score strong{display:block;font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--passion);font-weight:500;line-height:1}
+.score span{font-size:.85rem;color:var(--doux)}
+.paroles{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.parole{background:#fff;border-radius:20px;padding:1.4rem 1.6rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--encre)}
+.parole cite{display:block;font-family:Jost,Arial;font-style:normal;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux);margin-top:.6rem}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 80% 0%,#3a1418 0%,var(--encre) 60%);color:var(--sable);overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--or2)}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.6rem 0 2rem}
+.idee{border:1px solid rgba(216,183,126,.3);border-radius:18px;padding:1.1rem 1.3rem}
+.idee h3{color:#fff;font-size:1.25rem;margin-bottom:.2rem}
+.idee p{font-size:.93rem}
+.cadeau{aspect-ratio:1.6;border-radius:24px;background:linear-gradient(135deg,var(--or2),var(--or) 45%,#7d5a33);color:var(--encre);padding:clamp(1.3rem,4vw,2rem);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -30px rgba(0,0,0,.7);transform:rotate(-4deg);transition:transform .7s;position:relative;overflow:hidden}
+.cadeau:hover{transform:rotate(0) scale(1.02)}
+.cadeau::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-100%);animation:reflet 5s ease-in-out infinite}
+@keyframes reflet{60%,100%{transform:translateX(100%)}}
+.cadeau .script{color:var(--encre);font-size:clamp(2rem,7vw,2.8rem);line-height:1}
+.cadeau small{letter-spacing:.24em;text-transform:uppercase;font-size:.68rem;font-weight:500}
+.cadeau .ruban-v{position:absolute;top:0;bottom:0;right:22%;width:14px;background:var(--passion);opacity:.85}
+.noel .pti{font-size:.82rem;margin-top:1rem;color:var(--taupe)}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.infos p{margin:.55rem 0}
+.infos b{font-weight:500;color:var(--encre)}
+.infos a{text-decoration-color:var(--or)}
+.horaires{list-style:none;margin:.6rem 0 1.4rem;max-width:22rem}
+.horaires li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--sable);padding:.3rem 0;font-size:.95rem}
+.reseaux{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem}
+.map iframe{width:100%;aspect-ratio:4/3;border:0;border-radius:24px;filter:sepia(.25) saturate(.85)}
+footer{text-align:center;padding:2.6rem 1.2rem 3rem;font-size:.82rem;color:var(--doux)}
+footer img{width:64px;height:64px;border-radius:50%;margin:0 auto 1rem;object-fit:cover}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:900px){
+ .hero,.esprit,.ongles-head,.regard-in,.noel-in,.contact-in{grid-template-columns:1fr}
+ .hero{padding-top:5.5rem;gap:2.6rem}
+ .ecrin{order:-1;max-width:290px}
+ .ecrin .tag{left:.4rem;bottom:1.2rem}
+ .galerie{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.8rem;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
+ .galerie figure{flex:0 0 72%;scroll-snap-align:center}
+ .galerie figure:nth-child(even){transform:none}
+ .mots,.paroles,.scores{grid-template-columns:1fr}
+ .soins-grid{grid-template-columns:1fr}
+ .cadeau{max-width:360px;margin:auto}
+}
+@media (min-width:901px) and (max-width:1100px){.soins-grid{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .hero h1,.hero .devise,.hero .lead,.hero .ctas,.rv{opacity:1!important;transform:none!important}
+ canvas#paillettes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan · ATMA Digital</b> — créée avec plaisir pour Leela Beauty</div>
+<canvas id="paillettes" aria-hidden="true"></canvas>
+<main>
+
+<header class="wrap hero">
+  <div>
+    <img class="logo" src="img/logo-leela-beauty.webp" alt="Logo Leela Beauty">
+    <p class="eyebrow">Institut de beauté · Sainte-Clotilde</p>
+    <h1>Leela<span class="script">Beauty</span></h1>
+    <p class="devise">Beauté · Bien-être · Harmonie</p>
+    <p class="lead">Soins du visage Sothys, onglerie, extensions de cils et Powderbrows certifié PhiAcademy : un institut où votre bien-être est la priorité, rue Pitel à Sainte-Clotilde.</p>
+    <div class="ctas">
+      <a class="btn btn-or" href="https://app.flexybeauty.com/leela-institut-de-beaute">Réserver en ligne</a>
+      <a class="btn btn-ligne" href="tel:+262262283440">0262 28 34 40</a>
+    </div>
+    <p class="adr">2 A rue Pitel, 97490 Sainte-Clotilde</p>
+  </div>
+  <div class="ecrin rv">
+    <div class="cadre"><img src="img/cat-eyes-rouge-passion.webp" alt="Ongles effet Cat Eyes rouge passion réalisés chez Leela Beauty"></div>
+    <div class="tag"><b>Rouge passion, noir intense…</b>l'effet Cat Eyes fait toute la différence !</div>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Soin du visage Sothys</span><span>Onglerie</span><span>Extensions de cils</span><span>Powderbrows</span><span>Épilations</span><span>Maquillage</span><span>Nail art</span>
+<span>Soin du visage Sothys</span><span>Onglerie</span><span>Extensions de cils</span><span>Powderbrows</span><span>Épilations</span><span>Maquillage</span><span>Nail art</span>
+</div></div>
+
+<section class="wrap esprit">
+  <div class="rv">
+    <p class="eyebrow">Bienvenue chez Leela Beauty</p>
+    <h2>Une parenthèse pensée pour vous</h2>
+    <p>Chez Leela Beauty, chaque formule s'adapte à vos envies : relaxation profonde, éclat de la peau, ou simple parenthèse pour vous ressourcer. À vous de choisir celle qui vous fera du bien.</p>
+    <p>Des prestations de qualité, dans un cadre agréable, avec des produits professionnels et la même passion à chaque rendez-vous.</p>
+  </div>
+  <figure class="citation rv">Votre bien-être est notre priorité. Nous vous proposons plusieurs combinaisons de soins et d'expériences, conçues pour révéler votre beauté et vous offrir un moment de détente unique.<cite>Leela Beauty, à propos</cite></figure>
+</section>
+
+<section class="ongles" id="ongles">
+  <div class="wrap">
+    <div class="ongles-head">
+      <div class="rv"><p class="eyebrow">L'onglerie</p><h2>Chic jusqu'au bout des ongles <span class="script" style="font-size:.8em">by Audrey</span></h2></div>
+      <p class="rv">Gel, pose américaine, semi-permanent, French revisitée, nail art et strass : quelques créations récentes de l'institut, des plus douces aux plus audacieuses.</p>
+    </div>
+    <div class="galerie">
+      <figure class="rv"><img src="img/nail-art-coeur.webp" alt="Nail art nude, arabesques noires et petit cœur rouge" loading="lazy"><figcaption>Arabesques &amp; petit cœur</figcaption></figure>
+      <figure class="rv"><img src="img/french-jaune-paillettes.webp" alt="French jaune vif et paillettes dorées" loading="lazy"><figcaption>French soleil &amp; paillettes</figcaption></figure>
+      <figure class="rv"><img src="img/blanc-lacte.webp" alt="Ongles blanc lacté, forme carrée" loading="lazy"><figcaption>Blanc lacté</figcaption></figure>
+      <figure class="rv"><img src="img/french-nude-elegance.webp" alt="French nude élégante" loading="lazy"><figcaption>French nude</figcaption></figure>
+    </div>
+    <div class="mots">
+      <p class="mot rv">Rouge passion, noir intense… l'effet Cat Eyes fait toute la différence !<small>Publication du 14 octobre 2026</small></p>
+      <p class="mot rv">Chic jusqu'au bout des ongles by Audrey<small>Publication du 14 octobre 2026</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="regard" id="regard">
+  <div class="wrap regard-in">
+    <div class="rv">
+      <p class="eyebrow">Le regard</p>
+      <h2>Des cils et des sourcils sublimés</h2>
+      <p>Extensions de cils, volume russe, Powderbrows certifié PhiAcademy : le regard se dessine avec précision, pour un résultat harmonieux qui tient dans le temps.</p>
+      <div class="retention">
+        <h3>« Une rétention au top ! »</h3>
+        <p>Quand les extensions sont bien entretenues au quotidien, le résultat est là. Un bon entretien à la maison, des produits de qualité et une pose professionnelle permettent généralement d'espacer les remplissages <b>entre 3 et 4 semaines</b>.</p>
+      </div>
+    </div>
+    <div class="cartes3">
+      <div class="carte rv"><h3>Extensions de cils</h3><p>Pose et remplissages, volume russe pour un regard intense et fourni.</p></div>
+      <div class="carte rv"><h3>Powderbrows</h3><p>Un sourcil poudré et structuré, réalisé par une praticienne certifiée PhiAcademy.</p></div>
+      <div class="carte rv"><h3>Maquillage</h3><p>Maquillage libanais et grain de beauté pour souligner un trait, une expression.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="soins">
+  <div class="rv"><p class="eyebrow">La carte</p><h2>Tous les soins de l'institut</h2><p>Les prestations et les tarifs à jour se consultent sur la page de réservation en ligne.</p></div>
+  <div class="soins-grid">
+    <div class="soin rv"><span class="ico">✦</span><h3>Visage</h3><ul><li>Soin du visage Sothys</li><li>Maquillage</li><li>Épilations du visage</li></ul></div>
+    <div class="soin rv"><span class="ico">✦</span><h3>Mains &amp; pieds</h3><ul><li>Gel traditionnel, pose américaine</li><li>Vernis semi-permanent</li><li>Nail art, strass</li><li>Manucure, pédicure</li></ul></div>
+    <div class="soin rv"><span class="ico">✦</span><h3>Regard</h3><ul><li>Extensions de cils, volume russe</li><li>Powderbrows certifié PhiAcademy</li><li>Sourcils</li></ul></div>
+    <div class="soin rv"><span class="ico">✦</span><h3>Corps</h3><ul><li>Modelage du corps</li><li>Soin du corps enveloppement</li><li>Épilations femmes et hommes</li></ul></div>
+    <div class="soin rv"><span class="ico">✦</span><h3>Pour les petits</h3><ul><li>Head Spa Kids</li></ul></div>
+    <div class="soin rv"><span class="ico">✦</span><h3>Réserver</h3><ul><li><a href="https://app.flexybeauty.com/leela-institut-de-beaute">Flexybeauty</a></li><li><a href="https://booksy.com/fr-fr/63046_leela-beauty_instituts-de-beaute_102684_bois-de-nefles-saint-denis">Booksy</a></li><li><a href="tel:+262692627690">0692 62 76 90</a></li></ul></div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Elles en parlent</p><h2>Une clientèle fidèle</h2></div>
+    <div class="scores">
+      <div class="score rv"><strong>5,0</strong><span>sur Booksy</span></div>
+      <div class="score rv"><strong>96 %</strong><span>recommandent la page Facebook</span></div>
+      <div class="score rv"><strong>4,5/5</strong><span>sur Groupanoo (18 avis)</span></div>
+    </div>
+    <div class="paroles">
+      <p class="parole rv">« Super prestations et personnel adorable. »<cite>Avis Groupanoo</cite></p>
+      <p class="parole rv">« J'ai passé un très bon moment, accueil très chaleureux, soin très doux. »<cite>Avis Groupanoo</cite></p>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment chez Leela Beauty</h2>
+      <p>Une carte cadeau Leela Beauty, à glisser sous le sapin pour une maman, une sœur, une amie : elle choisit ensuite le soin qui lui fait envie.</p>
+      <div class="idees">
+        <div class="idee"><h3>Un soin du visage Sothys</h3><p>Un vrai moment de détente et d'éclat.</p></div>
+        <div class="idee"><h3>Une jolie pose d'ongles</h3><p>Gel, French ou nail art, pour briller pendant les fêtes.</p></div>
+        <div class="idee"><h3>Un regard sublimé</h3><p>Extensions de cils ou Powderbrows, pour la nouvelle année.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-or" href="https://wa.me/262692627690?text=Bonjour%20Leela%20Beauty%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl.">Demander une carte cadeau sur WhatsApp</a>
+        <a class="btn btn-clair" href="tel:+262262283440">Appeler l'institut</a>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="cadeau"><span class="ruban-v"></span><small>Carte cadeau</small><span class="script">Leela Beauty</span><small>Beauté · Bien-être · Harmonie</small></div>
+      <p class="pti">Le contenu et la valeur de la carte se choisissent avec l'institut.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir à l'institut</p>
+      <h2>À très bientôt</h2>
+      <p><b>Adresse</b><br>2 A rue Pitel, 97490 Sainte-Clotilde, La Réunion</p>
+      <p><b>Téléphone</b><br><a href="tel:+262262283440">0262 28 34 40</a> · <a href="tel:+262692627690">0692 62 76 90</a></p>
+      <p><b>E-mail</b><br><a href="mailto:leela-mtn@hotmail.fr">leela-mtn@hotmail.fr</a></p>
+      <p><b>Horaires</b></p>
+      <ul class="horaires">
+        <li><span>Mardi</span><span>9 h – 17 h</span></li>
+        <li><span>Mercredi</span><span>9 h – 17 h</span></li>
+        <li><span>Jeudi</span><span>9 h – 18 h</span></li>
+        <li><span>Vendredi</span><span>8 h – 18 h</span></li>
+        <li><span>Samedi</span><span>9 h – 15 h</span></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-or" href="https://app.flexybeauty.com/leela-institut-de-beaute">Prendre rendez-vous</a>
+        <a class="btn btn-ligne" href="https://wa.me/262692627690">WhatsApp</a>
+      </div>
+      <div class="reseaux">
+        <a class="btn btn-ligne" href="https://www.facebook.com/196312323838996/">Facebook</a>
+        <a class="btn btn-ligne" href="https://www.instagram.com/LEELA_BEAUTY_OFFICIEL/">Instagram</a>
+      </div>
+    </div>
+    <div class="map rv"><iframe title="Plan d'accès Leela Beauty" loading="lazy" src="https://www.google.com/maps?q=2%20A%20rue%20Pitel%2C%2097490%20Sainte-Clotilde%2C%20La%20R%C3%A9union&amp;output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo-leela-beauty.webp" alt="" loading="lazy">
+  <p>Maquette privée imaginée par Aurélie et Jonathan, ATMA Digital, à partir des publications de Leela Beauty.</p>
+</footer>
+</main>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var calme=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var c=document.getElementById('paillettes');if(calme||!c)return;
+var x=c.getContext('2d'),W,H,d=Math.min(window.devicePixelRatio||1,2),P=[],run=true;
+function taille(){W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0)}
+taille();addEventListener('resize',taille);
+var cols=['216,183,126','185,146,95','227,196,180','255,240,215'];
+var N=W<600?22:34;
+function neuve(p,haut){p.x=Math.random()*W;p.y=haut?-10:Math.random()*H;p.r=.6+Math.random()*1.8;p.v=.15+Math.random()*.35;p.dx=(Math.random()-.5)*.25;p.t=Math.random()*6.28;p.c=cols[(Math.random()*cols.length)|0];return p}
+for(var i=0;i<N;i++)P.push(neuve({},false));
+function etoile(p,a){x.fillStyle='rgba('+p.c+','+a+')';x.beginPath();
+ if(p.r>1.7){var s=p.r*2.2;x.moveTo(p.x,p.y-s);x.quadraticCurveTo(p.x,p.y,p.x+s,p.y);x.quadraticCurveTo(p.x,p.y,p.x,p.y+s);x.quadraticCurveTo(p.x,p.y,p.x-s,p.y);x.quadraticCurveTo(p.x,p.y,p.x,p.y-s)}
+ else x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+function boucle(){if(!run)return;x.clearRect(0,0,W,H);
+ P.forEach(function(p){p.y+=p.v;p.x+=p.dx+Math.sin(p.t)*.15;p.t+=.03;var a=.25+.45*(.5+.5*Math.sin(p.t*1.7));etoile(p,a);if(p.y>H+10)neuve(p,true)});
+ requestAnimationFrame(boucle)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(boucle)});
+requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Leela Beauty" defer></script>
+</body>
+</html>
