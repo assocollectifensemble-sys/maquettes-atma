@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Case Beauregard · Chambres d'hôtes à Petite Île, La Réunion</title>
+<meta name="description" content="Case Beauregard, chambres d'hôtes tout confort dans les hauts de Petite Île : piscine, petit déjeuner maison, vue sur l'océan et séjours sur mesure pour découvrir le Sud de La Réunion. 0692 59 72 57.">
+<meta property="og:title" content="Case Beauregard · Chambres d'hôtes à Petite Île">
+<meta property="og:description" content="Nos chambres d'hôtes tout confort vous attendent pour découvrir le Sud de l'île de La Réunion.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/case-beauregard-petite-ile/img/og-case-beauregard.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/case-beauregard-petite-ile/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Amatic+SC:wght@400;700&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{--encre:#1f2422;--creme:#fbf7ef;--sable:#f3eadb;--vert:#4f8a3a;--vert-f:#2f5a24;--feuille:#8dbb5f;--ocean:#2c6f8f;--lagon:#7fc3cf;--corail:#e8845f;--soleil:#f2c46d;--txt:#33393a;--doux:#6f7672}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-weight:400;color:var(--encre);line-height:1.1}
+h2{font-family:'Kaushan Script',cursive;font-size:clamp(2.1rem,7vw,3.3rem);margin:.3rem 0 1.1rem}
+h3{font-family:'Amatic SC',cursive;font-weight:700;font-size:1.75rem;letter-spacing:.03em}
+.eyebrow{font-family:'Amatic SC',cursive;font-weight:700;font-size:1.35rem;letter-spacing:.12em;color:var(--vert)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--encre);color:#d9e6cf;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#lumiere{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--vert);color:#fff;box-shadow:0 14px 30px -14px rgba(47,90,36,.9);animation:souffle 3.8s ease-in-out infinite}
+.btn-wa:hover{background:var(--vert-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(79,138,58,.65)}}
+.btn-line{border:1.5px solid var(--encre);color:var(--encre);background:rgba(255,255,255,.55)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(180deg,#fdf1de 0%,#fbe1c4 38%,#cfe6e6 70%)}
+.hero .scene{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%;}
+.hero .scene svg{width:100%;height:100%}
+.soleil{animation:leve 9s ease-out forwards}
+@keyframes leve{from{transform:translateY(40px);opacity:.3}to{transform:none;opacity:1}}
+.reflet{animation:miroite 5s ease-in-out infinite}
+.reflet:nth-child(2){animation-delay:-1.6s}.reflet:nth-child(3){animation-delay:-3.1s}
+@keyframes miroite{50%{opacity:.25;transform:translateX(14px)}}
+.palme{transform-box:fill-box;transform-origin:50% 100%;animation:vent 6s ease-in-out infinite}
+.palme.b{animation-duration:7.5s;animation-delay:-2s}
+@keyframes vent{50%{transform:rotate(3deg)}}
+.hamac{transform-box:fill-box;transform-origin:50% 0;animation:berce 5s ease-in-out infinite}
+@keyframes berce{50%{transform:rotate(-2.5deg)}}
+.hero-in{position:relative;z-index:2;padding:6.2rem 0 1rem;text-align:center}
+.hero h1{font-family:'Kaushan Script',cursive;font-size:clamp(3.4rem,15vw,7.5rem);line-height:.95;color:var(--encre)}
+.hero .sous{font-family:'Amatic SC',cursive;font-size:clamp(1.7rem,6vw,2.6rem);color:var(--encre);margin-top:.5rem;letter-spacing:.04em}
+.hero .lead{max-width:30rem;margin:1rem auto 1.6rem;font-size:1.08rem;color:#3d3a33}
+.hero .ctas{justify-content:center}
+.hero .legende{position:absolute;right:.9rem;bottom:.7rem;z-index:3;font-size:.72rem;color:rgba(255,255,255,.9);letter-spacing:.04em}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1.05s}.apparait.d4{animation-delay:1.4s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--vert-f);color:#f4f0e2;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Amatic SC',cursive;font-weight:700;font-size:1.55rem;letter-spacing:.04em}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✿";margin-left:2.2rem;font-size:.9rem;color:var(--soleil)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* la case */
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.case p+p{margin-top:1rem}
+.citation .g{font-family:Georgia,serif;font-style:normal}
+.citation{font-family:'Kaushan Script',cursive;font-size:clamp(1.3rem,4.4vw,1.75rem);color:var(--vert-f);border-left:3px solid var(--feuille);padding-left:1.1rem;margin:1.5rem 0;line-height:1.35}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Kaushan Script',cursive;font-weight:400;font-size:clamp(2rem,8vw,2.6rem);color:var(--corail);line-height:1}
+.chiffres span{font-size:.84rem;color:var(--doux);line-height:1.35;display:block;margin-top:.3rem}
+.medaillon{position:relative;max-width:340px;margin:auto}
+.medaillon img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:32px;background:#fff;box-shadow:0 34px 70px -34px rgba(31,36,34,.55)}
+.medaillon::before{content:"";position:absolute;inset:-12px -12px auto -12px;aspect-ratio:1;border:1.5px dashed var(--feuille);border-radius:40px;transform:rotate(-3deg)}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.medaillon figcaption{text-align:center;font-size:.82rem;color:var(--doux);margin-top:1.4rem}
+/* vague */
+.vague{display:block;width:100%;height:50px}
+/* carte postale */
+.carte-sec{background:var(--sable)}
+.carte-sec .intro{max-width:36rem}
+.postale{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.2rem}
+.moment{background:#fff;border-radius:20px;padding:1.5rem 1.4rem;box-shadow:0 22px 46px -34px rgba(31,36,34,.5);transition:transform .4s,box-shadow .4s;position:relative;overflow:hidden}
+.moment:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 30px 56px -30px rgba(31,36,34,.5)}
+.moment svg{width:54px;height:54px;margin-bottom:.6rem}
+.moment p{font-size:.95rem}
+.moment::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(242,196,109,.35),transparent 70%)}
+.timbre{border:2px dashed var(--corail);background:#fff8f0}
+.timbre h3{color:var(--corail)}
+.source{margin-top:1.4rem;font-size:.85rem;color:var(--doux)}
+/* chambres */
+.chambres{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:2rem}
+.chambre{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 26px 54px -36px rgba(31,36,34,.55)}
+.chambre .illu{aspect-ratio:16/9;background:linear-gradient(180deg,#fbe1c4,#cfe6e6)}
+.chambre .illu svg{width:100%;height:100%}
+.chambre .txt{padding:1.3rem 1.4rem 1.5rem}
+.chambre .txt small{display:block;font-size:.72rem;color:var(--doux);letter-spacing:.08em;margin-top:.2rem}
+.equip{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.equip span{border:1px solid rgba(79,138,58,.45);border-radius:999px;padding:.3rem .95rem;font-size:.9rem;background:#fff;transition:.3s}
+.equip span:hover{background:#eef5e6}
+/* sur mesure */
+.mesure{background:var(--encre);color:#e9eee4;overflow:hidden}
+.mesure h2{color:#fff}.mesure .eyebrow{color:var(--feuille)}
+.mesure-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.envies{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:1.6rem 0 2rem}
+.envie{border:1px solid rgba(141,187,95,.4);border-radius:18px;padding:1.1rem 1.1rem 1rem;transition:.35s}
+.envie:hover{background:rgba(141,187,95,.1)}
+.envie h3{color:var(--soleil);font-size:1.55rem}
+.envie p{font-size:.93rem}
+.mesure .btn-line{border-color:#e9eee4;color:#fff;background:transparent}
+.mesure .btn-line:hover{background:rgba(255,255,255,.1)}
+.sud{position:relative}
+.sud svg{width:100%;height:auto;border-radius:22px}
+.sud figcaption{font-size:.82rem;color:#b9c3b3;margin-top:.8rem;text-align:center}
+/* noel */
+.noel{background:radial-gradient(ellipse at top,#fff6e4,var(--creme) 70%);text-align:center;overflow:hidden}
+.guirlande{position:absolute;top:0;left:0;right:0;height:46px}
+.guirlande svg{width:100%;height:100%}
+.ampoule{animation:brille 2.6s ease-in-out infinite}
+.ampoule:nth-child(3n){animation-delay:-.9s}.ampoule:nth-child(3n+1){animation-delay:-1.7s}
+@keyframes brille{50%{opacity:.35}}
+.bon{max-width:620px;margin:1.8rem auto 0;background:#fff;border-radius:26px;padding:2.2rem 1.6rem;box-shadow:0 30px 70px -40px rgba(31,36,34,.55);position:relative;border:1.5px solid rgba(242,196,109,.7)}
+.bon::before,.bon::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--creme);transform:translateY(-50%)}
+.bon::before{left:-14px}.bon::after{right:-14px}
+.bon .nom{font-family:'Kaushan Script',cursive;font-size:clamp(1.9rem,7vw,2.6rem);color:var(--vert-f)}
+.bon p{margin:.8rem auto 1.5rem;max-width:30rem}
+.bon .ctas{justify-content:center}
+.note{font-size:.85rem;color:var(--doux);margin-top:1.4rem}
+/* contact */
+.contact{background:var(--sable)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.coord{list-style:none;display:grid;gap:.9rem;margin-top:1rem}
+.coord li{display:flex;gap:.8rem;align-items:flex-start}
+.coord svg{width:22px;height:22px;flex:none;margin-top:.2rem;color:var(--vert)}
+.coord a{text-decoration:none;border-bottom:1px solid rgba(79,138,58,.4);overflow-wrap:anywhere}
+.carte-acces{background:#fff;border-radius:24px;padding:1.6rem;box-shadow:0 26px 54px -36px rgba(31,36,34,.5)}
+.carte-acces p{font-size:.95rem;margin:.5rem 0 1.2rem}
+footer{background:var(--encre);color:#b9c3b3;text-align:center;padding:2.6rem 1.2rem 3rem;font-size:.85rem}
+footer .sig{font-family:'Kaushan Script',cursive;font-size:1.9rem;color:#fff;margin-bottom:.5rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .case,.mesure-in,.contact-in{grid-template-columns:1fr}
+ .postale{grid-template-columns:1fr 1fr}
+ .chambres{grid-template-columns:1fr}
+ .medaillon{max-width:250px}
+}
+@media (max-width:520px){
+ body{font-size:16px}
+ .postale{grid-template-columns:1fr}
+ .envies{grid-template-columns:1fr}
+ .hero .scene{height:50%}
+ .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#lumiere{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Case Beauregard</div>
+<canvas id="lumiere" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="hero-in wrap">
+  <p class="eyebrow apparait">Chambres d'hôtes · Petite Île · La Réunion</p>
+  <h1 class="apparait d2">Case Beauregard</h1>
+  <p class="sous apparait d2">Chambres d'hôtes à Petite Île</p>
+  <p class="lead apparait d3">Nos chambres d'hôtes tout confort vous attendent pour découvrir le Sud de l'île de La Réunion.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-wa" href="https://wa.me/262692597257?text=Bonjour%2C%20je%20souhaite%20organiser%20un%20s%C3%A9jour%20%C3%A0%20la%20Case%20Beauregard" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Préparer mon séjour</a>
+   <a class="btn btn-line" href="tel:+262692597257">0692 59 72 57</a>
+  </div>
+ </div>
+ <div class="scene" aria-hidden="true">
+  <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMax slice">
+   <defs>
+    <linearGradient id="mer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fc3cf"/><stop offset="1" stop-color="#2c6f8f"/></linearGradient>
+    <linearGradient id="colline" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8dbb5f"/><stop offset="1" stop-color="#4f8a3a"/></linearGradient>
+    <linearGradient id="avant" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f8a3a"/><stop offset="1" stop-color="#2f5a24"/></linearGradient>
+    <radialGradient id="halo"><stop offset="0" stop-color="#f2c46d" stop-opacity=".9"/><stop offset="1" stop-color="#f2c46d" stop-opacity="0"/></radialGradient>
+   </defs>
+   <g class="soleil"><circle cx="300" cy="78" r="60" fill="url(#halo)"/><circle cx="300" cy="78" r="20" fill="#f6cf80"/></g>
+   <rect x="0" y="92" width="400" height="120" fill="url(#mer)"/>
+   <g fill="#fff" opacity=".7"><rect class="reflet" x="262" y="100" width="70" height="2" rx="1"/><rect class="reflet" x="276" y="110" width="44" height="2" rx="1"/><rect class="reflet" x="284" y="121" width="28" height="2" rx="1"/></g>
+   <path d="M0 92 C40 70 70 62 105 72 C130 79 140 92 150 92 Z" fill="#6c9a8e" opacity=".55"/>
+   <path d="M0 150 C60 120 120 128 180 140 C250 154 320 126 400 132 L400 260 L0 260 Z" fill="url(#colline)"/>
+   <path d="M0 200 C80 176 160 190 230 200 C300 210 350 188 400 192 L400 260 L0 260 Z" fill="url(#avant)"/>
+   <g class="palme"><path d="M70 205 C72 170 76 140 82 118" stroke="#2a3a22" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    <g fill="#2f5a24"><path d="M82 118 C66 108 50 110 40 118 C56 112 70 116 82 118Z"/><path d="M82 118 C78 100 66 92 54 92 C68 98 76 108 82 118Z"/><path d="M82 118 C92 102 106 98 118 100 C104 104 92 110 82 118Z"/><path d="M82 118 C100 114 114 120 122 130 C106 122 94 120 82 118Z"/><path d="M82 118 C84 104 88 94 96 86 C90 98 86 108 82 118Z"/></g></g>
+   <g class="palme b"><path d="M140 208 C141 186 143 166 147 150" stroke="#2a3a22" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <g fill="#2f5a24"><path d="M147 150 C134 142 122 144 114 150 C126 146 136 148 147 150Z"/><path d="M147 150 C155 138 166 135 176 137 C164 140 155 144 147 150Z"/><path d="M147 150 C160 147 170 152 176 160 C164 154 155 152 147 150Z"/><path d="M147 150 C146 139 140 131 132 128 C140 135 144 142 147 150Z"/></g></g>
+   <g class="hamac"><path d="M80 150 Q111 182 144 168" stroke="#f3eadb" stroke-width="2.4" fill="none"/><path d="M84 154 Q111 186 140 172" stroke="#e8845f" stroke-width="3.2" fill="none" stroke-linecap="round"/></g>
+   <g transform="translate(262 170)"><rect x="0" y="14" width="64" height="30" fill="#fbf7ef"/><path d="M-6 16 L32 -6 L70 16 Z" fill="#c25a3c"/><rect x="26" y="26" width="12" height="18" fill="#2c6f8f"/><rect x="8" y="22" width="10" height="9" fill="#f2c46d"/><rect x="46" y="22" width="10" height="9" fill="#f2c46d"/></g>
+   <rect x="218" y="218" width="70" height="12" rx="6" fill="#7fc3cf" stroke="#fbf7ef" stroke-width="2"/>
+  </svg>
+ </div>
+ <span class="legende">Illustration · les hauts de Petite Île face à l'océan</span>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Se rafraîchir dans une jolie piscine</span><span>Faire la grasse matinée au calme</span><span>Un délicieux petit déjeuner maison</span><span>Une sieste dans le hamac</span><span>Admirer la vue</span><span>Le Sud sauvage à deux pas</span>
+ <span>Se rafraîchir dans une jolie piscine</span><span>Faire la grasse matinée au calme</span><span>Un délicieux petit déjeuner maison</span><span>Une sieste dans le hamac</span><span>Admirer la vue</span><span>Le Sud sauvage à deux pas</span>
+</div></div>
+
+<section id="case">
+ <div class="wrap case">
+  <div class="rv">
+   <p class="eyebrow">Bienvenue à la case</p>
+   <h2>Notre petit coin de paradis</h2>
+   <p>Dans les hauts de Petite Île, à Anse les Hauts, la Case Beauregard accueille ses hôtes au calme, en pleine nature, avec une vue panoramique sur l'océan.</p>
+   <p>En famille, entre amis ou en couple, la chambre familiale et la chambre double vous attendent pour des vacances cocooning, et pour partir chaque jour à la découverte du Sud sauvage.</p>
+   <p class="citation"><span class="g">«&nbsp;</span>Point de départ idéal pour découvrir ou redécouvrir le sud sauvage&nbsp;!<span class="g">&nbsp;»</span></p>
+   <div class="chiffres">
+    <div><b>100 %</b><span>de recommandations (34 avis Facebook)</span></div>
+    <div><b>2</b><span>chambres : familiale et double</span></div>
+    <div><b>180°</b><span>de vue sur l'océan</span></div>
+   </div>
+  </div>
+  <figure class="medaillon rv">
+   <img src="img/logo-case-beauregard.webp" alt="Logo Case Beauregard, chambres d'hôtes à Petite Île" width="500" height="500">
+   <figcaption>Le logo de la case, avec ses 3 épis Gîtes de France</figcaption>
+  </figure>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 400 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L0 22 C60 4 120 40 200 22 C280 4 340 34 400 18 L400 50 Z" fill="#f3eadb"/></svg>
+<section class="carte-sec" id="vacances" style="padding-top:2rem">
+ <div class="wrap">
+  <div class="intro rv">
+   <p class="eyebrow">Carte postale de vos vacances</p>
+   <h2>Une journée à la Case Beauregard</h2>
+   <p>Les envies de vacances que la case vous propose, racontées avec ses propres mots.</p>
+  </div>
+  <div class="postale">
+   <article class="moment rv"><svg viewBox="0 0 54 54" fill="none" stroke="#2c6f8f" stroke-width="2.4" stroke-linecap="round"><path d="M6 34c5-4 9 4 14 0s9 4 14 0 9 4 14 0"/><path d="M6 42c5-4 9 4 14 0s9 4 14 0 9 4 14 0"/><path d="M18 30V12a4 4 0 0 1 8 0M30 30V12a4 4 0 0 1 8 0M18 18h12M18 24h12"/></svg><h3>La piscine</h3><p>Se rafraîchir dans une jolie piscine.</p></article>
+   <article class="moment rv"><svg viewBox="0 0 54 54" fill="none" stroke="#6f7672" stroke-width="2.4" stroke-linecap="round"><path d="M8 38h38M8 38V22M46 38V30a6 6 0 0 0-6-6H22v14"/><circle cx="15" cy="26" r="4"/><path d="M32 10h8l-8 8h8M42 4h5l-5 5h5"/></svg><h3>La grasse matinée</h3><p>Faire la grasse matinée au calme.</p></article>
+   <article class="moment rv"><svg viewBox="0 0 54 54" fill="none" stroke="#e8845f" stroke-width="2.4" stroke-linecap="round"><path d="M10 24h28v6a12 12 0 0 1-12 12h-4a12 12 0 0 1-12-12z"/><path d="M38 27h3a5 5 0 0 1 0 10h-4M8 46h34"/><path d="M18 18c0-3 3-3 3-6M26 18c0-3 3-3 3-6"/></svg><h3>Le petit déjeuner</h3><p>Déguster un délicieux petit déjeuner maison.</p></article>
+   <article class="moment rv"><svg viewBox="0 0 54 54" fill="none" stroke="#4f8a3a" stroke-width="2.4" stroke-linecap="round"><path d="M6 10v34M48 10v34"/><path d="M6 18c10 16 32 16 42 0"/><path d="M10 22c9 12 25 12 34 0"/></svg><h3>Le hamac</h3><p>Faire une sieste, lire un livre dans le hamac ou le fauteuil suspendu.</p></article>
+   <article class="moment rv"><svg viewBox="0 0 54 54" fill="none" stroke="#f2a93b" stroke-width="2.4" stroke-linecap="round"><circle cx="27" cy="26" r="7"/><path d="M27 8v5M27 39v0M12 26h-4M46 26h-4M15 14l3 3M39 14l-3 3"/><path d="M4 40c6-4 10 4 16 0s10 4 16 0 8 3 14 0"/></svg><h3>La vue</h3><p>Ou simplement admirer la vue…</p></article>
+   <article class="moment timbre rv"><svg viewBox="0 0 54 54" fill="none" stroke="#e8845f" stroke-width="2.4" stroke-linecap="round"><path d="M27 44S8 32 8 19a9 9 0 0 1 19-4 9 9 0 0 1 19 4c0 13-19 25-19 25z"/></svg><h3>Ça vous tente ?</h3><p>Vacances cocooning dans les hauts de Petite Île, en famille, entre amis ou en couple.</p></article>
+  </div>
+  <p class="source rv">D'après la publication « Carte postale de vos vacances à la Case Beauregard » de leur page Facebook.</p>
+ </div>
+</section>
+
+<section id="chambres">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Les chambres</p>
+   <h2>Deux chambres tout confort</h2>
+   <p>Chaque chambre ouvre sur sa propre terrasse : de quoi savourer le calme des hauts et la vue sur l'océan.</p>
+  </div>
+  <div class="chambres">
+   <article class="chambre rv">
+    <div class="illu"><svg viewBox="0 0 320 180" aria-hidden="true"><rect x="0" y="110" width="320" height="70" fill="#f3eadb"/><rect x="190" y="30" width="96" height="70" rx="6" fill="#7fc3cf"/><path d="M190 76h96" stroke="#2c6f8f" stroke-width="10"/><path d="M238 30v70M190 65h96" stroke="#fbf7ef" stroke-width="4"/><rect x="30" y="92" width="130" height="40" rx="8" fill="#fbf7ef" stroke="#4f8a3a" stroke-width="3"/><rect x="40" y="82" width="40" height="18" rx="7" fill="#fff" stroke="#e8845f" stroke-width="2"/><rect x="110" y="82" width="40" height="18" rx="7" fill="#fff" stroke="#e8845f" stroke-width="2"/><rect x="34" y="132" width="122" height="10" rx="4" fill="#4f8a3a"/><rect x="200" y="118" width="60" height="32" rx="6" fill="#fbf7ef" stroke="#4f8a3a" stroke-width="3"/><rect x="208" y="110" width="22" height="12" rx="5" fill="#fff" stroke="#e8845f" stroke-width="2"/></svg></div>
+    <div class="txt"><h3>La chambre familiale</h3><p>Pour venir en famille ou entre amis et profiter du Sud ensemble.</p><small>Illustration</small></div>
+   </article>
+   <article class="chambre rv">
+    <div class="illu"><svg viewBox="0 0 320 180" aria-hidden="true"><rect x="0" y="110" width="320" height="70" fill="#f3eadb"/><rect x="34" y="30" width="96" height="70" rx="6" fill="#7fc3cf"/><path d="M34 76h96" stroke="#2c6f8f" stroke-width="10"/><path d="M82 30v70M34 65h96" stroke="#fbf7ef" stroke-width="4"/><circle cx="110" cy="46" r="8" fill="#f6cf80"/><rect x="150" y="92" width="140" height="40" rx="8" fill="#fbf7ef" stroke="#4f8a3a" stroke-width="3"/><rect x="162" y="82" width="50" height="18" rx="7" fill="#fff" stroke="#e8845f" stroke-width="2"/><rect x="226" y="82" width="50" height="18" rx="7" fill="#fff" stroke="#e8845f" stroke-width="2"/><rect x="154" y="132" width="132" height="10" rx="4" fill="#4f8a3a"/><path d="M200 112c6-8 14-8 20 0-6 8-14 8-20 0z" fill="#e8845f"/></svg></div>
+    <div class="txt"><h3>La chambre double</h3><p>Pour un séjour à deux, au calme, entre océan et montagne.</p><small>Illustration</small></div>
+   </article>
+  </div>
+  <div class="equip rv">
+   <span>Terrasse privée</span><span>Ventilateur</span><span>Télévision</span><span>Sèche-serviettes</span><span>Linge de lit fourni</span><span>Wifi</span><span>Parking</span><span>Piscine</span><span>Petit déjeuner maison</span>
+  </div>
+ </div>
+</section>
+
+<section class="mesure" id="sejour">
+ <div class="wrap mesure-in">
+  <div class="rv">
+   <p class="eyebrow">Votre séjour sur mesure</p>
+   <h2>Le Sud, à votre rythme</h2>
+   <p>En famille ou à deux, sur 2 à 3 nuits minimum : dites vos envies, et la case organise avec plaisir un séjour qui vous ressemble.</p>
+   <div class="envies">
+    <div class="envie"><h3>Se ressourcer</h3><p>En pleine nature, au calme, entre piscine, hamac et grasses matinées.</p></div>
+    <div class="envie"><h3>Explorer le Sud</h3><p>Visiter et connaître tous les coins du Sud de l'île, depuis les hauts de Petite Île.</p></div>
+   </div>
+   <p class="citation" style="color:#d9e6cf;border-color:var(--soleil)"><span class="g">«&nbsp;</span>Contactez-nous et je me ferai un plaisir d’organiser votre séjour sur mesure.<span class="g">&nbsp;»</span></p>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262692597257?text=Bonjour%2C%20je%20souhaite%20organiser%20un%20s%C3%A9jour%20sur%20mesure%20%C3%A0%20la%20Case%20Beauregard.%20Nos%20dates%20%3A%20" target="_blank" rel="noopener">Demander mes dates</a>
+    <a class="btn btn-line" href="mailto:case.beauregard@gmail.com?subject=S%C3%A9jour%20%C3%A0%20la%20Case%20Beauregard">Écrire un e-mail</a>
+   </div>
+  </div>
+  <figure class="sud rv">
+   <svg viewBox="0 0 300 220" role="img" aria-label="Illustration d'un panorama sur l'océan"><defs><linearGradient id="ciel2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6cf80"/><stop offset=".55" stop-color="#e8845f"/><stop offset="1" stop-color="#2c6f8f"/></linearGradient></defs><rect width="300" height="220" fill="url(#ciel2)"/><circle cx="150" cy="118" r="26" fill="#fbe1c4" opacity=".95"/><rect y="118" width="300" height="102" fill="#2c6f8f"/><g stroke="#fbe1c4" stroke-linecap="round" opacity=".8"><path class="reflet" d="M126 128h48"/><path class="reflet" d="M134 138h32"/><path class="reflet" d="M141 148h18"/></g><path d="M0 118 C30 96 60 92 90 108 C104 114 110 118 116 118Z" fill="#2f5a24"/><path d="M0 180 C70 160 140 170 190 182 C240 194 270 176 300 172 L300 220 L0 220Z" fill="#1f2422"/><path d="M226 182 C226 160 230 142 236 130" stroke="#1f2422" stroke-width="3" fill="none"/><g fill="#1f2422"><path d="M236 130c-12-8-24-6-32 0 12-4 22-2 32 0z"/><path d="M236 130c8-10 20-12 30-8-12 0-22 4-30 8z"/><path d="M236 130c-2-10-8-16-16-18 8 6 12 12 16 18z"/><path d="M236 130c12 0 22 6 26 14-10-8-18-10-26-14z"/></g></svg>
+   <figcaption>Illustration · une vue panoramique à 180° sur l'océan, de Grande-Anse à Saint-Pierre</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="noel" id="offrir">
+ <div class="guirlande" aria-hidden="true"><svg viewBox="0 0 400 46" preserveAspectRatio="none"><path d="M0 6 Q50 34 100 8 T200 8 T300 8 T400 6" stroke="#4f8a3a" stroke-width="1.5" fill="none"/><g fill="#f2c46d"><circle class="ampoule" cx="25" cy="17" r="4"/><circle class="ampoule" cx="62" cy="22" r="4" fill="#e8845f"/><circle class="ampoule" cx="100" cy="9" r="4"/><circle class="ampoule" cx="140" cy="20" r="4" fill="#7fc3cf"/><circle class="ampoule" cx="178" cy="13" r="4"/><circle class="ampoule" cx="222" cy="15" r="4" fill="#e8845f"/><circle class="ampoule" cx="262" cy="21" r="4"/><circle class="ampoule" cx="300" cy="9" r="4" fill="#7fc3cf"/><circle class="ampoule" cx="340" cy="20" r="4"/><circle class="ampoule" cx="378" cy="14" r="4" fill="#e8845f"/></g></svg></div>
+ <div class="wrap">
+  <p class="eyebrow rv">Offrir pour Noël</p>
+  <h2 class="rv">Offrez un séjour dans les hauts</h2>
+  <div class="bon rv">
+   <p class="eyebrow" style="font-size:1.1rem">Bon cadeau</p>
+   <p class="nom">Case Beauregard</p>
+   <p>Une grasse matinée au calme, un petit déjeuner maison, une sieste dans le hamac face à l'océan : un cadeau qui se savoure en famille ou à deux, au cœur du Sud sauvage.</p>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262692597257?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20%C3%A0%20la%20Case%20Beauregard%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1.5S10 9 12 9zm0 0c2-4 6-4 6-1.5S14 9 12 9z"/></svg>Offrir un séjour</a>
+   </div>
+  </div>
+  <p class="note rv">Dates, durée et formule : la case vous répond directement sur WhatsApp.</p>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap contact-in">
+  <div class="rv">
+   <p class="eyebrow">Réserver</p>
+   <h2>À bientôt à la case</h2>
+   <ul class="coord">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>25 rue des Criquets, Anse les Hauts<br>97429 Petite Île, La Réunion</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+262692597257">0692 59 72 57</a></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:case.beauregard@gmail.com">case.beauregard@gmail.com</a></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-3a4 4 0 0 0-4 4v3H6v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><a href="https://www.facebook.com/110894939251860" target="_blank" rel="noopener">Page Facebook Case Beauregard</a></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><a href="https://www.instagram.com/case_beauregard/" target="_blank" rel="noopener">@case_beauregard</a></li>
+   </ul>
+  </div>
+  <div class="carte-acces rv">
+   <h3>Venir à la case</h3>
+   <p>Dans les hauts de Petite Île, au calme de la campagne, avec l'océan pour horizon : le point de départ idéal pour le Sud sauvage.</p>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262692597257" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=25+rue+des+Criquets+97429+Petite-Ile" target="_blank" rel="noopener">Itinéraire</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <p class="sig">Case Beauregard</p>
+ <p>Chambres d'hôtes à Petite Île · La Réunion</p>
+ <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Case Beauregard.</p>
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('lumiere'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var cols=['242,196,109','141,187,95','232,132,95'];
+for(var i=0;i<26;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.6,vx:-.15+Math.random()*.3,vy:-.1-Math.random()*.25,a:Math.random()*6.3,f:i%4==0,c:cols[i%3]});
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p){p.a+=.012;p.x+=p.vx+Math.sin(p.a)*.25;p.y+=p.vy;if(p.y<-12){p.y=H+12;p.x=Math.random()*W}if(p.x<-12)p.x=W+12;if(p.x>W+12)p.x=-12;
+var o=.25+.2*Math.sin(p.a*2);
+if(p.f){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle='rgba('+p.c+','+o+')';x.beginPath();x.ellipse(0,0,p.r*2.4,p.r,0,0,6.3);x.fill();x.restore()}
+else{x.fillStyle='rgba('+p.c+','+o+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()}});
+requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Case Beauregard" defer></script>
+</body>
+</html>
