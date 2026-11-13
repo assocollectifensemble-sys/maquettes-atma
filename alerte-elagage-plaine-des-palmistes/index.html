@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Alerte Élagage · Élagage et espaces verts, La Plaine-des-Palmistes</title>
+<meta name="description" content="Alerte Élagage, à La Plaine-des-Palmistes : élagage et taille d'arbres, broyage de branches, entretien d'espaces verts pour particuliers, pros et collectivités, partout à La Réunion. Devis gratuit au 06 92 53 61 69.">
+<meta property="og:title" content="Alerte Élagage · Passion, savoir-faire et respect de vos jardins">
+<meta property="og:description" content="Élagage, taille d'arbres, broyage de branches et entretien d'espaces verts, depuis La Plaine-des-Palmistes. Devis gratuit.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/alerte-elagage-plaine-des-palmistes/img/palmiers-colonne.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/alerte-elagage-plaine-des-palmistes/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#163522;--sous-bois:#24502f;--feuille:#3f7d3a;--lime:#a8c62f;--lime2:#d6e77a;--orange:#ee6a1f;--ecorce:#7a4a26;--ciel:#2f78d0;--creme:#f6f4e8;--sable:#ece6cf;--txt:#1d2a20;--doux:#5b6a5c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:'Barlow Condensed',Arial Narrow,sans-serif;text-transform:uppercase;line-height:.98;letter-spacing:.01em;color:var(--foret)}
+h2{font-size:clamp(2.3rem,7vw,3.8rem);margin:.4rem 0 1rem}
+h3{font-size:1.45rem;letter-spacing:.02em}
+.main-ecrite{font-family:Caveat,cursive;color:var(--orange);font-size:1.6rem;line-height:1}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:600;color:var(--feuille)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--foret);color:var(--lime2);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#copeaux{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.85rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.02em;transition:.3s;border:2px solid transparent}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 14px 30px -12px rgba(238,106,31,.8);animation:souffle 4.5s ease-in-out infinite}
+.btn-orange:hover{background:#d85a12}
+.btn-lime{background:var(--lime);color:var(--foret)}
+.btn-lime:hover{background:var(--lime2)}
+.btn-line{border-color:rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08)}
+.btn-line:hover{background:rgba(255,255,255,.2)}
+@keyframes souffle{50%{transform:scale(1.03);box-shadow:0 18px 40px -8px rgba(238,106,31,.9)}}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{min-height:min(100svh,860px);position:relative;overflow:hidden;display:flex;align-items:flex-end;color:#fff;padding:7rem 0 3.5rem;background:var(--foret)}
+.hero .fond{position:absolute;inset:0;background:url(img/palmiers-colonne.webp) center 30%/cover;animation:kenburns 26s ease-in-out infinite alternate;transform-origin:50% 30%}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,53,34,.15) 0%,rgba(22,53,34,.05) 35%,rgba(22,53,34,.78) 72%,rgba(22,53,34,.96) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.marque{display:flex;align-items:center;gap:.8rem;margin-bottom:1.1rem}
+.marque img{width:58px;height:58px;border-radius:50%;background:#fff;padding:5px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.marque span{text-shadow:0 2px 10px rgba(0,0,0,.55);font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:.95rem;line-height:1.2}
+.marque small{display:block;font-family:Barlow;font-weight:500;letter-spacing:.04em;text-transform:none;color:var(--lime2);font-size:.85rem}
+.hero h1{color:#fff;font-size:clamp(3.1rem,13vw,6.6rem);font-weight:800;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero .accroche{font-size:1.15rem;max-width:34rem;margin:1rem 0 1.6rem;color:#eef3e2}
+.titre-anim span{display:inline-block;opacity:0;transform:translateY(30px);animation:monte 1s cubic-bezier(.2,.7,.2,1) forwards}
+.titre-anim span:nth-child(2){animation-delay:.18s}.titre-anim span:nth-child(3){animation-delay:.36s}
+@keyframes monte{to{opacity:1;transform:none}}
+.badge-hero{position:absolute;top:5.2rem;right:5vw;z-index:2;background:var(--lime);color:var(--foret);border-radius:50%;width:104px;height:104px;display:grid;place-items:center;text-align:center;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;line-height:1;font-size:.95rem;transform:rotate(-8deg);box-shadow:0 10px 30px rgba(0,0,0,.3);animation:balance 6s ease-in-out infinite}
+.badge-hero b{display:block;font-size:2.1rem}
+@keyframes balance{50%{transform:rotate(4deg)}}
+.legende-photo{position:absolute;right:5vw;bottom:1rem;z-index:2;font-size:.72rem;color:rgba(255,255,255,.75)}
+
+/* BANDEAU */
+.bandeau{background:var(--lime);color:var(--foret);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;font-size:1.25rem;letter-spacing:.06em;position:relative;z-index:2}
+.bandeau .piste{display:inline-block;animation:defile 32s linear infinite}
+.bandeau i{font-style:normal;color:var(--orange);margin:0 1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ESPRIT */
+.esprit{background:var(--creme)}
+.esprit .grille{display:grid;gap:2.4rem;align-items:center}
+.esprit p{color:var(--doux);margin-bottom:1rem}
+.esprit blockquote{font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;font-size:clamp(1.6rem,5.5vw,2.3rem);line-height:1.08;color:var(--sous-bois);border-left:6px solid var(--lime);padding-left:1rem;margin:1.2rem 0}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.6rem}
+.chiffres div{background:#fff;border-radius:16px;padding:1rem .6rem;text-align:center;box-shadow:0 10px 26px -18px rgba(22,53,34,.6)}
+.chiffres b{display:block;font-family:'Barlow Condensed';font-size:2.2rem;color:var(--orange);line-height:1}
+.chiffres span{font-size:.8rem;color:var(--doux);line-height:1.25;display:block;margin-top:.3rem}
+.photo-cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(22,53,34,.8)}
+.photo-cadre img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.photo-cadre figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem 1rem .8rem;color:#fff;font-size:.85rem;background:linear-gradient(transparent,rgba(22,53,34,.85))}
+
+/* VAGUE */
+.vague{display:block;width:100%;height:60px}
+
+/* SERVICES */
+.services{background:var(--foret);color:#e7efdc}
+.services h2{color:#fff}
+.services .eyebrow{color:var(--lime)}
+.services .intro{color:#c7d6bd;max-width:38rem}
+.cartes{display:grid;gap:1rem;margin-top:2.2rem}
+.carte{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(168,198,47,.25);border-radius:20px;padding:1.4rem 1.3rem;transition:.35s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-4px);border-color:var(--lime);background:rgba(168,198,47,.08)}
+.carte .ico{width:52px;height:52px;border-radius:14px;background:var(--lime);display:grid;place-items:center;margin-bottom:.9rem}
+.carte .ico svg{width:30px;height:30px;stroke:var(--foret);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.carte h3{color:#fff;margin-bottom:.35rem}
+.carte p{color:#c7d6bd;font-size:.97rem}
+.carte .date{display:inline-block;margin-top:.7rem;font-size:.78rem;color:var(--lime2);letter-spacing:.04em}
+.aussi{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.aussi span{border:1px solid rgba(214,231,122,.45);color:var(--lime2);border-radius:999px;padding:.35rem .9rem;font-size:.88rem}
+.aussi-titre{margin-top:2.4rem;color:#fff;font-weight:600}
+
+/* AVANT APRES */
+.avap{background:var(--sable)}
+.compare{position:relative;border-radius:22px;overflow:hidden;margin-top:1.6rem;box-shadow:0 30px 60px -30px rgba(22,53,34,.8);aspect-ratio:1000/846;user-select:none;touch-action:pan-y}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.compare .avant{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.compare .poignee{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.4);pointer-events:none}
+.compare .poignee::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:1.3rem;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.compare input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.compare .tag{position:absolute;top:.8rem;padding:.25rem .7rem;border-radius:8px;font-family:'Barlow Condensed';font-weight:700;text-transform:uppercase;font-size:.95rem;letter-spacing:.06em;pointer-events:none}
+.compare .t-av{left:.8rem;background:rgba(22,53,34,.85);color:#fff}
+.compare .t-ap{right:.8rem;background:var(--lime);color:var(--foret)}
+.avap .note{font-size:.85rem;color:var(--doux);margin-top:.8rem}
+
+/* CHANTIERS */
+.chantiers{background:var(--creme);overflow:hidden}
+.defil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.defil::-webkit-scrollbar{display:none}
+.defil figure{flex:0 0 min(78%,340px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;background:var(--foret);box-shadow:0 20px 40px -24px rgba(22,53,34,.8);transition:.35s}
+.defil figure:hover{transform:translateY(-4px)}
+.defil img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.defil figure:hover img{transform:scale(1.05)}
+.defil figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;color:#fff;font-size:.9rem;line-height:1.35;background:linear-gradient(transparent,rgba(22,53,34,.92))}
+.defil figcaption b{display:block;font-family:'Barlow Condensed';text-transform:uppercase;font-size:1.2rem;letter-spacing:.03em;color:var(--lime2)}
+.glisse{font-size:.85rem;color:var(--doux)}
+
+/* DEVIS */
+.devis{background:linear-gradient(120deg,var(--sous-bois),var(--foret));color:#fff;text-align:center;overflow:hidden}
+.devis h2{color:#fff}
+.devis p{color:#d8e5cc;max-width:32rem;margin:0 auto 1.6rem}
+.devis .ctas{justify-content:center}
+.devis .grand-num{font-family:'Barlow Condensed';font-weight:800;font-size:clamp(2.4rem,11vw,4.4rem);color:var(--lime);text-decoration:none;display:block;margin:.3rem 0 1.2rem;letter-spacing:.03em}
+
+/* NOEL */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#fff9ec 0%,var(--sable) 70%);overflow:hidden}
+.noel .boite{position:relative;background:#fff;border-radius:26px;padding:2.2rem 1.4rem;box-shadow:0 30px 70px -36px rgba(22,53,34,.7);border:2px dashed var(--lime);text-align:center;max-width:720px;margin:auto}
+.noel .boite::before{content:"";position:absolute;inset:-2px -2px auto -2px;height:10px;border-radius:26px 26px 0 0;background:repeating-linear-gradient(90deg,var(--orange) 0 18px,var(--lime) 18px 36px)}
+.noel h2 em{font-style:normal;color:var(--orange)}
+.noel p{color:var(--doux);max-width:32rem;margin:0 auto 1rem}
+.noel ul{list-style:none;display:grid;gap:.6rem;margin:1.3rem auto 1.8rem;max-width:30rem;text-align:left}
+.noel li{display:flex;gap:.7rem;align-items:flex-start}
+.noel li::before{content:"";flex:none;width:12px;height:12px;margin-top:.45rem;border-radius:3px;background:var(--lime);transform:rotate(45deg)}
+.sapin{display:block;width:74px;height:74px;margin:0 auto .4rem}
+.noel .ctas{justify-content:center}
+.noel .illus{font-size:.72rem;color:var(--doux);margin-top:1rem}
+
+/* CONTACT */
+.contact{background:var(--foret);color:#e7efdc}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--lime)}
+.infos{display:grid;gap:1rem;margin-top:1.8rem}
+.info{background:rgba(255,255,255,.05);border:1px solid rgba(168,198,47,.25);border-radius:18px;padding:1.2rem 1.3rem}
+.info h3{color:var(--lime);font-size:1.15rem;margin-bottom:.4rem}
+.info a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(168,198,47,.5);word-break:break-word}
+.info table{width:100%;border-collapse:collapse;font-size:.95rem}
+.info td{padding:.22rem 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.info td:last-child{text-align:right;color:#fff}
+.contact .ctas{margin-top:1.8rem}
+footer{text-align:center;padding:2.2rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--sable)}
+footer b{color:var(--foret)}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+
+@media(min-width:820px){
+ .esprit .grille{grid-template-columns:1.1fr .9fr}
+ .cartes{grid-template-columns:repeat(3,1fr)}
+ .infos{grid-template-columns:repeat(3,1fr)}
+ .defil{margin:0;padding:1.6rem 0 1.2rem}
+ .noel .boite{padding:3rem}
+}
+@media(max-width:520px){
+ .ribbon{font-size:.68rem}
+ .badge-hero{width:84px;height:84px;font-size:.78rem;top:5.4rem}
+ .badge-hero b{font-size:1.7rem}
+ .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .titre-anim span{opacity:1;transform:none}
+ .rv{opacity:1;transform:none}
+ canvas#copeaux{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Alerte Élagage</div>
+<canvas id="copeaux" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond" role="img" aria-label="Abattage de palmiers colonne en nacelle, dans l'est de l'île"></div>
+ <div class="badge-hero"><div><b>25</b>ans<br>d'expérience</div></div>
+ <div class="wrap">
+  <div class="marque"><img src="img/logo.webp" alt="Logo Alerte Élagage" width="58" height="58"><span>Alerte Élagage<small>La Plaine-des-Palmistes · toute La Réunion</small></span></div>
+  <h1 class="titre-anim"><span>Élagage,</span> <span>taille &amp;</span> <span><em>espaces verts</em></span></h1>
+  <p class="accroche">Passion, savoir-faire et respect de vos jardins : particuliers, pros et collectivités.</p>
+  <div class="ctas">
+   <a class="btn btn-orange" href="tel:+262692536169"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Devis gratuit · 06 92 53 61 69</a>
+   <a class="btn btn-line" href="#avant-apres">Voir un avant / après</a>
+  </div>
+ </div>
+ <span class="legende-photo">Palmiers colonne, est de l'île · février 2026</span>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+ Élagage<i>✦</i>Taille d'arbres<i>✦</i>Broyage de branches<i>✦</i>Entretien d'espaces verts<i>✦</i>Tonte de pelouse<i>✦</i>Abattage de palmiers<i>✦</i>Débroussaillage<i>✦</i>Taille de haie<i>✦</i>
+ Élagage<i>✦</i>Taille d'arbres<i>✦</i>Broyage de branches<i>✦</i>Entretien d'espaces verts<i>✦</i>Tonte de pelouse<i>✦</i>Abattage de palmiers<i>✦</i>Débroussaillage<i>✦</i>Taille de haie<i>✦</i>
+</div></div>
+
+<section class="esprit">
+ <div class="wrap grille">
+  <div class="rv">
+   <span class="eyebrow">🌳 Alerte Élagage 🌿</span>
+   <h2>Le soin des arbres, des Plaines à toute l'île</h2>
+   <blockquote>Spécialiste de l'entretien des arbres et des espaces verts. Travail soigné, sécurisé&nbsp;🍃</blockquote>
+   <p>Depuis La Plaine-des-Palmistes, l'équipe d'Alerte Élagage intervient partout à La Réunion : un grand arbre à alléger au cœur de Sainte-Marie, des palmiers colonne à abattre du côté de Saint-Benoît, un terrain à remettre au propre entre bananiers et cocotiers.</p>
+   <p>Particuliers, professionnels et collectivités profitent du même savoir-faire, de la nacelle à la débroussailleuse, jusqu'au broyeur qui transforme les branches en copeaux.</p>
+   <div class="chiffres">
+    <div><b>25</b><span>ans d'expérience</span></div>
+    <div><b>974</b><span>toute l'île</span></div>
+    <div><b>Devis</b><span>gratuit</span></div>
+   </div>
+  </div>
+  <figure class="photo-cadre rv">
+   <img src="img/nacelle-palmier.webp" alt="Nacelle déployée au sommet d'un palmier colonne" loading="lazy" width="1000" height="1333">
+   <figcaption>En nacelle, au sommet d'un palmier colonne · février 2026</figcaption>
+  </figure>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 40 C240 0 480 70 720 34 S1200 10 1440 36 V60 H0z" fill="#163522"/></svg>
+<section class="services" id="services">
+ <div class="wrap">
+  <span class="eyebrow rv">Nos services</span>
+  <h2 class="rv">Du pied de l'arbre à la cime</h2>
+  <p class="intro rv">Les prestations publiées par Alerte Élagage, pour un jardin clair, sain et agréable à vivre.</p>
+  <div class="cartes">
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><path d="M16 29V15"/><path d="M16 19l-5-4M16 16l5-4"/><path d="M8 14a8 8 0 1 1 16 0c0 3-2 5-4.5 5.5M8 14c0 3 2 5 4.5 5.5"/><circle cx="25.5" cy="7" r="2.5"/><path d="M23.6 8.6l-3 3"/></svg></div><h3>Élagage &amp; taille d'arbres</h3><p>Des arbres allégés, équilibrés et sécurisés, en grimpe ou en nacelle.</p><span class="date">Sainte-Marie · 15 janvier 2026</span></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><path d="M16 30V10"/><path d="M16 10c-3-5-8-5-11-3M16 10c3-5 8-5 11-3M16 10c-2-4-1-7 0-8 1 1 2 4 0 8M16 12c-4-1-8 1-10 4M16 12c4-1 8 1 10 4"/><path d="M12 30h8"/></svg></div><h3>Abattage de palmiers</h3><p>Palmiers colonne et grands sujets, abattus proprement et en sécurité.</p><span class="date">Est de l'île · 18 février 2026</span></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><rect x="4" y="12" width="15" height="12" rx="2"/><path d="M19 15l6-6 3 3-6 6"/><circle cx="8" cy="26" r="2.5"/><circle cx="16" cy="26" r="2.5"/><path d="M8 18h7"/></svg></div><h3>Broyage de branches</h3><p>Les branches passent au broyeur : le chantier repart net, les végétaux deviennent copeaux.</p></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><path d="M3 26c4-6 8-6 13 0 5-6 9-6 13 0"/><path d="M8 26V16M13 26V12M19 26V12M24 26V16"/><path d="M8 16c0-3 2-4 2-4M24 16c0-3-2-4-2-4"/></svg></div><h3>Entretien d'espaces verts</h3><p>Jardins, terrains et abords, entretenus pour particuliers, pros et collectivités.</p></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><path d="M4 27h24"/><path d="M7 27v-5M11 27v-7M15 27v-4M19 27v-6M23 27v-4M26 27v-6"/><path d="M27 4L15 18"/><path d="M13 18h5l-2.5 3z"/></svg></div><h3>Tonte de pelouse</h3><p>« Fait aussi de la tonte de pelouse » : une herbe rase et un terrain qui respire.</p><span class="date">Publication du 17 janvier 2026</span></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32"><path d="M6 6l20 20"/><path d="M6 6l3 9 6-3z"/><path d="M22 26c2 0 4-2 4-4"/><path d="M4 20c3 0 5 2 5 5M10 4c0 3 2 5 5 5"/></svg></div><h3>Débroussaillage</h3><p>Les terrains envahis retrouvent de l'espace, prêts à profiter.</p></article>
+  </div>
+  <p class="aussi-titre rv">Et aussi, sur toute l'île :</p>
+  <div class="aussi rv"><span>Taille de haie</span><span>Abattage d'arbre dangereux</span><span>Élagage de sapin</span><span>Dessouchage</span><span>Évacuation des déchets végétaux</span><span>Aménagement de haies</span></div>
+ </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:#ece6cf"><path d="M0 0 H1440 V24 C1200 60 960 6 720 30 S240 56 0 22z" fill="#163522"/></svg>
+
+<section class="avap" id="avant-apres">
+ <div class="wrap">
+  <span class="eyebrow rv">Un petit avant / après</span>
+  <h2 class="rv">Sainte-Marie, 15 janvier</h2>
+  <p class="rv">« Aujourd'hui élagage du côté de Sainte-Marie. Un petit avant après. » Glissez la poignée pour voir le grand arbre allégé.</p>
+  <div class="compare rv" id="compare">
+   <img src="img/sainte-marie-apres.webp" alt="Après : l'arbre élagué, la charpente allégée et aérée" loading="lazy" width="1000" height="846">
+   <img class="avant" src="img/sainte-marie-avant.webp" alt="Avant : l'arbre au feuillage très dense" loading="lazy" width="1000" height="846">
+   <span class="tag t-av">Avant</span><span class="tag t-ap">Après</span>
+   <span class="poignee"></span>
+   <input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après">
+  </div>
+  <p class="note">Photos publiées par Alerte Élagage le 15 janvier 2026.</p>
+ </div>
+</section>
+
+<section class="chantiers">
+ <div class="wrap">
+  <span class="eyebrow rv">Sur le terrain</span>
+  <h2 class="rv">Quelques chantiers récents</h2>
+  <p class="glisse rv">Faites glisser pour parcourir →</p>
+  <div class="defil">
+   <figure><img src="img/palmiers-colonne.webp" alt="Deux palmiers colonne, l'un en cours d'abattage depuis la nacelle" loading="lazy" width="1100" height="1467"><figcaption><b>Palmiers colonne</b>Abattage dans l'est de l'île · février 2026</figcaption></figure>
+   <figure><img src="img/tonte-avant.webp" alt="Terrain envahi d'herbes hautes avant la tonte" loading="lazy" width="900" height="1200"><figcaption><b>Avant la tonte</b>Herbes hautes entre bananiers · janvier 2026</figcaption></figure>
+   <figure><img src="img/tonte-apres.webp" alt="Terrain tondu, herbe rase sous les cocotiers" loading="lazy" width="900" height="1200"><figcaption><b>Terrain dégagé</b>Herbe rase sous les cocotiers · janvier 2026</figcaption></figure>
+   <figure><img src="img/debroussailleuse.webp" alt="Débroussailleuse posée devant un mur de pierres" loading="lazy" width="900" height="1200"><figcaption><b>L'outil du jour</b>Débroussailleuse prête pour le chantier · janvier 2026</figcaption></figure>
+   <figure><img src="img/nacelle-palmier.webp" alt="Nacelle au sommet d'un palmier" loading="lazy" width="1000" height="1333"><figcaption><b>En hauteur</b>Travail en nacelle, en toute sécurité · février 2026</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="devis">
+ <div class="wrap rv">
+  <span class="eyebrow" style="color:var(--lime)">📞 Devis gratuit</span>
+  <h2>Besoin d'un entretien ou d'une intervention&nbsp;?</h2>
+  <p>Contactez Alerte Élagage pour une étude rapide de votre jardin, de vos arbres ou de votre terrain.</p>
+  <a class="grand-num" href="tel:+262692536169">06 92 53 61 69</a>
+  <div class="ctas">
+   <a class="btn btn-lime" href="https://wa.me/262692536169?text=Bonjour%20Alerte%20%C3%89lagage%2C%20je%20voudrais%20un%20devis%20pour%20mon%20jardin." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/></svg>Demander un devis sur WhatsApp</a>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="wrap">
+  <div class="boite rv">
+   <svg class="sapin" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 6l14 20H46l16 20H50l18 22H12l18-22H18l16-20h-8z" fill="#3f7d3a"/><rect x="35" y="68" width="10" height="9" rx="2" fill="#7a4a26"/><circle cx="40" cy="6" r="4" fill="#ee6a1f"/><circle cx="31" cy="40" r="2.6" fill="#a8c62f"/><circle cx="50" cy="54" r="2.6" fill="#ee6a1f"/><circle cx="44" cy="30" r="2.2" fill="#d6e77a"/></svg>
+   <span class="eyebrow">Offrir pour Noël</span>
+   <h2>Un jardin tout beau <em>pour les fêtes</em></h2>
+   <p>Pour accueillir la famille au grand air, ou pour faire plaisir à un proche : offrez un moment de soin à son jardin.</p>
+   <ul>
+    <li>Un bon cadeau « entretien d'espaces verts », à glisser sous le sapin</li>
+    <li>Une taille d'arbres ou de haie, pour un jardin lumineux à l'heure du repas de Noël</li>
+    <li>Un terrain tondu et dégagé, prêt pour recevoir petits et grands</li>
+   </ul>
+   <div class="ctas"><a class="btn btn-orange" href="https://wa.me/262692536169?text=Bonjour%20Alerte%20%C3%89lagage%2C%20je%20voudrais%20offrir%20un%20entretien%20de%20jardin%20pour%20No%C3%ABl." target="_blank" rel="noopener">Offrir un entretien de jardin</a></div>
+   <p class="illus">Illustration : sapin dessiné pour la maquette.</p>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <span class="eyebrow rv">Contact</span>
+  <h2 class="rv">On s'occupe de vos arbres</h2>
+  <div class="infos">
+   <div class="info rv"><h3>Téléphone &amp; WhatsApp</h3><p><a href="tel:+262692536169">06 92 53 61 69</a></p><p style="margin-top:.6rem">E-mail<br><a href="mailto:alerte.elagage974@gmail.com">alerte.elagage974@gmail.com</a></p></div>
+   <div class="info rv"><h3>Horaires</h3><table><tr><td>Lundi – vendredi</td><td>7h00 – 17h30</td></tr><tr><td>Samedi</td><td>7h00 – 12h00</td></tr><tr><td>Dimanche</td><td>repos</td></tr></table></div>
+   <div class="info rv"><h3>Zone d'intervention</h3><p>Basé à La Plaine-des-Palmistes, intervention sur toute l'île de La Réunion.</p><p style="margin-top:.6rem"><a href="https://www.facebook.com/profile.php?id=100093069562330" target="_blank" rel="noopener">Suivre la page Facebook</a></p></div>
+  </div>
+  <div class="ctas rv">
+   <a class="btn btn-orange" href="tel:+262692536169">Appeler maintenant</a>
+   <a class="btn btn-lime" href="https://wa.me/262692536169" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer><b>Alerte Élagage</b> · Élagage, taille, broyage et entretien d'espaces verts · La Plaine-des-Palmistes, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Alerte Élagage.</footer>
+
+<script>
+(function(){
+ var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ // apparitions
+ var els=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window&&!reduit){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+ }else els.forEach(function(el){el.classList.add('vu')});
+ // avant / apres
+ var c=document.getElementById('compare'),r=c.querySelector('input');
+ r.addEventListener('input',function(){c.style.setProperty('--pos',r.value+'%')});
+ if(reduit)return;
+ // feuilles et copeaux
+ var cv=document.getElementById('copeaux'),x=cv.getContext('2d'),W,H,P=[],run=true;
+ function size(){W=cv.width=innerWidth;H=cv.height=innerHeight}
+ size();addEventListener('resize',size);
+ var cols=['#a8c62f','#3f7d3a','#d6e77a','#c79a5a','#7a4a26'];
+ for(var i=0;i<26;i++)P.push(nv(true));
+ function nv(init){var f=Math.random()<.55;return{x:Math.random()*W,y:init?Math.random()*H:-20,s:f?5+Math.random()*6:2+Math.random()*3,f:f,c:f?cols[Math.floor(Math.random()*3)]:cols[3+Math.floor(Math.random()*2)],vy:.25+Math.random()*.55,vx:(Math.random()-.5)*.4,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:.25+Math.random()*.35,ph:Math.random()*6.28}}
+ function tick(){
+  if(!run)return;
+  x.clearRect(0,0,W,H);
+  for(var i=0;i<P.length;i++){var p=P[i];p.ph+=.012;p.y+=p.vy;p.x+=p.vx+Math.sin(p.ph)*.45;p.a+=p.va;
+   if(p.y>H+20){P[i]=nv(false);continue}
+   x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;x.beginPath();
+   if(p.f){x.ellipse(0,0,p.s,p.s*.45,0,0,6.28);x.fill();x.strokeStyle='rgba(22,53,34,.35)';x.lineWidth=.6;x.beginPath();x.moveTo(-p.s,0);x.lineTo(p.s,0);x.stroke()}
+   else{x.fillRect(-p.s,-p.s*.35,p.s*2,p.s*.7)}
+   x.restore()}
+  requestAnimationFrame(tick)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+ requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Alerte Élagage" defer></script>
+</body>
+</html>
