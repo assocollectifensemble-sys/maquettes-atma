@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chambre d'hôtes Fleur des Orangers · Gîte et table d'hôtes à l'Îlet des Orangers, Mafate</title>
+<meta name="description" content="Fleur des Orangers, chambre d'hôtes et table d'hôtes à l'Îlet des Orangers, au cœur du cirque de Mafate, sur les GR R1 et GR R2. Dortoirs, chambre double, douches à l'italienne, cuisine créole avec les fruits et légumes de la cour.">
+<meta property="og:title" content="Fleur des Orangers · Chambre d'hôtes à l'Îlet des Orangers, Mafate">
+<meta property="og:description" content="Une maison de famille au cœur de Mafate : dortoirs, chambre double, table d'hôtes créole avec les fruits et légumes de la cour.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/gite-fleur-des-orangers-mafate/img/chambre-double.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/gite-fleur-des-orangers-mafate/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#fbf6ec;--lin:#f3e9d8;--or:#c08a4e;--ocre:#a8692f;--agrume:#e58a2e;--zeste:#f6b84a;--vert:#2e4636;--mousse:#4d6b52;--feuille:#8fa98a;--bois:#7a4c2c;--gris:#6b6763;--txt:#3a332c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;color:var(--vert);line-height:1.1}
+h2{font-size:clamp(2rem,5.4vw,3.2rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.4rem}
+.script{font-family:'Kaushan Script',cursive;color:var(--or);font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--ocre);font-weight:500}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert);color:#e6eee2;text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#fleurs{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.9rem;transition:.35s}
+.btn-main{background:var(--agrume);color:#fff;box-shadow:0 14px 30px -14px rgba(168,105,47,.9);animation:souffle 4.8s ease-in-out infinite}
+.btn-main:hover{background:var(--ocre)}
+@keyframes souffle{50%{box-shadow:0 16px 40px -8px rgba(229,138,46,.75);transform:scale(1.025)}}
+.btn-line{border:1px solid var(--or);color:var(--vert);background:rgba(255,255,255,.55)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,940px);display:flex;align-items:center;overflow:hidden;position:relative;padding:6.5rem 0 5rem;background:linear-gradient(180deg,#fdf3e2 0%,var(--creme) 55%)}
+.montagnes{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(150px,28vw,320px);pointer-events:none}
+.soleil{position:absolute;right:8%;top:14%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(246,184,74,.55),rgba(246,184,74,0) 68%);animation:respire 9s ease-in-out infinite}
+@keyframes respire{0%,100%{transform:scale(.9)}50%{transform:scale(1.12)}}
+.hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.logo{display:flex;align-items:center;gap:.9rem;margin-bottom:1rem}
+.logo svg{width:64px;height:64px;flex:none}
+.logo small{display:block;letter-spacing:.42em;font-size:.68rem;color:var(--gris);text-transform:uppercase}
+.hero h1{font-family:'Kaushan Script',cursive;color:var(--or);font-size:clamp(3.1rem,11vw,6rem);line-height:1;letter-spacing:.01em}
+.hero h1 span{display:block;font-family:Jost,sans-serif;font-size:clamp(.72rem,2.4vw,.9rem);letter-spacing:.5em;color:var(--gris);text-transform:uppercase;margin-top:.9rem;font-weight:400}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.3rem,3.4vw,1.7rem);color:var(--vert);margin:1.3rem 0 .6rem;max-width:31rem;line-height:1.35}
+.hero .lieu{font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mousse);margin-bottom:1.8rem}
+.arche{position:relative;max-width:420px;margin:auto;width:100%}
+.arche .cadre{border-radius:240px 240px 24px 24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(46,70,54,.6)}
+.arche img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-3%,-1%)}}
+.arche::before{content:"";position:absolute;inset:-14px;border:1px solid var(--or);border-radius:252px 252px 32px 32px;opacity:.6}
+.arche figcaption{position:absolute;left:-.6rem;bottom:1.4rem;background:#fff;padding:.6rem 1rem;border-radius:14px;font-size:.82rem;box-shadow:0 18px 40px -20px rgba(46,70,54,.5)}
+.badge{position:absolute;right:-14px;top:-18px;width:104px;height:104px;border-radius:50%;background:var(--vert);color:#fbf6ec;display:grid;place-items:center;text-align:center;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;z-index:3;box-shadow:0 18px 40px -18px rgba(46,70,54,.8);animation:tourne 30s linear infinite}
+.badge b{display:block;font-family:Fraunces,serif;font-size:1.6rem;letter-spacing:0;font-weight:400;color:var(--zeste)}
+@keyframes tourne{50%{transform:rotate(8deg)}}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--vert);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Fraunces,serif;font-style:italic;font-size:1.25rem}
+.track{display:inline-block;animation:defile 44s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✿";margin-left:2.4rem;font-style:normal;font-size:.85rem;color:var(--zeste)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.histoire p+p{margin-top:1rem}
+.citation{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.35rem,3.4vw,1.85rem);color:var(--mousse);border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;line-height:1.35}
+.citation small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.78rem;color:var(--gris);margin-top:.5rem;letter-spacing:.05em}
+.photo{border-radius:24px;overflow:hidden;box-shadow:0 40px 80px -45px rgba(46,70,54,.65);position:relative}
+.photo img{width:100%;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.04)}
+.photo figcaption,.legende{position:absolute;left:.8rem;bottom:.8rem;background:rgba(251,246,236,.94);padding:.35rem .9rem;border-radius:999px;font-size:.8rem;font-weight:500;color:var(--vert)}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.8rem}
+.chiffres div{background:#fff;border-radius:18px;padding:1rem .6rem;text-align:center;border:1px solid var(--lin)}
+.chiffres b{display:block;font-family:Fraunces,serif;font-size:1.7rem;font-weight:400;color:var(--ocre);line-height:1.1}
+.chiffres span{font-size:.78rem;letter-spacing:.06em;color:var(--gris)}
+.vague{display:block;width:100%;height:60px}
+/* table */
+.table{background:var(--lin)}
+.table-intro{max-width:44rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 4vw 1.2rem;margin:0 -4vw;scrollbar-width:thin}
+.plat{flex:0 0 min(78vw,330px);scroll-snap-align:center;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -36px rgba(122,76,44,.6);transition:transform .45s}
+.plat:hover{transform:translateY(-6px)}
+.plat img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.plat.haut img{aspect-ratio:4/3;object-position:center 40%}
+.plat div{padding:1.1rem 1.3rem 1.3rem}
+.plat q{font-family:Fraunces,serif;font-style:italic;font-size:1.1rem;color:var(--vert);line-height:1.35;display:block}
+.plat small{display:block;margin-top:.5rem;font-size:.78rem;color:var(--gris)}
+.glisse{font-size:.8rem;color:var(--gris);letter-spacing:.08em}
+.repas{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.moment{background:var(--creme);border-radius:22px;padding:1.6rem 1.7rem;position:relative;overflow:hidden}
+.moment::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--agrume),var(--zeste),transparent)}
+.moment h3{margin-bottom:.6rem}
+.moment ul{list-style:none}
+.moment li{padding-left:1.4rem;position:relative;margin:.3rem 0;font-size:.97rem}
+.moment li::before{content:"✿";position:absolute;left:0;top:0;color:var(--agrume);font-size:.8rem}
+/* dormir */
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.carte{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 22px 50px -36px rgba(46,70,54,.55);transition:transform .45s,box-shadow .45s;display:flex;flex-direction:column}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(46,70,54,.6)}
+.carte img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.carte .corps{padding:1.3rem 1.4rem 1.5rem}
+.carte p{font-size:.96rem}
+.atouts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.atouts span{border:1px solid var(--feuille);border-radius:999px;padding:.35rem 1rem;font-size:.88rem;background:rgba(255,255,255,.6)}
+.duo-photos{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;margin-top:1.6rem}
+.duo-photos .photo img{height:100%;aspect-ratio:auto;min-height:220px}
+.pratique{margin-top:2rem;background:var(--vert);color:#e6eee2;border-radius:24px;padding:1.6rem 1.8rem;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.pratique p{max-width:40rem}
+.pratique b{color:#fff;font-weight:500}
+/* venir */
+.venir{background:linear-gradient(180deg,var(--creme),#eef1e6)}
+.venir-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.sentiers{display:grid;gap:1rem;margin-top:1.6rem}
+.sentier{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.1rem 1.3rem;border:1px solid #e1e6d6}
+.sentier i{flex:none;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--mousse);color:#fff;display:grid;place-items:center;font-style:normal;font-family:Fraunces,serif}
+.sentier h3{font-size:1.15rem;margin-bottom:.15rem}
+.sentier p{font-size:.93rem}
+.carte-svg{position:relative;background:#fff;border-radius:24px;padding:1rem;box-shadow:0 30px 60px -40px rgba(46,70,54,.6)}
+.carte-svg svg{width:100%;height:auto}
+.carte-svg .legende{position:static;display:inline-block;margin-top:.4rem;background:var(--lin)}
+.trace{stroke-dasharray:6 7;animation:marche 30s linear infinite}
+@keyframes marche{to{stroke-dashoffset:-260}}
+.gr{margin-top:1.4rem;font-size:.95rem}
+/* avis */
+.avis-in{text-align:center;max-width:820px;margin:auto}
+.note{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap}
+.note b{font-family:Fraunces,serif;font-size:3.4rem;color:var(--ocre);font-weight:400;line-height:1}
+.etoiles{color:var(--zeste);letter-spacing:.2em;font-size:1.2rem}
+.avis-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem;text-align:left}
+.avis-grid figure{background:#fff;border-radius:22px;padding:1.5rem 1.6rem;border:1px solid var(--lin)}
+.avis-grid blockquote{font-family:Fraunces,serif;font-style:italic;font-size:1.2rem;line-height:1.4;color:var(--vert)}
+.avis-grid figcaption{margin-top:.8rem;font-size:.8rem;color:var(--gris)}
+/* offrir */
+.offrir{background:var(--vert);color:#e6eee2;overflow:hidden}
+.offrir h2,.offrir h3{color:#fff}
+.offrir .eyebrow{color:var(--zeste)}
+.offrir-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center;position:relative}
+.idees{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(246,184,74,.3);border-radius:18px;padding:1.1rem 1.3rem}
+.idee h3{font-size:1.2rem;margin-bottom:.2rem}
+.bon{aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,#fdf3e2,#f3dfbd);color:var(--vert);padding:1.6rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -30px rgba(0,0,0,.6);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.bon::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.bon:hover{transform:rotate(0)}
+.bon .script{font-size:clamp(1.9rem,7vw,2.6rem);line-height:1.1}
+.bon small{letter-spacing:.22em;text-transform:uppercase;font-size:.66rem;color:var(--gris)}
+.bon svg{position:absolute;right:-16px;top:-22px;width:120px;opacity:.5;transform:rotate(18deg)}
+.bon>*{position:relative;z-index:2}
+.guirlande{position:absolute;left:0;right:0;top:0;height:40px;width:100%;opacity:.8}
+.offrir .note-prop{font-size:.8rem;opacity:.75;margin-top:1rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0}
+.infos b{font-weight:500;color:var(--vert)}
+.btn-dark{border:1px solid var(--mousse);color:var(--vert)}
+.btn-dark:hover{background:#fff}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--gris);background:var(--lin)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.histoire,.repas,.venir-in,.offrir-in,.contact-in,.avis-grid{grid-template-columns:1fr}
+ .cartes{grid-template-columns:1fr}
+ .duo-photos{grid-template-columns:1fr}
+ .arche{max-width:320px}
+ .badge{right:-6px;width:92px;height:92px}
+ .ribbon{font-size:.7rem}
+ .soleil{right:-30px;top:10%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#fleurs{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chambre d'hôtes Fleur des Orangers</div>
+<canvas id="fleurs" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="soleil" aria-hidden="true"></div>
+  <svg class="montagnes" viewBox="0 0 1440 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 230 L120 120 L190 190 L300 60 L380 170 L470 110 L560 210 L660 90 L760 200 L860 130 L980 230 L1080 80 L1180 190 L1290 120 L1440 210 V400 H0Z" fill="#8fa98a" opacity=".25"/>
+    <path d="M0 300 L140 210 L230 260 L350 170 L460 270 L590 200 L700 290 L820 210 L940 280 L1060 190 L1200 280 L1320 220 L1440 270 V400 H0Z" fill="#4d6b52" opacity=".22"/>
+    <path d="M0 360 C 240 320 420 380 720 345 S 1200 320 1440 350 V400 H0Z" fill="#fbf6ec"/>
+  </svg>
+  <div class="wrap hero-in">
+    <div>
+      <div class="logo apparait">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="#6b6763" stroke-width="1.3" stroke-linecap="round"><path d="M10 50 C 22 44 34 36 44 22"/><path d="M18 46 C 12 38 14 30 22 28 C 24 36 22 42 18 46Z" fill="#8fa98a" fill-opacity=".35"/><path d="M30 38 C 30 30 36 26 42 28 C 40 34 36 38 30 38Z" fill="#8fa98a" fill-opacity=".35"/></g><g transform="translate(44 20)"><g fill="#fff" stroke="#c08a4e" stroke-width="1.1"><ellipse cx="0" cy="-8" rx="4" ry="8"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(72)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(144)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(216)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(288)"/></g><circle r="3" fill="#f6b84a"/></g></svg>
+        <div><small>Îlet des Orangers · Mafate</small></div>
+      </div>
+      <h1 class="apparait d2">Fleur des Orangers<span>Chambres d'hôtes</span></h1>
+      <p class="lead apparait d3">Une maison de famille au cœur du cirque de Mafate, où l'on cuisine avec les fruits et les légumes de la cour.</p>
+      <p class="lieu apparait d3">Sur les GR R1 &amp; GR R2 · Depuis 2019</p>
+      <div class="ctas apparait d3">
+        <a class="btn btn-main" href="https://wa.me/262692374408?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20%C3%A0%20la%20Fleur%20des%20Orangers">Réserver sur WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692374408">0692 37 44 08</a>
+      </div>
+    </div>
+    <figure class="arche apparait d2">
+      <div class="badge" aria-hidden="true"><span><b>4,9</b>avis Google</span></div>
+      <div class="cadre"><img src="img/chambre-double.webp" alt="La chambre double du gîte : tête de lit en bois sculpté, couette claire, murs boisés"></div>
+      <figcaption>La chambre double, avec sa salle d'eau</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Îlet des Orangers</span><span>Table d'hôtes créole</span><span>Fruits de la cour</span><span>Riz chauffé du matin</span><span>Douches à l'italienne</span><span>GR R1 · GR R2</span><span>Vue sur le Maïdo</span>
+<span>Îlet des Orangers</span><span>Table d'hôtes créole</span><span>Fruits de la cour</span><span>Riz chauffé du matin</span><span>Douches à l'italienne</span><span>GR R1 · GR R2</span><span>Vue sur le Maïdo</span>
+</div></div>
+
+<section class="wrap histoire">
+  <div class="rv">
+    <p class="eyebrow">Une histoire de famille</p>
+    <h2>Au pied du Maïdo, chez des enfants du pays</h2>
+    <p>Fleur des Orangers a ouvert ses portes début 2019, à l'Îlet des Orangers, un petit village niché dans les remparts du cirque. Une grande maison familiale moderne, tout près de l'école de l'îlet, qui porte d'ailleurs le nom du grand-père de la famille.</p>
+    <p>Ici, on perpétue l'accueil des Hauts : la terre se cultive derrière le gîte, les recettes se transmettent, et le soir, toute la tablée se retrouve autour du même repas.</p>
+    <p class="citation">« Profitons des fruits de la cour pour un bon dessert à mes clients… »<small>Publication Facebook de la Chambre d'hôte Fleur des Orangers</small></p>
+    <div class="chiffres">
+      <div><b>2019</b><span>ouverture</span></div>
+      <div><b>3</b><span>sentiers d'accès</span></div>
+      <div><b>GR</b><span>R1 &amp; R2</span></div>
+    </div>
+  </div>
+  <figure class="photo rv">
+    <img src="img/terrasse-fleurie.webp" alt="La terrasse ombragée du gîte, tables et chaises devant un muret couvert de plantes en pots" style="aspect-ratio:4/3" loading="lazy">
+    <figcaption>La terrasse fleurie</figcaption>
+  </figure>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#f3e9d8"/></svg>
+<section class="table" id="table">
+  <div class="wrap">
+    <div class="rv table-intro">
+      <p class="eyebrow">La table d'hôtes de Daniella</p>
+      <h2>Le goût de Mafate, cueilli dans la cour</h2>
+      <p>Oranges, ananas, maïs, salade, citrouille : la famille cultive à l'arrière du gîte et cuisine autant que possible avec sa propre récolte. Le dîner se partage en grande tablée, dans la convivialité.</p>
+    </div>
+    <div class="galerie rv">
+      <article class="plat"><img src="img/gateau-ti-son-ananas.webp" alt="Part de gâteau ti son au chocolat et brochette d'ananas caramélisé" loading="lazy"><div><q>Gâteau ti son chocolat et sa brochette d'ananas caramélisé beurre salé et cannelle</q><small>Publication Facebook du gîte</small></div></article>
+      <article class="plat"><img src="img/jus-bissap-ananas.webp" alt="Trois verres de jus de bissap rouge décorés d'ananas" loading="lazy"><div><q>Jus bissap, ananas la cour et confiture maison</q><small>Publication Facebook du gîte</small></div></article>
+      <article class="plat"><img src="img/confiture-ananas.webp" alt="Bocaux de confiture d'ananas maison à côté d'une couronne d'ananas" loading="lazy"><div><q>Confiture maison</q><small>À l'ananas, au petit-déjeuner</small></div></article>
+      <article class="plat"><img src="img/beignets-legumes.webp" alt="Plats de beignets de légumes maison sur le comptoir en bois" loading="lazy"><div><q>Beignets de légumes faits maison</q><small>Pour l'apéritif, avec le punch</small></div></article>
+      <article class="plat haut"><img src="img/citrouille-feu-de-bois.webp" alt="Marmite de citrouille en morceaux sur le feu de bois" loading="lazy"><div><q>Citrouille au feu de bois</q><small>Publication Facebook du gîte, « La saison »</small></div></article>
+      <article class="plat haut"><img src="img/agrumes-de-la-cour.webp" alt="Grand plat d'oranges coupées en deux et carafe de jus frais" loading="lazy"><div><q>La saison : agrumes, citrouille… il faut en profiter !</q><small>Publication Facebook du gîte</small></div></article>
+    </div>
+    <p class="glisse rv">← Faites glisser pour voir la suite →</p>
+    <div class="repas">
+      <div class="moment rv"><h3>Le soir, à la grande table</h3><ul><li>Punch maison ou rhum arrangé</li><li>Une entrée fraîche, salade de palmiste ou de chou</li><li>Les carris, servis avec riz, grains et rougails</li><li>Un dessert maison, gâteau ti son ou ananas-coco</li></ul></div>
+      <div class="moment rv"><h3>Au lever du jour</h3><ul><li>Macatias frais</li><li>Confitures maison aux fruits de saison</li><li>Le riz chauffé, plat du matin des habitants du cirque, sur commande la veille</li><li>Des forces pour la suite du sentier</li></ul></div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#f3e9d8"/></svg>
+
+<section class="wrap" id="dormir">
+  <div class="rv"><p class="eyebrow">Dormir à l'îlet</p><h2>Le confort, au cœur du cirque</h2><p>Des dortoirs soignés pour les groupes comme pour les marcheurs seuls, une chambre double pour les couples, et des sanitaires modernes. Draps, couvertures et oreillers sont fournis.</p></div>
+  <div class="cartes">
+    <article class="carte rv"><img src="img/chambre-double.webp" alt="Chambre double avec lit en bois et fauteuil tressé" loading="lazy"><div class="corps"><h3>La chambre double</h3><p>Pour les couples et ceux qui aiment l'intimité, avec sa propre salle d'eau et une belle vue sur le Maïdo.</p></div></article>
+    <article class="carte rv"><img src="img/dortoir.webp" alt="Dortoir lumineux avec lits en bois, matelas verts et roses" loading="lazy"><div class="corps"><h3>Les dortoirs</h3><p>Une literie confortable, pensée pour les séjours en montagne, et une prise dans chaque chambre.</p></div></article>
+    <article class="carte rv"><img src="img/douche-italienne.webp" alt="Douche à l'italienne carrelée de mosaïque et vasque blanche" loading="lazy"><div class="corps"><h3>Les douches à l'italienne</h3><p>Des sanitaires modernes, dont une douche aménagée pour les personnes à mobilité réduite. Ici, la douche à l'italienne de la chambre couple.</p></div></article>
+  </div>
+  <div class="duo-photos">
+    <figure class="photo rv"><img src="img/vasques.webp" alt="Plan de toilette en bois avec trois vasques en pierre sous une fenêtre" loading="lazy"><figcaption>Trois vasques en pierre</figcaption></figure>
+    <figure class="photo rv"><img src="img/salle-a-manger.webp" alt="Longue salle à manger avec tables et chaises en bois" loading="lazy" style="object-position:center 60%"><figcaption>La grande salle à manger</figcaption></figure>
+  </div>
+  <div class="atouts rv"><span>Demi-pension</span><span>Chambres prêtes dès 15h</span><span>Terrasse ombragée</span><span>Jeux de société</span><span>Vue montagne</span><span>Créole &amp; français</span></div>
+  <div class="pratique rv">
+    <p><b>Le séjour se réserve en demi-pension</b> : la nuit, le dîner en table d'hôtes et le petit-déjeuner. Pensez à glisser votre serviette dans le sac à dos.</p>
+    <a class="btn btn-main" href="https://wa.me/262692374408?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20la%20Fleur%20des%20Orangers">Demander une date</a>
+  </div>
+</section>
+
+<section class="venir" id="venir">
+  <div class="wrap venir-in">
+    <div class="rv">
+      <p class="eyebrow">Venir à pied</p>
+      <h2>Trois beaux sentiers mènent à l'îlet</h2>
+      <p>L'Îlet des Orangers se rejoint à pied, comme tout Mafate : une vraie aventure, qui donne encore plus de saveur à l'arrivée.</p>
+      <div class="sentiers">
+        <div class="sentier"><i>1</i><div><h3>La Canalisation des Orangers</h3><p>Au départ de Sans-Souci, un sentier en balcon très apprécié, avec des points de vue sur la Rivière des Galets et Cap Noir.</p></div></div>
+        <div class="sentier"><i>2</i><div><h3>Par la Rivière des Galets</h3><p>Depuis Deux Bras, environ 3 heures de remontée.</p></div></div>
+        <div class="sentier"><i>3</i><div><h3>Depuis le Maïdo</h3><p>Environ 3 heures de descente, plus technique, pour les marcheurs aguerris.</p></div></div>
+      </div>
+      <p class="gr">Le gîte se trouve en bordure des <b>GR R1 et GR R2</b> : une étape naturelle pour traverser le cirque.</p>
+    </div>
+    <figure class="carte-svg rv">
+      <svg viewBox="0 0 400 340" role="img" aria-label="Illustration : les trois sentiers qui mènent à l'Îlet des Orangers">
+        <defs><linearGradient id="ciel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fdf3e2"/><stop offset="1" stop-color="#eef1e6"/></linearGradient></defs>
+        <rect width="400" height="340" rx="18" fill="url(#ciel)"/>
+        <path d="M0 120 L60 60 L110 100 L170 30 L230 90 L290 40 L350 100 L400 70 V340 H0Z" fill="#8fa98a" opacity=".35"/>
+        <path d="M0 200 C 80 170 140 230 220 200 S 340 170 400 190 V340 H0Z" fill="#4d6b52" opacity=".25"/>
+        <path d="M30 330 C 90 290 70 250 140 240 S 220 250 250 300 S 330 330 380 320" fill="none" stroke="#9fb7c9" stroke-width="7" stroke-linecap="round" opacity=".7"/>
+        <path class="trace" d="M300 40 C 280 90 250 120 215 160" fill="none" stroke="#a8692f" stroke-width="3"/>
+        <path class="trace" d="M40 120 C 90 130 140 140 180 160 S 200 170 210 170" fill="none" stroke="#a8692f" stroke-width="3"/>
+        <path class="trace" d="M330 320 C 300 260 250 220 220 180" fill="none" stroke="#a8692f" stroke-width="3"/>
+        <g transform="translate(212 172)"><circle r="16" fill="#fff" stroke="#c08a4e" stroke-width="2"/><g fill="#fff" stroke="#e58a2e" stroke-width="1"><ellipse cx="0" cy="-6" rx="3" ry="6"/><ellipse cx="0" cy="-6" rx="3" ry="6" transform="rotate(72)"/><ellipse cx="0" cy="-6" rx="3" ry="6" transform="rotate(144)"/><ellipse cx="0" cy="-6" rx="3" ry="6" transform="rotate(216)"/><ellipse cx="0" cy="-6" rx="3" ry="6" transform="rotate(288)"/></g><circle r="2.4" fill="#f6b84a"/></g>
+        <g font-family="Jost,Arial" font-size="12" fill="#2e4636"><text x="250" y="30">Maïdo</text><text x="12" y="112">Sans-Souci</text><text x="300" y="312">Deux Bras</text><text x="232" y="200" font-weight="500">Îlet des Orangers</text><text x="60" y="290" fill="#5a7486" font-style="italic">Rivière des Galets</text></g>
+      </svg>
+      <span class="legende">Illustration</span>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap" id="avis">
+  <div class="avis-in rv">
+    <p class="eyebrow">Ils sont passés par l'îlet</p>
+    <h2>Une étape dont on se souvient</h2>
+    <div class="note"><b>4,9</b><span class="etoiles">★★★★★</span><span>304 avis Google</span></div>
+  </div>
+  <div class="avis-grid">
+    <figure class="rv"><blockquote>« Un accueil au top, une cuisine délicieuse et un véritable sens de l'hospitalité. »</blockquote><figcaption>avis Google, 2026</figcaption></figure>
+    <figure class="rv"><blockquote>« Le repas réunionnais était absolument délicieux, un vrai régal et une belle découverte des saveurs locales. »</blockquote><figcaption>avis Google, 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="offrir" id="offrir">
+  <svg class="guirlande" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 C 120 34 240 34 360 4 S 600 34 720 4 S 960 34 1080 4 S 1320 34 1440 4" fill="none" stroke="#f6b84a" stroke-width="1.2" opacity=".6"/><g fill="#f6b84a"><circle cx="180" cy="26" r="3"/><circle cx="540" cy="26" r="3"/><circle cx="900" cy="26" r="3"/><circle cx="1260" cy="26" r="3"/></g><g fill="#e58a2e"><circle cx="360" cy="6" r="2.5"/><circle cx="720" cy="6" r="2.5"/><circle cx="1080" cy="6" r="2.5"/></g></svg>
+  <div class="wrap offrir-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez une nuit au cœur de Mafate</h2>
+      <p>Un cadeau qui se vit à pied, en pleine nature : une étape à l'Îlet des Orangers, avec le dîner créole en grande tablée et le petit-déjeuner au lever du jour.</p>
+      <div class="idees">
+        <div class="idee"><h3>Un bon cadeau séjour</h3><p>Une nuit en demi-pension à offrir à un marcheur, un couple ou toute une bande d'amis.</p></div>
+        <div class="idee"><h3>Une aventure à partager</h3><p>Trois sentiers au choix, et le plaisir de découvrir la vie de l'îlet autour de la table.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692374408?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20nuit%20%C3%A0%20la%20Fleur%20des%20Orangers%20pour%20No%C3%ABl%20%28bon%20cadeau%29">Demander un bon cadeau</a>
+    </div>
+    <div class="bon rv"><small>Bon cadeau</small><span class="script">Une nuit à l'Îlet des Orangers</span><small>Fleur des Orangers · Mafate</small>
+      <svg viewBox="-20 -20 40 40" aria-hidden="true"><g fill="#fff" stroke="#c08a4e" stroke-width=".8"><ellipse cx="0" cy="-8" rx="4" ry="8"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(72)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(144)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(216)"/><ellipse cx="0" cy="-8" rx="4" ry="8" transform="rotate(288)"/></g><circle r="3" fill="#f6b84a"/></svg>
+    </div>
+    <p class="note-prop" style="text-align:right;margin-top:1.4rem">Illustration</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Réservation</p>
+      <h2>On vous attend à l'îlet</h2>
+      <p><b>Adresse</b> · Îlet des Orangers, Mafate, 97419 La Possession</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692374408">0692 37 44 08</a></p>
+      <p><b>E-mail</b> · <a href="mailto:lafleurdesorangers@gmail.com">lafleurdesorangers@gmail.com</a></p>
+      <p><b>Formule</b> · demi-pension : nuit, dîner, petit-déjeuner</p>
+      <p><b>Paiement</b> · espèces ou carte bancaire</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262692374408?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20%C3%A0%20la%20Fleur%20des%20Orangers">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692374408">Appeler</a>
+        <a class="btn btn-dark" href="mailto:lafleurdesorangers@gmail.com">E-mail</a>
+      </div>
+      <div class="ctas" style="margin-top:.8rem">
+        <a class="btn btn-dark" href="https://www.facebook.com/iletdesorangers">Facebook</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=%C3%8Elet%20des%20Orangers%20Mafate%20La%20R%C3%A9union">Situer l'îlet</a>
+      </div>
+    </div>
+    <figure class="photo rv"><img src="img/longoze.webp" alt="Fleur jaune de longoze au milieu de la végétation de Mafate" style="aspect-ratio:4/5" loading="lazy"><figcaption>Mafate, photographié par le gîte</figcaption></figure>
+  </div>
+</section>
+
+<footer>Chambre d'hôtes Fleur des Orangers · Gîte et table d'hôtes · Îlet des Orangers, Mafate, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chambre d'hôtes Fleur des Orangers.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* fleurs d'oranger qui tombent doucement */
+const c=document.getElementById('fleurs'),x=c.getContext('2d');let W,H,F=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<24;i++)F.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:4+Math.random()*5,v:.18+Math.random()*.35,a:Math.random()*6.28,r:Math.random()*6.28,o:.25+Math.random()*.3,p:i%5==0});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function fleur(p){x.save();x.translate(p.x,p.y);x.rotate(p.r);x.globalAlpha=p.o;
+ if(p.p){x.fillStyle='#fffaf0';x.strokeStyle='rgba(192,138,78,.7)';x.beginPath();x.ellipse(0,0,p.s*.55,p.s*1.1,0,0,6.28);x.fill();x.stroke()}
+ else{x.fillStyle='#fffaf0';x.strokeStyle='rgba(192,138,78,.55)';x.lineWidth=.7;for(let k=0;k<5;k++){x.rotate(1.2566);x.beginPath();x.ellipse(0,-p.s*.8,p.s*.42,p.s*.8,0,0,6.28);x.fill();x.stroke()}x.fillStyle='#f6b84a';x.beginPath();x.arc(0,0,p.s*.28,0,6.28);x.fill()}
+ x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of F){p.y+=p.v;p.a+=.01;p.x+=Math.sin(p.a)*.4;p.r+=.004+Math.sin(p.a)*.004;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}fleur(p)}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Chambre d'hôtes Fleur des Orangers" defer></script>
+</body>
+</html>
