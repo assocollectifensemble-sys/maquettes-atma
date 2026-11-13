@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Avirons Pneus Services · Pneus, batteries et entretien aux Avirons</title>
+<meta name="description" content="Avirons Pneus Services, centre de services pneumatiques aux Avirons : pneus toutes marques, montage et équilibrage, réparation de crevaison, batteries avec test gratuit, révision, freinage. 9 avenue du Général de Gaulle, 0692 865 965.">
+<meta property="og:title" content="Avirons Pneus Services · Le bon grip au bon moment">
+<meta property="og:description" content="Pneus toutes marques, batteries avec test gratuit, montage rapide en atelier, révision et freinage, au 9 avenue du Général de Gaulle aux Avirons.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/avirons-pneus-services/img/logo-aps.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/avirons-pneus-services/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,500;0,700;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0a1430;--nuit2:#12214a;--acier:#1c2f63;--bleu:#2453c9;--rouge:#e3101c;--rouge2:#ff3340;--gomme:#15161a;--gris:#c9cfdc;--blanc:#f5f7fb;--txt:#e9edf6;--doux:#a9b3c9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Barlow,system-ui,Arial;color:var(--txt);background:var(--nuit);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.02;text-transform:uppercase;letter-spacing:.01em}
+h2{font-size:clamp(2.3rem,8vw,3.8rem);margin:.4rem 0 1.1rem;transform:skewX(-6deg)}
+h2 em{font-style:normal;color:var(--rouge2)}
+h3{font-size:1.45rem}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.24em;font-size:.8rem;color:var(--rouge2);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:28px;height:4px;background:linear-gradient(90deg,var(--rouge) 0 45%,transparent 45% 60%,var(--blanc) 60%);transform:skewX(-30deg)}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--rouge);color:#fff;text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:10px;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:1.05rem;transition:.3s;transform:skewX(-8deg)}
+.btn>span{transform:skewX(8deg);display:inline-flex;align-items:center;gap:.55rem}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:linear-gradient(180deg,var(--rouge2),var(--rouge));color:#fff;box-shadow:0 14px 30px -12px rgba(227,16,28,.85);animation:souffle 4s ease-in-out infinite}
+.btn-main:hover{filter:brightness(1.1)}
+@keyframes souffle{50%{box-shadow:0 16px 44px -6px rgba(255,51,64,.9)}}
+.btn-wa{background:#1fa855;color:#fff}
+.btn-line{border:2px solid rgba(255,255,255,.35);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:center;overflow:hidden;padding:6rem 0 4.5rem;background:radial-gradient(90% 60% at 80% 20%,rgba(36,83,201,.45),transparent 65%),radial-gradient(70% 50% at 0% 100%,rgba(227,16,28,.28),transparent 60%),linear-gradient(180deg,var(--nuit),#060c1f)}
+#vitesse{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.8}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.logo-card{background:#fff;border-radius:16px;padding:.7rem 1rem;display:inline-block;box-shadow:0 22px 50px -24px rgba(0,0,0,.9);transform:rotate(-2deg);max-width:340px;width:88%}
+.hero h1{font-size:clamp(3rem,13vw,6.4rem);margin:1.6rem 0 1rem;padding-left:.12em;transform:skewX(-7deg)}
+.hero h1 .l{display:block;opacity:0;transform:translateX(-30px);animation:entre .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .l:nth-child(2){animation-delay:.18s;color:var(--rouge2)}
+.hero h1 .l:nth-child(3){animation-delay:.36s}
+@keyframes entre{to{opacity:1;transform:none}}
+.hero .lead{font-size:clamp(1.08rem,3.6vw,1.3rem);color:var(--gris);max-width:33rem;margin-bottom:1.8rem}
+.hero .lead b{color:#fff;font-weight:600}
+.adr{margin-top:1.4rem;font-size:.95rem;color:var(--doux);display:flex;gap:.5rem;align-items:center}
+.adr svg{width:18px;height:18px;color:var(--rouge2);flex:none}
+.roue{position:relative;width:min(400px,78vw);margin:auto;aspect-ratio:1}
+.roue svg.tourne{width:100%;height:100%;animation:tourne 14s linear infinite;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.roue::after{content:"";position:absolute;left:8%;right:8%;bottom:-6%;height:12%;border-radius:50%;background:radial-gradient(closest-side,rgba(0,0,0,.6),transparent)}
+.roue figcaption{position:absolute;right:0;bottom:4%;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);background:rgba(10,20,48,.75);padding:.25rem .6rem;border-radius:6px}
+.badge-grip{position:absolute;z-index:2;left:-4%;top:6%;background:var(--rouge);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;text-transform:uppercase;font-size:1rem;line-height:1.1;padding:.6rem .9rem;transform:rotate(-8deg);box-shadow:0 14px 30px -12px rgba(0,0,0,.8);border-radius:6px}
+/* bande crantée */
+.cran{height:34px;background:var(--gomme);position:relative;overflow:hidden;border-top:2px solid #000;border-bottom:2px solid #000}
+.cran::before{content:"";position:absolute;inset:0;width:200%;background:repeating-linear-gradient(115deg,transparent 0 14px,#2a2c33 14px 26px,transparent 26px 40px),repeating-linear-gradient(65deg,transparent 0 14px,#24262c 14px 22px,transparent 22px 40px);animation:roule 6s linear infinite}
+@keyframes roule{to{transform:translateX(-50%)}}
+.defile{background:var(--rouge);overflow:hidden;white-space:nowrap;padding:.7rem 0;transform:skewY(-1.5deg);margin:-.6rem 0}
+.defile div{display:inline-block;animation:defile 32s linear infinite;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;color:#fff}
+.defile span{margin:0 1.1rem}
+.defile i{font-style:normal;opacity:.6}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* pneus */
+.pneus{background:linear-gradient(180deg,#0b1636,var(--nuit2))}
+.intro{max-width:40rem;color:var(--gris)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:2.4rem}
+.col{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:1.6rem 1.4rem;position:relative;overflow:hidden}
+.col>h3{display:inline-block;background:var(--rouge);padding:.25rem .9rem;transform:skewX(-10deg);margin-bottom:1.3rem;font-size:1.3rem}
+.item{display:flex;gap:1rem;align-items:flex-start;padding:.9rem 0;border-top:1px solid rgba(255,255,255,.08)}
+.item:first-of-type{border-top:0}
+.ico{flex:none;width:48px;height:48px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--rouge2),var(--rouge) 60%,#9d0a13);display:grid;place-items:center;box-shadow:0 8px 18px -8px rgba(227,16,28,.9);transition:transform .5s}
+.ico svg{width:24px;height:24px;color:#fff}
+.item:hover .ico{transform:rotate(-20deg) scale(1.06)}
+.item b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;text-transform:uppercase;letter-spacing:.03em;color:#fff;line-height:1.15}
+.item b em{color:var(--rouge2);font-style:normal}
+.item p{color:var(--doux);font-size:.97rem;margin-top:.2rem}
+/* batteries */
+.batt{background:radial-gradient(70% 60% at 100% 0%,rgba(227,16,28,.2),transparent 60%),#070d22}
+.batt-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pile{position:relative;max-width:330px;margin:auto;width:100%}
+.pile .corps{border:5px solid #dfe5f2;border-radius:22px;height:170px;position:relative;padding:12px;background:rgba(255,255,255,.03)}
+.pile .borne{position:absolute;top:-22px;width:46px;height:18px;border-radius:6px 6px 0 0;background:#dfe5f2}
+.pile .borne.p{left:22%;background:var(--rouge2)}.pile .borne.m{right:22%}
+.pile .niveau{height:100%;border-radius:10px;background:linear-gradient(90deg,var(--rouge),var(--rouge2));width:18%;transition:width 2.4s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+.pile.charge .niveau{width:100%}
+.pile .niveau::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(0,0,0,.18) 22px 26px)}
+.pile .eclair{position:absolute;inset:0;display:grid;place-items:center}
+.pile .eclair svg{width:70px;color:#fff;filter:drop-shadow(0 0 12px rgba(255,255,255,.7));animation:clignote 2.4s ease-in-out infinite}
+@keyframes clignote{50%{opacity:.55}}
+.pile figcaption{text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-top:.9rem}
+.gratuit{display:inline-block;margin:1rem 0 1.4rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;font-size:clamp(1.5rem,6vw,2rem);text-transform:uppercase;line-height:1.1;border-left:6px solid var(--rouge);padding:.3rem 0 .3rem 1rem}
+.gratuit em{color:var(--rouge2);font-style:inherit}
+.checks{list-style:none;display:grid;gap:.75rem}
+.checks li{display:flex;gap:.75rem;align-items:flex-start;color:var(--gris)}
+.checks li::before{content:"";flex:none;width:24px;height:24px;margin-top:.12rem;border-radius:6px;background:var(--rouge) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/16px no-repeat}
+.checks b{color:#fff;font-weight:600}
+.vehic{display:flex;gap:1.2rem;margin-top:1.6rem;color:var(--doux);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;flex-wrap:wrap}
+.vehic span{display:flex;align-items:center;gap:.45rem}
+.vehic svg{width:30px;height:20px;color:#fff}
+/* entretien */
+.entretien{background:linear-gradient(180deg,var(--nuit2),#0b1636)}
+.cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2.2rem}
+.carte{background:linear-gradient(160deg,rgba(36,83,201,.22),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:1.5rem 1.4rem;transition:transform .4s,border-color .4s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-5px);border-color:rgba(255,51,64,.6)}
+.carte::before{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;border:14px dashed rgba(255,255,255,.05)}
+.carte h3{font-size:1.5rem;transform:skewX(-6deg);margin-bottom:.5rem}
+.carte h3 em{font-style:normal;color:var(--rouge2)}
+.carte p{color:var(--gris);font-size:.98rem}
+.carte .tag{display:inline-block;margin-top:.9rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;color:#fff;background:rgba(227,16,28,.85);padding:.2rem .7rem;border-radius:4px}
+.liste-rev{columns:2;column-gap:1.2rem;list-style:none;margin-top:.8rem;font-size:.95rem;color:var(--gris)}
+.liste-rev li{padding:.15rem 0 .15rem 1.2rem;position:relative;break-inside:avoid}
+.liste-rev li::before{content:"";position:absolute;left:0;top:.68em;width:9px;height:4px;background:var(--rouge2);transform:skewX(-30deg)}
+/* engagements */
+.engag{background:#060c1f;padding:3.5rem 0}
+.quatre{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.eng{text-align:center;padding:1.2rem .6rem}
+.eng svg{width:46px;height:46px;color:#fff;margin:0 auto .7rem}
+.eng b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;color:#fff;line-height:1.1}
+.eng span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;text-transform:uppercase;color:var(--rouge2);font-size:1rem}
+.devise{text-align:center;margin-top:2.2rem;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:clamp(1.1rem,4.4vw,1.5rem)}
+.devise em{color:var(--rouge2);font-style:inherit}
+/* avis */
+.avis{background:linear-gradient(180deg,#0b1636,var(--nuit))}
+.avis-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.avi{background:#fff;color:#1a2140;border-radius:18px;padding:1.6rem 1.5rem;position:relative;box-shadow:0 30px 60px -36px rgba(0,0,0,.9)}
+.avi .etoiles{color:var(--rouge);font-family:"Barlow Condensed",sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.95rem}
+.avi q{display:block;font-size:1.15rem;font-weight:500;margin:.5rem 0 .8rem;quotes:"« " " »"}
+.avi small{color:#5c6584;font-size:.82rem}
+/* noel */
+.noel{background:radial-gradient(80% 60% at 50% 0%,rgba(227,16,28,.3),transparent 65%),linear-gradient(180deg,var(--nuit),#081129);overflow:hidden}
+.noel .guirlande{position:absolute;top:0;left:0;right:0;height:40px;display:flex;justify-content:space-around;pointer-events:none}
+.noel .guirlande i{width:10px;height:10px;border-radius:50%;margin-top:18px;background:#ffd36b;box-shadow:0 0 12px 3px rgba(255,211,107,.6);animation:scintille 2.6s ease-in-out infinite}
+.noel .guirlande i:nth-child(2n){background:var(--rouge2);box-shadow:0 0 12px 3px rgba(255,51,64,.6);animation-delay:.8s;margin-top:26px}
+.noel .guirlande i:nth-child(3n){background:#fff;box-shadow:0 0 12px 3px rgba(255,255,255,.5);animation-delay:1.5s}
+@keyframes scintille{50%{opacity:.35}}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.noel-cartes{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.ncarte{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.1rem 1.3rem}
+.ncarte h3{font-size:1.2rem;margin-bottom:.3rem;color:#fff}
+.ncarte p{color:var(--gris);font-size:.96rem}
+.cadeau{position:relative;max-width:300px;margin:auto;width:100%}
+.cadeau svg{width:100%;animation:flotte 6s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(1.5deg)}}
+.cadeau figcaption{text-align:center;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-top:.6rem}
+/* contact */
+.contact{background:#050a1a}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem)}
+.coord{display:grid;gap:1rem;margin:1.5rem 0 2rem}
+.coord a,.coord div{display:flex;gap:.9rem;align-items:center;text-decoration:none;color:var(--gris);font-size:1.02rem;word-break:break-word}
+.coord svg{flex:none;width:42px;height:42px;padding:10px;border-radius:12px;background:rgba(227,16,28,.16);color:var(--rouge2)}
+.coord b{color:#fff;font-weight:600}
+.horaires{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:1.6rem 1.4rem}
+.horaires h3{font-size:1.5rem;transform:skewX(-6deg);margin-bottom:1rem}
+.hl{display:flex;justify-content:space-between;gap:1rem;padding:.7rem 0;border-top:1px dashed rgba(255,255,255,.15);font-size:1rem}
+.hl:first-of-type{border-top:0}
+.hl b{color:#fff;font-weight:600;text-align:right}
+.horaires small{display:block;color:var(--doux);font-size:.8rem;margin-top:.9rem}
+.reseaux{display:flex;gap:.7rem;margin-top:1.4rem;flex-wrap:wrap}
+.reseaux a{display:inline-flex;gap:.5rem;align-items:center;text-decoration:none;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:.5rem 1rem;font-size:.92rem;color:#fff}
+.reseaux a:hover{border-color:var(--rouge2)}
+.reseaux svg{width:18px;height:18px}
+footer{background:#03060f;color:var(--doux);text-align:center;font-size:.85rem;padding:2rem 1rem 2.6rem;line-height:1.6}
+footer b{color:#fff;font-weight:500}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.batt-in,.noel-in,.contact-in,.deux,.avis-grid{grid-template-columns:1fr}
+ .cartes{grid-template-columns:1fr}
+ .quatre{grid-template-columns:repeat(2,1fr)}
+ .hero{padding-top:5.6rem}
+ .roue{width:min(300px,72vw);margin-top:1rem}
+ .badge-grip{left:0;font-size:.9rem}
+ .ribbon{font-size:.7rem}
+ .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 .l{opacity:1;transform:none}#vitesse{display:none}.pile .niveau{width:100%}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Avirons Pneus Services</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="i-tel" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+ <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+ <symbol id="i-pin" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+ <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+ <symbol id="i-pneu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4L7 17M17 7l1.4-1.4"/></symbol>
+ <symbol id="i-jante" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 10V4M13.9 11.4l5.6-2M13.2 13.6l3.5 4.9M10.8 13.6l-3.5 4.9M10.1 11.4l-5.6-2"/></symbol>
+ <symbol id="i-conseil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-6 7-6 1.5 0 2.8.3 3.9.9"/><path d="M15 18l2 2 4-4.5"/></symbol>
+ <symbol id="i-clou" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M15 4l-4 9M9.5 15.5l1.5-2.5"/></symbol>
+ <symbol id="i-cle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8M14.7 6.3L8 13l3 3"/><path d="M3 21l4-4"/></symbol>
+ <symbol id="i-liste" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M8.5 10l1.5 1.5 3-3M8.5 16l1.5 1.5 3-3"/></symbol>
+ <symbol id="i-bouclier" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/><path d="M8 12l3 3 5-6"/></symbol>
+ <symbol id="i-chrono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6M12 2v3"/></symbol>
+ <symbol id="i-main" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12l4-4 4 2 3-1 5 4M22 12l-4-4-5 1M6 8l-4 4 6 6c.8.8 2 .8 2.8 0M10 16l2 2c.8.8 2 .8 2.8 0M13 13l3 3c.8.8 2 .8 2.8 0l1.2-1.2"/></symbol>
+ <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6z"/></symbol>
+ <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></symbol>
+ <symbol id="i-eclair" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></symbol>
+</svg>
+
+<main>
+<header class="hero">
+ <canvas id="vitesse" aria-hidden="true"></canvas>
+ <div class="wrap hero-in">
+  <div>
+   <div class="logo-card"><img src="img/logo-aps.webp" alt="Logo Avirons Pneus Services" width="860" height="295"></div>
+   <h1><span class="l">Le bon grip</span><span class="l">au bon</span><span class="l">moment</span></h1>
+   <p class="lead">Votre centre de services pneumatiques aux Avirons : <b>pneus toutes marques</b>, montage et équilibrage, <b>batteries</b> avec test gratuit, révision et freinage. <b>Roulez en toute confiance&nbsp;!</b></p>
+   <div class="ctas">
+    <a class="btn btn-main" href="tel:+262692865965"><span><svg><use href="#i-tel"/></svg>0692 865 965</span></a>
+    <a class="btn btn-wa" href="https://wa.me/262692865965?text=Bonjour%2C%20je%20voudrais%20un%20rendez-vous%20chez%20Avirons%20Pneus%20Services"><span><svg><use href="#i-wa"/></svg>WhatsApp</span></a>
+   </div>
+   <p class="adr"><svg><use href="#i-pin"/></svg>9 avenue du Général de Gaulle, 97425 Les Avirons</p>
+  </div>
+  <figure class="roue">
+   <span class="badge-grip">Pneus<br>toutes marques</span>
+   <svg class="tourne" viewBox="0 0 200 200" aria-hidden="true">
+    <defs>
+     <radialGradient id="gm" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#3a3d46"/><stop offset="1" stop-color="#121318"/></radialGradient>
+     <linearGradient id="ja" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6fa"/><stop offset=".5" stop-color="#9aa3b5"/><stop offset="1" stop-color="#e6eaf2"/></linearGradient>
+    </defs>
+    <circle cx="100" cy="100" r="97" fill="url(#gm)"/>
+    <g fill="#24262d"><path id="cr" d="M100 4l6 0 2 12-10 0z"/></g>
+    <g id="crans"></g>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#2c2f37" stroke-width="2"/>
+    <circle cx="100" cy="100" r="62" fill="#0d0e12"/>
+    <circle cx="100" cy="100" r="58" fill="#1d2027"/><circle cx="100" cy="100" r="30" fill="url(#ja)"/>
+    <g fill="#2a2d35"><path d="M95.5 46h9l3 38h-15z"/><path d="M97 50h6l1.6 32h-8.6z" fill="url(#ja)"/><path d="M95.5 46h9l3 38h-15z" transform="rotate(72 100 100)"/><path d="M97 50h6l1.6 32h-8.6z" fill="url(#ja)" transform="rotate(72 100 100)"/><path d="M95.5 46h9l3 38h-15z" transform="rotate(144 100 100)"/><path d="M97 50h6l1.6 32h-8.6z" fill="url(#ja)" transform="rotate(144 100 100)"/><path d="M95.5 46h9l3 38h-15z" transform="rotate(216 100 100)"/><path d="M97 50h6l1.6 32h-8.6z" fill="url(#ja)" transform="rotate(216 100 100)"/><path d="M95.5 46h9l3 38h-15z" transform="rotate(288 100 100)"/><path d="M97 50h6l1.6 32h-8.6z" fill="url(#ja)" transform="rotate(288 100 100)"/></g>
+    <circle cx="100" cy="100" r="58" fill="none" stroke="#7d8698" stroke-width="3"/>
+    <g fill="#5b6273"><circle cx="112.3" cy="83.0" r="2.6"/><circle cx="120.0" cy="106.5" r="2.6"/><circle cx="100.0" cy="121.0" r="2.6"/><circle cx="80.0" cy="106.5" r="2.6"/><circle cx="87.7" cy="83.0" r="2.6"/></g>
+    <circle cx="100" cy="100" r="14" fill="#c9cfdc" stroke="#1a1c22" stroke-width="3"/>
+    <circle cx="100" cy="100" r="5" fill="#e3101c"/>
+    <path d="M60 30a82 82 0 0 1 60-12" stroke="rgba(255,255,255,.12)" stroke-width="5" fill="none" stroke-linecap="round"/>
+   </svg>
+   <figcaption>Illustration</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="cran" aria-hidden="true"></div>
+<div class="defile" aria-hidden="true"><div><span>Changement de pneus</span><i>/</i><span>Montage &amp; équilibrage</span><i>/</i><span>Crevaison</span><i>/</i><span>Batteries</span><i>/</i><span>Révision</span><i>/</i><span>Freinage</span><i>/</i><span>Turbo</span><i>/</i><span>AdBlue &amp; FAP</span><i>/</i><span>Changement de pneus</span><i>/</i><span>Montage &amp; équilibrage</span><i>/</i><span>Crevaison</span><i>/</i><span>Batteries</span><i>/</i><span>Révision</span><i>/</i><span>Freinage</span><i>/</i><span>Turbo</span><i>/</i><span>AdBlue &amp; FAP</span><i>/</i></div></div>
+
+<section class="pneus" id="pneus">
+ <div class="wrap">
+  <p class="eyebrow rv">Notre priorité : votre sécurité</p>
+  <h2 class="rv">Changement de pneus <em>&amp; réparation</em></h2>
+  <p class="intro rv">Le bon pneu pour votre voiture et votre budget, posé et équilibré dans l'atelier des Avirons, avec un conseil personnalisé à chaque passage.</p>
+  <div class="deux">
+   <div class="col rv">
+    <h3>Changement de pneus</h3>
+    <div class="item"><span class="ico"><svg><use href="#i-pneu"/></svg></span><div><b>Large choix de pneus <em>toutes marques</em></b><p>Adaptés à tous les véhicules et à tous les budgets.</p></div></div>
+    <div class="item"><span class="ico"><svg><use href="#i-jante"/></svg></span><div><b>Montage &amp; équilibrage <em>professionnels</em></b><p>Pour un confort de conduite optimal et une usure maîtrisée.</p></div></div>
+    <div class="item"><span class="ico"><svg><use href="#i-conseil"/></svg></span><div><b>Conseils <em>personnalisés</em></b><p>Pour choisir le pneu idéal selon vos besoins.</p></div></div>
+   </div>
+   <div class="col rv">
+    <h3>Réparation</h3>
+    <div class="item"><span class="ico"><svg><use href="#i-clou"/></svg></span><div><b>Crevaison : <em>réparation rapide</em></b><p>Une réparation efficace et durable.</p></div></div>
+    <div class="item"><span class="ico"><svg><use href="#i-cle"/></svg></span><div><b>Réparation de pneus <em>toutes tailles</em></b><p>Pneus auto, 4x4 et utilitaires.</p></div></div>
+    <div class="item"><span class="ico"><svg><use href="#i-liste"/></svg></span><div><b>Contrôle complet <em>de votre véhicule</em></b><p>Pour prendre la route en toute sérénité.</p></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="batt" id="batteries">
+ <div class="wrap batt-in">
+  <figure class="pile rv" id="pile">
+   <div class="corps"><span class="borne p"></span><span class="borne m"></span><div class="niveau"></div><div class="eclair"><svg viewBox="0 0 24 24"><use href="#i-eclair"/></svg></div></div>
+   <figcaption>Illustration</figcaption>
+  </figure>
+  <div>
+   <p class="eyebrow rv">Énergie pour tous vos trajets</p>
+   <h2 class="rv">Batteries : <em>performance</em> et fiabilité</h2>
+   <p class="gratuit rv">Test de votre batterie <em>gratuit</em></p>
+   <ul class="checks rv">
+    <li><span><b>Démarrage optimal</b> en toutes conditions</span></li>
+    <li><span><b>Large choix</b>, toutes marques</span></li>
+    <li><span><b>Conseils personnalisés</b> pour la bonne batterie</span></li>
+    <li><span><b>Montage rapide</b> en atelier</span></li>
+   </ul>
+   <div class="vehic rv">
+    <span><svg viewBox="0 0 32 20" fill="currentColor"><path d="M4 12l3-6c.5-1 1.4-1.6 2.5-1.6h11c1 0 2 .6 2.5 1.5L26 11h2c1.1 0 2 .9 2 2v3h-3a3 3 0 0 0-6 0H11a3 3 0 0 0-6 0H2v-2c0-1.1.9-2 2-2zm5-1h6V6.5h-4.5zm8 0h6.5l-2-4.5H17z"/><circle cx="8" cy="16" r="2.4"/><circle cx="24" cy="16" r="2.4"/></svg>Auto</span>
+    <span><svg viewBox="0 0 32 20" fill="currentColor"><path d="M2 4h17v10H2zM20 7h5l4 4v3h-9z"/><circle cx="8" cy="16" r="2.4"/><circle cx="24" cy="16" r="2.4"/></svg>Utilitaire</span>
+    <span><svg viewBox="0 0 32 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="14" r="4.5"/><circle cx="25" cy="14" r="4.5"/><path d="M7 14l6-7h6l6 7M15 7l-2-3h-3M19 7l2-2h3"/></svg>Moto</span>
+   </div>
+   <div class="ctas" style="margin-top:2rem"><a class="btn btn-main" href="https://wa.me/262692865965?text=Bonjour%2C%20je%20voudrais%20faire%20tester%20ma%20batterie"><span><svg><use href="#i-wa"/></svg>Tester ma batterie</span></a></div>
+  </div>
+ </div>
+</section>
+
+<section class="entretien" id="entretien">
+ <div class="wrap">
+  <p class="eyebrow rv">Pour un véhicule fiable</p>
+  <h2 class="rv">L'entretien, <em>toutes marques</em></h2>
+  <div class="cartes">
+   <article class="carte rv">
+    <h3>Pensez à la <em>révision</em></h3>
+    <p>Plus de sécurité pour vous et vos proches, plus de performance, plus de longévité pour votre véhicule. La révision complète :</p>
+    <ul class="liste-rev"><li>Vidange huile</li><li>Filtre à huile</li><li>Filtre à air</li><li>Filtre à carburant</li><li>Contrôle freinage</li><li>Niveaux</li><li>Contrôle général</li></ul>
+   </article>
+   <article class="carte rv">
+    <h3>Plaquettes <em>en bon état</em></h3>
+    <p>Votre sécurité avant tout : confiez à l'atelier le contrôle de votre freinage, pour des arrêts nets et des disques préservés.</p>
+    <span class="tag">Service rapide et efficace</span>
+   </article>
+   <article class="carte rv">
+    <h3>Turbo : <em>la solution</em></h3>
+    <p>Perte de puissance, surconsommation, fumées ou bruits inhabituels, voyant moteur allumé : diagnostic, nettoyage et réparation.</p>
+    <span class="tag">Toutes marques, tous modèles</span>
+   </article>
+   <article class="carte rv">
+    <h3>AdBlue <em>&amp; FAP</em></h3>
+    <p>La nouveauté de l'été chez Avirons Pneus Services : diagnostic, nettoyage et réparation, pour des performances restaurées et une pollution réduite.</p>
+    <span class="tag">Diagnostic · nettoyage · réparation</span>
+   </article>
+  </div>
+ </div>
+</section>
+
+<div class="cran" aria-hidden="true"></div>
+
+<section class="engag">
+ <div class="wrap">
+  <div class="quatre">
+   <div class="eng rv"><svg><use href="#i-bouclier"/></svg><b>Sécurité</b><span>avant tout</span></div>
+   <div class="eng rv"><svg><use href="#i-pneu"/></svg><b>Pneus</b><span>toutes marques</span></div>
+   <div class="eng rv"><svg><use href="#i-chrono"/></svg><b>Service rapide</b><span>et professionnel</span></div>
+   <div class="eng rv"><svg><use href="#i-main"/></svg><b>Confiance</b><span>et proximité</span></div>
+  </div>
+  <p class="devise rv">Le bon grip au bon moment, c'est <em>notre engagement !</em></p>
+ </div>
+</section>
+
+<section class="avis">
+ <div class="wrap">
+  <p class="eyebrow rv">Ils recommandent l'atelier</p>
+  <h2 class="rv">Une petite structure <em>à l'écoute</em></h2>
+  <div class="avis-grid">
+   <blockquote class="avi rv"><div class="etoiles">👍 Recommande</div><q>Super accueil, un professionnel à l'écoute !</q><small>Recommandation publiée sur la page Facebook</small></blockquote>
+   <blockquote class="avi rv"><div class="etoiles">👍 Recommande</div><q>Allez y vraiment 5 étoiles. Petite structure à notre écoute</q><small>Recommandation publiée sur la page Facebook</small></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <div class="wrap noel-in">
+  <div>
+   <p class="eyebrow rv">Noël sur la route</p>
+   <h2 class="rv">Partez pour les fêtes <em>en toute confiance</em></h2>
+   <div class="noel-cartes">
+    <div class="ncarte rv"><h3>Avant les trajets en famille</h3><p>Le test de votre batterie gratuit et un coup d'œil à vos pneus : vous prenez la route des vacances l'esprit léger.</p></div>
+    <div class="ncarte rv"><h3>Offrir un entretien à un proche</h3><p>Une idée cadeau utile pour un jeune conducteur ou un parent : demandez à l'équipe ce qu'elle peut vous préparer.</p></div>
+   </div>
+   <a class="btn btn-wa rv" href="https://wa.me/262692865965?text=Bonjour%2C%20je%20voudrais%20pr%C3%A9parer%20ma%20voiture%20avant%20les%20f%C3%AAtes%20(pneus%20%2F%20batterie)"><span><svg><use href="#i-wa"/></svg>Préparer ma voiture pour Noël</span></a>
+  </div>
+  <figure class="cadeau rv">
+   <svg viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="112" r="74" fill="#15161a"/>
+    <circle cx="100" cy="112" r="74" fill="none" stroke="#2a2c33" stroke-width="10" stroke-dasharray="6 7"/>
+    <circle cx="100" cy="112" r="44" fill="#c9cfdc"/>
+    <circle cx="100" cy="112" r="12" fill="#e3101c"/>
+    <rect x="93" y="38" width="14" height="148" fill="#e3101c"/>
+    <rect x="26" y="105" width="148" height="14" fill="#e3101c"/>
+    <path d="M100 40c-14-26-46-22-40-4 4 12 26 8 40 4zM100 40c14-26 46-22 40-4-4 12-26 8-40 4z" fill="#ff3340" stroke="#a80b14" stroke-width="2"/>
+    <circle cx="100" cy="40" r="7" fill="#a80b14"/>
+    <g fill="#fff"><circle cx="30" cy="40" r="2.5"/><circle cx="172" cy="58" r="2"/><circle cx="160" cy="22" r="2.5"/><circle cx="44" cy="70" r="1.6"/></g>
+   </svg>
+   <figcaption>Illustration</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap contact-in">
+  <div>
+   <p class="eyebrow rv">Prenez rendez-vous dès maintenant</p>
+   <h2 class="rv">Passez <em>à l'atelier</em></h2>
+   <div class="coord rv">
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Avirons%20Pneus%20Services%2C%209%20avenue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2097425%20Les%20Avirons"><svg><use href="#i-pin"/></svg><span><b>9 avenue du Général de Gaulle</b><br>97425 Les Avirons</span></a>
+    <a href="tel:+262692865965"><svg><use href="#i-tel"/></svg><span><b>0692 865 965</b><br>devis et rendez-vous</span></a>
+    <a href="mailto:avironspneusservices@gmail.com"><svg><use href="#i-mail"/></svg><span>avironspneusservices@gmail.com</span></a>
+   </div>
+   <div class="ctas rv">
+    <a class="btn btn-main" href="tel:+262692865965"><span><svg><use href="#i-tel"/></svg>Appeler l'atelier</span></a>
+    <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Avirons%20Pneus%20Services%2C%209%20avenue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2097425%20Les%20Avirons"><span><svg><use href="#i-pin"/></svg>Itinéraire</span></a>
+   </div>
+  </div>
+  <div class="horaires rv">
+   <h3>Horaires d'ouverture</h3>
+   <div class="hl"><span>Lundi → vendredi</span><b>8h – 12h<br>13h30 – 17h</b></div>
+   <div class="hl"><span>Samedi</span><b>8h – 12h</b></div>
+   <small>Horaires publiés sur la page Facebook d'Avirons Pneus Services. Les fermetures exceptionnelles y sont annoncées.</small>
+   <div class="reseaux">
+    <a href="https://www.facebook.com/p/Avirons-Pneus-Services-61576077177229/"><svg><use href="#i-fb"/></svg>Facebook</a>
+    <a href="https://www.instagram.com/avironspneusservices/"><svg><use href="#i-ig"/></svg>@avironspneusservices</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications d'Avirons Pneus Services.<br>Les visuels marqués « Illustration » sont des dessins créés pour cette maquette.</footer>
+
+<script>
+(function(){
+ var crans=document.getElementById('crans'),cr=document.getElementById('cr');
+ if(crans&&cr){for(var i=1;i<36;i++){var u=cr.cloneNode();u.removeAttribute('id');u.setAttribute('transform','rotate('+(i*10)+' 100 100)');crans.appendChild(u);}}
+ var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');if(e.target.id==='pile')e.target.classList.add('charge');io.unobserve(e.target);}})},{threshold:.15});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ if(reduit)return;
+ var c=document.getElementById('vitesse');if(!c)return;var x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],on=true;
+ function taille(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);}
+ function neuf(p,init){p.y=Math.random()*H;p.l=40+Math.random()*140;p.v=2+Math.random()*5;p.x=init?Math.random()*W:-p.l;p.r=Math.random()<.3;p.a=.12+Math.random()*.25;p.e=.8+Math.random()*1.6;return p;}
+ taille();for(var k=0;k<26;k++)P.push(neuf({},true));
+ window.addEventListener('resize',taille);
+ document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(boucle);});
+ function boucle(){if(!on)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.x+=p.v;if(p.x>W+20)neuf(p,false);var g=x.createLinearGradient(p.x-p.l,0,p.x,0);var col=p.r?'255,51,64':'220,228,245';g.addColorStop(0,'rgba('+col+',0)');g.addColorStop(1,'rgba('+col+','+p.a+')');x.strokeStyle=g;x.lineWidth=p.e;x.beginPath();x.moveTo(p.x-p.l,p.y);x.lineTo(p.x,p.y);x.stroke();});requestAnimationFrame(boucle);}
+ requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Avirons Pneus Services" defer></script>
+</body>
+</html>
