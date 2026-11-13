@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Retouche Express · Couture et retouches au Tampon</title>
+<meta name="description" content="Retouche Express, couturière professionnelle et diplômée au centre-ville du Tampon : ourlets, retaillage, retouches diverses, pose fermeture, pose doublure, personnalisation. Toute la région Sud.">
+<meta property="og:title" content="Retouche Express · Couture et retouches au Tampon">
+<meta property="og:description" content="Couturière professionnelle et diplômée : travail rapide, efficace et soigné, au centre-ville du Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/retouche-express-le-tampon/img/partage.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/retouche-express-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+<style>
+:root{--fuchsia:#be1b89;--fuchsia2:#d92ea0;--prune:#5e0d45;--rose:#fde6f3;--rose2:#f8c9e4;--creme:#fff8fb;--jaune:#fff200;--or:#f4c400;--ardoise:#3d3b42;--txt:#2f2530;--doux:#7a6573}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{line-height:1.1}
+h2{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(2rem,6vw,3.1rem);color:var(--prune);margin:.3rem 0 1rem}
+h3{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:1.3rem;color:var(--prune)}
+.script{font-family:'Dancing Script',cursive;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;font-weight:700;color:var(--fuchsia)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--prune);color:var(--rose2);text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#boutons{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--jaune);color:var(--prune);box-shadow:0 14px 30px -14px rgba(0,0,0,.55);animation:souffle 4.5s ease-in-out infinite}
+.btn-wa:hover{background:#fff}
+@keyframes souffle{50%{transform:scale(1.035);box-shadow:0 18px 40px -10px rgba(255,242,0,.55)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.15)}
+.btn-fu{background:var(--fuchsia);color:#fff;box-shadow:0 14px 30px -14px rgba(94,13,69,.8)}
+.btn-fu:hover{background:var(--prune)}
+.btn-ghost{border:2px solid var(--fuchsia);color:var(--fuchsia)}
+.btn-ghost:hover{background:var(--rose)}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+/* HERO */
+.hero{min-height:min(100svh,860px);display:flex;align-items:center;overflow:hidden;color:#fff;padding:6rem 0 5rem;background:radial-gradient(90% 60% at 85% 0%,#e44bb0 0%,transparent 60%),radial-gradient(80% 60% at 0% 100%,#8f0f66 0%,transparent 60%),var(--fuchsia)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--creme);clip-path:polygon(0 60%,8% 40%,16% 62%,24% 38%,32% 60%,40% 36%,48% 58%,56% 34%,64% 56%,72% 38%,80% 60%,88% 40%,100% 58%,100% 100%,0 100%)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero .eyebrow{color:var(--jaune)}
+.hero h1{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(4rem,17vw,8rem);line-height:.9;margin:.6rem 0 .4rem;text-shadow:0 6px 30px rgba(94,13,69,.35)}
+.hero h1 span{display:block;padding-left:.9em}
+.couture{display:block;width:min(340px,80%);height:14px;margin:.4rem 0 1.2rem}
+.couture path{stroke:var(--jaune);stroke-width:3;stroke-dasharray:12 9;fill:none;stroke-linecap:round;animation:pique 2.6s linear infinite}
+@keyframes pique{to{stroke-dashoffset:-42}}
+.lead{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:clamp(1.3rem,4vw,1.7rem);max-width:30rem;margin-bottom:.5rem}
+.sous{color:var(--rose2);margin-bottom:1.8rem;max-width:30rem}
+.adr{margin-top:1.5rem;font-size:.9rem;color:var(--rose2);display:flex;gap:.5rem;align-items:flex-start}
+.adr svg{width:18px;height:18px;flex:none;margin-top:.2rem}
+.machine{position:relative;max-width:420px;width:100%;margin:auto}
+.machine .disque{position:absolute;inset:6% 4%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),rgba(255,255,255,0) 68%);animation:respire 7s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.08)}}
+.machine svg{position:relative;width:100%;height:auto;display:block}
+.aiguille{animation:pointe .55s ease-in-out infinite alternate;transform-box:fill-box}
+@keyframes pointe{to{transform:translateY(9px)}}
+.volant{transform-box:fill-box;transform-origin:center;animation:tourne 2.2s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.fil-anim{stroke-dasharray:10 8;animation:pique 1.6s linear infinite}
+.legende{position:absolute;right:0;bottom:-.4rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose2)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .2s forwards}
+.d2{animation-delay:.55s}.d3{animation-delay:.9s}.d4{animation-delay:1.2s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* METRE RUBAN */
+.metre{background:var(--jaune);color:var(--prune);overflow:hidden;white-space:nowrap;position:relative;border-top:3px dashed rgba(94,13,69,.25);border-bottom:3px dashed rgba(94,13,69,.25);transform:rotate(-1.5deg);margin:1rem -2vw 0}
+.metre .piste{display:inline-flex;gap:2.4rem;padding:.9rem 0;animation:defile 30s linear infinite;font-family:'Dancing Script',cursive;font-size:1.65rem;font-weight:700}
+.metre .piste span::after{content:"✂";font-family:system-ui;font-size:1rem;margin-left:2.4rem;color:var(--fuchsia)}
+@keyframes defile{to{transform:translateX(-50%)}}
+.graduations{position:absolute;left:0;right:0;top:0;height:8px;background:repeating-linear-gradient(90deg,rgba(94,13,69,.45) 0 1px,transparent 1px 12px)}
+/* ATELIER */
+.atelier-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+blockquote{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:clamp(1.25rem,3.6vw,1.6rem);color:var(--prune);border-left:4px solid var(--fuchsia);padding:.2rem 0 .2rem 1.2rem;margin:1.2rem 0}
+blockquote cite{display:block;font-family:'DM Sans',sans-serif;font-style:normal;font-size:.8rem;color:var(--doux);margin-top:.6rem;letter-spacing:.05em}
+.atouts{display:grid;gap:1rem}
+.atout{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:20px;padding:1.1rem 1.2rem;box-shadow:0 20px 40px -30px rgba(94,13,69,.5);border:1px dashed var(--rose2)}
+.atout .ic{width:52px;height:52px;border-radius:50%;background:var(--rose);display:grid;place-items:center;flex:none}
+.atout .ic svg{width:28px;height:28px}
+.atout b{display:block;color:var(--prune);font-size:1.02rem}
+.atout small{color:var(--doux);font-size:.88rem}
+/* PRESTATIONS */
+.prest{background:linear-gradient(180deg,var(--creme),var(--rose))}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+.carte{background:#fff;border-radius:24px;padding:1.5rem 1.4rem 1.4rem;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s;box-shadow:0 22px 40px -32px rgba(94,13,69,.6)}
+.carte::before{content:"";position:absolute;inset:8px;border:1.5px dashed var(--rose2);border-radius:18px;pointer-events:none;transition:border-color .35s}
+.carte:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 30px 50px -30px rgba(190,27,137,.7)}
+.carte:hover::before{border-color:var(--fuchsia)}
+.carte .num{font-family:'Dancing Script',cursive;font-size:2.6rem;color:var(--fuchsia);line-height:1}
+.carte svg{width:46px;height:46px;position:absolute;right:1.2rem;top:1.2rem}
+.carte h3{margin:.4rem 0 .35rem}
+.carte p{font-size:.93rem;color:var(--doux)}
+.note-src{font-size:.8rem;color:var(--doux);margin-top:1.4rem}
+/* ETAPES */
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem;counter-reset:e;position:relative}
+.etape{position:relative;padding:1.4rem 1.2rem 1.3rem;border-radius:22px;background:#fff;box-shadow:0 20px 40px -32px rgba(94,13,69,.55)}
+.etape .rond{width:46px;height:46px;border-radius:50%;background:var(--fuchsia);color:#fff;display:grid;place-items:center;font-family:'Dancing Script',cursive;font-size:1.6rem;margin-bottom:.8rem}
+.etape p{color:var(--doux);font-size:.94rem;margin-top:.3rem}
+.fil-etapes{position:absolute;left:5%;right:5%;top:46px;height:4px;z-index:-1}
+/* NOEL */
+.noel{background:radial-gradient(70% 60% at 100% 0%,rgba(255,242,0,.22),transparent 60%),linear-gradient(160deg,var(--prune),#8a1063 70%,var(--fuchsia));color:#fff;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.noel-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:center}
+.noel p{color:var(--rose2);max-width:34rem}
+.noel ul{list-style:none;margin:1.3rem 0 1.8rem;display:grid;gap:.7rem}
+.noel li{display:flex;gap:.7rem;align-items:flex-start}
+.noel li::before{content:"✦";color:var(--jaune);flex:none}
+.etoiles span{position:absolute;color:var(--jaune);opacity:.7;animation:scint 3.2s ease-in-out infinite}
+@keyframes scint{50%{opacity:.15;transform:scale(.6)}}
+.boule{max-width:260px;margin:auto;position:relative}
+.boule svg{width:100%;height:auto;animation:balance 5s ease-in-out infinite;transform-origin:50% 0}
+@keyframes balance{50%{transform:rotate(4deg)}}
+.noel .legende{position:static;display:block;text-align:center;margin-top:.4rem}
+.noel .petit{font-size:.85rem;margin-top:1.2rem;color:var(--rose2)}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.8rem}
+.fiche{background:#fff;border-radius:26px;padding:1.6rem;box-shadow:0 26px 50px -36px rgba(94,13,69,.65);border:1px dashed var(--rose2)}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px dashed var(--rose2);text-decoration:none}
+.ligne:last-child{border-bottom:0}
+.ligne svg{width:24px;height:24px;flex:none;color:var(--fuchsia);margin-top:.15rem}
+.ligne b{display:block;color:var(--prune)}
+.ligne span{color:var(--doux);font-size:.92rem;word-break:break-word}
+a.ligne:hover b{color:var(--fuchsia)}
+.plan{border-radius:26px;overflow:hidden;background:var(--rose);position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end;padding:1.6rem;text-decoration:none;box-shadow:0 26px 50px -36px rgba(94,13,69,.65)}
+.plan svg.rues{position:absolute;inset:0;width:100%;height:100%}
+.plan .etiq{position:relative;background:#fff;border-radius:16px;padding:.9rem 1.1rem;max-width:20rem}
+.plan .etiq b{color:var(--prune);display:block}
+.plan .etiq span{font-size:.88rem;color:var(--doux)}
+.pin{position:absolute;left:52%;top:30%;width:44px;animation:rebond 2.4s ease-in-out infinite}
+@keyframes rebond{50%{transform:translateY(-10px)}}
+footer{background:var(--prune);color:var(--rose2);text-align:center;padding:2.6rem 1.2rem 3rem;font-size:.85rem}
+footer .script{font-size:2rem;color:#fff;display:block;margin-bottom:.4rem}
+.wa-flottant{position:fixed;right:16px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
+.wa-flottant svg{width:30px;height:30px}
+.revele{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s ease}
+.revele.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.atelier-grid,.noel-grid,.contact-grid{grid-template-columns:1fr}
+ .machine{max-width:330px}
+ .cartes{grid-template-columns:1fr 1fr}
+ .etapes{grid-template-columns:1fr}
+ .fil-etapes{display:none}
+}
+@media (max-width:520px){
+ .cartes{grid-template-columns:1fr}
+ .hero{padding-top:5.2rem}
+ .ctas .btn{flex:1 1 100%}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.revele{opacity:1;transform:none}
+ canvas#boutons{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Retouche Express</div>
+<canvas id="boutons" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <p class="eyebrow apparait">Couturière diplômée · Le Tampon</p>
+   <h1 class="apparait d2">Retouche <span>Express</span></h1>
+   <svg class="couture apparait d3" viewBox="0 0 340 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 7 C 60 1, 120 13, 180 7 S 300 1, 338 7"/></svg>
+   <p class="lead apparait d3">Travail rapide, efficace et soigné.</p>
+   <p class="sous apparait d3">Travaux de couture et de retouche, au cœur du centre-ville du Tampon, pour toute la région Sud.</p>
+   <div class="ctas apparait d4">
+    <a class="btn btn-wa" href="https://wa.me/262692495715?text=Bonjour%20Retouche%20Express%2C%20j%27ai%20un%20v%C3%AAtement%20%C3%A0%20faire%20retoucher" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg>Écrire sur WhatsApp</a>
+    <a class="btn btn-line" href="tel:+262692495715"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>0692 49 57 15</a>
+   </div>
+   <p class="adr apparait d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>Centre-ville du Tampon, rue Hubert Delisle, en face de Sensuel Or</p>
+  </div>
+  <figure class="machine apparait d3">
+   <div class="disque"></div>
+   <svg viewBox="0 0 400 330" role="img" aria-label="Illustration d'une machine à coudre">
+    <rect x="30" y="250" width="340" height="34" rx="8" fill="#5e0d45"/>
+    <rect x="44" y="284" width="312" height="10" rx="4" fill="#3d3b42" opacity=".6"/>
+    <path d="M300 250V110a46 46 0 0 0-46-46H96a40 40 0 0 0-40 40v14h170a24 24 0 0 1 24 24v108Z" fill="#fff"/>
+    <path d="M300 250V110a46 46 0 0 0-46-46H96a40 40 0 0 0-40 40v14h170a24 24 0 0 1 24 24v108Z" fill="none" stroke="#3d3b42" stroke-width="5"/>
+    <rect x="56" y="118" width="54" height="40" rx="8" fill="#3d3b42"/>
+    <path d="M110 92h150" stroke="#be1b89" stroke-width="7" stroke-linecap="round"/>
+    <g class="volant"><circle cx="322" cy="140" r="26" fill="#fff200" stroke="#3d3b42" stroke-width="5"/><path d="M322 118v44M300 140h44" stroke="#3d3b42" stroke-width="4"/></g>
+    <rect x="160" y="40" width="10" height="26" rx="3" fill="#3d3b42"/>
+    <ellipse cx="165" cy="36" rx="16" ry="8" fill="#be1b89" stroke="#3d3b42" stroke-width="3"/>
+    <path d="M165 36 C 220 30, 250 70, 240 92" class="fil-anim" stroke="#fff200" stroke-width="3" fill="none"/>
+    <g class="aiguille"><rect x="78" y="158" width="10" height="44" fill="#3d3b42"/><path d="M83 202v34" stroke="#9aa0a6" stroke-width="3" stroke-linecap="round"/></g>
+    <path d="M60 246 C 90 236, 150 256, 200 244 S 290 236, 330 246" class="fil-anim" stroke="#fff200" stroke-width="3" fill="none"/>
+   </svg>
+   <figcaption class="legende">Illustration</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="metre" aria-hidden="true"><div class="graduations"></div>
+ <div class="piste"><span>Ourlets</span><span>Retaillage</span><span>Retouches diverses</span><span>Pose fermeture</span><span>Pose doublure</span><span>Personnalisation</span><span>Ourlets</span><span>Retaillage</span><span>Retouches diverses</span><span>Pose fermeture</span><span>Pose doublure</span><span>Personnalisation</span></div>
+</div>
+
+<section id="atelier">
+ <div class="wrap atelier-grid">
+  <div class="revele">
+   <p class="eyebrow">L'atelier</p>
+   <h2>Le savoir-faire d'une couturière, en plein centre-ville</h2>
+   <blockquote>« Couturière professionnelle et diplômée réalise travaux de couture et retouche sur la région Sud. »<cite>Retouche Express, sur sa page Facebook</cite></blockquote>
+   <p>Un pantalon à la bonne longueur, une veste ajustée, une fermeture remise à neuf : vos vêtements préférés retrouvent une seconde vie, rapidement et avec soin.</p>
+  </div>
+  <div class="atouts revele">
+   <div class="atout"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#be1b89" stroke-width="2"><path d="M16 3l3.5 7 7.5 1.1-5.5 5.3 1.3 7.6L16 20.4 9.2 24l1.3-7.6L5 11.1l7.5-1.1z"/></svg></div><div><b>Professionnelle et diplômée</b><small>Le métier appris, la main sûre</small></div></div>
+   <div class="atout"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#be1b89" stroke-width="2"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg></div><div><b>Travail rapide</b><small>Efficace et soigné</small></div></div>
+   <div class="atout"><div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="#be1b89" stroke-width="2"><path d="M16 29s9-8 9-15a9 9 0 1 0-18 0c0 7 9 15 9 15Z"/><circle cx="16" cy="14" r="3"/></svg></div><div><b>Centre-ville du Tampon</b><small>Pour toute la région Sud</small></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="prest" id="prestations">
+ <div class="wrap">
+  <p class="eyebrow revele">Les prestations</p>
+  <h2 class="revele">Tout ce que vos vêtements méritent</h2>
+  <div class="cartes">
+   <article class="carte revele"><span class="num">01</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4" stroke-linecap="round"><path d="M14 6h20l-3 36h-6l-1-20-1 20h-6z"/><path d="M14 38h20" stroke-dasharray="3 3"/></svg><h3>Ourlets</h3><p>Pantalons, jupes, robes : la longueur juste, qui tombe parfaitement.</p></article>
+   <article class="carte revele"><span class="num">02</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4" stroke-linecap="round"><circle cx="13" cy="36" r="5"/><circle cx="25" cy="38" r="5"/><path d="M16 32L38 8M22 34L40 14"/></svg><h3>Retaillage</h3><p>Un vêtement repris à votre mesure, pour une silhouette ajustée.</p></article>
+   <article class="carte revele"><span class="num">03</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4" stroke-linecap="round"><path d="M8 40L40 8"/><circle cx="40" cy="8" r="2"/><path d="M8 40c6-2 6-10 12-10s4 8 10 6" stroke="#f4c400"/></svg><h3>Retouches diverses</h3><p>Une couture à reprendre, un détail à ajuster : l'atelier s'en occupe.</p></article>
+   <article class="carte revele"><span class="num">04</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4" stroke-linecap="round"><path d="M24 4v40"/><path d="M20 8h8M20 14h8M20 20h8M20 26h8" /><rect x="19" y="30" width="10" height="9" rx="2"/></svg><h3>Pose fermeture</h3><p>Une fermeture neuve, et votre vêtement repart pour longtemps.</p></article>
+   <article class="carte revele"><span class="num">05</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4" stroke-linejoin="round"><path d="M16 6l8 5 8-5 10 6-4 10-4-2v22H14V20l-4 2-4-10z"/><path d="M18 24h12v14H18z" stroke="#f4c400"/></svg><h3>Pose doublure</h3><p>Une doublure posée avec soin, pour plus de confort et de tenue.</p></article>
+   <article class="carte revele"><span class="num">06</span><svg viewBox="0 0 48 48" fill="none" stroke="#be1b89" stroke-width="2.4"><circle cx="24" cy="24" r="14"/><circle cx="20" cy="20" r="2"/><circle cx="28" cy="20" r="2"/><circle cx="20" cy="28" r="2"/><circle cx="28" cy="28" r="2"/></svg><h3>Personnalisation</h3><p>Une touche en plus, et la pièce vous ressemble vraiment.</p></article>
+  </div>
+  <p class="note-src revele">Prestations reprises de l'affiche publiée par Retouche Express sur sa page Facebook.</p>
+ </div>
+</section>
+
+<section id="comment">
+ <div class="wrap">
+  <p class="eyebrow revele">Simple comme un point droit</p>
+  <h2 class="revele">Votre retouche en trois temps</h2>
+  <div class="etapes">
+   <svg class="fil-etapes" viewBox="0 0 100 4" preserveAspectRatio="none" aria-hidden="true"><path d="M0 2H100" stroke="#be1b89" stroke-width="2" stroke-dasharray="3 2" class="fil-anim"/></svg>
+   <div class="etape revele"><div class="rond">1</div><h3>Un message</h3><p>Écrivez sur WhatsApp ou appelez le 0692 49 57 15 pour décrire votre vêtement.</p></div>
+   <div class="etape revele"><div class="rond">2</div><h3>L'atelier</h3><p>Déposez-le au centre-ville du Tampon, rue Hubert Delisle, en face de Sensuel Or.</p></div>
+   <div class="etape revele"><div class="rond">3</div><h3>Comme neuf</h3><p>Vous retrouvez un vêtement ajusté, prêt à être porté.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="etoiles" aria-hidden="true"><span style="left:8%;top:14%">✦</span><span style="left:86%;top:10%;animation-delay:1s">✦</span><span style="left:72%;top:78%;animation-delay:2s">✦</span><span style="left:20%;top:88%;animation-delay:.5s">✦</span></div>
+ <div class="wrap noel-grid">
+  <div class="revele">
+   <p class="eyebrow">Pour Noël</p>
+   <h2>Vos tenues de fête, ajustées à la perfection</h2>
+   <p>Le réveillon approche : la robe des grands jours, le costume du repas de famille ou la tenue offerte méritent de tomber parfaitement.</p>
+   <ul>
+    <li>Un ourlet ou un retaillage pour briller le soir du réveillon</li>
+    <li>Un vêtement reçu en cadeau, ajusté à la bonne taille</li>
+    <li>Une touche de personnalisation pour une pièce unique à offrir</li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262692495715?text=Bonjour%20Retouche%20Express%2C%20je%20voudrais%20faire%20retoucher%20une%20tenue%20pour%20les%20f%C3%AAtes" target="_blank" rel="noopener">Préparer ma tenue de fête</a>
+    <a class="btn btn-line" href="tel:+262692495715">Appeler l'atelier</a>
+   </div>
+   <p class="petit">Les dates de l'atelier pendant les fêtes sont annoncées sur la page Facebook de Retouche Express.</p>
+  </div>
+  <figure class="boule revele">
+   <svg viewBox="0 0 200 240" role="img" aria-label="Illustration d'une boule de Noël en bobine de fil">
+    <path d="M100 0v40" stroke="#fff200" stroke-width="2"/>
+    <rect x="86" y="38" width="28" height="16" rx="3" fill="#f4c400"/>
+    <circle cx="100" cy="130" r="76" fill="#be1b89"/>
+    <circle cx="100" cy="130" r="76" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 6" opacity=".7"/>
+    <path d="M34 110c40 14 92 14 132 0M28 140c44 14 100 14 144 0M38 170c38 12 86 12 124 0" stroke="#fde6f3" stroke-width="3" fill="none" opacity=".75"/>
+    <circle cx="70" cy="96" r="12" fill="#fff" opacity=".35"/>
+    <path d="M150 80l26-26" stroke="#e7e7ea" stroke-width="3" stroke-linecap="round"/><circle cx="176" cy="54" r="3" fill="none" stroke="#e7e7ea" stroke-width="2"/>
+   </svg>
+   <figcaption class="legende">Illustration</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <p class="eyebrow revele">Contact</p>
+  <h2 class="revele">À très bientôt à l'atelier</h2>
+  <div class="contact-grid">
+   <div class="fiche revele">
+    <a class="ligne" href="https://wa.me/262692495715?text=Bonjour%20Retouche%20Express" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg><div><b>WhatsApp</b><span>0692 49 57 15</span></div></a>
+    <a class="ligne" href="tel:+262692495715"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><div><b>Téléphone</b><span>0692 49 57 15</span></div></a>
+    <a class="ligne" href="mailto:zaitonymohamady5@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><div><b>E-mail</b><span>zaitonymohamady5@gmail.com</span></div></a>
+    <a class="ligne" href="https://www.facebook.com/p/Retouche-Express-100067150304445" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg><div><b>Facebook</b><span>Retouche Express : nouvelles et dates de l'atelier</span></div></a>
+   </div>
+   <a class="plan revele" href="https://www.google.com/maps/search/?api=1&query=rue+Hubert+Delisle+97430+Le+Tampon" target="_blank" rel="noopener" aria-label="Ouvrir le plan">
+    <svg class="rues" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+     <rect width="400" height="300" fill="#fde6f3"/>
+     <path d="M-10 170 L410 120" stroke="#fff" stroke-width="26"/>
+     <path d="M-10 170 L410 120" stroke="#f8c9e4" stroke-width="2" stroke-dasharray="10 10"/>
+     <path d="M120 -10 L150 310M290 -10 L270 310" stroke="#fff" stroke-width="14"/>
+     <path d="M20 40h70v60H20zM180 20h70v70h-70zM310 20h80v60h-80zM20 210h90v80H20zM180 190h70v100h-70zM300 180h90v110h-90z" fill="#f8c9e4" opacity=".7"/>
+     <text x="330" y="114" font-family="DM Sans,sans-serif" font-size="11" fill="#7a6573" transform="rotate(-7 330 114)" text-anchor="middle">rue Hubert Delisle</text>
+    </svg>
+    <svg class="pin" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 50s16-15 16-28a16 16 0 1 0-32 0c0 13 16 28 16 28Z" fill="#be1b89"/><circle cx="20" cy="21" r="6" fill="#fff200"/></svg>
+    <div class="etiq"><b>Retouche Express</b><span>Centre-ville du Tampon, rue Hubert Delisle, en face de Sensuel Or · Ouvrir le plan</span></div>
+   </a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <span class="script">Retouche Express</span>
+ Couture et retouches · Le Tampon, La Réunion · SIRET 793425083<br><br>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Retouche Express.
+</footer>
+<a class="wa-flottant" href="https://wa.me/262692495715?text=Bonjour%20Retouche%20Express" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.1Z"/></svg></a>
+
+<script>
+(function(){
+ var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+ document.querySelectorAll('.revele').forEach(function(el){io?io.observe(el):el.classList.add('vu')});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('boutons'),x=c.getContext('2d'),W,H,P=[],cols=['#be1b89','#f4c400','#d92ea0','#5e0d45'];
+ function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+ size();addEventListener('resize',size);
+ for(var i=0;i<22;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:4+Math.random()*6,v:.15+Math.random()*.35,a:Math.random()*6.28,s:(Math.random()-.5)*.01,c:cols[i%4],o:.12+Math.random()*.18,k:i%3});
+ var run=true;document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.y+=p.v;p.a+=p.s;p.x+=Math.sin(p.a)*.25;if(p.y>H+12){p.y=-12;p.x=Math.random()*W}
+   x.save();x.globalAlpha=p.o;x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.strokeStyle=p.c;
+   if(p.k<2){x.beginPath();x.arc(0,0,p.r,0,6.28);x.fill();x.globalCompositeOperation='destination-out';var d=p.r*.32;[[-d,-d],[d,-d],[-d,d],[d,d]].forEach(function(q){x.beginPath();x.arc(q[0],q[1],p.r*.13,0,6.28);x.fill()})}
+   else{x.lineWidth=1.4;x.setLineDash([3,3]);x.beginPath();x.moveTo(-p.r*2,0);x.quadraticCurveTo(0,-p.r*1.5,p.r*2,0);x.stroke()}
+   x.restore()});
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Retouche Express" defer></script>
+</body>
+</html>
