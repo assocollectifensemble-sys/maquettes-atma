@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Zembro Café · Café, bar, cave et concerts aux Avirons</title>
+<meta name="description" content="Zembro Café, le petit bar café cave du village des Avirons : bières péi, vins, planches apéro, concerts, quiz et soirées jeux sur la terrasse. 11 bis avenue Général De Gaulle.">
+<meta property="og:title" content="Zembro Café · Café, bar, cave et concerts aux Avirons">
+<meta property="og:description" content="Bières péi, vins, planches apéro et concerts sur la terrasse, au cœur des Avirons. #ZcommeZembro">
+<meta property="og:image" content="https://maquettes.atma-digital.re/zembro-cafe-les-avirons/img/terrasse-coucher-soleil.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/zembro-cafe-les-avirons/">
+<link rel="icon" href="img/logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#14235f;--nuit-f:#0c1640;--bleu:#1a56e0;--corail:#ef4b45;--corail-f:#cf3530;--creme:#f8f1e3;--sable:#efe3cc;--jaune:#f3c233;--teal:#1f8fa6;--bois:#c9925a;--txt:#1d2240;--doux:#5e6585}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:.95;color:var(--nuit)}
+h2{font-size:clamp(2.6rem,8vw,4.4rem);margin:.3rem 0 1rem}
+h3{font-size:1.75rem}
+.brush{font-family:'Caveat Brush',cursive;color:var(--corail);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:700;color:var(--bleu)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit-f);color:#cfd8ff;text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#lumieres{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s;text-align:center}
+.btn-main{background:var(--corail);color:#fff;box-shadow:0 14px 30px -14px rgba(239,75,69,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--corail-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(239,75,69,.75)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{border:2px solid var(--nuit);color:var(--nuit)}
+.btn-dark:hover{background:var(--nuit);color:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:clamp(640px,100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit-f);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,22,64,.3) 0%,rgba(12,22,64,.3) 30%,rgba(12,22,64,.86) 62%,rgba(12,22,64,.97) 100%)}
+.guirlande{position:absolute;top:2.2rem;left:0;width:100%;height:90px;z-index:2}
+.guirlande circle{animation:scintille 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes scintille{50%{opacity:.45}}
+.hero-in{position:relative;z-index:3;padding:8rem 0 4rem}
+.logo{width:84px;border-radius:10px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);margin-bottom:1.2rem;transform:rotate(-4deg)}
+.hero .eyebrow{color:var(--jaune)}
+.hero h1{color:#fff;font-size:clamp(4.4rem,20vw,9rem);margin-top:.4rem}
+.hero h1 .brush{display:block;font-size:.42em;color:var(--corail);letter-spacing:0;margin-top:.15em;transform:rotate(-3deg);transform-origin:left}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:1rem 0 1.8rem;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:#cfd8ff}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.dechire{display:block;width:100%;height:40px;margin-top:-39px;position:relative;z-index:4}
+/* BANDEAU */
+.bande{background:var(--corail);color:#fff;overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:.06em}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"Z";margin-left:2.2rem;color:var(--nuit)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* LIEU */
+.topo{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='none' stroke='%231a56e0' stroke-opacity='.07' stroke-width='1.3'%3E%3Cpath d='M-20 60c60-30 110 30 170 0s110-40 190-5'/%3E%3Cpath d='M-20 95c60-30 110 30 170 0s110-40 190-5'/%3E%3Cpath d='M-20 130c70-40 120 40 180 5s100-35 180 0'/%3E%3Cpath d='M-20 200c50 30 120-30 180 0s120 35 180 0'/%3E%3Cpath d='M-20 240c50 30 120-30 180 0s120 35 180 0'/%3E%3Cpath d='M-20 280c60-20 130 30 190 5s100-25 150 0'/%3E%3C/g%3E%3C/svg%3E")}
+.lieu{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.lieu p+p{margin-top:1rem}
+.devise{font-family:'Caveat Brush',cursive;font-size:clamp(1.6rem,5vw,2.2rem);color:var(--nuit);line-height:1.15;margin:1.5rem 0;padding-left:1rem;border-left:4px solid var(--corail)}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Bebas Neue',sans-serif;font-size:2.9rem;font-weight:400;color:var(--corail);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.polaroid{background:#fff;padding:.8rem .8rem 1rem;box-shadow:0 34px 60px -30px rgba(20,35,95,.55);transform:rotate(2.5deg);transition:transform .6s;max-width:420px;margin:auto}
+.polaroid:hover{transform:rotate(0) scale(1.02)}
+.polaroid img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.polaroid figcaption{font-family:'Caveat Brush',cursive;font-size:1.3rem;color:var(--nuit);text-align:center;margin-top:.6rem}
+.polaroid.p2{transform:rotate(-3deg);max-width:300px;margin-top:-4rem;margin-left:auto;margin-right:0;position:relative}
+.polaroid.p2 img{aspect-ratio:4/5}
+/* CARTE */
+.carte-sec{background:var(--nuit);color:#e8ecff;overflow:hidden}
+.carte-sec h2,.carte-sec h3{color:#fff}
+.carte-sec .eyebrow{color:var(--jaune)}
+.carte-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.cave{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 40px 70px -30px rgba(0,0,0,.7)}
+.cave img{width:100%;aspect-ratio:727/830;object-fit:cover;transition:transform 1.4s}
+.cave:hover img{transform:scale(1.05)}
+.cave figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.2rem 1rem;background:linear-gradient(180deg,transparent,rgba(12,22,64,.92));font-size:.9rem;color:#fff}
+.verres{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.6rem}
+.verre{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1.2rem 1.2rem 1.1rem;transition:transform .35s,background .35s;position:relative;overflow:hidden}
+.verre:hover{transform:translateY(-5px);background:rgba(255,255,255,.1)}
+.verre::before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--corail),var(--jaune),transparent)}
+.verre h3{font-size:1.55rem;margin-bottom:.25rem}
+.verre p{font-size:.93rem;color:#cfd6f5}
+.verre.large{grid-column:1/-1}
+.mention{font-size:.78rem;color:#9aa5d6;margin-top:1.4rem}
+/* AGENDA */
+.agenda{background:var(--bleu);color:#fff;overflow:hidden}
+.agenda h2{color:#fff}
+.agenda .eyebrow{color:var(--jaune)}
+.agenda .intro{max-width:40rem}
+.agenda .brush{color:var(--creme);font-size:clamp(2rem,6vw,2.8rem);display:inline-block;transform:rotate(-2deg)}
+.billets{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.2rem}
+.billet{background:var(--creme);color:var(--txt);border-radius:16px;display:grid;grid-template-columns:78px 1fr;overflow:hidden;box-shadow:0 22px 40px -26px rgba(5,15,60,.8);transition:transform .35s}
+.billet:hover{transform:translateY(-6px) rotate(-.6deg)}
+.billet .date{background:var(--nuit);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;line-height:1;padding:.8rem .3rem;position:relative}
+.billet .date::after{content:"";position:absolute;right:-6px;top:0;bottom:0;width:12px;background:radial-gradient(circle at 6px 8px,var(--creme) 4px,transparent 4.5px) 0 0/12px 16px repeat-y}
+.billet .date small{font-size:1rem;letter-spacing:.08em;color:var(--jaune)}
+.billet .date b{font-size:2.6rem;font-weight:400}
+.billet .date i{font-style:normal;font-size:.95rem;color:#cfd8ff}
+.billet .txt{padding:1rem 1.1rem}
+.billet .txt h3{font-size:1.45rem;color:var(--nuit);margin-bottom:.2rem}
+.billet .txt p{font-size:.9rem;color:var(--doux);line-height:1.5}
+.billet .tag{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--corail);margin-bottom:.25rem}
+.resa{margin-top:2rem;background:rgba(12,22,64,.35);border-radius:18px;padding:1.3rem 1.4rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.resa p{max-width:34rem}
+/* TIREUSE */
+.tireuse-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.illu{max-width:330px;margin:auto;text-align:center}
+.illu svg{width:100%;height:auto;overflow:visible}
+.illu figcaption{font-size:.8rem;color:var(--doux);margin-top:.4rem;font-style:italic}
+.goutte{animation:tombe 2.4s ease-in infinite}
+@keyframes tombe{0%{transform:translateY(0);opacity:0}15%{opacity:1}80%{opacity:1}100%{transform:translateY(46px);opacity:0}}
+.bulle{animation:bulle 3s ease-in infinite}
+.bulle:nth-of-type(2){animation-delay:1s}.bulle:nth-of-type(3){animation-delay:2s}
+@keyframes bulle{from{transform:translateY(0);opacity:.9}to{transform:translateY(-38px);opacity:0}}
+.futs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0}
+.futs span{background:var(--sable);border:1px solid #e2d2b2;border-radius:999px;padding:.3rem .95rem;font-weight:500;font-size:.92rem;transition:.3s}
+.futs span:hover{background:var(--jaune)}
+.regles{display:grid;gap:.7rem;margin:1.2rem 0 1.8rem}
+.regles div{display:flex;gap:.8rem;align-items:flex-start}
+.regles div::before{content:"";flex:0 0 12px;height:12px;border-radius:50%;background:var(--corail);margin-top:.45rem;box-shadow:0 0 0 4px rgba(239,75,69,.18)}
+/* PRIVATISER */
+.priv{background:var(--sable)}
+.priv-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.priv figure{border-radius:22px;overflow:hidden;box-shadow:0 34px 60px -32px rgba(20,35,95,.55)}
+.priv figure img{width:100%;aspect-ratio:452/600;object-fit:cover;object-position:center 70%}
+.priv figcaption{background:#fff;padding:.7rem 1rem;font-size:.85rem;color:var(--doux)}
+.occasions{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0 1.8rem}
+.occasions span{background:var(--nuit);color:#fff;border-radius:10px;padding:.4rem .9rem;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.05em;transform:rotate(-1.5deg)}
+.occasions span:nth-child(2n){background:var(--corail);transform:rotate(1.5deg)}
+/* NOEL */
+.noel{background:var(--nuit-f);color:#e8ecff;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.noel::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(243,194,51,.16),transparent 40%),radial-gradient(circle at 85% 80%,rgba(239,75,69,.18),transparent 45%)}
+.noel-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0 1.8rem}
+.idee{background:rgba(255,255,255,.06);border:1px solid rgba(243,194,51,.28);border-radius:16px;padding:1.05rem 1.2rem}
+.idee h3{color:var(--jaune);font-size:1.45rem;margin-bottom:.15rem}
+.idee p{font-size:.94rem}
+.carte-cadeau{aspect-ratio:1.55;border-radius:20px;background:linear-gradient(135deg,var(--corail),#b82c28);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;color:#fff;box-shadow:0 40px 70px -30px rgba(0,0,0,.8);transform:rotate(-4deg);transition:transform .6s;position:relative;overflow:hidden;max-width:400px;margin:auto;width:100%}
+.carte-cadeau:hover{transform:rotate(0)}
+.carte-cadeau::before{content:"";position:absolute;top:0;bottom:0;right:22%;width:18px;background:linear-gradient(90deg,#e0aa1d,var(--jaune),#e0aa1d)}
+.carte-cadeau::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.carte-cadeau>*{position:relative;z-index:1}
+.carte-cadeau .z{font-family:'Bebas Neue',sans-serif;font-size:4.2rem;line-height:.8;color:var(--nuit)}
+.carte-cadeau .brush{color:#fff;font-size:clamp(1.9rem,6vw,2.5rem)}
+.carte-cadeau small{letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;font-weight:700}
+.noel .note{font-size:.84rem;color:#aab4e0;margin-top:1rem}
+/* CONTACT */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.horaires{background:#fff;border-radius:18px;padding:1.2rem 1.4rem;margin:1.2rem 0;box-shadow:0 20px 40px -30px rgba(20,35,95,.5)}
+.horaires div{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;border-bottom:1px dashed #d9d3c4}
+.horaires div:last-child{border:0}
+.horaires b{font-weight:700;color:var(--nuit)}
+.infos p{margin:.45rem 0}
+.infos p a{color:var(--corail);font-weight:700;word-break:break-word}
+.facade{border-radius:22px;overflow:hidden;box-shadow:0 34px 60px -32px rgba(20,35,95,.55)}
+.facade img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:35% center}
+.facade figcaption{background:var(--nuit);color:#cfd8ff;padding:.7rem 1rem;font-size:.85rem}
+footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--doux);background:var(--sable)}
+footer .loi{display:block;margin-top:.6rem;font-size:.75rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .lieu,.carte-in,.tireuse-in,.priv-in,.noel-in,.contact-in{grid-template-columns:1fr}
+ .billets{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.9rem;padding:0 0 1rem;margin-right:-5vw;-webkit-overflow-scrolling:touch}
+ .billet{flex:0 0 84%;scroll-snap-align:start}
+ .polaroid{max-width:330px}
+ .polaroid.p2{max-width:220px;margin-top:-3rem}
+ .ribbon{font-size:.68rem}
+ .verres{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#lumieres{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Zembro Café</div>
+<canvas id="lumieres" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/terrasse-coucher-soleil.webp" alt="La terrasse du Zembro Café au coucher du soleil : guirlandes lumineuses dans les arbres, l'océan à l'horizon"></div>
+  <svg class="guirlande" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-5 18 Q100 70 200 30 T405 22" fill="none" stroke="#0c1640" stroke-opacity=".7" stroke-width="1.2"/>
+    <g fill="#ffd27a">
+      <circle cx="20" cy="30" r="3.2"/><circle cx="55" cy="43" r="3.2"/><circle cx="92" cy="49" r="3.2"/><circle cx="130" cy="47" r="3.2"/><circle cx="168" cy="38" r="3.2"/><circle cx="205" cy="29" r="3.2"/><circle cx="242" cy="20" r="3.2"/><circle cx="280" cy="15" r="3.2"/><circle cx="318" cy="16" r="3.2"/><circle cx="356" cy="20" r="3.2"/><circle cx="392" cy="23" r="3.2"/>
+    </g>
+  </svg>
+  <div class="wrap hero-in">
+    <img class="logo apparait" src="img/logo.webp" alt="Logo Zembro Café : un grand Z corail sur fond bleu nuit">
+    <p class="eyebrow apparait">Café · bar · cave · concerts — Les Avirons</p>
+    <h1 class="apparait d2">Zembro Café<span class="brush">#ZcommeZembro</span></h1>
+    <p class="lead apparait d3">Café, thé, glaces, bières péi, vins et planches apéro ! Au calme sur la terrasse, et à emporter côté cave.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://m.me/zembrocafe">Réserver une table</a>
+      <a class="btn btn-line" href="#agenda">Le programme</a>
+    </div>
+    <p class="adr apparait d3">Cour Forcade · 11 bis avenue Général De Gaulle, Les Avirons</p>
+  </div>
+</header>
+<svg class="dechire" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V18l40 8 55-14 60 12 48-10 70 13 52-11 64 9 58-13 62 14 50-9 66 12 54-14 60 10 48-8 72 13 50-12 64 11 56-9 62 12 48-11 68 9 58-12 55 13 60-8L1440 16V40z" fill="#ef4b45"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Bières péi</span><span>Vins de toutes les couleurs</span><span>Planches apéro</span><span>Concerts</span><span>Soirées jeux</span><span>Zembro Quiz</span><span>Impro</span><span>Prêt de tireuse</span><span>Cave à emporter</span>
+<span>Bières péi</span><span>Vins de toutes les couleurs</span><span>Planches apéro</span><span>Concerts</span><span>Soirées jeux</span><span>Zembro Quiz</span><span>Impro</span><span>Prêt de tireuse</span><span>Cave à emporter</span>
+</div></div>
+
+<section class="topo">
+  <div class="wrap lieu">
+    <div class="rv">
+      <p class="eyebrow">Le lieu</p>
+      <h2>Le petit bar café cave du village</h2>
+      <p>Aux Avirons, le Zembro Café est un lieu pour épicuriens, où l'on prend plaisir à passer du temps en bonne compagnie avec de bons produits, dans une ambiance guinguette et bon vivant.</p>
+      <p class="devise">« Nartrouv vitement ! »<br>#ZcommeZembro</p>
+      <p>Tables jaunes, rouges et turquoise sous le grand arbre, comptoir en bois face au jardin : ici, on vient pour un café l'après-midi, une bière péi à l'apéro ou un concert le samedi soir. Depuis mai 2026, une fresque murale signée par des graffeurs habille même la terrasse.</p>
+      <div class="chiffres">
+        <div><b>2 ans</b><span>fêtés en septembre 2026</span></div>
+        <div><b>1,9 K</b><span>abonnés sur Facebook</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <figure class="polaroid"><img src="img/terrasse-jour.webp" alt="Terrasse en bois du Zembro Café : tables et chaises colorées sous un grand arbre, comptoir en bois, palmiers et ciel bleu" loading="lazy"><figcaption>La terrasse, côté soleil</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap carte-in">
+    <figure class="cave rv"><img src="img/cave.webp" alt="Étagères en bois de la cave du Zembro Café : vins, bières artisanales et spiritueux, ardoises écrites à la craie" loading="lazy"><figcaption>Côté cave : vins, bières artisanales et spiritueux péi, à emporter</figcaption></figure>
+    <div class="rv">
+      <p class="eyebrow">Au comptoir</p>
+      <h2>De bons produits, simplement</h2>
+      <p>Des boissons choisies avec soin, à savourer sur la terrasse ou à emporter.</p>
+      <div class="verres">
+        <div class="verre"><h3>Bières péi</h3><p>Les bières locales artisanales, de Dalons à Chipek.</p></div>
+        <div class="verre"><h3>Vins</h3><p>De toutes les couleurs et de tous les cépages.</p></div>
+        <div class="verre"><h3>Planches apéro</h3><p>Fromage, charcuterie ou végé, à partager.</p></div>
+        <div class="verre"><h3>Café, thé, glaces</h3><p>Pour une pause douce sur la terrasse, et de quoi se restaurer sur place.</p></div>
+        <div class="verre large"><h3>La cave à emporter</h3><p>Vins, bières et spiritueux artisanaux de La Réunion : gin, rhum, eaux de vie. Côté cave jusqu'à 21h.</p></div>
+      </div>
+      <p class="mention">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+    </div>
+  </div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <div class="rv intro">
+      <p class="eyebrow">Novembre 2026 au Zembro</p>
+      <h2>Novembre c'est parti !</h2>
+      <p>3 concerts, des jeux, de l'impro et du Beaujo. <span class="brush">Novembre, le mois du beaujo</span></p>
+    </div>
+    <div class="billets">
+      <div class="billet rv"><div class="date"><small>Sam</small><b>7</b><i>19h30</i></div><div class="txt"><span class="tag">Concert</span><h3>Banwar</h3><p>Chante créole, joue du funk, amuse, danse, s'éclate sur scène, et c'est contagieux.</p></div></div>
+      <div class="billet rv"><div class="date"><small>Ven</small><b>13</b><i>19h30</i></div><div class="txt"><span class="tag">Concert</span><h3>Toca Tambo</h3><p>Afro, latino, créole : l'Amérique du Sud rencontre La Réunion, un vendredi 13 mémorable.</p></div></div>
+      <div class="billet rv"><div class="date"><small>Jeu</small><b>19</b><i>19h00</i></div><div class="txt"><span class="tag">Quiz</span><h3>Le Zembro Quiz</h3><p>Le quiz mensuel par équipe : culture gé et blind test. Thème : ras le bol.</p></div></div>
+      <div class="billet rv"><div class="date"><small>Sam</small><b>21</b><i>19h30</i></div><div class="txt"><span class="tag">Concert</span><h3>Jazz manouche</h3><p>Avec Fleur et Mano, quelques lyonnaiseries et du bon Beaujo !</p></div></div>
+      <div class="billet rv"><div class="date"><small>Ven</small><b>27</b><i>19h30</i></div><div class="txt"><span class="tag">Impro</span><h3>L'impro des GranKer</h3><p>Vos histoires, leur talent, et ça part en impro sur la terrasse.</p></div></div>
+      <div class="billet rv"><div class="date"><small>Sam</small><b>28</b><i>18h00</i></div><div class="txt"><span class="tag">Jeux</span><h3>Soirée jeux</h3><p>Avec Kriké Kraké : ils ramènent les jeux, vous amenez votre mauvaise foi !</p></div></div>
+    </div>
+    <div class="resa rv">
+      <p><b>Les soirs d'événement, réservez votre table par message</b> : c'est fortement conseillé, et ça se fait en deux minutes.</p>
+      <a class="btn btn-main" href="https://m.me/zembrocafe">Réserver par message</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="tireuse">
+  <div class="tireuse-in">
+    <figure class="illu rv">
+      <svg viewBox="0 0 240 260" role="img" aria-label="Illustration d'une tireuse à bière et d'un verre">
+        <rect x="60" y="20" width="120" height="26" rx="8" fill="#14235f"/>
+        <rect x="104" y="46" width="32" height="44" rx="6" fill="#c9cbd6"/>
+        <rect x="112" y="4" width="16" height="30" rx="5" fill="#ef4b45" transform="rotate(-12 120 30)"/>
+        <path d="M112 90h16v14c0 5-16 5-16 0z" fill="#9ea2b3"/>
+        <circle class="goutte" cx="120" cy="112" r="4" fill="#f3c233"/>
+        <path d="M86 160h68l-8 92H94z" fill="#f3c233" opacity=".92"/>
+        <path d="M84 150h72v14H84z" fill="#fff8ea"/>
+        <path d="M82 146h76l-10 110H92z" fill="none" stroke="#14235f" stroke-width="4" stroke-linejoin="round"/>
+        <circle class="bulle" cx="108" cy="230" r="3" fill="#fff8ea"/><circle class="bulle" cx="126" cy="220" r="2.4" fill="#fff8ea"/><circle class="bulle" cx="138" cy="236" r="2" fill="#fff8ea"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">Prêt de tireuse</p>
+      <h2>Une belle blonde délicatement tirée ?</h2>
+      <p>Pour vos événements à la maison, le Zembro Café vous prête sa tireuse, avec des fûts de 20 L de bières artisanales.</p>
+      <div class="futs"><span>Dalons</span><span>Gayar</span><span>Timouss</span><span>Caffrine</span><span>Chipek</span><span>…</span></div>
+      <div class="regles">
+        <div><p>Prévenez 10 jours à l'avance pour valider la disponibilité des fûts.</p></div>
+        <div><p>Une caution est demandée au moment du prêt.</p></div>
+        <div><p>Toutes les infos sont dans le lien de la bio du Zembro, sur Facebook et Instagram.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://m.me/zembrocafe">Demander la tireuse</a>
+    </div>
+  </div>
+</section>
+
+<section class="priv">
+  <div class="wrap priv-in">
+    <div class="rv">
+      <p class="eyebrow">Privatiser le lieu</p>
+      <h2>Votre fête au Zembro</h2>
+      <p>Besoin de privatiser le lieu ? La terrasse, les guirlandes et le comptoir juste pour vous et vos invités.</p>
+      <div class="occasions"><span>Anniversaire</span><span>Fête</span><span>Afterwork</span></div>
+      <p>On en discute en direct au bar, ou par e-mail.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="mailto:zembrocafe@gmail.com?subject=Privatisation%20du%20Zembro%20Caf%C3%A9">Écrire au Zembro</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/terrasse-chaises.webp" alt="Chaises pliantes rouges et turquoise sur la terrasse en bois du Zembro Café, sous les arbres" loading="lazy"><figcaption>Chaises rouges et turquoise sous les arbres</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un Noël aux couleurs du Zembro</h2>
+      <div class="idees">
+        <div class="idee"><h3>Une bouteille de la cave</h3><p>Un vin choisi au comptoir, des bières péi ou un spiritueux artisanal de La Réunion : le cadeau qui fait plaisir aux épicuriens.</p></div>
+        <div class="idee"><h3>La tireuse pour le réveillon</h3><p>Des fûts de bières artisanales pour la grande tablée de fin d'année, à réserver 10 jours à l'avance.</p></div>
+        <div class="idee"><h3>Votre fête de fin d'année</h3><p>Un afterwork ou un repas entre amis sur la terrasse, sous les guirlandes.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://m.me/zembrocafe">Préparer mon Noël avec le Zembro</a>
+      <p class="note">Le Zembro Café vous conseille directement, au bar ou par message.</p>
+    </div>
+    <div class="carte-cadeau rv"><small>Offrir</small><span class="z">Z</span><span class="brush">Joyeux Noël</span><small>Zembro Café · Les Avirons</small></div>
+  </div>
+</section>
+
+<section class="topo" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir au Zembro</p>
+      <h2>On vous attend sur la terrasse</h2>
+      <div class="horaires">
+        <div><b>Mardi au jeudi</b><span>17h – 22h</span></div>
+        <div><b>Vendredi et samedi</b><span>17h – 23h</span></div>
+        <div><b>Cave à emporter</b><span>jusqu'à 21h</span></div>
+      </div>
+      <p><b>Adresse</b> · 11 bis avenue Général De Gaulle, Cour Forcade, 97425 Les Avirons</p>
+      <p><b>E-mail</b> · <a href="mailto:zembrocafe@gmail.com">zembrocafe@gmail.com</a></p>
+      <p><b>Réservations</b> · par message sur Facebook ou Instagram</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="https://m.me/zembrocafe">Message</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/zembrocafe">Facebook</a>
+        <a class="btn btn-dark" href="https://www.instagram.com/zembro_cafe/">Instagram</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Zembro%20Caf%C3%A9%2011%20bis%20avenue%20G%C3%A9n%C3%A9ral%20De%20Gaulle%2097425%20Les%20Avirons">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="facade rv"><img src="img/facade.webp" alt="Façade en pierre du Zembro Café avec son enseigne bleue au grand Z rouge" loading="lazy"><figcaption>L'enseigne au grand Z, avenue Général De Gaulle</figcaption></figure>
+  </div>
+</section>
+
+<footer>Zembro Café · Café, bar, cave, concerts · Les Avirons, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Zembro Café.<span class="loi">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* guinguette : lumières chaudes qui flottent + fines bulles qui montent */
+const c=document.getElementById('lumieres'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<30;i++){const b=i<12;P.push({b,x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:b?Math.random()*7+4:Math.random()*2+1,v:b?Math.random()*.12+.03:Math.random()*.5+.25,a:Math.random()*6.28,d:Math.random()*.4-.2})}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.a+=.02;
+ if(p.b){p.x+=Math.sin(p.a)*.25+p.d*.2;p.y-=p.v;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+  const o=.12+Math.sin(p.a*1.6)*.07;const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*2.4);g.addColorStop(0,'rgba(255,205,110,'+(o*1.6)+')');g.addColorStop(1,'rgba(255,205,110,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*2.4,0,6.28);x.fill()}
+ else{p.y-=p.v;p.x+=Math.sin(p.a*2)*.3;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+  x.strokeStyle='rgba(243,194,51,.38)';x.lineWidth=1;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.stroke()}}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Zembro Café" defer></script>
+</body>
+</html>
