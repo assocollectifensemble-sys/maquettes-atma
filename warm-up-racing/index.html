@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Warm Up Racing · Mécanique & préparation moto à Saint-Pierre</title>
+<meta name="description" content="Warm Up Racing, atelier moto à Saint-Pierre (ZA La Cafrine) : mécanique, optimisation moteur, banc de puissance, pièces racing et échappements montés sur place. Thorn Bikes Center officiel de La Réunion.">
+<meta property="og:title" content="Warm Up Racing · Saint-Pierre, La Réunion">
+<meta property="og:description" content="Mécanique, optimisation moteur, performance & esthétique. Pièces racing et échappements dispo et montés sur place. Service rapide, moto qui envoie !">
+<meta property="og:image" content="https://maquettes.atma-digital.re/warm-up-racing/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/warm-up-racing/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,700;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0d0d0f;--bitume:#17171a;--gris:#24242a;--acier:#9a9aa3;--blanc:#f4f4f2;--jaune:#f6e21c;--rouge:#e3101a;--bleu:#1f3fbf;--txt:#d9d9dc}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Barlow,system-ui,Arial,sans-serif;color:var(--txt);background:var(--noir);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;text-transform:uppercase;color:var(--blanc);line-height:.95;letter-spacing:.01em}
+h2{font-size:clamp(2.4rem,8vw,4.2rem);margin:.4rem 0 1.2rem}
+h2 em{font-style:inherit;color:var(--jaune)}
+h3{font-size:1.6rem;font-weight:800}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.3em;font-size:.82rem;color:var(--jaune);display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--rouge);transform:skewX(-30deg)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--jaune);color:var(--noir);text-align:center;font-size:.76rem;padding:.42rem 1rem;line-height:1.4}
+.ribbon b{font-weight:600}
+canvas#etincelles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:.06em;font-size:1.12rem;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:.3s}
+.btn-j{background:var(--jaune);color:var(--noir);animation:pulse 3.6s ease-in-out infinite}
+.btn-j:hover{background:#fff}
+@keyframes pulse{50%{filter:drop-shadow(0 0 14px rgba(246,226,28,.55));transform:scale(1.03)}}
+.btn-l{background:rgba(255,255,255,.14);color:var(--blanc);backdrop-filter:blur(4px)}
+.btn-l:hover{background:var(--rouge)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;overflow:hidden;padding:7rem 0 3.2rem;isolation:isolate}
+.hero .fond{position:absolute;inset:0;z-index:-2}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:ken 26s ease-in-out infinite alternate}
+@keyframes ken{from{transform:scale(1.05)}to{transform:scale(1.2) translate(2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,13,15,.5) 0%,rgba(13,13,15,.35) 22%,rgba(13,13,15,.82) 45%,rgba(13,13,15,.94) 70%,var(--noir) 100%)}
+.hero .logo{width:96px;height:96px;border-radius:50%;box-shadow:0 0 0 3px var(--noir),0 0 0 5px var(--jaune),0 20px 40px -10px #000;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(3.6rem,17vw,8.5rem);text-shadow:0 6px 30px rgba(0,0,0,.6)}
+.hero h1 span{display:block;color:var(--jaune);font-size:.5em;letter-spacing:.12em}
+.hero .lead{font-size:clamp(1.08rem,3.6vw,1.35rem);max-width:34rem;margin:1.1rem 0 1.8rem;color:#ededed}
+.hero .adr{margin-top:1.5rem;font-size:.92rem;color:var(--acier);display:flex;gap:.5rem;align-items:flex-start}
+.monte{opacity:0;transform:translateY(26px);animation:monte 1.1s .2s forwards}
+.monte.d2{animation-delay:.5s}.monte.d3{animation-delay:.8s}.monte.d4{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.damier{height:14px;background:repeating-conic-gradient(var(--blanc) 0 25%,var(--noir) 0 50%) 0 0/14px 14px;opacity:.9}
+/* bandeau */
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.75rem 0;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:800;text-transform:uppercase;font-size:1.35rem;letter-spacing:.04em;transform:skewY(-2deg);margin:-1.2rem 0 0;position:relative;z-index:3}
+.track{display:inline-block;animation:defile 32s linear infinite}
+.track span{margin:0 1rem}
+.track span::after{content:"";display:inline-block;width:12px;height:12px;background:var(--jaune);margin-left:2rem;transform:skewX(-25deg)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* atelier */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.intro p+p{margin-top:1rem}
+.devise{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:700;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.15;color:var(--blanc);border-left:5px solid var(--jaune);padding-left:1.1rem;margin:1.5rem 0}
+.devise small{display:block;font-family:Barlow,sans-serif;font-style:normal;font-weight:400;font-size:.8rem;color:var(--acier);margin-top:.5rem;letter-spacing:.03em}
+.photo{position:relative;overflow:hidden;background:var(--gris);clip-path:polygon(0 0,100% 0,100% calc(100% - 28px),calc(100% - 28px) 100%,0 100%)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{position:absolute;left:0;bottom:1rem;background:var(--jaune);color:var(--noir);padding:.3rem .9rem .3rem .7rem;font-size:.82rem;font-weight:600}
+.intro .photo img{aspect-ratio:4/3;object-position:30% 50%}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.chips span{border:1px solid rgba(255,255,255,.18);padding:.3rem .85rem;font-size:.86rem;background:rgba(255,255,255,.04)}
+/* services */
+.services{background:linear-gradient(180deg,var(--noir),var(--bitume) 20%,var(--bitume) 80%,var(--noir))}
+.grille{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.2rem}
+.carte{background:var(--gris);padding:1.6rem 1.4rem 1.7rem;position:relative;overflow:hidden;transition:transform .4s,background .4s;border-top:4px solid var(--rouge)}
+.carte:nth-child(2n){border-top-color:var(--jaune)}
+.carte:hover{transform:translateY(-6px) skewX(-1deg);background:#2c2c33}
+.carte .num{position:absolute;right:.6rem;top:-.4rem;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:4.6rem;color:rgba(255,255,255,.05);line-height:1}
+.carte svg{width:42px;height:42px;stroke:var(--jaune);fill:none;stroke-width:2;margin-bottom:1rem}
+.carte p{font-size:.96rem;margin-top:.6rem}
+.marques{margin-top:2.4rem;display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.marques b{font-family:'Barlow Condensed',sans-serif;font-style:italic;text-transform:uppercase;letter-spacing:.2em;color:var(--acier);font-size:.85rem;margin-right:.4rem}
+.marques span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;font-size:1.15rem;color:var(--blanc);padding:.25rem .8rem;background:rgba(255,255,255,.06)}
+/* banc */
+.banc .large{margin-top:1.8rem}
+.banc .large img{aspect-ratio:1088/302;min-height:190px}
+.dyno{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(1.5rem,5vw,3.5rem);align-items:center;margin-top:2.5rem}
+.ecran{background:#0a0b0e;border:2px solid #2d2f36;padding:1rem 1rem .6rem;position:relative;box-shadow:0 30px 60px -30px #000}
+.ecran svg{width:100%;height:auto;display:block}
+.ecran .leg{font-size:.72rem;color:var(--acier);text-align:right;margin-top:.3rem;font-style:italic}
+.courbe{stroke-dasharray:900;stroke-dashoffset:900;transition:stroke-dashoffset 2.6s cubic-bezier(.6,.1,.2,1)}
+.courbe.b{transition-delay:.7s}
+.vu .courbe{stroke-dashoffset:0}
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:1.2rem 0}
+.chiffres div{background:var(--gris);padding:1rem;text-align:center}
+.chiffres small{display:block;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--acier)}
+.chiffres b{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:2.4rem;line-height:1.1}
+.chiffres .av b{color:#ff4b4b}.chiffres .ap b{color:#3ddc84}
+.stats{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.6rem}
+.stat{flex:1 1 140px;border-left:4px solid var(--jaune);padding:.2rem 0 .2rem .9rem}
+.stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;font-size:2.3rem;color:var(--blanc);line-height:1}
+.stat span{font-size:.88rem;color:var(--acier)}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 5vw 1rem;margin-top:2rem;scrollbar-width:thin;scrollbar-color:var(--jaune) transparent}
+.galerie figure{flex:0 0 min(78vw,400px);scroll-snap-align:center}
+.galerie .photo img{aspect-ratio:4/5}
+.galerie .photo.pano img{aspect-ratio:4/5;object-position:30% 50%}
+.indice{font-size:.85rem;color:var(--acier);margin-top:.4rem}
+/* thorn */
+.thorn{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.thorn .photo img{aspect-ratio:860/1105}
+.badge{display:inline-block;background:var(--blanc);color:var(--noir);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;text-transform:uppercase;padding:.25rem .9rem;letter-spacing:.06em;margin-bottom:.4rem;transform:skewX(-8deg)}
+/* noel */
+.noel{background:radial-gradient(90% 70% at 50% 0%,rgba(227,16,26,.35),transparent 70%),var(--bitume);overflow:hidden}
+.noel .boite{border:2px solid var(--jaune);padding:clamp(1.6rem,5vw,3rem);position:relative;background:rgba(13,13,15,.6)}
+.noel .boite::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(246,226,28,.05) 22px 26px);pointer-events:none}
+.ruban{position:absolute;top:-2px;right:clamp(1rem,6vw,3rem);width:34px;height:70px;background:var(--rouge);clip-path:polygon(0 0,100% 0,100% 100%,50% 78%,0 100%)}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.8rem 0 2rem}
+.idee{background:var(--gris);padding:1.3rem;position:relative}
+.idee h3{font-size:1.35rem;color:var(--jaune)}
+.idee p{font-size:.95rem;margin-top:.45rem}
+.note{font-size:.85rem;color:var(--acier);margin-top:1.1rem}
+/* avis + equipe */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.bloc{background:var(--gris);padding:clamp(1.5rem,4vw,2.3rem)}
+.etoiles{color:var(--jaune);letter-spacing:.2em;font-size:1.3rem}
+.citation{font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:700;font-size:1.8rem;color:var(--blanc);line-height:1.1;margin:.6rem 0}
+/* contact */
+.contact{background:var(--jaune);color:var(--noir)}
+.contact h2,.contact h3{color:var(--noir)}
+.contact h2 em{color:var(--rouge)}
+.contact .eyebrow{color:var(--noir)}
+.coord{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.lignes{list-style:none;margin-top:1rem}
+.lignes li{padding:.75rem 0;border-bottom:2px solid rgba(13,13,15,.15);display:flex;gap:.8rem;align-items:flex-start}
+.lignes svg{width:22px;height:22px;flex:0 0 22px;stroke:var(--noir);fill:none;stroke-width:2;margin-top:.15rem}
+.lignes a{font-weight:600;text-decoration:none;border-bottom:2px solid var(--rouge)}
+.contact .btn-j{background:var(--noir);color:var(--jaune);animation:none}
+.contact .btn-l{background:rgba(13,13,15,.14);color:var(--noir)}
+.contact .btn-l:hover{background:var(--noir);color:#fff}
+.carte-plan{background:var(--noir);color:var(--blanc);padding:1.5rem;position:relative;overflow:hidden}
+.carte-plan svg{width:100%;height:auto;display:block}
+.carte-plan small{display:block;color:var(--acier);font-size:.75rem;margin-top:.5rem}
+footer{background:var(--noir);color:var(--acier);text-align:center;padding:2.2rem 1rem 2.6rem;font-size:.86rem}
+footer img{width:54px;height:54px;border-radius:50%;margin:0 auto .8rem}
+.rev{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s}
+.rev.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .intro,.dyno,.thorn,.coord,.duo{grid-template-columns:1fr}
+ .grille{grid-template-columns:1fr 1fr}
+ .idees{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+ body{font-size:16px}
+ .grille{grid-template-columns:1fr}
+ .ctas .btn{flex:1 1 100%}
+ .hero{padding-top:6rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .monte,.rev{opacity:1;transform:none}
+ .courbe{stroke-dashoffset:0}
+ canvas#etincelles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Warm Up Racing</div>
+<canvas id="etincelles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <figure class="fond"><img src="img/multistrada.webp" alt="Une Ducati Multistrada V4 dans le showroom Warm Up Racing"></figure>
+ <div class="wrap">
+  <img class="logo monte" src="img/logo.webp" alt="Logo Warm Up Racing 79" width="96" height="96">
+  <h1 class="monte d2">Warm Up<span>Racing · 974</span></h1>
+  <p class="lead monte d3">Passionnés de moto, bienvenue chez Warm Up Racing Réunion 🇷🇪🏍️ Mécanique, optimisation moteur, performance &amp; esthétique. <b>Service rapide, moto qui envoie 🚀</b></p>
+  <div class="ctas monte d4">
+   <a class="btn btn-j" href="tel:+262262830454">📞 02 62 83 04 54</a>
+   <a class="btn btn-l" href="https://m.me/warmupracing79">Écris-nous en MP</a>
+  </div>
+  <p class="adr monte d4">📍 1 chemin Maxime Rivière, ZA La Cafrine, 97410 Saint-Pierre</p>
+ </div>
+</header>
+<div class="damier" aria-hidden="true"></div>
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Mécanique</span><span>Optimisation moteur</span><span>Banc de puissance</span><span>Échappements racing</span><span>Pièces racing montées sur place</span><span>Thorn Bikes Center</span><span>Saint-Pierre 974</span>
+ <span>Mécanique</span><span>Optimisation moteur</span><span>Banc de puissance</span><span>Échappements racing</span><span>Pièces racing montées sur place</span><span>Thorn Bikes Center</span><span>Saint-Pierre 974</span>
+</div></div>
+
+<section id="atelier">
+ <div class="wrap intro">
+  <div class="rev">
+   <p class="eyebrow">L'atelier du Sud</p>
+   <h2>Ici, ta moto <em>retrouve sa voix</em></h2>
+   <p>À la ZA La Cafrine, Warm Up Racing réunit tout ce qu'un motard aime : un atelier de mécanique, un banc de puissance, un comptoir de pièces racing et une équipe de passionnés.</p>
+   <p>Pièces racing et échappements sont disponibles et montés sur place : tu repars avec une moto prête à rouler.</p>
+   <p class="devise">« Un coup de main, quelques conseils, des réglages affinés et beaucoup de passion. »<small>Warm Up Racing, publication du 16 juin 2026</small></p>
+   <div class="chips"><span>KTM</span><span>Kawasaki</span><span>Ducati</span><span>Yamaha</span><span>Honda</span><span>Supermotard</span></div>
+  </div>
+  <figure class="photo rev"><img src="img/atelier-facade.webp" alt="L'atelier Warm Up 79 à la ZA La Cafrine, Saint-Pierre" loading="lazy"><figcaption>L'atelier Warm Up 79, ZA La Cafrine</figcaption></figure>
+ </div>
+</section>
+
+<section class="services" id="services">
+ <div class="wrap">
+  <p class="eyebrow rev">Ce qu'on fait pour ta moto</p>
+  <h2 class="rev">Mécanique, <em>performance</em> &amp; esthétique</h2>
+  <div class="grille">
+   <article class="carte rev"><span class="num">01</span>
+    <svg viewBox="0 0 48 48"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 6-6-2-2-6 6-6z"/></svg>
+    <h3>Mécanique</h3><p>Entretien et réparation de ta moto à l'atelier : kit chaîne, filtres, bougies, freinage, vidange.</p></article>
+   <article class="carte rev"><span class="num">02</span>
+    <svg viewBox="0 0 48 48"><path d="M6 34a18 18 0 1 1 36 0"/><path d="M24 34l9-12"/><circle cx="24" cy="34" r="3"/></svg>
+    <h3>Optimisation moteur</h3><p>Optimisation sur mesure et réglages affinés, mesurés sur le banc de puissance, courbe à l'appui.</p></article>
+   <article class="carte rev"><span class="num">03</span>
+    <svg viewBox="0 0 48 48"><path d="M4 30h22l8-8h10M4 22h14M26 30v8h18"/><circle cx="38" cy="22" r="3"/></svg>
+    <h3>Échappements racing</h3><p>Échappements et pièces racing disponibles au comptoir et montés sur place par l'équipe.</p></article>
+   <article class="carte rev"><span class="num">04</span>
+    <svg viewBox="0 0 48 48"><path d="M24 4l5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1z"/></svg>
+    <h3>Esthétique</h3><p>Une moto qui envoie, et qui en jette : accessoires et pièces pour donner du caractère à ta machine.</p></article>
+  </div>
+  <div class="marques rev"><b>Au comptoir</b><span>Brembo</span><span>NGK Iridium</span><span>BMC</span><span>EK Chain</span><span>Motul</span><span>Thorn Bikes</span></div>
+ </div>
+</section>
+
+<section class="banc" id="banc">
+ <div class="wrap">
+  <p class="eyebrow rev">Le banc de puissance</p>
+  <h2 class="rev">La preuve <em>par la courbe</em></h2>
+  <p class="rev">Chaque optimisation se vérifie sur le banc Soft-Engine de l'atelier : la moto tourne, l'écran trace la courbe, et tu vois ce que ta moto gagne.</p>
+  <figure class="photo large rev"><img src="img/banc-puissance.webp" alt="Une Kawasaki Z900 sur le banc de puissance de Warm Up Racing, courbe à l'écran" loading="lazy"><figcaption>La salle du banc, Kawasaki Z900 en place</figcaption></figure>
+  <div class="dyno">
+   <div class="ecran rev" id="ecran">
+    <svg viewBox="0 0 400 230" role="img" aria-label="Illustration d'une courbe de puissance avant et après optimisation">
+     <g stroke="#23262e" stroke-width="1">
+      <path d="M30 20H390M30 70H390M30 120H390M30 170H390M30 210H390"/>
+      <path d="M90 20V210M150 20V210M210 20V210M270 20V210M330 20V210"/>
+     </g>
+     <g fill="#6b6e78" font-size="10" font-family="Barlow,sans-serif"><text x="4" y="24">200</text><text x="4" y="74">150</text><text x="4" y="124">100</text><text x="10" y="174">50</text><text x="30" y="225">3000</text><text x="200" y="225">9000</text><text x="345" y="225">tr/min</text></g>
+     <path class="courbe" d="M40 190C90 170 130 140 170 110S240 70 270 62 320 50 335 52 360 90 372 190" fill="none" stroke="#ff4b4b" stroke-width="3"/>
+     <path class="courbe b" d="M40 186C90 162 130 128 170 96S240 52 270 44 320 32 335 34 360 72 372 150" fill="none" stroke="#3ddc84" stroke-width="3"/>
+    </svg>
+    <p class="leg">Illustration</p>
+   </div>
+   <div class="rev">
+    <h3>Avant / après, chiffres publiés</h3>
+    <p>Sur une courbe partagée par l'atelier en avril 2026 :</p>
+    <div class="chiffres"><div class="av"><small>Avant</small><b data-to="161.42">161,42</b><small>CV</small></div><div class="ap"><small>Après</small><b data-to="174.72">174,72</b><small>CV</small></div></div>
+    <p>Puissance max mesurée à 11 820 tr/min, avant comme après.</p>
+    <div class="stats">
+     <div class="stat"><b>400 000</b><span>vues pour la KTM 1290 Super Duke 2014 « retour à la vie » sur le banc</span></div>
+     <div class="stat"><b>Stage 1</b><span>Kawasaki Z H2 « qui passe aux choses sérieuses », novembre 2026</span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="galerie" style="padding-top:1rem">
+ <div class="wrap">
+  <p class="eyebrow rev">En images</p>
+  <h2 class="rev">Bienvenue <em>à La Cafrine</em></h2>
+  <p class="indice">Fais glisser les photos →</p>
+ </div>
+ <div class="galerie">
+  <figure class="photo pano"><img src="img/atelier-facade.webp" alt="Façade de l'atelier Warm Up 79 et motos garées" loading="lazy"><figcaption>Les motos devant l'atelier</figcaption></figure>
+  <figure class="photo"><img src="img/multistrada.webp" alt="Ducati Multistrada V4 au showroom" loading="lazy"><figcaption>Le showroom</figcaption></figure>
+  <figure class="photo pano"><img src="img/banc-puissance.webp" alt="Salle du banc de puissance" loading="lazy" style="object-position:62% 50%"><figcaption>La salle du banc</figcaption></figure>
+  <figure class="photo"><img src="img/mug-titane.webp" alt="Mug titane Thorn Bikes" loading="lazy"><figcaption>Mug titane Thorn Bikes</figcaption></figure>
+ </div>
+</section>
+
+<section id="thorn">
+ <div class="wrap thorn">
+  <figure class="photo rev"><img src="img/mug-titane.webp" alt="Mug Titane Moto GP by Thorn Bikes, reflets bleus et dorés" loading="lazy"><figcaption>Mug Titane Moto GP by Thorn Bikes</figcaption></figure>
+  <div class="rev">
+   <span class="badge">Thorn Bikes Center</span>
+   <h2>Le centre officiel <em>de La Réunion</em></h2>
+   <p>Warm Up Racing est le Thorn Bikes Center officiel de La Réunion : pour découvrir la marque en vrai, c'est à Saint-Pierre que ça se passe.</p>
+   <p class="devise">« Léger, brut, efficace. Un accessoire pensé comme une pièce racing. »<small>Warm Up Racing, à propos du Mug Titane Moto GP, avril 2026</small></p>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="wrap">
+  <div class="boite rev">
+   <span class="ruban" aria-hidden="true"></span>
+   <p class="eyebrow">Offrir pour Noël</p>
+   <h2>Sous le sapin, <em>un cadeau qui envoie</em></h2>
+   <p>Un motard à gâter cette année ? Offre-lui un passage chez Warm Up Racing, une pièce racing ou un accessoire Thorn Bikes : l'équipe t'aide à choisir le cadeau qui fera vibrer sa moto.</p>
+   <div class="idees">
+    <div class="idee"><h3>🎁 Bon cadeau atelier</h3><p>Un entretien, une optimisation ou un passage au banc, à offrir à un passionné.</p></div>
+    <div class="idee"><h3>🏁 Pièce racing</h3><p>Freinage, filtre, échappement : une pièce choisie avec l'équipe et montée sur place.</p></div>
+    <div class="idee"><h3>☕ Mug titane Thorn</h3><p>Léger, brut, efficace : le cadeau parfait pour le café d'avant balade.</p></div>
+   </div>
+   <div class="ctas">
+    <a class="btn btn-j" href="tel:+262262830454">📞 Préparer mon cadeau</a>
+    <a class="btn btn-l" href="https://m.me/warmupracing79">Écris-nous en MP</a>
+   </div>
+   <p class="note">Contenu et modalités des cadeaux à voir directement avec l'équipe Warm Up Racing.</p>
+  </div>
+ </div>
+</section>
+
+<section id="avis">
+ <div class="wrap duo">
+  <div class="bloc rev">
+   <p class="eyebrow">Ils en parlent</p>
+   <p class="etoiles">★★★★★</p>
+   <p class="citation">« Débridage aux petits oignons »</p>
+   <p>Recommandé par 100 % des avis sur Facebook (7 avis) et suivi par 9,9 K passionnés.</p>
+  </div>
+  <div class="bloc rev">
+   <p class="eyebrow">L'équipe grandit</p>
+   <h3>Warm Up Racing recrute</h3>
+   <p style="margin-top:.6rem">L'atelier accueille de nouveaux talents : un mécanicien moto en CDI et un apprenti magasinier passionné de moto. Passion, motivation, sérieux : dépose ton CV directement sur place !</p>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap coord">
+  <div class="rev">
+   <p class="eyebrow">Passe à l'atelier</p>
+   <h2>Ta moto <em>t'attend</em></h2>
+   <ul class="lignes">
+    <li><svg viewBox="0 0 24 24"><path d="M12 22s7-7 7-12a7 7 0 0 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>1 chemin Maxime Rivière<br>ZA La Cafrine, 97410 Saint-Pierre</span></li>
+    <li><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+262262830454">02 62 83 04 54</a></li>
+    <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:warmupracing79@gmail.com">warmupracing79@gmail.com</a></li>
+    <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg><span><a href="https://www.facebook.com/warmupracing79">Facebook</a> · <a href="https://www.instagram.com/warmup_racing">@warmup_racing</a></span></li>
+   </ul>
+   <div class="ctas" style="margin-top:1.6rem">
+    <a class="btn btn-j" href="tel:+262262830454">Réserve ton créneau</a>
+    <a class="btn btn-l" href="https://www.google.com/maps/search/?api=1&amp;query=Warm+Up+Racing+1+chemin+Maxime+Rivi%C3%A8re+Saint-Pierre+R%C3%A9union">Itinéraire</a>
+   </div>
+  </div>
+  <div class="carte-plan rev">
+   <svg viewBox="0 0 320 220" role="img" aria-label="Illustration : plan stylisé de Saint-Pierre et de la ZA La Cafrine">
+    <path d="M0 200C60 186 120 196 170 188S270 170 320 176V220H0z" fill="#1f3fbf" opacity=".55"/>
+    <path d="M20 150C70 120 120 128 160 100S240 60 300 40" fill="none" stroke="#3a3c44" stroke-width="10" stroke-linecap="round"/>
+    <path d="M20 150C70 120 120 128 160 100S240 60 300 40" fill="none" stroke="#f6e21c" stroke-width="2" stroke-dasharray="8 8"/>
+    <path d="M150 104L150 30" stroke="#3a3c44" stroke-width="7" stroke-linecap="round"/>
+    <text x="70" y="182" fill="#9a9aa3" font-size="11" font-family="Barlow,sans-serif">Saint-Pierre</text>
+    <text x="196" y="112" fill="#9a9aa3" font-size="11" font-family="Barlow,sans-serif">ZA La Cafrine</text>
+    <g transform="translate(176 66)"><circle r="16" fill="#e3101a" opacity=".3"><animate attributeName="r" values="10;22;10" dur="2.4s" repeatCount="indefinite"/></circle><circle r="8" fill="#e3101a"/><circle r="3" fill="#fff"/></g>
+    <text x="200" y="62" fill="#f4f4f2" font-size="13" font-weight="700" font-family="Barlow Condensed,sans-serif" font-style="italic">WARM UP RACING</text>
+   </svg>
+   <small>Illustration</small>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <img src="img/logo.webp" alt="" width="54" height="54" loading="lazy">
+ <p>Warm Up Racing · Saint-Pierre, La Réunion</p>
+ <p style="margin-top:.4rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Warm Up Racing.</p>
+</footer>
+
+<script>
+(function(){
+var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);if(e.target.id==='ecran')compte();}})},{threshold:.18});
+document.querySelectorAll('.rev').forEach(function(el){io.observe(el)});
+function compte(){if(calme)return;document.querySelectorAll('[data-to]').forEach(function(b){var fin=parseFloat(b.dataset.to),t0=null;function pas(t){if(!t0)t0=t;var p=Math.min((t-t0)/1800,1),v=fin*(1-Math.pow(1-p,3));b.textContent=v.toFixed(2).replace('.',',');if(p<1)requestAnimationFrame(pas)}requestAnimationFrame(pas)})}
+if(calme)return;
+var c=document.getElementById('etincelles'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],N=30,run=true;
+function taille(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+taille();addEventListener('resize',taille);
+function neuve(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+10;p.vx=(Math.random()-.3)*.6;p.vy=-(.5+Math.random()*1.3);p.l=60+Math.random()*120;p.a=0;p.c=Math.random()<.6?'246,226,28':(Math.random()<.5?'255,140,40':'227,16,26');p.s=.8+Math.random()*1.6;return p}
+for(var i=0;i<N;i++)P.push(neuve({},true));
+function boucle(){if(!run)return;x.clearRect(0,0,W,H);for(var i=0;i<N;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;p.vx+=(Math.random()-.5)*.05;p.a++;var o=Math.max(0,1-p.a/p.l)*.55;x.strokeStyle='rgba('+p.c+','+o+')';x.lineWidth=p.s;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(p.x-p.vx*5,p.y-p.vy*5);x.stroke();if(p.a>p.l||p.y<-10)neuve(p)}requestAnimationFrame(boucle)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(boucle)});
+requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Warm Up Racing" defer></script>
+</body>
+</html>
