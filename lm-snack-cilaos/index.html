@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LM Snack · Américain, panini, gratiné à Cilaos</title>
+<meta name="description" content="LM Snack, snack-bar de la Mare à Joncs à Cilaos : américains, paninis, gratinés, sur place ou à emporter. Du mardi au dimanche, 11h-14h30 et 18h-21h. 0693 22 69 38.">
+<meta property="og:title" content="LM Snack · Cilaos 🌋">
+<meta property="og:description" content="Américain, panini, gratiné à la Mare à Joncs. Sur place ou à emporter.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lm-snack-cilaos/img/americain-creole.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lm-snack-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#11223f;--marine:#1b3561;--bleu:#2a73b8;--ciel:#3d9be0;--creme:#f4ede1;--papier:#fbf7f0;--pain:#e2a865;--sauce:#d4462c;--piment:#4c9a2a;--txt:#1d2a3f;--doux:#5f6b80}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--papier);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Archivo Black',Impact,sans-serif;font-weight:400;color:var(--nuit);line-height:1.05;letter-spacing:.01em}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.4rem 0 1rem}
+h3{font-size:1.25rem}
+.main-ecrite{font-family:'Caveat',cursive;font-weight:600;color:var(--sauce);font-size:1.5rem;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;color:var(--bleu);font-weight:800}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:#cfe3f7;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:800;font-size:.98rem;transition:transform .3s,background .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--sauce);color:#fff;box-shadow:0 6px 0 #9e2f1b;animation:souffle 3.4s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 6px 0 #9e2f1b,0 12px 34px -6px rgba(212,70,44,.75)}}
+.btn-wa{background:#1f9d55;color:#fff;box-shadow:0 6px 0 #156b3a}
+.btn-line{border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:2px solid var(--marine);color:var(--marine)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.ico{width:1.15em;height:1.15em;flex:none}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-start;overflow:hidden;background:var(--nuit);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 80%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(1%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,34,63,.92) 0%,rgba(17,34,63,.6) 42%,rgba(17,34,63,0) 62%,rgba(17,34,63,0) 88%,rgba(17,34,63,.7) 100%)}
+#vapeur{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:4.2rem 0 22rem}
+.logo-rond{width:92px;height:92px;border-radius:50%;background:var(--creme);padding:6px;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 16px 30px -12px rgba(0,0,0,.6);margin-bottom:1.1rem}
+.logo-rond img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.hero .eyebrow{color:#9fd0f5}
+.hero h1{color:#fff;font-size:clamp(3.4rem,15vw,7.2rem);margin:.3rem 0 .2rem;text-shadow:0 4px 0 var(--sauce)}
+.hero .sous{font-family:'Archivo Black';font-size:clamp(1.05rem,4.4vw,1.5rem);color:var(--pain);letter-spacing:.02em}
+.hero .lead{font-size:1.1rem;max-width:33rem;margin:1rem 0 1.8rem;color:#e8eef7;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .adr{display:inline-block;margin-top:1.2rem;font-size:.9rem;font-weight:600;color:#fff;background:rgba(17,34,63,.78);padding:.45rem .95rem;border-radius:999px;backdrop-filter:blur(4px)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--bleu);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Archivo Black';font-size:1.05rem;letter-spacing:.03em;border-top:4px solid var(--pain);border-bottom:4px solid var(--nuit)}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1rem}
+.track span::after{content:"";display:inline-block;width:.7em;height:.7em;margin-left:2rem;border-radius:50%;border:3px solid var(--piment);background:#9fdc7a;vertical-align:-.05em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* star */
+.star{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.star-photo{position:relative}
+.star-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:0 34px 60px -34px rgba(17,34,63,.75)}
+.pastille{position:absolute;top:-16px;right:-8px;width:104px;height:104px;border-radius:50%;background:var(--sauce);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Archivo Black';font-size:.82rem;line-height:1.1;transform:rotate(10deg);box-shadow:0 12px 24px -10px rgba(158,47,27,.9);animation:tourne 6s ease-in-out infinite}
+@keyframes tourne{50%{transform:rotate(-4deg) scale(1.04)}}
+.ingr{list-style:none;margin:1.2rem 0 1.4rem;display:grid;gap:.55rem}
+.ingr li{display:flex;gap:.7rem;align-items:center;background:#fff;border-radius:14px;padding:.6rem .9rem;box-shadow:0 10px 24px -20px rgba(17,34,63,.6)}
+.ingr li i{width:28px;height:28px;border-radius:50%;flex:none;display:grid;place-items:center;font-style:normal}
+.citation{border-left:4px solid var(--pain);padding-left:1rem;font-style:italic;color:var(--doux);margin-top:1rem}
+/* galerie */
+.gal-sec{background:var(--nuit);color:#e8eef7;overflow:hidden}
+.gal-sec h2{color:#fff}
+.gal-sec .eyebrow{color:#9fd0f5}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78%,340px);scroll-snap-align:center;border-radius:22px;overflow:hidden;background:var(--marine);box-shadow:0 26px 50px -30px rgba(0,0,0,.8)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.92rem}
+.galerie figcaption b{display:block;color:#fff;font-family:'Archivo Black';font-weight:400;font-size:1.02rem;margin-bottom:.15rem}
+.galerie figcaption span{color:#9fb3cc;font-size:.8rem}
+.glisse{font-size:.85rem;color:#9fb3cc;display:flex;align-items:center;gap:.5rem}
+.glisse::after{content:"→";animation:fleche 1.6s ease-in-out infinite}
+@keyframes fleche{50%{transform:translateX(6px)}}
+/* carte */
+.carte-sec{background:var(--creme)}
+.carte-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,rgba(42,115,184,.08),transparent 40%),radial-gradient(circle at 88% 80%,rgba(212,70,44,.07),transparent 40%);pointer-events:none}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.4rem 0 1.2rem}
+.tab{border:2px solid var(--marine);background:transparent;color:var(--marine);border-radius:999px;padding:.5rem 1rem;font:800 .9rem 'Nunito';cursor:pointer;min-height:44px;transition:.25s}
+.tab[aria-selected=true]{background:var(--marine);color:#fff}
+.panneau{background:#fff;border-radius:24px;padding:1.4rem 1.3rem 1.2rem;box-shadow:0 26px 50px -36px rgba(17,34,63,.6);position:relative;overflow:hidden}
+.panneau::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--bleu),var(--pain),var(--sauce))}
+.panneau[hidden]{display:none}
+.panneau h3{margin-bottom:.2rem}
+.panneau .base{color:var(--doux);font-size:.92rem;margin-bottom:.6rem}
+.ligne{display:flex;align-items:baseline;gap:.5rem;padding:.48rem 0;border-bottom:1px dashed #d9cfbf}
+.ligne:last-child{border-bottom:0}
+.ligne .n{font-weight:600}
+.ligne .pts{flex:1;border-bottom:2px dotted #cdbfa8;transform:translateY(-4px)}
+.ligne .p{font-family:'Archivo Black';color:var(--bleu);font-size:.98rem;white-space:nowrap}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.note{margin-top:1.2rem;font-size:.86rem;color:var(--doux)}
+/* hiver */
+.hiver{background:linear-gradient(180deg,#1b3561 0%,#2a5d93 60%,#3d7fbf 100%);color:#e8f1fb;overflow:hidden;padding-bottom:0}
+.hiver h2{color:#fff}
+.hiver .eyebrow{color:#cfe3f7}
+.hiver-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center;position:relative;z-index:2}
+.hiver blockquote{font-family:'Caveat',cursive;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.15;color:#fff;margin:1rem 0}
+.hiver .repas{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:1.1rem 1.2rem;margin-top:1.2rem}
+.hiver figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -30px rgba(0,0,0,.7)}
+.hiver figure figcaption{font-size:.84rem;color:#cfe3f7;margin-top:.6rem}
+.cirque{display:block;width:100%;height:auto;margin-top:2.5rem}
+.illu{font-size:.72rem;color:#cfe3f7;text-align:right;padding:.2rem 5vw .8rem;background:#11223f}
+/* infos */
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:1.8rem}
+.carte-info{background:#fff;border-radius:22px;padding:1.4rem;box-shadow:0 22px 46px -34px rgba(17,34,63,.6);transition:transform .35s}
+.carte-info:hover{transform:translateY(-5px)}
+.carte-info .rond{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--creme);color:var(--bleu);margin-bottom:.7rem}
+.carte-info h3{font-size:1.05rem;margin-bottom:.4rem}
+.carte-info p{font-size:.96rem}
+.jours{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.6rem}
+.jours span{font-size:.75rem;font-weight:800;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--bleu);color:#fff}
+.jours span.off{background:#e7e1d6;color:#9c9384}
+/* noel */
+.noel{background:var(--nuit);color:#e8eef7;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--pain)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:46px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande::before{content:"";position:absolute;top:8px;left:-5%;right:-5%;height:30px;border-bottom:2px solid rgba(255,255,255,.18);border-radius:0 0 50% 50%}
+.guirlande i{position:relative;top:22px;width:11px;height:11px;border-radius:50%;background:var(--pain);box-shadow:0 0 12px var(--pain);animation:brille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(3n){background:var(--sauce);box-shadow:0 0 12px var(--sauce);animation-delay:.8s}
+.guirlande i:nth-child(3n+1){background:#9fdc7a;box-shadow:0 0 12px #9fdc7a;animation-delay:1.6s}
+@keyframes brille{50%{opacity:.35}}
+.noel-box{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.noel-box ul{list-style:none;display:grid;gap:.7rem;margin:1.2rem 0 1.6rem}
+.noel-box li{display:flex;gap:.7rem;align-items:flex-start}
+.noel-box li b{color:#fff}
+.noel-box li::before{content:"★";color:var(--pain);flex:none}
+.bon{position:relative;background:var(--creme);color:var(--nuit);border-radius:22px;padding:1.6rem 1.4rem;text-align:center;transform:rotate(-2deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.8);border:3px dashed var(--bleu);animation:flotte 5s ease-in-out infinite}
+@keyframes flotte{50%{transform:rotate(1deg) translateY(-6px)}}
+.bon img{width:84px;margin:0 auto .6rem}
+.bon .main-ecrite{font-size:1.9rem}
+.bon p{font-size:.92rem;color:var(--doux);margin-top:.4rem}
+/* contact */
+.contact{background:linear-gradient(180deg,var(--papier),var(--creme));text-align:center}
+.contact .tel{display:block;font-family:'Archivo Black';font-size:clamp(2rem,9vw,3.4rem);color:var(--bleu);text-decoration:none;margin:.6rem 0 1.4rem}
+.contact .ctas{justify-content:center}
+footer{background:var(--nuit);color:#9fb3cc;text-align:center;font-size:.84rem;padding:2.2rem 1.2rem 2.6rem;line-height:1.6}
+footer img{width:64px;margin:0 auto 1rem;border-radius:50%;background:var(--creme);padding:4px}
+.revele{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.revele.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .star,.hiver-in,.noel-box,.duo{grid-template-columns:1fr}
+ .infos{grid-template-columns:1fr}
+ .star-photo{max-width:420px}
+ .pastille{right:4px;width:92px;height:92px;font-size:.74rem}
+ .hiver figure{max-width:420px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .revele,.apparait{opacity:1;transform:none}
+ #vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour LM Snack</div>
+
+<main>
+<!-- HERO -->
+<header class="hero">
+ <div class="fond"><img src="img/hero-creole.webp" alt="Américain créole gratiné au gros piment, sur une planche en bois" fetchpriority="high"></div>
+ <canvas id="vapeur" aria-hidden="true"></canvas>
+ <div class="wrap hero-in">
+  <div class="logo-rond apparait"><img src="img/logo.webp" alt="Logo LM Snack"></div>
+  <p class="eyebrow apparait">Snack-bar · La Mare à Joncs · Cilaos 🌋</p>
+  <h1 class="apparait d2">LM Snack</h1>
+  <p class="sous apparait d2">Américain, panini, gratiné</p>
+  <p class="lead apparait d3">« Chez LM Snack, nous préparons chaque commande avec des ingrédients de qualité et beaucoup de gourmandise. » Sur place ou à emporter, au cœur du cirque.</p>
+  <div class="ctas apparait d3">
+   <a class="btn btn-main" href="tel:+262693226938"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>Commander : 0693 22 69 38</a>
+   <a class="btn btn-line" href="#carte">Voir la carte</a>
+  </div>
+  <p class="adr apparait d3">Du mardi au dimanche · 11h – 14h30 et 18h – 21h</p>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Américain créole</span><span>Sarcive gros piment</span><span>Paninis crème ou tomate</span><span>Gratinés</span><span>Sur place ou à emporter</span><span>La Mare à Joncs</span>
+ <span>Américain créole</span><span>Sarcive gros piment</span><span>Paninis crème ou tomate</span><span>Gratinés</span><span>Sur place ou à emporter</span><span>La Mare à Joncs</span>
+</div></div>
+
+<!-- LA STAR -->
+<section id="star">
+ <div class="wrap star">
+  <div class="star-photo revele">
+   <img src="img/americain-creole.webp" alt="L'Américain Créole de LM Snack, gros piment et fromage gratiné, devant l'enseigne bleue du snack" loading="lazy">
+   <div class="pastille">LA STAR<br>DE LM<br>SNACK</div>
+  </div>
+  <div class="revele">
+   <p class="eyebrow">La spécialité de la maison</p>
+   <h2>L'Américain Créole</h2>
+   <p class="main-ecrite">« Un vrai délice péi ! »</p>
+   <ul class="ingr">
+    <li><i style="background:#f6e2c4">🥖</i>Base américain épaule</li>
+    <li><i style="background:#f7d6cf">🌭</i>Saucisse fumée</li>
+    <li><i style="background:#f3ead7">🧅</i>Oignons frits ou frais, au choix</li>
+    <li><i style="background:#fbefc4">🧀</i>Une bonne dose de fromage gratiné</li>
+    <li><i style="background:#dcefd2">🌶️</i>Quelques rondelles de gros piment</li>
+   </ul>
+   <p class="citation">« Américain créole + Despe = Combo de champion. À partager entre dalons ou en solo pour les gourmands. »</p>
+   <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-dark" href="tel:+262693226938">Je commande le mien</a></div>
+  </div>
+ </div>
+</section>
+
+<!-- GALERIE -->
+<section class="gal-sec" id="galerie">
+ <div class="wrap">
+  <p class="eyebrow revele">Tout droit sorti du camion</p>
+  <h2 class="revele">Bien garni, bien gratiné</h2>
+  <p class="glisse">Faites glisser</p>
+  <div class="galerie">
+   <figure><img src="img/sarcive-gros-piment.webp" alt="Américain sarcive gratiné au gros piment dans son papier, devant l'enseigne LM Snack" loading="lazy"><figcaption><b>American Sarcive</b>Pain gratiné, sarcive bien fumée, gros piment frais « pour les vrais ».<br><span>Publication du 20 juillet 2025</span></figcaption></figure>
+   <figure><img src="img/combo-champion.webp" alt="Américain créole gratiné aux frites et gros piment sur une planche, au comptoir du snack" loading="lazy"><figcaption><b>Le combo de champion</b>Américain créole + Despe, à partager entre dalons.<br><span>Publication du 22 septembre 2025</span></figcaption></figure>
+   <figure><img src="img/americain-lardons.webp" alt="Américain gratiné aux lardons sur une planche, vue sur Cilaos" loading="lazy"><figcaption><b>Gratiné aux lardons</b>Fromage fondant et lardons dorés, face au cirque.<br><span>Publication du 31 août 2025</span></figcaption></figure>
+   <figure><img src="img/paninis.webp" alt="Deux paninis grillés sur le comptoir, montagnes de Cilaos en arrière-plan" loading="lazy"><figcaption><b>Les Paninis</b>« Rien de mieux qu'un bon panini bien chaud pour se régaler. » Base crémée ou sauce tomate.<br><span>Publication du 2 septembre 2025</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<!-- CARTE -->
+<section class="carte-sec" id="carte">
+ <div class="wrap" style="position:relative">
+  <p class="eyebrow revele">📋 Choisissez votre préféré</p>
+  <h2 class="revele">La carte</h2>
+  <p class="revele">Américains, paninis, gratinés et suppléments : tout se prépare à la commande.</p>
+  <div class="tabs" role="tablist">
+   <button class="tab" role="tab" aria-selected="true" data-t="am">Américain</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="pa">Panini</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="gr">Gratiné</button>
+   <button class="tab" role="tab" aria-selected="false" data-t="su">Suppléments</button>
+  </div>
+
+  <div class="panneau" id="am" role="tabpanel">
+   <div class="duo">
+    <div>
+     <h3>Américain</h3>
+     <div class="ligne"><span class="n">Épaule</span><span class="pts"></span><span class="p">4,00 €</span></div>
+     <div class="ligne"><span class="n">Bouchon</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Poulet</span><span class="pts"></span><span class="p">6,00 €</span></div>
+     <div class="ligne"><span class="n">Poulet kebab</span><span class="pts"></span><span class="p">7,00 €</span></div>
+     <div class="ligne"><span class="n">Lardon</span><span class="pts"></span><span class="p">6,50 €</span></div>
+     <div class="ligne"><span class="n">Sarcive</span><span class="pts"></span><span class="p">6,50 €</span></div>
+     <div class="ligne"><span class="n">Hot dog</span><span class="pts"></span><span class="p">6,50 €</span></div>
+     <div class="ligne"><span class="n">Merguez</span><span class="pts"></span><span class="p">6,50 €</span></div>
+     <div class="ligne"><span class="n">Nugget</span><span class="pts"></span><span class="p">6,00 €</span></div>
+    </div>
+    <div>
+     <h3>Américain spécial</h3>
+     <div class="ligne"><span class="n">Créole</span><span class="pts"></span><span class="p">9,50 €</span></div>
+     <div class="ligne"><span class="n">Steak Angus</span><span class="pts"></span><span class="p">10,50 €</span></div>
+     <h3 style="margin-top:1.4rem">Maxi</h3>
+     <div class="ligne"><span class="n">Créole</span><span class="pts"></span><span class="p">13,50 €</span></div>
+     <div class="ligne"><span class="n">Viande</span><span class="pts"></span><span class="p">16,00 €</span></div>
+    </div>
+   </div>
+  </div>
+
+  <div class="panneau" id="pa" role="tabpanel" hidden>
+   <h3>Panini</h3>
+   <p class="base">Base tomate ou crème</p>
+   <div class="duo">
+    <div>
+     <div class="ligne"><span class="n">Épaule</span><span class="pts"></span><span class="p">4,00 €</span></div>
+     <div class="ligne"><span class="n">Bouchon</span><span class="pts"></span><span class="p">5,00 €</span></div>
+     <div class="ligne"><span class="n">Hot dog</span><span class="pts"></span><span class="p">3,00 €</span></div>
+     <div class="ligne"><span class="n">Lardon</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Merguez</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Poulet</span><span class="pts"></span><span class="p">5,50 €</span></div>
+    </div>
+    <div>
+     <div class="ligne"><span class="n">Poulet kebab</span><span class="pts"></span><span class="p">6,00 €</span></div>
+     <div class="ligne"><span class="n">Sarcive</span><span class="pts"></span><span class="p">6,00 €</span></div>
+     <div class="ligne"><span class="n">Nugget</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Steak</span><span class="pts"></span><span class="p">6,50 €</span></div>
+     <div class="ligne"><span class="n">Créole</span><span class="pts"></span><span class="p">6,50 €</span></div>
+    </div>
+   </div>
+  </div>
+
+  <div class="panneau" id="gr" role="tabpanel" hidden>
+   <h3>Gratiné</h3>
+   <div class="duo">
+    <div>
+     <div class="ligne"><span class="n">Épaule</span><span class="pts"></span><span class="p">3,00 €</span></div>
+     <div class="ligne"><span class="n">Bouchon</span><span class="pts"></span><span class="p">4,50 €</span></div>
+     <div class="ligne"><span class="n">Frite</span><span class="pts"></span><span class="p">3,00 €</span></div>
+     <div class="ligne"><span class="n">Hot dog</span><span class="pts"></span><span class="p">4,50 €</span></div>
+     <div class="ligne"><span class="n">Lardon</span><span class="pts"></span><span class="p">5,00 €</span></div>
+     <div class="ligne"><span class="n">Merguez</span><span class="pts"></span><span class="p">5,00 €</span></div>
+    </div>
+    <div>
+     <div class="ligne"><span class="n">Poulet</span><span class="pts"></span><span class="p">5,00 €</span></div>
+     <div class="ligne"><span class="n">Poulet kebab</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Sarcive</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Nugget</span><span class="pts"></span><span class="p">5,50 €</span></div>
+     <div class="ligne"><span class="n">Steak</span><span class="pts"></span><span class="p">6,50 €</span></div>
+    </div>
+   </div>
+  </div>
+
+  <div class="panneau" id="su" role="tabpanel" hidden>
+   <h3>Suppléments</h3>
+   <div class="duo">
+    <div>
+     <div class="ligne"><span class="n">Bouchon (unité)</span><span class="pts"></span><span class="p">0,50 €</span></div>
+     <div class="ligne"><span class="n">Gros piment</span><span class="pts"></span><span class="p">0,60 €</span></div>
+     <div class="ligne"><span class="n">Steak Angus</span><span class="pts"></span><span class="p">3,50 €</span></div>
+     <div class="ligne"><span class="n">Poulet kebab</span><span class="pts"></span><span class="p">2,50 €</span></div>
+     <div class="ligne"><span class="n">Épaule</span><span class="pts"></span><span class="p">1,50 €</span></div>
+     <div class="ligne"><span class="n">Poulet</span><span class="pts"></span><span class="p">2,00 €</span></div>
+    </div>
+    <div>
+     <div class="ligne"><span class="n">Hot dog</span><span class="pts"></span><span class="p">2,00 €</span></div>
+     <div class="ligne"><span class="n">Merguez</span><span class="pts"></span><span class="p">3,00 €</span></div>
+     <div class="ligne"><span class="n">Sarcive</span><span class="pts"></span><span class="p">2,00 €</span></div>
+     <div class="ligne"><span class="n">Lardon</span><span class="pts"></span><span class="p">2,00 €</span></div>
+     <div class="ligne"><span class="n">Oignon frit</span><span class="pts"></span><span class="p">0,50 €</span></div>
+    </div>
+   </div>
+  </div>
+  <p class="note">Carte publiée par LM Snack le 30 juillet 2026, avec frites et boissons à côté. 💬 Et vous, quel est votre menu préféré ?</p>
+ </div>
+</section>
+
+<!-- HIVER A CILAOS -->
+<section class="hiver" id="cilaos">
+ <div class="wrap hiver-in">
+  <div class="revele">
+   <p class="eyebrow">Au cœur du cirque</p>
+   <h2>Une pause qui réchauffe</h2>
+   <blockquote>« L'hiver s'installe à Cilaos, et nos américains sont là pour vous réchauffer. »</blockquote>
+   <p>Une pause repas réconfortante, idéale pour les journées et soirées fraîches : la promesse de LM Snack, au camion de la Mare à Joncs.</p>
+   <div class="repas">
+    <b style="color:#fff">Les repas chauds</b><br>
+    En plus des sandwichs, LM Snack a lancé ses repas chauds en août 2025, les mercredis et les week-ends, à emporter ou à déguster sur place. Le plat du jour se découvre sur leur page Facebook.
+   </div>
+  </div>
+  <figure class="revele">
+   <img src="img/repas-chaud.webp" alt="Bac de repas chaud mijoté devant l'enseigne bleue LM Snack" loading="lazy">
+   <figcaption>Un repas chaud du jour, devant l'enseigne du camion.</figcaption>
+  </figure>
+ </div>
+ <svg class="cirque" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 180V110l90-38 70 26 110-70 80 44 70-30 120 74 90-52 100 40 80-76 90 62 110-28 90 48 120-60 80 30 60-20 80 40v80z" fill="#16305a" opacity=".7"/>
+  <path d="M0 180v-40l120-30 100 22 140-46 120 40 110-22 130 36 110-34 140 30 120-26 130 34 120-20v56z" fill="#11223f"/>
+ </svg>
+ <p class="illu">Illustration : les remparts du cirque de Cilaos</p>
+</section>
+
+<!-- INFOS -->
+<section id="infos">
+ <div class="wrap">
+  <p class="eyebrow revele">Infos pratiques</p>
+  <h2 class="revele">Venir chez LM Snack</h2>
+  <div class="infos">
+   <div class="carte-info revele">
+    <div class="rond"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></div>
+    <h3>Où ?</h3>
+    <p>Le camion bar de la Mare à Joncs, Cilaos.</p>
+    <p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&query=Mare+%C3%A0+Joncs+Cilaos" target="_blank" rel="noopener" style="color:var(--bleu);font-weight:800">Ouvrir l'itinéraire →</a></p>
+   </div>
+   <div class="carte-info revele">
+    <div class="rond"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.6 2.1-.8 1.3L11 13V7h2z"/></svg></div>
+    <h3>Quand ?</h3>
+    <p>Du mardi au dimanche<br>11h – 14h30 et 18h – 21h</p>
+    <div class="jours" aria-label="Jours d'ouverture"><span class="off">L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+   </div>
+   <div class="carte-info revele">
+    <div class="rond"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M18 6h-2a4 4 0 0 0-8 0H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-6-2a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2z"/></svg></div>
+    <h3>Comment ?</h3>
+    <p>Sur place ou à emporter. Passez votre commande par téléphone ou directement au camion.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- NOEL -->
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+ <div class="wrap noel-box">
+  <div class="revele">
+   <p class="eyebrow">Pour les fêtes</p>
+   <h2>Les fêtes entre dalons</h2>
+   <p>Une soirée de décembre en famille, un après-midi entre amis au cirque : LM Snack régale toute la tablée.</p>
+   <ul>
+    <li><span><b>Passez votre commande</b> par téléphone ou au camion : américains, paninis et gratinés pour toute la bande.</span></li>
+    <li><span><b>Le combo de champion</b>, à partager entre dalons ou en solo pour les gourmands.</span></li>
+    <li><span><b>Sur place ou à emporter</b>, à la Mare à Joncs.</span></li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-wa" href="https://wa.me/262693226938?text=Bonjour%20LM%20Snack%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes%20%F0%9F%8E%84" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.2-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Commander pour les fêtes</a>
+    <a class="btn btn-line" href="tel:+262693226938">0693 22 69 38</a>
+   </div>
+  </div>
+  <div class="bon revele">
+   <img src="img/logo.webp" alt="" aria-hidden="true">
+   <p class="main-ecrite">Joyeuses fêtes !</p>
+   <h3 style="margin-top:.4rem">Commande des fêtes</h3>
+   <p>Un message, une heure de passage, et la bande se régale.</p>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+ <div class="wrap">
+  <p class="eyebrow revele">Une petite faim ?</p>
+  <h2 class="revele">On prépare votre commande</h2>
+  <a class="tel revele" href="tel:+262693226938">0693 22 69 38</a>
+  <div class="ctas revele">
+   <a class="btn btn-main" href="tel:+262693226938">Appeler LM Snack</a>
+   <a class="btn btn-wa" href="https://wa.me/262693226938?text=Bonjour%20LM%20Snack%2C%20je%20voudrais%20passer%20une%20commande" target="_blank" rel="noopener">WhatsApp</a>
+   <a class="btn btn-dark" href="https://www.facebook.com/p/LMsnack-61578095475144/" target="_blank" rel="noopener">Page Facebook</a>
+  </div>
+  <p class="note revele" style="text-align:center">LM Snack, le rendez-vous des amateurs de gourmandise ! 💙</p>
+ </div>
+</section>
+</main>
+
+<footer>
+ <img src="img/logo.webp" alt="LM Snack">
+ LM Snack · Snack-bar · La Mare à Joncs, Cilaos · 0693 22 69 38<br>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de LM Snack.
+</footer>
+
+<script>
+(function(){
+ var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ // apparitions
+ var els=document.querySelectorAll('.revele');
+ if(reduit||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')})}
+ else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+ // onglets carte
+ var tabs=document.querySelectorAll('.tab');
+ tabs.forEach(function(t){t.addEventListener('click',function(){tabs.forEach(function(o){o.setAttribute('aria-selected','false');document.getElementById(o.dataset.t).hidden=true});t.setAttribute('aria-selected','true');document.getElementById(t.dataset.t).hidden=false})});
+ // vapeur du gratiné
+ if(reduit)return;
+ var c=document.getElementById('vapeur'),x=c.getContext('2d'),w,h,ps=[],on=true;
+ function taille(){w=c.width=c.offsetWidth;h=c.height=c.offsetHeight}
+ taille();addEventListener('resize',taille);
+ function neuf(p){p.x=w*(.2+Math.random()*.6);p.y=h*(.7+Math.random()*.15);p.r=18+Math.random()*30;p.v=.25+Math.random()*.45;p.a=0;p.max=.06+Math.random()*.08;p.o=Math.random()*6;return p}
+ for(var i=0;i<26;i++){var p=neuf({});p.y-=Math.random()*h*.5;ps.push(p)}
+ document.addEventListener('visibilitychange',function(){on=!document.hidden;if(on)requestAnimationFrame(tick)});
+ function tick(t){if(!on)return;x.clearRect(0,0,w,h);
+  ps.forEach(function(p){p.y-=p.v;p.x+=Math.sin(t/1400+p.o)*.35;p.r+=.08;
+   var vie=(h*.82-p.y)/(h*.6);p.a=vie<.2?p.max*vie/.2:p.max*Math.max(0,1-(vie-.2)/.8);
+   if(p.y<h*.1||p.a<=0&&vie>.5)neuf(p);
+   var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+p.a+')');g.addColorStop(1,'rgba(255,255,255,0)');
+   x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()});
+  requestAnimationFrame(tick)}
+ requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="LM Snack" defer></script>
+</body>
+</html>
