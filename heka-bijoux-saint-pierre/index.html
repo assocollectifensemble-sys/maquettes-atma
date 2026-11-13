@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>HEKA · La Magie d'une Île · Bijoux talismans en macramé et pierres naturelles</title>
+<meta name="description" content="HEKA - La Magie d'une Île : création artisanale de bijoux talismans en macramé et pierres naturelles, pièces uniques et sur mesure, tissées à la main à La Réunion. Ateliers créatifs.">
+<meta property="og:title" content="HEKA · La Magie d'une Île">
+<meta property="og:description" content="Plus qu'un bijou, un talisman : pièces uniques en macramé et pierres naturelles, tissées à la main à La Réunion.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/heka-bijoux-saint-pierre/img/og-heka.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/heka-bijoux-saint-pierre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#16151a;--nuit2:#211f26;--ardoise:#2c2a31;--terre:#a4532f;--cuivre:#c0764a;--or:#c9a24a;--or2:#e6c97a;--lune:#cfe0ee;--lapis:#2f4f9e;--sauge:#7fa58f;--creme:#f5ede0;--lin:#e9dcc8;--txt:#efe6d6;--doux:#b9ad9b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--nuit);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Marcellus,'Cormorant Garamond',serif;font-weight:400;line-height:1.1;color:var(--creme)}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.4rem 0 1.1rem;letter-spacing:.02em}
+h3{font-size:1.45rem;letter-spacing:.03em}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.72rem;color:var(--or);font-weight:500}
+.it{font-family:'Cormorant Garamond',serif;font-style:italic}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:#0d0c10;color:var(--doux);text-align:center;font-size:.74rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(201,162,74,.35)}
+.ribbon b{color:var(--or2);font-weight:500}
+canvas#poussiere{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.07em;font-size:.88rem;transition:.35s;text-align:center}
+.btn-or{background:linear-gradient(135deg,var(--or2),var(--or) 55%,#a8822f);color:#1a1612;box-shadow:0 14px 34px -14px rgba(201,162,74,.8);animation:souffle 5s ease-in-out infinite}
+.btn-or:hover{filter:brightness(1.08)}
+@keyframes souffle{50%{box-shadow:0 16px 46px -8px rgba(230,201,122,.75);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(201,162,74,.6);color:var(--creme);background:rgba(255,255,255,.03)}
+.btn-line:hover{background:rgba(201,162,74,.12)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,880px);display:flex;align-items:center;overflow:hidden;padding:6.5rem 0 4rem;background:radial-gradient(90% 60% at 80% 20%,rgba(164,83,47,.28),transparent 65%),radial-gradient(80% 60% at 0% 100%,rgba(47,79,158,.22),transparent 60%),var(--nuit)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.logo{width:92px;margin-bottom:1.3rem;opacity:.95}
+.hero h1{font-size:clamp(3.6rem,15vw,7rem);letter-spacing:.14em;line-height:1}
+.hero .sous{font-family:Marcellus,serif;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.78rem,2.6vw,1rem);color:var(--or2);margin-top:.7rem}
+.hero .devise{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.55rem,5vw,2.2rem);color:var(--creme);margin:1.7rem 0 .7rem;line-height:1.25}
+.hero .lead{color:var(--doux);max-width:31rem;margin-bottom:2rem}
+.arche{position:relative;max-width:410px;margin:auto;width:100%}
+.arche .cadre{border-radius:230px 230px 22px 22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 90px -40px rgba(0,0,0,.9);position:relative;z-index:2}
+.arche img{width:100%;height:100%;object-fit:cover;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.arche::before{content:"";position:absolute;inset:-13px;border:1px solid rgba(201,162,74,.55);border-radius:243px 243px 30px 30px}
+.arche::after{content:"";position:absolute;inset:-26px;border:1px dashed rgba(201,162,74,.22);border-radius:256px 256px 38px 38px}
+.arche figcaption{position:absolute;left:-.4rem;bottom:1.3rem;z-index:3;background:rgba(22,21,26,.88);border:1px solid rgba(201,162,74,.4);padding:.55rem 1rem;border-radius:14px;font-size:.8rem;color:var(--creme);backdrop-filter:blur(4px)}
+.arche figcaption b{color:var(--or2);font-weight:500}
+.lune{position:absolute;right:-18px;top:-22px;z-index:3;width:92px;height:92px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--lune) 40%,#8fb1d1 75%,rgba(143,177,209,0) 76%);box-shadow:0 0 40px 6px rgba(207,224,238,.35);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px)}}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.4s .25s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1.05s}.apparait.d4{animation-delay:1.4s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau pierres */
+.bande{background:linear-gradient(90deg,#7d3d22,var(--terre),#7d3d22);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.28rem;border-top:1px solid rgba(230,201,122,.4);border-bottom:1px solid rgba(230,201,122,.4)}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.75rem;color:var(--or2)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* noeud separateur */
+.noeud{display:block;margin:0 auto 1rem;width:40px;height:auto;opacity:.85}
+/* univers */
+.univers{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.2rem,6vw,5rem);align-items:center}
+.univers p+p{margin-top:1rem}
+.citation{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,4.4vw,1.9rem);color:var(--creme);border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;line-height:1.35}
+.citation small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.76rem;color:var(--doux);margin-top:.55rem;letter-spacing:.05em}
+.photo{border-radius:22px;overflow:hidden;position:relative;box-shadow:0 40px 80px -45px rgba(0,0,0,.95)}
+.photo img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.04)}
+.photo figcaption{position:absolute;left:.8rem;bottom:.8rem;right:.8rem;background:rgba(22,21,26,.82);padding:.4rem .9rem;border-radius:12px;font-size:.8rem;color:var(--creme)}
+.valeurs{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.6rem}
+.valeurs span{border:1px solid rgba(201,162,74,.45);border-radius:999px;padding:.32rem .95rem;font-size:.86rem;color:var(--lin)}
+/* talismans */
+.talismans{background:linear-gradient(180deg,var(--nuit),var(--nuit2) 20%,var(--nuit2) 80%,var(--nuit))}
+.intro{max-width:40rem;color:var(--doux)}
+.vedette{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2.6rem}
+.carte{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));border:1px solid rgba(201,162,74,.22);border-radius:26px;overflow:hidden;transition:transform .5s,border-color .5s,box-shadow .5s;display:flex;flex-direction:column}
+.carte:hover{transform:translateY(-6px);border-color:rgba(230,201,122,.6);box-shadow:0 30px 70px -40px rgba(201,162,74,.5)}
+.carte .visu{aspect-ratio:4/4.2;overflow:hidden}
+.carte .visu img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.carte:hover .visu img{transform:scale(1.05)}
+.carte .corps{padding:1.5rem 1.5rem 1.7rem;flex:1;display:flex;flex-direction:column}
+.carte .nom{font-family:Marcellus,serif;font-size:1.65rem;color:var(--or2);letter-spacing:.08em}
+.carte .role{font-size:.78rem;text-transform:uppercase;letter-spacing:.2em;color:var(--cuivre);margin:.15rem 0 .9rem}
+.carte blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.22rem;line-height:1.4;color:var(--creme)}
+.carte .pierres{margin-top:1rem;font-size:.88rem;color:var(--doux)}
+.carte .pierres b{color:var(--lin);font-weight:500}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.6rem}
+.trio .carte .visu{aspect-ratio:3/4}
+.trio .nom{font-size:1.3rem}
+.trio blockquote{font-size:1.12rem}
+.unique{margin-top:2.4rem;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--lin)}
+.unique b{font-family:Jost,sans-serif;font-style:normal;font-weight:500;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:.4rem}
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 5vw 1.2rem;margin-top:2rem;scrollbar-width:thin;scrollbar-color:var(--or) transparent}
+.galerie figure{flex:0 0 min(72vw,300px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;border:1px solid rgba(201,162,74,.2)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;background:linear-gradient(transparent,rgba(13,12,16,.9));font-size:.82rem;color:var(--creme)}
+.glisse{font-size:.8rem;color:var(--doux);letter-spacing:.12em;text-transform:uppercase;text-align:center}
+/* sur mesure */
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
+.bloc{border:1px solid rgba(201,162,74,.25);border-radius:22px;padding:1.6rem 1.4rem;background:rgba(255,255,255,.025);transition:.45s}
+.bloc:hover{background:rgba(201,162,74,.07);transform:translateY(-4px)}
+.bloc svg{width:44px;height:44px;margin-bottom:.9rem}
+.bloc h3{margin-bottom:.5rem;color:var(--or2)}
+.bloc p{font-size:.96rem;color:var(--lin)}
+.bloc small{display:block;margin-top:.7rem;color:var(--doux);font-size:.8rem}
+/* noel */
+.noel{background:radial-gradient(70% 70% at 50% 0%,rgba(164,83,47,.4),transparent 70%),linear-gradient(180deg,#1b1418,#120f13);overflow:hidden;border-top:1px solid rgba(230,201,122,.25);border-bottom:1px solid rgba(230,201,122,.25)}
+.noel .wrap{position:relative;z-index:2}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.noel h2 .it{color:var(--or2)}
+.noel ul{list-style:none;margin:1.3rem 0 1.8rem}
+.noel li{padding-left:1.6rem;position:relative;margin:.55rem 0;color:var(--lin)}
+.noel li::before{content:"✦";position:absolute;left:0;top:0;color:var(--or)}
+.ecrin{position:relative;max-width:360px;margin:auto;width:100%}
+.ecrin .photo img{aspect-ratio:4/5;object-position:center 20%}.ecrin figcaption{top:.8rem;bottom:auto;right:auto}
+.ruban-noel{position:absolute;top:-14px;right:14px;z-index:3;background:var(--terre);color:var(--creme);font-family:Marcellus,serif;letter-spacing:.14em;font-size:.8rem;padding:.5rem .9rem;border-radius:10px;box-shadow:0 10px 24px -10px rgba(0,0,0,.8)}
+.etoiles{position:absolute;inset:0;pointer-events:none}
+.etoiles i{position:absolute;color:var(--or2);font-style:normal;opacity:.0;animation:scintille 4.5s ease-in-out infinite}
+@keyframes scintille{0%,100%{opacity:0;transform:scale(.6)}50%{opacity:.75;transform:scale(1)}}
+.note{font-size:.82rem;color:var(--doux);margin-top:1rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.lignes{list-style:none;margin-top:1.4rem}
+.lignes li{display:flex;gap:.9rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid rgba(201,162,74,.18)}
+.lignes svg{flex:0 0 22px;width:22px;height:22px;margin-top:.2rem}
+.lignes a{text-decoration:none;border-bottom:1px solid rgba(201,162,74,.5);word-break:break-word}
+.lignes small{display:block;color:var(--doux);font-size:.8rem}
+.carte-ile{border:1px solid rgba(201,162,74,.25);border-radius:22px;padding:2.4rem 1.6rem;background:rgba(255,255,255,.025);text-align:center}
+.carte-ile svg{width:100%;max-width:260px;height:auto;margin:auto}
+.carte-ile p{font-size:.9rem;color:var(--doux);margin-top:.6rem}
+footer{padding:3rem 6vw 4rem;text-align:center;font-size:.82rem;color:var(--doux);border-top:1px solid rgba(201,162,74,.18)}
+footer img{width:54px;margin:0 auto 1rem;opacity:.8}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1.1s ease,transform 1.1s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.univers,.noel-in,.contact-in{grid-template-columns:1fr}
+ .vedette{grid-template-columns:1fr}
+ .trio,.trois{grid-template-columns:1fr}
+ .hero{padding-top:5.5rem}
+ .hero-txt{text-align:center}
+ .hero .lead{margin-left:auto;margin-right:auto}
+ .logo{margin-left:auto;margin-right:auto}
+ .hero .ctas{justify-content:center}
+ .arche{max-width:320px}
+ .univers .photo{order:-1}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.reveal{opacity:1;transform:none}
+ canvas#poussiere{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour HEKA - La Magie d'une Île</div>
+<canvas id="poussiere" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="wrap hero-in">
+  <div class="hero-txt">
+   <img class="logo apparait" src="img/logo-heka.png" alt="Logo HEKA - La Magie d'une Île">
+   <h1 class="apparait d2">HEKA</h1>
+   <p class="sous apparait d2">La magie d'une île</p>
+   <p class="devise apparait d3">Plus qu'un bijou, un talisman.</p>
+   <p class="lead apparait d3">Création artisanale de bijoux en macramé et pierres naturelles. Allier savoir-faire, beauté des traditions et bien-être intérieur.</p>
+   <div class="ctas apparait d4">
+    <a class="btn btn-or" href="#talismans">Découvrir les talismans</a>
+    <a class="btn btn-line" href="mailto:heka.reunion@gmail.com?subject=Un%20talisman%20HEKA">Écrire à HEKA</a>
+   </div>
+  </div>
+  <figure class="arche apparait d2">
+   <span class="lune" aria-hidden="true"></span>
+   <div class="cadre"><img src="img/aset-pierre-de-lune.webp" alt="Collier talisman Aset : torque doré, macramé terre cuite, pierre de lune et scarabée"></div>
+   <figcaption><b>Aset</b> · Talisman de Mère-Magie</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Pierre de lune</span><span>Labradorite</span><span>Améthyste</span><span>Agate mousse</span><span>Lapis-lazuli</span><span>Goldstone</span><span>Aventurine verte</span><span>Apatite</span><span>Œil de tigre</span>
+ <span>Pierre de lune</span><span>Labradorite</span><span>Améthyste</span><span>Agate mousse</span><span>Lapis-lazuli</span><span>Goldstone</span><span>Aventurine verte</span><span>Apatite</span><span>Œil de tigre</span>
+</div></div>
+
+<section id="univers">
+ <div class="wrap univers">
+  <figure class="photo reveal">
+   <img src="img/boucles-macrame.webp" alt="Boucles d'oreilles en macramé bleu, cuivre et or disposées en soleil autour du logo HEKA" loading="lazy">
+   <figcaption>Boucles d'oreilles en macramé, perles d'apatite et lapis-lazuli</figcaption>
+  </figure>
+  <div class="reveal">
+   <span class="eyebrow">L'univers HEKA</span>
+   <h2>Des bijoux tissés avec intention</h2>
+   <p>HEKA, c'est la rencontre de la magie, de la spiritualité et de la création de bijoux talismans uniques, en pierres semi-précieuses et macramé. Chaque pièce est tissée à la main, ici, à La Réunion.</p>
+   <p class="citation">« Chaque pièce est tissée avec intention.<br>Chaque pierre porte une vibration. »<small>HEKA, publication du 3 mars 2026</small></p>
+   <p>Explorer la magie des cristaux, s'inspirer de la beauté de la connexion avec l'invisible, éveiller sa lumière intérieure : chaque talisman porte un nom, une histoire et une énergie.</p>
+   <div class="valeurs"><span>Pièces uniques</span><span>Sur mesure</span><span>Pierres naturelles</span><span>Ateliers créatifs</span><span>Artisanat de La Réunion</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="talismans" id="talismans">
+ <div class="wrap">
+  <div class="reveal">
+   <svg class="noeud" viewBox="0 0 40 60" fill="none" stroke="#c9a24a" stroke-width="2.2" aria-hidden="true"><path d="M20 4c-7 0-7 10 0 14s7 12 0 16-7 12 0 16M20 4c7 0 7 10 0 14s-7 12 0 16 7 12 0 16"/></svg>
+   <span class="eyebrow">Les talismans</span>
+   <h2>Chaque talisman a son nom, sa pierre, sa voix</h2>
+   <p class="intro">Inspirés des déesses et des mythes anciens, les talismans HEKA mêlent macramé, touches dorées et cabochons de pierres naturelles. En voici quelques-uns, avec leurs propres mots.</p>
+  </div>
+
+  <div class="vedette">
+   <article class="carte reveal">
+    <div class="visu"><img src="img/aset-detail.webp" alt="Talisman Aset en gros plan : pierre de lune aux reflets irisés sertie de macramé" loading="lazy"></div>
+    <div class="corps">
+     <span class="nom">ASET</span>
+     <span class="role">Talisman de Mère-Magie</span>
+     <blockquote>« Le scarabée, lui aussi en pierre de lune, symbole de renaissance et de transformation sacrée, rappelle que toute obscurité prépare une aurore. »</blockquote>
+     <p class="pierres"><b>Pierre de lune</b> aux reflets irisés presque arc-en-ciel, scarabée en pierre de lune, torque doré.</p>
+    </div>
+   </article>
+   <article class="carte reveal">
+    <div class="visu"><img src="img/aegis-labradorite-feu.webp" alt="Talisman Aegis : torque doré, macramé vert nuit et orange, labradorite feu et breloques dorées" loading="lazy"></div>
+    <div class="corps">
+     <span class="nom">AEGIS</span>
+     <span class="role">Talisman de protection</span>
+     <blockquote>« Comme ce bouclier mythique, Aegis agit en protection discrète. Un talisman pour avancer avec une force calme, jour après jour. »</blockquote>
+     <p class="pierres"><b>Labradorite feu</b> et un éclat subtil de <b>goldstone</b>, inspiré de l'Égide, le bouclier sacré d'Athéna.</p>
+    </div>
+   </article>
+  </div>
+
+  <div class="trio">
+   <article class="carte reveal">
+    <div class="visu"><img src="img/talisman-amethyste.webp" alt="Talisman d'Améthyste : cabochon violet serti de macramé vieux rose et perles dorées" loading="lazy"></div>
+    <div class="corps">
+     <span class="nom">Améthyste</span>
+     <span class="role">La douceur après la tempête</span>
+     <blockquote>« Je calme les pensées agitées et j'ouvre la porte de l'intuition. »</blockquote>
+    </div>
+   </article>
+   <article class="carte reveal">
+    <div class="visu"><img src="img/talisman-labradorite.webp" alt="Talisman de Labradorite et Lapis-lazuli en macramé bleu" loading="lazy"></div>
+    <div class="corps">
+     <span class="nom">Labradorite &amp; Lapis</span>
+     <span class="role">Le gardien des âmes sensibles</span>
+     <blockquote>« Je suis mystère, profondeur et force tranquille. »</blockquote>
+    </div>
+   </article>
+   <article class="carte reveal">
+    <div class="visu"><img src="img/talisman-agate-mousse.webp" alt="Talisman d'Agate mousse et Aventurine verte en macramé terre cuite" loading="lazy"></div>
+    <div class="corps">
+     <span class="nom">Agate mousse</span>
+     <span class="role">Le souffle de la Terre</span>
+     <blockquote>« Je me porte aussi naturellement par un homme que par une femme, car mon énergie est universelle. »</blockquote>
+    </div>
+   </article>
+  </div>
+
+  <p class="unique reveal"><b>Pièce unique</b>Tissée à la main à La Réunion. Disponible en message privé.</p>
+ </div>
+
+ <div class="galerie reveal" aria-label="Galerie des créations HEKA">
+  <figure><img src="img/trois-talismans.webp" alt="Trois talismans : améthyste, agate mousse et labradorite" loading="lazy"><figcaption>Trois talismans, trois énergies</figcaption></figure>
+  <figure><img src="img/aset-deesse.webp" alt="Le collier Aset posé devant une statuette d'Isis aux ailes déployées" loading="lazy"><figcaption>Aset, qui porte le nom ancien d'Isis</figcaption></figure>
+  <figure><img src="img/aset-pierre-de-lune.webp" alt="Le collier Aset entouré de pierres de goldstone et d'œil de tigre" loading="lazy"><figcaption>Aset, entre goldstone et œil de tigre</figcaption></figure>
+  <figure><img src="img/boucles-macrame.webp" alt="Boucles d'oreilles HEKA en macramé" loading="lazy"><figcaption>Boucles d'oreilles en macramé</figcaption></figure>
+  <figure><img src="img/aegis-labradorite-feu.webp" alt="Le talisman Aegis entouré de labradorites" loading="lazy"><figcaption>Aegis et ses labradorites</figcaption></figure>
+ </div>
+ <p class="glisse">← glissez pour voir les créations →</p>
+</section>
+
+<section id="sur-mesure">
+ <div class="wrap">
+  <div class="reveal">
+   <span class="eyebrow">Avec HEKA</span>
+   <h2>Le talisman qui vous appelle</h2>
+   <p class="intro">« Hâte de vous faire découvrir les dernières créations, de vous voir essayer les talismans, de sentir celui qui vous appelle. »</p>
+  </div>
+  <div class="trois">
+   <div class="bloc reveal">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#e6c97a" stroke-width="1.6" aria-hidden="true"><ellipse cx="24" cy="26" rx="10" ry="13"/><ellipse cx="24" cy="26" rx="5.5" ry="8" stroke="#cfe0ee"/><path d="M24 3v10M18 6c2 3 10 3 12 0"/></svg>
+    <h3>Pièces uniques</h3>
+    <p>Colliers, sautoirs, torques, bracelets et boucles d'oreilles : chaque talisman existe en un seul exemplaire.</p>
+   </div>
+   <div class="bloc reveal">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#e6c97a" stroke-width="1.6" aria-hidden="true"><path d="M24 6c-8 0-8 12 0 16s8 12 0 16-8-12 0-16 8-16 0-16z"/><circle cx="24" cy="22" r="2.4" fill="#c0764a" stroke="none"/></svg>
+    <h3>Sur mesure</h3>
+    <p>Une pierre, une intention, une couleur de fil : HEKA crée aussi votre talisman sur mesure.</p>
+    <small>Pour infos et commandes : en message privé.</small>
+   </div>
+   <div class="bloc reveal">
+    <svg viewBox="0 0 48 48" fill="none" stroke="#e6c97a" stroke-width="1.6" aria-hidden="true"><path d="M24 8l3.5 9.5L37 21l-9.5 3.5L24 34l-3.5-9.5L11 21l9.5-3.5z"/><path d="M10 40h28"/></svg>
+    <h3>Ateliers créatifs</h3>
+    <p>Des moments pour créer, se reconnecter et explorer les traditions, comme l'atelier « Réveille la Déesse en toi » au Jardin Secret, à Saint-Pierre.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="etoiles" aria-hidden="true"><i style="left:8%;top:14%">✦</i><i style="left:86%;top:10%;animation-delay:1.2s">✦</i><i style="left:72%;top:78%;animation-delay:2.1s">✧</i><i style="left:16%;top:84%;animation-delay:3s">✧</i><i style="left:48%;top:6%;animation-delay:.6s;font-size:.8rem">✦</i></div>
+ <div class="wrap noel-in">
+  <div class="reveal">
+   <span class="eyebrow">Noël approche</span>
+   <h2>Offrir un talisman <span class="it">pour Noël</span></h2>
+   <p>Un cadeau qui a une âme : une pièce unique tissée à la main, avec une pierre choisie pour la personne que vous aimez.</p>
+   <ul>
+    <li>Choisir parmi les talismans disponibles</li>
+    <li>Imaginer un talisman sur mesure autour de sa pierre</li>
+    <li>Offrir une place à un atelier créatif HEKA</li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-or" href="mailto:heka.reunion@gmail.com?subject=Un%20talisman%20%C3%A0%20offrir%20pour%20No%C3%ABl&amp;body=Bonjour%2C%20je%20voudrais%20offrir%20un%20talisman%20HEKA%20pour%20No%C3%ABl.">Écrire à HEKA pour Noël</a>
+    <a class="btn btn-line" href="https://ig.me/m/heka_reunion" target="_blank" rel="noopener">Message sur Instagram</a>
+   </div>
+  </div>
+  <div class="ecrin reveal">
+   <span class="ruban-noel">À OFFRIR</span>
+   <figure class="photo"><img src="img/talisman-amethyste.webp" alt="Talisman d'Améthyste, idée de cadeau" loading="lazy"><figcaption>Le Talisman d'Améthyste</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-in">
+  <div class="reveal">
+   <span class="eyebrow">Contact</span>
+   <h2>Écrire à HEKA</h2>
+   <p>Pour une information, une commande ou un talisman sur mesure, HEKA répond avec plaisir en message.</p>
+   <ul class="lignes">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#e6c97a" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><a href="mailto:heka.reunion@gmail.com">heka.reunion@gmail.com</a><small>Infos et commandes</small></div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#e6c97a" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#e6c97a"/></svg><div><a href="https://www.instagram.com/heka_reunion/" target="_blank" rel="noopener">@heka_reunion</a><small>Les dernières créations</small></div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#e6c97a" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg><div><a href="https://www.facebook.com/Heka.reunion" target="_blank" rel="noopener">HEKA - La Magie d'une Île</a><small>Page Facebook</small></div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="#e6c97a" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div>Saint-Pierre, Sud de l'île<small>Référencée à l'annuaire des artisans du Domaine des Tourelles</small></div></li>
+   </ul>
+  </div>
+  <div class="carte-ile reveal">
+   <img src="img/logo-heka.png" alt="" style="width:110px;margin:0 auto 1.4rem">
+   <p class="it" style="font-size:1.6rem;color:var(--creme);line-height:1.3">Plus qu'un bijou,<br>un talisman.</p>
+   <p>Création unique · Disponible en message privé</p>
+   <svg viewBox="0 0 240 24" aria-hidden="true" style="max-width:220px;margin-top:1.2rem"><path d="M0 12c10-10 20-10 30 0s20 10 30 0 20-10 30 0 20 10 30 0 20-10 30 0 20 10 30 0 20-10 30 0 20 10 30 0" fill="none" stroke="#c9a24a" stroke-width="1.4"/><path d="M0 12c10 10 20 10 30 0s20-10 30 0 20 10 30 0 20-10 30 0 20 10 30 0 20-10 30 0 20 10 30 0 20-10 30 0" fill="none" stroke="#c0764a" stroke-width="1.4"/></svg>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <img src="img/logo-heka.png" alt="">
+ <p>HEKA - La Magie d'une Île · Bijoux talismans en macramé et pierres naturelles · La Réunion</p>
+ <p style="margin-top:.6rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de HEKA - La Magie d'une Île.</p>
+</footer>
+
+<script>
+(function(){
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var els=document.querySelectorAll('.reveal');
+ if('IntersectionObserver' in window && !reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}});},{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+ } else els.forEach(function(el){el.classList.add('vu');});
+ if(reduce) return;
+ var c=document.getElementById('poussiere'),x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],run=true;
+ function size(){W=c.width=innerWidth*dpr;H=c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';}
+ size();addEventListener('resize',size);
+ var cols=['230,201,122','207,224,238','192,118,74'];
+ for(var i=0;i<30;i++)P.push({x:Math.random(),y:Math.random(),r:(Math.random()*1.6+.5),v:Math.random()*.00025+.00008,o:Math.random()*Math.PI*2,c:cols[i%3==0?1:(i%5==0?2:0)]});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f);});
+ function f(t){
+  if(!run)return;
+  x.clearRect(0,0,W,H);
+  for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;if(p.y<-.02){p.y=1.02;p.x=Math.random();}
+   var a=.25+.35*Math.sin(t*.0012+p.o);var px=(p.x+Math.sin(t*.0003+p.o)*.01)*W,py=p.y*H,r=p.r*dpr;
+   x.beginPath();x.fillStyle='rgba('+p.c+','+a.toFixed(3)+')';x.arc(px,py,r,0,6.283);x.fill();
+   if(p.r>1.6){x.strokeStyle='rgba('+p.c+','+(a*.5).toFixed(3)+')';x.lineWidth=.6*dpr;x.beginPath();x.moveTo(px-r*3,py);x.lineTo(px+r*3,py);x.moveTo(px,py-r*3);x.lineTo(px,py+r*3);x.stroke();}
+  }
+  requestAnimationFrame(f);
+ }
+ requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="HEKA" defer></script>
+</body>
+</html>
