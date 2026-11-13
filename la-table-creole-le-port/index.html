@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Table Créole · Restaurant créole au Port, La Réunion</title>
+<meta name="description" content="La Table Créole, restaurant au Port (La Réunion) : fusion unique entre saveurs réunionnaises et touches chinoises, plats et desserts faits maison, réceptions. 31 bis av. Jacques Prévert · 0262 39 81 49.">
+<meta property="og:title" content="La Table Créole · Restaurant créole, Le Port">
+<meta property="og:description" content="Fusion unique entre saveurs réunionnaises et touches chinoises. Plats et desserts faits maison.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-table-creole-le-port/img/salle-varangue.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-table-creole-le-port/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@300;400;700&family=Caveat+Brush&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#d3201b;--rouge-f:#9d1612;--safran:#f2b632;--safran-c:#ffd97a;--vert:#2c6a3c;--vert-f:#1b4527;--ardoise:#1c1b19;--bois:#6e4424;--creme:#fff8ec;--sable:#f6e7c8;--txt:#33261c;--doux:#7d6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:700;line-height:1.08;color:var(--ardoise)}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem}
+.craie{font-family:'Caveat Brush',cursive;font-weight:400;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--rouge);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ardoise);color:var(--safran-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.02em;transition:.3s}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -14px rgba(211,32,27,.9);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(211,32,27,.65)}}
+.btn-safran{background:var(--safran);color:var(--ardoise)}
+.btn-safran:hover{background:var(--safran-c)}
+.btn-line{border:1.5px solid rgba(255,217,122,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ardoise);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,27,25,.35) 0%,rgba(28,27,25,.5) 38%,rgba(28,27,25,.96) 100%)}
+.hero-in{position:relative;z-index:2;padding:7.5rem 0 4.5rem}
+.logo{width:96px;height:96px;border-radius:50%;box-shadow:0 0 0 5px rgba(255,217,122,.35),0 20px 40px -14px rgba(0,0,0,.7);margin-bottom:1.3rem;animation:tourne 1.4s .2s both}
+@keyframes tourne{from{opacity:0;transform:rotate(-25deg) scale(.7)}}
+.hero .eyebrow{color:var(--safran-c)}
+.hero h1{color:#fff;font-size:clamp(3.2rem,13vw,6.8rem);margin:.4rem 0 .2rem}
+.hero h1 .craie{display:block;color:var(--safran);font-size:.5em;margin-top:.25em}
+.hero .lead{font-size:1.15rem;max-width:33rem;margin:1.1rem 0 1.9rem;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--safran-c)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;position:relative;z-index:3}
+.track{display:inline-block;animation:defile 46s linear infinite;font-family:'Caveat Brush',cursive;font-size:1.45rem}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✿";margin-left:2.2rem;color:var(--safran-c);font-size:.9rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* fusion */
+.intro{max-width:44rem}
+.devise{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.8rem);color:var(--vert-f);border-left:3px solid var(--safran);padding-left:1.1rem;margin:1.5rem 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin-top:2.2rem}
+.cote{background:#fff;border-radius:24px;padding:1.6rem 1.5rem;box-shadow:0 24px 50px -36px rgba(51,38,28,.6);position:relative;overflow:hidden;transition:transform .4s}
+.cote:hover{transform:translateY(-6px)}
+.cote::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--vert)}
+.cote.chine::before{background:var(--rouge)}
+.cote .ico{font-size:1.9rem}
+.cote h3{margin:.4rem 0 .8rem}
+.cote ul{list-style:none}
+.cote li{padding:.42rem 0;border-bottom:1px dashed #e6d6b8}
+.cote li:last-child{border:0}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2.4rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2.4rem;color:var(--rouge);line-height:1}
+.chiffres span{font-size:.86rem;color:var(--doux)}
+/* ardoise */
+.ardoise-sec{background:linear-gradient(180deg,var(--creme),var(--sable))}
+.ardoise{margin-top:2rem;background:radial-gradient(ellipse at 30% 20%,#2c2b28,#1a1917 70%);color:#f4efe4;border-radius:14px;border:14px solid var(--bois);box-shadow:inset 0 0 40px rgba(0,0,0,.55),0 40px 70px -40px rgba(0,0,0,.8);padding:2rem 1.4rem 1.6rem;position:relative;max-width:640px}
+.ardoise h3{font-family:'Caveat Brush',cursive;font-weight:400;color:#fff;font-size:2.7rem;text-align:center;line-height:1}
+.ardoise h3 span{display:block;color:var(--safran);font-size:.62em}
+.ardoise .date{display:block;width:max-content;max-width:100%;margin:.9rem auto 1.2rem;border:1px solid rgba(255,217,122,.45);border-radius:6px;padding:.2rem .9rem;font-family:'Caveat Brush',cursive;font-size:1.3rem;color:var(--safran-c)}
+.ardoise ul{list-style:none;font-family:'Caveat Brush',cursive;font-size:1.45rem}
+.ardoise li{padding:.35rem 0 .35rem 1.8rem;border-bottom:1px dotted rgba(242,182,50,.45);position:relative;opacity:0;transform:translateX(-10px);transition:.6s}
+.ardoise li::before{content:"✿";position:absolute;left:0;color:var(--rouge);font-size:1rem;top:.65rem}
+.ardoise.vu li{opacity:1;transform:none}
+.ardoise .desserts{margin-top:1.4rem;text-align:center;font-family:'Caveat Brush',cursive;color:var(--safran);font-size:1.8rem}
+.ardoise .dlist{font-family:'Caveat Brush',cursive;font-size:1.2rem;text-align:center;color:#eadfca;line-height:1.5}
+.ardoise .maison{margin-top:1.3rem;text-align:center;background:var(--vert);border-radius:8px;padding:.45rem .8rem;font-family:'Caveat Brush',cursive;font-size:1.25rem}
+.ard-wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.ard-txt p+p{margin-top:.9rem}
+.service{display:inline-block;margin-top:1.3rem;background:var(--ardoise);color:var(--safran-c);border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.92rem}
+/* galerie */
+.galerie-sec{background:var(--vert-f);color:var(--creme);overflow:hidden}
+.galerie-sec h2{color:#fff}.galerie-sec .eyebrow{color:var(--safran-c)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,380px);scroll-snap-align:center;border-radius:22px;overflow:hidden;background:#000;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.3s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.1rem 1rem;background:linear-gradient(180deg,transparent,rgba(0,0,0,.82));font-size:.92rem}
+.glisse{font-size:.85rem;color:var(--safran-c);opacity:.85}
+/* receptions */
+.recep{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.recep-photo{position:relative}
+.recep-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 26px 26px;box-shadow:0 40px 80px -40px rgba(51,38,28,.7)}
+.recep-photo::before{content:"";position:absolute;inset:-12px;border:2px solid var(--safran);border-radius:212px 212px 34px 34px;opacity:.6}
+.inclus{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.3rem 0 1.6rem}
+.inclus span{background:#fff;border:1px solid #ecd9b3;border-radius:999px;padding:.35rem .95rem;font-size:.9rem;transition:.3s}
+.inclus span:hover{background:var(--safran-c)}
+.petit{font-size:.9rem;color:var(--doux);margin-top:1rem}
+/* noel */
+.noel{background:linear-gradient(160deg,#7c120f,var(--rouge-f) 45%,#4d0b09);color:#fff;overflow:hidden;text-align:center}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--safran-c)}
+.noel p{max-width:36rem;margin:0 auto 1rem}
+.lampions{display:flex;justify-content:center;gap:clamp(1rem,6vw,3rem);margin:-1rem auto 1.5rem}
+.lampions svg{width:44px;height:74px;transform-origin:50% 0;animation:balance 4s ease-in-out infinite}
+.lampions svg:nth-child(2){animation-delay:-1.3s;width:52px;height:86px}
+.lampions svg:nth-child(3){animation-delay:-2.6s}
+@keyframes balance{50%{transform:rotate(6deg)}}
+.illus{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6;margin-top:-.6rem;margin-bottom:1.4rem}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0 2.2rem;text-align:left}
+.idee{background:rgba(255,255,255,.09);border:1px solid rgba(255,217,122,.3);border-radius:20px;padding:1.3rem 1.2rem;transition:.35s}
+.idee:hover{background:rgba(255,255,255,.16);transform:translateY(-4px)}
+.idee b{display:block;font-family:'Fraunces',serif;font-size:1.15rem;margin:.3rem 0 .3rem;color:var(--safran-c)}
+.idee p{font-size:.94rem;margin:0}
+.noel .ctas{justify-content:center}
+/* contact */
+.contact-sec{background:var(--sable)}
+.infos{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:2rem}
+.info{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 22px 50px -38px rgba(51,38,28,.6)}
+.info small{display:block;text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;color:var(--rouge);font-weight:700;margin-bottom:.4rem}
+.info a{font-weight:700;text-decoration:none;color:var(--vert-f);word-break:break-word}
+.info p{font-size:.97rem}
+footer{text-align:center;padding:2.4rem 1rem 6.5rem;font-size:.82rem;color:var(--doux);background:var(--sable);border-top:1px solid #e8d4ad}
+.flottant{position:fixed;right:1rem;bottom:1rem;z-index:40;background:var(--rouge);color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.6);animation:souffle 3s ease-in-out infinite}
+.flottant svg{width:26px;height:26px}
+@media (max-width:760px){
+ .duo,.ard-wrap,.recep,.idees,.infos{grid-template-columns:1fr}
+ .ardoise{border-width:10px;padding:1.6rem 1rem 1.3rem}
+ .ardoise ul{font-size:1.3rem}
+ .recep-photo{max-width:420px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.apparait,.ardoise li{opacity:1!important;transform:none!important}
+ canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Table Créole</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/salle-varangue.webp" alt="La grande salle couverte de La Table Créole, tables dressées sous les lampions" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <img class="logo" src="img/logo.webp" alt="Logo La Table Créole, restaurant, cuisine traditionnelle" width="96" height="96">
+    <p class="eyebrow apparait">Restaurant · Le Port · La Réunion</p>
+    <h1 class="apparait d2">La Table Créole<span class="craie">Saveurs d'ici et d'ailleurs</span></h1>
+    <p class="lead apparait d3">🌴 Une fusion unique entre saveurs réunionnaises et touches chinoises 🥢 Tous nos plats et nos desserts sont faits maison.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="tel:+262262398149">Réserver : 0262 39 81 49</a>
+      <a class="btn btn-line" href="#ardoise">Voir l'ardoise du jour</a>
+    </div>
+    <p class="adr apparait d3">31 bis avenue Jacques Prévert, 97420 Le Port</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Civet zourite</span><span>Carry poulet fermier Cimendef</span><span>Pied de porc à la chinoise</span><span>Rougail boucané</span><span>Cabri massalé</span><span>Canard à la vanille</span><span>Bol renversé</span><span>Morue brède songe</span><span>Gâteau patate douce</span><span>Crème brûlée coco</span>
+  <span>Civet zourite</span><span>Carry poulet fermier Cimendef</span><span>Pied de porc à la chinoise</span><span>Rougail boucané</span><span>Cabri massalé</span><span>Canard à la vanille</span><span>Bol renversé</span><span>Morue brède songe</span><span>Gâteau patate douce</span><span>Crème brûlée coco</span>
+</div></div>
+
+<section id="cuisine">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">Notre cuisine</p>
+      <h2>La Réunion dans la marmite, une touche de Chine dans le wok</h2>
+      <p>À La Table Créole, la cheffe Kéza mijote une cuisine authentique, créole et traditionnelle, relevée de recettes chinoises. Des carry et des civets de la case, des plats « à la chinoise », et des desserts maison pour finir en douceur.</p>
+      <p class="devise">« Saveurs · Tradition · Partage » : le goût du soleil dans votre assiette.</p>
+    </div>
+    <div class="duo">
+      <div class="cote rv"><div class="ico">🌴</div><h3>Côté Réunion</h3>
+        <ul><li>Civet zourite</li><li>Carry poulet fermier Cimendef aux petits pois</li><li>Rougail boucané</li><li>Cabri massalé</li><li>Canard à la vanille</li><li>Morue brède songe</li><li>Rougail saucisse</li></ul></div>
+      <div class="cote chine rv"><div class="ico">🥢</div><h3>Touche chinoise</h3>
+        <ul><li>Pied de porc à la chinoise</li><li>Travers de porc à la chinoise au four</li><li>Steack de porc à la chinoise</li><li>Bol renversé poulet et sarcives</li></ul></div>
+    </div>
+    <div class="chiffres rv">
+      <div><b>4,6/5</b><span>sur Tripadvisor (21 avis)</span></div>
+      <div><b>100 %</b><span>de recommandations sur Facebook</span></div>
+      <div><b>3,1 K</b><span>abonnés gourmands</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ardoise-sec" id="ardoise">
+  <div class="wrap ard-wrap">
+    <div class="ard-txt rv">
+      <p class="eyebrow">Chaque jour, une nouvelle ardoise</p>
+      <h2>Les plats du jour</h2>
+      <p>Chaque matin, l'ardoise du jour paraît sur notre page Facebook : carry, civets, rougails et spécialités à la chinoise, accompagnés de riz et salade.</p>
+      <p>Ici, l'ardoise publiée le jeudi 8 octobre 2026, pour vous mettre l'eau à la bouche.</p>
+      <span class="service">Service midi · jusqu'à 14h00</span>
+      <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-main" href="https://www.facebook.com/latablecreole974" target="_blank" rel="noopener">L'ardoise du jour sur Facebook</a></div>
+    </div>
+    <div class="ardoise rv" id="ard">
+      <h3>Plats<span>du jour</span></h3>
+      <span class="date">Jeudi 8 octobre 2026</span>
+      <ul>
+        <li>Poulet ti Jack</li><li>Rougail boucané PDT</li><li>Bœuf jardinière</li><li>Steack de porc à la chinoise</li><li>Carry poisson vivaneau</li><li>Morue brède songe</li>
+      </ul>
+      <p class="desserts">Desserts</p>
+      <p class="dlist">Gâteau patate douce · Mousse chocolat · Fondant chocolat · Crème brûlée coco · Tarte coco · Panna cotta passion</p>
+      <p class="maison">Tous nos plats et nos desserts sont faits maison</p>
+    </div>
+  </div>
+</section>
+
+<section class="galerie-sec">
+  <div class="wrap">
+    <p class="eyebrow rv">Chez nous</p>
+    <h2 class="rv">Une grande salle sous la varangue</h2>
+    <p class="glisse rv">Faites glisser pour visiter →</p>
+    <div class="galerie">
+      <figure><img src="img/salle-lampions.webp" alt="Salle couverte avec lampions rouges et ballons dorés" loading="lazy"><figcaption>Lampions rouges et verdure tout autour</figcaption></figure>
+      <figure><img src="img/table-dressee.webp" alt="Table dressée avec verres et bouquet de fleurs blanches" loading="lazy"><figcaption>Une table dressée pour une réception</figcaption></figure>
+      <figure><img src="img/entrees-sauces.webp" alt="Salade composée et deux sauces servies au buffet" loading="lazy"><figcaption>Salade composée et sauces du buffet</figcaption></figure>
+      <figure><img src="img/salle-varangue.webp" alt="Rangées de tables nappées de blanc sous la varangue" loading="lazy"><figcaption>De la place pour toute la famille</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="receptions">
+  <div class="wrap recep">
+    <figure class="recep-photo rv"><img src="img/table-dressee.webp" alt="Détail d'une table de réception dressée à La Table Créole" loading="lazy"></figure>
+    <div class="rv">
+      <p class="eyebrow">Réceptions & évènements</p>
+      <h2>Votre fête, servie clé en main</h2>
+      <p>Pour vos réceptions, La Table Créole s'occupe de tout, des mises en bouche aux plats chauds, avec la salle et le service compris.</p>
+      <div class="inclus"><span>Mises en bouche</span><span>Entrées</span><span>Plats chauds</span><span>Boissons & vins</span><span>Salle</span><span>Tables & chaises</span><span>Service</span><span>Mise en place</span></div>
+      <p>Nous proposons aussi nos services selon votre budget. Et pour le gâteau, passez commande avec notre chef pâtissier !</p>
+      <div class="ctas" style="margin-top:1.5rem">
+        <a class="btn btn-main" href="mailto:Ltcevent974@gmail.com?subject=Demande%20de%20r%C3%A9ception%20%C3%A0%20La%20Table%20Cr%C3%A9ole">Demander un devis</a>
+        <a class="btn btn-safran" href="tel:+262262398149">0262 39 81 49</a>
+      </div>
+      <p class="petit">Réceptions : Ltcevent974@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="lampions" aria-hidden="true">
+      <svg viewBox="0 0 44 74"><line x1="22" y1="0" x2="22" y2="12" stroke="#ffd97a" stroke-width="1.5"/><rect x="14" y="11" width="16" height="5" rx="1" fill="#f2b632"/><ellipse cx="22" cy="38" rx="20" ry="23" fill="#ff3b2f"/><path d="M22 15v46M12 18q-6 20 0 40M32 18q6 20 0 40" stroke="#9d1612" stroke-width="1.2" fill="none"/><rect x="14" y="59" width="16" height="5" rx="1" fill="#f2b632"/><path d="M18 64v9M22 64v10M26 64v9" stroke="#ffd97a" stroke-width="1.3"/></svg>
+      <svg viewBox="0 0 44 74"><line x1="22" y1="0" x2="22" y2="12" stroke="#ffd97a" stroke-width="1.5"/><rect x="14" y="11" width="16" height="5" rx="1" fill="#f2b632"/><ellipse cx="22" cy="38" rx="20" ry="23" fill="#ffb12b"/><path d="M22 15v46M12 18q-6 20 0 40M32 18q6 20 0 40" stroke="#b5600c" stroke-width="1.2" fill="none"/><rect x="14" y="59" width="16" height="5" rx="1" fill="#d3201b"/><path d="M18 64v9M22 64v10M26 64v9" stroke="#ffd97a" stroke-width="1.3"/></svg>
+      <svg viewBox="0 0 44 74"><line x1="22" y1="0" x2="22" y2="12" stroke="#ffd97a" stroke-width="1.5"/><rect x="14" y="11" width="16" height="5" rx="1" fill="#f2b632"/><ellipse cx="22" cy="38" rx="20" ry="23" fill="#ff3b2f"/><path d="M22 15v46M12 18q-6 20 0 40M32 18q6 20 0 40" stroke="#9d1612" stroke-width="1.2" fill="none"/><rect x="14" y="59" width="16" height="5" rx="1" fill="#f2b632"/><path d="M18 64v9M22 64v10M26 64v9" stroke="#ffd97a" stroke-width="1.3"/></svg>
+    </div>
+    <p class="illus">Illustration</p>
+    <p class="eyebrow rv">Pour les fêtes</p>
+    <h2 class="rv">Offrir pour Noël : une belle table créole</h2>
+    <p class="rv">Réunissez famille, amis ou collègues autour de la cuisine de la cheffe Kéza pour fêter la fin de l'année. On en parle ensemble et on compose votre repas.</p>
+    <div class="idees">
+      <div class="idee rv"><span>🎁</span><b>Un repas à offrir</b><p>Faites plaisir à vos proches avec un bon moment à La Table Créole.</p></div>
+      <div class="idee rv"><span>🥂</span><b>Votre repas de fin d'année</b><p>Famille ou entreprise : salle, traiteur et service réunis au même endroit.</p></div>
+      <div class="idee rv"><span>🎂</span><b>Le gâteau du chef pâtissier</b><p>Passez commande pour un dessert de fête fait maison.</p></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-safran" href="tel:+262262398149">Appeler le 0262 39 81 49</a>
+      <a class="btn btn-line" href="mailto:Ltcevent974@gmail.com?subject=Repas%20de%20fin%20d%27ann%C3%A9e%20%C3%A0%20La%20Table%20Cr%C3%A9ole">Écrire pour les fêtes</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Venir nous voir</p>
+    <h2 class="rv">À très vite au Port !</h2>
+    <div class="infos">
+      <div class="info rv"><small>Adresse</small><p>31 bis avenue Jacques Prévert<br>97420 Le Port</p><p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&query=31+bis+avenue+Jacques+Pr%C3%A9vert+97420+Le+Port" target="_blank" rel="noopener">Itinéraire →</a></p></div>
+      <div class="info rv"><small>Réservation</small><p><a href="tel:+262262398149">0262 39 81 49</a></p><p style="margin-top:.6rem">Aux heures de pointe, pensez à réserver.</p></div>
+      <div class="info rv"><small>Horaires</small><p>Service du midi jusqu'à 14h00. Les soirées sont annoncées sur notre page, comme le 23 octobre, ouvert de 19h à 23h.</p></div>
+      <div class="info rv"><small>Écrire</small><p><a href="mailto:latablecreole974@gmail.com">latablecreole974@gmail.com</a></p><p style="margin-top:.6rem"><a href="https://www.facebook.com/latablecreole974" target="_blank" rel="noopener">Facebook · La Table Créole</a></p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>La Table Créole · Restaurant, cuisine traditionnelle · Le Port, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Table Créole.</footer>
+<a class="flottant" href="tel:+262262398149" aria-label="Appeler La Table Créole"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var ard=document.getElementById('ard');
+ard.querySelectorAll('li').forEach(function(li,i){li.style.transitionDelay=(.25+i*.14)+'s'});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+function mk(i,init){var p=i%4==0;return{p:p,x:Math.random()*W,y:init?Math.random()*H:(p?-20:H+30),r:p?4+Math.random()*4:14+Math.random()*26,v:p?.25+Math.random()*.35:.18+Math.random()*.3,a:Math.random()*6.28,s:.004+Math.random()*.008,o:p?.35+Math.random()*.25:.05+Math.random()*.06,rot:Math.random()*6.28}}
+for(var i=0;i<28;i++)P.push(mk(i,true));
+function petal(p){x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.globalAlpha=p.o;x.fillStyle='#e8352b';x.beginPath();x.ellipse(0,0,p.r,p.r*.55,0,0,6.28);x.fill();x.restore()}
+function loop(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.a+=p.s;
+ if(p.p){p.y+=p.v;p.x+=Math.sin(p.a)*.5;p.rot+=.01;petal(p);if(p.y>H+20)P[i]=mk(i,false)}
+ else{p.y-=p.v;p.x+=Math.sin(p.a)*.35;p.r+=.02;var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,248,236,'+p.o+')');g.addColorStop(1,'rgba(255,248,236,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-60)P[i]=mk(i,false)}
+});requestAnimationFrame(loop)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Table Créole" defer></script>
+</body>
+</html>
