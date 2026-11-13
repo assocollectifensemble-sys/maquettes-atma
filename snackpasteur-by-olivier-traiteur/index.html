@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snackpasteur by Olivier traiteur · Snack & traiteur, 4 rue Pasteur, Saint-Denis</title>
+<meta name="description" content="Snackpasteur by Olivier traiteur, snack et traiteur au 4 rue Pasteur à Saint-Denis (La Réunion) : le menu du jour, les bols à emporter, les burgers et les buffets traiteur.">
+<meta property="og:title" content="Snackpasteur by Olivier traiteur · Saint-Denis">
+<meta property="og:description" content="Aux plaisirs de vous retrouver et régaler vos papilles. Le menu du jour, 4 rue Pasteur à Saint-Denis.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snackpasteur-by-olivier-traiteur/img/hero.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snackpasteur-by-olivier-traiteur/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--tomate:#d9432b;--tomate-f:#a92f1c;--oignon:#5a9e3c;--oignon-c:#9fd27f;--kraft:#c9a274;--kraft-c:#ead7b9;--charbon:#1d1916;--ardoise:#2a2d2a;--creme:#fbf5ec;--txt:#2e2622;--doux:#7a6a5f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;line-height:1.02;color:var(--charbon);letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,7vw,3.4rem);margin:.4rem 0 1rem}
+h3{font-size:1.3rem;font-weight:700}
+.main-ecrite{font-family:'Caveat',cursive;font-weight:700}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;color:var(--tomate)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--charbon);color:var(--kraft-c);text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:700;font-size:.95rem;transition:transform .3s,background .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--tomate);color:#fff;box-shadow:0 14px 30px -14px rgba(217,67,43,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--tomate-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(217,67,43,.7)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:2px solid var(--charbon);color:var(--charbon)}
+.btn-dark:hover{background:var(--kraft-c)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--charbon);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,25,22,.35) 0%,rgba(29,25,22,.25) 30%,rgba(29,25,22,.82) 68%,rgba(29,25,22,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.2rem}
+.pastille{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.35rem .9rem;font-size:.82rem}
+.pastille i{width:9px;height:9px;border-radius:50%;background:var(--oignon-c);box-shadow:0 0 0 0 rgba(159,210,127,.8);animation:pouls 2s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 10px rgba(159,210,127,0)}100%{box-shadow:0 0 0 0 rgba(159,210,127,0)}}
+.hero h1{color:#fff;font-size:clamp(2.8rem,13vw,7.5rem);margin:1rem 0 .1rem;letter-spacing:-.03em}
+.hero h1 span{color:var(--tomate)}
+.hero .by{font-family:'Caveat',cursive;font-size:clamp(1.9rem,7vw,2.8rem);color:var(--kraft-c);line-height:1;display:block;transform:rotate(-2deg);margin-left:.2rem}
+.hero .lead{font-size:1.12rem;max-width:32rem;margin:1.3rem 0 1.8rem;color:#f5ece0;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--kraft-c);display:flex;gap:.45rem;align-items:center}
+.hero .adr svg{width:18px;height:18px;flex:none}
+.monte{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.monte.d2{animation-delay:.6s}.monte.d3{animation-delay:.95s}.monte.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--tomate);color:#fff;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.15rem;position:relative;z-index:3}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"";display:inline-block;width:12px;height:12px;border:3px solid var(--oignon-c);border-radius:50%;margin-left:2.2rem;vertical-align:1px}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* bienvenue */
+.bienvenue{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.citation{font-family:'Caveat',cursive;font-size:clamp(1.9rem,6.5vw,2.6rem);line-height:1.15;color:var(--tomate-f);margin:1rem 0 1.2rem}
+.signature{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 20px 44px -32px rgba(29,25,22,.6);margin-top:1.5rem}
+.signature svg{width:56px;height:56px;flex:none}
+.signature p{font-size:.95rem}
+.polaroid{position:relative;background:#fff;padding:.7rem .7rem 3rem;border-radius:6px;transform:rotate(2.2deg);box-shadow:0 34px 60px -34px rgba(29,25,22,.7);max-width:400px;margin:auto;transition:transform .6s}
+.polaroid:hover{transform:rotate(0)}
+.polaroid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.polaroid figcaption{position:absolute;left:0;right:0;bottom:.7rem;text-align:center;font-family:'Caveat',cursive;font-size:1.45rem;color:var(--charbon)}
+.scotch{position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-4deg);background:rgba(234,215,185,.85)}
+/* ardoise */
+.ardoise-sec{background:var(--ardoise);color:#ece7df;overflow:hidden}
+.ardoise-sec::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 10%,rgba(255,255,255,.06),transparent 45%),radial-gradient(circle at 85% 80%,rgba(255,255,255,.05),transparent 50%);pointer-events:none}
+.ardoise-sec h2{color:#fff}
+.ardoise-sec .eyebrow{color:var(--oignon-c)}
+.ardoise{position:relative;border:10px solid #6b4a2d;border-radius:12px;background:#262a26;padding:1.6rem 1.4rem;box-shadow:inset 0 0 40px rgba(0,0,0,.5),0 30px 60px -30px rgba(0,0,0,.8);max-width:560px}
+.ardoise .titre{font-family:'Caveat',cursive;font-size:2.6rem;color:#fff;line-height:1}
+.ardoise .titre u{text-decoration-color:var(--tomate);text-decoration-thickness:3px;text-underline-offset:6px}
+.ardoise ul{list-style:none;margin:1rem 0 .4rem;font-family:'Caveat',cursive;font-size:1.55rem;line-height:1.35;color:#e9e4da}
+.ardoise li::before{content:"~ ";color:var(--oignon-c)}
+.ardoise .craie{font-size:.86rem;color:#bdb6aa;margin-top:.6rem}
+.ardoise-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.ardoise-txt p+p{margin-top:.9rem}
+.fil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2.2rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.fil::-webkit-scrollbar{display:none}
+.fil figure{flex:0 0 min(74vw,300px);scroll-snap-align:center;border-radius:18px;overflow:hidden;background:#111;position:relative;box-shadow:0 24px 40px -26px rgba(0,0,0,.9)}
+.fil img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.fil figure:hover img{transform:scale(1.06)}
+.fil figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(29,25,22,.78);backdrop-filter:blur(4px);color:#fff;font-size:.8rem;padding:.3rem .7rem;border-radius:999px}
+.glisse{font-size:.85rem;color:#bdb6aa;display:flex;align-items:center;gap:.5rem}
+.glisse b{display:inline-block;animation:glisse 1.8s ease-in-out infinite;color:var(--oignon-c)}
+@keyframes glisse{50%{transform:translateX(8px)}}
+/* bols */
+.bols-sec{background:linear-gradient(180deg,var(--creme),#f3e6d2)}
+.bols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2rem}
+.bol{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 26px 50px -36px rgba(29,25,22,.7);transition:transform .4s,box-shadow .4s}
+.bol:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 34px 60px -34px rgba(29,25,22,.7)}
+.bol img{width:100%;aspect-ratio:1;object-fit:cover}
+.bol div{padding:1rem 1.1rem 1.2rem}
+.bol small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--oignon);font-weight:700}
+.bol p{font-size:.93rem;color:var(--doux);margin-top:.25rem}
+.signature-verte{margin-top:2.4rem;display:flex;gap:1rem;align-items:center;background:var(--charbon);color:#f0e8dc;border-radius:20px;padding:1.2rem 1.4rem}
+.signature-verte svg{width:64px;height:64px;flex:none}
+.signature-verte b{color:var(--oignon-c)}
+/* burgers */
+.burgers{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.burgers figure{border-radius:28px;overflow:hidden;box-shadow:0 36px 70px -40px rgba(29,25,22,.8);position:relative}
+.burgers figure img{width:100%;aspect-ratio:1;object-fit:cover;object-position:50% 40%}
+.etiquette{position:absolute;top:1rem;right:1rem;background:var(--tomate);color:#fff;font-family:'Caveat',cursive;font-size:1.5rem;padding:.2rem .9rem;border-radius:10px;transform:rotate(5deg)}
+.puces{list-style:none;margin-top:1.2rem;display:grid;gap:.6rem}
+.puces li{display:flex;gap:.7rem;align-items:flex-start}
+.puces li::before{content:"";width:14px;height:14px;border:3px solid var(--oignon);border-radius:50%;flex:none;margin-top:.35rem}
+/* traiteur */
+.traiteur-sec{background:var(--kraft-c)}
+.traiteur{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.buffet{position:relative;max-width:380px;margin:auto}
+.buffet img{width:100%;aspect-ratio:9/14;object-fit:cover;border-radius:200px 200px 24px 24px;box-shadow:0 40px 70px -40px rgba(29,25,22,.8)}
+.buffet::before{content:"";position:absolute;inset:-12px;border:2px dashed var(--tomate);border-radius:212px 212px 32px 32px;opacity:.5}
+.buffet figcaption{text-align:center;margin-top:1rem;font-size:.85rem;color:var(--doux)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.tags span{background:#fff;border-radius:999px;padding:.35rem .95rem;font-size:.9rem;font-weight:500;transition:.3s}
+.tags span:hover{background:var(--tomate);color:#fff}
+/* avis */
+.avis{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.bulle{background:#fff;border-radius:22px 22px 22px 6px;padding:1.5rem 1.4rem;box-shadow:0 24px 50px -36px rgba(29,25,22,.6);position:relative}
+.bulle q{font-family:'Caveat',cursive;font-size:1.75rem;line-height:1.2;color:var(--charbon);quotes:"« " " »"}
+.bulle small{display:block;margin-top:.7rem;color:var(--doux);font-size:.82rem}
+.reco{display:inline-flex;align-items:center;gap:.5rem;background:var(--oignon);color:#fff;border-radius:999px;padding:.4rem 1rem;font-weight:700;font-size:.9rem;margin-top:1.4rem}
+/* fêtes */
+.fetes{background:radial-gradient(circle at 50% 0%,#3b1d16,var(--charbon) 70%);color:#f3eadf;overflow:hidden;text-align:center}
+.fetes h2{color:#fff}
+.fetes .eyebrow{color:#f0c46a}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:70px}
+.guirlande circle{animation:brille 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.9s}.guirlande circle:nth-child(3n+1){animation-delay:1.7s}
+@keyframes brille{50%{opacity:.25}}
+.fetes .wrap{max-width:720px}
+.fetes p.intro{font-size:1.08rem;margin:0 auto 1.6rem;max-width:36rem}
+.idees{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin:2rem 0 2.2rem;text-align:left}
+.idee{border:1px solid rgba(240,196,106,.35);border-radius:18px;padding:1.1rem 1.1rem 1.2rem;background:rgba(255,255,255,.04);transition:.35s}
+.idee:hover{background:rgba(240,196,106,.1);transform:translateY(-4px)}
+.idee svg{width:34px;height:34px;margin-bottom:.5rem}
+.idee b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;color:#fff}
+.idee span{font-size:.9rem;color:#d9cdbd}
+.fetes .ctas{justify-content:center}
+.fetes .btn-main{background:#f0c46a;color:var(--charbon);box-shadow:0 14px 30px -14px rgba(240,196,106,.9);animation:none}
+.fetes .note{font-size:.82rem;color:#bfb2a2;margin-top:1.2rem}
+/* infos */
+.infos{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.carte-info{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 24px 50px -38px rgba(29,25,22,.6)}
+.carte-info h3{display:flex;gap:.6rem;align-items:center;margin-bottom:.6rem}
+.carte-info h3 svg{width:26px;height:26px;color:var(--tomate)}
+.carte-info p{font-size:.97rem}
+.carte-info a{color:var(--tomate-f);font-weight:700;word-break:break-word}
+.carte-info .btn{margin-top:1rem}
+.carte-info a.btn-main{color:#fff}.carte-info a.btn-dark{color:var(--charbon)}
+.plan{margin-top:1.2rem;border-radius:22px;overflow:hidden;background:var(--charbon);color:#fff;padding:1.4rem;display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.plan svg{width:120px;height:70px}
+footer{background:var(--charbon);color:#c9bcae;text-align:center;padding:3rem 1.2rem 3.4rem;font-size:.85rem;position:relative;z-index:2}
+footer b{color:#fff;font-family:'Bricolage Grotesque',sans-serif;font-size:1.3rem;display:block;margin-bottom:.4rem}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:40px;margin-top:-39px;position:relative;z-index:3}
+@media (max-width:860px){
+ .bienvenue,.ardoise-grid,.burgers,.traiteur,.avis,.infos{grid-template-columns:1fr}
+ .bols{grid-template-columns:1fr 1fr}
+ .idees{grid-template-columns:1fr}
+ .burgers figure{order:-1}
+}
+@media (max-width:420px){.bol div{padding:.8rem .85rem 1rem}.bol p{font-size:.86rem}h3{font-size:1.15rem}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.monte,.rv{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snackpasteur by Olivier traiteur</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<section class="hero">
+ <div class="fond"><img src="img/hero.webp" alt="Burgers au poulet pané, cheddar, tomate et salade, publiés par Snackpasteur" fetchpriority="high"></div>
+ <div class="wrap hero-in">
+  <span class="pastille monte"><i></i> Snack &amp; traiteur · Saint-Denis</span>
+  <h1 class="monte d2">Snack<span>pasteur</span></h1>
+  <span class="by monte d2">by Olivier traiteur</span>
+  <p class="lead monte d3">« Aux plaisirs de vous retrouver et régaler vos papilles. 🔥 » Le menu du jour, les bols à emporter, les burgers et les buffets traiteur, au cœur de Saint-Denis.</p>
+  <div class="ctas monte d4">
+   <a class="btn btn-main" href="#ardoise">Voir le menu du jour</a>
+   <a class="btn btn-line" href="#infos">Nous trouver</a>
+  </div>
+  <p class="adr monte d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>4 rue Pasteur, 97400 Saint-Denis</p>
+ </div>
+</section>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Le menu du jour</span><span>Bols à emporter</span><span>Burgers au poulet pané</span><span>Salades fraîches</span><span>Buffets traiteur</span><span>4 rue Pasteur</span><span>Régaler vos papilles</span>
+ <span>Le menu du jour</span><span>Bols à emporter</span><span>Burgers au poulet pané</span><span>Salades fraîches</span><span>Buffets traiteur</span><span>4 rue Pasteur</span><span>Régaler vos papilles</span>
+</div></div>
+
+<section id="bienvenue">
+ <div class="wrap bienvenue">
+  <div class="rv">
+   <span class="eyebrow">Bienvenue chez Olivier</span>
+   <h2>Une cuisine qui sort du feu, rue Pasteur.</h2>
+   <p class="citation">« Bonjour à tous et bienvenue sur ma page ☺️ »</p>
+   <p>Snackpasteur, c'est le snack du 4 rue Pasteur à Saint-Denis, tenu par Olivier, traiteur. Sur sa page, plus de 1&nbsp;500 personnes suivent ses plats : des sautés bien laqués, des rougails qui mijotent, des bols généreux et des burgers dorés.</p>
+   <div class="signature">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#5a9e3c"/><path d="M18 36c4 8 24 8 28 0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M20 28h24" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M26 22c0-4 4-6 6-6s6 2 6 6" stroke="#ead7b9" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+    <p><b>Recommandé à 100 %</b> par les clients qui ont laissé un avis sur sa page Facebook.</p>
+   </div>
+  </div>
+  <figure class="polaroid rv"><span class="scotch"></span><img src="img/poulet-pane.webp" alt="Bols de pâtes au poulet pané, tomates cerises et oignons verts" loading="lazy"><figcaption>Bols poulet pané · menu du jour</figcaption></figure>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V22c120-14 240-20 360-12s240 22 360 18 240-22 360-24 240 8 360 14v22z" fill="#2a2d2a"/></svg>
+<section class="ardoise-sec" id="ardoise">
+ <div class="wrap">
+  <div class="ardoise-grid">
+   <div class="ardoise-txt rv">
+    <span class="eyebrow">Tous les jours de semaine</span>
+    <h2>Le menu du jour, à la craie.</h2>
+    <p>Chaque jour de semaine, Olivier publie <b>« Le menu du jour »</b> sur sa page Facebook, en photos. Un coup d'œil et vous savez déjà ce qui vous attend à midi.</p>
+    <p>Et ici, l’ardoise du site se met à jour en un instant, en même temps que Facebook.</p>
+   </div>
+   <div class="ardoise rv" role="img" aria-label="Ardoise du menu du jour">
+    <p class="titre"><u>Le menu du jour</u></p>
+    <ul>
+     <li>Bols de pâtes au saumon</li>
+     <li>Bols de pâtes au poulet pané</li>
+     <li>Le plat mijoté du jour</li>
+     <li>Burgers, salades &amp; sandwichs</li>
+    </ul>
+    <p class="craie">Exemple d'ardoise d'après les photos publiées · le vrai menu est sur Facebook</p>
+   </div>
+  </div>
+  <div class="fil" tabindex="0" aria-label="Photos des menus du jour publiés">
+   <figure><img src="img/saucisses.webp" alt="Plat mijoté à la tomate, oignons verts" loading="lazy"><figcaption>Menu du jour · 9 novembre</figcaption></figure>
+   <figure><img src="img/saumon.webp" alt="Bols de pâtes au saumon et tomates cerises" loading="lazy"><figcaption>Menu du jour · 9 novembre</figcaption></figure>
+   <figure><img src="img/wok.webp" alt="Sauté laqué aux oignons, poivrons et carottes" loading="lazy"><figcaption>Menu du jour · 9 novembre</figcaption></figure>
+   <figure><img src="img/plat-a.webp" alt="Plat à la tomate parsemé d'oignons verts" loading="lazy"><figcaption>Menu du jour · 6 novembre</figcaption></figure>
+   <figure><img src="img/poelee.webp" alt="Poêlée de légumes, champignons noirs et viande" loading="lazy"><figcaption>Menu du jour · 6 novembre</figcaption></figure>
+   <figure><img src="img/plat-b.webp" alt="Plat doré couvert d'oignons verts" loading="lazy"><figcaption>Menu du jour · 5 novembre</figcaption></figure>
+   <figure><img src="img/plat-c.webp" alt="Plat à la tomate et piments verts" loading="lazy"><figcaption>Menu du jour · 5 novembre</figcaption></figure>
+   <figure><img src="img/plat-d.webp" alt="Plat mijoté à la tomate et aux oignons" loading="lazy"><figcaption>Menu du jour · 4 novembre</figcaption></figure>
+   <figure><img src="img/boeuf.webp" alt="Sauté de viande, carottes et champignons noirs" loading="lazy"><figcaption>Menu du jour · 4 novembre</figcaption></figure>
+  </div>
+  <p class="glisse">Faites glisser <b>→</b> photos publiées par Snackpasteur sur Facebook</p>
+ </div>
+</section>
+
+<section class="bols-sec" id="emporter">
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">À emporter</span>
+   <h2>Des bols prêts à partir.</h2>
+   <p>Bols kraft bien remplis, salades avec leur sauce à part : de quoi déjeuner au bureau ou au grand air.</p>
+  </div>
+  <div class="bols">
+   <article class="bol rv"><img src="img/saumon.webp" alt="Bol de pâtes au saumon" loading="lazy"><div><small>Bol</small><h3>Pâtes &amp; saumon</h3><p>Tomates cerises, oignons verts.</p></div></article>
+   <article class="bol rv"><img src="img/poulet-pane.webp" alt="Bol de pâtes au poulet pané" loading="lazy"><div><small>Bol</small><h3>Poulet pané</h3><p>Sur un lit de pâtes crémeuses.</p></div></article>
+   <article class="bol rv"><img src="img/salade.webp" alt="Salade au thon, œuf, maïs et tomates" loading="lazy"><div><small>Salade</small><h3>Salade composée</h3><p>Œuf, maïs, tomates, sauce à part.</p></div></article>
+   <article class="bol rv"><img src="img/bols.webp" alt="Bols de poulet laqué" loading="lazy"><div><small>Bol</small><h3>Poulet laqué</h3><p>Bien laqué, oignons verts.</p></div></article>
+  </div>
+  <div class="signature-verte rv">
+   <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="20" cy="22" r="10" fill="none" stroke="#9fd27f" stroke-width="5"/><circle cx="42" cy="30" r="8" fill="none" stroke="#5a9e3c" stroke-width="5"/><circle cx="26" cy="46" r="9" fill="none" stroke="#9fd27f" stroke-width="5"/></svg>
+   <p>La touche maison qu'on repère sur presque chaque photo : <b>une pluie d'oignons verts frais</b>, ajoutée juste avant de servir.</p>
+  </div>
+ </div>
+</section>
+
+<section id="burgers">
+ <div class="wrap burgers">
+  <div class="rv">
+   <span class="eyebrow">Côté snack</span>
+   <h2>Burgers dorés, pain au sésame.</h2>
+   <p>Poulet pané croustillant, cheddar fondant, tomate et salade dans un pain moelleux au sésame : le burger de Snackpasteur, publié dans le menu du 6 novembre.</p>
+   <ul class="puces">
+    <li>Au snack du 4 rue Pasteur</li>
+    <li>Pour le déjeuner ou la pause</li>
+    <li>Annoncé avec le menu du jour sur Facebook</li>
+   </ul>
+  </div>
+  <figure class="rv"><img src="img/hero.webp" alt="Burgers au poulet pané et cheddar" loading="lazy"><span class="etiquette">menu du jour</span></figure>
+ </div>
+</section>
+
+<section class="traiteur-sec" id="traiteur">
+ <div class="wrap traiteur">
+  <figure class="buffet rv"><img src="img/buffet.webp" alt="Buffet traiteur : mini-burgers au sésame, samoussas, feuilletés et fruits" loading="lazy"><figcaption>Buffet dressé par Snackpasteur · publié le 31 août 2025</figcaption></figure>
+  <div class="rv">
+   <span class="eyebrow">by Olivier traiteur</span>
+   <h2>Le traiteur de vos évènements.</h2>
+   <p>Olivier signe aussi des buffets : mini-burgers au sésame, plateaux de samoussas dorés, feuilletés, fruits frais, le tout dressé avec soin sur bois et verdure.</p>
+   <div class="tags"><span>Mini-burgers</span><span>Samoussas</span><span>Feuilletés</span><span>Plateaux apéritifs</span><span>Buffets</span></div>
+   <div class="ctas" style="margin-top:1.6rem">
+    <a class="btn btn-main" href="https://m.me/61550289574811">Demander un devis sur Messenger</a>
+    <a class="btn btn-dark" href="mailto:snackpasteur974@gmail.com?subject=Demande%20traiteur">Écrire un e-mail</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="avis">
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">Ils en parlent</span>
+   <h2>Le goût, tout simplement.</h2>
+  </div>
+  <div class="avis">
+   <div class="bulle rv"><q>Super bon repas 😉 Le goût oté 😜</q><small>Avis publié sur la page Facebook</small></div>
+   <div class="bulle rv"><q>très bon endroit convivial […] les repas et sandwich de qualité</q><small>Avis publié sur la page Facebook</small></div>
+  </div>
+  <span class="reco rv">✓ Recommandé à 100 % sur Facebook</span>
+ </div>
+</section>
+
+<section class="fetes" id="fetes">
+ <svg class="guirlande" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 8 Q50 46 100 12 T200 12 T300 12 T400 8" stroke="#6b4a2d" stroke-width="1.5" fill="none"/>
+  <circle cx="25" cy="24" r="4" fill="#f0c46a"/><circle cx="60" cy="34" r="4" fill="#d9432b"/><circle cx="100" cy="14" r="4" fill="#9fd27f"/><circle cx="140" cy="30" r="4" fill="#f0c46a"/><circle cx="175" cy="24" r="4" fill="#d9432b"/><circle cx="215" cy="20" r="4" fill="#9fd27f"/><circle cx="250" cy="32" r="4" fill="#f0c46a"/><circle cx="290" cy="16" r="4" fill="#d9432b"/><circle cx="330" cy="28" r="4" fill="#9fd27f"/><circle cx="370" cy="22" r="4" fill="#f0c46a"/>
+ </svg>
+ <div class="wrap rv">
+  <span class="eyebrow">Les fêtes de fin d'année</span>
+  <h2>Noël et le Nouvel An, version traiteur.</h2>
+  <p class="intro">Repas de famille, apéro du bureau, buffet du réveillon : confiez vos tables de fêtes à Olivier et profitez pleinement de vos invités.</p>
+  <div class="idees">
+   <div class="idee"><svg viewBox="0 0 36 36" fill="none" stroke="#f0c46a" stroke-width="2"><circle cx="18" cy="18" r="13"/><path d="M11 18h14M18 11v14"/></svg><b>Buffet des fêtes</b><span>Mini-burgers, samoussas, feuilletés : un buffet dressé pour vos invités.</span></div>
+   <div class="idee"><svg viewBox="0 0 36 36" fill="none" stroke="#f0c46a" stroke-width="2"><rect x="7" y="12" width="22" height="16" rx="3"/><path d="M12 12V9h12v3"/></svg><b>Apéro du bureau</b><span>Des plateaux à partager pour fêter l'année avec l'équipe.</span></div>
+   <div class="idee"><svg viewBox="0 0 36 36" fill="none" stroke="#f0c46a" stroke-width="2"><path d="M18 5l3.5 8 8.5.8-6.4 5.6 1.9 8.4L18 23.5 10.5 27.8l1.9-8.4L6 13.8l8.5-.8z"/></svg><b>Repas de famille</b><span>Un plat mijoté et des bols généreux pour toute la tablée.</span></div>
+  </div>
+  <div class="ctas">
+   <a class="btn btn-main" href="https://m.me/61550289574811">Commander pour les fêtes</a>
+   <a class="btn btn-line" href="mailto:snackpasteur974@gmail.com?subject=Commande%20pour%20les%20f%C3%AAtes&amp;body=Bonjour%20Olivier%2C%20je%20voudrais%20commander%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e.">Par e-mail</a>
+  </div>
+  <p class="note">Menus et disponibilités des fêtes à voir directement avec Olivier.</p>
+ </div>
+</section>
+
+<section id="infos">
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">Nous trouver</span>
+   <h2>4 rue Pasteur, Saint-Denis.</h2>
+  </div>
+  <div class="infos">
+   <div class="carte-info rv">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Adresse</h3>
+    <p>Snackpasteur by Olivier traiteur<br>4 rue Pasteur<br>97400 Saint-Denis, La Réunion</p>
+    <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=4%20rue%20Pasteur%2097400%20Saint-Denis%20R%C3%A9union">Itinéraire</a>
+   </div>
+   <div class="carte-info rv">
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Contact</h3>
+    <p>E-mail : <a href="mailto:snackpasteur974@gmail.com">snackpasteur974@gmail.com</a></p>
+    <p>Facebook : <a href="https://www.facebook.com/p/Snackpasteur-by-olivier-traiteur-61550289574811/">Snackpasteur by olivier traiteur</a></p>
+    <p>Instagram : <a href="https://www.instagram.com/snackpasteur_by_olivier974/">@snackpasteur_by_olivier974</a></p>
+    <a class="btn btn-main" href="https://m.me/61550289574811">Écrire sur Messenger</a>
+   </div>
+  </div>
+  <div class="plan rv">
+   <div><b style="font-family:'Bricolage Grotesque';font-size:1.25rem">Le menu du jour</b><br><span style="color:#c9bcae;font-size:.92rem">est publié en photos sur la page Facebook.</span></div>
+   <a class="btn btn-main" href="https://www.facebook.com/p/Snackpasteur-by-olivier-traiteur-61550289574811/">Voir sur Facebook</a>
+  </div>
+ </div>
+</section>
+
+</main>
+<footer>
+ <b>Snackpasteur by Olivier traiteur</b>
+ 4 rue Pasteur · Saint-Denis · La Réunion<br><br>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Snackpasteur by Olivier traiteur.
+</footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* vapeur douce qui monte + quelques rondelles d'oignon vert */
+const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+function n(i){return{x:Math.random()*W,y:H+Math.random()*H,r:i<22?Math.random()*26+14:Math.random()*3+4,v:Math.random()*.35+.15,a:Math.random()*6.28,s:i>=22,o:i<22?Math.random()*.05+.025:.22}}
+for(let i=0;i<30;i++){const p=n(i);p.y=Math.random()*H;P.push(p)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(let i=0;i<P.length;i++){const p=P[i];p.y-=p.v;p.a+=.012;p.x+=Math.sin(p.a)*.35;
+ if(p.y<-60){P[i]=n(i);continue}
+ const k=Math.min(1,p.y/H*1.4);
+ if(p.s){x.globalAlpha=p.o*k;x.strokeStyle=i%2?'#5a9e3c':'#9fd27f';x.lineWidth=2;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.stroke()}
+ else{const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,250,240,'+(p.o*k)+')');g.addColorStop(1,'rgba(255,250,240,0)');x.globalAlpha=1;x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}}
+x.globalAlpha=1;requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Snackpasteur by Olivier traiteur" defer></script>
+</body>
+</html>
