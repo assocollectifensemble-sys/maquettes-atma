@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snack bar du Moulin à Eau · Tour des Roches, Saint-Paul</title>
+<meta name="description" content="Snack bar du Moulin à Eau, 530 chemin Tour des Roches à Saint-Paul : cuisine créole et chinoise, sur place ou à emporter, dans le cadre verdoyant de l'étang de Saint-Paul. 0692 54 82 15.">
+<meta property="og:title" content="Snack bar du Moulin à Eau · Tour des Roches, Saint-Paul">
+<meta property="og:description" content="Explorez, savourez, détendez-vous : cuisine créole et chinoise au cœur de Tour des Roches.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-bar-du-moulin-a-eau-saint-paul/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-bar-du-moulin-a-eau-saint-paul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Outfit:wght@300;400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#f7d117;--jaune-c:#fff3b8;--vert:#1f8a3b;--vert-f:#0f4a24;--rouge:#d7262b;--turq:#2bb3c4;--turq-f:#11707c;--creme:#fffaf0;--txt:#22301f;--doux:#5f6b5a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:800;line-height:1.08;color:var(--vert-f)}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem;font-weight:600}
+.hand{font-family:'Caveat',cursive;font-weight:700;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600;color:var(--rouge)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert-f);color:var(--jaune-c);text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--jaune);color:var(--vert-f);box-shadow:0 8px 24px -8px rgba(247,209,23,.8);animation:respire 3.2s ease-in-out infinite}
+.btn-wa{background:#25d366;color:#06341a}
+.btn-ghost{border:2px solid rgba(255,255,255,.75);color:#fff}
+@keyframes respire{50%{box-shadow:0 8px 34px -4px rgba(247,209,23,.95);transform:scale(1.03)}}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,820px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:7rem 0 4.5rem}
+.hero-bg{position:absolute;inset:0;background:url(img/plat-rouge.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.18) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,74,36,.25) 0%,rgba(15,74,36,.15) 35%,rgba(10,40,20,.88) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{color:var(--jaune)}
+.hero h1{color:#fff;font-size:clamp(2.6rem,11vw,5.6rem);margin:.5rem 0 .6rem;text-shadow:0 3px 24px rgba(0,0,0,.35)}
+.hero h1 span{display:block;color:var(--jaune)}
+.hero .hand{font-size:clamp(1.7rem,6.5vw,2.6rem);color:var(--jaune-c)}
+.hero p.lead{max-width:34rem;margin:.9rem 0 1.6rem;font-size:1.05rem;color:#eef6e6}
+.cta{display:flex;flex-wrap:wrap;gap:.7rem}
+.fade{opacity:0;transform:translateY(18px);animation:up 1.1s .2s forwards}
+.fade.d2{animation-delay:.55s}.fade.d3{animation-delay:.9s}
+@keyframes up{to{opacity:1;transform:none}}
+/* VAGUE */
+.vague{display:block;width:100%;height:46px;margin-top:-45px;position:relative;z-index:2}
+/* BANDEAU */
+.bandeau{background:var(--jaune);color:var(--vert-f);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;border-block:3px solid var(--vert)}
+.bandeau div{display:inline-block;animation:defile 34s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau i{color:var(--rouge);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* LIEU */
+.lieu-grid{display:grid;gap:2rem;align-items:center}
+.photo-cadre{border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(15,74,36,.55);position:relative}
+.photo-cadre img{width:100%;height:auto}
+.photo-cadre figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(255,250,240,.92);color:var(--vert-f);font-size:.78rem;padding:.3rem .7rem;border-radius:99px;font-weight:600}
+blockquote{border-left:4px solid var(--turq);padding:.4rem 0 .4rem 1rem;margin:1.2rem 0;color:var(--doux);font-style:italic}
+blockquote cite{display:block;font-style:normal;font-size:.8rem;margin-top:.4rem;color:var(--turq-f)}
+.moulin{display:flex;gap:1rem;align-items:center;margin-top:1.4rem;background:#eaf7f5;border-radius:18px;padding:1rem}
+.moulin svg{flex:0 0 86px;height:86px}
+.moulin .roue{transform-origin:43px 43px;animation:tourne 14s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.moulin small{display:block;font-size:.72rem;color:var(--turq-f);letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem}
+/* MENU */
+.menu{background:var(--vert-f);color:#eaf4e2;overflow:hidden}
+.menu h2{color:#fff}
+.menu .eyebrow{color:var(--jaune)}
+.ardoise{background:linear-gradient(160deg,#173d24,#0c2a17);border:2px solid rgba(247,209,23,.45);border-radius:24px;padding:1.6rem 1.4rem;box-shadow:inset 0 0 40px rgba(0,0,0,.35);position:relative}
+.ardoise .hand.titre{font-size:2.1rem;color:var(--jaune)}
+.ardoise ul{list-style:none;margin:1rem 0 1.2rem}
+.ardoise li{font-family:'Caveat',cursive;font-size:1.65rem;font-weight:600;line-height:1.25;padding:.15rem 0 .15rem 2rem;position:relative;color:#fff}
+.ardoise li::before{content:"";position:absolute;left:.2rem;top:.6rem;width:.95rem;height:.5rem;border-left:3px solid var(--jaune);border-bottom:3px solid var(--jaune);transform:rotate(-45deg)}
+.ardoise li em{display:block;font-size:1.25rem;color:var(--jaune-c);font-style:normal}
+.tampon{display:inline-block;background:var(--rouge);color:#fff;font-weight:600;padding:.55rem 1rem;border-radius:12px;transform:rotate(-2deg);font-size:.95rem;box-shadow:0 6px 16px -6px rgba(0,0,0,.5)}
+.paie{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.paie span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:.35rem .9rem;font-size:.86rem}
+.note{font-size:.85rem;color:#b9d4b4;margin-top:1rem}
+/* GALERIE */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 5vw 1.4rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(74vw,320px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;background:#ddd;box-shadow:0 18px 36px -20px rgba(0,0,0,.5);transition:transform .35s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.galerie img{width:100%;height:400px;object-fit:cover}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;background:linear-gradient(transparent,rgba(10,40,20,.85));color:#fff;font-family:'Caveat',cursive;font-size:1.6rem;font-weight:700;line-height:1.1}
+.galerie figcaption small{display:block;font-family:'Outfit';font-size:.75rem;font-weight:400;opacity:.85;letter-spacing:.04em}
+.swipe{text-align:center;font-size:.82rem;color:var(--doux)}
+/* COEUR */
+.coeur{background:linear-gradient(180deg,#eaf7f5,var(--creme))}
+.carte-coeur{background:#fff;border-radius:24px;padding:1.7rem 1.4rem;box-shadow:0 20px 44px -26px rgba(17,112,124,.6);border-top:6px solid var(--turq)}
+.carte-coeur p{margin-top:.8rem}
+.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.6rem}
+.chiffres div{background:var(--jaune-c);border-radius:18px;padding:1rem;text-align:center}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2rem;color:var(--vert-f);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+/* NOEL */
+.noel{background:radial-gradient(circle at 20% 10%,#2a6b3a,#0f3d20 70%);color:#f1f7e8;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.guirlande{display:flex;justify-content:space-between;margin-bottom:1.8rem}
+.guirlande i{width:12px;height:12px;border-radius:50%;background:var(--jaune);box-shadow:0 0 12px var(--jaune);animation:brille 2.4s ease-in-out infinite}
+.guirlande i:nth-child(3n){background:var(--rouge);box-shadow:0 0 12px var(--rouge);animation-delay:.8s}
+.guirlande i:nth-child(3n+1){animation-delay:1.6s}
+@keyframes brille{50%{opacity:.35}}
+.noel-cartes{display:grid;gap:1rem;margin:1.6rem 0}
+.noel-cartes div{background:rgba(255,255,255,.08);border:1px solid rgba(247,209,23,.35);border-radius:18px;padding:1.1rem 1.2rem}
+.noel-cartes h3{color:var(--jaune);font-size:1.15rem;margin-bottom:.3rem}
+/* INFOS */
+.infos-grid{display:grid;gap:1rem}
+.info{background:#fff;border-radius:20px;padding:1.3rem 1.3rem;box-shadow:0 14px 30px -22px rgba(15,74,36,.6);border-left:5px solid var(--jaune)}
+.info h3{margin-bottom:.35rem}
+.info a{color:var(--vert);font-weight:600;word-break:break-word}
+.info p+p{margin-top:.3rem}
+footer{background:var(--vert-f);color:#cfe3c9;text-align:center;font-size:.82rem;padding:2.2rem 1rem 2.6rem;line-height:1.6}
+footer b{color:var(--jaune)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.on{opacity:1;transform:none}
+@media(min-width:820px){
+ .lieu-grid{grid-template-columns:1.1fr 1fr;gap:3.5rem}
+ .menu-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center}
+ .noel-cartes{grid-template-columns:repeat(3,1fr)}
+ .infos-grid{grid-template-columns:repeat(2,1fr)}
+ .galerie{justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.fade{opacity:1;transform:none}
+ canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snack bar du Moulin à Eau</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Un plat mijoté parsemé de cives, au bain-marie du snack"></div>
+  <div class="wrap">
+    <p class="eyebrow fade">Tour des Roches · Saint-Paul · La Réunion</p>
+    <h1 class="fade d2">Snack bar <span>du Moulin à Eau</span></h1>
+    <p class="hand fade d2">Explorez · Savourez · Détendez-vous</p>
+    <p class="lead fade d3">Cuisine créole et chinoise, sur place ou à emporter, dans le cadre verdoyant de l'étang de Saint-Paul. Bienvenue chez nous 😉</p>
+    <div class="cta fade d3">
+      <a class="btn btn-main" href="tel:+262692548215">Réserver · 0692 54 82 15</a>
+      <a class="btn btn-ghost" href="#menu">Voir le menu du jour</a>
+    </div>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24 C240 0 480 46 720 24 S1200 0 1440 24 V46 H0Z" fill="#f7d117"/></svg>
+
+<div class="bandeau" aria-label="Quelques plats du snack"><div>
+<span>Rougail saucisses</span><i>✦</i><span>Vindaye thon</span><i>✦</i><span>Coq massalé</span><i>✦</i><span>Carry espadon</span><i>✦</i><span>Shop suey poisson</span><i>✦</i><span>Vindaye marlin</span><i>✦</i><span>Tacos sarcive poulet</span><i>✦</i><span>Sandwiches</span><i>✦</i>
+<span>Rougail saucisses</span><i>✦</i><span>Vindaye thon</span><i>✦</i><span>Coq massalé</span><i>✦</i><span>Carry espadon</span><i>✦</i><span>Shop suey poisson</span><i>✦</i><span>Vindaye marlin</span><i>✦</i><span>Tacos sarcive poulet</span><i>✦</i><span>Sandwiches</span><i>✦</i>
+</div></div>
+
+<main>
+<section id="lieu">
+  <div class="wrap lieu-grid">
+    <figure class="photo-cadre rv">
+      <img src="img/terrasse.webp" alt="La terrasse du Snack bar du Moulin à Eau : tables et chaises jaunes, parasols jaunes et verts, enseigne turquoise" width="880" height="660" loading="lazy">
+      <figcaption>Notre terrasse, sous les parasols</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">Le lieu</p>
+      <h2>Une pause verte au bord de l'étang</h2>
+      <p>Chaises jaunes, parasols aux couleurs du soleil et des palmiers tout autour : au 530 chemin Tour des Roches, le snack vous accueille tous les jours, à 5 minutes de la rocade.</p>
+      <blockquote>« Le quartier Tour des Roches est resté un lieu authentique de La Réunion où les premiers habitants s'installèrent au milieu du XVIIe siècle. »<cite>Office de Tourisme de l'Ouest</cite></blockquote>
+      <p>Le bon plan : une balade jusqu'au Bassin Vital, puis une assiette créole bien méritée à l'ombre.</p>
+      <div class="moulin">
+        <svg viewBox="0 0 86 86" aria-hidden="true">
+          <circle cx="43" cy="43" r="42" fill="#d6f0ec"/>
+          <path d="M0 64 Q22 56 43 64 T86 64 V86 H0Z" fill="#2bb3c4" opacity=".55"/>
+          <g class="roue" fill="none" stroke="#11707c" stroke-width="3">
+            <circle cx="43" cy="43" r="26"/><circle cx="43" cy="43" r="6" fill="#11707c"/>
+            <path d="M43 17V69M17 43H69M24.6 24.6L61.4 61.4M61.4 24.6L24.6 61.4"/>
+            <path d="M43 17h7M69 43v7M43 69h-7M17 43v-7M61.4 24.6l5 5M61.4 61.4l-5 5M24.6 61.4l-5-5M24.6 24.6l5-5" stroke="#f7d117" stroke-width="5"/>
+          </g>
+        </svg>
+        <p>Un clin d'œil au moulin à eau de Tour des Roches, qui donne son nom au lieu.<small>Illustration</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap menu-grid">
+    <div class="rv">
+      <p class="eyebrow">Le menu du jour</p>
+      <h2>Chaque jour, l'ardoise change</h2>
+      <p>Carris, rougails, vindayes, plats chinois sautés au wok, tacos et sandwiches : le menu du jour s'affiche sur notre page Facebook. Exemple avec celui du mercredi 11 novembre.</p>
+      <div class="paie"><span>CB</span><span>Espèces</span><span>Tickets restaurant</span><span>Sur place</span><span>À emporter</span></div>
+    </div>
+    <div class="ardoise rv">
+      <p class="hand titre">Menu du mercredi 11 novembre</p>
+      <ul>
+        <li>Rougail saucisses</li>
+        <li>Vindaye thon</li>
+        <li>Coq massalé</li>
+        <li>Nos salades et crudités</li>
+        <li>Nos tacos<em>sarcive poulet ou tacos sarcive</em></li>
+        <li>Nos sandwiches<em>et bien d'autres gourmandises !</em></li>
+      </ul>
+      <span class="tampon">Ouvert en journée continue jusqu'à 18 h</span>
+      <p class="note">Réservations : <a href="tel:+262692548215" style="color:#fff;font-weight:600">0692 54 82 15</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="cuisine" style="padding-bottom:3rem">
+  <div class="wrap rv">
+    <p class="eyebrow">En cuisine</p>
+    <h2>Ça mijote, ça saute au wok</h2>
+    <p style="max-width:36rem;margin-bottom:1.6rem">Créole et chinoise, la cuisine du Moulin à Eau se partage en direct sur notre page.</p>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/vindaye-marlin.webp" alt="Vindaye marlin saisi au wok" loading="lazy"><figcaption>Vindaye marlin<small>en direct, au wok 🔥</small></figcaption></figure>
+    <figure><img src="img/carry-espadon.webp" alt="Carry espadon aux feuilles de caloupilé" loading="lazy"><figcaption>Carry espadon<small>dans la marmite</small></figcaption></figure>
+    <figure><img src="img/shop-suey-poisson.webp" alt="Shop suey poisson aux poivrons et cives" loading="lazy"><figcaption>Shop suey poisson<small>sauté minute</small></figcaption></figure>
+    <figure><img src="img/wok-legumes.webp" alt="Plat sauté aux carottes, poivrons et oignons" loading="lazy"><figcaption>Au bain-marie<small>carottes, poivrons, oignons</small></figcaption></figure>
+    <figure><img src="img/carry-cives.webp" alt="Carry parsemé de cives" loading="lazy"><figcaption>Un carry bien doré<small>parsemé de cives</small></figcaption></figure>
+    <figure><img src="img/marmite.webp" alt="Grande marmite de viande épicée" loading="lazy"><figcaption>La marmite<small>épices et patience</small></figcaption></figure>
+    <figure><img src="img/carry-poivrons.webp" alt="Plat mijoté aux poivrons verts et cives" loading="lazy"><figcaption>Mijoté maison<small>poivrons et cives</small></figcaption></figure>
+  </div>
+  <p class="swipe">← faites glisser →</p>
+</section>
+
+<section class="coeur">
+  <div class="wrap">
+    <div class="carte-coeur rv">
+      <p class="eyebrow">Un snack qui a du cœur</p>
+      <h2 style="font-size:clamp(1.7rem,5vw,2.5rem)">Le téléphone retrouvé</h2>
+      <p>Le 26 août, une famille venue déjeuner a perdu son téléphone chez nous, le jour même de son vol retour. Le snack a lancé un appel sur sa page, l'appel a circulé… et grâce à un client, la famille a été retrouvée :</p>
+      <blockquote style="color:var(--txt)">« Grâce au client on n'a retrouvé la cliente merciii à vous tous ils partiront le cœur trankil »<cite>Snack bar du Moulin à Eau, sur sa page Facebook</cite></blockquote>
+      <p>Ici, on cuisine bien, et on prend soin de chacun. Belle journée à tous ♥</p>
+    </div>
+    <div class="chiffres rv">
+      <div><b>17 K</b><span>abonnés Facebook</span></div>
+      <div><b>7 j/7</b><span>pour le service du midi</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow rv">Les fêtes au Moulin à Eau</p>
+    <h2 class="rv">Un repas de Noël créole, en toute simplicité</h2>
+    <p class="rv" style="max-width:38rem">Réunissez la famille, les collègues ou les copains autour d'un bon carry, sous les palmiers de Tour des Roches. Ou repartez avec vos plats à emporter pour la table de fête.</p>
+    <div class="noel-cartes">
+      <div class="rv"><h3>Repas de groupe</h3><p>Réservez votre tablée pour fêter la fin d'année ensemble.</p></div>
+      <div class="rv"><h3>Plats à emporter</h3><p>Commandez vos carris et rougails pour régaler toute la famille.</p></div>
+      <div class="rv"><h3>Un moment à offrir</h3><p>Offrez un déjeuner au bord de l'étang de Saint-Paul.</p></div>
+    </div>
+    <div class="cta rv">
+      <a class="btn btn-wa" href="https://wa.me/262692548215?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20pour%20un%20repas%20de%20No%C3%ABl%20au%20Moulin%20%C3%A0%20Eau">Réserver sur WhatsApp</a>
+      <a class="btn btn-ghost" href="tel:+262692548215">0692 54 82 15</a>
+    </div>
+  </div>
+</section>
+
+<section id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Infos pratiques</p>
+    <h2 class="rv">On vous attend !</h2>
+    <div class="infos-grid">
+      <div class="info rv"><h3>Adresse</h3><p>530 chemin Tour des Roches<br>97460 Saint-Paul</p><p><a href="https://www.google.com/maps/search/?api=1&query=530%20chemin%20Tour%20des%20Roches%2097460%20Saint-Paul">Ouvrir l'itinéraire</a></p><p>En bus : Kar'Ouest, ligne 65</p></div>
+      <div class="info rv"><h3>Horaires</h3><p>Tous les jours, service du midi</p><p>Journée continue jusqu'à 18 h annoncée sur le menu du 11 novembre : le menu du jour et les horaires se suivent sur notre page.</p></div>
+      <div class="info rv"><h3>Réservations</h3><p><a href="tel:+262692548215">0692 54 82 15</a></p><p><a href="https://wa.me/262692548215">Écrire sur WhatsApp</a></p><p><a href="mailto:snack-bar-moulineau@hotmail.fr">snack-bar-moulineau@hotmail.fr</a></p></div>
+      <div class="info rv"><h3>Suivez-nous</h3><p><a href="https://www.facebook.com/p/Snack-bar-du-moulin-%C3%A0-eau-100095167692028/">Facebook · Snack bar du moulin à eau</a></p><p>Menus du jour, plats en direct et bonne humeur.</p></div>
+    </div>
+    <div class="cta rv" style="margin-top:2rem;justify-content:center">
+      <a class="btn btn-main" href="tel:+262692548215">Réserver une table</a>
+      <a class="btn btn-wa" href="https://wa.me/262692548215?text=Bonjour%2C%20quel%20est%20le%20menu%20du%20jour%20%3F">Le menu du jour ?</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><b>Snack bar du Moulin à Eau</b> · Cuisine créole et chinoise · Tour des Roches, Saint-Paul<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Snack bar du Moulin à Eau.</footer>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true,N=22;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}
+rs();addEventListener('resize',rs);
+function mk(i){return{x:Math.random()*W,y:H+Math.random()*H*(i===undefined?1:0.2),r:18+Math.random()*34,v:.25+Math.random()*.45,a:0,ph:Math.random()*6.3,m:.04+Math.random()*.05}}
+for(var i=0;i<N;i++){var p=mk();p.y=Math.random()*H;P.push(p)}
+function f(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.x+=Math.sin(t/1400+p.ph)*.35;p.r+=.03;
+var life=p.y/H;var al=Math.max(0,Math.min(1,life*1.4))*p.m;
+var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,255,255,'+al+')');g.addColorStop(1,'rgba(255,255,255,0)');
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill();
+if(p.y<-p.r)P[i]=mk(0)}
+requestAnimationFrame(f)}
+requestAnimationFrame(f);
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Snack bar du Moulin à Eau" defer></script>
+</body>
+</html>
