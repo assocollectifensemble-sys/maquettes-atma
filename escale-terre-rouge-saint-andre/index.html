@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Escale Terre Rouge · Maison de vacances à Saint-André, La Réunion</title>
+<meta name="description" content="Escale Terre Rouge, maison T3 indépendante de 55 m² à Saint-André : deux chambres climatisées, bureau avec fibre, jardin privatif, terrasse et barbecue. Le point de départ idéal pour Salazie et l'Est réunionnais.">
+<meta property="og:title" content="Escale Terre Rouge · Saint-André, La Réunion">
+<meta property="og:description" content="Une maison T3 de 55 m² avec jardin privatif, terrasse et barbecue, au cœur de Saint-André, pour savourer l'Est réunionnais.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/escale-terre-rouge-saint-andre/img/og-escale-terre-rouge.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/escale-terre-rouge-saint-andre/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7e2416">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#f6ead0;--sable:#ecd6aa;--lin:#fbf4e4;--terre:#a3281c;--brique:#7e2416;--cacao:#43200f;--olive:#55602a;--feuille:#6f8a35;--ocre:#bd7a2e;--lagon:#3f9fb4;--txt:#3d2416;--doux:#7a5a44}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;color:var(--cacao);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.35rem}
+.main-script{font-family:Caveat,cursive;color:var(--terre);font-weight:500}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--terre);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--cacao);color:var(--sable);text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#terre{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.03em;font-size:.95rem;transition:.35s;text-align:center}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--terre);color:#fff;box-shadow:0 14px 30px -14px rgba(126,36,22,.9);animation:souffle 5s ease-in-out infinite}
+.btn-main:hover{background:var(--brique)}
+@keyframes souffle{50%{box-shadow:0 18px 44px -10px rgba(189,122,46,.85);transform:scale(1.025)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff;background:rgba(67,32,15,.25);backdrop-filter:blur(4px)}
+.btn-line:hover{background:rgba(255,255,255,.18)}
+.btn-dark{border:1.5px solid var(--cacao);color:var(--cacao)}
+.btn-dark:hover{background:var(--cacao);color:var(--creme)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* HERO */
+.hero{min-height:min(100svh,880px);position:relative;display:flex;align-items:flex-end;overflow:hidden;color:#fff;padding:7rem 0 4.5rem}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(67,32,15,.15) 0%,rgba(67,32,15,.05) 35%,rgba(67,32,15,.78) 78%,rgba(67,32,15,.92) 100%)}
+.hero-in{position:relative;z-index:2}
+.badge-logo{width:92px;height:92px;border-radius:50%;background:var(--creme);overflow:hidden;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);margin-bottom:1.2rem;border:3px solid rgba(255,255,255,.8)}
+.badge-logo img{width:100%;height:100%;object-fit:contain;padding:6px}
+.hero h1{color:#fff;font-size:clamp(3rem,13vw,6.6rem);letter-spacing:-.01em;font-weight:600;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 em{display:block;font-family:Caveat,cursive;font-style:normal;font-weight:500;color:var(--sable);font-size:.42em;letter-spacing:.02em;margin-top:.2rem}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.15rem,3.6vw,1.6rem);max-width:34rem;margin:1rem 0 1.8rem;color:#fff8ea;line-height:1.45}
+.hero .infos{margin-top:1.4rem;font-size:.86rem;color:var(--sable);letter-spacing:.04em}
+.apparait{opacity:0;transform:translateY(26px);animation:monte 1.4s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.3s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* BANDEAU */
+.bande{background:var(--brique);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Fraunces,serif;font-style:italic;font-size:1.15rem;position:relative;z-index:2}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.75rem;color:var(--ocre)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* ESPRIT */
+.esprit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.citation{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.8rem);color:var(--brique);border-left:3px solid var(--ocre);padding-left:1.2rem;margin:1.4rem 0;line-height:1.4}
+.citation small{display:block;font-family:Outfit,sans-serif;font-style:normal;font-size:.76rem;color:var(--doux);margin-top:.6rem;letter-spacing:.04em}
+.esprit p+p{margin-top:.9rem}
+.photo-arche{position:relative;max-width:430px;margin:auto;width:100%}
+.photo-arche .cadre{border-radius:230px 230px 22px 22px;overflow:hidden;aspect-ratio:4/5.4;box-shadow:0 40px 80px -40px rgba(67,32,15,.6)}
+.photo-arche img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s}
+.photo-arche:hover img{transform:scale(1.05)}
+.photo-arche::before{content:"";position:absolute;inset:-12px;border:1.5px solid var(--ocre);border-radius:242px 242px 30px 30px;opacity:.55}
+.photo-arche figcaption{position:absolute;left:.8rem;bottom:.9rem;background:rgba(251,244,228,.95);padding:.35rem .95rem;border-radius:999px;font-size:.8rem;font-weight:500;color:var(--cacao)}
+.note{position:absolute;right:-.6rem;top:1.6rem;background:var(--terre);color:#fff;border-radius:20px;padding:.75rem 1rem;text-align:center;box-shadow:0 18px 36px -16px rgba(126,36,22,.8);animation:flotte 6s ease-in-out infinite;z-index:2}
+.note b{display:block;font-family:Fraunces,serif;font-size:2rem;line-height:1}
+.note span{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:.25rem;line-height:1.3}
+@keyframes flotte{50%{transform:translateY(-8px) rotate(-2deg)}}
+/* TRANSITIONS */
+.vague{display:block;width:100%;height:56px}
+/* MAISON */
+.maison{background:var(--lin)}
+.pieces{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.2rem}
+.piece{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;box-shadow:0 20px 44px -34px rgba(67,32,15,.6);transition:transform .4s,box-shadow .4s;border-top:4px solid var(--sable)}
+.piece:hover{transform:translateY(-6px);box-shadow:0 28px 54px -32px rgba(67,32,15,.6);border-top-color:var(--terre)}
+.piece svg{width:42px;height:42px;color:var(--terre);margin-bottom:.7rem}
+.piece h3{margin-bottom:.35rem}
+.piece p{font-size:.95rem;color:var(--doux)}
+.chiffres{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+.chiffres span{background:var(--creme);border:1px solid var(--sable);border-radius:999px;padding:.4rem 1rem;font-size:.9rem;font-weight:500;color:var(--cacao)}
+/* DEHORS */
+.dehors{background:var(--olive);color:#f3efd9}
+.dehors h2{color:#fff}
+.dehors .eyebrow{color:var(--sable)}
+.dehors .intro{max-width:40rem;color:#e7e5c9}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 5vw 1.2rem;margin:0 calc(-5vw);scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;border-radius:22px;overflow:hidden;position:relative;background:#3b4220;box-shadow:0 24px 50px -30px rgba(0,0,0,.6)}
+.galerie figure.large{flex-basis:min(88vw,620px)}
+.galerie img{width:100%;height:440px;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.1rem .9rem;background:linear-gradient(transparent,rgba(30,22,8,.85));color:#fff;font-size:.9rem}
+.galerie figcaption b{display:block;font-family:Fraunces,serif;font-size:1.15rem;font-weight:600}
+.glisse{font-size:.82rem;color:var(--sable);letter-spacing:.06em;display:flex;align-items:center;gap:.5rem}
+.glisse i{display:inline-block;width:34px;height:2px;background:var(--sable);position:relative;animation:glisse 2.4s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(10px)}}
+/* AUTOUR */
+.autour-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2rem}
+.lieu{border-radius:20px;padding:1.4rem 1.2rem;background:linear-gradient(160deg,#fff,var(--lin));border:1px solid var(--sable);transition:.4s}
+.lieu:hover{transform:translateY(-5px);border-color:var(--ocre)}
+.lieu svg{width:46px;height:46px;margin-bottom:.6rem}
+.lieu h3{font-size:1.15rem}
+.lieu p{font-size:.9rem;color:var(--doux);margin-top:.3rem}
+.route{margin-top:2.4rem;background:var(--cacao);color:var(--sable);border-radius:24px;padding:1.8rem 1.6rem;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start}
+.route svg{width:46px;height:46px;color:var(--ocre)}
+.route h3{color:#fff;margin-bottom:.4rem}
+.route ol{padding-left:1.1rem;font-size:.93rem}
+.route li{margin:.25rem 0}
+/* TARIFS */
+.tarifs{background:var(--sable)}
+.prix-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+.prix{background:var(--lin);border-radius:24px;padding:1.6rem 1.4rem;text-align:center;position:relative;overflow:hidden;transition:.4s}
+.prix:hover{transform:translateY(-5px)}
+.prix.vedette{background:var(--terre);color:#fff}
+.prix.vedette h3,.prix.vedette b{color:#fff}
+.prix h3{font-size:1.1rem;letter-spacing:.06em;text-transform:uppercase;font-family:Outfit,sans-serif;font-weight:600}
+.prix b{display:block;font-family:Fraunces,serif;font-size:3rem;color:var(--brique);line-height:1.1;margin:.4rem 0 .2rem}
+.prix small{font-size:.85rem;opacity:.85}
+.pratique{display:flex;flex-wrap:wrap;gap:.6rem 1.6rem;justify-content:center;margin-top:1.8rem;font-size:.93rem;color:var(--cacao)}
+.pratique span::before{content:"✦ ";color:var(--terre)}
+/* NOEL */
+.noel{background:radial-gradient(120% 90% at 80% 0%,#9a3322 0%,var(--brique) 45%,#5a1a0f 100%);color:var(--creme);overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--sable)}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center;position:relative;z-index:2}
+.noel p{color:#f6e6cc;max-width:34rem}
+.noel ul{list-style:none;margin:1.2rem 0 1.8rem}
+.noel li{padding-left:1.6rem;position:relative;margin:.4rem 0}
+.noel li::before{content:"";position:absolute;left:0;top:.55em;width:.75rem;height:.75rem;border-radius:0 70% 0 70%;background:var(--feuille)}
+.carte-cadeau{background:var(--creme);color:var(--cacao);border-radius:22px;padding:1.6rem 1.4rem;box-shadow:0 30px 60px -28px rgba(0,0,0,.6);transform:rotate(-2.5deg);position:relative;animation:flotte 7s ease-in-out infinite;max-width:360px;margin:auto;width:100%}
+.carte-cadeau::before{content:"";position:absolute;top:-10px;left:50%;width:70px;height:20px;margin-left:-35px;background:var(--terre);border-radius:4px}
+.carte-cadeau .script-c{font-family:Caveat,cursive;font-size:2rem;color:var(--terre);line-height:1}
+.carte-cadeau h3{font-size:1.5rem;margin:.3rem 0 .6rem}
+.carte-cadeau p{color:var(--doux);font-size:.92rem}
+.carte-cadeau .pointilles{border-top:2px dashed var(--sable);margin:1rem 0 .8rem}
+.carte-cadeau small{font-size:.72rem;color:var(--doux)}
+.etoile{position:absolute;color:rgba(246,234,208,.35);font-size:1rem;animation:scintille 4s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.2;transform:scale(.7)}}
+/* CONTACT */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.coord{list-style:none;margin:1.2rem 0 1.8rem}
+.coord li{display:flex;gap:.9rem;align-items:flex-start;margin:.8rem 0}
+.coord svg{width:24px;height:24px;color:var(--terre);flex:none;margin-top:.15rem}
+.coord a{text-decoration:none;border-bottom:1px solid var(--sable);word-break:break-word}
+.carte-plan{border-radius:24px;overflow:hidden;background:var(--olive);position:relative;aspect-ratio:1/1;box-shadow:0 30px 60px -36px rgba(67,32,15,.7)}
+.carte-plan svg{width:100%;height:100%}
+.carte-plan figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(251,244,228,.95);border-radius:999px;padding:.3rem .9rem;font-size:.76rem;color:var(--cacao)}
+.pulse{transform-origin:center;transform-box:fill-box;animation:pulse 2.6s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+footer{background:var(--cacao);color:var(--sable);text-align:center;padding:2.6rem 1.2rem 6rem;font-size:.85rem}
+footer img{width:78px;height:78px;border-radius:50%;margin:0 auto 1rem;object-fit:contain;padding:5px;background:var(--creme)}
+.flottant{position:fixed;right:1rem;bottom:1rem;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.45);animation:souffle 4s ease-in-out infinite}
+.flottant svg{width:30px;height:30px;color:#fff}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .esprit,.noel-in,.contact-in{grid-template-columns:1fr}
+ .pieces{grid-template-columns:1fr 1fr}
+ .autour-grid{grid-template-columns:1fr 1fr}
+ .prix-grid{grid-template-columns:1fr}
+ .photo-arche{max-width:340px}
+}
+@media (max-width:520px){
+ body{font-size:16px}
+ .pieces{grid-template-columns:1fr}
+ .autour-grid{grid-template-columns:1fr}
+ .ctas .btn{width:100%}
+ .galerie img{height:400px}
+ .route{grid-template-columns:1fr}
+ .note{right:-.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.reveal{opacity:1;transform:none}
+ canvas#terre{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Escale Terre Rouge</div>
+<canvas id="terre" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <picture>
+  <source media="(max-width:640px)" srcset="img/cuisine-exterieure-mobile.webp">
+  <img src="img/cuisine-exterieure.webp" alt="La cuisine d'été couverte de l'Escale Terre Rouge, sa grande table et le jardin de bananiers">
+ </picture>
+ <div class="wrap hero-in">
+  <div class="badge-logo apparait"><img src="img/logo.webp" alt="Logo Escale Terre Rouge"></div>
+  <h1 class="apparait d2">Escale Terre Rouge<em>Saint-André, La Réunion</em></h1>
+  <p class="lead apparait d3">Une maison T3 indépendante de 55 m², son jardin privatif et sa cuisine d'été : votre camp de base tout en douceur pour savourer l'Est réunionnais.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-main" href="https://wa.me/262692705479?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20l%27Escale%20Terre%20Rouge" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Demander vos dates</a>
+   <a class="btn btn-line" href="tel:+262692705479"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>06 92 70 54 79</a>
+  </div>
+  <p class="infos apparait d4">76 rue de l'Oratoire · 97440 Saint-André · jusqu'à 4 personnes</p>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Maison T3 indépendante · 55 m²</span><span>Deux chambres climatisées</span><span>Bureau &amp; fibre pour télétravailler</span><span>Douche à l'italienne</span><span>Jardin privatif</span><span>Terrasse &amp; barbecue</span><span>Parking sécurisé</span>
+ <span>Maison T3 indépendante · 55 m²</span><span>Deux chambres climatisées</span><span>Bureau &amp; fibre pour télétravailler</span><span>Douche à l'italienne</span><span>Jardin privatif</span><span>Terrasse &amp; barbecue</span><span>Parking sécurisé</span>
+</div></div>
+
+<section id="esprit">
+ <div class="wrap esprit">
+  <div class="reveal">
+   <p class="eyebrow">L'esprit de la maison</p>
+   <h2>Ici, on ralentit.</h2>
+   <blockquote class="citation">« Un souffle d'air doux traverse le jardin… et déjà, l'Escale TERRE ROUGE vous invite à ralentir. »<small>— la présentation de l'Escale, Office de Tourisme de l'Est</small></blockquote>
+   <p>Au cœur de Saint-André, la vie réunionnaise se savoure dans un cocon chaleureux : un séjour lumineux et climatisé pour souffler après les découvertes, deux chambres calmes pour des nuits sereines, et un coin bureau relié à la fibre pour celles et ceux qui télétravaillent au soleil.</p>
+   <p>Un point de départ idéal pour un séjour en famille, entre amis ou en duo.</p>
+  </div>
+  <figure class="photo-arche reveal">
+   <div class="note"><b>9,0</b><span>Traveller Review<br>Awards 2026<br>Booking.com</span></div>
+   <div class="cadre"><img src="img/chambre.webp" alt="Une des deux chambres climatisées, lit double, suspension en fibre naturelle" loading="lazy"></div>
+   <figcaption>Une des deux chambres climatisées</figcaption>
+  </figure>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 0 480 56 720 30s480-30 720 0v26H0z" fill="#fbf4e4"/></svg>
+<section class="maison" id="maison" style="padding-top:2.5rem">
+ <div class="wrap">
+  <p class="eyebrow reveal">La maison</p>
+  <h2 class="reveal">Tout le confort, tout de suite.</h2>
+  <div class="chiffres reveal"><span>55 m²</span><span>T3 indépendant</span><span>2 chambres</span><span>4 voyageurs</span><span>Wifi &amp; fibre</span></div>
+  <div class="pieces">
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 30h36v8H6zM10 30V20a4 4 0 0 1 4-4h20a4 4 0 0 1 4 4v10M10 38v4M38 38v4"/><circle cx="38" cy="9" r="4"/></svg><h3>Le séjour</h3><p>Lumineux et climatisé, le refuge parfait après une journée de découvertes.</p></article>
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="16" width="32" height="24" rx="2"/><circle cx="18" cy="11" r="2"/><circle cx="30" cy="11" r="2"/><path d="M8 24h32M16 30h6"/></svg><h3>La cuisine ouverte</h3><p>Entièrement équipée (four, micro-ondes) : elle inspire des moments gourmands.</p></article>
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 36V14M44 36V26a6 6 0 0 0-6-6H20v10M4 30h40"/><circle cx="12" cy="24" r="4"/></svg><h3>Deux chambres</h3><p>Calmes et climatisées, linge de maison et serviettes inclus.</p></article>
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="10" y="10" width="28" height="19" rx="2"/><path d="M4 36h40l-3 4H7z"/><path d="M20 20l3 3 6-6"/></svg><h3>L'espace bureau</h3><p>Un bureau dédié et la connexion fibre : le télétravail devient un plaisir.</p></article>
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 6v6M10 12h8M14 18v2M10 22v2M18 22v2M14 26v2"/><path d="M6 38h36M30 38V10h8v28"/></svg><h3>La salle d'eau</h3><p>Élégante, avec sa douche à l'italienne. Lave-linge privatif sur place.</p></article>
+   <article class="piece reveal"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="20" width="36" height="16" rx="5"/><circle cx="15" cy="36" r="4"/><circle cx="33" cy="36" r="4"/><path d="M12 20l4-8h16l4 8"/></svg><h3>Parking sécurisé</h3><p>Votre voiture reste à l'abri, prête pour les routes de l'Est.</p></article>
+  </div>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true" style="background:#fbf4e4"><path d="M0 26C300 56 520 0 760 22s440 34 680 4v30H0z" fill="#55602a"/></svg>
+<section class="dehors" id="dehors" style="padding-top:2.5rem">
+ <div class="wrap">
+  <p class="eyebrow reveal">Côté jardin</p>
+  <h2 class="reveal">Le climat tropical, à pleins poumons.</h2>
+  <p class="intro reveal">La terrasse accueille les petits-déjeuners au soleil, le jardin privatif invite à respirer, et le barbecue promet de belles soirées en plein air sous les bananiers.</p>
+  <div class="galerie" tabindex="0" aria-label="Galerie photos du jardin">
+   <figure class="large"><img src="img/cuisine-exterieure.webp" alt="Cuisine d'été couverte avec grande table, barbecue et salon de jardin" loading="lazy"><figcaption><b>La cuisine d'été</b>Grande tablée, plaques de cuisson et vue sur les fauteuils bleus du jardin</figcaption></figure>
+   <figure><img src="img/terrasse-barbecue.webp" alt="Table, chaises rouges et barbecue sous la tonnelle" loading="lazy"><figcaption><b>Soirée barbecue</b>Chaises rouges, nappe et bananiers en toile de fond</figcaption></figure>
+   <figure><img src="img/tonnelle-jardin.webp" alt="Tonnelle blanche et table au bord de la pelouse" loading="lazy"><figcaption><b>La tonnelle</b>Un coin d'ombre au bord de la pelouse</figcaption></figure>
+   <figure><img src="img/jardin-bananier.webp" alt="Bananier et courgette grimpante au jardin" loading="lazy"><figcaption><b>Au jardin</b>Le bananier et sa courgette grimpante</figcaption></figure>
+   <figure><img src="img/herbe-pampa.webp" alt="Herbe de la pampa sous un ciel bleu, montagnes au loin" loading="lazy"><figcaption><b>Ciel bleu de Saint-André</b>Plumets de pampa et montagnes au loin</figcaption></figure>
+   <figure><img src="img/fin-de-journee.webp" alt="Ciel doré de fin de journée au-dessus des arbres et des héliconias" loading="lazy"><figcaption><b>Fin de journée</b>Le ciel s'embrase au-dessus des héliconias</figcaption></figure>
+  </div>
+  <p class="glisse"><i></i> Faites glisser pour la visite</p>
+ </div>
+</section>
+
+<section id="autour">
+ <div class="wrap">
+  <p class="eyebrow reveal">Autour de l'Escale</p>
+  <h2 class="reveal">Tout l'Est à portée de route.</h2>
+  <p class="reveal" style="max-width:40rem">Depuis l'Escale Terre Rouge, tout devient accessible : cascades, temples, vanille et grands espaces.</p>
+  <div class="autour-grid">
+   <div class="lieu reveal"><svg viewBox="0 0 48 48" fill="none" stroke-width="2"><path d="M6 42 18 12l8 14 6-8 10 24z" stroke="#55602a" fill="#e4e8c9"/><path d="M27 20c0 8 1 14 1 22" stroke="#3f9fb4" stroke-width="3"/></svg><h3>Les cascades de Salazie</h3><p>Le cirque vert, à quelques lacets de la maison.</p></div>
+   <div class="lieu reveal"><svg viewBox="0 0 48 48" fill="none" stroke-width="2"><path d="M14 42V22l10-14 10 14v20z" stroke="#a3281c" fill="#f5d9b8"/><path d="M10 42h28M20 42v-8h8v8M18 22h12" stroke="#a3281c"/></svg><h3>Les temples tamouls</h3><p>Colorés, au cœur de la vie de Saint-André.</p></div>
+   <div class="lieu reveal"><svg viewBox="0 0 48 48" fill="none" stroke-width="2"><path d="M24 44V10" stroke="#55602a"/><path d="M24 18c-8-6-14-2-14 4 6 0 10-1 14-4zM24 26c8-6 14-2 14 4-6 0-10-1-14-4z" stroke="#55602a" fill="#c8d59a"/><path d="M30 8c2 6 2 12-1 18" stroke="#43200f" stroke-width="2.5"/></svg><h3>Les plantations de vanille</h3><p>L'or noir de l'Est, à découvrir sur place.</p></div>
+   <div class="lieu reveal"><svg viewBox="0 0 48 48" fill="none" stroke-width="2"><circle cx="34" cy="12" r="6" fill="#f2c46b" stroke="#bd7a2e"/><path d="M4 40c8-10 14-14 20-14s12 4 20 14z" fill="#c8d59a" stroke="#55602a"/><path d="M16 40V30M16 30l-4 3M16 30l4 2" stroke="#55602a"/></svg><h3>Le Parc du Colosse</h3><p>Grands espaces et sorties en famille.</p></div>
+  </div>
+  <div class="route reveal">
+   <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 44s14-12 14-24a14 14 0 0 0-28 0c0 12 14 24 14 24z"/><circle cx="24" cy="20" r="5"/></svg>
+   <div><h3>Depuis l'aéroport</h3>
+   <ol>
+    <li>Prenez la N2 (quatre voies) direction Saint-Benoît / Saint-André.</li>
+    <li>Sortie Champ Borne, centre commercial, puis traversez la ville.</li>
+    <li>Au stop de la mairie, tout droit entre le cimetière et l'église, puis à gauche.</li>
+    <li>Au stop après l'école, à droite direction Bras des Chevrettes.</li>
+    <li>À l'intersection suivante, à droite rue de l'Oratoire ; au local EDF, la petite allée à droite, jusqu'au bout.</li>
+   </ol></div>
+  </div>
+ </div>
+</section>
+
+<section class="tarifs" id="tarifs">
+ <div class="wrap">
+  <p class="eyebrow reveal" style="text-align:center">Tarifs 2026</p>
+  <h2 class="reveal" style="text-align:center">Posez vos valises.</h2>
+  <div class="prix-grid">
+   <div class="prix reveal"><h3>La nuit</h3><b>132 €</b><small>nuitée pour 4 personnes</small></div>
+   <div class="prix vedette reveal"><h3>Le week-end</h3><b>290 €</b><small>pour souffler deux jours dans l'Est</small></div>
+   <div class="prix reveal"><h3>La semaine</h3><b>739 €</b><small>pour vivre Saint-André au quotidien</small></div>
+  </div>
+  <div class="pratique reveal"><span>Arrivée à partir de 15h</span><span>Départ avant 10h</span><span>Règlement en espèces ou par virement</span><span>On vous accueille en français et en créole</span></div>
+  <div class="ctas reveal" style="justify-content:center;margin-top:2rem"><a class="btn btn-main" href="https://wa.me/262692705479?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20l%27Escale%20Terre%20Rouge%20du%20...%20au%20..." target="_blank" rel="noopener">Réserver mes dates sur WhatsApp</a></div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <span class="etoile" style="top:12%;left:8%">✦</span><span class="etoile" style="top:22%;right:12%;animation-delay:1s">✦</span><span class="etoile" style="bottom:18%;left:46%;animation-delay:2s">✦</span><span class="etoile" style="bottom:30%;right:6%;animation-delay:3s">✦</span>
+ <div class="wrap noel-in">
+  <div class="reveal">
+   <p class="eyebrow">Offrir pour Noël</p>
+   <h2>Un séjour à l'Escale, sous le sapin.</h2>
+   <p>Cette année, offrez une parenthèse douce au cœur de l'Est réunionnais : une nuit, un week-end ou une semaine à Saint-André, à deux, en famille ou entre amis.</p>
+   <ul>
+    <li>Un week-end pour souffler, à deux pas de Salazie</li>
+    <li>Une semaine pour vivre l'Est en famille</li>
+    <li>Une carte cadeau à glisser au pied du sapin</li>
+   </ul>
+   <a class="btn btn-main" style="background:var(--creme);color:var(--brique)" href="https://wa.me/262692705479?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20%C3%A0%20l%27Escale%20Terre%20Rouge%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir un séjour sur WhatsApp</a>
+  </div>
+  <div class="carte-cadeau reveal">
+   <p class="script-c">Carte cadeau</p>
+   <h3>Escale Terre Rouge</h3>
+   <p>Une escapade dans la maison au jardin de bananiers, à Saint-André.</p>
+   <div class="pointilles"></div>
+   <small>Pour : ……………… · De la part de : ………………</small>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-in">
+  <div class="reveal">
+   <p class="eyebrow">Contact &amp; réservation</p>
+   <h2>On vous attend à Saint-André.</h2>
+   <ul class="coord">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>76 rue de l'Oratoire<br>97440 Saint-André, La Réunion<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-20.9610969,55.6463602" target="_blank" rel="noopener">Créer mon itinéraire</a></span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+262692705479">06 92 70 54 79</a></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:escaleterrerouge97440@gmail.com">escaleterrerouge97440@gmail.com</a></li>
+    <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.8.4-1 1-1h2V2h-3c-2.8 0-4 1.8-4 4v2H8v3h2v11h4V11h2.6L17 8z"/></svg><a href="https://www.facebook.com/people/Escale-Terre-Rouge/61587533612830/" target="_blank" rel="noopener">Escale Terre Rouge sur Facebook</a></li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-main" href="https://wa.me/262692705479?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20l%27Escale%20Terre%20Rouge" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+    <a class="btn btn-dark" href="tel:+262692705479">Appeler</a>
+   </div>
+  </div>
+  <figure class="carte-plan reveal">
+   <svg viewBox="0 0 400 400" aria-label="Illustration : plan stylisé de Saint-André">
+    <rect width="400" height="400" fill="#55602a"/>
+    <path d="M0 300C80 270 120 330 200 300s160-60 200-40v140H0z" fill="#3f9fb4" opacity=".55"/>
+    <path d="M-10 120C90 140 160 90 230 140s120 40 190 10" stroke="#ecd6aa" stroke-width="10" fill="none" opacity=".8"/>
+    <path d="M120 -10C140 80 170 160 200 200s40 120 30 210" stroke="#ecd6aa" stroke-width="7" fill="none" opacity=".6"/>
+    <path d="M200 200C250 190 290 210 330 250" stroke="#f6ead0" stroke-width="5" fill="none"/>
+    <g fill="#6f8a35"><circle cx="60" cy="60" r="16"/><circle cx="330" cy="70" r="20"/><circle cx="80" cy="220" r="14"/><circle cx="300" cy="170" r="12"/><circle cx="350" cy="210" r="10"/></g>
+    <circle class="pulse" cx="214" cy="204" r="18" fill="#a3281c"/>
+    <circle cx="214" cy="204" r="10" fill="#a3281c" stroke="#fff" stroke-width="3"/>
+    <text x="232" y="190" fill="#fff" font-family="Fraunces,serif" font-size="17" font-weight="600">Escale Terre Rouge</text>
+   </svg>
+   <figcaption>Illustration · rue de l'Oratoire</figcaption>
+  </figure>
+ </div>
+</section>
+</main>
+
+<footer>
+ <img src="img/logo.webp" alt="" loading="lazy">
+ <p>Escale Terre Rouge · 76 rue de l'Oratoire · 97440 Saint-André</p>
+ <p style="margin-top:.8rem;opacity:.8">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d'Escale Terre Rouge.</p>
+</footer>
+
+<a class="flottant" href="https://wa.me/262692705479?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20l%27Escale%20Terre%20Rouge" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></a>
+
+<script>
+(()=>{
+const calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>calme?el.classList.add('vu'):io.observe(el));
+if(calme)return;
+/* univers : petites feuilles de bananier et poussière de terre rouge portées par l'alizé */
+const c=document.getElementById('terre'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+const cols=['rgba(111,138,53,.55)','rgba(85,96,42,.5)','rgba(163,40,28,.4)','rgba(189,122,46,.45)'];
+const P=Array.from({length:26},(_,i)=>({x:Math.random()*W,y:Math.random()*H,r:i%3?2+Math.random()*2.5:6+Math.random()*5,leaf:i%3===0,c:cols[i%4],vx:.15+Math.random()*.35,vy:.12+Math.random()*.3,a:Math.random()*6,va:(Math.random()-.5)*.02,o:Math.random()*6}));
+function draw(t){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.x+=p.vx+Math.sin(t/2600+p.o)*.25;p.y+=p.vy;p.a+=p.va;
+if(p.y>H+20||p.x>W+20){p.y=-15;p.x=Math.random()*W*.9-40}
+x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.beginPath();
+if(p.leaf){x.ellipse(0,0,p.r,p.r*.38,0,0,7)}else{x.arc(0,0,p.r*.5,0,7)}x.fill();x.restore()}
+requestAnimationFrame(draw)}
+requestAnimationFrame(draw);
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(draw)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Escale Terre Rouge" defer></script>
+</body>
+</html>
