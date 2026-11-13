@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chut ! et alors · Artisanat calebasse à Saint-Paul, La Réunion</title>
+<meta name="description" content="Chut ! et alors, atelier-boutique d'artisanat calebasse au Marché Couvert de Saint-Paul : luminaires et abat-jours en calebasse sculptée à la main, bijoux en graines naturelles de La Réunion. Du lundi au samedi, 9h-17h.">
+<meta property="og:title" content="Chut ! et alors · Luminaires en calebasse, Saint-Paul">
+<meta property="og:description" content="Luminaires, abat-jours et bijoux en graines naturelles, sculptés à la main au Marché Couvert de Saint-Paul. Artisanat 100 % péï.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chut-et-alors-saint-paul/img/luminaires-baleine-oiseau.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chut-et-alors-saint-paul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#161b33;--nuit2:#222a4a;--ocre:#c99a5b;--miel:#f3c86e;--lueur:#ffe2a3;--ecorce:#5b3a22;--brou:#3a2616;--sauge:#8f9b57;--creme:#f7efe1;--lin:#efe3cd;--txt:#2f2418;--doux:#7a6450;--grenat:#9b2f35}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+button{font:inherit;border:0;cursor:pointer}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.4rem 0 1rem}
+h3{font-size:1.35rem}
+.script{font-family:'Caveat Brush',cursive;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;font-weight:500;color:var(--ecorce)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--brou);color:var(--lin);text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:var(--miel);font-weight:500}
+canvas#lucioles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40;opacity:.85}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.04em;font-size:.95rem;transition:.35s;text-align:center}
+.btn-lum{background:var(--miel);color:var(--brou);box-shadow:0 0 0 0 rgba(243,200,110,.6);animation:halo 3.6s ease-in-out infinite}
+.btn-lum:hover{background:var(--lueur)}
+@keyframes halo{50%{box-shadow:0 0 34px 6px rgba(243,200,110,.45)}}
+.btn-ghost{border:1px solid rgba(255,226,163,.55);color:var(--lueur)}
+.btn-ghost:hover{background:rgba(255,226,163,.12)}
+.btn-dark{background:var(--ecorce);color:var(--creme)}
+.btn-dark:hover{background:var(--brou)}
+.btn-line{border:1px solid var(--ocre);color:var(--ecorce)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* points façon perforations */
+.dots{height:22px;background-image:radial-gradient(circle,var(--ocre) 2.2px,transparent 2.6px);background-size:18px 18px;background-position:center;opacity:.55}
+.dots.clair{background:radial-gradient(circle,rgba(243,200,110,.4) 2px,transparent 2.6px) center/18px 18px,#0d1022;opacity:1}
+/* hero */
+.hero{min-height:min(100svh,860px);background:radial-gradient(80% 60% at 70% 35%,#3a3352 0%,transparent 70%),radial-gradient(60% 50% at 15% 90%,#2b2440 0%,transparent 70%),var(--nuit);color:var(--lin);display:flex;align-items:center;overflow:hidden;padding:6.5rem 0 4rem}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero .eyebrow{color:var(--miel)}
+.hero h1{font-family:'Caveat Brush',cursive;font-weight:400;font-size:clamp(4rem,17vw,7.4rem);line-height:.88;color:var(--lin);margin:.8rem 0 .4rem;text-shadow:0 0 40px rgba(243,200,110,.25)}
+.hero h1 span{display:block;padding-left:.9em;color:var(--miel)}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.3rem,4vw,1.7rem);color:var(--lueur);margin:1rem 0 .5rem}
+.hero .lead small{display:block;font-style:normal;font-family:Outfit,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(239,227,205,.7);margin-top:.35rem}
+.hero p.sous{color:rgba(239,227,205,.85);max-width:30rem;margin-bottom:1.8rem}
+.lampe{position:relative;max-width:420px;width:100%;margin:auto}
+.lampe .cadre{border-radius:50% 50% 46% 46% / 58% 58% 42% 42%;overflow:hidden;aspect-ratio:3/4;box-shadow:0 0 90px -10px rgba(243,200,110,.45),0 40px 80px -40px #000;position:relative}
+.lampe img{width:100%;height:100%;object-fit:cover;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.lampe::before{content:"";position:absolute;inset:-16px;border-radius:50% 50% 46% 46% / 58% 58% 42% 42%;border:2px dotted rgba(243,200,110,.5);animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.lampe figcaption{position:absolute;right:-.4rem;bottom:1.2rem;background:var(--creme);color:var(--txt);padding:.55rem .9rem;border-radius:14px;font-size:.8rem;box-shadow:0 18px 40px -18px #000;max-width:75%}
+.glow{position:absolute;left:50%;top:45%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,214,130,.35),transparent 65%);animation:pulse 5s ease-in-out infinite;pointer-events:none;z-index:-1}
+@keyframes pulse{50%{opacity:.5;transform:translate(-50%,-50%) scale(1.15)}}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--ecorce);color:var(--lin);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:Fraunces,serif;font-style:italic;font-size:1.2rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"•••";margin-left:2.4rem;color:var(--miel);font-style:normal;letter-spacing:.2em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.esprit figure{position:relative}
+.esprit figure img{border-radius:22px;aspect-ratio:1;object-fit:cover;box-shadow:0 30px 60px -30px rgba(58,38,22,.6)}
+.esprit figcaption,.cap{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+.citation{font-family:'Caveat Brush',cursive;font-size:clamp(1.9rem,6vw,2.5rem);color:var(--grenat);line-height:1.1;margin:1.2rem 0}
+.marque{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:18px;padding:1rem 1.2rem;margin-top:1.4rem;box-shadow:0 18px 40px -26px rgba(58,38,22,.5)}
+.marque .main{flex:0 0 52px;height:52px;border-radius:14px;background:var(--nuit);display:grid;place-items:center;color:var(--miel);font-family:'Caveat Brush',cursive;font-size:1.5rem}
+.marque p{font-size:.95rem;line-height:1.5}
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.4rem}
+.points div{background:var(--lin);border-radius:16px;padding:.9rem;font-size:.9rem;line-height:1.45}
+.points b{display:block;font-family:Fraunces,serif;font-weight:600;font-size:1.05rem;color:var(--ecorce)}
+/* créations */
+.creations{background:var(--nuit);color:var(--lin);overflow:hidden}
+.creations h2,.creations h3{color:var(--lueur)}
+.creations .eyebrow{color:var(--miel)}
+.creations .intro{max-width:36rem;color:rgba(239,227,205,.85)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5vw 1rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.carte{flex:0 0 min(76vw,320px);scroll-snap-align:center;background:var(--nuit2);border-radius:22px;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 0 50px -8px rgba(243,200,110,.4)}
+.carte .ph{aspect-ratio:3/4;overflow:hidden}
+.carte img{width:100%;height:100%;object-fit:cover;transition:transform .8s,filter .8s;filter:brightness(.9)}
+.carte:hover img{transform:scale(1.06);filter:brightness(1.08)}
+.carte .txt{padding:1rem 1.1rem 1.2rem}
+.carte p{font-size:.88rem;color:rgba(239,227,205,.78);line-height:1.5}
+.glisse{font-size:.8rem;color:rgba(239,227,205,.6);letter-spacing:.1em;text-transform:uppercase}
+.familles{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:2.2rem}
+.familles div{border:1px dotted rgba(243,200,110,.5);border-radius:14px;padding:.8rem;text-align:center;font-size:.9rem;color:var(--lueur)}
+/* allumer */
+.allume{background:linear-gradient(var(--nuit),#0d1022);color:var(--lin);text-align:center}
+.allume h2{color:var(--lueur)}
+.scene{position:relative;max-width:380px;margin:2rem auto 1.4rem;border-radius:26px;overflow:hidden;aspect-ratio:5/6}
+.scene img{width:100%;height:100%;object-fit:cover;filter:brightness(.35) saturate(.6);transition:filter 1.4s ease}
+.scene.on img{filter:brightness(1.08) saturate(1.1)}
+.scene::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,rgba(255,214,130,.4),transparent 55%);opacity:0;transition:opacity 1.4s}
+.scene.on::after{opacity:1}
+.allume .cap{color:rgba(239,227,205,.6)}
+/* gravures */
+.gravures-in{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+.gravures-in figure img{border-radius:20px;aspect-ratio:4/5;object-fit:cover}
+.gravures-in figure:nth-child(2){margin-top:3rem}
+.bijoux{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(1.5rem,5vw,4rem);align-items:center;margin-top:clamp(3rem,8vw,5rem)}
+.bijoux svg{width:100%;height:auto;max-width:360px;margin:auto;display:block}
+/* atelier enfants */
+.atelier{background:var(--lin)}
+.atelier .boite{background:#fff;border-radius:26px;padding:clamp(1.6rem,5vw,3rem);display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:center;box-shadow:0 30px 60px -40px rgba(58,38,22,.6)}
+.atelier .age{width:110px;height:110px;border-radius:50%;background:var(--sauge);color:#fff;display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;line-height:1.05;font-size:.85rem}
+.atelier .age b{display:block;font-size:2.2rem}
+/* où */
+.ou-in{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.bloc{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 22px 50px -36px rgba(58,38,22,.6)}
+.bloc h3{color:var(--ecorce);margin-bottom:.5rem}
+.bloc ul{list-style:none}
+.bloc li{padding:.45rem 0;border-bottom:1px dotted var(--ocre);display:flex;justify-content:space-between;gap:1rem;font-size:.95rem}
+.bloc li:last-child{border:0}
+.rdv li{display:block}
+.rdv b{color:var(--grenat);font-weight:500}
+/* noël */
+.noel{background:radial-gradient(70% 60% at 80% 20%,#3b1e22 0%,transparent 70%),var(--brou);color:var(--lin);overflow:hidden}
+.noel h2{color:var(--lueur)}
+.noel .eyebrow{color:var(--miel)}
+.noel-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.noel figure img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;box-shadow:0 0 70px -20px rgba(243,200,110,.5)}
+.noel .cap{color:rgba(239,227,205,.6)}
+.idees{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.6rem}
+.idees span{border:1px solid rgba(243,200,110,.45);border-radius:999px;padding:.35rem .9rem;font-size:.88rem;color:var(--lueur)}
+.noel .dates{background:rgba(255,255,255,.06);border-radius:18px;padding:1rem 1.2rem;margin-bottom:1.6rem;font-size:.95rem}
+.noel .dates b{color:var(--miel);font-weight:500}
+.etoile{position:absolute;color:var(--miel);opacity:.5;font-size:1.1rem;animation:scint 4s ease-in-out infinite}
+@keyframes scint{50%{opacity:.1;transform:scale(.7)}}
+/* contact */
+.contact{background:var(--nuit);color:var(--lin)}
+.contact h2{color:var(--lueur)}
+.contact .eyebrow{color:var(--miel)}
+.contact-in{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
+.coord{list-style:none;margin:1.2rem 0 1.8rem}
+.coord li{padding:.6rem 0;border-bottom:1px dotted rgba(243,200,110,.35)}
+.coord a{text-decoration:none;color:var(--lueur)}
+.reseaux{display:flex;gap:.7rem;flex-wrap:wrap}
+footer{background:#0d1022;color:rgba(239,227,205,.6);text-align:center;font-size:.8rem;padding:2rem 1rem 2.4rem;line-height:1.6}
+.revele{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.revele.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.esprit-in,.noel-in,.contact-in,.bijoux,.ou-in{grid-template-columns:1fr}
+ .hero{padding-top:5.5rem}
+ .lampe{max-width:330px}
+ .points{grid-template-columns:1fr}
+ .familles{grid-template-columns:1fr 1fr}
+ .atelier .boite{grid-template-columns:1fr;text-align:center}
+ .atelier .age{margin:auto}
+ .noel figure{order:-1}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.revele{opacity:1;transform:none}
+ canvas#lucioles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chut ! et alors</div>
+<canvas id="lucioles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow apparait">Artisanat calebasse · Île de la Réunion</p>
+      <h1 class="apparait d2">Chut !<span>et alors</span></h1>
+      <p class="lead apparait d2">« Éleveur de luminaires en calebasse »<small>Marque distinctive de l'artisanat réunionnais</small></p>
+      <p class="sous apparait d3">Luminaires, abat-jours, assiettes, paniers et bijoux en graines naturelles, sculptés à la main dans l'atelier-boutique du Marché Couvert de Saint-Paul.</p>
+      <div class="ctas apparait d3">
+        <a class="btn btn-lum" href="https://wa.me/262692043779?text=Bonjour%20Chut%20!%20et%20alors%2C%20je%20voudrais%20des%20infos%20sur%20vos%20luminaires%20en%20calebasse">Écrire sur WhatsApp</a>
+        <a class="btn btn-ghost" href="#ou">Venir à l'atelier</a>
+      </div>
+    </div>
+    <figure class="lampe apparait d2">
+      <div class="glow"></div>
+      <div class="cadre"><img src="img/luminaires-baleine-oiseau.webp" alt="Deux luminaires en calebasse allumés : un oiseau et une baleine dessinés en pointillés de lumière" width="1100" height="1467"></div>
+      <figcaption>La baleine et l'oiseau, en pointillés de lumière</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Luminaires</span><span>Abat-jours</span><span>Appliques</span><span>Assiettes</span><span>Paniers</span><span>Bijoux en graines naturelles</span><span>Pots de fleurs</span><span>100 % péï</span>
+  <span>Luminaires</span><span>Abat-jours</span><span>Appliques</span><span>Assiettes</span><span>Paniers</span><span>Bijoux en graines naturelles</span><span>Pots de fleurs</span><span>100 % péï</span>
+</div></div>
+
+<section class="esprit">
+  <div class="wrap esprit-in">
+    <figure class="revele">
+      <img src="img/geste-gravure.webp" alt="Mains gravant au couteau un motif de fleur sur une calebasse verte" width="1000" height="1000" loading="lazy">
+      <figcaption>Le geste : chaque motif est gravé à la main.</figcaption>
+    </figure>
+    <div class="revele">
+      <p class="eyebrow">L'atelier</p>
+      <h2>La calebasse, sculptée à la main</h2>
+      <p>Chut ! et alors fait vivre un savoir-faire réunionnais : la calebasse, fruit de la famille des Bignoniacées, devient sous le couteau une lampe, un abat-jour, une applique, un sac, un pot de fleurs ou un ustensile de cuisine. Chaque pièce est unique.</p>
+      <p class="citation">« Un cadeau artisanal 💯 % péï »</p>
+      <div class="points">
+        <div><b>Fait main</b>Chaque création est sculptée et gravée à l'atelier.</div>
+        <div><b>Local</b>Matières premières de l'île, démarche durable.</div>
+        <div><b>Graines</b>Bijoux en graines naturelles de La Réunion.</div>
+      </div>
+      <div class="marque">
+        <div class="main">AR</div>
+        <p><b>Marque distinctive de l'artisanat réunionnais</b><br>Reçue en 2026 : « un pas de plus pour le travail de Chut ! et alors ».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="dots"></div>
+
+<section class="creations" id="creations">
+  <div class="wrap">
+    <p class="eyebrow revele">Créations</p>
+    <h2 class="revele">Des luminaires qui dessinent sur les murs</h2>
+    <p class="intro revele">Perforées point par point, les calebasses laissent passer la lumière et projettent leurs motifs tout autour : spirales, cœurs, lunes, baleine…</p>
+    <div class="galerie" tabindex="0" aria-label="Galerie de luminaires en calebasse">
+      <article class="carte"><div class="ph"><img src="img/lampe-spirales.webp" alt="Luminaire en calebasse allumé, motifs ajourés et spirales en pointillés" width="1000" height="1333" loading="lazy"></div><div class="txt"><h3>Spirales</h3><p>Une lampe sur pied, ajourée en haut, spirales de lumière en bas.</p></div></article>
+      <article class="carte"><div class="ph"><img src="img/lampe-lune.webp" alt="Luminaire rond en calebasse sombre, croissant de lune et volutes ajourés" width="1000" height="1206" loading="lazy"></div><div class="txt"><h3>Croissant de lune</h3><p>Volutes et lune ajourées : la pièce entière devient un ciel étoilé.</p></div></article>
+      <article class="carte"><div class="ph"><img src="img/lampe-coeurs-verte.webp" alt="Luminaire en calebasse verte gravé de cœurs et de pointillés, posé sur un socle en calebasse" width="1000" height="1462" loading="lazy"></div><div class="txt"><h3>Cœurs verts</h3><p>La calebasse garde sa couleur, gravée de cœurs, de vagues et de points.</p></div></article>
+      <article class="carte"><div class="ph"><img src="img/luminaires-baleine-oiseau.webp" alt="Deux luminaires en calebasse : un oiseau et une baleine" width="1100" height="1467" loading="lazy"></div><div class="txt"><h3>Baleine &amp; oiseau</h3><p>Deux scènes découpées dans la calebasse, éclairées de l'intérieur.</p></div></article>
+    </div>
+    <p class="glisse">← faites glisser →</p>
+    <div class="familles revele">
+      <div>Luminaires</div><div>Abat-jours</div><div>Assiettes &amp; paniers</div><div>Bijoux en graines</div>
+    </div>
+  </div>
+</section>
+
+<section class="allume">
+  <div class="wrap">
+    <p class="eyebrow revele" style="color:var(--miel)">Le moment magique</p>
+    <h2 class="revele">Allumez la calebasse</h2>
+    <div class="scene" id="scene"><img src="img/lampe-lune.webp" alt="Luminaire en calebasse au croissant de lune" width="1000" height="1206" loading="lazy"></div>
+    <button class="btn btn-lum" id="interrupteur" type="button">Allumer la lampe</button>
+    <p class="cap" style="margin-top:.8rem">Un clic, et la lumière se met à danser.</p>
+  </div>
+</section>
+
+<div class="dots clair"></div>
+
+<section class="gravures">
+  <div class="wrap">
+    <p class="eyebrow revele">Gravures</p>
+    <h2 class="revele">Une rose, un hibou, un cœur</h2>
+    <p class="revele" style="max-width:36rem;margin-bottom:2rem">Des calebasses gravées de motifs tout simples, avec la petite signature « Chut ! » glissée sur le côté.</p>
+    <div class="gravures-in">
+      <figure class="revele"><img src="img/calebasses-gravees.webp" alt="Calebasses gravées d'une rose, d'un hibou, d'un poisson et d'un cœur « Chut ! », bol de fruits de la passion" width="1000" height="1337" loading="lazy"><figcaption class="cap">Rose, hibou, poisson et cœur « Chut ! »</figcaption></figure>
+      <figure class="revele"><img src="img/fleur-gravee.webp" alt="Calebasse dorée gravée d'une grande fleur" width="1000" height="1070" loading="lazy"><figcaption class="cap">Une fleur gravée sur une calebasse dorée</figcaption></figure>
+    </div>
+    <div class="bijoux">
+      <figure class="revele">
+        <svg viewBox="0 20 360 200" role="img" aria-label="Illustration d'un collier de graines naturelles">
+          <defs><radialGradient id="g1" cx="35%" cy="30%"><stop offset="0" stop-color="#e2574c"/><stop offset="1" stop-color="#8e1f22"/></radialGradient><radialGradient id="g2" cx="35%" cy="30%"><stop offset="0" stop-color="#a8774a"/><stop offset="1" stop-color="#4a2c16"/></radialGradient><radialGradient id="g3" cx="35%" cy="30%"><stop offset="0" stop-color="#d9c79a"/><stop offset="1" stop-color="#8a7448"/></radialGradient><radialGradient id="g4" cx="35%" cy="30%"><stop offset="0" stop-color="#555"/><stop offset="1" stop-color="#111"/></radialGradient></defs>
+          <path d="M40 40 Q180 330 320 40" fill="none" stroke="#7a6450" stroke-width="1.6"/>
+          <g id="perles"></g>
+        </svg>
+        <figcaption class="cap" style="text-align:center">Illustration</figcaption>
+      </figure>
+      <div class="revele">
+        <p class="eyebrow">Bijoux</p>
+        <h2>Des bijoux en graines naturelles</h2>
+        <p>À côté des calebasses, l'atelier propose des bijoux réalisés à partir de graines naturelles de La Réunion. Des pièces légères, aux couleurs de l'île, à découvrir sur place au Marché Couvert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="atelier">
+  <div class="wrap">
+    <div class="boite revele">
+      <div class="age"><span><b>8 ans</b>et plus</span></div>
+      <div>
+        <p class="eyebrow">Atelier créatif</p>
+        <h2 style="font-size:clamp(1.7rem,5vw,2.4rem)">« Découverte de la calebasse »</h2>
+        <p>Chut ! et alors organise des ateliers créatifs pour les enfants et les adolescent·e·s à partir de 8 ans, pour découvrir la calebasse et le plaisir de créer de ses mains.</p>
+        <div class="ctas" style="margin-top:1.2rem"><a class="btn btn-dark" href="https://wa.me/262692043779?text=Bonjour%20Chut%20!%20et%20alors%2C%20je%20voudrais%20des%20infos%20sur%20l%27atelier%20%C2%AB%20D%C3%A9couverte%20de%20la%20calebasse%20%C2%BB">Demander les prochaines dates</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ou">
+  <div class="wrap">
+    <p class="eyebrow revele">Me retrouver</p>
+    <h2 class="revele">L'atelier-boutique du Marché Couvert</h2>
+    <div class="ou-in">
+      <div class="bloc revele">
+        <h3>Atelier-boutique</h3>
+        <ul>
+          <li><span>Lieu</span><span>Marché Couvert de Saint-Paul</span></li>
+          <li><span>Adresse</span><span>59 rue Marius et Ary Leblond</span></li>
+          <li><span>Lundi → samedi</span><span>9h – 17h</span></li>
+          <li><span>Marché forain</span><span>le samedi matin</span></li>
+        </ul>
+        <p class="cap">Horaires de l'atelier hors jours de salons et de marchés. Commandes possibles.</p>
+        <div class="ctas" style="margin-top:1rem"><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9%20Couvert%20Saint-Paul%2059%20rue%20Marius%20et%20Ary%20Leblond%2097460">Itinéraire</a></div>
+      </div>
+      <div class="bloc rdv revele">
+        <h3>Prochains rendez-vous</h3>
+        <ul>
+          <li><b>Samedi 28 novembre</b><br>Marché de Noël de la Halle des Manifestations du Port</li>
+          <li><b>Du 4 au 6 décembre</b><br>Fête de l'Agri-Kultur à Corbeil-La Saline</li>
+          <li><b>Toute l'année</b><br>Salons d'artisans et marchés nocturnes : les dates sont annoncées sur la page Facebook.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <span class="etoile" style="top:12%;left:8%">✦</span><span class="etoile" style="top:22%;right:10%;animation-delay:1.3s">✦</span><span class="etoile" style="bottom:14%;left:44%;animation-delay:2.4s">✦</span>
+  <div class="wrap noel-in">
+    <figure class="revele">
+      <img src="img/calebasse-noel.webp" alt="Calebasse gravée coiffée d'un bonnet de Noël, petits sapins et flocon en bois" width="1000" height="1305" loading="lazy">
+      <figcaption class="cap">« Noël se prépare dès maintenant ! »</figcaption>
+    </figure>
+    <div class="revele">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Une calebasse à offrir, 100 % péï</h2>
+      <p>Pour faire plaisir, ou se faire plaisir, avec un cadeau artisanal unique, sculpté ici à Saint-Paul.</p>
+      <div class="idees"><span>Luminaire</span><span>Abat-jour</span><span>Assiette</span><span>Panier</span><span>Bijoux en graines naturelles</span></div>
+      <div class="dates">Atelier-boutique ouvert <b>jusqu'au 3 décembre</b>, puis rendez-vous le <b>28/11</b> au Marché de Noël du Port et <b>du 4 au 6 décembre</b> à la Fête de l'Agri-Kultur.</div>
+      <a class="btn btn-lum" href="https://wa.me/262692043779?text=Bonjour%20Chut%20!%20et%20alors%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20en%20calebasse%20pour%20No%C3%ABl">Réserver un cadeau sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="revele">
+      <p class="eyebrow">Contact</p>
+      <h2>Passez à l'atelier, ou écrivez-moi</h2>
+      <ul class="coord">
+        <li>📞 <a href="tel:+262692043779">06 92 04 37 79</a></li>
+        <li>✉️ <a href="mailto:chutetalors@gmail.com">chutetalors@gmail.com</a></li>
+        <li>📍 Marché Couvert de Saint-Paul, 59 rue Marius et Ary Leblond, 97460 Saint-Paul</li>
+        <li>🕘 Du lundi au samedi, 9h – 17h</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-lum" href="https://wa.me/262692043779?text=Bonjour%20Chut%20!%20et%20alors%2C%20je%20voudrais%20des%20infos%20sur%20vos%20cr%C3%A9ations">WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+262692043779">Appeler</a>
+      </div>
+    </div>
+    <div class="revele">
+      <p style="color:rgba(239,227,205,.8);margin-bottom:1rem">Toutes les nouveautés, les salons et les marchés sont annoncés ici :</p>
+      <div class="reseaux">
+        <a class="btn btn-ghost" href="https://www.facebook.com/ChutEtAlors">Facebook</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/chutetalors/">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>Chut ! et alors · Artisanat calebasse et bijoux en graines naturelles · Marché Couvert de Saint-Paul, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chut ! et alors.</footer>
+
+<script>
+(function(){
+var calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// collier de graines (illustration)
+var g=document.getElementById('perles'),tons=['g1','g2','g3','g1','g4','g2','g3'],n=17;
+for(var i=0;i<n;i++){var t=(i+1)/(n+1),x=(1-t)*(1-t)*40+2*(1-t)*t*180+t*t*320,y=(1-t)*(1-t)*40+2*(1-t)*t*330+t*t*40;
+var e=document.createElementNS('http://www.w3.org/2000/svg','ellipse');e.setAttribute('cx',x.toFixed(1));e.setAttribute('cy',y.toFixed(1));
+var r=i==8?17:(i%3==0?11:9);e.setAttribute('rx',r);e.setAttribute('ry',(r*.78).toFixed(1));e.setAttribute('fill','url(#'+tons[i%tons.length]+')');g.appendChild(e)}
+// apparitions
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.revele').forEach(function(el){io.observe(el)});
+// interrupteur
+var s=document.getElementById('scene'),b=document.getElementById('interrupteur');
+b.addEventListener('click',function(){var on=s.classList.toggle('on');b.textContent=on?'Éteindre la lampe':'Allumer la lampe'});
+// lucioles : points de lumière comme les perforations
+if(calme)return;
+var c=document.getElementById('lucioles'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+for(var k=0;k<28;k++)P.push({x:Math.random(),y:Math.random(),r:.8+Math.random()*2,v:.00012+Math.random()*.0003,p:Math.random()*6.28,d:(Math.random()-.5)*.0002});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(q){q.y-=q.v;q.x+=q.d;q.p+=.025;if(q.y<-.02){q.y=1.02;q.x=Math.random()}
+var a=.25+.35*Math.sin(q.p);if(a<0)a=0;var px=q.x*W,py=q.y*H,gr=x.createRadialGradient(px,py,0,px,py,q.r*5);
+gr.addColorStop(0,'rgba(255,214,130,'+a+')');gr.addColorStop(1,'rgba(255,214,130,0)');x.fillStyle=gr;x.beginPath();x.arc(px,py,q.r*5,0,6.28);x.fill()});
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chut ! et alors" defer></script>
+</body>
+</html>
