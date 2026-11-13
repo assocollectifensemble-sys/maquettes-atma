@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Boutik Ô Péi des laves · Artisanat local à Sainte-Rose</title>
+<meta name="description" content="La Boutik Ô Péi des laves, boutique d'artisanat local au Piton Sainte-Rose, face à l'église Notre-Dame des Laves : bijoux, créateurs péi, chocolat, plants de vanille, colis cadeaux.">
+<meta property="og:title" content="La Boutik Ô Péi des laves · Sainte-Rose">
+<meta property="og:description" content="Boutique d'artisanat local face à l'église Notre-Dame des Laves : créateurs péi, bijoux, trouvailles 100 % Réunion.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-boutik-o-pei-des-laves-sainte-rose/img/boutique-mugs.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-boutik-o-pei-des-laves-sainte-rose/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito+Sans:wght@300;400;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{--lave:#e8501f;--lave-f:#b8360f;--braise:#ff8a3d;--basalte:#1c1718;--roche:#2c2426;--ocean:#2b9bd3;--ocean-f:#17698f;--sable:#fbf5ec;--creme:#f3e8d8;--or:#f2b544;--txt:#3a2f2c;--doux:#7d6c66}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--sable);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;color:var(--basalte);line-height:1.08}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.35rem 0 1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Kaushan Script',cursive;font-weight:400;color:var(--lave)}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--lave);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(3.8rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--basalte);color:#f6d7c4;text-align:center;font-size:.74rem;padding:.45rem .8rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.35s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--lave);color:#fff;box-shadow:0 14px 30px -14px rgba(232,80,31,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--lave-f)}
+@keyframes souffle{50%{box-shadow:0 12px 42px -6px rgba(255,138,61,.75)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:1.5px solid var(--basalte);color:var(--basalte)}
+.btn-dark:hover{background:var(--creme)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--basalte);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:kenburns 26s ease-in-out infinite alternate;opacity:.9}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,23,24,.3) 0%,rgba(28,23,24,.35) 30%,rgba(28,23,24,.88) 62%,rgba(28,23,24,1) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4.4rem;margin:0 auto}
+.hero .eyebrow{color:var(--braise)}
+.hero h1{color:#fff;font-size:clamp(3rem,13vw,6.4rem);font-weight:700;letter-spacing:-.01em;margin-top:.4rem}
+.hero h1 .script{display:block;font-size:.62em;color:var(--braise);margin-bottom:-.08em;transform:rotate(-4deg);transform-origin:left}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:1.1rem 0 1.8rem;color:#f8ece4;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.86rem;color:#f6cdb5}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* coulee de lave (transition) */
+.coulee{display:block;width:100%;height:54px;margin-top:-1px;background:var(--basalte)}
+.coulee path.l{fill:var(--lave)}
+.coulee path.s{fill:var(--sable)}
+/* bandeau */
+.bande{background:var(--lave);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;font-style:normal;font-size:.7rem;color:var(--or)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* boutique */
+.boutique{display:grid;gap:2.2rem;align-items:center}
+.boutique p+p{margin-top:.9rem}
+.vitre{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 40px 70px -40px rgba(28,23,24,.7)}
+.vitre img{width:100%;aspect-ratio:960/585;object-fit:cover;transition:transform 1.4s}
+.vitre:hover img{transform:scale(1.05)}
+.vitre figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(255,255,255,.93);padding:.45rem .9rem;border-radius:12px;font-size:.8rem;color:var(--basalte)}
+.devise{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.25rem,4.4vw,1.7rem);color:var(--roche);border-left:3px solid var(--lave);padding-left:1rem;margin:1.4rem 0}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.puces span{background:#fff;border:1px solid #efd9c8;border-radius:999px;padding:.32rem .9rem;font-size:.86rem;transition:.3s}
+.puces span:hover{border-color:var(--lave);color:var(--lave)}
+.source{font-size:.8rem;color:var(--doux);margin-top:1rem}
+/* bijoux */
+.bijoux{background:linear-gradient(180deg,var(--sable),var(--creme))}
+.ecrins{display:grid;gap:1.2rem;margin-top:2rem}
+.ecrin{position:relative;border-radius:24px;overflow:hidden;background:var(--basalte);box-shadow:0 30px 60px -36px rgba(28,23,24,.75)}
+.ecrin img{width:100%;aspect-ratio:4/4.6;object-fit:cover;transition:transform 1.4s}
+.ecrin:hover img{transform:scale(1.06)}
+.ecrin figcaption{position:absolute;left:0;right:0;bottom:0;padding:3.2rem 1.2rem 1.1rem;background:linear-gradient(180deg,transparent,rgba(28,23,24,.9));color:#fff}
+.ecrin figcaption b{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem;display:block}
+.ecrin figcaption span{font-size:.88rem;color:#ffd2b8}
+.ecrin .date{position:absolute;top:.9rem;left:.9rem;background:var(--lave);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.08em;padding:.3rem .7rem;border-radius:999px;text-transform:uppercase}
+/* trouvailles */
+.trouv{background:var(--basalte);color:#f4e7de;overflow:hidden}
+.trouv h2{color:#fff}
+.trouv .eyebrow{color:var(--braise)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.carte{flex:0 0 78%;max-width:340px;scroll-snap-align:center;background:var(--roche);border-radius:22px;overflow:hidden;box-shadow:0 26px 50px -30px #000;transition:transform .45s}
+.carte:hover{transform:translateY(-6px)}
+.carte img{width:100%;aspect-ratio:1;object-fit:cover}
+.carte div{padding:1rem 1.15rem 1.25rem}
+.carte h3{color:#fff;font-size:1.15rem;margin-bottom:.3rem}
+.carte p{font-size:.92rem;color:#e5d3c8}
+.carte small{display:block;margin-top:.6rem;font-size:.75rem;color:var(--braise);letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+.glisse{font-size:.82rem;color:#c9b2a6;display:flex;align-items:center;gap:.5rem}
+.glisse i{display:inline-block;width:34px;height:2px;background:var(--lave);position:relative;animation:glisse 2s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(8px)}}
+/* noel */
+.noel{background:radial-gradient(120% 80% at 80% 0%,#fff3e6 0%,var(--sable) 60%)}
+.noel-in{display:grid;gap:2rem;align-items:center}
+.idees{display:grid;gap:.8rem;margin:1.4rem 0 1.8rem}
+.idee{background:#fff;border-radius:18px;padding:1rem 1.2rem;border:1px solid #f1dccb;display:flex;gap:.9rem;align-items:flex-start}
+.idee em{flex:none;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--lave);color:#fff;display:grid;place-items:center;font-style:normal;font-family:'Fraunces',serif}
+.idee h3{font-size:1.08rem;margin-bottom:.15rem}
+.idee p{font-size:.92rem}
+.colis{max-width:340px;margin:auto;text-align:center}
+.colis svg{width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(184,54,15,.3));animation:flotte 5s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.colis figcaption{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+.cite{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--roche)}
+/* contact */
+.contact{background:var(--basalte);color:#f4e7de}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--braise)}
+.infos{display:grid;gap:1rem;margin-top:1.6rem}
+.info{background:var(--roche);border-radius:20px;padding:1.2rem 1.3rem;border:1px solid rgba(255,138,61,.18)}
+.info h3{color:#fff;font-size:1.05rem;margin-bottom:.35rem;font-family:'Nunito Sans',sans-serif;font-weight:700;letter-spacing:.04em}
+.info p,.info a{font-size:.96rem;color:#ead8cd;word-break:break-word}
+.info a{text-decoration:none;border-bottom:1px solid rgba(255,138,61,.5)}
+.jours{display:grid;grid-template-columns:repeat(7,1fr);gap:.3rem;margin-top:.6rem}
+.jours span{text-align:center;font-size:.72rem;padding:.4rem 0;border-radius:8px;background:rgba(232,80,31,.85);color:#fff;font-weight:700}
+.jours span.off{background:transparent;border:1px dashed #6b5b57;color:#9c8a84}
+.contact .ctas{margin-top:1.8rem}
+footer{background:#120e0f;color:#a89590;text-align:center;font-size:.8rem;padding:2rem 6vw 2.4rem;line-height:1.6;position:relative;z-index:2}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (min-width:760px){
+ .boutique{grid-template-columns:1.05fr .95fr}
+ .ecrins{grid-template-columns:repeat(3,1fr)}
+ .noel-in{grid-template-columns:1.15fr .85fr}
+ .infos{grid-template-columns:repeat(3,1fr)}
+ .carte{flex-basis:300px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.apparait{opacity:1;transform:none}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Boutik Ô Péi des laves</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/boutique-mugs.webp" alt="Tasses « Ile de la Réunion » posées sur le comptoir de la boutique, sous le plafond rouge" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Piton Sainte-Rose · face à l'église Notre-Dame des Laves</p>
+    <h1 class="apparait d2"><span class="script">La Boutik</span>Ô Péi des laves</h1>
+    <p class="lead apparait d2">Boutique d'artisanat local : les créateurs péi, leurs bijoux, leurs douceurs et mille trouvailles 100 % Réunion, au pied du volcan.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262692700202?text=Bonjour%20La%20Boutik%20%C3%94%20P%C3%A9i%20des%20laves%2C%20j%27ai%20une%20question%20sur%20vos%20cr%C3%A9ations"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=386+Route+Nationale+2+97439+Sainte-Rose+La+R%C3%A9union">Venir à la boutique</a>
+    </div>
+    <p class="adr apparait d3">386 Route Nationale 2, 97439 Sainte-Rose · du mercredi au lundi</p>
+  </div>
+</header>
+<svg class="coulee" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true"><path class="l" d="M0 18 C180 40 300 4 480 22 S820 44 980 20 1300 6 1440 26 V54 H0Z"/><path class="s" d="M0 30 C200 50 320 16 500 34 S840 54 1000 32 1300 18 1440 38 V54 H0Z"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Créateurs péi</span><span>Vitrine à bijoux</span><span>Ti tang en bague ou en collier</span><span>Chocolat Les Cabosses Ailées</span><span>Plants de vanille &amp; d'ananas</span><span>Verres peints</span><span>Minis tableaux uniques</span><span>Soda péi citron gingembre</span><span>Colis cadeaux</span>
+<span>Créateurs péi</span><span>Vitrine à bijoux</span><span>Ti tang en bague ou en collier</span><span>Chocolat Les Cabosses Ailées</span><span>Plants de vanille &amp; d'ananas</span><span>Verres peints</span><span>Minis tableaux uniques</span><span>Soda péi citron gingembre</span><span>Colis cadeaux</span>
+</div></div>
+
+<section id="boutique">
+  <div class="wrap boutique">
+    <div class="rv">
+      <p class="eyebrow">La boutique</p>
+      <h2>Toute La Réunion <span class="script">sur une étagère</span></h2>
+      <p>Place des fêtes, au Piton Sainte-Rose, juste en face de l'église Notre-Dame des Laves : la devanture se repère de loin, habillée de grandes photos de l'île.</p>
+      <p class="devise">« Une boutique artisanale 100 % locale ! »</p>
+      <p>À l'intérieur, un large éventail de créateurs péi et de produits artisanaux originaux : de quoi repartir avec un vrai morceau de l'île.</p>
+      <div class="puces">
+        <span>Soda péi citron gingembre</span><span>Rhums arrangés médaillés</span><span>Piments la pâte</span><span>Confitures</span><span>Savonnettes au lait de chèvre</span><span>Brède mouroung &amp; mafane</span><span>Huile essentielle de moringa</span><span>Peluches aux comptines créoles</span>
+      </div>
+    </div>
+    <figure class="vitre rv"><img src="img/boutique-interieur.webp" alt="Intérieur de la boutique : étagères de créations locales, rhums et présentoir de cartes postales" loading="lazy"><figcaption>Dans la boutique, au Piton Sainte-Rose</figcaption></figure>
+  </div>
+</section>
+
+<section class="bijoux" id="bijoux">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">La vitrine à bijoux</p>
+      <h2>Des créations <span class="script">qui ont du caractère</span></h2>
+      <p>Hibiscus dorés, tortues, dodo, margouillats sur nacre, ti tang… « Des créations originales à retrouver dans notre vitrine à bijoux ».</p>
+    </div>
+    <div class="ecrins">
+      <figure class="ecrin rv"><span class="date">Mai 2026</span><img src="img/herissons.webp" alt="Bague et collier en forme de ti tang dans leurs écrins, sur un petit décor de gazon" loading="lazy"><figcaption><b>Ti tang</b><span>« En bague ou en collier, démarquez-vous ! »</span></figcaption></figure>
+      <figure class="ecrin rv"><span class="date">Mai 2026</span><img src="img/bijoux-pei.webp" alt="Cinq écrins : parures hibiscus, tortues, pendentif dodo et boucles margouillat sur nacre" loading="lazy"><figcaption><b>Hibiscus, tortue, dodo</b><span>Des créations originales, en écrin</span></figcaption></figure>
+      <figure class="ecrin rv"><span class="date">Mai 2026</span><img src="img/tipo-chouchou.webp" alt="Joncs et bagues dorés devant l'enseigne en bois découpé Ti Pô Chouchou Eko-pô Végétale" loading="lazy"><figcaption><b>Tipô Chouchou &amp; Lafécafé</b><span>Quantité limitée !</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="trouv" id="trouvailles">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les trouvailles péi</p>
+      <h2>Les coups de cœur <span class="script" style="color:var(--braise)">du moment</span></h2>
+      <p class="glisse">Faites glisser <i></i></p>
+    </div>
+    <div class="rail">
+      <article class="carte"><img src="img/cabosses-ailees.webp" alt="Tablettes de chocolat Les Cabosses Ailées dans leur présentoir en bois" loading="lazy"><div><h3>Les Cabosses Ailées</h3><p>« Sexy raffinée cette tablette de chocolat ! » De retour en boutique après avoir été victime de son succès.</p><small>Chocolat artisanal</small></div></article>
+      <article class="carte"><img src="img/vanille-ananas.webp" alt="Plant de vanille et plant d'ananas Garden Island en tube" loading="lazy"><div><h3>Vanille &amp; ananas à planter</h3><p>« Des plants de vanille ou d'ananas prêts à être ramenés dans votre valise ! Avez-vous la main verte ? »</p><small>Garden Island</small></div></article>
+      <article class="carte"><img src="img/verres-peints.webp" alt="Trois verres peints : pêcheur de bichiques, tortue et paille-en-queue" loading="lazy"><div><h3>Verres peints</h3><p>« Boire dans un verre peint aux couleurs de la Réunion, c'est savourer sa boisson autrement. »</p><small>Aux couleurs de La Réunion</small></div></article>
+      <article class="carte"><img src="img/mini-tableaux.webp" alt="Trois minis tableaux sur chevalets : tortue, caméléon et baleine" loading="lazy"><div><h3>Minis tableaux</h3><p>Pour la console d'entrée ou la table de chevet : « 1 dessin, 1 tableau ! Ils sont uniques ! »</p><small>Touche chic 974</small></div></article>
+      <article class="carte"><img src="img/pardon.webp" alt="Trousse, gourde et T-shirts en boîte illustrés de la collection Pardon!" loading="lazy"><div><h3>La collection Pardon!</h3><p>Gourde, trousse et T-shirts en boîte : les dernières pièces d'une collection victime de son succès.</p><small>@pardon.re</small></div></article>
+      <article class="carte"><img src="img/plaque-439.webp" alt="Plaque décorative orange 439 Sainte-Rose avec volcan et drapeau réunionnais" loading="lazy"><div><h3>439 Sainte-Rose</h3><p>La plaque aux couleurs du volcan et du drapeau réunionnais, pour emporter un bout de Sainte-Rose chez soi.</p><small>Island Dreams</small></div></article>
+      <article class="carte"><img src="img/boutique-mugs.webp" alt="Tasses en inox illustrées Ile de la Réunion avec anse mousqueton" loading="lazy"><div><h3>Tass La Rényon</h3><p>En inox, avec anse mousqueton : volcan, fruits péi, drapeau, paysages de l'île.</p><small>En boutique</small></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un colis cadeau <span class="script">100 % péi</span></h2>
+      <p class="cite">« Des colis cadeaux pour toutes les occasions particulières et pour toutes les fêtes ! »</p>
+      <div class="idees">
+        <div class="idee"><em>1</em><div><h3>Un bijou en écrin</h3><p>Ti tang, hibiscus, tortue ou dodo : un cadeau prêt à offrir.</p></div></div>
+        <div class="idee"><em>2</em><div><h3>Une douceur de l'île</h3><p>Chocolat Les Cabosses Ailées, confitures, soda péi citron gingembre.</p></div></div>
+        <div class="idee"><em>3</em><div><h3>Une pièce unique</h3><p>Un mini tableau, un verre peint, un plant de vanille à faire grandir.</p></div></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692700202?text=Bonjour%20La%20Boutik%20%C3%94%20P%C3%A9i%20des%20laves%2C%20je%20voudrais%20composer%20un%20colis%20cadeau%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>Composer mon colis cadeau</a>
+    </div>
+    <figure class="colis rv">
+      <svg viewBox="0 0 320 300" role="img" aria-label="Illustration d'un colis cadeau aux couleurs de la lave">
+        <defs><linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff8a3d"/><stop offset="1" stop-color="#b8360f"/></linearGradient><linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a52"/><stop offset="1" stop-color="#e8501f"/></linearGradient></defs>
+        <ellipse cx="160" cy="282" rx="120" ry="12" fill="#1c1718" opacity=".12"/>
+        <rect x="58" y="130" width="204" height="148" rx="14" fill="url(#gb)"/>
+        <rect x="44" y="98" width="232" height="46" rx="12" fill="url(#gc)"/>
+        <rect x="146" y="98" width="28" height="180" fill="#2b9bd3"/>
+        <rect x="58" y="160" width="204" height="10" fill="#1c1718" opacity=".12"/>
+        <path d="M160 98 C120 40 70 58 92 92 C104 108 140 102 160 98Z" fill="#2b9bd3"/>
+        <path d="M160 98 C200 40 250 58 228 92 C216 108 180 102 160 98Z" fill="#17698f"/>
+        <circle cx="160" cy="98" r="13" fill="#f2b544"/>
+        <g fill="#fff" opacity=".85"><circle cx="90" cy="200" r="3"/><circle cx="230" cy="230" r="2.5"/><circle cx="110" cy="250" r="2"/><circle cx="215" cy="185" r="2"/></g>
+        <path d="M84 196 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4z" fill="#f2b544"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Venir nous voir</p>
+      <h2>Rendez-vous <span class="script" style="color:var(--braise)">au Piton</span></h2>
+      <p>Une halte idéale sur la route du volcan, juste en face de Notre-Dame des Laves.</p>
+    </div>
+    <div class="infos">
+      <div class="info rv"><h3>Adresse</h3><p>386 Route Nationale 2<br>Piton Sainte-Rose, 97439 Sainte-Rose<br>Face à l'église Notre-Dame des Laves</p></div>
+      <div class="info rv"><h3>Ouverture</h3><p>Du mercredi au lundi</p>
+        <div class="jours" aria-label="Ouvert du mercredi au lundi, fermé le mardi"><span>Lu</span><span class="off">Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span></div></div>
+      <div class="info rv"><h3>Nous joindre</h3><p><a href="tel:+262692700202">0692 70 02 02</a><br><a href="mailto:laboutik.opeideslaves@gmail.com">laboutik.opeideslaves@gmail.com</a><br><a href="https://www.facebook.com/boutik.opeideslaves">Facebook</a> · <a href="https://www.instagram.com/laboutikopeideslaves">Instagram</a></p></div>
+    </div>
+    <p class="source" style="color:#a89590">Cartes bancaires, chèques et espèces · accueil des personnes à mobilité réduite · parking.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692700202?text=Bonjour%20La%20Boutik%20%C3%94%20P%C3%A9i%20des%20laves%20%21">Écrire sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692700202">Appeler la boutique</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>La Boutik Ô Péi des laves · Boutique d'artisanat local · Piton Sainte-Rose, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Boutik Ô Péi des laves.</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],N=28,run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+function mk(y){return{x:Math.random()*W,y:y==null?H+10:y,r:1+Math.random()*2.4,v:.25+Math.random()*.6,d:Math.random()*6.28,a:.25+Math.random()*.45}}
+for(var i=0;i<N;i++)P.push(mk(Math.random()*H));
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.35;var al=p.a*Math.min(1,p.y/(H*.6));
+var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*4);g.addColorStop(0,'rgba(255,170,90,'+al+')');g.addColorStop(.4,'rgba(232,80,31,'+al*.5+')');g.addColorStop(1,'rgba(232,80,31,0)');
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*4,0,6.28);x.fill();if(p.y<-10)P[i]=mk()});
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Boutik Ô Péi des laves" defer></script>
+</body>
+</html>
