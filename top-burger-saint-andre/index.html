@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ze Top Burger · Burgers maison aux saveurs 974, Saint-André</title>
+<meta name="description" content="TopBurger, food truck à Saint-André (La Réunion) : burgers faits maison aux saveurs 974, frites fraîches, sauce maison, produits frais et locaux. 0693 84 97 64.">
+<meta property="og:title" content="Ze Top Burger · By Food and Beer, Saint-André">
+<meta property="og:description" content="Des burgers faits maison aux saveurs 974, des produits frais et locaux. Le burger du mois : Le Zindien.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/top-burger-saint-andre/img/zindien-terrasse.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/top-burger-saint-andre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Allura&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#120f0e;--charbon:#1e1918;--brun:#2a211e;--rouge:#d0202b;--rouge-f:#9d151d;--or:#e3a72f;--or-c:#f3cd7a;--rose:#e2196e;--creme:#fbf3e6;--txt:#2b2220;--doux:#8a7a74}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+h2{font-size:clamp(2.3rem,8vw,4rem);margin:.4rem 0 1.1rem;color:var(--noir)}
+h3{font-size:1.45rem}
+.script{font-family:'Allura',cursive;text-transform:none;font-weight:400;letter-spacing:0}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:700;color:var(--rouge)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:var(--or-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:2px solid var(--rouge)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:12px;text-decoration:none;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 12px 28px -12px rgba(208,32,43,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f);transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -6px rgba(227,167,47,.75)}}
+.btn-or{background:var(--or);color:var(--noir)}
+.btn-or:hover{background:var(--or-c)}
+.btn-line{border:2px solid rgba(255,255,255,.55);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-dark{border:2px solid var(--noir);color:var(--noir)}
+.btn-dark:hover{background:var(--noir);color:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:52% 40%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.17) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,15,14,.55) 0%,rgba(18,15,14,.2) 30%,rgba(18,15,14,.72) 62%,rgba(18,15,14,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7.5rem 0 4.2rem}
+.logo{display:inline-flex;align-items:flex-end;gap:.45rem;line-height:.86}
+.logo .ze{font-family:'Anton';color:var(--or);font-size:clamp(1.9rem,8.4vw,3.4rem);line-height:.92;padding-bottom:.08em;display:flex;flex-direction:column;text-align:center}
+.logo .ze small{font-size:.6em}
+.logo .bu{font-family:'Anton';font-size:clamp(4.3rem,19vw,9rem);color:#fff;letter-spacing:.005em}
+.logo .bu i{font-style:normal;color:var(--rouge)}
+.by{display:block;font-size:clamp(2.1rem,8vw,3.4rem);color:#fff;margin:.1rem 0 0 .2rem;line-height:1}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:1.2rem 0 1.8rem;color:#f4e9dc;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+.hero .lieu{margin-top:1.4rem;font-size:.86rem;color:var(--or-c);letter-spacing:.05em}
+.apparait{opacity:0;transform:translateY(26px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}.apparait.d4{animation-delay:1.3s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Anton';font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase;transform:rotate(-1.2deg);margin:-1rem -2vw 0;position:relative;z-index:3;box-shadow:0 10px 30px -15px rgba(0,0,0,.6)}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;color:var(--or-c);font-size:.8rem;vertical-align:.2em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{text-align:center}
+.esprit .intro{max-width:38rem;margin:0 auto 2.6rem;color:#4a3d39}
+.trio{display:grid;gap:1.1rem}
+.carte{background:#fff;border-radius:18px;padding:1.8rem 1.4rem;box-shadow:0 18px 40px -28px rgba(42,33,30,.55);border-top:5px solid var(--or);transition:.35s;text-align:left}
+.carte:nth-child(2){border-color:var(--rouge)}.carte:nth-child(3){border-color:var(--rose)}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg)}
+.carte .ico{width:52px;height:52px;border-radius:14px;background:var(--noir);display:grid;place-items:center;margin-bottom:1rem}
+.carte .ico svg{width:30px;height:30px}
+.carte h3{color:var(--noir);margin-bottom:.4rem}
+.carte p{color:#55463f;font-size:.98rem}
+.carte .q{font-style:italic;color:var(--doux);font-size:.88rem;display:block;margin-top:.7rem}
+/* burger du mois */
+.mois{background:var(--noir);color:#f3e7d8;position:relative;overflow:hidden}
+.mois::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(227,167,47,.22),transparent 45%),radial-gradient(circle at 0% 90%,rgba(208,32,43,.25),transparent 50%)}
+.mois .wrap{position:relative;display:grid;gap:2.2rem;align-items:center}
+.mois h2{color:#fff}
+.zindien{font-size:clamp(3.2rem,15vw,6.4rem);line-height:.95;display:block;margin:.2rem 0 .6rem}
+.zindien b{font-weight:400}
+.zindien .c1{color:#fff}.zindien .c2{color:#f08a24}.zindien .c3{color:#fff}.zindien .c4{color:#2aa452}
+.mois .eyebrow{color:var(--or-c)}
+.compo{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.3rem 0 1.8rem;list-style:none}
+.compo li{border:1px solid rgba(243,205,122,.45);border-radius:999px;padding:.45rem 1rem;font-size:.92rem;color:#fff;background:rgba(255,255,255,.04);opacity:0;transform:scale(.85);transition:.5s}
+.compo.vu li{opacity:1;transform:none}
+.compo li:nth-child(2){transition-delay:.12s}.compo li:nth-child(3){transition-delay:.24s}.compo li:nth-child(4){transition-delay:.36s}.compo li:nth-child(5){transition-delay:.48s}
+.mois .photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.9);transform:rotate(1.6deg)}
+.mois .photo img{width:100%;aspect-ratio:4/3.4;object-fit:cover}
+.tampon{position:absolute;top:14px;left:14px;background:var(--or);color:var(--noir);font-family:'Anton';text-transform:uppercase;font-size:.95rem;padding:.45rem .8rem;border-radius:8px;transform:rotate(-6deg);box-shadow:0 6px 16px rgba(0,0,0,.4)}
+.legende{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+.mois .legende{color:#a7958c}
+/* galerie */
+.galerie h2{margin-bottom:.4rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 min(78vw,360px);scroll-snap-align:center;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 36px -24px rgba(42,33,30,.6);transition:.35s}
+.rail figure:hover{transform:translateY(-6px)}
+.rail img{width:100%;aspect-ratio:1;object-fit:cover}
+.rail figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.9rem;color:#55463f}
+.rail figcaption b{display:block;font-family:'Anton';font-weight:400;text-transform:uppercase;font-size:1.05rem;color:var(--noir);letter-spacing:.02em}
+.glisse{font-size:.82rem;color:var(--doux)}
+/* camion */
+.camion{background:var(--brun);color:#efe2d4;position:relative}
+.camion h2{color:#fff}
+.camion .eyebrow{color:var(--or-c)}
+.camion .grille{display:grid;gap:2rem}
+.slogans{display:grid;gap:.8rem;margin:1.4rem 0 2rem}
+.slogans div{font-family:'Anton';text-transform:uppercase;font-size:1.6rem;letter-spacing:.02em;display:flex;align-items:center;gap:.8rem}
+.slogans div::before{content:"";width:34px;height:4px;background:var(--or);border-radius:2px;flex:none}
+.slogans div:nth-child(2){color:var(--rouge);filter:brightness(1.35)}
+.agenda{list-style:none;display:grid;gap:.9rem}
+.agenda li{background:rgba(255,255,255,.05);border-left:4px solid var(--rouge);border-radius:0 12px 12px 0;padding:1rem 1.1rem}
+.agenda b{display:block;color:#fff;font-weight:600}
+.agenda span{font-size:.9rem;color:#c9b8ab}
+.illus{background:var(--noir);border-radius:20px;padding:1.2rem}
+.illus svg{width:100%;height:auto}
+.illus .legende{color:#a7958c;text-align:center}
+/* avis */
+.note{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;background:#fff;border-radius:18px;padding:1.4rem 1.5rem;box-shadow:0 18px 40px -30px rgba(42,33,30,.6);margin-top:2rem}
+.note .pct{font-family:'Anton';font-size:3rem;color:var(--rouge);line-height:1}
+/* noel */
+.noel{position:relative;background:linear-gradient(160deg,#1a1312 0%,#2b1513 60%,#3a1215 100%);color:#f6eadb;overflow:hidden;text-align:center}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:90px}
+.guirlande circle{animation:luit 2.4s ease-in-out infinite}
+.guirlande circle:nth-of-type(2n){animation-delay:.8s}.guirlande circle:nth-of-type(3n){animation-delay:1.5s}
+@keyframes luit{50%{opacity:.35}}
+.noel .wrap{position:relative;padding-top:2.5rem}
+.noel h2{color:#fff}
+.noel h2 .script{display:block;color:var(--or-c);font-size:.75em;margin-bottom:.2rem}
+.noel p.txt{max-width:36rem;margin:0 auto 1.6rem;color:#e9d9c8}
+.idees{display:grid;gap:.8rem;max-width:44rem;margin:0 auto 2rem;text-align:left}
+.idees div{background:rgba(255,255,255,.06);border:1px solid rgba(243,205,122,.25);border-radius:14px;padding:1rem 1.2rem}
+.idees b{color:var(--or-c);font-weight:600;display:block}
+.noel .ctas{justify-content:center}
+/* contact */
+.contact{text-align:center}
+.contact .grille{display:grid;gap:1rem;margin:2rem 0}
+.bloc{background:#fff;border-radius:18px;padding:1.4rem;box-shadow:0 18px 40px -30px rgba(42,33,30,.6)}
+.bloc h3{color:var(--noir);font-size:1.15rem;margin-bottom:.4rem}
+.bloc a{text-decoration:none;font-weight:600;color:var(--rouge);word-break:break-word}
+.bloc p{color:#55463f;font-size:.95rem}
+.reseaux{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem}
+footer{text-align:center;padding:2.4rem 1rem 7rem;font-size:.82rem;color:var(--doux);background:#efe4d4}
+.flottant{position:fixed;right:14px;bottom:16px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.55);animation:souffle 3.4s ease-in-out infinite}
+.flottant svg{width:30px;height:30px}
+.rv{opacity:0;transform:translateY(30px);transition:1s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .trio{grid-template-columns:repeat(3,1fr)}
+ .mois .wrap{grid-template-columns:1.05fr 1fr}
+ .camion .grille{grid-template-columns:1.1fr 1fr;align-items:center}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .contact .grille{grid-template-columns:repeat(3,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv,.compo li{opacity:1;transform:none}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour TopBurger</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/zindien-terrasse.webp" alt="Le Zindien de TopBurger : brioche dorée, poulet croustillant, sauce massalé et frites maison, sur une table rose en terrasse" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait" style="color:var(--or-c)">Food truck · Saint-André · La Réunion</p>
+    <h1 class="apparait d2"><span class="logo"><span class="ze">ZE<br>TOP</span><span class="bu">BU<i>R</i>GER</span></span><span class="by script">By Food and Beer</span></h1>
+    <p class="lead apparait d3">Des burgers faits maison aux saveurs 974, des produits frais et locaux… et l'envie de partager des émotions.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262693849764?text=Bonjour%20TopBurger%2C%20je%20voudrais%20commander%20des%20burgers"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.7-1.1-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg>Commander</a>
+      <a class="btn btn-line" href="tel:+262693849764">0693 84 97 64</a>
+    </div>
+    <p class="lieu apparait d4">Rond-point de l'AFPAR · Saint-André</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Burger création</span><span>Frites fraîches</span><span>Sauce maison</span><span>Saveurs 974</span><span>Produits frais et locaux</span><span>Le Zindien, burger du mois</span>
+  <span>Burger création</span><span>Frites fraîches</span><span>Sauce maison</span><span>Saveurs 974</span><span>Produits frais et locaux</span><span>Le Zindien, burger du mois</span>
+</div></div>
+
+<section class="wrap esprit">
+  <p class="eyebrow rv">Notre esprit</p>
+  <h2 class="rv">Fait maison,<br>goût péi</h2>
+  <p class="intro rv">Ze Top Burger, c'est un camion noir, une tonnelle rouge illuminée de guirlandes et une cuisine qui mélange l'esprit burger et les épices de l'île.</p>
+  <div class="trio">
+    <article class="carte rv">
+      <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#e3a72f" stroke-width="2" stroke-linecap="round"><path d="M5 14c0-5 5-8 11-8s11 3 11 8Z"/><path d="M4 18h24M6 22h20a2 2 0 0 1-2 3H8a2 2 0 0 1-2-3Z"/><path d="M5 18c2 1.5 4 1.5 5.5 0s3.5-1.5 5.5 0 3.5 1.5 5.5 0 3.5-1.5 5.5 0" stroke="#d0202b"/></svg></div>
+      <h3>Burgers faits maison</h3>
+      <p>Des recettes créées au camion, réalisées aux saveurs 974 : massalé, citron, gros piment…</p>
+      <span class="q">« vous faire découvrir des burgers fait maison réalisés aux saveurs 974 »</span>
+    </article>
+    <article class="carte rv">
+      <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#d0202b" stroke-width="2" stroke-linecap="round"><path d="M16 27s-10-6.2-10-13a5.5 5.5 0 0 1 10-3.2A5.5 5.5 0 0 1 26 14c0 6.8-10 13-10 13Z"/></svg></div>
+      <h3>Partager des émotions</h3>
+      <p>Un burger, c'est aussi un moment : entre amis sous la tonnelle, en famille, ou lors des grands rendez-vous de l'île.</p>
+      <span class="q">« partager des émotions »</span>
+    </article>
+    <article class="carte rv">
+      <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#2aa452" stroke-width="2" stroke-linecap="round"><path d="M7 25C7 13 15 7 26 6c0 11-6 19-18 19Z"/><path d="M7 25 18 14"/></svg></div>
+      <h3>Frais et local</h3>
+      <p>Des produits frais et locaux, des frites fraîches maison et une sauce maison pour signer chaque burger.</p>
+      <span class="q">« des produits frais et locaux »</span>
+    </article>
+  </div>
+  <div class="note rv">
+    <span class="pct">100 %</span>
+    <p style="text-align:left">des avis publiés sur la page Facebook recommandent TopBurger.<br><small style="color:var(--doux)">6 avis, page Facebook TopBurger</small></p>
+  </div>
+</section>
+
+<section class="mois" id="mois">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Le burger du mois · novembre 2026</p>
+      <h2><span class="zindien"><b class="c1">LE </b><b class="c2">ZIN</b><b class="c3">DI</b><b class="c4">EN</b></span></h2>
+      <p>Le burger du mois chez TopBurger : un hommage gourmand aux saveurs indiennes de La Réunion, servi avec ses frites maison.</p>
+      <ul class="compo" id="compo">
+        <li>Poulet croustillant</li><li>Frites maison</li><li>Sauce massalé</li><li>Citron</li><li>Gros piment</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-or" href="https://wa.me/262693849764?text=Bonjour%20TopBurger%2C%20je%20voudrais%20commander%20Le%20Zindien">Je veux Le Zindien</a>
+        <a class="btn btn-line" href="https://canva.link/menutopburger">Voir le menu</a>
+      </div>
+    </div>
+    <figure class="rv">
+      <div class="photo"><img src="img/zindien-sauce.webp" alt="Le Zindien en barquette rouge, sauce massalé coulante et frites maison" loading="lazy"><span class="tampon">Burger du mois</span></div>
+      <figcaption class="legende">Le Zindien, photo publiée par TopBurger le 6 novembre 2026.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap">
+    <p class="eyebrow rv">Sorti du camion</p>
+    <h2 class="rv">Croustillant,<br>doré, coulant</h2>
+    <p class="glisse rv">Faites glisser pour voir les burgers →</p>
+    <div class="rail">
+      <figure><img src="img/poulet-croustillant.webp" alt="Burger au poulet croustillant et bacon grillé sur planche en bambou" loading="lazy"><figcaption><b>Poulet croustillant</b>Brioche toastée, poulet bien doré, publié le 23 septembre 2026.</figcaption></figure>
+      <figure><img src="img/burger-sauce-bbq.webp" alt="Burger poulet croustillant nappé de sauce brune brillante" loading="lazy"><figcaption><b>Le nappage</b>Une sauce qui brille et qui coule juste ce qu'il faut.</figcaption></figure>
+      <figure><img src="img/burger-planche.webp" alt="Burger et frites maison sur planche en bois" loading="lazy"><figcaption><b>Burger + frites maison</b>Le duo servi sur planche, avec les frites maison.</figcaption></figure>
+      <figure><img src="img/zindien-frites.webp" alt="Le Zindien et ses frites maison dans une barquette illustrée" loading="lazy"><figcaption><b>Le Zindien</b>En terrasse, au soleil, sur les tables roses du camion.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="camion" id="camion">
+  <div class="wrap grille">
+    <div>
+      <p class="eyebrow rv">Le camion</p>
+      <h2 class="rv">Ze Top Burger<br>sur la route</h2>
+      <div class="slogans rv"><div>Burger création</div><div>Frites fraîches</div><div>Sauce maison</div></div>
+      <p class="rv" style="margin-bottom:1.4rem">Notre point d'attache : le rond-point de l'AFPAR, chemin Lagourgue, à Saint-André. Et le camion aime voyager à la rencontre des gourmands de toute l'île :</p>
+      <ul class="agenda rv">
+        <li><b>Parc du Colosse, Saint-André</b><span>Du 2 au 4 octobre 2026, pour une ambiance « gayar ».</span></li>
+        <li><b>Florilège, Le Tampon</b><span>Octobre 2026 : « Ça y est, on est installés ».</span></li>
+        <li><b>Toute l'année</b><span>Les rendez-vous du moment sont annoncés sur Facebook, Instagram et TikTok.</span></li>
+      </ul>
+    </div>
+    <figure class="illus rv">
+      <svg viewBox="0 0 400 260" role="img" aria-label="Illustration : le camion Ze Top Burger sous sa tonnelle rouge et ses guirlandes">
+        <path d="M30 70 L200 22 L370 70 Z" fill="#d0202b"/><path d="M30 70 L370 70" stroke="#9d151d" stroke-width="4"/>
+        <path d="M40 72 Q120 96 200 72 T360 72" fill="none" stroke="#f3cd7a" stroke-width="1.4"/>
+        <g fill="#f3cd7a"><circle cx="70" cy="80" r="4"/><circle cx="110" cy="87" r="4"/><circle cx="150" cy="86" r="4"/><circle cx="190" cy="76" r="4"/><circle cx="230" cy="80" r="4"/><circle cx="270" cy="87" r="4"/><circle cx="310" cy="85" r="4"/><circle cx="345" cy="77" r="4"/></g>
+        <line x1="40" y1="70" x2="40" y2="230" stroke="#ddd" stroke-width="3"/><line x1="360" y1="70" x2="360" y2="230" stroke="#ddd" stroke-width="3"/>
+        <rect x="70" y="105" width="260" height="105" rx="40" fill="#1e1918" stroke="#3a302c" stroke-width="3"/>
+        <rect x="105" y="118" width="190" height="42" rx="6" fill="#fbf3e6" opacity=".9"/>
+        <rect x="80" y="166" width="240" height="34" rx="4" fill="#120f0e"/>
+        <text x="96" y="190" font-family="Anton,Impact" font-size="20" fill="#e3a72f">ZE TOP</text>
+        <text x="160" y="191" font-family="Anton,Impact" font-size="24" fill="#fff">BU<tspan fill="#d0202b">R</tspan>GER</text>
+        <circle cx="130" cy="216" r="16" fill="#120f0e" stroke="#bbb" stroke-width="4"/><circle cx="270" cy="216" r="16" fill="#120f0e" stroke="#bbb" stroke-width="4"/>
+        <rect x="20" y="230" width="360" height="4" rx="2" fill="#3a302c"/>
+        <g fill="#b9473a"><rect x="345" y="190" width="30" height="40" rx="4"/></g>
+        <g fill="#e2196e"><rect x="22" y="200" width="10" height="30"/></g>
+      </svg>
+      <figcaption class="legende">Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 10 Q50 50 100 18 T200 18 T300 18 T400 10" fill="none" stroke="#5a4a40" stroke-width="1.2"/>
+    <g fill="#f3cd7a"><circle cx="25" cy="27" r="3.5"/><circle cx="60" cy="33" r="3.5" fill="#d0202b"/><circle cx="95" cy="20" r="3.5"/><circle cx="130" cy="31" r="3.5" fill="#2aa452"/><circle cx="165" cy="29" r="3.5"/><circle cx="200" cy="19" r="3.5" fill="#d0202b"/><circle cx="235" cy="30" r="3.5"/><circle cx="270" cy="31" r="3.5" fill="#2aa452"/><circle cx="305" cy="20" r="3.5"/><circle cx="340" cy="30" r="3.5" fill="#d0202b"/><circle cx="375" cy="22" r="3.5"/></g>
+  </svg>
+  <div class="wrap">
+    <h2 class="rv"><span class="script">Pour les fêtes</span>Noël version Top Burger</h2>
+    <p class="txt rv">Une soirée entre amis, un repas d'équipe, une grande tablée en famille : faites plaisir à tout le monde avec une commande Ze Top Burger pour Noël.</p>
+    <div class="idees rv">
+      <div><b>La tablée gourmande</b>Des burgers maison pour toute la famille, prêts à partager.</div>
+      <div><b>Le repas d'équipe</b>Une pause burger pour fêter la fin d'année avec les collègues.</div>
+      <div><b>Le cadeau qui régale</b>Offrez un repas Top Burger à quelqu'un que vous aimez.</div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262693849764?text=Bonjour%20TopBurger%2C%20je%20voudrais%20organiser%20une%20commande%20de%20burgers%20pour%20No%C3%ABl">Organiser ma commande de Noël</a>
+      <a class="btn btn-line" href="tel:+262693849764">Appeler le camion</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap contact" id="contact">
+  <p class="eyebrow rv">On se retrouve ?</p>
+  <h2 class="rv">Paré pou goûte ?</h2>
+  <div class="grille">
+    <div class="bloc rv"><h3>Commander</h3><p><a href="tel:+262693849764">0693 84 97 64</a></p><p style="margin-top:.6rem"><a href="https://wa.me/262693849764?text=Bonjour%20TopBurger%2C%20je%20voudrais%20commander%20des%20burgers">Écrire sur WhatsApp</a></p></div>
+    <div class="bloc rv"><h3>Le camion</h3><p>Rond-point de l'AFPAR, chemin Lagourgue<br>97440 Saint-André</p><p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&query=Rond-point+de+l%27AFPAR+chemin+Lagourgue+Saint-Andr%C3%A9+R%C3%A9union">Ouvrir l'itinéraire</a></p></div>
+    <div class="bloc rv"><h3>Horaires du jour</h3><p>Ouvertures et rendez-vous annoncés chaque semaine sur nos réseaux.</p><p style="margin-top:.6rem"><a href="mailto:mfoirestauration@gmail.com">mfoirestauration@gmail.com</a></p></div>
+  </div>
+  <div class="reseaux rv">
+    <a class="btn btn-dark" href="https://www.facebook.com/p/TopBurger-100092480206391/">Facebook</a>
+    <a class="btn btn-dark" href="https://www.instagram.com/zetopburger974/">Instagram</a>
+    <a class="btn btn-dark" href="https://www.tiktok.com/@zetopburger">TikTok</a>
+    <a class="btn btn-main" href="https://canva.link/menutopburger">Notre menu</a>
+  </div>
+</section>
+
+</main>
+<footer>Ze Top Burger · By Food and Beer · Food truck, Saint-André, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de TopBurger.</footer>
+<a class="flottant" href="https://wa.me/262693849764?text=Bonjour%20TopBurger%2C%20je%20voudrais%20commander%20des%20burgers" aria-label="Commander sur WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.7-1.1-4.4-3.9-4.6-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"/></svg></a>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,#compo').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],N=28,run=true;
+function sz(){W=c.width=innerWidth;H=c.height=innerHeight}sz();addEventListener('resize',sz);
+function nv(b){return{x:Math.random()*W,y:b?H+10:Math.random()*H,r:Math.random()*1.8+.6,vy:Math.random()*.55+.25,vx:(Math.random()-.5)*.3,o:Math.random()*.5+.25,t:Math.random()*6.3,h:Math.random()<.6?38:8}}
+for(var i=0;i<N;i++)P.push(nv(false));
+function f(){if(!run)return;x.clearRect(0,0,W,H);for(var i=0;i<N;i++){var p=P[i];p.y-=p.vy;p.t+=.03;p.x+=p.vx+Math.sin(p.t)*.25;if(p.y<-10)P[i]=p=nv(true);var a=p.o*(.65+.35*Math.sin(p.t*2));x.beginPath();x.fillStyle='hsla('+p.h+',95%,60%,'+a+')';x.shadowColor='hsla('+p.h+',100%,55%,.9)';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.3);x.fill()}requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Ze Top Burger" defer></script>
+</body>
+</html>
