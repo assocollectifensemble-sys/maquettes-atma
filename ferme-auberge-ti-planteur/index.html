@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ferme-auberge le Ti'Planteur · Table créole au feu de bois à Saint-Philippe</title>
+<meta name="description" content="Ferme-auberge le Ti'Planteur à Saint-Philippe (La Réunion) : plats cuits au feu de bois, produits de la ferme (palmiste, vacoa, poulets fermiers), repas de famille et hébergement à la ferme. 0692 78 43 23.">
+<meta property="og:title" content="Ferme-auberge le Ti'Planteur · Saint-Philippe">
+<meta property="og:description" content="Un vrai repas créole au feu de bois, avec les produits de la ferme, face à l'océan.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ferme-auberge-ti-planteur/img/salle-vue-mer.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ferme-auberge-ti-planteur/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,650;1,9..144,400;1,9..144,500&family=Nunito+Sans:wght@300;400;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#17321f;--foret2:#21462c;--palme:#4c8a4f;--feuille:#a9c98a;--lagon:#2b6f8c;--bois:#8a5530;--braise:#e0782c;--braise-c:#f6b35c;--creme:#f8f2e4;--sable:#efe5cf;--txt:#2a2b22;--doux:#6d6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;color:var(--foret);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.4rem 0 1.1rem}
+h2 em,h1 em{font-style:italic;font-weight:400;color:var(--braise)}
+h3{font-size:1.3rem;margin-bottom:.35rem}
+.main-script{font-family:'Caveat',cursive;color:var(--braise);font-size:1.5rem;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--palme);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:var(--feuille);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.35s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-feu{background:var(--braise);color:#fff;box-shadow:0 14px 30px -14px rgba(224,120,44,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-feu:hover{background:#c8621c}
+@keyframes souffle{50%{box-shadow:0 12px 44px -6px rgba(224,120,44,.75)}}
+.btn-clair{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-clair:hover{background:rgba(255,255,255,.14)}
+.btn-vert{border:1.5px solid var(--palme);color:var(--foret)}
+.btn-vert:hover{background:var(--sable)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--foret);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:28% center;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,50,31,.25) 0%,rgba(16,34,21,.55) 30%,rgba(16,34,21,.82) 60%,rgba(16,34,21,.97) 100%)}
+#braises{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4.6rem}
+.hero .eyebrow{color:var(--feuille)}
+.hero h1{color:#fff;font-size:clamp(3.1rem,13vw,6.6rem);font-weight:650;letter-spacing:-.01em;margin:.5rem 0 .2rem}
+.hero h1 small{display:block;font-family:'Caveat',cursive;font-size:.42em;color:var(--braise-c);font-weight:500;letter-spacing:0;margin-bottom:.15em}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:1rem 0 1.9rem;color:var(--creme);text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.86rem;color:var(--feuille)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--braise);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.7rem;color:var(--foret)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* parole */
+.parole{background:var(--creme)}
+.kreol{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.45rem,4.6vw,2.2rem);line-height:1.35;color:var(--foret);position:relative;padding-top:2.2rem}
+.kreol::before{content:"“";position:absolute;top:-1.4rem;left:-.3rem;font-size:5.5rem;color:var(--braise);opacity:.55;line-height:1}
+.kreol-src{margin-top:1rem;color:var(--doux);font-size:.9rem}
+.grille2{display:grid;gap:2.6rem;align-items:center}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:2rem}
+.chiffre{background:#fff;border-radius:18px;padding:1rem .7rem;text-align:center;box-shadow:0 12px 30px -22px rgba(23,50,31,.6)}
+.chiffre b{display:block;font-family:'Fraunces',serif;font-size:1.65rem;color:var(--braise);font-weight:650;line-height:1.1}
+.chiffre span{font-size:.78rem;color:var(--doux);line-height:1.3;display:block;margin-top:.3rem}
+.photo-cadre{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(23,50,31,.7)}
+.photo-cadre img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.legende{position:absolute;left:.8rem;bottom:.8rem;background:rgba(23,50,31,.78);color:var(--creme);font-size:.78rem;padding:.3rem .8rem;border-radius:99px;backdrop-filter:blur(4px)}
+/* ferme */
+.ferme{background:var(--foret);color:var(--creme);overflow:hidden}
+.ferme h2{color:#fff}
+.ferme .eyebrow{color:var(--feuille)}
+.ferme p.intro{max-width:40rem;color:#dfe6d3}
+.produits{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.6rem 0 2.2rem}
+.produits span{border:1px solid rgba(169,201,138,.5);color:var(--feuille);padding:.35rem .9rem;border-radius:99px;font-size:.88rem}
+.defile-photos{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defile-photos::-webkit-scrollbar{display:none}
+.carte-p{flex:0 0 min(74vw,320px);scroll-snap-align:center;border-radius:22px;overflow:hidden;position:relative;transition:transform .5s}
+.carte-p:hover{transform:translateY(-6px) rotate(-.6deg)}
+.carte-p img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.carte-p figcaption{position:absolute;inset:auto 0 0 0;padding:2.4rem 1rem 1rem;background:linear-gradient(transparent,rgba(16,34,21,.92));font-family:'Fraunces',serif;font-size:1.15rem;color:#fff}
+.carte-p figcaption small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.78rem;color:var(--feuille)}
+.glisse{font-size:.8rem;color:var(--feuille);margin-top:.4rem}
+.feuille-deco{position:absolute;right:-60px;top:40px;width:260px;opacity:.09;pointer-events:none}
+/* repas */
+.repas{background:var(--sable)}
+.etapes{display:grid;gap:1rem;margin-top:2rem;counter-reset:e}
+.etape{background:#fff;border-radius:20px;padding:1.3rem 1.3rem 1.3rem 4.4rem;position:relative;box-shadow:0 14px 30px -24px rgba(23,50,31,.7);transition:transform .4s}
+.etape:hover{transform:translateX(6px)}
+.etape::before{counter-increment:e;content:counter(e);position:absolute;left:1.2rem;top:1.25rem;width:2.3rem;height:2.3rem;border-radius:50%;background:var(--braise);color:#fff;font-family:'Fraunces',serif;font-weight:650;display:grid;place-items:center}
+.etape p{color:var(--doux);font-size:.95rem}
+.feu-bois{margin-top:2.4rem;display:flex;gap:1rem;align-items:center;background:var(--foret);color:var(--creme);border-radius:22px;padding:1.3rem 1.4rem}
+.feu-bois svg{flex:none;width:58px;height:58px}
+.feu-bois b{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:500;color:#fff;display:block}
+.menu-carte{margin-top:2.6rem;background:#fffdf7;border-radius:24px;padding:2rem 1.5rem;text-align:center;border:1px solid #e3d6b8;position:relative}
+.menu-carte h3{font-size:1.6rem;font-style:italic;font-weight:400;color:var(--bois)}
+.menu-carte .rub{font-family:'Caveat',cursive;font-size:1.45rem;color:var(--palme);margin-top:1.1rem}
+.menu-carte p{font-size:.98rem}
+.menu-carte .ou{font-style:italic;color:var(--doux);font-size:.85rem}
+.menu-carte .note{font-size:.8rem;color:var(--doux);margin-top:1.3rem}
+/* fêtes */
+.fetes-fam{background:var(--creme)}
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2rem}
+.mosaique figure{position:relative;border-radius:20px;overflow:hidden}
+.mosaique img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform 1.2s}
+.mosaique figure:hover img{transform:scale(1.06)}
+.mosaique .large{grid-column:1/-1}
+.mosaique .large img{aspect-ratio:16/10}
+.occasions{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 1.6rem}
+.occasions span{background:#fff;border:1px solid #e4d9bf;padding:.35rem .9rem;border-radius:99px;font-size:.88rem;color:var(--foret)}
+/* dormir */
+.dormir{background:linear-gradient(160deg,var(--lagon),#1d4f66);color:#eaf4f6;overflow:hidden}
+.dormir h2{color:#fff}.dormir .eyebrow{color:#bfe3ea}
+.dormir-cartes{display:grid;gap:1rem;margin-top:2rem}
+.dcarte{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:1.5rem;backdrop-filter:blur(3px)}
+.dcarte h3{color:#fff}
+.dcarte p{color:#dcecef;font-size:.96rem;margin-bottom:1rem}
+.vague{display:block;width:100%;height:42px}
+/* noël */
+.noel{background:radial-gradient(circle at 50% 0,#2c5a37,var(--foret) 70%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--braise-c)}
+.noel p{max-width:36rem;margin:0 auto 1rem;color:#e4ead9}
+.noel .ctas{justify-content:center;margin-top:1.8rem}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.2rem}
+.guirlande i{width:9px;height:9px;border-radius:50%;background:var(--braise-c);box-shadow:0 0 12px var(--braise);animation:luit 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--feuille);box-shadow:0 0 12px var(--palme);animation-delay:.8s}
+.guirlande i:nth-child(3n){animation-delay:1.6s}
+@keyframes luit{50%{opacity:.35}}
+.idees{display:grid;gap:.9rem;margin:2rem auto 0;max-width:46rem;text-align:left}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(246,179,92,.35);border-radius:20px;padding:1.2rem 1.3rem}
+.idee h3{color:var(--braise-c);font-size:1.2rem}
+.idee p{margin:0;font-size:.95rem}
+/* contact */
+.contact{background:var(--sable)}
+.coord{display:grid;gap:.9rem;margin-top:1.6rem}
+.coord a,.coord div{display:flex;gap:.9rem;align-items:center;background:#fff;border-radius:18px;padding:1rem 1.2rem;text-decoration:none;box-shadow:0 12px 28px -24px rgba(23,50,31,.8);transition:transform .3s;overflow-wrap:anywhere}
+.coord a:hover{transform:translateY(-3px)}
+.coord svg{flex:none;width:26px;height:26px;color:var(--braise)}
+.coord small{display:block;color:var(--doux);font-size:.78rem}
+.liens{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+footer{background:var(--foret);color:#c9d6bc;text-align:center;font-size:.82rem;padding:2.2rem 6vw 2.6rem;line-height:1.6}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .grille2{grid-template-columns:1.15fr .85fr}
+ .etapes{grid-template-columns:1fr 1fr}
+ .dormir-cartes,.idees{grid-template-columns:1fr 1fr}
+ .mosaique{grid-template-columns:2fr 1fr 1fr}
+ .mosaique .large{grid-column:auto;grid-row:span 2}
+ .mosaique .large img{aspect-ratio:auto}
+ .coord{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ferme-auberge le Ti'Planteur</div>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/salle-vue-mer.webp" alt="La salle de la ferme-auberge dressée pour une fête, grandes fenêtres ouvertes sur l'océan"></div>
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Ferme-auberge · Saint-Philippe · La Réunion</p>
+    <h1 class="apparait d2"><small>Ferme-auberge</small>le Ti'Planteur</h1>
+    <p class="lead apparait d2">Des plats cuits au feu de bois et les produits frais de la ferme : palmiste, vacoa, poulets fermiers. Un vrai repas créole, en famille ou entre amis, face à l'océan.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-feu" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20table%20%C3%A0%20la%20ferme-auberge%20le%20Ti%27Planteur"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Réserver ma table</a>
+      <a class="btn btn-clair" href="tel:+262692784323">0692 78 43 23</a>
+    </div>
+    <p class="adr apparait d3">Chemin la Mer Cassée · 97442 Saint-Philippe · Sur réservation</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track"><span>Cuisine au feu de bois</span><span>Salade de palmiste</span><span>Vacoa de la ferme</span><span>Poulets fermiers</span><span>Rhums arrangés</span><span>Saveurs péi</span><span>Saint-Philippe</span><span>Cuisine au feu de bois</span><span>Salade de palmiste</span><span>Vacoa de la ferme</span><span>Poulets fermiers</span><span>Rhums arrangés</span><span>Saveurs péi</span><span>Saint-Philippe</span></div></div>
+
+<section class="parole">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="eyebrow">Bienvenue à la ferme</p>
+      <blockquote class="kreol">Nout table d'hôtes i prépare a zot in vrai repas créole, plein saveurs péi, dan in ambiance chaleureuse et conviviale.</blockquote>
+      <p class="kreol-src">Ferme-auberge le Ti'Planteur, publication du 21 avril 2026</p>
+      <p style="margin-top:1.4rem">À Saint-Philippe, dans le Sud sauvage, la ferme d'Erika Ponama sert ce qu'elle cultive : les produits choisis pour les repas viennent tout frais de la ferme. On s'installe dans une grande salle lumineuse, les fenêtres ouvertes sur la mer, pour un bon moment en famille, dans la joie et la gourmandise.</p>
+      <div class="chiffres">
+        <div class="chiffre"><b>100 %</b><span>des avis Facebook recommandent</span></div>
+        <div class="chiffre"><b>100</b><span>convives accueillis en groupe</span></div>
+        <div class="chiffre"><b>3,3 K</b><span>abonnés sur Facebook</span></div>
+      </div>
+    </div>
+    <figure class="photo-cadre rv"><img src="img/bar-rhums.webp" alt="Le bar en bois de la ferme-auberge, ses bocaux et bouteilles de rhums arrangés, une pirogue posée au-dessus" loading="lazy" style="aspect-ratio:4/5;object-position:30% center"><figcaption class="legende">Le bar et ses rhums arrangés</figcaption></figure>
+  </div>
+</section>
+
+<section class="ferme" id="ferme">
+  <svg class="feuille-deco" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 195C96 140 70 90 10 60c50 4 80 30 90 70-4-50 10-95 45-125-12 45-18 90-45 190z" fill="#a9c98a"/></svg>
+  <div class="wrap">
+    <p class="eyebrow rv">De la ferme à l'assiette</p>
+    <h2 class="rv">Ce qui pousse ici <em>finit dans votre assiette</em></h2>
+    <p class="intro rv">Les palmistes alignés sous le soleil, le vacoa et ses grappes de fruits, le manguier chargé, le verger : la ferme nourrit la table de l'auberge.</p>
+    <div class="produits rv"><span>Palmiste</span><span>Vacoa</span><span>Poulets fermiers</span><span>Anones</span><span>Fruits de la passion</span><span>Letchis</span></div>
+    <div class="defile-photos">
+      <figure class="carte-p"><img src="img/palmistes.webp" alt="Jeunes palmiers palmistes dans la plantation de la ferme" loading="lazy"><figcaption><small>À la ferme</small>Les palmistes</figcaption></figure>
+      <figure class="carte-p"><img src="img/vacoa.webp" alt="Un vacoa et ses fruits sous le ciel bleu" loading="lazy"><figcaption><small>À la ferme</small>Le vacoa</figcaption></figure>
+      <figure class="carte-p"><img src="img/palmeraie.webp" alt="La palmeraie de la ferme, lumière du soir entre les troncs" loading="lazy"><figcaption><small>À la ferme</small>La palmeraie</figcaption></figure>
+      <figure class="carte-p"><img src="img/manguier.webp" alt="Manguier chargé de mangues qui rougissent" loading="lazy"><figcaption><small>Au verger</small>Le manguier</figcaption></figure>
+      <figure class="carte-p"><img src="img/verger.webp" alt="Branches chargées de fruits verts dans le verger" loading="lazy"><figcaption><small>Au verger</small>Les fruits de saison</figcaption></figure>
+      <figure class="carte-p"><img src="img/jardin.webp" alt="Grandes feuilles vertes au jardin de la ferme" loading="lazy"><figcaption><small>Au jardin</small>Le vert du Sud</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser pour visiter la ferme →</p>
+  </div>
+</section>
+
+<section class="repas" id="repas">
+  <div class="wrap">
+    <p class="eyebrow rv">Le repas à la ferme</p>
+    <h2 class="rv">Un repas complet, <em>du punch au dessert</em></h2>
+    <p class="rv" style="max-width:40rem">L'authenticité d'une table à la ferme : des produits locaux et des spécialités régionales, tirés de la production de la ferme.</p>
+    <div class="etapes">
+      <div class="etape rv"><h3>L'apéritif créole</h3><p>Pour ouvrir le repas en douceur, à la mode péi.</p></div>
+      <div class="etape rv"><h3>L'entrée</h3><p>Par exemple la salade de palmiste, tout droit de la plantation.</p></div>
+      <div class="etape rv"><h3>Le plat</h3><p>Par exemple le carry poulet, mijoté au feu de bois.</p></div>
+      <div class="etape rv"><h3>Le dessert</h3><p>Par exemple le gâteau patate, pour finir en gourmandise.</p></div>
+    </div>
+    <div class="feu-bois rv">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6c3 10 14 14 14 28a14 14 0 0 1-28 0c0-7 4-11 6-15 1 5 3 7 5 7-2-8 0-14 3-20z" fill="#e0782c"/><path d="M32 30c2 5 7 7 7 13a7 7 0 0 1-14 0c0-4 3-6 4-9 1 2 2 3 3 3-1-3-1-5 0-7z" fill="#f6b35c"/><rect x="12" y="52" width="40" height="5" rx="2.5" fill="#8a5530" transform="rotate(-8 32 54)"/><rect x="12" y="52" width="40" height="5" rx="2.5" fill="#6d4223" transform="rotate(8 32 54)"/></svg>
+      <div><b>Tout est cuit au feu de bois</b>Le goût unique de la cuisine au feu de bois, à la ferme.</div>
+    </div>
+    <div class="menu-carte rv">
+      <p class="eyebrow">Publié le 21 avril 2026</p>
+      <h3>Le menu de la fête des mères</h3>
+      <p class="rub">Apéritifs créoles</p><p>Samoussas, beignets<br>Jus frais, punch maison, sodas, rhums arrangés</p>
+      <p class="rub">2 entrées</p><p>Salade de palmiste royal<br>et gratin de chou de coco</p>
+      <p class="rub">2 plats chauds au choix</p><p>Carry de pintade au combava<br><span class="ou">ou</span><br>Sauté d'émincés de thon au palmiste<br><span class="ou">ou</span><br>Jarret et pied de porc au palmiste</p>
+      <p class="rub">Dessert</p><p>Gâteau maison, accompagné d'infusion ou café</p>
+      <p class="note">Chaque grande occasion a son menu : demandez celui du moment au 0692 78 43 23.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fetes-fam" id="fetes">
+  <div class="wrap">
+    <p class="eyebrow rv">Vos grandes occasions</p>
+    <h2 class="rv">Une salle face à la mer <em>pour vos fêtes de famille</em></h2>
+    <p class="rv" style="max-width:40rem">Grandes tablées nappées de blanc, chemins de table, serviettes pliées en éventail et l'océan dans toutes les fenêtres : la ferme-auberge reçoit vos repas de famille jusqu'à 100 personnes.</p>
+    <div class="occasions rv"><span>Baptêmes</span><span>Communions</span><span>Confirmations</span><span>Anniversaires</span><span>Fête des mères</span><span>Dimanche de Pâques</span></div>
+    <a class="btn btn-feu rv" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20organiser%20un%20repas%20de%20famille%20%C3%A0%20la%20ferme-auberge%20le%20Ti%27Planteur">Organiser ma fête</a>
+    <div class="mosaique">
+      <figure class="large rv"><img src="img/salle-ocean.webp" alt="La salle dressée, baies vitrées ouvertes sur l'océan et la verdure" loading="lazy"></figure>
+      <figure class="rv"><img src="img/tablee.webp" alt="Longue tablée dressée avec chemin de table vert et serviettes roses" loading="lazy"></figure>
+      <figure class="rv"><img src="img/table-dressee.webp" alt="Détail d'une table dressée : verres, serviettes pliées et petits moulins à vent" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 42" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 42V20c160-20 320-20 480 0s320 20 480 0 320-20 480 0v22z" fill="#2b6f8c"/></svg>
+<section class="dormir" id="dormir" style="padding-top:2.5rem">
+  <div class="wrap">
+    <p class="eyebrow rv">Rester dormir</p>
+    <h2 class="rv">Prolonger le repas <em style="color:#f6b35c">par une nuit au calme</em></h2>
+    <p class="rv" style="max-width:40rem">Séjournez à la ferme, dans un cadre naturel et reposant : un hébergement indépendant et tout équipé vous attend.</p>
+    <div class="dormir-cartes">
+      <div class="dcarte rv"><h3>Dormir à la ferme</h3><p>Hébergement indépendant et tout équipé, au cœur de la ferme, à Saint-Philippe.</p><a class="btn btn-clair" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20%C3%A0%20la%20ferme">Demander les disponibilités</a></div>
+      <div class="dcarte rv"><h3>La Ciconia by ti'planteur</h3><p>Une villa tout confort avec piscine, pour une pause calme et déconnexion totale, jusqu'à 12 personnes.</p><a class="btn btn-clair" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20des%20informations%20sur%20la%20villa%20La%20Ciconia">En savoir plus</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offrez un repas <em style="color:#f6b35c">à la ferme</em></h2>
+    <p class="rv">Un repas créole au feu de bois face à l'océan, à partager en famille : un cadeau qui se savoure ensemble. Réservez aussi votre grande tablée des fêtes à la ferme-auberge.</p>
+    <div class="idees">
+      <div class="idee rv"><h3>Le repas à offrir</h3><p>Un bon cadeau pour un repas complet à la ferme, de l'apéritif créole au dessert.</p></div>
+      <div class="idee rv"><h3>La tablée des fêtes</h3><p>Toute la famille réunie dans la salle face à la mer, pour un vrai repas péi.</p></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-feu" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20repas%20%C3%A0%20la%20ferme-auberge%20pour%20No%C3%ABl">Offrir un repas à la ferme</a>
+      <a class="btn btn-clair" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20table%20pour%20les%20f%C3%AAtes">Réserver pour les fêtes</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Réserver</p>
+    <h2 class="rv">On vous attend <em>à la ferme</em></h2>
+    <p class="rv">Les repas se font sur réservation : un message ou un appel, et votre table est prête.</p>
+    <div class="coord">
+      <a class="rv" href="https://wa.me/262692784323?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20table"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span><small>WhatsApp</small>Écrire un message</span></a>
+      <a class="rv" href="tel:+262692784323"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg><span><small>Téléphone</small>0692 78 43 23</span></a>
+      <a class="rv" href="mailto:tiplanteur974@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><span><small>E-mail</small>tiplanteur974@gmail.com</span></a>
+      <a class="rv" href="https://www.google.com/maps/search/?api=1&query=Ferme+auberge+le+ti+planteur+Saint-Philippe+R%C3%A9union"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Adresse</small>Chemin la Mer Cassée, 97442 Saint-Philippe</span></a>
+    </div>
+    <div class="liens rv">
+      <a class="btn btn-vert" href="https://www.facebook.com/Ferme-auberge-le-ti-planteur-122093121567184">Facebook</a>
+      <a class="btn btn-vert" href="https://www.bienvenue-a-la-ferme.com/en/reunion/la-reunion/saint-philippe/ferme/ti-planteur/630994">Bienvenue à la ferme</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Ferme-auberge le Ti'Planteur · Table créole au feu de bois et hébergement à la ferme · Saint-Philippe, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Ferme-auberge le Ti'Planteur.</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+var c=document.getElementById('braises');if(!c)return;var x=c.getContext('2d'),W,H,P=[],run=true;
+var calme=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function taille(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}
+taille();addEventListener('resize',taille);
+function neuve(p,deb){p.x=Math.random()*W;p.y=deb?Math.random()*H:H+10;p.r=.8+Math.random()*2.2;p.v=.25+Math.random()*.6;p.o=.25+Math.random()*.5;p.ph=Math.random()*6.3;p.f=Math.random()<.25;return p}
+for(var i=0;i<28;i++)P.push(neuve({},true));
+function dessine(){x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.ph+=.02;p.x+=Math.sin(p.ph)*.35;var a=p.o*Math.min(1,p.y/(H*.35));if(p.y<-10)neuve(p,false);x.beginPath();x.fillStyle=p.f?'rgba(246,179,92,'+a+')':'rgba(224,120,44,'+a+')';x.shadowColor='rgba(240,140,50,.8)';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.3);x.fill()})}
+function boucle(){if(run)dessine();requestAnimationFrame(boucle)}
+if(calme){dessine()}else{boucle()}
+document.addEventListener('visibilitychange',function(){run=!document.hidden});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Ferme-auberge le Ti&#x27;Planteur" defer></script>
+</body>
+</html>
