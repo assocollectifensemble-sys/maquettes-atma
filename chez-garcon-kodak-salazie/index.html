@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Garçon Kodak · Restauration rapide, boucherie charcuterie à Salazie</title>
+<meta name="description" content="Chez Garçon Kodak, 95A rue Georges Pompidou à Salazie : le menu du midi publié chaque matin, sandwiches, boucherie charcuterie, fruits &amp; légumes. 0693 42 22 94.">
+<meta property="og:title" content="Chez Garçon Kodak · Salazie">
+<meta property="og:description" content="Le menu du midi publié chaque matin, sandwiches, boucherie charcuterie, fruits &amp; légumes, au cœur de Salazie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-garcon-kodak-salazie/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-garcon-kodak-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Outfit:wght@300;400;600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<style>
+:root{--terre:#9a4a24;--terre-f:#6e3117;--cafe:#24150e;--brun:#3d2417;--sable:#e8dfd6;--creme:#f7f1ea;--piment:#c8321e;--curcuma:#e9a531;--vert:#4f7a3a;--txt:#33241b;--doux:#7d6a5d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:500;color:var(--cafe);line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.35rem 0 1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Mrs Saint Delafield',cursive;font-weight:400;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--terre);font-weight:600}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--cafe);color:#e9cfa8;text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:.93rem;transition:.3s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--piment);color:#fff;box-shadow:0 14px 30px -14px rgba(200,50,30,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:#a82614}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(200,50,30,.65);transform:translateY(-1px)}}
+.btn-line{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{border:1px solid var(--terre);color:var(--terre-f)}
+.btn-dark:hover{background:var(--sable)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--cafe);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,21,14,.3) 0%,rgba(36,21,14,.62) 28%,rgba(36,21,14,.82) 60%,rgba(36,21,14,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4.2rem}
+.hero .eyebrow{color:var(--curcuma)}
+.hero h1{color:#fff;font-size:clamp(3.1rem,13vw,7rem);font-weight:700;letter-spacing:.01em;margin-top:.6rem}
+.hero h1 small{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:.38em;color:#f3d9b3;letter-spacing:.02em;margin-bottom:.1em}
+.hero .sign{font-size:clamp(2.6rem,10vw,4.4rem);color:var(--curcuma);display:block;margin-top:-.15em;transform:rotate(-4deg);transform-origin:left}
+.hero .lead{text-shadow:0 1px 12px rgba(0,0,0,.5);font-size:1.12rem;max-width:33rem;margin:1.1rem 0 1.8rem;color:var(--creme)}
+.hero .adr{margin-top:1.5rem;font-size:.86rem;color:#f3d9b3;display:flex;align-items:center;gap:.4rem}
+.hero .adr svg{width:1rem;height:1rem;flex:none}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}.apparait.d4{animation-delay:1.3s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--terre);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.7rem;color:var(--curcuma)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* ardoise */
+.bonjour{background:var(--creme)}
+.intro{max-width:40rem}
+.intro p+p{margin-top:.8rem}
+.ardoise{margin-top:2.4rem;background:var(--cafe);color:#efe4d6;border-radius:22px;padding:2rem 1.4rem 1.6rem;position:relative;box-shadow:0 30px 60px -30px rgba(36,21,14,.8);border:10px solid #7a4a2c;outline:1px solid rgba(255,255,255,.08);outline-offset:-18px}
+.ardoise .titre{font-family:'Playfair Display',serif;letter-spacing:.42em;text-align:center;color:var(--curcuma);font-size:1.05rem}
+.ardoise .sous{text-align:center;font-style:italic;font-family:'Playfair Display',serif;color:#f3d9b3;margin:.2rem 0 1.4rem;font-size:1.05rem}
+.jours{list-style:none;display:grid;gap:.15rem}
+.jours li{display:flex;gap:.9rem;align-items:baseline;padding:.6rem .2rem;border-bottom:1px dashed rgba(239,228,214,.18)}
+.jours li:last-child{border-bottom:0}
+.jours .j{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#c9a98a;min-width:6.6rem;flex:none}
+.jours .p{font-family:'Playfair Display',serif;font-size:1.12rem;color:#fff}
+.ardoise .note{font-size:.8rem;color:#b89d86;text-align:center;margin-top:1.1rem}
+.craie{font-size:2.1rem;color:var(--curcuma);text-align:center;margin-top:.6rem}
+/* galerie */
+.galerie{background:var(--sable)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 calc(50% - 50vw);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 min(72vw,300px);scroll-snap-align:center;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 18px 36px -24px rgba(36,21,14,.6);transition:transform .4s}
+.rail figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.rail figcaption{padding:.8rem 1rem 1rem;font-size:.86rem;color:var(--doux)}
+.rail figcaption b{display:block;font-family:'Playfair Display',serif;font-weight:500;color:var(--cafe);font-size:1.06rem}
+.glisse{font-size:.82rem;color:var(--doux);display:flex;align-items:center;gap:.5rem}
+.glisse i{display:inline-block;width:34px;height:2px;background:var(--terre);position:relative;animation:glisse 2.2s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(8px)}}
+/* sandwiches */
+.sandw{background:var(--creme)}
+.carte{display:grid;gap:1.1rem;margin-top:2rem}
+.bloc{background:#fff;border-radius:18px;padding:1.4rem 1.3rem;border-top:4px solid var(--curcuma);box-shadow:0 14px 30px -24px rgba(36,21,14,.5);transition:transform .35s,box-shadow .35s}
+.bloc:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(36,21,14,.55)}
+.bloc:nth-child(2){border-color:var(--piment)}.bloc:nth-child(3){border-color:var(--terre)}.bloc:nth-child(4){border-color:var(--vert)}
+.bloc h3{margin-bottom:.15rem}
+.bloc .compo{font-size:.84rem;font-style:italic;color:var(--doux);margin-bottom:.8rem}
+.bloc ul{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+.bloc li{font-size:.82rem;background:var(--sable);border-radius:999px;padding:.3rem .75rem;color:var(--brun)}
+.bloc li.star{background:var(--piment);color:#fff}
+.pied-carte{margin-top:1.6rem;font-size:.92rem;color:var(--doux)}
+/* boutique */
+.boutique{background:var(--brun);color:#efe4d6}
+.boutique h2{color:#fff}
+.boutique .eyebrow{color:var(--curcuma)}
+.trio{display:grid;gap:1.2rem;margin-top:2rem}
+.carte-b{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden}
+.carte-b img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.carte-b .t{padding:1.2rem 1.2rem 1.4rem}
+.carte-b h3{color:#fff;margin-bottom:.35rem}
+.carte-b p{font-size:.95rem;color:#dccab8}
+.carte-b .date{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--curcuma);margin-bottom:.4rem}
+.illu{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;background:linear-gradient(160deg,#5a7d3c,#2f4a22);position:relative}
+.illu svg{width:62%;height:auto}
+.illu span{position:absolute;right:.7rem;bottom:.5rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+/* avis */
+.avis{background:var(--sable);text-align:center}
+.avis blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.6rem,5.5vw,2.5rem);color:var(--cafe);max-width:36rem;margin:1rem auto .8rem;line-height:1.25}
+.avis blockquote::before{content:"“";display:block;font-size:3.5rem;color:var(--piment);line-height:.6;margin-bottom:.6rem}
+.avis cite{font-style:normal;font-size:.85rem;color:var(--doux)}
+/* noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#7c2414 0%,#4a150c 60%,#2b0d07 100%);color:#f6e6d2;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#f2c46b}
+.noel p{max-width:34rem;margin:0 auto}
+.noel .ctas{justify-content:center;margin-top:1.8rem}
+.guirlande{position:absolute;top:0;left:0;right:0;height:60px;width:100%}
+.guirlande circle{animation:brille 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(2n){animation-delay:.9s}.guirlande circle:nth-child(3n){animation-delay:1.7s}
+@keyframes brille{50%{opacity:.35}}
+.idees{display:grid;gap:.8rem;margin:2rem auto 0;max-width:46rem;text-align:left}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(242,196,107,.3);border-radius:16px;padding:1rem 1.1rem;display:flex;gap:.9rem;align-items:flex-start}
+.idee b{font-family:'Playfair Display',serif;font-weight:500;color:#fff;font-size:1.08rem;display:block}
+.idee span{font-size:.92rem;color:#e7cfb6}
+.idee .n{font-family:'Playfair Display',serif;color:#f2c46b;font-size:1.6rem;line-height:1}
+/* contact */
+.contact{background:var(--creme)}
+.fiche{display:grid;gap:1rem;margin-top:1.8rem}
+.ligne{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:16px;padding:1rem 1.1rem;text-decoration:none;box-shadow:0 12px 26px -22px rgba(36,21,14,.6);transition:transform .3s}
+a.ligne:hover{transform:translateX(4px)}
+.ligne .ic{width:44px;height:44px;border-radius:50%;background:var(--sable);display:grid;place-items:center;flex:none;color:var(--terre)}
+.ligne .ic svg{width:22px;height:22px}
+.ligne small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux)}
+.ligne strong{font-weight:600;color:var(--cafe);word-break:break-word}
+footer{background:var(--cafe);color:#c9b5a3;text-align:center;font-size:.8rem;padding:2.4rem 6vw 3rem;line-height:1.7}
+footer .script{font-size:2.6rem;color:var(--curcuma);display:block;margin-bottom:.4rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .carte{grid-template-columns:1fr 1fr}
+ .trio{grid-template-columns:repeat(3,1fr)}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .fiche{grid-template-columns:1fr 1fr}
+ .ardoise{padding:2.6rem 3rem 2rem;max-width:44rem}
+}
+@media(max-width:420px){.ribbon{font-size:.68rem}.jours .j{min-width:5.6rem;font-size:.66rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Garçon Kodak</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/poulet-croustillant.webp" alt="Poulet croustillant doré, photo publiée par Chez Garçon Kodak"></div>
+  <div class="hero-in wrap">
+    <p class="eyebrow apparait">Salazie · La Réunion</p>
+    <h1 class="apparait d2"><small>Bienvenue</small>Chez Garçon Kodak</h1>
+    <p class="lead apparait d3">Boucherie charcuterie, fruits &amp; légumes et restauration rapide au cœur de Salazie. Chaque matin, le menu de ce midi vous attend.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262693422294?text=Bonjour%2C%20quel%20est%20le%20menu%20de%20ce%20midi%20%3F"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>Le menu du jour</a>
+      <a class="btn btn-line" href="#sandwiches">Nos sandwiches</a>
+    </div>
+    <p class="adr apparait d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>95A rue Georges Pompidou, Salazie</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 24c240 26 480 26 720 6s480-26 720 2v12H0Z" fill="#9a4a24"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Sauté poulet gros piment</span><span>Massalé poulet</span><span>Boucané patates chouchou</span><span>Rôti porc à la vanille</span><span>Poulet croustillant</span><span>Bol renversé poulet</span><span>Massalé cabri pomme de terre</span><span>Rôti poulet</span>
+  <span>Sauté poulet gros piment</span><span>Massalé poulet</span><span>Boucané patates chouchou</span><span>Rôti porc à la vanille</span><span>Poulet croustillant</span><span>Bol renversé poulet</span><span>Massalé cabri pomme de terre</span><span>Rôti poulet</span>
+</div></div>
+
+<section class="bonjour" id="menu">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">Bonjour !</p>
+      <h2>Voici le menu de ce midi</h2>
+      <p>C'est ainsi que commence la journée chez Garçon Kodak : dès l'aube, le menu du midi s'affiche sur la page. Un plat différent chaque jour, des recettes créoles qui sentent bon la cuisine de la maison.</p>
+    </div>
+    <div class="ardoise rv">
+      <p class="titre">B O N J O U R</p>
+      <p class="sous">Les menus publiés ces derniers jours</p>
+      <ul class="jours">
+        <li><span class="j">Ven. 6 nov.</span><span class="p">Sauté poulet gros piment</span></li>
+        <li><span class="j">Jeu. 5 nov.</span><span class="p">Massalé poulet</span></li>
+        <li><span class="j">Mer. 4 nov.</span><span class="p">Boucané patates chouchou</span></li>
+        <li><span class="j">Mar. 3 nov.</span><span class="p">Rôti porc à la vanille</span></li>
+        <li><span class="j">Lun. 2 nov.</span><span class="p">Poulet croustillant</span></li>
+        <li><span class="j">Sam. 31 oct.</span><span class="p">Rôti de porc</span></li>
+        <li><span class="j">Ven. 30 oct.</span><span class="p">Bol renversé poulet</span></li>
+        <li><span class="j">Jeu. 29 oct.</span><span class="p">Massalé cabri pomme de terre</span></li>
+        <li><span class="j">Mer. 28 oct.</span><span class="p">Rôti poulet</span></li>
+      </ul>
+      <p class="craie script">bon appétit !</p>
+      <p class="note">Premier plat de chaque menu, tel que publié sur la page Facebook. Le menu complet du jour : un message suffit.</p>
+    </div>
+    <div class="ctas rv" style="margin-top:1.8rem">
+      <a class="btn btn-main" href="https://wa.me/262693422294?text=Bonjour%2C%20je%20voudrais%20le%20menu%20complet%20de%20ce%20midi">Demander le menu complet</a>
+      <a class="btn btn-dark" href="https://www.facebook.com/profile.php?id=61558456342375">Suivre le menu sur Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Dans les marmites</p>
+      <h2>Des plats généreux, cuisinés chaque jour</h2>
+      <p class="glisse"><i></i> Faites glisser pour découvrir</p>
+    </div>
+    <div class="rail">
+      <figure><img src="img/poulet-olives.webp" alt="Poulet en sauce tomate avec olives et poivrons" loading="lazy"><figcaption><b>Poulet, olives &amp; poivrons</b>Publié le 7 août 2025</figcaption></figure>
+      <figure><img src="img/cari-pommes-de-terre.webp" alt="Plat mijoté avec pommes de terre" loading="lazy"><figcaption><b>Mijoté aux pommes de terre</b>Publié le 7 août 2025</figcaption></figure>
+      <figure><img src="img/poulet-croustillant.webp" alt="Morceaux de poulet croustillant" loading="lazy"><figcaption><b>Poulet croustillant</b>Publié le 3 août 2025</figcaption></figure>
+      <figure><img src="img/plat-soja.webp" alt="Sauté aux germes de soja et carottes" loading="lazy"><figcaption><b>Sauté aux germes de soja</b>Publié le 3 août 2025</figcaption></figure>
+      <figure><img src="img/riz-saute.webp" alt="Riz sauté aux petits pois, carottes et œuf" loading="lazy"><figcaption><b>Riz sauté petits pois &amp; œuf</b>Publié le 3 août 2025</figcaption></figure>
+      <figure><img src="img/plat-sesame.webp" alt="Plat nappé de sauce et parsemé de sésame" loading="lazy"><figcaption><b>Sauce caramélisée &amp; sésame</b>Publié le 4 août 2025</figcaption></figure>
+      <figure><img src="img/plat-carottes-oignons.webp" alt="Plat aux carottes râpées et oignons rouges" loading="lazy"><figcaption><b>Carottes &amp; oignons rouges</b>Publié le 7 août 2025</figcaption></figure>
+      <figure><img src="img/plat-patates.webp" alt="Plat mijoté avec morceaux de pommes de terre" loading="lazy"><figcaption><b>Mijoté pommes de terre &amp; épices</b>Publié le 4 août 2025</figcaption></figure>
+      <figure><img src="img/plat-oignons.webp" alt="Sauté aux oignons fondants" loading="lazy"><figcaption><b>Sauté aux oignons fondants</b>Publié le 4 août 2025</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sandw" id="sandwiches">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">À toute heure</p>
+      <h2>Nos sandwiches</h2>
+      <p style="max-width:38rem">La carte maison, avec la viande et la sauce de votre choix : crudités, paninis, américains et gratinés.</p>
+    </div>
+    <div class="carte">
+      <div class="bloc rv"><h3>Nos crudités</h3><p class="compo">Baguette, salade, tomate, œuf, sauce au choix, viande au choix</p>
+        <ul><li class="star">Poulet croustillant</li><li>Jambon</li><li>Sarcive</li><li>Merguez</li><li>Poulet rôti</li><li>Saumon</li><li>Œuf</li></ul></div>
+      <div class="bloc rv"><h3>Nos américains</h3><p class="compo">Pain blanc, viande au choix, sauce au choix, frites, fromage</p>
+        <ul><li class="star">Spécial 3 viandes</li><li>Poulet croustillant</li><li>Jambon</li><li>Sarcive</li><li>Bouchon</li><li>Merguez</li><li>Poulet rôti</li><li>Saumon</li></ul></div>
+      <div class="bloc rv"><h3>Nos paninis</h3><p class="compo">Pain blanc, salade, tomate, viande au choix, sauce au choix, fromage</p>
+        <ul><li>Merguez</li><li>Jambon</li><li class="star">Bouchon</li><li>Sarcive</li><li>Poulet croustillant</li><li>Poulet rôti</li><li>Saumon</li></ul></div>
+      <div class="bloc rv"><h3>Nos gratinés</h3><p class="compo">Pain blanc, viande au choix, sauce au choix, fromage</p>
+        <ul><li>Jambon</li><li>Merguez</li><li>Sarcive</li><li>Bouchon</li><li>Poulet croustillant</li><li class="star">Frite</li><li>Poulet rôti</li><li>Saumon</li></ul></div>
+    </div>
+    <p class="pied-carte rv">Et aussi les classiques : <b>jambon beurre</b>, <b>pain bouchon</b>, <b>bouchons</b>, petite ou grande <b>barquette de frites</b>.</p>
+  </div>
+</section>
+
+<section class="boutique">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">La boutique</p>
+      <h2>Tout pour la cuisine du jour</h2>
+      <p style="max-width:38rem">Chez Garçon Kodak, on repart aussi avec de quoi cuisiner à la maison : boucherie charcuterie, fruits &amp; légumes et quelques douceurs à boire.</p>
+    </div>
+    <div class="trio">
+      <div class="carte-b rv"><img src="img/boudin.webp" alt="Boudins de porc, photo publiée par Chez Garçon Kodak" loading="lazy"><div class="t"><p class="date">Arrivage du 5 janvier 2026</p><h3>Le boudin porc</h3><p>Version pimentée ou version douce : chaque arrivage est annoncé sur la page Facebook, au bonheur des amateurs.</p></div></div>
+      <div class="carte-b rv"><div class="illu"><svg viewBox="0 0 120 90" aria-hidden="true"><ellipse cx="60" cy="72" rx="48" ry="10" fill="#e9dcc4" opacity=".9"/><path d="M14 66c4 14 88 14 92 0" fill="#c9a77a"/><circle cx="40" cy="52" r="15" fill="#d9442c"/><path d="M40 37c-2-5 2-9 6-9" stroke="#3f6b2c" stroke-width="3" fill="none"/><circle cx="64" cy="54" r="13" fill="#e9a531"/><ellipse cx="84" cy="50" rx="10" ry="15" transform="rotate(25 84 50)" fill="#9cc25a"/><path d="M84 35c3-6 8-7 12-6" stroke="#3f6b2c" stroke-width="3" fill="none"/><circle cx="54" cy="40" r="8" fill="#7e3a8c"/></svg><span>Illustration</span></div><div class="t"><p class="date">Au quotidien</p><h3>Fruits &amp; légumes</h3><p>Des produits frais pour compléter votre panier en même temps que votre plat du midi.</p></div></div>
+      <div class="carte-b rv"><img src="img/bubble-tea.webp" alt="Canettes de bubble tea aux saveurs mangue, litchi, fraise et pêche" loading="lazy"><div class="t"><p class="date">Publié le 6 janvier 2026</p><h3>Bubble tea</h3><p>Mangue, litchi, fraise, pêche : des perles fruitées pour accompagner le plat du midi.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap rv">
+    <p class="eyebrow">Ils recommandent</p>
+    <blockquote>Très bon accueil. Et plat excellents !</blockquote>
+    <cite>Avis publié sur la page Facebook de Chez Garçon Kodak</cite>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 Q50 40 100 10 T200 10 T300 10 T400 8" stroke="#f2c46b" stroke-width="1" fill="none" opacity=".5"/><g fill="#f2c46b"><circle cx="50" cy="24" r="3"/><circle cx="100" cy="11" r="2.5"/><circle cx="150" cy="25" r="3"/><circle cx="200" cy="11" r="2.5"/><circle cx="250" cy="25" r="3"/><circle cx="300" cy="11" r="2.5"/><circle cx="350" cy="25" r="3"/></g></svg>
+  <div class="wrap rv">
+    <p class="eyebrow">Pour Noël</p>
+    <h2>Les fêtes se préparent chez Garçon Kodak</h2>
+    <p>Repas de famille, réveillon, pique-nique du 25 : passez commande à l'avance et profitez de vos proches pendant que la cuisine se prépare ici.</p>
+    <div class="idees">
+      <div class="idee"><span class="n">1</span><div><b>Vos plats créoles</b><span>Massalé, rôti, sauté : réservez vos marmites pour la tablée.</span></div></div>
+      <div class="idee"><span class="n">2</span><div><b>Le boudin des fêtes</b><span>Pimenté ou doux, gardé de côté pour votre réveillon.</span></div></div>
+      <div class="idee"><span class="n">3</span><div><b>Sandwiches à partager</b><span>Américains, paninis, bouchons : un plateau pour toute la famille.</span></div></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262693422294?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20No%C3%ABl">Commander pour Noël sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262693422294">Appeler le 0693 42 22 94</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Venir nous voir</p>
+      <h2>Rendez-vous à Salazie</h2>
+      <p>Le menu du midi, un sandwich, un arrivage : un message WhatsApp et tout est prêt.</p>
+    </div>
+    <div class="fiche">
+      <a class="ligne rv" href="https://www.google.com/maps/search/?api=1&amp;query=95A%20rue%20Georges%20Pompidou%2097433%20Salazie"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Adresse</small><strong>95A rue Georges Pompidou, 97433 Salazie</strong></span></a>
+      <a class="ligne rv" href="https://wa.me/262693422294"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></span><span><small>WhatsApp</small><strong>0693 42 22 94</strong></span></a>
+      <a class="ligne rv" href="tel:+262693422294"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg></span><span><small>Téléphone</small><strong>0693 42 22 94</strong></span></a>
+      <a class="ligne rv" href="https://www.facebook.com/profile.php?id=61558456342375"><span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.2V10H7v4h3v8h4v-8h3l1-4h-4V8.5c0-.3.2-.5.5-.5Z"/></svg></span><span><small>Facebook</small><strong>Le menu du jour, chaque matin</strong></span></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><span class="script">Chez Garçon Kodak</span>Boucherie charcuterie · Fruits &amp; légumes · Restauration rapide · Salazie, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chez Garçon Kodak.</footer>
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.rv');
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+if(rm)return;
+var c=document.getElementById('vapeur'),g=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+function mk(y){return{x:Math.random()*W,y:y==null?H+Math.random()*60:y,r:18+Math.random()*34,v:.25+Math.random()*.45,a:0,m:.05+Math.random()*.06,o:Math.random()*6.28,s:Math.random()<.25}}
+for(var i=0;i<26;i++)P.push(mk(Math.random()*H));
+function draw(){if(!run)return;g.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.o+=.012;p.x+=Math.sin(p.o)*.35;
+var life=p.y/H;p.a=Math.min(p.m,p.m*life*1.6);
+if(p.s){g.fillStyle='rgba(233,165,49,'+(p.a*4)+')';g.beginPath();g.arc(p.x,p.y,1.6,0,6.28);g.fill();}
+else{var gr=g.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);gr.addColorStop(0,'rgba(255,248,238,'+p.a+')');gr.addColorStop(1,'rgba(255,248,238,0)');g.fillStyle=gr;g.beginPath();g.arc(p.x,p.y,p.r,0,6.28);g.fill();}
+if(p.y<-p.r)P[i]=mk();}
+requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(draw)});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Garçon Kodak" defer></script>
+</body>
+</html>
