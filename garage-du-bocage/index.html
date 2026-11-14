@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Garage du Bocage · Centre de service rapide à Sainte-Suzanne</title>
+<meta name="description" content="Garage du Bocage, Sainte-Suzanne (La Réunion) : mécanique, vidange, pneumatiques, freinage, diagnostic et climatisation, voitures et poids lourds. 0692 20 28 15.">
+<meta property="og:title" content="Garage du Bocage · Sainte-Suzanne">
+<meta property="og:description" content="Centre de service rapide à votre écoute : mécanique, vidange, pneus, freinage, diagnostic et clim, VL et poids lourds.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/garage-du-bocage/img/hangar-cocotiers.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/garage-du-bocage/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#d3131c;--rouge-f:#9e0d14;--nuit:#121417;--acier:#1d2126;--acier2:#2a2f36;--alu:#c9ced4;--clair:#f3f4f6;--jaune:#f2c40f;--bleu:#2457b0;--txt:#dfe3e8;--doux:#9aa3ad}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,Arial;color:var(--txt);background:var(--nuit);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Oswald',Impact,sans-serif;font-weight:600;text-transform:uppercase;color:#fff;line-height:1.05;letter-spacing:.01em}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.4rem 0 1rem}
+h2 em{font-style:normal;color:var(--rouge)}
+h3{font-size:1.25rem;letter-spacing:.03em}
+.script{font-family:'Kaushan Script',cursive;text-transform:none;font-weight:400;color:var(--alu)}
+.eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:600;color:var(--jaune)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:#000;color:var(--alu);text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4;border-bottom:2px solid var(--rouge)}
+.ribbon b{color:#fff}
+canvas#etincelles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:6px;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:1rem;transition:.3s;clip-path:polygon(0 0,100% 0,100% 72%,94% 100%,0 100%)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn-main{background:var(--rouge);color:#fff;animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{filter:brightness(1.18)}}
+.btn-line{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn-line:hover{background:rgba(255,255,255,.18)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:#0b0c0e}
+.hero picture,.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.14) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,14,.15) 0%,rgba(10,12,14,.35) 38%,rgba(10,12,14,.96) 88%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 3.6rem}
+.logo{width:min(210px,56vw);border-radius:10px;box-shadow:0 18px 40px -18px #000;margin-bottom:1.3rem}
+.hero h1{font-size:clamp(3rem,13vw,6.6rem);font-weight:700;letter-spacing:.01em}
+.hero h1 span{color:var(--rouge);display:block}
+.hero .lead{font-size:1.18rem;max-width:33rem;margin:1rem 0 1.8rem;color:#eef1f4;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:var(--alu)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+.engrenage{position:absolute;right:-70px;top:90px;width:240px;height:240px;opacity:.16;z-index:2;animation:tourne 30s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+/* bandes chantier */
+.chantier{height:14px;background:repeating-linear-gradient(-45deg,var(--rouge) 0 18px,#fff 18px 36px)}
+.bande{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:1.05rem}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"⚙";margin-left:2.2rem;color:#ffd7d9}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{background:linear-gradient(180deg,var(--nuit),var(--acier))}
+.intro .grid{display:grid;gap:2.2rem;align-items:center}
+.intro p{color:var(--txt);font-size:1.08rem;margin-bottom:1rem}
+.intro .cadre{position:relative}
+.intro .cadre img{border-radius:8px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.intro .cadre::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:2px solid var(--rouge);border-radius:8px;z-index:-1}
+.legende{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+/* services */
+.services{background:var(--acier)}
+.cards{display:grid;gap:1rem;margin-top:2rem}
+.card{position:relative;background:linear-gradient(160deg,var(--acier2),#191c20);border:1px solid rgba(255,255,255,.07);border-left:4px solid var(--rouge);border-radius:8px;padding:1.4rem 1.3rem 1.3rem;transition:transform .35s,border-color .35s,box-shadow .35s}
+.card:hover{transform:translateY(-4px);border-color:rgba(242,196,15,.45);box-shadow:0 18px 40px -22px #000}
+.card .ico{width:44px;height:44px;color:var(--jaune);margin-bottom:.7rem}
+.card p{color:var(--doux);font-size:.98rem;margin-top:.4rem}
+.card ul{list-style:none;margin-top:.6rem}
+.card li{color:var(--txt);font-size:.96rem;padding-left:1.2rem;position:relative;margin:.25rem 0}
+.card li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;background:var(--rouge);transform:rotate(45deg)}
+.card.neuf::after{content:"Nouveau";position:absolute;top:1rem;right:1rem;background:var(--jaune);color:#111;font-family:'Oswald';text-transform:uppercase;font-size:.72rem;letter-spacing:.1em;padding:.15rem .55rem;border-radius:3px}
+/* atelier */
+.atelier{background:#0e1013}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 5vw 1rem;margin:0 calc(50% - 50vw);scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(82vw,520px);scroll-snap-align:center}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;transition:transform .5s}
+.galerie figure:hover img{transform:scale(1.02)}
+.galerie figcaption{font-size:.85rem;color:var(--doux);margin-top:.5rem}
+.glisse{font-size:.82rem;color:var(--doux);text-align:center}
+.bandeau-photo{height:180px;background:url(img/accueil-jante.webp) center/cover;position:relative}
+.bandeau-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,16,19,.2),rgba(14,16,19,.75))}
+/* moment */
+.moment{background:linear-gradient(180deg,var(--acier),var(--nuit))}
+.citation{border-left:4px solid var(--jaune);padding:1.2rem 1.4rem;background:rgba(255,255,255,.04);border-radius:0 8px 8px 0;margin-top:1.4rem}
+.citation p{font-size:1.1rem;color:#fff}
+.citation small{display:block;color:var(--doux);margin-top:.6rem;font-size:.82rem}
+.avis{margin-top:1.6rem;font-style:italic;font-size:1.35rem;color:var(--alu);line-height:1.4;font-weight:500}
+.avis small{display:block;font-style:normal;font-weight:400;font-size:.82rem;color:var(--doux);margin-top:.3rem}
+/* devis */
+.devis{background:var(--rouge);color:#fff;overflow:hidden}
+.devis h2{color:#fff}
+.devis h2 em{color:#111}
+.devis p{font-size:1.1rem;max-width:36rem;margin-bottom:1.6rem}
+.plaque{display:inline-flex;align-items:stretch;background:#fff;color:#111;border:3px solid #111;border-radius:8px;font-family:'Oswald';font-size:clamp(1.6rem,8vw,2.4rem);letter-spacing:.08em;margin-bottom:1.6rem;overflow:hidden;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+.plaque .eu{background:var(--bleu);color:#fff;font-size:.45em;display:flex;flex-direction:column;justify-content:flex-end;padding:.3rem .45rem;letter-spacing:0}
+.plaque .num{padding:.2rem .9rem}
+.plaque .num i{font-style:normal;display:inline-block;animation:clignote 1.1s steps(1) infinite}
+@keyframes clignote{50%{opacity:0}}
+.devis .btn-main{background:#111;animation:none}
+.devis .btn-main:hover{background:#000}
+.devis .btn-line{border-color:rgba(255,255,255,.6)}
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#2a1215 0%,var(--nuit) 70%);text-align:center;overflow:hidden}
+.noel .boite{max-width:640px;margin:auto;border:1px solid rgba(242,196,15,.35);border-radius:12px;padding:2.4rem 1.4rem;background:rgba(255,255,255,.03);position:relative}
+.noel .boite::before,.noel .boite::after{content:"";position:absolute;width:70px;height:70px;border:2px solid var(--jaune);opacity:.6}
+.noel .boite::before{top:-1px;left:-1px;border-right:0;border-bottom:0;border-radius:12px 0 0 0}
+.noel .boite::after{bottom:-1px;right:-1px;border-left:0;border-top:0;border-radius:0 0 12px 0}
+.noel .etoile{display:block;width:44px;height:44px;margin:0 auto .6rem;color:var(--jaune);animation:brille 3s ease-in-out infinite}
+@keyframes brille{50%{transform:scale(1.12) rotate(8deg);filter:drop-shadow(0 0 10px rgba(242,196,15,.7))}}
+.noel h2 .script{display:block;font-size:.62em;color:var(--jaune);margin-top:.2rem}
+.noel p{color:var(--txt);margin:0 auto 1rem;max-width:30rem}
+.noel ul{list-style:none;margin:1.2rem auto 1.8rem;max-width:26rem;text-align:left}
+.noel li{padding:.45rem 0 .45rem 1.8rem;position:relative;border-bottom:1px dashed rgba(255,255,255,.12)}
+.noel li::before{content:"✦";position:absolute;left:.2rem;color:var(--rouge)}
+.noel .ctas{justify-content:center}
+.noel .note{font-size:.8rem;color:var(--doux);margin-top:1.2rem}
+/* infos */
+.infos{background:var(--acier)}
+.infos .grid{display:grid;gap:1.2rem;margin-top:1.6rem}
+.bloc{background:var(--acier2);border-radius:8px;padding:1.4rem;border-top:3px solid var(--rouge)}
+.bloc h3{margin-bottom:.7rem;font-size:1.1rem}
+.bloc a{color:#fff;text-decoration:none;border-bottom:1px solid var(--rouge)}
+.horaires{width:100%;border-collapse:collapse;font-size:.98rem}
+.horaires td{padding:.38rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.horaires td:last-child{text-align:right;color:#fff}
+.horaires .ferme td:last-child{color:var(--doux)}
+.bloc small{display:block;color:var(--doux);font-size:.8rem;margin-top:.7rem}
+footer{background:#000;color:var(--doux);text-align:center;font-size:.82rem;padding:2.4rem 1.2rem 6rem}
+footer a{color:var(--alu)}
+.flottant{position:fixed;right:16px;bottom:16px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.7);animation:souffle 3.4s ease-in-out infinite}
+.flottant svg{width:30px;height:30px;color:#fff}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.reveal.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .intro .grid{grid-template-columns:1.05fr 1fr;gap:3.4rem}
+ .cards{grid-template-columns:repeat(2,1fr)}
+ .infos .grid{grid-template-columns:repeat(3,1fr)}
+ .engrenage{width:380px;height:380px;right:-90px;top:120px}
+ .bandeau-photo{height:260px}
+}
+@media(min-width:1040px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.apparait,.reveal{opacity:1;transform:none}canvas#etincelles{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Garage du Bocage</div>
+<canvas id="etincelles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <picture class="fond">
+  <source media="(max-width:700px)" srcset="img/hangar-portrait.webp">
+  <img src="img/hangar-cocotiers.webp" alt="L'atelier du Garage du Bocage sous les cocotiers, à Sainte-Suzanne">
+ </picture>
+ <svg class="engrenage" viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M43 2h14l2 12a37 37 0 0 1 9 4l10-7 10 10-7 10a37 37 0 0 1 4 9l12 2v14l-12 2a37 37 0 0 1-4 9l7 10-10 10-10-7a37 37 0 0 1-9 4l-2 12H43l-2-12a37 37 0 0 1-9-4l-10 7-10-10 7-10a37 37 0 0 1-4-9L3 57V43l12-2a37 37 0 0 1 4-9l-7-10 10-10 10 7a37 37 0 0 1 9-4zM50 32a18 18 0 1 0 0 36 18 18 0 1 0 0-36z"/></svg>
+ <div class="wrap hero-in">
+  <img class="logo apparait" src="img/logo.webp" alt="Logo Garage du Bocage, poids lourd et VL, Sainte-Suzanne" width="456" height="272">
+  <span class="eyebrow apparait d2">Sainte-Suzanne · Poids lourd &amp; VL</span>
+  <h1 class="apparait d2">Garage <span>du Bocage</span></h1>
+  <p class="lead apparait d3">Centre de service rapide à votre écoute. Mécanique, vidange, pneumatiques, freinage, diagnostic… et la climatisation, voiture et poids lourd.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-main" href="https://wa.me/262692202815?text=Bonjour%20Garage%20du%20Bocage%2C%20je%20voudrais%20un%20devis%20pour%20mon%20v%C3%A9hicule."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Devis sur WhatsApp</a>
+   <a class="btn btn-line" href="tel:+262692202815">0692 20 28 15</a>
+  </div>
+  <p class="adr apparait d4">📍 130 avenue Pierre Mendes, 97441 Sainte-Suzanne</p>
+ </div>
+</header>
+
+<div class="chantier" aria-hidden="true"></div>
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Mécanique</span><span>Vidange</span><span>Pneumatiques</span><span>Freinage</span><span>Diagnostic</span><span>Climatisation</span><span>Distribution</span><span>Poids lourd &amp; VL</span>
+ <span>Mécanique</span><span>Vidange</span><span>Pneumatiques</span><span>Freinage</span><span>Diagnostic</span><span>Climatisation</span><span>Distribution</span><span>Poids lourd &amp; VL</span>
+</div></div>
+
+<section class="intro">
+ <div class="wrap grid">
+  <div class="reveal">
+   <span class="eyebrow">Bienvenue à l'atelier</span>
+   <h2>On prend soin de <em>votre voiture</em></h2>
+   <p>Au Garage du Bocage, à Sainte-Suzanne, on entretient et on répare les voitures, les utilitaires et les poids lourds, sous le grand hangar entouré de cocotiers.</p>
+   <p>Pour les artisans, les transporteurs et les chefs d'entreprise, la priorité de l'équipe est claire : <strong>remettre votre outil de travail sur la route, vite et bien.</strong></p>
+   <p>Avant de charger la voiture pour les vacances, Nelson et l'équipe font le tour de l'essentiel : freins, niveaux, diagnostic moteur. Vous partez l'esprit léger.</p>
+  </div>
+  <div class="reveal">
+   <div class="cadre"><img src="img/ponts-elevateurs.webp" alt="Les ponts élévateurs bleus et jaunes de l'atelier du Garage du Bocage" loading="lazy"></div>
+   <p class="legende" style="margin-top:1.4rem">L'atelier et ses ponts élévateurs (photo publiée par le garage, août 2026).</p>
+  </div>
+ </div>
+</section>
+
+<section class="services" id="services">
+ <div class="wrap">
+  <span class="eyebrow reveal">Ce qu'on fait pour vous</span>
+  <h2 class="reveal">Nos <em>prestations</em></h2>
+  <div class="cards">
+   <article class="card reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M30 6a10 10 0 0 0-9 14L7 34a4 4 0 0 0 6 6l14-14a10 10 0 0 0 14-9l-6 6-6-2-2-6z"/></svg>
+    <h3>Mécanique &amp; diagnostic</h3>
+    <p>Un diagnostic précis pour savoir où en est votre moteur, puis la réparation à l'atelier.</p>
+   </article>
+   <article class="card reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M24 6c6 9 11 15 11 22a11 11 0 0 1-22 0c0-7 5-13 11-22z"/><path d="M19 30a5 5 0 0 0 5 5"/></svg>
+    <h3>Vidange &amp; niveaux</h3>
+    <p>L'entretien régulier qui garde votre moteur en pleine forme, kilomètre après kilomètre.</p>
+   </article>
+   <article class="card reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="7"/><path d="M24 6v11M24 31v11M6 24h11M31 24h11"/></svg>
+    <h3>Pneumatiques</h3>
+    <p>Vos pneumatiques pris en charge à l'atelier, pour une belle tenue de route sur les routes de l'île.</p>
+   </article>
+   <article class="card reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="24" cy="24" r="17"/><circle cx="24" cy="24" r="5"/><path d="M33 9a17 17 0 0 1 6 9l-7 3" stroke-linecap="round"/></svg>
+    <h3>Freinage</h3>
+    <ul><li>Disques &amp; plaquettes</li><li>Pièces Brembo sur demande</li></ul>
+   </article>
+   <article class="card neuf reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M24 4v40M7 14l34 20M7 34l34-20"/><path d="M19 7l5 4 5-4M19 41l5-4 5 4"/></svg>
+    <h3>Climatisation</h3>
+    <ul><li>Diagnostic &amp; recherche de fuites</li><li>Recharge de gaz rapide</li><li>Réparation mécanique sur place</li><li>Voitures <strong>et poids lourds</strong></li></ul>
+   </article>
+   <article class="card reveal">
+    <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="15" cy="17" r="8"/><circle cx="34" cy="31" r="9"/><path d="M8 20l19 18M22 13l19 15"/></svg>
+    <h3>Distribution</h3>
+    <ul><li>Kit distribution</li><li>Pompe à eau</li><li>Courroie accessoire</li></ul>
+    <p>Pièces de marque Valeo, partenaire pièces du garage.</p>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="atelier" id="atelier">
+ <div class="wrap">
+  <span class="eyebrow reveal">L'atelier en images</span>
+  <h2 class="reveal">Sous le <em>hangar</em></h2>
+ </div>
+ <div class="galerie" tabindex="0" aria-label="Photos de l'atelier">
+  <figure><img src="img/cayenne-sur-pont.webp" alt="Un Porsche Cayenne S sur le pont élévateur" loading="lazy"><figcaption>Un Cayenne S sur le pont.</figcaption></figure>
+  <figure><img src="img/opel-sur-pont.webp" alt="Une Opel levée sur le pont pour une intervention" loading="lazy"><figcaption>Intervention par-dessous, en toute précision.</figcaption></figure>
+  <figure><img src="img/pont-atelier.webp" alt="Pont élévateur bleu et jaune, compresseur et outillage de l'atelier" loading="lazy"><figcaption>Le poste de travail, prêt pour la prochaine voiture.</figcaption></figure>
+  <figure><img src="img/hangar-cocotiers.webp" alt="Le hangar du Garage du Bocage et son parking, sous les cocotiers" loading="lazy"><figcaption>Le garage, côté soleil, à Sainte-Suzanne.</figcaption></figure>
+ </div>
+ <p class="glisse">← faites glisser →</p>
+</section>
+<div class="bandeau-photo" role="img" aria-label="Une jante devant l'entrée de l'accueil du garage"></div>
+
+<section class="moment">
+ <div class="wrap reveal">
+  <span class="eyebrow">Ça s'est passé au garage</span>
+  <h2>Une belle <em>visite</em></h2>
+  <div class="citation">
+   <p>« Cet après-midi au Garage du Bocage, nous avons eu l'honneur de recevoir M. Bernard Picardo, Président de la Chambre de Métiers et de l'Artisanat Réunion. Il a découvert notre garage grâce au réel que nous avions sponsorisé sur Facebook. »</p>
+   <small>Publication du garage, 21 septembre 2026</small>
+  </div>
+  <p class="avis">« Accueil agréable, travail bien fait et réactif ! »<small>Un avis laissé sur la page Facebook du garage</small></p>
+ </div>
+</section>
+
+<section class="devis" id="devis">
+ <div class="wrap reveal">
+  <span class="eyebrow" style="color:#111">Devis rapide</span>
+  <h2>Votre plaque, <em>votre devis</em></h2>
+  <div class="plaque" aria-hidden="true"><span class="eu">F<br>974</span><span class="num">AB-123-CD<i>_</i></span></div>
+  <p>Envoyez simplement votre plaque d'immatriculation en message et recevez votre devis personnalisé rapidement.</p>
+  <div class="ctas">
+   <a class="btn btn-main" href="https://wa.me/262692202815?text=Bonjour%20Garage%20du%20Bocage%2C%20voici%20ma%20plaque%20d%27immatriculation%20pour%20un%20devis%20%3A%20">Envoyer ma plaque</a>
+   <a class="btn btn-line" href="tel:+262692202815">Appeler le garage</a>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="wrap">
+  <div class="boite reveal">
+   <svg class="etoile" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 7.4L22 9l-6 4.7 2.2 7.3L12 16.8 5.8 21 8 13.7 2 9l7.4-.6z"/></svg>
+   <span class="eyebrow">Idée cadeau</span>
+   <h2>Offrir pour Noël<span class="script">la route en toute sérénité</span></h2>
+   <p>Pour un proche qui roule beaucoup, offrez un moment d'entretien au Garage du Bocage : un cadeau utile, qui fait plaisir à chaque trajet.</p>
+   <ul>
+    <li>Un bon cadeau entretien ou vidange</li>
+    <li>Une recharge de clim pour rouler au frais tout l'été</li>
+    <li>Un contrôle freins &amp; niveaux avant les routes des vacances</li>
+   </ul>
+   <div class="ctas">
+    <a class="btn btn-main" href="https://wa.me/262692202815?text=Bonjour%20Garage%20du%20Bocage%2C%20je%20voudrais%20offrir%20un%20bon%20cadeau%20entretien%20pour%20No%C3%ABl.">Demander un bon cadeau</a>
+   </div>
+   <p class="note">Formule à composer avec le garage, sur WhatsApp ou au 0692 20 28 15.</p>
+  </div>
+ </div>
+</section>
+
+<section class="infos" id="contact">
+ <div class="wrap">
+  <span class="eyebrow reveal">Nous trouver</span>
+  <h2 class="reveal">Passez <em>nous voir</em></h2>
+  <div class="grid">
+   <div class="bloc reveal">
+    <h3>Adresse</h3>
+    <p>130 avenue Pierre Mendes<br>97441 Sainte-Suzanne, La Réunion</p>
+    <p style="margin-top:.8rem"><a href="https://www.google.com/maps/search/?api=1&query=Garage+du+Bocage+130+Avenue+Pierre+Mendes+Sainte-Suzanne">Itinéraire</a></p>
+   </div>
+   <div class="bloc reveal">
+    <h3>Horaires</h3>
+    <table class="horaires">
+     <tr><td>Lundi → vendredi</td><td>8h–12h · 13h–16h</td></tr>
+     <tr class="ferme"><td>Samedi, dimanche</td><td>Repos</td></tr>
+    </table>
+    <small>D'après le panneau de l'accueil (photo publiée par le garage en mai 2026).</small>
+   </div>
+   <div class="bloc reveal">
+    <h3>Contact</h3>
+    <p><a href="tel:+262692202815">0692 20 28 15</a> · WhatsApp</p>
+    <p style="margin-top:.5rem"><a href="mailto:contact.garagedubocage@gmail.com">contact.garagedubocage@gmail.com</a></p>
+    <p style="margin-top:.5rem"><a href="https://www.facebook.com/garagedubocage/">Page Facebook</a></p>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <p>Garage du Bocage · Centre de service rapide · Sainte-Suzanne</p>
+ <p style="margin-top:.6rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Garage du Bocage.</p>
+</footer>
+<a class="flottant" href="https://wa.me/262692202815?text=Bonjour%20Garage%20du%20Bocage%20!" aria-label="Écrire au garage sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
+
+<script>
+(function(){
+ var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+ document.querySelectorAll('.reveal').forEach(function(el){io?io.observe(el):el.classList.add('vu')});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('etincelles'),x=c.getContext('2d'),W,H,P=[],run=true,N=28;
+ function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+ function nouv(p){p=p||{};p.x=Math.random()*W;p.y=H+10;p.vx=(Math.random()-.5)*.9;p.vy=-(.6+Math.random()*1.3);p.l=60+Math.random()*120;p.a=0;p.t=Math.random()<.75?'#ffb020':'#ff4a2a';p.r=.8+Math.random()*1.6;return p}
+ for(var i=0;i<N;i++){var p=nouv();p.y=Math.random()*H;p.a=Math.random()*p.l;P.push(p)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.vy*=.998;p.a++;var k=1-p.a/p.l;if(k<=0||p.y<-10){nouv(p);return}
+   x.globalAlpha=.55*k;x.strokeStyle=p.t;x.lineWidth=p.r;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(p.x-p.vx*5,p.y-p.vy*5);x.stroke()});
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Garage du Bocage" defer></script>
+</body>
+</html>
