@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Délices Kréol · Snack-bar créole à Savanna, Saint-Paul</title>
+<meta name="description" content="Délices Kréol, snack-bar à Savanna (Saint-Paul, La Réunion) : menu du jour créole, grandes salades, baguettes pizzas, sandwichs et macatia bouchon. Réservez votre repas au 0692 05 43 17.">
+<meta property="og:title" content="Délices Kréol · Le goût réunionnais fait maison !">
+<meta property="og:description" content="Menu du jour créole, baguettes pizzas, grandes salades et sandwichs au 39 route de Savanna, Saint-Paul. Réservez votre repas au 0692 05 43 17.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/delices-kreol-saint-paul/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/delices-kreol-saint-paul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#e3262f;--hibiscus:#e0186c;--violet:#7b2cbf;--marmite:#e8641e;--bois:#5a2e17;--bois2:#7a4424;--creme:#fff8ef;--lin:#fdeedd;--feuille:#2f8f3a;--soleil:#ffd23f;--txt:#3a2318;--doux:#7a5a4a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Baloo 2',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit}
+.wrap{width:min(1100px,92vw);margin:auto}
+section{padding:clamp(3.6rem,9vw,6.5rem) 0;position:relative}
+h1,h2,h3{line-height:1.1}
+h2{font-size:clamp(2rem,6.4vw,3.1rem);font-weight:800;color:var(--bois);margin:.3rem 0 1rem}
+h2 .script{font-family:Pacifico,cursive;font-weight:400;color:var(--rouge)}
+.eyebrow{font-family:Caveat,cursive;font-size:1.45rem;color:var(--hibiscus);font-weight:700}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--bois);color:#f6dcc6;text-align:center;font-size:.78rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:1rem;transition:.3s;border:0}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:linear-gradient(100deg,var(--rouge),var(--hibiscus));color:#fff;box-shadow:0 14px 30px -12px rgba(227,38,47,.75);animation:souffle 4.5s ease-in-out infinite}
+.btn-main:hover{transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 16px 40px -6px rgba(224,24,108,.7);transform:scale(1.03)}}
+.btn-line{background:#fff;color:var(--bois);border:2px solid #f0c9b0}
+.btn-line:hover{border-color:var(--marmite)}
+.btn-wa{background:#1fa855;color:#fff;box-shadow:0 14px 30px -14px rgba(31,168,85,.8)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* HERO */
+.hero{min-height:min(100svh,900px);display:flex;align-items:center;padding:6rem 0 4.5rem;overflow:hidden;
+background:radial-gradient(70% 50% at 90% 8%,rgba(255,210,63,.35),transparent 70%),radial-gradient(80% 60% at 0% 100%,rgba(224,24,108,.16),transparent 70%),linear-gradient(180deg,#fff3e2,var(--creme))}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero .quartier{display:inline-flex;align-items:center;gap:.4rem;background:#fff;border:1px solid #f3d3bd;border-radius:999px;padding:.3rem .9rem;font-size:.85rem;font-weight:600;color:var(--bois2)}
+.hero h1{font-family:Pacifico,cursive;font-weight:400;font-size:clamp(3.3rem,14vw,6.4rem);line-height:1.12;margin:.9rem 0 .2rem;letter-spacing:.01em}
+.hero h1 span{display:inline-block;background:linear-gradient(95deg,var(--rouge) 0%,var(--hibiscus) 55%,var(--violet) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .08em .12em 0;opacity:0;transform:translateY(24px);animation:monte 1s .2s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 span+span{animation-delay:.45s}
+@keyframes monte{to{opacity:1;transform:none}}
+.slogan{font-family:Caveat,cursive;font-size:clamp(1.7rem,6vw,2.3rem);color:var(--bois);font-weight:700;margin-bottom:.6rem}
+.slogan u{text-decoration:none;background:linear-gradient(transparent 62%,rgba(255,210,63,.75) 62%)}
+.hero .lead{font-size:1.08rem;color:var(--doux);max-width:32rem;margin-bottom:1.6rem}
+.hero .adr{margin-top:1.4rem;font-size:.95rem;color:var(--doux)}
+.hero .adr b{color:var(--bois)}
+.scene{position:relative;max-width:440px;width:100%;margin:auto}
+.scene .disque{position:absolute;inset:6% 4% 10%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fff 0%,#ffe9d6 55%,#ffd9c0 100%);box-shadow:inset 0 0 0 10px rgba(255,255,255,.6)}
+.scene svg{position:relative;width:100%;height:auto;display:block}
+.couvercle{animation:souleve 3.6s ease-in-out infinite;transform-origin:70% 100%;transform-box:fill-box}
+@keyframes souleve{0%,55%,100%{transform:rotate(0)}70%{transform:rotate(-7deg) translateY(-6px)}85%{transform:rotate(-2deg)}}
+.fumee path{stroke-dasharray:60;animation:fume 3.2s linear infinite;opacity:.0}
+.fumee path:nth-child(2){animation-delay:1s}.fumee path:nth-child(3){animation-delay:2s}
+@keyframes fume{0%{opacity:0;transform:translateY(10px)}30%{opacity:.75}100%{opacity:0;transform:translateY(-28px)}}
+.legende{position:absolute;right:0;bottom:2%;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux);background:rgba(255,255,255,.85);padding:.2rem .6rem;border-radius:8px}
+.bulle{position:absolute;left:-2%;top:12%;background:#fff;border-radius:18px;padding:.55rem .9rem;font-family:Caveat,cursive;font-size:1.35rem;font-weight:700;color:var(--rouge);box-shadow:0 14px 30px -16px rgba(90,46,23,.5);transform:rotate(-5deg);animation:flotte 5s ease-in-out infinite}
+@keyframes flotte{50%{transform:rotate(-3deg) translateY(-6px)}}
+/* bandeau */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-weight:700;font-size:1.05rem;transform:rotate(-1.2deg);margin:0 -2vw;position:relative;z-index:3;box-shadow:0 10px 24px -14px rgba(227,38,47,.8)}
+.bandeau .defile{display:inline-block;animation:defile 38s linear infinite}
+.bandeau i{font-style:normal;color:var(--soleil);margin:0 1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* réserver */
+.reserver{background:var(--creme)}
+.reserver-in{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.etapes{list-style:none;display:grid;gap:1rem}
+.etapes li{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:20px;padding:1.1rem 1.2rem;box-shadow:0 18px 36px -26px rgba(90,46,23,.55);border:1px solid #f6e0cf}
+.etapes .n{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.2rem}
+.etapes li:nth-child(1) .n{background:var(--rouge)}.etapes li:nth-child(2) .n{background:var(--hibiscus)}.etapes li:nth-child(3) .n{background:var(--violet)}
+.etapes b{display:block;color:var(--bois);font-size:1.08rem;line-height:1.3}
+.etapes span{color:var(--doux);font-size:.95rem}
+.gros-num{display:block;font-size:clamp(2.1rem,9vw,3.2rem);font-weight:800;color:var(--rouge);text-decoration:none;letter-spacing:.02em;line-height:1.1;margin:.4rem 0 1rem}
+/* menu semaine */
+.semaine{background:linear-gradient(180deg,var(--lin),#fff6ea)}
+.semaine .intro{max-width:40rem;color:var(--doux)}
+.ardoises{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 4vw 1.4rem;margin:0 -4vw;scrollbar-width:none}
+.ardoises::-webkit-scrollbar{display:none}
+.ardoise{flex:0 0 min(78vw,300px);scroll-snap-align:center;background:#2b1a12;color:#fff6ea;border-radius:22px;padding:1.4rem 1.3rem 1.3rem;position:relative;border:8px solid var(--bois2);box-shadow:0 26px 40px -26px rgba(43,26,18,.9);transition:transform .35s}
+.ardoise:hover{transform:translateY(-6px) rotate(-.6deg)}
+.ardoise .jour{font-family:Caveat,cursive;font-size:1.7rem;font-weight:700;color:var(--soleil);line-height:1}
+.ardoise .date{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#d9b89f}
+.ardoise ul{list-style:none;margin-top:.9rem;display:grid;gap:.55rem}
+.ardoise li{padding-left:1.5rem;position:relative;line-height:1.3;font-weight:500}
+.ardoise li::before{content:"";position:absolute;left:0;top:.35em;width:.8rem;height:.8rem;border-radius:50%;background:radial-gradient(circle,var(--soleil) 0 22%,var(--rouge) 24% 100%)}
+.ardoise .dessert{margin-top:1rem;padding-top:.8rem;border-top:1px dashed rgba(255,246,234,.3);font-family:Caveat,cursive;font-size:1.3rem;color:#ffc2d8}
+.astuce{display:flex;gap:.6rem;align-items:center;color:var(--bois2);font-weight:600;font-size:.95rem}
+.astuce svg{width:22px;height:22px;flex:none;color:var(--marmite)}
+/* carte */
+.carte .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:1.6rem}
+.case{background:#fff;border-radius:24px;padding:1.5rem 1.4rem;border-top:6px solid var(--c,var(--rouge));box-shadow:0 20px 40px -30px rgba(90,46,23,.6);transition:transform .35s,box-shadow .35s}
+.case:hover{transform:translateY(-5px);box-shadow:0 26px 46px -28px rgba(90,46,23,.7)}
+.case h3{font-family:Pacifico,cursive;font-weight:400;font-size:1.55rem;color:var(--c,var(--rouge));margin-bottom:.2rem}
+.case .sous{font-family:Caveat,cursive;font-size:1.25rem;color:var(--doux);font-weight:700;margin-bottom:.7rem}
+.case ul{list-style:none;display:grid;gap:.35rem}
+.case li{padding-left:1.35rem;position:relative}
+.case li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;height:.55rem;border-radius:50%;background:var(--c,var(--rouge))}
+.case li small{display:block;color:var(--doux);font-size:.88rem}
+.case .note{margin-top:.8rem;font-size:.92rem;color:var(--c,var(--rouge));font-weight:600}
+.ico-case{width:54px;height:54px;margin-bottom:.5rem}
+/* cuisine */
+.cuisines{background:var(--bois);color:#fbe7d6;overflow:hidden}
+.cuisines h2{color:#fff}
+.cuisines h2 .script{color:var(--soleil)}
+.cuisines-in{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.pastilles{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0}
+.pastille{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:.4rem 1rem;font-weight:600}
+.pastille.r{background:var(--rouge);border-color:var(--rouge)}.pastille.v{background:var(--violet);border-color:var(--violet)}.pastille.o{background:var(--marmite);border-color:var(--marmite)}
+.citation{font-family:Caveat,cursive;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.2;color:#fff;border-left:4px solid var(--hibiscus);padding-left:1rem;margin-top:1.4rem}
+.citation small{display:block;font-family:'Baloo 2',sans-serif;font-size:.8rem;color:#d9b89f;margin-top:.3rem;letter-spacing:.05em}
+.hibiscus-deco{width:100%;max-width:360px;margin:auto;display:block;animation:tourne 40s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.vague{display:block;width:100%;height:46px}
+/* noel */
+.noel{background:radial-gradient(60% 50% at 85% 10%,rgba(255,210,63,.25),transparent 70%),linear-gradient(160deg,#7d1420,#a5162a 55%,#6a1440);color:#fff;overflow:hidden}
+.noel h2{color:#fff}.noel h2 .script{color:var(--soleil)}
+.noel .eyebrow{color:#ffc2d8}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+.noel p{color:#ffe3e8;max-width:34rem}
+.noel ul{list-style:none;display:grid;gap:.6rem;margin:1.3rem 0 1.8rem}
+.noel li{display:flex;gap:.7rem;align-items:flex-start}
+.noel li::before{content:"✦";color:var(--soleil);flex:none}
+.guirlande{position:absolute;top:0;left:0;right:0;height:34px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande span{width:10px;height:10px;border-radius:50%;margin-top:14px;background:var(--soleil);box-shadow:0 0 12px 3px rgba(255,210,63,.7);animation:brille 2.4s ease-in-out infinite}
+.guirlande span:nth-child(2n){background:#ffc2d8;box-shadow:0 0 12px 3px rgba(255,194,216,.7);animation-delay:.8s}
+.guirlande span:nth-child(3n){animation-delay:1.5s}
+@keyframes brille{50%{opacity:.35}}
+.noel .btn-wa{background:#fff;color:#a5162a}
+.noel .note{font-size:.82rem;color:#f8c6d0;margin-top:1rem}
+.marmite-noel{max-width:320px;margin:auto;width:100%}
+/* infos */
+.infos-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:1.5rem}
+.info{background:#fff;border-radius:22px;padding:1.4rem;box-shadow:0 18px 36px -28px rgba(90,46,23,.6);border:1px solid #f6e0cf}
+.info svg{width:34px;height:34px;color:var(--rouge);margin-bottom:.5rem}
+.info h3{font-size:1.15rem;color:var(--bois);margin-bottom:.3rem}
+.info p{color:var(--doux)}
+.info a{font-weight:700;color:var(--rouge);text-decoration:none}
+.contact-final{text-align:center;margin-top:2.6rem}
+.contact-final .ctas{justify-content:center}
+.cap{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin-top:.4rem}
+footer{background:#2b1a12;color:#d9b89f;text-align:center;padding:2.4rem 1rem 3rem;font-size:.88rem}
+footer .logo-f{font-family:Pacifico,cursive;font-size:1.9rem;color:#fff;display:block;margin-bottom:.3rem}
+footer a{color:#ffc2d8}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.reserver-in,.cuisines-in,.noel-in{grid-template-columns:1fr}
+ .hero{padding-top:5.4rem}
+ .scene{max-width:330px;order:-1;margin-bottom:-.6rem}
+ .carte .grille,.infos-grille{grid-template-columns:1fr}
+ .hibiscus-deco{max-width:220px}
+ .marmite-noel{max-width:230px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .hero h1 span{opacity:1;transform:none}
+ .rv{opacity:1;transform:none}
+ canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Délices Kréol</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<!-- HERO -->
+<header class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <span class="quartier">📍 Savanna · Saint-Paul</span>
+   <h1><span>Délices</span> <span>Kréol</span></h1>
+   <p class="slogan">Le goût réunionnais <u>fait maison</u> !</p>
+   <p class="lead">Snack-bar au 39 route de Savanna : chaque jour un nouveau menu de plats chauds créoles, des baguettes pizzas selon vos envies, des grandes salades et des sandwichs gourmands.</p>
+   <div class="ctas">
+    <a class="btn btn-main" href="tel:+262692054317"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Réserver mon repas</a>
+    <a class="btn btn-line" href="#menu">Voir les menus</a>
+   </div>
+   <p class="adr">Commandez avant 10h, <b>retirez votre repas tout de suite</b> 😉</p>
+  </div>
+  <figure class="scene rv">
+   <div class="disque"></div>
+   <svg viewBox="0 0 400 380" role="img" aria-label="Illustration : une marmite de rougail fumante">
+    <g class="fumee" fill="none" stroke="#f3b9a0" stroke-width="7" stroke-linecap="round">
+     <path d="M150 120c-14-18 14-30 0-50"/><path d="M200 110c-14-18 14-30 0-50"/><path d="M250 120c-14-18 14-30 0-50"/>
+    </g>
+    <!-- feuilles -->
+    <path d="M40 300c30-60 90-70 120-50-40 10-80 30-120 50z" fill="#2f8f3a"/>
+    <path d="M360 290c-30-55-85-62-115-44 38 8 76 26 115 44z" fill="#3aa449"/>
+    <!-- corps -->
+    <ellipse cx="200" cy="318" rx="150" ry="18" fill="#5a2e17" opacity=".18"/>
+    <path d="M78 198h244l-14 92c-4 22-24 34-46 34H138c-22 0-42-12-46-34z" fill="#e8641e"/>
+    <path d="M78 198h244l-3 22H81z" fill="#c94f12"/>
+    <path d="M60 206c-22 0-22 34 0 34h22v-34zM340 206c22 0 22 34 0 34h-22v-34z" fill="#e8641e" stroke="#c94f12" stroke-width="5"/>
+    <ellipse cx="200" cy="198" rx="124" ry="26" fill="#a63a10"/>
+    <ellipse cx="200" cy="196" rx="114" ry="20" fill="#c9341f"/>
+    <circle cx="160" cy="192" r="15" fill="#8e2a1a"/><circle cx="160" cy="192" r="9" fill="#b0503a"/>
+    <circle cx="214" cy="198" r="15" fill="#8e2a1a"/><circle cx="214" cy="198" r="9" fill="#b0503a"/>
+    <circle cx="258" cy="190" r="13" fill="#8e2a1a"/><circle cx="258" cy="190" r="8" fill="#b0503a"/>
+    <path d="M128 196q8-8 16 0M186 186q7-7 14 0M236 200q7-7 14 0" stroke="#ffd9a8" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="140" cy="186" r="3" fill="#2f8f3a"/><circle cx="230" cy="186" r="3" fill="#2f8f3a"/><circle cx="276" cy="200" r="3" fill="#2f8f3a"/><circle cx="190" cy="204" r="3" fill="#2f8f3a"/>
+    <text x="200" y="278" text-anchor="middle" font-family="Pacifico,cursive" font-size="30" fill="#fff">N ♥ D</text>
+    <!-- couvercle -->
+    <g class="couvercle">
+     <path d="M96 176c10-40 60-58 104-58s94 18 104 58z" fill="#f07a2e"/>
+     <path d="M96 176h208" stroke="#c94f12" stroke-width="7" stroke-linecap="round"/>
+     <rect x="182" y="102" width="36" height="20" rx="9" fill="#2b1a12"/>
+    </g>
+    <!-- coeurs -->
+    <path d="M58 120c-8-10 6-20 12-10 6-10 20 0 12 10l-12 12z" fill="none" stroke="#e0186c" stroke-width="4"/>
+    <path d="M330 116c-8-10 6-20 12-10 6-10 20 0 12 10l-12 12z" fill="none" stroke="#7b2cbf" stroke-width="4"/>
+   </svg>
+   <span class="bulle">Bon appétit ♡</span>
+   <figcaption class="legende">Illustration</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="defile">
+ Carri coq frais <i>✿</i> Rougail morue <i>✿</i> Bol renversé poulet <i>✿</i> Riz chauffé pimenté œufs <i>✿</i> Poulet 3 merveilles <i>✿</i> Rougail boucané <i>✿</i> Porc caramel <i>✿</i> Poisson gingembre <i>✿</i> Carri espadon combavas <i>✿</i> Rougail sounouk <i>✿</i> Macatia bouchon <i>✿</i>
+ Carri coq frais <i>✿</i> Rougail morue <i>✿</i> Bol renversé poulet <i>✿</i> Riz chauffé pimenté œufs <i>✿</i> Poulet 3 merveilles <i>✿</i> Rougail boucané <i>✿</i> Porc caramel <i>✿</i> Poisson gingembre <i>✿</i> Carri espadon combavas <i>✿</i> Rougail sounouk <i>✿</i> Macatia bouchon <i>✿</i>
+</div></div>
+
+<!-- RÉSERVER -->
+<section class="reserver" id="reserver">
+ <div class="wrap reserver-in">
+  <div class="rv">
+   <p class="eyebrow">Réservez votre repas</p>
+   <h2>Votre plat vous <span class="script">attend</span></h2>
+   <p>Un appel ou un SMS, et votre assiette est prête à votre arrivée : vous gagnez du temps sur votre pause du midi.</p>
+   <a class="gros-num" href="tel:+262692054317">0692 05 43 17</a>
+   <div class="ctas">
+    <a class="btn btn-main" href="tel:+262692054317">Appeler</a>
+    <a class="btn btn-line" href="sms:+262692054317">Envoyer un SMS</a>
+   </div>
+  </div>
+  <ol class="etapes rv">
+   <li><span class="n">1</span><div><b>Commandez avant 10h</b><span>par téléphone ou SMS au 0692 05 43 17</span></div></li>
+   <li><span class="n">2</span><div><b>Retirez-le tout de suite</b><span>votre repas est prêt au 39 route de Savanna</span></div></li>
+   <li><span class="n">3</span><div><b>Livraison à partir de 5 repas</b><span>pratique pour le bureau, le chantier ou les collègues</span></div></li>
+  </ol>
+ </div>
+</section>
+
+<!-- MENU DE LA SEMAINE -->
+<section class="semaine" id="menu">
+ <div class="wrap">
+  <p class="eyebrow rv">Dans les marmites</p>
+  <h2 class="rv">Le menu <span class="script">du jour</span></h2>
+  <p class="intro rv">Chaque jour, Délices Kréol publie son menu sur sa page Facebook. Voici quelques ardoises de ces dernières semaines, de quoi régaler vos papilles !</p>
+  <div class="ardoises" tabindex="0" aria-label="Menus récents, à faire défiler">
+   <article class="ardoise"><p class="jour">Vendredi</p><p class="date">13 novembre 2026</p><ul><li>Bol renversé poulet</li><li>Rougail morue</li><li>Riz chauffé pimenté morue</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+   <article class="ardoise"><p class="jour">Jeudi</p><p class="date">12 novembre 2026</p><ul><li>Carri coq frais</li><li>Émincé de porc frit</li><li>Rougail crevettes aux gros piments</li><li>Riz chauffé pimenté aux œufs</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+   <article class="ardoise"><p class="jour">Mardi</p><p class="date">10 novembre 2026</p><ul><li>Poulet 3 merveilles</li><li>Rougail boucané</li><li>Calamar sauté aux gros piments</li><li>Riz chauffé pimenté aux œufs</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+   <article class="ardoise"><p class="jour">Mercredi</p><p class="date">4 novembre 2026</p><ul><li>Porc caramel</li><li>Poisson gingembre</li><li>Émincé de poulet gros piments et ananas</li><li>Riz chauffé pimenté œufs</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+   <article class="ardoise"><p class="jour">Mardi</p><p class="date">3 novembre 2026</p><ul><li>Émincé de poulet sauce poivre vert</li><li>Sauté boucané champignons et brèdes</li><li>Morue mangue</li><li>Riz chauffé pimenté œufs</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+   <article class="ardoise"><p class="jour">Jeudi</p><p class="date">29 octobre 2026</p><ul><li>Émincé de poulet sauce roquefort</li><li>Émincé de porc frit</li><li>Carri espadon combavas</li><li>Riz chauffé pimenté œufs</li></ul><p class="dessert">♡ Salade de fruits frais</p></article>
+  </div>
+  <p class="astuce rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span>Faites glisser les ardoises · le menu du jour est sur <a href="https://www.facebook.com/deliceskreol974" target="_blank" rel="noopener">leur page Facebook</a></span></p>
+ </div>
+</section>
+
+<!-- CARTE -->
+<section class="carte" id="carte">
+ <div class="wrap">
+  <p class="eyebrow rv">Tous les jours</p>
+  <h2 class="rv">La carte <span class="script">gourmande</span></h2>
+  <div class="grille">
+   <article class="case rv" style="--c:var(--feuille)">
+    <svg class="ico-case" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 34h52c0 14-11 22-26 22S6 48 6 34z" fill="#e9f5ea" stroke="#2f8f3a" stroke-width="3"/><circle cx="22" cy="28" r="7" fill="#e3262f"/><circle cx="38" cy="26" r="6" fill="#ffd23f"/><path d="M28 30c4-10 14-12 20-8-6 2-12 6-20 8z" fill="#2f8f3a"/><circle cx="46" cy="31" r="4" fill="#e3262f"/></svg>
+    <h3>Grandes salades</h3>
+    <p class="sous">sur commande avant 11h</p>
+    <ul><li>Saumon</li><li>Jambon / œufs</li><li>Poulet / œufs</li><li>Végétarienne</li></ul>
+   </article>
+   <article class="case rv" style="--c:var(--violet)">
+    <svg class="ico-case" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="24" width="56" height="18" rx="9" fill="#f6d39c" stroke="#7a4424" stroke-width="3"/><circle cx="16" cy="30" r="4" fill="#e3262f"/><circle cx="30" cy="33" r="4" fill="#e3262f"/><circle cx="44" cy="29" r="4" fill="#e3262f"/><path d="M20 36h6M36 37h6" stroke="#2f8f3a" stroke-width="3" stroke-linecap="round"/></svg>
+    <h3>Baguettes pizzas</h3>
+    <p class="sous">selon vos envies</p>
+    <ul><li>Saumon, merguez, bouchon, jambon, sarcive, poulet</li><li>Gros piments, oignons, ananas</li><li>Chèvre miel, persillade</li></ul>
+    <p class="note">Préparées maison et garnies avec gourmandise 😊</p>
+   </article>
+   <article class="case rv" style="--c:var(--marmite)">
+    <svg class="ico-case" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 30c0-8 12-14 26-14s26 6 26 14z" fill="#f6d39c" stroke="#7a4424" stroke-width="3"/><path d="M6 34h52" stroke="#2f8f3a" stroke-width="4" stroke-linecap="round"/><path d="M6 39h52" stroke="#e3262f" stroke-width="4" stroke-linecap="round"/><path d="M6 44h52c0 4-4 6-8 6H14c-4 0-8-2-8-6z" fill="#f6d39c" stroke="#7a4424" stroke-width="3"/></svg>
+    <h3>Sandwichs</h3>
+    <p class="sous">nos différents sandwichs</p>
+    <ul><li>Lard, kebab, paninis</li><li>Américains gratinés crudités</li><li>Macatia bouchon<small>nature, gratiné ou achards</small></li><li>Sandwichs cari<small>selon le menu du jour</small></li></ul>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- CUISINES -->
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 46V20c160-26 320 20 480 10s320-34 480-20 320 30 480 12v24z" fill="#5a2e17"/></svg>
+<section class="cuisines">
+ <div class="wrap cuisines-in">
+  <div class="rv">
+   <p class="eyebrow" style="color:#ffc2d8">Une cuisine créole avec le cœur</p>
+   <h2>Créole, chinoise, <span class="script">française…</span></h2>
+   <p>La marmite de Délices Kréol voyage : rougails et carris réunionnais, porc caramel, poulet sauce d'huître ou riz cantonais, émincés à la française. Et toujours l'incontournable riz chauffé pimenté !</p>
+   <div class="pastilles">
+    <span class="pastille r">Cuisine créole</span><span class="pastille v">Cuisine chinoise</span><span class="pastille o">Cuisine française</span><span class="pastille">Terrasse en plein air</span>
+   </div>
+   <p class="citation">« Merci pour votre fidélité &amp; bon appétit ♡ »<small>— le mot de Délices Kréol en bas de chaque menu</small></p>
+  </div>
+  <figure class="rv" style="text-align:center"><svg class="hibiscus-deco" viewBox="0 0 200 200" role="img" aria-label="Illustration : fleur d'hibiscus">
+   <g transform="translate(100 100)">
+    <g fill="#e0186c"><ellipse rx="34" ry="52" cy="-50"/><ellipse rx="34" ry="52" cy="-50" transform="rotate(72)"/><ellipse rx="34" ry="52" cy="-50" transform="rotate(144)"/><ellipse rx="34" ry="52" cy="-50" transform="rotate(216)"/><ellipse rx="34" ry="52" cy="-50" transform="rotate(288)"/></g>
+    <g fill="#ff4f93" opacity=".7"><ellipse rx="18" ry="34" cy="-40"/><ellipse rx="18" ry="34" cy="-40" transform="rotate(72)"/><ellipse rx="18" ry="34" cy="-40" transform="rotate(144)"/><ellipse rx="18" ry="34" cy="-40" transform="rotate(216)"/><ellipse rx="18" ry="34" cy="-40" transform="rotate(288)"/></g>
+    <circle r="16" fill="#a10f4a"/>
+    <path d="M0 0l30-46" stroke="#ffd23f" stroke-width="4"/><circle cx="30" cy="-46" r="6" fill="#ffd23f"/><circle cx="22" cy="-50" r="4" fill="#ffd23f"/><circle cx="36" cy="-38" r="4" fill="#ffd23f"/>
+   </g>
+  </svg><figcaption class="cap">Illustration</figcaption></figure>
+ </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="background:#7d1420"><path d="M0 0v26c160 26 320-20 480-10s320 34 480 20 320-30 480-12V0z" fill="#5a2e17"/></svg>
+
+<!-- NOËL -->
+<section class="noel" id="noel">
+ <div class="guirlande" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+ <div class="wrap noel-in">
+  <div class="rv">
+   <p class="eyebrow">Noël approche</p>
+   <h2>Un Noël gourmand, <span class="script">en kréol</span></h2>
+   <p>Repas d'équipe, fin d'année au bureau ou grande tablée en famille : confiez votre commande de Noël à Délices Kréol et partagez le goût réunionnais fait maison.</p>
+   <ul>
+    <li>Livraison à partir de 5 repas, pratique pour les collègues</li>
+    <li>Plats chauds créoles, baguettes pizzas, grandes salades</li>
+    <li>On en parle ensemble par WhatsApp, simplement</li>
+   </ul>
+   <a class="btn btn-wa" href="https://wa.me/262692054317?text=Bonjour%20D%C3%A9lices%20Kr%C3%A9ol%2C%20je%20voudrais%20commander%20des%20repas%20pour%20No%C3%ABl." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.1z"/></svg>Commander pour Noël</a>
+  </div>
+  <figure class="rv" style="text-align:center"><svg class="marmite-noel" viewBox="0 0 240 220" role="img" aria-label="Illustration : marmite décorée pour les fêtes">
+   <path d="M60 70c-10-14 6-24 0-38M120 60c-10-14 6-24 0-38M180 70c-10-14 6-24 0-38" stroke="#ffc2d8" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+   <path d="M30 100h180l-10 70c-3 16-17 26-34 26H74c-17 0-31-10-34-26z" fill="#e8641e"/>
+   <path d="M30 100h180" stroke="#c94f12" stroke-width="8" stroke-linecap="round"/>
+   <path d="M44 84c8-22 40-34 76-34s68 12 76 34z" fill="#f07a2e"/>
+   <rect x="106" y="40" width="28" height="14" rx="7" fill="#2b1a12"/>
+   <path d="M30 128c40 18 140 18 180 0" stroke="#2f8f3a" stroke-width="8" fill="none"/>
+   <circle cx="70" cy="140" r="7" fill="#ffd23f"/><circle cx="120" cy="146" r="7" fill="#fff"/><circle cx="170" cy="140" r="7" fill="#ffd23f"/>
+   <path d="M120 118l-14-10c-6-4-6-12 2-12 4 0 8 4 12 10 4-6 8-10 12-10 8 0 8 8 2 12z" fill="#e3262f"/>
+   <text x="120" y="182" text-anchor="middle" font-family="Pacifico,cursive" font-size="18" fill="#fff">Délices Kréol</text>
+  </svg><figcaption class="cap">Illustration</figcaption></figure>
+ </div>
+</section>
+
+<!-- INFOS -->
+<section class="infos" id="infos">
+ <div class="wrap">
+  <p class="eyebrow rv">Venir chez Délices Kréol</p>
+  <h2 class="rv">On vous attend <span class="script">à Savanna</span></h2>
+  <div class="infos-grille">
+   <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg><h3>Adresse</h3><p>39 route de Savanna<br>97460 Saint-Paul</p><p><a href="https://www.google.com/maps/search/?api=1&query=D%C3%A9lices%20Kr%C3%A9ol%2039%20route%20de%20Savanna%20Saint-Paul" target="_blank" rel="noopener">Ouvrir l'itinéraire →</a></p></div>
+   <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><h3>Commandes</h3><p>Appel ou SMS<br><a href="tel:+262692054317">0692 05 43 17</a></p><p>Commandez avant 10h, grandes salades avant 11h.</p></div>
+   <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><h3>Menu du jour</h3><p>Publié chaque jour sur la page Facebook.</p><p><a href="https://www.facebook.com/deliceskreol974" target="_blank" rel="noopener">facebook.com/deliceskreol974 →</a></p></div>
+  </div>
+  <div class="contact-final rv">
+   <p class="slogan">Une petite faim ? On s'occupe de tout ♡</p>
+   <div class="ctas"><a class="btn btn-main" href="tel:+262692054317">Réserver mon repas</a><a class="btn btn-line" href="mailto:anniecerveaux@gmail.com">Écrire un e-mail</a></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <span class="logo-f">Délices Kréol</span>
+ Snack-bar · 39 route de Savanna, 97460 Saint-Paul · <a href="tel:+262692054317">0692 05 43 17</a><br><br>
+ Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Délices Kréol.
+</footer>
+
+<script>
+(function(){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+ function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+ size();addEventListener('resize',size);
+ var cols=['#e0186c','#e3262f','#7b2cbf','#ff7aa8'];
+ function nouv(init){var petale=Math.random()<.45;return{p:petale,x:Math.random()*W,y:init?Math.random()*H:(petale?-20:H+30),r:petale?5+Math.random()*5:14+Math.random()*22,v:petale?.35+Math.random()*.5:-(.25+Math.random()*.35),a:Math.random()*6.28,s:.004+Math.random()*.01,o:petale?.28+Math.random()*.2:.05+Math.random()*.06,c:cols[Math.floor(Math.random()*cols.length)]}}
+ for(var i=0;i<26;i++)P.push(nouv(true));
+ function pas(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(q,i){q.a+=q.s*3;q.y+=q.v;q.x+=Math.sin(q.a)*.4;
+   if(q.p){x.save();x.translate(q.x,q.y);x.rotate(q.a);x.globalAlpha=q.o;x.fillStyle=q.c;x.beginPath();x.ellipse(0,0,q.r,q.r*.55,0,0,6.28);x.fill();x.restore();if(q.y>H+20)P[i]=nouv(false)}
+   else{var g=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.r);g.addColorStop(0,'rgba(255,255,255,'+(q.o*2.4)+')');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.beginPath();x.arc(q.x,q.y,q.r,0,6.28);x.fill();q.r+=.03;if(q.y<-40)P[i]=nouv(false)}
+  });requestAnimationFrame(pas)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(pas)});
+ requestAnimationFrame(pas);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Délices Kréol" defer></script>
+</body>
+</html>
