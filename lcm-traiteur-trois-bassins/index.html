@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LCM Traiteur · Traiteur à Trois-Bassins, de l'apéritif au dessert</title>
+<meta name="description" content="LCM Traiteur vous accompagne pour tous vos événements, de l'apéritif au dessert : petites commandes d'apéro, buffets, desserts gourmands, petits-déjeuners. Basé à Trois-Bassins. 0693 43 08 45.">
+<meta property="og:title" content="LCM Traiteur · Mettez de l'amour dans vos plats">
+<meta property="og:description" content="Traiteur à Trois-Bassins : de l'apéritif au dessert, pour tous vos événements.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lcm-traiteur-trois-bassins/img/plateaux-aperitif.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lcm-traiteur-trois-bassins/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1b2457;--nuit-f:#121a42;--or:#e9b62f;--or-c:#f6d77a;--miel:#fff3d1;--creme:#fffaf0;--sapin:#1f3d2c;--sapin-c:#2c5a40;--rouge:#c8202f;--txt:#2a2f4a;--doux:#6f7391}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial,sans-serif;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Josefin Sans',sans-serif;font-weight:600;color:var(--nuit);line-height:1.1;letter-spacing:.01em}
+h2{font-size:clamp(1.95rem,6vw,3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.25rem}
+.script{font-family:'Dancing Script',cursive;font-weight:700;color:var(--or);letter-spacing:0}
+.eyebrow{font-family:'Josefin Sans',sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;color:var(--or);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit-f);color:var(--or-c);text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-family:'Josefin Sans',sans-serif;font-weight:700;letter-spacing:.06em;font-size:.95rem;transition:.35s;text-align:center}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:var(--or);color:var(--nuit-f);box-shadow:0 14px 30px -14px rgba(233,182,47,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-or:hover{background:var(--or-c)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(233,182,47,.75);transform:translateY(-1px)}}
+.btn-ligne{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn-ligne:hover{background:rgba(255,255,255,.12)}
+.btn-nuit{background:var(--nuit);color:#fff}
+.btn-nuit:hover{background:var(--nuit-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* logo */
+.logo{display:inline-flex;flex-direction:column;align-items:center;line-height:1}
+.logo svg{width:46px;height:26px;color:var(--or-c)}
+.logo .l1{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:2.3rem;letter-spacing:.12em;color:#fff}
+.logo .l2{font-family:'Dancing Script',cursive;font-size:1.25rem;color:var(--or);margin-top:-.75rem;letter-spacing:.08em}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit-f);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,26,66,.55) 0%,rgba(18,26,66,.25) 30%,rgba(18,26,66,.72) 62%,rgba(18,26,66,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:6.2rem 0 4.6rem}
+.hero .logo{margin-bottom:1.6rem}
+.hero h1{color:#fff;font-size:clamp(2.7rem,11vw,5.6rem);font-weight:700;letter-spacing:.02em}
+.hero h1 .script{display:block;font-size:.6em;color:var(--or-c);margin-top:.15em;line-height:1.15}
+.hero .lead{font-size:1.12rem;max-width:33rem;margin:1.1rem 0 1.9rem;color:#f4f1ff;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--or-c);display:flex;align-items:center;gap:.4rem}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}.apparait.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--or);color:var(--nuit-f);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Josefin Sans',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;font-size:.8rem;color:var(--nuit)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{background:var(--creme)}
+.duo{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.devise{font-family:'Dancing Script',cursive;font-size:clamp(1.8rem,6vw,2.4rem);color:var(--nuit);margin:1.4rem 0;line-height:1.2}
+.devise::before{content:"";display:block;width:56px;height:3px;background:var(--or);margin-bottom:1rem;border-radius:3px}
+.duo p+p{margin-top:1rem}
+.arche{position:relative;max-width:440px;margin:auto}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 26px 26px;box-shadow:0 40px 80px -40px rgba(27,36,87,.7)}
+.arche::before{content:"";position:absolute;inset:-13px;border:1.5px solid var(--or);border-radius:212px 212px 34px 34px;opacity:.7}
+.arche figcaption{position:absolute;left:-.3rem;bottom:1.5rem;background:#fff;padding:.65rem 1.05rem;border-radius:14px;font-size:.85rem;box-shadow:0 18px 40px -20px rgba(27,36,87,.5)}
+.arche figcaption b{color:var(--nuit)}
+/* moments */
+.moments{background:linear-gradient(180deg,var(--creme),var(--miel))}
+.cartes{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.2rem}
+.moment{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px -34px rgba(27,36,87,.55);transition:transform .45s,box-shadow .45s;display:flex;flex-direction:column}
+.moment:hover{transform:translateY(-6px);box-shadow:0 32px 60px -32px rgba(27,36,87,.6)}
+.moment img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.2s}
+.moment:hover img{transform:scale(1.06)}
+.moment .ill{aspect-ratio:4/3;background:radial-gradient(circle at 50% 45%,#fff7dc,#f6dc8f);display:grid;place-items:center;position:relative}
+.moment .ill svg{width:62%;height:auto}
+.moment .ill small{position:absolute;right:.7rem;bottom:.5rem;font-size:.68rem;color:#8a6c18;letter-spacing:.06em}
+.moment div.t{padding:1.2rem 1.25rem 1.4rem}
+.moment small.k{display:block;font-family:'Josefin Sans',sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:700;margin-bottom:.35rem}
+.moment h3{margin-bottom:.4rem}
+.moment p{font-size:.95rem}
+/* galerie */
+.galerie{background:var(--nuit);color:#fff;overflow:hidden}
+.galerie h2{color:#fff}
+.galerie .intro{color:#d9dcf2;max-width:36rem}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 min(72vw,330px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;background:var(--nuit-f);box-shadow:0 26px 50px -30px rgba(0,0,0,.8)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.1rem 1rem;background:linear-gradient(180deg,transparent,rgba(18,26,66,.92));font-size:.92rem}
+.rail figcaption b{font-family:'Josefin Sans',sans-serif;display:block;font-size:1.08rem;color:var(--or-c)}
+.glisse{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:var(--or-c);margin-top:.4rem}
+.glisse i{display:inline-block;width:34px;height:2px;background:var(--or-c);border-radius:2px;animation:glisse 2.4s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(10px)}}
+/* evenements */
+.evts{background:var(--creme)}
+.tags{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.3rem}
+.tags span{border:1.5px solid var(--or);border-radius:999px;padding:.35rem 1rem;font-size:.92rem;background:#fff;transition:.3s}
+.tags span:hover{background:var(--miel)}
+.foodbook{margin-top:2rem;background:#fff;border-radius:22px;padding:1.4rem 1.4rem 1.3rem;box-shadow:0 22px 50px -36px rgba(27,36,87,.55);border-left:4px solid var(--or)}
+.foodbook small{font-family:'Josefin Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem;color:var(--or);font-weight:700}
+.foodbook p{margin-top:.35rem;font-size:.97rem}
+.duo-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.duo-photos figure{border-radius:20px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(27,36,87,.7)}
+.duo-photos figure:nth-child(2){margin-top:2.6rem}
+.duo-photos img{width:100%;aspect-ratio:3/4;object-fit:cover}
+/* avis */
+.avis{background:var(--miel);text-align:center}
+.citations{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem;text-align:left}
+blockquote{background:#fff;border-radius:22px;padding:1.6rem 1.5rem 1.3rem;box-shadow:0 22px 50px -36px rgba(27,36,87,.5);position:relative}
+blockquote::before{content:"“";font-family:'Dancing Script',cursive;position:absolute;top:-.6rem;left:1rem;font-size:4rem;color:var(--or);line-height:1}
+blockquote p{font-size:1.08rem;color:var(--nuit)}
+blockquote cite{display:block;margin-top:.7rem;font-style:normal;font-size:.82rem;color:var(--doux)}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0%,var(--sapin-c),var(--sapin) 60%,#152b1f);color:#f3efe2;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--or-c)}
+.noel .intro{max-width:36rem;color:#e4ebdf}
+.etoiles{position:absolute;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(circle,rgba(246,215,122,.9) 1.2px,transparent 1.6px),radial-gradient(circle,rgba(255,255,255,.6) 1px,transparent 1.4px);background-size:120px 140px,190px 170px;background-position:10px 20px,70px 90px;animation:scintille 6s ease-in-out infinite alternate}
+@keyframes scintille{to{opacity:.25}}
+.menu-noel{position:relative;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.rub{background:rgba(255,255,255,.06);border:1px solid rgba(246,215,122,.35);border-radius:22px;padding:1.4rem 1.3rem 1.2rem;backdrop-filter:blur(2px)}
+.rub h3{color:var(--or-c);font-size:1.05rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.9rem}
+.rub ul{list-style:none}
+.rub li{display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;padding:.42rem 0;border-bottom:1px dashed rgba(246,215,122,.22);font-size:.95rem}
+.rub li:last-child{border-bottom:0}
+.rub li span:last-child{white-space:nowrap;color:var(--or-c);font-weight:700}
+.rub li em{display:block;font-size:.8rem;color:#c8d6c6;font-style:normal}
+.rub.buches{grid-column:1/-1;background:linear-gradient(135deg,rgba(233,182,47,.16),rgba(255,255,255,.05))}
+.vegan{display:inline-block;font-size:.68rem;border:1px solid var(--or-c);color:var(--or-c);border-radius:999px;padding:.05rem .5rem;margin-left:.3rem;vertical-align:.12em;letter-spacing:.04em}
+.noel .pied{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+.noel .pied p{font-size:.9rem;color:#d4dfd0;max-width:28rem}
+.boule{position:absolute;width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 32% 30%,#ff8d8d,var(--rouge) 45%,#6e0d16);box-shadow:0 10px 25px -8px rgba(0,0,0,.6);animation:balance 5s ease-in-out infinite;transform-origin:50% -60px}
+.boule::before{content:"";position:absolute;left:50%;top:-60px;width:1px;height:60px;background:rgba(246,215,122,.6)}
+.boule::after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:8px;margin-left:-6px;background:var(--or);border-radius:3px 3px 1px 1px}
+.boule.b1{top:60px;right:8%}.boule.b2{top:30px;right:24%;width:32px;height:32px;animation-delay:-2s;background:radial-gradient(circle at 32% 30%,#fff1b8,var(--or) 45%,#8a6510)}
+@keyframes balance{50%{transform:rotate(6deg)}}
+/* contact */
+.contact{background:var(--nuit-f);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .lead{color:#d9dcf2;max-width:34rem;margin:0 auto 2rem}
+.contact .ctas{justify-content:center}
+.coord{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.6rem;text-align:left}
+.coord a,.coord div{display:flex;gap:.8rem;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(246,215,122,.25);border-radius:18px;padding:1rem 1.1rem;text-decoration:none;transition:.3s;min-width:0}
+.coord a:hover{background:rgba(255,255,255,.12)}
+.coord svg{width:26px;height:26px;flex:none;color:var(--or)}
+.coord small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--or-c)}
+.coord span{display:block;overflow-wrap:anywhere;font-size:.95rem}
+footer{background:#0c1233;color:#aab0d6;text-align:center;font-size:.82rem;padding:2rem 5vw 2.4rem;position:relative;z-index:2}
+footer b{color:var(--or-c)}
+/* vague */
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:900px){
+ .duo{grid-template-columns:1fr}
+ .cartes{grid-template-columns:1fr 1fr}
+ .coord{grid-template-columns:1fr}
+}
+@media (max-width:620px){
+ body{font-size:16px}
+ .cartes{grid-template-columns:1fr}
+ .citations,.menu-noel{grid-template-columns:1fr}
+ .hero .ctas .btn{flex:1 1 100%}
+ .noel .pied .btn{width:100%}
+ .boule.b2{display:none}
+ .boule.b1{right:6%;top:40px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour LCM Traiteur</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+ <div class="fond"><img src="img/plateaux-aperitif.webp" alt="Plateaux d'apéritif LCM Traiteur : samoussas, croustades et bouchées dorées dans leurs boîtes"></div>
+ <div class="wrap hero-in">
+  <div class="logo apparait" aria-label="LCM Traiteur">
+   <svg viewBox="0 0 46 26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M13 2v9M10 2v5a3 3 0 0 0 6 0V2M13 11l-2 13"/><path d="M23 2v22"/><ellipse cx="34" cy="6" rx="3" ry="4.2"/><path d="M34 10.2l1.5 13.8"/></svg>
+   <span class="l1">LCM</span><span class="l2">traiteur</span>
+  </div>
+  <p class="eyebrow apparait d2">Traiteur · Les Trois-Bassins</p>
+  <h1 class="apparait d2">De l'apéritif<br>au dessert<span class="script">Mettez de l'amour dans vos plats</span></h1>
+  <p class="lead apparait d3">LCM Traiteur vous accompagne pour tous vos événements : petites commandes d'apéro, buffets, desserts gourmands et petits-déjeuners, préparés avec cœur.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-or" href="https://wa.me/262693430845?text=Bonjour%20LCM%20Traiteur%2C%20je%20voudrais%20un%20devis%20pour%20un%20%C3%A9v%C3%A9nement" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Demander un devis</a>
+   <a class="btn btn-ligne" href="tel:+262693430845">0693 43 08 45</a>
+  </div>
+  <p class="adr apparait d4"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>Basé à Trois-Bassins, La Réunion</p>
+ </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Petites commandes d'apéro</span><span>Samoussas</span><span>Mini-pizzas</span><span>Verrines de tiramisu</span><span>Wedding cake pistache framboise</span><span>Petits-déjeuners</span><span>Number cakes</span><span>Tous vos événements</span>
+ <span>Petites commandes d'apéro</span><span>Samoussas</span><span>Mini-pizzas</span><span>Verrines de tiramisu</span><span>Wedding cake pistache framboise</span><span>Petits-déjeuners</span><span>Number cakes</span><span>Tous vos événements</span>
+</div></div>
+
+<section class="histoire">
+ <div class="wrap duo">
+  <div class="rv">
+   <p class="eyebrow">La maison</p>
+   <h2>Un traiteur des hauts, avec beaucoup d'amour dedans</h2>
+   <p>Chez LCM Traiteur, chaque commande est pensée comme une fête : des bouchées salées bien dorées pour l'apéritif, des plats généreux pour régaler tout le monde, et des desserts qui font briller les yeux au moment du gâteau.</p>
+   <p class="devise">« Mettez de l'amour dans vos plats »</p>
+   <p>Basée à Trois-Bassins, LCM Traiteur prépare aussi bien une petite commande d'apéro entre amis qu'un buffet de mariage, et propose des petits-déjeuners pour bien commencer la journée.</p>
+  </div>
+  <figure class="arche rv">
+   <img src="img/number-cake.webp" alt="Number cake LCM Traiteur garni de fraises, macarons et chocolats" loading="lazy">
+   <figcaption><b>Number cake</b> · fraises, macarons, chocolats</figcaption>
+  </figure>
+ </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V22C240 0 480 0 720 18s480 26 720 4v22Z" fill="#fff8e3"/></svg>
+<section class="moments">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Les moments LCM</p>
+   <h2>De l'apéritif au dessert</h2>
+   <p style="max-width:36rem">Quatre façons de se régaler, selon l'heure et l'occasion. Un message suffit pour composer votre commande.</p>
+  </div>
+  <div class="cartes">
+   <article class="moment rv">
+    <img src="img/samoussas-mini-pizzas.webp" alt="Samoussas et mini-pizzas LCM Traiteur" loading="lazy">
+    <div class="t"><small class="k">Apéritif</small><h3>Petites commandes d'apéro</h3><p>Samoussas croustillants, mini-pizzas fondantes et bouchées dorées, présentés en boîtes prêtes à partager.</p></div>
+   </article>
+   <article class="moment rv">
+    <img src="img/buffet-plat.webp" alt="Plat mijoté servi en buffet par LCM Traiteur" loading="lazy">
+    <div class="t"><small class="k">Buffets</small><h3>Plats pour vos tablées</h3><p>Des plats généreux servis en buffet, pour réunir famille, amis ou collègues autour d'une belle table.</p></div>
+   </article>
+   <article class="moment rv">
+    <img src="img/verrine-tiramisu.webp" alt="Verrine de tiramisu LCM Traiteur" loading="lazy">
+    <div class="t"><small class="k">Dessert</small><h3>Desserts gourmands</h3><p>Verrines de tiramisu, number cakes et wedding cake en layer pistache framboise : le dessert qui fait toujours plaisir.</p></div>
+   </article>
+   <article class="moment rv">
+    <div class="ill" role="img" aria-label="Illustration d'un petit-déjeuner">
+     <svg viewBox="0 0 120 90" fill="none" stroke="#1b2457" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 46h40v8a20 20 0 0 1-40 0Z" fill="#fff"/><path d="M58 50h5a7 7 0 0 1 0 14h-6"/><path d="M28 38c-3-4 3-6 0-10M38 38c-3-4 3-6 0-10M48 38c-3-4 3-6 0-10" stroke="#e9b62f"/><path d="M76 34h14l-2 36H78Z" fill="#ffd36b"/><path d="M80 34l-2-8M78 46h10" stroke="#e9b62f"/><rect x="94" y="52" width="16" height="18" rx="3" fill="#c8202f" stroke="#1b2457"/><path d="M93 52h18" /><path d="M10 76h100"/></svg>
+     <small>Illustration</small>
+    </div>
+    <div class="t"><small class="k">Matin</small><h3>Petits-déjeuners</h3><p>Confiture, macatia, tisane et jus frais : LCM Traiteur propose aussi des petits-déjeuners pour démarrer la journée en douceur.</p></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="galerie">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Sur nos tables</p>
+   <h2>Tout droit sortis de la cuisine</h2>
+   <p class="intro">Les vraies créations de LCM Traiteur, telles qu'elles partent chez vous.</p>
+   <p class="glisse"><i></i>Faites glisser</p>
+  </div>
+  <div class="rail">
+   <figure><img src="img/croissants-mini-pizzas.webp" alt="Croissants et mini-pizzas" loading="lazy"><figcaption><b>Viennoiseries & mini-pizzas</b>pour un apéro ou un brunch</figcaption></figure>
+   <figure><img src="img/number-cake-detail.webp" alt="Détail d'un number cake aux fraises et macarons" loading="lazy"><figcaption><b>Number cake</b>fraises, macarons, chocolats</figcaption></figure>
+   <figure><img src="img/samoussas.webp" alt="Boîte de samoussas" loading="lazy"><figcaption><b>Samoussas</b>bien dorés, en boîte</figcaption></figure>
+   <figure><img src="img/verrines-gourmandes.webp" alt="Verrines gourmandes au biscuit" loading="lazy"><figcaption><b>Verrines gourmandes</b>en série pour vos buffets</figcaption></figure>
+   <figure><img src="img/beignets.webp" alt="Beignets dorés en boîte" loading="lazy"><figcaption><b>Beignets dorés</b>tout juste sortis de la friture</figcaption></figure>
+   <figure><img src="img/feuilletes.webp" alt="Feuilletés et viennoiseries" loading="lazy"><figcaption><b>Feuilletés</b>bien croustillants</figcaption></figure>
+   <figure><img src="img/mini-pizzas.webp" alt="Mini-pizzas gratinées" loading="lazy"><figcaption><b>Mini-pizzas</b>gratinées au fromage</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="evts">
+ <div class="wrap duo">
+  <div class="rv">
+   <p class="eyebrow">Vos événements</p>
+   <h2>Pour tous vos grands et petits jours</h2>
+   <p>« LCM Traiteur vous accompagne pour tous vos événements » : du simple apéro au grand jour, avec un wedding cake en layer pistache framboise « pour les amoureux de ce grand jour ».</p>
+   <div class="tags"><span>Mariages</span><span>Gâteaux de fête</span><span>Apéros entre amis</span><span>Buffets</span><span>Petits-déjeuners</span><span>Repas de fêtes</span></div>
+   <div class="foodbook">
+    <small>Dans la commune</small>
+    <p>Le 21 octobre 2026, la Ville de Trois-Bassins a invité <b>Lydia de LCM Traiteur</b> à animer l'atelier cuisine FoodBook avec les jeunes, autour de la confection du gâteau patate.</p>
+   </div>
+  </div>
+  <div class="duo-photos rv">
+   <figure><img src="img/plateaux-aperitif.webp" alt="Assortiment de bouchées en boîtes" loading="lazy"></figure>
+   <figure><img src="img/verrine-tiramisu.webp" alt="Verrine de tiramisu" loading="lazy"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="avis">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Ils en parlent</p>
+   <h2>Recommandé avec le sourire</h2>
+  </div>
+  <div class="citations">
+   <blockquote class="rv"><p>Je recommande à 200% ! Gâteau excellent ✨🎂😋</p><cite>Avis publié sur la page Facebook de LCM Traiteur</cite></blockquote>
+   <blockquote class="rv"><p>Adorable, à l'écoute, ultra pro, plats délicieux, mersi bonpe ❤️ on recommande chaudement !!</p><cite>Avis publié sur la page Facebook de LCM Traiteur</cite></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <div class="etoiles"></div>
+ <span class="boule b1" aria-hidden="true"></span><span class="boule b2" aria-hidden="true"></span>
+ <div class="wrap" style="position:relative">
+  <div class="rv">
+   <p class="eyebrow">Commande des fêtes</p>
+   <h2>La carte de Noël <span class="script" style="font-size:.8em">2026</span></h2>
+   <p class="intro">Des exclusivités disponibles seulement en cette fin d'année, en plus des cartes habituelles. Faites-vous plaisir, et gâtez vos proches !</p>
+  </div>
+  <div class="menu-noel">
+   <div class="rub rv">
+    <h3>Apéritifs salés</h3>
+    <ul>
+     <li><span>Tartelette au magret fumé et confit d'oignon</span><span>1,20 €</span></li>
+     <li><span>Cromesquis de rillettes de canard à la vanille</span><span>1,00 €</span></li>
+     <li><span>Cromesquis végan, patate douce et champignons</span><span>0,90 €</span></li>
+     <li><span>Tartelette parmesan et courgette</span><span>0,90 €</span></li>
+     <li><span>Roulé à la tapenade, basilic et chorizo</span><span>0,90 €</span></li>
+     <li><span>Brochette de boudin blanc à la mangue et au letchi</span><span>2,80 €</span></li>
+     <li><span>Verrine de mousse de foie gras<em>avec pomme caramel et pain d'épices grillé</em></span><span>3,20 €</span></li>
+     <li><span>Verrine saumon, avocat et fromage frais</span><span>3,20 €</span></li>
+    </ul>
+   </div>
+   <div class="rub rv">
+    <h3>Gourmandises sucrées</h3>
+    <ul>
+     <li><span>Dôme Trianon et son croustillant</span><span>3,80 €</span></li>
+     <li><span>Royale chocolat et son croquant</span><span>3,80 €</span></li>
+     <li><span>Verrine mousse pomme-cannelle et pain d'épices</span><span>2,20 €</span></li>
+    </ul>
+   </div>
+   <div class="rub buches rv">
+    <h3>Bûches pour 10 personnes</h3>
+    <ul>
+     <li><span>Bûche entremet pistache, framboise &amp; chocolat blanc <span class="vegan">possible en végan</span></span><span>45 €</span></li>
+     <li><span>Bûche entremet exotique mangue-passion <span class="vegan">possible en végan</span></span><span>45 €</span></li>
+     <li><span>Bûche 3 chocolats et son croustillant</span><span>38 €</span></li>
+    </ul>
+   </div>
+  </div>
+  <div class="pied rv">
+   <p>Et toujours l'ensemble des créations habituelles de LCM Traiteur, pour des tables de fêtes bien garnies.</p>
+   <a class="btn btn-or" href="https://wa.me/262693430845?text=Bonjour%20LCM%20Traiteur%2C%20je%20voudrais%20commander%20sur%20votre%20carte%20de%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Commander pour les fêtes</a>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">On en parle ?</p>
+   <h2>Racontez-nous votre événement</h2>
+   <p class="lead">Une date, un nombre d'invités, une envie : LCM Traiteur compose avec vous le menu qui vous ressemble, de l'apéritif au dessert.</p>
+   <div class="ctas">
+    <a class="btn btn-or" href="https://wa.me/262693430845?text=Bonjour%20LCM%20Traiteur%2C%20je%20voudrais%20un%20devis%20pour%20un%20%C3%A9v%C3%A9nement" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+    <a class="btn btn-ligne" href="tel:+262693430845">Appeler le 0693 43 08 45</a>
+   </div>
+  </div>
+  <div class="coord">
+   <a href="mailto:lcmtraiteur974@gmail.com" class="rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div style="all:unset;min-width:0"><small>E-mail</small><span>lcmtraiteur974@gmail.com</span></div></a>
+   <a href="https://www.facebook.com/p/LCM-Traiteur-100084718141365" target="_blank" rel="noopener" class="rv"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8Z"/></svg><div style="all:unset;min-width:0"><small>Facebook</small><span>LCM Traiteur</span></div></a>
+  </div>
+ </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de LCM Traiteur.</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* volutes de vapeur qui montent + paillettes dorées */
+const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.6+.6,v:Math.random()*.3+.1,a:Math.random()*6.28,s:i<8,w:Math.random()*14+10});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.02;const dx=Math.sin(p.a)*(p.s?10:4);if(p.y<-40){p.y=H+40;p.x=Math.random()*W}
+ if(p.s){x.globalAlpha=.07+Math.sin(p.a*.7)*.03;x.strokeStyle='#f6d77a';x.lineWidth=2;x.beginPath();x.moveTo(p.x+dx,p.y);x.bezierCurveTo(p.x+dx+p.w*.6,p.y-p.w*.6,p.x+dx-p.w*.6,p.y-p.w*1.2,p.x+dx,p.y-p.w*1.8);x.stroke()}
+ else{x.globalAlpha=Math.max(.32+Math.sin(p.a*2)*.25,.05);x.fillStyle=p.r>1.5?'#fff3c4':'#e9b62f';x.beginPath();x.arc(p.x+dx,p.y,p.r,0,6.28);x.fill()}}
+x.globalAlpha=1;requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="LCM Traiteur" defer></script>
+</body>
+</html>
