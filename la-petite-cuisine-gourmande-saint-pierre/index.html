@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Petite Cuisine Gourmande · Cuisine traditionnelle créole à Saint-Pierre</title>
+<meta name="description" content="La Petite Cuisine Gourmande, restaurant de cuisine traditionnelle créole à Saint-Pierre (La Réunion) : cari feu de bois, 100 % fait maison, sur place, à emporter et traiteur. 0693 94 42 58.">
+<meta property="og:title" content="La Petite Cuisine Gourmande · Saint-Pierre">
+<meta property="og:description" content="Cari feu de bois, 100 % fait maison. « Lo Gout, Lo Kèr, La Tradition »">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-petite-cuisine-gourmande-saint-pierre/img/riz-jaune.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-petite-cuisine-gourmande-saint-pierre/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--marmite:#c2441c;--marmite-f:#8f2e10;--curcuma:#e9b320;--curcuma-c:#f6d77a;--braise:#2a1710;--bois:#4a2a1b;--creme:#fbf3e3;--sable:#f3e3c4;--feuille:#2f6b3a;--txt:#3a251b;--doux:#8a6d5c;--ardoise:#1f2321}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;color:var(--braise);line-height:1.08}
+h2{font-size:clamp(2rem,6.5vw,3.2rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem}
+.main-ecrite{font-family:'Caveat',cursive;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;color:var(--marmite);font-weight:800}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--braise);color:var(--curcuma-c);text-align:center;font-size:.74rem;padding:.42rem .8rem;line-height:1.35}
+.ribbon b{color:#fff}
+canvas#feu{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.95rem;transition:.3s;letter-spacing:.02em}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--marmite);color:#fff;box-shadow:0 14px 30px -14px rgba(194,68,28,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-wa:hover{background:var(--marmite-f)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -6px rgba(233,179,32,.75)}}
+.btn-line{border:2px solid var(--curcuma-c);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:2px solid var(--bois);color:var(--braise)}
+.btn-dark:hover{background:var(--sable)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--braise);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,23,16,.35) 0%,rgba(42,23,16,.35) 35%,rgba(42,23,16,.96) 100%)}
+.hero-in{position:relative;z-index:2;padding:7.5rem 0 3.6rem}
+.hero .eyebrow{color:var(--curcuma-c)}
+.hero h1{color:#fff;font-size:clamp(2.9rem,12.5vw,6.4rem);letter-spacing:-.01em;margin:.5rem 0 .2rem}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--curcuma)}
+.devise{font-family:'Caveat',cursive;font-size:clamp(1.7rem,6.5vw,2.4rem);color:var(--curcuma-c);line-height:1.1}
+.hero .lead{font-size:1.1rem;max-width:34rem;margin:1rem 0 1.8rem;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:var(--curcuma-c)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--curcuma);color:var(--braise);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;font-weight:500}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;font-style:normal;font-size:.8rem;color:var(--marmite)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{display:grid;gap:2.4rem;align-items:center}
+.histoire figure{position:relative;border-radius:26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(42,23,16,.55)}
+.histoire figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.histoire figcaption,.cap{position:absolute;left:.8rem;bottom:.8rem;background:rgba(42,23,16,.78);color:var(--creme);font-size:.78rem;padding:.3rem .75rem;border-radius:999px;backdrop-filter:blur(4px)}
+blockquote.kreol{font-family:'Fraunces',serif;font-style:italic;font-size:1.22rem;line-height:1.5;color:var(--bois);border-left:4px solid var(--curcuma);padding:.2rem 0 .2rem 1.1rem;margin:1.2rem 0}
+.trad{font-size:.95rem;color:var(--doux)}
+.signe{margin-top:1.2rem;font-family:'Caveat',cursive;font-size:1.9rem;color:var(--marmite)}
+/* ardoise */
+.menu-sec{background:var(--braise);color:var(--creme);position:relative}
+.menu-sec h2{color:#fff}
+.menu-sec .eyebrow{color:var(--curcuma)}
+.menu-intro{max-width:40rem;margin-bottom:2rem}
+.ardoise{background:var(--ardoise) radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.06),transparent 60%);border:12px solid #6b4226;border-radius:14px;box-shadow:inset 0 0 40px rgba(0,0,0,.55),0 30px 60px -25px rgba(0,0,0,.8);padding:1.6rem 1.3rem;font-family:'Caveat',cursive;color:#f4efe4}
+.ardoise .titre{text-align:center;font-size:1.9rem;line-height:1.1;color:var(--curcuma-c);margin-bottom:.4rem}
+.ardoise .sous{text-align:center;font-size:1.25rem;opacity:.85;margin-bottom:1.2rem}
+.ardoise .cols{display:grid;gap:1.1rem}
+.ardoise h4{font-family:'Caveat',cursive;font-size:1.55rem;color:var(--curcuma);border-bottom:1px dashed rgba(246,215,122,.4);margin-bottom:.25rem}
+.ardoise ul{list-style:none;font-size:1.35rem;line-height:1.35}
+.ardoise li::before{content:"• ";color:var(--marmite)}
+.ardoise .pied{text-align:center;margin-top:1.3rem;font-size:1.35rem;color:var(--curcuma-c)}
+.infos-cmd{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.6rem 0}
+.puce{background:rgba(233,179,32,.14);border:1px solid rgba(233,179,32,.45);color:var(--curcuma-c);padding:.45rem .9rem;border-radius:999px;font-size:.88rem;font-weight:600}
+/* galerie */
+.gal-sec{padding-bottom:3rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 5vw 1.4rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 76%;max-width:340px;scroll-snap-align:center;position:relative;border-radius:22px;overflow:hidden;box-shadow:0 22px 40px -24px rgba(42,23,16,.7);transition:transform .4s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.6deg)}
+.galerie img{aspect-ratio:1/1;object-fit:cover;width:100%}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem .9rem .8rem;background:linear-gradient(transparent,rgba(42,23,16,.9));color:#fff;font-weight:700;font-size:.95rem;line-height:1.25}
+.galerie figcaption small{display:block;font-weight:400;font-size:.76rem;color:var(--curcuma-c);margin-top:.15rem}
+.glisse{text-align:center;font-size:.85rem;color:var(--doux)}
+/* formules */
+.formules{display:grid;gap:1rem;margin-top:1.6rem}
+.carte{background:#fff;border-radius:22px;padding:1.5rem 1.3rem;box-shadow:0 18px 40px -28px rgba(42,23,16,.55);border-top:5px solid var(--curcuma);transition:transform .35s}
+.carte:hover{transform:translateY(-5px)}
+.carte .ico{width:48px;height:48px;border-radius:14px;background:var(--sable);display:grid;place-items:center;margin-bottom:.8rem}
+.carte .ico svg{width:28px;height:28px;stroke:var(--marmite);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.carte p{font-size:.97rem;margin-top:.4rem}
+/* fred */
+.fred{background:var(--sable);border-radius:30px;padding:2.2rem 1.4rem;display:grid;gap:1.6rem;align-items:center;position:relative;overflow:hidden}
+.fred .chiffre{font-family:'Fraunces',serif;font-size:3rem;font-weight:700;color:var(--marmite);line-height:1}
+.fred .chiffre small{display:block;font-family:'Nunito';font-size:.85rem;color:var(--doux);font-weight:600;margin-top:.3rem}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.fred figure{position:relative;border-radius:22px;overflow:hidden}
+.fred figure img{aspect-ratio:1/1;object-fit:cover;width:100%}
+/* noel */
+.noel{position:relative;background:linear-gradient(160deg,#7a1f12,#3c130b 70%);color:var(--creme);border-radius:30px;padding:2.6rem 1.4rem;overflow:hidden;text-align:center}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--curcuma-c)}
+.noel p{max-width:36rem;margin:0 auto 1.2rem}
+.noel .guirlande{position:absolute;top:0;left:0;right:0;height:26px}
+.noel .ctas{justify-content:center;margin-top:1.4rem}
+.noel .note{font-size:.8rem;opacity:.75;margin-top:1rem}
+.noel-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin:1.6rem auto 0;max-width:520px}
+.noel-photos img{border-radius:16px;aspect-ratio:1/1;object-fit:cover;width:100%;border:3px solid rgba(246,215,122,.5)}
+/* avis */
+.avis{text-align:center}
+.etoiles{font-size:1.6rem;color:var(--curcuma);letter-spacing:.2em}
+.gros{font-family:'Fraunces',serif;font-size:clamp(2.4rem,9vw,3.6rem);font-weight:700;color:var(--marmite);line-height:1}
+/* contact */
+.contact{background:var(--braise);color:var(--creme)}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--curcuma)}
+.contact-grid{display:grid;gap:1.6rem}
+.bloc{background:rgba(255,255,255,.06);border:1px solid rgba(246,215,122,.25);border-radius:22px;padding:1.4rem}
+.bloc h3{color:var(--curcuma-c);font-size:1.15rem;margin-bottom:.5rem}
+.bloc a{color:#fff}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
+.reseaux a{border:1px solid rgba(246,215,122,.5);padding:.45rem .9rem;border-radius:999px;text-decoration:none;font-size:.88rem}
+footer{text-align:center;padding:2.2rem 1rem 6.5rem;font-size:.8rem;color:var(--doux);background:var(--sable)}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(42,23,16,.94);backdrop-filter:blur(6px)}
+.barre a{flex:1;min-height:48px}
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .histoire{grid-template-columns:1fr 1.1fr}
+ .ardoise{padding:2.4rem 2.6rem}
+ .ardoise .cols{grid-template-columns:1fr 1fr;gap:1.4rem 2.6rem}
+ .formules{grid-template-columns:repeat(3,1fr)}
+ .fred{grid-template-columns:1.2fr 1fr;padding:3rem}
+ .contact-grid{grid-template-columns:1fr 1fr}
+ .galerie figure{flex-basis:300px}
+ .barre{display:none}
+ footer{padding-bottom:2.2rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.apparait{opacity:1;transform:none}canvas#feu{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Petite Cuisine Gourmande</div>
+<canvas id="feu" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/riz-jaune.webp" alt="Grande marmite de riz jaune et sa cuillère en bois, à La Petite Cuisine Gourmande"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Cuisine traditionnelle créole · Saint-Pierre</p>
+    <h1 class="apparait">La Petite Cuisine <em>Gourmande</em></h1>
+    <p class="devise apparait d2">« Lo Gout, Lo Kèr, La Tradition »</p>
+    <p class="lead apparait d2">Cari feu de bois, 100 % fait maison. Chaque jour, de nouvelles marmites à savourer sur place, à emporter ou en traiteur.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-wa" href="https://wa.me/262693944258?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20le%20menu%20du%20jour" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262693944258">0693 94 42 58</a>
+    </div>
+    <p class="adr apparait d3">132 rue Luc Lorion, résidence Les Poètes · Saint-Pierre</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V18c180 22 360 26 540 12S900 0 1080 8s300 26 360 22v16z" fill="#e9b320"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Cari feu de bois</span><span>100 % fait maison</span><span>Sur place</span><span>À emporter</span><span>Traiteur</span><span>Lo Gout, Lo Kèr, La Tradition</span><span>Menu du jour chaque soir</span>
+  <span>Cari feu de bois</span><span>100 % fait maison</span><span>Sur place</span><span>À emporter</span><span>Traiteur</span><span>Lo Gout, Lo Kèr, La Tradition</span><span>Menu du jour chaque soir</span>
+</div></div>
+
+<section class="wrap histoire" id="histoire">
+  <figure class="rv"><img src="img/sauce-piment-zoignon.webp" alt="Sauce piment zoignon : oignons rouges, ail et piment vert" loading="lazy"><figcaption>Sauce piment zoignon, menu du 13 novembre</figcaption></figure>
+  <div class="rv">
+    <p class="eyebrow">Lo zistwar</p>
+    <h2>Tout a commencé à côté de maman</h2>
+    <blockquote class="kreol">« Marmay mi té curieux, toujour côté maman po gad a el fé cui mangé : koman i plich l'ail, a kwé i serv zoignon… Un jour mi t travail frigoriste St Pierre côté lo resto, la patronne la propose amwin ropren lo restaurant, et la lo zistwar la komenssé ! »</blockquote>
+    <p class="trad">En français : enfant curieux, toujours aux côtés de maman pour la regarder cuisiner, apprendre comment éplucher l'ail, à quoi sert l'oignon… Puis un jour, frigoriste à Saint-Pierre juste à côté du resto, la patronne propose de reprendre le restaurant. Et l'histoire commence !</p>
+    <p class="signe">Aux marmites : Fred le Cuistot</p>
+  </div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <p class="eyebrow rv">Le menu du jour</p>
+    <h2 class="rv">Une nouvelle ardoise chaque jour</h2>
+    <p class="menu-intro rv">Le menu du lendemain est publié chaque soir sur Facebook et Instagram. Exemple avec le menu du vendredi 13 novembre 2026 : « On termine la semaine comme il faut ! »</p>
+    <div class="ardoise rv">
+      <p class="titre">Menu du vendredi 13 novembre</p>
+      <p class="sous">boucané péi, poulet façon Fred et sardines frites</p>
+      <div class="cols">
+        <div><h4>Les plats chauds du jour</h4><ul><li>Riz jaune</li><li>Rougail boucané péi</li><li>Ailerons de poulet façon Fred</li><li>Sauce sardines en boîte frites</li><li>Haricots coco rosés</li><li>Sauce piment zoignon</li></ul></div>
+        <div><h4>Côté salé &amp; gourmand</h4><ul><li>Quiche brèdes, saucisses &amp; poulet fumé</li><li>Beignets carottes emmental</li></ul>
+          <h4 style="margin-top:.8rem">Côté sandwich</h4><ul><li>Crudités &amp; rôti de poulet</li></ul></div>
+        <div><h4>Les salades, sur commande</h4><ul><li>Raviole poulet</li><li>Raviole saumon</li><li>Aiguillettes de poulet croustillantes</li><li>3 fromages</li></ul></div>
+        <div><h4>Pour les gourmands</h4><ul><li>Quatre-quarts banane flambée</li><li>Moelleux chocolat</li><li>Fondant chocolat</li><li>Tarte banane</li></ul></div>
+      </div>
+      <p class="pied">« Dan marmite i chante, dan l'assiette i raconte nout' péi. »</p>
+    </div>
+    <div class="infos-cmd rv">
+      <span class="puce">Commandez avant 10h</span><span class="puce">Salades crudités : commande avant 9h30</span><span class="puce">Sur place · À emporter · Traiteur</span>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-wa" href="https://wa.me/262693944258?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20le%20menu%20du%20jour" target="_blank" rel="noopener">Réserver le menu du jour</a>
+      <a class="btn btn-line" href="https://www.instagram.com/lapetitecuisinegourmande/" target="_blank" rel="noopener">Voir le menu de demain</a>
+    </div>
+  </div>
+</section>
+
+<section class="gal-sec" id="marmites">
+  <div class="wrap"><p class="eyebrow rv">Dans les marmites</p><h2 class="rv">Ce qui mijote cette semaine</h2></div>
+  <div class="galerie">
+    <figure><img src="img/civet-feu-de-bois.webp" alt="Civet la patte cochon au feu de bois" loading="lazy"><figcaption>Civet la patte cochon au feu de bois<small>Menu du jeudi 12 novembre</small></figcaption></figure>
+    <figure><img src="img/rougail-boucane.webp" alt="Rougail boucané péi" loading="lazy"><figcaption>Rougail boucané péi<small>Menu du vendredi 13 novembre</small></figcaption></figure>
+    <figure><img src="img/ailerons-facon-fred.webp" alt="Ailerons de poulet façon Fred, persil frais" loading="lazy"><figcaption>Ailerons de poulet façon Fred<small>Menu du vendredi 13 novembre</small></figcaption></figure>
+    <figure><img src="img/haricots-coco.webp" alt="Louche de haricots coco rosés en sauce" loading="lazy"><figcaption>Haricots coco rosés<small>Menu du vendredi 13 novembre</small></figcaption></figure>
+    <figure><img src="img/beignets-carottes-2.webp" alt="Beignets carottes emmental dorés" loading="lazy"><figcaption>Beignets carottes emmental<small>Menu du jeudi 12 novembre</small></figcaption></figure>
+    <figure><img src="img/gratin.webp" alt="Gratin 3 légumes gratiné, avec son ardoise" loading="lazy"><figcaption>Gratin 3 légumes<small>Menu du jeudi 12 novembre</small></figcaption></figure>
+    <figure><img src="img/sandwich-poulet.webp" alt="Sandwich crudités et rôti de poulet" loading="lazy"><figcaption>Sandwich crudités &amp; rôti de poulet<small>Côté sandwich</small></figcaption></figure>
+    <figure><img src="img/salade-aiguillettes.webp" alt="Salade aux aiguillettes de poulet croustillantes" loading="lazy"><figcaption>Salade aiguillettes de poulet croustillantes<small>Sur commande avant 9h30</small></figcaption></figure>
+    <figure><img src="img/gateau-patate.webp" alt="Part de gâteau patate avec son ardoise" loading="lazy"><figcaption>Gâteau patate<small>Pour finir en douceur</small></figcaption></figure>
+  </div>
+  <p class="glisse">Faites glisser pour découvrir les marmites →</p>
+</section>
+
+<section class="wrap" id="formules">
+  <p class="eyebrow rv">Comme vous préférez</p>
+  <h2 class="rv">Sur place, à emporter ou traiteur</h2>
+  <div class="formules">
+    <div class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 11h16M6 11v9M18 11v9M3 7h18l-2 4H5z"/></svg></div><h3>Sur place</h3><p>Une table en salle ou en terrasse, au cœur de la résidence Les Poètes, pour savourer le plat du jour bien chaud.</p></div>
+    <div class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.5 12h-11zM9 8V6a3 3 0 0 1 6 0v2"/></svg></div><h3>À emporter</h3><p>Barquettes, salades, sandwichs et petites gourmandises : réservez avant 10h et repartez avec votre repas péi.</p></div>
+    <div class="carte rv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 13h18M5 13a7 7 0 0 1 14 0M12 6V4M2 17h20"/></svg></div><h3>Traiteur</h3><p>Pour vos repas de famille, vos fêtes et vos évènements, Fred prépare les marmites pour toute la tablée.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="fred">
+  <div class="fred rv">
+    <div>
+      <p class="eyebrow">Les astuces péi de Fred</p>
+      <h2>Fred le Cuistot partage ses secrets</h2>
+      <p>En vidéo, Fred dévoile ses astuces de cuisine créole « à garder sous le coude », et vous invite à partager la vôtre en commentaire. Son top 5 du 30 octobre a régalé des milliers de curieux.</p>
+      <div class="stats" style="margin:1.6rem 0">
+        <p class="chiffre">14 954<small>vues pour « 5 astuces péi »</small></p>
+        <p class="chiffre">29 K<small>abonnés sur Facebook</small></p>
+      </div>
+      <a class="btn btn-dark" href="https://www.instagram.com/lapetitecuisinegourmande/" target="_blank" rel="noopener">Voir les astuces sur Instagram</a>
+    </div>
+    <figure><img src="img/beignets-carottes.webp" alt="Beignets carottes emmental en vitrine" loading="lazy" style="aspect-ratio:4/3"><span class="cap">Beignets carottes emmental</span></figure>
+  </div>
+</section>
+
+<section class="wrap" id="noel">
+  <div class="noel rv">
+    <svg class="guirlande" viewBox="0 0 400 26" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q50 24 100 4 T200 4 T300 4 T400 4" stroke="#f6d77a" stroke-width="1.5" fill="none" opacity=".7"/><g fill="#e9b320"><circle cx="50" cy="14" r="3"/><circle cx="150" cy="14" r="3"/><circle cx="250" cy="14" r="3"/><circle cx="350" cy="14" r="3"/></g><g fill="#2f6b3a"><circle cx="100" cy="5" r="2.5"/><circle cx="200" cy="5" r="2.5"/><circle cx="300" cy="5" r="2.5"/></g></svg>
+    <p class="eyebrow">Commande des fêtes</p>
+    <h2>Un Noël péi, préparé par Fred</h2>
+    <p>Pour vos tablées de fin d'année, confiez les marmites à La Petite Cuisine Gourmande : cari feu de bois, accompagnements et douceurs maison, en formule traiteur, pour profiter pleinement de vos invités.</p>
+    <p>Parlez-nous de votre repas, du nombre de convives et de vos envies : on vous répond avec plaisir.</p>
+    <div class="noel-photos"><img src="img/civet-feu-de-bois.webp" alt="" loading="lazy"><img src="img/riz-jaune.webp" alt="" loading="lazy"><img src="img/gateau-patate.webp" alt="" loading="lazy"></div>
+    <div class="ctas">
+      <a class="btn btn-wa" href="https://wa.me/262693944258?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20traiteur%20pour%20No%C3%ABl" target="_blank" rel="noopener">Commander pour Noël</a>
+      <a class="btn btn-line" href="tel:+262693944258">Appeler</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap avis">
+  <p class="etoiles rv">★★★★★</p>
+  <p class="gros rv">100 %</p>
+  <p class="rv">de recommandations sur Facebook (11 avis).<br>Les clients saluent une cuisine locale généreuse et un accueil chaleureux.</p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Vien retrouv lo goût lontan</p>
+    <h2 class="rv">Passez nous voir à Saint&#8209;Pierre</h2>
+    <div class="contact-grid">
+      <div class="bloc rv"><h3>Adresse</h3><p>132 rue Luc Lorion<br>Résidence Les Poètes<br>97410 Saint-Pierre, La Réunion</p><div class="reseaux"><a href="https://www.google.com/maps/search/?api=1&query=132+rue+Luc+Lorion+97410+Saint-Pierre" target="_blank" rel="noopener">Itinéraire</a></div></div>
+      <div class="bloc rv"><h3>Réserver &amp; commander</h3><p><a href="tel:+262693944258">0693 94 42 58</a> · appel ou WhatsApp<br>Commandez avant 10h · salades avant 9h30</p>
+        <div class="reseaux"><a href="https://www.facebook.com/lapetitecuisinegourmande" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/lapetitecuisinegourmande/" target="_blank" rel="noopener">Instagram</a></div></div>
+    </div>
+    <div class="ctas rv" style="margin-top:1.8rem">
+      <a class="btn btn-wa" href="https://wa.me/262693944258?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20le%20menu%20du%20jour" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>La Petite Cuisine Gourmande · Cuisine traditionnelle créole · Saint-Pierre, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Petite Cuisine Gourmande.</footer>
+<nav class="barre"><a class="btn btn-wa" href="https://wa.me/262693944258?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20le%20menu%20du%20jour" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-line" href="tel:+262693944258">Appeler</a></nav>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('feu'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+function n(t){return{t:t,x:Math.random()*W,y:H+Math.random()*H*.6,r:t?1+Math.random()*1.8:14+Math.random()*22,v:t?.5+Math.random()*.9:.25+Math.random()*.35,a:t?.35+Math.random()*.4:.05+Math.random()*.05,s:Math.random()*6.3}}
+for(var i=0;i<26;i++)P.push(n(i%3?1:0));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+function loop(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p,i){p.y-=p.v;p.s+=.015;p.x+=Math.sin(p.s)*(p.t?.5:.3);
+if(p.t){x.fillStyle='rgba(233,'+(140+((i*37)%60))+',40,'+p.a+')';x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill()}
+else{var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,248,235,'+p.a+')');g.addColorStop(1,'rgba(255,248,235,0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.3);x.fill();p.r+=.03}
+if(p.y<-40)P[i]=n(p.t)});
+requestAnimationFrame(loop)}
+loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Petite Cuisine Gourmande" defer></script>
+</body>
+</html>
