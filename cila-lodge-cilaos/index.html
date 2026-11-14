@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cila Lodge · Chalet en bois pour 13 personnes à Cilaos</title>
+<meta name="description" content="Cila Lodge, chalet meublé en bois à quelques minutes à pied du centre-ville de Cilaos, pour jusqu'à 13 personnes. 2 B route du Bras des Étangs, Cilaos, La Réunion.">
+<meta property="og:title" content="Cila Lodge · Votre écrin de nature au cœur de Cilaos">
+<meta property="og:description" content="Un chalet en bois pour se retrouver en famille ou entre amis, avec vue sur les montagnes du cirque. Jusqu'à 13 personnes.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/cila-lodge-cilaos/img/chalet-varangue.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/cila-lodge-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Oswald:wght@400;500;600&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#24391f;--sapin:#35532c;--mousse:#6c7c2f;--bois:#8a4720;--bois2:#b8692f;--miel:#d39a35;--creme:#f6efe1;--lin:#ece0c9;--ciel:#cfe0ea;--toit:#9b3328;--txt:#2f3127;--doux:#6c6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Oswald,Impact,sans-serif;font-weight:500;color:var(--foret);line-height:1.08;letter-spacing:.02em}
+h2{font-size:clamp(2rem,6vw,3.2rem);text-transform:uppercase;margin:.2rem 0 1.1rem}
+h3{font-size:1.35rem;text-transform:uppercase;letter-spacing:.05em}
+.script{font-family:Caveat,cursive;font-weight:700;color:var(--bois);text-transform:none;letter-spacing:0;line-height:1}
+.eyebrow{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:.76rem;color:var(--mousse);font-weight:500}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:#dfe6d2;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#brume{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-family:Oswald,sans-serif;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:.92rem;transition:.35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--mousse);color:#fff;box-shadow:0 14px 30px -14px rgba(36,57,31,.9);animation:souffle 5s ease-in-out infinite}
+.btn-main:hover{background:var(--bois)}
+@keyframes souffle{50%{box-shadow:0 16px 40px -8px rgba(108,124,47,.85);transform:scale(1.03)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff;background:rgba(255,255,255,.08);backdrop-filter:blur(3px)}
+.btn-line:hover{background:rgba(255,255,255,.22)}
+.btn-bois{border:1.5px solid var(--bois);color:var(--bois);background:#fff}
+.btn-bois:hover{background:var(--bois);color:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;padding:7rem 0 7.5rem;color:#fff;background:var(--foret)}
+.hero .fond{position:absolute;inset:0;overflow:hidden}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:62% center;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-3%,-1%)}}
+.hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,17,.2) 0%,rgba(20,32,17,.3) 25%,rgba(20,32,17,.62) 55%,rgba(20,32,17,.88) 100%)}
+.hero .wrap{position:relative;z-index:2;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero h1{color:#fff;font-family:Caveat,cursive;font-weight:700;font-size:clamp(4.2rem,17vw,8.5rem);line-height:.85;letter-spacing:0;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.hero .tag{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:clamp(.8rem,2.6vw,1rem);margin:.9rem 0 1.1rem;color:#f2e7c9}
+.hero .lead{font-size:clamp(1.05rem,3.6vw,1.25rem);max-width:33rem;margin-bottom:1.8rem;color:#f4f0e6}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:#e3dccb}
+.monts{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;z-index:3}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}.apparait.d4{animation-delay:1.5s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--creme);color:var(--sapin);overflow:hidden;white-space:nowrap;padding:.6rem 0 1rem;font-family:Caveat,cursive;font-size:1.75rem;font-weight:500}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"▲";margin-left:2.4rem;font-size:.7rem;color:var(--miel);vertical-align:middle}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* chalet */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.duo p+p{margin-top:1rem}
+.citation{font-family:Caveat,cursive;font-size:clamp(1.7rem,5vw,2.2rem);color:var(--bois);line-height:1.2;border-left:3px solid var(--miel);padding-left:1.1rem;margin:1.5rem 0}
+.citation small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.78rem;color:var(--doux);margin-top:.4rem}
+.cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -45px rgba(36,57,31,.75)}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s}
+.cadre:hover img{transform:scale(1.04)}
+.cadre figcaption,.galerie figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(246,239,225,.95);padding:.3rem .9rem;border-radius:999px;font-size:.8rem;font-weight:600;color:var(--foret)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:1.8rem}
+.atouts div{background:#fff;border-radius:16px;padding:.9rem .5rem;text-align:center;font-family:Oswald,sans-serif;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sapin);transition:.4s;box-shadow:0 12px 26px -22px rgba(36,57,31,.7)}
+.atouts div:hover{transform:translateY(-4px)}
+.atouts svg{width:30px;height:30px;margin:0 auto .35rem;stroke:var(--bois);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.vague{display:block;width:100%;height:56px}
+/* galerie */
+.galsec{background:var(--lin);padding-top:3.5rem}
+.galerie{display:flex;align-items:flex-start;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 4vw 1.6rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,430px);scroll-snap-align:center;position:relative;border-radius:20px;overflow:hidden;box-shadow:0 26px 50px -36px rgba(36,57,31,.8)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.galerie figure.large{flex-basis:min(88vw,620px)}
+.galerie figure.large img{aspect-ratio:16/11}
+.galerie figure:hover img{transform:scale(1.05)}
+.glisse{text-align:center;font-family:Caveat,cursive;font-size:1.4rem;color:var(--bois)}
+/* sejour */
+.sejour{background:var(--sapin);color:#eef0e2;overflow:hidden}
+.sejour h2,.sejour h3{color:#fff}
+.sejour .eyebrow{color:var(--miel)}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.chiffres div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.4rem 1rem;text-align:center}
+.chiffres b{display:block;font-family:Oswald,sans-serif;font-size:2.6rem;font-weight:500;color:var(--miel);line-height:1}
+.chiffres span{font-size:.88rem;display:block;margin-top:.4rem}
+.tarifs{background:var(--creme);color:var(--txt);border-radius:24px;padding:1.6rem 1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center}
+.tarifs h3{color:var(--foret)}
+.tarifs ul{list-style:none;margin-top:.6rem}
+.tarifs li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed var(--lin);padding:.55rem 0}
+.tarifs li b{font-family:Oswald,sans-serif;font-weight:500;color:var(--bois);font-size:1.25rem;white-space:nowrap}
+.tarifs .note{font-size:.88rem;color:var(--doux);margin-top:.7rem}
+.dispo{margin-top:2rem;display:flex;gap:1.2rem;align-items:center;background:rgba(0,0,0,.18);border-radius:22px;padding:1.4rem 1.5rem}
+.dispo .cal{flex:none;width:64px;height:64px;border-radius:16px;background:var(--miel);color:var(--foret);display:grid;place-items:center;font-family:Oswald,sans-serif;font-weight:600;line-height:1;text-align:center;font-size:.8rem;text-transform:uppercase}
+.dispo .cal b{font-size:1.6rem;display:block}
+/* rando */
+.rando{text-align:center;padding-bottom:0}
+.rando p{max-width:36rem;margin:0 auto 1rem}
+.cirque{width:100%;height:auto;display:block;margin-top:1rem}
+.legende{font-size:.75rem;color:var(--doux);text-align:right;padding:0 4vw .6rem}
+/* avis */
+.avis{background:#fff;text-align:center}
+.etoiles{font-size:1.6rem;color:var(--miel);letter-spacing:.25rem}
+.avis blockquote{font-family:Caveat,cursive;font-size:clamp(1.9rem,6vw,2.6rem);color:var(--foret);line-height:1.2;margin:1rem auto;max-width:34rem}
+.avis p{color:var(--doux);font-size:.92rem}
+/* noel */
+.noel{background:linear-gradient(160deg,#1d2f1a,#2f4a27 60%,#3b5a2e);color:#f3eedf;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#f0c46a}
+.noel .boite{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.noel ul{list-style:none;margin:1.2rem 0 1.8rem}
+.noel li{padding-left:1.6rem;position:relative;margin:.45rem 0}
+.noel li::before{content:"✦";position:absolute;left:0;color:#f0c46a}
+.bon{background:var(--creme);color:var(--foret);border-radius:22px;padding:1.6rem 1.4rem;text-align:center;position:relative;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);transform:rotate(-2deg);transition:transform .5s}
+.bon:hover{transform:rotate(0) scale(1.02)}
+.bon::before{content:"";position:absolute;inset:8px;border:1.5px dashed var(--bois2);border-radius:16px;pointer-events:none}
+.bon .script{font-size:2.6rem;display:block}
+.bon small{display:block;font-family:Oswald,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;color:var(--mousse);margin-top:.4rem}
+.bon svg{width:84px;margin:.6rem auto 0;display:block}
+.noel .wa{background:#f0c46a;color:var(--foret)}
+.noel .wa:hover{background:#fff}
+.flocon{position:absolute;color:rgba(255,255,255,.18);font-size:1.4rem;animation:tombe 9s linear infinite}
+@keyframes tombe{from{transform:translateY(-30px) rotate(0)}to{transform:translateY(420px) rotate(180deg)}}
+/* contact */
+.contact .duo{align-items:stretch}
+.fiche{background:#fff;border-radius:24px;padding:1.8rem 1.6rem;box-shadow:0 26px 60px -44px rgba(36,57,31,.8)}
+.fiche dl{display:grid;grid-template-columns:auto 1fr;gap:.6rem 1rem;margin:1.2rem 0 1.6rem}
+.fiche dt{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;color:var(--mousse);padding-top:.2rem}
+.fiche dd a{color:var(--bois);font-weight:600;text-decoration:none;word-break:break-word}
+.hotes{font-family:Caveat,cursive;font-size:1.7rem;color:var(--bois);margin-top:.4rem}
+.contact .cadre img{aspect-ratio:auto;height:100%;min-height:320px}
+footer{background:var(--foret);color:#cfd6c2;text-align:center;font-size:.82rem;padding:2.2rem 1rem 2.6rem;line-height:1.8}
+footer b{color:#fff;font-family:Caveat,cursive;font-size:1.6rem;font-weight:700;display:block}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .duo,.tarifs,.noel .boite{grid-template-columns:1fr}
+ .atouts{grid-template-columns:repeat(2,1fr)}
+ .chiffres b{font-size:2rem}
+ .chiffres{gap:.6rem}
+ .chiffres span{font-size:.8rem}
+ .bon{transform:rotate(-1.5deg);max-width:360px;margin:auto}
+ .contact .cadre img{min-height:0;aspect-ratio:4/3}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.apparait,.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Cila Lodge</div>
+<canvas id="brume" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/chalet-varangue.webp" alt="Le chalet en bois du Cila Lodge et sa varangue, sous le ciel bleu de Cilaos"></div>
+  <div class="wrap">
+    <p class="eyebrow apparait" style="color:#f0c46a">Cilaos · Île de La Réunion</p>
+    <h1 class="apparait d2">Le Cila Lodge</h1>
+    <p class="tag apparait d2">Votre écrin de nature au cœur de Cilaos</p>
+    <p class="lead apparait d3">Un chalet meublé tout en bois, à quelques minutes à pied du centre-ville, pour accueillir jusqu'à 13 personnes face aux montagnes du cirque.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262692774371?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20au%20Cila%20Lodge%20%F0%9F%8F%94%EF%B8%8F"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.8-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>Mes dates par WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692774371">Appeler</a>
+    </div>
+    <p class="adr apparait d4">2 B route du Bras des Étangs · 97413 Cilaos</p>
+  </div>
+  <svg class="monts" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#f6efe1" d="M0 90V58l90-20 70 14 110-38 80 26 60-12 120 30 90-36 70 10 100-30 120 44 80-14 110 24 90-28 90 20 70-8 100 22V90z"/></svg>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Respirez, explorez, ralentissez…</span><span>Vivez Cilaos autrement</span><span>Calme et dépaysement assurés</span><span>Idéal en famille ou entre amis</span><span>Paysages à couper le souffle</span>
+  <span>Respirez, explorez, ralentissez…</span><span>Vivez Cilaos autrement</span><span>Calme et dépaysement assurés</span><span>Idéal en famille ou entre amis</span><span>Paysages à couper le souffle</span>
+</div></div>
+
+<section id="chalet">
+  <div class="wrap duo">
+    <div class="rv">
+      <p class="eyebrow">Le chalet</p>
+      <h2>Le bois, la montagne <span class="script" style="font-size:1.1em">& vous</span></h2>
+      <p>Le Cila Lodge vous accueille pour un séjour en pleine nature, dans un cadre calme et reposant avec vue sur les montagnes. Un vrai chalet en bois, ses volets en Z, sa grande varangue et son jardin, au pied des remparts de Cilaos.</p>
+      <p>Idéal pour se retrouver en famille ou entre amis : le chalet est tout équipé, confortable et authentique, et le centre-ville se rejoint en quelques minutes à pied.</p>
+      <p class="citation">« Envie de vous évader à Cilaos ? »<small>Publication du Cila Lodge, mai 2026</small></p>
+      <div class="atouts">
+        <div><svg viewBox="0 0 32 32"><path d="M4 12a17 17 0 0 1 24 0M8 16.5a11 11 0 0 1 16 0M12 21a5 5 0 0 1 8 0"/><circle cx="16" cy="25" r="1.2"/></svg>Wifi</div>
+        <div><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M13 23V9h4.5a4 4 0 0 1 0 8H13"/></svg>Parking</div>
+        <div><svg viewBox="0 0 32 32"><path d="M4 12 16 5l12 7M7 12v14M25 12v14M7 19h18M11 19v7M21 19v7"/></svg>Terrasse</div>
+        <div><svg viewBox="0 0 32 32"><path d="M2 27 11 11l5 8 4-6 10 14z"/><path d="m9 15 2-4 2 3"/></svg>Vue montagne</div>
+      </div>
+    </div>
+    <figure class="cadre rv"><img src="img/porte-cila-lodge.webp" alt="La porte d'entrée du chalet, ses volets en bois et l'enseigne Cila Lodge" loading="lazy"><figcaption>L'enseigne au-dessus de la porte</figcaption></figure>
+  </div>
+</section>
+
+<section class="galsec" aria-label="Photos du Cila Lodge">
+  <div class="wrap"><p class="eyebrow">En images</p><h2>Le Cila Lodge, côté jardin</h2></div>
+  <div class="galerie">
+    <figure class="large"><img src="img/chalet-jardin-mur.webp" alt="Le chalet derrière son mur de pierres, le jardin et les montagnes" loading="lazy"><figcaption>Le jardin et le mur de pierres</figcaption></figure>
+    <figure><img src="img/varangue-transat.webp" alt="La varangue et sa chaise longue" loading="lazy"><figcaption>La varangue</figcaption></figure>
+    <figure><img src="img/chalet-fleurs.webp" alt="Le chalet et un massif de fleurs jaunes" loading="lazy"><figcaption>Fleurs jaunes devant le chalet</figcaption></figure>
+    <figure><img src="img/chalet-soleil.webp" alt="Le chalet sous un rayon de soleil, montagne en fond" loading="lazy"><figcaption>Soleil sur les remparts</figcaption></figure>
+    <figure class="large"><img src="img/chalet-ciel-bleu.webp" alt="Le chalet sous un grand ciel bleu" loading="lazy"><figcaption>Grand ciel bleu sur Cilaos</figcaption></figure>
+    <figure><img src="img/entree-bois.webp" alt="Les portes-fenêtres en bois de l'entrée" loading="lazy"><figcaption>Les portes-fenêtres</figcaption></figure>
+  </div>
+  <p class="glisse">← glissez pour visiter →</p>
+  <svg class="vague" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true"><path fill="#35532c" d="M0 56V30c160-26 320-26 480 0s320 26 480 0 320-26 480 0v26z"/></svg>
+</section>
+
+<section class="sejour" id="sejour" style="padding-top:2.5rem">
+  <div class="wrap">
+    <p class="eyebrow">Votre séjour</p>
+    <h2>Toute la tribu <span class="script" style="color:#f0c46a;font-size:1.1em">sous le même toit</span></h2>
+    <div class="chiffres rv">
+      <div><b>13</b><span>personnes au maximum</span></div>
+      <div><b>2</b><span>niveaux tout en bois</span></div>
+      <div><b>100 %</b><span>des voyageurs le recommandent</span></div>
+    </div>
+    <div class="tarifs rv">
+      <div>
+        <h3>Les tarifs</h3>
+        <ul>
+          <li><span>Adulte, par nuit</span><b>30 €</b></li>
+          <li><span>Enfant de 4 à 11 ans, par nuit</span><b>20 €</b></li>
+        </ul>
+        <p class="note">Pour un groupe de plus de 6 personnes. Moins de 6 personnes : contactez-nous, on trouve la formule ensemble.</p>
+      </div>
+      <div>
+        <p>Une semaine de randonnées, un week-end en famille, une fête entre amis : écrivez-nous vos dates et le nombre de voyageurs, on vous répond en direct.</p>
+        <div class="ctas" style="margin-top:1.2rem"><a class="btn btn-bois" href="https://wa.me/262692774371?text=Bonjour%2C%20nous%20serions%20...%20personnes%2C%20du%20...%20au%20...%20%3A%20le%20Cila%20Lodge%20est-il%20disponible%20%3F">Demander mes dates</a></div>
+      </div>
+    </div>
+    <div class="dispo rv">
+      <div class="cal"><span><b>5</b>oct.</span></div>
+      <p><b style="color:#fff">Dernières nouvelles du chalet :</b> « Il nous reste quelques disponibilités pour octobre, novembre et décembre ! Renseignements et tarifs en privé, venez vite réserver votre séjour. »</p>
+    </div>
+  </div>
+</section>
+
+<section class="rando">
+  <div class="wrap rv">
+    <p class="eyebrow">Autour du chalet</p>
+    <h2>Départ idéal pour vos balades</h2>
+    <p>Cadre exceptionnel au cœur du cirque de Cilaos : randonnées, nature et détente commencent au portail. Le soir, on rentre au chalet, on s'installe sous la varangue et on regarde la lumière glisser sur les remparts.</p>
+  </div>
+  <svg class="cirque" viewBox="0 0 1440 300" aria-hidden="true">
+    <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6c7c2f"/><stop offset="1" stop-color="#35532c"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#35532c"/><stop offset="1" stop-color="#24391f"/></linearGradient></defs>
+    <circle cx="1120" cy="90" r="38" fill="#d39a35" opacity=".85"/>
+    <path fill="#b9c6a3" opacity=".7" d="M0 190 120 120l70 30 90-90 60 50 80-70 110 110 70-40 120 60 90-80 100 70 80-30 110 60 80-40 120 50 100-30 40 20v170H0z"/>
+    <path fill="url(#g1)" d="M0 230 90 180l90 30 120-60 100 50 90-30 130 70 110-50 120 40 90-30 120 50 100-40 110 30 70-10v140H0z"/>
+    <path fill="url(#g2)" d="M0 270c180-40 360-30 540-10s380 20 560-10 260-20 340-10v60H0z"/>
+    <g fill="#8a4720"><path d="M690 252h60v-24l-30-18-30 18z"/><path fill="#9b3328" d="M684 230l36-24 36 24z"/><rect x="714" y="236" width="12" height="16" fill="#d39a35"/></g>
+  </svg>
+  <p class="legende">Illustration</p>
+</section>
+
+<section class="avis">
+  <div class="wrap rv">
+    <p class="eyebrow">Ils sont repartis ravis</p>
+    <div class="etoiles" aria-label="Recommandé à 100 %">★★★★★</div>
+    <blockquote>«&nbsp;Séjour très agréable. Tout était parfait&nbsp;!&nbsp;»</blockquote>
+    <p>Recommandé par 100 % des voyageurs · 7 avis sur la page Facebook du Cila Lodge</p>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <span class="flocon" style="left:8%;top:-10px">❄</span><span class="flocon" style="left:46%;top:-30px;animation-delay:3s">❄</span><span class="flocon" style="left:82%;top:-20px;animation-delay:6s">❄</span>
+  <div class="wrap boite">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un séjour à Cilaos sous le sapin</h2>
+      <p>Cette année, offrez des souvenirs : quelques nuits au Cila Lodge pour vos parents, vos amis ou toute la famille réunie.</p>
+      <ul>
+        <li>Un bon cadeau séjour, au nom de la personne que vous gâtez</li>
+        <li>Des retrouvailles en famille dans le cirque, pour la nouvelle année</li>
+        <li>Les dates et la formule se choisissent ensemble, par message</li>
+      </ul>
+      <a class="btn wa" href="https://wa.me/262692774371?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20au%20Cila%20Lodge%20pour%20No%C3%ABl%20%F0%9F%8E%81">Offrir un séjour</a>
+    </div>
+    <div class="bon rv">
+      <small>Bon cadeau</small>
+      <span class="script">Un séjour au Cila Lodge</span>
+      <small>Cilaos · Île de La Réunion</small>
+      <svg viewBox="0 0 84 60" aria-hidden="true"><path d="M4 56 30 14l12 18 10-14 28 38z" fill="#6c7c2f"/><path d="M24 24l6-10 6 9" fill="#f6efe1"/><path d="M34 56h20V44l-10-7-10 7z" fill="#8a4720"/><path d="M31 45l13-9 13 9z" fill="#9b3328"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap duo">
+    <div class="fiche rv">
+      <p class="eyebrow">Réserver</p>
+      <h2>On vous attend !</h2>
+      <p class="hotes">Romain et Laurence</p>
+      <dl>
+        <dt>Adresse</dt><dd>2 B route du Bras des Étangs<br>97413 Cilaos, La Réunion</dd>
+        <dt>Téléphone</dt><dd><a href="tel:+262692774371">0692 77 43 71</a></dd>
+        <dt>E-mail</dt><dd><a href="mailto:cilalodge@hotmail.com">cilalodge@hotmail.com</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/p/Cila-Lodge-100057519906371/">Cila Lodge</a></dd>
+      </dl>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692774371?text=Bonjour%2C%20je%20voudrais%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20au%20Cila%20Lodge">WhatsApp</a>
+        <a class="btn btn-bois" href="https://www.google.com/maps/search/?api=1&amp;query=2%20B%20route%20du%20Bras%20des%20%C3%89tangs%2097413%20Cilaos">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="cadre rv"><img src="img/chalet-ciel-bleu.webp" style="object-position:45% center" alt="Le Cila Lodge vu du jardin" loading="lazy"><figcaption>À bientôt à Cilaos</figcaption></figure>
+  </div>
+</section>
+
+<footer><b>Cila Lodge</b>Chalet en bois pour 13 personnes · Cilaos, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Cila Lodge.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* brume du cirque et feuilles de filaos qui passent */
+const c=document.getElementById('brume'),x=c.getContext('2d');let W,H,run=true,N=[],F=[];
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<7;i++)N.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:120+Math.random()*160,v:.12+Math.random()*.2,o:.05+Math.random()*.05});
+const cols=['108,124,47','53,83,44','211,154,53','138,71,32'];
+for(let i=0;i<18;i++)F.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:5+Math.random()*7,v:.2+Math.random()*.35,a:Math.random()*6.28,r:Math.random()*6.28,c:cols[i%4],o:.14+Math.random()*.18});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const n of N){n.x+=n.v;if(n.x-n.r>W){n.x=-n.r;n.y=Math.random()*H}
+const g=x.createRadialGradient(n.x,n.y,0,n.x,n.y,n.r);g.addColorStop(0,'rgba(255,255,255,'+n.o+')');g.addColorStop(1,'rgba(255,255,255,0)');x.fillStyle=g;x.beginPath();x.arc(n.x,n.y,n.r,0,6.28);x.fill()}
+for(const p of F){p.y+=p.v;p.a+=.012;p.x+=Math.sin(p.a)*.5;p.r+=Math.sin(p.a)*.008;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle='rgba('+p.c+','+p.o+')';x.beginPath();x.moveTo(0,-p.s);x.quadraticCurveTo(p.s*.55,0,0,p.s);x.quadraticCurveTo(-p.s*.55,0,0,-p.s);x.fill();x.restore()}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Cila Lodge" defer></script>
+</body>
+</html>
