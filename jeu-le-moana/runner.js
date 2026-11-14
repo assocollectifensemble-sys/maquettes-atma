@@ -29,9 +29,9 @@
   // ---------------------------------------------------------------- réglages
   var C = {
     v0: 10,            // couloirs/s au départ (1 unité = 1 couloir)
-    vGain: 0.40,       // +40 % max
-    rampDelay: 5,      // 5 s à vitesse confortable
-    rampSpan: 60,      // le maximum est atteint 60 s plus tard
+    vGain: 0.48,       // +48 % max (v3.1 : un peu plus vif)
+    rampDelay: 4,      // 4 s à vitesse confortable
+    rampSpan: 52,      // le maximum est atteint 52 s plus tard
     laneLerp: 17,      // vitesse du changement de couloir (≈ 0,15 s)
     jumpT: 0.62, jumpH: 1.25, slideT: 0.66, dive: -15,
     zFar: 64, zSpawn: 80, camH: 3.0, camD: 4.0,
@@ -508,8 +508,8 @@
 
     for (var li = 0; li < LINES.length; li++) { LINES[li].a = rnd() * 6.283; LINES[li].p = rnd(); LINES[li].v = 0.8 + rnd() * 0.8; }
 
-    function beatT() { return 0.42 - 0.08 * clamp((gt - 8) / 60, 0, 1); }
-    function level() { return gt < 22 ? 0 : gt < 40 ? 1 : gt < 60 ? 2 : 3; }
+    function beatT() { return 0.42 - 0.08 * clamp((gt - 7) / 52, 0, 1); }
+    function level() { return gt < 20 ? 0 : gt < 36 ? 1 : gt < 54 ? 2 : 3; }
 
     function placeTuto() {
       var i, c;
@@ -538,11 +538,21 @@
       for (i = 0; i < CHUNKS.length; i++) { if (CHUNKS[i][0] > L || i === lastChunk) continue; w = CHUNKS[i][0] === L ? 3 : CHUNKS[i][0] === L - 1 ? 2 : 1; r -= w; if (r <= 0) { pick = i; break; } }
       lastChunk = pick;
       var rows = CHUNKS[pick][1], mir = rnd() < 0.5, lastM = [null, null, null];
+      // v3.1 : temps de récupération. Entre un saut (H/J) et un passage dessous (B), 0,95 s minimum :
+      // l'atterrissage + la glissade restent faisables même quand le rythme accélère.
+      var rowOff = [], acc = 0, lastHJ = -99, ri0;
+      for (ri0 = 0; ri0 < rows.length; ri0++) {
+        if (ri0 > 0) acc += bz;
+        if (rows[ri0].indexOf('B') >= 0 && lastHJ >= 0 && (acc - rowOff[lastHJ]) < speed * 0.95) acc = rowOff[lastHJ] + speed * 0.95;
+        rowOff[ri0] = acc;
+        if (/[HJ]/.test(rows[ri0])) lastHJ = ri0;
+      }
+      var extraSpan = acc - (rows.length - 1) * bz;
       for (var ri = 0; ri < rows.length; ri++) {
-        var wz = nextWZ + ri * bz, row = rows[ri];
+        var wz = nextWZ + rowOff[ri], row = rows[ri];
         for (var j = 0; j < 3; j++) {
           var ch = row.charAt(mir ? 2 - j : j), ln = j - 1;
-          if (ch === 'M') { if (lastM[j]) { lastM[j].len += bz; } else { lastM[j] = addObs(2, ln, wz, 1.4); } continue; }
+          if (ch === 'M') { if (lastM[j]) { lastM[j].len = (wz - lastM[j].wz) + 1.4; } else { lastM[j] = addObs(2, ln, wz, 1.4); } continue; }
           lastM[j] = null;
           if (ch === 'H') addObs(0, ln, wz);
           else if (ch === 'J') { addObs(0, ln, wz); addArc(ln, wz, speed); }
@@ -551,7 +561,7 @@
           else if (ch === '*') addCoin(ln, wz, 0.7, true);
         }
       }
-      nextWZ += rows.length * bz + bz * (L === 0 ? 2.2 : L === 1 ? 1.8 : 1.4);
+      nextWZ += rows.length * bz + Math.max(0, extraSpan) + bz * (L === 0 ? 2.2 : L === 1 ? 1.8 : 1.5);
     }
 
     function spawnProps() {
