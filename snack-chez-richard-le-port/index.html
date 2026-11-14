@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snack Chez Richard · Snack bar péi au Port (974)</title>
+<meta name="description" content="Snack Chez Richard, 108 chemin des Anglais au Port : ambiance péi, cuisine maison comme à la case. Menu du jour, menu du soir, bol renversé, livraison en entreprise. 0692 09 13 34.">
+<meta property="og:title" content="Snack Chez Richard · Saveurs &amp; Passion, Le Port">
+<meta property="og:description" content="Ambiance péi, cuisine maison comme à la case : sandwicherie, repas savoureux et desserts maison.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-chez-richard-le-port/img/apercu.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-chez-richard-le-port/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Nunito:wght@400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#141010;--nuit2:#221a16;--orange:#f28c1a;--orange-f:#d96f05;--or:#f5b335;--bordeaux:#8b0a0a;--palme:#1f6b3a;--palme-c:#3f9a5c;--creme:#fbf3e8;--sable:#f3e2d3;--txt:#2d211b;--doux:#7a6558}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+a{color:inherit}
+svg{display:block}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.05;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,8vw,3.6rem);margin:.3rem 0 1rem;color:var(--nuit)}
+h3{font-size:1.45rem}
+.script{font-family:'Kaushan Script',cursive;text-transform:none;letter-spacing:0;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:800;color:var(--orange-f)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:var(--or);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(245,179,53,.35)}
+.ribbon b{color:#fff}
+canvas#vapeur{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.95rem;letter-spacing:.03em;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--orange);color:var(--nuit);box-shadow:0 12px 30px -12px rgba(242,140,26,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--or)}
+@keyframes souffle{50%{box-shadow:0 12px 44px -6px rgba(242,140,26,.75);transform:translateY(-1px)}}
+.btn-line{border:2px solid var(--or);color:#fff}
+.btn-line:hover{background:rgba(245,179,53,.15)}
+.btn-dark{border:2px solid var(--nuit);color:var(--nuit)}
+.btn-dark:hover{background:var(--sable)}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(120% 70% at 50% 72%,#5a2a0c 0%,#2a1710 45%,var(--nuit) 80%);color:#fff;padding:6.5rem 0 5rem}
+.palme{position:absolute;width:min(62vw,420px);opacity:.9;pointer-events:none}
+.palme.g{top:2.2rem;left:-14vw;transform-origin:10% 10%;animation:balance 9s ease-in-out infinite}
+.palme.d{bottom:-2rem;right:-16vw;transform:scaleX(-1) rotate(160deg);animation:balance2 11s ease-in-out infinite}
+@keyframes balance{50%{transform:rotate(4deg)}}
+@keyframes balance2{0%,100%{transform:scaleX(-1) rotate(160deg)}50%{transform:scaleX(-1) rotate(155deg)}}
+.hero-in{position:relative;z-index:2;text-align:center}
+.badge{width:150px;height:150px;margin:0 auto 1.4rem;border-radius:50%;background:var(--nuit);border:3px solid var(--or);box-shadow:0 0 0 6px rgba(245,179,53,.15),0 20px 50px -10px rgba(242,140,26,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.badge small{font-family:'Anton';letter-spacing:.2em;font-size:.72rem;color:#fff}
+.badge b{font-family:'Kaushan Script';font-weight:400;font-size:2.1rem;color:var(--orange);margin:.15rem 0 .1rem}
+.badge i{font-style:normal;font-family:'Anton';letter-spacing:.25em;font-size:.62rem;color:var(--or)}
+.hero .eyebrow{color:var(--or)}
+.hero h1{font-size:clamp(3.6rem,17vw,8rem);margin:.4rem 0 .2rem;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.5)}
+.hero h1 span{color:var(--orange)}
+.hero .script.sous{display:block;font-size:clamp(1.7rem,7vw,2.6rem);color:var(--or);margin-bottom:1.1rem}
+.hero .lead{font-size:1.12rem;max-width:32rem;margin:0 auto 1.8rem;color:var(--sable)}
+.hero .ctas{justify-content:center}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--or)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* BANDEAU */
+.bande{background:var(--orange);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Kaushan Script';font-size:1.25rem}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-size:.8rem;color:var(--bordeaux)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* CASE */
+.case-grid{display:grid;gap:1rem;margin-top:1.8rem}
+.carte{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;box-shadow:0 18px 40px -26px rgba(60,30,10,.45);border-top:5px solid var(--orange);transition:.35s}
+.carte:hover{transform:translateY(-5px) rotate(-.4deg)}
+.carte .ico{width:52px;height:52px;border-radius:16px;background:var(--sable);display:grid;place-items:center;margin-bottom:.8rem}
+.carte .ico svg{width:30px;height:30px}
+.carte h3{color:var(--nuit);margin-bottom:.35rem}
+.carte p{color:var(--doux)}
+.citation{margin-top:2.2rem;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:clamp(1.4rem,5.5vw,2rem);color:var(--bordeaux);text-align:center;line-height:1.3}
+/* ARDOISE */
+.ardoise-sec{background:var(--nuit);color:var(--sable);overflow:hidden}
+.ardoise-sec h2{color:#fff}
+.ardoise-sec .eyebrow{color:var(--or)}
+.ardoise-sec .intro{max-width:36rem}
+.ardoise{margin-top:2rem;position:relative;background:linear-gradient(160deg,#2b2b27,#1d1e1b);border:10px solid #6b4423;border-radius:14px;padding:1.6rem 1.3rem 1.4rem;box-shadow:inset 0 0 50px rgba(0,0,0,.6),0 30px 60px -25px rgba(0,0,0,.9);font-family:'Kaushan Script';color:#f4efe6}
+.ardoise .titre{font-size:1.9rem;color:var(--or);text-align:center;line-height:1.1}
+.ardoise .date{display:block;text-align:center;font-family:'Nunito';font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#cfc6b8;margin:.4rem 0 1rem}
+.ardoise ul{list-style:none;font-size:1.18rem;line-height:1.5}
+.ardoise li{padding:.28rem 0;border-bottom:1px dashed rgba(244,239,230,.18);display:flex;gap:.6rem}
+.ardoise li::before{content:"»";color:var(--orange);font-family:'Anton'}
+.ardoise .col2{display:grid;gap:1.2rem;margin-top:1.2rem}
+.ardoise h4{font-family:'Anton';font-weight:400;letter-spacing:.12em;font-size:.95rem;color:var(--orange);text-transform:uppercase;margin-bottom:.3rem}
+.ardoise .craie{position:absolute;bottom:-14px;right:22px;width:70px;height:12px;border-radius:4px;background:#f4efe6;transform:rotate(-4deg);box-shadow:0 3px 6px rgba(0,0,0,.4)}
+.legende{font-size:.78rem;color:#b9ab9a;margin-top:1.4rem;text-align:center}
+.soir{margin-top:2.6rem;display:grid;gap:1rem;align-items:center;background:linear-gradient(135deg,rgba(242,140,26,.16),rgba(139,10,10,.25));border:1px solid rgba(245,179,53,.35);border-radius:22px;padding:1.5rem 1.3rem}
+.soir h3{color:var(--or)}
+/* BOL */
+.bol-sec{background:var(--sable)}
+.bol-grid{display:grid;gap:2rem;align-items:center}
+.bol-ill{position:relative;max-width:340px;margin:auto}
+.bol-ill svg{width:100%;height:auto}
+.bol-ill .fumee path{animation:fume 4s ease-in-out infinite;transform-origin:center}
+.bol-ill .fumee path:nth-child(2){animation-delay:1.3s}.bol-ill .fumee path:nth-child(3){animation-delay:2.6s}
+@keyframes fume{0%{opacity:0;transform:translateY(10px)}40%{opacity:.7}100%{opacity:0;transform:translateY(-22px)}}
+.bol-ill figcaption{text-align:center;font-size:.75rem;color:var(--doux);margin-top:.4rem}
+.puces{display:flex;flex-wrap:wrap;gap:.55rem;margin:1.2rem 0 1.6rem}
+.puce{background:#fff;border:2px solid var(--orange);border-radius:999px;padding:.35rem .9rem;font-weight:800;font-size:.85rem;color:var(--nuit)}
+.chrono{display:inline-flex;align-items:center;gap:.6rem;background:var(--nuit);color:var(--or);border-radius:14px;padding:.6rem 1rem;font-family:'Anton';letter-spacing:.06em;font-size:1.1rem}
+.chrono svg{width:30px;height:30px}
+.chrono svg .aig{transform-origin:16px 18px;animation:tourne 5s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+/* LIVRAISON */
+.livr-grid{display:grid;gap:1rem;margin-top:1.6rem}
+.etape{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 14px 34px -26px rgba(60,30,10,.5)}
+.etape .n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--orange);color:var(--nuit);font-family:'Anton';font-size:1.2rem;display:grid;place-items:center}
+.etape b{display:block;color:var(--nuit)}
+.etape span{color:var(--doux);font-size:.95rem}
+.zones{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0}
+.zone{background:var(--palme);color:#fff;border-radius:999px;padding:.35rem .95rem;font-weight:700;font-size:.88rem}
+/* EVENEMENTS */
+.evt-sec{background:linear-gradient(180deg,var(--creme),#fff)}
+.evts{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin:1.6rem 0 1.8rem}
+.evt{background:#fff;border-radius:18px;padding:1.2rem .8rem;text-align:center;border:2px solid var(--sable);transition:.3s}
+.evt:hover{border-color:var(--orange);transform:translateY(-4px)}
+.evt .e{font-size:1.9rem;line-height:1}
+.evt b{display:block;font-family:'Anton';font-weight:400;letter-spacing:.06em;text-transform:uppercase;margin-top:.45rem;color:var(--nuit)}
+.evt:last-child{grid-column:1/-1}
+/* NOEL */
+.noel{background:radial-gradient(90% 60% at 50% 0%,#3a1a0d,var(--nuit) 70%);color:var(--sable);text-align:center;overflow:hidden}
+.guirlande{position:absolute;top:0;left:0;right:0;height:60px}
+.guirlande circle{animation:brille 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(2n){animation-delay:.8s}.guirlande circle:nth-child(3n){animation-delay:1.6s}
+@keyframes brille{50%{opacity:.25}}
+.noel h2{color:#fff}
+.noel h2 .script{display:block;color:var(--or);font-size:.7em;margin-top:.2rem}
+.noel .eyebrow{color:var(--or)}
+.noel p.l{max-width:34rem;margin:0 auto 1.6rem}
+.idees{display:grid;gap:.8rem;margin:0 auto 2rem;max-width:40rem;text-align:left}
+.idee{display:flex;gap:.9rem;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(245,179,53,.3);border-radius:16px;padding:1rem 1.1rem}
+.idee .e{font-size:1.6rem}
+.idee b{color:#fff}
+.noel .ctas{justify-content:center}
+.noel .note{font-size:.8rem;color:#b9ab9a;margin-top:1.2rem}
+/* CONTACT */
+.contact-grid{display:grid;gap:1.2rem;margin-top:1.6rem}
+.bloc{background:#fff;border-radius:20px;padding:1.4rem;box-shadow:0 18px 40px -28px rgba(60,30,10,.5)}
+.bloc h3{color:var(--orange-f);font-size:1.15rem;margin-bottom:.5rem}
+.bloc a{text-decoration:none;font-weight:800;color:var(--nuit)}
+.bloc a:hover{color:var(--orange-f)}
+.bloc p{margin:.25rem 0;word-break:break-word}
+.carte-svg{border-radius:20px;overflow:hidden;background:var(--sable)}
+.carte-svg svg{width:100%;height:auto}
+footer{background:var(--nuit);color:#b9ab9a;text-align:center;padding:2.2rem 6vw 2.6rem;font-size:.82rem;line-height:1.7}
+footer b{color:var(--or);font-family:'Kaushan Script';font-weight:400;font-size:1.4rem;display:block;margin-bottom:.3rem}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .case-grid{grid-template-columns:repeat(3,1fr)}
+ .ardoise .col2{grid-template-columns:1fr 1fr}
+ .ardoise{padding:2.2rem 2.4rem}
+ .soir{grid-template-columns:1.4fr 1fr}
+ .bol-grid{grid-template-columns:1fr 1.1fr}
+ .livr-grid{grid-template-columns:repeat(3,1fr)}
+ .evts{grid-template-columns:repeat(5,1fr)}
+ .evt:last-child{grid-column:auto}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .idee{flex-direction:column;text-align:center}
+ .contact-grid{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snack Chez Richard</div>
+<main>
+
+<!-- HERO -->
+<header class="hero">
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <svg class="palme g" viewBox="0 0 300 300" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M10 10 C90 60 170 120 290 250" stroke="#2c5a34" stroke-width="5"/><g stroke-width="15"><path d="M40 28 l-26 40" stroke="#1f6b3a"/><path d="M62 42 l-20 52" stroke="#e07b12"/><path d="M86 58 l-14 58" stroke="#1f6b3a"/><path d="M110 76 l-6 60" stroke="#f28c1a"/><path d="M134 94 l2 60" stroke="#1f6b3a"/><path d="M158 114 l8 56" stroke="#e07b12"/><path d="M182 136 l14 50" stroke="#1f6b3a"/><path d="M206 160 l18 42" stroke="#f28c1a"/><path d="M50 30 l40 -16" stroke="#1f6b3a"/><path d="M74 46 l46 -10" stroke="#f28c1a"/><path d="M98 62 l50 -4" stroke="#1f6b3a"/><path d="M122 80 l52 4" stroke="#e07b12"/><path d="M146 100 l50 10" stroke="#1f6b3a"/><path d="M170 122 l46 18" stroke="#f28c1a"/><path d="M194 146 l40 24" stroke="#1f6b3a"/></g></g></svg>
+  <svg class="palme d" viewBox="0 0 300 300" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M10 10 C90 60 170 120 290 250" stroke="#2c5a34" stroke-width="5"/><g stroke-width="15"><path d="M40 28 l-26 40" stroke="#f28c1a"/><path d="M62 42 l-20 52" stroke="#1f6b3a"/><path d="M86 58 l-14 58" stroke="#e07b12"/><path d="M110 76 l-6 60" stroke="#1f6b3a"/><path d="M134 94 l2 60" stroke="#f28c1a"/><path d="M158 114 l8 56" stroke="#1f6b3a"/><path d="M182 136 l14 50" stroke="#e07b12"/><path d="M50 30 l40 -16" stroke="#e07b12"/><path d="M74 46 l46 -10" stroke="#1f6b3a"/><path d="M98 62 l50 -4" stroke="#f28c1a"/><path d="M122 80 l52 4" stroke="#1f6b3a"/><path d="M146 100 l50 10" stroke="#f28c1a"/><path d="M170 122 l46 18" stroke="#1f6b3a"/></g></g></svg>
+  <div class="wrap hero-in">
+    <div class="badge apparait" aria-hidden="true"><small>SNACK BAR</small><b>Richard</b><i>LE PORT</i></div>
+    <p class="eyebrow apparait d2">Snack bar péi · Le Port 974</p>
+    <h1 class="apparait d2">Chez <span>Richard</span></h1>
+    <span class="script sous apparait d3">Saveurs &amp; Passion</span>
+    <p class="lead apparait d3">Ambiance péi, cuisine maison comme à la case. Venez manger simple, bon et gourmand : sandwicherie, repas savoureux et desserts maison.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20voudrais%20r%C3%A9server%20une%20barquette"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692091334"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>0692 09 13 34</a>
+    </div>
+    <p class="adr apparait d4">📍 108 chemin des Anglais · 97420 Le Port · sur place ou à emporter</p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 C240 44 480 0 720 18 S1200 40 1440 14 V44 H0Z" fill="#f28c1a"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Fait maison avec passion !</span><span>Des plats généreux, des saveurs authentiques !</span><span>Le goût réunionnais comme à la maison !</span><span>Cari lé prêt, i attend a zot !</span><span>Bon appétit !</span>
+  <span>Fait maison avec passion !</span><span>Des plats généreux, des saveurs authentiques !</span><span>Le goût réunionnais comme à la maison !</span><span>Cari lé prêt, i attend a zot !</span><span>Bon appétit !</span>
+</div></div>
+
+<!-- LA CASE -->
+<section id="case">
+  <div class="wrap">
+    <p class="eyebrow rv">Bienvenue chez Richard</p>
+    <h2 class="rv">Simple, bon <span class="script" style="color:var(--orange-f)">et gourmand</span></h2>
+    <p class="rv" style="max-width:38rem">Au chemin des Anglais, Chez Richard régale sur place ou à emporter : cuisine créole, américains, paninis, boissons fraîches et menu à la carte. Une cuisine maison, comme à la case.</p>
+    <div class="case-grid">
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#d96f05" stroke-width="2.2" stroke-linecap="round"><path d="M4 18h24a12 12 0 0 1-24 0z"/><path d="M11 13c0-3 2-3 2-6M16 13c0-3 2-3 2-6M21 13c0-3 2-3 2-6"/></svg></div><h3>Repas savoureux</h3><p>Caris, rougails, civets et plats du jour mijotés maison, servis en barquette généreuse.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#d96f05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14c4-6 22-6 26 0z"/><path d="M3 18h26M4 22c3 3 21 3 24 0"/></svg></div><h3>Sandwicherie</h3><p>Américains, paninis et boissons fraîches pour une pause qui fait plaisir.</p></article>
+      <article class="carte rv"><div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#d96f05" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12h20l-2 14H8z"/><path d="M6 17h20M6 21h20"/><path d="M12 12c0-4 8-4 8 0"/></svg></div><h3>Desserts maison</h3><p>Le tiramisu en plusieurs saveurs, pour finir le repas en douceur.</p></article>
+    </div>
+    <p class="citation rv">« Le goût réunionnais comme à la maison ! »</p>
+  </div>
+</section>
+
+<!-- ARDOISE -->
+<section class="ardoise-sec" id="menu">
+  <div class="wrap">
+    <p class="eyebrow rv">Chaque jour sur la page</p>
+    <h2 class="rv">L'ardoise du jour</h2>
+    <p class="intro rv">Tous les jours, Chez Richard publie son menu du jour et son menu du soir. Un aperçu, avec le menu du 12 novembre :</p>
+    <div class="ardoise rv" role="img" aria-label="Illustration : ardoise reprenant le menu du jour du 12 novembre publié par Chez Richard">
+      <p class="titre">Menu du jour</p><span class="date">12 novembre</span>
+      <ul>
+        <li>Cari joue de légine combava</li>
+        <li>Porc 3 merveilles</li>
+        <li>Sauté bœuf carotte gros piment</li>
+        <li>Poulet basquaise</li>
+        <li>Riz frit chevaquine pimenté</li>
+        <li>Poulet sarcive, croustillant ou spicy</li>
+        <li>Côte de porc poivre vert</li>
+      </ul>
+      <div class="col2">
+        <div><h4>À la carte</h4><ul><li>Brochette poulet</li><li>Magret de canard</li><li>Entrecôte</li><li>Omelette nature, fromage, jambon ou mixte</li></ul></div>
+        <div><h4>Salade du jour</h4><ul><li>Fraîche et gourmande, préparée chaque jour</li></ul><h4 style="margin-top:.9rem">Dessert</h4><ul><li>Tiramisu, multiples saveurs</li></ul></div>
+      </div>
+      <span class="craie" aria-hidden="true"></span>
+    </div>
+    <p class="legende rv">Illustration · menu recopié depuis la publication du 12 novembre 2026</p>
+    <div class="soir rv">
+      <div><p class="eyebrow" style="color:var(--or)">Le soir aussi</p><h3>Le menu du soir</h3><p>Poulet croustillant, cari poulet vermouth, poisson ananas, civet poulet… « Pour être sûr d'avoir votre barquette de croustillant, réservez ! »</p></div>
+      <div class="ctas"><a class="btn btn-main" href="tel:+262693501733">Réserver · 0693 50 17 33</a><a class="btn btn-line" href="https://www.facebook.com/chezrichardsnack/">Le menu du jour</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOL RENVERSE -->
+<section class="bol-sec" id="bol">
+  <div class="wrap bol-grid">
+    <figure class="bol-ill rv">
+      <svg viewBox="0 0 320 300" aria-label="Illustration d'un bol renversé">
+        <g class="fumee" fill="none" stroke="#c9b6a3" stroke-width="5" stroke-linecap="round"><path d="M120 70c-12-16 12-24 0-42"/><path d="M160 60c-12-16 12-24 0-42"/><path d="M200 70c-12-16 12-24 0-42"/></g>
+        <ellipse cx="160" cy="268" rx="130" ry="14" fill="#e3cdb7"/>
+        <path d="M40 170h240c0 60-55 95-120 95S40 230 40 170z" fill="#fff" stroke="#e9dccd" stroke-width="3"/>
+        <path d="M58 180h204" stroke="#f28c1a" stroke-width="5" stroke-linecap="round"/>
+        <g fill="#b5541c"><circle cx="70" cy="166" r="16"/><circle cx="98" cy="160" r="15"/><circle cx="222" cy="160" r="15"/><circle cx="250" cy="166" r="16"/><circle cx="84" cy="150" r="12"/><circle cx="236" cy="150" r="12"/></g>
+        <g fill="#5b9a3f"><circle cx="112" cy="168" r="6"/><circle cx="208" cy="170" r="6"/><circle cx="60" cy="150" r="5"/></g>
+        <g fill="#d6402b"><rect x="236" y="168" width="14" height="9" rx="3"/><rect x="72" y="176" width="13" height="8" rx="3"/></g>
+        <path d="M100 170c0-48 26-74 60-74s60 26 60 74z" fill="#f7f1e6" stroke="#e9dccd" stroke-width="2"/>
+        <g fill="#efe5d4"><circle cx="130" cy="140" r="3"/><circle cx="150" cy="128" r="3"/><circle cx="175" cy="135" r="3"/><circle cx="195" cy="150" r="3"/><circle cx="120" cy="158" r="3"/><circle cx="165" cy="155" r="3"/></g>
+        <ellipse cx="160" cy="100" rx="52" ry="20" fill="#fff"/>
+        <circle cx="152" cy="98" r="15" fill="#f5b335"/>
+        <g stroke="#3f9a5c" stroke-width="4" stroke-linecap="round"><path d="M178 92l6 4M132 104l6-3M170 106l5 3"/></g>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow rv">Tous les midis</p>
+      <h2 class="rv">Bol renversé <span class="script" style="color:var(--orange-f)">à la demande&nbsp;!</span></h2>
+      <p class="rv"><span class="chrono"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="16" cy="18" r="11"/><path d="M13 4h6M16 4v3"/><path class="aig" d="M16 18V11"/></svg>Prêt en 5 minutes</span></p>
+      <div class="puces rv"><span class="puce">Copieux</span><span class="puce">Savoureux</span><span class="puce">100 % fait maison</span><span class="puce">Préparé avec amour</span></div>
+      <p class="rv">« Ton bol renversé est prêt ! » Le midi, Chez Richard le prépare à la minute, généreux et gourmand.</p>
+      <div class="ctas rv" style="margin-top:1.5rem"><a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20voudrais%20un%20bol%20renvers%C3%A9%20ce%20midi">Commander mon bol</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRAISON -->
+<section id="livraison">
+  <div class="wrap">
+    <p class="eyebrow rv">Livraison entreprise</p>
+    <h2 class="rv">Votre pause déjeuner <span class="script" style="color:var(--orange-f)">livrée au bureau</span></h2>
+    <p class="rv" style="max-width:38rem">Profitez de bons plats en gardant tout votre temps : Chez Richard livre directement au bureau, idéal pour vos équipes et vos réunions.</p>
+    <div class="livr-grid">
+      <div class="etape rv"><span class="n">1</span><div><b>À partir de 3 barquettes</b><span>Une commande groupée pour toute l'équipe.</span></div></div>
+      <div class="etape rv"><span class="n">2</span><div><b>Commande avant 10 h</b><span>Pour une livraison le midi même.</span></div></div>
+      <div class="etape rv"><span class="n">3</span><div><b>CB, ticket restaurant, espèces</b><span>Le paiement qui vous arrange.</span></div></div>
+    </div>
+    <div class="zones rv"><span class="zone">La Possession</span><span class="zone">Le Port</span><span class="zone">Saint-Paul centre-ville</span></div>
+    <p class="rv" style="color:var(--doux)">🌙 Possible aussi pour les entreprises de nuit, le quai et les hôpitaux.</p>
+    <div class="ctas rv" style="margin-top:1.4rem"><a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20voudrais%20une%20livraison%20au%20bureau%20pour%20ce%20midi">Commander pour l'équipe</a><a class="btn btn-dark" href="tel:+262693501733">0693 50 17 33</a></div>
+  </div>
+</section>
+
+<!-- EVENEMENTS -->
+<section class="evt-sec" id="evenements">
+  <div class="wrap">
+    <p class="eyebrow rv">Une fête en préparation ?</p>
+    <h2 class="rv">Vos moments <span class="script" style="color:var(--orange-f)">les plus précieux</span></h2>
+    <p class="rv" style="max-width:36rem">Le Snack Bar Chez Richard vous accompagne pour tous vos événements.</p>
+    <div class="evts">
+      <div class="evt rv"><span class="e">🎂</span><b>Anniversaire</b></div>
+      <div class="evt rv"><span class="e">👶</span><b>Baptême</b></div>
+      <div class="evt rv"><span class="e">⛪</span><b>Communion</b></div>
+      <div class="evt rv"><span class="e">🙏</span><b>Confirmation</b></div>
+      <div class="evt rv"><span class="e">💍</span><b>Mariage</b></div>
+    </div>
+    <div class="ctas rv"><a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20pr%C3%A9pare%20un%20%C3%A9v%C3%A9nement%20et%20je%20voudrais%20des%20informations">Parler de mon événement</a></div>
+  </div>
+</section>
+
+<!-- NOEL -->
+<section class="noel" id="fetes">
+  <svg class="guirlande" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 Q50 40 100 10 T200 10 T300 10 T400 8" fill="none" stroke="#6b4423" stroke-width="1.5"/><g fill="#f5b335"><circle cx="25" cy="22" r="4"/><circle cx="75" cy="24" r="4" fill="#f28c1a"/><circle cx="125" cy="22" r="4"/><circle cx="175" cy="24" r="4" fill="#3f9a5c"/><circle cx="225" cy="22" r="4"/><circle cx="275" cy="24" r="4" fill="#f28c1a"/><circle cx="325" cy="22" r="4"/><circle cx="375" cy="24" r="4" fill="#3f9a5c"/></g></svg>
+  <div class="wrap">
+    <p class="eyebrow rv">Noël au Port</p>
+    <h2 class="rv">Les fêtes <span class="script">chez Richard</span></h2>
+    <p class="l rv">Repas de famille, déjeuner de fin d'année avec les collègues, tablée entre amis : commandez vos plats péi pour les fêtes et profitez pleinement de vos invités.</p>
+    <div class="idees">
+      <div class="idee rv"><span class="e">🍛</span><div><b>Vos barquettes des fêtes</b><br>Caris et plats maison pour toute la tablée.</div></div>
+      <div class="idee rv"><span class="e">🏢</span><div><b>Le repas d'équipe</b><br>Livré au bureau pour fêter l'année ensemble.</div></div>
+      <div class="idee rv"><span class="e">🎉</span><div><b>Votre réception</b><br>Chez Richard accompagne vos grands moments.</div></div>
+    </div>
+    <div class="ctas rv"><a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20voudrais%20commander%20des%20plats%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e">Commander pour les fêtes</a><a class="btn btn-line" href="tel:+262692091334">0692 09 13 34</a></div>
+    <p class="note rv">Menus et quantités à voir directement avec Chez Richard.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Cari lé prêt, i attend a zot !</p>
+    <h2 class="rv">Venir chez Richard</h2>
+    <div class="contact-grid">
+      <div class="bloc rv">
+        <h3>Adresse</h3>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=108%20chemin%20des%20Anglais%2097420%20Le%20Port">108 chemin des Anglais<br>97420 Le Port, La Réunion</a></p>
+        <p style="color:var(--doux);font-size:.92rem">Sur place ou à emporter</p>
+        <h3 style="margin-top:1.1rem">Téléphone</h3>
+        <p><a href="tel:+262692091334">0692 09 13 34</a></p>
+        <p><a href="tel:+262693501733">0693 50 17 33</a></p>
+        <h3 style="margin-top:1.1rem">Écrire</h3>
+        <p><a href="mailto:Chezrichard.974@gmail.com">Chezrichard.974@gmail.com</a></p>
+        <p><a href="https://www.facebook.com/chezrichardsnack/">Facebook · Snack Chez Richard</a></p>
+        <div class="ctas" style="margin-top:1.2rem"><a class="btn btn-main" href="https://wa.me/262692091334?text=Bonjour%20Chez%20Richard%2C%20je%20voudrais%20r%C3%A9server%20une%20barquette">WhatsApp</a><a class="btn btn-dark" href="tel:+262692091334">Appeler</a></div>
+      </div>
+      <figure class="carte-svg rv">
+        <svg viewBox="0 0 400 300" aria-label="Illustration : plan stylisé, Chez Richard au Port">
+          <rect width="400" height="300" fill="#f3e2d3"/>
+          <path d="M0 230 C90 210 140 260 230 240 S360 200 400 215 V300 H0Z" fill="#7fb7c9" opacity=".55"/>
+          <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90 C120 110 260 70 410 100"/><path d="M150 -10 C160 90 140 170 170 310"/></g>
+          <g stroke="#e6cdb4" stroke-width="6" fill="none"><path d="M40 -10 L60 220"/><path d="M300 -10 L280 210"/><path d="M-10 170 L400 150"/></g>
+          <text x="290" y="282" font-family="Nunito" font-size="13" fill="#2d211b" opacity=".6">Océan Indien</text>
+          <text x="200" y="74" font-family="Nunito" font-weight="700" font-size="12" fill="#7a6558">chemin des Anglais</text>
+          <g transform="translate(196 96)"><circle r="26" fill="#f28c1a" opacity=".25"><animate attributeName="r" values="18;30;18" dur="2.6s" repeatCount="indefinite"/></circle><path d="M0 8 C-14 -6 -14 -26 0 -26 S14 -6 0 8z" fill="#8b0a0a"/><circle cy="-15" r="5" fill="#fff"/></g>
+          <text x="134" y="140" font-family="Kaushan Script" font-size="22" fill="#141010">Chez Richard</text>
+        </svg>
+        <figcaption style="text-align:center;font-size:.75rem;color:var(--doux);padding:.5rem">Illustration · plan stylisé</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Chez Richard · Saveurs &amp; Passion</b>Snack bar péi · 108 chemin des Anglais · 97420 Le Port, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Snack Chez Richard.</footer>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}size();addEventListener('resize',size);
+function mk(i){return{x:Math.random()*W,y:H+Math.random()*H,r:i%3?1.2+Math.random()*1.8:14+Math.random()*22,v:.25+Math.random()*.5,s:Math.random()*6,k:i%3?1:0}}
+for(var i=0;i<30;i++)P.push(mk(i));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.s+=.01;var dx=Math.sin(p.s)*(p.k?6:14);
+if(p.y<-40){var n=mk(i);n.y=H+20;P[i]=n;continue}
+var a=Math.min(1,(H-p.y)/(H*.4))*Math.max(0,p.y/H);
+if(p.k){x.fillStyle='rgba(245,160,40,'+(.5*a)+')';x.beginPath();x.arc(p.x+dx,p.y,p.r,0,6.3);x.fill()}
+else{var g=x.createRadialGradient(p.x+dx,p.y,0,p.x+dx,p.y,p.r);g.addColorStop(0,'rgba(240,225,210,'+(.10*a)+')');g.addColorStop(1,'rgba(240,225,210,0)');x.fillStyle=g;x.beginPath();x.arc(p.x+dx,p.y,p.r,0,6.3);x.fill()}}
+requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Snack Chez Richard" defer></script>
+</body>
+</html>
