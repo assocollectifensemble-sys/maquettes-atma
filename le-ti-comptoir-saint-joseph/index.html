@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Ti Comptoir · Resto-bistrot bistronomique à Saint-Joseph</title>
+<meta name="description" content="Le Ti Comptoir, restaurant bistronomique à Saint-Joseph (La Réunion) depuis avril 2019 : cuisine métropolitaine aux produits locaux, menu à l'ardoise, label Maître restaurateur. 15 rue Leconte de Lisle. Réservations au 0262 87 07 21.">
+<meta property="og:title" content="Le Ti Comptoir · Bistronomie à Saint-Joseph">
+<meta property="og:description" content="Cuisine métropolitaine aux produits locaux, menu à l'ardoise et déco en bois, coco et vacoa, au cœur de Saint-Joseph.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-ti-comptoir-saint-joseph/img/devanture-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-ti-comptoir-saint-joseph/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--choco:#2e1e18;--choco2:#3d2820;--bois:#6b4630;--ambre:#e9a94b;--miel:#f4cf8a;--creme:#f6eee2;--lin:#ece0cd;--basalte:#3a3836;--ardoise:#25292a;--craie:#efeae0;--letchi:#b8323a;--feuille:#4f7a43;--txt:#3a2a22;--doux:#7b6658}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08;color:var(--choco)}
+h2{font-size:clamp(2.1rem,6vw,3.3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.55rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--bois);font-weight:500}
+.craie{font-family:Caveat,cursive;font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--choco);color:var(--lin);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(233,169,75,.35)}
+.ribbon b{color:var(--miel);font-weight:500}
+canvas#lueurs{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.92rem;transition:.35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--ambre);color:var(--choco);box-shadow:0 14px 34px -14px rgba(233,169,75,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--miel)}
+@keyframes souffle{50%{box-shadow:0 16px 44px -6px rgba(233,169,75,.75);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(244,207,138,.6);color:var(--creme);background:rgba(255,255,255,.06)}
+.btn-line:hover{background:rgba(255,255,255,.16)}
+.btn-dark{background:var(--choco);color:var(--creme)}
+.btn-dark:hover{background:var(--bois)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--choco);color:var(--creme);padding:0 0 3.4rem}
+.hero .photo{position:relative;height:clamp(330px,92vw,460px);overflow:hidden;margin-top:2rem}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,30,24,.35) 0%,rgba(46,30,24,0) 22%,rgba(46,30,24,0) 62%,var(--choco) 100%)}
+.guirlande{position:absolute;top:2.1rem;left:-5%;width:110%;height:70px;z-index:2;pointer-events:none}
+.guirlande path{fill:none;stroke:rgba(244,207,138,.35);stroke-width:1}
+.guirlande circle{fill:var(--miel);filter:drop-shadow(0 0 6px rgba(244,207,138,.95));animation:scintille 3.2s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.35}}
+.hero-in{position:relative;z-index:3;margin-top:-2.2rem}
+.hero .eyebrow{color:var(--miel)}
+.hero h1{color:var(--creme);font-size:clamp(3.2rem,13vw,6.6rem);font-weight:500;letter-spacing:.02em;margin:.5rem 0 .2rem}
+.hero .sous{font-family:'Cormorant Garamond',serif;letter-spacing:.42em;text-transform:uppercase;font-size:clamp(.85rem,3vw,1.05rem);color:var(--miel)}
+.hero .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,4.4vw,1.75rem);margin:1.3rem 0 1.8rem;max-width:32rem;color:#f3e6d3}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:#d9c7b1}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:1s}.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau défilant */
+.bande{background:var(--choco2);color:var(--miel);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Caveat,cursive;font-size:1.45rem;border-top:1px solid rgba(244,207,138,.18);border-bottom:1px solid rgba(244,207,138,.18)}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-size:.8rem;color:var(--ambre)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* esprit */
+.esprit .grid{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
+.esprit p{margin-bottom:1rem}
+.esprit .big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,4.2vw,1.7rem);line-height:1.4;color:var(--choco2)}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.chip{border:1px solid #d6c3a6;border-radius:999px;padding:.35rem .9rem;font-size:.85rem;background:#fff8ee}
+.medaille{display:flex;gap:1rem;align-items:center;background:var(--choco);color:var(--creme);border-radius:22px;padding:1.3rem 1.4rem;box-shadow:0 30px 60px -36px rgba(46,30,24,.9)}
+.medaille svg{width:64px;height:64px;flex:none}
+.medaille b{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:500;color:var(--miel);display:block;line-height:1.1}
+.medaille span{font-size:.88rem;color:#dccab4}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.2rem}
+.stat{background:#fff8ee;border:1px solid #e6d6bd;border-radius:16px;padding:.9rem .5rem;text-align:center}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:600;color:var(--bois);line-height:1}
+.stat span{font-size:.74rem;letter-spacing:.06em;color:var(--doux)}
+
+/* vacoa : tressage */
+.vacoa{height:46px;background:
+ repeating-linear-gradient(45deg,rgba(107,70,48,.0) 0 10px,rgba(107,70,48,.22) 10px 20px),
+ repeating-linear-gradient(-45deg,rgba(201,160,104,.0) 0 10px,rgba(201,160,104,.35) 10px 20px),#e5d2b2;opacity:.9}
+
+/* ardoise */
+.ardoise-sec{background:var(--basalte);color:var(--craie);overflow:hidden}
+.ardoise-sec h2{color:var(--craie)}
+.ardoise-sec .eyebrow{color:var(--miel)}
+.ardoise{position:relative;background:radial-gradient(120% 90% at 30% 10%,#343a3b 0%,var(--ardoise) 70%);border:14px solid #7a5232;border-radius:10px;box-shadow:inset 0 0 50px rgba(0,0,0,.55),0 30px 60px -30px rgba(0,0,0,.8);padding:1.8rem 1.3rem 1.4rem;margin-top:1.6rem;outline:2px solid #5a3a24;outline-offset:-2px}
+.ardoise::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.018) 0 2px,transparent 2px 7px);pointer-events:none}
+.ardoise h3{font-family:Caveat,cursive;font-size:2.3rem;color:var(--craie);text-align:center;font-weight:700;margin-bottom:.6rem}
+.ardoise ul{list-style:none;display:grid;gap:1rem}
+.ardoise li{font-family:Caveat,cursive;font-size:1.5rem;line-height:1.2;border-bottom:1px dashed rgba(239,234,224,.22);padding-bottom:.75rem;opacity:0;transform:translateX(-12px);transition:.8s}
+.ardoise.vu li{opacity:1;transform:none}
+.ardoise li small{display:block;font-family:Jost,sans-serif;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--miel);margin-top:.25rem;opacity:.85}
+.ardoise .note{font-size:.82rem;color:#bdb6aa;text-align:center;margin-top:1rem;font-family:Jost,sans-serif}
+
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 5vw 1.4rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 82%;scroll-snap-align:center;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 26px 50px -32px rgba(46,30,24,.8);transition:transform .45s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.4deg)}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.9rem;color:var(--doux)}
+.galerie figcaption b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--choco)}
+.glisse{font-family:Caveat,cursive;font-size:1.25rem;color:var(--bois)}
+
+/* letchis */
+.letchis{background:linear-gradient(180deg,var(--creme) 0%,var(--lin) 100%)}
+.letchis .grid{display:grid;gap:2.2rem;align-items:center}
+.bocal{position:relative;border-radius:200px 200px 26px 26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(46,30,24,.7);max-width:420px;margin:auto;width:100%}
+.bocal img{width:100%;height:100%;object-fit:cover;animation:kenburns 24s ease-in-out infinite alternate}
+.citation{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.35rem,4.4vw,1.8rem);line-height:1.35;color:var(--choco2);border-left:3px solid var(--letchi);padding-left:1.1rem;margin:1rem 0 1.2rem}
+.citation + small{color:var(--doux);font-size:.85rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#4a2f24 0%,var(--choco) 70%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--miel)}
+.noel p{max-width:34rem;margin:0 auto 1.6rem;color:#e8d9c4}
+.noel .carte{position:relative;max-width:440px;margin:0 auto 2rem;background:linear-gradient(135deg,#f6eee2,#eadbc2);color:var(--choco);border-radius:18px;padding:1.8rem 1.4rem 1.5rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);transform:rotate(-1.5deg)}
+.noel .carte::before{content:"";position:absolute;inset:8px;border:1px solid rgba(107,70,48,.45);border-radius:12px;pointer-events:none}
+.noel .carte .craie{font-family:Caveat,cursive;font-size:1.7rem;color:var(--letchi);display:block}
+.noel .carte b{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:500;display:block;line-height:1.1}
+.noel .carte span.sm{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--bois)}
+.noel .ruban-n{position:absolute;top:-12px;right:26px;width:46px;height:46px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.75rem;color:#bfa98f;margin-top:.8rem}
+
+/* contact */
+.contact .grid{display:grid;gap:2rem}
+.carte-info{background:#fff8ee;border:1px solid #e6d6bd;border-radius:22px;padding:1.6rem 1.4rem}
+.carte-info dl{display:grid;gap:1rem}
+.carte-info dt{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--bois);font-weight:500}
+.carte-info dd{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-info dd a{text-decoration:none;border-bottom:1px solid #d9bf96}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem}
+.reseaux a{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1rem;border-radius:999px;border:1px solid #d6c3a6;text-decoration:none;font-size:.88rem;background:#fff}
+.reseaux svg{width:16px;height:16px}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#cdb9a2;background:var(--choco)}
+footer b{color:var(--miel);font-weight:500}
+
+@media(min-width:860px){
+ .esprit .grid{grid-template-columns:1.15fr .85fr;gap:4rem}
+ .letchis .grid{grid-template-columns:.9fr 1.1fr;gap:4rem}
+ .contact .grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+ .galerie figure{flex:0 0 31%}
+ .ardoise{padding:2.4rem 2.6rem 1.8rem}
+ .hero .photo{height:min(62vh,560px)}
+ .hero .photo img{object-position:50% 58%}
+ .ardoise ul{grid-template-columns:1fr 1fr;column-gap:2.4rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv,.ardoise li{opacity:1!important;transform:none!important}
+ canvas#lueurs{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Ti Comptoir</div>
+<canvas id="lueurs" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="photo"><img src="img/devanture-nuit.webp" alt="La devanture du Ti Comptoir le soir : enseigne « Le Ti Comptoir, resto-bistrot » et pergola illuminée de guirlandes, sur un muret de pierres de basalte" fetchpriority="high"></div>
+  <svg class="guirlande" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 8 Q125 62 250 14 T500 14 T750 14 T1000 10"/>
+    <circle cx="40" cy="22" r="3.2"/><circle cx="95" cy="36" r="3.2" style="animation-delay:.4s"/><circle cx="150" cy="40" r="3.2" style="animation-delay:1.1s"/><circle cx="205" cy="28" r="3.2" style="animation-delay:.7s"/><circle cx="290" cy="22" r="3.2" style="animation-delay:1.6s"/><circle cx="345" cy="36" r="3.2" style="animation-delay:.2s"/><circle cx="400" cy="38" r="3.2" style="animation-delay:1.3s"/><circle cx="455" cy="26" r="3.2" style="animation-delay:.9s"/><circle cx="540" cy="22" r="3.2" style="animation-delay:.5s"/><circle cx="595" cy="36" r="3.2" style="animation-delay:1.8s"/><circle cx="650" cy="38" r="3.2" style="animation-delay:.1s"/><circle cx="705" cy="26" r="3.2" style="animation-delay:1.2s"/><circle cx="790" cy="22" r="3.2" style="animation-delay:.6s"/><circle cx="845" cy="35" r="3.2" style="animation-delay:1.5s"/><circle cx="900" cy="36" r="3.2" style="animation-delay:.3s"/><circle cx="955" cy="22" r="3.2" style="animation-delay:1s"/>
+  </svg>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Saint-Joseph · La Réunion · depuis avril 2019</p>
+    <h1 class="apparait d2">Le Ti Comptoir</h1>
+    <p class="sous apparait d2">Resto · Bistrot</p>
+    <p class="lead apparait d3">Une cuisine métropolitaine aux produits locaux, écrite chaque jour à l'ardoise, dans un décor de bois, de coco et de vacoa.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="tel:+262262870721"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Réserver au 0262 87 07 21</a>
+      <a class="btn btn-line" href="#ardoise">Voir l'ardoise</a>
+    </div>
+    <p class="adr apparait d4">15 rue Leconte de Lisle, centre-ville de Saint-Joseph</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Bistronomie</span><span>Maître restaurateur</span><span>Menu à l'ardoise</span><span>Produits locaux</span><span>Noix de Saint-Jacques &amp; couteaux</span><span>Pickles de letchis</span><span>Viandes d'exception</span>
+  <span>Bistronomie</span><span>Maître restaurateur</span><span>Menu à l'ardoise</span><span>Produits locaux</span><span>Noix de Saint-Jacques &amp; couteaux</span><span>Pickles de letchis</span><span>Viandes d'exception</span>
+</div></div>
+
+<section class="esprit" id="esprit">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">L'esprit du lieu</p>
+      <h2>Un bistrot de cœur, au centre de Saint-Joseph</h2>
+      <p class="big">Ouvert à la mi-avril 2019, Le Ti Comptoir marie la bistronomie métropolitaine et les produits de l'île.</p>
+      <p>La décoration est artisanale et locale : bois, palette, métal, coco et vacoa. Le soir, la pergola s'allume de guirlandes au-dessus du muret de basalte, et la salle accueille jusqu'à 60 couverts.</p>
+      <p>Au fil des arrivages, la carte change : on suit l'ardoise, et nos publications annoncent les nouveautés de la semaine.</p>
+      <div class="chips"><span class="chip">Bois &amp; palette</span><span class="chip">Coco &amp; vacoa</span><span class="chip">Centre-ville</span><span class="chip">Wifi</span><span class="chip">Français · English</span></div>
+    </div>
+    <div class="rv">
+      <div class="medaille">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="28" r="20" fill="none" stroke="#f4cf8a" stroke-width="2"/><circle cx="32" cy="28" r="14" fill="none" stroke="#e9a94b" stroke-width="1" stroke-dasharray="2 3"/><path d="M24 46l-4 14 12-6 12 6-4-14" fill="none" stroke="#f4cf8a" stroke-width="2" stroke-linejoin="round"/><path d="M26 30c0-6 3-10 6-10s6 4 6 10" fill="none" stroke="#f4cf8a" stroke-width="2" stroke-linecap="round"/><path d="M24 31h16" stroke="#f4cf8a" stroke-width="2" stroke-linecap="round"/></svg>
+        <div><b>Maître restaurateur</b><span>Un titre qui distingue une cuisine faite maison, à partir de produits bruts.</span></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>2019</b><span>ouverture</span></div>
+        <div class="stat"><b>60</b><span>couverts</span></div>
+        <div class="stat"><b>96 %</b><span>recommandent*</span></div>
+      </div>
+      <p style="font-size:.76rem;color:var(--doux);margin-top:.6rem">* 96 % de recommandations sur 75 avis, page Facebook du Ti Comptoir.</p>
+    </div>
+  </div>
+</section>
+
+<div class="vacoa" aria-hidden="true"></div>
+
+<section class="ardoise-sec" id="ardoise">
+  <div class="wrap">
+    <p class="eyebrow rv">À l'ardoise</p>
+    <h2 class="rv">Ce qui est passé sur notre comptoir</h2>
+    <p class="rv" style="color:#d4cdc1;max-width:36rem">Quelques arrivages annoncés sur notre page. La carte suit les saisons et le marché : appelez-nous pour connaître l'ardoise du jour.</p>
+    <div class="ardoise" id="tableau">
+      <h3>Le Ti Comptoir</h3>
+      <ul>
+        <li>Noix de Saint-Jacques &amp; couteaux, arrivage en frais<small>septembre 2026</small></li>
+        <li>Pickles de letchis de Grand Galet, maison<small>février 2026</small></li>
+        <li>Fromage de tête<small>août 2025</small></li>
+        <li>Saucisse de Montbéliard briochée<small>août 2025</small></li>
+        <li>Arrivage de viandes d'exception<small>mars 2025</small></li>
+        <li>Noix d'entrecôte &amp; faux-filet Aberdeen<small>février 2025</small></li>
+      </ul>
+      <p class="note">Menu à l'ardoise · cuisine métropolitaine aux produits locaux</p>
+    </div>
+  </div>
+</section>
+
+<section class="assiettes" id="assiettes">
+  <div class="wrap">
+    <p class="eyebrow rv">Dans l'assiette</p>
+    <h2 class="rv">Le fait maison, en vrai</h2>
+    <p class="glisse rv">Faites glisser →</p>
+    <div class="galerie rv">
+      <figure><img src="img/fromage-de-tete.webp" alt="Tranche de fromage de tête maison sur assiette noire, oignon rouge et carotte" loading="lazy"><figcaption><b>Fromage de tête</b>Persillé, servi avec oignon rouge et carotte.</figcaption></figure>
+      <figure><img src="img/saucisse-briochee.webp" alt="Saucisse de Montbéliard briochée tranchée, salade aux fleurs comestibles et tomates cerises" loading="lazy"><figcaption><b>Saucisse de Montbéliard briochée</b>Brioche dorée, salade fleurie et sa crème.</figcaption></figure>
+      <figure><img src="img/pickles-letchis.webp" alt="Bocaux de pickles de letchis posés sur le comptoir, letchis frais et feuilles au premier plan" loading="lazy"><figcaption><b>Pickles de letchis</b>Les derniers letchis de Grand Galet, mis en bocaux au Ti Comptoir.</figcaption></figure>
+      <figure><img src="img/devanture-nuit.webp" alt="La pergola illuminée du Ti Comptoir le soir" loading="lazy"><figcaption><b>Le soir venu</b>La pergola s'illumine au-dessus de l'enseigne.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="letchis" id="letchis">
+  <div class="wrap grid">
+    <div class="bocal rv"><img src="img/pickles-letchis.webp" alt="Bocaux de pickles de letchis du Ti Comptoir" loading="lazy"></div>
+    <div class="rv">
+      <p class="eyebrow">Fait maison</p>
+      <h2>La saison du letchi, toute l'année</h2>
+      <p class="citation">« Les derniers letchis de l'année en provenance de Grand Galet, transformés en pickles au Ti Comptoir pour en profiter toute l'année. »</p>
+      <small>Publication du Ti Comptoir, février 2026</small>
+      <p style="margin-top:1.2rem">Le produit local, gardé au meilleur de sa saison : voilà l'esprit de la maison, de la cuisine jusqu'au comptoir.</p>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Pour les fêtes</p>
+    <h2 class="rv">Offrez une belle table au Ti Comptoir</h2>
+    <div class="carte rv">
+      <svg class="ruban-n" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#b8323a"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#9e2a31"/><circle cx="23" cy="18" r="3.5" fill="#e9a94b"/></svg>
+      <span class="craie">Un repas à offrir</span>
+      <b>Le Ti Comptoir</b>
+      <span class="sm">Resto · Bistrot · Saint-Joseph</span>
+    </div>
+    <p class="rv">Un dîner sous les guirlandes, une ardoise de fête, un moment à partager : écrivez-nous pour réserver votre table des fêtes ou offrir un repas à un proche.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692668534?text=Bonjour%20Le%20Ti%20Comptoir%2C%20je%20voudrais%20r%C3%A9server%20une%20table%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver ma table des fêtes</a>
+      <a class="btn btn-line" href="https://wa.me/262692668534?text=Bonjour%20Le%20Ti%20Comptoir%2C%20je%20voudrais%20offrir%20un%20repas%20pour%20No%C3%ABl">Offrir un repas</a>
+    </div>
+    <p class="leg">Illustration : carte à offrir</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Venir nous voir</p>
+      <h2>Réservez votre table</h2>
+      <p>Midi et soir, sur réservation. Les ouvertures exceptionnelles et les nouveautés de l'ardoise sont annoncées sur notre page Facebook.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-dark" href="tel:+262262870721">Appeler le 0262 87 07 21</a>
+        <a class="btn btn-main" href="https://wa.me/262692668534?text=Bonjour%20Le%20Ti%20Comptoir%2C%20je%20voudrais%20r%C3%A9server%20une%20table">WhatsApp</a>
+      </div>
+    </div>
+    <div class="carte-info rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Ti%20Comptoir%2015%20rue%20Leconte%20de%20Lisle%2097480%20Saint-Joseph">15 rue Leconte de Lisle<br>97480 Saint-Joseph, La Réunion</a></dd></div>
+        <div><dt>Réservations</dt><dd><a href="tel:+262262870721">0262 87 07 21</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:leticomptoir@gmail.com">leticomptoir@gmail.com</a></dd></div>
+        <div><dt>Paiement</dt><dd>Cartes bancaires, chèques, espèces</dd></div>
+      </dl>
+      <div class="reseaux">
+        <a href="https://www.facebook.com/p/Le-Ti-Comptoir-100063462824035"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg>Facebook</a>
+        <a href="https://www.instagram.com/restaurantleticomptoir/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Le Ti Comptoir</b> · Resto-bistrot bistronomique · Saint-Joseph, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Ti Comptoir.</footer>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,#tableau').forEach(function(el){io.observe(el)});
+document.querySelectorAll('#tableau li').forEach(function(li,i){li.style.transitionDelay=(i*.18)+'s'});
+if(reduce)return;
+/* lueurs ambrées + vapeur légère : l'ambiance d'un bistrot sous les guirlandes */
+var c=document.getElementById('lueurs'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(init){var steam=Math.random()<.35;return{x:Math.random()*W,y:init?Math.random()*H:H+20,r:steam?14+Math.random()*22:1.2+Math.random()*2.4,vy:-(steam?.18+Math.random()*.25:.2+Math.random()*.45),vx:(Math.random()-.5)*.2,a:0,m:steam?.05:.32+Math.random()*.3,s:steam,ph:Math.random()*6.28}}
+for(var i=0;i<28;i++)P.push(mk(true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(t/1800+p.ph)*.15;if(p.a<p.m)p.a+=.004;
+if(p.y<-40){P[i]=mk(false);continue}
+var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*(p.s?1:4));
+if(p.s){g.addColorStop(0,'rgba(246,238,226,'+p.a+')');g.addColorStop(1,'rgba(246,238,226,0)')}
+else{g.addColorStop(0,'rgba(244,207,138,'+p.a+')');g.addColorStop(.25,'rgba(233,169,75,'+p.a*.5+')');g.addColorStop(1,'rgba(233,169,75,0)')}
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r*(p.s?1:4),0,6.283);x.fill()}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Ti Comptoir" defer></script>
+</body>
+</html>
