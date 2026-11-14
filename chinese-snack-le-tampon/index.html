@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chinese Snack · Sandwicherie au Tampon, du mardi au dimanche dès 17h30</title>
+<meta name="description" content="Chinese Snack, sandwicherie au 92A rue du Général de Gaulle, Le Tampon : américains, tacos, paninis, lord, pain gratiné. Du mardi au dimanche, 17h30 – 22h00. Commandes au 0692 06 46 48.">
+<meta property="og:title" content="Chinese Snack · Le Tampon">
+<meta property="og:description" content="Même sous la pluie, votre snack vous attend ! Américains, tacos, paninis, du mardi au dimanche dès 17h30.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chinese-snack-le-tampon/img/facade.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chinese-snack-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Yellowtail&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#d7261e;--orange:#f2621f;--jaune:#ffc21a;--nuit:#151110;--charbon:#221a17;--sapin:#1d3b31;--bleu:#1f9be0;--creme:#fff6ea;--txt:#2a1f1a;--doux:#7c6a60}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;line-height:1.05;letter-spacing:.01em;text-transform:uppercase}
+h2{font-size:clamp(2.1rem,7vw,3.4rem);margin:.3rem 0 1rem;color:var(--nuit)}
+h3{font-size:1.3rem;color:var(--nuit)}
+.script{font-family:'Yellowtail',cursive;text-transform:none;font-weight:400;letter-spacing:0}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:800;color:var(--rouge)}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--jaune);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;letter-spacing:.04em;font-size:.95rem;transition:.3s}
+.btn-feu{background:linear-gradient(135deg,var(--jaune),var(--orange) 55%,var(--rouge));color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25);box-shadow:0 14px 30px -12px rgba(215,38,30,.85);animation:souffle 3.4s ease-in-out infinite}
+.btn-feu:hover{filter:brightness(1.08)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(242,98,31,.75)}}
+.btn-clair{border:2px solid rgba(255,194,26,.75);color:#fff}
+.btn-clair:hover{background:rgba(255,194,26,.15)}
+.btn-sombre{border:2px solid var(--nuit);color:var(--nuit)}
+.btn-sombre:hover{background:var(--nuit);color:var(--jaune)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* motif asanoha de l'enseigne */
+.asanoha{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cg fill='none' stroke='%23ffc21a' stroke-opacity='.16' stroke-width='1'%3E%3Cpath d='M30 0v104M0 17.3l60 34.7M0 52l60-34.7M0 52l60 34.7M0 86.7l60-34.7M30 0L0 52l30 52 30-52z'/%3E%3C/g%3E%3C/svg%3E")}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:35% 40%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14) translate(1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,17,16,.25) 0%,rgba(21,17,16,.35) 35%,rgba(21,17,16,.93) 78%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.hero .eyebrow{color:var(--jaune)}
+.hero h1{font-size:clamp(4.2rem,20vw,8.5rem);line-height:.9;background:linear-gradient(180deg,var(--jaune) 10%,var(--orange) 60%,var(--rouge));-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 0 rgba(0,0,0,.45))}
+.hero h1 .script{display:block;font-size:.62em;margin:-.12em 0 0 .9em;color:var(--jaune);-webkit-text-fill-color:var(--jaune);transform:rotate(-6deg);transform-origin:left}
+.hero .lead{font-size:1.2rem;font-weight:600;max-width:32rem;margin:1.3rem 0 .6rem}
+.chip{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,194,26,.14);border:1px solid rgba(255,194,26,.5);border-radius:999px;padding:.4rem 1rem;font-size:.9rem;font-weight:700;color:var(--jaune);margin-bottom:1.6rem}
+.chip i{width:9px;height:9px;border-radius:50%;background:#3ddc6a;box-shadow:0 0 0 0 rgba(61,220,106,.7);animation:pouls 2s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 9px rgba(61,220,106,0)}}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:#ffd9b0}
+.ap{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.ap.d2{animation-delay:.6s}.ap.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:linear-gradient(90deg,var(--rouge),var(--orange));color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Anton',sans-serif;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;color:var(--jaune);font-size:.85rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* bouchee */
+.bouchee{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.citation{font-family:'Yellowtail',cursive;font-size:clamp(1.9rem,6vw,2.6rem);color:var(--rouge);line-height:1.15;margin:.2rem 0 1rem}
+.bouchee p+p{margin-top:1rem}
+.chiffres{display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:2.4rem;line-height:1;color:var(--orange)}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.cadre{position:relative}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:28px;box-shadow:0 40px 70px -36px rgba(21,17,16,.75)}
+.cadre::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--jaune);border-radius:28px;z-index:-1}
+.cadre figcaption{position:absolute;left:-.5rem;bottom:1.4rem;background:var(--nuit);color:var(--jaune);padding:.6rem 1rem;border-radius:12px;font-size:.84rem;font-weight:700;max-width:80%}
+/* carte */
+.carte-sec{background:var(--nuit);color:#f3e6da}
+.carte-sec h2{color:#fff}
+.carte-sec .eyebrow{color:var(--jaune)}
+.intro{max-width:40rem}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.4rem}
+.cat{background:linear-gradient(160deg,#2a1f1b,#1b1513);border:1px solid rgba(255,194,26,.18);border-radius:22px;padding:1.4rem 1.4rem 1.3rem;transition:transform .35s,border-color .35s;position:relative;overflow:hidden}
+.cat:hover{transform:translateY(-5px);border-color:rgba(255,194,26,.55)}
+.cat::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--jaune),var(--orange),var(--rouge))}
+.cat h3{color:var(--jaune);font-size:1.45rem;margin-bottom:.5rem}
+.cat p{font-size:.95rem;color:#e8d6c8}
+.cat ul{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.7rem}
+.cat li{font-size:.82rem;background:rgba(255,255,255,.06);border-radius:999px;padding:.2rem .7rem}
+.cat.star{grid-column:span 2;background:linear-gradient(135deg,var(--rouge),var(--orange));border:0}
+.cat.star h3{color:#fff}
+.cat.star p,.cat.star li{color:#fff}
+.cat.star li{background:rgba(0,0,0,.18)}
+.cat.star li em{font-style:normal;opacity:.8;font-size:.92em}
+.note{margin-top:1.6rem;font-size:.9rem;color:#bfa999}
+/* galerie */
+.gal-sec{background:linear-gradient(180deg,var(--creme),#ffe9d2)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 4vw 1.5rem;margin:0 -4vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,340px);scroll-snap-align:center;border-radius:24px;overflow:hidden;background:var(--nuit);box-shadow:0 26px 50px -30px rgba(21,17,16,.7);position:relative}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.1rem 1rem;background:linear-gradient(180deg,transparent,rgba(21,17,16,.9));color:#fff;font-size:.9rem}
+.galerie figcaption b{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.15rem;color:var(--jaune);letter-spacing:.03em}
+.glisse{font-size:.85rem;color:var(--doux);text-align:center}
+/* patat */
+.patat{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.patat img{width:100%;border-radius:26px;aspect-ratio:1;object-fit:cover;box-shadow:0 30px 60px -34px rgba(21,17,16,.7)}
+.saveurs{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+.saveurs span{border-radius:999px;padding:.4rem 1rem;font-weight:800;font-size:.9rem;color:#fff}
+.saveurs .rose{background:#e0428f}.saveurs .vert{background:#2e7d32}
+/* coucher de soleil */
+.soir{background:linear-gradient(180deg,var(--rouge) 0%,var(--orange) 45%,#ffb347 100%);color:#fff;padding-bottom:0;overflow:hidden}
+.soir h2{color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.2)}
+.soir .eyebrow{color:#fff3c4}
+.soir-in{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;position:relative;z-index:2}
+.soir .photo{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(80,10,0,.8)}
+.soir .photo img{width:100%;aspect-ratio:1300/594;object-fit:cover}
+.soir .photo figcaption{background:var(--nuit);color:var(--jaune);font-size:.85rem;padding:.6rem 1rem}
+.soleil{position:absolute;right:8%;bottom:70px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,#fff3b0,#ffcf4a 60%,rgba(255,207,74,0) 72%);animation:lueur 6s ease-in-out infinite;z-index:0}
+@keyframes lueur{50%{transform:scale(1.07);opacity:.85}}
+.silhouette{display:block;width:100%;height:clamp(110px,14vw,170px);margin-top:2.5rem;position:relative;z-index:1}
+.illu{text-align:right;font-size:.72rem;color:#ffe0c2;background:var(--nuit);padding:.2rem 4vw .5rem}
+/* etapes */
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem;counter-reset:e}
+.etape{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 22px 46px -34px rgba(21,17,16,.6);position:relative;transition:transform .35s}
+.etape:hover{transform:translateY(-5px)}
+.etape::before{counter-increment:e;content:counter(e);font-family:'Anton',sans-serif;font-size:2.6rem;line-height:1;background:linear-gradient(180deg,var(--jaune),var(--rouge));-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:.4rem}
+.etape p{font-size:.95rem}
+/* noel */
+.noel{background:radial-gradient(circle at 80% 10%,#7a1410,var(--nuit) 70%);color:#f6e7da;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.noel-in{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.idee{border-left:3px solid var(--jaune);padding:.2rem 0 .2rem 1rem}
+.idee h3{color:var(--jaune);font-size:1.15rem}
+.idee p{font-size:.95rem}
+.lanterne{max-width:200px;margin:auto;text-align:center}
+.lanterne svg{width:100%;height:auto;animation:balance 5s ease-in-out infinite;transform-origin:50% 0}
+@keyframes balance{50%{transform:rotate(3deg)}}
+.lanterne small{display:block;font-size:.75rem;color:#c9a99a;margin-top:.4rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.45rem 0}
+.infos b{color:var(--rouge)}
+.contact figure img{width:100%;border-radius:24px;aspect-ratio:3/4;object-fit:cover;object-position:30% 50%;box-shadow:0 30px 60px -34px rgba(21,17,16,.7)}
+.contact figcaption{font-size:.85rem;color:var(--doux);margin-top:.6rem}
+footer{background:var(--nuit);color:#cdb8a8;text-align:center;font-size:.82rem;padding:2.2rem 1rem 2.6rem;line-height:1.7}
+footer b{color:var(--jaune)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .bouchee,.patat,.soir-in,.noel-in,.contact-in{grid-template-columns:1fr}
+ .menu{grid-template-columns:1fr}
+ .cat.star{grid-column:auto}
+ .etapes{grid-template-columns:1fr}
+ .soleil{width:120px;height:120px;bottom:40px}
+ .cadre{margin-right:14px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ap,.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chinese Snack</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero asanoha">
+  <div class="fond"><img src="img/facade.webp" alt="La façade de Chinese Snack au Tampon, son enseigne orange aux pagodes et sa terrasse aux chaises bleues"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow ap">Sandwicherie · Le Tampon</p>
+    <h1 class="ap d2">Chinese<span class="script">Snack</span></h1>
+    <p class="lead ap d2">Même sous la pluie, votre snack vous attend !</p>
+    <div class="ap d3">
+      <span class="chip"><i></i>Du mardi au dimanche · 17h30 – 22h00</span>
+      <div class="ctas">
+        <a class="btn btn-feu" href="tel:+262692064648">Commander · 0692 06 46 48</a>
+        <a class="btn btn-clair" href="#carte">Voir la carte</a>
+      </div>
+      <p class="adr">92A rue du Général de Gaulle, 97430 Le Tampon</p>
+    </div>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Américains</span><span>Tacos</span><span>Paninis</span><span>Lord</span><span>Pain gratiné</span><span>Frites &amp; bouchons artisanaux</span><span>Croque monsieur</span><span>Crudité / gratiné</span>
+  <span>Américains</span><span>Tacos</span><span>Paninis</span><span>Lord</span><span>Pain gratiné</span><span>Frites &amp; bouchons artisanaux</span><span>Croque monsieur</span><span>Crudité / gratiné</span>
+</div></div>
+
+<section id="snack">
+  <div class="wrap bouchee">
+    <div class="rv">
+      <p class="eyebrow">Le snack du soir</p>
+      <h2>Une seule bouchée</h2>
+      <p class="citation">… et vous comprendrez !</p>
+      <p>Chez Chinese Snack, les américains sortent bien garnis : frites croustillantes, bouchons artisanaux, achards, poivrons, fromage qui file. <b>Préparé avec passion et servi avec générosité</b>, comme le dit si bien l'équipe.</p>
+      <p>Toute l'équipe vous attend pour un moment gourmand et réconfortant, à savourer sur la terrasse aux chaises bleues ou à emporter à la maison.</p>
+      <div class="chiffres">
+        <div><b>6</b><span>soirs par semaine</span></div>
+        <div><b>17h30</b><span>ouverture des commandes</span></div>
+        <div><b>3,9 K</b><span>abonnés Facebook</span></div>
+      </div>
+    </div>
+    <figure class="cadre rv">
+      <img src="img/sandwich-achards.webp" alt="Un américain garni de frites, saucisse, achards de légumes et piment vert" loading="lazy">
+      <figcaption>Frites, saucisse, achards et piment vert</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="carte-sec asanoha" id="carte">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">La carte</p>
+      <h2>Faites-vous plaisir</h2>
+      <p>Américains, tacos, paninis, lord… toute la carte du snack, avec les spécialités de la maison et la sauce samouraï maison en supplément.</p>
+    </div>
+    <div class="menu">
+      <article class="cat star rv">
+        <h3>Les spécialités</h3>
+        <p>Les américains signature de la maison.</p>
+        <ul><li>AM Poitrine fumé</li><li>AM Agneau</li><li>AM Tartiflette <em>lardons, reblochon</em></li><li>AM Raclette</li><li>AM 4 Épis <em>bouchon, salami, merguez, poivrons</em></li><li>AM Tenders, nuggets ou cordon bleu</li></ul>
+      </article>
+      <article class="cat rv">
+        <h3>Américains</h3>
+        <p>Le grand classique, garni de frites.</p>
+        <ul><li>Chinese <em>sarcive, ananas</em></li><li>Réunionnaise</li><li>Créole</li><li>Kebab</li><li>Spécial</li><li>Chèvre miel</li><li>Saumon</li><li>Bouchon</li></ul>
+      </article>
+      <article class="cat rv">
+        <h3>Tacos</h3>
+        <p>En simple ou en double.</p>
+        <ul><li>Épaule</li><li>Bouchon</li><li>Poulet</li><li>Hot-dog</li><li>Merguez</li><li>Sarcive</li><li>Saumon</li><li>Nuggets</li></ul>
+      </article>
+      <article class="cat rv">
+        <h3>Paninis</h3>
+        <p>Dorés et croustillants.</p>
+        <ul><li>Américain</li><li>Réunionnaise</li><li>Créole</li><li>Chinese</li><li>Chèvre miel</li><li>Saumon</li></ul>
+      </article>
+      <article class="cat rv">
+        <h3>Lord</h3>
+        <p>Pour les grosses faims.</p>
+        <ul><li>Épaule</li><li>Steak</li><li>Réunionnaise</li><li>Créole</li><li>Chinese</li><li>Sarcive</li></ul>
+      </article>
+      <article class="cat rv">
+        <h3>Et aussi</h3>
+        <p>Pour compléter la soirée.</p>
+        <ul><li>Pain gratiné</li><li>Crudité / gratiné</li><li>Croque monsieur</li><li>Frites</li><li>Bouchons artisanaux</li><li>Nuggets</li></ul>
+      </article>
+    </div>
+    <p class="note rv">La carte complète, avec ses prix, est affichée au snack et sur la page Facebook de Chinese Snack.</p>
+  </div>
+</section>
+
+<section class="gal-sec" id="galerie">
+  <div class="wrap">
+    <p class="eyebrow rv">En cuisine</p>
+    <h2 class="rv">Tout droit sorti du comptoir</h2>
+  </div>
+  <div class="wrap">
+    <div class="galerie">
+      <figure><img src="img/sandwichs-vitrine.webp" alt="Une rangée d'américains garnis de frites, salami, chorizo et poivrons" loading="lazy"><figcaption><b>La rangée du soir</b>Salami, chorizo, poivrons, frites</figcaption></figure>
+      <figure><img src="img/pain-gratine.webp" alt="Un pain gratiné au fromage fondu dans sa boîte, avec ses frites gratinées" loading="lazy"><figcaption><b>Pain gratiné</b>Fromage doré, frites gratinées</figcaption></figure>
+      <figure><img src="img/sachets-miam.webp" alt="Des sandwichs chauds emballés dans des sachets imprimés Miam" loading="lazy"><figcaption><b>Miam, miam !</b>Les commandes prêtes à partir</figcaption></figure>
+      <figure><img src="img/sandwich-achards.webp" alt="Un américain aux achards et piment vert" loading="lazy"><figcaption><b>Version créole</b>Achards, saucisse, piment</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser pour voir la suite →</p>
+  </div>
+</section>
+
+<section id="boissons">
+  <div class="wrap patat">
+    <figure class="rv"><img src="img/la-patat.webp" alt="Deux canettes La Patat' : Pink Paradise et Tropical Vibe Pomme" loading="lazy"></figure>
+    <div class="rv">
+      <p class="eyebrow">Boissons fraîches</p>
+      <h2>Un coup de boost tropical</h2>
+      <p>Les boissons énergétiques <b>La Patat'</b> ont rejoint le snack : des saveurs ultra fruitées, un max de fraîcheur et le boost parfait pour recharger les batteries.</p>
+      <div class="saveurs"><span class="rose">Pink Paradise</span><span class="vert">Tropical Vibe Pomme</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="soir">
+  <div class="soleil" aria-hidden="true"></div>
+  <div class="wrap soir-in">
+    <div class="rv">
+      <p class="eyebrow">Le soir venu</p>
+      <h2>C'est le week-end, tout est permis !</h2>
+      <p>Après une longue semaine de boulot, place à un bon moment. Dès 17h30, l'enseigne aux pagodes s'allume rue du Général de Gaulle : laissez de côté le stress de la semaine et faites-vous plaisir.</p>
+    </div>
+    <figure class="photo rv"><img src="img/enseigne-nuit.webp" alt="L'enseigne Snack Chinese illuminée à la tombée de la nuit" loading="lazy"><figcaption>L'enseigne illuminée à la tombée de la nuit</figcaption></figure>
+  </div>
+  <svg class="silhouette" viewBox="0 0 1200 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><path fill="#151110" d="M0 150 Q150 120 300 140 L300 170 0 170Z"/><path fill="#151110" d="M120 150v-38h-14l30-14h-22l40-18h-26l50-22 50 22h-26l40 18h-22l30 14h-14v38zM860 150V66h-40l-6-14h196l-6 14h-40v84h-20V84h-84v66zM700 150c40-30 120-30 160 0M930 150c40-30 120-30 160 0"/><path fill="#151110" d="M0 170V150c200-14 400-14 600 0s400 14 600 0v20z"/><path stroke="#151110" stroke-width="4" fill="none" d="M560 150v-60M560 90c-10 6-22 6-34 0M560 104c12 6 24 6 36 0M560 118c-12 6-24 6-34 0"/></svg>
+  <p class="illu">Illustration inspirée de l'enseigne : pagode et torii au soleil couchant</p>
+</section>
+
+<section id="commander">
+  <div class="wrap">
+    <p class="eyebrow rv">Comment commander</p>
+    <h2 class="rv">Simple comme un coup de fil</h2>
+    <div class="etapes">
+      <div class="etape rv"><h3>Appelez dès 17h30</h3><p>Passez votre commande par téléphone au 0692 06 46 48, ou directement sur place.</p></div>
+      <div class="etape rv"><h3>L'équipe prépare</h3><p>Pain, frites, garniture et sauce : votre américain ou votre tacos se prépare pour vous.</p></div>
+      <div class="etape rv"><h3>Régalez-vous</h3><p>Récupérez votre commande au 92A rue du Général de Gaulle et savourez-la en terrasse ou chez vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="fetes">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Fêtes de fin d'année</p>
+      <h2>Un soir de fêtes au snack</h2>
+      <p>Les soirées de décembre se partagent : réunissez la famille ou les copains autour d'une belle commande Chinese Snack.</p>
+      <div class="idees">
+        <div class="idee"><h3>La grande tablée</h3><p>Américains, tacos et paninis pour toute la bande, préparés pour le même créneau.</p></div>
+        <div class="idee"><h3>La soirée film en famille</h3><p>Un plateau de frites, bouchons artisanaux et nuggets à partager devant l'écran.</p></div>
+        <div class="idee"><h3>Le petit plaisir d'après-shopping</h3><p>Un pain gratiné bien chaud après une journée de courses de Noël.</p></div>
+      </div>
+      <a class="btn btn-feu" href="https://wa.me/262692064648?text=Bonjour%2C%20je%20voudrais%20passer%20une%20commande%20pour%20une%20soir%C3%A9e%20de%20f%C3%AAtes">Préparer ma commande des fêtes</a>
+    </div>
+    <div class="lanterne rv">
+      <svg viewBox="0 0 200 300" aria-hidden="true"><line x1="100" y1="0" x2="100" y2="40" stroke="#ffc21a" stroke-width="3"/><rect x="70" y="40" width="60" height="14" rx="4" fill="#ffc21a"/><ellipse cx="100" cy="140" rx="78" ry="88" fill="#d7261e"/><ellipse cx="100" cy="140" rx="78" ry="88" fill="url(#g)"/><path d="M60 62Q40 140 60 218M100 52v176M140 62q20 78 0 156" stroke="#9e140f" stroke-width="3" fill="none"/><rect x="70" y="222" width="60" height="14" rx="4" fill="#ffc21a"/><path d="M85 236v44M100 236v54M115 236v44" stroke="#ffc21a" stroke-width="3"/><text x="100" y="152" text-anchor="middle" font-family="Yellowtail,cursive" font-size="34" fill="#ffe7a0">Snack</text><defs><radialGradient id="g" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ff9a3c" stop-opacity=".75"/><stop offset="1" stop-color="#d7261e" stop-opacity="0"/></radialGradient></defs></svg>
+      <small>Illustration · lanterne de fête</small>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir au snack</p>
+      <h2>On vous attend avec le sourire</h2>
+      <p><b>Adresse</b> · 92A rue du Général de Gaulle, 97430 Le Tampon</p>
+      <p><b>Horaires</b> · du mardi au dimanche, de 17h30 à 22h00</p>
+      <p><b>Commandes</b> · sur place ou par téléphone, à partir de 17h30</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692064648">0692 06 46 48</a></p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-feu" href="tel:+262692064648">Appeler</a>
+        <a class="btn btn-sombre" href="https://wa.me/262692064648?text=Bonjour%20Chinese%20Snack%2C%20je%20voudrais%20passer%20une%20commande">WhatsApp</a>
+        <a class="btn btn-sombre" href="https://www.facebook.com/p/Chinese-Snack-100090132104987">Facebook</a>
+        <a class="btn btn-sombre" href="https://www.google.com/maps/search/?api=1&amp;query=92A%20rue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2097430%20Le%20Tampon">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/facade.webp" alt="La terrasse en bois et les chaises bleues devant Chinese Snack" loading="lazy"><figcaption>La terrasse, rue du Général de Gaulle</figcaption></figure>
+  </div>
+</section>
+
+<footer><b>Chinese Snack</b> · Sandwicherie · 92A rue du Général de Gaulle, Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Chinese Snack.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* braises qui montent du grill */
+const c=document.getElementById('braises'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const col=['#ffc21a','#f2621f','#ff8a3d','#ffe08a'];
+for(let i=0;i<28;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.7+.5,v:Math.random()*.45+.15,a:Math.random()*6.28,c:col[i%4]});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.03;p.x+=Math.sin(p.a)*.35;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+ x.globalAlpha=.25+Math.abs(Math.sin(p.a*1.3))*.4;x.fillStyle=p.c;x.shadowColor=p.c;x.shadowBlur=8;
+ x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+x.globalAlpha=1;x.shadowBlur=0;requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Chinese Snack" defer></script>
+</body>
+</html>
