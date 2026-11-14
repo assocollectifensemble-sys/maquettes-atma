@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>BNM CREA Couture · Créations couture faites main à La Rivière Saint-Louis</title>
+<meta name="description" content="BNM CREA Couture, couture et créations faites main à La Rivière Saint-Louis : draps de lit Picot, serviettes de cantine brodées au prénom, coussins personnalisés, sacs et déco maison. 0692 77 67 01.">
+<meta property="og:title" content="BNM CREA Couture · Fait main à La Rivière Saint-Louis">
+<meta property="og:description" content="Kits maternelle brodés au prénom, coussins personnalisés, sacs et déco maison : des créations artisanales cousues avec passion depuis 2019.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/bnm-crea-couture-saint-louis/img/stand-coussins-brodes.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/bnm-crea-couture-saint-louis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--marine:#1f2a56;--marine-f:#141c3d;--rose:#d6447a;--rose-c:#f6d3e0;--rose-p:#fbeaf0;--vert:#7fae4a;--vert-c:#e5f0d6;--orange:#cf6f37;--orange-c:#f6dcc8;--creme:#fdf8f1;--lin:#f5ece0;--txt:#33384f;--doux:#7a7d8f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;color:var(--marine);line-height:1.12}
+h2{font-size:clamp(2rem,6vw,3rem);margin:.3rem 0 1rem}
+h3{font-size:1.25rem}
+.main{font-family:'Caveat',cursive;font-weight:700;color:var(--rose);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--rose);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--marine);color:var(--rose-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#fils{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.35s}
+.btn-main{background:var(--rose);color:#fff;box-shadow:0 14px 30px -14px rgba(214,68,122,.9);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:#b8355f}
+@keyframes souffle{50%{box-shadow:0 14px 42px -6px rgba(214,68,122,.65)}}
+.btn-line{border:2px dashed rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:2px dashed var(--marine);color:var(--marine)}
+.btn-dark:hover{background:var(--rose-p)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* points de couture */
+.couture{border:2px dashed var(--rose);border-radius:22px}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--marine);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,28,61,.35) 0%,rgba(20,28,61,.35) 30%,rgba(20,28,61,.93) 78%)}
+.hero-in{position:relative;z-index:2;padding:6.5rem 0 4.2rem}
+.badge{width:110px;height:110px;border-radius:50%;background:#fff;padding:10px;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 0 0 7px var(--rose);margin-bottom:1.4rem;overflow:hidden}
+.badge img{width:100%;height:100%;object-fit:contain}
+.hero .eyebrow{color:var(--rose-c)}
+.hero h1{color:#fff;font-size:clamp(2.9rem,12vw,6.4rem);letter-spacing:.01em;margin-top:.4rem}
+.hero h1 .main{display:block;font-size:.56em;color:var(--rose-c);margin-top:.1em;font-weight:500}
+.hero .lead{font-size:1.1rem;max-width:34rem;margin:1.1rem 0 1.8rem;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--rose-c)}
+.hero .adr a{color:#fff}
+.fil-hero{display:block;width:min(340px,80%);height:24px;margin:.8rem 0 0}
+.fil-hero path{stroke-dasharray:8 7;animation:coud 2.6s .8s both}
+@keyframes coud{from{stroke-dashoffset:420;opacity:0}to{stroke-dashoffset:0;opacity:1}}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Caveat',cursive;font-size:1.55rem;border-top:2px dashed rgba(255,255,255,.6);border-bottom:2px dashed rgba(255,255,255,.6)}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✂";margin-left:2.4rem;font-size:1rem;opacity:.8}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* atelier */
+.atelier{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.atelier p+p{margin-top:1rem}
+.devise{font-family:'Caveat',cursive;font-size:clamp(1.7rem,4.6vw,2.2rem);color:var(--marine);line-height:1.25;border-left:3px dashed var(--vert);padding-left:1.1rem;margin:1.5rem 0}
+.chiffres{display:flex;gap:2.2rem;flex-wrap:wrap;margin-top:1.6rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:2.4rem;font-weight:600;color:var(--orange);line-height:1}
+.chiffres span{font-size:.86rem;color:var(--doux)}
+.ile{position:relative;max-width:380px;margin:auto}
+.ile img{width:100%;background:#fff;border-radius:34px;padding:1.4rem;box-shadow:0 30px 60px -34px rgba(31,42,86,.55)}
+.ile::before{content:"";position:absolute;inset:-14px;border:2px dashed var(--vert);border-radius:44px}
+.ile figcaption{text-align:center;font-size:.85rem;color:var(--doux);margin-top:1.2rem}
+/* kits */
+.kits{background:linear-gradient(180deg,var(--creme),var(--vert-c) 55%,var(--creme))}
+.kits-top{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(31,42,86,.6);background:var(--marine)}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.05)}
+.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1.2rem 1rem;background:linear-gradient(180deg,transparent,rgba(20,28,61,.85));color:#fff;font-size:.88rem}
+.dodo{font-family:'Caveat',cursive;font-size:2rem;color:var(--rose);display:block;margin-bottom:.2rem}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2.6rem}
+.carte{background:#fff;border-radius:22px;padding:1.4rem 1.4rem 1.3rem;box-shadow:0 22px 46px -34px rgba(31,42,86,.55);transition:transform .4s;position:relative;outline:2px dashed var(--rose-c);outline-offset:-9px}
+.carte:hover{transform:translateY(-6px) rotate(-.6deg)}
+.carte small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--vert);font-weight:700;margin-bottom:.3rem}
+.carte h3{margin-bottom:.3rem}
+.carte p{font-size:.95rem}
+.atouts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.atouts span{background:#fff;border:2px dashed var(--vert);border-radius:999px;padding:.3rem .95rem;font-size:.9rem;font-weight:600;color:var(--marine)}
+/* atelier broderie */
+.brode{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4rem);align-items:center;margin-top:3.5rem;background:#fff;border-radius:28px;padding:clamp(1.4rem,4vw,2.6rem);box-shadow:0 30px 60px -40px rgba(31,42,86,.5)}
+.brode label{font-weight:700;color:var(--marine);display:block;margin:.8rem 0 .4rem}
+.brode input{width:100%;font:inherit;font-size:1.1rem;padding:.75rem 1rem;border-radius:14px;border:2px dashed var(--rose);background:var(--rose-p);color:var(--marine);outline:none}
+.brode input:focus{border-style:solid}
+.motifs{display:flex;gap:.5rem;margin-top:1rem;flex-wrap:wrap}
+.motifs button{width:42px;height:42px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 2px var(--rose-c);cursor:pointer}
+.motifs button[aria-pressed=true]{box-shadow:0 0 0 3px var(--rose)}
+.pochon svg{width:100%;max-width:340px;margin:auto;display:block}
+.pochon figcaption{text-align:center;font-size:.8rem;color:var(--doux)}
+#nomBrode{font-family:'Caveat',cursive;font-weight:700}
+/* coussins */
+.coussins{background:var(--marine);color:#eef0fa;overflow:hidden}
+.coussins h2{color:#fff}
+.coussins .eyebrow{color:var(--rose-c)}
+.coussins-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.coussins .photo{box-shadow:0 0 0 8px rgba(246,211,224,.12),0 40px 70px -30px rgba(0,0,0,.7)}
+.messages{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.4rem 0 1.8rem}
+.messages span{font-family:'Fraunces',serif;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;padding:.45rem 1rem;border-radius:12px;color:#ffd77a;background:#7d2335;outline:2px dashed rgba(255,215,122,.45);outline-offset:-6px}
+.messages span:nth-child(2){background:#a64a26}.messages span:nth-child(3){background:#c79a7c;color:#fff}.messages span:nth-child(4){background:#9b3a2a}
+/* rendez-vous */
+.rdv-list{display:grid;gap:1rem;margin-top:2rem;position:relative}
+.rdv{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start;background:#fff;border-radius:20px;padding:1.2rem 1.3rem;box-shadow:0 20px 44px -36px rgba(31,42,86,.6)}
+.bouton-ico{width:46px;height:46px;border-radius:50%;background:var(--orange-c);display:grid;place-items:center}
+.rdv h3{font-size:1.12rem}
+.rdv p{font-size:.95rem}
+.rdv small{color:var(--rose);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem}
+.avis{margin-top:2.6rem;text-align:center;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.7rem);color:var(--marine)}
+.avis small{display:block;font-family:'Nunito',sans-serif;font-style:normal;font-size:.82rem;color:var(--doux);margin-top:.5rem}
+/* noel */
+.noel{background:linear-gradient(160deg,#16213f,#24305f);color:#eef0fa;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#ffd77a}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0 1.9rem}
+.idee{border:2px dashed rgba(255,215,122,.45);border-radius:18px;padding:1rem 1.2rem}
+.idee h3{color:#ffd77a;font-size:1.15rem;margin-bottom:.2rem}
+.idee p{font-size:.95rem}
+.etiquette{max-width:330px;margin:auto;transform:rotate(-4deg);transition:transform .6s}
+.etiquette:hover{transform:rotate(0)}
+.etiquette svg{width:100%;display:block;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.etiquette figcaption{text-align:center;font-size:.8rem;color:#b9bfda;margin-top:.6rem;transform:rotate(4deg)}
+.flocon{position:absolute;color:rgba(255,255,255,.18);font-size:1.4rem;animation:flotte 9s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(14px) rotate(20deg)}}
+/* contact */
+.contact{background:var(--lin)}
+.contact-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0}
+.infos b{color:var(--marine)}
+.infos p a{color:var(--rose);font-weight:700}
+.carte-ile{background:#fff;border-radius:26px;padding:1.6rem;text-align:center;outline:2px dashed var(--vert);outline-offset:-12px}
+.carte-ile img{width:150px;margin:0 auto .8rem}
+.carte-ile p{font-family:'Caveat',cursive;font-size:1.6rem;color:var(--marine);line-height:1.2}
+footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--doux);background:var(--lin)}
+.couture-sep{display:block;width:100%;height:30px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .atelier,.kits-top,.coussins-in,.noel-in,.contact-in,.brode{grid-template-columns:1fr}
+ .cartes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding:0 0 1rem;margin-right:-5vw;-webkit-overflow-scrolling:touch}
+ .cartes .carte{flex:0 0 78%;scroll-snap-align:start}
+ .ile{max-width:300px}
+ .ribbon{font-size:.7rem}
+ .hero-in{padding-top:6rem}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#fils{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour BNM CREA Couture</div>
+<canvas id="fils" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/stand-coussins-brodes.webp" alt="Le stand BNM CREA Couture : bannière « Fait main » et coussins brodés Papa en or, Je t'aime papa, Bonne fête papa, Papa dévoué"></div>
+  <div class="wrap hero-in">
+    <div class="badge apparait"><img src="img/logo-bnm.webp" alt="Logo BNM Créa Couture : une machine à coudre dessinée sur l'île de La Réunion, since 2019"></div>
+    <p class="eyebrow apparait">Couture &amp; créations faites main · La Rivière Saint-Louis</p>
+    <h1 class="apparait d2">BNM CREA Couture<span class="main">brodé au prénom, cousu avec passion</span></h1>
+    <svg class="fil-hero apparait d2" viewBox="0 0 340 24" aria-hidden="true"><path d="M2 14c40-12 80-12 120 0s80 12 120 0 64-10 96-4" fill="none" stroke="#f6d3e0" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <p class="lead apparait d3">Draps de lit Picot, serviettes de cantine, sacs pochons, coussins personnalisés et déco maison : des créations artisanales, réalisées à la main à La Réunion depuis 2019.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262692776701?text=Bonjour%20BNM%20CREA%20Couture%2C%20je%20voudrais%20commander%20une%20cr%C3%A9ation%20personnalis%C3%A9e">Commander sur WhatsApp</a>
+      <a class="btn btn-line" href="#kits">Les créations</a>
+    </div>
+    <p class="adr apparait d3">27 Route de Cilaos, La Rivière Saint-Louis · <a href="tel:+262692776701">0692 77 67 01</a></p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Draps de lit Picot</span><span>Serviettes de cantine</span><span>Serviettes essuie-main</span><span>Sacs pochons</span><span>Trousses</span><span>Sacs à dos</span><span>Coussins personnalisés</span><span>Déco maison</span><span>Broderie du prénom</span>
+<span>Draps de lit Picot</span><span>Serviettes de cantine</span><span>Serviettes essuie-main</span><span>Sacs pochons</span><span>Trousses</span><span>Sacs à dos</span><span>Coussins personnalisés</span><span>Déco maison</span><span>Broderie du prénom</span>
+</div></div>
+
+<section class="wrap atelier">
+  <div class="rv">
+    <p class="eyebrow">L'atelier</p>
+    <h2>Une machine à coudre au cœur de l'île</h2>
+    <p>Le logo de BNM CREA Couture dit tout : une machine à coudre dessinée au crayon sur la carte de La Réunion, un ruban rose qui s'en échappe, et la date qui compte, <b>since 2019</b>.</p>
+    <p>À l'atelier de la Route de Cilaos, l'équipe confectionne des créations utiles et jolies : le linge des tout-petits pour la crèche et l'école, des coussins brodés de messages tendres, des sacs, des accessoires et de la déco pour la maison.</p>
+    <p class="devise">« Venez découvrir nos créations artisanales, réalisées avec passion. »</p>
+    <div class="chiffres">
+      <div><b>2019</b><span>des créations depuis</span></div>
+      <div><b>936</b><span>abonnés sur Facebook</span></div>
+    </div>
+  </div>
+  <figure class="ile rv">
+    <img src="img/logo-bnm.webp" alt="Le logo dessiné de BNM Créa Couture" loading="lazy">
+    <figcaption>Le logo dessiné de BNM Créa Couture</figcaption>
+  </figure>
+</section>
+
+<section class="kits" id="kits">
+  <div class="wrap">
+    <div class="kits-top">
+      <div class="rv">
+        <p class="eyebrow">Crèche, maternelle &amp; école</p>
+        <h2><span class="dodo">Le dodo tout doux à l'école !</span>Les kits des Ptits Bou'w Chou</h2>
+        <p>Des accessoires aussi pratiques que jolis, confectionnés avec soin et personnalisés avec la <b>broderie du prénom</b> de votre enfant. Pour préparer la rentrée de vos Ptits Bou'w Chou de manière originale.</p>
+        <div class="atouts"><span>Fabrication artisanale</span><span>Coton doux &amp; résistant</span><span>Lavable en machine à 30°</span><span>Plusieurs motifs</span></div>
+      </div>
+      <figure class="photo rv"><img src="img/draps-lit-picot.webp" alt="Deux draps de lit Picot cousus par BNM CREA Couture : motif petits camions rouges sur fond crème, et motif fées sur fond vert sapin" loading="lazy"><figcaption>Draps de lit Picot · photo publiée par BNM CREA Couture</figcaption></figure>
+    </div>
+    <div class="cartes">
+      <div class="carte rv"><small>Pour la sieste</small><h3>Draps de lit Picot</h3><p>Tout doux et confortables, idéals pour la sieste à l'école ou à la crèche.</p></div>
+      <div class="carte rv"><small>Pour la cantine</small><h3>Serviettes de cantine</h3><p>Pratiques et jolies, pour un repas tout en couleur, brodées au prénom.</p></div>
+      <div class="carte rv"><small>Pour le doudou</small><h3>Sacs pochons</h3><p>Parfaits pour ranger le doudou, les affaires de rechange et bien plus encore.</p></div>
+      <div class="carte rv"><small>Pour les petites mains</small><h3>Serviettes essuie-main</h3><p>Confectionnées avec soin, assorties au reste du kit.</p></div>
+      <div class="carte rv"><small>Pour le cartable</small><h3>Trousses &amp; sacs à dos</h3><p>À personnaliser selon vos préférences.</p></div>
+    </div>
+
+    <div class="brode rv">
+      <div>
+        <p class="eyebrow">Essayez la broderie</p>
+        <h3 style="font-size:1.6rem">Le prénom de votre enfant, brodé sur son pochon</h3>
+        <label for="prenom">Tapez un prénom</label>
+        <input id="prenom" maxlength="12" value="Léa" autocomplete="off">
+        <p style="margin-top:1rem;font-weight:700;color:var(--marine)">Choisissez un tissu</p>
+        <div class="motifs" role="group" aria-label="Tissu">
+          <button style="background:#fbf3ea" data-f="#fbf3ea" data-m="#d84a4a" aria-pressed="true" aria-label="Crème et rouge"></button>
+          <button style="background:#2f3d3a" data-f="#2f3d3a" data-m="#f2b39a" aria-pressed="false" aria-label="Vert sapin et pêche"></button>
+          <button style="background:#f4a6c4" data-f="#f4a6c4" data-m="#ffffff" aria-pressed="false" aria-label="Rose"></button>
+          <button style="background:#2d4a8a" data-f="#2d4a8a" data-m="#ffd77a" aria-pressed="false" aria-label="Bleu nuit"></button>
+        </div>
+        <p style="margin-top:1.2rem;font-size:.92rem;color:var(--doux)">Princesses, champignons, fées, véhicules et bien d'autres : demandez les motifs du moment.</p>
+        <a class="btn btn-main" style="margin-top:1.2rem" id="waKit" href="https://wa.me/262692776701?text=Bonjour%2C%20je%20voudrais%20un%20kit%20maternelle%20brod%C3%A9%20au%20pr%C3%A9nom">Commander ce kit</a>
+      </div>
+      <figure class="pochon">
+        <svg viewBox="0 0 320 340" role="img" aria-label="Illustration d'un sac pochon brodé au prénom">
+          <defs>
+            <pattern id="pois" width="34" height="34" patternUnits="userSpaceOnUse"><rect id="fondP" width="34" height="34" fill="#fbf3ea"/><circle class="m" cx="8" cy="9" r="3.4" fill="#d84a4a"/><circle class="m" cx="25" cy="26" r="3.4" fill="#d84a4a"/><path class="m" d="M22 7l2 3.5 3.8.6-2.8 2.6.7 3.8-3.7-1.8-3.4 1.8.6-3.8-2.7-2.6 3.8-.6z" fill="#d84a4a" opacity=".55"/></pattern>
+          </defs>
+          <path d="M120 40c-30 0-60 4-62 10" stroke="#f08db0" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M200 40c30 0 60 4 62 10" stroke="#f08db0" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M60 52h200l14 252c1 14-9 24-23 24H69c-14 0-24-10-23-24z" fill="url(#pois)" stroke="#1f2a56" stroke-opacity=".15" stroke-width="2"/>
+          <path d="M60 52h200v26H60z" fill="#1f2a56" opacity=".1"/>
+          <path d="M64 66h192" stroke="#fff" stroke-width="2" stroke-dasharray="6 5"/>
+          <rect x="82" y="170" width="156" height="66" rx="12" fill="#f6d3e0"/>
+          <rect x="89" y="177" width="142" height="52" rx="8" fill="none" stroke="#d6447a" stroke-width="2" stroke-dasharray="5 4"/>
+          <text id="nomBrode" x="160" y="216" text-anchor="middle" font-size="38" fill="#1f2a56">Léa</text>
+          <path d="M52 312h216" stroke="#fff" stroke-width="2" stroke-dasharray="6 5" opacity=".7"/>
+        </svg>
+        <figcaption>Illustration · aperçu imaginé pour s'amuser avec la broderie</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="coussins">
+  <div class="wrap coussins-in">
+    <figure class="photo rv"><img src="img/stand-coussins-brodes.webp" alt="Coussins en velours côtelé brodés : Papa dévoué, Bonne fête papa, Je t'aime papa, Papa en or" loading="lazy"><figcaption>Le stand « Fait main » · photo publiée par BNM CREA Couture</figcaption></figure>
+    <div class="rv">
+      <p class="eyebrow">Coussins personnalisés</p>
+      <h2>Un message brodé, un cadeau unique</h2>
+      <p>Velours côtelé aux couleurs chaudes, lettres brodées une à une : les coussins personnalisés de BNM CREA Couture transforment trois mots tendres en un cadeau qui reste. Des créations faites avec amour, pour la Fête des Pères et toutes les belles occasions.</p>
+      <div class="messages"><span>Papa en or</span><span>Papa dévoué</span><span>Bonne fête papa</span><span>Je t'aime papa</span></div>
+      <a class="btn btn-main" href="https://wa.me/262692776701?text=Bonjour%2C%20je%20voudrais%20un%20coussin%20brod%C3%A9%20personnalis%C3%A9">Mon coussin brodé</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="rdv">
+  <div class="rv"><p class="eyebrow">Venir voir les créations en vrai</p><h2>L'atelier, les marchés, les kiosques</h2><p>BNM CREA Couture aime partager son univers : à l'atelier, et sur les marchés artisanaux de l'île, pour toucher les tissus et choisir ensemble.</p></div>
+  <div class="rdv-list">
+    <div class="rdv rv"><div class="bouton-ico"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="#cf6f37"/><circle cx="9.5" cy="9.5" r="1.8" fill="#f6dcc8"/><circle cx="16.5" cy="9.5" r="1.8" fill="#f6dcc8"/><circle cx="9.5" cy="16.5" r="1.8" fill="#f6dcc8"/><circle cx="16.5" cy="16.5" r="1.8" fill="#f6dcc8"/></svg></div><div><small>L'atelier</small><h3>27 Route de Cilaos, La Rivière Saint-Louis</h3><p>Près de France Travail : l'adresse où retrouver les créations couture et les cadeaux faits main.</p></div></div>
+    <div class="rdv rv"><div class="bouton-ico"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="#d6447a"/><circle cx="10" cy="13" r="1.9" fill="#fbeaf0"/><circle cx="16" cy="13" r="1.9" fill="#fbeaf0"/></svg></div><div><small>Marché forain</small><h3>La Rivière Saint-Louis</h3><p>Le stand des créations artisanales s'installe au marché forain de La Rivière, comme le vendredi 17 juillet 2026, de 14h à 18h.</p></div></div>
+    <div class="rdv rv"><div class="bouton-ico"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="11" fill="#7fae4a"/><circle cx="9.5" cy="9.5" r="1.8" fill="#e5f0d6"/><circle cx="16.5" cy="9.5" r="1.8" fill="#e5f0d6"/><circle cx="9.5" cy="16.5" r="1.8" fill="#e5f0d6"/><circle cx="16.5" cy="16.5" r="1.8" fill="#e5f0d6"/></svg></div><div><small>Dimanche 13 septembre 2026</small><h3>Les Grands Kiosques, Plaine des Cafres</h3><p>Sacs, coussins, accessoires, déco maison : une journée pour voir les créations en vrai et soutenir les artisans locaux.</p></div></div>
+  </div>
+  <p class="avis rv">« Faites leur confiance, ils font du travail soigné et magnifique. »<small>Un avis publié sur la page Facebook de BNM CREA Couture</small></p>
+</section>
+
+<section class="noel" id="noel">
+  <span class="flocon" style="top:12%;left:6%" aria-hidden="true">✻</span><span class="flocon" style="top:70%;left:88%;animation-delay:-3s" aria-hidden="true">✻</span><span class="flocon" style="top:40%;left:94%;animation-delay:-6s" aria-hidden="true">✻</span>
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un cadeau brodé, cousu main à La Réunion</h2>
+      <div class="idees">
+        <div class="idee"><h3>Un coussin au message brodé</h3><p>Le prénom, un petit mot tendre, une phrase de famille : le cadeau qu'on garde longtemps.</p></div>
+        <div class="idee"><h3>Un sac ou une trousse personnalisés</h3><p>Pour les petits comme pour les grands, avec la broderie du prénom.</p></div>
+        <div class="idee"><h3>Une jolie pièce de déco maison</h3><p>Une création unique et faite main, à glisser sous le sapin.</p></div>
+      </div>
+      <p style="margin-bottom:1.4rem">Racontez votre idée à BNM CREA Couture : on la brode avec plaisir pour les fêtes.</p>
+      <a class="btn btn-main" href="https://wa.me/262692776701?text=Bonjour%20BNM%20CREA%20Couture%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20brod%C3%A9e%20pour%20No%C3%ABl">Commander mon cadeau brodé</a>
+    </div>
+    <figure class="etiquette rv">
+      <svg viewBox="0 0 300 380" role="img" aria-label="Illustration d'une étiquette cadeau cousue">
+        <path d="M150 6c-10 0-18 8-18 18s8 18 18 18 18-8 18-18" fill="none" stroke="#ffd77a" stroke-width="3"/>
+        <path d="M60 50l90-30 90 30v300c0 12-10 22-22 22H82c-12 0-22-10-22-22z" fill="#d6447a"/>
+        <path d="M74 60l76-25 76 25v284c0 8-6 14-14 14H88c-8 0-14-6-14-14z" fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="7 6"/>
+        <circle cx="150" cy="58" r="9" fill="#16213f"/>
+        <text x="150" y="160" text-anchor="middle" font-family="Caveat,cursive" font-size="54" font-weight="700" fill="#fff">Joyeux</text>
+        <text x="150" y="215" text-anchor="middle" font-family="Caveat,cursive" font-size="54" font-weight="700" fill="#ffd77a">Noël</text>
+        <path d="M108 245h84" stroke="#fff" stroke-width="2" stroke-dasharray="5 5"/>
+        <text x="150" y="285" text-anchor="middle" font-family="Nunito,sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#fbeaf0">FAIT MAIN</text>
+        <text x="150" y="312" text-anchor="middle" font-family="Nunito,sans-serif" font-size="11.5" letter-spacing="1" fill="#fbeaf0">BNM CREA COUTURE</text>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Commander</p>
+      <h2>Parlons de votre création</h2>
+      <p><b>Atelier</b> · 27 Route de Cilaos, près de France Travail, La Rivière Saint-Louis</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692776701">0692 77 67 01</a></p>
+      <p><b>Commandes &amp; renseignements</b> · par WhatsApp ou en message privé sur Facebook</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262692776701?text=Bonjour%20BNM%20CREA%20Couture%2C%20je%20voudrais%20des%20renseignements">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692776701">Appeler</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/100373551311717">Facebook</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=27%20Route%20de%20Cilaos%2097421%20Saint-Louis%20La%20R%C3%A9union">Itinéraire</a>
+      </div>
+    </div>
+    <div class="carte-ile rv"><img src="img/logo-bnm.webp" alt="Logo BNM Créa Couture" loading="lazy"><p>Chaque création est réalisée avec amour, à La Rivière Saint-Louis.</p></div>
+  </div>
+</section>
+
+<footer>BNM CREA Couture · Couture et créations faites main · La Rivière Saint-Louis, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de BNM CREA Couture.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* broderie du prénom */
+const inp=document.getElementById('prenom'),nb=document.getElementById('nomBrode'),wa=document.getElementById('waKit');
+function maj(){const v=inp.value.trim()||'Léa';nb.textContent=v;nb.setAttribute('font-size',v.length>8?28:38);wa.href='https://wa.me/262692776701?text='+encodeURIComponent('Bonjour, je voudrais un kit maternelle brodé au prénom « '+v+' »')}
+inp.addEventListener('input',maj);
+document.querySelectorAll('.motifs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.motifs button').forEach(o=>o.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');document.getElementById('fondP').setAttribute('fill',b.dataset.f);document.querySelectorAll('#pois .m').forEach(m=>m.setAttribute('fill',b.dataset.m))}));
+/* boutons de couture et bouts de fil qui flottent */
+const c=document.getElementById('fils'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const col=['#d6447a','#7fae4a','#cf6f37','#f6d3e0','#1f2a56'];
+for(let i=0;i<24;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*4+3.5,v:Math.random()*.22+.07,a:Math.random()*6.28,s:Math.random()*.01+.004,c:col[i%5],t:i%4==0,h:i%3?4:2});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.v;p.a+=p.s;p.x+=Math.sin(p.a*3)*.2;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}
+ x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=.32;
+ if(p.t){x.strokeStyle=p.c;x.lineWidth=1.6;x.setLineDash([4,3]);x.beginPath();x.moveTo(-14,0);x.bezierCurveTo(-6,-10,6,10,14,0);x.stroke();x.setLineDash([])}
+ else{x.fillStyle=p.c;x.beginPath();x.arc(0,0,p.r,0,6.28);x.fill();x.fillStyle='#fdf8f1';const d=p.r*.33;
+  if(p.h==4){for(const[q,w]of[[-d,-d],[d,-d],[-d,d],[d,d]]){x.beginPath();x.arc(q,w,p.r*.15,0,6.28);x.fill()}}
+  else{for(const q of[-d,d]){x.beginPath();x.arc(q,0,p.r*.17,0,6.28);x.fill()}}}
+ x.restore()}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="BNM CREA Couture" defer></script>
+</body>
+</html>
