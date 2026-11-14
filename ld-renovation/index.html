@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>LD Renovation · Rénovation et construction au Tampon</title>
+<meta name="description" content="LD Renovation, entreprise de rénovation et construction au Tampon (La Réunion) : maçonnerie, clôture, constructions villas, peinture, carrelage, plomberie, terrasses bois. RC + décennale. 0692 95 40 84.">
+<meta property="og:title" content="LD Renovation · Rénovation et construction, Le Tampon">
+<meta property="og:description" content="Maçonnerie, carrelage, terrasses bois, constructions villas : les chantiers de LD Renovation au Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ld-renovation/img/terrasse-bois-jardin.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ld-renovation/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#2b3190;--bleu-f:#1b1f63;--rouge:#e3343f;--rouge-f:#b8222c;--basalte:#1e2026;--basalte-c:#3a3d46;--chaux:#f6f4ef;--beton:#e7e4dd;--bois:#7a3f22;--bois-c:#c27a4b;--miel:#e8b07a;--txt:#2a2c33;--doux:#6c6f78}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,Arial,sans-serif;font-weight:400;color:var(--txt);background:var(--chaux);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Archivo',sans-serif;font-weight:800;color:var(--basalte);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,7vw,3.2rem);margin:.4rem 0 1.1rem}
+h2 em{font-style:normal;color:var(--rouge)}
+h3{font-size:1.2rem;font-weight:700}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--rouge);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--basalte);color:#c9ccd6;text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4;border-bottom:2px solid var(--rouge)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#sciure{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:6px;text-decoration:none;font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -14px rgba(227,52,63,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(227,52,63,.65)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-bleu{background:var(--bleu);color:#fff}
+.btn-bleu:hover{background:var(--bleu-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--basalte);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 60%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,32,38,.45) 0%,rgba(30,32,38,.2) 30%,rgba(30,32,38,.75) 65%,rgba(27,31,99,.96) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 4rem}
+.logo{display:flex;align-items:flex-end;gap:.6rem;line-height:.8}
+.logo .ent{writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Archivo';font-weight:700;font-size:.72rem;letter-spacing:.2em;color:#fff;opacity:.85;padding-bottom:.2rem}
+.logo .ld{font-family:'Archivo';font-weight:900;font-size:clamp(5.2rem,26vw,10rem);color:#fff;letter-spacing:-.04em;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+.logo .reno{font-family:'Archivo';font-weight:800;font-size:clamp(1.6rem,7.6vw,3.2rem);color:var(--rouge);padding-bottom:.35rem;text-shadow:0 2px 14px rgba(0,0,0,.5);background:#fff;padding:.1em .25em;border-radius:3px;margin-bottom:.5rem}
+.hero h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero .lead{font-size:1.18rem;max-width:34rem;margin:1.3rem 0 1.8rem;color:#f1f1f4;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.6rem}
+.badge{font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .7rem;border:1px solid rgba(255,255,255,.4);border-radius:4px;background:rgba(255,255,255,.08);backdrop-filter:blur(4px)}
+.badge.r{background:var(--rouge);border-color:var(--rouge)}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:.95s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--bleu-f);color:#fff;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Archivo';font-weight:700;font-size:1rem;text-transform:uppercase;letter-spacing:.12em;border-top:4px solid var(--rouge)}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"";display:inline-block;width:.55rem;height:.55rem;background:var(--rouge);margin-left:2.2rem;transform:rotate(45deg) translateY(-2px)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* intro */
+.intro{background:var(--chaux)}
+.intro p.big{font-size:clamp(1.25rem,4.4vw,1.6rem);line-height:1.45;color:var(--basalte);max-width:46rem;font-weight:500}
+.intro p.big b{color:var(--bleu)}
+.cles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:2.4rem}
+.cle{border-left:4px solid var(--rouge);padding:.3rem 0 .3rem 1rem}
+.cle strong{display:block;font-family:'Archivo';font-weight:800;font-size:1.3rem;color:var(--bleu)}
+.cle span{font-size:.92rem;color:var(--doux)}
+/* savoir-faire */
+.sf{background:var(--beton);background-image:linear-gradient(90deg,rgba(255,255,255,.55) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.55) 1px,transparent 1px);background-size:56px 56px}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+.carte{background:#fff;border-radius:8px;padding:1.4rem 1.3rem;box-shadow:0 10px 30px -22px rgba(30,32,38,.6);transition:.35s;border-bottom:3px solid transparent}
+.carte:hover{transform:translateY(-5px);border-bottom-color:var(--rouge)}
+.carte svg{width:42px;height:42px;color:var(--bleu);margin-bottom:.7rem}
+.carte p{color:var(--doux);font-size:.97rem;margin-top:.35rem}
+/* galerie */
+.chantiers{background:var(--basalte);color:#e8e9ee}
+.chantiers h2{color:#fff}
+.chantiers .eyebrow{color:var(--miel)}
+.chantiers .sous{color:#b9bcc6;max-width:38rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 5vw 1.2rem;margin:0 calc(50% - 50vw);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(78vw,330px);scroll-snap-align:center;position:relative;border-radius:8px;overflow:hidden;background:#111}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .9rem;background:linear-gradient(transparent,rgba(20,21,26,.92));font-size:.95rem;color:#fff;line-height:1.35}
+.galerie figcaption small{display:block;color:var(--miel);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.2rem}
+.glisse{font-size:.82rem;color:#9599a4;text-align:right;letter-spacing:.08em}
+/* bois */
+.bois{background:linear-gradient(180deg,#2b170e,#4a2717);color:#f5e6d8;overflow:hidden}
+.bois::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(100deg,rgba(255,255,255,.035) 0 2px,transparent 2px 46px);pointer-events:none}
+.bois h2{color:#fff}.bois h2 em{color:var(--miel)}
+.bois .eyebrow{color:var(--miel)}
+.duo{display:grid;gap:1.2rem;margin-top:2rem}
+@media(min-width:760px){.duo{grid-template-columns:1.2fr 1fr;align-items:center}}
+.duo .ph{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 30px 60px -30px #000}
+.duo .ph img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.duo .ph.b img{aspect-ratio:1/1}
+.duo p{color:#ead6c4;margin-bottom:1rem}
+.etiq{position:absolute;top:.8rem;left:.8rem;background:rgba(43,23,14,.75);color:var(--miel);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .6rem;border-radius:4px}
+/* carnet */
+.carnet{background:var(--chaux)}
+.frise{list-style:none;margin-top:2rem;position:relative;padding-left:1.6rem}
+.frise::before{content:"";position:absolute;left:.4rem;top:.4rem;bottom:.4rem;width:3px;background:linear-gradient(var(--bleu),var(--rouge));border-radius:3px}
+.frise li{position:relative;padding:0 0 1.8rem 1rem}
+.frise li::before{content:"";position:absolute;left:-1.55rem;top:.35rem;width:15px;height:15px;background:#fff;border:3px solid var(--rouge);transform:rotate(45deg)}
+.frise .date{font-family:'Archivo';font-weight:700;color:var(--bleu);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.frise q{display:block;font-size:1.2rem;color:var(--basalte);font-weight:500;margin-top:.15rem;quotes:"« " " »"}
+.frise .note{font-size:.88rem;color:var(--doux)}
+.mots{font-size:.88rem;color:var(--doux);margin-top:.4rem}
+/* photos duo carrelage */
+.carrelage{background:#fff}
+.mosaique{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-top:2rem}
+.mosaique figure{border-radius:8px;overflow:hidden;position:relative}
+.mosaique img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4}
+.mosaique figure.l{grid-row:span 2}
+.mosaique figure.l img{aspect-ratio:auto;height:100%}
+.mosaique figcaption{position:absolute;bottom:.5rem;left:.5rem;background:rgba(255,255,255,.92);font-size:.75rem;padding:.2rem .5rem;border-radius:3px;color:var(--basalte);font-weight:600}
+/* avis */
+.avis{background:var(--bleu);color:#fff;text-align:center}
+.avis .eyebrow{color:#ffb3b8}
+.avis blockquote{font-family:'Archivo';font-weight:700;font-size:clamp(1.4rem,5.6vw,2.2rem);line-height:1.2;max-width:40rem;margin:1rem auto}
+.avis blockquote::before{content:"“";display:block;font-size:3.5rem;color:var(--rouge);line-height:.6;margin-bottom:.4rem}
+.avis .src{color:#c3c6f0;font-size:.88rem}
+.avis .petit{font-family:'Barlow';font-weight:500;font-size:1.15rem;max-width:32rem;margin:2rem auto .4rem;color:#e4e6fb}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0%,#2a2f8f 0%,#14173f 70%);color:#eef0ff;overflow:hidden;text-align:center}
+.noel h2{color:#fff}.noel h2 em{color:#ff6b74}
+.noel .eyebrow{color:#ffd28a}
+.noel p{max-width:36rem;margin:0 auto 1rem;color:#d7daf7}
+.guirlande{position:absolute;top:0;left:0;right:0;height:46px;pointer-events:none}
+.guirlande circle{animation:luit 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes luit{50%{opacity:.25}}
+.idees{display:grid;gap:.8rem;max-width:44rem;margin:2rem auto 2.2rem;text-align:left}
+@media(min-width:700px){.idees{grid-template-columns:repeat(3,1fr)}}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:1.1rem}
+.idee b{display:block;font-family:'Archivo';color:#fff;margin-bottom:.2rem}
+.idee span{font-size:.92rem;color:#c8cbef}
+.noel .ctas{justify-content:center}
+.noel .mini{font-size:.78rem;color:#9a9fd6;margin-top:1.2rem}
+/* contact */
+.contact{background:var(--chaux)}
+.fiche{display:grid;gap:1rem;margin-top:1.8rem}
+@media(min-width:760px){.fiche{grid-template-columns:repeat(2,1fr)}}
+.ligne{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:8px;padding:1.1rem 1.2rem;text-decoration:none;box-shadow:0 10px 26px -22px rgba(30,32,38,.6);transition:.3s;min-width:0}
+a.ligne:hover{transform:translateY(-3px)}
+.ligne svg{width:28px;height:28px;color:var(--rouge);flex:none;margin-top:.15rem}
+.ligne b{display:block;font-family:'Archivo';color:var(--basalte)}
+.ligne span{color:var(--doux);font-size:.95rem;overflow-wrap:anywhere}
+.contact .ctas{margin-top:2rem}
+footer{background:var(--basalte);color:#9ea2ad;text-align:center;font-size:.85rem;padding:2.4rem 1.2rem 6rem;line-height:1.7;position:relative;z-index:2}
+footer b{color:#fff}
+.flottant{position:fixed;right:1rem;bottom:1rem;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.5);animation:souffle2 3s ease-in-out infinite}
+.flottant svg{width:30px;height:30px;color:#fff}
+@keyframes souffle2{50%{transform:scale(1.07)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.apparait{opacity:1;transform:none}canvas#sciure{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour LD Renovation</div>
+<canvas id="sciure" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/terrasse-bois-jardin.webp" alt="Terrasse en lames de bois posée par LD Renovation sous un abri, face à un jardin tropical et un mur en pierres"></div>
+  <div class="wrap hero-in">
+    <h1>LD Renovation, rénovation et construction au Tampon</h1>
+    <div class="logo apparait" aria-hidden="true"><span class="ent">Entreprise</span><span class="ld">LD</span><span class="reno">Rénovation</span></div>
+    <p class="lead apparait d2">Rénovation et construction au Tampon : maçonnerie, carrelage, terrasses en bois, plages de piscine et villas, de la toupie de béton à la « livraison du jour ».</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262692954084?text=Bonjour%20LD%20Renovation%2C%20je%20voudrais%20un%20devis%20pour%20mon%20projet"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6 0l.8-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.2 1.2Z"/></svg>Demander un devis</a>
+      <a class="btn btn-line" href="tel:+262692954084"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>0692 95 40 84</a>
+    </div>
+    <div class="badges apparait d3"><span class="badge r">RC + Décennale</span><span class="badge">Artisan</span><span class="badge">Le Tampon · 97430</span></div>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Maçonnerie</span><span>Clôture</span><span>Constructions villas</span><span>Rénovation immobilière</span><span>Peinture</span><span>Carrelage</span><span>Plomberie</span><span>Terrasses bois</span>
+  <span>Maçonnerie</span><span>Clôture</span><span>Constructions villas</span><span>Rénovation immobilière</span><span>Peinture</span><span>Carrelage</span><span>Plomberie</span><span>Terrasses bois</span>
+</div></div>
+
+<section class="intro">
+  <div class="wrap">
+    <p class="eyebrow rv">Rénovation et construction</p>
+    <h2 class="rv">Du gros œuvre<br>à la <em>finition</em>.</h2>
+    <p class="big rv">Une seule équipe pour toute la maison : <b>la maçonnerie et le bois</b>, la cour et la terrasse, la salle de bain et la plage de piscine. Au Tampon, LD Renovation partage chaque chantier sur sa page, de la toupie de béton à la « livraison du jour ».</p>
+    <div class="cles">
+      <div class="cle rv"><strong>RC + Décennale</strong><span>assurances affichées sur leur panneau</span></div>
+      <div class="cle rv"><strong>Maçonnerie &amp; bois</strong><span>deux savoir-faire réunis sous le même toit</span></div>
+      <div class="cle rv"><strong>Avant / après</strong><span>chaque réalisation montrée en photos</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sf" id="savoir-faire">
+  <div class="wrap">
+    <p class="eyebrow rv">Le savoir-faire</p>
+    <h2 class="rv">Tout ce qui fait<br>une <em>belle maison</em>.</h2>
+    <div class="cartes">
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 40h40M6 40V28h12v12M18 40V22h12v18M30 40V30h12v10M6 28h12M10 22h14"/></svg><h3>Maçonnerie</h3><p>Divers travaux de maçonnerie, murs, dalles et plages de piscine.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 42V12l4-5 4 5v30M22 42V12l4-5 4 5v30M36 42V12l4-5 4 5v30M4 20h44M4 34h44"/></svg><h3>Clôture</h3><p>Clôtures pour fermer et habiller votre terrain.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 22 24 6l20 16M9 18v24h30V18M20 42V30h8v12"/></svg><h3>Constructions villas</h3><p>Des villas construites par une équipe qui maîtrise maçonnerie et bois.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M10 42h28M14 42V20h20v22M14 20l10-10 10 10M30 8l8 8M34 4l8 8-4 4-8-8z"/></svg><h3>Rénovation immobilière</h3><p>Salles de bain et WC refaits à neuf, intérieurs remis au goût du jour.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M8 8h28v10H8zM36 13h4v10H22v6M19 29h6v13h-6z"/></svg><h3>Peinture</h3><p>Des finitions peintes pour un rendu net et lumineux.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 6h17v17H6zM25 6h17v17H25zM6 25h17v17H6zM25 25h17v17H25z"/></svg><h3>Carrelage</h3><p>Allées, balcons, escaliers et plages de piscine carrelés.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 14h20v8h12v20h-8V30H6zM38 30h4M12 14V8h8v6"/></svg><h3>Plomberie</h3><p>La plomberie de vos pièces d'eau, posée avec le reste du chantier.</p></div>
+      <div class="carte rv"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 36 24 26l20 10M4 36l20 8 20-8M10 33l20 9M16 30l20 9M22 27l18 8"/></svg><h3>Terrasses bois</h3><p>Lames de bois posées une à une, sous abri ou autour de la piscine.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chantiers" id="chantiers">
+  <div class="wrap">
+    <p class="eyebrow rv">Chantiers d'octobre 2026</p>
+    <h2 class="rv">Les dernières<br>réalisations.</h2>
+    <p class="sous rv">Toutes ces photos viennent de la page Facebook de LD Renovation, publiées entre le 26 et le 30 octobre 2026.</p>
+    <div class="galerie">
+      <figure><img src="img/terrasse-bois-abri.webp" alt="Terrasse en bois sous abri" loading="lazy"><figcaption><small>26 octobre 2026</small>Terrasse en lames de bois sous l'abri</figcaption></figure>
+      <figure><img src="img/allee-carrelage.webp" alt="Allée carrelée le long de la maison" loading="lazy"><figcaption><small>27 octobre 2026</small>Allée carrelée aux tons pierre, le long de la maison</figcaption></figure>
+      <figure><img src="img/escalier-carrelage.webp" alt="Escalier extérieur carrelé" loading="lazy"><figcaption><small>27 octobre 2026</small>Escalier extérieur carrelé, marches et plinthes</figcaption></figure>
+      <figure><img src="img/balcon-carrelage.webp" alt="Balcon carrelé en grands carreaux gris" loading="lazy"><figcaption><small>27 octobre 2026</small>Balcon en grands carreaux gris anthracite</figcaption></figure>
+      <figure><img src="img/allee-gravier-bordure.webp" alt="Allée en gravier avec bordure bois" loading="lazy"><figcaption><small>28 octobre 2026</small>Allée en gravier tenue par une bordure bois</figcaption></figure>
+      <figure><img src="img/allee-gravier-outils.webp" alt="Allée en gravier en cours, outils posés" loading="lazy"><figcaption><small>28 octobre 2026</small>Le chantier en cours, outils à portée de main</figcaption></figure>
+      <figure><img src="img/cour-villa.webp" alt="Cour de villa en gravillons" loading="lazy"><figcaption><small>30 octobre 2026</small>Une grande cour de villa toute neuve</figcaption></figure>
+      <figure><img src="img/cour-gravillons.webp" alt="Gros plan sur le revêtement en gravillons" loading="lazy"><figcaption><small>30 octobre 2026</small>Le grain du revêtement, en gros plan</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser →</p>
+  </div>
+</section>
+
+<section class="bois" id="bois">
+  <div class="wrap">
+    <p class="eyebrow rv">Maçonnerie et bois</p>
+    <h2 class="rv">Le bois,<br>lame après <em>lame</em>.</h2>
+    <div class="duo">
+      <div class="ph rv"><span class="etiq">Publié le 26/10/2026</span><img src="img/terrasse-bois-abri.webp" alt="Terrasse bois sous un abri blanc, mur de pierres au fond" loading="lazy"></div>
+      <div class="rv">
+        <p>Des lames aux teintes chaudes, du miel au brun profond, posées sous l'abri face au jardin. La terrasse prolonge la maison et invite à s'installer dehors.</p>
+        <div class="ph b"><img src="img/terrasse-bois-lames.webp" alt="Gros plan sur les lames de bois de la terrasse" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap">
+    <p class="eyebrow rv">Le carnet de chantier</p>
+    <h2 class="rv">Septembre 2026,<br>en <em>leurs mots</em>.</h2>
+    <p class="mots rv">Les légendes publiées sur la page Facebook, au fil d'un mois de chantiers.</p>
+    <ol class="frise">
+      <li class="rv"><span class="date">3 septembre</span><q>Réalisation d'une plage piscine avec pompe et camion toupie pour pose carrelage.</q></li>
+      <li class="rv"><span class="date">9 septembre</span><q>Piscine bientôt livrée, on attend la mise en eau.</q></li>
+      <li class="rv"><span class="date">10 septembre</span><q>Avant et après LD Rénovation.</q><q>Livraison du jour : SDB et WC refaits à neuf.</q></li>
+      <li class="rv"><span class="date">22 septembre</span><q>De toute beauté.</q><q>Livraison du jour : pose carrelage, parquet sur plage piscine.</q></li>
+    </ol>
+  </div>
+</section>
+
+<section class="carrelage">
+  <div class="wrap">
+    <p class="eyebrow rv">Le carrelage</p>
+    <h2 class="rv">Des finitions<br>au <em>cordeau</em>.</h2>
+    <div class="mosaique rv">
+      <figure class="l"><img src="img/escalier-carrelage.webp" alt="Escalier carrelé vu d'en haut" loading="lazy"><figcaption>Escalier</figcaption></figure>
+      <figure><img src="img/balcon-carrelage.webp" alt="Balcon carrelé" loading="lazy"><figcaption>Balcon</figcaption></figure>
+      <figure><img src="img/allee-carrelage.webp" alt="Allée carrelée" loading="lazy"><figcaption>Allée</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils recommandent LD Renovation</p>
+    <blockquote class="rv">Réactif et professionnel ! Toujours de bon conseil !</blockquote>
+    <p class="src rv">Avis laissé sur la page Facebook</p>
+    <p class="petit rv">« Une équipe très pro. Super boulot ! »</p>
+    <p class="src rv">Commentaire sous la publication du 22 septembre 2026</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 6 Q50 36 100 10 T200 10 T300 10 T400 6" fill="none" stroke="#6a70c9" stroke-width="1.2"/><g fill="#ffd28a"><circle cx="25" cy="18" r="2.6"/><circle cx="60" cy="27" r="2.6" fill="#ff6b74"/><circle cx="95" cy="12" r="2.6"/><circle cx="130" cy="21" r="2.6" fill="#ff6b74"/><circle cx="170" cy="18" r="2.6"/><circle cx="210" cy="11" r="2.6" fill="#ff6b74"/><circle cx="250" cy="20" r="2.6"/><circle cx="290" cy="12" r="2.6" fill="#ff6b74"/><circle cx="330" cy="19" r="2.6"/><circle cx="370" cy="12" r="2.6" fill="#ff6b74"/></g></svg>
+  <div class="wrap">
+    <p class="eyebrow rv">Pour Noël</p>
+    <h2 class="rv">Une maison prête<br>à <em>recevoir</em>.</h2>
+    <p class="rv">Noël, c'est la famille autour de la table. Une terrasse en bois pour le grand repas, une salle de bain refaite pour accueillir tout le monde, une cour toute neuve pour garer les voitures : parlons de votre projet des fêtes.</p>
+    <div class="idees">
+      <div class="idee rv"><b>La terrasse du repas</b><span>Des lames de bois chaleureuses, sous l'abri ou au soleil.</span></div>
+      <div class="idee rv"><b>La salle de bain</b><span>SDB et WC refaits à neuf, prêts pour les invités.</span></div>
+      <div class="idee rv"><b>Un projet à offrir</b><span>Offrez à vos proches le chantier dont ils rêvent.</span></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692954084?text=Bonjour%20LD%20Renovation%2C%20je%20voudrais%20pr%C3%A9parer%20la%20maison%20pour%20No%C3%ABl%20%3A%20pouvons-nous%20parler%20de%20mon%20projet%20%3F"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6 0l.8-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.2 1.2Z"/></svg>Mon projet des fêtes</a>
+    </div>
+    <p class="mini rv">Calendrier des chantiers à voir directement avec LD Renovation.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Contact</p>
+    <h2 class="rv">Parlons de<br>votre <em>chantier</em>.</h2>
+    <div class="fiche">
+      <a class="ligne rv" href="tel:+262692954084"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg><div><b>0692 95 40 84</b><span>Appel ou WhatsApp</span></div></a>
+      <a class="ligne rv" href="mailto:lauret_david@orange.fr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg><div><b>E-mail</b><span>lauret_david@orange.fr</span></div></a>
+      <a class="ligne rv" href="https://www.google.com/maps/search/?api=1&amp;query=201+chemin+Portail+97430+Le+Tampon" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>201 chemin Portail</b><span>97430 Le Tampon, La Réunion</span></div></a>
+      <a class="ligne rv" href="https://www.facebook.com/p/LD-Renovation-100063798060730" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v8h4v-8h3l1-4h-4V8.6c0-.4.3-.6.6-.6Z"/></svg><div><b>Facebook</b><span>Tous les chantiers, au jour le jour</span></div></a>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692954084?text=Bonjour%20LD%20Renovation%2C%20je%20voudrais%20un%20devis%20pour%20mon%20projet">Demander un devis sur WhatsApp</a>
+      <a class="btn btn-bleu" href="tel:+262692954084">Appeler</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><b>LD Renovation</b> · Rénovation et construction · Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de LD Renovation.</footer>
+<a class="flottant" href="https://wa.me/262692954084?text=Bonjour%20LD%20Renovation%2C%20je%20voudrais%20un%20devis%20pour%20mon%20projet" aria-label="Écrire à LD Renovation sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6 0l.8-1c.2-.3.4-.2.6-.1l2 .9c.3.2.5.2.5.4.1.1.1.7-.2 1.2Z"/></svg></a>
+
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('sciure'),x=c.getContext('2d'),W,H,P=[],run=true;
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+var cols=['194,122,75','232,176,122','122,63,34','200,196,188'];
+for(var i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:.8+Math.random()*2.2,w:Math.random()*Math.PI*2,vy:.12+Math.random()*.35,vx:(Math.random()-.5)*.25,a:.18+Math.random()*.35,c:cols[i%4],rot:Math.random()*6,long:Math.random()<.4});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(p){p.w+=.01;p.y+=p.vy;p.x+=p.vx+Math.sin(p.w)*.3;p.rot+=.01;if(p.y>H+10){p.y=-10;p.x=Math.random()*W}
+x.save();x.translate(p.x,p.y);x.rotate(p.rot);x.fillStyle='rgba('+p.c+','+p.a+')';
+if(p.long){x.fillRect(-p.r*2,-p.r*.4,p.r*4,p.r*.8)}else{x.beginPath();x.arc(0,0,p.r,0,7);x.fill()}x.restore()});
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="LD Renovation" defer></script>
+</body>
+</html>
