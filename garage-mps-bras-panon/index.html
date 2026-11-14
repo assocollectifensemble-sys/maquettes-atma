@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Garage MPS · Mécanique & optimisation moteur à Bras-Panon</title>
+<meta name="description" content="Garage MPS, 7 rue des Dattiers à Bras-Panon : mécanique générale, optimisation moteur et boîte auto, soudures inox, fonte, alu, codage VAG. Revendeur officiel Turbosmart. 0692 56 55 77.">
+<meta property="og:title" content="Garage MPS · Bras-Panon">
+<meta property="og:description" content="Mécanique générale, optimisation moteur et boîte, soudures inox, fonte, alu, codage VAG. Revendeur officiel Turbosmart.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/garage-mps-bras-panon/img/flammes-banc.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/garage-mps-bras-panon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;600&family=Kaushan+Script&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#101013;--acier:#1b1c21;--gris:#2a2c33;--argent:#c9ccd3;--blanc:#f4f2ee;--feu:#ff7a1a;--braise:#ffb347;--bordeaux:#9b2335;--txt:#d9dade;--doux:#9a9ca5}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--nuit);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;color:var(--blanc);letter-spacing:.03em;line-height:1}
+h2{font-size:clamp(2.6rem,9vw,4.4rem);margin:.4rem 0 1.2rem}
+h3{font-size:1.6rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--feu);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4.2rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:#000;color:var(--argent);text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(255,122,26,.35)}
+.ribbon b{color:var(--braise);font-weight:600}
+canvas#etincelles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:6px;text-decoration:none;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem;transition:.3s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-feu{background:linear-gradient(135deg,var(--feu),#e2470e);color:#fff;box-shadow:0 12px 30px -12px rgba(255,122,26,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-feu:hover{filter:brightness(1.1)}
+@keyframes souffle{50%{box-shadow:0 12px 44px -6px rgba(255,122,26,.75)}}
+.btn-ligne{border:1px solid rgba(201,204,211,.55);color:var(--blanc)}
+.btn-ligne:hover{background:rgba(255,255,255,.08)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.hero picture,.hero .fond{position:absolute;inset:0}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.13) translate(0,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,16,19,.55) 0%,rgba(16,16,19,.2) 30%,rgba(16,16,19,.75) 62%,var(--nuit) 100%)}
+.hero-in{position:relative;z-index:2;padding:8rem 0 3.6rem;margin:0 auto}
+.logo{line-height:.9;margin:.6rem 0 0}
+.logo .g{display:block;font-family:'Kaushan Script',cursive;color:var(--braise);font-size:clamp(2.4rem,10vw,4.4rem);transform:rotate(-6deg);transform-origin:left;margin-left:.1em;text-shadow:0 4px 24px rgba(255,122,26,.5)}
+.logo .m{display:block;font-family:'Playfair Display',serif;font-weight:900;color:#fff;font-size:clamp(5.2rem,26vw,10rem);letter-spacing:.02em;margin-top:-.12em;text-shadow:0 6px 40px rgba(0,0,0,.6)}
+.hero .lead{font-size:1.15rem;max-width:34rem;margin:1rem 0 1.8rem;color:var(--blanc);text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:var(--argent);letter-spacing:.04em}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1s .2s forwards}
+.apparait.d2{animation-delay:.45s}.apparait.d3{animation-delay:.7s}
+@media(max-width:640px){.hero{align-items:flex-start;min-height:900px}.hero-in{padding:4.6rem 0 2rem}.hero img{object-position:center bottom}.hero::after{background:linear-gradient(180deg,rgba(16,16,19,.92) 0%,rgba(16,16,19,.78) 45%,rgba(16,16,19,.1) 66%,rgba(16,16,19,0) 85%,var(--nuit) 100%)}}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bandeau{background:linear-gradient(90deg,var(--bordeaux),#c0392b 50%,var(--bordeaux));overflow:hidden;white-space:nowrap;padding:.85rem 0;position:relative;z-index:3;transform:skewY(-2deg);margin:-1rem 0 1rem}
+.bandeau .piste{display:inline-block;animation:defile 34s linear infinite;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.12em;color:#fff}
+.bandeau span{margin:0 1.1rem}.bandeau i{color:var(--braise);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* révéler */
+.rv{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+/* atelier */
+.intro{font-size:1.12rem;max-width:42rem;color:var(--txt)}
+.intro b{color:var(--blanc);font-weight:600}
+.cartes{display:grid;gap:1rem;margin-top:2.4rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.carte{background:linear-gradient(160deg,var(--gris),var(--acier));border:1px solid rgba(255,255,255,.06);border-radius:10px;padding:1.5rem 1.4rem;position:relative;overflow:hidden;transition:.35s}
+.carte::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--feu),var(--bordeaux))}
+.carte:hover{transform:translateY(-4px);border-color:rgba(255,122,26,.4)}
+.carte svg{width:38px;height:38px;color:var(--feu);margin-bottom:.8rem}
+.carte p{color:var(--doux);font-size:.98rem;margin-top:.35rem}
+.vehicules{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.6rem}
+.vehicules span{border:1px solid rgba(255,122,26,.45);color:var(--braise);border-radius:99px;padding:.3rem .9rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase}
+/* optimisation */
+.optim{background:radial-gradient(ellipse at 20% 30%,rgba(255,122,26,.13),transparent 60%),var(--acier)}
+.optim-grid{display:grid;gap:2.4rem;align-items:center}
+@media(min-width:860px){.optim-grid{grid-template-columns:1fr 1fr}}
+.compte{position:relative;max-width:420px;margin:auto;width:100%}
+.compte svg{width:100%;height:auto;display:block}
+.legende{font-size:.74rem;color:var(--doux);text-align:center;letter-spacing:.12em;text-transform:uppercase;margin-top:.4rem}
+#aiguille{transform-origin:200px 200px;transform:rotate(-120deg);transition:transform 2.4s cubic-bezier(.2,.9,.25,1.15)}
+.compte.vu #aiguille{transform:rotate(78deg)}
+.atouts{list-style:none;margin:1.4rem 0}
+.atouts li{padding:.7rem 0 .7rem 2rem;border-bottom:1px solid rgba(255,255,255,.07);position:relative;color:var(--blanc)}
+.atouts li::before{content:"";position:absolute;left:0;top:1.05rem;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle,var(--braise),var(--feu) 60%,transparent 70%);box-shadow:0 0 14px var(--feu)}
+.citation{border-left:3px solid var(--feu);padding:.8rem 1.2rem;background:rgba(255,255,255,.03);border-radius:0 8px 8px 0;font-style:italic;color:var(--argent);margin-top:1.4rem}
+.citation small{display:block;font-style:normal;color:var(--doux);font-size:.78rem;margin-top:.4rem;letter-spacing:.06em}
+.nouveau{display:inline-block;background:var(--bordeaux);color:#fff;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.25rem .7rem;border-radius:4px;margin-right:.5rem}
+/* partenaires */
+.partenaires{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2rem}
+.badge{border:1px solid rgba(201,204,211,.18);border-radius:12px;padding:1.6rem 1.4rem;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.04),transparent)}
+.badge .nom{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;color:#fff;letter-spacing:.08em}
+.badge .role{color:var(--feu);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:600}
+.badge p{color:var(--doux);font-size:.95rem;margin-top:.6rem}
+/* carnet */
+.carnet{background:#0b0b0d}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem 5vw 1.5rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--feu) transparent}
+.galerie figure{flex:0 0 min(82vw,460px);scroll-snap-align:center;background:var(--acier);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.galerie img{width:100%;height:300px;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.92rem;color:var(--argent)}
+.galerie figcaption b{display:block;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.05em;font-weight:400}
+.glisse{font-size:.8rem;color:var(--doux);letter-spacing:.14em;text-transform:uppercase;margin-top:.4rem}
+/* noël */
+.noel{background:radial-gradient(ellipse at 50% 0%,rgba(155,35,53,.45),transparent 65%),var(--nuit);text-align:center;overflow:hidden}
+.noel .boite{max-width:640px;margin:auto;border:1px solid rgba(255,179,71,.35);border-radius:16px;padding:2.4rem 1.5rem;background:rgba(16,16,19,.75);position:relative}
+.noel .boite::before{content:"";position:absolute;inset:8px;border:1px dashed rgba(255,179,71,.25);border-radius:12px;pointer-events:none}
+.noel .ruban{width:64px;height:64px;margin:0 auto 1rem;color:var(--braise)}
+.noel p{max-width:30rem;margin:0 auto 1.6rem}
+.noel .ctas{justify-content:center}
+.noel .note{font-size:.8rem;color:var(--doux);margin-top:1.2rem}
+/* contact */
+.contact-grid{display:grid;gap:1.4rem}
+@media(min-width:860px){.contact-grid{grid-template-columns:1.1fr .9fr}}
+.coord{list-style:none}
+.coord li{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.coord svg{width:24px;height:24px;color:var(--feu);flex:none;margin-top:.15rem}
+.coord a{text-decoration:none;color:var(--blanc);word-break:break-word}
+.coord a:hover{color:var(--braise)}
+.coord small{display:block;color:var(--doux);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.carte-plan{border-radius:12px;overflow:hidden;min-height:260px;background:linear-gradient(160deg,var(--gris),var(--acier));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem;border:1px solid rgba(255,255,255,.06)}
+.carte-plan svg{width:100%;max-width:300px;height:auto}
+footer{text-align:center;padding:2.6rem 5vw 3rem;font-size:.82rem;color:var(--doux);border-top:1px solid rgba(255,255,255,.06);position:relative;z-index:2;background:#09090b}
+footer .sig{font-family:'Kaushan Script',cursive;color:var(--braise);font-size:1.5rem;display:block;margin-bottom:.4rem}
+.flottant{position:fixed;right:16px;bottom:16px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.7)}
+.flottant svg{width:30px;height:30px;color:#fff}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}#aiguille{transform:rotate(78deg)}canvas#etincelles{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Garage MPS</div>
+<canvas id="etincelles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:640px)" srcset="img/flammes-banc-mobile.webp">
+    <img src="img/flammes-banc.webp" alt="Une voiture préparée par Garage MPS, flammes à l'échappement, plaque Garage MPS">
+  </picture>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Bras-Panon · La Réunion</p>
+    <h1 class="logo apparait d2"><span class="g">Garage</span><span class="m">MPS</span></h1>
+    <p class="lead apparait d2">Mécanique générale, et optimisation moteur et boîte auto pour voitures, motos, tracteurs et camions.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-feu" href="https://wa.me/262692565577?text=Bonjour%20Garage%20MPS%2C%20je%20voudrais%20un%20devis%20pour%20mon%20v%C3%A9hicule"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/></svg>Demander un devis</a>
+      <a class="btn btn-ligne" href="tel:+262692565577"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>0692 56 55 77</a>
+    </div>
+    <p class="adr apparait d3">7 rue des Dattiers · 97412 Bras-Panon</p>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Optimisation moteur</span><i>✦</i><span>Boîte auto</span><i>✦</i><span>Soudures inox · fonte · alu</span><i>✦</i><span>Codage groupe VAG</span><i>✦</i><span>Revendeur officiel Turbosmart</span><i>✦</i><span>Galano Engineering</span><i>✦</i>
+  <span>Optimisation moteur</span><i>✦</i><span>Boîte auto</span><i>✦</i><span>Soudures inox · fonte · alu</span><i>✦</i><span>Codage groupe VAG</span><i>✦</i><span>Revendeur officiel Turbosmart</span><i>✦</i><span>Galano Engineering</span><i>✦</i>
+</div></div>
+
+<section id="atelier">
+  <div class="wrap">
+    <p class="eyebrow rv">L'atelier</p>
+    <h2 class="rv">Du quotidien à la performance</h2>
+    <p class="intro rv">Chez <b>Garage MPS</b>, à Bras-Panon, on entretient, on répare et on optimise. Une révision, une soudure délicate ou une reprogrammation sur mesure : votre véhicule repart avec tout son caractère.</p>
+    <div class="cartes">
+      <article class="carte rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg><h3>Mécanique générale</h3><p>Entretien, révision et réparation de votre véhicule.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 14l4-6"/><path d="M3.3 17a9 9 0 1 1 17.4 0"/><circle cx="12" cy="14" r="1.6"/></svg><h3>Optimisation moteur et boîte auto</h3><p>Reprogrammation moteur et boîte, réglages sur mesure.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-7"/><path d="M11 13l3-3 2 2-3 3z"/><path d="M17 4l1 2M20 7l-2 1M15 3v2M21 10h-2"/></svg><h3>Soudures</h3><p>Acier inox, fonte et alu.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4M7 10h2M11 10h6M7 13h6"/></svg><h3>Codage groupe VAG</h3><p>Codage des véhicules du groupe VAG.</p></article>
+    </div>
+    <p class="eyebrow rv" style="margin-top:2rem">Optimisation pour</p><div class="vehicules rv" style="margin-top:.8rem"><span>Voitures</span><span>Motos</span><span>Tracteurs</span><span>Camions</span></div>
+  </div>
+</section>
+
+<section class="optim" id="optimisation">
+  <div class="wrap optim-grid">
+    <div class="compte rv" id="compte">
+      <svg viewBox="0 0 400 330" role="img" aria-label="Illustration d'un compte-tours">
+        <defs>
+          <linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="#c9ccd3"/><stop offset=".65" stop-color="#ffb347"/><stop offset="1" stop-color="#ff3b1a"/></linearGradient>
+          <radialGradient id="cad" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#26272d"/><stop offset="1" stop-color="#121215"/></radialGradient>
+        </defs>
+        <circle cx="200" cy="200" r="168" fill="url(#cad)" stroke="#33353d" stroke-width="3"/>
+        <path d="M 54.5 284 A 168 168 0 1 1 345.5 284" fill="none" stroke="url(#arc)" stroke-width="10" stroke-linecap="round" opacity=".9" transform="translate(0,-6)"/>
+        <g id="graduations" stroke="#9a9ca5" stroke-width="2"></g>
+        <g id="chiffres" fill="#d9dade" font-family="Bebas Neue,Impact,sans-serif" font-size="22" text-anchor="middle"></g>
+        <text x="200" y="262" text-anchor="middle" fill="#9a9ca5" font-family="Barlow,sans-serif" font-size="12" letter-spacing="3">x1000 tr/min</text>
+        <text x="200" y="292" text-anchor="middle" fill="#ff7a1a" font-family="Kaushan Script,cursive" font-size="22">Garage MPS</text>
+        <g id="aiguille"><path d="M196 205 L200 62 L204 205 Z" fill="#ff7a1a"/><circle cx="200" cy="200" r="16" fill="#1b1c21" stroke="#ff7a1a" stroke-width="3"/></g>
+      </svg>
+      <p class="legende">Illustration</p>
+    </div>
+    <div>
+      <p class="eyebrow rv">Spécialiste de la reprogrammation</p>
+      <h2 class="rv">Cartographie moteur</h2>
+      <ul class="atouts rv">
+        <li>Gains de puissance &amp; couple</li>
+        <li>Économie de carburant</li>
+        <li>Conversion bioéthanol E85</li>
+        <li>Optimisation sur mesure</li>
+        <li>Stage 2 reprogrammation moteur + boîte avec Galano Engineering</li>
+      </ul>
+      <blockquote class="citation rv">« La reprogrammation moteur de type Stage 1 ou “eco-tuning” peut entraîner une baisse de la consommation de carburant, généralement estimée entre -10 % et -15 %. »<small>Garage MPS, publication du 6 novembre 2026</small></blockquote>
+      <p class="rv" style="margin-top:1.4rem"><span class="nouveau">Nouveauté</span>Reprogrammation des BMW et Mini équipées de calculateurs MDG1.</p>
+    </div>
+  </div>
+</section>
+
+<section id="partenaires">
+  <div class="wrap">
+    <p class="eyebrow rv">Les marques de l'atelier</p>
+    <h2 class="rv">Des pièces et des solutions de passionnés</h2>
+    <div class="partenaires">
+      <div class="badge rv"><p class="role">Revendeur officiel</p><p class="nom">Turbosmart</p><p>La « grande nouvelle » du 14 août : les produits Turbosmart, sur devis chez Garage MPS.</p></div>
+      <div class="badge rv"><p class="role">Représentant officiel</p><p class="nom">Galano Engineering</p><p>Reprogrammation Stage 2, moteur + boîte.</p></div>
+      <div class="badge rv"><p class="role">Tableau de bord</p><p class="nom">GMdash</p><p>« La solution 100 % péi » : un dashboard personnalisable selon vos goûts et vos besoins, compatible avec un grand nombre de calculateurs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap">
+    <p class="eyebrow rv">Carnet d'atelier</p>
+    <h2 class="rv">Sur les ponts, ces derniers mois</h2>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/flammes-banc.webp" alt="Voiture aux couleurs de Garage MPS, flammes à l'échappement" loading="lazy"><figcaption><b>Ça crache le feu</b>Plaque Garage MPS et autocollant Galano Engineering, publication du 2 août.</figcaption></figure>
+    <figure><img src="img/radiateur-alu.webp" alt="Radiateur Mishimoto en aluminium posé à l'atelier" loading="lazy"><figcaption><b>Ford Focus RS mk2</b>Radiateur alu Mishimoto à l'atelier, publication du 6 novembre.</figcaption></figure>
+    <figure><img src="img/c3-hdi-moteur.webp" alt="Compartiment moteur d'une Citroën C3 ouvert, culasse déposée" loading="lazy"><figcaption><b>Citroën C3 1.5 HDi</b>Capot ouvert, moteur en plein chantier, publication du 6 novembre.</figcaption></figure>
+    <figure><img src="img/culasses.webp" alt="Une culasse usagée et une culasse neuve côte à côte" loading="lazy" style="object-position:center 30%"><figcaption><b>Ancienne et nouvelle</b>Deux culasses côte à côte, sur le même chantier C3.</figcaption></figure>
+  </div>
+  <p class="wrap glisse">← Faites glisser →</p>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="boite rv">
+      <svg class="ruban" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="10" y="26" width="44" height="30" rx="3"/><rect x="6" y="18" width="52" height="10" rx="2"/><path d="M32 18v38"/><path d="M32 18c-4-10-16-12-16-4 0 4 8 4 16 4zM32 18c4-10 16-12 16-4 0 4-8 4-16 4z"/></svg>
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Un cadeau qui fait vibrer les passionnés</h2>
+      <p>Un bon cadeau Garage MPS sous le sapin : une révision, une pièce Turbosmart ou une séance d'optimisation pour la voiture d'un proche. On en parle ensemble et on prépare le bon à offrir.</p>
+      <div class="ctas"><a class="btn btn-feu" href="https://wa.me/262692565577?text=Bonjour%20Garage%20MPS%2C%20je%20voudrais%20offrir%20un%20bon%20cadeau%20pour%20No%C3%ABl">Offrir un bon cadeau</a></div>
+      <p class="note">Par WhatsApp au 0692 56 55 77</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Contact</p>
+    <h2 class="rv">Passez à l'atelier</h2>
+    <div class="contact-grid">
+      <ul class="coord rv">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Adresse</small><a href="https://www.google.com/maps/search/?api=1&query=7%20rue%20des%20Dattiers%2097412%20Bras-Panon">7 rue des Dattiers, 97412 Bras-Panon</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><small>Téléphone · WhatsApp</small><a href="tel:+262692565577">0692 56 55 77</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg><div><small>E-mail · demandes de devis</small><a href="mailto:garagemps974@gmail.com">garagemps974@gmail.com</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg><div><small>Facebook</small><a href="https://www.facebook.com/GarageMPS">facebook.com/GarageMPS</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><small>Instagram</small><a href="https://www.instagram.com/garagemps974/">@garagemps974</a></div></li>
+      </ul>
+      <div class="carte-plan rv">
+        <svg viewBox="0 0 300 180" aria-label="Illustration">
+          <path d="M10 140 C 80 120, 120 150, 170 110 S 260 60, 292 40" fill="none" stroke="#33353d" stroke-width="14" stroke-linecap="round"/>
+          <path d="M10 140 C 80 120, 120 150, 170 110 S 260 60, 292 40" fill="none" stroke="#ff7a1a" stroke-width="2" stroke-dasharray="10 10" opacity=".7"/>
+          <path d="M150 20 L150 170" stroke="#2a2c33" stroke-width="10"/>
+          <circle cx="170" cy="108" r="22" fill="rgba(255,122,26,.18)"/>
+          <path d="M170 76c-10 0-18 8-18 18 0 13 18 30 18 30s18-17 18-30c0-10-8-18-18-18z" fill="#ff7a1a"/><circle cx="170" cy="94" r="6" fill="#101013"/>
+        </svg>
+        <p style="margin-top:1rem;color:var(--blanc);font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.06em">Bras-Panon</p>
+        <p class="legende">Illustration</p>
+        <a class="btn btn-ligne" style="margin-top:1rem" href="https://www.google.com/maps/search/?api=1&query=7%20rue%20des%20Dattiers%2097412%20Bras-Panon">Itinéraire</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="sig">Garage MPS</span>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Garage MPS.
+</footer>
+
+<a class="flottant" href="https://wa.me/262692565577?text=Bonjour%20Garage%20MPS" aria-label="WhatsApp Garage MPS"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.6 0l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.6-.1 1.2z"/></svg></a>
+
+<script>
+(function(){
+  // graduations du compte-tours (0 à 8)
+  var g=document.getElementById('graduations'),t=document.getElementById('chiffres'),ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<=40;i++){var a=(-120+i*6)*Math.PI/180,r1=150,r2=i%5?142:132,l=document.createElementNS(ns,'line');
+    l.setAttribute('x1',200+r1*Math.sin(a));l.setAttribute('y1',200-r1*Math.cos(a));l.setAttribute('x2',200+r2*Math.sin(a));l.setAttribute('y2',200-r2*Math.cos(a));
+    if(i>=30)l.setAttribute('stroke','#ff3b1a');g.appendChild(l);
+    if(i%5==0){var x=document.createElementNS(ns,'text');x.setAttribute('x',200+112*Math.sin(a));x.setAttribute('y',208-112*Math.cos(a));x.textContent=i/5;t.appendChild(x);}}
+  var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}})},{threshold:.2});
+  document.querySelectorAll('.rv,#compte').forEach(function(el){io.observe(el)});
+  if(reduit)return;
+  // étincelles d'atelier
+  var c=document.getElementById('etincelles'),x=c.getContext('2d'),W,H,P=[],N=30,run=true;
+  function taille(){W=c.width=innerWidth;H=c.height=innerHeight}taille();addEventListener('resize',taille);
+  function neuf(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+10;p.vy=-(.4+Math.random()*1.1);p.vx=(Math.random()-.5)*.5;p.r=.6+Math.random()*1.6;p.v=1;p.d=.0025+Math.random()*.004;return p}
+  for(var k=0;k<N;k++)P.push(neuf({},true));
+  function boucle(){if(!run)return;x.clearRect(0,0,W,H);
+    for(var k=0;k<N;k++){var p=P[k];p.x+=p.vx+Math.sin(p.y*.02)*.25;p.y+=p.vy;p.v-=p.d;if(p.v<=0||p.y<-10)neuf(p);
+      var a=Math.max(p.v,0)*.55;x.beginPath();x.fillStyle='rgba(255,'+(120+Math.round(p.v*80))+',40,'+a+')';x.shadowColor='rgba(255,122,26,'+a+')';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.283);x.fill();}
+    requestAnimationFrame(boucle)}
+  boucle();
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)boucle()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Garage MPS" defer></script>
+</body>
+</html>
