@@ -1,5 +1,5 @@
 /* ============================================================
-   CONTENU — Hôtel Le Victoria (Grand Bois, Saint-Pierre, groupe Exsel) · « Ti Paille et les plumes d'or »
+   CONTENU — Hôtel Exsel Victoria (Grand Bois, Saint-Pierre, groupe Exsel) · « Ti Paille et les plumes d'or »
    Faits utilisés (vérifiés le 13/11/2026) :
    - Écolabel européen FR/051/622 (ADEME, ligne 9 de 07-hotels-eco-labellises.md) ;
      page exsel.re/hotel/le-victoria/ : « engagé dans une démarche RSE qui lui a permis d'obtenir l'Écolabel Européen »,
@@ -85,7 +85,7 @@ window.H = (function () {
     '<path d="M14 440 q4 -50 18 -80" stroke="#6b4a2a" stroke-width="5" fill="none"/><path d="M32 360 q-18 10 -26 22 M32 360 q18 10 26 22 M30 374 q-16 8 -22 20 M30 374 q16 8 22 20" stroke="#4b7d4f" stroke-width="5" fill="none" stroke-linecap="round"/>';
 
   return {
-    id: "victoria", nom: "Hôtel Le Victoria", nomCourt: "Le Victoria", titre: "Ti Paille et les plumes d'or",
+    id: "victoria", nom: "Hôtel Exsel Victoria", nomCourt: "Le Victoria", titre: "Ti Paille et les plumes d'or",
     couleurs: C, perso, perso_nom: "Ti Paille", decor,
     accroche: "Une aventure en famille, de ta chambre au jardin face à l'océan.",
     accueilBulle: "Bonjour ! Moi, c'est <b>Ti Paille</b>, un petit paille-en-queue. Je vis dans la falaise, juste sous l'hôtel. Tu viens voler avec moi ?",
@@ -153,7 +153,7 @@ window.H = (function () {
     compteur: "Ta famille rejoint les Gardiens de la falaise du Victoria (compteur affiché à l'accueil, par exemple).",
     victoireSuite: ["5 plumes d'or dans tout l'hôtel", "Des niveaux 2 et 3 pour les longs séjours", "Une carte souvenir de Gardien de la falaise à garder"],
     projet: {
-      pour: "Maquette pour l'Hôtel Le Victoria · Grand Bois, Saint-Pierre",
+      pour: "Maquette pour l'Hôtel Exsel Victoria · Grand Bois, Saint-Pierre",
       sous: "Une aventure sur téléphone pour vos familles. Ti Paille, un petit paille-en-queue de la falaise, fait découvrir l'hôtel, de la chambre au jardin face à l'océan. Personnage, étapes, défis et lots se construisent avec vos équipes.",
       puces: [["🎁", "Un lot gagné à coup sûr, par ex. au Rivage"], ["🌿", "Un appui pour vos critères Écolabel 3, 16 et 26"], ["📱", "Un QR code suffit, et ça marche même hors ligne"]],
       idee: [
