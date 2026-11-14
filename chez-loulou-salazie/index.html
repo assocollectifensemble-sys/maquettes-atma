@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Loulou · Alimentation générale & charcuterie à Salazie et Hell-Bourg</title>
+<meta name="description" content="Chez Loulou, alimentation générale et charcuterie au village de Salazie et à Hell-Bourg : ouvert 7j/7 de 8h à 19h, jours fériés compris. 0693 00 39 04.">
+<meta property="og:title" content="Chez Loulou · Salazie & Hell-Bourg">
+<meta property="og:description" content="Votre épicerie du cirque, ouverte 7j/7 de 8h à 19h, jours fériés compris.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-loulou-salazie/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-loulou-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Nunito:wght@400;600;700&family=Caveat+Brush&display=swap" rel="stylesheet">
+<style>
+:root{--toit:#b5463c;--rose:#d23a55;--lime:#b7d65a;--vert:#1f6b46;--vert-f:#123f2b;--mur:#f3e6cf;--creme:#fbf6ec;--bleu:#2f78bd;--hib:#e85d8f;--txt:#2a2a24;--doux:#6b6a5c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;line-height:1.08;color:var(--vert-f)}
+h2{font-size:clamp(2rem,6vw,3rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem;font-weight:500}
+.main{font-family:'Caveat Brush',cursive;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:700;color:var(--toit)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.6rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--vert-f);color:var(--lime);text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#brume{position:fixed;inset:0;pointer-events:none;z-index:3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:#1fa855;color:#fff;box-shadow:0 14px 30px -14px rgba(31,168,85,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-wa:hover{background:#178a45}
+@keyframes souffle{50%{box-shadow:0 12px 40px -6px rgba(31,168,85,.65);transform:scale(1.02)}}
+.btn-clair{background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.7);color:#fff;backdrop-filter:blur(4px)}
+.btn-clair:hover{background:rgba(255,255,255,.26)}
+.btn-ligne{border:1.5px solid var(--vert);color:var(--vert)}
+.btn-ligne:hover{background:var(--vert);color:#fff}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--vert-f);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:62% 40%;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.17) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,63,43,.15) 0%,rgba(18,63,43,.3) 22%,rgba(18,63,43,.82) 50%,rgba(18,63,43,.96) 85%)}
+.hero-in{position:relative;z-index:4;padding:7rem 0 5.5rem}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--lime);color:var(--vert-f);font-weight:700;font-size:.8rem;padding:.35rem .9rem;border-radius:999px}
+.badge i{width:9px;height:9px;border-radius:50%;background:#1fa855;box-shadow:0 0 0 0 rgba(31,168,85,.7);animation:pouls 2s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 9px rgba(31,168,85,0)}}
+.hero h1{color:#fff;font-size:clamp(3.6rem,15vw,7.4rem);letter-spacing:.01em;margin:.6rem 0 .1rem;text-shadow:0 4px 28px rgba(0,0,0,.35)}
+.hero h1 span{color:#ffd1dc}
+.hero .lieu{font-family:'Caveat Brush',cursive;font-size:clamp(1.7rem,6vw,2.4rem);color:var(--lime)}
+.hero .lead{font-size:1.1rem;max-width:33rem;margin:1rem 0 1.8rem;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}.apparait.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* auvent rayé */
+.auvent{height:34px;background:repeating-linear-gradient(90deg,var(--vert) 0 28px,#fff 28px 56px);position:relative;z-index:5;margin-top:-1px}
+.auvent::after{content:"";position:absolute;left:0;right:0;bottom:-14px;height:14px;background:radial-gradient(circle at 14px 0,var(--vert) 13px,transparent 14px) 0 0/56px 14px,radial-gradient(circle at 42px 0,#fff 13px,transparent 14px) 0 0/56px 14px;filter:drop-shadow(0 4px 3px rgba(0,0,0,.12))}
+/* bandeau */
+.bande{background:var(--rose);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Fredoka',sans-serif;font-weight:500;font-size:1.12rem;margin-top:14px}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✿";margin-left:2.4rem;color:#ffd1dc}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* bienvenue */
+.bienv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.bienv p+p{margin-top:.9rem}
+.cite{font-family:'Caveat Brush',cursive;font-size:clamp(1.6rem,5vw,2.1rem);color:var(--toit);line-height:1.2;margin:1.4rem 0 .4rem}
+.fresque{position:relative}
+.fresque img{width:100%;aspect-ratio:610/340;object-fit:cover;border-radius:22px;box-shadow:0 34px 70px -38px rgba(18,63,43,.7);transform:rotate(-1.5deg);transition:transform .6s}
+.fresque:hover img{transform:rotate(0) scale(1.02)}
+.fresque figcaption{font-size:.84rem;color:var(--doux);margin-top:.9rem;text-align:center}
+.chiffres{display:flex;gap:1.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.chiffres b{display:block;font-family:'Fredoka',sans-serif;font-size:2.4rem;color:var(--rose);line-height:1}
+.chiffres span{font-size:.86rem;color:var(--doux)}
+/* rayons */
+.rayons-sec{background:linear-gradient(180deg,var(--creme),var(--mur))}
+.rayons{display:grid;grid-template-columns:1.1fr 1fr;gap:1.4rem;margin-top:2rem;align-items:stretch}
+.vedette{position:relative;border-radius:26px;overflow:hidden;background:var(--vert-f);box-shadow:0 30px 60px -34px rgba(18,63,43,.75);min-height:420px}
+.vedette img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s}
+.vedette:hover img{transform:scale(1.06)}
+.vedette figcaption{position:absolute;left:0;right:0;bottom:0;padding:3.5rem 1.3rem 1.2rem;background:linear-gradient(180deg,transparent,rgba(18,63,43,.92));color:#fff}
+.vedette figcaption b{font-family:'Fredoka',sans-serif;font-weight:500;font-size:1.4rem;display:block}
+.vedette figcaption span{font-size:.9rem;color:var(--lime)}
+.cartes{display:grid;gap:1rem}
+.carte{background:#fff;border-radius:20px;padding:1.3rem 1.3rem 1.2rem 4.4rem;position:relative;box-shadow:0 18px 44px -32px rgba(18,63,43,.6);transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-5px);box-shadow:0 26px 54px -30px rgba(18,63,43,.6)}
+.carte .ico{position:absolute;left:1.1rem;top:1.25rem;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-size:1.25rem;background:var(--mur)}
+.carte h3{margin-bottom:.2rem}
+.carte p{font-size:.95rem;color:#4a4a40}
+.slogan{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap;margin-top:2.2rem}
+.slogan span{font-family:'Caveat Brush',cursive;font-size:1.5rem;background:var(--vert);color:#fff;padding:.25rem 1.1rem;border-radius:12px;transform:rotate(-2deg)}
+.slogan span:nth-child(2){background:var(--lime);color:var(--vert-f);transform:rotate(1.5deg)}
+/* deux boutiques */
+.cirque{background:var(--vert-f);color:#f1f5ea;overflow:hidden}
+.cirque h2{color:#fff}
+.cirque .eyebrow{color:var(--lime)}
+.illus{margin:1.8rem 0 0;position:relative}
+.illus svg{width:100%;height:auto;display:block}
+.illus figcaption{font-size:.78rem;color:rgba(241,245,234,.6);text-align:right;margin-top:.3rem}
+.cascade{stroke-dasharray:6 10;animation:coule 1.6s linear infinite}
+@keyframes coule{to{stroke-dashoffset:-32}}
+.boutiques{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.6rem}
+.boutique{background:rgba(255,255,255,.07);border:1px solid rgba(183,214,90,.35);border-radius:22px;padding:1.5rem;transition:background .35s,transform .35s}
+.boutique:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}
+.boutique small{color:var(--lime);font-weight:700;letter-spacing:.15em;text-transform:uppercase;font-size:.72rem}
+.boutique h3{color:#fff;font-size:1.6rem;margin:.3rem 0 .4rem}
+.boutique p{margin-bottom:1rem}
+.boutique .btn-ligne{border-color:var(--lime);color:var(--lime)}
+.boutique .btn-ligne:hover{background:var(--lime);color:var(--vert-f)}
+/* horaires */
+.horaires{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.semaine{background:#fff;border-radius:24px;padding:1.4rem 1.5rem;box-shadow:0 24px 54px -36px rgba(18,63,43,.6);list-style:none}
+.semaine li{display:flex;justify-content:space-between;padding:.6rem .4rem;border-bottom:1px dashed #e1d8c4}
+.semaine li:last-child{border:0}
+.semaine li b{font-weight:700}
+.semaine li.auj{background:var(--lime);border-radius:12px;color:var(--vert-f);border-color:transparent;padding:.6rem .8rem}
+.ferie{margin-top:1rem;font-size:.95rem;color:var(--vert)}
+/* rallye */
+.rallye{background:var(--mur)}
+.rallye-in{display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:center;background:#fff;border-radius:26px;padding:clamp(1.4rem,4vw,2.4rem);box-shadow:0 24px 54px -38px rgba(18,63,43,.6)}
+.drapeau{width:84px;height:84px;border-radius:20px;background:conic-gradient(#222 0 25%,#fff 0 50%,#222 0 75%,#fff 0) 0 0/28px 28px;box-shadow:inset 0 0 0 4px var(--rose);animation:flotte 4s ease-in-out infinite}
+@keyframes flotte{50%{transform:rotate(-6deg) translateY(-3px)}}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0,#2a7a52 0%,var(--vert-f) 70%);color:#fff;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#ffd1dc}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:60px}
+.guirlande circle{animation:brille 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes brille{50%{opacity:.35}}
+.noel-in{max-width:40rem;margin:auto;position:relative;z-index:2}
+.noel p{font-size:1.08rem;margin:.6rem 0}
+.noel .petites{display:flex;justify-content:center;gap:.6rem;flex-wrap:wrap;margin:1.6rem 0 2rem}
+.noel .petites span{border:1px solid rgba(255,209,220,.6);border-radius:999px;padding:.35rem 1rem;font-size:.92rem}
+.noel .ctas{justify-content:center}
+.noel .note{font-size:.85rem;color:rgba(255,255,255,.7);margin-top:1.2rem}
+/* contact */
+.contact{text-align:center}
+.contact .ctas{justify-content:center;margin-top:1.4rem}
+.tel{font-family:'Fredoka',sans-serif;font-size:clamp(2rem,8vw,3rem);color:var(--rose);text-decoration:none;display:inline-block;margin-top:.4rem}
+.contact .info{margin-top:1.4rem;color:var(--doux)}
+footer{background:var(--vert-f);color:rgba(241,245,234,.75);text-align:center;font-size:.84rem;padding:2.2rem 1rem 2.6rem}
+footer b{color:#fff}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s,transform 1s}
+.reveal.vu{opacity:1;transform:none}
+@media (max-width:760px){
+ .bienv,.rayons,.boutiques,.horaires{grid-template-columns:1fr}
+ .vedette{min-height:380px}
+ .rallye-in{grid-template-columns:1fr;text-align:center}
+ .drapeau{margin:auto;width:70px;height:70px}
+ .hero-in{padding-bottom:4.5rem}
+ .hero{min-height:min(100svh,780px)}
+ .hero .fond img{object-position:56% 22%}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.reveal{opacity:1;transform:none}
+ canvas#brume{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Chez Loulou Salazie</div>
+<canvas id="brume" aria-hidden="true"></canvas>
+
+<header class="hero">
+ <div class="fond"><img src="img/devanture.webp" alt="La boutique Chez Loulou, son enseigne fleurie et sa fresque, sous les toits rouges de Salazie" fetchpriority="high"></div>
+ <div class="wrap hero-in">
+  <span class="badge apparait"><i></i>Ouvert 7j/7 · 8h – 19h</span>
+  <h1 class="apparait d2">Chez <span>Loulou</span></h1>
+  <div class="lieu apparait d2">Salazie village &amp; Hell-Bourg</div>
+  <p class="lead apparait d3">Alimentation générale et charcuterie au cœur du cirque : vos courses du quotidien, fruits et légumes frais, tous les jours de l’année, jours fériés compris.</p>
+  <div class="ctas apparait d4">
+   <a class="btn btn-wa" href="https://wa.me/262693003904?text=Bonjour%20Chez%20Loulou%2C%20" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+   <a class="btn btn-clair" href="#boutiques">Nos deux boutiques</a>
+  </div>
+ </div>
+</header>
+<div class="auvent" aria-hidden="true"></div>
+<div class="bande" aria-hidden="true"><div class="track">
+ <span>Lundi au dimanche 8h – 19h</span><span>Jours fériés compris</span><span>Salazie village</span><span>Hell-Bourg</span><span>Le goût du frais</span><span>Alimentation générale</span><span>Charcuterie</span>
+ <span>Lundi au dimanche 8h – 19h</span><span>Jours fériés compris</span><span>Salazie village</span><span>Hell-Bourg</span><span>Le goût du frais</span><span>Alimentation générale</span><span>Charcuterie</span>
+</div></div>
+
+<main>
+<section>
+ <div class="wrap bienv">
+  <div class="reveal">
+   <span class="eyebrow">La boutique du cirque</span>
+   <h2>Bienvenue chez Loulou</h2>
+   <p>Sous le toit de tôle rouge, une fresque bleue « Boutique », un cochon tout sourire et des hibiscus en fleurs : chez Loulou, on reconnaît la boutique de loin, et on y trouve de quoi remplir le panier du jour.</p>
+   <p>Alimentation générale, charcuterie, fruits et légumes de saison : deux adresses, au village de Salazie et à Hell-Bourg, au cœur du cirque.</p>
+   <p class="cite">« Frais et savoureux ! »</p>
+   <div class="chiffres">
+    <div><b>7j/7</b><span>toute l’année</span></div>
+    <div><b>11 h</b><span>d’ouverture par jour</span></div>
+    <div><b>2</b><span>boutiques dans le cirque</span></div>
+   </div>
+  </div>
+  <figure class="fresque reveal">
+   <img src="img/fresque.webp" alt="La fresque peinte sur le mur de la boutique : « Boutique », un panneau Charcuterie et des fleurs d’hibiscus" loading="lazy">
+   <figcaption>La fresque de la boutique, photo publiée sur la page Chez Loulou</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="rayons-sec">
+ <div class="wrap">
+  <div class="reveal">
+   <span class="eyebrow">Dans les rayons</span>
+   <h2>Le panier du jour</h2>
+  </div>
+  <div class="rayons">
+   <figure class="vedette reveal">
+    <img src="img/litchis.webp" alt="Une grappe de litchis roses encore sur leurs branches" loading="lazy">
+    <figcaption><b>Les litchis sont là</b><span>« Disponible » : publié sur la page à l’arrivée de la saison</span></figcaption>
+   </figure>
+   <div class="cartes">
+    <article class="carte reveal"><span class="ico">🥬</span><h3>Fruits &amp; légumes</h3><p>Le goût du frais, au fil des arrivages : choux-fleurs, litchis en saison, beaux légumes du moment.</p></article>
+    <article class="carte reveal"><span class="ico">🥓</span><h3>Charcuterie</h3><p>Le rayon mis à l’honneur sur la fresque de la boutique, avec son petit cochon tout sourire.</p></article>
+    <article class="carte reveal"><span class="ico">🛒</span><h3>Alimentation générale</h3><p>L’épicerie du quotidien, ouverte dès 8 h et jusqu’à 19 h : les courses de la semaine comme celles de dernière minute.</p></article>
+    <article class="carte reveal"><span class="ico">🌼</span><h3>Petits plaisirs de saison</h3><p>Brins de muguet pour le 1er mai, disponibles en magasin, et belles idées au fil de l’année.</p></article>
+   </div>
+  </div>
+  <div class="slogan reveal"><span>Le goût du frais</span><span>Frais et savoureux !</span></div>
+ </div>
+</section>
+
+<section class="cirque" id="boutiques">
+ <div class="wrap">
+  <div class="reveal">
+   <span class="eyebrow">Deux adresses</span>
+   <h2>Du village à Hell-Bourg</h2>
+   <p>Une boutique en bas, au village de Salazie ; une autre en haut, à Hell-Bourg. Toutes deux ouvertes aux mêmes horaires, tous les jours.</p>
+  </div>
+  <figure class="illus reveal" aria-hidden="true">
+   <svg viewBox="0 0 800 220" preserveAspectRatio="xMidYMax meet">
+    <defs><linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f8f5f"/><stop offset="1" stop-color="#1c5a3b"/></linearGradient><linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d7a4f"/><stop offset="1" stop-color="#123f2b"/></linearGradient></defs>
+    <path d="M0 220 L0 120 C60 40 110 30 160 90 C200 20 260 10 300 80 C340 30 380 40 410 100 C450 20 520 0 560 70 C600 30 660 20 700 90 C740 50 780 60 800 80 L800 220Z" fill="url(#m1)" opacity=".7"/>
+    <path class="cascade" d="M528 40 C530 80 526 120 530 170" stroke="#e9f5ff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"/>
+    <path d="M0 220 L0 160 C80 110 140 120 200 150 C260 110 330 100 400 140 C470 105 540 110 600 150 C660 120 740 120 800 150 L800 220Z" fill="url(#m2)"/>
+    <g transform="translate(150 150)"><rect x="-26" y="0" width="52" height="30" fill="#f3e6cf"/><path d="M-32 2 L0 -18 L32 2Z" fill="#b5463c"/><rect x="-8" y="12" width="16" height="18" fill="#1f6b46"/></g>
+    <text x="150" y="205" text-anchor="middle" fill="#b7d65a" font-family="Caveat Brush,cursive" font-size="22">Salazie village</text>
+    <g transform="translate(640 140)"><rect x="-26" y="0" width="52" height="30" fill="#f3e6cf"/><path d="M-32 2 L0 -18 L32 2Z" fill="#b5463c"/><rect x="-8" y="12" width="16" height="18" fill="#1f6b46"/></g>
+    <text x="640" y="200" text-anchor="middle" fill="#b7d65a" font-family="Caveat Brush,cursive" font-size="22">Hell-Bourg</text>
+    <path d="M190 175 C300 150 420 190 600 160" stroke="#b7d65a" stroke-width="2" stroke-dasharray="4 8" fill="none" opacity=".7"/>
+   </svg>
+   <figcaption>Illustration : les deux boutiques dans le cirque de Salazie</figcaption>
+  </figure>
+  <div class="boutiques">
+   <article class="boutique reveal">
+    <small>Au village</small>
+    <h3>Salazie</h3>
+    <p>6 route de Bois de Pomme<br>97433 Salazie</p>
+    <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&query=6%20route%20de%20Bois%20de%20Pomme%2097433%20Salazie" target="_blank" rel="noopener">Itinéraire</a>
+   </article>
+   <article class="boutique reveal">
+    <small>Dans le cirque</small>
+    <h3>Hell-Bourg</h3>
+    <p>48 rue Général de Gaulle<br>97433 Hell-Bourg, Salazie</p>
+    <a class="btn btn-ligne" href="https://www.google.com/maps/search/?api=1&query=48%20rue%20G%C3%A9n%C3%A9ral%20de%20Gaulle%20Hell-Bourg%2097433%20Salazie" target="_blank" rel="noopener">Itinéraire</a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap horaires">
+  <div class="reveal">
+   <span class="eyebrow">Horaires</span>
+   <h2>Ouvert tous les jours</h2>
+   <p>Du lundi au dimanche, de 8 h à 19 h, jours fériés compris : la boutique vous accueille du matin jusqu’aux courses du soir.</p>
+   <p class="ferie">Horaires spéciaux des jours de fête : annoncés chaque année sur la page Facebook.</p>
+  </div>
+  <ul class="semaine reveal" id="semaine">
+   <li data-j="1"><b>Lundi</b><span>8h – 19h</span></li>
+   <li data-j="2"><b>Mardi</b><span>8h – 19h</span></li>
+   <li data-j="3"><b>Mercredi</b><span>8h – 19h</span></li>
+   <li data-j="4"><b>Jeudi</b><span>8h – 19h</span></li>
+   <li data-j="5"><b>Vendredi</b><span>8h – 19h</span></li>
+   <li data-j="6"><b>Samedi</b><span>8h – 19h</span></li>
+   <li data-j="0"><b>Dimanche</b><span>8h – 19h</span></li>
+  </ul>
+ </div>
+</section>
+
+<section class="rallye">
+ <div class="wrap">
+  <div class="rallye-in reveal">
+   <div class="drapeau" aria-hidden="true"></div>
+   <div>
+    <span class="eyebrow">La vie du cirque</span>
+    <h2 style="font-size:clamp(1.7rem,5vw,2.4rem)">Partenaire du Rallye de Salazie</h2>
+    <p>Chez Loulou figure parmi les partenaires du Rallye de Salazie 2024, et pour l’édition du 21 juin 2025, la page a fièrement relayé les tee-shirts de la Team Chouchou’X. Une boutique de village, fière de son cirque.</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="fetes">
+ <svg class="guirlande" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 8 Q50 40 100 8 T200 8 T300 8 T400 8" stroke="#b7d65a" stroke-width="1.2" fill="none" opacity=".6"/>
+  <circle cx="25" cy="20" r="3.5" fill="#ffd1dc"/><circle cx="50" cy="26" r="3.5" fill="#f5d06b"/><circle cx="75" cy="20" r="3.5" fill="#e85d8f"/>
+  <circle cx="125" cy="20" r="3.5" fill="#f5d06b"/><circle cx="150" cy="26" r="3.5" fill="#ffd1dc"/><circle cx="175" cy="20" r="3.5" fill="#e85d8f"/>
+  <circle cx="225" cy="20" r="3.5" fill="#ffd1dc"/><circle cx="250" cy="26" r="3.5" fill="#f5d06b"/><circle cx="275" cy="20" r="3.5" fill="#e85d8f"/>
+  <circle cx="325" cy="20" r="3.5" fill="#f5d06b"/><circle cx="350" cy="26" r="3.5" fill="#ffd1dc"/><circle cx="375" cy="20" r="3.5" fill="#e85d8f"/>
+ </svg>
+ <div class="wrap noel-in reveal">
+  <span class="eyebrow">Noël à Salazie</span>
+  <h2>Les commandes des fêtes</h2>
+  <p>Pour le repas de Noël et du jour de l’An, Chez Loulou prend vos commandes de viande à l’avance : vous réservez tranquillement et vous profitez pleinement de ces beaux moments en famille.</p>
+  <div class="petites"><span>Porc</span><span>Poulet</span><span>Canard</span><span>Dinde</span></div>
+  <p>Commande par WhatsApp ; horaires de fêtes annoncés sur la page.</p>
+  <div class="ctas">
+   <a class="btn btn-wa" href="https://wa.me/262693003904?text=Bonjour%20Chez%20Loulou%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>Je passe ma commande</a>
+  </div>
+  <p class="note">Au plaisir de vous servir pour les fêtes !</p>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap reveal">
+  <span class="eyebrow">Contact</span>
+  <h2>Une question, une commande&nbsp;?</h2>
+  <p>Un message WhatsApp ou un appel, et l’équipe vous répond.</p>
+  <a class="tel" href="tel:+262693003904">0693 00 39 04</a>
+  <div class="ctas">
+   <a class="btn btn-wa" href="https://wa.me/262693003904?text=Bonjour%20Chez%20Loulou%2C%20" target="_blank" rel="noopener">WhatsApp</a>
+   <a class="btn btn-ligne" href="tel:+262262208132">Fixe : 0262 20 81 32</a>
+   <a class="btn btn-ligne" href="https://www.facebook.com/loulou97433" target="_blank" rel="noopener">Page Facebook</a>
+  </div>
+  <p class="info">6 route de Bois de Pomme, Salazie village · 48 rue Général de Gaulle, Hell-Bourg</p>
+ </div>
+</section>
+</main>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Chez Loulou Salazie.</footer>
+
+<script>
+(function(){
+ var j=new Date().getDay(),li=document.querySelector('#semaine li[data-j="'+j+'"]');if(li)li.className='auj';
+ var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('brume'),x=c.getContext('2d'),W,H,P=[],run=true;
+ function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+ var cols=['#7fbf6a','#b7d65a','#e85d8f','#3f8f5f'];
+ for(var i=0;i<22;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:5+Math.random()*6,v:.25+Math.random()*.45,a:Math.random()*6.28,s:(Math.random()-.5)*.02,c:cols[i%4],o:.18+Math.random()*.22});
+ function leaf(p){x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;x.beginPath();x.moveTo(0,-p.r);x.quadraticCurveTo(p.r*.8,0,0,p.r);x.quadraticCurveTo(-p.r*.8,0,0,-p.r);x.fill();x.restore()}
+ function tick(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.y+=p.v;p.x+=Math.sin(p.y/60)*.4;p.a+=p.s;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}leaf(p)});requestAnimationFrame(tick)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)tick()});tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Loulou" defer></script>
+</body>
+</html>
