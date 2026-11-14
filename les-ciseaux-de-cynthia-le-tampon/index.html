@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Ciseaux De Cynthia · Salon de coiffure au Tampon</title>
+<meta name="description" content="Les Ciseaux De Cynthia, salon de coiffure au Tampon (La Réunion) : coiffures de mariée sur-mesure, couleur, éclaircissement, transformations. 409a rue Jules Bertaut, sur rendez-vous ou en passage libre. 0692 82 40 67.">
+<meta property="og:title" content="Les Ciseaux De Cynthia · Salon de coiffure au Tampon">
+<meta property="og:description" content="« La différence se voit, la qualité se ressent » : chignons de mariée sur-mesure, couleur et transformations au 409a rue Jules Bertaut, Le Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-ciseaux-de-cynthia-le-tampon/img/transformation-avant-apres.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-ciseaux-de-cynthia-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Josefin+Sans:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#e07fae;--rose2:#f2b8d2;--blush:#fbe8ef;--poudre:#fdf4f6;--creme:#fffaf7;--prune:#4b2639;--prune2:#6e3c56;--palme:#3d7a45;--palme2:#9cc49b;--bois:#d8b086;--or:#c9a25f;--txt:#3e2a34;--doux:#86707c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;color:var(--prune);line-height:1.1}
+h2{font-size:clamp(2rem,5.6vw,3.2rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.4rem}
+.script{font-family:'Great Vibes',cursive;font-weight:400;color:var(--rose);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;color:var(--palme);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--prune);color:var(--blush);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#petales{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.85rem 1.6rem .7rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.1em;font-size:.86rem;text-transform:uppercase;transition:.35s}
+.btn-main{background:var(--rose);color:#fff;box-shadow:0 14px 30px -14px rgba(224,127,174,.95);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--prune2)}
+@keyframes souffle{50%{box-shadow:0 16px 42px -8px rgba(224,127,174,.85);transform:scale(1.03)}}
+.btn-line{border:1.5px solid var(--rose2);color:var(--prune);background:rgba(255,255,255,.6)}
+.btn-line:hover{background:#fff;border-color:var(--rose)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,940px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(110% 70% at 90% 0%,var(--blush) 0%,transparent 62%),radial-gradient(80% 60% at 0% 100%,#f6e4d3 0%,transparent 62%),var(--creme);padding:6.5rem 0 4rem;position:relative}
+.palme{position:absolute;pointer-events:none;opacity:.5}
+.palme.p1{left:-70px;bottom:-40px;width:260px;transform:rotate(18deg);animation:berce 9s ease-in-out infinite}
+.palme.p2{right:-60px;top:70px;width:200px;transform:rotate(200deg);animation:berce 11s ease-in-out infinite reverse}
+@keyframes berce{50%{rotate:5deg}}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center;position:relative}
+.hero h1{font-size:clamp(3rem,11vw,6.2rem);letter-spacing:.06em;font-weight:400;text-transform:uppercase;font-family:'Josefin Sans',sans-serif;line-height:1}
+.hero h1 .script{display:block;text-transform:none;letter-spacing:0;font-size:.95em;margin-top:.05em}
+.hero .lead{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.7rem);color:var(--prune2);margin:1.3rem 0 .5rem;max-width:30rem}
+.hero .lead small{display:block;font-family:'Josefin Sans',sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);letter-spacing:.06em;margin-top:.3rem}
+.hero .metier{font-size:.92rem;letter-spacing:.2em;text-transform:uppercase;color:var(--doux);margin:1.2rem 0 2rem}
+.hero .eyebrow{margin-bottom:.9rem}
+.hero .adr{margin-top:1.6rem;font-size:.95rem;color:var(--doux)}
+.hero .adr a{color:var(--prune);font-weight:600}
+.medaillon{position:relative;max-width:400px;width:100%;margin:auto;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,var(--blush) 55%,var(--rose2) 100%);box-shadow:0 40px 80px -40px rgba(110,60,86,.55);display:grid;place-items:center}
+.medaillon::before{content:"";position:absolute;inset:-14px;border:1px solid var(--rose2);border-radius:50%;animation:tourne 40s linear infinite;border-style:dashed}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.medaillon svg{width:70%;height:auto;overflow:visible}
+.lame{transform-origin:100px 108px;animation:coupe 3.6s ease-in-out infinite}
+.lame.b{animation-name:coupe2}
+@keyframes coupe{0%,60%,100%{transform:rotate(0)}30%{transform:rotate(-9deg)}}
+@keyframes coupe2{0%,60%,100%{transform:rotate(0)}30%{transform:rotate(9deg)}}
+.meche{stroke-dasharray:420;stroke-dashoffset:420;animation:trace 3.2s .6s ease-out forwards}
+@keyframes trace{to{stroke-dashoffset:0}}
+.medaillon figcaption{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--doux);background:rgba(255,255,255,.8);padding:.25rem .8rem;border-radius:999px;white-space:nowrap}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--prune);color:var(--blush);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.25rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✂";margin-left:2.4rem;font-style:normal;font-size:.9rem;color:var(--rose2)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* transformation */
+.transfo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(75,38,57,.6);background:#111}
+.photo img{width:100%;aspect-ratio:680/616;object-fit:cover;transition:transform 1.4s}
+.photo:hover img{transform:scale(1.04)}
+.photo .tag{position:absolute;top:.9rem;background:rgba(20,12,16,.82);color:#fff;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;padding:.35rem .8rem .25rem;border-radius:6px}
+.photo .t1{left:.9rem}.photo .t2{right:.9rem;background:var(--rose)}
+.photo figcaption{position:absolute;left:50%;bottom:.9rem;transform:translateX(-50%);background:rgba(255,250,247,.95);padding:.35rem 1rem .25rem;border-radius:999px;font-size:.78rem;font-weight:600;color:var(--prune);white-space:nowrap}
+.citation{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.4rem,3.6vw,2rem);color:var(--prune2);border-left:2px solid var(--rose);padding-left:1.2rem;margin:1.4rem 0;line-height:1.35}
+.citation small,.src{display:block;font-family:'Josefin Sans',sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);margin-top:.5rem;letter-spacing:.05em}
+.trio{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.4rem 0}
+.trio span{border:1px solid var(--rose2);border-radius:999px;padding:.4rem 1.1rem .3rem;font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;background:#fff;transition:.4s}
+.trio span:hover{background:var(--blush);transform:translateY(-3px)}
+.formule{margin-top:1.4rem;background:linear-gradient(120deg,var(--blush),#fff);border:1px dashed var(--rose);border-radius:20px;padding:1.1rem 1.4rem;font-size:1.05rem}
+.formule b{font-weight:600;color:var(--prune)}
+/* vague */
+.vague{display:block;width:100%;height:60px}
+/* mariage */
+.mariage{background:var(--blush)}
+.coiffures{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:2.2rem}
+.coif{background:#fff;border-radius:26px;padding:1.6rem 1.4rem 1.5rem;text-align:center;box-shadow:0 22px 50px -38px rgba(75,38,57,.6);transition:transform .45s,box-shadow .45s;position:relative}
+.coif:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(75,38,57,.6)}
+.coif svg{width:120px;height:120px;margin:0 auto .8rem}
+.coif small{position:absolute;top:.9rem;right:1.1rem;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux)}
+.coif p{font-size:.95rem;color:var(--doux)}
+.jourj{margin-top:2.2rem;display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:center;background:var(--prune);color:var(--blush);border-radius:26px;padding:1.6rem 1.8rem}
+.jourj .script{font-size:3.6rem;color:var(--rose2)}
+.jourj blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;line-height:1.45;color:#fff}
+.jourj small{display:block;margin-top:.5rem;font-size:.78rem;color:var(--rose2);letter-spacing:.05em}
+/* avis */
+.avis-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.avis figure{background:#fff;border-radius:22px;padding:1.6rem 1.7rem;border:1px solid var(--blush);position:relative;overflow:hidden}
+.avis figure::before{content:"“";position:absolute;right:1rem;top:-.6rem;font-family:'Playfair Display',serif;font-size:6rem;color:var(--blush);line-height:1}
+.avis blockquote{font-family:'Playfair Display',serif;font-style:italic;font-size:1.45rem;line-height:1.35;color:var(--prune);position:relative}
+.avis figcaption{margin-top:.7rem;font-size:.82rem;color:var(--doux)}
+.coeur{color:var(--rose)}
+/* noel */
+.noel{background:linear-gradient(180deg,var(--creme),#f7ece4)}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.idee{background:#fff;border-radius:18px;padding:1.2rem 1.4rem;border:1px solid var(--blush);display:flex;gap:1rem;align-items:flex-start}
+.idee i{font-style:normal;font-size:1.4rem;color:var(--palme);line-height:1.2}
+.idee h3{font-size:1.2rem;margin-bottom:.2rem}
+.carte-cadeau{aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,var(--prune2),var(--prune));color:var(--blush);padding:1.7rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -35px rgba(75,38,57,.85);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.carte-cadeau:hover{transform:rotate(0)}
+.carte-cadeau::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(201,162,95,.4),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.carte-cadeau .script{color:var(--rose2);font-size:clamp(2.2rem,8vw,3rem)}
+.carte-cadeau small{letter-spacing:.24em;text-transform:uppercase;font-size:.66rem;position:relative;z-index:2}
+.carte-cadeau .script{position:relative;z-index:2}
+.carte-cadeau svg{position:absolute;right:-10px;top:-14px;width:120px;opacity:.9}
+.ruban{position:absolute;left:0;right:0;top:58%;height:12px;background:linear-gradient(90deg,var(--or),#e8cf98,var(--or));opacity:.75}
+/* contact */
+.contact{background:var(--blush)}
+.contact-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0}
+.infos b{font-weight:600;color:var(--prune)}
+.pin{background:#fff;border-radius:28px;padding:2rem 1.6rem;text-align:center;box-shadow:0 30px 60px -40px rgba(75,38,57,.6)}
+.pin svg{width:86px;margin:0 auto 1rem;animation:saute 3s ease-in-out infinite}
+@keyframes saute{50%{transform:translateY(-8px)}}
+.pin b{display:block;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:400;color:var(--prune);line-height:1.25}
+.pin span{display:block;margin-top:.4rem;color:var(--doux);font-size:.95rem}
+.pin .script{font-size:2.2rem;margin-top:.8rem}
+.btn-dark{border:1.5px solid var(--prune2);color:var(--prune)}
+.btn-dark:hover{background:#fff}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--blush)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.transfo,.noel-in,.contact-in{grid-template-columns:1fr}
+ .coiffures,.avis-grid{grid-template-columns:1fr}
+ .medaillon{max-width:290px}
+ .jourj{grid-template-columns:1fr;text-align:center}
+ .ribbon{font-size:.7rem}
+ .palme.p2{width:150px;top:auto;bottom:38%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}.meche{stroke-dashoffset:0}canvas#petales{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les Ciseaux De Cynthia</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <svg class="palme p1" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#3d7a45" stroke-width="2.2" stroke-linecap="round"><path d="M20 190 C 70 140 120 90 190 20"/><path d="M50 160 C 40 130 45 110 60 95"/><path d="M50 160 C 80 165 100 160 115 148"/><path d="M80 130 C 70 100 78 80 95 66"/><path d="M80 130 C 110 135 130 128 145 115"/><path d="M110 100 C 102 75 110 58 126 46"/><path d="M110 100 C 136 104 152 98 165 86"/></g></svg>
+  <svg class="palme p2" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#9cc49b" stroke-width="2.4" stroke-linecap="round"><path d="M20 190 C 70 140 120 90 190 20"/><path d="M50 160 C 40 130 45 110 60 95"/><path d="M50 160 C 80 165 100 160 115 148"/><path d="M80 130 C 70 100 78 80 95 66"/><path d="M80 130 C 110 135 130 128 145 115"/><path d="M110 100 C 102 75 110 58 126 46"/><path d="M110 100 C 136 104 152 98 165 86"/></g></svg>
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow apparait">Salon de coiffure · Le Tampon</p>
+      <h1 class="apparait d2">Les Ciseaux<span class="script">de Cynthia</span></h1>
+      <p class="lead apparait d3">« La différence se voit, la qualité se ressent »<small>Les Ciseaux De Cynthia, juillet 2026</small></p>
+      <p class="metier apparait d3">Mariage · Couleur · Soins</p>
+      <div class="ctas apparait d3">
+        <a class="btn btn-main" href="https://wa.me/262692824067?text=Bonjour%20Cynthia%2C%20je%20voudrais%20prendre%20rendez-vous%20au%20salon">Prendre rendez-vous</a>
+        <a class="btn btn-line" href="tel:+262692824067">Appeler</a>
+      </div>
+      <p class="adr apparait d3">409a rue Jules Bertaut, Le Tampon · Sur rendez-vous ou en passage libre · <a href="tel:+262692824067">0692 82 40 67</a></p>
+    </div>
+    <figure class="medaillon apparait d2">
+      <svg viewBox="0 0 200 200" aria-hidden="true">
+        <path class="meche" d="M30 40 C 60 70 40 110 70 140 S 120 170 150 190" fill="none" stroke="#c9a25f" stroke-width="3" stroke-linecap="round"/>
+        <path class="meche" d="M40 30 C 75 62 52 104 84 134 S 132 160 168 182" fill="none" stroke="#d8b086" stroke-width="2" stroke-linecap="round" style="animation-delay:.9s"/>
+        <g class="lame a"><path d="M100 108 L 168 40 C 172 36 176 40 172 44 Z" fill="#4b2639"/></g>
+        <g class="lame b"><path d="M100 108 L 32 40 C 28 36 24 40 28 44 Z" fill="#6e3c56"/></g>
+        <circle cx="100" cy="108" r="5" fill="#e07fae"/>
+        <circle cx="76" cy="150" r="20" fill="none" stroke="#e07fae" stroke-width="7"/>
+        <circle cx="124" cy="150" r="20" fill="none" stroke="#e07fae" stroke-width="7"/>
+        <path d="M88 133 L 100 108 L 112 133" fill="none" stroke="#e07fae" stroke-width="7" stroke-linejoin="round"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Chignon bas</span><span>Flou</span><span>Tressé</span><span>Neutralisation</span><span>Éclaircissement</span><span>Brillance</span><span>Douceur</span><span>Éclat</span><span>Sur-mesure</span>
+<span>Chignon bas</span><span>Flou</span><span>Tressé</span><span>Neutralisation</span><span>Éclaircissement</span><span>Brillance</span><span>Douceur</span><span>Éclat</span><span>Sur-mesure</span>
+</div></div>
+
+<section class="wrap transfo" id="couleur">
+  <figure class="photo rv">
+    <img src="img/transformation-avant-apres.webp" alt="Avant / après : des longueurs devenues lisses, brillantes et lumineuses au salon" width="680" height="616">
+    <span class="tag t1">Avant</span><span class="tag t2">Après</span>
+  </figure>
+  <div class="rv">
+    <p class="eyebrow">Couleur &amp; soins</p>
+    <h2>Des cheveux sublimés, naturellement</h2>
+    <p>Chez Cynthia, chaque transformation se réalise avec précision, pour des cheveux plus brillants, plus doux et naturellement sublimés.</p>
+    <p class="citation">« Une transformation réalisée avec précisions pour des cheveux plus brillant, plus doux et naturellement, sublimés. ✨ »<small>Publication Facebook du 18 juillet 2026</small></p>
+    <div class="trio"><span>Brillance</span><span>Douceur</span><span>Éclat</span></div>
+    <p class="formule">✨ <b>Neutralisation + éclaircissement</b> = résultat parfait<span class="src">Publication Facebook du 4 février 2026</span></p>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#fbe8ef"/></svg>
+<section class="mariage" id="mariage">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Mariage</p><h2>Votre coiffure de mariée, <span class="script" style="font-size:1.25em;white-space:nowrap">sur-mesure</span></h2><p>« Chignon bas, flous, tressés… Tout est fait sur-mesure selon vos envies. » Cynthia imagine avec vous la coiffure de votre grand jour.</p></div>
+    <div class="coiffures">
+      <article class="coif rv"><small>Illustration</small>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 120 C 20 98 40 92 60 92 C 80 92 100 98 106 120 Z" fill="#fbe8ef" stroke="#6e3c56" stroke-width="2"/><rect x="51" y="70" width="18" height="26" rx="6" fill="#f3d6c4"/><ellipse cx="60" cy="46" rx="26" ry="30" fill="#6e3c56"/><path d="M40 36 C 50 52 70 52 80 36" fill="none" stroke="#8a5270" stroke-width="2"/><circle cx="60" cy="78" r="14" fill="#4b2639"/><path d="M52 77 C 54 69 67 70 68 78 C 66 86 55 87 54 79 C 56 74 63 74 63 79" fill="none" stroke="#e07fae" stroke-width="2"/><circle cx="46" cy="72" r="3" fill="#c9a25f"/><circle cx="74" cy="72" r="3" fill="#c9a25f"/><circle cx="60" cy="62" r="2.5" fill="#c9a25f"/></svg>
+        <h3>Chignon bas</h3><p>Élégant et intemporel, tout en douceur sur la nuque.</p></article>
+      <article class="coif rv"><small>Illustration</small>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 120 C 20 98 40 92 60 92 C 80 92 100 98 106 120 Z" fill="#fbe8ef" stroke="#6e3c56" stroke-width="2"/><rect x="51" y="70" width="18" height="26" rx="6" fill="#f3d6c4"/><path d="M34 46 C 30 76 40 96 32 112 C 50 106 70 106 88 112 C 80 96 90 76 86 46 Z" fill="#6e3c56"/><ellipse cx="60" cy="46" rx="26" ry="30" fill="#6e3c56"/><g fill="none" stroke="#e07fae" stroke-width="1.8" stroke-linecap="round"><path d="M44 40 C 40 64 50 80 42 104"/><path d="M60 34 C 56 62 66 80 58 106"/><path d="M76 40 C 80 64 70 80 78 104"/></g><circle cx="80" cy="34" r="3.5" fill="#c9a25f"/><circle cx="85" cy="40" r="2.5" fill="#f2b8d2"/></svg>
+        <h3>Flou</h3><p>Des ondulations légères, libres et lumineuses.</p></article>
+      <article class="coif rv"><small>Illustration</small>
+        <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 120 C 20 98 40 92 60 92 C 80 92 100 98 106 120 Z" fill="#fbe8ef" stroke="#6e3c56" stroke-width="2"/><rect x="51" y="70" width="18" height="26" rx="6" fill="#f3d6c4"/><ellipse cx="60" cy="46" rx="26" ry="30" fill="#6e3c56"/><g fill="#4b2639" stroke="#e07fae" stroke-width="1.6"><ellipse cx="60" cy="74" rx="8" ry="6" transform="rotate(-25 60 74)"/><ellipse cx="60" cy="84" rx="8" ry="6" transform="rotate(25 60 84)"/><ellipse cx="60" cy="94" rx="7" ry="5.5" transform="rotate(-25 60 94)"/><ellipse cx="60" cy="103" rx="6" ry="5" transform="rotate(25 60 103)"/></g><rect x="55" y="108" width="10" height="4" rx="2" fill="#c9a25f"/><path d="M57 112 C 56 117 64 117 63 112" fill="#4b2639"/></svg>
+        <h3>Tressé</h3><p>Une tresse délicate, romantique et raffinée.</p></article>
+    </div>
+    <div class="jourj rv">
+      <span class="script">Oui !</span>
+      <div><blockquote>« ✨Une mariée sublime pour un jour inoubliable 🤍✨ Quel plaisir d'avoir pu sublimer la femme de mon cousin pour ce si beau jour ! »</blockquote><small>Publication Facebook du 23 août 2026</small></div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#fbe8ef"/></svg>
+
+<section class="wrap avis">
+  <div class="rv"><p class="eyebrow">Elles en parlent</p><h2>Une vraie professionnelle <span class="coeur">♥</span></h2><p>Sur la page Facebook du salon, les clientes recommandent Les Ciseaux De Cynthia.</p></div>
+  <div class="avis-grid">
+    <figure class="rv"><blockquote>« Super satisfaite très professionnelle »</blockquote><figcaption>Recommandation Facebook</figcaption></figure>
+    <figure class="rv"><blockquote>« Une vraie professionnelle. »</blockquote><figcaption>Commentaire Facebook, sous l'aperçu mariage</figcaption></figure>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment chez Cynthia</h2>
+      <p>Une jolie idée à glisser sous le sapin : un moment de beauté au salon, pour une maman, une sœur, une amie.</p>
+      <div class="idees">
+        <div class="idee"><i>✂</i><div><h3>Une carte cadeau coiffure</h3><p>Couleur, soin ou coiffure : la personne choisit sa prestation avec Cynthia.</p></div></div>
+        <div class="idee"><i>✦</i><div><h3>Une belle coiffure pour les fêtes</h3><p>Chignon, flou ou tressé, pour briller à chaque repas de famille.</p></div></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692824067?text=Bonjour%20Cynthia%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl">Demander une carte cadeau</a>
+    </div>
+    <div class="carte-cadeau rv"><span class="ruban" aria-hidden="true"></span><small>Carte cadeau</small><span class="script">Un moment pour toi</span><small>Les Ciseaux De Cynthia · Le Tampon</small>
+      <svg viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#c9a25f" stroke-width="5" stroke-linecap="round"><path d="M50 50 C 30 20 10 35 25 50 C 35 58 45 54 50 50"/><path d="M50 50 C 70 20 90 35 75 50 C 65 58 55 54 50 50"/><path d="M50 50 L 38 82"/><path d="M50 50 L 62 82"/></g><circle cx="50" cy="50" r="6" fill="#e8cf98"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Au salon</p>
+      <h2>Venez vous faire chouchouter</h2>
+      <p><b>Adresse</b> · 409a rue Jules Bertaut, 97430 Le Tampon</p>
+      <p><b>Accueil</b> · sur rendez-vous ou en passage libre</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692824067">0692 82 40 67</a></p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262692824067?text=Bonjour%20Cynthia%2C%20je%20voudrais%20prendre%20rendez-vous%20au%20salon">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692824067">Appeler</a>
+      </div>
+      <div class="ctas" style="margin-top:.8rem">
+        <a class="btn btn-dark" href="https://www.facebook.com/102160949128441/">Facebook</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=409%20rue%20Jules%20Bertaut%2097430%20Le%20Tampon%20La%20R%C3%A9union">Itinéraire</a>
+      </div>
+    </div>
+    <div class="pin rv">
+      <svg viewBox="0 0 60 80" aria-hidden="true"><path d="M30 78 C 30 78 4 46 4 28 A 26 26 0 0 1 56 28 C 56 46 30 78 30 78Z" fill="#e07fae"/><circle cx="30" cy="28" r="10" fill="#fff"/></svg>
+      <b>409a rue Jules Bertaut</b>
+      <span>97430 Le Tampon · La Réunion</span>
+      <span class="script">à très vite !</span>
+    </div>
+  </div>
+</section>
+
+<footer>Les Ciseaux De Cynthia · Salon de coiffure · Mariage, couleur, soins · Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les Ciseaux De Cynthia.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* pétales de rose et petites paillettes */
+const c=document.getElementById('petales'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const cols=['224,127,174','242,184,210','201,162,95','253,220,232'];
+for(let i=0;i<26;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:5+Math.random()*8,v:.2+Math.random()*.4,a:Math.random()*6.28,r:Math.random()*6.28,c:cols[i%4],o:.15+Math.random()*.25,g:i%4==2});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function draw(p){x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle='rgba('+p.c+','+p.o+')';x.beginPath();
+if(p.g){const s=p.s*.45,t=.5+.5*Math.sin(p.a*3);x.globalAlpha=t;x.moveTo(0,-s*2);x.lineTo(s*.4,0);x.lineTo(0,s*2);x.lineTo(-s*.4,0);x.closePath();x.fill();x.beginPath();x.moveTo(-s*2,0);x.lineTo(0,s*.4);x.lineTo(s*2,0);x.lineTo(0,-s*.4);x.closePath()}
+else{x.moveTo(0,-p.s);x.bezierCurveTo(p.s*.9,-p.s*.8,p.s*.8,p.s*.6,0,p.s);x.bezierCurveTo(-p.s*.8,p.s*.6,-p.s*.9,-p.s*.8,0,-p.s)}
+x.fill();x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.v;p.a+=.012;p.x+=Math.sin(p.a)*.5;p.r+=Math.sin(p.a)*.01;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}draw(p)}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Les Ciseaux De Cynthia" defer></script>
+</body>
+</html>
