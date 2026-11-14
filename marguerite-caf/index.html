@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Marguerite Café · Coffee shop à Petite-Île</title>
+<meta name="description" content="Marguerite Café, coffee shop à Petite-Île (La Réunion) : une pause pour Soi, douceurs, déjeuners & gourmandises. 65 rue Joseph Suacot, du mardi au vendredi de 9h à 17h. 0693 22 48 54.">
+<meta property="og:title" content="Marguerite Café · Coffee shop, Petite-Île">
+<meta property="og:description" content="Une pause pour Soi : café de sélection, douceurs maison, déjeuners & gourmandises, au 65 rue Joseph Suacot.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/marguerite-caf/img/cheesecake-mures.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/marguerite-caf/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito:wght@300;400;600;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#2f7d4a;--vert-f:#1f5634;--vert-n:#173f27;--rose:#f4dcd2;--rose-c:#fbefe9;--orange:#e46f2a;--orange-c:#f6a46b;--sauge:#a9c9bb;--sauge-c:#dcebe4;--creme:#fdf8f1;--cafe:#3a2a20;--txt:#3c3129;--doux:#7d6e63;--jaune:#f5c341}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;color:var(--vert-n);line-height:1.12}
+h2{font-size:clamp(1.95rem,6vw,3rem);margin:.3rem 0 1rem}
+h3{font-size:1.3rem}
+.script{font-family:'Dancing Script',cursive;font-weight:600}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--orange);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert-n);color:var(--sauge-c);text-align:center;font-size:.74rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#fleurs{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.35s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--orange);color:#fff;box-shadow:0 14px 30px -14px rgba(228,111,42,.95);animation:souffle 3.8s ease-in-out infinite}
+.btn-main:hover{background:#c95a1b}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(228,111,42,.7);transform:translateY(-1px)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-vert{background:var(--vert);color:#fff}
+.btn-vert:hover{background:var(--vert-f)}
+.btn-dark{border:1.5px solid var(--vert);color:var(--vert-f)}
+.btn-dark:hover{background:var(--sauge-c)}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--vert-n);color:#fff}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:40% 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.14) translate(1.5%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,63,39,.15) 0%,rgba(23,63,39,.25) 35%,rgba(23,63,39,.93) 82%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4.2rem}
+.hero .eyebrow{color:var(--orange-c)}
+.hero h1{color:#fff;font-size:clamp(4rem,17vw,8rem);font-family:'Dancing Script',cursive;font-weight:600;line-height:.95;margin-top:.4rem;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 small{display:block;font-family:'Nunito',sans-serif;font-size:.2em;letter-spacing:.6em;font-weight:600;margin:.5rem 0 0 .3rem;color:var(--sauge-c)}
+.hero .lead{font-size:1.14rem;max-width:32rem;margin:1.2rem 0 1.9rem;color:var(--creme);text-shadow:0 1px 12px rgba(0,0,0,.45)}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--sauge-c)}
+.hero .adr a{color:#fff}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:44px;margin-top:-43px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--vert);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 44s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✿";margin-left:2.4rem;font-style:normal;font-size:.85rem;color:var(--jaune)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{display:grid;gap:2.6rem;align-items:center}
+.conte{font-family:'Dancing Script',cursive;font-size:clamp(1.9rem,7vw,2.6rem);color:var(--orange);line-height:1.15;margin-bottom:.4rem}
+.citation{border-left:3px solid var(--sauge);padding:.3rem 0 .3rem 1.1rem;margin:1.3rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.12rem;color:var(--vert-f)}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.8rem}
+.chiffres div{background:#fff;border-radius:18px;padding:1rem .5rem;text-align:center;box-shadow:0 10px 30px -20px rgba(31,86,52,.5)}
+.chiffres b{display:block;font-family:'Fraunces',serif;font-size:1.45rem;color:var(--vert)}
+.chiffres span{font-size:.74rem;color:var(--doux);line-height:1.3;display:block}
+.arche{position:relative;border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(31,86,52,.6);max-width:420px;margin:auto}
+.arche img{width:100%;aspect-ratio:3/4;object-fit:cover}
+figcaption{font-size:.8rem;color:var(--doux);margin-top:.6rem;text-align:center}
+/* douceurs */
+.douceurs{background:var(--rose-c)}
+.douceurs>.wrap{position:relative;z-index:1}
+.douceurs::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 12% 18%,rgba(47,125,74,.08) 0 120px,transparent 121px),radial-gradient(circle at 92% 70%,rgba(228,111,42,.08) 0 140px,transparent 141px);pointer-events:none}
+.vedette{display:grid;gap:2rem;align-items:center;margin-top:2rem}
+.vedette figure{position:relative}
+.vedette img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -30px rgba(58,42,32,.55)}
+.pastille{position:absolute;top:-14px;right:-6px;background:var(--orange);color:#fff;border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-size:.72rem;font-weight:700;line-height:1.2;transform:rotate(8deg);box-shadow:0 10px 24px -10px rgba(228,111,42,.9)}
+.creole{font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--vert);margin:.8rem 0}
+.cartes{display:grid;gap:1rem;margin-top:3rem}
+.carte{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;box-shadow:0 14px 34px -24px rgba(58,42,32,.5);transition:.35s;border-top:4px solid var(--sauge)}
+.carte:nth-child(2){border-color:var(--orange-c)}.carte:nth-child(3){border-color:var(--vert)}
+.carte:hover{transform:translateY(-5px) rotate(-.4deg)}
+.carte .ico{width:44px;height:44px;margin-bottom:.6rem}
+.carte p{font-size:.96rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2.4rem}
+.duo img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:20px}
+.duo figure:nth-child(2){margin-top:2.2rem}
+/* café */
+.cafe{background:var(--vert-n);color:var(--sauge-c)}
+.cafe h2{color:#fff}
+.cafe .eyebrow{color:var(--orange-c)}
+.cafe-in{display:grid;gap:2.4rem;align-items:center}
+.tasses{position:relative;max-width:440px;margin:auto;width:100%}
+.tasses .t1{width:78%;border-radius:24px;aspect-ratio:3/4;object-fit:cover}
+.tasses .t2{position:absolute;right:0;bottom:-2rem;width:52%;border-radius:20px;border:6px solid var(--vert-n);aspect-ratio:3/4;object-fit:cover}
+.vapeur{position:absolute;left:30%;top:-2.4rem;width:70px;height:70px;opacity:.7}
+.vapeur path{fill:none;stroke:var(--sauge-c);stroke-width:3;stroke-linecap:round;animation:vap 4s ease-in-out infinite}
+.vapeur path:nth-child(2){animation-delay:1.3s}.vapeur path:nth-child(3){animation-delay:2.6s}
+@keyframes vap{0%{opacity:0;transform:translateY(12px)}40%{opacity:.9}100%{opacity:0;transform:translateY(-14px)}}
+.choix{display:flex;gap:.6rem;flex-wrap:wrap;margin:1.4rem 0}
+.choix span{border:1.5px solid var(--sauge);border-radius:999px;padding:.35rem 1rem;font-size:.9rem;color:#fff}
+.pile{position:relative}
+.legende-t{font-size:.8rem;color:var(--sauge);margin-top:3rem;text-align:center}
+.tasses .t2{object-position:20% 50%}
+.cafe figcaption{color:var(--sauge)}
+/* brunch */
+.brunch-box{background:linear-gradient(135deg,var(--orange) 0%,#ef8d4e 100%);color:#fff;border-radius:30px;padding:clamp(2rem,6vw,3.4rem);position:relative;overflow:hidden}
+.brunch-box h2{color:#fff}
+.brunch-box .eyebrow{color:#fff3e6}
+.brunch-box::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-50 -50 100 100'%3E%3Cg fill='%23ffffff' fill-opacity='.22'%3E%3Cellipse rx='9' ry='24' cy='-24'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(45)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(90)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(135)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(180)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(225)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(270)'/%3E%3Cellipse rx='9' ry='24' cy='-24' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='11' fill='%23f5c341' fill-opacity='.5'/%3E%3C/svg%3E") center/contain no-repeat;animation:tourne 40s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.brunch-box .btn{background:#fff;color:var(--orange);box-shadow:none;animation:none;margin-top:1.4rem}
+/* saisons galerie */
+.saisons{background:var(--sauge-c)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 76%;max-width:360px;scroll-snap-align:center}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:22px;transition:.4s}
+.galerie figure:hover img{transform:scale(1.02)}
+.galerie figcaption{text-align:left}
+.glisse{font-size:.82rem;color:var(--doux)}
+/* musique */
+.musique{text-align:center}
+.notes{display:grid;gap:.7rem;margin:1.8rem auto 0;max-width:560px;text-align:left}
+.note{display:flex;gap:.9rem;align-items:center;background:#fff;border-radius:16px;padding:.8rem 1rem;box-shadow:0 10px 26px -22px rgba(58,42,32,.6)}
+.disque{width:38px;height:38px;border-radius:50%;flex:none;background:radial-gradient(circle,var(--jaune) 0 5px,var(--cafe) 6px 13px,#5a463a 14px 15px,var(--cafe) 16px);animation:tourne 6s linear infinite}
+.note b{display:block;font-family:'Fraunces',serif;font-weight:600;color:var(--vert-n);line-height:1.25}
+.note span{font-size:.84rem;color:var(--doux)}
+/* noël */
+.noel{background:linear-gradient(180deg,var(--creme),#f7ece3)}
+.noel-in{display:grid;gap:2.4rem;align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.idee{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1rem 1.1rem;box-shadow:0 10px 26px -22px rgba(58,42,32,.6)}
+.idee .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--vert);color:#fff;display:grid;place-items:center;font-family:'Fraunces',serif}
+.idee h3{font-size:1.08rem;margin-bottom:.15rem}
+.idee p{font-size:.93rem}
+.carte-cadeau{position:relative;aspect-ratio:1.6/1;border-radius:22px;background:var(--vert);color:#fff;padding:1.4rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;box-shadow:0 30px 60px -28px rgba(23,63,39,.8);max-width:420px;width:100%;margin:auto;transform:rotate(-3deg);transition:.5s}
+.carte-cadeau:hover{transform:rotate(0)}
+.carte-cadeau .ruban{position:absolute;top:0;bottom:0;right:22%;width:18px;background:var(--orange)}
+.carte-cadeau .ruban2{position:absolute;left:0;right:0;top:58%;height:14px;background:var(--orange)}
+.carte-cadeau small{position:relative;z-index:2;text-transform:uppercase;letter-spacing:.22em;font-size:.66rem;color:var(--sauge-c)}
+.carte-cadeau .script{position:relative;z-index:2;font-size:2.4rem;line-height:1}
+.carte-cadeau svg.fl{position:absolute;right:calc(22% - 32px);top:calc(58% - 34px);width:82px;height:82px;z-index:1}
+.illu{display:block;text-align:center;font-size:.75rem;color:var(--doux);margin-top:.8rem}
+/* contact */
+.contact{background:var(--vert);color:#fff}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--jaune)}
+.contact-in{display:grid;gap:2.4rem;align-items:center}
+.infos p{margin:.5rem 0;color:var(--sauge-c)}
+.infos p b{color:#fff;font-weight:700}
+.infos a{color:#fff}
+.horaires{background:rgba(255,255,255,.1);border-radius:18px;padding:1rem 1.2rem;margin:1.2rem 0}
+.horaires div{display:flex;justify-content:space-between;gap:1rem;padding:.2rem 0;border-bottom:1px dashed rgba(255,255,255,.2);font-size:.95rem}
+.horaires div:last-child{border:0}
+.contact .btn-dark{border-color:#fff;color:#fff}
+.contact .btn-dark:hover{background:rgba(255,255,255,.12)}
+.contact figure img{border-radius:24px;width:100%;max-width:520px;margin:auto}
+.contact figcaption{color:var(--sauge-c)}
+footer{background:var(--vert-n);color:var(--sauge);text-align:center;font-size:.82rem;padding:2.2rem 1rem 3rem;position:relative;z-index:2}
+footer .script{font-size:2rem;color:#fff;display:block;margin-bottom:.3rem}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (min-width:860px){
+ .histoire,.vedette,.cafe-in,.noel-in,.contact-in{grid-template-columns:1.1fr .9fr}
+ .vedette{grid-template-columns:.9fr 1.1fr}
+ .cartes{grid-template-columns:repeat(3,1fr)}
+ .galerie figure{flex-basis:30%}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.apparait{opacity:1;transform:none}
+ canvas#fleurs{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Marguerite Café</div>
+<canvas id="fleurs" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/balais-bougainvilliers.webp" alt="Le mur vert de l'entrée du Marguerite Café, deux balais de paille et des bougainvilliers roses"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Coffee shop · Petite-Île, La Réunion</p>
+    <h1 class="apparait d2">Marguerite<small>CAFÉ</small></h1>
+    <p class="lead apparait d3">Une pause pour Soi : douceurs, déjeuners &amp; gourmandises, autour d'un café de sélection.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262693224854?text=Bonjour%20Marguerite%20Caf%C3%A9%2C%20je%20voudrais%20r%C3%A9server%20une%20table"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.1.1.7-.1 1.3z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-line" href="#venir">Venir au café</a>
+    </div>
+    <p class="adr apparait d3">65 rue Joseph Suacot, Petite-Île · <a href="tel:+262693224854">0693 22 48 54</a></p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><path d="M0 44V20c120-16 240-22 360-10s240 28 360 22 240-28 360-28 240 10 360 16v24z" fill="#2f7d4a"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Café de sélection</span><span>Cappuccino</span><span>Latté macchiato</span><span>Thé</span><span>Douceurs</span><span>Déjeuners</span><span>Le brunch mensuel</span><span>Cheesecake</span><span>Gourmandises</span>
+<span>Café de sélection</span><span>Cappuccino</span><span>Latté macchiato</span><span>Thé</span><span>Douceurs</span><span>Déjeuners</span><span>Le brunch mensuel</span><span>Cheesecake</span><span>Gourmandises</span>
+</div></div>
+
+<section class="wrap histoire" id="histoire">
+  <div class="rv">
+    <p class="eyebrow">L'histoire</p>
+    <p class="conte">Il était une fois… une tasse qui souriait</p>
+    <h2>Un cocon au cœur du quartier</h2>
+    <p>Marguerite Café a ouvert ses portes en juin 2025, à Petite-Île. Dès la première semaine, de belles rencontres et retrouvailles autour d'une tasse chaude.</p>
+    <p class="citation">« Un café de sélection qui fait du bien, des rires sincères et des petites douceurs à savourer en bonne compagnie. »</p>
+    <p>Fleurs fraîches sur le comptoir, tables couleur sauge, murs peints de grandes feuilles : un lieu pensé pour prendre le temps, le temps d'un café, d'un thé ou d'un latté.</p>
+    <div class="chiffres">
+      <div><b>2025</b><span>ouverture à Petite-Île</span></div>
+      <div><b>2,3 K</b><span>abonnés Facebook</span></div>
+      <div><b>100 %</b><span>recommandé (5 avis)</span></div>
+    </div>
+  </div>
+  <figure class="rv">
+    <div class="arche"><img src="img/bouquet-theiere.webp" alt="Bouquet de gerberas et d'eucalyptus dans une théière blanche et dorée, sur le comptoir en bois" loading="lazy"></div>
+    <figcaption>Gerberas &amp; eucalyptus, sur le comptoir</figcaption>
+  </figure>
+</section>
+
+<section class="douceurs" id="douceurs">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Douceurs &amp; déjeuners</p><h2>Ce qui vous attend sur le comptoir</h2><p>Le menu change chaque jour, selon la saisonnalité des produits : il se découvre en story sur la page du café.</p></div>
+    <div class="vedette">
+      <figure class="rv"><img src="img/cheesecake-mures.webp" alt="Part de cheesecake vanille nappée de coulis de mûres, une mûre fraîche sur le dessus, dans une assiette à feuillage vert" loading="lazy"><span class="pastille">Fait<br>maison</span></figure>
+      <div class="rv">
+        <p class="eyebrow">Publié le 3 novembre 2026</p>
+        <h3 style="font-size:1.6rem">Le cheesecake vanille Mïan Ha &amp; ti mûriers du Potager la tit Île</h3>
+        <p class="creole">« Si zot la loupé, lé enkor la… »</p>
+        <p>Une part fondante saveur vanille Mïan Ha, avec les mûres du Potager la tit Île : la gourmandise du moment, faite avec des produits d'ici.</p>
+        <a class="btn btn-main" style="margin-top:1.3rem" href="https://wa.me/262693224854?text=Bonjour%20Marguerite%20Caf%C3%A9%2C%20quelles%20sont%20les%20douceurs%20du%20jour%20%3F">Les douceurs du jour</a>
+      </div>
+    </div>
+    <div class="cartes">
+      <div class="carte rv"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 20h26v8a13 13 0 0 1-26 0z" fill="#a9c9bb"/><path d="M34 22h3a5 5 0 0 1 0 10h-4" fill="none" stroke="#2f7d4a" stroke-width="3"/><path d="M16 6c-3 4 3 6 0 10M23 6c-3 4 3 6 0 10" stroke="#e46f2a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg><h3>Café, thé &amp; latté</h3><p>Un café de sélection, en cappuccino ou en latté macchiato, et de quoi faire une vraie pause thé.</p></div>
+      <div class="carte rv"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 34 40 14v20z" fill="#f6a46b"/><path d="M6 34 40 14" stroke="#e46f2a" stroke-width="3"/><circle cx="30" cy="12" r="5" fill="#3a2a20"/></svg><h3>Douceurs &amp; gourmandises</h3><p>Cheesecakes, cakes généreux, petites créations de saison : les douceurs changent au fil des jours.</p></div>
+      <div class="carte rv"><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="26" r="16" fill="#dcebe4" stroke="#2f7d4a" stroke-width="3"/><path d="M17 26c2-6 12-6 14 0" stroke="#2f7d4a" stroke-width="3" fill="none"/><path d="M6 8v12M42 8v12" stroke="#e46f2a" stroke-width="3" stroke-linecap="round"/></svg><h3>Le déjeuner</h3><p>Un menu du jour, au rythme des saisons, publié chaque jour en story.</p></div>
+    </div>
+    <div class="duo">
+      <figure class="rv"><img src="img/cake-cacahuete.webp" alt="Cake moelleux nappé d'un glaçage doré et parsemé d'éclats de cacahuètes" loading="lazy"><figcaption>Un cake généreux, nappage doré</figcaption></figure>
+      <figure class="rv"><img src="img/latte-art.webp" alt="Tasse de latté vue du dessus, dessin dans la mousse, au-dessus des coussins orange et sauge du café" loading="lazy"><figcaption>Latté, version souriante</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cafe" id="cafe">
+  <div class="wrap cafe-in">
+    <div class="rv">
+      <p class="eyebrow">À la tasse</p>
+      <h2>Cappuccino ou Latté macchiato ?</h2>
+      <p>La grande question du samedi, posée par Marguerite elle-même. Ici, le café se choisit avec soin : un café de sélection, servi en tasses colorées, sur les petites tables sauge du café.</p>
+      <div class="choix"><span>Cappuccino</span><span>Latté macchiato</span><span>Latté</span><span>Thé</span></div>
+    </div>
+    <div class="tasses rv">
+      <svg class="vapeur" viewBox="0 0 70 70" aria-hidden="true"><path d="M20 62c-8-12 8-16 0-30s6-18 2-28"/><path d="M35 62c-8-12 8-16 0-30s6-18 2-28"/><path d="M50 62c-8-12 8-16 0-30s6-18 2-28"/></svg>
+      <div class="pile"><img class="t1" src="img/cappuccinos.webp" alt="Deux cappuccinos tenus au-dessus des tables vert sauge du café" loading="lazy">
+      <img class="t2" src="img/cafe-selection.webp" alt="Sachet de café La Isabelia Jinotega du Nicaragua, à côté d'un bocal de guimauves" loading="lazy"></div>
+      <p class="legende-t">Deux cappuccinos &amp; La Isabelia, Jinotega (Nicaragua), sur le comptoir</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="brunch">
+  <div class="brunch-box rv">
+    <p class="eyebrow">Une fois par mois</p>
+    <h2>Le brunch mensuel</h2>
+    <p style="max-width:34rem">Chaque mois, le café prépare son brunch, sur réservation. L'édition d'octobre s'est tenue le samedi 31, aux couleurs d'Halloween. La prochaine s'annonce sur la page du café : réservez votre place par téléphone ou WhatsApp.</p>
+    <a class="btn" href="https://wa.me/262693224854?text=Bonjour%20Marguerite%20Caf%C3%A9%2C%20je%20voudrais%20r%C3%A9server%20pour%20le%20prochain%20brunch">Réserver le prochain brunch</a>
+  </div>
+</section>
+
+<section class="saisons" id="saisons">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Au fil des saisons</p><h2>Des mignonneries faites main</h2><p>Pour Halloween, le comptoir s'est rempli de sucettes citrouilles, de petits fantômes et de meringues orange : « passez au café vous équiper de mignonneries pour le weekend de fête ! »</p></div>
+    <div class="galerie" tabindex="0" aria-label="Galerie de photos du café">
+      <figure><img src="img/sucettes-citrouille.webp" alt="Deux sucettes meringuées en forme de citrouille, étiquette Handmade" loading="lazy"><figcaption>Sucettes citrouilles, « Handmade »</figcaption></figure>
+      <figure><img src="img/meringues-citrouille.webp" alt="Petites meringues orange en forme de citrouille, feuille verte sur le dessus" loading="lazy"><figcaption>Meringues citrouilles</figcaption></figure>
+      <figure><img src="img/meringues-fantomes.webp" alt="Petites meringues fantômes aux yeux en chocolat, dans des boîtes en papier de soie" loading="lazy"><figcaption>Petits fantômes meringués</figcaption></figure>
+      <figure><img src="img/cheesecake-mures.webp" alt="Part de cheesecake vanille et coulis de mûres, devant le salon orange et sauge du café" loading="lazy" style="object-position:50% 60%"><figcaption>Cheesecake vanille &amp; mûres, novembre</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser pour voir la suite →</p>
+  </div>
+</section>
+
+<section class="wrap musique">
+  <div class="rv">
+    <p class="eyebrow">En musique</p>
+    <h2>Chaque publication a sa chanson</h2>
+    <p style="max-width:36rem;margin:auto">Sur la page du café, chaque douceur arrive avec sa bande-son. Quelques titres choisis par Marguerite cet automne :</p>
+  </div>
+  <div class="notes">
+    <div class="note rv"><i class="disque"></i><div><b>Loder mon pei</b><span>Ousanousava</span></div></div>
+    <div class="note rv"><i class="disque"></i><div><b>Lambian's famille</b><span>Bèf Séga</span></div></div>
+    <div class="note rv"><i class="disque"></i><div><b>Goo Goo Muck</b><span>The Cramps</span></div></div>
+    <div class="note rv"><i class="disque"></i><div><b>Hocus Pocus Picnic</b><span>Azda</span></div></div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez une pause pour Soi</h2>
+      <p>Pour Noël, offrez un moment chez Marguerite : un café, une douceur, un déjeuner, un brunch en famille. Le cadeau qui fait du bien, à Petite-Île.</p>
+      <div class="idees">
+        <div class="idee"><span class="n">1</span><div><h3>Un moment au café à offrir</h3><p>Un café et une douceur, ou un déjeuner : demandez au café comment l'offrir.</p></div></div>
+        <div class="idee"><span class="n">2</span><div><h3>Des douceurs pour la table des fêtes</h3><p>Des gourmandises de Marguerite pour vos repas de famille : demandez au café ce qui vous ferait plaisir.</p></div></div>
+        <div class="idee"><span class="n">3</span><div><h3>Un brunch à partager</h3><p>Une place au brunch du mois, pour se retrouver autour d'une belle table.</p></div></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262693224854?text=Bonjour%20Marguerite%20Caf%C3%A9%2C%20je%20voudrais%20offrir%20un%20moment%20chez%20vous%20pour%20No%C3%ABl%2C%20comment%20faire%20%3F">Préparer mon cadeau sur WhatsApp</a>
+    </div>
+    <div class="rv">
+      <div class="carte-cadeau" role="img" aria-label="Illustration d'une carte cadeau Marguerite Café">
+        <span class="ruban"></span><span class="ruban2"></span>
+        <svg class="fl" viewBox="-50 -50 100 100" aria-hidden="true"><g fill="#fff"><ellipse rx="8" ry="20" cy="-22"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(45)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(90)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(135)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(180)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(225)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(270)"/><ellipse rx="8" ry="20" cy="-22" transform="rotate(315)"/></g><circle r="10" fill="#f5c341"/></svg>
+        <small>Un moment à offrir</small>
+        <span class="script">Marguerite Café</span>
+        <small>Petite-Île · Noël</small>
+      </div>
+      <span class="illu">Illustration</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="venir">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir au café</p>
+      <h2>Ravie de vous accueillir</h2>
+      <p><b>Adresse</b> · 65 rue Joseph Suacot, 97429 Petite-Île</p>
+      <p><b>Parking</b> · un grand parking gratuit à 50 m du café</p>
+      <div class="horaires">
+        <div><span>Mardi → vendredi</span><b>9h – 17h</b></div>
+        <div><span>Le menu du jour</span><b>en story, chaque jour</b></div>
+      </div>
+      <p><b>Téléphone</b> · <a href="tel:+262693224854">0693 22 48 54</a></p>
+      <p><b>E-mail</b> · <a href="mailto:margueritecafe974@gmail.com">margueritecafe974@gmail.com</a></p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262693224854?text=Bonjour%20Marguerite%20Caf%C3%A9%2C%20je%20voudrais%20r%C3%A9server%20une%20table">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262693224854">Appeler</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=65+rue+Joseph+Suacot+97429+Petite-%C3%8Ele">Itinéraire</a>
+      </div>
+      <div class="ctas" style="margin-top:.8rem">
+        <a class="btn btn-dark" href="https://www.facebook.com/p/Marguerite-Caf%C3%A9-61569513862428/">Facebook</a>
+        <a class="btn btn-dark" href="https://www.instagram.com/marguerite.cafe/">Instagram</a>
+      </div>
+    </div>
+    <figure class="rv"><img class="ens" src="img/enseigne.webp" alt="L'enseigne Marguerite Café, fleurs peintes, au-dessus de la porte sur la façade verte" loading="lazy"><figcaption>L'enseigne, au 65 rue Joseph Suacot</figcaption></figure>
+  </div>
+</section>
+</main>
+<footer>
+  <span class="script">Marguerite Café</span>
+  Coffee shop · 65 rue Joseph Suacot, Petite-Île · mardi au vendredi, 9h-17h<br><br>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Marguerite Café.
+</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('fleurs'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var N=W<600?16:26;
+function mk(y){return{x:Math.random()*W,y:y==null?Math.random()*H:y,r:3+Math.random()*5,vy:.18+Math.random()*.35,vx:(Math.random()-.5)*.25,a:Math.random()*6.3,va:(Math.random()-.5)*.01,o:.18+Math.random()*.3,p:Math.random()*6.3,k:Math.random()<.25}}
+for(var i=0;i<N;i++)P.push(mk());
+function fleur(f){x.save();x.translate(f.x,f.y);x.rotate(f.a);x.globalAlpha=f.o;
+ if(f.k){x.fillStyle='#ffffff';x.beginPath();x.ellipse(0,0,f.r*.45,f.r*1.2,0,0,6.3);x.fill()}
+ else{x.fillStyle='#ffffff';for(var j=0;j<8;j++){x.rotate(.785);x.beginPath();x.ellipse(0,-f.r,f.r*.38,f.r*.85,0,0,6.3);x.fill()}
+ x.fillStyle='#f5c341';x.beginPath();x.arc(0,0,f.r*.42,0,6.3);x.fill()}
+ x.restore()}
+function tick(){if(!run)return;x.clearRect(0,0,W,H);
+ for(var i=0;i<P.length;i++){var f=P[i];f.p+=.01;f.y+=f.vy;f.x+=f.vx+Math.sin(f.p)*.25;f.a+=f.va;if(f.y>H+20)P[i]=mk(-20);fleur(f)}
+ requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Marguerite Café" defer></script>
+</body>
+</html>
