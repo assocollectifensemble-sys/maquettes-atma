@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Laverie &amp; Blanchisserie Cilaos · Lavage, séchage, blanchisserie</title>
+<meta name="description" content="Laverie &amp; Blanchisserie Cilaos, 03 rue du Docteur Manès : un service pratique, local et efficace au quotidien. Lavage, séchage, blanchisserie pour les habitants comme pour les professionnels.">
+<meta property="og:title" content="Laverie &amp; Blanchisserie Cilaos">
+<meta property="og:description" content="Un service pratique, local et efficace au quotidien. Lavage • Séchage • Blanchisserie, au cœur de Cilaos.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/laverie-blanchisserie-cilaos/img/logo-firmant-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/laverie-blanchisserie-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Libre+Baskerville:ital@0;1&family=Mulish:wght@300;400;600;700&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#43695a;--vert-f:#2f4d41;--vert-n:#1f352c;--jaune:#f5c63c;--jaune-c:#fbe08c;--ardoise:#2d2a33;--blanc:#fbfaf6;--linge:#eef1ec;--txt:#26332d;--doux:#6b7a72}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Mulish',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--blanc);line-height:1.7;font-size:17px;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{line-height:1.08}
+h2{font-family:'Libre Baskerville',serif;font-weight:400;color:var(--vert-f);font-size:clamp(1.9rem,5.4vw,3rem);margin:.4rem 0 1.1rem}
+h2 em{color:var(--vert)}
+h3{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:.04em;font-size:1.15rem;text-transform:uppercase;color:var(--vert-f)}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--vert);font-weight:700}
+.script{font-family:'Sacramento',cursive;font-weight:400;line-height:1}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ardoise);color:var(--jaune-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+canvas#bulles{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.04em;font-size:.93rem;transition:.35s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--jaune);color:var(--ardoise);box-shadow:0 14px 30px -14px rgba(245,198,60,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:#ffd556;transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(245,198,60,.7)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-vert{background:var(--vert);color:#fff}
+.btn-vert:hover{background:var(--vert-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(120% 80% at 80% 10%,#557c6b 0%,var(--vert) 45%,var(--vert-f) 100%);color:#fff}
+.hero-in{position:relative;z-index:2;padding:6.5rem 0 5rem;display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
+.points{display:flex;gap:.45rem;margin-bottom:1.1rem}
+.points i{width:14px;height:14px;border-radius:50%;border:2px solid var(--jaune)}
+.points i:nth-child(odd){background:var(--jaune)}
+.hero .eyebrow{color:var(--jaune);letter-spacing:.42em}
+.hero h1{font-family:'Archivo Black',sans-serif;font-weight:400;font-size:clamp(3.3rem,13vw,7.2rem);letter-spacing:.04em;margin:.8rem 0 .2rem;text-transform:uppercase}
+.hero h1 .contour{display:block;font-size:.48em;letter-spacing:.11em;color:transparent;-webkit-text-stroke:2px var(--jaune);margin-top:.25em}
+.trait{height:2px;background:rgba(255,255,255,.65);width:min(420px,100%);margin:1.1rem 0}
+.hero .lead{font-size:1.15rem;max-width:32rem;margin:1rem 0 1.8rem;color:#eef5f0}
+.hero .lead b{color:var(--jaune-c);font-weight:600}
+.badge7{display:inline-flex;align-items:baseline;gap:.15rem;font-family:'Archivo Black',sans-serif;color:var(--jaune);font-size:2.2rem;transform:rotate(-4deg);margin-bottom:.4rem}
+.badge7 sup{font-size:.4em}
+.badge7 span{font-family:'Mulish';font-weight:700;font-size:.9rem;background:var(--jaune);color:var(--ardoise);padding:.2rem .6rem;margin-left:.8rem;transform:rotate(4deg);letter-spacing:.06em}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:#dfe9e3}
+.hero .adr a{color:var(--jaune-c)}
+.machine{position:relative;max-width:360px;margin:auto;width:100%}
+.machine figcaption{position:absolute;right:0;bottom:-1.6rem;font-size:.72rem;color:#cfe0d6;letter-spacing:.1em;text-transform:uppercase}
+.tambour{transform-origin:150px 205px;animation:tourne 6s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.hublot-reflet{animation:luit 4s ease-in-out infinite}
+@keyframes luit{50%{opacity:.35}}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .25s forwards}
+.apparait.d2{animation-delay:.6s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:50px;margin-top:-49px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--jaune);color:var(--ardoise);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:1rem}
+.track{display:inline-block;animation:defile 36s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"";display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--vert);margin-left:2.4rem;vertical-align:.08em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* services */
+.intro{max-width:44rem}
+.intro p{color:var(--doux);font-size:1.08rem}
+.services{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-top:2.6rem}
+.carte{background:#fff;border-radius:26px;padding:2rem 1.7rem;box-shadow:0 30px 60px -40px rgba(31,53,44,.55);border:1px solid #e3e9e4;position:relative;overflow:hidden;transition:transform .5s,box-shadow .5s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(31,53,44,.7)}
+.carte::before{content:"";position:absolute;right:-60px;top:-60px;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle at 35% 35%,rgba(255,255,255,.9),rgba(245,198,60,.25) 55%,rgba(67,105,90,.15) 70%,transparent 72%)}
+.carte .ico{width:58px;height:58px;border-radius:18px;background:var(--linge);display:grid;place-items:center;margin-bottom:1.1rem}
+.carte .ico svg{width:34px;height:34px}
+.carte .pour{display:inline-block;margin:.5rem 0 .9rem;font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ardoise);background:var(--jaune-c);padding:.25rem .7rem;border-radius:999px}
+.carte p{color:#46544d}
+.carte .heures{margin-top:1.2rem;padding-top:1rem;border-top:1px dashed #cfd9d2;font-weight:600;color:var(--vert-f)}
+.carte .heures small{display:block;font-weight:400;color:var(--doux);font-size:.8rem}
+.carte.pro{background:var(--vert-f);color:#fff;border-color:var(--vert-f)}
+.carte.pro h3{color:var(--jaune)}
+.carte.pro p{color:#dbe7e0}
+.carte.pro .ico{background:rgba(255,255,255,.1)}
+.carte.pro .heures{color:#fff;border-color:rgba(255,255,255,.25)}
+.carte.pro .heures small{color:#bcd0c5}
+.firmant{font-family:'Libre Baskerville',serif;font-style:italic}
+/* cycle */
+.cycle{background:var(--linge)}
+.etapes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.4rem;counter-reset:e}
+.etape{text-align:center;padding:1.6rem 1rem;background:#fff;border-radius:24px;position:relative}
+.etape .rond{width:120px;height:120px;margin:0 auto 1.1rem;border-radius:50%;background:var(--vert);display:grid;place-items:center;position:relative;box-shadow:inset 0 0 0 8px #d7e2db,0 18px 30px -18px rgba(31,53,44,.8)}
+.etape .rond svg{width:62px;height:62px}
+.etape:nth-child(1) .rond svg{animation:tourne 7s linear infinite}
+.etape:nth-child(2) .rond svg{animation:tangue 3s ease-in-out infinite}
+.etape:nth-child(3) .rond svg{animation:flotte 3.4s ease-in-out infinite}
+@keyframes tangue{50%{transform:rotate(-8deg)}}
+@keyframes flotte{50%{transform:translateY(-5px)}}
+.etape h3{font-size:1.4rem;margin-bottom:.3rem}
+.etape p{color:var(--doux);font-size:.95rem}
+.cycle .note{text-align:center;margin-top:2.2rem;color:var(--vert-f);font-family:'Libre Baskerville',serif;font-style:italic;font-size:1.1rem}
+/* histoire */
+.histoire{background:var(--vert-n);color:#e6efe9;overflow:hidden}
+.histoire h2{color:#fff}
+.histoire h2 em{color:var(--jaune)}
+.citation{font-family:'Libre Baskerville',serif;font-size:clamp(1.5rem,4.6vw,2.4rem);line-height:1.35;color:#fff;max-width:40rem;margin:1rem 0 .6rem}
+.citation::before{content:"« ";color:var(--jaune)}.citation::after{content:" »";color:var(--jaune)}
+.cite-src{font-size:.85rem;color:#a9c0b4;margin-bottom:2.6rem}
+.frise{position:relative;display:grid;gap:1.6rem;padding-left:2rem;max-width:46rem}
+.frise::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--jaune),rgba(245,198,60,.15))}
+.jalon{position:relative}
+.jalon::before{content:"";position:absolute;left:-2rem;top:.35rem;width:16px;height:16px;border-radius:50%;background:var(--vert-n);border:3px solid var(--jaune)}
+.jalon .date{font-family:'Archivo Black';color:var(--jaune);letter-spacing:.08em;font-size:.85rem;text-transform:uppercase}
+.jalon h3{color:#fff;font-size:1.05rem;margin:.15rem 0 .3rem}
+.jalon p{color:#c7d8ce;font-size:.95rem}
+.lancement{font-size:2.6rem;color:var(--jaune-c);display:block;margin-bottom:-.3rem}
+/* noel */
+.noel{background:linear-gradient(160deg,#fffdf4 0%,#fff6d6 100%);overflow:hidden}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.noel .eyebrow{color:#b0471f}
+.noel h2 .script{color:#b0471f;font-size:1.5em;display:block;margin-bottom:-.1em}
+.noel ul{list-style:none;margin:1.2rem 0 1.8rem;display:grid;gap:.75rem}
+.noel li{display:flex;gap:.8rem;align-items:flex-start}
+.noel li::before{content:"";flex:none;width:12px;height:12px;margin-top:.5rem;border-radius:50%;background:var(--jaune);box-shadow:0 0 0 4px rgba(245,198,60,.3)}
+.pile{position:relative;max-width:330px;margin:auto;width:100%}
+.pile figcaption{text-align:right;font-size:.72rem;color:var(--doux);letter-spacing:.1em;text-transform:uppercase;margin-top:.3rem}
+.ruban-anim{animation:flotte 3.2s ease-in-out infinite}
+.etoile{animation:scint 2.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.etoile.e2{animation-delay:.9s}.etoile.e3{animation-delay:1.6s}
+@keyframes scint{50%{opacity:.25;transform:scale(.7)}}
+.noel .petit{font-size:.85rem;color:var(--doux);margin-top:1rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.logo-rond{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;overflow:hidden;margin:auto;box-shadow:0 0 0 10px var(--linge),0 30px 60px -30px rgba(31,53,44,.6);animation:flotte 5s ease-in-out infinite}
+.logo-rond img{width:100%;height:100%;object-fit:cover}
+.infos{display:grid;gap:.9rem;margin-top:1.4rem}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.1rem;background:#fff;border-radius:18px;border:1px solid #e3e9e4}
+.ligne svg{width:24px;height:24px;flex:none;margin-top:.15rem;color:var(--vert)}
+.ligne b{display:block;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux);font-weight:700}
+.ligne a{color:var(--vert-f);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+.ligne a:hover{text-decoration:underline}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:#a9c0b4;background:var(--vert-n)}
+footer b{color:#fff;font-weight:600}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.services,.noel-in,.contact-in{grid-template-columns:1fr}
+ .hero-in{padding-top:5.5rem;gap:3rem}
+ .machine{max-width:200px;order:-1}
+ .etapes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding-bottom:1rem;margin-right:-5vw;padding-right:5vw}
+ .etape{flex:0 0 74%;scroll-snap-align:start}
+ .ribbon{font-size:.7rem}
+ .hero h1 .contour{-webkit-text-stroke:1.5px var(--jaune)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#bulles{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Laverie &amp; Blanchisserie Cilaos</div>
+<canvas id="bulles" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <div class="points apparait" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="eyebrow apparait">Cilaos</p>
+      <div class="trait apparait"></div>
+      <h1 class="apparait d2">Laverie<span class="contour">Blanchisserie</span></h1>
+      <p class="lead apparait d3">Un service <b>pratique, local et efficace</b> au quotidien. Lavage, séchage, blanchisserie : pour les habitants comme pour les professionnels.</p>
+      <div class="badge7 apparait d3" aria-label="Laverie ouverte 7 jours sur 7, de 7h à 19h">7<sup>jrs</sup>/7<sup>jrs</sup><span>7H00 – 19H00</span></div>
+      <div class="ctas apparait d3" style="margin-top:1.2rem">
+        <a class="btn btn-main" href="tel:+262693525357"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>0693 52 53 57</a>
+        <a class="btn btn-line" href="#services">Nos services</a>
+      </div>
+      <p class="adr apparait d3">03 rue du Docteur Manès, 97413 Cilaos · <a href="https://www.google.com/maps/search/?api=1&amp;query=03%20rue%20du%20Docteur%20Man%C3%A8s%2097413%20Cilaos">Itinéraire</a></p>
+    </div>
+    <figure class="machine apparait d2">
+      <svg viewBox="0 0 300 380" role="img" aria-label="Illustration d'un lave-linge dont le tambour tourne">
+        <defs>
+          <linearGradient id="carro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe6e1"/></linearGradient>
+          <radialGradient id="vitre" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#5b7f70"/><stop offset="1" stop-color="#1f352c"/></radialGradient>
+          <clipPath id="hub"><circle cx="150" cy="205" r="82"/></clipPath>
+        </defs>
+        <rect x="20" y="10" width="260" height="350" rx="26" fill="url(#carro)"/>
+        <rect x="20" y="10" width="260" height="70" rx="26" fill="#f1f4f1"/>
+        <rect x="20" y="62" width="260" height="18" fill="#f1f4f1"/>
+        <line x1="20" y1="80" x2="280" y2="80" stroke="#cfd9d2" stroke-width="2"/>
+        <rect x="42" y="32" width="70" height="26" rx="8" fill="#2d2a33"/>
+        <text x="77" y="50" fill="#f5c63c" font-family="Archivo Black,Arial" font-size="13" text-anchor="middle">7/7</text>
+        <circle cx="210" cy="45" r="13" fill="#f5c63c"/><circle cx="210" cy="45" r="5" fill="#2d2a33"/>
+        <circle cx="245" cy="45" r="6" fill="#43695a"/>
+        <circle cx="150" cy="205" r="108" fill="#e3e9e4"/>
+        <circle cx="150" cy="205" r="96" fill="#c9d4cd"/>
+        <circle cx="150" cy="205" r="82" fill="url(#vitre)"/>
+        <g clip-path="url(#hub)">
+          <g class="tambour">
+            <path d="M80 240c30-30 60 10 90-12s40-30 70-6v80H80z" fill="#fbfaf6" opacity=".95"/>
+            <path d="M95 255c25-18 45 6 70-6s35-20 55-4v40H95z" fill="#f5c63c"/>
+            <path d="M120 150c20 10 35-12 55 0s20 25 10 30-40-10-55-5-25-15-10-25z" fill="#ffffff" opacity=".85"/>
+            <circle cx="105" cy="185" r="14" fill="#7fa492"/>
+            <circle cx="195" cy="170" r="10" fill="#fbe08c"/>
+          </g>
+        </g>
+        <path class="hublot-reflet" d="M98 160a70 70 0 0 1 60-36" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none" opacity=".75"/>
+        <rect x="50" y="330" width="200" height="8" rx="4" fill="#cfd9d2"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50V24c120-20 240-26 360-12s240 32 360 26 240-32 360-32 240 12 360 20v24z" fill="#f5c63c"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Lavage</span><span>Séchage</span><span>Blanchisserie</span><span>7 jours sur 7</span><span>Habitants &amp; professionnels</span><span>Cilaos</span>
+<span>Lavage</span><span>Séchage</span><span>Blanchisserie</span><span>7 jours sur 7</span><span>Habitants &amp; professionnels</span><span>Cilaos</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">Deux services, une adresse</p>
+      <h2>Le linge de Cilaos, <em>frais et soigné</em></h2>
+      <p>Au 03 rue du Docteur Manès, une laverie ouverte tous les jours pour simplifier le quotidien des habitants, et une blanchisserie industrielle au service des professionnels du cirque.</p>
+    </div>
+    <div class="services">
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#43695a" stroke-width="2.4"><rect x="7" y="4" width="26" height="32" rx="5"/><circle cx="20" cy="22" r="8"/><path d="M13 22c3-2 5 2 7 0s4-2 7 0" stroke="#f5c63c"/><circle cx="12" cy="9.5" r="1.4" fill="#43695a"/></svg></div>
+        <h3>La laverie</h3>
+        <span class="pour">Pour les habitants</span>
+        <p>Lavage et séchage dans une laverie moderne, accessible 7 jours sur 7 « pour vous simplifier le quotidien ». Vous déposez votre panier, vous repartez avec du linge propre et sec.</p>
+        <p class="heures">Tous les jours, 7h00 – 19h00<small>Horaires publiés par la laverie en janvier 2026</small></p>
+      </article>
+      <article class="carte pro rv">
+        <div class="ico"><svg viewBox="0 0 40 40" fill="none" stroke="#f5c63c" stroke-width="2.4"><path d="M20 8a3 3 0 1 1 3 3c-1.5 0-3 1-3 2.5V15"/><path d="M20 15 4 26c-1.5 1-1 3 1 3h30c2 0 2.5-2 1-3z"/><path d="M8 34h24" stroke="#fff"/></svg></div>
+        <h3>La blanchisserie</h3>
+        <span class="pour">Pour les professionnels</span>
+        <p>La <span class="firmant">Blanchisserie Industrielle Firmant</span> met son savoir-faire au service des professionnels : une solution de proximité, fiable et adaptée à leurs besoins. « Nos machines modernes assurent un traitement rigoureux, efficace et respectueux des textiles. »</p>
+        <p class="heures">7h30 – 12h00 · 13h30 – 16h00<small>Horaires publiés à l'ouverture officielle, février 2026</small></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cycle">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">Lavage • Séchage • Blanchisserie</p>
+      <h2>Trois gestes, <em>un linge qui sent bon</em></h2>
+    </div>
+    <div class="etapes">
+      <div class="etape rv">
+        <div class="rond"><svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="3"><circle cx="30" cy="30" r="22"/><path d="M12 34c6-5 10 3 18-1s12-6 18 0" stroke="#f5c63c"/><circle cx="22" cy="22" r="3" fill="#fff"/><circle cx="36" cy="18" r="2" fill="#fff"/></svg></div>
+        <h3>Lavage</h3>
+        <p>Des machines modernes pour un lavage efficace, tous les jours de la semaine.</p>
+      </div>
+      <div class="etape rv">
+        <div class="rond"><svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="3"><path d="M8 18h44"/><path d="M16 18v16c0 3 4 3 4 0V18M30 18v22c0 3 4 3 4 0V18" stroke="#f5c63c"/><path d="M42 18v12c0 3 4 3 4 0V18"/></svg></div>
+        <h3>Séchage</h3>
+        <p>Votre linge repart sec et prêt à ranger, même quand la brume descend sur le cirque.</p>
+      </div>
+      <div class="etape rv">
+        <div class="rond"><svg viewBox="0 0 60 60" fill="none" stroke="#fff" stroke-width="3"><rect x="12" y="34" width="36" height="8" rx="2"/><rect x="14" y="26" width="32" height="8" rx="2" stroke="#f5c63c"/><rect x="16" y="18" width="28" height="8" rx="2"/></svg></div>
+        <h3>Blanchisserie</h3>
+        <p>Un traitement rigoureux et respectueux des textiles pour le linge des professionnels.</p>
+      </div>
+    </div>
+    <p class="note rv">Un service pratique, local et efficace au quotidien.</p>
+  </div>
+</section>
+
+<section class="histoire">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--jaune)">Notre histoire</p>
+    <h2 class="rv">2026, <em>l'année du linge frais</em> à Cilaos</h2>
+    <p class="citation rv">Beaucoup en parlaient. Peu y croyaient.</p>
+    <p class="cite-src rv">Publication de la page, 8 janvier 2026</p>
+    <div class="frise">
+      <div class="jalon rv"><span class="script lancement">Lancement</span><p class="date">7 janvier 2026</p><h3>La Blanchisserie de Cilaos s'annonce</h3><p>« Un nouveau service local destiné aux professionnels de Cilaos souhaitant bénéficier d'une solution de proximité, fiable et adaptée à leurs besoins. »</p></div>
+      <div class="jalon rv"><p class="date">9 janvier 2026</p><h3>La laverie ouvre 7j/7</h3><p>De 7h00 à 19h00, au 03 rue du Docteur Manès, « pour vous simplifier le quotidien ».</p></div>
+      <div class="jalon rv"><p class="date">10 février 2026</p><h3>Ouverture officielle de la Blanchisserie Industrielle Firmant</h3><p>La blanchisserie ouvre officiellement ses portes et met son savoir-faire au service des professionnels.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Les fêtes approchent</p>
+      <h2><span class="script">Pour Noël,</span>recevez avec du linge tout frais</h2>
+      <p>Les fêtes à Cilaos, c'est la famille qui monte au cirque, les tablées qui s'allongent et les chambres d'amis qui se préparent. Avec la laverie et la blanchisserie à deux pas, profitez pleinement de vos invités.</p>
+      <ul>
+        <li><span><b>Habitants</b> : un passage à la laverie, 7 jours sur 7, et tout le linge des fêtes est prêt.</span></li>
+        <li><span><b>Professionnels</b> : gîtes, hébergements et restaurants, organisez dès maintenant le linge de votre saison des fêtes avec la blanchisserie.</span></li>
+        <li><span><b>Horaires des fêtes</b> : un petit message et on vous répond.</span></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262693525357?text=Bonjour%2C%20je%20voudrais%20pr%C3%A9parer%20mon%20linge%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl%20%F0%9F%8E%84"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Préparer le linge des fêtes</a>
+        <a class="btn btn-vert" href="tel:+262693821714">Blanchisserie pro : 0693 82 17 14</a>
+      </div>
+    </div>
+    <figure class="pile rv">
+      <svg viewBox="0 0 300 300" role="img" aria-label="Illustration d'une pile de linge plié nouée d'un ruban de fête">
+        <ellipse cx="150" cy="268" rx="120" ry="12" fill="#f0dfa6"/>
+        <rect x="45" y="205" width="210" height="58" rx="14" fill="#43695a"/>
+        <rect x="45" y="205" width="210" height="14" rx="7" fill="#557c6b"/>
+        <rect x="60" y="150" width="180" height="56" rx="14" fill="#ffffff" stroke="#e3e9e4" stroke-width="2"/>
+        <rect x="60" y="150" width="180" height="12" rx="6" fill="#f4f6f3"/>
+        <rect x="74" y="100" width="152" height="52" rx="14" fill="#f5c63c"/>
+        <rect x="74" y="100" width="152" height="12" rx="6" fill="#fbe08c"/>
+        <g class="ruban-anim">
+          <rect x="141" y="96" width="18" height="168" fill="#b0471f" opacity=".9"/>
+          <path d="M150 98c-22-30-52-22-40-4 6 9 26 8 40 4zM150 98c22-30 52-22 40-4-6 9-26 8-40 4z" fill="#c9562a"/>
+          <circle cx="150" cy="98" r="9" fill="#8f3616"/>
+        </g>
+        <path class="etoile" d="M52 70l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#f5c63c"/>
+        <path class="etoile e2" d="M250 52l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#43695a"/>
+        <path class="etoile e3" d="M232 128l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#c9562a"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-in">
+    <div class="logo-rond rv"><img src="img/logo-firmant.webp" alt="Logo Firmant Laverie : une cloche de service jaune avec un petit lave-linge" width="420" height="420"></div>
+    <div class="rv">
+      <p class="eyebrow">Nous trouver</p>
+      <h2>Au cœur de <em>Cilaos</em></h2>
+      <div class="infos">
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Adresse</b><a href="https://www.google.com/maps/search/?api=1&amp;query=03%20rue%20du%20Docteur%20Man%C3%A8s%2097413%20Cilaos">03 rue du Docteur Manès, 97413 Cilaos</a></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Horaires</b>Laverie : tous les jours, 7h00 – 19h00<br>Blanchisserie : 7h30 – 12h00 et 13h30 – 16h00</div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><b>Téléphone</b><a href="tel:+262693525357">0693 52 53 57</a><br>Blanchisserie : <a href="tel:+262693821714">0693 82 17 14</a></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><b>E-mail</b><a href="mailto:blanchisseriecilaos@gmail.com">blanchisseriecilaos@gmail.com</a></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg><div><b>Facebook</b><a href="https://www.facebook.com/p/Laverie-Blanchisserie-Cilaos-61585906664402/">Laverie &amp; Blanchisserie Cilaos</a></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><b>Laverie &amp; Blanchisserie Cilaos</b> · Lavage • Séchage • Blanchisserie · Cilaos, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Laverie &amp; Blanchisserie Cilaos.</footer>
+<script>
+(function(){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('bulles'),x=c.getContext('2d'),W,H,B=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+function nb(init){var r=6+Math.random()*22;return{x:Math.random()*W,y:init?Math.random()*H:H+r+Math.random()*60,r:r,v:.25+Math.random()*.5,p:Math.random()*6.28,a:.25+Math.random()*.3}}
+size();addEventListener('resize',size);
+var n=W<600?18:28;for(var i=0;i<n;i++)B.push(nb(true));
+function draw(b){var g=x.createRadialGradient(b.x-b.r*.35,b.y-b.r*.35,b.r*.1,b.x,b.y,b.r);
+g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(.72,'rgba(255,255,255,'+b.a*.25+')');g.addColorStop(.86,'rgba(251,224,140,'+b.a*.8+')');g.addColorStop(.94,'rgba(150,200,215,'+b.a+')');g.addColorStop(1,'rgba(255,255,255,0)');
+x.fillStyle=g;x.beginPath();x.arc(b.x,b.y,b.r,0,6.283);x.fill();
+x.fillStyle='rgba(255,255,255,'+(b.a+.2)+')';x.beginPath();x.ellipse(b.x-b.r*.38,b.y-b.r*.42,b.r*.18,b.r*.1,-.7,0,6.283);x.fill()}
+function loop(){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<B.length;i++){var b=B[i];b.y-=b.v;b.p+=.012;b.x+=Math.sin(b.p)*.35;if(b.y<-b.r*2)B[i]=nb(false);draw(b)}
+requestAnimationFrame(loop)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(loop)});
+loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Laverie &amp; Blanchisserie Cilaos" defer></script>
+</body>
+</html>
