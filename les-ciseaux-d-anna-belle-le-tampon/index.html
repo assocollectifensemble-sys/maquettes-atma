@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Ciseaux d'Anna'Belle · Salon de coiffure & barber au Tampon</title>
+<meta name="description" content="Les Ciseaux d'Anna'Belle, salon de coiffure au Tampon : coupe femme, enfant et homme, balayage, soins et conseil capillaire, barber les mardis et mercredis. 16 bis rue du Docteur Henry Roussel.">
+<meta property="og:title" content="Les Ciseaux d'Anna'Belle · Coiffure & barber au Tampon">
+<meta property="og:description" content="Plus d'une coupe, un moment pour soi : coupe, balayage, soins végétaux, conseil capillaire et barber au Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-ciseaux-d-anna-belle-le-tampon/img/logo-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-ciseaux-d-anna-belle-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#faf0e7;--lin:#f3e7d8;--sable:#eadbc6;--or:#b8924f;--or2:#d8b878;--olive:#3a3a28;--mousse:#55583c;--feuille:#8a8f6a;--feuille2:#c3c6a6;--txt:#3b3a2c;--doux:#77735f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+a[href^="tel:"]{white-space:nowrap}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--olive);line-height:1.08}
+h2{font-size:clamp(2.1rem,5.6vw,3.3rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.5rem}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;color:var(--or);line-height:1.1}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--or);font-weight:500}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--olive);color:var(--sable);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#meches{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.06em;font-size:.9rem;transition:.35s}
+.btn-main{background:var(--olive);color:#fff;box-shadow:0 14px 30px -14px rgba(58,58,40,.9);animation:souffle 4.8s ease-in-out infinite}
+.btn-main:hover{background:var(--or)}
+@keyframes souffle{50%{box-shadow:0 16px 42px -8px rgba(184,146,79,.85);transform:scale(1.025)}}
+.btn-line{border:1px solid var(--or);color:var(--olive);background:rgba(255,255,255,.45)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,880px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(110% 80% at 90% 5%,#efe2cc 0%,transparent 60%),radial-gradient(90% 70% at 0% 100%,#e8e7d4 0%,transparent 60%),var(--creme);padding:6.5rem 0 4rem}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero h1{font-size:clamp(3rem,10vw,6rem);letter-spacing:.07em;text-transform:uppercase;font-weight:400}
+.hero h1 .script{display:block;text-transform:none;letter-spacing:0;font-size:.82em;margin-top:.15rem}
+.hero .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,3.6vw,1.85rem);color:var(--mousse);margin:1.2rem 0 .6rem;max-width:30rem}
+.hero .publics{font-size:.92rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);margin-bottom:2rem}
+.hero .adr{margin-top:1.6rem;font-size:.9rem;color:var(--doux)}
+.medaille{position:relative;width:min(400px,78vw);aspect-ratio:1;margin:auto}
+.medaille .logo{position:absolute;inset:13%;border-radius:50%;overflow:hidden;box-shadow:0 40px 80px -40px rgba(58,58,40,.55);background:var(--creme)}
+.medaille .logo img{width:100%;height:100%;object-fit:cover;transform:scale(1.06)}
+.medaille svg.anneau{position:absolute;inset:0;width:100%;height:100%;animation:tourne 60s linear infinite}
+.medaille svg.anneau text{font-family:Jost,sans-serif;font-size:7.4px;letter-spacing:2.6px;fill:var(--or);text-transform:uppercase}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.apparait{animation:monte 1s .1s both}
+.apparait.d2{animation-delay:.3s}.apparait.d3{animation-delay:.5s}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--olive);color:var(--sable);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.3rem}
+.track span::after{content:"✂";margin-left:2.6rem;font-style:normal;font-size:.85rem;color:var(--or2)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.esprit p+p{margin-top:1rem}
+.devise{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.45rem,3.4vw,2rem);color:var(--mousse);border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;line-height:1.35}
+.devise small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);margin-top:.5rem;letter-spacing:.05em}
+.atouts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.atouts span{border:1px solid var(--or2);border-radius:999px;padding:.35rem 1rem;font-size:.88rem;background:rgba(255,255,255,.5)}
+.ciseaux{position:relative;background:linear-gradient(160deg,#fff 0%,var(--lin) 100%);border-radius:28px;padding:2rem;box-shadow:0 40px 80px -50px rgba(58,58,40,.6);overflow:hidden}
+.ciseaux svg{width:100%;height:auto;display:block}
+.ciseaux .lame-a{transform-origin:150px 150px;animation:coupe 3.6s ease-in-out infinite}
+.ciseaux .lame-b{transform-origin:150px 150px;animation:coupe2 3.6s ease-in-out infinite}
+@keyframes coupe{0%,60%,100%{transform:rotate(0)}75%{transform:rotate(9deg)}}
+@keyframes coupe2{0%,60%,100%{transform:rotate(0)}75%{transform:rotate(-9deg)}}
+.legende{position:absolute;left:1rem;bottom:.9rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--doux)}
+/* vague */
+.vague{display:block;width:100%;height:60px}
+/* prestations */
+.presta{background:var(--lin)}
+.grille{display:grid;grid-template-columns:repeat(2,1fr);gap:1.3rem;margin-top:2rem}
+.carte{background:#fff;border-radius:26px;padding:1.6rem 1.6rem 1.7rem;box-shadow:0 22px 50px -36px rgba(58,58,40,.55);transition:transform .45s,box-shadow .45s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(58,58,40,.6)}
+.carte .ico{width:54px;height:54px;border-radius:50%;background:var(--creme);display:grid;place-items:center;margin-bottom:1rem;border:1px solid var(--sable)}
+.carte .ico svg{width:30px;height:30px}
+.carte h3{margin-bottom:.4rem}
+.carte ul{list-style:none;margin:.8rem 0 0}
+.carte li{padding-left:1.4rem;position:relative;font-size:.96rem;margin:.28rem 0}
+.carte li::before{content:"";position:absolute;left:0;top:.62em;width:.6rem;height:.6rem;border-radius:0 60% 0 60%;background:var(--feuille)}
+.carte .tag{display:inline-block;margin-top:1rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--or)}
+.marques{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-top:2rem;background:var(--olive);color:var(--sable);border-radius:24px;padding:1.5rem 1.7rem}
+.marques p{flex:1 1 260px}
+.marques b{color:#fff;font-weight:500}
+/* longueurs */
+.longueurs-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.meches{display:flex;gap:.7rem;align-items:flex-start;justify-content:center;background:#fff;border-radius:26px;padding:1.6rem 1rem 1.2rem;box-shadow:0 30px 60px -45px rgba(58,58,40,.6);position:relative}
+.meche{flex:1;display:flex;flex-direction:column;align-items:center;gap:.6rem;cursor:pointer;background:none;border:0;font:inherit;color:inherit;padding:.2rem}
+.meche .tige{width:16px;border-radius:8px 8px 14px 14px;background:linear-gradient(180deg,var(--mousse),var(--or) 70%,var(--or2));transform-origin:top;animation:ondule 5s ease-in-out infinite;transition:filter .3s}
+.meche:nth-child(2) .tige{animation-delay:-1.2s}.meche:nth-child(3) .tige{animation-delay:-2.4s}.meche:nth-child(4) .tige{animation-delay:-3.6s}
+@keyframes ondule{50%{transform:skewX(4deg)}}
+.meche span{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--doux);white-space:nowrap}
+.meche.on span{color:var(--olive);font-weight:500}
+.meche.on .tige{filter:drop-shadow(0 0 8px rgba(184,146,79,.7))}
+.meches .legende{position:static;display:block;text-align:center;margin-top:.8rem}
+.longueurs .bulle{margin-top:1.4rem;background:var(--creme);border:1px dashed var(--or2);border-radius:20px;padding:1.1rem 1.3rem;font-size:.98rem}
+/* barber */
+.barber{background:var(--olive);color:var(--sable);overflow:hidden}
+.barber h2,.barber h3{color:#fff}
+.barber .eyebrow{color:var(--or2)}
+.barber-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.jours{display:flex;gap:.8rem;flex-wrap:wrap;margin:1.4rem 0}
+.jours div{border:1px solid rgba(216,184,120,.5);border-radius:18px;padding:.8rem 1.1rem;background:rgba(255,255,255,.04)}
+.jours b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:#fff;font-weight:500;line-height:1.1}
+.jours small{font-size:.82rem;letter-spacing:.06em}
+.barber ul{list-style:none;display:grid;gap:.9rem}
+.barber li{background:rgba(255,255,255,.05);border-radius:18px;padding:1rem 1.2rem;border-left:3px solid var(--or)}
+.barber li b{display:block;color:#fff;font-weight:500;letter-spacing:.04em}
+.poteau{width:64px;height:220px;margin:0 auto 1.4rem;border-radius:32px;border:3px solid var(--or2);overflow:hidden;background:repeating-linear-gradient(-45deg,var(--creme) 0 16px,var(--or) 16px 32px,var(--mousse) 32px 48px);background-size:100% 136px;animation:poteau 3.5s linear infinite;box-shadow:0 0 40px -6px rgba(216,184,120,.6)}
+@keyframes poteau{to{background-position:0 136px}}
+.barber .legende{position:static;display:block;text-align:center;color:var(--or2)}
+.duo{margin-top:1.4rem;background:linear-gradient(120deg,var(--or),var(--or2));color:var(--olive);border-radius:20px;padding:1.1rem 1.4rem;font-weight:400}
+.duo b{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600}
+/* noel */
+.noel{background:radial-gradient(90% 70% at 100% 0%,#efe2cc 0%,transparent 60%),var(--creme)}
+.offrir-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.idee{background:#fff;border-radius:18px;padding:1.1rem 1.3rem;border:1px solid var(--sable)}
+.idee h3{font-size:1.25rem;margin-bottom:.2rem}
+.bon{aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,var(--mousse),var(--olive));color:var(--sable);padding:1.7rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -35px rgba(58,58,40,.85);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.bon::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(216,184,120,.35),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.bon:hover{transform:rotate(0)}
+.bon .script{color:var(--or2);font-size:clamp(2.1rem,7vw,2.9rem)}
+.bon small{letter-spacing:.22em;text-transform:uppercase;font-size:.68rem}
+.bon small,.bon .script{position:relative;z-index:2}
+.bon .etoile{position:absolute;color:var(--or2);opacity:.5;animation:scintille 3s ease-in-out infinite;z-index:1}
+@keyframes scintille{50%{opacity:.1;transform:scale(.7)}}
+.bon svg{position:absolute;right:-12px;top:-14px;width:120px;opacity:.2;transform:rotate(25deg)}
+/* contact */
+.contact{background:var(--lin)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0;overflow-wrap:anywhere}
+.infos b{font-weight:500;color:var(--olive)}
+.carte-visite{background:var(--creme);border-radius:28px;padding:1.6rem;box-shadow:0 40px 80px -50px rgba(58,58,40,.6);text-align:center}
+.carte-visite img{width:min(300px,100%);margin:auto;border-radius:50%}
+.carte-visite p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--mousse);margin-top:.6rem}
+.btn-dark{border:1px solid var(--mousse);color:var(--olive)}
+.btn-dark:hover{background:#fff}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--lin)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .hero-in,.esprit,.grille,.offrir-in,.contact-in,.longueurs-in,.barber-in{grid-template-columns:1fr}
+ .hero{padding-top:5.5rem}
+ .medaille{width:min(320px,76vw)}
+ .ribbon{font-size:.7rem}
+ .poteau{height:150px;width:54px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#meches{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les ciseaux d' Anna'Belle</div>
+<canvas id="meches" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow apparait">Salon de coiffure · Le Tampon, La Réunion</p>
+      <h1 class="apparait d2">Les Ciseaux<span class="script">d'Anna'Belle</span></h1>
+      <p class="lead apparait d3">Plus d'une coupe, un moment pour soi.</p>
+      <p class="publics apparait d3">Femme · Enfant · Homme · Barber</p>
+      <div class="ctas apparait d3">
+        <a class="btn btn-main" href="https://wa.me/262692050445?text=Bonjour%20Les%20Ciseaux%20d%27Anna%27Belle%2C%20je%20voudrais%20prendre%20rendez-vous">Réserver sur WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692050445">0692 05 04 45</a>
+      </div>
+      <p class="adr apparait d3">16 bis rue du Docteur Henry Roussel, 97430 Le Tampon · Salon <a href="tel:+262262243096">0262 24 30 96</a></p>
+    </div>
+    <figure class="medaille apparait d2">
+      <svg class="anneau" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="cercle" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text><textPath href="#cercle">Plus d'une coupe ✦ un moment pour soi ✦ coupe ✦ balayage ✦ soin ✦ conseil ✦</textPath></text></svg>
+      <div class="logo"><img src="img/logo.webp" alt="Logo Les Ciseaux d'Anna'Belle : ciseaux dorés, branche d'olivier et « Plus d'une coupe, un moment pour soi »"></div>
+    </figure>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Coupe femme</span><span>Coupe enfant</span><span>Coupe homme</span><span>Balayage</span><span>Soin capillaire</span><span>Conseil</span><span>Dégradé</span><span>Barbe</span>
+<span>Coupe femme</span><span>Coupe enfant</span><span>Coupe homme</span><span>Balayage</span><span>Soin capillaire</span><span>Conseil</span><span>Dégradé</span><span>Barbe</span>
+</div></div>
+
+<section class="wrap esprit">
+  <div class="rv">
+    <p class="eyebrow">L'esprit du salon</p>
+    <h2>Ici, on prend le temps</h2>
+    <p class="devise">« Ici on prend le temps de vous écouter et de vous conseiller. »<small>Les Ciseaux d'Anna'Belle, page Facebook</small></p>
+    <p>Du savoir-faire et une vraie attention portée à vos cheveux : chaque rendez-vous commence par l'écoute, puis une prestation personnalisée selon votre base, votre carnation et le résultat souhaité.</p>
+    <p>Une hésitation sur votre longueur, votre couleur ou votre routine ? Le conseil se donne directement au salon, avec plaisir.</p>
+    <div class="atouts"><span>Coupe femme, enfant et homme</span><span>Soin capillaire</span><span>Conseil personnalisé</span><span>Barber</span></div>
+  </div>
+  <figure class="ciseaux rv">
+    <svg viewBox="0 0 300 300" aria-hidden="true">
+      <defs><linearGradient id="or" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#e3c78f"/><stop offset=".5" stop-color="#b8924f"/><stop offset="1" stop-color="#8a6a35"/></linearGradient></defs>
+      <g fill="none" stroke="#8a8f6a" stroke-width="2" opacity=".75"><path d="M40 255 C 80 215 120 205 160 200"/><path d="M70 236 q -14 -22 6 -36 q 12 16 -6 36z" fill="#c3c6a6"/><path d="M100 220 q -6 -26 16 -32 q 6 18 -16 32z" fill="#c3c6a6"/><path d="M128 210 q 0 -24 22 -26 q 0 20 -22 26z" fill="#c3c6a6"/><path d="M84 230 q 24 4 30 26 q -22 -2 -30 -26z" fill="#c3c6a6"/></g>
+      <g class="lame-a"><path d="M150 150 L 262 52 L 268 60 L 160 158Z" fill="url(#or)"/><circle cx="98" cy="214" r="26" fill="none" stroke="url(#or)" stroke-width="9"/><path d="M150 150 L 116 194" stroke="url(#or)" stroke-width="10" stroke-linecap="round"/></g>
+      <g class="lame-b"><path d="M150 150 L 52 52 L 44 60 L 140 158Z" fill="url(#or)"/><circle cx="202" cy="214" r="26" fill="none" stroke="url(#or)" stroke-width="9"/><path d="M150 150 L 184 194" stroke="url(#or)" stroke-width="10" stroke-linecap="round"/></g>
+      <circle cx="150" cy="150" r="7" fill="#3a3a28"/>
+    </svg>
+    <figcaption class="legende">Illustration</figcaption>
+  </figure>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#f3e7d8"/></svg>
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Les prestations</p><h2>Couleur, volume, brillance</h2><p>Coupe, balayage, soins et conseil capillaire personnalisé : quatre belles façons de prendre soin de vos cheveux au salon.</p></div>
+    <div class="grille">
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#b8924f" stroke-width="1.8"><circle cx="8" cy="24" r="4"/><circle cx="24" cy="24" r="4"/><path d="M11 21 26 4M21 21 6 4"/></svg></div>
+        <h3>Coupe &amp; conseil</h3>
+        <p>Pour les femmes, les enfants et les hommes, avec un vrai temps d'écoute avant chaque coupe.</p>
+        <ul><li>Coupe femme</li><li>Coupe enfant</li><li>Coupe homme</li><li>Conseil capillaire personnalisé</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#b8924f" stroke-width="1.8"><path d="M6 28C10 18 8 10 12 4M13 28c3-9 2-16 6-24M20 28c2-8 2-14 6-22"/></svg></div>
+        <h3>Forfait Balayage</h3>
+        <p>Envie de lumière, de douceur et d'un blond parfaitement fondu : blond froid, beige, miel, lumineux ou naturel.</p>
+        <ul><li>Balayage</li><li>Patine</li><li>Soin</li><li>Brushing</li></ul>
+        <span class="tag">Sur rendez-vous</span>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#b8924f" stroke-width="1.8"><path d="M16 3c-6 4 6 8 0 12s6 8 0 14M9 5c-5 4 5 8 0 12s5 8 0 11M23 5c-5 4 5 8 0 12s5 8 0 11"/></svg></div>
+        <h3>Sublimez vos boucles</h3>
+        <p>Le soin Salvatore Réduction de Volume, pour garder votre mouvement naturel avec une chevelure plus souple et plus facile à coiffer.</p>
+        <ul><li>Volume maîtrisé</li><li>Hydratation intense</li><li>Boucles plus détendues et plus souples</li><li>Cheveux brillants et doux</li></ul>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#8a8f6a" stroke-width="1.8"><path d="M6 27C12 21 20 18 28 17"/><path d="M12 22q-6-6 0-12q5 6 0 12zM20 19q0-8 7-9q0 7-7 9z"/></svg></div>
+        <h3>Le rituel végétal</h3>
+        <p>Un rituel Végétalement Provence riche en actifs végétaux, tout en douceur.</p>
+        <ul><li>Coloration Sans &amp; Sens à la gelée royale et à l'huile essentielle de mandarine</li><li>Bain de plantes au Cassia : volume, brillance, effet glossy</li><li>Massage crânien pour savourer l'instant</li></ul>
+      </article>
+    </div>
+    <div class="marques rv">
+      <p><b>Au salon : Davines &amp; Végétalement Provence.</b> Shampoings, soins hydratants, nourrissants ou protecteurs, choisis avec vous selon les besoins de vos cheveux. « Parce que de beaux cheveux commencent aussi par de bons produits à la maison. »</p>
+      <a class="btn btn-line" style="background:transparent;color:#fff;border-color:#d8b878" href="https://wa.me/262692050445?text=Bonjour%2C%20je%20voudrais%20un%20conseil%20pour%20ma%20routine%20cheveux">Demander conseil</a>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 40 C 240 0 480 60 720 30 S 1200 0 1440 34 V60 H0Z" fill="#f3e7d8"/></svg>
+
+<section class="wrap longueurs" id="longueurs">
+  <div class="longueurs-in">
+    <div class="rv">
+      <p class="eyebrow">Petit guide des longueurs</p>
+      <h2>Court, mi-long, long ou très long&nbsp;?</h2>
+      <p>Identifier votre longueur aide à choisir la prestation la plus adaptée : elle guide le temps de travail et la quantité de produit nécessaire.</p>
+      <p class="bulle" id="txtLong">Touchez une mèche pour voir votre longueur. En cas d'hésitation, demandez conseil directement au salon 🤎</p>
+    </div>
+    <div class="rv">
+      <div class="meches" role="group" aria-label="Longueurs de cheveux">
+        <button class="meche" data-t="Court : une coupe nette, rapide à coiffer au quotidien."><div class="tige" style="height:60px"></div><span>Court</span></button>
+        <button class="meche" data-t="Mi-long : la longueur qui se prête à tous les styles, du carré au dégradé."><div class="tige" style="height:115px"></div><span>Mi-long</span></button>
+        <button class="meche on" data-t="Long : un beau terrain pour le balayage et les soins brillance."><div class="tige" style="height:175px"></div><span>Long</span></button>
+        <button class="meche" data-t="Très long : un temps de travail et une quantité de produit adaptés à votre chevelure."><div class="tige" style="height:235px"></div><span>Très long</span></button>
+      </div>
+      <span class="legende" style="position:static;display:block;text-align:center;margin-top:.7rem">Illustration · d'après la publication du 13 septembre 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="barber" id="barber">
+  <div class="wrap barber-in">
+    <div class="rv">
+      <p class="eyebrow">Nouveau service · Barber &amp; coiffure homme 💈</p>
+      <h2>Messieurs, donnez du style à votre look</h2>
+      <p>Un savoir-faire expert et sur-mesure pour vos cheveux et votre barbe.</p>
+      <div class="jours"><div><b>Mardi</b><small>9h – 18h non-stop</small></div><div><b>Mercredi</b><small>9h – 18h non-stop</small></div></div>
+      <p>Avec rendez-vous ou en passant directement au salon : réservez votre créneau pour être reçu à l'heure qui vous arrange.</p>
+      <div class="duo"><b>Formule Duo</b> · Coupe + Barbe</div>
+      <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-main" style="background:#b8924f" href="https://wa.me/262692050445?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20un%20cr%C3%A9neau%20barber%20(mardi%20ou%20mercredi)">Réserver un créneau barber</a></div>
+    </div>
+    <div class="rv">
+      <div class="poteau" aria-hidden="true"></div>
+      <ul>
+        <li><b>Coupes &amp; fondus</b>Dégradé américain, dégradé à blanc ou moderne</li>
+        <li><b>Techniques &amp; finitions</b>Dégradé au rasoir ultra-précis, contours nets, motifs et dessins personnalisés</li>
+        <li><b>Soin de la barbe</b>Taille, traçage, entretien et rasage traditionnel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap offrir-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un moment pour soi</h2>
+      <p>Une jolie idée sous le sapin : un moment chez Les Ciseaux d'Anna'Belle, pour une maman, une amie, un ado ou un papa.</p>
+      <div class="idees">
+        <div class="idee"><h3>Une carte cadeau</h3><p>Coupe, balayage ou soin : la personne choisit sa prestation au salon.</p></div>
+        <div class="idee"><h3>Pour lui, la Formule Duo</h3><p>Coupe + barbe, les mardis et mercredis.</p></div>
+        <div class="idee"><h3>Une belle routine</h3><p>Des soins Davines ou Végétalement Provence, choisis avec les conseils du salon.</p></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692050445?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20Les%20Ciseaux%20d%27Anna%27Belle%20pour%20No%C3%ABl">Demander une carte cadeau</a>
+    </div>
+    <div class="bon rv"><small>Carte cadeau</small><span class="script">Un moment pour soi</span><small>Les Ciseaux d'Anna'Belle · Le Tampon</small>
+      <span class="etoile" style="left:62%;top:18%">✦</span><span class="etoile" style="left:80%;top:62%;animation-delay:-1s">✦</span><span class="etoile" style="left:46%;top:70%;animation-delay:-2s;font-size:.7rem">✦</span>
+      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="25" cy="78" r="12" fill="none" stroke="#d8b878" stroke-width="5"/><circle cx="75" cy="78" r="12" fill="none" stroke="#d8b878" stroke-width="5"/><path d="M33 70 85 8M67 70 15 8" stroke="#d8b878" stroke-width="6"/></svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Rendez-vous</p>
+      <h2>À très vite au salon</h2>
+      <p><b>Adresse</b> · 16 bis rue du Docteur Henry Roussel, 97430 Le Tampon</p>
+      <p><b>Réservations</b> · <a href="tel:+262692050445">0692 05 04 45</a></p>
+      <p><b>Salon</b> · <a href="tel:+262262243096">0262 24 30 96</a></p>
+      <p><b>E-mail</b> · <a href="mailto:lesciseauxdannabelle@orange.fr">lesciseauxdannabelle@orange.fr</a></p>
+      <p><b>Barber</b> · mardi et mercredi, 9h–18h non-stop</p>
+      <p><b>Bon à savoir</b> · pour les prestations longues, un acompte valide votre réservation.</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262692050445?text=Bonjour%20Les%20Ciseaux%20d%27Anna%27Belle%2C%20je%20voudrais%20prendre%20rendez-vous">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692050445">Appeler</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=16%20bis%20rue%20du%20Docteur%20Henry%20Roussel%2097430%20Le%20Tampon">Itinéraire</a>
+      </div>
+      <div class="ctas" style="margin-top:.8rem">
+        <a class="btn btn-dark" href="https://www.facebook.com/219035697962239/">Facebook</a>
+        <a class="btn btn-dark" href="https://www.instagram.com/les_ciseaux_dannabelle/">Instagram</a>
+      </div>
+    </div>
+    <div class="carte-visite rv"><img src="img/logo.webp" alt="Logo Les Ciseaux d'Anna'Belle" loading="lazy"><p>Plus d'une coupe, un moment pour soi</p></div>
+  </div>
+</section>
+
+<footer>Les Ciseaux d'Anna'Belle · Coiffure femme, enfant, homme &amp; barber · Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les ciseaux d' Anna'Belle.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* guide des longueurs */
+const t=document.getElementById('txtLong');
+document.querySelectorAll('.meche').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.meche').forEach(m=>m.classList.remove('on'));b.classList.add('on');t.textContent=b.dataset.t+' Un doute ? Demandez conseil au salon 🤎'}));
+/* fines mèches dorées et feuilles d'olivier qui flottent */
+const c=document.getElementById('meches'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+for(let i=0;i<26;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:8+Math.random()*16,v:.15+Math.random()*.35,a:Math.random()*6.28,r:Math.random()*6.28,k:i%3?'m':'f',o:.12+Math.random()*.2});
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function draw(p){x.save();x.translate(p.x,p.y);x.rotate(p.r);
+ if(p.k==='m'){x.strokeStyle='rgba(184,146,79,'+p.o+')';x.lineWidth=1.1;x.beginPath();x.moveTo(0,-p.s);x.bezierCurveTo(p.s*.6,-p.s*.3,-p.s*.6,p.s*.3,0,p.s);x.stroke()}
+ else{x.fillStyle='rgba(138,143,106,'+p.o+')';x.beginPath();x.moveTo(0,-p.s*.6);x.quadraticCurveTo(p.s*.4,0,0,p.s*.6);x.quadraticCurveTo(-p.s*.4,0,0,-p.s*.6);x.fill()}
+ x.restore()}
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+ for(const p of P){p.y+=p.v;p.a+=.01;p.x+=Math.sin(p.a)*.4;p.r+=Math.sin(p.a)*.006;if(p.y>H+30){p.y=-30;p.x=Math.random()*W}draw(p)}
+ requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Les ciseaux d' Anna'Belle" defer></script>
+</body>
+</html>
