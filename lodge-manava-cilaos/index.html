@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lodge Manava · Cabane perchée avec jacuzzi à Cilaos</title>
+<meta name="description" content="Lodge Manava, cabane perchée dans les arbres à Palmiste Rouge, Cilaos : jacuzzi privatif face à la nature, filet suspendu, parenthèse à deux. SMS ou appel au 0693 47 21 64.">
+<meta property="og:title" content="Lodge Manava · Évasion nature à Cilaos">
+<meta property="og:description" content="Une cabane perchée dans les arbres, un jacuzzi privatif et un filet suspendu face à la nature. Déconnectez. Respirez. Profitez.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lodge-manava-cilaos/img/terrasse-guirlande.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lodge-manava-cilaos/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Sacramento&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#1f3a2a;--foret-f:#13261b;--mousse:#3f6a46;--bois:#8a4a2b;--bois-c:#b9733f;--creme:#f5eee2;--lin:#ebe1cf;--or:#c9a15b;--or-c:#e6cf9c;--rose:#c8342f;--txt:#2d2a24;--doux:#776f62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.chiffres b,.tel,.info b{font-variant-numeric:lining-nums}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;color:var(--foret);line-height:1.08}
+h2{font-size:clamp(2.2rem,6vw,3.4rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.55rem}
+.script{font-family:'Sacramento',cursive;font-weight:400;color:var(--or);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--bois);font-weight:500}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret-f);color:var(--or-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:#fff;font-weight:500}
+canvas#lucioles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.93rem;transition:.35s}
+.btn svg{width:1.1em;height:1.1em;flex:none}
+.btn-main{background:var(--or);color:var(--foret-f);box-shadow:0 14px 30px -14px rgba(201,161,91,.95);animation:souffle 3.8s ease-in-out infinite}
+.btn-main:hover{background:var(--or-c)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(230,207,156,.75)}}
+.btn-line{border:1px solid var(--or-c);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-vert{background:var(--foret);color:var(--creme)}
+.btn-vert:hover{background:var(--mousse)}
+.btn-dark{border:1px solid var(--foret);color:var(--foret)}
+.btn-dark:hover{background:var(--lin)}
+.ctas{display:flex;gap:.75rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--foret-f);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kenburns 26s ease-in-out infinite alternate;opacity:.9}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,38,27,.5) 0%,rgba(19,38,27,.25) 22%,rgba(19,38,27,.72) 50%,rgba(19,38,27,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7.5rem 0 4.5rem}
+.logo{display:inline-flex;flex-direction:column;align-items:center;color:var(--or-c);margin-bottom:1.6rem}
+.logo small{display:flex;align-items:center;gap:.7rem;font-size:.85rem;font-weight:500;letter-spacing:.5em;padding-left:.5em;text-shadow:0 1px 10px rgba(0,0,0,.7)}
+.logo small::before,.logo small::after{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.hero h1{color:#fff;font-size:clamp(3.4rem,14vw,7.4rem);font-weight:500;letter-spacing:.12em;line-height:1;margin:.25rem 0}
+.hero .tag{text-shadow:0 2px 12px rgba(0,0,0,.6);font-family:'Sacramento',cursive;font-size:clamp(2rem,7vw,3rem);color:var(--or-c);line-height:1.1}
+.hero .lead{text-shadow:0 1px 14px rgba(0,0,0,.5);font-size:1.12rem;max-width:34rem;margin:1rem 0 2rem;color:var(--creme)}
+.hero .adr{margin-top:1.5rem;font-size:.86rem;color:var(--or-c);letter-spacing:.04em}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}.apparait.d4{animation-delay:1.5s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--foret);color:var(--or-c);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"❦";margin-left:2.4rem;font-style:normal;font-size:.9rem;color:var(--or)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* lieu */
+.lieu{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.lieu p+p{margin-top:1rem}
+.devise{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.45rem,3.6vw,2rem);color:var(--bois);border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;line-height:1.3}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.8rem}
+.chiffres b{display:block;font-family:'Jost',sans-serif;font-size:2.4rem;font-weight:300;color:var(--foret);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.arche{position:relative;margin:0 .8rem}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:220px 220px 22px 22px;box-shadow:0 40px 80px -40px rgba(19,38,27,.7)}
+.arche::before{content:"";position:absolute;inset:-13px;border:1px solid var(--or);border-radius:230px 230px 30px 30px;opacity:.6}
+.arche figcaption{position:absolute;right:-.8rem;bottom:1.4rem;background:#fff;padding:.65rem 1rem;border-radius:14px;font-size:.84rem;box-shadow:0 18px 40px -20px rgba(19,38,27,.5);max-width:72%}
+/* tresors */
+.tresors{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.2rem}
+.carte{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 26px 56px -38px rgba(19,38,27,.6);transition:transform .45s,box-shadow .45s}
+.carte:hover{transform:translateY(-7px);box-shadow:0 34px 66px -36px rgba(19,38,27,.65)}
+.carte .ph{overflow:hidden}
+.carte img{width:100%;aspect-ratio:4/3.4;object-fit:cover;transition:transform 1.4s}
+.carte:hover img{transform:scale(1.07)}
+.carte div.t{padding:1.3rem 1.4rem 1.5rem}
+.carte small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);font-weight:500;margin-bottom:.3rem}
+.carte h3{margin-bottom:.4rem}
+.carte p{font-size:.96rem}
+/* galerie */
+.galerie-sec{background:var(--foret-f);color:var(--creme);overflow:hidden}
+.galerie-sec h2{color:#fff}
+.galerie-sec .eyebrow{color:var(--or-c)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 min(74vw,340px);scroll-snap-align:center;border-radius:20px;overflow:hidden;position:relative;background:#000}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem .9rem;background:linear-gradient(180deg,transparent,rgba(19,38,27,.9));font-size:.9rem;color:var(--or-c)}
+.glisse{font-size:.82rem;color:var(--or-c);opacity:.8;text-align:center}
+/* pluie */
+.pluie{position:relative;overflow:hidden;background:linear-gradient(180deg,#22372b,#0f1e15);color:var(--creme);text-align:center}
+.pluie h2{color:#fff;max-width:20ch;margin-inline:auto}
+.pluie .eyebrow{color:var(--or-c)}
+.pluie p{max-width:36rem;margin:0 auto}
+.pluie .cite{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--or-c);margin-top:1.4rem}
+.gouttes{position:absolute;inset:0;pointer-events:none}
+.gouttes i{position:absolute;top:-20%;width:1px;height:70px;background:linear-gradient(180deg,transparent,rgba(230,207,156,.5));animation:tombe linear infinite}
+@keyframes tombe{to{transform:translateY(160vh)}}
+.pluie .wrap{position:relative;z-index:2}
+/* pratique */
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.info{background:#fff;border-radius:18px;padding:1.2rem 1.3rem;border:1px solid var(--lin);display:flex;gap:.9rem;align-items:flex-start;transition:transform .35s}
+.info:hover{transform:translateY(-4px)}
+.info svg{flex:0 0 34px;height:34px;color:var(--mousse)}
+.info b{display:block;font-family:'Jost',sans-serif;font-size:1.02rem;font-weight:500;color:var(--foret);line-height:1.2}
+.info span{font-size:.92rem;color:var(--doux)}
+.note{margin-top:1.4rem;font-size:.88rem;color:var(--doux)}
+/* noel */
+.noel{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 10%,rgba(201,161,91,.18),transparent 55%),var(--lin)}
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.noel h2 .script{display:block;font-size:.85em;color:var(--rose);margin-top:.2rem}
+.idees{display:grid;gap:.9rem;margin:1.5rem 0 2rem}
+.idee{background:#fff;border-radius:18px;padding:1.1rem 1.3rem;border-left:3px solid var(--rose)}
+.idee h3{font-size:1.25rem;margin-bottom:.2rem}
+.bon{aspect-ratio:1.45;border-radius:22px;background:linear-gradient(135deg,var(--foret),var(--foret-f));color:var(--creme);padding:1.6rem 1.7rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -35px rgba(19,38,27,.9);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden;border:1px solid rgba(230,207,156,.35)}
+.bon:hover{transform:rotate(0) scale(1.02)}
+.bon::before{content:"";position:absolute;inset:10px;border-radius:16px;border:1px dashed rgba(230,207,156,.28)}
+.bon small{letter-spacing:.32em;font-size:.68rem;color:var(--or-c)}
+.bon b{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(1.6rem,4.6vw,2.2rem);line-height:1.1;color:#fff}
+.bon .script{font-size:1.9rem;color:var(--or-c)}
+.bon svg.noeud{position:absolute;right:1.3rem;top:1.1rem;width:58px;height:40px}
+.bon::after{content:"";position:absolute;right:calc(1.3rem + 27px);top:0;height:calc(1.1rem + 22px);width:5px;background:#c8342f;opacity:.85;z-index:0}
+.bon>*{position:relative;z-index:1}
+.legende{text-align:center;font-size:.8rem;color:var(--doux);margin-top:1.4rem}
+.flocon{position:absolute;color:var(--or);opacity:.35;font-size:1.1rem;animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-12px) rotate(25deg)}}
+/* contact */
+.contact{background:var(--foret);color:var(--creme);position:relative;overflow:hidden}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--or-c)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:start}
+.lignes{display:grid;gap:1.1rem;margin-top:1rem}
+.lignes div{border-bottom:1px solid rgba(230,207,156,.25);padding-bottom:1rem}
+.lignes small{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:.7rem;color:var(--or-c)}
+.lignes a,.lignes p{font-size:1.08rem;text-decoration:none}
+.tel{font-family:'Jost',sans-serif;font-size:2.1rem!important;color:#fff;font-weight:300;letter-spacing:.04em}
+.contact .ctas{margin-top:1.6rem}
+.mot{background:rgba(255,255,255,.06);border:1px solid rgba(230,207,156,.3);border-radius:22px;padding:1.6rem}
+.mot p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.4;color:var(--or-c)}
+.mot span{display:block;margin-top:.8rem;font-size:.85rem;color:var(--creme);opacity:.8}
+footer{background:var(--foret-f);color:var(--or-c);text-align:center;font-size:.8rem;padding:2rem 1.2rem 2.4rem;line-height:1.7}
+.vague{display:block;width:100%;height:44px}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .lieu,.noel-in,.contact-in{grid-template-columns:1fr}
+ .cartes,.infos{grid-template-columns:1fr}
+ .arche{max-width:440px;margin:1rem auto 0}
+ .bon{max-width:420px;margin:0 auto}
+}
+@media (max-width:420px){
+ body{font-size:16px}
+ .ribbon{font-size:.7rem}
+ .ctas .btn{flex:1 1 100%}
+ .tel{font-size:1.9rem!important}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1;transform:none}
+ canvas#lucioles,.gouttes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Lodge Manava</div>
+<canvas id="lucioles" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/terrasse-guirlande.webp" alt="La terrasse en bois du Lodge Manava, ses fauteuils en rotin et sa guirlande lumineuse au milieu des arbres"></div>
+  <div class="wrap hero-in">
+    <div class="logo apparait"><small>LODGE</small></div>
+    <h1 class="apparait d2">MANAVA</h1>
+    <p class="tag apparait d2">Évasion nature à Cilaos</p>
+    <p class="lead apparait d3">Une cabane perchée dans les arbres de Palmiste Rouge, un jacuzzi privatif face à la nature et un filet suspendu pour se poser… à deux.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="sms:+262693472164?body=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20au%20Lodge%20Manava"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v11H8l-4 4z"/></svg>Envoyer un SMS</a>
+      <a class="btn btn-line" href="tel:+262693472164"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0693 47 21 64</a>
+    </div>
+    <p class="adr apparait d4">Palmiste Rouge · Cilaos · La Réunion</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Déconnectez. Respirez. Profitez.</span><span>Détente, nature et déconnexion</span><span>Pour vous. Juste vous. Et la nature.</span><span>Dormez comme dans un rêve…</span><span>Nature, calme &amp; authenticité</span>
+  <span>Déconnectez. Respirez. Profitez.</span><span>Détente, nature et déconnexion</span><span>Pour vous. Juste vous. Et la nature.</span><span>Dormez comme dans un rêve…</span><span>Nature, calme &amp; authenticité</span>
+</div></div>
+
+<section class="wrap lieu" id="lieu">
+  <div class="rv">
+    <p class="eyebrow">Le lodge</p>
+    <h2>Un cocon perché, juste pour vous deux</h2>
+    <p>Le Lodge Manava est une petite cabane en hauteur, aménagée tout en bois au cœur de la verdure de Cilaos. Compact et parfaitement optimisé, il offre tout le confort pour une parenthèse au calme : vous êtes entourés d'arbres et réveillés par le chant des oiseaux.</p>
+    <p>Tout le logement est privatisé. Un cocon chaleureux, idéal pour un week-end romantique ou une pause déconnexion au cœur de la verdure.</p>
+    <p class="devise">« Un lieu, une ambiance, une expérience à vivre. »</p>
+    <div class="chiffres">
+      <div><b>2</b><span>voyageurs</span></div>
+      <div><b>1</b><span>lit double</span></div>
+      <div><b>1</b><span>jacuzzi privatif</span></div>
+    </div>
+  </div>
+  <figure class="arche rv">
+    <img src="img/cygne-petales.webp" alt="Un cygne en serviette et des pétales de rose sur le lit du lodge, face à la fenêtre ouverte sur les arbres" loading="lazy">
+    <figcaption>Pétales de rose et cygne en serviette sur le lit</figcaption>
+  </figure>
+</section>
+
+<section class="tresors" id="lodge">
+  <div class="wrap">
+    <p class="eyebrow rv">Jacuzzi • filet suspendu • nature • calme absolu</p>
+    <h2 class="rv">Trois bonheurs à vivre sur place</h2>
+    <div class="cartes">
+      <article class="carte rv">
+        <div class="ph"><img src="img/jacuzzi.webp" alt="Le jacuzzi privatif du lodge, devant les baies vitrées ouvertes sur la forêt" loading="lazy"></div>
+        <div class="t"><small>Spa privatif</small><h3>Le jacuzzi face à la nature</h3><p>Un jacuzzi privatif, face à la nature : des bulles, des baies ouvertes sur la forêt et le calme absolu des montagnes.</p></div>
+      </article>
+      <article class="carte rv">
+        <div class="ph"><img src="img/terrasse-filet.webp" alt="La terrasse en bois avec deux fauteuils en rotin et le filet suspendu" loading="lazy"></div>
+        <div class="t"><small>Terrasse en bois</small><h3>Le filet suspendu</h3><p>Sur la terrasse en bois, un filet suspendu face à la nature pour se poser, lire, rêver… avec les arbres de Cilaos pour horizon.</p></div>
+      </article>
+      <article class="carte rv">
+        <div class="ph"><img src="img/chambre-led.webp" alt="Le lit du lodge dans la lumière douce des LED et d'une ampoule à filament" loading="lazy"></div>
+        <div class="t"><small>Soirées cosy</small><h3>Les LED sont de retour</h3><p>Lumière ambrée, bois blond, plaid tout doux : une ambiance cosy garantie pour vos soirées détente.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="galerie-sec" id="galerie">
+  <div class="wrap">
+    <p class="eyebrow rv">En images</p>
+    <h2 class="rv">Une visite du lodge</h2>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/terrasse-guirlande.webp" alt="La terrasse et sa guirlande lumineuse" loading="lazy"><figcaption>La terrasse et sa guirlande</figcaption></figure>
+    <figure><img src="img/jacuzzi.webp" alt="Le jacuzzi au milieu des arbres" loading="lazy"><figcaption>Le jacuzzi, baies ouvertes sur la forêt</figcaption></figure>
+    <figure><img src="img/cygne-petales.webp" alt="La chambre et ses pétales de rose" loading="lazy"><figcaption>La chambre, côté fenêtre</figcaption></figure>
+    <figure><img src="img/chambre-led.webp" alt="Le lit en lumière LED" loading="lazy"><figcaption>Ambiance du soir</figcaption></figure>
+    <figure><img src="img/coin-cuisine.webp" alt="Le coin cuisine en bois avec plaque de cuisson et évier" loading="lazy"><figcaption>Le coin cuisine tout en bois</figcaption></figure>
+    <figure><img src="img/escalier-trappe.webp" alt="La trappe et l'escalier en bois qui descend vers la salle de bain" loading="lazy"><figcaption>La trappe vers la salle de bain et le jacuzzi</figcaption></figure>
+    <figure><img src="img/terrasse-filet.webp" alt="Les fauteuils et le filet suspendu" loading="lazy"><figcaption>Fauteuils en rotin et filet suspendu</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section class="pluie">
+  <div class="gouttes" aria-hidden="true"></div>
+  <div class="wrap rv">
+    <p class="eyebrow">Une cabane insolite</p>
+    <h2>Et si la pluie devenait votre plus beau spectacle ?</h2>
+    <p>Le Lodge Manava invite à l'aventure et à la déconnexion. Et quand une belle averse arrive sur Cilaos, la cabane se transforme en loge aux premières places.</p>
+    <p class="cite">« Lors de forte pluie, vous aurez droit à un merveilleux spectacle, je vous laisse la surprise 😁 »</p>
+  </div>
+</section>
+
+<section class="wrap" id="pratique">
+  <p class="eyebrow rv">Bon à savoir</p>
+  <h2 class="rv">Votre séjour, en pratique</h2>
+  <div class="infos">
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Arrivée dès 15 h</b><span>Départ avant 11 h</span></div></div>
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M9 15V9h3a2 2 0 0 1 0 4H9"/></svg><div><b>Stationnement</b><span>Gratuit, sur place</span></div></div>
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 10h16v10H4zM8 10V5h8v5M9 14h6"/></svg><div><b>Coin cuisine</b><span>Réfrigérateur, micro-ondes, plaque de cuisson</span></div></div>
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M6 21V10l6-5 6 5v11M10 21v-5h4v5"/></svg><div><b>Cabane perchée</b><span>Accès par escaliers, salle de bain et jacuzzi par une trappe : idéale pour deux adultes amoureux d'aventure</span></div></div>
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="9" r="2"/><circle cx="17" cy="9" r="2"/><circle cx="10" cy="5" r="1.6"/><circle cx="14" cy="5" r="1.6"/><path d="M8 17c0-3 2-5 4-5s4 2 4 5-2 3-4 3-4 0-4-3"/></svg><div><b>Animaux acceptés</b><span>Votre compagnon est le bienvenu</span></div></div>
+    <div class="info rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Palmiste Rouge</b><span>Au cœur des montagnes de Cilaos</span></div></div>
+  </div>
+  <p class="note rv">Réservation par SMS, par téléphone ou sur <a href="https://airbnb.com/h/lodgemanavacilaos">airbnb.com/h/lodgemanavacilaos</a>.</p>
+</section>
+
+<section class="noel" id="noel">
+  <span class="flocon" style="left:6%;top:12%">✦</span><span class="flocon" style="right:9%;top:8%;animation-delay:2s">✧</span><span class="flocon" style="left:44%;bottom:7%;animation-delay:4s">✦</span>
+  <div class="wrap noel-in">
+    <div class="rv">
+      <p class="eyebrow">Idée cadeau</p>
+      <h2>Offrir une nuit au Lodge Manava <span class="script">pour Noël</span></h2>
+      <p>Le plus joli cadeau à glisser sous le sapin : du temps à deux, un jacuzzi sous les arbres et une nuit bercée par la forêt de Cilaos.</p>
+      <div class="idees">
+        <div class="idee"><h3>Une parenthèse en amoureux</h3><p>Pour un anniversaire, une surprise ou simplement le plaisir de se retrouver.</p></div>
+        <div class="idee"><h3>Un cadeau qui se vit</h3><p>Jacuzzi privatif, filet suspendu, soirée cosy : un souvenir à partager longtemps.</p></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-vert" href="sms:+262693472164?body=Bonjour%2C%20je%20voudrais%20offrir%20une%20nuit%20au%20Lodge%20Manava%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16v11H8l-4 4z"/></svg>Demander par SMS</a>
+        <a class="btn btn-dark" href="tel:+262693472164">Appeler le 0693 47 21 64</a>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="bon">
+        <svg class="noeud" viewBox="0 0 64 44" aria-hidden="true"><path d="M32 22C22 6 6 6 8 18s16 8 24 4zM32 22c10-16 26-16 24-4s-16 8-24 4z" fill="#c8342f"/><path d="M30 24l-8 18 6-3 4 5zM34 24l8 18-6-3-4 5z" fill="#a52824"/><circle cx="32" cy="22" r="4.5" fill="#e04a40"/></svg>
+        <small>LODGE MANAVA · CILAOS</small>
+        <b>Bon pour une nuit<br>à deux</b>
+        <span class="script">Pour vous. Juste vous. Et la nature.</span>
+      </div>
+      <p class="legende">Illustration</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="rv">
+      <p class="eyebrow">Réserver</p>
+      <h2>Pour une réponse rapide, un SMS ou un appel</h2>
+      <div class="lignes">
+        <div><small>Téléphone · SMS</small><a class="tel" href="tel:+262693472164">0693 47 21 64</a></div>
+        <div><small>Réservation en ligne</small><a href="https://airbnb.com/h/lodgemanavacilaos">airbnb.com/h/lodgemanavacilaos</a></div>
+        <div><small>Où</small><p>Palmiste Rouge, Cilaos · La Réunion</p></div>
+        <div><small>Suivre le lodge</small><a href="https://www.facebook.com/p/Lodge-Manava-61555113024836">Facebook · Lodge Manava</a></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-main" href="sms:+262693472164?body=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20au%20Lodge%20Manava">Envoyer un SMS</a>
+        <a class="btn btn-line" href="tel:+262693472164">Appeler</a>
+      </div>
+    </div>
+    <div class="mot rv">
+      <p>« Le travail c'est bien… mais le repos, c'est essentiel. »</p>
+      <span>— Lodge Manava, sur sa page Facebook</span>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Lodge Manava · Cabane perchée avec jacuzzi · Palmiste Rouge, Cilaos, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Lodge Manava.</footer>
+<script>
+(function(){
+var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');obs.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el)});
+var g=document.querySelector('.gouttes');
+if(g&&!reduit){for(var i=0;i<26;i++){var d=document.createElement('i');d.style.left=(Math.random()*100)+'%';d.style.animationDuration=(1.2+Math.random()*1.4)+'s';d.style.animationDelay=(-Math.random()*3)+'s';d.style.opacity=.3+Math.random()*.5;g.appendChild(d)}}
+if(reduit)return;
+var c=document.getElementById('lucioles'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+for(var k=0;k<24;k++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*1.8,a:Math.random()*6.28,s:.15+Math.random()*.35,p:Math.random()*6.28});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+P.forEach(function(q){q.a+=(Math.random()-.5)*.2;q.x+=Math.cos(q.a)*q.s;q.y+=Math.sin(q.a)*q.s-.08;q.p+=.03;
+if(q.x<-10)q.x=W+10;if(q.x>W+10)q.x=-10;if(q.y<-10)q.y=H+10;if(q.y>H+10)q.y=-10;
+var o=.25+.35*(1+Math.sin(q.p))/2,gr=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.r*6);
+gr.addColorStop(0,'rgba(240,214,140,'+o+')');gr.addColorStop(1,'rgba(240,214,140,0)');
+x.fillStyle=gr;x.beginPath();x.arc(q.x,q.y,q.r*6,0,6.28);x.fill()});
+requestAnimationFrame(f)}
+f();
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Lodge Manava" defer></script>
+</body>
+</html>
