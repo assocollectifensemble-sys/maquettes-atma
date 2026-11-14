@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Snack La Kafrine · Cuisine créole sur place ou à emporter, Saint-Pierre</title>
+<meta name="description" content="Snack La Kafrine, 51 B chemin Maxime Rivière à Saint-Pierre : carris, rougails, salades, sandwichs et desserts, sur place ou à emporter. 0693 11 78 09.">
+<meta property="og:title" content="Snack La Kafrine · Saint-Pierre">
+<meta property="og:description" content="La cuisine créole faite avec amour, sur place ou à emporter.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/snack-la-kafrine/img/rougail-saucisse.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/snack-la-kafrine/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Outfit:wght@300;400;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#141210;--noir2:#221d19;--cuivre:#c98245;--cuivre-f:#9a5a2a;--cuivre-c:#e9b783;--kraft:#dcc39c;--creme:#f8f2e8;--lin:#efe4d2;--vert:#2f5a3a;--tomate:#d2462f;--txt:#2c241e;--doux:#7d6d60}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bodoni Moda',serif;font-weight:500;color:var(--noir);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.3rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--cuivre-f);font-weight:600}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:var(--cuivre-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:600}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:5}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:.95rem;transition:.35s}
+.btn-main{background:var(--cuivre);color:#fff;box-shadow:0 14px 30px -14px rgba(154,90,42,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--cuivre-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(201,130,69,.75)}}
+.btn-line{border:1px solid var(--cuivre-c);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{border:1px solid var(--noir2);color:var(--noir)}
+.btn-dark:hover{background:var(--lin)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:kenburns 26s ease-in-out infinite alternate;opacity:.9}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.55) 0%,rgba(20,18,16,.25) 30%,rgba(20,18,16,.7) 62%,rgba(20,18,16,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4.5rem}
+.logo{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem}
+.logo svg{width:64px;height:auto}
+.hero .eyebrow{color:var(--cuivre-c)}
+.hero h1{color:#fff;font-size:clamp(3rem,13vw,6.6rem);letter-spacing:.01em}
+.hero .sous{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(1.25rem,4.4vw,1.8rem);color:var(--cuivre-c);margin-top:.4rem}
+.hero .lead{text-shadow:0 1px 12px rgba(0,0,0,.5);font-size:1.1rem;max-width:34rem;margin:1.1rem 0 1.9rem}
+.hero .adr{margin-top:1.5rem;font-size:.9rem;color:var(--cuivre-c)}
+.hero .adr a{color:#fff}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.vague{display:block;width:100%;height:42px;margin-top:-41px;position:relative;z-index:3}
+/* bandeau */
+.bande{background:var(--cuivre);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.7rem;color:var(--noir)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.maison p+p{margin-top:1rem}
+.devise{font-family:'Bodoni Moda',serif;font-style:italic;font-size:clamp(1.3rem,3.6vw,1.8rem);color:var(--noir2);border-left:2px solid var(--cuivre);padding-left:1.1rem;margin:1.5rem 0}
+.chiffres{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1.7rem}
+.chiffres b{display:block;font-family:'Bodoni Moda',serif;font-size:2.3rem;font-weight:500;color:var(--cuivre-f);line-height:1}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.arche{position:relative;max-width:420px;margin:auto}
+.arche img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 26px 26px;box-shadow:0 40px 80px -40px rgba(20,18,16,.7)}
+.arche::before{content:"";position:absolute;inset:-13px;border:1px solid var(--cuivre);border-radius:210px 210px 34px 34px;opacity:.6}
+.arche figcaption{position:absolute;right:.4rem;bottom:1.3rem;background:#fff;padding:.65rem 1rem;border-radius:14px;font-size:.84rem;box-shadow:0 18px 40px -20px rgba(20,18,16,.5)}
+/* carte du jour */
+.jour{background:var(--noir);color:var(--creme);overflow:hidden}
+.jour h2{color:#fff}
+.jour .eyebrow{color:var(--cuivre-c)}
+.jour-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.ardoise{background:#fbfaf6;color:#2a2a2a;border-radius:10px;padding:1.6rem 1.5rem 1.4rem;box-shadow:0 0 0 10px #cfcfcf,0 0 0 12px #9b9b9b,0 40px 70px -30px rgba(0,0,0,.8);transform:rotate(-1.2deg);font-family:'Caveat',cursive;font-size:1.45rem;line-height:1.35;max-width:440px;margin:1rem auto}
+.ardoise h3{font-family:'Caveat',cursive;font-weight:700;font-size:2rem;color:var(--tomate);margin-bottom:.4rem}
+.ardoise ul{list-style:none}
+.ardoise li::before{content:"✱ ";color:var(--tomate);font-size:1rem}
+.ardoise .acc{margin-top:.8rem;font-size:1.2rem;color:#555;border-top:1px dashed #bbb;padding-top:.6rem}
+.ardoise small{display:block;font-family:'Outfit';font-size:.75rem;color:#888;margin-top:.8rem;letter-spacing:.04em}
+.bain{margin-top:2rem;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.bain img{width:100%;aspect-ratio:1400/658;object-fit:cover;transition:transform 1.4s}
+.bain:hover img{transform:scale(1.05)}
+.bain figcaption{padding:.8rem 1.1rem;font-size:.88rem;color:var(--cuivre-c);background:var(--noir2)}
+/* formule */
+.formule-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.6rem 0}
+.trio div{background:#fff;border-radius:18px;padding:1rem .8rem;text-align:center;box-shadow:0 20px 40px -30px rgba(20,18,16,.6);border-top:3px solid var(--cuivre)}
+.trio b{font-family:'Bodoni Moda',serif;font-size:1.1rem;font-weight:500;display:block}
+.trio span{font-size:.82rem;color:var(--doux)}
+.prix{font-family:'Bodoni Moda',serif;font-size:1.25rem}
+.prix b{font-size:2.6rem;color:var(--cuivre-f);font-weight:700}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+.duo figure{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(20,18,16,.75)}
+.duo figure:nth-child(2){margin-top:2.6rem}
+.duo img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.3s}
+.duo figure:hover img{transform:scale(1.06)}
+.duo figcaption{font-size:.82rem;padding:.6rem .9rem;background:#fff;color:var(--doux)}
+/* galerie */
+.gal-sec{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 0 1.2rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 min(300px,74vw);scroll-snap-align:start;background:var(--noir);border-radius:22px;overflow:hidden;position:relative;box-shadow:0 26px 50px -34px rgba(20,18,16,.8)}
+.galerie img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.3s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.6rem 1rem .9rem;background:linear-gradient(180deg,transparent,rgba(20,18,16,.9));color:#fff;font-size:.9rem}
+.glisse{font-size:.85rem;color:var(--doux)}
+/* desserts */
+.douceurs-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4.5rem);align-items:center}
+.liste{display:grid;gap:.8rem;margin-top:1.4rem}
+.liste div{background:#fff;border-radius:16px;padding:1rem 1.2rem;border-left:3px solid var(--cuivre);transition:transform .4s}
+.liste div:hover{transform:translateX(6px)}
+.liste b{font-family:'Bodoni Moda',serif;font-weight:500;font-size:1.15rem;display:block}
+.liste span{font-size:.9rem;color:var(--doux)}
+.rond img{width:100%;max-width:400px;margin:auto;aspect-ratio:1;object-fit:cover;object-position:center 88%;border-radius:50%;box-shadow:0 0 0 10px rgba(201,130,69,.2),0 40px 70px -30px rgba(20,18,16,.7)}
+.rond figcaption{text-align:center;font-size:.85rem;color:var(--doux);margin-top:1rem}
+/* evenements */
+.evts{background:var(--vert);color:#eef3ea;overflow:hidden}
+.evts h2{color:#fff}
+.evts .eyebrow{color:var(--kraft)}
+.evts-in{max-width:760px}
+.evts .devise{color:#fff;border-color:var(--kraft)}
+.etapes{display:grid;gap:1rem;margin:1.8rem 0 2rem;counter-reset:e}
+.etape{display:flex;gap:1rem;align-items:flex-start}
+.etape::before{counter-increment:e;content:counter(e);flex:0 0 2.2rem;height:2.2rem;border-radius:50%;background:var(--kraft);color:var(--noir);display:grid;place-items:center;font-family:'Bodoni Moda',serif}
+.feuille{position:absolute;right:-60px;top:-40px;width:320px;opacity:.12;pointer-events:none}
+/* noel */
+.noel-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:1rem;margin:1.5rem 0 1.8rem}
+.idee{background:#fff;border-radius:18px;padding:1.1rem 1.3rem;border:1px solid var(--lin)}
+.idee h3{font-size:1.15rem;margin-bottom:.2rem}
+.scene{position:relative;background:radial-gradient(circle at 50% 40%,#2b241e,var(--noir));border-radius:26px;padding:2rem 1.4rem 1.2rem;text-align:center;box-shadow:0 40px 70px -35px rgba(20,18,16,.85);overflow:hidden}
+.scene svg{width:min(260px,70%);height:auto;margin:auto}
+.scene .titre{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--cuivre-c);font-size:1.6rem;margin-top:.6rem}
+.scene small{display:block;color:#a99a8b;font-size:.75rem;margin-top:.5rem;letter-spacing:.06em}
+.lum{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--cuivre-c);box-shadow:0 0 12px 3px rgba(233,183,131,.75);animation:brille 2.6s ease-in-out infinite}
+@keyframes brille{50%{opacity:.25}}
+.fumee path{animation:fume 4s ease-in-out infinite;transform-origin:center bottom}
+.fumee path:nth-child(2){animation-delay:1.2s}.fumee path:nth-child(3){animation-delay:2.4s}
+@keyframes fume{0%{opacity:0;transform:translateY(8px)}40%{opacity:.75}100%{opacity:0;transform:translateY(-14px)}}
+/* contact */
+.contact{background:var(--lin)}
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0}
+.infos b{font-weight:600;color:var(--noir)}
+.infos p a{color:var(--cuivre-f);font-weight:600}
+.contact figure img{border-radius:22px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.contact figcaption{font-size:.82rem;color:var(--doux);margin-top:.5rem}
+footer{text-align:center;padding:2.4rem 1rem 6rem;font-size:.82rem;color:var(--doux);background:var(--lin)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:820px){
+ .maison,.jour-in,.formule-in,.douceurs-in,.noel-in,.contact-in{grid-template-columns:1fr}
+ .hero-in{padding-top:6rem}
+ .ribbon{font-size:.7rem}
+ .trio{gap:.5rem}.trio div{padding:.9rem .4rem}
+ .scene{max-width:400px;margin:auto;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Snack La Kafrine</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="fond"><img src="img/rougail-saucisse.webp" alt="Barquette de rougail saucisse parsemée d'oignon vert"></div>
+  <div class="wrap hero-in">
+    <div class="logo apparait">
+      <svg viewBox="0 0 120 80" aria-hidden="true"><ellipse cx="60" cy="22" rx="44" ry="9" fill="#d9d6d0"/><rect x="50" y="8" width="20" height="7" rx="3.5" fill="none" stroke="#d9d6d0" stroke-width="3"/><path d="M16 26h88l-6 34c-2 10-14 16-38 16S24 70 22 60z" fill="#efece6"/><path d="M16 30c-8 0-12 4-10 8M104 30c8 0 12 4 10 8" fill="none" stroke="#d9d6d0" stroke-width="4" stroke-linecap="round"/><path d="M30 46c16 6 44 6 60 0" fill="none" stroke="#b9b4ab" stroke-width="1.5"/></svg>
+      <p class="eyebrow">Snack · cuisine créole · Saint-Pierre</p>
+    </div>
+    <h1 class="apparait d2">Snack La Kafrine</h1>
+    <p class="sous apparait d2">Sur place ou à emporter</p>
+    <p class="lead apparait d3">Carris, rougails, salades, sandwichs et desserts maison : une cuisine faite avec amour, au cœur d'une terrasse toute verte.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262693117809?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20barquette%20pour%20ce%20midi">Réserver ma barquette</a>
+      <a class="btn btn-line" href="#jour">La carte du jour</a>
+    </div>
+    <p class="adr apparait d3">51 B chemin Maxime Rivière, Saint-Pierre · <a href="tel:+262693117809">0693 11 78 09</a></p>
+  </div>
+</header>
+<svg class="vague" viewBox="0 0 1440 42" preserveAspectRatio="none" aria-hidden="true"><path d="M0 42V20c120-16 240-22 360-10s240 28 360 22 240-28 360-28 240 10 360 16v22z" fill="#c98245"/></svg>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Zambrocale pomme de terre</span><span>Rougail morue</span><span>Coq massalé</span><span>Rougail saucisse</span><span>Sauté poulet gros piment</span><span>Bol renversé</span><span>Riz cantonais poulet</span><span>Tiramisu</span><span>Cœur coulant chocolat</span>
+<span>Zambrocale pomme de terre</span><span>Rougail morue</span><span>Coq massalé</span><span>Rougail saucisse</span><span>Sauté poulet gros piment</span><span>Bol renversé</span><span>Riz cantonais poulet</span><span>Tiramisu</span><span>Cœur coulant chocolat</span>
+</div></div>
+
+<section class="wrap maison">
+  <div class="rv">
+    <p class="eyebrow">La maison</p>
+    <h2>La marmite de Saint-Pierre</h2>
+    <p>Sur son enseigne noire, une marmite frappée « Île de la Réunion » : tout l'esprit du Snack La Kafrine. Chaque jour, le snack fait mijoter les grands classiques créoles, à savourer sur place, sous les palmiers de la terrasse, ou à emporter en barquette.</p>
+    <p class="devise">« La même cuisine faite avec amour et le même savoir-faire. »</p>
+    <p>Chaque matin, la carte du jour arrive sur la page Facebook du snack : un simple coup d'œil, et le midi est tout trouvé.</p>
+    <div class="chiffres">
+      <div><b>1,3 K</b><span>abonnés sur Facebook</span></div>
+      <div><b>2</b><span>façons de se régaler : sur place ou à emporter</span></div>
+    </div>
+  </div>
+  <figure class="arche rv">
+    <img src="img/barquette-carri.webp" alt="Barquette de carri avec rougail tomate, canette et pot de sorbet goyavier" loading="lazy">
+    <figcaption>Un bon carri, une boisson, un dessert</figcaption>
+  </figure>
+</section>
+
+<section class="jour" id="jour">
+  <div class="wrap jour-in">
+    <div class="rv">
+      <p class="eyebrow">La carte du jour</p>
+      <h2>Ce qui mijote aujourd'hui</h2>
+      <p>La carte change au fil des jours et se découvre chaque matin sur Facebook. Voici celle publiée le 12 novembre : de quoi donner le ton.</p>
+      <figure class="bain rv"><img src="img/bain-marie.webp" alt="Bacs du comptoir : riz cantonais, viande en sauce parsemée d'herbes, poulet et pommes de terre rissolées" loading="lazy"><figcaption>Le comptoir du snack, garni et fumant</figcaption></figure>
+    </div>
+    <div class="ardoise rv">
+      <h3>Menu du jour</h3>
+      <ul>
+        <li>Zambrocale pomme de terre</li>
+        <li>Rougail morue</li>
+        <li>Coq massalé</li>
+        <li>Rougail saucisse</li>
+        <li>Saute poulet gros piment</li>
+        <li>Bol renversé crevette ou poulet</li>
+        <li>Riz cantonais poulet</li>
+      </ul>
+      <p class="acc">Piments : oignon, dakatine, concombre<br>Grains : lentilles, pois, haricots<br>Salades, crudités<br>Desserts : muesli, glaces, fondant au chocolat</p>
+      <small>Menu publié par le snack le 12 novembre 2026</small>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="formule">
+  <div class="formule-in">
+    <div class="rv">
+      <p class="eyebrow">La formule</p>
+      <h2>Barquette, boisson, dessert</h2>
+      <p>Le trio gourmand qui met tout le monde d'accord, en petite ou moyenne barquette.</p>
+      <div class="trio">
+        <div><b>Un bon carri</b><span>petite ou moyenne barquette</span></div>
+        <div><b>Une boisson</b><span>Coca ou Cilaos</span></div>
+        <div><b>Un dessert</b><span>glace ou fondant au chocolat</span></div>
+      </div>
+      <p class="prix">À partir de <b>9 €</b></p>
+      <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-main" href="https://wa.me/262693117809?text=Bonjour%2C%20je%20voudrais%20une%20formule%20barquette%20boisson%20dessert">Commander ma formule</a></div>
+    </div>
+    <div class="duo">
+      <figure class="rv"><img src="img/barquette-oignons.webp" alt="Barquette de viande sautée aux oignons et citron, fromage blanc et bouteille d'eau de Cilaos" loading="lazy"><figcaption>Barquette &amp; eau de Cilaos</figcaption></figure>
+      <figure class="rv"><img src="img/salade-poulet.webp" alt="Salade au poulet rôti, concombre et croûtons, avec une limonade Cot" loading="lazy"><figcaption>Salade au poulet rôti</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="gal-sec">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Dans les barquettes</p><h2>Carris, salades &amp; sandwichs</h2><p class="glisse">Glissez pour voir les photos publiées par le snack →</p></div>
+    <div class="galerie">
+      <figure><img src="img/rougail-saucisse.webp" alt="Rougail saucisse en barquette" loading="lazy"><figcaption>Rougail saucisse</figcaption></figure>
+      <figure><img src="img/sandwich.webp" alt="Sandwich garni de poulet, salade, tomate et carotte" loading="lazy"><figcaption>Le sandwich bien garni : salade, tomate, carotte</figcaption></figure>
+      <figure><img src="img/salade-croutons.webp" alt="Salade poulet, haricots verts, maïs, carotte et croûtons, sauce à part" loading="lazy"><figcaption>Salade poulet, maïs, haricots verts &amp; croûtons</figcaption></figure>
+      <figure><img src="img/barquette-carri.webp" alt="Carri en barquette avec rougail tomate" loading="lazy"><figcaption>Un bon carri et son rougail tomate</figcaption></figure>
+      <figure><img src="img/barquette-oignons.webp" alt="Barquette de viande sautée aux oignons" loading="lazy"><figcaption>Barquette fumante, fromage blanc en dessert</figcaption></figure>
+      <figure><img src="img/salade-poulet.webp" alt="Salade au poulet rôti et concombre" loading="lazy"><figcaption>Salade fraîcheur au poulet</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="douceurs">
+  <div class="douceurs-in">
+    <div class="rv">
+      <p class="eyebrow">Envie d'une petite douceur ?</p>
+      <h2>Les desserts du snack</h2>
+      <p>Pour finir le repas en beauté, les desserts changent avec les semaines :</p>
+      <div class="liste">
+        <div><b>Cœur coulant chocolat</b><span>le chocolat au cœur fondant</span></div>
+        <div><b>Fromage blanc, muesli &amp; mangue</b><span>tout en fraîcheur</span></div>
+        <div><b>Tiramisus</b><span>« de retour cette semaine ! » annonçait le snack le 2 novembre</span></div>
+        <div><b>Glaces artisanales Igloo</b><span>fabriquées à La Réunion, jusqu'au sorbet goyavier</span></div>
+      </div>
+    </div>
+    <figure class="rond rv"><img src="img/coeurs-coulants.webp" alt="Plateau de cœurs coulants au chocolat devant la terrasse végétale" loading="lazy"><figcaption>Une fournée de cœurs coulants, devant la terrasse</figcaption></figure>
+  </div>
+</section>
+
+<section class="evts">
+  <svg class="feuille" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 190C100 120 60 70 10 40c60 0 110 40 90 150zM100 190c0-70 40-120 90-150-60 0-110 40-90 150z" fill="#fff"/></svg>
+  <div class="wrap evts-in rv">
+    <p class="eyebrow">Repas de groupe &amp; événements</p>
+    <h2>Votre événement, l'esprit tranquille</h2>
+    <p class="devise">« Organisez votre événement l'esprit tranquille, on s'occupe du repas ! »</p>
+    <p>Anniversaire, repas de famille, déjeuner d'équipe : le Snack La Kafrine vous propose les mêmes saveurs qu'au snack, avec la même cuisine faite avec amour.</p>
+    <div class="etapes">
+      <div class="etape"><p>Écrivez au snack sur WhatsApp ou appelez le 0693 11 78 09.</p></div>
+      <div class="etape"><p>Racontez votre événement : la date, le nombre de convives, vos plats préférés.</p></div>
+      <div class="etape"><p>Le snack prépare votre repas, et vous profitez pleinement de vos invités.</p></div>
+    </div>
+    <a class="btn btn-main" href="https://wa.me/262693117809?text=Bonjour%2C%20je%20voudrais%20un%20repas%20pour%20un%20%C3%A9v%C3%A9nement">Parler de mon événement</a>
+  </div>
+</section>
+
+<section class="wrap" id="noel">
+  <div class="noel-in">
+    <div class="rv">
+      <p class="eyebrow">Noël à La Kafrine</p>
+      <h2>Le repas des fêtes, mijoté pour vous</h2>
+      <div class="idees">
+        <div class="idee"><h3>Le repas de Noël en famille</h3><p>Une grande tablée créole, préparée par le snack : vous gardez tout votre temps pour vos proches.</p></div>
+        <div class="idee"><h3>Le repas de fin d'année au bureau</h3><p>Une belle façon de remercier votre équipe autour d'un bon carri.</p></div>
+        <div class="idee"><h3>Les douceurs pour finir</h3><p>Cœurs coulants, tiramisus ou glaces : la touche sucrée de la fête.</p></div>
+      </div>
+      <p style="margin-bottom:1.3rem">Réservez tôt votre commande des fêtes : le snack vous répond avec plaisir.</p>
+      <a class="btn btn-main" href="https://wa.me/262693117809?text=Bonjour%2C%20je%20voudrais%20commander%20un%20repas%20pour%20No%C3%ABl">Commander pour Noël</a>
+    </div>
+    <figure class="scene rv">
+      <span class="lum" style="left:12%;top:14%"></span><span class="lum" style="left:84%;top:10%;animation-delay:.8s"></span><span class="lum" style="left:74%;top:44%;animation-delay:1.6s"></span><span class="lum" style="left:20%;top:52%;animation-delay:1.1s"></span><span class="lum" style="left:50%;top:6%;animation-delay:2s"></span>
+      <svg viewBox="0 0 240 200" aria-hidden="true">
+        <g class="fumee" fill="none" stroke="#e9b783" stroke-width="3" stroke-linecap="round"><path d="M95 70c-10-12 10-20 0-34"/><path d="M120 66c-10-12 10-20 0-36"/><path d="M145 70c-10-12 10-20 0-34"/></g>
+        <path d="M58 84c22-14 102-14 124 0" fill="none" stroke="#2f5a3a" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="70" cy="80" r="5" fill="#d2462f"/><circle cx="170" cy="80" r="5" fill="#d2462f"/><circle cx="120" cy="73" r="5" fill="#d2462f"/>
+        <ellipse cx="120" cy="96" rx="78" ry="14" fill="#d9d6d0"/>
+        <path d="M44 100h152l-10 58c-3 16-24 26-66 26s-63-10-66-26z" fill="#efece6"/>
+        <path d="M44 106c-14 0-20 6-17 13M196 106c14 0 20 6 17 13" fill="none" stroke="#d9d6d0" stroke-width="6" stroke-linecap="round"/>
+        <text x="120" y="140" text-anchor="middle" font-family="Bodoni Moda,serif" font-size="13" fill="#6d665d">Snack La Kafrine</text>
+      </svg>
+      <p class="titre">Joyeux Noël kréol</p>
+      <small>Illustration</small>
+    </figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Venir au snack</p>
+      <h2>On vous attend à Saint-Pierre</h2>
+      <p><b>Adresse</b> · 51 B chemin Maxime Rivière, Saint-Pierre</p>
+      <p><b>Téléphone</b> · <a href="tel:+262693117809">0693 11 78 09</a></p>
+      <p><b>Formule</b> · repas sur place ou à emporter</p>
+      <p><b>Carte du jour</b> · chaque matin sur Facebook</p>
+      <div class="ctas" style="margin-top:1.5rem">
+        <a class="btn btn-main" href="https://wa.me/262693117809?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20barquette">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262693117809">Appeler</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/snack.lakafrine/">Facebook</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=51%20B%20chemin%20Maxime%20Rivi%C3%A8re%20Saint-Pierre%20R%C3%A9union">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/devanture.webp" alt="Devanture du Snack La Kafrine : enseignes noires à la marmite, façade cuivrée et terrasse plantée" loading="lazy"><figcaption>La devanture cuivrée et ses enseignes noires à la marmite</figcaption></figure>
+  </div>
+</section>
+
+<footer>Snack La Kafrine · Cuisine créole sur place ou à emporter · Saint-Pierre, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Snack La Kafrine.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* vapeur de marmite : volutes douces qui montent */
+const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+function nv(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+40;p.r=Math.random()*26+14;p.v=Math.random()*.35+.15;p.a=Math.random()*6.28;p.o=Math.random()*.05+.03;p.g=Math.random()<.25;return p}
+for(let i=0;i<24;i++)P.push(nv({},true));
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.012;p.x+=Math.sin(p.a)*.35;p.r+=.02;if(p.y<-60)nv(p,false);
+ const k=Math.min(1,(H-p.y)/(H*.25)),o=p.o*k*Math.min(1,p.y/(H*.2));
+ const gr=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+ const col=p.g?'201,130,69':'255,250,240';
+ gr.addColorStop(0,`rgba(${col},${Math.max(o,0)})`);gr.addColorStop(1,`rgba(${col},0)`);
+ x.fillStyle=gr;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Snack La Kafrine" defer></script>
+</body>
+</html>
