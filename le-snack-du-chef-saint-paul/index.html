@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Snack du Chef · Snack nouvelle génération à Saint-Paul</title>
+<meta name="description" content="Le Snack du Chef, votre snack nouvelle génération à l'Étang-Saint-Paul : Américain XL, tacos, kebab, pâtes. Sur place, à emporter, livraison. 358 bis rue Saint-Louis, 0693 84 98 02.">
+<meta property="og:title" content="Le Snack du Chef · Le numéro 1 sandwich XL">
+<meta property="og:description" content="Américain XL, tacos, kebab, pâtes : votre snack nouvelle génération, 358 bis rue Saint-Louis à Saint-Paul.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-snack-du-chef-saint-paul/img/facade-inauguration.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-snack-du-chef-saint-paul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0f0e0d;--charbon:#1b1916;--ardoise:#26231f;--or:#f2b33d;--orange:#e98a2c;--bois:#c8925a;--creme:#f7f0e4;--sable:#efe2cc;--txt:#2a2622;--doux:#7a6f62;--blanc:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:Outfit,system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.01em;text-transform:uppercase}
+h2{font-size:clamp(2.3rem,8vw,3.8rem);margin:.3rem 0 1rem}
+h3{font-size:1.45rem;letter-spacing:.02em}
+.or{background:linear-gradient(100deg,var(--or),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.main{font-family:Caveat,cursive;font-weight:600;text-transform:none;letter-spacing:0}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;font-weight:700;color:var(--orange)}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:#d9cfbf;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(242,179,61,.35)}
+.ribbon b{color:var(--or);font-weight:600}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:3}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:14px;text-decoration:none;font-weight:700;letter-spacing:.05em;font-size:.92rem;text-transform:uppercase;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:linear-gradient(100deg,var(--or),var(--orange));color:var(--noir);box-shadow:0 14px 30px -12px rgba(233,138,44,.75);animation:souffle 4.5s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 18px 44px -8px rgba(242,179,61,.85);transform:scale(1.025)}}
+.btn-ligne{border:1.5px solid rgba(242,179,61,.6);color:var(--creme);background:rgba(255,255,255,.04)}
+.btn-ligne:hover{background:rgba(242,179,61,.12)}
+.btn-sombre{background:var(--noir);color:var(--creme)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{background:radial-gradient(90% 60% at 80% 20%,rgba(233,138,44,.22),transparent 65%),radial-gradient(70% 50% at 0% 100%,rgba(200,146,90,.18),transparent 60%),var(--noir);color:var(--creme);padding:6.2rem 0 4.5rem;overflow:hidden;min-height:min(100svh,900px);display:flex;align-items:center}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.hero .tag{display:inline-block;border:1px solid rgba(242,179,61,.5);border-radius:999px;padding:.35rem .9rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or);margin-bottom:1.2rem}
+.hero h1{font-size:clamp(3.6rem,15vw,7.2rem);color:var(--creme)}
+.hero h1 span{display:block}
+.hero .lead{font-size:clamp(1.15rem,3.6vw,1.4rem);margin:1.2rem 0 .4rem;color:#e9dfcf;max-width:32rem}
+.hero .lead b{color:var(--or);font-weight:600}
+.couronne{display:flex;align-items:center;gap:.6rem;font-family:Caveat,cursive;font-size:1.7rem;color:var(--or);margin:.4rem 0 1.6rem}
+.couronne svg{width:34px;height:26px;flex:none}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.puces span{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:.35rem .85rem;border-radius:10px;font-size:.88rem;font-weight:600;letter-spacing:.04em}
+.mur{position:relative;max-width:440px;width:100%;margin:auto}
+.mur .cadre{border-radius:26px;overflow:hidden;aspect-ratio:10/11;box-shadow:0 40px 90px -30px rgba(233,138,44,.55),0 0 0 1px rgba(242,179,61,.25)}
+.mur img{width:100%;height:100%!important;object-fit:cover;animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.13) translate(-1.5%,-2%)}}
+.mur figcaption{position:absolute;right:-.4rem;bottom:1.2rem;background:var(--creme);color:var(--txt);padding:.55rem .95rem;border-radius:12px;font-size:.8rem;font-weight:600;box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+.mur::before{content:"";position:absolute;inset:-12px;border:1px dashed rgba(242,179,61,.4);border-radius:34px}
+.adr{margin-top:1.5rem;font-size:.9rem;color:#b9ad9c}
+.hero h1,.hero .lead,.couronne,.puces,.hero .ctas,.adr,.hero .tag{opacity:0;transform:translateY(18px);animation:monte .9s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .tag{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero .lead{animation-delay:.35s}.couronne{animation-delay:.5s}.puces{animation-delay:.6s}.hero .ctas{animation-delay:.75s}.adr{animation-delay:.9s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bandeau{background:linear-gradient(100deg,var(--or),var(--orange));color:var(--noir);overflow:hidden;padding:.9rem 0;transform:rotate(-1.2deg) scale(1.04);margin:-1.4rem 0 0;width:100%;position:relative;z-index:4}
+.bandeau .piste{display:flex;width:max-content;animation:defile 28s linear infinite}
+.bandeau span{font-family:Anton,sans-serif;font-size:1.35rem;letter-spacing:.06em;text-transform:uppercase;padding-right:1.6rem;white-space:nowrap}
+.bandeau i{font-style:normal;padding-right:1.6rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* retour */
+.retour-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.retour p{margin-bottom:1rem;color:#4a4339}
+.citation{border-left:4px solid var(--orange);background:var(--sable);padding:1.1rem 1.3rem;border-radius:0 16px 16px 0;font-size:1.05rem;color:var(--txt);margin:1.4rem 0}
+.citation small{display:block;margin-top:.5rem;color:var(--doux);font-size:.8rem}
+.facade{border-radius:20px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(15,14,13,.6)}
+.facade img{width:100%;aspect-ratio:1400/342;object-fit:cover}
+.legende{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+.date{display:inline-flex;align-items:baseline;gap:.5rem;background:var(--noir);color:var(--or);border-radius:14px;padding:.7rem 1.1rem;margin-top:1.4rem}
+.date b{font-family:Anton,sans-serif;font-size:2.2rem;font-weight:400;line-height:1}
+.date span{color:var(--creme);font-size:.85rem;text-transform:uppercase;letter-spacing:.12em}
+/* carte */
+.carte{background:var(--charbon);color:var(--creme);overflow:hidden}
+.carte::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(200,146,90,.06) 0 14px,transparent 14px 30px);pointer-events:none}
+.carte .intro{max-width:38rem;color:#cfc4b4}
+.familles{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem}
+.fam{background:var(--ardoise);border:1px solid rgba(242,179,61,.18);border-radius:20px;padding:1.5rem 1.3rem;transition:.35s;position:relative;overflow:hidden}
+.fam:hover{transform:translateY(-5px);border-color:rgba(242,179,61,.6)}
+.fam .ico{width:52px;height:52px;margin-bottom:.9rem}
+.fam h3{color:var(--or);margin-bottom:.4rem}
+.fam p{font-size:.92rem;color:#cfc4b4}
+.fam.xl{grid-column:span 2;background:linear-gradient(140deg,#2e2820,#1f1c18)}
+.fam.xl h3{font-size:2rem}
+.signatures{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.signatures span{background:rgba(242,179,61,.12);color:var(--or);border:1px solid rgba(242,179,61,.3);padding:.25rem .7rem;border-radius:8px;font-size:.82rem;font-weight:600}
+.reference{margin-top:1.1rem;padding-top:1rem;border-top:1px dashed rgba(242,179,61,.3);font-size:.92rem;color:#e9dfcf}
+.reference b{font-family:Anton,sans-serif;font-weight:400;color:var(--or);font-size:1.15rem;letter-spacing:.04em;margin-right:.3rem}
+.note{margin-top:1.8rem;font-size:.85rem;color:#a99d8c}
+/* galerie */
+.galerie{background:var(--creme);overflow:hidden}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 5vw 1.8rem;margin-top:1rem;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 min(72vw,330px);scroll-snap-align:center;border-radius:22px;overflow:hidden;background:var(--noir);position:relative;box-shadow:0 24px 50px -28px rgba(15,14,13,.7)}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;background:linear-gradient(transparent,rgba(15,14,13,.85));color:var(--creme);font-size:.86rem;font-weight:600}
+.astuce{text-align:center;font-size:.82rem;color:var(--doux)}
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.serv{background:#fff;border-radius:20px;padding:1.6rem 1.3rem;text-align:center;box-shadow:0 18px 40px -30px rgba(15,14,13,.5);border-bottom:4px solid var(--or);transition:.3s}
+.serv:hover{transform:translateY(-4px)}
+.serv svg{width:46px;height:46px;margin:0 auto .7rem;display:block}
+.serv h3{font-size:1.3rem;color:var(--noir)}
+.serv p{font-size:.9rem;color:var(--doux)}
+/* noel */
+.noel{background:radial-gradient(80% 70% at 50% 0%,rgba(242,179,61,.18),transparent 70%),var(--noir);color:var(--creme);overflow:hidden;text-align:center}
+.noel .wrap{position:relative;z-index:2;max-width:760px}
+.guirlande{position:absolute;top:0;left:0;right:0;height:60px;pointer-events:none}
+.noel p{color:#d8ccba;margin:0 auto 1rem;max-width:36rem}
+.noel .idees{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:2rem 0 2.2rem;text-align:left}
+.noel .idee{background:rgba(255,255,255,.05);border:1px solid rgba(242,179,61,.25);border-radius:16px;padding:1.1rem}
+.noel .idee b{display:block;color:var(--or);font-family:Anton,sans-serif;font-weight:400;font-size:1.15rem;letter-spacing:.03em;text-transform:uppercase;margin-bottom:.25rem}
+.noel .idee span{font-size:.88rem;color:#cfc4b4}
+.noel .ctas{justify-content:center}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:start}
+.fiche{background:#fff;border-radius:22px;padding:1.8rem;box-shadow:0 24px 50px -34px rgba(15,14,13,.55)}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px solid #eee3d2}
+.ligne:last-child{border-bottom:0}
+.ligne svg{width:24px;height:24px;flex:none;margin-top:.15rem}
+.ligne small{display:block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux);font-weight:700}
+.ligne a{text-decoration:none;font-weight:600;word-break:break-word}
+.ligne a:hover{color:var(--orange)}
+.sac{border-radius:22px;overflow:hidden;position:relative}
+.sac img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.sac figcaption{position:absolute;left:1rem;bottom:1rem;right:1rem;background:rgba(15,14,13,.82);color:var(--creme);padding:.8rem 1rem;border-radius:14px;font-size:.88rem}
+.sac figcaption b{color:var(--or)}
+footer{background:var(--noir);color:#a99d8c;text-align:center;font-size:.82rem;padding:2.4rem 1.2rem 6.5rem;line-height:1.7}
+footer b{color:var(--or);font-weight:600}
+.barre{position:fixed;left:.8rem;right:.8rem;bottom:.8rem;z-index:55;display:none;gap:.6rem}
+.barre .btn{flex:1;min-height:52px;font-size:.85rem;padding:.7rem}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero-in,.retour-grid,.contact-grid{grid-template-columns:1fr}
+ .hero{padding-top:5.4rem}
+ .mur{max-width:340px;margin-top:.6rem}
+ .familles{grid-template-columns:1fr 1fr}
+ .fam.xl,.fam:last-child{grid-column:span 2}
+ .services{grid-template-columns:1fr}
+ .noel .idees{grid-template-columns:1fr}
+ .barre{display:flex}
+}
+@media (max-width:420px){
+ .familles{grid-template-columns:1fr}
+ .fam.xl,.fam:last-child{grid-column:auto}
+ .fam.xl h3{font-size:1.7rem}
+ .ribbon{font-size:.7rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .hero h1,.hero .lead,.couronne,.puces,.hero .ctas,.adr,.hero .tag,.rv{opacity:1;transform:none}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Snack du Chef</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+
+<header class="hero">
+ <div class="wrap hero-in">
+  <div>
+   <span class="tag">Étang-Saint-Paul · La Réunion 974</span>
+   <h1><span>Le Snack</span><span class="or">du Chef</span></h1>
+   <p class="lead">✨ Votre snack <b>nouvelle génération</b> ✨</p>
+   <div class="couronne"><svg viewBox="0 0 34 26" aria-hidden="true"><path d="M2 22 4 6l8 8 5-12 5 12 8-8 2 16z" fill="#f2b33d"/><rect x="3" y="22.5" width="28" height="3" rx="1.5" fill="#e98a2c"/></svg>Le numéro 1 sandwich XL</div>
+   <div class="puces"><span>🔥 Américain XL</span><span>Tacos</span><span>Kebab</span><span>Pâtes</span></div>
+   <div class="ctas">
+    <a class="btn btn-or" href="tel:+262693849802"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>0693 84 98 02</a>
+    <a class="btn btn-ligne" href="#carte">Voir la carte</a>
+   </div>
+   <p class="adr">📍 Local N°1 – 358 bis rue Saint-Louis, Saint-Paul · Sur place · À emporter · Livraison</p>
+  </div>
+  <figure class="mur">
+   <div class="cadre"><img src="img/enseigne-chef.webp" alt="Le logo lumineux du Snack du Chef, un chef aux bras croisés, sur le mur noir de la salle" width="1000" height="1099"></div>
+   <figcaption>Le Chef vous attend en salle 👨‍🍳</figcaption>
+  </figure>
+ </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+ <span>Américain XL</span><i>★</i><span>Tacos</span><i>★</i><span>Kebab</span><i>★</i><span>Pâtes</span><i>★</i><span>Sur place</span><i>★</i><span>À emporter</span><i>★</i><span>Livraison</span><i>★</i>
+ <span>Américain XL</span><i>★</i><span>Tacos</span><i>★</i><span>Kebab</span><i>★</i><span>Pâtes</span><i>★</i><span>Sur place</span><i>★</i><span>À emporter</span><i>★</i><span>Livraison</span><i>★</i>
+</div></div>
+
+<main>
+<section class="retour" id="retour">
+ <div class="wrap retour-grid">
+  <div class="rv">
+   <span class="eyebrow">Le grand retour</span>
+   <h2>Un nouveau départ, <span class="or">rue Saint-Louis</span></h2>
+   <p>« Le Snack du Chef est prêt à faire son grand retour ! » Après plus d'un an d'absence, l'équipe vous accueille dans sa salle bois clair et mur noir, au 358 bis rue Saint-Louis.</p>
+   <div class="citation">« Vous avez été nombreux à répondre présents pour célébrer ce nouveau départ à nos côtés. […] Le meilleur reste à venir ! »<small>Le Snack du Chef, publication du 8 novembre 2026</small></div>
+   <div class="date"><b>06.11</b><span>Soirée d'inauguration 2026</span></div>
+  </div>
+  <figure class="rv">
+   <div class="facade"><img src="img/facade-inauguration.webp" alt="La façade du Snack du Chef le soir de l'inauguration, décorée de ballons dorés et noirs" width="1400" height="342" loading="lazy"></div>
+   <figcaption class="legende">La façade le soir de l'inauguration, ballons or et noir aux couleurs de la maison.</figcaption>
+  </figure>
+ </div>
+</section>
+
+<section class="carte" id="carte">
+ <div class="wrap">
+  <div class="rv">
+   <span class="eyebrow">La carte</span>
+   <h2>Version <span class="or">XL</span>, version gourmande</h2>
+   <p class="intro">Quatre familles, une seule promesse : repartir rassasié. Le grand classique de la maison, c'est l'Américain XL, en version Traditionnel ou Signature.</p>
+  </div>
+  <div class="familles">
+   <article class="fam xl rv">
+    <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><path d="M6 26c0-5 4-8 9-8h22c5 0 9 3 9 8z" fill="#c8925a"/><path d="M5 28h42" stroke="#f2b33d" stroke-width="4" stroke-linecap="round"/><path d="M6 32c4 2 8-2 12 0s8 2 12 0 8-2 16 0" stroke="#e98a2c" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M6 36h40c0 4-4 7-9 7H15c-5 0-9-3-9-7z" fill="#c8925a"/><circle cx="18" cy="23" r="1.2" fill="#f7f0e4"/><circle cx="26" cy="21" r="1.2" fill="#f7f0e4"/><circle cx="34" cy="23" r="1.2" fill="#f7f0e4"/></svg>
+    <h3>Américain XL</h3>
+    <p>Le Big Américain en deux versions, Traditionnel et Signature. Au tableau du comptoir :</p>
+    <div class="signatures"><span>Saumon</span><span>Magret</span><span>Agneau</span><span>Merguez</span><span>Jambon cru</span><span>Outre-mer</span></div>
+    <p class="reference"><b>👑 La Référence</b> 4 viandes au choix, 2 légumes au choix.</p>
+   </article>
+   <article class="fam rv">
+    <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><path d="M8 40 26 10l18 30z" fill="#f2b33d"/><path d="M14 36 26 16l12 20z" fill="#c8925a"/><path d="M16 33c4-3 6 1 10-2s6 1 10-1" stroke="#e98a2c" stroke-width="3" fill="none" stroke-linecap="round"/></svg>
+    <h3>Tacos</h3>
+    <p>À savourer sur place, à emporter ou en livraison.</p>
+   </article>
+   <article class="fam rv">
+    <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><rect x="22" y="6" width="8" height="34" rx="4" fill="#c8925a"/><path d="M26 4v42" stroke="#f7f0e4" stroke-width="2"/><path d="M14 20h24l-3 22H17z" fill="#f2b33d" opacity=".85"/><path d="M16 27h20M17 34h18" stroke="#e98a2c" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <h3>Kebab</h3>
+    <p>Le grand classique des soirées gourmandes, version Chef.</p>
+   </article>
+   <article class="fam rv">
+    <svg class="ico" viewBox="0 0 52 52" aria-hidden="true"><path d="M6 26h40c0 9-9 16-20 16S6 35 6 26z" fill="#f2b33d"/><path d="M12 24c3-6 6 2 9-5s6 3 9-4 6 4 9-2" stroke="#e98a2c" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M36 8 26 22M42 10 30 23" stroke="#c8925a" stroke-width="2.5" stroke-linecap="round"/></svg>
+    <h3>Pâtes</h3>
+    <p>Une assiette réconfortante pour toutes les envies.</p>
+   </article>
+  </div>
+  <p class="note rv">Carte complète et nouveautés : au tableau du comptoir et sur la page Facebook du Snack du Chef.</p>
+ </div>
+</section>
+
+<section class="galerie" id="galerie">
+ <div class="wrap rv">
+  <span class="eyebrow">En cuisine et au comptoir</span>
+  <h2>Ça grille, ça dore, <span class="or">ça régale</span></h2>
+ </div>
+ <div class="rail" tabindex="0" aria-label="Galerie photos du Snack du Chef">
+  <figure><img src="img/cuisine-grill.webp" alt="En cuisine, une garniture passe sous le grill" width="900" height="1125" loading="lazy"><figcaption>Passage au grill, juste avant de servir</figcaption></figure>
+  <figure><img src="img/sandwich-comptoir.webp" alt="Un sandwich gratiné tout chaud dans son papier, posé au comptoir" width="900" height="692" loading="lazy"><figcaption>Tout chaud, emballé, prêt à partir</figcaption></figure>
+  <figure><img src="img/samoussas.webp" alt="Un plateau de samoussas dorés" width="900" height="1125" loading="lazy"><figcaption>Samoussas dorés du soir d'inauguration</figcaption></figure>
+  <figure><img src="img/creation-du-chef.webp" alt="Une création du Chef généreusement garnie, servie sur papier" width="800" height="1124" loading="lazy"><figcaption>Une création du Chef, partagée le 8 octobre</figcaption></figure>
+  <figure><img src="img/enseigne-chef.webp" alt="Le logo lumineux du Snack du Chef" width="1000" height="1099" loading="lazy"><figcaption>La salle, bois clair et mur noir</figcaption></figure>
+ </div>
+ <p class="astuce">← Faites glisser pour voir la suite →</p>
+</section>
+
+<section id="services" style="padding-top:2rem">
+ <div class="wrap">
+  <div class="rv" style="text-align:center">
+   <span class="eyebrow">À votre façon</span>
+   <h2>Sur place, à emporter <span class="or">ou livré</span></h2>
+  </div>
+  <div class="services">
+   <div class="serv rv"><svg viewBox="0 0 48 48" fill="none" stroke="#e98a2c" stroke-width="2.6" stroke-linecap="round"><path d="M8 20h32v4a16 16 0 0 1-32 0z"/><path d="M4 42h40M18 6c-2 3 2 5 0 8M26 6c-2 3 2 5 0 8"/></svg><h3>Sur place</h3><p>Une salle chaleureuse, bois clair et lumière dorée, pour savourer tout chaud.</p></div>
+   <div class="serv rv"><svg viewBox="0 0 48 48" fill="none" stroke="#e98a2c" stroke-width="2.6" stroke-linejoin="round"><path d="M10 16h28l-3 26H13z"/><path d="M18 16v-4a6 6 0 0 1 12 0v4"/></svg><h3>À emporter</h3><p>Commande prête, bien emballée, direction la maison ou la plage.</p></div>
+   <div class="serv rv"><svg viewBox="0 0 48 48" fill="none" stroke="#e98a2c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="36" r="5"/><circle cx="36" cy="36" r="5"/><path d="M17 36h14l-6-14h-7M31 36l4-14h5M8 22h10"/></svg><h3>Livraison</h3><p>Le Chef vient jusqu'à vous : un appel et c'est parti.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="noel" id="noel">
+ <svg class="guirlande" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 8 Q50 40 100 10 T200 10 T300 10 T400 8" stroke="rgba(242,179,61,.5)" stroke-width="1.5" fill="none"/><g fill="#f2b33d"><circle cx="50" cy="25" r="4"/><circle cx="150" cy="25" r="4"/><circle cx="250" cy="25" r="4"/><circle cx="350" cy="25" r="4"/></g><g fill="#1b1916" stroke="#f2b33d" stroke-width="1"><circle cx="100" cy="12" r="3.5"/><circle cx="200" cy="12" r="3.5"/><circle cx="300" cy="12" r="3.5"/></g></svg>
+ <div class="wrap rv">
+  <span class="eyebrow">Pour Noël 🎄</span>
+  <h2>Vos tablées de fêtes, <span class="or">version XL</span></h2>
+  <p>Soirée entre amis, repas d'équipe, grande famille réunie : le Chef prépare vos Américains XL, tacos, kebabs et pâtes pour régaler tout le monde pendant les fêtes.</p>
+  <div class="idees">
+   <div class="idee"><b>Soirée en famille</b><span>Une grande commande à partager, livrée ou à emporter.</span></div>
+   <div class="idee"><b>Repas d'équipe</b><span>De quoi fêter la fin d'année avec les collègues.</span></div>
+   <div class="idee"><b>Veillée entre amis</b><span>Les sandwichs XL au centre de la table, et la fête commence.</span></div>
+  </div>
+  <div class="ctas">
+   <a class="btn btn-or" href="https://wa.me/262693849802?text=Bonjour%20Le%20Snack%20du%20Chef%2C%20je%20voudrais%20passer%20une%20commande%20pour%20une%20soir%C3%A9e%20de%20f%C3%AAtes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2m4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3"/></svg>Commander sur WhatsApp</a>
+   <a class="btn btn-ligne" href="tel:+262693849802">Appeler le Chef</a>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-grid">
+  <div class="rv">
+   <span class="eyebrow">Nous trouver</span>
+   <h2>À tout de suite <span class="or">chez le Chef</span></h2>
+   <div class="fiche">
+    <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="#e98a2c" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><small>Adresse</small><a href="https://www.google.com/maps/search/?api=1&query=358%20bis%20rue%20Saint-Louis%2097460%20Saint-Paul%20La%20R%C3%A9union" target="_blank" rel="noopener">Local N°1 – 358 bis rue Saint-Louis<br>Étang-Saint-Paul, 97460 Saint-Paul</a></div></div>
+    <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="#e98a2c" stroke-width="2"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><div><small>Téléphone</small><a href="tel:+262693849802">0693 84 98 02</a></div></div>
+    <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="#e98a2c" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><small>E-mail</small><a href="mailto:snackduchef01@gmail.com">snackduchef01@gmail.com</a></div></div>
+    <div class="ligne"><svg viewBox="0 0 24 24" fill="#e98a2c"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg><div><small>Horaires du jour et nouveautés</small><a href="https://www.facebook.com/p/La-pizza-du-chef-100095333568225" target="_blank" rel="noopener">Page Facebook du Snack du Chef</a></div></div>
+   </div>
+  </div>
+  <figure class="sac rv">
+   <img src="img/commande-emporter.webp" alt="Une commande à emporter dans son sac kraft, tendue au comptoir" width="700" height="897" loading="lazy">
+   <figcaption><b>Commande prête !</b> Sur place, à emporter ou en livraison, au choix.</figcaption>
+  </figure>
+ </div>
+</section>
+</main>
+
+<footer><b>Le Snack du Chef</b> · Américain XL · Tacos · Kebab · Pâtes · Étang-Saint-Paul, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Snack du Chef.</footer>
+
+<div class="barre"><a class="btn btn-or" href="tel:+262693849802">📞 Appeler</a><a class="btn btn-sombre" href="#carte">La carte</a></div>
+
+<script>
+(function(){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],N=26,run=true;
+ function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+ function nv(b){return{x:Math.random()*W,y:b?H+Math.random()*60:Math.random()*H,r:.8+Math.random()*2.2,v:.25+Math.random()*.7,o:.15+Math.random()*.45,d:Math.random()*6.28,h:Math.random()<.6?'242,179,61':'233,138,44'}}
+ for(var i=0;i<N;i++)P.push(nv(false));
+ function f(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p,i){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.35;var a=p.o*Math.min(1,p.y/(H*.4));x.beginPath();x.fillStyle='rgba('+p.h+','+a+')';x.shadowColor='rgba('+p.h+',.8)';x.shadowBlur=6;x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-10)P[i]=nv(true)});requestAnimationFrame(f)}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Snack du Chef" defer></script>
+</body>
+</html>
