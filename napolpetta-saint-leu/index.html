@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Napolpetta · Spécialités napolitaines à Saint-Leu</title>
+<meta name="description" content="Napolpetta, restaurant pizzeria napolitain à Saint-Leu (La Réunion) : montanara, panzerotto, polpette, pizzas et desserts siciliens. Sur place ou à emporter. 0692 27 41 37.">
+<meta property="og:title" content="Napolpetta · Spécialités napolitaines, Saint-Leu">
+<meta property="og:description" content="Restaurant pizzeria napolitain, 4 rue du Trésor, Résidence Ariane, Saint-Leu. Sur place ou à emporter.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/napolpetta-saint-leu/img/logo-napolpetta.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/napolpetta-saint-leu/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito+Sans:wght@300;400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--creme:#fffbf2;--lin:#f6ecdb;--brique:#d2552a;--brique-f:#a83c18;--orange:#e98a3f;--nuit:#1b2a44;--ciel:#8fc3e8;--ciel-f:#3f7fb8;--or:#c9a24a;--basilic:#3f7d3a;--txt:#2a2f3a;--doux:#6d6a66}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--nuit);line-height:1.12}
+h2{font-size:clamp(2rem,6vw,3rem);margin:.3rem 0 1rem}
+h3{font-size:1.25rem}
+.main{font-family:'Caveat',cursive;color:var(--brique);font-size:1.6rem;line-height:1.1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--ciel-f);font-weight:700}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:#cfe3f3;text-align:center;font-size:.75rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;letter-spacing:.02em;transition:.3s}
+.btn svg{width:20px;height:20px}
+.btn-main{background:var(--brique);color:#fff;box-shadow:0 14px 28px -14px rgba(210,85,42,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:var(--brique-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(233,138,63,.75)}}
+.btn-line{border:1.5px solid var(--nuit);color:var(--nuit)}
+.btn-line:hover{background:var(--lin)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:center;padding:4.5rem 0 3.5rem;overflow:hidden;background:var(--creme)}
+#braises{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hero-in{position:relative;z-index:2;text-align:center}
+.four{position:relative;width:min(560px,94%);margin:0 auto}
+.four::before{content:"";position:absolute;left:50%;top:58%;width:42%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,170,80,.55),rgba(255,170,80,0) 70%);animation:flamme 2.6s ease-in-out infinite alternate;z-index:-1}
+@keyframes flamme{0%{opacity:.55;transform:translate(-50%,-50%) scale(.92)}60%{opacity:1}100%{opacity:.75;transform:translate(-50%,-50%) scale(1.08)}}
+.four img{width:100%;height:auto;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 78%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 78%,transparent 100%);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-6px)}}
+.hero h1{font-size:clamp(1.75rem,6.4vw,3rem);margin:1.1rem auto .6rem;max-width:20ch}
+.hero h1 em{color:var(--brique);font-style:italic}
+.hero .lead{max-width:34rem;margin:0 auto 1.6rem;color:var(--doux)}
+.hero .ctas{justify-content:center}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:var(--nuit)}
+.hero .adr b{font-weight:700}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--nuit);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem}
+.track{display:inline-block;animation:defile 42s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"●";margin-left:2.2rem;font-style:normal;font-size:.5rem;vertical-align:.3em;color:var(--orange)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{display:grid;gap:2.2rem}
+.citation{font-family:'Fraunces',serif;font-style:italic;font-size:1.35rem;color:var(--brique-f);border-left:3px solid var(--or);padding:.2rem 0 .2rem 1.1rem;margin:1.4rem 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.duo div{background:var(--lin);border-radius:18px;padding:1.1rem 1rem}
+.duo b{display:block;font-family:'Fraunces',serif;font-size:1.25rem;color:var(--nuit);font-weight:500}
+.duo span{font-size:.88rem;color:var(--doux);line-height:1.45;display:block;margin-top:.2rem}
+.arche{background:var(--nuit);border-radius:200px 200px 26px 26px;padding:2.6rem 1.6rem 2rem;color:#e6eef6;text-align:center;position:relative;overflow:hidden}
+.arche svg.briques{width:100%;max-width:300px;margin:0 auto 1rem}
+.arche p{font-size:.98rem}
+.arche .main{color:var(--orange);font-size:1.9rem;margin-bottom:.4rem}
+/* vague */
+.vague{display:block;width:100%;height:40px}
+/* pizza semaine */
+.semaine{background:var(--lin)}
+.semaine-in{display:grid;gap:2rem;align-items:center}
+.pizza-fig{position:relative;max-width:360px;margin:auto}
+.pizza-fig svg{width:100%;height:auto;animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.vapeur{position:absolute;left:0;right:0;top:-14%;height:40%;pointer-events:none}
+.vapeur i{position:absolute;bottom:0;width:10px;height:60px;border-radius:10px;background:linear-gradient(to top,rgba(255,255,255,.0),rgba(255,255,255,.85),rgba(255,255,255,0));filter:blur(4px);animation:monteV 4.5s ease-in infinite;opacity:0}
+.vapeur i:nth-child(1){left:38%}.vapeur i:nth-child(2){left:50%;animation-delay:1.5s}.vapeur i:nth-child(3){left:62%;animation-delay:3s}
+@keyframes monteV{0%{opacity:0;transform:translateY(20px) scaleX(1)}30%{opacity:.9}100%{opacity:0;transform:translateY(-60px) scaleX(2.2)}}
+figcaption{font-size:.78rem;color:var(--doux);text-align:center;margin-top:.6rem;letter-spacing:.04em}
+.pastille{display:inline-block;background:var(--brique);color:#fff;font-weight:700;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .8rem;border-radius:999px}
+.semaine h3{font-size:clamp(1.6rem,5vw,2.2rem);margin:.8rem 0 .6rem;color:var(--brique-f)}
+/* carte */
+.carte-intro{max-width:40rem}
+.onglets{display:flex;gap:.5rem;overflow-x:auto;padding:.3rem .1rem 1rem;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.onglets::-webkit-scrollbar{display:none}
+.onglets button{flex:0 0 auto;scroll-snap-align:start;font:inherit;font-weight:700;font-size:.88rem;border:1.5px solid var(--nuit);background:transparent;color:var(--nuit);border-radius:999px;padding:.55rem 1.05rem;cursor:pointer;transition:.25s;min-height:44px}
+.onglets button[aria-selected=true]{background:var(--nuit);color:#fff}
+.panneau{display:none;gap:.8rem}
+.panneau.on{display:grid;animation:monte .6s both}
+.plat{background:#fff;border-radius:18px;padding:1.1rem 1.2rem 1.1rem 1.4rem;box-shadow:0 10px 26px -20px rgba(27,42,68,.6);border-left:4px solid var(--ciel);transition:.3s}
+.plat:hover{transform:translateY(-3px);border-left-color:var(--brique)}
+.plat h3{font-size:1.12rem}
+.plat p{font-size:.93rem;color:var(--doux);line-height:1.5;margin-top:.2rem}
+.note{font-size:.85rem;color:var(--doux);margin-top:1.4rem;font-style:italic}
+/* sur place */
+.modes{display:grid;gap:1rem;margin-top:1.6rem}
+.mode{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:20px;padding:1.2rem}
+.mode svg{flex:0 0 44px;width:44px;height:44px}
+/* noel */
+.fetes{background:var(--nuit);color:#e6eef6;overflow:hidden}
+.fetes h2{color:#fff}
+.fetes .eyebrow{color:var(--ciel)}
+.guirlande{position:absolute;top:0;left:0;right:0;height:46px;width:100%}
+.guirlande circle{animation:clign 2.4s ease-in-out infinite}
+.guirlande circle:nth-child(3n){animation-delay:.8s}.guirlande circle:nth-child(3n+1){animation-delay:1.6s}
+@keyframes clign{50%{opacity:.35}}
+.idees{display:grid;gap:.9rem;margin:1.6rem 0 1.8rem}
+.idee{border:1px solid rgba(143,195,232,.35);border-radius:20px;padding:1.2rem 1.3rem;background:rgba(255,255,255,.04)}
+.idee h3{color:#fff;font-size:1.2rem;margin-bottom:.25rem}
+.idee p{font-size:.94rem;color:#c9d6e3}
+.fetes .btn-line{border-color:var(--ciel);color:#fff}
+.fetes .btn-line:hover{background:rgba(255,255,255,.1)}
+/* contact */
+.contact-grid{display:grid;gap:1.4rem}
+.carte-contact{background:#fff;border-radius:24px;padding:1.6rem 1.4rem;box-shadow:0 18px 40px -30px rgba(27,42,68,.7)}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;padding:.85rem 0;border-bottom:1px dashed #e4d9c6}
+.ligne:last-child{border:0}
+.ligne svg{flex:0 0 26px;width:26px;height:26px;color:var(--brique)}
+.ligne a{font-weight:700;text-decoration:none;color:var(--nuit)}
+.ligne small{display:block;color:var(--doux);font-size:.85rem}
+footer{text-align:center;font-size:.8rem;color:var(--doux);padding:2.4rem 1rem 3rem;line-height:1.6}
+footer img{width:120px;margin:0 auto 1rem;mix-blend-mode:multiply}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .histoire{grid-template-columns:1.2fr .9fr;align-items:center}
+ .semaine-in{grid-template-columns:1fr 1fr}
+ .panneau.on{grid-template-columns:1fr 1fr}
+ .modes{grid-template-columns:1fr 1fr 1fr}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .contact-grid{grid-template-columns:1fr 1fr;align-items:center}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Napolpetta</div>
+
+<header class="hero">
+  <canvas id="braises" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <div class="four apparait"><img src="img/logo-napolpetta.webp" alt="Logo Napolpetta : un four à bois en briques et une cuisinière napolitaine, Spécialités napolitaines" width="934" height="570"></div>
+    <h1 class="apparait d2">La cuisine napolitaine, <em>au cœur de Saint-Leu</em></h1>
+    <p class="lead apparait d3">Restaurant · Pizzeria. Montanara, panzerotto, polpette et pizzas fondantes, à savourer sur place ou à emporter.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262692274137?text=Bonjour%20Napolpetta%2C%20je%20voudrais%20r%C3%A9server%20une%20table"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.4z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692274137">Appeler · 0692 27 41 37</a>
+    </div>
+    <p class="adr apparait d4"><b>4 rue du Trésor</b>, Résidence Ariane · Saint-Leu</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Montanara</span><span>Panzerotto</span><span>Polpette al parmigiano</span><span>Frittatina</span><span>Crocchè</span><span>Parmigiana</span><span>Pizza Na'Polpetta</span><span>Cannolo siciliano</span><span>Affogato al caffè</span><span>Limoncello</span>
+<span>Montanara</span><span>Panzerotto</span><span>Polpette al parmigiano</span><span>Frittatina</span><span>Crocchè</span><span>Parmigiana</span><span>Pizza Na'Polpetta</span><span>Cannolo siciliano</span><span>Affogato al caffè</span><span>Limoncello</span>
+</div></div>
+
+<main>
+<section class="wrap histoire" id="histoire">
+  <div class="rv">
+    <p class="eyebrow">Un retour aux racines</p>
+    <h2>Flavio &amp; Federica, une vision partagée</h2>
+    <p>Napolpetta, c'est le projet d'un couple uni par la passion de ses métiers : faire entrer la cuisine napolitaine dans le quotidien des Réunionnais. Après quatre ans à La Réunion, puis des années de perfectionnement en métropole, ils sont revenus sur l'île pour concrétiser leur rêve commun.</p>
+    <p class="citation">« Un lieu de rencontre, de partage et de découverte culinaire. »</p>
+    <p>Des plats italiens savoureux, faits maison, à prix accessibles, avec des produits frais et l'envie de travailler main dans la main avec les producteurs de l'île.</p>
+    <div class="duo">
+      <div><b>Flavio</b><span>Chef cuisinier, passé par des maisons de renom à travers la France.</span></div>
+      <div><b>Federica</b><span>À l'accueil et à la gestion, avec le sens de la relation client.</span></div>
+    </div>
+  </div>
+  <div class="arche rv">
+    <svg class="briques" viewBox="0 0 300 150" aria-hidden="true"><g fill="none" stroke-linecap="round"><path d="M30 150 A120 120 0 0 1 270 150" stroke="#d2552a" stroke-width="26" stroke-dasharray="22 6"/><path d="M58 150 A92 92 0 0 1 242 150" stroke="#e98a3f" stroke-width="6" opacity=".6"/></g><circle cx="150" cy="128" r="36" fill="#e98a3f" opacity=".35"><animate attributeName="r" values="32;40;32" dur="2.8s" repeatCount="indefinite"/></circle><path d="M138 150c-4-14 6-20 4-32 10 8 14 18 10 26 4-4 6-10 4-16 8 8 8 16 4 22z" fill="#f4b04a"/></svg>
+    <p class="main">Polpette a Napolpetta</p>
+    <p>Le nom dit tout : la <em>polpetta</em>, la boulette napolitaine, est la signature de la maison. En pizza, en panozzo ou en plat à la sauce tomate.</p>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40V22C240 2 480 2 720 20s480 18 720 0v20z" fill="#f6ecdb"/></svg>
+<section class="semaine" id="semaine">
+  <div class="wrap semaine-in">
+    <figure class="pizza-fig rv">
+      <div class="vapeur" aria-hidden="true"><i></i><i></i><i></i></div>
+      <svg viewBox="0 0 200 200" role="img" aria-label="Illustration d'une pizza crème de courge et stracciatella">
+        <defs><radialGradient id="pate" cx="50%" cy="50%" r="50%"><stop offset="78%" stop-color="#f2c98a"/><stop offset="92%" stop-color="#d99a52"/><stop offset="100%" stop-color="#b8743a"/></radialGradient><radialGradient id="courge" cx="45%" cy="40%" r="60%"><stop offset="0%" stop-color="#f6a54a"/><stop offset="100%" stop-color="#e07a2a"/></radialGradient></defs>
+        <circle cx="100" cy="100" r="96" fill="url(#pate)"/>
+        <g fill="#7a3d1a" opacity=".45"><circle cx="30" cy="70" r="4"/><circle cx="165" cy="60" r="3.5"/><circle cx="172" cy="130" r="4.5"/><circle cx="60" cy="172" r="3.5"/><circle cx="120" cy="182" r="3"/></g>
+        <circle cx="100" cy="100" r="78" fill="url(#courge)"/>
+        <g fill="#fffaf0"><path d="M70 66c10-6 22 2 18 12s-22 8-22-2c0-4 1-8 4-10z"/><path d="M118 58c12-2 18 10 10 16s-20 2-18-8c0-4 3-7 8-8z"/><path d="M128 110c12-4 22 8 14 16s-24 4-22-6c1-5 3-8 8-10z"/><path d="M70 118c10-4 22 6 16 14s-24 6-22-4c1-5 2-8 6-10z"/><path d="M98 92c8-3 16 4 12 10s-18 4-16-3c0-3 1-6 4-7z"/><path d="M96 146c8-2 15 6 10 11s-17 3-15-4c1-4 2-6 5-7z"/></g>
+        <g fill="#3f7d3a"><path d="M100 76c8-8 18-6 20 0-8 6-16 6-20 0z"/><path d="M60 96c4-10 14-12 18-6-6 8-14 10-18 6z"/><path d="M140 88c10-2 16 6 14 12-10 0-16-6-14-12z"/><path d="M108 128c6-8 16-8 18-2-8 6-14 6-18 2z"/></g>
+        <g fill="#5b3a1e" opacity=".55"><circle cx="86" cy="104" r="1.4"/><circle cx="116" cy="84" r="1.4"/><circle cx="122" cy="138" r="1.4"/><circle cx="76" cy="138" r="1.4"/><circle cx="140" cy="104" r="1.4"/></g>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+    <div class="rv">
+      <span class="pastille">Pizza de la semaine</span>
+      <h3>Crème de courge &amp; stracciatella di bufala</h3>
+      <p>Chaque semaine, Napolpetta dévoile une pizza du moment sur sa page. Cette semaine, la douceur de la courge rencontre le crémeux de la stracciatella di bufala.</p>
+      <div class="ctas" style="margin-top:1.5rem"><a class="btn btn-main" href="https://wa.me/262692274137?text=Bonjour%20Napolpetta%2C%20je%20voudrais%20la%20pizza%20de%20la%20semaine%20%C3%A0%20la%20cr%C3%A8me%20de%20courge">Je la commande</a></div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 40V22C240 2 480 2 720 20s480 18 720 0v20z" fill="#f6ecdb"/></svg>
+
+<section class="wrap" id="carte">
+  <div class="carte-intro rv">
+    <p class="eyebrow">La carte</p>
+    <h2>Spécialités napolitaines</h2>
+    <p>Fritures dorées, pizzas, panozzi et douceurs siciliennes : un aperçu des plats publiés par Napolpetta.</p>
+  </div>
+  <div class="onglets rv" role="tablist" aria-label="Catégories de la carte">
+    <button role="tab" aria-selected="true" data-p="p1">Spécialités</button>
+    <button role="tab" aria-selected="false" data-p="p2">Pizzas</button>
+    <button role="tab" aria-selected="false" data-p="p3">Panozzi</button>
+    <button role="tab" aria-selected="false" data-p="p4">Entrées &amp; plats</button>
+    <button role="tab" aria-selected="false" data-p="p5">Desserts</button>
+  </div>
+  <div class="panneau on" id="p1" role="tabpanel">
+    <div class="plat"><h3>Montanara</h3><p>Beignet de pâte levée avec sauce tomate, mozzarella de bufala, basilic, parmesan.</p></div>
+    <div class="plat"><h3>Panzerotto</h3><p>Chausson frit à la ricotta, spianata calabraise (chorizo italien), poivre, mozzarella fior di latte, basilic.</p></div>
+    <div class="plat"><h3>Panzerotto végétarien</h3><p>Chausson frit à la ricotta, aubergines, sauce tomate, mozzarella fior di latte, poivre, basilic.</p></div>
+    <div class="plat"><h3>3 Polpette parmesan</h3><p>Recette de boulettes au parmesan et citron.</p></div>
+    <div class="plat"><h3>Frittatina</h3><p>Médaillon de pâte frit avec jambon blanc, petits pois, mozzarella fondante, béchamel, parmesan. Existe en version végétarienne aux courgettes.</p></div>
+    <div class="plat"><h3>3 Crocchè</h3><p>Croquettes de pomme de terre, parmesan, herbes, poivre.</p></div>
+  </div>
+  <div class="panneau" id="p2" role="tabpanel">
+    <div class="plat"><h3>Na'Polpetta</h3><p>Tomate, mozzarella fior di latte, boulettes de bœuf, petits pois, tomates cerises, parmesan, cébette.</p></div>
+    <div class="plat"><h3>Margherita</h3><p>Tomate, mozzarella fior di latte, basilic.</p></div>
+    <div class="plat"><h3>La Norma</h3><p>Tomate, mozzarella fior di latte, ricotta, aubergines, parmesan, basilic.</p></div>
+    <div class="plat"><h3>La Nerano</h3><p>Crème de courgettes, mozzarella fior di latte, courgettes en deux cuissons, pecorino, basilic.</p></div>
+    <div class="plat"><h3>L'Italienne</h3><p>Tomate, mozzarella di bufala, roquette, jambon cru, tomates cerises, parmesan, basilic.</p></div>
+    <div class="plat"><h3>Gambero</h3><p>Crème de courgettes, mozzarella fior di latte, crevettes, tomates cerises, cébette.</p></div>
+    <div class="plat"><h3>La Capra</h3><p>Crème fraîche, mozzarella fior di latte, fromage de chèvre, miel, roquette.</p></div>
+    <div class="plat"><h3>Calzone Napoli</h3><p>Le chausson : tomate, mozzarella fior di latte, ricotta, spianata calabrese, poivre, basilic.</p></div>
+  </div>
+  <div class="panneau" id="p3" role="tabpanel">
+    <div class="plat"><h3>Panozzo Napoletano</h3><p>Pain pizza farci avec parmigiana d'aubergine (gratin d'aubergine napolitain), crème de parmesan, cébette.</p></div>
+    <div class="plat"><h3>Panozzo Italiano</h3><p>Pain pizza farci avec mozzarella de bufala, tomates fraîches, jambon cru, roquette.</p></div>
+    <div class="plat"><h3>Panozzo Napolpetta</h3><p>Pain pizza farci avec boulettes de bœuf à la sauce tomate, crème de parmesan, basilic.</p></div>
+  </div>
+  <div class="panneau" id="p4" role="tabpanel">
+    <div class="plat"><h3>Parmigiana</h3><p>Gratin d'aubergine avec sauce tomate, mozzarella, basilic.</p></div>
+    <div class="plat"><h3>Vitello tonnato</h3><p>Fines tranches de veau, cuisson lente, servies fraîches avec une sauce à base de thon, jaune d'œuf, anchois, câpres, huile d'olive, relevée au citron.</p></div>
+    <div class="plat"><h3>Scamorza sorrentina</h3><p>Scamorza fumée fondue dans la sauce tomate, tomates confites et basilic.</p></div>
+    <div class="plat"><h3>Polpette</h3><p>Boulettes de viande à la sauce tomate, parmesan, basilic, accompagnées d'une salade de roquette.</p></div>
+    <div class="plat"><h3>Lasagna</h3><p>Lasagne au ragoût de bœuf genovese, parmesan, mozzarella, scamorza.</p></div>
+  </div>
+  <div class="panneau" id="p5" role="tabpanel">
+    <div class="plat"><h3>Cannolo siciliano</h3><p>Le grand classique sicilien.</p></div>
+    <div class="plat"><h3>Affogato al caffè</h3><p>Espresso avec boule de glace vanille et chantilly.</p></div>
+    <div class="plat"><h3>Gnocchi crème pâtissière &amp; Nutella</h3><p>Une douceur pour finir en beauté.</p></div>
+    <div class="plat"><h3>Les glaces</h3><p>Citron, vanille, chocolat, pistache. Et pour le digestif : grappa, limoncello, sambuca.</p></div>
+  </div>
+  <p class="note">D'après la carte publiée sur la page Facebook de Napolpetta. La carte du moment et ses tarifs vous attendent au restaurant.</p>
+</section>
+
+<section class="wrap" id="venir" style="padding-top:0">
+  <div class="rv"><p class="eyebrow">Comme vous aimez</p><h2>Sur place ou à emporter</h2></div>
+  <div class="modes">
+    <div class="mode rv"><svg viewBox="0 0 48 48" fill="none" stroke="#d2552a" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 20h32M12 20v20M36 20v20M6 14h36"/><path d="M18 8c0 3 3 3 3 6M26 8c0 3 3 3 3 6" stroke="#8fc3e8"/></svg><div><h3>À table</h3><p>Installez-vous à la Résidence Ariane et savourez la cuisine de Naples.</p></div></div>
+    <div class="mode rv"><svg viewBox="0 0 48 48" fill="none" stroke="#d2552a" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M6 16h36v24H6z"/><path d="M6 16l6-8h24l6 8"/><circle cx="24" cy="28" r="6" stroke="#8fc3e8"/></svg><div><h3>À emporter</h3><p>Votre pizza ou vos fritures napolitaines, prêtes à partager à la maison.</p></div></div>
+    <div class="mode rv"><svg viewBox="0 0 48 48" fill="none" stroke="#d2552a" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 12c10-6 22-6 32 0L24 42z" stroke-linejoin="round"/><path d="M10 16c9-5 19-5 28 0" stroke="#e98a3f"/><circle cx="20" cy="22" r="2.5" stroke="#8fc3e8"/><circle cx="28" cy="27" r="2.5" stroke="#8fc3e8"/><circle cx="23" cy="32" r="2" stroke="#8fc3e8"/></svg><div><h3>Pour les petits</h3><p>La pizza Bambino, 24 cm pour enfant : tomate, mozzarella fior di latte, jambon blanc.</p></div></div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <svg class="guirlande" viewBox="0 0 400 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 6 Q50 34 100 8 T200 8 T300 8 T400 8" stroke="#c9a24a" stroke-width="1.2" fill="none" vector-effect="non-scaling-stroke"/><circle cx="25" cy="18" r="3.2" fill="#e98a3f"/><circle cx="75" cy="20" r="3.2" fill="#8fc3e8"/><circle cx="125" cy="18" r="3.2" fill="#fffbf2"/><circle cx="175" cy="18" r="3.2" fill="#e98a3f"/><circle cx="225" cy="18" r="3.2" fill="#8fc3e8"/><circle cx="275" cy="18" r="3.2" fill="#fffbf2"/><circle cx="325" cy="18" r="3.2" fill="#e98a3f"/><circle cx="375" cy="18" r="3.2" fill="#8fc3e8"/></svg>
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Noël à la napolitaine</p>
+      <h2>Offrir et partager pour les fêtes</h2>
+      <p>À Naples, Noël se fête autour d'une grande table. Napolpetta vous accueille pour faire pareil à Saint-Leu.</p>
+    </div>
+    <div class="idees">
+      <div class="idee rv"><h3>Une tablée des fêtes</h3><p>Famille, collègues, amis : réservez votre table pour un repas de fin d'année aux saveurs de Naples.</p></div>
+      <div class="idee rv"><h3>L'apéritif à emporter</h3><p>Montanara, panzerotti, polpette et crocchè : vos spécialités napolitaines à partager au réveillon.</p></div>
+      <div class="idee rv"><h3>Un repas à offrir</h3><p>Offrez une soirée chez Napolpetta : le cadeau gourmand qui fait voyager jusqu'à Naples.</p></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692274137?text=Bonjour%20Napolpetta%2C%20je%20voudrais%20organiser%20un%20repas%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl">Organiser mon repas des fêtes</a>
+      <a class="btn btn-line" href="https://wa.me/262692274137?text=Bonjour%20Napolpetta%2C%20je%20voudrais%20offrir%20un%20repas%20chez%20vous%20pour%20No%C3%ABl">Offrir un repas</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact-grid">
+    <div class="rv">
+      <p class="eyebrow">Venir chez Napolpetta</p>
+      <h2>À tout de suite, à Saint-Leu</h2>
+      <p>Réservez votre table ou passez votre commande en un message : on vous répond avec plaisir.</p>
+      <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-main" href="https://wa.me/262692274137?text=Bonjour%20Napolpetta%2C%20je%20voudrais%20passer%20une%20commande">Commander sur WhatsApp</a></div>
+    </div>
+    <div class="carte-contact rv">
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-7.2 7-12a7 7 0 0 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><a href="https://www.google.com/maps/search/?api=1&amp;query=Napolpetta%204%20rue%20du%20Tr%C3%A9sor%20Saint-Leu%20R%C3%A9union">4 rue du Trésor, Résidence Ariane</a><small>97436 Saint-Leu, La Réunion</small></div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><a href="tel:+262692274137">0692 27 41 37</a><small>Téléphone &amp; WhatsApp</small></div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v2H7v4h2v9h4v-9h3l1-4h-4V9c0-.6.4-1 1-1z"/></svg><div><a href="https://www.facebook.com/61577217533963">Napolpetta Saint Leu</a><small>Pizza de la semaine et actualités sur Facebook</small></div></div>
+      <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><a href="https://www.instagram.com/napolpetta974/">@napolpetta974</a><small>Sur Instagram</small></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <img src="img/logo-napolpetta.webp" alt="" loading="lazy" width="934" height="570">
+  Napolpetta · Restaurant pizzeria · Spécialités napolitaines · Saint-Leu, La Réunion<br>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Napolpetta.
+</footer>
+
+<script>
+(function(){
+var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){if(rm)el.classList.add('vu');else io.observe(el)});
+var tabs=document.querySelectorAll('.onglets button');
+tabs.forEach(function(b){b.addEventListener('click',function(){tabs.forEach(function(t){t.setAttribute('aria-selected',t===b)});document.querySelectorAll('.panneau').forEach(function(p){p.classList.toggle('on',p.id===b.dataset.p)})})});
+var c=document.getElementById('braises');if(!c||rm)return;var x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+function nv(p,init){p.x=W*(.3+Math.random()*.4);p.y=init?Math.random()*H:H*(.45+Math.random()*.2);p.r=.8+Math.random()*2;p.vy=.25+Math.random()*.55;p.vx=(Math.random()-.5)*.3;p.a=0;p.l=0;p.m=220+Math.random()*260;p.h=20+Math.random()*25;return p}
+size();for(var i=0;i<28;i++)P.push(nv({},true));
+addEventListener('resize',size);
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)loop()});
+function loop(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p){p.l++;p.y-=p.vy;p.x+=p.vx+Math.sin(p.l/30)*.25;var t=p.l/p.m;p.a=t<.2?t*5:1-t;if(t>=1||p.y<0)nv(p,false);x.beginPath();x.fillStyle='hsla('+p.h+',95%,55%,'+(p.a*.75)+')';x.shadowColor='rgba(255,140,40,.8)';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.283);x.fill()});requestAnimationFrame(loop)}
+loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Napolpetta" defer></script>
+</body>
+</html>
