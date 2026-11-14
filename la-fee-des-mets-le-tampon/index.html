@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Fée Des Mets · Traiteur 974 au Tampon</title>
+<meta name="description" content="La Fée Des Mets, traiteur au Tampon (La Réunion) : apéro, brunch, vin d'honneur, cocktail dînatoire, repas d'entreprise et location de mange-debout. Réservation par WhatsApp au 0692 30 61 36.">
+<meta property="og:title" content="La Fée Des Mets · Traiteur 974, Le Tampon">
+<meta property="og:description" content="Le plaisir de bien manger, tout simplement ! Apéro, brunch, vin d'honneur et cocktail dînatoire pour vos événements privés et professionnels.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-fee-des-mets-le-tampon/img/bruschetta.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-fee-des-mets-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--brique:#a63a1e;--brique-f:#7f2a14;--or:#c79a3e;--or-c:#e8cb85;--nuit:#24160f;--nuit2:#3a2418;--creme:#fbf5ec;--lin:#f3e6d3;--txt:#3a2a20;--doux:#7d6a5c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,Arial;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--nuit);line-height:1.08}
+h2{font-size:clamp(2.1rem,6vw,3.2rem);margin:.3rem 0 1.1rem}
+h3{font-size:1.45rem}
+.script{font-family:'Great Vibes',cursive;font-weight:400;line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;color:var(--brique);font-weight:600}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--or-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(232,203,133,.25)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#poudre{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.95rem;transition:.35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--brique);color:#fff;box-shadow:0 14px 30px -14px rgba(166,58,30,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--brique-f)}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(199,154,62,.75)}}
+.btn-line{border:1px solid var(--or-c);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-dark{border:1px solid var(--nuit2);color:var(--nuit)}
+.btn-dark:hover{background:var(--lin)}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+
+/* HERO */
+.hero{background:radial-gradient(120% 80% at 80% 0%,#4a2c1c 0%,var(--nuit) 60%);color:#f3e6d3;padding:6.2rem 0 4.5rem;overflow:hidden}
+.hero-in{display:grid;gap:2.6rem;align-items:center}
+.hero .eyebrow{color:var(--or-c)}
+.hero h1{color:#fff;font-weight:400;margin:.6rem 0 .2rem}
+.hero h1 .script{display:block;font-size:clamp(3.6rem,15vw,6.6rem);color:var(--or-c);text-shadow:0 0 28px rgba(232,203,133,.35);opacity:0;animation:apparait 1.8s .3s ease forwards}
+.hero .slogan{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.35rem,4.6vw,1.8rem);color:#fff;margin:.6rem 0 1rem;opacity:0;animation:apparait 1.6s .9s ease forwards}
+.hero .sous{color:#d9c6ad;max-width:34rem;margin-bottom:1.8rem}
+@keyframes apparait{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-visu{position:relative;width:min(78%,300px);margin:auto}
+.arche{border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:3/4.4;border:1px solid rgba(232,203,133,.5);box-shadow:0 30px 60px -25px #000;position:relative}
+.arche img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.medaillon{position:absolute;width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:4px solid var(--nuit);outline:1px solid var(--or-c);left:-14%;bottom:-4%;box-shadow:0 20px 40px -15px #000}
+.medaillon img{width:100%;height:100%;object-fit:cover}
+.hero-visu figcaption{font-size:.75rem;color:#b9a48a;text-align:right;margin-top:.8rem;letter-spacing:.04em}
+.etoile{position:absolute;color:var(--or-c);animation:scintille 3s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.25;transform:scale(.7) rotate(20deg)}}
+
+/* BANDEAU */
+.bandeau{background:var(--brique);color:#fff;overflow:hidden;padding:.9rem 0;position:relative;z-index:2}
+.bandeau-piste{display:flex;width:max-content;animation:defile 32s linear infinite}
+.bandeau span{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;padding:0 1.2rem;white-space:nowrap}
+.bandeau i{color:var(--or-c);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* COEUR */
+.coeur{text-align:center}
+.coeur .wrap{max-width:46rem}
+.coeur blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,4.8vw,2.1rem);font-style:italic;color:var(--nuit);line-height:1.3;margin:1.2rem 0}
+.coeur blockquote cite{display:block;font-family:'Jost';font-style:normal;font-size:.8rem;color:var(--doux);letter-spacing:.06em;margin-top:.8rem}
+.coeur p{color:var(--txt)}
+.kreol{display:inline-block;margin-top:1.6rem;font-family:'Great Vibes';font-size:2.2rem;color:var(--brique)}
+
+/* PRESTATIONS */
+.presta{background:var(--lin)}
+.cartes{display:grid;gap:1.1rem;margin-top:2rem}
+.carte{background:var(--creme);border-radius:20px;padding:1.6rem 1.5rem;border:1px solid rgba(199,154,62,.35);position:relative;transition:transform .4s,box-shadow .4s}
+.carte:hover{transform:translateY(-5px);box-shadow:0 22px 40px -26px rgba(58,36,24,.6)}
+.carte h3::before{content:'✦';display:block;color:var(--or);font-size:1rem;margin-bottom:.5rem}
+.carte p{font-size:.97rem;color:var(--txt);margin-top:.4rem}
+.carte.nouveau{background:var(--nuit);color:#ecdcc4;border-color:var(--or)}
+.carte.nouveau h3{color:#fff}
+.carte.nouveau p{color:#dccab0}
+.pastille{position:absolute;top:1.1rem;right:1.1rem;background:var(--or);color:var(--nuit);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.25rem .7rem;border-radius:999px}
+.tarifs{list-style:none;margin-top:.9rem;display:grid;gap:.35rem;font-size:.93rem}
+.tarifs li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed rgba(232,203,133,.35);padding-bottom:.3rem}
+.tarifs b{color:var(--or-c);font-weight:500;white-space:nowrap}
+.note{font-size:.8rem;color:#b9a48a;margin-top:.7rem}
+
+/* GALERIE */
+.galerie-tete{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center}
+.galerie .cadre{border-radius:18px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 18px 36px -24px rgba(36,22,15,.8)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{font-size:.85rem;color:var(--doux);margin-top:.6rem}
+.glisse{font-size:.8rem;color:var(--doux);letter-spacing:.06em}
+
+/* RENDEZ-VOUS */
+.rdv{background:var(--nuit);color:#e6d5bd;overflow:hidden}
+.rdv h2,.rdv h3{color:#fff}
+.rdv .eyebrow{color:var(--or-c)}
+.frise{display:grid;gap:1.3rem;margin-top:2.2rem;position:relative}
+.evt{border-left:1px solid rgba(232,203,133,.45);padding:.2rem 0 .4rem 1.4rem;position:relative}
+.evt::before{content:"";position:absolute;left:-6px;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--or);box-shadow:0 0 14px var(--or)}
+.evt small{color:var(--or-c);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem}
+.evt p{font-size:.97rem;margin-top:.3rem}
+.menu-pei{margin-top:2.6rem;border:1px solid rgba(232,203,133,.4);border-radius:22px;padding:1.6rem 1.5rem;background:rgba(255,255,255,.03)}
+.menu-pei ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.menu-pei li{border:1px solid rgba(232,203,133,.35);border-radius:999px;padding:.3rem .85rem;font-size:.88rem;color:#f0e2cc}
+
+/* RESERVER */
+.etapes{display:grid;gap:1rem;margin-top:2rem;counter-reset:e}
+.etape{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.2rem 1.3rem;border:1px solid var(--lin)}
+.etape::before{counter-increment:e;content:counter(e);flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--brique);color:#fff;font-family:'Cormorant Garamond';font-size:1.4rem;font-weight:600}
+.etape b{font-weight:500;color:var(--nuit)}
+
+/* FETES */
+.fetes{background:linear-gradient(160deg,#2b1a11,#4a2416 70%,#5a2a18);color:#ecdcc4;overflow:hidden}
+.fetes h2,.fetes h3{color:#fff}
+.fetes .eyebrow{color:var(--or-c)}
+.fetes-in{display:grid;gap:2.2rem;align-items:center}
+.idees{display:grid;gap:.9rem;margin:1.4rem 0 1.6rem}
+.idee{border-radius:16px;padding:1.1rem 1.2rem;background:rgba(255,255,255,.05);border:1px solid rgba(232,203,133,.3)}
+.idee p{font-size:.95rem;color:#dccab0;margin-top:.2rem}
+.guirlande{position:absolute;top:0;left:0;right:0;height:40px;display:flex;justify-content:space-around;pointer-events:none}
+.guirlande span{width:9px;height:9px;border-radius:50%;background:var(--or-c);margin-top:18px;box-shadow:0 0 12px 3px rgba(232,203,133,.6);animation:scintille 2.6s ease-in-out infinite}
+.guirlande span:nth-child(2n){animation-delay:1.2s;background:#f1a37f;box-shadow:0 0 12px 3px rgba(241,163,127,.5)}
+.boite{border-radius:24px;aspect-ratio:1;max-width:270px;width:100%;margin:auto;background:radial-gradient(circle at 50% 40%,rgba(232,203,133,.22),transparent 65%);border:1px solid rgba(232,203,133,.5);display:grid;place-items:center;text-align:center;padding:2rem;position:relative}
+.boite .script{font-size:3.4rem;color:var(--or-c);display:block;margin:.4rem 0}
+.boite small{letter-spacing:.18em;text-transform:uppercase;font-size:.7rem;color:#cdb895}
+
+/* CONTACT */
+.contact-in{display:grid;gap:2.2rem;align-items:center}
+.infos p{margin-bottom:.55rem}
+.infos b{font-weight:500;color:var(--nuit)}
+.infos a{color:var(--brique);text-decoration:none;font-weight:500}
+.infos a.btn-main{color:#fff}
+.infos a.btn-dark{color:var(--nuit)}
+.contact figure{width:min(100%,300px);margin:auto}
+.contact figure .cadre{border-radius:200px 200px 22px 22px;overflow:hidden;aspect-ratio:1/1.15;border:1px solid var(--or-c)}
+.contact figure img{width:100%;height:100%;object-fit:cover}
+.contact figcaption{font-size:.82rem;color:var(--doux);margin-top:.6rem}
+footer{background:var(--nuit);color:#b9a48a;text-align:center;font-size:.82rem;padding:2.2rem 6vw 2.6rem;line-height:1.8;position:relative;z-index:2}
+footer .script{color:var(--or-c);font-size:2rem;display:block;margin-bottom:.4rem}
+
+@media(min-width:860px){
+ .hero-in{grid-template-columns:1.15fr .85fr}
+ .cartes{grid-template-columns:repeat(3,1fr)}
+ .carte.nouveau{grid-column:span 2}
+ .galerie figure{flex-basis:30%}
+ .frise{grid-template-columns:repeat(3,1fr)}
+ .etapes{grid-template-columns:repeat(3,1fr)}
+ .fetes-in,.contact-in{grid-template-columns:1.2fr .8fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv{opacity:1;transform:none}
+ .hero h1 .script,.hero .slogan{opacity:1}
+ canvas#poudre{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Fée Des Mets</div>
+<canvas id="poudre" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="eyebrow">Traiteur 974 · Le Tampon</p>
+      <h1><span class="script">La Fée des Mets</span></h1>
+      <p class="slogan">Le plaisir de bien manger, tout simplement !</p>
+      <p class="sous">Événements privés &amp; professionnels : brunch, cocktail dînatoire, vin d'honneur, apéro et repas d'entreprise, préparés avec le cœur au Tampon.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692306136?text=Bonjour%20La%20F%C3%A9e%20Des%20Mets%2C%20je%20voudrais%20un%20devis%20pour%20mon%20%C3%A9v%C3%A9nement"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2c.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Réserver sur WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692306136">0692 30 61 36</a>
+      </div>
+    </div>
+    <figure class="hero-visu rv">
+      <div class="arche"><img src="img/canapes-haut.jpg" alt="Grand plateau de canapés à la tomate cerise, préparé par La Fée Des Mets" width="424" height="850"></div>
+      <div class="medaillon"><img src="img/brochettes-fruits.jpg" alt="Brochettes de fraises, ananas et mangue" width="604" height="636"></div>
+      <svg class="etoile" style="right:-4%;top:6%;width:26px" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+      <svg class="etoile" style="right:8%;bottom:14%;width:16px;animation-delay:1.4s" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+      <figcaption>Photos publiées par La Fée Des Mets</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+  <span>Apéro <i>✦</i></span><span>Brunch <i>✦</i></span><span>Vin d'honneur <i>✦</i></span><span>Repas d'entreprise <i>✦</i></span><span>Cocktail dînatoire <i>✦</i></span><span>Mange-debout <i>✦</i></span>
+  <span>Apéro <i>✦</i></span><span>Brunch <i>✦</i></span><span>Vin d'honneur <i>✦</i></span><span>Repas d'entreprise <i>✦</i></span><span>Cocktail dînatoire <i>✦</i></span><span>Mange-debout <i>✦</i></span>
+</div></div>
+
+<section class="coeur">
+  <div class="wrap rv">
+    <p class="eyebrow">La cuisine au service de vos plus beaux moments</p>
+    <h2>Une Fée aux fourneaux, une équipe à vos côtés</h2>
+    <blockquote>« Nous mettons tout notre cœur, notre professionnalisme et notre passion au service de vos plus beaux événements. »<cite>La Fée Des Mets, publication du 16 juin 2026</cite></blockquote>
+    <p>Derrière La Fée Des Mets, il y a Stéphanie, la gérante, et son équipe, installées au Tampon. Plateaux de bouchées, brochettes de fruits frais, tartines colorées : chaque réception devient un moment gourmand et convivial, du vin d'honneur au repas d'entreprise.</p>
+    <span class="kreol">In ti brin bonheur pou zot</span>
+  </div>
+</section>
+
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les prestations</p>
+      <h2>Pour tous vos événements, privés et professionnels</h2>
+    </div>
+    <div class="cartes">
+      <article class="carte rv"><h3>Apéro &amp; cocktail dînatoire</h3><p>Burgers poulet maison, navettes, batbouts, croffles, nems et mini-pizzas : la carte apéro 2026, pour des « apéros &amp; cocktails dînatoires haut de gamme ».</p></article>
+      <article class="carte rv"><h3>Brunch</h3><p>Pain, viennoiseries, croffles, fruits frais : un réveil gourmand à partager, en famille, entre amis ou entre collègues.</p></article>
+      <article class="carte rv"><h3>Vin d'honneur</h3><p>« Vin d'honneur d'exception » : des plateaux généreux pour lever son verre aux mariages, communions et grandes occasions.</p></article>
+      <article class="carte rv"><h3>Repas d'entreprise</h3><p>« Repas d'entreprise élégants » : pour vos séminaires et vos moments d'équipe, un service soigné autour d'une belle table.</p></article>
+      <article class="carte nouveau rv"><span class="pastille">Nouveauté</span><h3>Mange-debout &amp; chaises hautes</h3><p>« Élégance, praticité et confort » pour vos cocktails, réceptions, mariages, séminaires et soirées. Table Ø 80 cm, hauteur 110 cm.</p>
+        <ul class="tarifs">
+          <li>Table mange-debout <b>15 € / pièce</b></li>
+          <li>Chaise haute <b>3 € / pièce</b></li>
+          <li>Combo 1 table + 4 chaises hautes <b>25 € / set</b></li>
+          <li>Housse blanche en option <b>5 € / pièce</b></li>
+        </ul>
+        <p class="note">Livraison possible (frais de déplacement selon le lieu) · disponible 7j/7 sur réservation · devis gratuit sur demande.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="creations">
+  <div class="wrap">
+    <div class="galerie-tete rv">
+      <div><p class="eyebrow">Dans les plateaux de la Fée</p><h2>Couleurs, fraîcheur et gourmandise</h2></div>
+      <span class="glisse">Faites glisser →</span>
+    </div>
+    <div class="galerie">
+      <figure><div class="cadre"><img src="img/brochettes-fruits.jpg" alt="Brochettes de fraises, ananas et mangue sur planche en bois" loading="lazy" width="604" height="636"></div><figcaption>Brochettes fraise, ananas, mangue</figcaption></figure>
+      <figure><div class="cadre"><img src="img/tartelettes.jpg" alt="Tartelettes garnies de fruits frais" loading="lazy" width="600" height="626"></div><figcaption>Tartelettes aux fruits frais</figcaption></figure>
+      <figure><div class="cadre"><img src="img/bouchees.jpg" alt="Buffet de bouchées et de petits sandwichs" loading="lazy" width="604" height="626"></div><figcaption>Bouchées et petits sandwichs</figcaption></figure>
+      <figure><div class="cadre"><img src="img/canapes.jpg" alt="Canapés tomate et herbes alignés sur un plateau" loading="lazy" width="600" height="490"></div><figcaption>Canapés tomate et herbes</figcaption></figure>
+      <figure><div class="cadre"><img src="img/bruschetta.jpg" alt="Tartines à la tomate fraîche" loading="lazy" width="608" height="612"></div><figcaption>Tartines à la tomate fraîche</figcaption></figure>
+    </div>
+    <p class="glisse" style="margin-top:.4rem">Photos publiées par La Fée Des Mets sur sa page Facebook.</p>
+  </div>
+</section>
+
+<section class="rdv">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les rendez-vous gourmands</p>
+      <h2>La Fée invite aussi à sa table</h2>
+      <p>Au fil de l'année, La Fée Des Mets organise ses propres événements, festifs et savoureux.</p>
+    </div>
+    <div class="frise">
+      <div class="evt rv"><small>Saint-Valentin 2026</small><h3>La collection de box</h3><p>Box Love Brunch, Box Love &amp; Chill Créole, Box L'Amour Péi : « boxes en duo ou à partager, fait avec amour ».</p></div>
+      <div class="evt rv"><small>28 février 2026</small><h3>Le dîner dansant</h3><p>Salle Le Plalada, à Saint-Pierre : une soirée où la gastronomie rencontre la fête, du thon rôti crème combava au coq massalé.</p></div>
+      <div class="evt rv"><small>23 août 2026</small><h3>La Barbecue Party</h3><p>Après le succès des Brunchs Party, une journée « partage, saveurs &amp; plaisir » au Centre ALEFPA, Ligne des Bambous.</p></div>
+    </div>
+    <div class="menu-pei rv">
+      <p class="eyebrow">Le goût péi</p>
+      <h3>Les menus de la semaine</h3>
+      <p>Sur sa page, la Fée publie aussi ses menus de la semaine, avec livraison au Tampon et à Saint-Pierre. Quelques plats déjà proposés :</p>
+      <ul><li>Rougail saucisse fumée</li><li>Civet zourite</li><li>Carry camarons</li><li>Daube chouchou</li><li>Rougail morue</li><li>Sauté mine poulet</li><li>Fricassé brèdes</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="reserver">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Réserver</p>
+      <h2>Votre événement, en toute sérénité</h2>
+      <p>Une demande de renseignements, un devis, une commande : tout se fait simplement, en message privé ou sur WhatsApp.</p>
+    </div>
+    <div class="etapes">
+      <div class="etape rv"><p><b>Écrivez à la Fée</b><br>En MP sur Facebook ou sur WhatsApp au 0692 30 61 36, avec la date et le nombre d'invités.</p></div>
+      <div class="etape rv"><p><b>Réservez votre date</b><br>50 % à la réservation : votre événement est bloqué dans l'agenda.</p></div>
+      <div class="etape rv"><p><b>Profitez de la fête</b><br>Le solde une semaine avant, et le jour J, vous recevez l'esprit léger.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="guirlande" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap fetes-in">
+    <div class="rv">
+      <p class="eyebrow">Commande des fêtes</p>
+      <h2>Une table de fête signée La Fée Des Mets</h2>
+      <div class="idees">
+        <div class="idee"><h3>Un apéro ou cocktail dînatoire</h3><p>Pour le réveillon de Noël ou du Nouvel An, des plateaux à partager qui régalent toute la tablée.</p></div>
+        <div class="idee"><h3>Un brunch de fête</h3><p>Pour se retrouver en famille le lendemain du réveillon, autour d'une belle table gourmande.</p></div>
+        <div class="idee"><h3>Le repas de fin d'année de l'équipe</h3><p>Un moment convivial pour remercier vos collaborateurs, avec mange-debout et chaises hautes en option.</p></div>
+      </div>
+      <p style="margin-bottom:1.4rem">Réservez votre date de fête : la Fée vous répond avec plaisir et vous prépare un devis sur mesure.</p>
+      <a class="btn btn-main" href="https://wa.me/262692306136?text=Bonjour%20La%20F%C3%A9e%20Des%20Mets%2C%20je%20voudrais%20r%C3%A9server%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e">Réserver ma date sur WhatsApp</a>
+    </div>
+    <div class="boite rv"><div><small>Fêtes de fin d'année</small><span class="script">Douces fêtes</span><small>La Fée Des Mets · Le Tampon</small></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de votre événement</h2>
+      <p><b>Où</b> · Rue Jules Bertaut, Le Tampon (La Réunion)</p>
+      <p><b>Téléphone &amp; WhatsApp</b> · <a href="tel:+262692306136">0692 30 61 36</a></p>
+      <p><b>E-mail</b> · <a href="mailto:lafeedesmets974@gmail.com">lafeedesmets974@gmail.com</a></p>
+      <p><b>Réservations</b> · en MP ou sur WhatsApp</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-main" href="https://wa.me/262692306136?text=Bonjour%20La%20F%C3%A9e%20Des%20Mets%2C%20je%20voudrais%20un%20devis%20pour%20mon%20%C3%A9v%C3%A9nement">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692306136">Appeler</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/profile.php?id=61555824878397">Facebook</a>
+        <a class="btn btn-dark" href="https://www.instagram.com/lafee_desmets/">Instagram</a>
+      </div>
+    </div>
+    <figure class="rv"><div class="cadre"><img src="img/tartelettes.jpg" alt="Tartelettes aux fruits frais de La Fée Des Mets" loading="lazy" width="600" height="626"></div><figcaption>Tartelettes aux fruits frais, publiées par La Fée Des Mets</figcaption></figure>
+  </div>
+</section>
+
+</main>
+<footer><span class="script">La Fée des Mets</span>Traiteur 974 · Événements privés &amp; professionnels · Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Fée Des Mets.</footer>
+
+<script>
+(function(){
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var els=document.querySelectorAll('.rv');
+if(rm||!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+else{var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});}
+if(rm)return;
+var c=document.getElementById('poudre'),g=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],N=28,run=true;
+function size(){W=c.width=innerWidth*dpr;H=c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px'}
+function mk(y){return{x:Math.random()*W,y:y!=null?y:Math.random()*H,r:(Math.random()*1.6+.5)*dpr,vy:-(Math.random()*.25+.08)*dpr,vx:(Math.random()-.5)*.15*dpr,t:Math.random()*6.28,s:Math.random()*.03+.012,etoile:Math.random()<.25}}
+size();for(var i=0;i<N;i++)P.push(mk());
+addEventListener('resize',size);
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function star(x,y,r){g.beginPath();for(var k=0;k<4;k++){var a=k*Math.PI/2;g.moveTo(x,y);g.lineTo(x+Math.cos(a)*r*3.2,y+Math.sin(a)*r*3.2)}g.lineWidth=r*.55;g.stroke()}
+function f(){if(!run)return;g.clearRect(0,0,W,H);
+ P.forEach(function(p){p.t+=p.s;p.y+=p.vy;p.x+=p.vx+Math.sin(p.t)*.12*dpr;if(p.y<-10)Object.assign(p,mk(H+10));
+  var o=.18+.32*(.5+.5*Math.sin(p.t*2));g.fillStyle='rgba(232,203,133,'+o+')';g.strokeStyle='rgba(232,203,133,'+o*.8+')';
+  g.beginPath();g.arc(p.x,p.y,p.r,0,6.283);g.fill();if(p.etoile)star(p.x,p.y,p.r)});
+ requestAnimationFrame(f)}
+requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Fée Des Mets" defer></script>
+</body>
+</html>
