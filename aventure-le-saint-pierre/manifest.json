@@ -1,0 +1,20 @@
+{
+  "name": "Ti Pierre et le jardin secret · Le Saint-Pierre",
+  "short_name": "Ti Pierre",
+  "description": "Une aventure en famille, de ta chambre à la cour fleurie du Saint-Pierre.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1d3a33",
+  "theme_color": "#1d3a33",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

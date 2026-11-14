@@ -1,0 +1,20 @@
+{
+  "name": "Ti Dea et les clés de la forêt · Diana Dea Lodge",
+  "short_name": "Ti Dea",
+  "description": "Une aventure en famille, de ta chambre aux sentiers du domaine, au milieu des cerfs.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#13291e",
+  "theme_color": "#13291e",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

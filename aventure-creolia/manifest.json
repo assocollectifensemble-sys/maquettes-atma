@@ -1,0 +1,20 @@
+{
+  "name": "Ti Kalou et les fleurs de Montgaillard · Créolia",
+  "short_name": "Ti Kalou",
+  "description": "Une aventure en famille, de ta chambre à la piscine qui regarde Saint-Denis.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#123a2c",
+  "theme_color": "#123a2c",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

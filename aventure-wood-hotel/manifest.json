@@ -1,0 +1,20 @@
+{
+  "name": "Ti Natte et le trésor de la savane · WOOD",
+  "short_name": "Ti Natte",
+  "description": "Une aventure en famille, de ta chambre en bois à la savane face à l'océan.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2b1d12",
+  "theme_color": "#2b1d12",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

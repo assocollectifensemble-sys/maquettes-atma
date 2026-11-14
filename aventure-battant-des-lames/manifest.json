@@ -1,0 +1,20 @@
+{
+  "name": "Ti Lame et le trésor du lagon · Battant des Lames",
+  "short_name": "Ti Lame",
+  "description": "Une aventure en famille, de ta chambre au lagon de Saint-Pierre.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a3550",
+  "theme_color": "#0a3550",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
