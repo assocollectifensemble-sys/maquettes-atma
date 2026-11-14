@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ti Bar XL · Snack-bar au Port · Petit bar mais carte XL</title>
+<meta name="description" content="Ti Bar XL, snack-bar au Port (La Réunion) : kebabs, tacos, américains, paninis, Tasty Crousty et plats créoles, sur place ou à emporter. 0692 92 63 66.">
+<meta property="og:title" content="Ti Bar XL · Petit bar mais carte XL, au Port">
+<meta property="og:description" content="Kebabs, tacos, américains, paninis, Tasty Crousty et plats créoles, sur place ou à emporter.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ti-bar-xl-le-port/img/og-tasty-crousty.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ti-bar-xl-le-port/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--violet:#ae65ce;--violet-f:#6d3a8c;--corail:#e2817a;--orange:#f08a2c;--orange-c:#ffb56b;--bordeaux:#5e1a1c;--nuit:#1c0f1e;--nuit2:#2a1630;--creme:#fff6ec;--sable:#f6e6d4;--txt:#2b1b22;--doux:#7d6870;--grad:linear-gradient(120deg,#ae65ce 0%,#e2817a 55%,#f39a55 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.6;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.xl{font-family:'Luckiest Guy','Arial Black',sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.05}
+h2{font-size:clamp(2.1rem,8vw,3.4rem);color:var(--nuit);margin:.3rem 0 1rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.74rem;font-weight:800;color:var(--violet-f)}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(3.8rem,9vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:var(--orange-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:800;font-size:.98rem;transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn-main{background:var(--orange);color:var(--nuit);box-shadow:0 14px 30px -12px rgba(240,138,44,.9);animation:souffle 3.4s ease-in-out infinite}
+@keyframes souffle{50%{box-shadow:0 14px 44px -6px rgba(240,138,44,.75)}}
+.btn-line{border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--nuit);color:#fff}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:kb 26s ease-in-out infinite alternate;opacity:.9}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,15,30,.25) 0%,rgba(28,15,30,.35) 35%,rgba(28,15,30,.93) 78%,var(--nuit) 100%)}
+.hero-in{position:relative;z-index:2;padding:6.5rem 0 4rem}
+.badge{width:132px;height:132px;border-radius:50%;background:var(--grad);display:grid;place-items:center;box-shadow:0 18px 40px -14px rgba(0,0,0,.7),0 0 0 5px rgba(255,255,255,.14);overflow:hidden;margin-bottom:1.3rem}
+.badge.apparait{animation:monte 1.2s .25s forwards,flotte 6s 1.6s ease-in-out infinite}
+.badge img{width:118%;max-width:none;transform:translateY(4%)}
+@keyframes flotte{50%{transform:translateY(-7px) rotate(-2deg)}}
+.hero .eyebrow{color:var(--orange-c)}
+.hero h1{font-size:clamp(3.6rem,17vw,7.5rem);margin:.4rem 0 .2rem;text-shadow:0 6px 0 var(--bordeaux),0 12px 30px rgba(0,0,0,.5)}
+.hero h1 .x{color:var(--orange)}
+.slogan{font-family:'Luckiest Guy',sans-serif;font-size:clamp(1.35rem,5.6vw,2rem);background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))}
+.lead{font-size:1.1rem;max-width:34rem;margin:1rem 0 1.8rem;color:#fbeee6;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:var(--orange-c)}
+.apparait{opacity:0;transform:translateY(26px);animation:monte 1.2s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:.95s}.d4{animation-delay:1.3s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--grad);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Luckiest Guy',sans-serif;font-size:1.3rem;position:relative;z-index:2}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✦";margin-left:2.2rem;color:#fff;font-size:.8rem;vertical-align:.2em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* vedette */
+.vedette{background:var(--nuit);color:#f6e9ee;overflow:hidden}
+.vedette h2{color:#fff}
+.vedette .eyebrow{color:var(--orange-c)}
+.ved-grid{display:grid;gap:2rem;align-items:center}
+.ved-photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.8)}
+.ved-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s}
+.ved-photo:hover img{transform:scale(1.05)}
+.ved-photo figcaption{position:absolute;left:12px;bottom:12px;background:rgba(28,15,30,.75);backdrop-filter:blur(4px);padding:.35rem .8rem;border-radius:999px;font-size:.78rem;color:#fff}
+.sticker{position:absolute;top:14px;right:14px;background:var(--orange);color:var(--nuit);font-family:'Luckiest Guy',sans-serif;border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-size:.92rem;line-height:1.05;transform:rotate(10deg);box-shadow:0 10px 20px -8px rgba(0,0,0,.6);animation:tourne 7s ease-in-out infinite}
+@keyframes tourne{50%{transform:rotate(-4deg) scale(1.05)}}
+.quote{font-size:1.15rem;border-left:4px solid var(--orange);padding:.2rem 0 .2rem 1rem;margin:1rem 0 1.4rem;color:#fff}
+.quote small{display:block;color:var(--orange-c);font-size:.8rem;margin-top:.3rem}
+.formules{display:grid;gap:.7rem;margin:1.2rem 0}
+.formule{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.85rem 1.1rem;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);transition:background .3s,transform .3s}
+.formule:hover{background:rgba(240,138,44,.18);transform:translateX(4px)}
+.formule b{font-family:'Luckiest Guy',sans-serif;font-weight:400;font-size:1.2rem;letter-spacing:.03em}
+.prix{font-family:'Luckiest Guy',sans-serif;color:var(--orange);font-size:1.25rem;white-space:nowrap}
+.compo{font-size:.95rem;color:#e7d3dc}
+/* carte */
+.carte{background:var(--creme)}
+.carte-intro{max-width:40rem;margin-bottom:1.6rem;color:var(--doux)}
+.chips{display:flex;gap:.5rem;overflow-x:auto;padding:.2rem 0 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;scroll-snap-align:start;border:2px solid var(--nuit);background:transparent;color:var(--nuit);padding:.55rem 1rem;border-radius:999px;font:800 .9rem 'Nunito',sans-serif;cursor:pointer;transition:.25s;min-height:44px}
+.chip[aria-selected="true"]{background:var(--nuit);color:var(--orange-c)}
+.panel{display:none;background:#fff;border-radius:26px;padding:1.6rem 1.3rem 1.4rem;box-shadow:0 24px 50px -30px rgba(60,20,60,.45);border-top:6px solid transparent;border-image:var(--grad) 1;border-image-slice:1;animation:ouvre .45s ease}
+.panel.on{display:block}
+@keyframes ouvre{from{opacity:0;transform:translateY(10px)}}
+.panel h3{font-size:2rem;color:var(--orange);text-shadow:2px 2px 0 var(--nuit);margin-bottom:.9rem}
+.lignes{list-style:none;columns:1}
+.lignes li{display:flex;align-items:baseline;gap:.5rem;padding:.42rem 0;break-inside:avoid;font-weight:600}
+.lignes li .n{flex:none;max-width:72%}
+.lignes li .pts{flex:1;border-bottom:2px dotted #e2cfc2;transform:translateY(-4px);min-width:1rem}
+.lignes li .p{font-weight:800;color:var(--bordeaux);white-space:nowrap}
+.lignes li em{display:block;font-style:normal;font-weight:400;font-size:.88rem;color:var(--doux)}
+.lignes.desc li{display:block;padding:.65rem 0;border-bottom:1px solid #f1e3d8}
+.lignes.desc li .top{display:flex;justify-content:space-between;gap:1rem}
+.note{margin-top:1rem;font-size:.9rem;color:var(--doux);background:var(--sable);border-radius:14px;padding:.8rem 1rem}
+.source-carte{margin-top:1.1rem;font-size:.82rem;color:var(--doux)}
+/* marmite */
+.marmite{background:var(--grad);color:var(--nuit);overflow:hidden}
+.marmite h2{color:var(--nuit)}
+.marmite .eyebrow{color:var(--nuit)}
+.posts{display:grid;gap:1.1rem;margin-top:1.4rem}
+.post{background:rgba(255,246,236,.92);border-radius:22px;padding:1.4rem 1.3rem;box-shadow:0 18px 40px -26px rgba(40,10,40,.7);transition:transform .35s}
+.post:hover{transform:translateY(-4px) rotate(-.4deg)}
+.post .date{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.14em;color:var(--violet-f)}
+.post p{margin-top:.5rem;font-size:1.06rem}
+.post .gros{font-family:'Luckiest Guy',sans-serif;font-size:1.5rem;color:var(--bordeaux);line-height:1.15;margin-top:.5rem}
+/* livraison */
+.livraison{background:var(--sable)}
+.liv-card{background:var(--nuit);color:#fff;border-radius:30px;padding:2rem 1.4rem;position:relative;overflow:hidden}
+.liv-card h2{color:#fff}
+.liv-card .eyebrow{color:var(--orange-c)}
+.scoot{position:absolute;right:-10px;top:18px;width:120px;opacity:.9;animation:roule 5s ease-in-out infinite}
+@keyframes roule{50%{transform:translateX(-12px)}}
+.liv-list{list-style:none;display:grid;gap:.75rem;margin:1.2rem 0 1.6rem}
+.liv-list li{display:flex;gap:.8rem;align-items:flex-start}
+.liv-list li i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--orange);color:var(--nuit);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:.9rem}
+.illu{font-size:.72rem;color:#bfa6b4;margin-top:1rem}
+/* noel */
+.noel{background:linear-gradient(180deg,var(--nuit2),var(--nuit));color:#f6e9ee;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--orange-c)}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin:0 auto 1.6rem;max-width:100%;overflow:hidden}
+.guirlande span{width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 14px 3px rgba(240,138,44,.7);animation:brille 2.4s ease-in-out infinite}
+.guirlande span:nth-child(3n+2){background:#e2817a;box-shadow:0 0 14px 3px rgba(226,129,122,.7);animation-delay:.6s}
+.guirlande span:nth-child(3n){background:#ae65ce;box-shadow:0 0 14px 3px rgba(174,101,206,.7);animation-delay:1.2s}
+@keyframes brille{50%{opacity:.35;transform:scale(.8)}}
+.noel p.big{font-size:1.12rem;max-width:36rem;margin:0 auto 1.6rem}
+.idees{display:grid;gap:.8rem;max-width:44rem;margin:0 auto 2rem;text-align:left}
+.idee{display:flex;gap:.9rem;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1rem 1.1rem}
+.idee .ic{flex:none;width:44px;height:44px;border-radius:14px;background:var(--grad);display:grid;place-items:center}
+.idee .ic svg{width:24px;height:24px}
+.noel .ctas{justify-content:center}
+/* infos */
+.infos-grid{display:grid;gap:1rem}
+.info{background:#fff;border-radius:22px;padding:1.4rem 1.3rem;box-shadow:0 16px 36px -28px rgba(60,20,60,.5)}
+.info h3{font-size:1.35rem;color:var(--violet-f);margin-bottom:.5rem}
+.horaires{list-style:none}
+.horaires li{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px dashed #ead8cb;font-weight:600}
+.horaires li span:last-child{text-align:right}
+.mini{font-size:.82rem;color:var(--doux);margin-top:.6rem}
+.contact{background:var(--nuit);color:#fff;text-align:center}
+.contact h2{color:#fff}
+.contact .eyebrow{color:var(--orange-c)}
+.contact .ctas{justify-content:center;margin-top:1.4rem}
+.contact .tels{font-family:'Luckiest Guy',sans-serif;font-size:clamp(1.8rem,8vw,2.6rem);color:var(--orange);text-decoration:none;display:inline-block;margin-top:.4rem}
+footer{text-align:center;padding:2.2rem 1rem 3rem;font-size:.82rem;color:var(--doux);background:var(--sable);position:relative;z-index:2}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:40px}
+@media(min-width:760px){
+ .ved-grid{grid-template-columns:1fr 1.1fr;gap:3.5rem}
+ .lignes{columns:2;column-gap:2.5rem}
+ .lignes.desc{columns:1}
+ .posts{grid-template-columns:1fr 1fr}
+ .infos-grid{grid-template-columns:repeat(3,1fr)}
+ .liv-card{padding:3rem}
+ .scoot{width:180px;right:30px}
+ .idees{grid-template-columns:repeat(3,1fr)}
+ .idee{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.apparait,.rv{opacity:1;transform:none}canvas#vapeur{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ti Bar XL</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="fond"><img src="img/tasty-crousty.webp" alt="Bol de Tasty Crousty de Ti Bar XL : riz, tenders croustillants, sauce maison, oignons frits et cive" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <div class="badge apparait"><img src="img/logo-ti-bar-xl.webp" alt="Logo Ti Bar XL, Family Concept"></div>
+    <p class="eyebrow apparait">Snack-bar · Le Port · Family concept</p>
+    <h1 class="apparait d2">Ti Bar <span class="x">XL</span></h1>
+    <p class="slogan apparait d2">Petit bar mais carte XL</p>
+    <p class="lead apparait d3">Kebabs, tacos, américains, paninis, Tasty Crousty et plats créoles : une grande carte généreuse à savourer sur place ou à emporter, en plein cœur du Port.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262692926366?text=Bonjour%20Ti%20Bar%20XL%2C%20je%20voudrais%20passer%20une%20commande">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+        Commander sur WhatsApp</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+    <p class="adr apparait d4">22 rue du 14 Juillet · Le Port · <a href="tel:+262692926366">0692 92 63 66</a></p>
+  </div>
+</section>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Kebab</span><span>Tacos</span><span>Américain XL</span><span>Panini</span><span>Tasty Crousty</span><span>Assiette kebab</span><span>Menu Kid's</span><span>Sarcive</span><span>Plats créoles</span>
+  <span>Kebab</span><span>Tacos</span><span>Américain XL</span><span>Panini</span><span>Tasty Crousty</span><span>Assiette kebab</span><span>Menu Kid's</span><span>Sarcive</span><span>Plats créoles</span>
+</div></div>
+
+<!-- VEDETTE -->
+<section class="vedette" id="tasty">
+  <div class="wrap ved-grid">
+    <figure class="ved-photo rv">
+      <img src="img/tasty-crousty-640.webp" alt="Tasty Crousty de Ti Bar XL en bol kraft" loading="lazy">
+      <span class="sticker">Toujours<br>dispo&nbsp;!</span>
+      <figcaption>Photo publiée par Ti Bar XL · 7 octobre 2026</figcaption>
+    </figure>
+    <div class="rv">
+      <p class="eyebrow">La star du moment</p>
+      <h2>Le Tasty Crousty</h2>
+      <p class="quote">« Bon appétit, tasty crousty toujours disponible »<small>Ti Bar XL sur Facebook, 7 octobre 2026</small></p>
+      <p class="compo">Du riz, la sauce maison et la viande de votre choix : nuggets, cordon bleu ou wings. Trois versions pour trois envies.</p>
+      <div class="formules">
+        <div class="formule"><b>L'Original</b><span class="prix">9 €</span></div>
+        <div class="formule"><b>Le Spicy</b><span class="prix">12 €</span></div>
+        <div class="formule"><b>Le Cheesy</b><span class="prix">12 €</span></div>
+      </div>
+      <a class="btn btn-main" href="https://wa.me/262692926366?text=Bonjour%20Ti%20Bar%20XL%2C%20je%20voudrais%20commander%20un%20Tasty%20Crousty">Mon Tasty Crousty, s'il vous plaît</a>
+    </div>
+  </div>
+</section>
+
+<!-- CARTE -->
+<section class="carte" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">La carte XL</p>
+    <h2 class="rv">Toute la carte, en un coup d'œil</h2>
+    <p class="carte-intro rv">Choisissez votre rubrique : chaque recette se compose à votre goût, avec la viande qui vous fait envie.</p>
+    <div class="chips" role="tablist" aria-label="Rubriques de la carte">
+      <button class="chip" role="tab" aria-selected="true" data-p="tacos">Tacos</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="kebab">Kebab</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="americain">Américain XL</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="special">Américain spécial</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="panini">Panini</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="assiette">Assiette kebab</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="demi">Demi kebab</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="kids">Menu Kid's</button>
+      <button class="chip" role="tab" aria-selected="false" data-p="boissons">Boissons</button>
+    </div>
+
+    <div class="panel on" id="p-tacos" role="tabpanel">
+      <h3>Tacos</h3>
+      <ul class="lignes">
+        <li><span class="n">Une viande</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">XL deux viandes</span><span class="pts"></span><span class="p">7,50 €</span></li>
+        <li><span class="n">Mega tacos : quatre viandes</span><span class="pts"></span><span class="p">11,00 €</span></li>
+      </ul>
+      <p class="note">Viandes : jambon, bouchon, poulet, hot-dog, saucisse fumée, merguez, sarcive, saumon · lardon ou agneau : +1 €<br>Composition : frites, salade, tomates, oignons et fromage.</p>
+    </div>
+
+    <div class="panel" id="p-kebab" role="tabpanel">
+      <h3>Kebab</h3>
+      <ul class="lignes">
+        <li><span class="n">Hot-dog</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Jambon</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Bouchon</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Poulet</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Merguez</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Saucisse fumée</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Sarcive</span><span class="pts"></span><span class="p">9,00 €</span></li>
+        <li><span class="n">Saumon</span><span class="pts"></span><span class="p">9,00 €</span></li>
+        <li><span class="n">Agneau</span><span class="pts"></span><span class="p">9,00 €</span></li>
+        <li><span class="n">Lardon</span><span class="pts"></span><span class="p">9,00 €</span></li>
+        <li><span class="n">Mix deux viandes</span><span class="pts"></span><span class="p">10,00 €</span></li>
+      </ul>
+      <p class="note">Composition : frites ou légumes (salade, tomates, oignons) · complet : +1 € · gratiné : +0,50 €</p>
+    </div>
+
+    <div class="panel" id="p-americain" role="tabpanel">
+      <h3>Américain XL</h3>
+      <ul class="lignes">
+        <li><span class="n">Hot-dog</span><span class="pts"></span><span class="p">4,50 €</span></li>
+        <li><span class="n">Jambon</span><span class="pts"></span><span class="p">4,50 €</span></li>
+        <li><span class="n">Bouchon</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Poulet</span><span class="pts"></span><span class="p">5,50 €</span></li>
+        <li><span class="n">Sarcive</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Saucisse fumée</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Merguez</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Saumon</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Agneau</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Outre-mer</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Lardon</span><span class="pts"></span><span class="p">6,50 €</span></li>
+      </ul>
+    </div>
+
+    <div class="panel" id="p-special" role="tabpanel">
+      <h3>Américain spécial</h3>
+      <ul class="lignes desc">
+        <li><div class="top"><span class="n">La Créole</span><span class="p">7,00 €</span></div><em>Saucisse fumée, gros piment, oignons, sauce tomate, frites et fromage</em></li>
+        <li><div class="top"><span class="n">La Fermière</span><span class="p">7,00 €</span></div><em>Poulet, oignons, sauce tomate, frites et fromage</em></li>
+        <li><div class="top"><span class="n">La Mexicaine</span><span class="p">7,00 €</span></div><em>Merguez, gros piment, oignons, sauce tomate, herbes de Provence, frites et fromage</em></li>
+        <li><div class="top"><span class="n">La Tasty Crousty</span><span class="p">7,50 €</span></div><em>Tenders, sauce tasty crousty maison, frites et fromage</em></li>
+        <li><div class="top"><span class="n">La Nordique</span><span class="p">8,00 €</span></div><em>Saumon, crème fraîche, citron, frites et fromage</em></li>
+        <li><div class="top"><span class="n">La Suprême</span><span class="p">9,00 €</span></div><em>Trois viandes au choix, frites, salade, tomates, oignons et fromage (lardon et agneau : +1 €)</em></li>
+      </ul>
+      <p class="note">Suppléments disponibles : +1 € oignons frits, gros piment, crème</p>
+    </div>
+
+    <div class="panel" id="p-panini" role="tabpanel">
+      <h3>Panini</h3>
+      <ul class="lignes">
+        <li><span class="n">Hot-dog</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Jambon</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Bouchon</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Poulet</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Sarcive</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Saucisse fumée</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Merguez</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Saumon</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Agneau</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Outre-mer</span><span class="pts"></span><span class="p">6,50 €</span></li>
+        <li><span class="n">Lardon</span><span class="pts"></span><span class="p">6,50 €</span></li>
+      </ul>
+      <p class="note">Composition : frites, salade, tomates, oignons et fromage.</p>
+    </div>
+
+    <div class="panel" id="p-assiette" role="tabpanel">
+      <h3>Assiette kebab</h3>
+      <ul class="lignes">
+        <li><span class="n">Bouchon</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Jambon</span><span class="pts"></span><span class="p">6,00 €</span></li>
+        <li><span class="n">Poulet</span><span class="pts"></span><span class="p">7,00 €</span></li>
+        <li><span class="n">Hot-dog</span><span class="pts"></span><span class="p">7,00 €</span></li>
+        <li><span class="n">Sarcive</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Saucisse fumée</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Merguez</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Saumon</span><span class="pts"></span><span class="p">8,00 €</span></li>
+        <li><span class="n">Agneau</span><span class="pts"></span><span class="p">8,50 €</span></li>
+        <li><span class="n">Lardon</span><span class="pts"></span><span class="p">8,50 €</span></li>
+      </ul>
+      <p class="note">Composition : une viande au choix, frites et salade.</p>
+    </div>
+
+    <div class="panel" id="p-demi" role="tabpanel">
+      <h3>Demi kebab</h3>
+      <ul class="lignes">
+        <li><span class="n">Bouchon</span><span class="pts"></span><span class="p">3,50 €</span></li>
+        <li><span class="n">Jambon</span><span class="pts"></span><span class="p">4,00 €</span></li>
+        <li><span class="n">Poulet</span><span class="pts"></span><span class="p">4,50 €</span></li>
+        <li><span class="n">Hot-dog</span><span class="pts"></span><span class="p">4,50 €</span></li>
+        <li><span class="n">Sarcive</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Saucisse fumée</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Merguez</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Saumon</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Agneau</span><span class="pts"></span><span class="p">5,00 €</span></li>
+        <li><span class="n">Lardon</span><span class="pts"></span><span class="p">5,00 €</span></li>
+      </ul>
+      <p class="note">Composition : frites ou légumes (salade, tomates, oignons) · complet : +1 € · gratiné : +0,50 €</p>
+    </div>
+
+    <div class="panel" id="p-kids" role="tabpanel">
+      <h3>Menu Kid's</h3>
+      <ul class="lignes desc">
+        <li><div class="top"><span class="n">Choix n°1</span><span class="p">5,00 €</span></div><em>4 bouchons, une portion de frites + 1 boisson 33 cl</em></li>
+        <li><div class="top"><span class="n">Choix n°2</span><span class="p">5,50 €</span></div><em>2 saucisses hot-dog, une portion de frites + 1 boisson 33 cl</em></li>
+        <li><div class="top"><span class="n">Choix n°3</span><span class="p">6,00 €</span></div><em>4 nuggets, une portion de frites + 1 boisson 33 cl</em></li>
+        <li><div class="top"><span class="n">Choix n°4 · Box mix</span><span class="p">8,00 €</span></div><em>4 bouchons, 4 nuggets, 2 saucisses hot-dog, une portion de frites + 1 boisson 33 cl</em></li>
+      </ul>
+      <p class="note">Boissons : eau 50 cl, Cot ou Capri-Sun.</p>
+    </div>
+
+    <div class="panel" id="p-boissons" role="tabpanel">
+      <h3>Boissons</h3>
+      <ul class="lignes">
+        <li><span class="n">Eau (50 cl)</span><span class="pts"></span><span class="p">1,00 €</span></li>
+        <li><span class="n">Diego / Capri-Sun</span><span class="pts"></span><span class="p">1,00 €</span></li>
+        <li><span class="n">Volcanik</span><span class="pts"></span><span class="p">1,50 €</span></li>
+        <li><span class="n">Cilaos</span><span class="pts"></span><span class="p">1,50 €</span></li>
+        <li><span class="n">Cot (50 cl)</span><span class="pts"></span><span class="p">1,50 €</span></li>
+        <li><span class="n">Sprite / 7up</span><span class="pts"></span><span class="p">2,20 €</span></li>
+        <li><span class="n">Coca</span><span class="pts"></span><span class="p">2,20 €</span></li>
+        <li><span class="n">Fanta</span><span class="pts"></span><span class="p">2,20 €</span></li>
+        <li><span class="n">Thé Pokka</span><span class="pts"></span><span class="p">2,50 €</span></li>
+        <li><span class="n">Lipton</span><span class="pts"></span><span class="p">2,50 €</span></li>
+        <li><span class="n">Bum Bum</span><span class="pts"></span><span class="p">2,50 €</span></li>
+        <li><span class="n">Eau (1,5 L)</span><span class="pts"></span><span class="p">2,50 €</span></li>
+        <li><span class="n">Schweppes</span><span class="pts"></span><span class="p">2,50 €</span></li>
+        <li><span class="n">Bum Bum (50 cl)</span><span class="pts"></span><span class="p">3,50 €</span></li>
+        <li><span class="n">Coca (1,5 L)</span><span class="pts"></span><span class="p">4,00 €</span></li>
+      </ul>
+    </div>
+    <p class="source-carte">Carte et tarifs publiés par Ti Bar XL sur sa page Facebook le 13 août 2026.</p>
+  </div>
+</section>
+
+<!-- MARMITE & GRILL -->
+<section class="marmite">
+  <div class="wrap">
+    <p class="eyebrow rv">Côté marmite &amp; grill</p>
+    <h2 class="rv">Le goût créole, au fil des jours</h2>
+    <p class="rv" style="max-width:38rem">À côté de la carte, la cuisine du Ti Bar XL suit les envies du moment : plats du midi et grillades du week-end, annoncés sur la page Facebook.</p>
+    <div class="posts">
+      <article class="post rv">
+        <p class="date">Publié le 31 juillet 2026</p>
+        <p class="gros">Vendredi, samedi, dimanche : agneau, sarcive, poulet grillé</p>
+        <p>« À vous de choisir. On vous attend ! »</p>
+      </article>
+      <article class="post rv">
+        <p class="date">Publié le 8 avril 2026</p>
+        <p class="gros">« Oyé oyé, au menu ce midi »</p>
+        <p>Riz cantonnais, rougail saucisse pomme de terre… Le plat du jour s'annonce dès le matin : un coup d'œil sur la page et c'est parti pour le midi.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LIVRAISON -->
+<section class="livraison">
+  <div class="wrap">
+    <div class="liv-card rv">
+      <svg class="scoot" viewBox="0 0 120 80" aria-hidden="true"><g fill="none" stroke="#f08a2c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="25" cy="62" r="12"/><circle cx="95" cy="62" r="12"/><path d="M25 62h20l14-20h22l14 20"/><path d="M81 42l-6-18h-10"/><rect x="30" y="20" width="26" height="22" rx="4" fill="#e2817a" stroke="#e2817a"/></g></svg>
+      <p class="eyebrow">Livraison à domicile</p>
+      <h2>Le Ti Bar XL<br>vient jusqu'à vous</h2>
+      <ul class="liv-list">
+        <li><i>1</i><span>Du mardi au dimanche, 11h–13h et 18h30–22h</span></li>
+        <li><i>2</i><span>Tarif unique de 3 € au Port et à La Possession centre-ville</span></li>
+        <li><i>3</i><span>Livraison offerte dès 25 € d'achat</span></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-main" href="tel:+262693602201">0693 60 22 01</a>
+        <a class="btn btn-line" href="tel:+262692926366">0692 92 63 66</a>
+      </div>
+      <p class="illu">Illustration : scooter de livraison · Infos publiées par Ti Bar XL le 2 juin 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- NOEL -->
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="guirlande" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="eyebrow rv">Pour les fêtes</p>
+    <h2 class="rv">Un Noël version XL</h2>
+    <p class="big rv">Repas entre collègues, soirée en famille, grande tablée entre amis : le Ti Bar XL prépare votre commande des fêtes, et chacun choisit son plat préféré sur la carte.</p>
+    <div class="idees">
+      <div class="idee rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1c0f1e" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11v8h14v-8M12 11v8M7 7c0-2 2-3 5 0 3-3 5-2 5 0"/></svg></span><div><b>La tablée de fin d'année</b><br>Kebabs, tacos, américains : une commande groupée pour toute la bande.</div></div>
+      <div class="idee rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1c0f1e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span><div><b>Commande à l'avance</b><br>Un message, une heure de retrait : votre repas est prêt à l'arrivée.</div></div>
+      <div class="idee rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#1c0f1e" stroke-width="2" stroke-linecap="round"><path d="M4 20l8-16 8 16M8 13h8"/></svg></span><div><b>Les petits gourmands</b><br>Les Menus Kid's font aussi la fête : de quoi régaler toute la famille.</div></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692926366?text=Bonjour%20Ti%20Bar%20XL%2C%20je%20voudrais%20passer%20une%20commande%20pour%20un%20repas%20de%20f%C3%AAtes">Préparer ma commande des fêtes</a>
+      <a class="btn btn-line" href="tel:+262692926366">Appeler</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFOS -->
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Infos pratiques</p>
+    <h2 class="rv">On vous attend au Port</h2>
+    <div class="infos-grid">
+      <div class="info rv">
+        <h3>Horaires</h3>
+        <ul class="horaires">
+          <li><span>Mardi → samedi</span><span>10h–14h · 18h–23h</span></li>
+          <li><span>Dimanche</span><span>18h–23h</span></li>
+        </ul>
+        <p class="mini">Service midi et soir. Les nouvelles du jour sont annoncées sur la page Facebook.</p>
+      </div>
+      <div class="info rv">
+        <h3>Adresse</h3>
+        <p>22 rue du 14 Juillet<br>97420 Le Port, La Réunion</p>
+        <p class="mini">Sur place ou à emporter.</p>
+        <a class="btn btn-dark" style="margin-top:.9rem" href="https://www.google.com/maps/search/?api=1&query=Ti%20Bar%20XL%2C%2022%20rue%20du%2014%20Juillet%2C%2097420%20Le%20Port">Itinéraire</a>
+      </div>
+      <div class="info rv">
+        <h3>Suivre le Ti Bar</h3>
+        <p>Plus de 3 000 abonnés suivent les plats du jour, les grillades du week-end et les nouveautés.</p>
+        <a class="btn btn-dark" style="margin-top:.9rem" href="https://www.facebook.com/p/Ti-Bar-Xl-100057112314456">Page Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <p class="eyebrow">Une faim XL ?</p>
+    <h2>Commandez en un message</h2>
+    <a class="tels" href="tel:+262692926366">0692 92 63 66</a>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692926366?text=Bonjour%20Ti%20Bar%20XL%2C%20je%20voudrais%20passer%20une%20commande">Commander sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692926366">Appeler</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Ti Bar XL · Snack-bar · Family concept · Le Port, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Ti Bar XL.</footer>
+
+<script>
+// onglets de la carte
+document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+  document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-selected','false')});
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+  c.setAttribute('aria-selected','true');document.getElementById('p-'+c.dataset.p).classList.add('on');
+})});
+// apparitions
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+// vapeur et étincelles de grill
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var cv=document.getElementById('vapeur'),cx=cv.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),P=[],run=true;
+  function rs(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+  rs();addEventListener('resize',rs);
+  function nv(i){var spark=i%3===0;return{x:Math.random()*W,y:H+Math.random()*H*.6,r:spark?1.2+Math.random()*1.6:14+Math.random()*26,v:spark?.6+Math.random()*.9:.25+Math.random()*.35,a:spark?.55+Math.random()*.35:.05+Math.random()*.06,s:spark,ph:Math.random()*6.3}}
+  for(var i=0;i<30;i++){var p=nv(i);p.y=Math.random()*H;P.push(p)}
+  function f(){if(!run)return;cx.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y-=p.v;p.ph+=.012;p.x+=Math.sin(p.ph)*(p.s?.5:.35);
+      if(p.y<-60){var n=nv(i);n.y=H+40;P[i]=n;return}
+      var fade=Math.min(1,p.y/(H*.5));
+      if(p.s){cx.fillStyle='rgba(255,170,90,'+(p.a*fade)+')';cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.29);cx.fill()}
+      else{var g=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba(255,240,230,'+(p.a*fade)+')');g.addColorStop(1,'rgba(255,240,230,0)');cx.fillStyle=g;cx.beginPath();cx.arc(p.x,p.y,p.r,0,6.29);cx.fill()}
+    });requestAnimationFrame(f)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Ti Bar XL" defer></script>
+</body>
+</html>
