@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Casa Food · Douceurs indiennes et commandes pour vos événements à Saint-André</title>
+<meta name="description" content="Casa Food à Saint-André : bonbons miel, ladoos, box gourmandes et commandes pour vos événements. 0693 48 81 44.">
+<meta property="og:title" content="Casa Food · Saint-André">
+<meta property="og:description" content="Bonbons miel, douceurs des fêtes et commandes pour vos événements, à Saint-André.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/casa-food-saint-andre/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/casa-food-saint-andre/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bordeaux:#7a1426;--bordeaux-f:#4d0b17;--or:#d9a63e;--or-v:#f2c766;--miel:#e8901c;--rose:#c8246a;--noir:#151010;--creme:#fbf3e4;--sable:#f3e6cf;--txt:#3a2a22;--doux:#86705f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.7;font-size:16.5px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cinzel',Georgia,serif;font-weight:700;line-height:1.12;letter-spacing:.02em}
+h2{font-size:clamp(1.9rem,7vw,3rem);margin:.4rem 0 1rem;color:var(--bordeaux)}
+h3{font-size:1.25rem}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,6.5rem) 0;position:relative}
+.eyebrow{font-size:.8rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--miel)}
+.script{font-family:'Dancing Script',cursive;font-weight:600}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--noir);color:var(--or-v);text-align:center;font-size:.74rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(217,166,62,.4)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#sucre{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+/* motif rangoli / mandala */
+.mandala{background-image:radial-gradient(circle at 50% 50%,rgba(217,166,62,.16) 0 2px,transparent 3px),radial-gradient(circle at 0 0,rgba(217,166,62,.10) 0 6px,transparent 7px);background-size:26px 26px,52px 52px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1rem;transition:.3s;line-height:1.2;text-align:center}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-or{background:linear-gradient(135deg,var(--or-v),var(--or));color:var(--noir);box-shadow:0 12px 28px -12px rgba(217,166,62,.95);animation:souffle 3.4s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px);filter:brightness(1.06)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -4px rgba(242,199,102,.75)}}
+.btn-line{border:2px solid var(--or-v);color:#fff}
+.btn-line:hover{background:rgba(242,199,102,.15)}
+.btn-wa{background:#25D366;color:#0b2b17}
+.btn-wa:hover{filter:brightness(1.07);transform:translateY(-2px)}
+.btn-bord{background:var(--bordeaux);color:var(--or-v)}
+.btn-bord:hover{background:var(--bordeaux-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* logo : cercle noir, pointillés dorés, comme sur leurs affiches */
+.logo{width:clamp(130px,38vw,180px);aspect-ratio:1;border-radius:50%;background:var(--noir);display:grid;place-items:center;position:relative;box-shadow:0 18px 40px -16px rgba(0,0,0,.8)}
+.logo::before{content:"";position:absolute;inset:8px;border-radius:50%;border:2px dotted var(--or)}
+.logo::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(242,199,102,.45);animation:tourne 30s linear infinite;border-top-color:var(--or-v)}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.logo span{font-family:'Cinzel',serif;color:var(--or-v);font-weight:700;text-align:center;line-height:1;font-size:clamp(1.4rem,6.5vw,1.9rem);letter-spacing:.08em}
+.logo small{display:block;font-size:.42em;letter-spacing:.32em;margin-top:.45em;color:var(--or)}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--noir);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,16,16,.6) 0%,rgba(21,16,16,.15) 28%,rgba(77,11,23,.6) 58%,rgba(21,16,16,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 3.8rem}
+.hero .titre{opacity:0;transform:translateY(24px);animation:monte 1.1s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .accroche{opacity:0;transform:translateY(24px);animation:monte 1.1s .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.hero h1{font-size:clamp(2rem,8.4vw,3.6rem);margin:1.4rem 0 .6rem;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.55)}
+.hero h1 em{font-style:normal;color:var(--or-v)}
+.hero p.lead{max-width:34rem;font-size:1.06rem;color:#f8ecd8;margin-bottom:1.6rem;text-shadow:0 1px 10px rgba(0,0,0,.85)}
+.hero .puces{margin-top:1.3rem;font-size:.92rem;color:#e6d4b8;display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+.hero .puces span::before{content:"✦ ";color:var(--or-v)}
+/* bandeau */
+.bandeau{background:var(--bordeaux);color:var(--or-v);overflow:hidden;padding:.8rem 0;border-block:2px solid var(--or)}
+.bandeau-piste{display:flex;width:max-content;animation:defile 34s linear infinite}
+.bandeau span{font-family:'Cinzel',serif;font-size:1.15rem;letter-spacing:.08em;padding:0 1.2rem;white-space:nowrap}
+.bandeau span::after{content:"✦";margin-left:2.4rem;color:var(--or)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* maison */
+.maison{background:var(--creme)}
+.grille2{display:grid;gap:2.4rem;align-items:center}
+.maison .citation{font-family:'Dancing Script',cursive;font-size:clamp(2rem,7vw,2.8rem);line-height:1.15;color:var(--bordeaux)}
+.maison p{max-width:36rem}
+.cadre{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 28px 50px -24px rgba(77,11,23,.6);transform:rotate(1.4deg);outline:2px solid var(--or);outline-offset:6px}
+.cadre img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s}
+.cadre:hover img{transform:scale(1.05)}
+.cadre figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .7rem;font-size:.85rem;color:#fff;background:linear-gradient(transparent,rgba(21,16,16,.8))}
+.pastilles{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pastilles span{background:var(--bordeaux);color:var(--or-v);font-size:.9rem;padding:.35rem .95rem;border-radius:999px}
+/* douceurs */
+.douceurs{background:var(--noir);color:var(--creme);overflow:hidden}
+.douceurs::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(232,144,28,.28),transparent 70%)}
+.douceurs .wrap{position:relative}
+.douceurs h2{color:#fff}
+.douceurs .intro{color:#e3d2b8;max-width:38rem}
+.photo-large{margin-top:2rem;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 30px 60px -28px #000}
+.photo-large img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%}
+.photo-large figcaption{position:absolute;left:1rem;bottom:1rem;right:1rem;font-size:.85rem;color:#fff;text-shadow:0 1px 6px #000}
+.noms{display:grid;gap:1rem;margin-top:2rem}
+.nom{border:1px solid rgba(217,166,62,.35);border-radius:12px;padding:1.2rem 1.3rem;background:rgba(255,255,255,.04);transition:transform .4s,border-color .4s}
+.nom:hover{transform:translateY(-5px);border-color:var(--or-v)}
+.nom h3{color:var(--or-v);margin-bottom:.3rem;display:flex;align-items:center;gap:.6rem}
+.nom h3 svg{width:28px;height:28px;flex:none}
+.nom p{color:#e3d2b8;font-size:.95rem}
+/* événements */
+.evenements{background:var(--sable)}
+.cartes{display:grid;gap:1.2rem;margin-top:2rem}
+.carte{background:#fff;border-radius:14px;padding:1.5rem 1.4rem;border-top:5px solid var(--or);box-shadow:0 16px 34px -26px rgba(77,11,23,.6);transition:transform .4s}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg)}
+.carte .ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--bordeaux);color:var(--or-v);margin-bottom:.8rem}
+.carte .ico svg{width:28px;height:28px}
+.carte h3{color:var(--bordeaux);margin-bottom:.35rem}
+.carte .date{font-size:.8rem;color:var(--doux);margin-top:.6rem}
+.post{margin-top:2rem;background:var(--noir);color:var(--creme);border-radius:14px;padding:1.4rem 1.5rem;border-left:5px solid var(--or)}
+.post q{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--or-v);quotes:"« " " »"}
+.post p{font-size:.85rem;color:#c9b69a;margin-top:.4rem}
+/* noël */
+.noel{background:linear-gradient(180deg,var(--bordeaux-f),var(--bordeaux) 60%,#5c0f1c);color:var(--creme);overflow:hidden}
+.guirlande{position:absolute;top:0;left:0;width:100%;height:80px}
+.guirlande circle{animation:scintille 2.4s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.3}}
+.noel .wrap{position:relative;padding-top:2rem}
+.noel h2{color:#fff}
+.noel .note{color:#f0dcc0;max-width:38rem}
+.noel-photos{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:2rem 0}
+.noel-photos figure{border-radius:12px;overflow:hidden;position:relative;outline:2px solid rgba(242,199,102,.7);outline-offset:4px}
+.noel-photos img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform 1.2s}
+.noel-photos figure:hover img{transform:scale(1.06)}
+.noel-photos figcaption{position:absolute;left:0;right:0;bottom:0;font-size:.78rem;padding:1.4rem .7rem .5rem;background:linear-gradient(transparent,rgba(21,16,16,.85));color:#fff}
+.idees{display:grid;gap:1rem;margin-bottom:2rem}
+.idee{background:rgba(255,255,255,.07);border:1px solid rgba(242,199,102,.35);border-radius:12px;padding:1.1rem 1.3rem}
+.idee h3{color:var(--or-v);font-size:1.15rem;margin-bottom:.25rem}
+.idee p{color:#f0dcc0;font-size:.95rem}
+/* contact */
+.contact{background:var(--creme)}
+.contact::before{content:"";position:absolute;top:-1px;left:0;right:0;height:26px;background:radial-gradient(circle at 13px 0,#5c0f1c 12px,transparent 13px) 0 0/26px 26px repeat-x}
+.coord{display:grid;gap:1rem;margin:1.4rem 0 1.8rem}
+.coord a,.coord div{display:flex;gap:.9rem;align-items:flex-start;text-decoration:none;font-size:1rem}
+.coord svg{width:24px;height:24px;flex:none;margin-top:.2rem;color:var(--bordeaux)}
+.coord b{font-family:'Cinzel',serif;font-size:1.2rem;display:block;line-height:1.25;color:var(--bordeaux);word-break:break-word}
+.encart{background:var(--noir);color:var(--creme);border-radius:14px;padding:1.8rem 1.6rem;text-align:center}
+.encart .logo{margin:0 auto 1.2rem;width:140px}
+.encart .logo span{font-size:1.45rem}
+.encart p{color:#e3d2b8}
+.encart .script{color:var(--or-v);font-size:1.7rem;margin-top:.6rem;line-height:1.2}
+footer{background:var(--noir);color:#b8a58c;text-align:center;font-size:.84rem;padding:2.2rem 1rem 2.4rem;line-height:1.6}
+footer b{color:var(--or-v);font-weight:600}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+@media(min-width:760px){
+  .grille2{grid-template-columns:1.1fr 1fr}
+  .noms,.cartes,.idees{grid-template-columns:repeat(3,1fr)}
+  .noel-photos{max-width:760px}
+  .contact-g{grid-template-columns:1.3fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero .titre,.hero .accroche{opacity:1;transform:none}
+  canvas#sucre{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Casa Food</div>
+<canvas id="sucre" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.3-.3-.3-.5-.4z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V14h2.8v8z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></symbol>
+  <symbol id="i-diya" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3c2.5 3 3.4 5.4 2.6 7.3-.5 1.3-1.5 2-2.6 2s-2.1-.7-2.6-2C12.6 8.4 13.5 6 16 3z"/><path fill="currentColor" d="M3 16h26c0 5.5-5.8 9-13 9S3 21.5 3 16zm9 10h8l-1 3h-6z"/></symbol>
+  <symbol id="i-spirale" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M16 16.5c0-1 1.6-1 1.6.2 0 1.8-2.8 2.2-3.6.6-1-2 .6-4.6 3.2-4.6 3 0 4.8 2.8 4 5.8-.9 3.4-5 4.9-8 3.4-3.6-1.8-4.4-6.6-2-9.8 2.6-3.4 7.8-3.8 11-1"/></symbol>
+  <symbol id="i-boule" viewBox="0 0 32 32"><circle cx="16" cy="17" r="10" fill="currentColor"/><circle cx="12.5" cy="13.5" r="2.4" fill="#fff" opacity=".35"/></symbol>
+  <symbol id="i-bebe" viewBox="0 0 32 32"><path fill="currentColor" d="M16 4a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm-9 23c0-5 4-8.5 9-8.5s9 3.5 9 8.5z"/></symbol>
+  <symbol id="i-verres" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" d="M6 5h8l-1 8a3 3 0 0 1-6 0zm4 11v10m-3 0h6M18 5h8l-1 8a3 3 0 0 1-6 0zm4 11v10m-3 0h6"/></symbol>
+  <symbol id="i-cadeau" viewBox="0 0 32 32"><path fill="currentColor" d="M4 11h24v6H4zm2 7h9v10H6zm11 0h9v10h-9zM15 11h2v17h-2zM16 11c-2-4-7-6-7-2.5 0 2 3 2.5 7 2.5zm0 0c2-4 7-6 7-2.5 0 2-3 2.5-7 2.5z"/></symbol>
+</defs></svg>
+<main>
+
+<section class="hero">
+  <div class="fond"><img src="img/bonbons-miel.webp" alt="Une boîte de douceurs Casa Food : bonbons miel dorés, ladoos et boules au sirop" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <div class="titre">
+      <div class="logo" aria-hidden="true"><span>CASA<small>FOOD</small></span></div>
+      <h1>Casa Food, <em>la gourmandise</em> à Saint-André</h1>
+    </div>
+    <div class="accroche">
+      <p class="lead">Bonbons miel, ladoos, box à partager et commandes pour tous vos moments de fête : Casa Food régale l'Est, des douceurs indiennes à l'apéro entre amis.</p>
+      <div class="ctas">
+        <a class="btn btn-or" href="tel:+262693488144"><svg><use href="#i-tel"/></svg>0693 48 81 44</a>
+        <a class="btn btn-line" href="#evenements">Commander pour un événement</a>
+      </div>
+      <div class="puces"><span>Saint-André, 97440</span><span>Fast food &amp; douceurs</span><span>Commandes pour vos événements</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+  <span>Bonbons miel</span><span>Ladoos</span><span>Kaloo</span><span>Douceurs des fêtes</span><span>Box à partager</span><span>Apéro</span><span>Baptêmes</span><span>Saint-André</span>
+  <span>Bonbons miel</span><span>Ladoos</span><span>Kaloo</span><span>Douceurs des fêtes</span><span>Box à partager</span><span>Apéro</span><span>Baptêmes</span><span>Saint-André</span>
+</div></div>
+
+<section class="maison mandala">
+  <div class="wrap grille2">
+    <div class="rv">
+      <p class="eyebrow">Chez Casa Food</p>
+      <p class="citation">Du sucre, du doré, et le goût des grandes tablées.</p>
+      <p style="margin-top:1.1rem">À Saint-André, Casa Food prépare des gourmandises qui se partagent : des douceurs saupoudrées de sucre, des confiseries indiennes brillantes de sirop, des box pour l'apéro et des commandes pensées pour les belles occasions.</p>
+      <p style="margin-top:.8rem">Diwali, Noël, un baptême, un match entre amis : à chaque fête, sa boîte Casa Food.</p>
+      <div class="pastilles"><span>Douceurs indiennes</span><span>Box gourmandes</span><span>Événements</span><span>Apéro</span></div>
+    </div>
+    <figure class="cadre rv"><img src="img/douceurs-sucre.webp" alt="Rangées de douceurs dorées généreusement saupoudrées de sucre" loading="lazy"><figcaption>Des douceurs généreusement sucrées, tout juste sorties de la cuisine</figcaption></figure>
+  </div>
+</section>
+
+<section class="douceurs" id="douceurs">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les douceurs de la maison</p>
+      <h2>Une boîte qui brille comme Diwali</h2>
+      <p class="intro">Pour Diwali, Casa Food a composé ses box de confiseries : bonbons miel, kaloo, ladoo, napolitaine. Des couleurs d'or et de miel, à offrir et à partager.</p>
+    </div>
+    <div class="noms">
+      <div class="nom rv"><h3><svg><use href="#i-spirale"/></svg>Bonbon miel</h3><p>Des spirales dorées et brillantes, croquantes et gorgées de sirop : l'incontournable des fêtes.</p></div>
+      <div class="nom rv"><h3><svg><use href="#i-boule"/></svg>Ladoo &amp; kaloo</h3><p>Des petites boules fondantes et colorées, à piocher dans la boîte avec gourmandise.</p></div>
+      <div class="nom rv"><h3><svg><use href="#i-diya"/></svg>Box de fête</h3><p>Des assortiments composés pour les grandes occasions, comme les box de Diwali publiées par Casa Food.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="evenements" id="evenements">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Vos événements</p>
+      <h2>Une fête ? Casa Food s'occupe du buffet.</h2>
+      <p style="max-width:38rem">Baptême, anniversaire, apéro du match : on passe commande, et les plateaux arrivent prêts à régaler tout le monde.</p>
+    </div>
+    <div class="cartes">
+      <div class="carte rv"><div class="ico"><svg><use href="#i-bebe"/></svg></div><h3>Baptêmes</h3><p>Des commandes pour vos événements de famille, à prévoir à l'avance avec Casa Food.</p><p class="date">Publication du 16 juin 2026</p></div>
+      <div class="carte rv"><div class="ico"><svg><use href="#i-verres"/></svg></div><h3>Apéro</h3><p>Pour les soirées entre amis et les grands matchs, comme pendant la Coupe du monde 2026.</p><p class="date">Publication du 18 juin 2026</p></div>
+      <div class="carte rv"><div class="ico"><svg><use href="#i-diya"/></svg></div><h3>Fêtes de l'année</h3><p>Diwali, Noël et toutes les belles dates : des box gourmandes à réserver pour le jour J.</p><p class="date">Box Diwali et box de Noël publiées sur la page</p></div>
+    </div>
+    <div class="post rv"><q>Passez vos commandes pour vos événements</q><p>L'invitation de Casa Food sur sa page Facebook, #baptême</p></div>
+    <div class="ctas rv" style="margin-top:1.6rem">
+      <a class="btn btn-bord" href="tel:+262693488144"><svg><use href="#i-tel"/></svg>Appeler Casa Food</a>
+      <a class="btn btn-wa" href="https://wa.me/262693488144?text=Bonjour%20Casa%20Food%2C%20je%20voudrais%20passer%20une%20commande%20pour%20un%20%C3%A9v%C3%A9nement"><svg><use href="#i-wa"/></svg>Commander sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 8 Q50 50 100 16 T200 16 T300 16 T400 10" fill="none" stroke="#d9a63e" stroke-opacity=".5" stroke-width="1.3"/>
+    <g fill="#f2c766"><circle cx="18" cy="22" r="3.2"/><circle cx="46" cy="32" r="3.2" style="animation-delay:.4s"/><circle cx="74" cy="29" r="3.2" style="animation-delay:.9s"/><circle cx="100" cy="17" r="3.2" style="animation-delay:1.3s"/><circle cx="128" cy="28" r="3.2" style="animation-delay:.2s"/><circle cx="152" cy="32" r="3.2" style="animation-delay:1.7s"/><circle cx="176" cy="27" r="3.2" style="animation-delay:.6s"/><circle cx="200" cy="16" r="3.2" style="animation-delay:1.1s"/><circle cx="228" cy="28" r="3.2" style="animation-delay:.3s"/><circle cx="252" cy="32" r="3.2" style="animation-delay:1.5s"/><circle cx="276" cy="27" r="3.2" style="animation-delay:.8s"/><circle cx="300" cy="16" r="3.2" style="animation-delay:.1s"/><circle cx="328" cy="26" r="3.2" style="animation-delay:1.9s"/><circle cx="354" cy="29" r="3.2" style="animation-delay:.5s"/><circle cx="380" cy="20" r="3.2" style="animation-delay:1.2s"/></g>
+  </svg>
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow" style="color:var(--or-v)">Offrir pour Noël</p>
+      <h2>Noël a le goût des douceurs Casa Food</h2>
+      <p class="note">Coffrets enrubannés, gourmandises décorées aux couleurs des fêtes, box salées pour le réveillon : les créations de Noël de Casa Food se commandent à l'avance, pour offrir ou pour garnir la table.</p>
+    </div>
+    <div class="noel-photos">
+      <figure class="rv"><img src="img/coffret-noel.webp" alt="Coffret kraft à fenêtre, ruban rouge et étiquette Joyeux Noël, garni de douceurs décorées" loading="lazy"><figcaption>Le coffret de Noël</figcaption></figure>
+      <figure class="rv"><img src="img/noel-decorees.webp" alt="Quatre douceurs de Noël décorées : couronne, étoile, sapin et nœud, rouge, vert et or" loading="lazy"><figcaption>Couronne, étoile, sapin, nœud</figcaption></figure>
+    </div>
+    <div class="idees">
+      <div class="idee rv"><h3><svg width="20" height="20" style="vertical-align:-3px;margin-right:.35rem"><use href="#i-cadeau"/></svg>Le coffret à offrir</h3><p>Une jolie boîte enrubannée, garnie de douceurs : le cadeau gourmand qui fait briller les yeux.</p></div>
+      <div class="idee rv"><h3>La table des fêtes</h3><p>Des gourmandises décorées en rouge, vert et or pour habiller le dessert du réveillon.</p></div>
+      <div class="idee rv"><h3>La box du réveillon</h3><p>Des box salées à partager pour les soirées du 24 et du 25 décembre, à réserver auprès de Casa Food.</p></div>
+    </div>
+    <div class="rv"><a class="btn btn-or" href="https://wa.me/262693488144?text=Bonjour%20Casa%20Food%2C%20je%20voudrais%20commander%20pour%20No%C3%ABl"><svg><use href="#i-wa"/></svg>Commander pour Noël sur WhatsApp</a></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grille2 contact-g">
+    <div class="rv">
+      <p class="eyebrow">Contact</p>
+      <h2>Une envie gourmande ? Parlons-en.</h2>
+      <div class="coord">
+        <a href="tel:+262693488144"><svg><use href="#i-tel"/></svg><span><b>0693 48 81 44</b>Téléphone et WhatsApp</span></a>
+        <a href="mailto:casafoodrun@gmail.com"><svg><use href="#i-mail"/></svg><span><b>casafoodrun@gmail.com</b>Pour vos demandes de commande</span></a>
+        <div><svg><use href="#i-pin"/></svg><span><b>Saint-André</b>97440, La Réunion</span></div>
+        <a href="https://www.facebook.com/104013229296264" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg><span><b>CASA FOOD</b>Les nouveautés et les box du moment sur Facebook</span></a>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-bord" href="tel:+262693488144"><svg><use href="#i-tel"/></svg>Appeler</a>
+        <a class="btn btn-wa" href="https://wa.me/262693488144?text=Bonjour%20Casa%20Food%20%21"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+    <div class="encart rv">
+      <div class="logo" aria-hidden="true"><span>CASA<small>FOOD</small></span></div>
+      <p>246 gourmands suivent déjà Casa Food sur Facebook, entre box de fête, apéros et douceurs dorées.</p>
+      <p class="script">À chaque fête, sa boîte Casa Food.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Casa Food</b> · Fast food et douceurs · Saint-André, La Réunion<br>Maquette privée imaginée par Aurélie &amp; Jonathan, ATMA Digital, à partir des publications de Casa Food.</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* éclats de sucre et gouttes de miel dorées qui descendent doucement */
+  var c=document.getElementById('sucre'),x=c.getContext('2d'),W,H,P=[],run=true;
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  for(var i=0;i<30;i++)P.push({x:Math.random(),y:Math.random(),r:.8+Math.random()*2.2,v:.0002+Math.random()*.0004,p:Math.random()*6.28,s:.5+Math.random()*1.4,d:(Math.random()-.5)*.00025,m:Math.random()<.35});
+  function f(t){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(o){o.y+=o.v;o.x+=o.d+Math.sin(t*.0006+o.p)*.00008;if(o.y>1.04){o.y=-.04;o.x=Math.random()}
+      var a=.22+.2*Math.sin(t*.0012*o.s+o.p),px=o.x*W,py=o.y*H;
+      if(o.m){var g=x.createRadialGradient(px,py,0,px,py,o.r*4);g.addColorStop(0,'rgba(232,144,28,'+a+')');g.addColorStop(1,'rgba(232,144,28,0)');x.fillStyle=g;x.beginPath();x.arc(px,py,o.r*4,0,6.28);x.fill()}
+      else{x.save();x.translate(px,py);x.rotate(t*.0004*o.s);x.fillStyle='rgba(242,199,102,'+(a+.1)+')';x.fillRect(-o.r,-o.r,o.r*2,o.r*2);x.restore()}});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Casa Food" defer></script>
+</body>
+</html>
