@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Phoenix Photographie · Photographe événementiel à La Réunion</title>
+<meta name="description" content="Phoenix Photographie, photographe événementiel à La Réunion : mariages, portraits, mode, shootings privés et événements. Parce que chaque histoire mérite de renaître en image.">
+<meta property="og:title" content="Phoenix Photographie · Photographe événementiel à La Réunion">
+<meta property="og:description" content="Mariages, portraits, mode, shootings privés et événements. Parce que chaque histoire mérite de renaître en image.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/phoenix-photographie-etang-sale/img/logo-phoenix.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/phoenix-photographie-etang-sale/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#0b0907;--nuit:#15110c;--brun:#241b12;--or:#c9a24a;--or2:#e8cc86;--braise:#c2662b;--froid:#9fb8d6;--creme:#f4ede0;--lin:#e9dfcc;--txt:#e9e2d4;--doux:#a99d88;--encre:#2b241b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial;font-weight:300;color:var(--txt);background:var(--noir);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.08;color:var(--creme)}
+h2{font-size:clamp(2.1rem,5.6vw,3.3rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.45rem}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;color:var(--or2);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--or);font-weight:500}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:#000;color:var(--doux);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(201,162,74,.35)}
+.ribbon b{color:var(--or2);font-weight:500}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.08em;font-size:.88rem;transition:.35s;text-transform:uppercase}
+.btn-or{background:linear-gradient(135deg,var(--or2),var(--or) 55%,#9c7a2e);color:#160f05;box-shadow:0 14px 34px -14px rgba(201,162,74,.8);animation:souffle 4.8s ease-in-out infinite}
+.btn-or:hover{filter:brightness(1.08)}
+@keyframes souffle{50%{box-shadow:0 16px 46px -6px rgba(232,204,134,.55);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(201,162,74,.6);color:var(--or2);background:rgba(0,0,0,.25)}
+.btn-line:hover{background:rgba(201,162,74,.12)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,900px);display:flex;align-items:center;overflow:hidden;padding:6.5rem 0 4rem;position:relative;background:radial-gradient(70% 55% at 50% 38%,#2a1c0e 0%,transparent 70%),radial-gradient(60% 50% at 85% 100%,#1b2433 0%,transparent 70%),var(--noir)}
+.faisceau{position:absolute;top:-10%;width:38vw;max-width:420px;height:min(130%,1100px);background:linear-gradient(180deg,rgba(232,204,134,.16),rgba(232,204,134,0) 75%);filter:blur(6px);transform-origin:top center;pointer-events:none}
+.faisceau.f1{left:8%;transform:rotate(18deg);animation:balaye 14s ease-in-out infinite alternate}
+.faisceau.f2{right:6%;transform:rotate(-20deg);background:linear-gradient(180deg,rgba(159,184,214,.14),rgba(159,184,214,0) 75%);animation:balaye2 17s ease-in-out infinite alternate}
+@keyframes balaye{to{transform:rotate(6deg)}}
+@keyframes balaye2{to{transform:rotate(-7deg)}}
+.fumee{position:absolute;left:-10%;right:-10%;bottom:-6%;height:42%;background:radial-gradient(40% 60% at 20% 80%,rgba(233,226,212,.10),transparent 70%),radial-gradient(45% 55% at 70% 85%,rgba(233,226,212,.08),transparent 70%);filter:blur(10px);animation:derive 22s ease-in-out infinite alternate;pointer-events:none}
+@keyframes derive{to{transform:translateX(6%)}}
+.hero-in{position:relative;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.medaillon{position:relative;width:min(340px,72vw);aspect-ratio:1;margin:auto}
+.medaillon .rond{position:relative;z-index:2;width:100%;height:100%;border-radius:50%;background:#000;display:grid;place-items:center;overflow:hidden;box-shadow:0 0 0 1px rgba(201,162,74,.5),0 30px 90px -20px rgba(201,162,74,.45)}
+.medaillon img{width:84%;height:84%;object-fit:contain;animation:kenburns 18s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.04)}}
+.medaillon::before{content:"";position:absolute;inset:-18px;border-radius:50%;border:1px dashed rgba(201,162,74,.45);animation:tourne 60s linear infinite}
+.medaillon::after{content:"";position:absolute;inset:-60px;border-radius:50%;background:radial-gradient(circle,rgba(194,102,43,.35),rgba(194,102,43,0) 62%);animation:respire 7s ease-in-out infinite;z-index:1}
+@keyframes tourne{to{transform:rotate(360deg)}}
+@keyframes respire{0%,100%{transform:scale(.9);opacity:.7}50%{transform:scale(1.08);opacity:1}}
+.hero h1{font-size:clamp(3rem,10vw,6rem);letter-spacing:.1em;text-transform:uppercase;font-weight:400;background:linear-gradient(100deg,var(--or2) 0%,#fff6dc 30%,var(--or) 55%,var(--or2) 100%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;transform:translateY(24px);animation:monte 1.4s .7s forwards,eclat 7s ease-in-out infinite}
+@keyframes eclat{50%{background-position:100% 0}}
+.hero h1 .script{display:block;text-transform:none;letter-spacing:0;font-size:.5em;margin-top:.15rem;-webkit-text-fill-color:var(--or2)}
+.hero .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.4rem,3.6vw,1.85rem);color:var(--creme);margin:1.3rem 0 .5rem;max-width:32rem}
+.hero .metier{font-size:.92rem;letter-spacing:.16em;text-transform:uppercase;color:var(--doux);margin-bottom:2rem}
+.hero .resa{margin-top:1.6rem;font-size:.9rem;color:var(--doux)}
+.hero .resa b{color:var(--or2);font-weight:500}
+.apparait{opacity:0;transform:translateY(24px);animation:monte 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:linear-gradient(90deg,#1a130a,#2a1d0d,#1a130a);color:var(--or2);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;border-block:1px solid rgba(201,162,74,.3)}
+.track{display:inline-block;animation:defile 40s linear infinite}
+.track span{margin:0 1.3rem}
+.track span::after{content:"✦";margin-left:2.6rem;font-style:normal;font-size:.75rem;color:var(--braise)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.esprit p+p{margin-top:1rem}
+.devise{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.45rem,3.6vw,2rem);color:var(--or2);border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;line-height:1.35}
+.devise small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);margin-top:.5rem;letter-spacing:.05em}
+.ecrin{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:radial-gradient(60% 50% at 50% 30%,rgba(232,204,134,.22),transparent 70%),linear-gradient(180deg,#141a24,#0b0907);border:1px solid rgba(201,162,74,.3)}
+.ecrin svg{position:absolute;inset:0;width:100%;height:100%}
+.ecrin figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(11,9,7,.75);padding:.3rem .9rem;border-radius:999px;font-size:.75rem;color:var(--doux);letter-spacing:.06em}
+.diaph{transform-origin:200px 200px;animation:tourne 40s linear infinite}
+.atouts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.atouts span{border:1px solid rgba(201,162,74,.4);border-radius:999px;padding:.35rem 1rem;font-size:.88rem;color:var(--or2)}
+/* specialites */
+.spe{background:linear-gradient(180deg,var(--noir),var(--nuit) 30%,var(--nuit))}
+.cartes{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.2rem}
+.carte{background:linear-gradient(160deg,#1f170e,#120e09);border:1px solid rgba(201,162,74,.25);border-radius:22px;padding:1.6rem 1.3rem;transition:transform .45s,border-color .45s,box-shadow .45s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-6px);border-color:rgba(232,204,134,.7);box-shadow:0 26px 50px -30px rgba(201,162,74,.6)}
+.carte svg{width:42px;height:42px;stroke:var(--or2);fill:none;stroke-width:1.4;margin-bottom:1rem}
+.carte h3{font-size:1.4rem;margin-bottom:.3rem}
+.carte p{font-size:.92rem;color:var(--doux)}
+/* moments */
+.moments-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.moment{border-radius:22px;padding:1.7rem;position:relative;overflow:hidden;min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(201,162,74,.25)}
+.moment::before{content:"";position:absolute;inset:0;z-index:0}
+.moment>*{position:relative;z-index:1}
+.m1::before{background:radial-gradient(70% 60% at 50% 20%,rgba(232,204,134,.35),transparent 70%),radial-gradient(60% 50% at 20% 100%,rgba(233,226,212,.12),transparent 70%),#140f09}
+.m2::before{background:radial-gradient(60% 60% at 30% 25%,rgba(194,102,43,.45),transparent 70%),radial-gradient(60% 60% at 80% 30%,rgba(159,184,214,.35),transparent 70%),#0f1118}
+.m3::before{background:linear-gradient(135deg,#2b2b2b,#0b0b0b);filter:grayscale(1)}
+.moment .date{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or)}
+.moment blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;line-height:1.3;color:var(--creme);margin:.5rem 0 .6rem}
+.moment small{color:var(--doux);font-size:.82rem}
+.lueur{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff6dc;box-shadow:0 0 12px 4px rgba(232,204,134,.8);animation:scintille 3s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.2;transform:scale(.6)}}
+/* carnet */
+.carnet{background:var(--creme);color:var(--encre)}
+.carnet h2,.carnet h3{color:var(--encre)}
+.carnet .eyebrow{color:#8a6420}
+.frise{list-style:none;margin-top:2.2rem;position:relative;padding-left:1.8rem}
+.frise::before{content:"";position:absolute;left:.45rem;top:.4rem;bottom:.4rem;width:1px;background:linear-gradient(var(--or),rgba(201,162,74,.15))}
+.frise li{position:relative;padding:0 0 1.8rem}
+.frise li::before{content:"";position:absolute;left:-1.72rem;top:.45rem;width:.85rem;height:.85rem;border-radius:50%;background:var(--creme);border:2px solid var(--or);box-shadow:0 0 0 4px rgba(201,162,74,.15)}
+.frise .quand{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#8a6420;font-weight:500}
+.frise h3{font-size:1.45rem;margin:.15rem 0 .25rem}
+.frise p{font-size:.97rem;color:#5b4f3e}
+.frise em{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--encre)}
+.complices{margin-top:.6rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.complices span{background:#fff;border:1px solid var(--lin);border-radius:999px;padding:.3rem .9rem;font-size:.85rem}
+.ouvert{margin-top:1rem;background:var(--encre);color:var(--creme);border-radius:24px;padding:1.6rem 1.8rem;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.ouvert p{max-width:34rem}
+.ouvert b{color:var(--or2);font-weight:500}
+/* offrir */
+.offrir{background:radial-gradient(60% 60% at 80% 40%,rgba(194,102,43,.18),transparent 70%),var(--nuit)}
+.offrir-in{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.idees{display:grid;gap:1rem;margin:1.6rem 0 2rem}
+.idee{background:rgba(255,255,255,.03);border-radius:18px;padding:1.2rem 1.4rem;border:1px solid rgba(201,162,74,.25)}
+.idee h3{font-size:1.25rem;margin-bottom:.25rem;color:var(--or2)}
+.bon{aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,#1c140b,#000);border:1px solid rgba(232,204,134,.55);color:var(--creme);padding:1.6rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 70px -35px rgba(201,162,74,.6);transform:rotate(-3deg);transition:transform .6s;position:relative;overflow:hidden}
+.bon::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(232,204,134,.3),transparent);transform:rotate(20deg);animation:reflet 5.5s ease-in-out infinite}
+@keyframes reflet{to{left:130%}}
+.bon:hover{transform:rotate(0)}
+.bon .script{font-size:clamp(2.1rem,7vw,2.9rem)}
+.bon small{letter-spacing:.24em;text-transform:uppercase;font-size:.66rem;color:var(--or)}
+.bon img{position:absolute;right:1rem;top:1rem;width:64px;height:64px;border-radius:50%;opacity:.9}
+.bon small,.bon .script{position:relative;z-index:2}
+.houx{font-size:.8rem;color:var(--doux);margin-top:.9rem}
+/* contact */
+.contact-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem);align-items:center}
+.infos p{margin:.5rem 0;overflow-wrap:anywhere}
+.infos b{font-weight:500;color:var(--or2)}
+.signature{text-align:center}
+.signature img{width:min(260px,64vw);margin:0 auto 1rem;border-radius:50%;padding:11%;background:#000;box-shadow:0 0 70px -10px rgba(201,162,74,.45)}
+.signature .script{font-size:2.4rem}
+footer{text-align:center;padding:2.4rem 1rem 3rem;font-size:.82rem;color:var(--doux);border-top:1px solid rgba(201,162,74,.2)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:980px){.cartes{grid-template-columns:repeat(2,1fr)}.cartes .carte:last-child{grid-column:span 2}}
+@media (max-width:820px){
+ .hero-in,.esprit,.offrir-in,.contact-in{grid-template-columns:1fr}
+ .hero-in{text-align:center}.hero .lead{margin-inline:auto}.hero .ctas{justify-content:center}
+ .moments-grid{grid-template-columns:1fr}
+ .ecrin{aspect-ratio:1}
+ .ribbon{font-size:.7rem}
+ .hero{padding-top:5.5rem}
+}
+@media (max-width:420px){.cartes{grid-template-columns:1fr}.cartes .carte:last-child{grid-column:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.apparait,.hero h1{opacity:1;transform:none}canvas#braises{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Phoenix Photographie</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+  <div class="faisceau f1" aria-hidden="true"></div><div class="faisceau f2" aria-hidden="true"></div><div class="fumee" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <figure class="medaillon apparait"><div class="rond"><img src="img/logo-phoenix.webp" alt="Logo de Phoenix Photographie : un phénix doré aux ailes déployées sur fond noir"></div></figure>
+    <div>
+      <p class="eyebrow apparait">Photographe événementiel · La Réunion</p>
+      <h1>Phoenix<span class="script">Photographie</span></h1>
+      <p class="lead apparait d3">« Parce que chaque histoire mérite de renaître en&nbsp;image.&nbsp;»</p>
+      <p class="metier apparait d3">Mariages · Portraits · Mode · Shootings privés · Événements</p>
+      <div class="ctas apparait d3">
+        <a class="btn btn-or" href="https://wa.me/262693632736?text=Bonjour%20Phoenix%20Photographie%2C%20je%20voudrais%20des%20informations%20pour%20un%20reportage%20photo">Réserver ma date</a>
+        <a class="btn btn-line" href="tel:+262693632736">0693 63 27 36</a>
+      </div>
+      <p class="resa apparait d3"><b>Réservations ouvertes pour 2026 et 2027</b></p>
+    </div>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+<span>Mariages</span><span>Portraits</span><span>Mode</span><span>Shootings privés</span><span>Événements</span><span>Première danse</span><span>Noir &amp; blanc</span>
+<span>Mariages</span><span>Portraits</span><span>Mode</span><span>Shootings privés</span><span>Événements</span><span>Première danse</span><span>Noir &amp; blanc</span>
+</div></div>
+
+<section class="wrap esprit">
+  <div class="rv">
+    <p class="eyebrow">L'esprit Phoenix</p>
+    <h2>Capturer l'émotion, au cœur de la lumière</h2>
+    <p>Derrière l'objectif, Jonathan Araye saisit ce qui fait battre une journée : les regards, les étreintes, la première danse, la famille réunie. Entre lumières chaudes et froides, fumée lourde et étincelles, chaque instant devient une image à garder pour toujours.</p>
+    <p class="devise">« Des regards, une étreinte, des émotions… Ces instants qui rendent chaque histoire unique. »<small>Publication Facebook de Phoenix Photographie, 29 octobre 2026</small></p>
+    <p>Vos souvenirs restent les vôtres : lorsque des mariés choisissent la confidentialité, Phoenix Photographie partage les images avec leur accord et des visages floutés.</p>
+    <div class="atouts"><span>Couleur &amp; noir et blanc</span><span>Portraits</span><span>Première danse</span><span>La Réunion</span></div>
+  </div>
+  <figure class="ecrin rv">
+    <svg viewBox="0 0 400 400" aria-hidden="true">
+      <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6dc" stop-opacity=".9"/><stop offset=".5" stop-color="#e8cc86" stop-opacity=".35"/><stop offset="1" stop-color="#e8cc86" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#c9a24a" stroke-opacity=".5"/>
+      <circle cx="200" cy="200" r="120" fill="none" stroke="#c9a24a" stroke-opacity=".25" stroke-dasharray="2 6"/>
+      <g class="diaph" fill="none" stroke="#e8cc86" stroke-width="1.4" stroke-opacity=".85">
+        <path d="M200 80 L304 140 L200 160Z"/><path d="M304 140 L304 260 L235 220Z"/><path d="M304 260 L200 320 L200 240Z"/>
+        <path d="M200 320 L96 260 L165 220Z"/><path d="M96 260 L96 140 L165 180Z"/><path d="M96 140 L200 80 L200 160Z"/>
+      </g>
+      <circle cx="200" cy="200" r="46" fill="url(#g)"/>
+    </svg>
+    <figcaption>Illustration · diaphragme</figcaption>
+  </figure>
+</section>
+
+<section class="spe" id="specialites">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Spécialités</p><h2>Votre histoire, en images</h2><p>Mariages, portraits, mode, shootings privés et événements : Phoenix Photographie vous accompagne à La Réunion.</p></div>
+    <div class="cartes">
+      <article class="carte rv"><svg viewBox="0 0 48 48"><circle cx="18" cy="28" r="10"/><circle cx="30" cy="28" r="10"/><path d="M24 10l3 4h-6z"/></svg><h3>Mariages</h3><p>Préparatifs, cérémonie, première danse et soirée : toute la journée racontée.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 48 48"><rect x="10" y="8" width="28" height="32" rx="3"/><circle cx="24" cy="21" r="6"/><path d="M15 36c2-6 16-6 18 0"/></svg><h3>Portraits</h3><p>Des portraits qui jouent avec la lumière, en couleur ou en noir et blanc.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M24 8v6M24 14l-14 20h28z"/><path d="M14 40h20"/></svg><h3>Mode</h3><p>Des images soignées pour vos créations, vos tenues et vos projets.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 48 48"><rect x="6" y="14" width="36" height="24" rx="4"/><circle cx="24" cy="26" r="7"/><path d="M17 14l3-5h8l3 5"/></svg><h3>Shootings privés</h3><p>Une séance pensée pour vous : en solo, en couple ou en famille.</p></article>
+      <article class="carte rv"><svg viewBox="0 0 48 48"><path d="M24 6l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><path d="M38 30l1.5 4 4 1.5-4 1.5L38 41l-1.5-4-4-1.5 4-1.5z"/></svg><h3>Événements</h3><p>Soirées, shows, concerts : l'énergie de la scène et de la piste.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="moments">
+  <div class="rv"><p class="eyebrow">Ses mots</p><h2>Des instants suspendus</h2></div>
+  <div class="moments-grid">
+    <figure class="moment m1 rv"><span class="lueur" style="top:22%;left:30%"></span><span class="lueur" style="top:14%;left:66%;animation-delay:1s"></span><span class="date">6 octobre 2026</span><blockquote>« Deux cœurs, une seule histoire. »</blockquote><small>Une première danse sublimée par les effets, la lumière et la fumée, à la Salle Candin.</small></figure>
+    <figure class="moment m2 rv"><span class="lueur" style="top:18%;left:20%;animation-delay:.5s"></span><span class="lueur" style="top:28%;left:78%;animation-delay:1.6s"></span><span class="date">8 octobre 2026</span><blockquote>« Quand la photographie rencontre la lumière. »</blockquote><small>Entre lumières chaudes et froides, nuages et effets de lumière, la suite du mariage en portrait.</small></figure>
+    <figure class="moment m3 rv"><span class="date">4 septembre 2026</span><blockquote>« Un regard, un sourire, une présence… »</blockquote><small>Le mariage de A &amp; C en noir et blanc : une famille réunie pour célébrer l'un des plus beaux jours de son histoire.</small></figure>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="wrap">
+    <div class="rv"><p class="eyebrow">Carnet de mariages 2026</p><h2>La saison en quelques dates</h2><p>Les derniers reportages publiés sur la page de Phoenix Photographie, souvent en duo avec VS Events pour le son, la lumière et l'ambiance.</p></div>
+    <ol class="frise">
+      <li class="rv"><span class="quand">4 &amp; 17 septembre</span><h3>Le mariage de A &amp; C</h3><p>En noir et blanc, puis en couleur, <em>« pour vous faire découvrir toute la douceur et les émotions de cette belle journée »</em>.</p></li>
+      <li class="rv"><span class="quand">18 septembre</span><h3>Une première danse mémorable</h3><p>Jeux de lumière, fumée lourde et étincelles froides : <em>« des moments que j'ai eu plaisir à capturer »</em>.</p></li>
+      <li class="rv"><span class="quand">23 &amp; 26 septembre</span><h3>Villa Prestige</h3><p>Une soirée pleine d'émotions, de musique et de beaux souvenirs, avec un show lumière.</p></li>
+      <li class="rv"><span class="quand">6 &amp; 8 octobre</span><h3>Salle Candin</h3><p>Une première danse <em>« tout simplement à couper le souffle »</em>, puis la série portrait.</p></li>
+      <li class="rv"><span class="quand">29 octobre</span><h3>Domaine des Sables</h3><p><em>« Un instant magique, une danse, des souvenirs inoubliables. »</em></p></li>
+    </ol>
+    <div class="complices rv"><span>📸 Phoenix Photographie</span><span>✨ VS Events</span></div>
+    <div class="ouvert rv" style="margin-top:2rem">
+      <p><b>Réservations ouvertes pour 2026 et 2027.</b> Partagez votre date, votre lieu et vos envies en un message WhatsApp.</p>
+      <a class="btn btn-or" href="https://wa.me/262693632736?text=Bonjour%20Phoenix%20Photographie%2C%20je%20voudrais%20r%C3%A9server%20une%20date%20pour%20mon%20mariage">Réserver ma date</a>
+    </div>
+  </div>
+</section>
+
+<section class="offrir" id="offrir">
+  <div class="wrap offrir-in">
+    <div class="rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Offrez un shooting photo</h2>
+      <p>Un portrait, une séance en couple ou en famille : un cadeau qui se garde longtemps, bien après les fêtes.</p>
+      <div class="idees">
+        <div class="idee"><h3>Un bon cadeau shooting</h3><p>Demandez votre bon cadeau par WhatsApp, Phoenix Photographie vous accompagne pour composer la séance.</p></div>
+        <div class="idee"><h3>Des photos de famille pour les fêtes</h3><p>Toute la famille réunie : le plus beau souvenir de l'année, en couleur ou en noir et blanc.</p></div>
+      </div>
+      <a class="btn btn-or" href="https://wa.me/262693632736?text=Bonjour%20Phoenix%20Photographie%2C%20je%20voudrais%20offrir%20un%20shooting%20photo%20pour%20No%C3%ABl%20%28bon%20cadeau%29">Offrir un shooting</a>
+    </div>
+    <div class="rv">
+      <div class="bon"><img src="img/logo-phoenix.webp" alt=""><small>Bon cadeau</small><span class="script">Un shooting photo</span><small>Phoenix Photographie · La Réunion</small></div>
+      <p class="houx">✦ Proposition de bon cadeau, à imaginer ensemble.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact">
+  <div class="contact-in">
+    <div class="infos rv">
+      <p class="eyebrow">Contact</p>
+      <h2>Parlons de votre histoire</h2>
+      <p><b>Téléphone &amp; WhatsApp</b> · <a href="tel:+262693632736">0693 63 27 36</a></p>
+      <p><b>E-mail</b> · <a href="mailto:jonathanaraye90@gmail.com">jonathanaraye90@gmail.com</a></p>
+      <p><b>Zone</b> · La Réunion</p>
+      <div class="ctas" style="margin-top:1.6rem">
+        <a class="btn btn-or" href="https://wa.me/262693632736?text=Bonjour%20Phoenix%20Photographie%2C%20je%20voudrais%20des%20informations%20pour%20un%20reportage%20photo">WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262693632736">Appeler</a>
+      </div>
+      <div class="ctas" style="margin-top:.8rem">
+        <a class="btn btn-line" href="https://www.facebook.com/829154686940591">Facebook</a>
+        <a class="btn btn-line" href="https://www.instagram.com/phoenix_photographie/">Instagram</a>
+      </div>
+    </div>
+    <div class="signature rv"><img src="img/logo-phoenix.webp" alt="Le phénix doré de Phoenix Photographie" loading="lazy"><p class="script">Jonathan Araye</p><p style="color:var(--doux);font-size:.9rem">Photographe événementiel</p></div>
+  </div>
+</section>
+
+<footer>Phoenix Photographie · Mariages, portraits, mode, shootings privés et événements · La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Phoenix Photographie.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* braises dorées et étincelles froides qui s'élèvent, comme un phénix */
+const c=document.getElementById('braises'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const cols=['232,204,134','201,162,74','194,102,43','159,184,214'];
+function nv(p,top){p.x=Math.random()*W;p.y=top?Math.random()*H:H+10;p.r=.8+Math.random()*2.2;p.v=.25+Math.random()*.6;p.a=Math.random()*6.28;p.c=cols[Math.floor(Math.random()*4)];p.o=.25+Math.random()*.45;return p}
+for(let i=0;i<32;i++)P.push(nv({},true));
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.4;if(p.y<-10)nv(p,false);
+const fl=p.o*(.7+.3*Math.sin(p.a*3));x.beginPath();x.fillStyle='rgba('+p.c+','+fl+')';x.shadowColor='rgba('+p.c+',.9)';x.shadowBlur=8;x.arc(p.x,p.y,p.r,0,6.28);x.fill()}
+requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Phoenix Photographie" defer></script>
+</body>
+</html>
