@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ferme de l'Est · Spécialités culinaires de la Réunion, Saint-Benoît</title>
+<meta name="description" content="Ferme de l'Est, Saint-Benoît (La Réunion) : achards, confitures, pâtes de piments et plats cuisinés créés à la ferme par Suzie. Livraison dans le Nord-Est, envoi Colissimo. 0692 74 34 46.">
+<meta property="og:title" content="Ferme de l'Est · Spécialités culinaires de la Réunion">
+<meta property="og:description" content="Achards, confitures, pâtes de piments et plats cuisinés, transformés avec passion à Saint-Benoît.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/ferme-de-l-est-saint-benoit/img/etal-bocaux.webp">
+<meta property="og:url" content="https://maquettes.atma-digital.re/ferme-de-l-est-saint-benoit/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito+Sans:wght@300;400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--vert:#163a0e;--vert-m:#2f6a22;--feuille:#6fa53a;--rouge:#c8202f;--rouge-f:#9b1622;--curcuma:#e8a127;--orange:#e07a2b;--creme:#fbf5e6;--lin:#f3ead3;--txt:#2a2a1f;--doux:#6d6a58}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial;font-weight:400;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:700;color:var(--vert);line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.3rem 0 1.1rem}
+h3{font-size:1.25rem;font-weight:500}
+.main-ecrite{font-family:'Caveat',cursive;font-weight:600;color:var(--orange);line-height:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--rouge);font-weight:700}
+.wrap{width:min(1120px,90vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--vert);color:#d9e8c4;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#fff}
+canvas#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;letter-spacing:.03em;font-size:.95rem;transition:.3s}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-main{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -14px rgba(200,32,47,.9);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{background:var(--rouge-f)}
+@keyframes souffle{50%{box-shadow:0 14px 40px -6px rgba(200,32,47,.65)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.14)}
+.btn-dark{border:1.5px solid var(--vert);color:var(--vert)}
+.btn-dark:hover{background:var(--lin)}
+.ctas{display:flex;gap:.7rem;flex-wrap:wrap}
+/* madras : le tissu des couvercles */
+.madras{height:14px;background:
+ repeating-linear-gradient(90deg,rgba(255,255,255,.0) 0 22px,rgba(255,255,255,.35) 22px 25px,rgba(0,0,0,0) 25px 40px,rgba(22,58,14,.55) 40px 46px),
+ repeating-linear-gradient(0deg,rgba(232,161,39,.0) 0 5px,rgba(232,161,39,.75) 5px 9px),
+ var(--rouge)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--vert);color:var(--creme)}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:center 55%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,58,14,.35) 0%,rgba(22,58,14,.25) 35%,rgba(16,40,10,.96) 88%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.logo{width:74px;height:74px;border-radius:16px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6);margin-bottom:1.2rem;border:1px solid rgba(255,255,255,.25)}
+.hero .eyebrow{color:var(--curcuma)}
+.hero h1{color:#fff;font-size:clamp(3.2rem,13vw,7rem);letter-spacing:-.01em;margin:.3rem 0 .2rem}
+.hero .main-ecrite{font-size:clamp(1.7rem,6vw,2.5rem);color:var(--curcuma)}
+.hero .lead{font-size:1.12rem;max-width:34rem;margin:1.1rem 0 1.8rem;color:#f4f0e2;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero .adr{margin-top:1.4rem;font-size:.86rem;color:#d9e8c4}
+.credit{position:absolute;right:.8rem;top:3.2rem;z-index:3;font-size:.68rem;color:rgba(255,255,255,.75);background:rgba(0,0,0,.25);padding:.15rem .5rem;border-radius:99px}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .3s forwards}
+.apparait.d2{animation-delay:.65s}.apparait.d3{animation-delay:1s}
+@keyframes monte{to{opacity:1;transform:none}}
+/* bandeau */
+.bande{background:var(--vert);color:#fff;overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.2rem}
+.track{display:inline-block;animation:defile 38s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-style:normal;font-size:.8rem;color:var(--curcuma)}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* histoire */
+.histoire{background:var(--creme)}
+.duo{display:grid;gap:2.4rem;align-items:center}
+.histoire p{margin-bottom:1rem;color:#3f3d30}
+.citation{border-left:4px solid var(--curcuma);padding:.4rem 0 .4rem 1.1rem;font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;color:var(--vert);margin:1.6rem 0}
+.citation small{display:block;font-family:'Nunito Sans',sans-serif;font-style:normal;font-size:.78rem;color:var(--doux);margin-top:.4rem}
+.chiffres{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.chiffres div{background:var(--lin);border-radius:16px;padding:1rem}
+.chiffres b{display:block;font-family:'Fraunces',serif;color:var(--rouge);font-size:1.2rem;line-height:1.2}
+.chiffres span{font-size:.85rem;color:var(--doux)}
+.illu{background:var(--lin);border-radius:28px;padding:1.5rem;text-align:center}
+.illu svg{width:100%;max-width:340px;margin:auto;height:auto}
+figcaption{font-size:.78rem;color:var(--doux);margin-top:.6rem;text-align:center}
+/* étagère */
+.etagere{background:linear-gradient(180deg,var(--lin),var(--creme))}
+.intro{max-width:40rem;color:#4a4838}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.bocal{flex:0 0 min(72vw,280px);scroll-snap-align:center;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(22,58,14,.55);transition:transform .4s}
+.bocal:hover{transform:translateY(-6px) rotate(-.6deg)}
+.bocal img{aspect-ratio:1;object-fit:cover;width:100%}
+.bocal div{padding:.9rem 1.1rem 1.2rem;border-top:6px solid var(--curcuma)}
+.bocal.rouge div{border-top-color:var(--rouge)}
+.bocal h3{font-size:1.12rem;color:var(--vert)}
+.bocal p{font-size:.88rem;color:var(--doux);line-height:1.5;margin-top:.2rem}
+.glisse{font-size:.8rem;color:var(--doux);text-align:right}
+.plus{margin-top:1.4rem;font-size:.95rem;color:#4a4838}
+.plus b{color:var(--vert)}
+/* plats */
+.plats{background:var(--vert);color:#eef3e4}
+.plats h2{color:#fff}
+.plats .eyebrow{color:var(--curcuma)}
+.plats .intro{color:#d9e8c4}
+.grille{display:grid;gap:1rem;margin-top:2rem}
+.plat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.3rem 1.3rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;transition:.35s}
+.plat:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.plat svg{flex:none;width:42px;height:42px}
+.plat h3{color:#fff;font-size:1.15rem}
+.plat p{font-size:.9rem;color:#cfdcbe;line-height:1.55;margin-top:.15rem}
+/* saison */
+.saison{background:var(--creme)}
+.posts{display:grid;gap:1.1rem;margin-top:1.8rem}
+.post{background:#fff;border-radius:22px;padding:1.5rem;box-shadow:0 18px 40px -30px rgba(22,58,14,.6);position:relative;overflow:hidden}
+.post::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--curcuma)}
+.post.r::before{background:var(--rouge)}.post.v::before{background:var(--feuille)}
+.post .tag{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--doux);font-weight:700}
+.post blockquote{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--vert);margin:.6rem 0 .5rem;line-height:1.45}
+.post small{font-size:.78rem;color:var(--doux)}
+/* livraison */
+.livraison{background:var(--lin)}
+.carte-liv{display:grid;gap:1rem;margin-top:1.8rem}
+.liv{background:#fff;border-radius:20px;padding:1.3rem;display:flex;gap:1rem;align-items:flex-start}
+.liv .pic{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--creme)}
+.liv .pic svg{width:24px;height:24px}
+.liv h3{font-size:1.1rem;color:var(--vert)}
+.liv p{font-size:.92rem;color:#4a4838;line-height:1.55}
+/* noël */
+.noel{background:radial-gradient(circle at 80% 10%,#2c5a1f 0,var(--vert) 55%);color:#f3efe0;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--curcuma)}
+.noel .boite{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(232,161,39,.45);border-radius:28px;padding:2rem 1.4rem;margin-top:1.4rem}
+.noel ul{list-style:none;margin:1.2rem 0 1.6rem;display:grid;gap:.6rem}
+.noel li{padding-left:1.7rem;position:relative}
+.noel li::before{content:"";position:absolute;left:0;top:.45em;width:.85rem;height:.85rem;border-radius:3px;background:var(--rouge);box-shadow:inset 0 0 0 2px rgba(255,255,255,.35)}
+.noel .note{font-size:.8rem;color:#c6d4b4;margin-top:1rem}
+.guirlande{position:absolute;top:-6px;left:0;right:0;height:30px;pointer-events:none}
+.guirlande circle{animation:luit 2.6s ease-in-out infinite}
+.guirlande circle:nth-child(2n){animation-delay:1.3s}
+@keyframes luit{50%{opacity:.35}}
+/* contact */
+.contact{background:var(--creme)}
+.contact p{margin-bottom:.5rem}
+.contact b{color:var(--vert)}
+.contact .duo figure img{border-radius:24px;box-shadow:0 22px 50px -30px rgba(22,58,14,.8)}
+footer{background:var(--vert);color:#cfdcbe;text-align:center;font-size:.8rem;padding:2rem 1.2rem 2.4rem;line-height:1.6}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:820px){
+ .duo{grid-template-columns:1.1fr .9fr;gap:4rem}
+ .grille{grid-template-columns:1fr 1fr}
+ .posts{grid-template-columns:repeat(3,1fr)}
+ .carte-liv{grid-template-columns:repeat(3,1fr)}
+ .noel .boite{padding:3rem}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.apparait{opacity:1;transform:none}canvas#feuilles{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ferme de l'Est</div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="fond"><img src="img/etal-bocaux.webp" alt="L'étal de la Ferme de l'Est : bocaux d'achards, de confitures et de rougails sous les arbres" fetchpriority="high"></div>
+  <span class="credit">Photo : fiche Ferme de l'Est, Office de tourisme Côté Est</span>
+  <div class="wrap hero-in">
+    <img class="logo apparait" src="img/logo.webp" alt="Logo Ferme de l'Est" width="74" height="74">
+    <p class="eyebrow apparait">Saint-Benoît · Est de La Réunion</p>
+    <h1 class="apparait d2">Ferme de l'Est</h1>
+    <p class="main-ecrite apparait d2">Spécialités culinaires de la Réunion</p>
+    <p class="lead apparait d3">Achards, confitures, pâtes de piments et plats cuisinés : la Ferme de l'Est transforme avec passion les produits de l'Est de l'île, bocal après bocal.</p>
+    <div class="ctas apparait d3">
+      <a class="btn btn-main" href="https://wa.me/262692743446?text=Bonjour%20Suzie%2C%20je%20voudrais%20commander%20des%20produits%20de%20la%20Ferme%20de%20l%27Est"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>Commander sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692743446">0692 74 34 46</a>
+    </div>
+    <p class="adr apparait d3">57ter chemin Bassin Bleu, Sainte-Anne · Livraison de Saint-Denis à Sainte-Rose · Envoi Colissimo</p>
+  </div>
+</header>
+<div class="madras" aria-hidden="true"></div>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Achards divers</span><span>Plats cuisinés</span><span>Confitures variées</span><span>Confiseries</span><span>Pâtes de piments</span><span>Produits du terroir</span>
+  <span>Achards divers</span><span>Plats cuisinés</span><span>Confitures variées</span><span>Confiseries</span><span>Pâtes de piments</span><span>Produits du terroir</span>
+</div></div>
+
+<section class="histoire" id="histoire">
+  <div class="wrap duo">
+    <div class="rv">
+      <p class="eyebrow">L'histoire</p>
+      <h2>Suzie, et toute la générosité de l'Est</h2>
+      <p>Née à Saint-André, issue d'une famille d'artisans, Suzie a donné à sa ferme un nom qui rend hommage aux <b>agriculteurs de l'Est de La Réunion</b>, ceux qui lui confient les fruits, les légumes et les épices de ses recettes.</p>
+      <p>De ses cuisines sortent des confitures de fruits tropicaux, des achards traditionnels, des rougails, des piments et des plats créoles revisités avec sa touche à elle : ananas, papaye, mangue, goyavier ou letchi, relevés de gingembre, de piment ou de poivre sauvage.</p>
+      <blockquote class="citation">« Une belle aventure que connaisse nos savoirs-faire »<small>Ferme de l'Est, sur sa page Facebook</small></blockquote>
+      <div class="chiffres">
+        <div><b>Salon de l'Agriculture</b><span>Paris, édition 2026</span></div>
+        <div><b>Circuits courts</b><span>avec les producteurs de l'Est</span></div>
+        <div><b>Français · Créole · English</b><span>on vous accueille dans les trois</span></div>
+        <div><b>Fête du Vacoa</b><span>fidèle au rendez-vous de Saint-Philippe</span></div>
+      </div>
+    </div>
+    <figure class="illu rv">
+      <svg viewBox="0 0 320 300" role="img" aria-label="Illustration : un bocal coiffé de tissu madras, entouré de feuilles et d'un ananas">
+        <defs><pattern id="mad" width="22" height="22" patternUnits="userSpaceOnUse"><rect width="22" height="22" fill="#c8202f"/><rect x="0" y="8" width="22" height="5" fill="#e8a127" opacity=".8"/><rect x="9" y="0" width="4" height="22" fill="#163a0e" opacity=".55"/><rect x="16" y="0" width="2" height="22" fill="#fff" opacity=".4"/></pattern></defs>
+        <ellipse cx="160" cy="268" rx="120" ry="14" fill="#163a0e" opacity=".12"/>
+        <g fill="#6fa53a"><path d="M58 250c-30-40-20-95 18-120-4 40 4 80-18 120Z"/><path d="M262 250c30-40 20-95-18-120 4 40-4 80 18 120Z" fill="#2f6a22"/></g>
+        <g transform="translate(232 120)"><ellipse cx="0" cy="70" rx="30" ry="42" fill="#e8a127"/><path d="M-22 50l44 40M-22 80l44-40M-26 66l52 0" stroke="#c97a14" stroke-width="2" opacity=".6"/><path d="M0 28c-6-24-20-30-26-34 14 2 22 8 26 18 2-14 10-22 22-26-8 10-12 24-10 42Z" fill="#2f6a22"/></g>
+        <rect x="104" y="112" width="112" height="150" rx="22" fill="#f8efd8" stroke="#163a0e" stroke-opacity=".18"/>
+        <rect x="110" y="150" width="100" height="106" rx="16" fill="#e0a02c"/>
+        <g fill="#c06f12" opacity=".55"><circle cx="128" cy="180" r="5"/><circle cx="170" cy="200" r="6"/><circle cx="150" cy="230" r="4"/><circle cx="192" cy="170" r="4"/><circle cx="185" cy="236" r="5"/></g>
+        <rect x="122" y="176" width="76" height="46" rx="6" fill="#fff"/>
+        <text x="160" y="196" text-anchor="middle" font-family="Caveat,cursive" font-size="17" fill="#163a0e">Ferme de l'Est</text>
+        <text x="160" y="213" text-anchor="middle" font-family="Nunito Sans,sans-serif" font-size="9" fill="#c8202f" letter-spacing="1">ACHARD</text>
+        <path d="M92 116c10-22 126-22 136 0l-6 18c-14 10-110 10-124 0Z" fill="url(#mad)"/>
+        <path d="M100 128c20 8 100 8 120 0" stroke="#e8a127" stroke-width="3" fill="none"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="etagere" id="achards">
+  <div class="wrap">
+    <p class="eyebrow rv">L'étagère salée</p>
+    <h2 class="rv">Les achards de la Ferme</h2>
+    <p class="intro rv">Fraîcheur, croquant et caractère : les accompagnements incontournables de la table créole, préparés à Saint-Benoît et coiffés de leur petit tissu.</p>
+    <div class="rail rv" tabindex="0" aria-label="Les achards, faites glisser">
+      <article class="bocal"><img src="img/achard-palmiste.webp" alt="Bocal d'achard palmiste de la Ferme de l'Est" loading="lazy"><div><h3>Achard palmiste</h3><p>« Les achards de palmistes 😁 », la star d'une de ses publications.</p></div></article>
+      <article class="bocal rouge"><img src="img/achard-baba-figue.webp" alt="Bocal d'achard baba-figue de la Ferme de l'Est" loading="lazy"><div><h3>Achard baba-figue</h3><p>La fleur de bananier, en achard.</p></div></article>
+      <article class="bocal"><img src="img/achard-bilimbis.webp" alt="Bocal d'achard bilimbis devant une grappe de bilimbis" loading="lazy"><div><h3>Achard bilimbis</h3><p>Le petit fruit acidulé du jardin créole.</p></div></article>
+      <article class="bocal rouge"><img src="img/achard-mangue-verte.webp" alt="Bocal d'achard mangue verte coiffé de madras" loading="lazy"><div><h3>Achard mangue verte</h3><p>Coiffé de son madras.</p></div></article>
+      <article class="bocal"><img src="img/achard-choux-coco.webp" alt="Bocal d'achard choux de coco de la Ferme de l'Est" loading="lazy"><div><h3>Achard choux de coco</h3><p>Une recette créole artisanale.</p></div></article>
+    </div>
+    <p class="glisse">faites glisser →</p>
+    <p class="plus rv">Et aussi : <b>achard de légumes</b>, <b>achard p'tit jacques</b>, <b>achard citron</b>, <b>achard chouchou</b>, <b>rougail dakatine</b>, <b>rougail bringelle à l'ancienne</b>, <b>piments à la pâte rouge</b> à l'ananas, au gingembre ou au citron.</p>
+  </div>
+</section>
+
+<section class="etagere" id="confitures" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rv">L'étagère sucrée</p>
+    <h2 class="rv">Les confitures de Suzie</h2>
+    <p class="intro rv">Des fruits de l'île aux parfums intenses, associés avec audace : piment, gingembre, vanille, poivre sauvage.</p>
+    <div class="rail rv" tabindex="0" aria-label="Les confitures, faites glisser">
+      <article class="bocal rouge"><img src="img/confiture-ananas-piment.webp" alt="Confiture ananas au piment, couvercle en tissu rouge étoilé" loading="lazy"><div><h3>Ananas au piment</h3><p>Douce et relevée à la fois.</p></div></article>
+      <article class="bocal"><img src="img/confiture-papaye-vanille.webp" alt="Confiture papaye vanille de la Ferme de l'Est" loading="lazy"><div><h3>Papaye vanille</h3><p>La papaye, parfumée à la vanille.</p></div></article>
+      <article class="bocal rouge"><img src="img/confiture-chouchou-citrouille.webp" alt="Confiture chouchou citrouille au poivre sauvage" loading="lazy"><div><h3>Chouchou citrouille au poivre sauvage</h3><p>Une association signée Ferme de l'Est.</p></div></article>
+      <article class="bocal"><img src="img/confiture-letchis-gingembre.webp" alt="Confiture letchis gingembre" loading="lazy"><div><h3>Letchis gingembre</h3><p>Le letchi, réveillé au gingembre.</p></div></article>
+      <article class="bocal rouge"><img src="img/confiture-mangue-letchi.webp" alt="Confiture mangue letchi" loading="lazy"><div><h3>Mangue letchi</h3><p>Deux fruits de l'été réunionnais.</p></div></article>
+      <article class="bocal"><img src="img/confiture-banane-pitaya.webp" alt="Confiture banane pitaya" loading="lazy"><div><h3>Banane pitaya</h3><p>La banane et le fruit du dragon.</p></div></article>
+    </div>
+    <p class="glisse">faites glisser →</p>
+    <p class="plus rv">Et encore : <b>ananas Victoria</b>, <b>banane flambée</b>, <b>ananas tangor</b>, <b>ananas coco</b>, <b>ananas au poivre sauvage</b>, <b>banane goyavier</b>, <b>papaye ananas</b>, <b>papaye passion</b>, des coulis et des crèmes.</p>
+  </div>
+</section>
+
+<section class="plats" id="plats">
+  <div class="wrap">
+    <p class="eyebrow rv">Plats cuisinés &amp; terrines</p>
+    <h2 class="rv">La cuisine créole, revisitée</h2>
+    <p class="intro rv">À côté des bocaux colorés, Suzie prépare des spécialités qui racontent l'île et ses métissages.</p>
+    <div class="grille">
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="32" rx="18" ry="8" fill="#e8a127"/><path d="M8 30c0-10 32-10 32 0" fill="#c8202f"/><path d="M16 14c2 3-2 5 0 8M24 12c2 3-2 5 0 8M32 14c2 3-2 5 0 8" stroke="#d9e8c4" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><h3>Coq massalé</h3><p>Savoureux et relevé, en bocal.</p></div></div>
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><ellipse cx="24" cy="32" rx="18" ry="8" fill="#6fa53a"/><path d="M8 30c0-10 32-10 32 0" fill="#e07a2b"/><circle cx="18" cy="26" r="3" fill="#9b1622"/><circle cx="28" cy="25" r="3" fill="#9b1622"/></svg><div><h3>Rougail saucisse</h3><p>Le plat incontournable de l'île.</p></div></div>
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 34c4-14 24-14 28 0Z" fill="#8a5a2b"/><path d="M14 20c6-8 14-8 20 0" stroke="#e8a127" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M18 14c2-3 4-3 6 0M26 12c2-3 4-3 6 0" stroke="#d9e8c4" stroke-width="2" fill="none" stroke-linecap="round"/></svg><div><h3>Ti'jacques boucané</h3><p>Une vraie découverte culinaire.</p></div></div>
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="18" width="28" height="18" rx="6" fill="#f3ead3"/><path d="M14 18c4-8 16-8 20 0" fill="#e8a127"/><path d="M22 10l2 6 2-6" stroke="#2f2a10" stroke-width="2" fill="none"/></svg><div><h3>Foie gras vanille Bourbon ou goyavier</h3><p>Le savoir-faire français marié aux arômes de l'île.</p></div></div>
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="14" width="24" height="24" rx="6" fill="#f3ead3"/><rect x="12" y="12" width="24" height="7" rx="3" fill="#c8202f"/><path d="M16 28h16M16 32h12" stroke="#e07a2b" stroke-width="2.5" stroke-linecap="round"/></svg><div><h3>Rillettes</h3><p>À tartiner, pour l'apéritif comme pour le pique-nique.</p></div></div>
+      <div class="plat rv"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8c8 6 10 20 0 32-10-12-8-26 0-32Z" fill="#c8202f"/><path d="M24 8c1-3 4-4 6-3" stroke="#6fa53a" stroke-width="3" fill="none" stroke-linecap="round"/></svg><div><h3>Pâtes de piments</h3><p>Pour donner du caractère à chaque assiette.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="saison" id="actus">
+  <div class="wrap">
+    <p class="eyebrow rv">Sur la page de la Ferme</p>
+    <h2 class="rv">Au fil des saisons</h2>
+    <div class="posts">
+      <article class="post rv"><span class="tag">La saison des agrumes</span><blockquote>« La saison des agrumes bat son plein, seul ou avec de subtils mélanges d'autres fruits, pour un petit déjeuner ensoleillé 😊 »</blockquote><small>Publication Facebook de la Ferme de l'Est</small></article>
+      <article class="post r rv"><span class="tag">Fête du Vacoa · Saint-Philippe</span><blockquote>« Une variété de belles curiosités gustatives pour réveiller vos papilles, venez nombreux découvrir mes produits phares de cette année »</blockquote><small>Publication Facebook de la Ferme de l'Est</small></article>
+      <article class="post v rv"><span class="tag">Les achards</span><blockquote>« Les achards de palmistes 😁 »</blockquote><small>Publication Facebook de la Ferme de l'Est</small></article>
+    </div>
+  </div>
+</section>
+
+<section class="livraison" id="livraison">
+  <div class="wrap">
+    <p class="eyebrow rv">Recevoir les bocaux</p>
+    <h2 class="rv">Chez vous, dans l'Est et au-delà</h2>
+    <div class="carte-liv">
+      <div class="liv rv"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#163a0e" stroke-width="2" stroke-linecap="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></span><div><h3>Livraison Nord-Est</h3><p>De Saint-Denis à Sainte-Rose : commandez, la Ferme vous livre.</p></div></div>
+      <div class="liv rv"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8202f" stroke-width="2" stroke-linecap="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg></span><div><h3>Envoi Colissimo</h3><p>Vos saveurs de l'Est voyagent partout où vous êtes.</p></div></div>
+      <div class="liv rv"><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="#e07a2b" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><div><h3>À l'Office de tourisme</h3><p>Retrouvez les produits à l'Office de tourisme Côté Est de Sainte-Anne, et sur les marchés et événements de l'île.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <svg class="guirlande" viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 6 Q50 26 100 6 T200 6 T300 6 T400 6" stroke="#6fa53a" stroke-width="1.5" fill="none"/><circle cx="50" cy="16" r="3.2" fill="#e8a127"/><circle cx="100" cy="6" r="3" fill="#c8202f"/><circle cx="150" cy="16" r="3.2" fill="#e8a127"/><circle cx="200" cy="6" r="3" fill="#c8202f"/><circle cx="250" cy="16" r="3.2" fill="#e8a127"/><circle cx="300" cy="6" r="3" fill="#c8202f"/><circle cx="350" cy="16" r="3.2" fill="#e8a127"/></svg>
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Un panier de l'Est sous le sapin</h2>
+    <div class="boite rv">
+      <p>Pour les gourmands de la famille, les collègues ou les proches en Métropole : composez avec Suzie une sélection de bocaux à offrir, du sucré au pimenté.</p>
+      <ul>
+        <li>Confitures de fruits de l'île : ananas, papaye, letchi, banane…</li>
+        <li>Achards et pâtes de piments pour les amateurs de caractère</li>
+        <li>Foie gras vanille ou goyavier et rillettes pour la table des fêtes</li>
+        <li>Livraison dans le Nord-Est ou envoi Colissimo pour faire voyager vos cadeaux</li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692743446?text=Bonjour%20Suzie%2C%20je%20voudrais%20commander%20des%20produits%20%C3%A0%20offrir%20pour%20No%C3%ABl">Préparer ma commande de Noël</a>
+        <a class="btn btn-line" href="tel:+262692743446">Appeler la Ferme</a>
+      </div>
+      <p class="note">Composez votre sélection directement avec Suzie, selon les produits du moment.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap duo">
+    <div class="rv">
+      <p class="eyebrow">Contact</p>
+      <h2>Passer commande</h2>
+      <p><b>Adresse</b> · 57ter chemin Bassin Bleu, Sainte-Anne, 97437 Saint-Benoît</p>
+      <p><b>Téléphone</b> · <a href="tel:+262692743446">0692 74 34 46</a></p>
+      <p><b>E-mail</b> · <a href="mailto:suzie.fermedelest@gmail.com">suzie.fermedelest@gmail.com</a></p>
+      <p><b>Livraison</b> · de Saint-Denis à Sainte-Rose, envoi Colissimo</p>
+      <p><b>Langues</b> · français, créole, anglais</p>
+      <div class="ctas" style="margin-top:1.5rem">
+        <a class="btn btn-main" href="https://wa.me/262692743446?text=Bonjour%20Suzie%2C%20je%20voudrais%20commander%20des%20produits%20de%20la%20Ferme%20de%20l%27Est">WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692743446">Appeler</a>
+        <a class="btn btn-dark" href="https://www.facebook.com/464147627058999">Facebook</a>
+        <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=57ter%20chemin%20Bassin%20Bleu%20Sainte-Anne%2097437%20Saint-Beno%C3%AEt">Itinéraire</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/achard-bilimbis.webp" alt="Un bocal d'achard bilimbis de la Ferme de l'Est devant une grappe de bilimbis" loading="lazy"><figcaption>L'achard bilimbis, avec ses bilimbis</figcaption></figure>
+  </div>
+</section>
+
+<footer>Ferme de l'Est · Spécialités culinaires de la Réunion · Saint-Benoît, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Ferme de l'Est.</footer>
+</main>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* feuilles qui tombent doucement + grains d'épices dorés */
+const c=document.getElementById('feuilles'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const cols=['#6fa53a','#2f6a22','#8fbf4f'];
+for(let i=0;i<26;i++)P.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*5+5,v:Math.random()*.35+.15,a:Math.random()*6.28,r:Math.random()*6.28,vr:(Math.random()-.5)*.02,f:i<14,c:cols[i%3]});
+function feuille(p){x.save();x.translate(p.x,p.y);x.rotate(p.r);x.fillStyle=p.c;x.beginPath();x.moveTo(0,-p.s);x.quadraticCurveTo(p.s*.75,0,0,p.s);x.quadraticCurveTo(-p.s*.75,0,0,-p.s);x.fill();x.strokeStyle='rgba(255,255,255,.35)';x.lineWidth=.8;x.beginPath();x.moveTo(0,-p.s*.8);x.lineTo(0,p.s*.8);x.stroke();x.restore()}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.v;p.a+=.012;p.x+=Math.sin(p.a)*.45;p.r+=p.vr;if(p.y>H+14){p.y=-14;p.x=Math.random()*W}
+ if(p.f){x.globalAlpha=.32;feuille(p)}else{x.globalAlpha=.45+Math.sin(p.a*3)*.2;x.fillStyle='#e8a127';x.beginPath();x.arc(p.x,p.y,p.s*.22,0,6.28);x.fill()}}
+x.globalAlpha=1;requestAnimationFrame(f)}
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches)f();
+</script>
+<script src="/outils/cta.js" data-nom="Ferme de l'Est" defer></script>
+</body>
+</html>
