@@ -27,26 +27,26 @@ var CONFIG = {
     });
   }
 
-  // Vidéo de visite : la section reste masquée tant que assets/lotus-visite.mp4 est absent
-  var vs = d.getElementById('video');
-  if (vs) {
-    var vid = vs.querySelector('video'), src = vid && vid.querySelector('source');
-    var drop = function () { if (vs.parentNode) vs.parentNode.removeChild(vs); };
-    if (!src || !window.fetch) drop();
-    else {
-      src.addEventListener('error', drop);
-      fetch(src.getAttribute('src'), { method: 'HEAD' }).then(function (r) {
-        var ct = r.headers.get('content-type') || '';
-        if (r.ok && /video|octet-stream/.test(ct)) vs.hidden = false; else drop();
-      }).catch(drop);
-    }
-  }
+  // Vidéo de visite : preload="none" + affiche (poster) chargée à l'approche de la section (lazy-load)
+  [].forEach.call(d.querySelectorAll('video[data-poster]'), function (v) {
+    var load = function () { v.poster = v.getAttribute('data-poster'); v.removeAttribute('data-poster'); };
+    if (!('IntersectionObserver' in window)) return load();
+    var io = new IntersectionObserver(function (en) {
+      if (en[0].isIntersecting) { load(); io.disconnect(); }
+    }, { rootMargin: '400px 0px' });
+    io.observe(v);
+  });
 
-  // Barre d'action mobile : visible après le hero
-  var bar = d.querySelector('.sticky'), hero = d.querySelector('.hero');
-  if (bar && hero && 'IntersectionObserver' in window) {
-    bar.classList.add('off');
-    new IntersectionObserver(function (en) { bar.classList.toggle('off', en[0].isIntersecting); }).observe(hero);
+  // Barre d'action mobile (position sticky, placée avant le pied de page) : masquée tant que le hero de l'accueil est visible
+  var bar = d.querySelector('.sticky'), watch = [d.querySelector('.hero')].filter(Boolean);
+  if (bar && watch.length && 'IntersectionObserver' in window) {
+    var seen = [];
+    if (d.querySelector('.hero')) bar.classList.add('off');
+    var io2 = new IntersectionObserver(function (en) {
+      en.forEach(function (e) { seen[watch.indexOf(e.target)] = e.isIntersecting; });
+      bar.classList.toggle('off', seen.indexOf(true) > -1);
+    });
+    watch.forEach(function (el) { io2.observe(el); });
   }
 
   // Lightbox galerie (clavier + tactile)
