@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lévazion · Box apéro, box brunch &amp; buffet sur mesure, La Possession</title>
+<meta name="description" content="Lévazion, traiteur à La Possession : box apéro et box brunchs 100 % fait maison sur commande, buffet sur mesure pour tous vos événements. Commandes au 0692 20 03 93.">
+<meta property="og:title" content="Lévazion · Quand la gourmandise rencontre l'élégance">
+<meta property="og:description" content="Box apéro, box brunchs 100 % fait maison sur commande et buffet sur mesure pour tous vos événements, à La Possession.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/levazion-la-possession/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/levazion-la-possession/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Parisienne&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1c1915;--brun:#2b251f;--or:#c9a24a;--or-c:#e6c877;--miel:#f2c14e;--rose:#d6527f;--rose-c:#f7d6e0;--feuille:#2f5d3a;--creme:#fbf6ee;--lin:#f3ebde;--txt:#2b251f;--doux:#6e6256}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.08}
+h2{font-size:clamp(2.2rem,8.6vw,3.6rem);margin:.3rem 0 1rem}
+h3{font-size:1.55rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.eyebrow{font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;color:var(--or);font-weight:600}
+.script{font-family:'Parisienne',cursive;font-weight:400}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:var(--or-c);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(201,162,74,.4)}
+.ribbon b{color:#fff;font-weight:600}
+canvas#petales{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1rem;letter-spacing:.04em;transition:.3s;line-height:1.1;border:0;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:linear-gradient(135deg,var(--or-c),var(--or));color:var(--nuit);box-shadow:0 12px 28px -12px rgba(201,162,74,.95);animation:souffle 3.6s ease-in-out infinite}
+.btn-main:hover{transform:translateY(-2px);filter:brightness(1.06)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -4px rgba(242,193,78,.8)}}
+.btn-line{border:1.5px solid var(--or-c);color:#fff;background:rgba(28,25,21,.25)}
+.btn-line:hover{background:rgba(201,162,74,.18)}
+.btn-rose{background:var(--rose);color:#fff}
+.btn-rose:hover{background:#bf3f6b}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,900px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.15) translate(-2%,-1.5%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,25,21,.6) 0%,rgba(28,25,21,.08) 22%,rgba(28,25,21,.55) 45%,rgba(28,25,21,.92) 64%,rgba(28,25,21,.97) 100%)}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.hero .titre{opacity:0;transform:translateY(24px);animation:monte 1.2s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .accroche{opacity:0;transform:translateY(24px);animation:monte 1.2s .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.nom{font-family:'Parisienne',cursive;color:#fff;font-size:clamp(3.6rem,17vw,7rem);line-height:1;text-shadow:0 8px 30px rgba(0,0,0,.55)}
+.nom small{display:block;font-family:'Jost',sans-serif;font-size:max(.8rem,.15em);letter-spacing:.34em;color:var(--or-c);text-transform:uppercase;margin-top:.5rem}
+.hero h1{font-size:clamp(1.9rem,7.4vw,3rem);margin:1.3rem 0 .7rem;color:#fff;font-style:italic;font-weight:500}
+.hero h1 em{font-style:italic;color:var(--or-c)}
+.hero p.lead{max-width:34rem;font-size:1.08rem;color:#f3ead9;text-shadow:0 1px 8px rgba(0,0,0,.6);margin-bottom:1.5rem}
+.infos-vite{margin-top:1.3rem;font-size:.92rem;color:#e9dfcf;display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+.infos-vite span::before{content:"✿ ";color:var(--miel)}
+/* bandeau */
+.bandeau{background:var(--nuit);color:var(--or-c);overflow:hidden;padding:.75rem 0;border-block:1px solid rgba(201,162,74,.5)}
+.bandeau-piste{display:flex;width:max-content;animation:defile 44s linear infinite}
+.bandeau span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.45rem;padding:0 1rem;white-space:nowrap}
+.bandeau span::after{content:"✿";margin-left:2rem;color:var(--rose);font-style:normal;font-size:.9em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{background:var(--creme);overflow:hidden}
+.esprit-grille{display:grid;gap:2.4rem;align-items:center}
+.citation{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(2rem,8vw,3.1rem);line-height:1.1;color:var(--nuit)}
+.citation em{color:var(--rose);font-style:italic}
+.source{font-size:.85rem;color:var(--doux);margin-top:.6rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pastilles span{border:1px solid var(--or);color:var(--brun);font-size:.85rem;letter-spacing:.08em;padding:.35rem .9rem;border-radius:999px;text-transform:uppercase;background:#fff}
+.photo-cadre{position:relative;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(28,25,21,.6);border:6px solid #fff;outline:1px solid var(--or);transition:transform .6s}
+.photo-cadre:hover{transform:translateY(-4px)}
+.photo-cadre img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.photo-cadre figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .9rem;background:linear-gradient(transparent,rgba(28,25,21,.88));color:#fff;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;line-height:1.25}
+/* box */
+.box{background:linear-gradient(180deg,var(--brun),var(--nuit));color:var(--creme);overflow:hidden}
+.box::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 50% 0%,rgba(201,162,74,.22),transparent 70%)}
+.box .wrap{position:relative}
+.box h2{color:#fff}
+.box .intro{color:#d9cdbb;max-width:40rem}
+.fil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem .2rem 1.2rem;margin-top:.6rem;scrollbar-width:thin;scrollbar-color:var(--or) transparent}
+.carte-box{flex:0 0 min(82%,310px);scroll-snap-align:start;background:rgba(255,255,255,.05);border:1px solid rgba(201,162,74,.35);border-radius:20px;padding:1.4rem 1.25rem 1.5rem;transition:transform .4s,box-shadow .4s,border-color .4s}
+.carte-box:hover{transform:translateY(-6px);border-color:var(--or-c);box-shadow:0 26px 40px -24px rgba(201,162,74,.6)}
+.carte-box .type{font-family:'Parisienne',cursive;color:var(--or-c);font-size:1.6rem;line-height:1}
+.carte-box h3{color:#fff;margin:.35rem 0 .6rem;font-size:1.75rem}
+.carte-box ul{list-style:none;color:#e3d8c8;font-size:.96rem}
+.carte-box li{padding:.22rem 0 .22rem 1.2rem;position:relative}
+.carte-box li::before{content:"✿";position:absolute;left:0;color:var(--rose);font-size:.75em;top:.42rem}
+.glisse{font-size:.85rem;color:#b6a994}
+/* bouchees */
+.bouchees{background:var(--lin)}
+.bouchees .intro{max-width:40rem}
+.familles{display:grid;gap:1.6rem;margin-top:2rem}
+.famille h3{font-size:1.6rem;margin-bottom:.8rem;display:flex;align-items:center;gap:.6rem}
+.famille h3::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--or),transparent)}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem}
+.puces span{background:#fff;border:1px solid #e7dccb;border-radius:999px;padding:.38rem .85rem;font-size:.93rem;box-shadow:0 4px 12px -8px rgba(28,25,21,.35);transition:transform .3s,border-color .3s}
+.puces span:hover{transform:translateY(-2px) rotate(-1deg);border-color:var(--rose)}
+/* buffet */
+.buffet{background:var(--creme);overflow:hidden}
+.buffet .intro{max-width:42rem}
+.themes{display:grid;gap:1rem;margin:2rem 0}
+.theme{background:#fff;border-radius:18px;padding:1.3rem 1.3rem 1.4rem;border:1px solid #eadfcd;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s}
+.theme:hover{transform:translateY(-4px);box-shadow:0 22px 36px -24px rgba(28,25,21,.45)}
+.theme::before{content:"";position:absolute;top:0;left:0;width:5px;height:100%;background:var(--c,var(--or))}
+.theme h3{font-size:1.5rem;margin-bottom:.3rem}
+.theme p{color:var(--doux);font-size:.97rem}
+.galerie{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.5rem .2rem 1rem;scrollbar-width:thin;scrollbar-color:var(--or) transparent}
+.galerie figure{flex:0 0 min(70%,300px);scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 18px 30px -20px rgba(28,25,21,.6);transition:transform .45s}
+.galerie figure:hover{transform:translateY(-4px) rotate(-.6deg)}
+.galerie img{width:100%;aspect-ratio:1;object-fit:cover}
+.galerie figcaption{padding:.6rem .9rem .75rem;font-size:.88rem;color:var(--doux)}
+.forfait{margin-top:1.4rem;background:var(--nuit);color:#e7dccb;border-radius:18px;padding:1.4rem 1.4rem;display:grid;gap:.4rem}
+.forfait b{color:var(--or-c);font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600}
+/* noel */
+.noel{background:radial-gradient(ellipse at 50% 0%,#3a2a22,var(--nuit) 70%);color:var(--creme);overflow:hidden;text-align:center}
+.noel::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(230,200,119,.5) 1px,transparent 1.6px);background-size:46px 46px;opacity:.35;animation:scintille 6s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.15}}
+.noel .wrap{position:relative;max-width:760px}
+.noel h2{color:#fff}
+.noel h2 .script{color:var(--or-c);font-size:1.15em}
+.noel p{color:#e3d8c8;margin:0 auto 1rem;max-width:36rem}
+.noel .idees{display:grid;gap:.8rem;margin:1.8rem 0 2rem;text-align:left}
+.noel .idee{border:1px solid rgba(201,162,74,.4);border-radius:16px;padding:1rem 1.1rem;background:rgba(255,255,255,.04)}
+.noel .idee b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:#fff;font-weight:600}
+.noel .idee span{font-size:.95rem;color:#d9cdbb}
+.noel .ctas{justify-content:center}
+.guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:.8rem}
+.guirlande i{width:9px;height:9px;border-radius:50%;background:var(--or-c);box-shadow:0 0 12px var(--or-c);animation:lueur 2.4s ease-in-out infinite}
+.guirlande i:nth-child(2n){background:var(--rose);box-shadow:0 0 12px var(--rose);animation-delay:.8s}
+.guirlande i:nth-child(3n){animation-delay:1.6s}
+@keyframes lueur{50%{opacity:.35;transform:scale(.8)}}
+/* etapes */
+.etapes{background:var(--lin)}
+.pas-grille{display:grid;gap:1rem;margin-top:1.6rem;counter-reset:e}
+.etape{background:#fff;border-radius:18px;padding:1.3rem 1.3rem 1.3rem 4.3rem;position:relative;border:1px solid #eadfcd}
+.etape::before{counter-increment:e;content:counter(e);position:absolute;left:1.1rem;top:1.1rem;width:2.3rem;height:2.3rem;border-radius:50%;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--nuit);background:linear-gradient(135deg,var(--or-c),var(--or))}
+.etape h3{font-size:1.4rem;margin-bottom:.2rem}
+.etape p{color:var(--doux);font-size:.97rem}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--rose-c),#fff4e0);overflow:hidden}
+.contact-grille{display:grid;gap:2rem;align-items:start}
+.coord{display:grid;gap:.95rem;margin:1.4rem 0 1.8rem}
+.coord a{display:flex;gap:.8rem;align-items:flex-start;text-decoration:none;font-size:1rem}
+.coord svg{width:24px;height:24px;flex:none;margin-top:.2rem;color:var(--rose)}
+.coord b{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;display:block;line-height:1.1}
+.contact .btn-line{border-color:var(--nuit);color:var(--nuit);background:transparent}
+.contact .btn-line:hover{background:rgba(0,0,0,.06)}
+.mot{border-radius:24px;overflow:hidden;background:var(--nuit);color:var(--creme);box-shadow:0 30px 50px -30px rgba(28,25,21,.7)}
+.mot img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mot div{padding:1.3rem 1.4rem 1.5rem}
+.mot blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;line-height:1.25;color:#fff;border-left:3px solid var(--or);padding-left:1rem}
+.mot cite{display:block;font-style:normal;font-size:.85rem;color:#b6a994;margin-top:.5rem;font-family:'Jost',sans-serif}
+footer{background:var(--nuit);color:#b6a994;text-align:center;font-size:.85rem;padding:2.2rem 1rem 6.5rem;line-height:1.6}
+footer b{color:var(--or-c);font-weight:500}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(28,25,21,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(201,162,74,.4);transform:translateY(110%);transition:transform .45s}
+.barre.vue{transform:none}
+.barre .btn{flex:1;min-height:46px;font-size:.95rem;padding:.6rem .8rem;animation:none}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+@media(min-width:760px){
+  .esprit-grille{grid-template-columns:1.15fr 1fr}
+  .familles{grid-template-columns:1fr 1fr}
+  .famille.large{grid-column:1/-1}
+  .themes{grid-template-columns:1fr 1fr}
+  .noel .idees{grid-template-columns:1fr 1fr 1fr}
+  .pas-grille{grid-template-columns:1fr 1fr 1fr}
+  .contact-grille{grid-template-columns:1.2fr 1fr}
+  .barre{display:none}
+  footer{padding-bottom:2.2rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero .titre,.hero .accroche{opacity:1;transform:none}
+  canvas#petales{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Lévazion</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.200s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.900 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.3-.3-.3-.5-.4z"/></symbol>
+    <symbol id="ico-form" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM7 11v1.6h10V11H7zm0 3.5v1.6h10v-1.6H7zm0 3.5v1.6h6V18H7z"/></symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="ico-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V14h2.8v8z"/></symbol>
+    <symbol id="ico-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 3.6c2.7 0 3 0 4.1.1 2.7.1 4 1.4 4.1 4.1.1 1.1.1 1.4.1 4.1s0 3-.1 4.1c-.1 2.7-1.4 4-4.1 4.1-1.1.1-1.4.1-4.1.1s-3 0-4.1-.1c-2.7-.1-4-1.4-4.1-4.1-.1-1.1-.1-1.4-.1-4.1s0-3 .1-4.1c.1-2.7 1.4-4 4.1-4.1 1.1-.1 1.4-.1 4.1-.1zM12 2c-2.7 0-3.1 0-4.2.1C4.2 2.200 2.200 4.200 2.100 7.800 2 8.900 2 9.300 2 12s0 3.100.1 4.200c.2 3.600 2.100 5.600 5.700 5.700 1.100.1 1.500.1 4.200.1s3.100 0 4.200-.1c3.600-.2 5.600-2.100 5.700-5.700.1-1.100.1-1.500.1-4.200s0-3.100-.1-4.200c-.2-3.600-2.100-5.600-5.700-5.700C15.100 2 14.700 2 12 2z"/></symbol>
+  </defs>
+</svg>
+<main>
+
+<section class="hero">
+  <div class="fond"><img src="img/buffet-fleurs.webp" alt="Buffet Lévazion dressé en plein air : viennoiseries, fruits frais, jus et grandes compositions de fleurs tropicales" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <div class="titre">
+      <div class="nom">Lévazion<small>Traiteur · La Possession</small></div>
+    </div>
+    <div class="accroche">
+      <h1>Quand la gourmandise rencontre <em>l'élégance…</em></h1>
+      <p class="lead">Des box apéro et des box brunchs 100 % fait maison, préparées sur commande. Et un buffet sur mesure pour tous vos événements, décoré de fleurs fraîches.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692200393?text=Bonjour%20L%C3%A9vazion%20%21%20Je%20voudrais%20des%20informations%20pour%20une%20commande."><svg><use href="#ico-wa"/></svg>Commander sur WhatsApp</a>
+        <a class="btn btn-line" href="https://r9p24473.forms.app/formulaire-de-demande-de-service-traiteur" target="_blank" rel="noopener"><svg><use href="#ico-form"/></svg>Demande de devis</a>
+      </div>
+      <div class="infos-vite"><span>Box apéro</span><span>Box brunch</span><span>Buffet sur mesure</span><span>Sur commande</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+  <span>Box apéro</span><span>Box brunch</span><span>Buffet sur mesure</span><span>Mini burgers black bun</span><span>Bouchées dorées</span><span>Bao bun poulet caramélisé</span><span>Navettes</span><span>Pancakes</span><span>Jus goyavier</span><span>Fleurs fraîches</span>
+  <span>Box apéro</span><span>Box brunch</span><span>Buffet sur mesure</span><span>Mini burgers black bun</span><span>Bouchées dorées</span><span>Bao bun poulet caramélisé</span><span>Navettes</span><span>Pancakes</span><span>Jus goyavier</span><span>Fleurs fraîches</span>
+</div></div>
+
+<section class="esprit">
+  <div class="wrap esprit-grille">
+    <div class="rv">
+      <p class="eyebrow">L'esprit Lévazion</p>
+      <p class="citation">Quand la gourmandise rencontre <em>l'élégance…</em></p>
+      <p class="source">Publication de Lévazion, 29 avril 2026 : « Des minis burgers black bun, des bouchées dorées… »</p>
+      <p style="margin-top:1.3rem">Chez Lévazion, tout est fait maison et préparé sur commande. Une petite box pour un apéro entre amis, un brunch à partager, ou un grand buffet dressé avec soin pour un anniversaire, un mariage, une fête de famille : chaque création est pensée pour être aussi belle que bonne.</p>
+      <div class="pastilles"><span>100 % fait maison</span><span>Sur commande</span><span>Sur mesure</span><span>Fleurs fraîches</span></div>
+    </div>
+    <figure class="photo-cadre rv">
+      <img src="img/bouchees-gourmandes.webp" alt="Bouchées gourmandes dorées de Lévazion, alignées sur un plateau" loading="lazy">
+      <figcaption>Les « Bouchées gourmandes » de Lévazion</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="box" id="box">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les box &amp; plateaux</p>
+      <h2>Prêtes à <span class="script" style="color:var(--or-c)">partager</span></h2>
+      <p class="intro">Des formules à poser sur la table, toutes faites maison. Voici celles que Lévazion présente dans son formulaire de demande :</p>
+    </div>
+    <div class="fil rv" tabindex="0" aria-label="Les box Lévazion, à faire défiler">
+      <article class="carte-box"><p class="type">Box apéro</p><h3>Évasion Box</h3><ul><li>Mini batbout poulet</li><li>Mini navettes</li></ul></article>
+      <article class="carte-box"><p class="type">Box apéro</p><h3>Classique</h3><ul><li>Mini burger poulet croustillant</li><li>Mini hotdog façon US</li><li>Bagel saumon</li><li>Navettes thon crémeux</li></ul></article>
+      <article class="carte-box"><p class="type">Box apéro</p><h3>Gourmande</h3><ul><li>Bao bun poulet caramélisé</li><li>Navettes au poulet</li><li>Mini Cheese Chicken</li></ul></article>
+      <article class="carte-box"><p class="type">Box brunch</p><h3>Duo &amp; Trio</h3><ul><li>Plateau de fruits</li><li>Fromage &amp; charcuterie de volaille</li><li>Plateau pancakes + topping</li><li>Riz sofé morue + œuf</li><li>Pain au chocolat ou croissant fourré</li><li>Jus maison</li></ul></article>
+      <article class="carte-box"><p class="type">Douceur</p><h3>Pancakes Box</h3><ul><li>Petite : 20 pancakes</li><li>Moyenne : 40 pancakes</li><li>Maxi : 60 pancakes</li></ul></article>
+      <article class="carte-box"><p class="type">Pour les grandes tablées</p><h3>Plateaux prêts à poser</h3><ul><li>Mini burgers poulet ou bœuf, mini shrimp rolls</li><li>Mini navettes thon ou saumon, mini pizzas, mini hotdogs</li><li>Ou version verrines : saumon avocat, thon œuf crevettes</li><li>Et un plateau de fruits pour 10 personnes</li></ul></article>
+    </div>
+    <p class="glisse">Faites glisser pour voir toutes les box →</p>
+  </div>
+</section>
+
+<section class="bouchees" id="bouchees">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">À la pièce</p>
+      <h2>Composez votre <span class="script" style="color:var(--rose)">buffet</span></h2>
+      <p class="intro">Des bouchées salées, des douceurs et des jus frais à choisir une par une, pour un buffet à votre goût.</p>
+    </div>
+    <div class="familles">
+      <div class="famille large rv"><h3>Bouchées salées</h3><div class="puces">
+        <span>Mini burger poulet ou bœuf</span><span>Mini burger sarcive poulet</span><span>Mini burger vegan</span><span>Mini buns cheddar</span><span>Mini Cheese Chicken</span><span>Mini bao bun</span><span>Mini batbout poulet</span><span>Mini shrimp roll</span><span>Mini bagel saumon</span><span>Navette au poulet</span><span>Navette achard</span><span>Navette au thon</span><span>Navette dakatine</span><span>Mini quiche poulet fumé</span><span>Mini hotdog</span><span>Mini pizza</span><span>Mini pita kebab</span><span>Mini croque-monsieur</span><span>Mini bouchon gratiné</span><span>Mini feuilleté poisson ou poulet</span><span>Tempura de crevettes</span><span>Pastel au thon</span><span>Samoussa</span><span>Bonbon piment</span><span>Brochettes poulet</span>
+      </div></div>
+      <div class="famille rv"><h3>Douceurs</h3><div class="puces">
+        <span>Pancakes</span><span>Sphère ou verrine framboise</span><span>Spéculos</span><span>Oreo</span><span>Cookies new-yorkais</span><span>Macarons</span><span>Galette manioc</span><span>Mini gâteau patate</span>
+      </div></div>
+      <div class="famille rv"><h3>Jus frais maison</h3><div class="puces">
+        <span>Goyavier</span><span>Mangue</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="buffet" id="buffet">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Buffet sur mesure</p>
+      <h2>Pour tous vos <span class="script" style="color:var(--or)">événements</span></h2>
+      <p class="intro">Lévazion installe, décore et désinstalle votre buffet, avec une composition de fleurs fraîches. Quatre ambiances au choix :</p>
+    </div>
+    <div class="themes">
+      <div class="theme rv" style="--c:#b58a5a"><h3>Rustique et élégant</h3><p>Un mélange de matières : cubes acrylique et bois.</p></div>
+      <div class="theme rv" style="--c:#7a5636"><h3>Rustique</h3><p>Tout en bois, chaleureux et naturel.</p></div>
+      <div class="theme rv" style="--c:var(--feuille)"><h3>Créole</h3><p>Accessoires traditionnels, vannes, feuilles de bananier et supports en bois.</p></div>
+      <div class="theme rv" style="--c:var(--or)"><h3>Prestige</h3><p>Supports entièrement en acrylique et verres en porcelaine.</p></div>
+    </div>
+    <div class="galerie rv" tabindex="0" aria-label="Buffets réalisés par Lévazion, à faire défiler">
+      <figure><img src="img/buffet-blanc-or.webp" alt="Buffet blanc et or de Lévazion : viennoiseries, pâtisseries, roses blanches et guirlandes lumineuses" loading="lazy"><figcaption>Blanc, or et roses blanches</figcaption></figure>
+      <figure><img src="img/buffet-anniversaire.webp" alt="Buffet d'anniversaire dressé par Lévazion avec ballons dorés et présentoirs à étages" loading="lazy"><figcaption>Un buffet pour fêter 40 ans</figcaption></figure>
+      <figure><img src="img/plateaux-suspendus.webp" alt="Plateaux noirs suspendus garnis de bouchées, devant un drapé blanc et des fleurs blanches" loading="lazy"><figcaption>Plateaux suspendus</figcaption></figure>
+      <figure><img src="img/buffet-plein-air.webp" alt="Buffet en plein air sur l'herbe, nappe blanche et fruits, face aux montagnes" loading="lazy"><figcaption>En plein air, face aux montagnes</figcaption></figure>
+      <figure><img src="img/buffet-fleurs.webp" alt="Buffet brunch de Lévazion entouré de fleurs tropicales" loading="lazy"><figcaption>Brunch fleuri</figcaption></figure>
+    </div>
+    <div class="forfait rv"><b>Le forfait buffet</b><span>Installation, décoration et désinstallation comprises, avec fleurs fraîches. Disponible dès 20 personnes, pour un service de qualité. Le détail se cale ensemble selon votre sélection de mets.</span></div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap rv">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow">Les fêtes approchent</p>
+    <h2>Un Noël <span class="script">gourmand</span></h2>
+    <p>Pour un réveillon entre amis, un brunch de Noël en famille ou une belle attention à offrir, Lévazion prépare vos box et vos buffets des fêtes, faits maison et sur commande.</p>
+    <div class="idees">
+      <div class="idee"><b>Une box apéro pour le réveillon</b><span>Évasion, Classique ou Gourmande, à poser sur la table.</span></div>
+      <div class="idee"><b>Une box brunch à offrir</b><span>Duo ou trio, pour un matin de fête tout en douceur.</span></div>
+      <div class="idee"><b>Un buffet pour toute la famille</b><span>Sur mesure, décoré de fleurs fraîches.</span></div>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692200393?text=Bonjour%20L%C3%A9vazion%20%21%20Je%20voudrais%20commander%20pour%20les%20f%C3%AAtes%20de%20No%C3%ABl."><svg><use href="#ico-wa"/></svg>Commander pour Noël</a>
+    </div>
+  </div>
+</section>
+
+<section class="etapes" id="commander">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Comment commander</p>
+      <h2>En trois étapes simples</h2>
+    </div>
+    <div class="pas-grille">
+      <div class="etape rv"><h3>Choisissez</h3><p>Une box, des plateaux prêts à poser, ou vos bouchées préférées à la pièce.</p></div>
+      <div class="etape rv"><h3>Racontez votre événement</h3><p>Date, horaire, type d'événement et nombre d'invités, via le formulaire de demande de devis ou sur WhatsApp.</p></div>
+      <div class="etape rv"><h3>Retrait, livraison ou buffet</h3><p>Vous récupérez votre commande, Lévazion vous la livre, ou installe un buffet sur mesure chez vous.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grille">
+    <div class="rv">
+      <p class="eyebrow" style="color:var(--rose)">Contact</p>
+      <h2>Une envie, un événement ?</h2>
+      <div class="coord">
+        <a href="https://wa.me/262692200393?text=Bonjour%20L%C3%A9vazion%20%21"><svg><use href="#ico-wa"/></svg><span><b>WhatsApp</b>Écrivez à Lévazion en un message</span></a>
+        <a href="tel:+262692200393"><svg><use href="#ico-tel"/></svg><span><b>0692 20 03 93</b>Commandes et renseignements</span></a>
+        <a href="https://r9p24473.forms.app/formulaire-de-demande-de-service-traiteur" target="_blank" rel="noopener"><svg><use href="#ico-form"/></svg><span><b>Demande de devis</b>Le formulaire en ligne de Lévazion</span></a>
+        <a href="https://www.instagram.com/levazion_/" target="_blank" rel="noopener"><svg><use href="#ico-ig"/></svg><span><b>@levazion_</b>Les dernières créations sur Instagram</span></a>
+        <a href="https://www.facebook.com/61560214354350" target="_blank" rel="noopener"><svg><use href="#ico-fb"/></svg><span><b>Lévazion</b>La page Facebook</span></a>
+        <span style="display:flex;gap:.8rem;align-items:flex-start"><svg style="width:24px;height:24px;flex:none;margin-top:.2rem;color:var(--rose)"><use href="#ico-pin"/></svg><span><b style="font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-weight:600;display:block;line-height:1.1">La Possession</b>La Réunion</span></span>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-rose" href="https://wa.me/262692200393?text=Bonjour%20L%C3%A9vazion%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692200393"><svg><use href="#ico-tel"/></svg>Appeler</a>
+      </div>
+    </div>
+    <div class="mot rv">
+      <img src="img/buffet-blanc-or.webp" alt="Buffet de Lévazion, roses blanches et viennoiseries dorées" loading="lazy">
+      <div>
+        <blockquote>« Découvrez nos box apéro, nos box brunchs 100 % fait maison sur commande. Buffet sur mesure pour tous vos événements. »<cite>Présentation de la page Facebook de Lévazion</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Lévazion</b> · Traiteur · La Possession, La Réunion · Box apéro, box brunch &amp; buffet sur mesure<br>Maquette privée imaginée par Aurélie &amp; Jonathan, ATMA Digital, à partir des publications de Lévazion.</footer>
+
+<div class="barre" id="barre">
+  <a class="btn btn-main" href="https://wa.me/262692200393?text=Bonjour%20L%C3%A9vazion%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-line" href="tel:+262692200393"><svg><use href="#ico-tel"/></svg>Appeler</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var barre=document.getElementById('barre');
+  addEventListener('scroll',function(){barre.classList.toggle('vue',scrollY>innerHeight*.6)},{passive:true});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* pétales de fleurs fraîches qui tombent doucement + paillettes dorées */
+  var c=document.getElementById('petales'),x=c.getContext('2d'),W,H,P=[],run=true;
+  var cols=['214,82,127','247,214,224','255,255,255','242,193,78'];
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  for(var i=0;i<28;i++){var p=i<18;P.push({x:Math.random(),y:Math.random(),r:p?4+Math.random()*4:1+Math.random()*1.4,v:p?.0005+Math.random()*.0007:.0002+Math.random()*.0003,ph:Math.random()*6.28,s:.5+Math.random(),rot:Math.random()*6.28,p:p,col:cols[i%4]})}
+  function f(t){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(o){o.y+=o.v;if(o.y>1.05){o.y=-.05;o.x=Math.random()}
+      var px=(o.x+.03*Math.sin(t*.0006*o.s+o.ph))*W,py=o.y*H;
+      if(o.p){x.save();x.translate(px,py);x.rotate(o.rot+Math.sin(t*.001*o.s+o.ph)*.9);x.scale(1,.55+.35*Math.sin(t*.0015*o.s+o.ph));
+        x.fillStyle='rgba('+o.col+',.42)';x.beginPath();x.ellipse(0,0,o.r,o.r*.6,0,0,6.28);x.fill();x.restore()}
+      else{var a=.25+.25*Math.sin(t*.003*o.s+o.ph),R=o.r*3,g=x.createRadialGradient(px,py,0,px,py,R);
+        g.addColorStop(0,'rgba(230,200,119,'+a+')');g.addColorStop(1,'rgba(230,200,119,0)');x.fillStyle=g;x.beginPath();x.arc(px,py,R,0,6.28);x.fill()}});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Lévazion" defer></script>
+</body>
+</html>
