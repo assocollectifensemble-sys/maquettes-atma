@@ -1,5 +1,5 @@
 {
-  "_commentaire": "Fichier unique de thème et de contenu. Changer ce fichier (et img/) puis lancer python3 data/generer.py suffit pour produire la démo d'un autre restaurant. Prix marqués \"source\" : post Facebook So Thai du 02/10/2026 (menu du vendredi), relevé dans /opt/cerveau/travaux/landing-974/maquettes/so-thai/. Prix marqués \"estime\": true = prix plausibles [E], à confirmer avec le restaurant.",
+  "_commentaire": "Fichier unique de thème et de contenu. Changer ce fichier (et img/) puis lancer python3 data/generer.py suffit pour produire la démo d'un autre restaurant. Prix marqués \"source\" : post Facebook So Thai du 02/10/2026 (menu du vendredi), relevé dans /opt/cerveau/travaux/landing-974/maquettes/so-thai/. Prix marqués \"estime\": true = prix plausibles [E], à confirmer avec le restaurant. Plats sans photo : champ \"icone\" (emoji) affiché sur une vignette illustrée, en attendant les photos du restaurant.",
   "id": "sothai",
   "nom": "So Thai",
   "sousTitre": "Cuisine thaï à emporter",
@@ -187,7 +187,8 @@
         "khao mok",
         "khao"
       ],
-      "court": "khao mok"
+      "court": "khao mok",
+      "icone": "🍗"
     },
     {
       "id": "crispy",
@@ -199,7 +200,8 @@
       "mots": [
         "crispy"
       ],
-      "court": "bol crispy"
+      "court": "bol crispy",
+      "icone": "🍗"
     },
     {
       "id": "padthai-poulet",
@@ -242,7 +244,8 @@
         "poisson"
       ],
       "source": "post FB 02/10/2026",
-      "court": "poisson piment doux"
+      "court": "poisson piment doux",
+      "icone": "🐟"
     },
     {
       "id": "camarons",
@@ -255,7 +258,8 @@
         "camarons"
       ],
       "source": "post FB 02/10/2026",
-      "court": "camarons poivre"
+      "court": "camarons poivre",
+      "icone": "🦐"
     },
     {
       "id": "massaman",
@@ -268,7 +272,8 @@
         "curry"
       ],
       "source": "post FB 02/10/2026",
-      "court": "massaman"
+      "court": "massaman",
+      "icone": "🍛"
     },
     {
       "id": "panang",
@@ -308,7 +313,8 @@
         "nems"
       ],
       "source": "post FB 02/10/2026",
-      "court": "nems"
+      "court": "nems",
+      "icone": "🥟"
     },
     {
       "id": "brochette",
@@ -320,7 +326,8 @@
       "mots": [
         "brochette"
       ],
-      "court": "brochettes combava"
+      "court": "brochettes combava",
+      "icone": "🍢"
     },
     {
       "id": "rouleaux",
@@ -333,7 +340,8 @@
         "rouleau",
         "rouleaux"
       ],
-      "court": "rouleaux"
+      "court": "rouleaux",
+      "icone": "🥬"
     },
     {
       "id": "banoffee",
@@ -345,7 +353,8 @@
         "banoffee"
       ],
       "source": "post FB 02/10/2026",
-      "court": "banoffee"
+      "court": "banoffee",
+      "icone": "🍌"
     },
     {
       "id": "sagou",
@@ -358,7 +367,8 @@
         "sagou",
         "perles"
       ],
-      "court": "perles de sagou"
+      "court": "perles de sagou",
+      "icone": "🥥"
     }
   ],
   "rotation": {

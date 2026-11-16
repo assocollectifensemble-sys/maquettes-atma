@@ -1,6 +1,6 @@
 /* Service worker : tout le site en cache, l'appli s'ouvre hors-ligne. */
-const VERSION = 'demo-resto-v1';
-const FICHIERS = ['./', 'index.html', 'style.css?v=1', 'app.js?v=1', 'config.json', 'data/demo.json', 'manifest.json',
+const VERSION = 'demo-resto-v2';
+const FICHIERS = ['./', 'index.html', 'style.css?v=2', 'app.js?v=2', 'config.json', 'data/demo.json', 'manifest.json',
   'img/logo.jpg', 'img/icon-192.png', 'img/icon-512.png', 'img/padthai.jpg', 'img/kaphrao.jpg', 'img/bobun.jpg',
   'img/bol-mer.jpg', 'img/kuaitiao.jpg', 'img/panang.jpg'];
 self.addEventListener('install', e => {

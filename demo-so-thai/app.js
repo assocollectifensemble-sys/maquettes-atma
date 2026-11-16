@@ -27,7 +27,7 @@ const plat = id => C.plats.find(p => p.id === id);
 const dateLong = d => `${JL[JK[d.getDay()]]} ${d.getDate()} ${MOIS[d.getMonth()]}`;
 const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
 const initials = n => n.split(' ').map(x => x[0]).join('').slice(0, 2);
-const photo = (p, cls = 'ph') => p.photo ? `<img class="${cls}" src="${p.photo}" alt="${esc(p.nom)}" loading="lazy">` : `<div class="tile${cls === 'ph sm' ? ' sm' : ''}" aria-hidden="true">${esc(p.nom[0])}</div>`;
+const photo = (p, cls = 'ph') => p.photo ? `<img class="${cls}" src="${p.photo}" alt="${esc(p.nom)}" loading="lazy">` : `<div class="tile${cls === 'ph sm' ? ' sm' : ''}${p.icone ? ' ic' : ''}" aria-hidden="true">${p.icone ? `<span>${p.icone}</span>` : esc(p.nom[0])}</div>`;
 
 /* ---------- jour de démo, rotation, horloge ---------- */
 function demoDay() { const d = new Date(); d.setHours(12, 0, 0, 0); for (let i = 0; i < 8; i++) { if (C.horaires[JK[d.getDay()]]) return d; d.setDate(d.getDate() + 1); } return d; }
@@ -196,7 +196,8 @@ function accueil() {
   const prenom = cd.nom.split(' ')[0];
   const cats = Object.keys(C.categories);
   const reste = C.fidelite.objectif - (S.tampons % C.fidelite.objectif);
-  let h = `<section class="sec"><div class="hello"><div><h1>${esc(C.accroche)}</h1><p>${cap(dateLong(DAY))} · menu ${SEM}</p></div></div><div class="chip-limit" data-countdown>${limiteTexte()}</div></section>`;
+  let h = `<section class="sec"><div class="hello"><div><h1>${esc(C.accroche)}</h1><p>${cap(dateLong(DAY))} · le menu du jour est prêt</p></div></div><div class="chip-limit" data-countdown>${limiteTexte()}</div></section>`;
+  if (innerWidth < 1000) h += `<section class="sec"><p class="demo-hint">🧭 Visite de la démo : ajoutez un plat, choisissez l'heure de retrait, puis touchez « Côté resto » en haut pour voir la commande arriver avec son ticket.</p></section>`;
   if (hab.length) h += `<section class="sec"><div class="card habit"><div class="ic">↻</div><div><small>Comme d'habitude, ${esc(prenom)} ?</small><b>${esc(habTxt)}</b></div><button class="btn btn-a btn-s" data-act="habitude">Recommander</button></div></section>`;
   h += `<section class="sec"><article class="special">${sp.photo ? `<img src="${sp.photo}" alt="${esc(sp.nom)}">` : '<div style="height:200px"></div>'}<div class="tx"><span class="tag">Plat spécial du ${JL[DAYK]}</span><h3>${esc(sp.nom)}</h3><p>${esc(sp.desc)}</p><div class="row"><span class="px">${euro(sp.prix)}</span>${dispo(sp.id) ? stepper(sp.id) : '<span class="succes">Victime de son succès 🎉</span>'}</div></div></article></section>`;
   h += `<section class="sec"><h2>Le menu du jour</h2>`;
@@ -267,7 +268,7 @@ function suivi() {
   if (!mine.length) return `<section class="sec ctr"><div style="font-size:54px;margin-top:40px">🛍️</div><h2>Votre prochaine commande</h2><p class="muted">Elle s'affichera ici, avec son suivi en direct.</p><a class="btn btn-p" href="#/client">Commander</a></section>`;
   const o = mine[0], i = ST.indexOf(o.statut), rdy = i >= 2;
   const prenom = o.nom.split(' ')[0];
-  let h = `<section class="sec ctr"><div class="okc ${rdy ? 'rdy' : ''}">${rdy ? '🍜' : '✓'}</div><h1 class="big">${rdy ? `C'est prêt, ${esc(prenom)} !` : `C'est noté, ${esc(prenom)} !`}</h1><p class="muted" style="margin:6px 0 0">Commande n° ${o.num} · retrait à <b style="color:var(--e)">${o.creneau}</b></p></section>`;
+  let h = `<section class="sec ctr"><div class="okc ${rdy ? 'rdy' : ''}">${rdy ? '🍜' : '✓'}</div><h1 class="big">${rdy ? `C'est prêt, ${esc(prenom)} !` : `C'est noté, ${esc(prenom)} !`}</h1><p class="muted" style="margin:6px 0 0">Commande n° ${o.num} · retrait à <b style="color:var(--e)">${o.creneau}</b></p><a class="btn btn-l btn-s demo-link" href="#/resto/tickets?o=${o.id}">👀 Démo : voir le ticket cuisine côté resto</a></section>`;
   h += `<section class="sec"><div class="card"><div class="track"><div class="bar" style="width:${Math.min(i, 2) * 38}%"></div>${['Reçue', 'En préparation', 'Prête'].map((l, k) => `<div class="tk ${k <= i ? 'on' : ''} ${k === Math.min(i, 2) && i < 2 ? 'now' : ''}"><i>${['📩', '🔥', '🍜'][k]}</i>${l}</div>`).join('')}</div>
   <p class="ctr muted" style="font-size:13px;margin:12px 0 0">${['Votre ticket est en cuisine, Néo l\'a sous les yeux.', 'Néo prépare votre commande.', 'Votre commande vous attend au comptoir.', 'Bon appétit !'][i]}</p></div></section>`;
   h += `<section class="sec"><div class="card">${o.items.map(([id, q]) => `<div class="line"><span>${q} × ${esc(plat(id).nom)}</span><span>${euro(plat(id).prix * q)}</span></div>`).join('')}
@@ -408,7 +409,7 @@ function commandes() {
   const du = S.orders.filter(o => o.paiement === 'sur_place').reduce((s, o) => s + total(o), 0);
   const ligne = S.orders.filter(o => o.paiement === 'en_ligne');
   let h = `<div class="wrap"><div class="ttl"><div><h2>Commandes du jour</h2><p>Glissez une carte d'une colonne à l'autre, ou touchez le bouton.</p></div><div class="seg">${['tous', ...services()].map(x => `<button class="${f === x ? 'on' : ''}" data-act="filtre" data-v="${x}">${x === 'tous' ? 'Tout' : cap(x)}</button>`).join('')}</div></div>
-  <div class="kpis"><div class="kpi"><small>Commandes</small><b>${S.orders.length}</b><em>${S.orders.filter(o => o.source === 'appli').length} appli · ${S.orders.filter(o => o.source === 'messenger').length} Messenger</em></div><div class="kpi"><small>Plats à préparer</small><b>${plats}</b><em>tickets imprimés</em></div><div class="kpi"><small>Réglé en ligne</small><b>${euro(ligne.reduce((s, o) => s + total(o), 0))}</b><em>${ligne.length} commandes</em></div><div class="kpi"><small>À encaisser</small><b>${euro(du)}</b><em>au comptoir</em></div></div>
+  <div class="kpis"><div class="kpi"><small>Commandes</small><b>${S.orders.length}</b><em>${S.orders.filter(o => o.source === 'appli').length} appli · ${S.orders.filter(o => o.source === 'messenger').length} Messenger</em></div><div class="kpi"><small>Plats à préparer</small><b>${plats}</b><em>${S.orders.filter(o => o.imprime).length} tickets imprimés</em></div><div class="kpi"><small>Réglé en ligne</small><b>${euro(ligne.reduce((s, o) => s + total(o), 0))}</b><em>${ligne.length} commandes</em></div><div class="kpi"><small>À encaisser</small><b>${euro(du)}</b><em>au comptoir</em></div></div>
   <div class="board">`;
   for (const st of ST) {
     const cs = list.filter(o => o.statut === st).sort((a, b) => a.creneau.localeCompare(b.creneau) || a.id - b.id);
@@ -531,7 +532,8 @@ function stats() {
 function clients() {
   const q = norm(P.cq || '');
   const l = D.clients.filter(c => !q || norm(c.nom).includes(q) || norm(c.favori).includes(q));
-  const dd = s => { const d = new Date(s + 'T12:00:00'); return `${d.getDate()} ${MOIS[d.getMonth()].slice(0, 4)}.`; };
+  const MC = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+  const dd = s => { const d = new Date(s + 'T12:00:00'); return `${d.getDate()} ${MC[d.getMonth()]}`; };
   return `<div class="wrap"><div class="ttl"><div><h2>Clients</h2><p>Les habitués, leur rythme et leur plat préféré. Prénoms fictifs.</p></div></div><input class="search" id="cq" placeholder="Rechercher un client ou un plat" value="${esc(P.cq || '')}">
   <div class="cgrid">${l.map(c => `<div class="cc"><div class="av">${esc(initials(c.nom))}</div><div class="in"><b>${esc(c.nom)}</b> <span class="src ${c.canal}">${SRC[c.canal]}</span><div class="meta">${c.commandes} commandes · ${String(c.parSemaine).replace('.', ',')} par semaine · panier ${euro(c.panierMoyen)}</div><div class="fav">❤️ ${esc(c.favori)}${c.remarque ? ` · <span class="muted">« ${esc(c.remarque)} »</span>` : ''}</div><div class="meta" style="display:flex;align-items:center;gap:8px;margin-top:6px"><span class="dots">${dots(c.tampons)}</span><span>${c.offerts} offert${c.offerts > 1 ? 's' : ''} · vu le ${dd(c.derniere)}</span></div></div></div>`).join('')}</div></div>`;
 }
@@ -665,7 +667,7 @@ window.addEventListener('storage', e => { if (e.key === KEY()) { const s = load(
 function after(r) {
   if (r.side === 'client' && r.page === 'messenger') { const b = $('#msb'); if (b) b.scrollTop = b.scrollHeight; }
   const aside = $('.cl-aside');
-  if (aside && innerWidth >= 1000) { aside.hidden = false; aside.innerHTML = `<img src="${C.logo}" alt=""><h1>${esc(C.nom)}</h1><p>L'appli de commande, côté client.</p><ul><li>🍜 Le menu du jour, en photos</li><li>🕒 L'heure de retrait au choix</li><li>💳 En ligne ou sur place</li><li>💬 Ou sur Messenger, comme d'habitude</li></ul><a class="btn btn-a" href="#/resto">Voir le côté resto →</a>`; }
+  if (aside && innerWidth >= 1000) { aside.hidden = false; aside.innerHTML = `<img src="${C.logo}" alt=""><h1>${esc(C.nom)}</h1><p>L'appli de commande, côté client.</p><ul><li>🍜 Le menu du jour, en photos</li><li>🕒 L'heure de retrait au choix</li><li>💳 En ligne ou sur place</li><li>💬 Ou sur Messenger, comme d'habitude</li></ul><p class="tour"><b>Visite en 3 gestes</b><br>1. Ajoutez un plat et validez.<br>2. Ouvrez le côté resto : la commande arrive, ticket prêt.<br>3. Passez un plat en « épuisé » : Facebook et le site suivent.</p><a class="btn btn-a" href="#/resto">Voir le côté resto →</a>`; }
 }
 
 /* ---------- démarrage ---------- */
