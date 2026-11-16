@@ -1,0 +1,551 @@
+{
+  "_commentaire": "Fichier unique de thème et de contenu. Changer ce fichier (et img/) puis lancer python3 data/generer.py suffit pour produire la démo d'un autre restaurant. Prix marqués \"source\" : post Facebook So Thai du 02/10/2026 (menu du vendredi), relevé dans /opt/cerveau/travaux/landing-974/maquettes/so-thai/. Prix marqués \"estime\": true = prix plausibles [E], à confirmer avec le restaurant.",
+  "id": "sothai",
+  "nom": "So Thai",
+  "sousTitre": "Cuisine thaï à emporter",
+  "accroche": "Sawadee !",
+  "remerciement": "Kob Koon Ka !",
+  "logo": "img/logo.jpg",
+  "ville": "Sainte-Clotilde",
+  "adresse": "115 route de Bois de Nèfles, à l'angle de la rue Tessan, Sainte-Clotilde",
+  "cheffe": "Néo",
+  "gerant": "Yannick",
+  "couleurs": {
+    "primaire": "#22324A",
+    "accent": "#C9A23A",
+    "fond": "#F7F4EE",
+    "encre": "#1E2A3B",
+    "doux": "#5E6878",
+    "succes": "#2F7D4F"
+  },
+  "horaires": {
+    "mar": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "mer": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "jeu": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "ven": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "sam": [
+      [
+        "11:30",
+        "14:00"
+      ]
+    ]
+  },
+  "heuresLimites": {
+    "midi": "11:00",
+    "soir": "17:30"
+  },
+  "creneaux": {
+    "pasMinutes": 15,
+    "capaciteParCreneau": 4,
+    "midi": [
+      "11:45",
+      "12:00",
+      "12:15",
+      "12:30",
+      "12:45",
+      "13:00",
+      "13:15",
+      "13:30"
+    ],
+    "soir": [
+      "18:15",
+      "18:30",
+      "18:45",
+      "19:00",
+      "19:15",
+      "19:30",
+      "19:45"
+    ]
+  },
+  "atouts": [
+    {
+      "icone": "🌿",
+      "titre": "Barquettes écologiques",
+      "texte": "Vos plats voyagent dans des barquettes compostables, choisies avec soin."
+    },
+    {
+      "icone": "🧑‍🍳",
+      "titre": "Cuisiné par Néo",
+      "texte": "Des sauces maison et un menu qui suit le marché."
+    }
+  ],
+  "fidelite": {
+    "objectif": 10,
+    "recompense": "le 10e plat offert"
+  },
+  "remarquesRapides": [
+    "Plus de sauce",
+    "Citron à part",
+    "Moins de riz",
+    "Bien épicé",
+    "Couverts en plus"
+  ],
+  "publication": {
+    "menuVeille": "20:00",
+    "platSpecial": "05:00",
+    "canaux": [
+      "Site",
+      "Facebook",
+      "Instagram",
+      "Google",
+      "Assistant"
+    ]
+  },
+  "categories": {
+    "plat": "Plats",
+    "entree": "À picorer",
+    "dessert": "Desserts"
+  },
+  "plats": [
+    {
+      "id": "bol-mer",
+      "nom": "Bol renversé de la mer",
+      "desc": "Poisson croustillant, calamar, camarons, œuf, légumes sautés",
+      "prix": 12,
+      "cat": "plat",
+      "photo": "img/bol-mer.jpg",
+      "mots": [
+        "bol renverse",
+        "bol de la mer",
+        "bol mer"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "bol de la mer"
+    },
+    {
+      "id": "kuaitiao",
+      "nom": "Kuaitiao Nam Kai",
+      "desc": "Soupe de nouilles de riz au poulet",
+      "prix": 10,
+      "estime": true,
+      "cat": "plat",
+      "photo": "img/kuaitiao.jpg",
+      "mots": [
+        "kuaitiao",
+        "soupe"
+      ],
+      "court": "kuaitiao"
+    },
+    {
+      "id": "kaphrao",
+      "nom": "Pad Kaphrao Kai",
+      "desc": "Poulet au basilic sacré, œuf frit, riz jasmin",
+      "prix": 10,
+      "estime": true,
+      "cat": "plat",
+      "photo": "img/kaphrao.jpg",
+      "mots": [
+        "kaphrao",
+        "basilic"
+      ],
+      "court": "kaphrao"
+    },
+    {
+      "id": "khao-mok",
+      "nom": "Khao Mok Kai Tod",
+      "desc": "Riz parfumé au curcuma, poulet frit",
+      "prix": 11,
+      "estime": true,
+      "cat": "plat",
+      "mots": [
+        "khao mok",
+        "khao"
+      ],
+      "court": "khao mok"
+    },
+    {
+      "id": "crispy",
+      "nom": "Bol Crispy Chicken",
+      "desc": "Poulet croustillant, riz jasmin, sauce maison",
+      "prix": 11,
+      "estime": true,
+      "cat": "plat",
+      "mots": [
+        "crispy"
+      ],
+      "court": "bol crispy"
+    },
+    {
+      "id": "padthai-poulet",
+      "nom": "Pad Thaï poulet",
+      "desc": "Nouilles de riz sautées, omelette, sauce pad thaï maison",
+      "prix": 8.5,
+      "cat": "plat",
+      "photo": "img/padthai.jpg",
+      "mots": [
+        "pad thai poulet",
+        "pad thai",
+        "padthai"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "pad thaï poulet"
+    },
+    {
+      "id": "padthai-legumes",
+      "nom": "Pad Thaï légumes",
+      "desc": "Nouilles de riz sautées, légumes croquants, omelette",
+      "prix": 8.5,
+      "estime": true,
+      "cat": "plat",
+      "photo": "img/padthai.jpg",
+      "mots": [
+        "pad thai legume",
+        "pad thai legumes",
+        "pad thai vege",
+        "padthai legume"
+      ],
+      "court": "pad thaï légumes"
+    },
+    {
+      "id": "poisson",
+      "nom": "Poisson croustillant au piment doux",
+      "desc": "Riz jasmin thaï",
+      "prix": 8.5,
+      "cat": "plat",
+      "mots": [
+        "poisson"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "poisson piment doux"
+    },
+    {
+      "id": "camarons",
+      "nom": "Camarons sauce poivre noir",
+      "desc": "Riz jasmin thaï",
+      "prix": 9.5,
+      "cat": "plat",
+      "mots": [
+        "camaron",
+        "camarons"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "camarons poivre"
+    },
+    {
+      "id": "massaman",
+      "nom": "Poulet au curry Massaman",
+      "desc": "Combava, lait de coco, riz jasmin thaï",
+      "prix": 8.5,
+      "cat": "plat",
+      "mots": [
+        "massaman",
+        "curry"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "massaman"
+    },
+    {
+      "id": "panang",
+      "nom": "Curry Panang",
+      "desc": "Curry rouge doux au lait de coco, riz jasmin",
+      "prix": 9,
+      "estime": true,
+      "cat": "plat",
+      "photo": "img/panang.jpg",
+      "mots": [
+        "panang"
+      ],
+      "court": "panang"
+    },
+    {
+      "id": "bobun",
+      "nom": "Salade Bò Bùn",
+      "desc": "Poulet, vermicelles, nems végétariens",
+      "prix": 10,
+      "cat": "plat",
+      "photo": "img/bobun.jpg",
+      "mots": [
+        "bo bun",
+        "bobun"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "bò bùn"
+    },
+    {
+      "id": "nems",
+      "nom": "Nems légumes ou poulet",
+      "desc": "À l'unité, croustillants",
+      "prix": 1.5,
+      "cat": "entree",
+      "mots": [
+        "nem",
+        "nems"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "nems"
+    },
+    {
+      "id": "brochette",
+      "nom": "Brochette au combava",
+      "desc": "Poulet mariné au combava",
+      "prix": 3,
+      "estime": true,
+      "cat": "entree",
+      "mots": [
+        "brochette"
+      ],
+      "court": "brochettes combava"
+    },
+    {
+      "id": "rouleaux",
+      "nom": "Rouleau de printemps",
+      "desc": "Crevette, herbes fraîches",
+      "prix": 2.5,
+      "estime": true,
+      "cat": "entree",
+      "mots": [
+        "rouleau",
+        "rouleaux"
+      ],
+      "court": "rouleaux"
+    },
+    {
+      "id": "banoffee",
+      "nom": "Banoffee maison",
+      "desc": "Caramel, banane, chantilly maison, spéculos",
+      "prix": 3.5,
+      "cat": "dessert",
+      "mots": [
+        "banoffee"
+      ],
+      "source": "post FB 02/10/2026",
+      "court": "banoffee"
+    },
+    {
+      "id": "sagou",
+      "nom": "Perles de sagou coco",
+      "desc": "Lait de coco, perles fondantes",
+      "prix": 3,
+      "estime": true,
+      "cat": "dessert",
+      "mots": [
+        "sagou",
+        "perles"
+      ],
+      "court": "perles de sagou"
+    }
+  ],
+  "rotation": {
+    "_commentaire": "Plats spéciaux par jour relevés sur la page Facebook (oct. 2026). Base fixe relevée : Pad Thaï poulet/légumes, nems, brochette combava. Le détail S1/S2/S3 ci-dessous est un exemple à remplacer par la vraie rotation de la cheffe.",
+    "lundiReferenceS1": "2026-11-02",
+    "special": {
+      "mar": "kuaitiao",
+      "mer": "kaphrao",
+      "jeu": "khao-mok",
+      "ven": "bol-mer",
+      "sam": "crispy"
+    },
+    "base": [
+      "padthai-poulet",
+      "padthai-legumes",
+      "nems",
+      "brochette"
+    ],
+    "semaines": {
+      "S1": {
+        "mar": [
+          "poisson",
+          "massaman",
+          "banoffee"
+        ],
+        "mer": [
+          "camarons",
+          "bobun",
+          "sagou"
+        ],
+        "jeu": [
+          "panang",
+          "poisson",
+          "rouleaux",
+          "banoffee"
+        ],
+        "ven": [
+          "poisson",
+          "camarons",
+          "massaman",
+          "bobun",
+          "banoffee"
+        ],
+        "sam": [
+          "massaman",
+          "sagou"
+        ]
+      },
+      "S2": {
+        "mar": [
+          "panang",
+          "bobun",
+          "sagou"
+        ],
+        "mer": [
+          "poisson",
+          "massaman",
+          "banoffee"
+        ],
+        "jeu": [
+          "camarons",
+          "bobun",
+          "rouleaux",
+          "sagou"
+        ],
+        "ven": [
+          "panang",
+          "poisson",
+          "camarons",
+          "banoffee"
+        ],
+        "sam": [
+          "bobun",
+          "banoffee"
+        ]
+      },
+      "S3": {
+        "mar": [
+          "camarons",
+          "massaman",
+          "rouleaux",
+          "banoffee"
+        ],
+        "mer": [
+          "panang",
+          "poisson",
+          "sagou"
+        ],
+        "jeu": [
+          "massaman",
+          "bobun",
+          "banoffee"
+        ],
+        "ven": [
+          "camarons",
+          "bobun",
+          "poisson",
+          "sagou"
+        ],
+        "sam": [
+          "panang",
+          "rouleaux",
+          "banoffee"
+        ]
+      }
+    }
+  },
+  "demo": {
+    "heureDepart": "10:20",
+    "intervalleNouvelleCommandeSec": 20,
+    "clientDemo": {
+      "nom": "Julie M.",
+      "tel": "06 92 00 00 01",
+      "tampons": 7,
+      "habitude": [
+        [
+          "padthai-poulet",
+          1
+        ],
+        [
+          "nems",
+          3
+        ]
+      ],
+      "remarque": "Plus de sauce"
+    },
+    "clientMessenger": "Kevin L."
+  },
+  "faq": [
+    {
+      "q": [
+        "horaire",
+        "ouvert",
+        "ouvre",
+        "heure"
+      ],
+      "r": "Nous vous accueillons du mardi au vendredi, 11 h 30 à 14 h et 18 h à 20 h, et le samedi midi, 11 h 30 à 14 h. Commandes jusqu'à 11 h pour le midi et 17 h 30 pour le soir 😉"
+    },
+    {
+      "q": [
+        "adresse",
+        "ou etes",
+        "trouver",
+        "parking",
+        "venir"
+      ],
+      "r": "Au 115 route de Bois de Nèfles, à l'angle de la rue Tessan, à Sainte-Clotilde. À tout à l'heure !"
+    },
+    {
+      "q": [
+        "vegetarien",
+        "vege",
+        "vegan",
+        "legume"
+      ],
+      "r": "Le Pad Thaï légumes vous attend tous les jours, avec les nems légumes. Néo adapte aussi volontiers un plat : précisez-le dans votre message."
+    },
+    {
+      "q": [
+        "payer",
+        "paiement",
+        "carte",
+        "cb",
+        "especes"
+      ],
+      "r": "Vous réglez en ligne dans l'appli, ou sur place au retrait, comme vous préférez."
+    },
+    {
+      "q": [
+        "livraison",
+        "livrer",
+        "livrez"
+      ],
+      "r": "So Thai, c'est à emporter, avec quelques places assises : votre plat vous attend au comptoir à l'heure choisie."
+    },
+    {
+      "q": [
+        "piment",
+        "epice",
+        "cacahuete",
+        "allergie"
+      ],
+      "r": "Le piment et les cacahuètes sont toujours servis à part : vous dosez à votre goût. Pour une allergie, indiquez-la dans votre message, Néo en tient compte."
+    }
+  ],
+  "manifeste": {
+    "nomCourt": "So Thai",
+    "description": "Commandez votre plat So Thai et retirez-le à l'heure choisie."
+  }
+}
