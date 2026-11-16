@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Pizza Nono · Pizzeria à la Cour Forcade, Les Avirons</title>
+<meta name="description" content="La Pizza Nono, pizzeria de la Cour Forcade, 11 bis avenue Général de Gaulle aux Avirons : pâte fraîche préparée sur place, du mardi au samedi de 18h00 à 21h30. Commandes au 0692 23 20 52.">
+<meta property="og:title" content="La Pizza Nono · La bonne pizza, la vraie !">
+<meta property="og:description" content="Pizzeria de la Cour Forcade aux Avirons : pâte fraîche préparée sur place, une pizza du moment qui change au fil des mois. Du mardi au samedi, 18h00 – 21h30.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-pizza-nono-les-avirons/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-pizza-nono-les-avirons/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&family=Barlow:wght@400;500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--charbon:#1e1b1f;--four:#2a2326;--rouge:#d7261e;--rouge-f:#a5160f;--jaune:#ffc21a;--braise:#ff7a1a;--creme:#fbf4e6;--farine:#f4ecdc;--bois:#d7c3a8;--txt:#2a2326;--doux:#e7dccb;--gris:#b9ab98}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',system-ui,Arial,sans-serif;color:var(--txt);background:var(--farine);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Anton',Impact,sans-serif;font-weight:400;letter-spacing:.01em;line-height:1.04;text-transform:uppercase}
+h2{font-size:clamp(2.1rem,8.5vw,3.6rem);margin:.4rem 0 1rem}
+h3{font-size:1.45rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.eyebrow{font-family:'Anton',sans-serif;letter-spacing:.16em;font-size:.95rem;color:var(--rouge);text-transform:uppercase}
+.script{font-family:'Pacifico',cursive;text-transform:none;letter-spacing:0;font-weight:400}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--charbon);color:var(--jaune);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(255,194,26,.35)}
+.ribbon b{color:#fff}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font-family:'Anton',sans-serif;font-size:1.08rem;letter-spacing:.05em;text-transform:uppercase;transition:.3s;line-height:1;border:0;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--jaune);color:var(--charbon);box-shadow:0 12px 28px -12px rgba(255,194,26,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:#ffd34f;transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -4px rgba(255,122,26,.75)}}
+.btn-line{border:2px solid var(--jaune);color:#fff;background:transparent}
+.btn-line:hover{background:rgba(255,194,26,.15)}
+.btn-rouge{background:var(--rouge);color:#fff}
+.btn-rouge:hover{background:var(--rouge-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--charbon);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,27,31,.72) 0%,rgba(30,27,31,.12) 22%,rgba(30,27,31,.7) 45%,rgba(30,27,31,.95) 62%,rgba(30,27,31,.98) 100%)}
+.hero .chaleur{position:absolute;left:-20%;right:-20%;bottom:-30%;height:70%;z-index:1;background:radial-gradient(ellipse at 50% 100%,rgba(255,122,26,.42),rgba(215,38,30,.18) 40%,transparent 70%);animation:four 5s ease-in-out infinite;pointer-events:none}
+@keyframes four{50%{opacity:.6;transform:scaleY(1.06)}}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.hero .titre{display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(24px);animation:monte 1.1s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .accroche{opacity:0;transform:translateY(24px);animation:monte 1.1s .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.logo-rond{width:clamp(92px,26vw,140px);aspect-ratio:1;border-radius:50%;background:#fff;border:5px solid var(--jaune);box-shadow:0 0 0 3px var(--charbon),0 14px 40px rgba(0,0,0,.55);overflow:hidden;flex:none;animation:balance 5s ease-in-out infinite}
+.logo-rond img{width:100%;height:100%;object-fit:cover}
+@keyframes balance{50%{transform:rotate(-4deg) translateY(-4px)}}
+.nom{font-family:'Pacifico',cursive;color:#fff;font-size:clamp(2.6rem,12vw,5.6rem);line-height:1.05;text-shadow:0 4px 0 var(--rouge-f),0 12px 30px rgba(0,0,0,.6)}
+.nom small{display:block;font-family:'Anton',sans-serif;font-size:.26em;letter-spacing:.3em;color:var(--jaune);text-shadow:none;text-transform:uppercase;margin-top:.2rem}
+.hero h1{font-size:clamp(1.6rem,6.4vw,2.6rem);margin:1.4rem 0 .7rem;color:#fff}
+.hero h1 em{font-style:normal;color:var(--jaune)}
+.hero p.lead{max-width:34rem;font-size:1.1rem;color:#f3ead9;text-shadow:0 1px 8px rgba(0,0,0,.6);margin-bottom:1.5rem}
+.infos-vite{margin-top:1.3rem;font-size:.95rem;color:var(--doux);display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+.infos-vite span::before{content:"● ";color:var(--braise);font-size:.7em}
+/* bandeau */
+.bandeau{background:var(--rouge);color:#fff;overflow:hidden;padding:.7rem 0;border-block:3px solid var(--charbon)}
+.bandeau-piste{display:flex;width:max-content;animation:defile 40s linear infinite}
+.bandeau span{font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.05em;padding:0 1rem;white-space:nowrap;text-transform:uppercase}
+.bandeau span::after{content:"";display:inline-block;width:.45em;height:.45em;margin-left:2rem;border-radius:50%;background:var(--jaune);vertical-align:.2em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{background:var(--farine);overflow:hidden}
+.esprit-grille{display:grid;gap:2.4rem;align-items:center}
+.citation{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.9rem,7.4vw,3rem);line-height:1.06;color:var(--charbon)}
+.citation em{font-style:normal;color:var(--rouge)}
+.esprit p{max-width:36rem}
+.source{font-size:.85rem;color:#7a6c5f;margin-top:.6rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pastilles span{background:var(--charbon);color:var(--jaune);font-family:'Anton',sans-serif;letter-spacing:.06em;font-size:.95rem;padding:.4rem .9rem;border-radius:999px;text-transform:uppercase}
+.photo-cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(30,27,31,.65);transform:rotate(1.5deg);transition:transform .6s}
+.photo-cadre:hover{transform:rotate(0) scale(1.01)}
+.photo-cadre img{width:100%;aspect-ratio:9/8;object-fit:cover}
+.photo-cadre figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .8rem;background:linear-gradient(transparent,rgba(30,27,31,.9));color:#fff;font-family:'Caveat',cursive;font-size:1.35rem;line-height:1.2}
+/* pizza du moment */
+.moment{background:linear-gradient(180deg,var(--four),var(--charbon));color:var(--creme);overflow:hidden}
+.moment::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 50% 0%,rgba(255,122,26,.25),transparent 70%)}
+.moment .wrap{position:relative}
+.moment .eyebrow{color:var(--jaune)}
+.moment h2{color:#fff}
+.moment .intro{color:var(--doux);max-width:40rem}
+.fil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem .2rem 1.2rem;margin-top:.6rem;scrollbar-width:thin;scrollbar-color:var(--braise) transparent}
+.mois{flex:0 0 min(80%,300px);scroll-snap-align:start;background:rgba(255,255,255,.05);border:1px solid rgba(255,194,26,.28);border-radius:18px;padding:1.3rem 1.2rem 1.4rem;position:relative;transition:transform .4s,box-shadow .4s,border-color .4s}
+.mois:hover{transform:translateY(-6px);border-color:var(--braise);box-shadow:0 26px 40px -24px rgba(255,122,26,.55)}
+.mois .quand{font-family:'Caveat',cursive;color:var(--jaune);font-size:1.4rem;line-height:1}
+.mois h3{color:#fff;margin:.45rem 0 .55rem;font-size:1.55rem}
+.mois p{color:var(--doux);font-size:.97rem}
+.mois .tag{display:inline-block;margin-top:.8rem;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;background:var(--rouge);color:#fff;padding:.15rem .6rem;border-radius:999px}
+.glisse{font-size:.85rem;color:var(--gris)}
+/* carte */
+.carte{background:var(--creme)}
+.carte .intro{max-width:40rem}
+.onglets{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.6rem 0 1.2rem}
+.onglets button{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.98rem;border:2px solid var(--charbon);border-radius:999px;padding:.5rem 1rem;background:transparent;color:var(--charbon);cursor:pointer;transition:.3s}
+.onglets button[aria-pressed=true]{background:var(--charbon);color:var(--jaune)}
+.plats{list-style:none;display:grid;gap:.2rem}
+.plats li{display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;padding:.85rem 0;border-bottom:1px dashed rgba(42,35,38,.25);animation:pose .5s both}
+.plats li:nth-child(2){animation-delay:.05s}.plats li:nth-child(3){animation-delay:.1s}.plats li:nth-child(4){animation-delay:.15s}.plats li:nth-child(5){animation-delay:.2s}.plats li:nth-child(6){animation-delay:.25s}.plats li:nth-child(n+7){animation-delay:.3s}
+@keyframes pose{from{opacity:0;transform:translateY(10px)}}
+.plats b{font-family:'Anton',sans-serif;font-weight:400;font-size:1.25rem;letter-spacing:.03em;text-transform:uppercase;color:var(--charbon)}
+.plats .prix{font-family:'Anton',sans-serif;font-size:1.25rem;color:var(--rouge)}
+.plats span.ing{grid-column:1/-1;color:#5d5149;font-size:.96rem}
+.plats .star b{color:var(--rouge)}
+.supp{margin-top:1rem;font-size:.95rem;background:var(--charbon);color:var(--doux);border-radius:12px;padding:.8rem 1rem;display:inline-block}
+.supp b{color:var(--jaune)}
+.cartes-photo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2rem;max-width:520px}
+.cartes-photo a{display:block;border-radius:12px;overflow:hidden;box-shadow:0 18px 30px -18px rgba(30,27,31,.7);transition:transform .4s}
+.cartes-photo a:hover{transform:translateY(-4px) rotate(-1deg)}
+.cartes-photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.carte .source{margin-top:.8rem}
+[hidden]{display:none!important}
+/* lieu */
+.lieu{background:var(--rouge);color:#fff;overflow:hidden}
+.lieu::before{content:"";position:absolute;top:-1px;left:0;right:0;height:26px;background:radial-gradient(circle at 13px 0,var(--creme) 12px,transparent 13px) 0 0/26px 26px repeat-x}
+.lieu .eyebrow{color:var(--jaune)}
+.lieu-grille{display:grid;gap:2rem;align-items:center}
+.lieu blockquote{font-family:'Caveat',cursive;font-size:clamp(1.7rem,6.5vw,2.4rem);line-height:1.2;border-left:4px solid var(--jaune);padding-left:1rem;margin:1rem 0}
+.lieu cite{display:block;font-style:normal;font-family:'Barlow',sans-serif;font-size:.85rem;color:#ffd9cf;margin-top:.4rem}
+.infos{display:grid;gap:1rem}
+.info{background:var(--charbon);border-radius:16px;padding:1.2rem 1.3rem;color:var(--doux)}
+.info h3{color:var(--jaune);font-size:1.3rem;margin-bottom:.3rem}
+.info .gros{font-family:'Anton',sans-serif;color:#fff;font-size:1.6rem;letter-spacing:.02em;line-height:1.15}
+.gros-plan{border-radius:50%;overflow:hidden;width:min(320px,70vw);aspect-ratio:1;margin:auto;border:6px solid var(--jaune);box-shadow:0 0 0 6px var(--charbon),0 30px 50px -20px rgba(0,0,0,.6);animation:balance 6s ease-in-out infinite}
+.gros-plan{background:#fff}.gros-plan img{width:100%;height:100%;object-fit:cover}
+/* contact */
+.contact{background:var(--jaune);color:var(--charbon);overflow:hidden}
+.contact .eyebrow{color:var(--rouge-f)}
+.contact-grille{display:grid;gap:2rem;align-items:start}
+.coord{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.coord a{display:flex;gap:.8rem;align-items:flex-start;text-decoration:none;font-size:1.05rem}
+.coord svg{width:24px;height:24px;flex:none;margin-top:.15rem}
+.coord b{font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.03em;font-weight:400;display:block;line-height:1.1}
+.contact .btn-line{border-color:var(--charbon);color:var(--charbon)}
+.contact .btn-line:hover{background:rgba(0,0,0,.08)}
+.mot{background:var(--charbon);color:var(--creme);border-radius:16px;padding:1.6rem}
+.mot p{color:var(--doux)}
+.mot blockquote{margin-top:1rem;border-left:3px solid var(--braise);padding-left:1rem;font-family:'Caveat',cursive;font-size:1.55rem;color:#fff;line-height:1.2}
+.mot cite{display:block;font-style:normal;font-size:.85rem;color:var(--gris);margin-top:.4rem;font-family:'Barlow',sans-serif}
+footer{background:var(--charbon);color:var(--gris);text-align:center;font-size:.85rem;padding:2.2rem 1rem 6.5rem;line-height:1.6}
+footer b{color:var(--jaune);font-weight:500}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(30,27,31,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(255,194,26,.35);transform:translateY(110%);transition:transform .45s}
+.barre.vue{transform:none}
+.barre .btn{flex:1;min-height:46px;font-size:1rem;padding:.6rem .8rem;animation:none}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+@media(min-width:760px){
+  .esprit-grille{grid-template-columns:1.1fr 1fr}
+  .lieu-grille{grid-template-columns:1.2fr 1fr}
+  .infos{grid-template-columns:1fr 1fr}
+  .plats{grid-template-columns:1fr 1fr;column-gap:2.5rem}
+  .contact-grille{grid-template-columns:1.3fr 1fr}
+  .barre{display:none}
+  footer{padding-bottom:2.2rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero .titre,.hero .accroche{opacity:1;transform:none}
+  canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour La Pizza Nono</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.3-.3-.3-.5-.4z"/></symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="ico-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V14h2.8v8z"/></symbol>
+  </defs>
+</svg>
+<main>
+
+<section class="hero">
+  <div class="fond"><img src="img/pizza-13-juillet.webp" alt="Pizza de La Pizza Nono à la roquette et aux noix, tout juste sortie, dans sa boîte" fetchpriority="high"></div>
+  <div class="chaleur" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="titre">
+      <div class="logo-rond"><img src="img/logo.webp" alt="Logo de La Pizza Nono"></div>
+      <div class="nom" aria-hidden="true">Nono<small>La Pizza · Les Avirons</small></div>
+    </div>
+    <div class="accroche">
+      <h1>La bonne pizza, <em>la vraie !</em></h1>
+      <p class="lead">Une pizzeria installée dans un magnifique endroit, la Cour Forcade, aux Avirons. Pâte fraîche préparée sur place, produits frais et de qualité, et une pizza faite avec passion.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692232052?text=Bonjour%20La%20Pizza%20Nono%20%21%20Je%20voudrais%20commander%20une%20pizza%20pour%20ce%20soir."><svg><use href="#ico-wa"/></svg>Commander sur WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692232052"><svg><use href="#ico-tel"/></svg>0692 23 20 52</a>
+      </div>
+      <div class="infos-vite"><span>Du mardi au samedi</span><span>18h00 – 21h30</span><span>Cour Forcade, Les Avirons</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+  <span>La bonne pizza, la vraie !</span><span>La Nono</span><span>Chèvre Noix</span><span>Savoyarde</span><span>Montagnarde</span><span>Salazie</span><span>Bayonne</span><span>Mortadella</span><span>Pâte fraîche</span><span>Cour Forcade</span>
+  <span>La bonne pizza, la vraie !</span><span>La Nono</span><span>Chèvre Noix</span><span>Savoyarde</span><span>Montagnarde</span><span>Salazie</span><span>Bayonne</span><span>Mortadella</span><span>Pâte fraîche</span><span>Cour Forcade</span>
+</div></div>
+
+<section class="esprit">
+  <div class="wrap esprit-grille">
+    <div class="rv">
+      <p class="eyebrow">L'esprit Nono</p>
+      <p class="citation">Viens te régaler avec une <em>bonne pizza</em> !</p>
+      <p class="source">Les mots de La Pizza Nono sur sa page Facebook</p>
+      <p style="margin-top:1.3rem">Chez Nono, la pâte est préparée sur place, les produits sont frais et de qualité, et chaque pizza est préparée avec générosité. Le soir venu, la Cour Forcade sent bon la pizza chaude.</p>
+      <div class="pastilles"><span>Pâte fraîche</span><span>100 % fait maison</span><span>Produits frais</span><span>Fait avec passion</span></div>
+    </div>
+    <figure class="photo-cadre rv">
+      <img src="img/pizza-gros-plan.webp" alt="Gros plan sur une pizza de Nono : mozzarella fondue, roquette fraîche et noix" loading="lazy">
+      <figcaption>« Nono sera ouvert ce soir pour vous régaler vos papilles. » — 13 juillet 2026</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="moment" id="moment">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Au fil des mois</p>
+      <h2>La pizza <span class="script" style="color:var(--jaune)">du moment</span></h2>
+      <p class="intro">Chaque mois, Nono imagine une nouvelle recette et la présente sur sa page. Un petit tour des dernières créations publiées :</p>
+    </div>
+    <div class="fil rv" tabindex="0" aria-label="Les pizzas du moment, à faire défiler">
+      <article class="mois"><p class="quand">Mars 2026</p><h3>La Chèvre Noix</h3><p>Base crème, chèvre, roquette &amp; miel pays.</p><span class="tag">« La petite nouvelle »</span></article>
+      <article class="mois"><p class="quand">Avril 2026</p><h3>La Montagnarde Poulet</h3><p>Une base crème onctueuse, une mozzarella fondante, de tendres morceaux de poulet, des pommes de terre et des oignons frits croustillants.</p></article>
+      <article class="mois"><p class="quand">Mai 2026</p><h3>La Boucané Volaille</h3><p>Base tomate, volaille tendre, légumes grillés, gros piment vert tout en douceur, mozzarella fondante. « Une pizza qui a du caractère ! »</p></article>
+      <article class="mois"><p class="quand">Juin 2026</p><h3>La Carnivore</h3><p>Base tomate, mozzarella, bœuf, jambon blanc, merguez, oignons frits. 100 % fait maison.</p></article>
+      <article class="mois"><p class="quand">Juillet 2026</p><h3>La Gourmande</h3><p>Base tomate, mozzarella, bœuf, lardons, raclette, gros piment, olives.</p><span class="tag">Pizza du mois</span></article>
+      <article class="mois"><p class="quand">Juillet 2026</p><h3>Le Hot Pizz</h3><p>La nouveauté de l'été : saucisse au porc ou saucisse poulet, et la sauce au choix. « Chaude, généreuse et pleine de goût ! »</p><span class="tag">Nouveauté</span></article>
+    </div>
+    <p class="glisse">Faites glisser pour voir toutes les créations →</p>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">La carte</p>
+      <h2>Toutes les pizzas de Nono</h2>
+      <p class="intro">La carte publiée par La Pizza Nono le 6 octobre 2026. Choisissez une famille et laissez-vous tenter.</p>
+    </div>
+    <div class="onglets rv" id="onglets">
+      <button type="button" aria-pressed="true" data-f="classiques">Classiques</button>
+      <button type="button" aria-pressed="false" data-f="speciales">Spéciales</button>
+      <button type="button" aria-pressed="false" data-f="fromages">Fromages</button>
+      <button type="button" aria-pressed="false" data-f="poulets">Poulets</button>
+      <button type="button" aria-pressed="false" data-f="poissons">Poissons</button>
+    </div>
+    <ul class="plats" data-liste="classiques">
+      <li><b>Margarita</b><span class="prix">10 €</span><span class="ing">Tomate, mozzarella, olives</span></li>
+      <li><b>Romana</b><span class="prix">11 €</span><span class="ing">Tomate, mozzarella, jambon blanc</span></li>
+      <li><b>Reine</b><span class="prix">12 €</span><span class="ing">Tomate, mozzarella, jambon blanc, champignons, olives</span></li>
+      <li><b>Chausson</b><span class="prix">13 €</span><span class="ing">Tomate, mozzarella, jambon blanc, champignons, œuf</span></li>
+      <li><b>Paysanne</b><span class="prix">13 €</span><span class="ing">Tomate, mozzarella, lardons, champignons, œuf, persillade</span></li>
+      <li><b>Carbonara</b><span class="prix">13 €</span><span class="ing">Crème, mozzarella, jambon blanc, lardons, œuf</span></li>
+      <li><b>Chorizo</b><span class="prix">13 €</span><span class="ing">Tomate, mozzarella, chorizo, olives</span></li>
+      <li><b>Kebab</b><span class="prix">14 €</span><span class="ing">Crème, mozzarella, viande kebab</span></li>
+      <li><b>Charcutière</b><span class="prix">14 €</span><span class="ing">Tomate, mozzarella, jambon blanc, chorizo, ventrèche (poitrine de porc)</span></li>
+      <li><b>Salazie</b><span class="prix">14 €</span><span class="ing">Tomate, mozzarella, saucisses, gros piments, olives</span></li>
+      <li><b>Printanière</b><span class="prix">15 €</span><span class="ing">Tomate, mozzarella, bacon, artichauts, champignons, olives</span></li>
+      <li><b>Texane</b><span class="prix">15 €</span><span class="ing">Tomate, mozzarella, haché de bœuf, poivrons, oignons, œuf, persillade</span></li>
+    </ul>
+    <ul class="plats" data-liste="speciales" hidden>
+      <li class="star"><b>La Nono</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, jambon blanc, aubergine, gros piments, olives, oignons</span></li>
+      <li><b>Végétarienne</b><span class="prix">12 €</span><span class="ing">Crème, mozzarella, aubergine, gros piments, oignons</span></li>
+      <li><b>Tunisienne</b><span class="prix">14 €</span><span class="ing">Tomate, mozzarella, merguez, chorizo, poivrons</span></li>
+      <li><b>Américaine</b><span class="prix">14 €</span><span class="ing">Tomate, mozzarella, cheddar, haché de bœuf, oignons</span></li>
+      <li><b>Bayonne</b><span class="prix">16 €</span><span class="ing">Tomate, mozzarella, jambon cru, tomates cerises, roquette, parmesan, crème balsamique</span></li>
+      <li><b>Mortadella</b><span class="prix">18 €</span><span class="ing">Crème, mozzarella, mortadelle, burrata, basilic, parmesan</span></li>
+    </ul>
+    <ul class="plats" data-liste="fromages" hidden>
+      <li><b>Chèvre Miel</b><span class="prix">12 €</span><span class="ing">Tomate, mozzarella, chèvre, miel</span></li>
+      <li><b>3 Fromages</b><span class="prix">12 €</span><span class="ing">Tomate, mozzarella, bleu d'Auvergne, chèvre</span></li>
+      <li><b>Savoyarde</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, pommes de terre, raclette, lardons, reblochon</span></li>
+      <li><b>Camembert</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, camembert, lardons, roquette, crème balsamique</span></li>
+      <li class="star"><b>Chèvre Noix</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, chèvre, miel, noix, roquette</span></li>
+    </ul>
+    <ul class="plats" data-liste="poulets" hidden>
+      <li><b>Montagnarde</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, poulet, pommes de terre, oignons frits</span></li>
+      <li><b>La Forestière</b><span class="prix">16 €</span><span class="ing">Crème, mozzarella, poulet, oignons frits, persillade</span></li>
+    </ul>
+    <ul class="plats" data-liste="poissons" hidden>
+      <li><b>Norvégienne</b><span class="prix">15 €</span><span class="ing">Crème, mozzarella, saumon, roquette, crème balsamique</span></li>
+      <li><b>Provençale</b><span class="prix">16 €</span><span class="ing">Tomate, mozzarella, poivrons, oignons, anchois, pesto, olives, persillade</span></li>
+    </ul>
+    <p class="supp">Suppléments : <b>légumes, œuf 1 €</b> · <b>viandes 2 €</b></p>
+    <div class="cartes-photo rv">
+      <a href="img/carte-1.webp" target="_blank" rel="noopener"><img src="img/carte-1.webp" alt="Carte de La Pizza Nono, première page : coordonnées, horaires et pizzas classiques" loading="lazy"></a>
+      <a href="img/carte-2.webp" target="_blank" rel="noopener"><img src="img/carte-2.webp" alt="Carte de La Pizza Nono, seconde page : spéciales, poissons, fromages et poulets" loading="lazy"></a>
+    </div>
+    <p class="source">Carte publiée sur la page Facebook de La Pizza Nono, 6 octobre 2026. Touchez une page pour l'agrandir.</p>
+  </div>
+</section>
+
+<section class="lieu" id="lieu">
+  <div class="wrap lieu-grille">
+    <div class="rv">
+      <p class="eyebrow">Le lieu</p>
+      <h2>Rendez-vous à la Cour Forcade</h2>
+      <blockquote>« La Pizza Nono vous accueille dans un magnifique endroit, la Cour Forcade. »<cite>Présentation de la page Facebook de La Pizza Nono</cite></blockquote>
+      <div class="infos">
+        <div class="info"><h3>Adresse</h3><p class="gros">11 bis av. Général de Gaulle</p><p>Cour Forcade, 97425 Les Avirons</p></div>
+        <div class="info"><h3>Ouvert le soir</h3><p class="gros">Mardi → samedi</p><p>De 18h00 à 21h30</p></div>
+      </div>
+    </div>
+    <div class="gros-plan rv"><img src="img/logo.webp" alt="Logo de La Pizza Nono : la mascotte rouge et sa part de pizza" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grille">
+    <div class="rv">
+      <p class="eyebrow">Commander</p>
+      <h2>Une envie de pizza ce soir ?</h2>
+      <div class="coord">
+        <a href="https://wa.me/262692232052?text=Bonjour%20La%20Pizza%20Nono%20%21"><svg><use href="#ico-wa"/></svg><span><b>WhatsApp</b>Écrivez à Nono en un message</span></a>
+        <a href="tel:+262692232052"><svg><use href="#ico-tel"/></svg><span><b>0692 23 20 52</b>Commandes par téléphone</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Cour%20Forcade%2011%20bis%20avenue%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2097425%20Les%20Avirons" target="_blank" rel="noopener"><svg><use href="#ico-pin"/></svg><span><b>Cour Forcade</b>11 bis avenue Général de Gaulle, Les Avirons</span></a>
+        <a href="https://www.facebook.com/418448514673664" target="_blank" rel="noopener"><svg><use href="#ico-fb"/></svg><span><b>La Pizza Nono</b>La pizza du moment et les nouveautés sur Facebook</span></a>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-rouge" href="https://wa.me/262692232052?text=Bonjour%20La%20Pizza%20Nono%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692232052"><svg><use href="#ico-tel"/></svg>Appeler</a>
+      </div>
+    </div>
+    <div class="mot rv">
+      <p style="color:#fff;font-family:'Anton',sans-serif;font-size:1.4rem;letter-spacing:.03em;text-transform:uppercase">Le mot de Nono</p>
+      <p>Publié pour le 14 juillet 2026 :</p>
+      <blockquote>« Bonjour à tous et joyeux 14 juillet. Nono sera ouvert ce soir pour vous régaler vos papilles. »<cite>Page Facebook de La Pizza Nono</cite></blockquote>
+      <blockquote>« Un jour de plus pour une bonne pizza. »<cite>Page Facebook de La Pizza Nono, 21 janvier 2026</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>La Pizza Nono</b> · Pizzeria · Cour Forcade, Les Avirons, La Réunion · La bonne pizza, la vraie !<br>Maquette privée imaginée par Aurélie &amp; Jonathan, ATMA Digital, à partir des publications de La Pizza Nono.</footer>
+
+<div class="barre" id="barre">
+  <a class="btn btn-main" href="https://wa.me/262692232052?text=Bonjour%20La%20Pizza%20Nono%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-line" href="tel:+262692232052"><svg><use href="#ico-tel"/></svg>Appeler</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var barre=document.getElementById('barre');
+  addEventListener('scroll',function(){barre.classList.toggle('vue',scrollY>innerHeight*.6)},{passive:true});
+  /* onglets de la carte */
+  var bt=document.querySelectorAll('#onglets button'),ls=document.querySelectorAll('[data-liste]');
+  bt.forEach(function(b){b.addEventListener('click',function(){
+    bt.forEach(function(o){o.setAttribute('aria-pressed',o===b)});
+    ls.forEach(function(l){l.hidden=l.dataset.liste!==b.dataset.f})})});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* braises du four qui montent + fine farine qui flotte */
+  var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true;
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  for(var i=0;i<30;i++){var b=i<18;P.push({x:Math.random(),y:Math.random(),r:b?1.2+Math.random()*1.8:1+Math.random()*1.6,v:b?.0006+Math.random()*.0009:.00015+Math.random()*.00025,p:Math.random()*6.28,s:.5+Math.random()*1.2,b:b})}
+  function f(t){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(o){o.y-=o.v;if(o.y<-.05){o.y=1.05;o.x=Math.random()}
+      var px=(o.x+.02*Math.sin(t*.0007*o.s+o.p))*W,py=o.y*H,a,col,R;
+      if(o.b){a=(.35+.3*Math.sin(t*.004*o.s+o.p))*Math.min(1,o.y*1.6);col=Math.sin(o.p*7)>0?'255,122,26':'255,194,26';R=o.r*3.2}
+      else{a=.16+.08*Math.sin(t*.001*o.s+o.p);col='255,248,235';R=o.r*2.2}
+      var g=x.createRadialGradient(px,py,0,px,py,R);g.addColorStop(0,'rgba('+col+','+a+')');g.addColorStop(1,'rgba('+col+',0)');
+      x.fillStyle=g;x.beginPath();x.arc(px,py,R,0,6.28);x.fill()});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Pizza Nono" defer></script>
+</body>
+</html>
