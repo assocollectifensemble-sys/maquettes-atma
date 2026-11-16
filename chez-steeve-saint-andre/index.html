@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chez Steeve · La référence des plats Mauriciens depuis 2006 · Saint-André</title>
+<meta name="description" content="Chez Steeve, traiteur mauricien et camion-bar à Saint-André : dholl puri, roti, faratha, briani. Le midi près de la mairie, avenue de la République. 0692 04 86 66.">
+<meta property="og:title" content="Chez Steeve · La référence des plats Mauriciens depuis 2006">
+<meta property="og:description" content="Le camion turquoise de Saint-André : dholl puri, roti, faratha, briani… les saveurs de Maurice à la Réunion depuis 2006.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/chez-steeve-saint-andre/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/chez-steeve-saint-andre/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Nunito:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--lagon:#16afc4;--lagon-f:#0d8597;--ocean:#0a3440;--nuit:#072630;--soleil:#f7c625;--curcuma:#e8951c;--piment:#d4442a;--creme:#fff8ea;--sable:#f6ecd6;--txt:#123039;--doux:#cfe6ea;--gris:#8fb0b7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,Arial,sans-serif;color:var(--txt);background:var(--sable);line-height:1.65;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.02}
+h2{font-size:clamp(2.4rem,10vw,4rem);margin:.3rem 0 1rem}
+h3{font-size:1.6rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+.eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:.2em;font-size:1.05rem;color:var(--lagon-f)}
+.script{font-family:'Lobster',cursive;font-weight:400;letter-spacing:0}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:var(--soleil);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(247,198,37,.35)}
+.ribbon b{color:#fff}
+canvas#vapeur{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:.06em;transition:.3s;line-height:1;border:0;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--soleil);color:var(--ocean);box-shadow:0 12px 28px -12px rgba(247,198,37,.9);animation:souffle 3.4s ease-in-out infinite}
+.btn-main:hover{background:#ffd75a;transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 12px 40px -4px rgba(232,149,28,.75)}}
+.btn-line{border:2px solid var(--soleil);color:#fff;background:transparent}
+.btn-line:hover{background:rgba(247,198,37,.15)}
+.btn-lagon{background:var(--lagon);color:#fff}
+.btn-lagon:hover{background:var(--lagon-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ocean);color:var(--creme);padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:45% 45%;animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.15) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,38,48,.7) 0%,rgba(7,38,48,.1) 24%,rgba(7,38,48,.6) 46%,rgba(7,38,48,.94) 64%,var(--nuit) 100%)}
+.hero .chaleur{position:absolute;left:-20%;right:-20%;bottom:-30%;height:70%;z-index:1;background:radial-gradient(ellipse at 50% 100%,rgba(232,149,28,.38),rgba(247,198,37,.12) 40%,transparent 70%);animation:mijote 6s ease-in-out infinite;pointer-events:none}
+@keyframes mijote{50%{opacity:.6;transform:scaleY(1.06)}}
+.hero-in{position:relative;z-index:2;padding:7rem 0 4rem}
+.hero .titre{opacity:0;transform:translateY(24px);animation:monte 1.1s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.hero .accroche{opacity:0;transform:translateY(24px);animation:monte 1.1s .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.nom{font-family:'Lobster',cursive;color:var(--soleil);font-size:clamp(3.4rem,16vw,6.4rem);line-height:1;text-shadow:0 4px 0 var(--lagon-f),0 14px 30px rgba(0,0,0,.6)}
+.nom small{display:block;font-family:'Bebas Neue',sans-serif;font-size:.24em;letter-spacing:.32em;color:#fff;text-shadow:none;margin-top:.5rem}
+.hero h1{font-size:clamp(1.9rem,8vw,3rem);margin:1.2rem 0 .7rem;color:#fff}
+.hero h1 em{font-style:normal;color:var(--soleil)}
+.hero p.lead{max-width:34rem;font-size:1.1rem;color:#eaf6f8;text-shadow:0 1px 8px rgba(0,0,0,.6);margin-bottom:1.5rem}
+.infos-vite{margin-top:1.3rem;font-size:.95rem;color:var(--doux);display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+.infos-vite span::before{content:"● ";color:var(--curcuma);font-size:.7em}
+/* bandeau */
+.bandeau{background:var(--lagon);color:#fff;overflow:hidden;padding:.7rem 0;border-block:3px solid var(--soleil)}
+.bandeau-piste{display:flex;width:max-content;animation:defile 42s linear infinite}
+.bandeau span{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:.06em;padding:0 1rem;white-space:nowrap}
+.bandeau span::after{content:"";display:inline-block;width:.42em;height:.42em;margin-left:2rem;border-radius:50%;background:var(--soleil);vertical-align:.18em}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{background:var(--sable);overflow:hidden}
+.esprit-grille{display:grid;gap:2.4rem;align-items:center}
+.citation{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.3rem,9vw,3.6rem);line-height:1.02;color:var(--ocean)}
+.citation em{font-style:normal;color:var(--lagon-f)}
+.esprit p{max-width:36rem}
+.source{font-size:.85rem;color:#5d7c83;margin-top:.6rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pastilles span{background:var(--ocean);color:var(--soleil);font-family:'Bebas Neue',sans-serif;letter-spacing:.07em;font-size:1.1rem;padding:.35rem .95rem;border-radius:999px}
+.photo-cadre{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(7,38,48,.65);transform:rotate(1.5deg);transition:transform .6s;border:5px solid #fff}
+.photo-cadre:hover{transform:rotate(0) scale(1.01)}
+.photo-cadre img{width:100%;aspect-ratio:2/1;object-fit:cover}
+.photo-cadre figcaption{background:#fff;color:var(--ocean);font-family:'Caveat',cursive;font-size:1.35rem;line-height:1.2;padding:.6rem .8rem .4rem}
+/* plats */
+.plats{background:linear-gradient(180deg,var(--ocean),var(--nuit));color:var(--creme);overflow:hidden}
+.plats::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 45% at 50% 0%,rgba(22,175,196,.28),transparent 70%)}
+.plats .wrap{position:relative}
+.plats .eyebrow{color:var(--soleil)}
+.plats h2{color:#fff}
+.plats .intro{color:var(--doux);max-width:40rem}
+.fil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem .2rem 1.2rem;margin-top:.6rem;scrollbar-width:thin;scrollbar-color:var(--soleil) transparent}
+.plat{flex:0 0 min(72%,250px);scroll-snap-align:start;background:rgba(255,255,255,.05);border:1px solid rgba(247,198,37,.28);border-radius:20px;padding:1.4rem 1.2rem 1.3rem;transition:transform .4s,box-shadow .4s,border-color .4s}
+.plat:hover{transform:translateY(-6px);border-color:var(--soleil);box-shadow:0 26px 40px -24px rgba(247,198,37,.5)}
+.plat svg{width:68px;height:68px;display:block;margin-bottom:.7rem}
+.plat h3{color:var(--soleil);font-size:1.9rem}
+.plat p{color:var(--doux);font-size:.95rem}
+.glisse{font-size:.85rem;color:var(--gris)}
+/* où */
+.ou{background:var(--creme)}
+.ou-grille{display:grid;gap:2rem;align-items:start}
+.lieux{display:grid;gap:1rem;margin-top:1.4rem}
+.lieu{background:#fff;border-radius:18px;padding:1.2rem 1.3rem;box-shadow:0 18px 34px -26px rgba(7,38,48,.55);border-left:6px solid var(--lagon);transition:transform .4s}
+.lieu:hover{transform:translateX(4px)}
+.lieu .quand{font-family:'Caveat',cursive;color:var(--curcuma);font-size:1.45rem;line-height:1}
+.lieu h3{color:var(--ocean);font-size:1.7rem;margin:.2rem 0 .2rem}
+.lieu p{color:#3d5a61;font-size:.97rem}
+.post{background:var(--ocean);color:var(--creme);border-radius:20px;padding:1.6rem;position:relative}
+.post .date{font-family:'Bebas Neue',sans-serif;letter-spacing:.12em;color:var(--soleil);font-size:1.1rem}
+.post blockquote{font-family:'Caveat',cursive;font-size:clamp(1.7rem,6.5vw,2.2rem);line-height:1.2;margin:.6rem 0;color:#fff}
+.post cite{display:block;font-style:normal;font-size:.85rem;color:var(--gris)}
+.vignette{width:min(260px,62vw);aspect-ratio:1;border-radius:50%;overflow:hidden;margin:1.6rem auto 0;border:6px solid var(--soleil);box-shadow:0 0 0 6px var(--lagon),0 26px 46px -20px rgba(0,0,0,.6);animation:balance 6s ease-in-out infinite}
+.vignette img{width:100%;height:100%;object-fit:cover}
+.vignette-leg{text-align:center;font-family:'Caveat',cursive;font-size:1.35rem;color:var(--ocean);margin-top:.9rem}
+@keyframes balance{50%{transform:rotate(-3deg) translateY(-4px)}}
+/* fêtes */
+.fetes{background:linear-gradient(160deg,var(--lagon-f),var(--ocean));color:#fff;overflow:hidden;text-align:center}
+.fetes::before{content:"";position:absolute;top:-1px;left:0;right:0;height:26px;background:radial-gradient(circle at 13px 0,var(--creme) 12px,transparent 13px) 0 0/26px 26px repeat-x}
+.fetes .guirlande{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1rem}
+.fetes .guirlande i{width:12px;height:12px;border-radius:50%;background:var(--soleil);box-shadow:0 0 14px var(--soleil);animation:scintille 2.4s ease-in-out infinite}
+.fetes .guirlande i:nth-child(2n){background:var(--piment);box-shadow:0 0 14px var(--piment);animation-delay:.6s}
+.fetes .guirlande i:nth-child(3n){background:#fff;box-shadow:0 0 14px #fff;animation-delay:1.2s}
+@keyframes scintille{50%{opacity:.35;transform:scale(.8)}}
+.fetes .eyebrow{color:var(--soleil)}
+.fetes h2{color:#fff}
+.fetes p{max-width:36rem;margin:0 auto 1.6rem;color:#e6f6f8}
+.fetes .ctas{justify-content:center}
+.fetes .idees{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem;margin:0 auto 1.8rem;max-width:40rem}
+.fetes .idees span{border:1.5px solid rgba(247,198,37,.7);color:var(--soleil);border-radius:999px;padding:.3rem .9rem;font-weight:600;font-size:.95rem}
+/* contact */
+.contact{background:var(--soleil);color:var(--ocean);overflow:hidden}
+.contact .eyebrow{color:var(--lagon-f)}
+.contact-grille{display:grid;gap:2rem;align-items:start}
+.coord{display:grid;gap:.9rem;margin:1.4rem 0 1.8rem}
+.coord a{display:flex;gap:.8rem;align-items:flex-start;text-decoration:none;font-size:1.05rem}
+.coord svg{width:24px;height:24px;flex:none;margin-top:.15rem}
+.coord b{font-family:'Bebas Neue',sans-serif;font-size:1.55rem;letter-spacing:.04em;font-weight:400;display:block;line-height:1.1}
+.contact .btn-line{border-color:var(--ocean);color:var(--ocean)}
+.contact .btn-line:hover{background:rgba(0,0,0,.08)}
+.mot{background:var(--ocean);color:var(--creme);border-radius:18px;overflow:hidden}
+.mot img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.mot div{padding:1.3rem 1.4rem 1.5rem}
+.mot p.t{color:var(--soleil);font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.04em}
+.mot p{color:var(--doux)}
+footer{background:var(--nuit);color:var(--gris);text-align:center;font-size:.85rem;padding:2.2rem 1rem 6.5rem;line-height:1.6}
+footer b{color:var(--soleil);font-weight:600}
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(7,38,48,.94);backdrop-filter:blur(8px);border-top:1px solid rgba(247,198,37,.35);transform:translateY(110%);transition:transform .45s}
+.barre.vue{transform:none}
+.barre .btn{flex:1;min-height:46px;font-size:1.1rem;padding:.6rem .8rem;animation:none}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.on{opacity:1;transform:none}
+@media(min-width:760px){
+  .esprit-grille{grid-template-columns:1.1fr 1fr}
+  .ou-grille{grid-template-columns:1.2fr 1fr}
+  .contact-grille{grid-template-columns:1.3fr 1fr}
+  .barre{display:none}
+  footer{padding-bottom:2.2rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.hero .titre,.hero .accroche{opacity:1;transform:none}
+  canvas#vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Chez Steeve</div>
+<canvas id="vapeur" aria-hidden="true"></canvas>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ico-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+    <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.3-.3-.3-.5-.4z"/></symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="ico-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.6V14h2.8v8z"/></symbol>
+  </defs>
+</svg>
+<main>
+
+<section class="hero">
+  <div class="fond"><img src="img/camion-steeve.webp" alt="Le camion turquoise de Chez Steeve et ses lettres jaunes : Maurice à la Réunion depuis 2006" fetchpriority="high"></div>
+  <div class="chaleur" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="titre">
+      <div class="nom" aria-hidden="true">Chez Steeve<small>Traiteur mauricien · Saint-André</small></div>
+    </div>
+    <div class="accroche">
+      <h1>La référence des plats <em>Mauriciens</em> depuis 2006</h1>
+      <p class="lead">Un camion-bar turquoise près de la mairie de Saint-André, et des plats du jour à emporter qui sentent bon Maurice : dholl puri, roti, faratha, briani…</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692048666?text=Bonjour%20Chez%20Steeve%20%21%20Je%20voudrais%20passer%20commande%20pour%20ce%20midi."><svg><use href="#ico-wa"/></svg>Commander sur WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692048666"><svg><use href="#ico-tel"/></svg>0692 04 86 66</a>
+      </div>
+      <div class="infos-vite"><span>Le midi, 11h – 13h</span><span>Centre-ville de Saint-André</span><span>Depuis 2006</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+  <span>Dholl puri</span><span>Roti</span><span>Faratha</span><span>Briani</span><span>Riz frit</span><span>Sauté mines</span><span>Maurice à la Réunion</span><span>Depuis 2006</span>
+  <span>Dholl puri</span><span>Roti</span><span>Faratha</span><span>Briani</span><span>Riz frit</span><span>Sauté mines</span><span>Maurice à la Réunion</span><span>Depuis 2006</span>
+</div></div>
+
+<section class="esprit">
+  <div class="wrap esprit-grille">
+    <div class="rv">
+      <p class="eyebrow">L'esprit Chez Steeve</p>
+      <p class="citation"><em>Maurice</em> à la Réunion depuis 2006</p>
+      <p class="source">Les mots peints sur le camion de Chez Steeve</p>
+      <p style="margin-top:1.3rem">Depuis 2006, Chez Steeve fait voyager Saint-André jusqu'à l'île sœur. Chaque midi, le camion propose ses plats du jour à emporter, préparés avec des produits frais et locaux, où se mêlent les parfums de l'Inde, de la Chine et du terroir créole.</p>
+      <div class="pastilles"><span>Plats du jour</span><span>À emporter</span><span>Produits frais et locaux</span><span>Saveurs métissées</span></div>
+    </div>
+    <figure class="photo-cadre rv">
+      <img src="img/lettrage.webp" alt="Le flanc du camion Chez Steeve : dholl-puri, faratha, briani, riz frit" loading="lazy">
+      <figcaption>Le menu s'écrit en grand, en lettres jaunes sur le turquoise.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="plats" id="plats">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Les spécialités</p>
+      <h2>Les saveurs de <span class="script" style="color:var(--soleil)">l'île sœur</span></h2>
+      <p class="intro">Les grands classiques mauriciens peints sur le camion et présentés par Chez Steeve, à retrouver selon le plat du jour.</p>
+    </div>
+    <div class="fil rv" tabindex="0" aria-label="Les spécialités, à faire défiler">
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><ellipse cx="34" cy="36" rx="24" ry="17" fill="#f3d79b"/><ellipse cx="34" cy="36" rx="17" ry="11" fill="#e8b85c"/><circle cx="27" cy="33" r="2" fill="#c98a2a"/><circle cx="38" cy="38" r="2" fill="#c98a2a"/><circle cx="41" cy="31" r="1.6" fill="#c98a2a"/></svg><h3>Dholl puri</h3><p>En tête des lettres jaunes du camion : le grand classique de Maurice.</p></article>
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><circle cx="34" cy="34" r="22" fill="#f1cf8c"/><path d="M20 30q7-5 14 0t14 0M20 38q7-5 14 0t14 0" stroke="#d9a24a" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg><h3>Roti</h3><p>Cité parmi les assiettes du midi qui racontent l'île.</p></article>
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><path d="M14 40q20-26 40 0z" fill="#efc77a"/><path d="M18 40q16-18 32 0" stroke="#c98a2a" stroke-width="2" fill="none"/><rect x="14" y="40" width="40" height="5" rx="2.5" fill="#d9a24a"/></svg><h3>Faratha</h3><p>Écrit deux fois sur le camion, signe d'une vraie spécialité de la maison.</p></article>
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><path d="M12 36h44a22 14 0 0 1-44 0z" fill="#16afc4"/><ellipse cx="34" cy="36" rx="22" ry="5" fill="#0d8597"/><path d="M16 35q18-20 36 0z" fill="#f5c35a"/><circle cx="28" cy="29" r="1.6" fill="#d4442a"/><circle cx="37" cy="27" r="1.6" fill="#fff"/><circle cx="42" cy="31" r="1.6" fill="#d4442a"/></svg><h3>Briani</h3><p>Au menu peint sur le flanc du camion, aux côtés du riz frit.</p></article>
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><path d="M12 36h44a22 14 0 0 1-44 0z" fill="#fff8ea"/><path d="M16 35q18-18 36 0z" fill="#f1d27e"/><circle cx="26" cy="31" r="1.8" fill="#58a14a"/><circle cx="33" cy="28" r="1.8" fill="#e8951c"/><circle cx="40" cy="31" r="1.8" fill="#58a14a"/></svg><h3>Riz frit</h3><p>Une valeur sûre du camion, peinte en lettres jaunes.</p></article>
+      <article class="plat"><svg viewBox="0 0 68 68" aria-hidden="true"><circle cx="34" cy="34" r="30" fill="#f7c625" opacity=".18"/><path d="M14 38q10-14 20-2t20-4" stroke="#e8b85c" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M14 44q10-12 20-2t20-6" stroke="#d9a24a" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M18 32q8-10 18-2" stroke="#f1cf8c" stroke-width="4" fill="none" stroke-linecap="round"/></svg><h3>Sauté mines</h3><p>Le clin d'œil chinois de la cuisine métissée de Chez Steeve.</p></article>
+    </div>
+    <p class="glisse">Faites glisser pour voir toutes les spécialités →</p>
+  </div>
+</section>
+
+<section class="ou" id="ou">
+  <div class="wrap ou-grille">
+    <div class="rv">
+      <p class="eyebrow">Où trouver le camion</p>
+      <h2>Le midi à Saint-André, le week-end sur les marchés</h2>
+      <div class="lieux">
+        <div class="lieu"><p class="quand">Chaque midi</p><h3>Près de la mairie de Saint-André</h3><p>Avenue de la République, au centre-ville, de 11h à 13h.</p></div>
+        <div class="lieu"><p class="quand">Le dimanche</p><h3>Marché de l'Ermitage</h3><p>Le camion turquoise s'installe au marché de l'Ermitage.</p></div>
+        <div class="lieu"><p class="quand">Le premier samedi du mois</p><h3>Le Barachois</h3><p>Rendez-vous au Barachois pour les amateurs de marchés.</p></div>
+      </div>
+      <p class="source">L'emplacement du jour est annoncé sur la page Facebook de Chez Steeve.</p>
+    </div>
+    <div class="rv">
+      <div class="post">
+        <p class="date">Publié le 1er mai 2026</p>
+        <blockquote>« Bonne fête du 1er mai ! Nous serons ouvert aujourd'hui au centre ville de Saint-André de 11h à 13h. »</blockquote>
+        <cite>Page Facebook de Chez Steeve</cite>
+      </div>
+      <div class="vignette"><img src="img/barachois.webp" alt="Le camion de Chez Steeve installé au Barachois, en fin de journée, montagnes en toile de fond" loading="lazy"></div>
+      <p class="vignette-leg">Soir de marché au Barachois</p>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap rv">
+    <div class="guirlande" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="eyebrow">Offrir pour Noël · Commande des fêtes</p>
+    <h2>Des fêtes aux saveurs de <span class="script" style="color:var(--soleil)">Maurice</span></h2>
+    <p>Un repas de famille, un pot entre collègues, une tablée de fin d'année ? Parlez de votre projet à Chez Steeve : dholl puri, faratha, briani… le traiteur mauricien de Saint-André vous répond directement sur WhatsApp.</p>
+    <div class="idees"><span>Repas de famille</span><span>Pot entre collègues</span><span>Tablée de fin d'année</span></div>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692048666?text=Bonjour%20Chez%20Steeve%20%21%20Je%20voudrais%20vous%20parler%20d%27une%20commande%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e."><svg><use href="#ico-wa"/></svg>Parler de ma commande des fêtes</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grille">
+    <div class="rv">
+      <p class="eyebrow">Commander</p>
+      <h2>Une envie de dholl puri ce midi ?</h2>
+      <div class="coord">
+        <a href="https://wa.me/262692048666?text=Bonjour%20Chez%20Steeve%20%21"><svg><use href="#ico-wa"/></svg><span><b>WhatsApp</b>Écrivez à Chez Steeve en un message</span></a>
+        <a href="tel:+262692048666"><svg><use href="#ico-tel"/></svg><span><b>0692 04 86 66</b>Commandes par téléphone</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenue%20de%20la%20R%C3%A9publique%2097440%20Saint-Andr%C3%A9%20R%C3%A9union" target="_blank" rel="noopener"><svg><use href="#ico-pin"/></svg><span><b>Avenue de la République</b>Près de la mairie, 97440 Saint-André</span></a>
+        <a href="https://www.facebook.com/p/Chez-Steeve-100057262607977" target="_blank" rel="noopener"><svg><use href="#ico-fb"/></svg><span><b>Chez Steeve</b>9,4 K abonnés · l'emplacement du jour sur Facebook</span></a>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-lagon" href="https://wa.me/262692048666?text=Bonjour%20Chez%20Steeve%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692048666"><svg><use href="#ico-tel"/></svg>Appeler</a>
+      </div>
+    </div>
+    <div class="mot rv">
+      <img src="img/camion-steeve.webp" alt="Le camion Chez Steeve, turquoise et jaune, à Saint-André" loading="lazy">
+      <div>
+        <p class="t">Le camion turquoise</p>
+        <p>Facile à repérer avec ses lettres jaunes : « Maurice à la Réunion depuis 2006 ». On y parle français, créole et anglais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Chez Steeve</b> · Traiteur mauricien · Saint-André, La Réunion · La référence des plats Mauriciens depuis 2006<br>Maquette privée imaginée par Aurélie &amp; Jonathan, ATMA Digital, à partir des publications de Chez Steeve.</footer>
+
+<div class="barre" id="barre">
+  <a class="btn btn-main" href="https://wa.me/262692048666?text=Bonjour%20Chez%20Steeve%20%21"><svg><use href="#ico-wa"/></svg>WhatsApp</a>
+  <a class="btn btn-line" href="tel:+262692048666"><svg><use href="#ico-tel"/></svg>Appeler</a>
+</div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var barre=document.getElementById('barre');
+  addEventListener('scroll',function(){barre.classList.toggle('vue',scrollY>innerHeight*.6)},{passive:true});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  /* vapeur des marmites qui monte + grains d'épices (curcuma, cumin) qui flottent */
+  var c=document.getElementById('vapeur'),x=c.getContext('2d'),W,H,P=[],run=true;
+  function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+  size();addEventListener('resize',size);
+  for(var i=0;i<30;i++){var v=i<12;P.push({x:Math.random(),y:Math.random(),r:v?14+Math.random()*22:1+Math.random()*1.6,v:v?.0004+Math.random()*.0005:.0002+Math.random()*.0004,p:Math.random()*6.28,s:.5+Math.random()*1.2,b:v})}
+  function f(t){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(o){o.y-=o.v;if(o.y<-.1){o.y=1.1;o.x=Math.random()}
+      var px=(o.x+.03*Math.sin(t*.0006*o.s+o.p))*W,py=o.y*H,a,col,R;
+      if(o.b){a=.07*Math.min(1,o.y*1.5);col='255,255,255';R=o.r*(1.4-o.y*.5)}
+      else{a=.32+.18*Math.sin(t*.003*o.s+o.p);col=Math.sin(o.p*7)>0?'232,149,28':'247,198,37';R=o.r*2.4}
+      var g=x.createRadialGradient(px,py,0,px,py,R);g.addColorStop(0,'rgba('+col+','+a+')');g.addColorStop(1,'rgba('+col+',0)');
+      x.fillStyle=g;x.beginPath();x.arc(px,py,R,0,6.28);x.fill()});
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Chez Steeve" defer></script>
+</body>
+</html>
