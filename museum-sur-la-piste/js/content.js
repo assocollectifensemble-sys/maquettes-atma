@@ -184,6 +184,41 @@
       prog: "CM1 : liens de parenté, « qui est plus proche de qui ? » [M79] · CE2 : effets des activités humaines sur la biodiversité [M78]" }
   };
 
+
+  // ---------- VERSION COURTE (démo 2 à 3 min) : bulles de 1 à 2 phrases ----------
+  const court = {
+    quete: { expr: "clin", fr: "Psst ! Moi, c'est Ti-Vent, un jeune pétrel de Barau. Qui vivait sur mon île avant moi ? Les os vont nous le dire : à toi de fouiller !",
+      kr: "Psst ! Mwin, sé Ti-Vent, in zène pétrèl Barau. Kisa i viv dsi mon zil avan mwin ? Bann zo va dir anou : a ou fouy !",
+      en: "Psst! I'm Ti-Vent, a young Barau's petrel. Who lived on my island before me? The bones will tell us: your turn to dig!" },
+    fouilleFin: { expr: "fete", fr: "5 os dégagés ! Des os comme ceux-là ont vraiment été retrouvés à La Réunion. On remonte le squelette ?",
+      kr: "5 zo dégazé ! Bann zo konmsa la té trouvé pou dovré La Rényon. Nou romont lo skelèt ?",
+      en: "5 bones uncovered! Bones like these were really found on Réunion. Shall we rebuild the skeleton?" },
+    sqFin: { expr: "surpris", fr: "Long cou, bec fin, longues pattes… Des savants l'imaginaient en « dodo blanc ». Habille-le de plumes pour vérifier !",
+      kr: "Gran kou, bèk fin, gran pat… Bann savan té imazine ali an « dodo blan ». Abiy ali ék son plim pou oir !",
+      en: "Long neck, slim beak, long legs… Scholars imagined a “white dodo”. Dress it in feathers to check!" },
+    revelation: { expr: "fete", fr: "Le Solitaire était un IBIS : un grand oiseau blanc, avec le bout des ailes noir. Le « dodo blanc » venait de vieux tableaux.",
+      kr: "Lo Solitèr té in IBIS : in gran zozo blan, ék lo bout son zèl noir. Lo « dodo blan » té sort dann vié tablo.",
+      en: "The Solitaire was an IBIS: a big white bird with black wing tips. The “white dodo” came from old paintings." },
+    fouille: { fr: "Frotte la terre du doigt pour dégager les 5 os.", en: "Rub the soil with your finger to uncover the 5 bones." },
+    squelette: { fr: "Glisse chaque os à sa place sur la silhouette.", en: "Drag each bone to its place on the silhouette." },
+    carte: { fr: "Glisse chaque animal sur son île.", en: "Drag each animal onto its island." },
+    carteFin: { expr: "fete", fr: "Le dodo vivait à Maurice, l'ibis à La Réunion, son grand cousin à Rodrigues. Maintenant, remonte le temps !",
+      kr: "Lo dodo té viv Moris, libis La Rényon, son gran kouzin Rodrig. Astèr, romont lo tan !",
+      en: "The dodo lived on Mauritius, the ibis on Réunion, its big cousin on Rodrigues. Now, travel through time!" },
+    temps: { fr: "Fais glisser le curseur de 1598 à 1855 : les dates s'inscrivent toutes seules.", en: "Slide the cursor from 1598 to 1855: the dates fill in by themselves." },
+    tempsFin: { expr: "pense", fr: "Tout a changé avec les bateaux : chasse, rats, chats et cochons. Aujourd'hui, on protège les animaux d'ici, comme moi !",
+      kr: "Tout la shanzé ék bann bato : lashas, rat, sha é koshon. Zordi, nou protèz bann zanimo isi, konm mwin !",
+      en: "Everything changed with the ships: hunting, rats, cats and pigs. Today we protect the animals living here, like me!" },
+    quiz1: { q: { fr: "Qu'est-ce qui a révélé que le Solitaire était un ibis ?", en: "What revealed that the Solitaire was an ibis?" },
+      opts: [{ fr: "Des os retrouvés dans le sol de l'île", en: "Bones found in the island's ground" }, { fr: "Un tableau de dodo blanc", en: "A painting of a white dodo" }, { fr: "Une photo prise par un marin", en: "A photo taken by a sailor" }], ok: 0,
+      bravo: { fr: "Exact ! Grâce aux os, des scientifiques ont montré en 1995 que le Solitaire est un ibis : Threskiornis solitarius.", en: "Right! Thanks to the bones, scientists showed in 1995 that the Solitaire is an ibis: Threskiornis solitarius." },
+      rate: { fr: "Bonne piste, et la preuve la plus solide, ce sont les os !", en: "Good thinking, and the strongest evidence is the bones!" } },
+    quiz2: { q: { fr: "Qui est le vrai cousin du dodo ?", en: "Who is the dodo's true cousin?" },
+      opts: [{ fr: "Le Solitaire de Rodrigues", en: "The Rodrigues solitaire" }, { fr: "Le Solitaire de La Réunion", en: "The Réunion Solitaire" }, { fr: "La Huppe de Bourbon", en: "The hoopoe starling" }], ok: 0,
+      bravo: { fr: "Bravo ! Le dodo et le Solitaire de Rodrigues sont deux grands pigeons. Celui de La Réunion est un ibis.", en: "Well done! The dodo and the Rodrigues solitaire are both big pigeons. The Réunion one is an ibis." },
+      rate: { fr: "Joli piège : même surnom, et c'est un ibis ! Cherche l'autre grand pigeon des îles sœurs.", en: "Nice trap: same nickname, and it's an ibis! Look for the other big pigeon of the sister islands." } }
+  };
+
   // ---------- Hub ----------
   const hub = {
     debut: { expr: "clin", fr: "Voici le parcours de l'étage. Pour cette démo, les étapes 1 et 2 sont ouvertes : touche la première pour commencer !",
@@ -193,5 +228,5 @@
     fin: { expr: "fete", fr: "Deux planches dans ton carnet ! Les autres étapes arrivent dans l'application complète.", kr: "De plansh dann out karné ! Lé zot étap i ariv dann laplikasion konplèt.", en: "Two plates in your notebook! The other stages come in the full app." }
   };
 
-  window.Content = { CONFIG, UI, titre, publics, intro, etapes, diplome, st1, st2, marche, animaux, hub };
+  window.Content = { court, CONFIG, UI, titre, publics, intro, etapes, diplome, st1, st2, marche, animaux, hub };
 })();

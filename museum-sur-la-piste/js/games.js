@@ -340,14 +340,26 @@
     const ev = o.evenements.slice().sort((a, b) => a.an - b.an), DEB = o.debut || 1600, FIN = o.fin || 2026;
     const vus = new Set(); let attente = false, fini = false;
     const poses = (o.animaux || []).map(a => { const s = (SLOTS[a.ile] || [])[(o.animaux.filter(x => x.ile === a.ile).indexOf(a))] || [0, 0]; return '<g class="ca-pose" data-an="' + a.id + '">' + mini(a.id, s[0], s[1], .34) + '</g>'; }).join("");
-    el.innerHTML = '<div class="temps" data-jeu="temps"><div class="carte-jeu">' + Art.carte().replace("</svg>", '<g class="ca-poses">' + poses + '</g><g class="tp-bateaux"></g></svg>') +
+    el.innerHTML = '<div class="temps' + (o.auto ? " auto" : "") + '" data-jeu="temps"><div class="carte-jeu">' + Art.carte().replace("</svg>", '<g class="ca-poses">' + poses + '</g><g class="tp-bateaux"></g></svg>') +
       '<div class="tp-annee" aria-live="polite"><small>' + (o.motAn || "an") + '</small><b>' + DEB + '</b></div></div>' +
       '<div class="tp-regle"><input type="range" class="tp-curseur" min="' + DEB + '" max="' + FIN + '" step="1" value="' + DEB + '" aria-label="' + (o.aria || "Faire avancer le temps") + '">' +
-      '<div class="tp-graduations" aria-hidden="true">' + [1600, 1700, 1800, 1900, 2000].map(a => '<span style="left:' + ((a - DEB) / (FIN - DEB) * 100) + '%">' + a + '</span>').join("") + '</div></div>' +
+      '<div class="tp-graduations" aria-hidden="true">' + [1600, 1700, 1800, 1900, 2000].filter(a => a >= DEB && a <= FIN).map(a => '<span style="left:' + ((a - DEB) / (FIN - DEB) * 100) + '%">' + a + '</span>').join("") + '</div></div>' +
       '<div class="tp-fiche" hidden></div><ol class="tp-frise" aria-label="' + (o.motFrise || "Frise") + '"></ol></div>';
     const r = el.querySelector(".tp-curseur"), an = el.querySelector(".tp-annee b"), fiche = el.querySelector(".tp-fiche"), frise = el.querySelector(".tp-frise"), svg = el.querySelector("svg.carte"), bateaux = el.querySelector(".tp-bateaux");
     let dernierAn = DEB;
+    // mode « auto » (version courte) : un seul geste, chaque date s'inscrit au passage du curseur
+    function auto(e) {
+      vus.add(e);
+      if (e.animal) { const g = svg.querySelector('.ca-pose[data-an="' + e.animal + '"]'); if (g) g.classList.add("disparu"); S().vent(); }
+      else if (e.bateau) { const I = Art.ILES[e.bateau]; bateaux.insertAdjacentHTML("beforeend", '<g class="tp-bateau" transform="translate(' + (I.cx + 30) + ' ' + (I.cy + 6) + ')"><path d="M-14 0 H14 L9 7 H-9 Z" fill="#6b4e33"/><path d="M0 0 V-20 M0 -19 L11 -6 H0" stroke="#3b2b1c" stroke-width="1.6" fill="#f3e9d2"/></g>'); S().page(); }
+      else S().tampon();
+      Audio2.vibre(20);
+      fiche.hidden = false; fiche.className = "tp-fiche " + (e.animal ? "disparition" : "humains");
+      fiche.innerHTML = '<span class="tp-f-an">' + (e.vers ? (o.motVers || "vers") + " " : "") + e.an + '</span><p>' + e.texte + '</p>' + (e.src ? '<small class="src">' + e.src + '</small>' : "");
+      frise.insertAdjacentHTML("beforeend", '<li class="' + (e.animal ? "d" : "h") + '"><b>' + (e.vers ? "≈ " : "") + e.an + '</b> ' + e.court + '</li>');
+    }
     function montre(e) {
+      if (o.auto) return auto(e);
       vus.add(e); attente = true; r.disabled = true; r.value = e.an; an.textContent = (e.vers ? "≈ " : "") + e.an;
       if (e.animal) { const g = svg.querySelector('.ca-pose[data-an="' + e.animal + '"]'); if (g) g.classList.add("disparu"); S().vent(); }
       else if (e.bateau) { const I = Art.ILES[e.bateau]; bateaux.insertAdjacentHTML("beforeend", '<g class="tp-bateau" transform="translate(' + (I.cx + 30) + ' ' + (I.cy + 6) + ')"><path d="M-14 0 H14 L9 7 H-9 Z" fill="#6b4e33"/><path d="M0 0 V-20 M0 -19 L11 -6 H0" stroke="#3b2b1c" stroke-width="1.6" fill="#f3e9d2"/></g>'); S().page(); }
@@ -367,10 +379,10 @@
       const v = +r.value;
       if (Math.floor(v / 10) !== Math.floor(dernierAn / 10)) S().temps();
       dernierAn = v;
-      const suivant = ev.find(e => !vus.has(e) && e.an <= v);
-      if (suivant) return montre(suivant);
+      if (o.auto) { ev.filter(e => !vus.has(e) && e.an <= v).forEach(auto); }
+      else { const suivant = ev.find(e => !vus.has(e) && e.an <= v); if (suivant) return montre(suivant); }
       an.textContent = v;
-      if (v >= FIN && ev.every(x => vus.has(x)) && !fini) { fini = true; r.disabled = true; svg.classList.add("aujourdhui"); setTimeout(() => o.onFin && o.onFin(), 600); }
+      if (v >= FIN && ev.every(x => vus.has(x)) && !fini) { fini = true; r.disabled = true; svg.classList.add("aujourdhui"); if (o.auto) { fiche.hidden = true; el.querySelector(".temps").classList.add("fini"); } setTimeout(() => o.onFin && o.onFin(), 600); }
     }
     r.addEventListener("input", maj); r.addEventListener("change", maj);
     return {

@@ -218,10 +218,10 @@
     const socle = (x, w) => '<rect x="' + x + '" y="186" width="' + w + '" height="22" rx="2" fill="#3a2d20"/><rect x="' + x + '" y="186" width="' + w + '" height="4" fill="#5a4630"/>';
     const cartel = (x, t) => '<g><rect x="' + (x - 44) + '" y="192" width="88" height="11" rx="1.5" fill="#f2e8cf"/><text x="' + x + '" y="200" text-anchor="middle" class="cartel">' + t + '</text></g>';
     return '<svg class="vitrine-art" viewBox="0 0 360 240" role="img" aria-label="Une vitrine éclairée : le Solitaire de La Réunion (un ibis), le dodo de Maurice et la Huppe de Bourbon.">' +
-      '<defs><linearGradient id="vFond" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#25423a"/><stop offset="1" stop-color="#132520"/></linearGradient>' +
+      '<defs><linearGradient id="vFond" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4eedd"/><stop offset="1" stop-color="#b7cdb0"/></linearGradient>' +
       '<radialGradient id="vLum" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#fff3cf" stop-opacity=".55"/><stop offset=".6" stop-color="#fff3cf" stop-opacity=".08"/><stop offset="1" stop-color="#fff3cf" stop-opacity="0"/></radialGradient>' +
       '<linearGradient id="vVerre" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".1"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>' +
-      '<rect x="10" y="8" width="340" height="216" rx="6" fill="#5b4430"/>' +
+      '<rect x="10" y="8" width="340" height="216" rx="6" fill="#8a6a42"/>' +
       '<rect x="20" y="18" width="320" height="196" fill="url(#vFond)"/>' +
       '<rect class="v-lum" x="20" y="18" width="320" height="196" fill="url(#vLum)"/>' +
       '<g class="v-especes">' +
@@ -231,7 +231,7 @@
       socle(30, 100) + socle(130, 100) + socle(230, 100) +
       cartel(80, "Huppe · La Réunion") + cartel(180, "Solitaire · La Réunion") + cartel(280, "Dodo · Maurice") +
       '<rect x="20" y="18" width="320" height="196" fill="url(#vVerre)" class="v-verre"/>' +
-      '<rect x="10" y="208" width="340" height="16" fill="#4a3726"/><rect x="10" y="8" width="340" height="10" fill="#4a3726"/>' +
+      '<rect x="10" y="208" width="340" height="16" fill="#76582f"/><rect x="10" y="8" width="340" height="10" fill="#76582f"/>' +
       '</svg>';
   }
 

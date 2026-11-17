@@ -12,7 +12,7 @@
   const defaut = () => ({
     faits: { 1: false, 2: false, 3: false, 4: false, 5: false, jardin: false },
     nom: "", equipe: [], tour: 0, tablette: false,
-    public: "famille", lang: "fr", theme: "salle", taille: 1, son: true, intro: false,
+    public: "famille", lang: "fr", theme: "clair", taille: 1, son: true, intro: false,
     stats: { lancements: 0, departs: 0, etapes: {}, durees: {}, langues: {}, publics: {}, quiz: {}, fins: 0 }
   });
   let mem = null;
@@ -33,7 +33,7 @@
     faits() { return charge().faits; },
     count() { return ETAPES.filter(k => charge().faits[k]).length; },
     // nouvelle partie : on garde les réglages et les statistiques
-    reset() { const c = charge(); mem = Object.assign(defaut(), { theme: c.theme, taille: c.taille, son: c.son, lang: c.lang, public: c.public, tablette: c.tablette, stats: c.stats }); sauve(); },
+    reset() { const c = charge(); mem = Object.assign(defaut(), { theme: c.theme, v2: c.v2, taille: c.taille, son: c.son, lang: c.lang, public: c.public, tablette: c.tablette, stats: c.stats }); sauve(); },
     Stats: {
       lancement() { inc(charge().stats, "lancements"); sauve(); },
       depart() { const s = charge().stats; inc(s, "departs"); inc(s.langues, charge().lang); inc(s.publics, charge().public + (charge().tablette ? "-tablette" : "")); sauve(); },
