@@ -219,14 +219,36 @@
       rate: { fr: "Joli piège : même surnom, et c'est un ibis ! Cherche l'autre grand pigeon des îles sœurs.", en: "Nice trap: same nickname, and it's an ibis! Look for the other big pigeon of the sister islands." } }
   };
 
+
+  // ---------- APERÇU (≈ 1 min 30) : 2 étapes jouées au doigt, 1 phrase par bulle ----------
+  const apercu = {
+    os: ["crane", "aile", "patte"],
+    fouille: { fr: "Frotte la terre du doigt pour dégager 3 os d'un oiseau disparu.", en: "Rub the soil with your finger to uncover 3 bones of a vanished bird." },
+    fouilleFin: { expr: "fete", fr: "Bravo, des os comme ceux-là ont vraiment été retrouvés à La Réunion !",
+      kr: "Bravo, bann zo konmsa la té trouvé pou dovré La Rényon !",
+      en: "Well done, bones like these were really found on Réunion!" },
+    squelette: { fr: "Glisse le crâne, l'aile et la patte à leur place.", en: "Drag the skull, wing and leg to their places." },
+    sqFin: { expr: "surpris", fr: "Long cou, bec fin, longues pattes : habille-le de plumes pour le reconnaître !",
+      kr: "Gran kou, bèk fin, gran pat : abiy ali ék son plim pou rokonèt ali !",
+      en: "Long neck, slim beak, long legs: dress it in feathers to find out who it is!" },
+    revelation: { expr: "fete", fr: "Le Solitaire de La Réunion était un IBIS blanc, et le « dodo blanc » venait de vieux tableaux !",
+      kr: "Lo Solitèr La Rényon té in IBIS blan, é lo « dodo blan » té sort dann vié tablo !",
+      en: "Réunion's Solitaire was a white IBIS, and the “white dodo” came from old paintings!" },
+    carte: { fr: "Glisse le dodo sur son île.", en: "Drag the dodo onto its island." },
+    carteFin: { expr: "fete", fr: "Le dodo vivait à Maurice et l'ibis à La Réunion : deux îles sœurs, deux oiseaux bien différents !",
+      kr: "Lo dodo té viv Moris é libis La Rényon : de zil sèr, de zozo byin diféran !",
+      en: "The dodo lived on Mauritius and the ibis on Réunion: two sister islands, two very different birds!" },
+    suite2: { fr: "La suite : la frise 1598 → 1855 et le vrai cousin du dodo.", en: "Continued: the 1598 → 1855 timeline and the dodo’s true cousin." }
+  };
+
   // ---------- Hub ----------
   const hub = {
-    debut: { expr: "clin", fr: "Voici le parcours de l'étage. Pour cette démo, les étapes 1 et 2 sont ouvertes : touche la première pour commencer !",
-      kr: "Vwala lo parkour létaz. Pou sète démo, létap 1 é 2 lé ouvèr : tous la promié pou komansé !",
-      en: "Here's the floor trail. In this demo, stages 1 and 2 are open: tap the first one to begin!" },
+    debut: { expr: "clin", fr: "Voici le parcours de l'étage. Dans cet aperçu, les étapes 1 et 2 sont ouvertes : touche la première pour commencer !",
+      kr: "Vwala lo parkour létaz. Pou sat aperçu, létap 1 é 2 lé ouvèr : tous la promié pou komansé !",
+      en: "Here's the floor trail. In this preview, stages 1 and 2 are open: tap the first one to begin!" },
     milieu: { expr: "content", fr: "Bravo, première planche gagnée ! Direction l'étape 2, juste à côté.", kr: "Bravo, promié plansh gagné ! Diréksion létap 2, zis akoté.", en: "Well done, first plate earned! On to stage 2, right next door." },
     fin: { expr: "fete", fr: "Deux planches dans ton carnet ! Les autres étapes arrivent dans l'application complète.", kr: "De plansh dann out karné ! Lé zot étap i ariv dann laplikasion konplèt.", en: "Two plates in your notebook! The other stages come in the full app." }
   };
 
-  window.Content = { court, CONFIG, UI, titre, publics, intro, etapes, diplome, st1, st2, marche, animaux, hub };
+  window.Content = { court, apercu, CONFIG, UI, titre, publics, intro, etapes, diplome, st1, st2, marche, animaux, hub };
 })();

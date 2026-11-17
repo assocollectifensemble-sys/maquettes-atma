@@ -583,3 +583,8 @@ body[data-theme="clair"] .observer { background: #e5f1e3; border-left-color: var
 /* frise finie : la carte s'efface, la frise des 6 dates remonte sous la règle (visible au-dessus de la bulle) */
 .temps.auto.fini .carte-jeu { display: none; }
 .temps.auto.fini .tp-frise { animation: fondu .4s ease-out; }
+.sq-plateau.trois { grid-template-columns: repeat(3, 1fr); }
+/* V3 aperçu : le sous-titre de la barre du haut passe à la ligne au lieu d'être tronqué (360 → 430 px) */
+.reseau { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.15; overflow-wrap: anywhere; }
+.findemo .fd-h { font-size: 1rem; margin: 14px 0 6px; }
+.fd-suite .fd-t small { display: block; font-weight: 400; font-size: .85rem; color: var(--texte2); line-height: 1.3; }

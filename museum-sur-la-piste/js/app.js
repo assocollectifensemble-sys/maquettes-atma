@@ -15,6 +15,10 @@
   // TOUS les chemins (boutons, adresse ?station=…, reprise de partie, diaporama) passent par go() : c'est là qu'on refuse.
   const COMPLET = !!(C.CONFIG && C.CONFIG.versionComplete);
   const OUVERTES = ["1", "2"];
+  // APERÇU (par défaut) : étape 1 + mini-aperçu de l'étape 2 (le dodo sur Maurice), ≈ 1 min 30.
+  // ?version=longue : parcours court de la v2 (frise + 2e question), mémorisé pour l'onglet.
+  const LONGUE = (() => { try { const v = new URLSearchParams(location.search).get("version"); if (v) sessionStorage.setItem("museum-version", v); return sessionStorage.getItem("museum-version") === "longue"; } catch (e) { return false; } })();
+  const APERCU = !COMPLET && !LONGUE;
   const VERROU = n => !COMPLET && (/^st(3|4|5|jardin)$/.test(n) || n === "diplome");
   let installPrompt = null;
   const BULLES = {};
@@ -151,6 +155,8 @@
     let refus = false;
     // « Rejoins la prochaine vitrine » vers une étape verrouillée : même refus (ex. ?station=marche&etape=3)
     if (VERROU(n) || (!COMPLET && n === "marche" && step != null && !OUVERTES.includes(String(step)))) { refus = true; n = "hub"; step = null; }
+    if (APERCU && n === "st2" && step != null && step !== "carte") step = "carte"; // frise et 2e question : version complète
+    if (APERCU && n === "intro") { n = "st1"; step = "fouille"; }
     const avant = route.n;
     route = { n, step: step == null ? null : String(step) };
     const u = new URL(location.href); u.searchParams.delete("station");
@@ -203,10 +209,10 @@
     ];
     return '<div class="projet"><div class="pj-tete"><span class="pj-lieu">Muséum d\'histoire naturelle · Saint-Denis</span><span class="pj-badge">Prototype</span></div>' +
       '<div class="pj-art">' + Art.vitrine() + '<div class="pj-tv">' + Art.tivent("clin", "flotte") + '</div></div>' +
-      '<h1>Sur la piste des animaux disparus</h1><p class="pj-sous">' + typo("Fouille, remonte un squelette et perce l'énigme du Solitaire : 2 minutes de jeu sur ton téléphone.") + '</p>' +
+      '<h1>Sur la piste des animaux disparus</h1><p class="pj-sous">' + typo("Fouille, remonte un squelette et perce l'énigme du Solitaire : 1 min 30 de jeu sur ton téléphone.") + '</p>' +
       '<details class="pj-plus"><summary>En savoir plus sur le projet</summary>' +
       '<p class="pj-idee">' + typo("Ti-Vent, un jeune pétrel de Barau ébloui par les lumières de la ville, atterrit devant le Muséum : les enfants enquêtent <b>de vitrine en vitrine</b> pour découvrir qui vivait sur l'île avant lui. Ils fouillent, remontent des squelettes, voyagent dans le temps… et finissent au <b>Jardin de l'État</b> avec l'envie de protéger la faune d'aujourd'hui.") + '</p>' +
-      '<div class="pj-demo"><b>Dans cette démo</b> : les étapes 1 et 2 de la salle Lacroix, jouables de bout en bout (version express ≈ 2 min 30).</div>' +
+      '<div class="pj-demo"><b>Dans cet aperçu</b> : l’étape 1 de la salle Lacroix et un avant-goût de l’étape 2, à jouer au doigt en 1 min 30 environ.</div>' +
       '<h2 class="pj-h">Ce que l\'application complète proposera</h2><ul class="pj-grille">' +
       cartes.map(x => x[3] === "stats" ? '<li class="pj-lien"><button data-act="go" data-r="stats"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small><span class="pj-voir">Voir l\'aperçu ›</span></button></li>'
         : '<li class="' + (x[3] || "") + '"><span class="pj-i" aria-hidden="true">' + x[0] + '</span><b>' + esc(x[1]) + '</b><small>' + esc(x[2]) + '</small></li>').join("") + '</ul>' +
@@ -230,7 +236,7 @@
       (p === "classe" ? '<div class="tablette"><button class="interrupteur" data-act="tablette" role="switch" aria-checked="' + !!Store.get("tablette") + '"><span class="int-rail"><span class="int-bille"></span></span><span><b>' + esc(T("Mode tablette de groupe", "Group-tablet mode")) + '</b><small>' + esc(T("Une tablette pour 3 à 5 élèves : on se la passe à chaque mission.", "One tablet for 3-5 pupils, passed round at each mission.")) + '</small></span></button>' +
         (Store.get("tablette") ? '<button class="btn sec mini" data-act="equipe">👥 ' + (eq.length ? eq.map(esc).join(", ") : esc(T("Ajouter les prénoms du groupe", "Add the group's names"))) + '</button>' : "") + '</div>' : "") + '</section>' +
       '<section class="card ligne"><h3>' + esc(T("Langue des bulles", "Bubble language")) + '</h3><div class="seg">' + lgBtn("fr", "Français") + lgBtn("kr", "Kréol") + lgBtn("en", "English") + '</div></section>' +
-      '<p class="small dim center">' + esc(T("Démo ≈ 2 min 30 · tout reste sur ce téléphone", "Demo ≈ 2 min 30 · everything stays on this phone")) + '</p>' +
+      '<p class="small dim center">' + esc(T("Aperçu ≈ 1 min 30 · tout reste sur ce téléphone", "Preview ≈ 1 min 30 · everything stays on this phone")) + '</p>' +
       (COMPLET ? "" : '<p class="center"><button class="lien" data-act="go" data-r="projet">← ' + esc(T("Présentation du projet", "About the project")) + '</button></p>') +
       dock(btn((n > 0 ? "🔎 " + esc(L(C.UI.continuer)) : "🔎 " + esc(L(C.UI.commencer))), "start", "big"));
   };
@@ -258,24 +264,25 @@
     };
     const t = n === 0 ? C.hub.debut : n === 1 ? C.hub.milieu : C.hub.fin;
     return '<span class="kicker">' + esc(T("L'enquête · premier étage", "The investigation · first floor")) + '</span><h2>' + esc(T("Le parcours", "The trail")) + '</h2>' +
-      '<div class="progress" role="img" aria-label="' + n + ' planches sur 2 dans la démo"><i style="width:' + n * 50 + '%"></i><span>' + n + ' / 2 ' + esc(T("planches · démo", "plates · demo")) + '</span></div>' +
+      '<div class="progress" role="img" aria-label="' + n + ' planches sur 2 dans l’aperçu"><i style="width:' + n * 50 + '%"></i><span>' + n + ' / 2 ' + esc(T("planches · aperçu", "plates · preview")) + '</span></div>' +
       bulle("hub" + n, t, { compact: true }) +
       '<div class="hub-plan">' + Art.plan(null, OUVERTES.find(k => !fait(k)) || "jardin") + '</div>' +
       '<ul class="stations">' + C.etapes.map(ligne).join('<li class="sentier" aria-hidden="true"></li>') +
       '<li class="sentier" aria-hidden="true"></li>' + (COMPLET ? '<li class="st"><button class="station" data-act="go" data-r="diplome"><span class="num">🎓</span><span class="st-t"><b>' + esc(L(C.diplome.titre)) + '</b></span></button></li>' :
         '<li class="st verrou"><div class="station" aria-disabled="true"><span class="num">' + Art.ICO.cadenas + '</span><span class="st-t"><b>🎓 ' + esc(L(C.diplome.titre)) + '</b><small>' + esc(LF(C.diplome.apercu)) + '</small><span class="badge-complet">' + esc(T("Application complète", "Full app")) + '</span></span></div></li>') + '</ul>' +
       '<p class="note small">' + esc(T("Sur place : un seul QR code à l'accueil, puis l'appli guide de vitrine en vitrine. Ici, touche simplement une étape ouverte.", "On site: one QR code at the entrance, then the app guides you. Here, just tap an open stage.")) + '</p>' +
-      (!COMPLET && n >= 2 ? dock(btn("🏁 " + esc(T("Fin de la démo", "End of demo")) + " ➜", "go", "big", { r: "findemo" })) : "");
+      (!COMPLET && n >= 2 ? dock(btn("🏁 " + esc(T("Fin de l'aperçu", "End of preview")) + " ➜", "go", "big", { r: "findemo" })) : "");
   };
 
   // ===================== ÉTAPES : briques communes =====================
   // Parcours court (fil d'étape). Les écrans brief / legende / info restent atteignables par adresse.
-  const ETAPES_DEF = { st1: ["fouille", "squelette", "quiz"], st2: ["carte", "temps", "quiz"] };
+  const ETAPES_DEF = APERCU ? { st1: ["fouille", "squelette", "quiz"], st2: ["carte"] } : { st1: ["fouille", "squelette", "quiz"], st2: ["carte", "temps", "quiz"] };
+  const A = APERCU ? C.apercu : C.court; // textes du parcours joué
   const ETAPES_TOUS = { st1: ["brief", "fouille", "squelette", "legende", "quiz", "info"], st2: ["brief", "carte", "temps", "quiz", "info"] };
   const ETQ = { brief: ["Mission", "Mission"], fouille: ["Fouille", "Dig"], squelette: ["Squelette", "Skeleton"], legende: ["Légende ou science ?", "Legend or science?"], carte: ["Carte", "Map"], temps: ["Le temps", "Time"], quiz: ["Question", "Question"], info: ["Planche gagnée", "Plate earned"] };
   function enTete(id, step) {
     const E = C.etapes.find(e => e.id === id), etapes = ETAPES_DEF["st" + id], k = etapes.indexOf(step);
-    return '<div class="et-tete"><span class="kicker">' + esc(L(C.UI.etape)) + " " + id + " · 📍 " + esc(LF(E.lieu)) + '</span><h2><span aria-hidden="true">' + E.ico + '</span> ' + esc(L(E.titre)) + '</h2>' +
+    return '<div class="et-tete"><span class="kicker">' + esc(L(C.UI.etape)) + " " + id + " · 📍 " + esc(LF(E.lieu).split(" · ")[0]) + '</span><h2><span aria-hidden="true">' + E.ico + '</span> ' + esc(L(E.titre)) + '</h2>' +
       '<ol class="et-fil" aria-label="Progression de l\'étape">' + etapes.map((s, i) => '<li class="' + (i < k ? "ok" : i === k ? "ici" : "") + '"><span>' + esc(T(ETQ[s][0], ETQ[s][1])) + '</span></li>').join("") + '</ol></div>';
   }
   function tourEquipe() {
@@ -304,7 +311,7 @@
       fb.className = "retour-quiz ok"; fb.textContent = typo(LF(Q.bravo)); Audio2.Sfx.ok(); Audio2.vibre(40);
       finEtape(id);
       document.querySelector(".dock").outerHTML = dock(id === "1" ? btn("🗺️ " + esc(T("Étape 2 : les îles sœurs", "Stage 2: the sister islands")) + " ➜", "go", "big", { r: "st2", s: "carte" })
-        : btn("🏁 " + esc(T("Fin de la démo", "End of demo")) + " ➜", "go", "big", { r: "findemo" }));
+        : btn("🏁 " + esc(T("Fin de l'aperçu", "End of preview")) + " ➜", "go", "big", { r: "findemo" }));
     } else {
       b[i].classList.add("faux"); b[i].disabled = true;
       fb.className = "retour-quiz ko"; fb.textContent = typo(LF(Q.rate)); Audio2.Sfx.ko(); Audio2.vibre([30, 40, 30]);
@@ -334,8 +341,8 @@
   SCREENS.st1 = step => {
     const D = C.st1; step = ETAPES_TOUS.st1.includes(step) ? step : "fouille";
     if (step === "brief") return enTete("1", step) + '<div class="brief-art">' + Art.solitaire("brief-sil") + '<span class="brief-q" aria-hidden="true">?</span></div>' + bulle("st1-brief", D.brief) + observer(D.observer) + dock(btn("🦴 " + esc(T("Commencer la fouille", "Start digging")) + " ➜", "pas", "big", { s: "fouille" }));
-    if (step === "fouille") return enTete("1", step) + tourEquipe() + consigne(C.court.fouille) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(T("Dégage les 5 os…", "Uncover the 5 bones…")), "rien", "big attente", {}));
-    if (step === "squelette") return enTete("1", step) + tourEquipe() + consigne(C.court.squelette) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(T("Place les 5 os…", "Place the 5 bones…")), "rien", "big attente", {}));
+    if (step === "fouille") return enTete("1", step) + tourEquipe() + consigne(A.fouille) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(APERCU ? T("Dégage les 3 os…", "Uncover the 3 bones…") : T("Dégage les 5 os…", "Uncover the 5 bones…")), "rien", "big attente", {}));
+    if (step === "squelette") return enTete("1", step) + tourEquipe() + consigne(A.squelette) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(APERCU ? T("Place les 3 os…", "Place the 3 bones…") : T("Place les 5 os…", "Place the 5 bones…")), "rien", "big attente", {}));
     if (step === "legende") return enTete("1", step) + consigne(D.legende) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(T("Fais glisser le volet…", "Slide the panel…")), "rien", "big attente", {}));
     if (step === "quiz") return enTete("1", step) + tourEquipe() + quizHTML(C.court.quiz1) + dock(btn(esc(T("Choisis une réponse…", "Pick an answer…")), "rien", "big attente", {}));
     return infoHTML("1", D, dock(btn("🧭 " + esc(T("Rejoins la prochaine vitrine", "Head to the next case")) + " ➜", "go", "big", { r: "marche", s: "2" })));
@@ -344,9 +351,9 @@
     const D = C.st1, el = document.getElementById("jeu"), noms = {}, court = {}, bravo = {}, rate = {};
     Object.keys(D.noms).forEach(k => { noms[k] = LF(D.noms[k]); court[k] = LF(D.court[k]); bravo[k] = LF(D.sqBravo[k]); rate[k] = LF(D.sqRate[k]); });
     if (step === "brief" || step === "fouille" || !step) { debutEtape["1"] = debutEtape["1"] || Date.now(); }
-    if (step === "fouille") jeu = Games.fouille(el, { noms, motOs: T("os", "bones"), motIndice: "💡 " + T("Un indice", "A hint"), onFin: () => { montrerBulle("st1-fouille", C.court.fouilleFin); montrerSuite(btn("🦴 " + esc(T("Remonter le squelette", "Rebuild the skeleton")) + " ➜", "pas", "big", { s: "squelette" })); } });
-    if (step === "squelette") jeu = Games.squelette(el, { noms, court, bravo, rate, annot: { bec: esc(LF(D.annot.bec)), ailes: esc(LF(D.annot.ailes)), pattes: esc(LF(D.annot.pattes)) }, choisi: LF(D.sqChoisi), lacher: LF(D.sqLacher), depart: "",
-      onFin: () => { montrerBulle("st1-sq", C.court.sqFin); montrerSuite(btn(esc(LF(D.habiller)), "habiller", "big")); } });
+    if (step === "fouille") jeu = Games.fouille(el, { ids: APERCU ? C.apercu.os : null, noms, motOs: T("os", "bones"), motIndice: "💡 " + T("Un indice", "A hint"), onFin: () => { montrerBulle("st1-fouille", A.fouilleFin); montrerSuite(btn("🦴 " + esc(T("Remonter le squelette", "Rebuild the skeleton")) + " ➜", "pas", "big", { s: "squelette" })); } });
+    if (step === "squelette") jeu = Games.squelette(el, { ids: APERCU ? C.apercu.os : null, noms, court, bravo, rate, annot: { bec: esc(LF(D.annot.bec)), ailes: esc(LF(D.annot.ailes)), pattes: esc(LF(D.annot.pattes)) }, choisi: LF(D.sqChoisi), lacher: LF(D.sqLacher), depart: "",
+      onFin: () => { montrerBulle("st1-sq", A.sqFin); montrerSuite(btn(esc(LF(D.habiller)), "habiller", "big")); } });
     if (step === "legende") jeu = Games.legende(el, { etqMythe: LF(D.etqMythe), etqScience: LF(D.etqScience), note: esc(LF(D.lgNote)) + ' <span class="src">[' + D.lgNote.src + ']</span>', aria: T("Volet de comparaison", "Comparison slider"),
       onFin: () => { montrerBulle("st1-revelation", D.revelation); Audio2.vibre([40, 30, 80]); fete(); montrerSuite(btn("❓ " + esc(T("Une dernière question", "One last question")) + " ➜", "pas", "big", { s: "quiz" })); } });
     if (step === "quiz") essais = 0;
@@ -360,7 +367,7 @@
       '<div class="plan-l">' + Art.plan(de, vers) + '<p class="plan-info">📍 <b>' + esc(LF(E.lieu)) + '</b> · ' + esc(T("tout près", "close by")) + '</p></div>' +
       bulle("marche" + vers, M, { compact: true }) +
       '<section class="card repere"><h3>' + Art.ICO.loupe + ' ' + esc(T("Le repère à chercher", "The landmark to look for")) + '</h3><div class="repere-l">' + Art.dodo("repere-art") + '<p>' + esc(LF(M.repere)) + '</p></div></section>' +
-      '<p class="note small">' + esc(T("Ordre des vitrines proposé, à valider avec l'équipe du Muséum. Démo : touche « Je suis arrivé·e ».", "Proposed order, to confirm with the Museum team. Demo: tap “I'm here”.")) + '</p>' +
+      '<p class="note small">' + esc(T("Ordre des vitrines proposé, à valider avec l'équipe du Muséum. Ici : touche « Je suis arrivé·e ».", "Proposed order, to confirm with the Museum team. Here: tap “I'm here”.")) + '</p>' +
       dock(btn("📍 " + esc(L(C.UI.arrive)), "station", "big", { id: vers }) + btn("🗺️ " + esc(T("Voir le parcours", "See the trail")), "hub", "sec"), "flow");
   };
 
@@ -370,7 +377,7 @@
   SCREENS.st2 = step => {
     const D = C.st2; step = ETAPES_TOUS.st2.includes(step) ? step : "carte";
     if (step === "brief") return enTete("2", step) + '<div class="brief-art duo">' + Art.dodo("") + '<span class="brief-q" aria-hidden="true">?</span></div>' + bulle("st2-brief", D.brief) + observer(D.observer) + dock(btn("🗺️ " + esc(T("Ouvrir la carte des îles", "Open the island map")) + " ➜", "pas", "big", { s: "carte" }));
-    if (step === "carte") return enTete("2", step) + tourEquipe() + consigne(C.court.carte) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(T("Place les 3 animaux…", "Place the 3 animals…")), "rien", "big attente", {}));
+    if (step === "carte") return enTete("2", step) + tourEquipe() + consigne(A.carte) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(APERCU ? T("Place le dodo…", "Place the dodo…") : T("Place les 3 animaux…", "Place the 3 animals…")), "rien", "big attente", {}));
     if (step === "temps") return enTete("2", step) + tourEquipe() + consigne(C.court.temps) + '<div class="jeu" id="jeu"></div><div class="zone-bulle" hidden></div>' + resoudre() + dock(btn(esc(T("Fais avancer le temps…", "Move time forward…")), "rien", "big attente", {}));
     if (step === "quiz") return enTete("2", step) + tourEquipe() + quizHTML(C.court.quiz2) + dock(btn(esc(T("Choisis une réponse…", "Pick an answer…")), "rien", "big attente", {}));
     return infoHTML("2", D, COMPLET ? dock(btn("🧭 " + esc(T("Rejoins la prochaine vitrine", "Head to the next case")) + " ➜", "go", "big", { r: "hub" }))
@@ -379,9 +386,10 @@
   AFTER.st2 = step => {
     const D = C.st2, el = document.getElementById("jeu");
     if (step === "brief" || step === "carte" || !step) { debutEtape["2"] = debutEtape["2"] || Date.now(); }
-    if (step === "carte") jeu = Games.carte(el, { animaux: animauxL(), choisi: LF(D.caChoisi), lacher: LF(D.caLacher),
+    if (step === "carte") jeu = Games.carte(el, { animaux: APERCU ? animauxL().filter(a => a.id === "dodo") : animauxL(), choisi: LF(D.caChoisi), lacher: LF(D.caLacher),
       bravo: a => typo(LF(C.animaux.find(x => x.id === a.id).bravo)), rate: a => typo(LF(C.animaux.find(x => x.id === a.id).rate)),
-      onFin: () => { montrerBulle("st2-carte", C.court.carteFin); montrerSuite(btn("⏳ " + esc(T("Voyager dans le temps", "Travel in time")) + " ➜", "pas", "big", { s: "temps" })); } });
+      onFin: () => { if (APERCU) { finEtape("2"); montrerBulle("st2-carte", A.carteFin); montrerSuite(btn("🏁 " + esc(T("Fin de l'aperçu", "End of preview")) + " ➜", "go", "big", { r: "findemo" })); return; }
+        montrerBulle("st2-carte", C.court.carteFin); montrerSuite(btn("⏳ " + esc(T("Voyager dans le temps", "Travel in time")) + " ➜", "pas", "big", { s: "temps" })); } });
     if (step === "temps") jeu = Games.temps(el, { animaux: animauxL(), debut: 1590, fin: 1855, auto: true, motAn: T("année", "year"), motVers: T("vers", "around"), motNoter: T("Noter dans le carnet ✓", "Note it down ✓"), motFrise: T("Frise du carnet", "Notebook timeline"), aria: T("Règle du temps, de 1590 à 1855", "Time ruler, 1590 to 1855"),
       evenements: D.evenements.filter(e => e.an <= 1855 && (!e.animal || COURT_AN.includes(e.animal))).map(e => Object.assign({}, e, { texte: esc(LF(e.texte)), court: esc(LF(e.court)), src: e.src ? esc(L(C.UI.source)) + " : " + e.src : "" })),
       onFin: () => { montrerBulle("st2-temps", C.court.tempsFin); montrerSuite(btn("❓ " + esc(T("Une dernière question", "One last question")) + " ➜", "pas", "big", { s: "quiz" })); } });
@@ -390,14 +398,24 @@
   };
 
   // ===================== FIN DE LA DÉMO =====================
-  SCREENS.findemo = () => '<div class="findemo"><span class="kicker">Version démo · 2 étapes sur 6</span><h2>Fin de la démo</h2>' +
-    '<div class="fd-art" aria-hidden="true">' + Art.tivent("fete", "flotte") + '</div>' +
-    '<p class="fd-lead">' + esc("En 2 minutes : le squelette d'un oiseau, l'ibis et le dodo, Maurice et La Réunion, les dates et les causes des disparitions.") + '</p>' +
-    '<p class="fd-txt">' + esc("L'application complète guide toute la visite de l'étage, en 3 langues, avec une version classe et un final au Jardin de l'État.") + '</p>' +
-    '<ul class="fd-suite">' + C.etapes.filter(e => !OUVERTES.includes(e.id)).map(e => '<li><span class="fd-i" aria-hidden="true">' + Art.ICO.cadenas + '</span><span class="fd-t"><b>' + e.ico + " " + esc(e.titre.fr) + '</b></span></li>').join("") +
-    '<li><span class="fd-i" aria-hidden="true">' + Art.ICO.cadenas + '</span><span class="fd-t"><b>🎓 ' + esc(C.diplome.titre.fr) + '</b></span></li></ul></div>' +
-    dock(btn("🔁 Recommencer", "recommencer", "big") + '<div class="rang-btn">' + btn("✨ Revoir le projet", "go", "sec", { r: "projet" }) + btn("🏛️ Pour le Muséum", "go", "sec", { r: "musee" }) + '</div>' +
-      '<p class="center small"><button class="lien" data-act="go" data-r="hub">Voir tout le parcours</button> · <button class="lien" data-act="go" data-r="fiche">Version classe</button></p>', "flow");
+  SCREENS.findemo = () => {
+    const verrou = (ico, t, d) => '<li><span class="fd-i" aria-hidden="true">' + Art.ICO.cadenas + '</span><span class="fd-t"><b>' + ico + " " + esc(t) + '</b>' + (d ? '<small>' + esc(d) + '</small>' : "") + '</span></li>';
+    if (!APERCU) return '<div class="findemo"><span class="kicker">Aperçu · 2 étapes sur 6</span><h2>Fin de l\'aperçu</h2>' +
+      '<div class="fd-art" aria-hidden="true">' + Art.tivent("fete", "flotte") + '</div>' +
+      '<p class="fd-lead">' + esc("En 2 minutes : le squelette d'un oiseau, l'ibis et le dodo, Maurice et La Réunion, les dates et les causes des disparitions.") + '</p>' +
+      '<p class="fd-txt">' + esc("L'application complète guide toute la visite de l'étage, en 3 langues, avec une version classe et un final au Jardin de l'État.") + '</p>' +
+      '<ul class="fd-suite">' + C.etapes.filter(e => !OUVERTES.includes(e.id)).map(e => verrou(e.ico, e.titre.fr)).join("") + verrou("🎓", C.diplome.titre.fr) + '</ul></div>' +
+      dock(btn("🔁 Recommencer", "recommencer", "big") + '<div class="rang-btn">' + btn("✨ Revoir le projet", "go", "sec", { r: "projet" }) + btn("🏛️ Pour le Muséum", "go", "sec", { r: "musee" }) + '</div>' +
+        '<p class="center small"><button class="lien" data-act="go" data-r="hub">Voir tout le parcours</button> · <button class="lien" data-act="go" data-r="fiche">Version classe</button></p>', "flow");
+    return '<div class="findemo"><span class="kicker">' + esc(T("Aperçu · 2 étapes sur 6", "Preview · 2 stages of 6")) + '</span><h2>' + esc(T("Fin de l'aperçu", "End of the preview")) + '</h2>' +
+      '<div class="fd-art" aria-hidden="true">' + Art.tivent("fete", "flotte") + '</div>' +
+      '<p class="fd-lead">' + esc(T("Tu as joué 2 des 6 étapes. La version complète se découvre tranquillement chez soi : le lien arrive par message.", "You played 2 of the 6 stages. The full version is yours to explore at home: the link arrives by message.")) + '</p>' +
+      '<h3 class="fd-h">' + esc(T("Dans la version complète", "In the full version")) + '</h3>' +
+      '<ul class="fd-suite">' + verrou("🗺️", T("Étape 2", "Stage 2") + " · " + L(C.etapes[1].titre), LF(C.apercu.suite2)) +
+        C.etapes.filter(e => !OUVERTES.includes(e.id)).map(e => verrou(e.ico, (e.id === "jardin" ? T("Final au jardin", "Garden finale") : T("Étape ", "Stage ") + e.id) + " · " + L(e.titre), LF(e.apercu))).join("") +
+        verrou("🎓", L(C.diplome.titre), LF(C.diplome.apercu)) + '</ul></div>' +
+      dock(btn("🔁 " + esc(T("Rejouer", "Play again")), "rejouer", "big") + '<div class="rang-btn">' + btn("🏛️ " + esc(T("Pour le Muséum", "For the Museum")), "go", "sec", { r: "musee" }) + btn("✨ " + esc(T("Recommencer", "Start over")), "recommencer", "sec") + '</div>', "flow");
+  };
   AFTER.findemo = () => { Store.Stats.fin(); if (!navigator.userActivation || navigator.userActivation.hasBeenActive) Audio2.Sfx.fanfare(); fete(); };
 
   // ===================== CARNET =====================
@@ -450,7 +468,7 @@
     ].map(a => '<li><span aria-hidden="true">' + a[0] + '</span><p>' + esc(a[1]) + ' <span class="src">[' + a[2] + ']</span></p></li>').join("") + '</ul></section>' +
     '<section class="card"><h3>À co-écrire ensemble</h3><p>' + esc("L'ordre réel des vitrines, les noms des salles, le contenu des mezzanines, les textes et les questions : tout se construit avec votre équipe, en atelier.") + '</p></section>' +
     '<div class="pj-acces">' + btn("📊 Aperçu du tableau de bord", "go", "pj-sec", { r: "stats" }) + btn("🔳 QR code de départ", "go", "pj-sec", { r: "qr" }) + '</div></div>' +
-    dock(btn("▶ Démarrer la démo", "go", "big", { r: "accueil" }) + btn("← Retour au projet", "go", "sec", { r: "projet" }), "flow");
+    dock(btn("▶ Jouer l’aperçu", "go", "big", { r: "accueil" }) + btn("← Retour au projet", "go", "sec", { r: "projet" }), "flow");
 
   // ===================== QR CODE DE DÉPART =====================
   function baseURL() { return Store.get("baseqr") || (location.origin + location.pathname); }
@@ -497,8 +515,8 @@
   }
 
   // ===================== mode démo (?demo=1) =====================
-  const DEMO = [["projet"], ["intro"], ["st1", "fouille"], ["st1", "squelette"], ["st1", "quiz"], ["st2", "carte"], ["st2", "temps"], ["st2", "quiz"], ["findemo"], ["hub"], ["musee"], ["fiche"], ["stats"]];
-  const NOMS_DEMO = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "Le parcours", st1: "Étape 1", st2: "Étape 2", marche: "Rejoins la vitrine", findemo: "Fin de la démo", fiche: "Version classe", musee: "Pour le Muséum", stats: "Tableau de bord" };
+  const DEMO = APERCU ? [["projet"], ["st1", "fouille"], ["st1", "squelette"], ["st1", "quiz"], ["st2", "carte"], ["findemo"], ["hub"], ["musee"], ["fiche"], ["stats"]] : [["projet"], ["intro"], ["st1", "fouille"], ["st1", "squelette"], ["st1", "quiz"], ["st2", "carte"], ["st2", "temps"], ["st2", "quiz"], ["findemo"], ["hub"], ["musee"], ["fiche"], ["stats"]];
+  const NOMS_DEMO = { projet: "Le projet", accueil: "Accueil", intro: "Histoire", hub: "Le parcours", st1: "Étape 1", st2: "Étape 2", marche: "Rejoins la vitrine", findemo: "Fin de l'aperçu", fiche: "Version classe", musee: "Pour le Muséum", stats: "Tableau de bord" };
   function updatePresbar() {
     let b = document.getElementById("presbar");
     document.body.classList.toggle("demo", demoMode);
@@ -538,8 +556,9 @@
       case "retour": Audio2.Sfx.tap(); if (aPrecedent()) history.back(); else go(b.dataset.r || "projet", null, false, "replace"); break;
       case "rep": repondre(+b.dataset.i); break;
       case "resoudre": if (jeu) jeu.solve(); break;
-      case "habiller": if (jeu && jeu.habiller) { jeu.habiller(); b.disabled = true; setTimeout(() => { if (route.n !== "st1") return; montrerBulle("st1-revelation", C.court.revelation); Audio2.Sfx.fanfare(); Audio2.vibre([40, 30, 80]); fete(); montrerSuite(btn("❓ " + esc(T("Une question", "One question")) + " ➜", "pas", "big", { s: "quiz" })); }, 1500); } break;
-      case "jouer": { Audio2.Sfx.page(); Store.Stats.depart(); Store.set("intro", true); go("intro"); break; }
+      case "habiller": if (jeu && jeu.habiller) { jeu.habiller(); b.disabled = true; setTimeout(() => { if (route.n !== "st1") return; montrerBulle("st1-revelation", A.revelation); Audio2.Sfx.fanfare(); Audio2.vibre([40, 30, 80]); fete(); montrerSuite(btn("❓ " + esc(T("Une question", "One question")) + " ➜", "pas", "big", { s: "quiz" })); }, 1500); } break;
+      case "jouer": { Audio2.Sfx.page(); Store.Stats.depart(); Store.set("intro", true); APERCU ? go("st1", "fouille") : go("intro"); break; }
+      case "rejouer": { Audio2.Sfx.page(); go("st1", "fouille"); break; }
       case "print": window.print(); break;
       case "equipe": equipe(); break;
       case "eqok": { const v = Array.from(document.querySelectorAll(".eqn")).map(i => i.value.trim()).filter(Boolean).slice(0, 5); Store.set("equipe", v); Store.set("tour", 0); fermerFeuille(); render(); toast(v.length > 1 ? T("Groupe de ", "Group of ") + v.length + " ✓" : T("Prénom enregistré ✓", "Name saved ✓")); break; }
@@ -582,6 +601,6 @@
     navigator.serviceWorker.register("sw.js").then(() => navigator.serviceWorker.ready).then(() => setTimeout(topbar, 300)).catch(() => { });
     navigator.serviceWorker.addEventListener("controllerchange", topbar);
   }
-  window.App = { go, route: () => Object.assign({}, route), demo: () => demoMode, jeu: () => jeu, VERROU, COMPLET };
+  window.App = { APERCU, go, route: () => Object.assign({}, route), demo: () => demoMode, jeu: () => jeu, VERROU, COMPLET };
   init();
 })();

@@ -4,7 +4,7 @@
    Chemins RELATIFS : l'appli peut être servie dans un sous-dossier
    (ex. https://maquettes.atma-digital.re/museum-sur-la-piste/).
    Voix enregistrées : ajouter ici leurs chemins (ex. "assets/audio/intro0.fr.mp3"). */
-const VERSION = "museum-piste-v4";
+const VERSION = "museum-piste-v5";
 const FICHIERS = [
   "./", "index.html", "manifest.json", "css/style.css", "assets/icon.svg",
   "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/icons/icon-maskable-512.png", "assets/icons/apple-touch-icon-180.png",

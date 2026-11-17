@@ -49,15 +49,16 @@
   // ===================== FOUILLE : dégager les os au pinceau =====================
   function fouille(el, o) {
     o = o || {};
-    const trouve = {}, ordre = OS.map(x => x.id);
+    const LISTE = o.ids ? OS.filter(b => o.ids.includes(b.id)) : OS; // aperçu : 3 os
+    const trouve = {}, ordre = LISTE.map(x => x.id);
     let fini = false, compteur = 0, dernierGrain = 0, actif = null, last = null;
     el.innerHTML = '<div class="fouille" data-jeu="fouille"><svg class="fo-os" viewBox="0 0 400 300" aria-hidden="true">' +
       '<defs><radialGradient id="foFond" cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#d9c8a4"/><stop offset="1" stop-color="#b59d73"/></radialGradient></defs>' +
       '<rect width="400" height="300" fill="url(#foFond)"/>' + cailloux() +
-      OS.map(b => '<g class="os-f" data-os="' + b.id + '" transform="' + trPose(b.id) + '">' + b.svg + '</g>').join("") + '</svg>' +
+      LISTE.map(b => '<g class="os-f" data-os="' + b.id + '" transform="' + trPose(b.id) + '">' + b.svg + '</g>').join("") + '</svg>' +
       '<canvas class="fo-sed" aria-hidden="true"></canvas><div class="fo-fx" aria-hidden="true"></div>' +
       '<div class="fo-etiquettes" aria-live="polite"></div></div>' +
-      '<div class="fo-barre"><div class="fo-compte" aria-live="polite"><b>0</b> / 5 ' + (o.motOs || "os") + '</div>' +
+      '<div class="fo-barre"><div class="fo-compte" aria-live="polite"><b>0</b> / ' + LISTE.length + ' ' + (o.motOs || "os") + '</div>' +
       '<button class="btn mini sec" data-jeu-act="indice">' + (o.motIndice || "Un indice") + '</button></div>';
     const box = el.querySelector(".fouille"), cv = box.querySelector("canvas"), fx = box.querySelector(".fo-fx"), lab = box.querySelector(".fo-etiquettes");
     const ctx = cv.getContext("2d", { willReadFrequently: true });
@@ -90,7 +91,7 @@
       const w = box.clientWidth, h = Math.round(w * .75), d = Math.min(2, window.devicePixelRatio || 1);
       if (!w || (cv.width === Math.round(w * d))) return;
       cv.width = Math.round(w * d); cv.height = Math.round(h * d); W = cv.width; H = cv.height; k = W / 400;
-      sediments(); OS.forEach(b => { if (trouve[b.id]) degage(b.id); });
+      sediments(); LISTE.forEach(b => { if (trouve[b.id]) degage(b.id); });
     }
     function degage(id) { // efface tout autour d'un os trouvé (et pour le mode « Résoudre »)
       ctx.globalCompositeOperation = "destination-out"; ctx.globalAlpha = 1; ctx.lineCap = "round"; ctx.lineWidth = 30 * k; ctx.strokeStyle = "#000";
@@ -100,7 +101,7 @@
     }
     function brosse(x, y) {
       ctx.globalCompositeOperation = "destination-out"; ctx.lineCap = "round"; ctx.lineJoin = "round";
-      ctx.strokeStyle = "rgba(0,0,0,.55)"; ctx.lineWidth = 26 * k;
+      ctx.strokeStyle = "rgba(0,0,0,.55)"; ctx.lineWidth = (o.ids ? 40 : 26) * k; // aperçu : pinceau large (≈ 1 cm de doigt)
       ctx.beginPath(); ctx.moveTo((last ? last[0] : x) * k, (last ? last[1] : y) * k); ctx.lineTo(x * k + .1, y * k); ctx.stroke();
       ctx.globalCompositeOperation = "source-over"; last = [x, y];
     }
@@ -113,7 +114,7 @@
     function verifie() {
       if (fini) return;
       const img = ctx.getImageData(0, 0, W, H).data;
-      OS.forEach(b => {
+      LISTE.forEach(b => {
         if (trouve[b.id]) return;
         const pts = b.pts.map(p => poser(b.id, p)); let libres = 0;
         pts.forEach(p => { const x = Math.min(W - 1, Math.max(0, Math.round(p[0] * k))), y = Math.min(H - 1, Math.max(0, Math.round(p[1] * k))); if (img[(y * W + x) * 4 + 3] < 120) libres++; });
@@ -130,7 +131,7 @@
       el.querySelectorAll(".fo-anneau").forEach(a => a.remove());
       S().decouverte(); Audio2.vibre(40);
       if (o.onOs) o.onOs(id, n);
-      if (n === OS.length) { fini = true; setTimeout(() => o.onFin && o.onFin(), 1100); }
+      if (n === LISTE.length) { fini = true; setTimeout(() => o.onFin && o.onFin(), 1100); }
     }
     function pos(e) { const r = box.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * 400, (e.clientY - r.top) / r.height * 300, e.clientX - r.left, e.clientY - r.top]; }
     const down = e => { if (fini) return; actif = e.pointerId; try { cv.setPointerCapture(e.pointerId); } catch (er) { } last = null; const p = pos(e); brosse(p[0], p[1]); S().unlock(); };
@@ -162,14 +163,15 @@
   }
   function squelette(el, o) {
     o = o || {};
+    const LISTE = o.ids ? OS.filter(b => o.ids.includes(b.id)) : OS; // aperçu : 3 os à placer, les autres déjà montés
     const place = {}; let choisi = null, fini = false, drag = null;
     const bbox = { crane: "270 54 90 50", cou: "226 76 66 80", aile: "140 126 106 40", sternum: "160 164 90 54", patte: "176 206 60 112" };
     el.innerHTML = '<div class="squelette" data-jeu="squelette"><svg class="sq-svg" viewBox="0 0 400 320" aria-label="Silhouette à compléter">' +
       '<path class="sq-ombre" d="' + SILHOUETTE + '"/>' +
       '<g class="sq-plumes" opacity="0"><g transform="translate(40 4) scale(2.25)">' + Art.solitaire("").replace(/^<svg[^>]*>/, "").replace(/<\/svg>$/, "") + '</g></g>' +
-      OS.map(b => '<g class="sq-slot" data-slot="' + b.id + '" tabindex="-1" role="button" aria-label="' + ((o.noms && o.noms[b.id]) || b.id) + ' : emplacement">' + b.svg + '</g>').join("") +
+      OS.map(b => '<g class="sq-slot' + (LISTE.includes(b) ? '' : ' pose') + '" data-slot="' + b.id + '" tabindex="-1" role="button" aria-label="' + ((o.noms && o.noms[b.id]) || b.id) + ' : emplacement">' + b.svg + '</g>').join("") +
       annotations(o.annot) + '</svg><div class="sq-bulle" aria-live="polite"></div></div>' +
-      '<div class="sq-plateau" role="group" aria-label="Os à placer">' + OS.map(b => '<button class="sq-os" data-os="' + b.id + '" aria-label="' + ((o.noms && o.noms[b.id]) || b.id) + '"><svg viewBox="' + bbox[b.id] + '" aria-hidden="true"><g class="os-p">' + b.svg + '</g></svg><span>' + ((o.court && o.court[b.id]) || "") + '</span></button>').join("") + '</div>';
+      '<div class="sq-plateau' + (LISTE.length < OS.length ? ' trois' : '') + '" role="group" aria-label="Os à placer">' + LISTE.map(b => '<button class="sq-os" data-os="' + b.id + '" aria-label="' + ((o.noms && o.noms[b.id]) || b.id) + '"><svg viewBox="' + bbox[b.id] + '" aria-hidden="true"><g class="os-p">' + b.svg + '</g></svg><span>' + ((o.court && o.court[b.id]) || "") + '</span></button>').join("") + '</div>';
     const svg = el.querySelector(".sq-svg"), info = el.querySelector(".sq-bulle");
     // l'ibis « habillé » est dessiné à l'échelle du squelette : on cale ses plumes sur la silhouette
     function dire(t, cls) { info.textContent = t; info.className = "sq-bulle " + (cls || ""); }
@@ -182,7 +184,7 @@
       dire((o.bravo && o.bravo[id]) || "Bien vu !", "ok");
       choisi = null; el.querySelectorAll(".sq-os.choisi").forEach(x => x.classList.remove("choisi")); svg.classList.remove("attend");
       if (o.onPose) o.onPose(id);
-      if (Object.keys(place).length === OS.length) { fini = true; setTimeout(() => o.onFin && o.onFin(), 700); }
+      if (Object.keys(place).length === LISTE.length) { fini = true; setTimeout(() => o.onFin && o.onFin(), 700); }
       return true;
     }
     // glisser-déposer
@@ -228,7 +230,7 @@
     dire(o.depart || "", "");
     return {
       destroy() { if (drag) drag.fant.remove(); fini = true; },
-      solve() { OS.forEach((b, i) => setTimeout(() => poserOs(b.id, b.id), i * 160)); },
+      solve() { LISTE.forEach((b, i) => setTimeout(() => poserOs(b.id, b.id), i * 160)); },
       habiller() { // les plumes apparaissent par-dessus les os : l'ibis se révèle
         svg.classList.add("habille"); dire("", ""); S().vent(); setTimeout(() => S().decouverte(), 500);
       }
