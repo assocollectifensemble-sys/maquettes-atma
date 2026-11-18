@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gorillaz Pizza · Italian Street Food à La Possession</title>
+<meta name="description" content="Gorillaz Pizza, pizzeria Italian Street Food au 3 ter chemin Bœuf Mort, La Possession : pizzas, pasta et bonne humeur chaque soir. Commandes au 0693 11 74 21.">
+<meta property="og:title" content="Gorillaz Pizza · Prépare-toi à kiffer">
+<meta property="og:description" content="Pizzas, pasta et bonnes énergies : la Team Gorillaz vous accueille chaque soir à La Possession, et aussi au Port.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/gorillaz-pizza-la-possession/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/gorillaz-pizza-la-possession/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Outfit:wght@400;500;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{--bleu:#1e3d8d;--bleu-f:#122a66;--nuit:#0c1736;--rose:#c11f68;--rose-c:#ff4f9a;--creme:#fff7f0;--farine:#f6f3fb;--txt:#18203a;--doux:#c9d1ee;--gris:#6b7290}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,Arial,sans-serif;color:var(--txt);background:var(--farine);line-height:1.6;font-size:17px;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Bowlby One',Impact,sans-serif;font-weight:400;line-height:1.05;letter-spacing:.01em}
+h2{font-size:clamp(2rem,8.4vw,3.4rem);margin:.4rem 0 1rem;text-transform:uppercase}
+h3{font-size:1.3rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+section{padding:clamp(4rem,9vw,6.5rem) 0;position:relative}
+.eyebrow{font-family:'Permanent Marker',cursive;font-size:1.15rem;color:var(--rose)}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--nuit);color:var(--doux);text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:2px solid var(--rose)}
+.ribbon b{color:#fff}
+canvas#energie{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.8rem 1.4rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:1.05rem;letter-spacing:.02em;transition:.3s;line-height:1.1;border:0;cursor:pointer}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--rose);color:#fff;box-shadow:0 12px 28px -12px rgba(193,31,104,.95);animation:souffle 3.2s ease-in-out infinite}
+.btn-main:hover{background:#d72a79;transform:translateY(-2px)}
+@keyframes souffle{50%{box-shadow:0 12px 42px -4px rgba(255,79,154,.75)}}
+.btn-line{border:2px solid #fff;color:#fff;background:rgba(255,255,255,.06)}
+.btn-line:hover{background:rgba(255,255,255,.16)}
+.btn-bleu{background:var(--bleu);color:#fff}
+.btn-bleu:hover{background:var(--bleu-f)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+/* hero */
+.hero{min-height:min(100svh,860px);display:flex;align-items:flex-end;overflow:hidden;background:var(--nuit);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;animation:kenburns 24s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.15) translate(-2%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,23,54,.75) 0%,rgba(12,23,54,.15) 24%,rgba(12,23,54,.62) 46%,rgba(12,23,54,.95) 64%,rgba(12,23,54,.98) 100%)}
+.hero .halo{position:absolute;left:-30%;right:-30%;bottom:-30%;height:70%;z-index:1;background:radial-gradient(ellipse at 50% 100%,rgba(193,31,104,.45),rgba(30,61,141,.25) 45%,transparent 72%);animation:halo 6s ease-in-out infinite;pointer-events:none}
+@keyframes halo{50%{opacity:.6;transform:scaleY(1.07)}}
+.hero-in{position:relative;z-index:2;padding:7rem 0 3.6rem}
+.titre{display:flex;align-items:center;gap:1rem;opacity:0;transform:translateY(24px);animation:monte 1.1s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.accroche{opacity:0;transform:translateY(24px);animation:monte 1.1s .7s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.logo-rond{width:clamp(96px,27vw,150px);aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:0 0 0 4px var(--rose),0 14px 40px rgba(0,0,0,.55);overflow:hidden;flex:none;animation:balance 5s ease-in-out infinite}
+.logo-rond img{width:100%;height:100%;object-fit:cover}
+@keyframes balance{50%{transform:rotate(-5deg) translateY(-4px)}}
+.nom{font-family:'Bowlby One',sans-serif;font-size:clamp(2.2rem,10.5vw,4.8rem);line-height:.98;text-shadow:0 4px 0 var(--rose),0 12px 30px rgba(0,0,0,.6)}
+.nom small{display:block;font-family:'Permanent Marker',cursive;font-size:.34em;color:var(--rose-c);text-shadow:none;margin-top:.35rem;letter-spacing:.02em}
+.hero h1{font-size:clamp(1.5rem,6.2vw,2.5rem);margin:1.4rem 0 .7rem;color:#fff;text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--rose-c)}
+.hero p.lead{max-width:34rem;font-size:1.1rem;color:#eef1ff;text-shadow:0 1px 8px rgba(0,0,0,.6);margin-bottom:1.5rem}
+.infos-vite{margin-top:1.3rem;font-size:.95rem;color:var(--doux);display:flex;flex-wrap:wrap;gap:.3rem 1.1rem}
+.infos-vite span::before{content:"● ";color:var(--rose-c);font-size:.7em}
+/* bandeau */
+.bandeau{background:var(--rose);color:#fff;overflow:hidden;padding:.75rem 0;border-block:3px solid var(--nuit)}
+.bandeau-piste{display:flex;width:max-content;animation:defile 38s linear infinite}
+.bandeau span{font-family:'Bowlby One',sans-serif;font-size:1.2rem;padding:0 1rem;white-space:nowrap;text-transform:uppercase}
+.bandeau span::after{content:"";display:inline-block;width:.45em;height:.45em;margin-left:2rem;border-radius:50%;background:var(--bleu);vertical-align:.15em;box-shadow:0 0 0 2px #fff}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* esprit */
+.esprit{background:var(--farine);overflow:hidden}
+.grille{display:grid;gap:2.4rem;align-items:center}
+.citation{font-family:'Bowlby One',sans-serif;font-size:clamp(1.6rem,6.6vw,2.6rem);line-height:1.12;color:var(--bleu)}
+.citation em{font-style:normal;color:var(--rose)}
+.esprit p{max-width:36rem}
+.source{font-size:.85rem;color:var(--gris);margin-top:.6rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.pastilles span{background:var(--bleu);color:#fff;font-weight:700;font-size:.9rem;padding:.42rem .95rem;border-radius:999px}
+.pastilles span:nth-child(even){background:var(--rose)}
+.photo-cadre{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -28px rgba(12,23,54,.7);transform:rotate(1.5deg);transition:transform .6s;border:4px solid #fff}
+.photo-cadre:hover{transform:rotate(0) scale(1.01)}
+.photo-cadre img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo-cadre figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .8rem;background:linear-gradient(transparent,rgba(12,23,54,.92));color:#fff;font-family:'Permanent Marker',cursive;font-size:1.1rem;line-height:1.25}
+/* carte */
+.carte{background:linear-gradient(180deg,var(--bleu-f),var(--nuit));color:#fff;overflow:hidden}
+.carte::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 70% 40% at 50% 0%,rgba(193,31,104,.32),transparent 70%)}
+.carte .wrap{position:relative}
+.carte .eyebrow{color:var(--rose-c)}
+.carte .intro{color:var(--doux);max-width:40rem}
+.onglets{display:flex;gap:.5rem;margin:1.6rem 0 1.2rem;flex-wrap:wrap}
+.onglets button{font:inherit;font-weight:700;border:2px solid rgba(255,255,255,.35);background:transparent;color:#fff;padding:.55rem 1.1rem;border-radius:999px;cursor:pointer;transition:.3s}
+.onglets button[aria-selected="true"]{background:var(--rose);border-color:var(--rose)}
+.pizzas{display:grid;gap:.9rem}
+.pizzas[hidden]{display:none}
+.pz{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:1.1rem 1.15rem;transition:transform .4s,border-color .4s,box-shadow .4s}
+.pz:hover{transform:translateY(-4px);border-color:var(--rose-c);box-shadow:0 22px 40px -26px rgba(255,79,154,.7)}
+.pz h3{font-size:1.25rem;color:#fff;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.pz h3 .peï{font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#ffd23f;color:var(--nuit);padding:.18rem .5rem;border-radius:6px}
+.pz p{color:var(--doux);font-size:.97rem;margin-top:.35rem}
+.note{font-size:.85rem;color:var(--doux);margin-top:1.2rem;opacity:.85}
+.street{display:grid;gap:1rem;margin-top:2.6rem;align-items:center}
+.street img{border-radius:18px;width:100%;aspect-ratio:640/262;object-fit:cover;border:3px solid rgba(255,255,255,.2)}
+.street ul{list-style:none;display:grid;gap:.55rem}
+.street li{padding-left:1.6rem;position:relative}
+.street li::before{content:"";position:absolute;left:0;top:.5em;width:.75rem;height:.75rem;border-radius:50%;background:var(--rose-c);box-shadow:0 0 12px var(--rose-c)}
+.street li b{color:#fff}
+.street li span{color:var(--doux)}
+/* galerie */
+.galerie{background:var(--creme);overflow:hidden}
+.fil{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem .2rem 1.2rem;scrollbar-width:thin;scrollbar-color:var(--rose) transparent}
+.fil figure{flex:0 0 min(78%,320px);scroll-snap-align:start;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 20px 40px -26px rgba(12,23,54,.6);transition:transform .4s}
+.fil figure:hover{transform:translateY(-5px) rotate(-.6deg)}
+.fil img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.fil figcaption{padding:.75rem 1rem .9rem;font-size:.92rem;color:var(--gris)}
+.fil figcaption b{display:block;color:var(--bleu);font-size:1rem}
+.astuce{font-size:.85rem;color:var(--gris)}
+/* fidélité */
+.fidele{background:var(--rose);color:#fff;overflow:hidden}
+.fidele::after{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;border:30px solid rgba(255,255,255,.12)}
+.fidele .eyebrow{color:#ffe1ee}
+.carte-fid{position:relative;max-width:420px;aspect-ratio:1.6;border-radius:22px;background:linear-gradient(135deg,var(--bleu) 0%,var(--nuit) 100%);box-shadow:0 30px 50px -24px rgba(12,23,54,.9);padding:1.2rem 1.3rem;color:#fff;display:flex;flex-direction:column;justify-content:space-between;animation:flotte 6s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-8px) rotate(-1.2deg)}}
+.carte-fid .haut{display:flex;align-items:center;gap:.7rem;font-family:'Bowlby One',sans-serif;font-size:1.1rem}
+.carte-fid .haut img{width:52px;height:52px;border-radius:50%;background:#fff}
+.tampons{display:grid;grid-template-columns:repeat(5,1fr);gap:.45rem}
+.tampons i{aspect-ratio:1;border-radius:50%;border:2px dashed rgba(255,255,255,.5);display:grid;place-items:center;font-style:normal;font-size:1.1rem}
+.tampons i.ok{background:var(--rose);border:2px solid #fff}
+.carte-fid small{font-size:.75rem;opacity:.8;letter-spacing:.08em;text-transform:uppercase}
+/* adresses */
+.adresses{background:var(--farine)}
+.duo{display:grid;gap:1.2rem;margin-top:1.4rem}
+.adr{background:#fff;border-radius:22px;padding:1.5rem 1.3rem;box-shadow:0 22px 44px -30px rgba(12,23,54,.6);border-top:6px solid var(--bleu);position:relative}
+.adr.port{border-top-color:var(--rose)}
+.adr .lab{font-family:'Permanent Marker',cursive;color:var(--rose);font-size:1.05rem}
+.adr h3{font-size:1.5rem;color:var(--bleu);margin:.2rem 0 .6rem}
+.adr p{margin-bottom:.5rem}
+.horaires{width:100%;border-collapse:collapse;margin:.6rem 0 1rem;font-size:.97rem}
+.horaires td{padding:.32rem 0;border-bottom:1px dashed #d9dcea}
+.horaires td:last-child{text-align:right;font-weight:700;color:var(--bleu)}
+.adr .ctas .btn{min-height:46px;font-size:.98rem;padding:.65rem 1.1rem}
+.mini{font-size:.85rem;color:var(--gris)}
+/* avis */
+.avis{background:var(--nuit);color:#fff;overflow:hidden}
+.avis .eyebrow{color:var(--rose-c)}
+.note-g{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.note-g strong{font-family:'Bowlby One',sans-serif;font-size:3rem;color:#fff;line-height:1}
+.etoiles{color:#ffd23f;letter-spacing:.12em;font-size:1.3rem}
+.cits{display:grid;gap:1rem}
+blockquote{background:rgba(255,255,255,.06);border-left:4px solid var(--rose-c);border-radius:14px;padding:1.1rem 1.2rem;font-size:1.02rem}
+blockquote footer{font-size:.85rem;color:var(--doux);margin-top:.5rem}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--bleu),var(--nuit));color:#fff;text-align:center;overflow:hidden}
+.contact h2{color:#fff}
+.contact p{color:var(--doux);max-width:34rem;margin:0 auto 1.6rem}
+.contact .ctas{justify-content:center}
+.reseaux{display:flex;justify-content:center;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap}
+.reseaux a{display:inline-flex;align-items:center;gap:.45rem;color:#fff;text-decoration:none;font-weight:600;padding:.5rem .9rem;border-radius:999px;background:rgba(255,255,255,.1);transition:.3s;font-size:.95rem;overflow-wrap:anywhere}
+.reseaux a:hover{background:rgba(255,255,255,.2)}
+.reseaux svg{width:18px;height:18px;flex:none}
+footer.pied{background:#070e24;color:#8f97b8;text-align:center;font-size:.82rem;padding:1.6rem 1rem 6rem}
+.flottant{position:fixed;right:14px;bottom:16px;z-index:70;display:flex;align-items:center;gap:.5rem;background:var(--rose);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.15rem;border-radius:999px;box-shadow:0 14px 30px -10px rgba(193,31,104,.9)}
+.flottant svg{width:20px;height:20px}
+.revele{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.revele.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:46px}
+@media(min-width:760px){
+ .grille{grid-template-columns:1.1fr 1fr}
+ .pizzas{grid-template-columns:1fr 1fr}
+ .street{grid-template-columns:1fr 1fr;gap:2rem}
+ .duo{grid-template-columns:1fr 1fr}
+ .cits{grid-template-columns:repeat(3,1fr)}
+ .fidele .grille{grid-template-columns:1.2fr 1fr}
+ .flottant{display:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.revele{opacity:1;transform:none}.titre,.accroche{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Gorillaz Pizza</div>
+<canvas id="energie" aria-hidden="true"></canvas>
+<main>
+
+<section class="hero">
+ <div class="fond"><img src="img/hero-pizza.jpg" alt="Pizza Gorillaz cuite au four, roquette et champignons, dans sa boîte à emporter"></div>
+ <div class="halo"></div>
+ <div class="wrap hero-in">
+  <div class="titre">
+   <div class="logo-rond"><img src="img/logo.jpg" alt="Logo Gorillaz Pizza"></div>
+   <div class="nom">Gorillaz<br>Pizza<small>Team Gorillaz · La Possession</small></div>
+  </div>
+  <div class="accroche">
+   <h1>Italian Street Food,<br><em>bonne humeur incluse</em></h1>
+   <p class="lead">Des pizzas bien gourmandes, des pasta, des sandwichs italiens… et une équipe qui adore partager ses bonnes énergies. Prépare-toi à kiffer !</p>
+   <div class="ctas">
+    <a class="btn btn-main" href="tel:+262693117421"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Commander · 0693 11 74 21</a>
+    <a class="btn btn-line" href="#adresses">Nos deux adresses</a>
+   </div>
+   <div class="infos-vite"><span>Chaque soir dès 17h30</span><span>4,6/5 sur Google · 151 avis</span><span>3 ter chemin Bœuf Mort</span></div>
+  </div>
+ </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="bandeau-piste">
+ <span>Pizzas gourmandes</span><span>Pasta</span><span>Salades fraîches</span><span>Sandwichs italiens</span><span>Jus frais</span><span>Team Gorillaz</span><span>Prépare-toi à kiffer</span>
+ <span>Pizzas gourmandes</span><span>Pasta</span><span>Salades fraîches</span><span>Sandwichs italiens</span><span>Jus frais</span><span>Team Gorillaz</span><span>Prépare-toi à kiffer</span>
+</div></div>
+
+<section class="esprit">
+ <div class="wrap grille">
+  <div class="revele">
+   <div class="eyebrow">L'esprit Gorillaz</div>
+   <p class="citation">« On aime faire de bonnes pizzas… mais on aime aussi <em>rigoler, sourire, partager</em> et vous transmettre de bonnes énergies ! »</p>
+   <p class="source">La Team Gorillaz, sur Instagram, le 29 septembre 2026</p>
+   <p style="margin-top:1.2rem">Chez Gorillaz, la satisfaction passe aussi par la bonne humeur. La maison mise sur le circuit court et une cuisine respectueuse de l'environnement, avec des produits d'ici qui se glissent dans les recettes : boucané, brède, chouchou, piton du Maïdo.</p>
+   <div class="pastilles"><span>Circuit court</span><span>Saveurs péi</span><span>Italian Street Food</span><span>Sur place ou à emporter</span></div>
+  </div>
+  <figure class="photo-cadre revele"><img src="img/comptoir.jpg" alt="Le comptoir Gorillaz Pizza, papier peint tropical et salade bar" loading="lazy"><figcaption>Le comptoir Gorillaz, ambiance tropicale</figcaption></figure>
+ </div>
+</section>
+
+<section class="carte" id="carte">
+ <svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" style="position:absolute;top:-1px;left:0;transform:rotate(180deg)" aria-hidden="true"><path d="M0 46V20c180 22 360 26 540 10S900-4 1080 10s260 22 360 14v22z" fill="#f6f3fb"/></svg>
+ <div class="wrap">
+  <div class="revele">
+   <div class="eyebrow">La carte</div>
+   <h2>Pizzas de caractère</h2>
+   <p class="intro">Base crème ou base tomate, des recettes qui mêlent l'Italie et La Réunion. Un aperçu de la carte affichée en pizzeria :</p>
+  </div>
+  <div class="onglets" role="tablist">
+   <button role="tab" aria-selected="true" data-cible="creme">Base crème</button>
+   <button role="tab" aria-selected="false" data-cible="tomate">Base tomate</button>
+  </div>
+  <div class="pizzas" id="creme">
+   <article class="pz revele"><h3>Boucané 2.0 <span class="peï">péi</span></h3><p>Caviar d'aubergine, mozza, boucané poulet, oignon, persillade, gros piment</p></article>
+   <article class="pz revele"><h3>VG péi <span class="peï">péi</span></h3><p>Caviar d'aubergine, mozza, chouchou, citrouille, ail, gingembre, brède, persillade</p></article>
+   <article class="pz revele"><h3>Tartillaz <span class="peï">péi</span></h3><p>Crème, mozza, piton Maïdo, poitrine fumée, cornichon, oignon</p></article>
+   <article class="pz revele"><h3>Duck</h3><p>Crème moutarde à l'ancienne, mozza, pomme de terre, champignon, roquette, canard fumé</p></article>
+   <article class="pz revele"><h3>Trufforizo</h3><p>Crème tartufo, mozza, champignon, chorizo, roquette</p></article>
+   <article class="pz revele"><h3>Amore</h3><p>Crème, mozza, saumon gravelax, stracciatella, roquette, persillade</p></article>
+  </div>
+  <div class="pizzas" id="tomate" hidden>
+   <article class="pz"><h3>Créole <span class="peï">péi</span></h3><p>Tomate, mozza, saucisse porc ou poulet, gros piment, brède</p></article>
+   <article class="pz"><h3>Buffala 2.0</h3><p>Tomate, mozza, tomate cerise, pesto, buffala fraîche, olive noire</p></article>
+   <article class="pz"><h3>Toscane</h3><p>Tomate, mozza, jambon cru, parmesan, crème balsamique, roquette</p></article>
+   <article class="pz"><h3>Sapouak</h3><p>Tomate, mozza, spianata, miel piment, olive noire, roquette</p></article>
+   <article class="pz"><h3>Milanaise</h3><p>Tomate, mozza, bœuf, chorizo, poitrine fumée, merguez poulet, crème épaisse</p></article>
+   <article class="pz"><h3>Calzone Burger</h3><p>Tomate, mozza, bœuf, poitrine fumée, cheddar, sauce burger</p></article>
+  </div>
+  <p class="note">Toute la carte et les nouveautés du moment vous attendent en pizzeria et sur la page Facebook.</p>
+
+  <div class="street revele">
+   <img src="img/pasta.jpg" alt="Linguine crémeuses servies à la pince" loading="lazy">
+   <ul>
+    <li><b>Le Gorillaz Poulet Crousty</b><br><span>Linguine al dente, crème parmesan, poulet croustillant, oignons crousty. « Crémeux + croustillant = combo fatal. »</span></li>
+    <li><b>Gorilla'Nuzzo &amp; sandwichs italiens</b><br><span>L'esprit street food, à croquer sur le pouce.</span></li>
+    <li><b>Salades fraîches, jus frais, desserts gourmands</b><br><span>Pour faire le plein d'énergie, du midi au soir.</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="galerie">
+ <div class="wrap">
+  <div class="revele"><div class="eyebrow">Dans l'assiette</div><h2 style="color:var(--bleu)">Ça donne faim</h2></div>
+  <div class="fil">
+   <figure><img src="img/pizza-truffe.jpg" alt="Pizza garnie de roquette, charcuterie fine et lamelles de truffe" loading="lazy"><figcaption><b>Version gastronome</b>Roquette, charcuterie fine et truffe</figcaption></figure>
+   <figure><img src="img/burrata-saumon.jpg" alt="Gros plan sur une pizza au saumon, roquette et tomate cerise" loading="lazy"><figcaption><b>Tout en fraîcheur</b>Saumon, roquette, tomate cerise</figcaption></figure>
+   <figure><img src="img/pizza-bois.jpg" alt="Pizza chorizo et roquette sur une planche en bois" loading="lazy"><figcaption><b>Pâte dorée</b>Bords gonflés, cuisson au four</figcaption></figure>
+   <figure><img src="img/hero-pizza.jpg" alt="Pizza à emporter dans sa boîte" loading="lazy"><figcaption><b>À emporter</b>Aussi bonne à la maison… si elle tient le trajet</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour voir la suite →</p>
+ </div>
+</section>
+
+<section class="fidele">
+ <div class="wrap grille">
+  <div class="revele">
+   <div class="eyebrow">Programme de fidélité</div>
+   <h2>La fidélité, version numérique</h2>
+   <p>Depuis août 2026, Gorillaz Pizza a son programme de fidélité numérique : la carte vit dans votre téléphone et accompagne chaque visite. Inscription simple avec Fidelatoo.</p>
+   <div class="ctas" style="margin-top:1.4rem"><a class="btn btn-bleu" href="https://www.facebook.com/gorillazpizza" target="_blank" rel="noopener">Rejoindre le programme</a></div>
+  </div>
+  <div class="carte-fid revele" aria-hidden="true">
+   <div class="haut"><img src="img/logo.jpg" alt="">Carte Gorillaz</div>
+   <div class="tampons"><i class="ok">🍕</i><i class="ok">🍕</i><i class="ok">🍕</i><i>🍕</i><i>🎁</i></div>
+   <small>Fidélité numérique · Team Gorillaz</small>
+  </div>
+ </div>
+</section>
+
+<section class="adresses" id="adresses">
+ <div class="wrap">
+  <div class="revele"><div class="eyebrow">Deux adresses</div><h2 style="color:var(--bleu)">Où kiffer chez Gorillaz</h2></div>
+  <div class="duo">
+   <article class="adr revele">
+    <div class="lab">Le soir, 7 jours sur 7</div>
+    <h3>La Possession</h3>
+    <p>3 ter chemin Bœuf Mort<br>zone cœur de ville, 97419 La Possession</p>
+    <table class="horaires">
+     <tr><td>Lundi → samedi</td><td>17h30 – 21h00</td></tr>
+     <tr><td>Dimanche</td><td>18h00 – 21h00</td></tr>
+    </table>
+    <div class="ctas">
+     <a class="btn btn-main" href="tel:+262693117421">0693 11 74 21</a>
+     <a class="btn btn-bleu" href="https://www.google.com/maps/dir/?api=1&amp;destination=-20.9377363,55.3341585" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+    <p class="mini" style="margin-top:.8rem">Sur place ou à emporter.</p>
+   </article>
+   <article class="adr port revele">
+    <div class="lab">Le midi et le soir</div>
+    <h3>Le Port</h3>
+    <p>4 rue Mahé de Labourdonnais<br>97420 Le Port</p>
+    <p>Midi 5 jours sur 7, soir 6 jours sur 7. Le midi, ouverture dès 11h00 et commandes dès 9h00. Petite terrasse au soleil et livraison au bureau avec Uber Eats.</p>
+    <div class="ctas">
+     <a class="btn btn-main" href="tel:+262692659672">0692 65 96 72</a>
+     <a class="btn btn-bleu" href="https://www.google.com/maps/search/?api=1&amp;query=4+rue+Mah%C3%A9+de+Labourdonnais+97420+Le+Port" target="_blank" rel="noopener">Itinéraire</a>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="avis">
+ <div class="wrap">
+  <div class="revele"><div class="eyebrow">Ils en parlent</div><h2>Le verdict des gourmands</h2>
+   <div class="note-g"><strong>4,6</strong><span class="etoiles">★★★★★</span><span style="color:var(--doux)">151 avis sur Google</span></div>
+  </div>
+  <div class="cits">
+   <blockquote class="revele">« Elles sentaient tellement bon […] : on les a dévorées sur place ! Un vrai régal, avec un accueil au top. »<footer>Ju L., avis Google</footer></blockquote>
+   <blockquote class="revele">« Une excellente pizzeria ! Les pizzas étaient exceptionnelles. Des produits de qualité, une pâte parfaite, des saveurs incroyables et une cuisson maîtrisée à la perfection. »<footer>Alexandra T., avis Google</footer></blockquote>
+   <blockquote class="revele">« Des vraies pizzas à l'italienne, elles sont excellentes ! Meilleure pizza à La Possession&nbsp;»<footer>Maëva L., avis Google</footer></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wrap revele">
+  <div class="eyebrow" style="color:var(--rose-c)">Une envie de pizza ce soir ?</div>
+  <h2>On t'attend, Team !</h2>
+  <p>Un appel suffit pour commander, et votre pizza vous attend toute chaude au 3 ter chemin Bœuf Mort.</p>
+  <div class="ctas">
+   <a class="btn btn-main" href="tel:+262693117421">Appeler · 0693 11 74 21</a>
+   <a class="btn btn-line" href="https://www.google.com/maps/dir/?api=1&amp;destination=-20.9377363,55.3341585" target="_blank" rel="noopener">Itinéraire</a>
+  </div>
+  <div class="reseaux">
+   <a href="https://www.facebook.com/gorillazpizza" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8z"/></svg>Facebook</a>
+   <a href="https://www.instagram.com/gorillaz_pizza/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@gorillaz_pizza</a>
+   <a href="mailto:contact.gorillazpizza@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>contact.gorillazpizza@gmail.com</a>
+  </div>
+ </div>
+</section>
+</main>
+<footer class="pied">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Gorillaz Pizza.<br>Photos : page Instagram et fiche Google de Gorillaz Pizza.</footer>
+<a class="flottant" href="tel:+262693117421"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Commander</a>
+<script>
+(function(){
+ var reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.revele').forEach(function(el){io.observe(el)});
+ document.querySelectorAll('.onglets button').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.onglets button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+  ['creme','tomate'].forEach(function(id){document.getElementById(id).hidden=(id!==b.dataset.cible)});
+ })});
+ if(reduit)return;
+ var c=document.getElementById('energie'),x=c.getContext('2d'),W,H,P=[],run=true;
+ function taille(){W=c.width=innerWidth;H=c.height=innerHeight}
+ taille();addEventListener('resize',taille);
+ var cols=['255,79,154','120,150,255','255,210,63'];
+ for(var i=0;i<28;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:1+Math.random()*2.4,v:.25+Math.random()*.6,o:.15+Math.random()*.35,d:Math.random()*6.28,c:cols[i%3]});
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.4;if(p.y<-10){p.y=H+10;p.x=Math.random()*W}
+   x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba('+p.c+','+p.o+')';x.shadowBlur=8;x.shadowColor='rgba('+p.c+',.8)';x.fill()});
+  requestAnimationFrame(f)}
+ f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Gorillaz Pizza" defer></script>
+</body>
+</html>
