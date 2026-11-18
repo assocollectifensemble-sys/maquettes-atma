@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les p’tites gourmandises · Saladerie &amp; snacking à Saint-Louis</title>
+<meta name="description" content="Salades à composer, burgers froids, wraps, sandwichs, pâtisseries et boissons, au 31 rue Pente Nicole à Saint-Louis. Commande par téléphone ou message.">
+<meta property="og:title" content="Les p’tites gourmandises · Saladerie &amp; snacking">
+<meta property="og:description" content="Une page imaginée pour Les p’tites gourmandises, à Saint-Louis.">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-ptites-gourmandises-saint-louis/">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-ptites-gourmandises-saint-louis/img/legumes.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#262c3d;--nuit2:#353d54;--creme:#fbf6ee;--lin:#f1e7d6;--carotte:#e9762b;--feuille:#6f9a35;--citron:#f2c230;--gris:#62677a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--creme);color:var(--nuit);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--nuit);color:var(--creme);text-align:center;font-size:.78rem;padding:.55rem 1rem}
+.wrap{width:min(1120px,92vw);margin:auto}
+h1,h2,h3{line-height:1.08}
+h2{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;letter-spacing:-.01em;margin:.4rem 0 .8rem}
+.script{font-family:Pacifico,cursive;font-weight:400;color:var(--carotte)}
+.sur{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--feuille);font-weight:800}
+.chapo{color:var(--gris);font-size:1.05rem;max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.85rem 1.5rem;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .3s,box-shadow .3s,background .3s}
+.btn.plein{background:var(--carotte);color:#fff;box-shadow:0 10px 24px -10px rgba(233,118,43,.8);animation:respire 3.2s ease-in-out infinite}
+.btn.plein:hover{transform:translateY(-2px)}
+.btn.ligne{border:2px solid var(--nuit);color:var(--nuit)}.btn.ligne:hover{background:var(--nuit);color:var(--creme)}
+.btn:focus-visible{outline:3px solid var(--citron);outline-offset:3px}
+@keyframes respire{50%{box-shadow:0 14px 30px -8px rgba(233,118,43,.95)}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 80% at 90% 0%,#fff3df 0,var(--creme) 60%)}
+#graines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero .g{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;padding:3.2rem 0 4rem}
+.hero h1{font-size:clamp(2.9rem,10vw,5.6rem);font-weight:800;letter-spacing:-.02em;animation:monte 1.1s ease both}
+.hero h1 .script{display:block;font-size:.62em;margin-bottom:.2rem}
+.lead{font-size:1.12rem;color:var(--gris);max-width:42ch;margin-top:1rem;animation:monte 1.1s .2s ease both}
+@keyframes monte{from{opacity:0;transform:translateY(18px)}}
+.pastilles{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.3rem}
+.pastilles span{background:#fff;border:1px solid var(--lin);padding:.35rem .9rem;border-radius:999px;font-size:.88rem;font-weight:700}
+.visuel{position:relative;aspect-ratio:1/1.02;max-width:520px;width:100%;justify-self:center}
+.visuel .a{position:absolute;inset:0 0 10% 8%;border-radius:46% 54% 42% 58%/52% 44% 56% 48%;overflow:hidden;box-shadow:0 30px 60px -28px rgba(38,44,61,.55)}
+.visuel .a img{width:100%;height:100%;object-fit:cover;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.12) translate(-2%,2%)}}
+.visuel .b{position:absolute;left:0;bottom:0;width:44%;border-radius:22px;border:7px solid var(--creme);box-shadow:0 18px 40px -20px rgba(38,44,61,.6);animation:balance 7s ease-in-out infinite}
+@keyframes balance{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.vague{display:block;width:100%;height:46px}
+/* semaine */
+.semaine{background:var(--nuit);color:var(--creme);padding:3.6rem 0 4.2rem}
+.semaine .sur{color:var(--citron)}.semaine .chapo{color:#c9cbd6}
+.ardoise{margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.ardoise div{background:var(--nuit2);border-radius:18px;padding:1.2rem 1.3rem;border-top:4px solid var(--carotte);transition:transform .35s}
+.ardoise div:nth-child(2n){border-top-color:var(--feuille)}.ardoise div:nth-child(3n){border-top-color:var(--citron)}
+.ardoise div:hover{transform:translateY(-4px)}
+.ardoise b{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#aeb2c2;margin-bottom:.3rem}
+.ardoise p{font-size:1.15rem;font-weight:700}
+.note{margin-top:1.6rem;font-size:.92rem;color:#c9cbd6}
+.note a{color:var(--citron)}
+/* carte */
+.bloc{padding:clamp(3.6rem,9vh,6rem) 0}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:2rem}
+.carte{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 14px 34px -24px rgba(38,44,61,.5);transition:transform .35s}
+.carte:hover{transform:translateY(-5px) rotate(-.4deg)}
+.carte .ph{aspect-ratio:4/3;overflow:hidden}
+.carte img{width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.carte:hover img{transform:scale(1.06)}
+.carte h3{font-size:1.2rem;font-weight:800;padding:.9rem 1.1rem 1rem}
+.sauces{margin-top:1.8rem;background:var(--lin);border-radius:22px;padding:1.3rem 1.5rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center}
+.sauces strong{font-size:1.05rem}
+.sauces span{background:#fff;border-radius:999px;padding:.35rem .9rem;font-weight:700;font-size:.92rem}
+/* étapes */
+.etapes{background:var(--lin)}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2rem;counter-reset:e}
+.trois div{background:var(--creme);border-radius:22px;padding:1.4rem}
+.trois div::before{counter-increment:e;content:counter(e);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--feuille);color:#fff;font-weight:800;font-size:1.2rem;margin-bottom:.8rem}
+.trois h3{font-size:1.3rem;font-weight:800;margin-bottom:.3rem}.trois p{color:var(--gris)}
+.trois a{font-weight:800;color:var(--carotte)}
+/* galerie */
+.defile{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.6rem 4vw 1rem;margin:0 -4vw;scrollbar-width:none}
+.defile::-webkit-scrollbar{display:none}
+.defile figure{flex:0 0 min(72vw,300px);scroll-snap-align:center;position:relative;border-radius:22px;overflow:hidden;aspect-ratio:3/4}
+.defile img{width:100%;height:100%;object-fit:cover}
+.defile figcaption{position:absolute;left:.7rem;bottom:.7rem;right:.7rem;background:rgba(251,246,238,.94);font-weight:800;font-size:.86rem;padding:.35rem .8rem;border-radius:999px;width:fit-content}
+.astuce{font-size:.85rem;color:var(--gris)}
+/* infos */
+.infos .g{display:grid;grid-template-columns:1fr 1fr;gap:2.6rem;align-items:start}
+.devanture{border-radius:26px;overflow:hidden;box-shadow:0 24px 50px -30px rgba(38,44,61,.6)}
+.coord{list-style:none;margin-top:1.2rem}
+.coord li{display:flex;gap:.9rem;flex-wrap:wrap;padding:.9rem 0;border-bottom:1px solid rgba(38,44,61,.14)}
+.coord span{min-width:6.8rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--feuille);font-weight:800;padding-top:.25rem}
+.coord a{text-underline-offset:4px;word-break:break-word}
+.etoiles{color:var(--citron);letter-spacing:.1em}
+footer{background:var(--nuit);color:#aeb2c2;text-align:center;font-size:.84rem;padding:1.8rem 1rem 6rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s,transform .9s}.rv.vu{opacity:1;transform:none}
+@media (max-width:860px){
+ .hero .g,.infos .g{grid-template-columns:1fr}.hero .g{padding:2.2rem 0 3rem;gap:2rem}
+ .visuel{max-width:400px}
+ .cartes{grid-template-columns:1fr 1fr;gap:.8rem}.carte h3{font-size:1rem;padding:.7rem .8rem .8rem}
+ .trois{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#graines{display:none}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> · créée avec plaisir pour Les p’tites gourmandises</div>
+
+<header class="hero">
+ <canvas id="graines" aria-hidden="true"></canvas>
+ <div class="wrap g">
+  <div>
+   <p class="sur">Saladerie &amp; snacking · Saint-Louis</p>
+   <h1><span class="script">Les p’tites</span>gourmandises</h1>
+   <p class="lead">Salades à composer, burgers froids, wraps, sandwichs, pâtisseries et boissons, au 31 rue Pente Nicole à Saint-Louis.</p>
+   <div class="pastilles"><span>Lundi → vendredi</span><span>8h30 – 14h</span><span>À emporter</span></div>
+   <div class="btns">
+    <a class="btn plein" href="tel:+262693640500">Appeler pour commander</a>
+    <a class="btn ligne" href="#semaine">Le programme de la semaine</a>
+   </div>
+  </div>
+  <div class="visuel">
+   <div class="a"><img src="img/legumes.webp" alt="Bacs de légumes frais coupés : chou rouge, tomates cerises, poivrons, champignons, carottes, concombre"></div>
+   <img class="b" src="img/devanture.webp" alt="La devanture des P’tites Gourmandises, rue Pente Nicole">
+  </div>
+ </div>
+ <svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 0 480 46 720 24 S1200 4 1440 26 V46 H0Z" fill="#262c3d"/></svg>
+</header>
+
+<section class="semaine" id="semaine">
+ <div class="wrap">
+  <p class="sur rv">Cette semaine au comptoir</p>
+  <h2 class="rv">Le programme <span class="script">du moment</span></h2>
+  <p class="chapo rv">Chaque dimanche, un nouveau programme : un ingrédient à l’honneur, des quiches, un flan, un dessert et un topping pour vos salades.</p>
+  <div class="ardoise">
+   <div class="rv"><b>Ingrédient</b><p>Brocolis</p></div>
+   <div class="rv"><b>Quiches</b><p>Poulet / Tartiflette ou Brocolis / Pomme de terre</p></div>
+   <div class="rv"><b>Flan</b><p>Coco</p></div>
+   <div class="rv"><b>Dessert</b><p>Cookies spéculoos</p></div>
+   <div class="rv"><b>Topping</b><p>Amandes effilées ou graines de sésame noir</p></div>
+  </div>
+  <p class="note rv">Programme publié le 15 novembre sur <a href="https://www.facebook.com/LaPtiteGourmandise974">la page Facebook</a>. Ici, il se met à jour en un instant, chaque semaine.</p>
+ </div>
+</section>
+
+<section class="bloc" id="carte">
+ <div class="wrap">
+  <p class="sur rv">La carte</p>
+  <h2 class="rv">Composez <span class="script">à votre goût</span></h2>
+  <p class="chapo rv">Une base, vos ingrédients préférés, un topping croquant : votre salade vous ressemble.</p>
+  <div class="cartes">
+   <article class="carte rv"><div class="ph"><img src="img/salade.webp" alt="Salade composée : jambon, fromage, olives, haricots verts, chou" loading="lazy"></div><h3>Salades à composer</h3></article>
+   <article class="carte rv"><div class="ph"><img src="img/burger.webp" alt="Burger froid à l’œuf, fromage et jambon" loading="lazy"></div><h3>Burgers froids</h3></article>
+   <article class="carte rv"><div class="ph"><img src="img/wrap.webp" alt="Wraps garnis de salade, jambon et concombre" loading="lazy"></div><h3>Wraps</h3></article>
+   <article class="carte rv"><div class="ph"><img src="img/sandwich.webp" alt="Sandwich garni de crudités et sauce" loading="lazy"></div><h3>Sandwichs</h3></article>
+   <article class="carte rv"><div class="ph"><img src="img/bol.webp" alt="Salade aux œufs, carottes râpées, chou, oignons rouges" loading="lazy"></div><h3>Vos ingrédients</h3></article>
+   <article class="carte rv"><div class="ph"><img src="img/tartelettes.webp" alt="Tartelettes meringuées" loading="lazy"></div><h3>Pâtisseries</h3></article>
+  </div>
+  <div class="sauces rv"><strong>Nos 2 sauces maison <small>(+0,20 €)</small></strong><span>Mayonnaise pimentée</span><span>Sauce fraîche citronnée</span></div>
+ </div>
+</section>
+
+<section class="bloc etapes">
+ <div class="wrap">
+  <p class="sur rv">Commander</p>
+  <h2 class="rv">Simple comme <span class="script">un coup de fil</span></h2>
+  <div class="trois">
+   <div class="rv"><h3>Choisissez</h3><p>Votre salade, votre wrap ou votre sandwich, et un petit dessert du programme.</p></div>
+   <div class="rv"><h3>Appelez ou écrivez</h3><p>Au <a href="tel:+262693640500">0693 64 05 00</a> ou par <a href="https://m.me/LaPtiteGourmandise974">message Facebook</a>.</p></div>
+   <div class="rv"><h3>Récupérez</h3><p>Votre commande vous attend au 31 rue Pente Nicole, à Saint-Louis.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="bloc" id="gourmandises">
+ <div class="wrap">
+  <p class="sur rv">Côté sucré</p>
+  <h2 class="rv">Tout droit <span class="script">sortis du four</span></h2>
+  <p class="chapo rv">Muffins, cookies, tartelettes, flans : chaque semaine, une nouvelle douceur pour finir la pause.</p>
+  <div class="defile">
+   <figure><img src="img/muffins-3-chocolats.webp" alt="Muffins 3 chocolats" loading="lazy"><figcaption>Muffins 3 chocolats</figcaption></figure>
+   <figure><img src="img/cookies.webp" alt="Cookies aux fruits rouges sur plaque" loading="lazy"><figcaption>Cookies du jour</figcaption></figure>
+   <figure><img src="img/moelleux.webp" alt="Moelleux banane chocolat" loading="lazy"><figcaption>Moelleux banane chocolat</figcaption></figure>
+   <figure><img src="img/quiche.webp" alt="Part de flan pâtissier" loading="lazy"><figcaption>Le flan de la semaine</figcaption></figure>
+   <figure><img src="img/tartelettes.webp" alt="Tartelettes meringuées" loading="lazy"><figcaption>Tartelettes meringuées</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour découvrir →</p>
+ </div>
+</section>
+
+<section class="bloc etapes infos" id="infos">
+ <div class="wrap g">
+  <div class="rv">
+   <p class="sur">Nous trouver</p>
+   <h2>À tout à l’heure <span class="script">rue Pente Nicole</span></h2>
+   <ul class="coord">
+    <li><span>Adresse</span>31 rue Pente Nicole, 97421 Saint-Louis</li>
+    <li><span>Horaires</span>Du lundi au vendredi, 8h30 – 14h</li>
+    <li><span>Téléphone</span><a href="tel:+262693640500">0693 64 05 00</a></li>
+    <li><span>E-mail</span><a href="mailto:bonnie.pro421@gmail.com">bonnie.pro421@gmail.com</a></li>
+    <li><span>Avis Google</span><span class="etoiles" style="min-width:0;letter-spacing:.1em;padding:0;font-size:1rem;color:#d9a400">★★★★★</span>&nbsp;5,0</li>
+   </ul>
+   <div class="btns">
+    <a class="btn plein" href="tel:+262693640500">Appeler</a>
+    <a class="btn ligne" href="https://maps.google.com/?cid=5206528700372263253">Itinéraire</a>
+    <a class="btn ligne" href="https://www.facebook.com/LaPtiteGourmandise974">Facebook</a>
+   </div>
+  </div>
+  <div class="devanture rv"><img src="img/devanture.webp" alt="Devanture des P’tites Gourmandises avec son drapeau" loading="lazy"></div>
+ </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications des P’tites gourmandises.</footer>
+<script>
+(function(){
+ var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+ if(rm)return;
+ var cv=document.getElementById('graines'),x=cv.getContext('2d'),P=[],W,H,run=true;
+ var T=[['#2b2b2b',2.2,1],['#e8d9a8',3,1.6],['#f1e3c4',5,2],['#6f9a35',4,1.6],['#e9762b',3,1.3]];
+ function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}rs();addEventListener('resize',rs);
+ for(var i=0;i<28;i++){var t=T[i%T.length];P.push({x:Math.random(),y:Math.random(),v:.00012+Math.random()*.0003,c:t[0],a:t[1]*(1+Math.random()*.6),b:t[2],r:Math.random()*6,s:(Math.random()-.5)*.002})}
+ document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+ function f(t){if(!run)return;x.clearRect(0,0,W,H);
+  P.forEach(function(p){p.y+=p.v;p.r+=p.s*16;if(p.y>1.04){p.y=-.04;p.x=Math.random()}
+   x.save();x.translate(p.x*W+Math.sin(t/2000+p.r)*14,p.y*H);x.rotate(p.r);x.globalAlpha=.35;x.fillStyle=p.c;
+   x.beginPath();x.ellipse(0,0,p.a,p.b,0,0,7);x.fill();x.restore()});
+  requestAnimationFrame(f)}
+ requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les p’tites gourmandises" defer></script>
+</body>
+</html>
