@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gîte La Cascade · Chambre &amp; table d'hôtes à Grand Bassin, Plaine des Cafres</title>
+<meta name="description" content="Gîte La Cascade, chez Marie-Hélène Nativel : chambre et table d'hôtes à Grand Bassin (La Plaine des Cafres, Le Tampon). 4 chambres doubles et 11 places en dortoir, demi-pension, cuisine péï. 0692 28 59 12.">
+<meta property="og:title" content="Gîte La Cascade · Grand Bassin">
+<meta property="og:description" content="Chez Marie-Hélène Nativel, au fond de la vallée de Grand Bassin : une case, une table péï, le chant de la cascade.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/gite-la-cascade-grand-bassin-le-tampon/img/og-gite-la-cascade.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/gite-la-cascade-grand-bassin-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#17302a;--foret2:#21413a;--fougere:#4f7a4a;--mousse:#8fae6f;--eau:#5fa8a3;--ecume:#cfe6e1;--porte:#a8392c;--tole:#9aa3a0;--soleil:#e9b949;--creme:#f6f2ea;--lin:#ece6d8;--txt:#26302c;--doux:#66706b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.08;color:var(--foret)}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.45rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--fougere);font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:var(--ecume);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(207,230,225,.3)}
+.ribbon b{color:var(--soleil);font-weight:500}
+canvas#gouttes{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.04em;font-size:.92rem;transition:.35s;text-align:center}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--soleil);color:var(--foret);box-shadow:0 14px 34px -14px rgba(233,185,73,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:#f3cd70}
+@keyframes souffle{50%{box-shadow:0 16px 44px -6px rgba(233,185,73,.7);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(207,230,225,.6);color:var(--creme);background:rgba(255,255,255,.07)}
+.btn-line:hover{background:rgba(255,255,255,.18)}
+.btn-dark{background:var(--foret);color:var(--creme)}
+.btn-dark:hover{background:var(--porte)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--foret);color:var(--creme);padding:0 0 3.4rem}
+.hero .photo{position:relative;height:clamp(360px,100vw,480px);overflow:hidden;margin-top:2rem}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.15) translate(-1.5%,-1.5%)}}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,48,42,.35) 0%,rgba(23,48,42,0) 22%,rgba(23,48,42,0) 55%,var(--foret) 100%)}
+.hero-in{position:relative;z-index:3;margin-top:-2.4rem}
+.hero .eyebrow{color:var(--ecume)}
+.hero h1{color:var(--creme);font-size:clamp(2.7rem,11.5vw,6rem);font-weight:500;margin:.5rem 0 .3rem}
+.hero h1 em{font-style:italic;color:var(--eau);font-weight:400}
+.hero .sous{letter-spacing:.32em;text-transform:uppercase;font-size:clamp(.74rem,3vw,1rem);color:var(--soleil)}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.25rem,4.3vw,1.7rem);margin:1.3rem 0 1.8rem;max-width:36rem;color:#e4efec;line-height:1.4}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:#bcd0cb}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:1s}.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bande */
+.bande{background:var(--foret2);color:var(--ecume);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Caveat,cursive;font-size:1.45rem;border-top:1px solid rgba(207,230,225,.18);border-bottom:1px solid rgba(207,230,225,.18)}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"❦";margin-left:2.4rem;font-size:.95rem;color:var(--soleil)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+.vague{display:block;width:100%;height:56px}
+
+/* esprit */
+.esprit .grid{display:grid;gap:2.6rem;align-items:center}
+.esprit p{margin-bottom:1rem}
+.esprit .big{font-family:Fraunces,serif;font-size:clamp(1.3rem,4.2vw,1.65rem);line-height:1.4;color:var(--foret2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.4rem}
+.stat{background:#fff;border:1px solid #dfe3d6;border-radius:16px;padding:.9rem .4rem;text-align:center}
+.stat b{display:block;font-family:Fraunces,serif;font-size:1.9rem;font-weight:600;color:var(--porte);line-height:1}
+.stat span{font-size:.74rem;letter-spacing:.05em;color:var(--doux)}
+.arche{position:relative;border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(23,48,42,.75);max-width:420px;margin:auto;width:100%}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:kenburns 24s ease-in-out infinite alternate}
+.arche figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1.2rem 1rem;background:linear-gradient(0deg,rgba(23,48,42,.88),rgba(23,48,42,0));color:#fff;font-family:Caveat,cursive;font-size:1.45rem;text-align:center}
+.mot{margin-top:1.4rem;font-family:Caveat,cursive;font-size:1.6rem;color:var(--porte);line-height:1.25}
+
+/* chambres */
+.chambres{background:var(--lin)}
+.duo{display:grid;gap:1.2rem;margin-top:1.8rem}
+.duo figure{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(23,48,42,.75);transition:transform .45s}
+.duo figure:hover{transform:translateY(-6px)}
+.duo img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.duo figcaption{padding:1rem 1.2rem 1.2rem;color:var(--doux);font-size:.93rem}
+.duo figcaption b{display:block;font-family:Fraunces,serif;font-size:1.3rem;font-weight:500;color:var(--foret)}
+.couchages{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.4rem}
+.couchage{background:var(--foret);color:var(--ecume);border-radius:20px;padding:1.2rem 1.1rem}
+.couchage b{display:block;font-family:Fraunces,serif;font-size:2.4rem;color:var(--soleil);line-height:1;font-weight:600}
+.couchage span{font-size:.9rem}
+.note-plan{margin-top:1rem;font-size:.9rem;color:var(--doux)}
+
+/* table */
+.table-sec{background:linear-gradient(180deg,var(--creme) 0%,#f1e9da 100%)}
+.table-sec .grid{display:grid;gap:2.4rem;align-items:center}
+.assiette{border-radius:50%;overflow:hidden;aspect-ratio:1;max-width:400px;width:100%;margin:auto;box-shadow:0 0 0 12px #fff,0 0 0 13px #e2d7c3,0 40px 80px -40px rgba(23,48,42,.7)}
+.assiette img{width:100%;height:100%;object-fit:cover;transition:transform 8s}
+.assiette:hover img{transform:scale(1.08) rotate(3deg)}
+.mots{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0}
+.mots span{background:#fff;border:1px solid #e0d5c0;border-radius:999px;padding:.35rem .95rem;font-size:.9rem}
+.mots span b{font-weight:500;color:var(--porte)}
+.citation{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.15rem,4vw,1.5rem);line-height:1.4;color:var(--foret2);border-left:3px solid var(--porte);padding-left:1.1rem;margin:1.3rem 0 .5rem}
+.src{color:var(--doux);font-size:.84rem;display:block}
+
+/* vallée */
+.vallee{background:var(--foret);color:var(--ecume);overflow:hidden}
+.vallee h2{color:var(--creme)}
+.vallee .eyebrow{color:var(--eau)}
+.vallee p{color:#c9dad5;max-width:38rem}
+.vallee .grid{display:grid;gap:2.4rem;align-items:center}
+.cascade-svg{width:100%;max-width:380px;margin:auto;display:block}
+.cascade-svg .eau{stroke-dasharray:6 10;animation:coule 1.6s linear infinite}
+@keyframes coule{to{stroke-dashoffset:-32}}
+.balade{list-style:none;display:grid;gap:.8rem;margin-top:1.4rem}
+.balade li{display:flex;gap:.9rem;align-items:flex-start;background:rgba(207,230,225,.07);border:1px solid rgba(207,230,225,.18);border-radius:16px;padding:.85rem 1rem}
+.balade svg{width:26px;height:26px;flex:none;margin-top:.1rem}
+.balade b{color:var(--creme);font-weight:500}
+
+/* avis */
+.avis .tete{display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0 1.6rem}
+.note{display:flex;align-items:center;gap:.8rem;background:#fff;border:1px solid #dfe3d6;border-radius:18px;padding:.9rem 1.2rem}
+.note b{font-family:Fraunces,serif;font-size:2.5rem;font-weight:600;color:var(--fougere);line-height:1}
+.note span{font-size:.85rem;color:var(--doux);line-height:1.35}
+.avis .cartes{display:grid;gap:1.1rem}
+.avis-carte{background:#fff;border-radius:22px;padding:1.5rem 1.4rem;border:1px solid #dfe3d6;box-shadow:0 24px 50px -38px rgba(23,48,42,.6)}
+.avis-carte .etoiles{color:var(--soleil);letter-spacing:.2em;font-size:1.05rem}
+.avis-carte q{display:block;font-family:Fraunces,serif;font-style:italic;font-size:1.13rem;line-height:1.45;color:var(--foret2);margin:.6rem 0 .8rem;quotes:"« " " »"}
+
+/* tarifs */
+.tarifs{background:var(--lin)}
+.prix{display:grid;gap:1rem;margin-top:1.4rem;max-width:640px}
+.prix div{background:#fff;border-radius:20px;padding:1.3rem 1.4rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;border:1px solid #dfe3d6}
+.prix b{font-family:Fraunces,serif;font-size:2.4rem;font-weight:600;color:var(--porte);white-space:nowrap}
+.prix small{display:block;color:var(--doux);font-size:.82rem}
+.infos{margin-top:1.2rem;font-size:.92rem;color:var(--doux);max-width:640px}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#2c4f45 0%,var(--foret) 72%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--soleil)}
+.noel p{max-width:34rem;margin:0 auto 1.6rem;color:#dbe8e4}
+.noel .carte{position:relative;max-width:440px;margin:0 auto 2rem;background:linear-gradient(135deg,#f6f2ea,#e3efe9);color:var(--foret);border-radius:18px;padding:1.9rem 1.4rem 1.6rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);transform:rotate(-1.5deg)}
+.noel .carte::before{content:"";position:absolute;inset:8px;border:1px solid rgba(168,57,44,.4);border-radius:12px;pointer-events:none}
+.noel .carte .main{font-family:Caveat,cursive;font-size:1.7rem;color:var(--porte);display:block}
+.noel .carte b{font-family:Fraunces,serif;font-size:1.9rem;font-weight:500;display:block;line-height:1.1}
+.noel .carte span.sm{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--fougere)}
+.noel .ruban-n{position:absolute;top:-14px;right:26px;width:46px;height:46px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.75rem;color:#9fb8b1;margin-top:.9rem}
+.etoile{position:absolute;color:#fff;opacity:.5;animation:scintille 3.4s ease-in-out infinite;font-size:.8rem}
+@keyframes scintille{50%{opacity:.1}}
+
+/* contact */
+.contact .grid{display:grid;gap:2rem}
+.carte-info{background:#fff;border:1px solid #dfe3d6;border-radius:22px;padding:1.6rem 1.4rem}
+.carte-info dl{display:grid;gap:1rem}
+.carte-info dt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--fougere);font-weight:500}
+.carte-info dd{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-info dd a{text-decoration:none;border-bottom:1px solid #b9d3cc}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#a9c0ba;background:var(--foret)}
+footer b{color:var(--soleil);font-weight:500}
+
+@media(min-width:860px){
+ .esprit .grid{grid-template-columns:1.1fr .9fr;gap:4rem}
+ .table-sec .grid{grid-template-columns:.9fr 1.1fr;gap:4rem}
+ .vallee .grid{grid-template-columns:1.1fr .9fr;gap:4rem}
+ .contact .grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+ .duo{grid-template-columns:1fr 1fr}
+ .couchages{max-width:560px}
+ .avis .cartes{grid-template-columns:repeat(3,1fr)}
+ .hero .photo{height:min(68vh,600px)}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1!important;transform:none!important}
+ canvas#gouttes{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour le Gîte La Cascade</div>
+<canvas id="gouttes" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="photo"><img src="img/case-montagne.webp" alt="La case du gîte, bardage clair, portes et volets rouges, terrasse en bois, devant les remparts boisés de Grand Bassin" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Grand Bassin · La Plaine des Cafres · Le Tampon</p>
+    <h1 class="apparait d2">Gîte <em>La Cascade</em></h1>
+    <p class="sous apparait d2">Chambre &amp; table d'hôtes · chez Marie-Hélène Nativel</p>
+    <p class="lead apparait d3">Au fond de la vallée de Grand Bassin : une case aux portes rouges, une cuisine péï, le calme et la nature tout autour.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="tel:+262692285912"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Réserver au 0692 28 59 12</a>
+      <a class="btn btn-line" href="#maison">Découvrir le gîte</a>
+    </div>
+    <p class="adr apparait d4">Grand Bassin · 97418 La Plaine des Cafres · Le Tampon</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Cuisine péï</span><span>Calme &amp; nature</span><span>Demi-pension</span><span>4 chambres doubles</span><span>11 places en dortoir</span><span>Le chemin de la cascade</span><span>Punch letchis</span>
+  <span>Cuisine péï</span><span>Calme &amp; nature</span><span>Demi-pension</span><span>4 chambres doubles</span><span>11 places en dortoir</span><span>Le chemin de la cascade</span><span>Punch letchis</span>
+</div></div>
+
+<section class="esprit" id="maison">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Chambre &amp; table d'hôtes</p>
+      <h2>La simplicité d'un village des Hauts</h2>
+      <p class="big">« À l'écart du village, la chambre et table d'hôte La Cascade permet de découvrir l'authenticité et la simplicité des villageois de Grand Bassin. »</p>
+      <p>Marie-Hélène Nativel et sa famille vous ouvrent leur maison : une étape chaleureuse après la descente dans la vallée, une table servie le soir, une nuit au calme et le petit-déjeuner avant de reprendre le sentier.</p>
+      <p>Une voyageuse le résume ainsi : « le gîte est juste au-dessus du chemin qui mène à la cascade ».</p>
+      <div class="stats">
+        <div class="stat"><b>19</b><span>voyageurs</span></div>
+        <div class="stat"><b>4</b><span>chambres doubles</span></div>
+        <div class="stat"><b>11</b><span>places en dortoir</span></div>
+      </div>
+      <p class="mot">« Cuisine péï, calme, nature. »<span class="src" style="font-family:Outfit,sans-serif;font-size:.84rem">la devise du gîte, sur sa page Facebook</span></p>
+    </div>
+    <figure class="arche rv"><img src="img/fenetre-rempart.webp" alt="Fenêtre ouverte à volets bois sur les remparts boisés et les bananiers de Grand Bassin" loading="lazy"><figcaption>La vallée, depuis la fenêtre</figcaption></figure>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true" style="background:var(--creme)"><path d="M0 56 L0 30 C150 10 260 44 420 26 C580 8 700 42 860 24 C1000 10 1100 34 1200 22 L1200 56Z" fill="#ece6d8"/></svg>
+
+<section class="chambres" id="chambres">
+  <div class="wrap">
+    <p class="eyebrow rv">Dormir à La Cascade</p>
+    <h2 class="rv">Des chambres lumineuses, ouvertes sur le jardin</h2>
+    <p class="rv" style="max-width:38rem">En couple, en famille ou en groupe de marcheurs, chacun trouve sa place : quatre chambres doubles et un dortoir de onze places, avec des sanitaires partagés.</p>
+    <div class="duo">
+      <figure class="rv"><img src="img/chambre-fenetres.webp" alt="Chambre au plafond de bois, lit double à couvre-lit fleuri, quatre fenêtres sur le jardin" loading="lazy"><figcaption><b>La chambre aux fenêtres</b>Plafond de bois, couvre-lit fleuri et vue sur la verdure.</figcaption></figure>
+      <figure class="rv"><img src="img/chambre-orchidee.webp" alt="Chambre au papier peint doré, lit blanc et orchidée mauve près de la fenêtre" loading="lazy"><figcaption><b>La chambre à l'orchidée</b>Une orchidée en fleur et le vert du jardin à la fenêtre.</figcaption></figure>
+    </div>
+    <div class="couchages rv">
+      <div class="couchage"><b>4</b><span>chambres doubles</span></div>
+      <div class="couchage"><b>11</b><span>places en dortoir</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="table-sec" id="table">
+  <div class="wrap grid">
+    <div class="assiette rv"><img src="img/orchidees.webp" alt="Grappe d'orchidées magenta en fleur, photographiée au gîte" loading="lazy"></div>
+    <div class="rv">
+      <p class="eyebrow">La table d'hôtes</p>
+      <h2>Le soir, un vrai repas réunionnais</h2>
+      <p>La nuit se prend en demi-pension : le repas du soir et le petit-déjeuner font partie du séjour. Les voyageurs en parlent encore :</p>
+      <div class="mots">
+        <span><b>brioche</b></span><span><b>confitures</b></span><span><b>jus</b></span><span><b>crêpes</b></span><span><b>gratin</b></span><span><b>baba figue</b></span><span>café grillé à la <b>vanille</b></span><span>p'tit punch <b>letchis</b></span>
+      </div>
+      <p class="citation">« On mange les produits locaux et c'est un délice, et je ne parle pas du rhum litchis !!! »</p>
+      <span class="src">Florence, avis Google, séjour de juin 2025</span>
+    </div>
+  </div>
+</section>
+
+<section class="vallee" id="vallee">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Grand Bassin</p>
+      <h2 class="rv">Au bout du sentier, la vallée</h2>
+      <p class="rv">Grand Bassin, c'est un village blotti au creux des remparts de la Plaine des Cafres, que l'on rejoint à pied. Le gîte en est une porte d'entrée idéale : montagne, village et grands espaces.</p>
+      <ul class="balade">
+        <li class="rv"><svg viewBox="0 0 26 26" fill="none" stroke="#5fa8a3" stroke-width="2" stroke-linecap="round"><path d="M13 3v6M9 9c0 4 8 4 8 8s-8 4-8 6"/></svg><span><b>Le chemin de la cascade</b>, juste en contrebas du gîte.</span></li>
+        <li class="rv"><svg viewBox="0 0 26 26" fill="none" stroke="#8fae6f" stroke-width="2" stroke-linejoin="round"><path d="M2 22l7-12 5 7 4-5 6 10z"/></svg><span><b>Sentiers de randonnée</b> et de grande randonnée tout autour.</span></li>
+        <li class="rv"><svg viewBox="0 0 26 26" fill="none" stroke="#e9b949" stroke-width="2" stroke-linecap="round"><circle cx="13" cy="13" r="4"/><path d="M13 2v3M13 21v3M2 13h3M21 13h3"/></svg><span><b>Points de vue panoramiques</b> sur les remparts.</span></li>
+        <li class="rv"><svg viewBox="0 0 26 26" fill="none" stroke="#cfe6e1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20l2-7 6-2 4-6 3 2-2 4 3 3-1 6M9 20v-5"/></svg><span><b>Équitation</b> dans les environs.</span></li>
+      </ul>
+    </div>
+    <svg class="cascade-svg rv" viewBox="0 0 300 340" aria-hidden="true">
+      <path d="M0 340 L0 120 L60 70 L95 110 L120 40 L150 30 L178 42 L205 110 L240 72 L300 120 L300 340Z" fill="#21413a"/>
+      <path d="M0 340 L0 200 L70 160 L120 210 L150 190 L180 210 L230 160 L300 200 L300 340Z" fill="#2c574c"/>
+      <g stroke="#cfe6e1" stroke-width="3" fill="none" opacity=".9">
+        <path class="eau" d="M140 40 C138 100 142 160 140 250"/>
+        <path class="eau" d="M150 36 C150 100 152 170 150 250" style="animation-delay:.4s"/>
+        <path class="eau" d="M160 40 C162 100 158 160 160 250" style="animation-delay:.8s"/>
+      </g>
+      <ellipse cx="150" cy="262" rx="58" ry="12" fill="#5fa8a3" opacity=".75"/>
+      <ellipse cx="150" cy="262" rx="34" ry="6" fill="#cfe6e1" opacity=".6"/>
+      <g fill="#4f7a4a"><circle cx="40" cy="250" r="22"/><circle cx="70" cy="270" r="18"/><circle cx="250" cy="248" r="24"/><circle cx="222" cy="272" r="16"/></g>
+      <g transform="translate(206 292)"><rect x="0" y="12" width="56" height="30" fill="#ece6d8"/><path d="M-6 14 L28 -6 L62 14Z" fill="#9aa3a0"/><rect x="10" y="22" width="12" height="20" fill="#a8392c"/><rect x="32" y="22" width="14" height="10" fill="#a8392c"/></g>
+    </svg>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils sont passés par ici</p>
+    <h2 class="rv">Un accueil dont on se souvient</h2>
+    <div class="tete rv">
+      <div class="note"><b>4,7</b><span>sur 5 · 35 avis<br>Google</span></div>
+      <div class="note"><b>100 %</b><span>recommandent le gîte<br>Facebook · 13 avis</span></div>
+    </div>
+    <div class="cartes">
+      <div class="avis-carte rv"><div class="etoiles">★★★★★</div><q>Nous avons été accueillis avec beaucoup de gentillesse et de simplicité. Nous avons dégusté un délicieux repas typique réunionnais.</q><span class="src">Charlotte, séjour de janvier 2025 · Google</span></div>
+      <div class="avis-carte rv"><div class="etoiles">★★★★★</div><q>Repas copieux et bon, mention spéciale pour le baba figue, p'tit punch letchis.</q><span class="src">Mélissa · Google</span></div>
+      <div class="avis-carte rv"><div class="etoiles">★★★★★</div><q>Le bonjour à Mme Nativel qui m'a accompagnée à la cascade quand la rivière ronflait bien, et je garde un super souvenir de son accueil !</q><span class="src">Marie Paule · commentaire sur la page Facebook du gîte</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tarifs" id="tarifs">
+  <div class="wrap">
+    <p class="eyebrow rv">Tarifs 2026</p>
+    <h2 class="rv">Le dîner, la nuit, le petit-déjeuner</h2>
+    <div class="prix">
+      <div class="rv"><span>Chambre double, la nuit<small>petit-déjeuner et repas du soir compris</small></span><b>55 €</b></div>
+    </div>
+    <p class="infos rv">Tarifs 2026 publiés sur la fiche reunion.fr du gîte. Pour réserver une chambre ou des places en dortoir, un appel ou un message au 0692 28 59 12.</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <span class="etoile" style="top:12%;left:10%">✦</span><span class="etoile" style="top:22%;right:12%;animation-delay:1s">✦</span><span class="etoile" style="top:62%;left:6%;animation-delay:2s">✦</span><span class="etoile" style="top:74%;right:8%;animation-delay:.6s">✦</span>
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offrez une nuit à Grand Bassin</h2>
+    <div class="carte rv">
+      <svg class="ruban-n" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#a8392c"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#4f7a4a"/><circle cx="23" cy="18" r="3.5" fill="#e9b949"/></svg>
+      <span class="main">Une escapade à offrir</span>
+      <b>Gîte La Cascade</b>
+      <span class="sm">Grand Bassin · Plaine des Cafres</span>
+    </div>
+    <p class="rv">La descente dans la vallée, un repas péï, une nuit au calme près de la cascade : écrivez au gîte pour offrir un séjour à un proche ou réserver vos nuits pendant les fêtes.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692285912?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20au%20G%C3%AEte%20La%20Cascade%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Offrir un séjour</a>
+      <a class="btn btn-line" href="https://wa.me/262692285912?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20des%20nuits%20au%20G%C3%AEte%20La%20Cascade%20pendant%20les%20f%C3%AAtes">Réserver pour les fêtes</a>
+    </div>
+    <p class="leg">Illustration : carte à offrir</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Venir au gîte</p>
+      <h2>Réservez votre nuit dans la vallée</h2>
+      <p>Grand Bassin se rejoint à pied depuis la Plaine des Cafres. Prévenez Marie-Hélène de votre arrivée : la table et les chambres vous attendent.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-dark" href="tel:+262692285912">Appeler le 0692 28 59 12</a>
+        <a class="btn btn-main" href="https://wa.me/262692285912?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20au%20G%C3%AEte%20La%20Cascade">WhatsApp</a>
+      </div>
+    </div>
+    <div class="carte-info rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=-21.1843918%2C55.5299449">Gîte La Cascade, Grand Bassin<br>97418 La Plaine des Cafres<br>Le Tampon, La Réunion</a></dd></div>
+        <div><dt>Téléphone &amp; WhatsApp</dt><dd><a href="tel:+262692285912">0692 28 59 12</a></dd></div>
+        <div><dt>Formule</dt><dd>Chambre &amp; table d'hôtes · demi-pension · 19 places</dd></div>
+        <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/profile.php?id=100068751049240">Gîte de la cascade à Grand Bassin</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Gîte La Cascade</b> · chez Marie-Hélène Nativel · Grand Bassin, Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications du Gîte La Cascade.</footer>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(reduce)return;
+/* fines gouttes d'embrun, comme au pied de la cascade */
+var c=document.getElementById('gouttes'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+var cols=['207,230,225','95,168,163','143,174,111'];
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,r:1.4+Math.random()*2.4,vy:.35+Math.random()*.6,vx:(Math.random()-.5)*.2,a:.18+Math.random()*.25,c:cols[Math.floor(Math.random()*cols.length)],ph:Math.random()*6.28}}
+var N=W<600?20:32;for(var i=0;i<N;i++)P.push(mk(true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function goutte(p){x.fillStyle='rgba('+p.c+','+p.a+')';x.beginPath();x.moveTo(p.x,p.y-p.r*2.2);x.quadraticCurveTo(p.x+p.r,p.y,p.x,p.y+p.r);x.quadraticCurveTo(p.x-p.r,p.y,p.x,p.y-p.r*2.2);x.fill()}
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(t/1800+p.ph)*.2;
+if(p.y>H+20){P[i]=mk(false);continue}goutte(p)}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Gîte La Cascade" defer></script>
+</body>
+</html>
