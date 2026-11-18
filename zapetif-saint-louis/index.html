@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Z'APÉTIF — Street food 974 à La Rivière Saint-Louis</title>
+<meta name="description" content="Z'APÉTIF, street food frais &amp; local au 21 rue Pente Nicole, La Rivière Saint-Louis : pains américains, bouchons, batbout fait maison. Maquette offerte.">
+<meta property="og:title" content="Z'APÉTIF — Street food 974, La Rivière Saint-Louis">
+<meta property="og:description" content="Frais &amp; local, #onkasslékod. Maquette de site imaginée pour Z'APÉTIF.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/zapetif-saint-louis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/zapetif-saint-louis/">
+<meta name="theme-color" content="#151210">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--noir:#151210;--noir2:#221c18;--rouge:#e5482f;--rouge2:#c9361f;--jaune:#f6b92b;--creme:#fff4e2;--ink:#191410;--muted:#6d6257;--display:'Anton',Impact,sans-serif;--hand:'Permanent Marker',cursive;--sans:'Rubik',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+.wrap{width:min(1140px,100% - 36px);margin-inline:auto}
+.ribbon{background:#000;color:#e8dccb;font-size:.78rem;text-align:center;padding:8px 12px}
+.ribbon b{color:var(--jaune)}
+.nav{position:sticky;top:0;z-index:40;background:rgba(21,18,16,.93);backdrop-filter:blur(10px);color:#fff}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+.brand img{width:44px;height:44px;border-radius:50%}
+.brand b{font-family:var(--display);font-weight:400;font-size:1.3rem;letter-spacing:.03em;line-height:1}
+.brand small{display:block;font-size:.6rem;letter-spacing:.22em;color:var(--jaune);font-weight:700;margin-top:3px}
+.nav ul{display:flex;gap:24px;list-style:none;font-weight:700;font-size:.92rem}
+.nav ul a{color:#fff;text-decoration:none;opacity:.78}.nav ul a:hover{opacity:1}
+@media(max-width:860px){.nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:800;text-decoration:none;border-radius:999px;padding:14px 22px;border:0;cursor:pointer;font-family:var(--sans);font-size:1rem;transition:transform .25s,box-shadow .25s;min-height:48px;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn-r{background:var(--rouge);color:#fff;box-shadow:0 14px 30px -14px rgba(229,72,47,.95)}
+.btn-y{background:var(--jaune);color:var(--ink)}
+.btn-g{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-sm{padding:9px 16px;min-height:42px;font-size:.88rem}
+.breathe{animation:breathe 3.2s ease-in-out infinite}
+@keyframes breathe{50%{box-shadow:0 0 0 10px rgba(229,72,47,0),0 14px 30px -14px rgba(229,72,47,.95);transform:scale(1.03)}}
+/* hero */
+.hero{position:relative;min-height:min(calc(100svh - 96px),760px);color:#fff;overflow:hidden;display:flex;align-items:flex-end;background:var(--noir)}
+.hero .bg{position:absolute;inset:0;background:url(img/gratine.jpg) center 40%/cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,1%)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.35) 22%,rgba(21,18,16,.82) 50%,rgba(21,18,16,.95) 75%,var(--noir) 100%)}
+#fx{position:absolute;inset:0;z-index:1;pointer-events:none}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 54px}
+.badge{position:absolute;right:0;top:26px;width:110px;height:110px;border-radius:50%;box-shadow:0 18px 40px -12px rgba(0,0,0,.8);animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.kicker{display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--jaune)}
+.kicker:before{content:"";width:30px;height:2px;background:currentColor}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(3.1rem,11vw,6.4rem);line-height:.95;text-transform:uppercase;margin:14px 0 16px}
+h1 em{font-style:normal;color:var(--rouge);display:block;text-shadow:0 3px 18px rgba(0,0,0,.6)}
+h1 .hand{font-family:var(--hand);text-transform:none;color:var(--jaune);font-size:.48em;display:block;transform:rotate(-3deg);margin-top:8px}
+.rise{opacity:0;transform:translateY(24px);animation:rise 1s .2s forwards}
+.rise.d2{animation-delay:.45s}.rise.d3{animation-delay:.7s}
+@keyframes rise{to{opacity:1;transform:none}}
+.lead{font-size:1.1rem;max-width:36ch;color:#efe6da}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.meta{display:flex;flex-wrap:wrap;gap:18px 26px;margin-top:28px;font-size:.88rem;color:#d6cbbd}
+.meta b{display:block;color:#fff;font-size:1.05rem}
+@media(max-width:600px){.badge{width:84px;height:84px;top:20px}.hero .wrap{padding-top:110px}}
+/* tape */
+.tape{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;font-family:var(--display);text-transform:uppercase;font-size:1.25rem;padding:11px 0;transform:rotate(-1.4deg);margin:-14px -10px 0;position:relative;z-index:3;box-shadow:0 10px 24px -14px rgba(0,0,0,.6)}
+.tape div{display:inline-block;animation:tape 30s linear infinite}
+.tape span{margin:0 18px}.tape i{color:var(--jaune);font-style:normal}
+@keyframes tape{to{transform:translateX(-50%)}}
+section{padding:88px 0}
+h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(2.2rem,7vw,3.6rem);line-height:1}
+h2 em{font-style:normal;color:var(--rouge)}
+.sub{color:var(--muted);font-size:1.05rem;max-width:58ch;margin-top:12px}
+.hand-note{font-family:var(--hand);color:var(--rouge);font-size:1.15rem;transform:rotate(-2deg);display:inline-block}
+/* carte */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 26px 50px -34px rgba(21,18,16,.55);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 34px 60px -30px rgba(21,18,16,.6)}
+.card figure{aspect-ratio:4/3;overflow:hidden;position:relative;background:var(--noir)}
+.card figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover figure img{transform:scale(1.07)}
+.card .tag{position:absolute;left:12px;top:12px;background:var(--jaune);color:var(--ink);font-weight:800;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px}
+.card .txt{padding:20px 22px 24px}
+.card h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.55rem;line-height:1.05}
+.card p{color:var(--muted);margin-top:8px;font-size:.97rem}
+.card ul{list-style:none;margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.card li{background:var(--creme);border-radius:999px;padding:4px 11px;font-size:.82rem;font-weight:600}
+.type{aspect-ratio:4/3;display:grid;place-items:center;background:radial-gradient(circle at 30% 30%,var(--jaune),var(--rouge) 55%,var(--rouge2));}
+.type span{font-family:var(--display);font-size:clamp(2.6rem,9vw,3.4rem);line-height:.95;color:#fff;text-align:center;transform:rotate(-4deg);text-shadow:0 6px 0 rgba(0,0,0,.25)}
+.card.dark{background:var(--noir);color:#fff}.card.dark p{color:#cbbfb1}.card.dark li{background:#2d2520;color:#f3e7d6}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.cards{grid-template-columns:1fr}}
+/* galerie */
+.gal{background:var(--noir);color:#fff;position:relative;overflow:hidden}
+.gal .sub{color:#c7bbad}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 18px 14px;margin:0 -18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(72vw,300px);aspect-ratio:3/4;border-radius:20px;overflow:hidden;scroll-snap-align:center;position:relative;transform:rotate(var(--r,0deg));transition:transform .4s}
+.strip figure:hover{transform:rotate(0) scale(1.02)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;left:10px;bottom:10px;right:10px;background:rgba(0,0,0,.62);font-size:.8rem;font-weight:700;padding:7px 11px;border-radius:12px}
+.hint{font-size:.82rem;color:#a99d90;margin-top:6px}
+/* avis */
+.avis{text-align:center}
+.score{font-family:var(--display);font-size:clamp(4rem,16vw,6.5rem);color:var(--rouge);line-height:1}
+.stars{color:var(--jaune);font-size:1.6rem;letter-spacing:4px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;text-align:left}
+.quote{background:#fff;border-radius:20px;padding:24px;position:relative;box-shadow:0 22px 44px -34px rgba(21,18,16,.6)}
+.quote:before{content:"“";font-family:var(--display);font-size:4.2rem;color:var(--jaune);position:absolute;top:-6px;left:16px;line-height:1}
+.quote p{margin-top:26px;font-size:1.02rem}
+.quote small{display:block;margin-top:12px;color:var(--muted);font-weight:600}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+/* commande */
+.order{background:linear-gradient(180deg,var(--creme),#f6e3c4)}
+.order .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.panel{background:#fff;border-radius:24px;padding:26px;box-shadow:0 30px 60px -36px rgba(21,18,16,.55)}
+.panel h3{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.7rem}
+.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px dashed #eadbc4}
+.row label{font-weight:700;font-size:.98rem}
+.qty{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.qty button{width:42px;height:42px;border-radius:50%;border:2px solid var(--noir);background:#fff;font-size:1.25rem;font-weight:800;cursor:pointer;color:var(--noir)}
+.qty button:hover{background:var(--noir);color:#fff}
+.qty output{min-width:22px;text-align:center;font-weight:800;font-size:1.1rem}
+select,input[type=text]{font:inherit;padding:9px 11px;border-radius:12px;border:2px solid #eadbc4;background:#fff;min-height:44px;width:100%;max-width:190px}
+.preview{margin-top:16px;background:var(--creme);border-radius:14px;padding:13px;font-size:.9rem;color:#3d342b;white-space:pre-line}
+.panel .btn{width:100%;margin-top:11px}
+.btn-n{background:var(--noir);color:#fff}
+.small{font-size:.84rem;color:var(--muted);margin-top:10px}
+@media(max-width:860px){.order .wrap{grid-template-columns:1fr}}
+/* infos */
+.hours{width:100%;border-collapse:collapse;margin-top:22px;font-size:1rem}
+.hours td{padding:10px 4px;border-bottom:1px solid #eadbc4}
+.hours td:first-child{font-weight:700;width:38%}
+.hours tr.today td{color:var(--rouge);font-weight:800}
+.hours tr.repos td:last-child{color:var(--muted);font-style:italic}
+.facts{display:grid;gap:16px;margin-top:26px}
+.facts div{display:grid;grid-template-columns:110px 1fr;gap:10px}
+.facts dt{font-weight:800;color:var(--rouge);text-transform:uppercase;font-size:.74rem;letter-spacing:.14em;padding-top:4px}
+.facts a{color:var(--ink)}
+@media(max-width:600px){.facts div{grid-template-columns:1fr;gap:0}}
+.map{display:block;margin-top:24px;border-radius:20px;overflow:hidden;position:relative;text-decoration:none}
+.map img{width:100%;aspect-ratio:16/10;object-fit:cover;filter:saturate(1.05)}
+.map span{position:absolute;left:14px;bottom:14px}
+/* barak */
+.barak{background:var(--noir);color:#fff}
+.barak .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
+.barak figure{border-radius:24px;overflow:hidden;transform:rotate(-2deg);box-shadow:0 30px 60px -30px rgba(0,0,0,.9)}
+.barak .sub{color:#cbbfb1}
+@media(max-width:860px){.barak .wrap{grid-template-columns:1fr}}
+.social{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+footer{background:#000;color:#b9ad9f;padding:44px 0 90px;font-size:.88rem}
+footer a{color:var(--jaune)}
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none;gap:10px}
+.callbar .btn{flex:1;min-height:50px;box-shadow:0 12px 30px -10px rgba(0,0,0,.6)}
+@media(max-width:700px){.callbar{display:flex}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.rise{opacity:1;transform:none}#fx{display:none}}
+</style>
+</head>
+<body id="top">
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan · Atma Digital</b> — imaginée avec plaisir pour Z'APÉTIF</div>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top"><img src="img/logo.png" alt="Logo Z'APÉTIF Street Food 974"><span><b>Z'APÉTIF</b><small>STREET FOOD 974</small></span></a>
+  <ul><li><a href="#carte">La carte</a></li><li><a href="#galerie">En images</a></li><li><a href="#commande">Commander</a></li><li><a href="#infos">Horaires</a></li></ul>
+  <a class="btn btn-r btn-sm" href="tel:+262692507690">0692 50 76 90</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+  <div class="bg" role="img" aria-label="Pain américain gratiné de Z'APÉTIF"></div>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <img class="badge" src="img/logo.png" alt="">
+    <span class="kicker rise">Street food 974 · La Rivière Saint-Louis</span>
+    <h1 class="rise d2">Frais &amp; local,<em>ça i sort St-Louis</em><span class="hand">#onkasslékod</span></h1>
+    <p class="lead rise d3">Pains américains gratinés, bouchons artisanaux, batbout fait maison et frites fraîches : la street food de la rue Pente Nicole, sur place, à emporter ou en livraison Uber Eats.</p>
+    <div class="cta rise d3"><a class="btn btn-r breathe" href="tel:+262692507690">Appeler Z'APÉTIF</a><a class="btn btn-g" href="#carte">Voir la carte</a></div>
+    <div class="meta rise d3"><div><b>4,0 ★ · 54 avis</b>sur Google</div><div><b>12 200 abonnés</b>sur Facebook</div><div><b>Midi &amp; soir</b>du jeudi au lundi</div></div>
+  </div>
+</section>
+<div class="tape" aria-hidden="true"><div><span>Frais &amp; local</span><i>★</i><span>#onkasslékod</span><i>★</i><span>Lundredi</span><i>★</i><span>Jeudredi</span><i>★</i><span>Vendredi tout est permis</span><i>★</i><span>Batbout fait maison</span><i>★</i><span>Frais &amp; local</span><i>★</i><span>#onkasslékod</span><i>★</i><span>Lundredi</span><i>★</i><span>Jeudredi</span><i>★</i><span>Vendredi tout est permis</span><i>★</i><span>Batbout fait maison</span><i>★</i></div></div>
+
+<section id="carte"><div class="wrap">
+  <span class="hand-note rv">Produit frais &amp; local</span>
+  <h2 class="rv" style="margin-top:8px">La carte <em>Z'APÉTIF</em></h2>
+  <p class="sub rv">Les incontournables de la maison, tels qu'on les découvre chaque jour sur notre page : du pain croustillant, des frites fraîches et des sauces maison.</p>
+  <div class="cards">
+    <article class="card rv"><figure><img src="img/zape-gourman.jpg" alt="Zapé'Gourman servi sur l'assiette Z'APÉTIF" loading="lazy"><span class="tag">Signature</span></figure>
+      <div class="txt"><h3>Zapé'Gourman</h3><p>Le pain américain bien garni, gratiné et couronné d'oignons frits. « Sa i sort St Louis sa ! »</p></div></article>
+    <article class="card rv"><figure><img src="img/bouchons-cot.jpg" alt="Bouchons artisanaux sauce piment et mayonnaise avec une bouteille de Cot" loading="lazy"><span class="tag">Le duo</span></figure>
+      <div class="txt"><h3>Bouchons artisanaux</h3><p>Siave, piment, mayonnaise… « ek 1 ti COT bien frais ». L'équipe parfaite pour un midi gourmand.</p></div></article>
+    <article class="card rv"><figure><img src="img/batbout.jpg" alt="Batbout garni de poulet, chou rouge et salade" loading="lazy"><span class="tag">Fait maison</span></figure>
+      <div class="txt"><h3>Batbout</h3><p>Le pain moelleux fait maison, généreusement garni et plein de crudités croquantes.</p></div></article>
+    <article class="card dark rv"><figure><img src="img/bouch-ki.jpg" alt="Affiche du spécial du week-end Le Bouch Ki" loading="lazy"><span class="tag">Spécial week-end</span></figure>
+      <div class="txt"><h3>Le Bouch Ki</h3><p>Le spécial du week-end, pour les grandes faims :</p>
+      <ul><li>Pain artisanal</li><li>Frite fraîche au paprika</li><li>12 bouchons frits</li><li>Lardon poulet</li><li>Emmental &amp; mozzarella</li><li>Raclette</li><li>Oignon frit</li><li>Filet de miel</li></ul></div></article>
+    <article class="card dark rv"><div class="type" aria-hidden="true"><span>ZAPÉ'<br>CROUSTY</span></div>
+      <div class="txt"><h3>Zapé'Crousty</h3><p>La version qui croustille :</p>
+      <ul><li>Riz créole</li><li>Poulet assaisonnement maison</li><li>Sauce Taï &amp; Blanche maison</li><li>Oignon frit</li><li>Oignon vert</li></ul></div></article>
+    <article class="card rv"><figure><img src="img/tiramisu.jpg" alt="Tiramisu Spéculos, Kinder et Pistache de Z'APÉTIF" loading="lazy"><span class="tag">Dessert maison</span></figure>
+      <div class="txt"><h3>Tiramisu</h3><p>Fait maison avec amour, en trois parfums. À emporter ou sur place.</p><ul><li>Spéculos</li><li>Kinder</li><li>Pistache</li></ul></div></article>
+  </div>
+</div></section>
+
+<section class="gal" id="galerie"><div class="wrap">
+  <h2 class="rv">Tout droit <em>de la cuisine</em></h2>
+  <p class="sub rv">Gratiné, doré, généreux : un aperçu de ce qui sort chaque jour de chez Z'APÉTIF.</p>
+  <div class="strip">
+    <figure style="--r:-2deg"><img src="img/enseigne-neon.jpg" alt="Enseigne lumineuse Z'APÉTIF et pain américain gratiné" loading="lazy"><figcaption>Sous le néon de la rue Pente Nicole</figcaption></figure>
+    <figure style="--r:1.5deg"><img src="img/bouchons-sauce.jpg" alt="Pain aux bouchons, sauce cheddar et mayonnaise" loading="lazy"><figcaption>Vendredi tout est permis</figcaption></figure>
+    <figure style="--r:-1deg"><img src="img/gratine.jpg" alt="Pain américain gratiné aux herbes" loading="lazy"><figcaption>Lundredi gratiné</figcaption></figure>
+    <figure style="--r:2deg"><img src="img/americain-gourman.jpg" alt="Pain américain gratiné aux oignons frits" loading="lazy"><figcaption>Gratiné aux oignons frits</figcaption></figure>
+    <figure style="--r:-1.5deg"><img src="img/americain-bouchons.jpg" alt="Pain américain aux bouchons" loading="lazy"><figcaption>Américain aux bouchons</figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir la suite →</p>
+</div></section>
+
+<section class="avis"><div class="wrap">
+  <div class="rv"><div class="score">4,0</div><div class="stars" aria-hidden="true">★★★★☆</div><p class="sub" style="margin:8px auto 0">Note moyenne sur 54 avis Google</p></div>
+  <div class="quotes">
+    <blockquote class="quote rv"><p>Le meilleur dans sa catégorie vraiment, on sent le goût de chaque produit , le pain et les frites fraîches font la différence</p><small>Ornella M. · avis Google</small></blockquote>
+    <blockquote class="quote rv"><p>Très bien manger pour ma part un pain bouchons gratiné supplément gros piment et oignon frais je vous laisse aller tester une tuerie.</p><small>Laëtitia M. · avis Google</small></blockquote>
+    <blockquote class="quote rv"><p>Une véritable explosion de saveurs en bouche !</p><small>Judicaelle M. · avis Google</small></blockquote>
+  </div>
+</div></section>
+
+<section class="order" id="commande"><div class="wrap">
+  <div class="panel rv">
+    <h3>Préparer ma commande</h3>
+    <p class="small" style="margin-top:4px">Composez votre repas, choisissez l'heure de passage, puis envoyez le message en un geste.</p>
+    <div class="row"><label>Pain américain</label><div class="qty"><button type="button" data-k="a" data-d="-1" aria-label="Un de moins">−</button><output id="q-a">1</output><button type="button" data-k="a" data-d="1" aria-label="Un de plus">+</button></div></div>
+    <div class="row"><label>Bouchons</label><div class="qty"><button type="button" data-k="b" data-d="-1" aria-label="Un de moins">−</button><output id="q-b">0</output><button type="button" data-k="b" data-d="1" aria-label="Un de plus">+</button></div></div>
+    <div class="row"><label>Batbout</label><div class="qty"><button type="button" data-k="t" data-d="-1" aria-label="Un de moins">−</button><output id="q-t">0</output><button type="button" data-k="t" data-d="1" aria-label="Un de plus">+</button></div></div>
+    <div class="row"><label>Tiramisu</label><div class="qty"><button type="button" data-k="m" data-d="-1" aria-label="Un de moins">−</button><output id="q-m">0</output><button type="button" data-k="m" data-d="1" aria-label="Un de plus">+</button></div></div>
+    <div class="row"><label for="h">Heure</label><select id="h"><option>11h30</option><option selected>12h00</option><option>12h30</option><option>18h00</option><option>18h30</option><option>19h00</option><option>19h30</option><option>20h00</option><option>20h30</option></select></div>
+    <div class="row"><label for="n">Prénom</label><input id="n" type="text" placeholder="Votre prénom"></div>
+    <div class="preview" id="pv"></div>
+    <a class="btn btn-r" id="wa" href="#">Envoyer par WhatsApp</a>
+    <a class="btn btn-n" id="sms" href="#">Envoyer par SMS</a>
+    <p class="small">Votre commande arrive directement chez Z'APÉTIF, prête à l'heure choisie.</p>
+  </div>
+  <div class="rv" id="infos">
+    <h2>Rendez-vous <em>rue Pente Nicole</em></h2>
+    <table class="hours" aria-label="Horaires d'ouverture">
+      <tr data-d="1"><td>Lundi</td><td>11h30 – 13h00<br>18h00 – 21h00</td></tr>
+      <tr data-d="2" class="repos"><td>Mardi</td><td>Jour de repos</td></tr>
+      <tr data-d="3" class="repos"><td>Mercredi</td><td>Jour de repos</td></tr>
+      <tr data-d="4"><td>Jeudi</td><td>11h30 – 13h00<br>18h00 – 21h00</td></tr>
+      <tr data-d="5"><td>Vendredi</td><td>11h30 – 13h00<br>18h00 – 21h30</td></tr>
+      <tr data-d="6"><td>Samedi</td><td>18h00 – 21h30</td></tr>
+      <tr data-d="0"><td>Dimanche</td><td>18h00 – 21h00</td></tr>
+    </table>
+    <p class="small">Les nouvelles du jour sont annoncées sur notre page Facebook.</p>
+    <dl class="facts">
+      <div><dt>Adresse</dt><dd>21 rue Pente Nicole<br>La Rivière, 97421 Saint-Louis</dd></div>
+      <div><dt>Téléphone</dt><dd><a href="tel:+262692507690">0692 50 76 90</a></dd></div>
+      <div><dt>Livraison</dt><dd>Disponible sur Uber Eats</dd></div>
+    </dl>
+    <a class="map" href="https://www.google.com/maps/dir/?api=1&amp;destination=Z%27ap%C3%A9tif%2C%2021%20Rue%20Pente%20Nicole%2C%2097421%20Saint-Louis%2C%20La%20R%C3%A9union" target="_blank" rel="noopener"><img src="img/enseigne-neon.jpg" alt="Z'APÉTIF, 21 rue Pente Nicole" loading="lazy" style="object-position:center 20%"><span class="btn btn-y btn-sm">Itinéraire Google Maps →</span></a>
+  </div>
+</div></section>
+
+<section class="barak"><div class="wrap">
+  <figure class="rv"><img src="img/barak-a-zfrites.jpg" alt="Logo La Barak à Z'frites" loading="lazy"></figure>
+  <div class="rv">
+    <span class="kicker">Aussi en événement</span>
+    <h2 style="margin-top:12px">La Barak <em>à Z'frites</em></h2>
+    <p class="sub">Retrouvez aussi la Barak à Z'frites, partagée sur notre page pendant les Florilèges 2026 au Tampon : « Américain américain chez Barak à Z'frites ! »</p>
+    <div class="social">
+      <a class="btn btn-y btn-sm" href="https://www.facebook.com/zapetif974/" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn btn-g btn-sm" href="https://www.instagram.com/zapetif974/" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-g btn-sm" href="https://www.tiktok.com/@zapetif974" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="brand" href="#top"><img src="img/logo.png" alt=""><span><b>Z'APÉTIF</b><small>STREET FOOD 974 · FRAIS &amp; LOCAL</small></span></a>
+  <p style="margin-top:14px">21 rue Pente Nicole, La Rivière, 97421 Saint-Louis · <a href="tel:+262692507690">0692 50 76 90</a></p>
+  <p style="margin-top:8px">Maquette privée imaginée par Aurélie &amp; Jonathan, <a href="https://atma-digital.re">Atma Digital</a>, à partir des publications de Z'APÉTIF. Photos : page Facebook Z'APÉTIF.</p>
+</div></footer>
+<div class="callbar"><a class="btn btn-r" href="tel:+262692507690">Appeler</a><a class="btn btn-y" href="#commande">Commander</a></div>
+
+<script>
+var q={a:1,b:0,t:0,m:0},tel="262692507690",L={a:"pain américain",b:"bouchons",t:"batbout",m:"tiramisu"};
+function msg(){var n=document.getElementById("n").value.trim(),h=document.getElementById("h").value,l=[];
+for(var k in q)if(q[k]>0)l.push("- "+q[k]+" "+L[k]);
+return "Bonjour Z'APÉTIF ! Je voudrais commander :\n"+(l.length?l.join("\n"):"- (à compléter)")+"\nJe passe vers "+h+"."+(n?"\n"+n:"")}
+function up(){for(var k in q)document.getElementById("q-"+k).textContent=q[k];var m=msg();document.getElementById("pv").textContent=m;
+document.getElementById("wa").href="https://wa.me/"+tel+"?text="+encodeURIComponent(m);document.getElementById("sms").href="sms:+"+tel+"?&body="+encodeURIComponent(m)}
+document.querySelectorAll(".qty button").forEach(function(b){b.addEventListener("click",function(){var k=b.dataset.k;q[k]=Math.max(0,Math.min(20,q[k]+(+b.dataset.d)));up()})});
+["h","n"].forEach(function(i){document.getElementById(i).addEventListener("input",up)});up();
+var d=new Date().getDay(),tr=document.querySelector('.hours tr[data-d="'+d+'"]');if(tr)tr.classList.add("today");
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(el){io.observe(el)});
+/* vapeur et etincelles du grill */
+(function(){var c=document.getElementById("fx");if(!c||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var x=c.getContext("2d"),W,H,P=[],run=true;function rs(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight}rs();addEventListener("resize",rs);
+function mk(s){var sp=Math.random()<.45;return{x:Math.random()*W,y:s?Math.random()*H:H+20,r:sp?1+Math.random()*2:18+Math.random()*30,v:sp?.6+Math.random()*1.1:.25+Math.random()*.4,sp:sp,a:0,ph:Math.random()*6}}
+for(var i=0;i<28;i++)P.push(mk(true));
+document.addEventListener("visibilitychange",function(){run=!document.hidden;if(run)requestAnimationFrame(f)});
+function f(){if(!run)return;x.clearRect(0,0,W,H);P.forEach(function(p,i){p.y-=p.v;p.ph+=.02;p.x+=Math.sin(p.ph)*(p.sp?.6:.3);p.a=Math.min(1,p.a+.01);
+var k=Math.max(0,Math.min(1,(p.y)/H));
+if(p.sp){x.fillStyle="rgba(246,"+(150+Math.floor(60*k))+",43,"+(.75*k*p.a)+")";x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}
+else{var g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,"rgba(255,244,226,"+(.10*k*p.a)+")");g.addColorStop(1,"rgba(255,244,226,0)");x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill()}
+if(p.y<-40)P[i]=mk(false)});requestAnimationFrame(f)}f()})();
+</script>
+<script src="/outils/cta.js" data-nom="Z&#x27;APÉTIF" defer></script>
+</body>
+</html>
