@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Villa Les Palmiers · Maison avec piscine à L'Étang-Salé, La Réunion</title>
+<meta name="description" content="Villa Les Palmiers, maison créole clôturée avec piscine à L'Étang-Salé : jusqu'à 12 couchages, grande terrasse et cuisine extérieure. Le lieu idéal pour un moment de détente en famille ou entre amis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Villa Les Palmiers · L'Étang-Salé">
+<meta property="og:description" content="Maison clôturée avec piscine, grande terrasse et cuisine extérieure, jusqu'à 12 couchages. Le lieu idéal pour un moment de détente en famille ou entre amis.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/villa-les-palmiers-etang-sale/img/og-villa-les-palmiers.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/villa-les-palmiers-etang-sale/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#c42a2a; --rouge-fonce:#9c1f22;
+  --palme:#2f6a3c; --palme-clair:#6fa35a;
+  --lagon:#1aa0c8; --lagon-fonce:#0d6f8f; --eau:#d9f2f8;
+  --bois:#a8723f; --sable:#f7f1e6; --creme:#fffaf2; --encre:#1f2a24;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:700}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--rouge)}
+.ruban{background:var(--encre);color:#f3ead9;font-size:.82rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:#fff}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,880px);min-height:min(92svh,880px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/piscine-terrasse.webp) center 60%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:60% 60%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,30,25,.25) 0%,rgba(10,30,25,.05) 35%,rgba(8,26,22,.78) 100%)}
+#feuilles{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-txt{position:relative;z-index:2;padding:0 0 4.5rem}
+.hero .eyebrow{color:#ffd9c9}
+.hero h1{font-size:clamp(2.6rem,9vw,5.4rem);margin:.4rem 0 .6rem;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 em{font-style:italic;font-weight:500;color:#bfeefa}
+.hero p.lead{font-size:clamp(1.05rem,3.6vw,1.3rem);max-width:34rem;opacity:.96}
+.apparait{opacity:0;transform:translateY(18px);animation:monte 1.1s .25s ease forwards}
+.apparait.d2{animation-delay:.55s}.apparait.d3{animation-delay:.85s}
+@keyframes monte{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.35rem;border-radius:999px;font-weight:800;text-decoration:none;font-size:1rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:#25a35a;color:#fff;box-shadow:0 8px 24px rgba(37,163,90,.4);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 8px 24px rgba(37,163,90,.35)}50%{box-shadow:0 8px 34px rgba(37,163,90,.65)}}
+.btn-clair{background:rgba(255,255,255,.16);color:#fff;border:1.5px solid rgba(255,255,255,.7);backdrop-filter:blur(4px)}
+.btn-rouge{background:var(--rouge);color:#fff}
+.btn-contour{border:1.5px solid var(--palme);color:var(--palme);background:#fff}
+
+/* bandeau */
+.bandeau{background:var(--palme);color:#eaf5e4;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-weight:700;position:relative}
+.bandeau .piste{display:inline-flex;gap:2.2rem;animation:defile 38s linear infinite;padding-left:2rem}
+.bandeau span::before{content:"🌴";margin-right:.6rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 0}
+.titre{font-size:clamp(1.9rem,6vw,2.9rem);margin:.35rem 0 1rem}
+.intro{font-size:1.08rem;max-width:40rem;color:#3c4a42}
+
+/* maison */
+.maison{background:var(--sable)}
+.maison-grid{display:grid;gap:2rem;align-items:center}
+.maison-photo{position:relative}
+.maison-photo img{border-radius:var(--r);box-shadow:0 22px 50px rgba(40,30,10,.18);aspect-ratio:4/3;object-fit:cover;width:100%}
+.maison-photo .panneau{position:absolute;width:42%;right:-4%;bottom:-9%;border:6px solid #fff;border-radius:14px;box-shadow:0 14px 30px rgba(0,0,0,.2);transform:rotate(3deg);aspect-ratio:4/3;object-fit:cover}
+.legende{font-size:.8rem;color:#6a6355;margin-top:.5rem}
+.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.6rem}
+.chiffre{background:#fff;border-radius:14px;padding:1rem;border-bottom:4px solid var(--lagon);transition:transform .3s}
+.chiffre:hover{transform:translateY(-3px)}
+.chiffre b{font-family:Fraunces,serif;font-size:2rem;color:var(--palme);display:block;line-height:1}
+.chiffre small{font-size:.9rem;color:#4b564f}
+
+/* piscine */
+.piscine{position:relative;background:linear-gradient(180deg,var(--eau),#f2fbfd 70%,var(--creme));overflow:hidden}
+.piscine::before{content:"";position:absolute;inset:-40%;background:
+ radial-gradient(closest-side,rgba(255,255,255,.55),transparent) 0 0/180px 120px,
+ radial-gradient(closest-side,rgba(26,160,200,.12),transparent) 60px 40px/220px 160px;
+ animation:reflets 18s linear infinite;opacity:.6;pointer-events:none}
+@keyframes reflets{to{transform:translate(180px,120px)}}
+.piscine .wrap{position:relative}
+.duo{display:grid;gap:1rem;margin-top:2rem}
+.duo figure{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px rgba(13,111,143,.18)}
+.duo img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s}
+.duo figure:hover img{transform:scale(1.04)}
+.duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .8rem;color:#fff;font-weight:700;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.atouts{display:grid;gap:.7rem;margin-top:2rem}
+.atout{display:flex;gap:.8rem;align-items:flex-start;background:#fff;border-radius:14px;padding:1rem 1.1rem;box-shadow:0 6px 18px rgba(13,111,143,.08)}
+.atout i{font-style:normal;font-size:1.4rem;line-height:1.2}
+.atout b{display:block}
+.atout span{font-size:.94rem;color:#4b564f}
+
+/* galerie */
+.galerie{background:var(--creme);padding-bottom:3rem}
+.defile{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 4vw 1.2rem;scrollbar-width:thin}
+.defile figure{flex:0 0 min(78vw,420px);scroll-snap-align:center}
+.defile img{border-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%;box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.defile figcaption{font-size:.9rem;margin-top:.5rem;color:#4b564f;font-weight:600}
+.astuce{text-align:center;font-size:.85rem;color:#7a7466}
+
+/* week-end */
+.weekend{background:var(--palme);color:#f1f7ee;position:relative;overflow:hidden}
+.weekend .eyebrow{color:#ffd0bf}
+.weekend .intro{color:#dceadb}
+.cartes{display:grid;gap:1rem;margin-top:2rem}
+.carte{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:1.4rem;transition:background .3s,transform .3s}
+.carte:hover{background:rgba(255,255,255,.13);transform:translateY(-3px)}
+.carte h3{font-size:1.3rem;margin-bottom:.4rem;color:#fff}
+.carte p{color:#dceadb}
+.citation{margin-top:2rem;border-left:4px solid var(--rouge);padding:.6rem 1.1rem;font-family:Fraunces,serif;font-style:italic;font-size:1.15rem;color:#fff}
+.citation small{display:block;font-family:"Nunito Sans",sans-serif;font-style:normal;font-size:.8rem;color:#bcd3bb;margin-top:.4rem}
+
+/* autour */
+.autour{background:var(--sable)}
+.liste-autour{display:grid;gap:.8rem;margin-top:1.8rem}
+.lieu{display:flex;align-items:center;gap:1rem;background:#fff;border-radius:14px;padding:1rem 1.2rem}
+.lieu .temps{flex:none;width:4.6rem;height:4.6rem;border-radius:50%;display:grid;place-items:center;text-align:center;background:var(--eau);color:var(--lagon-fonce);font-weight:800;font-size:.85rem;line-height:1.1}
+.notes{display:grid;gap:1rem;margin-top:2.5rem}
+.note{background:var(--encre);color:#fff;border-radius:var(--r);padding:1.4rem}
+.note b{font-family:Fraunces,serif;font-size:2.3rem;color:#ffd36b;line-height:1}
+.note p{color:#d7dcd8;font-size:.95rem;margin-top:.3rem}
+
+/* noël */
+.noel{background:radial-gradient(circle at 20% 0%,#2e5e3a,#173a24 70%);color:#fff;position:relative;overflow:hidden}
+.noel .eyebrow{color:#ffcf6b}
+.noel-grid{display:grid;gap:2rem;align-items:center}
+.noel p{color:#e2ecdf;max-width:36rem}
+.noel ul{list-style:none;margin:1.2rem 0;display:grid;gap:.5rem}
+.noel li::before{content:"✦";color:#ffcf6b;margin-right:.6rem}
+.bon{background:var(--creme);color:var(--encre);border-radius:20px;padding:1.6rem;position:relative;box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-2deg);border:2px dashed var(--rouge)}
+.bon .ruban-bon{position:absolute;top:-14px;right:22px;background:var(--rouge);color:#fff;font-weight:800;font-size:.8rem;padding:.3rem .8rem;border-radius:999px}
+.bon h3{font-size:1.7rem;color:var(--palme)}
+.bon p{color:#4b564f;margin-top:.4rem}
+.bon .sign{font-family:Fraunces,serif;font-style:italic;color:var(--rouge);margin-top:1rem}
+.etoile{position:absolute;width:4px;height:4px;border-radius:50%;background:#ffe9a8;opacity:.0;animation:scintille 4s ease-in-out infinite}
+@keyframes scintille{50%{opacity:.85}}
+
+/* contact */
+.contact{background:var(--creme);text-align:center}
+.contact .btns{justify-content:center}
+.infos{display:grid;gap:.8rem;margin:2rem auto 0;max-width:46rem;text-align:left}
+.info{background:#fff;border-radius:14px;padding:1rem 1.2rem;border-left:4px solid var(--palme)}
+.info b{display:block;color:var(--palme)}
+footer{background:var(--encre);color:#c9d0cb;text-align:center;padding:2rem 1rem;font-size:.85rem}
+footer b{color:#fff}
+
+/* vague */
+.vague{display:block;width:100%;height:46px}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .maison-grid{grid-template-columns:1.05fr 1fr;gap:3.5rem}
+  .chiffres{grid-template-columns:repeat(4,1fr)}
+  .duo{grid-template-columns:1.3fr 1fr}
+  .atouts{grid-template-columns:repeat(3,1fr)}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .liste-autour{grid-template-columns:repeat(2,1fr)}
+  .notes{grid-template-columns:repeat(3,1fr)}
+  .noel-grid{grid-template-columns:1.2fr 1fr;gap:3rem}
+  .infos{grid-template-columns:repeat(2,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .apparait,.reveal{opacity:1;transform:none}
+  #feuilles{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Villa Les Palmiers</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="La piscine et la terrasse en bois de la Villa Les Palmiers, entourées de palmiers"></div>
+  <canvas id="feuilles" aria-hidden="true"></canvas>
+  <div class="wrap hero-txt">
+    <p class="eyebrow apparait">L'Étang-Salé · La Réunion</p>
+    <h1 class="apparait d2">Villa <em>Les Palmiers</em></h1>
+    <p class="lead apparait d2">Le lieu idéal pour un moment de détente en famille ou entre amis : une maison créole clôturée, sa piscine d'eau salée et jusqu'à 12 couchages.</p>
+    <div class="btns apparait d3">
+      <a class="btn btn-wa" href="https://wa.me/262692776107?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20un%20s%C3%A9jour%20%C3%A0%20la%20Villa%20Les%20Palmiers" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>
+        Réserver sur WhatsApp</a>
+      <a class="btn btn-clair" href="tel:+262692776107">Appeler · 0692 77 61 07</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Maison clôturée avec piscine</span><span>Jusqu'à 12 couchages</span><span>Grande terrasse &amp; cuisine extérieure</span><span>Piscine d'eau salée</span><span>Salon climatisé</span><span>Barbecue</span><span>Wifi &amp; parking</span><span>Centre-ville à 5-10 min à pied</span>
+  <span>Maison clôturée avec piscine</span><span>Jusqu'à 12 couchages</span><span>Grande terrasse &amp; cuisine extérieure</span><span>Piscine d'eau salée</span><span>Salon climatisé</span><span>Barbecue</span><span>Wifi &amp; parking</span><span>Centre-ville à 5-10 min à pied</span>
+</div></div>
+
+<section class="maison">
+  <div class="wrap maison-grid">
+    <div class="maison-photo reveal">
+      <img src="img/varangue-salon.webp" alt="La terrasse couverte sous charpente en bois, avec salon et vue sur le jardin" loading="lazy">
+      <img class="panneau" src="img/panneau-bienvenue.webp" alt="Le panneau « Bienvenue à la Maison Palmiers »" loading="lazy">
+      <p class="legende">La terrasse couverte, et le panneau qui accueille les voyageurs.</p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Bienvenue à la maison</p>
+      <h2 class="titre">Une maison créole, deux terrasses, toute la place pour se retrouver</h2>
+      <p class="intro">Dans une petite ruelle calme, tout près du centre de L'Étang-Salé, la Villa Les Palmiers se privatise en entier. Deux terrasses, dont une au bord de la piscine pour profiter pleinement des repas en famille ou entre amis, des pièces ventilées et un salon climatisé pour les journées d'été.</p>
+      <div class="chiffres">
+        <div class="chiffre"><b>12</b><small>couchages, +5 possibles sous conditions</small></div>
+        <div class="chiffre"><b>4</b><small>chambres, dont un petit dortoir</small></div>
+        <div class="chiffre"><b>2</b><small>terrasses et 2 canapés-lits</small></div>
+        <div class="chiffre"><b>1</b><small>piscine privée d'eau salée</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="piscine">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Côté piscine</p>
+      <h2 class="titre">Les journées se passent dehors</h2>
+      <p class="intro">Piscine privée d'eau salée, ouverte toute l'année, jardin entièrement clôturé, transats, cuisine extérieure et barbecue : on cuisine, on plonge, on refait le monde sous les palmiers.</p>
+    </div>
+    <div class="duo">
+      <figure class="reveal"><img src="img/piscine-palmiers.webp" alt="La piscine bleue, la terrasse en bois et les palmiers, montagnes au loin" loading="lazy"><figcaption>La piscine, face aux montagnes</figcaption></figure>
+      <figure class="reveal"><img src="img/terrasse-couverte.webp" alt="La grande terrasse couverte au plafond de bois, ouverte sur la piscine" loading="lazy"><figcaption>La grande terrasse couverte</figcaption></figure>
+    </div>
+    <div class="atouts">
+      <div class="atout reveal"><i>🔥</i><div><b>Cuisine extérieure &amp; barbecue</b><span>Pour les grillades et les longues tablées au grand air.</span></div></div>
+      <div class="atout reveal"><i>🌿</i><div><b>Jardin entièrement clôturé</b><span>Une entrée privée et un espace rien qu'à vous.</span></div></div>
+      <div class="atout reveal"><i>🚿</i><div><b>Douche extérieure</b><span>Un petit rinçage en sortant de l'eau, et retour au transat.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap reveal">
+    <p class="eyebrow">Visite en images</p>
+    <h2 class="titre">De la piscine au salon</h2>
+  </div>
+  <div class="defile">
+    <figure><img src="img/piscine-transats.webp" alt="Transats rouges et bleus au bord de la piscine" loading="lazy"><figcaption>Transats au bord de l'eau</figcaption></figure>
+    <figure><img src="img/salon-jardin.webp" alt="Salon de jardin sur la terrasse dallée" loading="lazy"><figcaption>Le salon de jardin</figcaption></figure>
+    <figure><img src="img/terrasse-fresque.webp" alt="Terrasse avec table, chaises et fresque de palmiers au mur" loading="lazy"><figcaption>La terrasse à la fresque</figcaption></figure>
+    <figure><img src="img/salon-climatise.webp" alt="Le salon climatisé avec deux canapés et télévision" loading="lazy"><figcaption>Le salon climatisé</figcaption></figure>
+    <figure><img src="img/cuisine.webp" alt="La cuisine ouverte et la table de la salle à manger" loading="lazy"><figcaption>Cuisine ouverte &amp; salle à manger</figcaption></figure>
+    <figure><img src="img/chambre.webp" alt="Une chambre avec lit double et ventilateur au plafond" loading="lazy"><figcaption>Une des 4 chambres</figcaption></figure>
+  </div>
+  <p class="astuce">Faites glisser pour visiter →</p>
+</section>
+
+<section class="weekend">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Les week-ends à la villa</p>
+      <h2 class="titre">Du vendredi 14 h au dimanche 14 h, on déconnecte</h2>
+      <p class="intro">La villa se réserve pour un week-end comme pour un plus long séjour. Les offres du moment (week-ends à prix doux, dernière minute) sont annoncées sur la page Facebook de la villa.</p>
+    </div>
+    <div class="cartes">
+      <div class="carte reveal"><h3>En famille ou entre amis</h3><p>Jusqu'à 12 couchages, et des personnes supplémentaires possibles sous conditions tarifaires.</p></div>
+      <div class="carte reveal"><h3>Réserver en toute simplicité</h3><p>Un message privé ou un appel au 0692 77 61 07, un acompte de 40 % pour bloquer vos dates, une caution de 500 €.</p></div>
+      <div class="carte reveal"><h3>Tout est prévu</h3><p>Cuisine équipée (lave-vaisselle, four, cuiseur à riz, Nespresso), lave-linge, Wifi, lit parapluie et parking gratuit sur place.</p></div>
+    </div>
+    <p class="citation reveal">« L'occasion parfaite pour vous retrouver en famille ou entre amis et déconnecter le temps d'un week-end. »<small>Publication de la Villa Les Palmiers sur Facebook, 14/09/2026</small></p>
+  </div>
+</section>
+
+<section class="autour">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Autour de la villa</p>
+      <h2 class="titre">Sable noir, filaos et sorties en famille</h2>
+      <p class="intro">L'Étang-Salé et sa plage de sable volcanique, l'une des rares de l'île, puis tout le Sud à portée de voiture.</p>
+    </div>
+    <div class="liste-autour">
+      <div class="lieu reveal"><div class="temps">5-10 min<br>à pied</div><div><b>Le centre-ville</b><br>Commerces et commodités tout proches.</div></div>
+      <div class="lieu reveal"><div class="temps">8 min<br>en voiture</div><div><b>La plage de L'Étang-Salé</b><br>Sa plage de sable volcanique, à deux pas.</div></div>
+      <div class="lieu reveal"><div class="temps">10-20 min</div><div><b>Croc Parc &amp; ferme tortue</b><br>De belles sorties avec les enfants.</div></div>
+      <div class="lieu reveal"><div class="temps">10-20 min</div><div><b>Parc aquatique, golf de Bourbon, usine sucrière</b><br>De quoi remplir les journées.</div></div>
+    </div>
+    <div class="notes">
+      <div class="note reveal"><b>8,7<small style="font-size:1rem">/10</small></b><p>sur Booking.com</p></div>
+      <div class="note reveal"><b>4,9<small style="font-size:1rem">/5</small></b><p>pour la communication, sur Airbnb</p></div>
+      <div class="note reveal"><b>5,7 K</b><p>abonnés suivent la villa sur Facebook</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap noel-grid">
+    <div class="reveal">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2 class="titre">Et si le cadeau, c'était un week-end tous ensemble ?</h2>
+      <p>Pour les fêtes, offrez un séjour à la Villa Les Palmiers : la famille réunie autour de la piscine, un barbecue sous les palmiers, et des souvenirs pour toute l'année.</p>
+      <ul>
+        <li>Un week-end à offrir à vos parents, vos enfants, vos amis</li>
+        <li>Une grande tablée des fêtes sur la terrasse</li>
+        <li>Les dates et les conditions, directement avec la villa</li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-wa" href="https://wa.me/262692776107?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20%C3%A0%20la%20Villa%20Les%20Palmiers%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir un séjour sur WhatsApp</a>
+      </div>
+    </div>
+    <div class="bon reveal" aria-label="Illustration d'un bon cadeau">
+      <span class="ruban-bon">Illustration</span>
+      <p class="eyebrow">Bon pour un séjour</p>
+      <h3>Villa Les Palmiers</h3>
+      <p>Un moment de détente en famille ou entre amis, piscine et terrasse comprises, à L'Étang-Salé.</p>
+      <p class="sign">Joyeuses fêtes sous les palmiers 🌴</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <p class="eyebrow">Infos &amp; réservations</p>
+    <h2 class="titre">On vous attend à L'Étang-Salé</h2>
+    <p class="intro" style="margin:0 auto">Un message, un appel, et vos dates sont posées.</p>
+    <div class="btns">
+      <a class="btn btn-wa" href="https://wa.me/262692776107?text=Bonjour%2C%20je%20souhaite%20des%20infos%20pour%20un%20s%C3%A9jour%20%C3%A0%20la%20Villa%20Les%20Palmiers" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-rouge" href="tel:+262692776107">0692 77 61 07</a>
+      <a class="btn btn-contour" href="https://www.facebook.com/lavillalespalmiers" target="_blank" rel="noopener">Page Facebook</a>
+      <a class="btn btn-contour" href="https://www.airbnb.fr/rooms/46130656" target="_blank" rel="noopener">Annonce Airbnb</a>
+    </div>
+    <div class="infos">
+      <div class="info"><b>Où</b>Une petite ruelle calme, proche du centre de L'Étang-Salé (97427), La Réunion.</div>
+      <div class="info"><b>Séjours</b>Week-ends du vendredi 14 h au dimanche 14 h, et séjours plus longs sur demande.</div>
+      <div class="info"><b>Capacité</b>Jusqu'à 12 couchages, +5 possibles sous conditions tarifaires.</div>
+      <div class="info"><b>Réservation</b>Acompte de 40 %, caution de 500 €.</div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Villa Les Palmiers.</footer>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if(reduit || !('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});}
+  else{
+    var io = new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target);}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+  // étoiles du bloc Noël
+  var noel=document.getElementById('noel');
+  for(var i=0;i<18;i++){var s=document.createElement('span');s.className='etoile';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*4)+'s';noel.appendChild(s);}
+  if(reduit) return;
+  // feuilles de palmier et éclats de lumière dans le hero
+  var c=document.getElementById('feuilles'), x=c.getContext('2d'), W,H,P=[], run=true;
+  function taille(){var r=c.getBoundingClientRect();W=c.width=r.width*devicePixelRatio;H=c.height=r.height*devicePixelRatio;}
+  taille(); window.addEventListener('resize',taille);
+  for(var k=0;k<26;k++){P.push({x:Math.random(),y:Math.random(),v:.0006+Math.random()*.0012,a:Math.random()*6.28,va:(Math.random()-.5)*.02,s:6+Math.random()*12,f:k%3===0,o:.25+Math.random()*.35});}
+  function feuille(p){
+    var d=devicePixelRatio, s=p.s*d;
+    x.save();x.translate(p.x*W,p.y*H);x.rotate(p.a);x.globalAlpha=p.o;
+    if(p.f){
+      x.fillStyle='#8fc46e';x.beginPath();x.ellipse(0,0,s*1.6,s*.45,0,0,6.28);x.fill();
+      x.strokeStyle='rgba(40,90,40,.6)';x.lineWidth=d;x.beginPath();x.moveTo(-s*1.5,0);x.lineTo(s*1.5,0);x.stroke();
+    }else{
+      x.fillStyle='rgba(255,250,215,.9)';x.beginPath();x.arc(0,0,s*.25,0,6.28);x.fill();
+    }
+    x.restore();
+  }
+  function tour(){
+    if(!run) return;
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      if(p.f){p.y+=p.v;p.x+=Math.sin(p.a)*.0008;p.a+=p.va;}
+      else{p.y-=p.v*.5;p.x+=Math.sin(p.a+=.01)*.0004;}
+      if(p.y>1.05){p.y=-.05;p.x=Math.random();}
+      if(p.y<-.05){p.y=1.05;p.x=Math.random();}
+      feuille(p);
+    });
+    requestAnimationFrame(tour);
+  }
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tour);});
+  requestAnimationFrame(tour);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Villa Les Palmiers" defer></script>
+</body>
+</html>

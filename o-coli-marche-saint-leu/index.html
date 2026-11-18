@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ô Coli'Marché · Fruits, légumes & fleurs aux Colimaçons, Saint-Leu</title>
+<meta name="description" content="Ô Coli'Marché, stand de fruits et légumes frais et de saison aux Colimaçons (Saint-Leu, La Réunion). Fleurs, gâteaux faits maison, arrivages du jour. Ouvert 7j/7 de 6h30 à 18h30. 0692 85 48 01.">
+<meta property="og:title" content="Ô Coli'Marché · Fruits, légumes & fleurs à Saint-Leu">
+<meta property="og:description" content="Stand de fruits et légumes frais et de saison aux Colimaçons, ouvert tous les jours dès 6h30. Proximité, qualité !">
+<meta property="og:image" content="https://maquettes.atma-digital.re/o-coli-marche-saint-leu/img/og-tomates.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/o-coli-marche-saint-leu/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#f07818;--mangue:#f0a800;--soleil:#f6c64a;--vert:#4a9032;--feuille:#2f6b24;--sauge:#a8c090;--creme:#f6efdf;--lin:#efe4cc;--terre:#3b2a1a;--txt:#3a2e22;--doux:#6f6250;--tomate:#d8402a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:Nunito,system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.08;color:var(--feuille);font-weight:700}
+h2{font-size:clamp(2rem,6.4vw,3.2rem);margin:.35rem 0 1rem}
+h3{font-size:1.3rem}
+.script{font-family:Pacifico,cursive;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;font-weight:700;color:var(--orange)}
+.wrap{width:min(1100px,90%);margin:auto}
+section{padding:clamp(3.8rem,10vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--feuille);color:#f3ecd8;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:var(--soleil)}
+canvas#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;transition:.3s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--orange);color:#fff;box-shadow:0 14px 30px -14px rgba(240,120,24,.9);animation:souffle 4.4s ease-in-out infinite}
+.btn-main:hover{background:#e0650c}
+@keyframes souffle{50%{transform:scale(1.03);box-shadow:0 18px 40px -10px rgba(240,120,24,.75)}}
+.btn-line{border:2px solid rgba(255,255,255,.75);color:#fff;background:rgba(255,255,255,.08)}
+.btn-line:hover{background:rgba(255,255,255,.2)}
+.btn-vert{background:var(--vert);color:#fff}
+.btn-vert:hover{background:var(--feuille)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,900px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:var(--terre);padding:6rem 0 3.6rem}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;animation:kenburns 24s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.18) translate(-2%,-1.5%)}}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,40,15,.45) 0%,rgba(30,40,15,.12) 26%,rgba(28,34,12,.62) 52%,rgba(24,30,10,.94) 100%)}
+.hero-in{position:relative;z-index:2}
+.logo-pastille{width:96px;height:96px;border-radius:50%;background:var(--creme);display:grid;place-items:center;box-shadow:0 10px 30px -10px rgba(0,0,0,.6);margin-bottom:1.1rem;overflow:hidden;animation:monte 1s .1s both}
+.logo-pastille img{width:86%;height:auto}
+.hero .eyebrow{color:var(--soleil);text-shadow:0 2px 12px rgba(0,0,0,.7);animation:monte 1s .25s both}
+.hero h1{color:#fff;font-size:clamp(3rem,13vw,6.4rem);margin:.4rem 0 .1rem;letter-spacing:-.01em;animation:monte 1.1s .4s both;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero h1 .o{color:var(--mangue)}
+.hero .sous{text-shadow:0 2px 12px rgba(0,0,0,.6);font-size:clamp(1rem,3.6vw,1.2rem);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sauge);animation:monte 1s .55s both}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.25rem,4.4vw,1.7rem);margin:1.1rem 0 1.7rem;max-width:34rem;animation:monte 1s .7s both}
+.hero .ctas{animation:monte 1s .85s both}
+.badge-ouvert{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.35rem .9rem;font-size:.85rem;font-weight:700;margin-top:1.3rem;animation:monte 1s 1s both}
+.badge-ouvert i{width:9px;height:9px;border-radius:50%;background:#7bd35a;box-shadow:0 0 0 0 rgba(123,211,90,.7);animation:pouls 2.2s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 10px rgba(123,211,90,0)}100%{box-shadow:0 0 0 0 rgba(123,211,90,0)}}
+@keyframes monte{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* BANDEAU */
+.bandeau{background:var(--mangue);color:var(--terre);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Fraunces,serif;font-weight:700;font-size:1.15rem;position:relative;z-index:2}
+.bandeau div{display:inline-block;animation:defile 32s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau em{font-style:normal;color:var(--feuille)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* ESPRIT */
+.esprit .grid{display:grid;gap:2.4rem;align-items:center}
+.esprit p{color:var(--doux);margin-bottom:1rem;max-width:36rem}
+.esprit .slogan{font-size:clamp(1.7rem,6vw,2.4rem);color:var(--orange);line-height:1.2;margin:.4rem 0 1.2rem}
+.esprit .photo{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(47,107,36,.55);aspect-ratio:4/3}
+.esprit .photo img{width:100%;height:100%;object-fit:cover}
+.esprit .photo figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(246,239,223,.92);color:var(--feuille);font-weight:700;font-size:.85rem;padding:.35rem .8rem;border-radius:999px}
+.pastilles{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.pastilles span{background:#fff;border:1px solid var(--lin);border-radius:999px;padding:.4rem .95rem;font-weight:700;font-size:.9rem;color:var(--feuille)}
+@media(min-width:860px){.esprit .grid{grid-template-columns:1.1fr .9fr}}
+
+/* ETAL */
+.etal{background:linear-gradient(180deg,var(--creme),#eef0dc)}
+.etal .intro{color:var(--doux);max-width:38rem}
+.cartes{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5.56% 1.2rem;margin:0 -5.56%;scrollbar-width:none}
+.cartes::-webkit-scrollbar{display:none}
+.carte{flex:0 0 min(78vw,330px);scroll-snap-align:start;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(59,42,26,.6);transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 50px -24px rgba(59,42,26,.6)}
+.carte .im{aspect-ratio:4/3;overflow:hidden}
+.carte .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.carte:hover .im img{transform:scale(1.07)}
+.carte .tx{padding:1rem 1.2rem 1.3rem}
+.carte h3{color:var(--terre);font-size:1.25rem;margin-bottom:.3rem}
+.carte p{color:var(--doux);font-size:.95rem;line-height:1.5}
+.carte .tag{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);margin-bottom:.35rem}
+.glisse{font-size:.85rem;color:var(--doux);display:flex;align-items:center;gap:.5rem}
+.glisse b{display:inline-block;animation:glisse 1.8s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(8px)}}
+@media(min-width:1000px){.cartes{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:1.8rem 0 0}.carte{flex:auto}.glisse{display:none}}
+
+/* MOTS */
+.mots{background:var(--feuille);color:#f3ecd8;text-align:center;overflow:hidden}
+.mots::before,.mots::after{content:"";position:absolute;left:0;right:0;height:40px;background:var(--creme)}
+.mots::before{top:-1px;clip-path:polygon(0 0,100% 0,100% 20%,85% 70%,65% 30%,45% 80%,25% 25%,0 75%)}
+.mots::after{bottom:-1px;background:var(--creme);clip-path:polygon(0 100%,100% 100%,100% 30%,80% 80%,60% 25%,40% 70%,20% 20%,0 60%)}
+.mots blockquote{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.5rem,5.4vw,2.4rem);line-height:1.3;max-width:46rem;margin:1rem auto}
+.mots .eyebrow{color:var(--soleil)}
+.mots cite{display:block;font-style:normal;font-size:.88rem;color:var(--sauge);margin-top:.6rem}
+.mots .petits{display:grid;gap:1rem;margin-top:2.6rem;text-align:left}
+.mots .petit{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.1rem 1.2rem}
+.mots .petit b{font-family:Fraunces,serif;font-size:1.15rem;color:#fff;display:block;margin-bottom:.2rem}
+.mots .petit small{color:var(--sauge);font-size:.8rem}
+@media(min-width:800px){.mots .petits{grid-template-columns:repeat(3,1fr)}}
+
+/* INFOS */
+.infos .grid{display:grid;gap:1.4rem}
+.bloc{background:#fff;border-radius:24px;padding:1.6rem 1.5rem;box-shadow:0 16px 40px -30px rgba(59,42,26,.6);border:1px solid var(--lin)}
+.bloc h3{display:flex;align-items:center;gap:.6rem;margin-bottom:.8rem}
+.bloc h3 svg{width:26px;height:26px;color:var(--orange);flex:none}
+.heures{font-family:Fraunces,serif;font-size:2.1rem;color:var(--orange);font-weight:700;line-height:1.1}
+.jours{display:flex;gap:.35rem;margin:1rem 0 .4rem;flex-wrap:wrap}
+.jours span{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--sauge);color:var(--feuille);font-weight:700;font-size:.85rem}
+.bloc p{color:var(--doux)}
+.bloc .big{font-family:Fraunces,serif;font-size:1.35rem;color:var(--terre);font-weight:700}
+@media(min-width:860px){.infos .grid{grid-template-columns:repeat(3,1fr)}}
+
+/* NOEL */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#2f6b24 0%,#1f4a18 70%);color:#f3ecd8;overflow:hidden}
+.noel .grid{display:grid;gap:2rem;align-items:center}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--soleil)}
+.noel p{color:#dfe6cf;max-width:34rem;margin-bottom:1rem}
+.noel ul{list-style:none;margin:1.2rem 0 1.8rem;display:grid;gap:.7rem}
+.noel li{display:flex;gap:.7rem;align-items:flex-start}
+.noel li::before{content:"";flex:none;width:12px;height:12px;margin-top:.45rem;border-radius:50%;background:var(--mangue);box-shadow:0 0 12px var(--soleil)}
+.panier{position:relative;aspect-ratio:1;max-width:400px;margin:auto;width:100%}
+.panier svg{width:100%;height:100%}
+.panier .etoile{animation:scintille 2.6s ease-in-out infinite}
+.panier .etoile:nth-child(2n){animation-delay:1.1s}
+@keyframes scintille{50%{opacity:.25}}
+.panier figcaption{text-align:center;font-size:.78rem;color:var(--sauge);margin-top:.3rem}
+@media(min-width:860px){.noel .grid{grid-template-columns:1.1fr .9fr}}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact p{color:var(--doux);max-width:34rem;margin:0 auto 1.6rem}
+.contact .ctas{justify-content:center}
+.tel{font-family:Fraunces,serif;font-size:clamp(2rem,8vw,3rem);color:var(--orange);text-decoration:none;font-weight:700;display:inline-block;margin:.2rem 0 1.4rem}
+footer{background:var(--terre);color:#d9ccb2;text-align:center;font-size:.85rem;padding:2.2rem 1rem 2.6rem;position:relative;z-index:2}
+footer b{color:var(--soleil)}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}canvas#feuilles{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Ô Coli'Marché</div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="bg"><img src="img/etal-du-jour.webp" alt="Barquettes colorées et salades fraîches sur l'étal d'Ô Coli'Marché" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <div class="logo-pastille"><img src="img/logo.webp" alt="Logo Ô Coli'Marché, fruits & légumes"></div>
+    <p class="eyebrow">Les Colimaçons · Saint-Leu</p>
+    <h1><span class="o">Ô</span> Coli'Marché</h1>
+    <p class="sous">Fruits · Légumes · Fleurs</p>
+    <p class="lead">Un stand de fruits et légumes frais et de saison, au cœur des Colimaçons. Proximité, qualité !</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692854801?text=Bonjour%20%C3%94%20Coli'March%C3%A9%2C%20qu'avez-vous%20comme%20arrivage%20aujourd'hui%20%3F"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg>Demander l'arrivage du jour</a>
+      <a class="btn btn-line" href="#infos">Horaires & accès</a>
+    </div>
+    <div class="badge-ouvert"><i></i>Ouvert 7j/7 · 6h30 – 18h30</div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Fruits frais</span><em>✦</em><span>Légumes de saison</span><em>✦</em><span>Fleurs</span><em>✦</em><span>Gâteaux faits maison</span><em>✦</em><span>Promo du jour</span><em>✦</em><span>Ouvert tous les jours dès 6h30</span><em>✦</em>
+  <span>Fruits frais</span><em>✦</em><span>Légumes de saison</span><em>✦</em><span>Fleurs</span><em>✦</em><span>Gâteaux faits maison</span><em>✦</em><span>Promo du jour</span><em>✦</em><span>Ouvert tous les jours dès 6h30</span><em>✦</em>
+</div></div>
+
+<section class="esprit" id="esprit">
+  <div class="wrap grid">
+    <div class="reveal">
+      <p class="eyebrow">Le stand du quartier</p>
+      <h2>Le marché, juste à côté de chez vous</h2>
+      <p class="slogan script">Proximité, qualité !</p>
+      <p>Ô Coli'Marché, c'est le stand de fruits et légumes des Colimaçons, tout près du cimetière : des produits frais et de saison, des fleurs pour faire plaisir, des gâteaux faits maison, et chaque jour une nouvelle promo à découvrir.</p>
+      <p>Le stand vous accueille tous les jours, de 6h30 à 18h30. Et l'ambiance, l'équipe la signe elle-même sous ses vidéos : <em>#Ambiance #joie</em>.</p>
+      <div class="pastilles"><span>Produits frais de saison</span><span>Arrivages du jour</span><span>Fleurs</span><span>Gâteaux maison</span></div>
+    </div>
+    <figure class="photo reveal">
+      <img src="img/tomates.webp" alt="Tomates bien rouges sur l'étal" loading="lazy">
+      <figcaption>Promo du jour : tomates bien rouges</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="etal" id="etal">
+  <div class="wrap">
+    <p class="eyebrow reveal">Sur l'étal</p>
+    <h2 class="reveal">Ce qui arrive au Coli'Marché</h2>
+    <p class="intro reveal">Quelques beaux produits vus passer sur la page du stand ces derniers mois. Les arrivages changent avec les saisons : le plus simple, c'est de demander ce qui est arrivé ce matin.</p>
+    <div class="cartes">
+      <article class="carte reveal"><div class="im"><img src="img/tomates.webp" alt="Tomates rouges"></div><div class="tx"><span class="tag">Promo du jour</span><h3>Tomates bien rouges</h3><p>Brillantes, charnues, parfaites pour un rougail ou une salade.</p></div></article>
+      <article class="carte reveal"><div class="im"><img src="img/concombres.webp" alt="Concombres frais"></div><div class="tx"><span class="tag">Fraîcheur</span><h3>Concombres</h3><p>Le 2 juillet, un concombre offert dès 10 € d'achat : croquants et bien verts.</p></div></article>
+      <article class="carte reveal"><div class="im"><img src="img/aubergines.webp" alt="Aubergines"></div><div class="tx"><span class="tag">Arrivage</span><h3>Aubergines</h3><p>Pour le rougail aubergine ou un bon gratin du dimanche.</p></div></article>
+      <article class="carte reveal"><div class="im"><img src="img/arrivage-13-juin.webp" alt="Arrivage du 13 juin sur l'étal"></div><div class="tx"><span class="tag">Arrivage</span><h3>Qualité excellence</h3><p>L'arrivage du 13 juin, salué sur la page d'un « Qualité excellence ! ».</p></div></article>
+      <article class="carte reveal"><div class="im"><img src="img/gateau-maison.webp" alt="Gâteau doré fait maison"></div><div class="tx"><span class="tag">Fait maison</span><h3>Gâteaux maison</h3><p>« Délicieux, savoureux, exquis ! » : de quoi finir les courses sur une note sucrée.</p></div></article>
+      <article class="carte reveal"><div class="im"><img src="img/etal-du-jour.webp" alt="Étal coloré du Coli'Marché" style="object-position:50% 35%"></div><div class="tx"><span class="tag">Fruits, légumes & fleurs</span><h3>L'étal du jour</h3><p>Couleurs, fraîcheur et petites surprises, renouvelées chaque matin.</p></div></article>
+    </div>
+    <p class="glisse">Faites glisser <b>→</b></p>
+  </div>
+</section>
+
+<section class="mots" id="mots">
+  <div class="wrap">
+    <p class="eyebrow reveal">Les mots du Coli'Marché</p>
+    <blockquote class="reveal">« Vos commentaires nous touchent vraiment beaucoup ❤️ Nos chers clients, nous vous adorons ! »<cite>Publication de la page Ô Coli'Marché, 7 juin 2026</cite></blockquote>
+    <div class="petits">
+      <div class="petit reveal"><b>Un grand jeu entre voisins</b>Trois bons d'achat de 30 € à gagner, et une question qui dit tout : « Êtes-vous bien accueilli en arrivant Ô Coli'Marché ? »<br><small>7 juin 2026</small></div>
+      <div class="petit reveal"><b>Les fleurs de la fête des mères</b>« Vos plus belles fleurs vous attendent ! » : le stand se pare de bouquets pour les grandes occasions.<br><small>30 mai 2026</small></div>
+      <div class="petit reveal"><b>Les petits prix qui font sourire</b>« Zantac 1 € kg, qui dit mieux ?? », et le jour où, dès 10 € d'achat, un concombre était offert.<br><small>Juin – juillet 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow reveal">Venir au stand</p>
+    <h2 class="reveal">Tous les jours, du lever au coucher du soleil</h2>
+    <div class="grid">
+      <div class="bloc reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horaires</h3>
+        <p class="heures">6h30 – 18h30</p>
+        <div class="jours"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+        <p>Ouvert 7 jours sur 7, week-end compris.</p>
+      </div>
+      <div class="bloc reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Adresse</h3>
+        <p class="big">Près du cimetière des Colimaçons</p>
+        <p>97436 Saint-Leu, La Réunion</p>
+        <p style="margin-top:.9rem"><a class="btn btn-vert" href="https://www.google.com/maps/search/?api=1&query=Cimeti%C3%A8re%20des%20Colima%C3%A7ons%20Saint-Leu">Itinéraire</a></p>
+      </div>
+      <div class="bloc reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Une question ?</h3>
+        <p class="big"><a href="tel:+262692854801" style="text-decoration:none">0692 85 48 01</a></p>
+        <p>Appel ou WhatsApp, pour connaître l'arrivage et la promo du jour.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap grid">
+    <div class="reveal">
+      <p class="eyebrow">Pour les fêtes</p>
+      <h2>Une table de fêtes pleine de couleurs</h2>
+      <p>Pour les repas de fin d'année, le Coli'Marché a tout ce qui fait une belle table : des fruits frais pour le dessert, des légumes pour le carry du réveillon, des fleurs pour décorer ou offrir.</p>
+      <ul>
+        <li>Des fleurs pour décorer la table ou faire plaisir</li>
+        <li>Des gâteaux faits maison pour finir le repas en douceur</li>
+        <li>Les arrivages des fêtes, à demander d'un simple message</li>
+      </ul>
+      <a class="btn btn-main" href="https://wa.me/262692854801?text=Bonjour%20%C3%94%20Coli'March%C3%A9%2C%20qu'aurez-vous%20comme%20arrivages%20pour%20les%20f%C3%AAtes%20%3F"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Demander les arrivages des fêtes</a>
+    </div>
+    <figure class="panier reveal">
+      <svg viewBox="0 0 400 400" role="img" aria-label="Illustration d'un panier de fruits et de fleurs">
+        <g fill="#f6c64a"><circle class="etoile" cx="70" cy="70" r="4"/><circle class="etoile" cx="330" cy="60" r="5"/><circle class="etoile" cx="300" cy="140" r="3"/><circle class="etoile" cx="90" cy="160" r="3"/><circle class="etoile" cx="200" cy="40" r="4"/></g>
+        <path d="M120 120 Q200 30 280 120" fill="none" stroke="#c8a464" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="150" cy="190" r="42" fill="#d8402a"/><path d="M150 150 q8-14 20-10" stroke="#2f6b24" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="235" cy="180" r="40" fill="#f0a800"/><circle cx="222" cy="168" r="8" fill="#f6c64a" opacity=".7"/>
+        <ellipse cx="290" cy="205" rx="22" ry="44" transform="rotate(30 290 205)" fill="#6a8f2a"/>
+        <path d="M95 210 q-10-50 30-70 q-5 40-30 70Z" fill="#4a9032"/>
+        <g transform="translate(305 140)"><circle r="16" fill="#f07818"/><circle r="6" fill="#f6c64a"/></g>
+        <g transform="translate(110 140)"><circle r="13" fill="#e86a8a"/><circle r="5" fill="#f6c64a"/></g>
+        <path d="M70 215 h260 l-28 120 q-4 16-20 16 H118 q-16 0-20-16Z" fill="#b8874a"/>
+        <path d="M80 245 h240 M86 275 h228 M92 305 h216" stroke="#8d6230" stroke-width="5"/>
+        <path d="M70 215 h260" stroke="#8d6230" stroke-width="12" stroke-linecap="round"/>
+        <path d="M200 215 q-30 30 -60 20 M200 215 q30 30 60 20" stroke="#d8402a" stroke-width="8" fill="none" stroke-linecap="round"/>
+      </svg>
+      <figcaption>Illustration</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <p class="eyebrow">À très vite au stand</p>
+    <h2>Passez nous voir aux Colimaçons</h2>
+    <a class="tel" href="tel:+262692854801">0692 85 48 01</a>
+    <p>Tous les jours de 6h30 à 18h30, près du cimetière des Colimaçons à Saint-Leu. Suivez les arrivages et les promos du jour sur la page Facebook.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="https://wa.me/262692854801">WhatsApp</a>
+      <a class="btn btn-vert" href="https://www.facebook.com/profile.php?id=61573942896714">Page Facebook</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <p><b>Ô Coli'Marché</b> · Fruits, légumes & fleurs · Les Colimaçons, Saint-Leu</p>
+  <p style="margin-top:.6rem">Maquette privée imaginée par Aurélie et Jonathan (ATMA Digital), à partir des publications d'Ô Coli'Marché.</p>
+</footer>
+<script>
+(()=>{const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('feuilles'),g=c.getContext('2d');let W,H,run=true;const cols=['#4a9032','#a8c090','#f0a800','#f07818','#6a8f2a'];
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}size();addEventListener('resize',size);
+const N=innerWidth<700?16:28,P=[];for(let i=0;i<N;i++)P.push(nv(true));
+function nv(s){return{x:Math.random()*W,y:s?Math.random()*H:-20,r:5+Math.random()*7,v:.25+Math.random()*.55,a:Math.random()*6.3,va:(Math.random()-.5)*.02,o:.18+Math.random()*.3,c:cols[Math.random()*cols.length|0],w:Math.random()*6.3}}
+function leaf(p){g.save();g.translate(p.x,p.y);g.rotate(p.a);g.globalAlpha=p.o;g.fillStyle=p.c;g.beginPath();g.moveTo(0,-p.r);g.quadraticCurveTo(p.r*.8,0,0,p.r);g.quadraticCurveTo(-p.r*.8,0,0,-p.r);g.fill();g.restore()}
+function tick(){if(!run)return;g.clearRect(0,0,W,H);for(const p of P){p.w+=.012;p.y+=p.v;p.x+=Math.sin(p.w)*.45;p.a+=p.va;if(p.y>H+20)Object.assign(p,nv(false));leaf(p)}requestAnimationFrame(tick)}tick();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tick()});})();
+</script>
+<script src="/outils/cta.js" data-nom="Ô Coli&#x27;Marché" defer></script>
+</body>
+</html>
