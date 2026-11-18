@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Gouléo · Restaurant-pizzéria créole à Hell-Bourg, Salazie</title>
+<meta name="description" content="Le Gouléo, l'escale gourmande au cœur de Hell-Bourg : cuisine créole et pizzas au feu de bois, plats généreux et faits maison, café torréfié sur place. 46 rue du Général de Gaulle, Salazie. 0692 62 36 24.">
+<meta property="og:title" content="Le Gouléo · L'escale gourmande au cœur de Hell-Bourg">
+<meta property="og:description" content="Cuisine créole et pizzas au feu de bois, faites maison, au centre du village de Hell-Bourg, dans le cirque de Salazie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-gouleo-salazie/img/og-gouleo.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-gouleo-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;600&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--foret:#1d3628;--foret2:#264634;--vert:#4a7c3e;--feuille:#6ba547;--coq:#c84c2a;--orange:#cc6633;--braise:#f0a04b;--pierre:#8b8680;--ciel:#4a7ba7;--corail:#e8a89a;--creme:#f7f1e6;--lin:#efe5d3;--txt:#2b2a24;--doux:#6f6a5e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;color:var(--foret)}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.45rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--coq);font-weight:600}
+.main{font-family:Caveat,cursive;font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--foret);color:#e6efe0;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4;border-bottom:1px solid rgba(240,160,75,.35)}
+.ribbon b{color:var(--braise);font-weight:600}
+canvas#braises{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:.93rem;transition:.35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--coq);color:#fff;box-shadow:0 14px 34px -14px rgba(200,76,42,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--orange)}
+@keyframes souffle{50%{box-shadow:0 16px 44px -6px rgba(200,76,42,.7);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.08)}
+.btn-line:hover{background:rgba(255,255,255,.18)}
+.btn-dark{background:var(--foret);color:var(--creme)}
+.btn-dark:hover{background:var(--vert)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--foret);color:var(--creme);padding:0 0 3.6rem}
+.hero .photo{position:relative;height:clamp(330px,90vw,470px);overflow:hidden;margin-top:2rem}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:60% 45%;animation:kenburns 26s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,54,40,.4) 0%,rgba(29,54,40,0) 25%,rgba(29,54,40,0) 58%,var(--foret) 100%)}
+.hero-in{position:relative;z-index:3;margin-top:-2.4rem}
+.hero .eyebrow{color:var(--braise)}
+.hero h1{color:#fff;font-size:clamp(3.3rem,14vw,6.8rem);letter-spacing:.01em;margin:.45rem 0 .25rem}
+.hero .sous{letter-spacing:.34em;text-transform:uppercase;font-size:clamp(.78rem,3vw,1rem);color:var(--corail);font-weight:600}
+.hero .lead{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.3rem,4.6vw,1.8rem);margin:1.2rem 0 1.8rem;max-width:32rem;color:#f1eadb;line-height:1.35}
+.hero .adr{margin-top:1.4rem;font-size:.88rem;color:#c9d6c6}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:1s}.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* montagnes du cirque */
+.cirque{display:block;width:100%;height:70px;margin-top:-1px}
+
+/* bandeau */
+.bande{background:var(--coq);color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Caveat,cursive;font-size:1.5rem}
+.track{display:inline-block;animation:defile 44s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"✿";margin-left:2.2rem;font-size:.9rem;color:#ffd6b8}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* esprit */
+.esprit .grid{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
+.esprit p{margin-bottom:1rem}
+.esprit .big{font-family:Fraunces,serif;font-size:clamp(1.3rem,4.2vw,1.65rem);line-height:1.4;color:var(--foret2)}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.chip{border:1px solid #d9cdb5;border-radius:999px;padding:.35rem .9rem;font-size:.85rem;background:#fffaf1}
+.case{background:linear-gradient(180deg,#dfeaf3 0%,#eef3ea 100%);border-radius:24px;padding:1.2rem 1rem .4rem;box-shadow:0 30px 60px -38px rgba(29,54,40,.8);overflow:hidden}
+.case svg{width:100%;height:auto}
+.case .leg{font-size:.74rem;color:var(--doux);text-align:center;padding:.4rem 0 .6rem}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.1rem}
+.stat{background:#fffaf1;border:1px solid #e3d7c0;border-radius:16px;padding:.9rem .4rem;text-align:center}
+.stat b{display:block;font-family:Fraunces,serif;font-size:1.8rem;font-weight:600;color:var(--coq);line-height:1}
+.stat span{font-size:.74rem;letter-spacing:.04em;color:var(--doux)}
+
+/* lambrequin */
+.lambrequin{display:block;width:100%;height:34px}
+
+/* carte */
+.carte-sec{background:var(--vert);color:#fff;overflow:hidden}
+.carte-sec::before{content:"";position:absolute;inset:0;opacity:.16;background-image:radial-gradient(circle at 20px 20px,#c84c2a 0 7px,transparent 8px),radial-gradient(circle at 20px 20px,#1d3628 0 2px,transparent 3px),radial-gradient(circle at 60px 60px,#f0a04b 0 5px,transparent 6px);background-size:80px 80px;pointer-events:none}
+.carte-sec h2{color:#fff}
+.carte-sec .eyebrow{color:#ffd6b8}
+.menu{position:relative;background:var(--creme);color:var(--txt);border-radius:22px;padding:2rem 1.4rem 1.6rem;margin-top:1.6rem;box-shadow:0 34px 70px -34px rgba(0,0,0,.7)}
+.menu::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(74,124,62,.45);border-radius:15px;pointer-events:none}
+.menu .cols{display:grid;gap:1.8rem}
+.menu h3{font-family:Caveat,cursive;font-size:2.1rem;font-weight:700;color:var(--coq);margin-bottom:.4rem}
+.menu ul{list-style:none;display:grid;gap:.7rem}
+.menu li{font-family:Fraunces,serif;font-size:1.22rem;line-height:1.25;border-bottom:1px dotted #cfc2a8;padding-bottom:.6rem;opacity:0;transform:translateX(-12px);transition:.8s}
+.menu.vu li{opacity:1;transform:none}
+.menu li small{display:block;font-family:'Nunito Sans',sans-serif;font-size:.8rem;color:var(--doux);margin-top:.15rem}
+.menu .note{font-size:.84rem;color:var(--doux);text-align:center;margin-top:1.3rem}
+
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 5vw 1.4rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 82%;scroll-snap-align:center;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 26px 50px -32px rgba(29,54,40,.8);transition:transform .45s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.4deg)}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.9rem;color:var(--doux)}
+.galerie figcaption b{display:block;font-family:Fraunces,serif;font-size:1.25rem;font-weight:600;color:var(--foret)}
+.glisse{font-family:Caveat,cursive;font-size:1.3rem;color:var(--coq)}
+
+/* café */
+.cafe{background:linear-gradient(180deg,var(--creme) 0%,var(--lin) 100%)}
+.cafe .grid{display:grid;gap:2.2rem;align-items:center}
+.tasse{position:relative;max-width:360px;margin:auto;width:100%}
+.tasse svg{width:100%;height:auto}
+.vap{animation:vapeur 4s ease-in-out infinite;transform-origin:center bottom}
+.vap.v2{animation-delay:1.3s}.vap.v3{animation-delay:2.6s}
+@keyframes vapeur{0%{opacity:0;transform:translateY(8px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-16px)}}
+.citation{font-family:Fraunces,serif;font-style:italic;font-size:clamp(1.3rem,4.4vw,1.75rem);line-height:1.35;color:var(--foret2);border-left:3px solid var(--coq);padding-left:1.1rem;margin:1rem 0 .6rem}
+.src{color:var(--doux);font-size:.84rem}
+
+/* avis */
+.avis{background:var(--foret);color:#eaf0e6}
+.avis h2{color:#fff}
+.avis .eyebrow{color:var(--braise)}
+.avis .grid{display:grid;gap:1.1rem;margin-top:1.4rem}
+.avis blockquote{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:1.3rem 1.3rem 1.1rem;font-family:Fraunces,serif;font-style:italic;font-size:1.2rem;line-height:1.4}
+.avis blockquote span{display:block;font-family:'Nunito Sans',sans-serif;font-style:normal;font-size:.8rem;color:#b9c8b5;margin-top:.7rem}
+.note-g{display:flex;align-items:center;gap:.8rem;margin-top:.4rem;flex-wrap:wrap}
+.note-g b{font-family:Fraunces,serif;font-size:2.6rem;color:var(--braise);line-height:1}
+.etoiles{color:var(--braise);letter-spacing:.15em}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#7a2c1a 0%,#4b1d14 72%);color:#fbeee4;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#ffd6b8}
+.noel p{max-width:34rem;margin:0 auto 1.6rem;color:#f2dccd}
+.noel .bon{position:relative;max-width:430px;margin:0 auto 2rem;background:linear-gradient(135deg,#f7f1e6,#ece0c9);color:var(--txt);border-radius:18px;padding:1.8rem 1.4rem 1.5rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.8);transform:rotate(-1.5deg)}
+.noel .bon::before{content:"";position:absolute;inset:8px;border:1px solid rgba(74,124,62,.5);border-radius:12px;pointer-events:none}
+.noel .bon .main{font-size:1.7rem;color:var(--coq);display:block}
+.noel .bon b{font-family:Fraunces,serif;font-size:2.1rem;font-weight:600;display:block;line-height:1.1;color:var(--foret)}
+.noel .bon .sm{font-size:.76rem;letter-spacing:.26em;text-transform:uppercase;color:var(--vert);font-weight:600}
+.noel .noeud{position:absolute;top:-14px;right:26px;width:48px;height:48px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.75rem;color:#d9b9a6;margin-top:.9rem}
+
+/* infos */
+.infos .grid{display:grid;gap:2rem}
+.carte-info{background:#fffaf1;border:1px solid #e3d7c0;border-radius:22px;padding:1.6rem 1.4rem}
+.carte-info dl{display:grid;gap:1rem}
+.carte-info dt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--coq);font-weight:600}
+.carte-info dd{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-info dd a{text-decoration:none;border-bottom:1px solid #e0b9a8}
+.horaires{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:.3rem}
+.horaires td{padding:.32rem 0;border-bottom:1px dotted #d9cdb5}
+.horaires td:last-child{text-align:right}
+.horaires tr.ferme td{color:var(--doux);font-style:italic}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#b9c8b5;background:var(--foret)}
+footer b{color:var(--braise);font-weight:600}
+
+@media(min-width:860px){
+ .esprit .grid{grid-template-columns:1.1fr .9fr;gap:4rem}
+ .cafe .grid{grid-template-columns:.8fr 1.2fr;gap:4rem}
+ .infos .grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+ .galerie figure{flex:0 0 31%}
+ .menu{padding:2.6rem 2.6rem 1.8rem}
+ .menu .cols{grid-template-columns:1fr 1fr;gap:3rem}
+ .avis .grid{grid-template-columns:repeat(3,1fr)}
+ .hero .photo{height:min(64vh,580px)}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv,.menu li{opacity:1!important;transform:none!important}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Gouléo</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="photo"><img src="img/salle-pierre.jpg" alt="La salle du Gouléo : murs en pierre, poutres bleues, chaises en bois orange et nappes vertes à coquelicots" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Hell-Bourg · Cirque de Salazie · La Réunion</p>
+    <h1 class="apparait d2">Le Gouléo</h1>
+    <p class="sous apparait d2">Restaurant · Pizzéria</p>
+    <p class="lead apparait d3">L'escale gourmande au cœur de Hell-Bourg : cuisine créole et pizzas au feu de bois, généreuses et faites maison.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="tel:+262692623624"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Appeler le 0692 62 36 24</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+    <p class="adr apparait d4">46 rue du Général de Gaulle, au centre du village classé de Hell-Bourg</p>
+  </div>
+</header>
+
+<svg class="cirque" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true"><rect width="1000" height="70" fill="#c84c2a"/><path d="M0 0h1000v22l-60 18-70-26-90 34-80-30-70 22-90-34-80 30-70-20-90 32-80-28-70 24-90-30-60 20z" fill="#1d3628"/></svg>
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Pizzas au feu de bois</span><span>Rougail saucisse</span><span>Carry d'espadon au miel</span><span>Gratin de chouchou</span><span>Poulet letchi</span><span>Jus de fruits pressés</span><span>Café torréfié sur place</span>
+  <span>Pizzas au feu de bois</span><span>Rougail saucisse</span><span>Carry d'espadon au miel</span><span>Gratin de chouchou</span><span>Poulet letchi</span><span>Jus de fruits pressés</span><span>Café torréfié sur place</span>
+</div></div>
+
+<section class="esprit" id="esprit">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">L'esprit du lieu</p>
+      <h2>Une pause savoureuse au cœur du cirque</h2>
+      <p class="big">Au centre du village classé de Hell-Bourg, Le Gouléo vous accueille dans une ambiance décontractée et chaleureuse.</p>
+      <p>Un petit restaurant-pizzéria niché dans le cirque verdoyant de Salazie, au cadre simple et convivial : l'adresse idéale après une balade ou une visite culturelle.</p>
+      <p>Déjeuner entre amis, repas en couple ou moment gourmand en solo, sur place ou à emporter, en salle ou en terrasse.</p>
+      <div class="chips"><span class="chip">Terrasse</span><span class="chip">Sur place &amp; à emporter</span><span class="chip">Français · Créole · English</span><span class="chip">Cartes bancaires</span></div>
+    </div>
+    <div class="rv">
+      <div class="case">
+        <svg viewBox="0 0 400 250" aria-hidden="true">
+          <path d="M0 120 60 70 110 100 170 40 230 95 290 55 350 90 400 60V250H0z" fill="#9fbf8f" opacity=".55"/>
+          <path d="M0 150 70 110 140 140 210 100 280 135 340 105 400 130V250H0z" fill="#6ba547" opacity=".55"/>
+          <rect x="70" y="120" width="260" height="110" fill="#e8a89a"/>
+          <path d="M55 122 200 62 345 122z" fill="#8b9ba8"/>
+          <path d="M70 122h260" stroke="#fff" stroke-width="3"/>
+          <g fill="#fff"><path d="M70 124h260v6H70z"/><path d="M70 130l6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8 6 8 6-8z"/></g>
+          <g fill="none" stroke="#8b9ba8" stroke-width="2.5"><rect x="88" y="146" width="96" height="30"/><path d="M88 161 136 146 184 161 136 176z"/><rect x="216" y="146" width="96" height="30"/><path d="M216 161 264 146 312 161 264 176z"/></g>
+          <rect x="104" y="186" width="44" height="44" fill="#3a3836"/><rect x="178" y="186" width="44" height="44" fill="#3a3836"/><rect x="252" y="186" width="44" height="44" fill="#3a3836"/>
+          <text x="200" y="104" text-anchor="middle" font-family="Caveat,cursive" font-size="22" fill="#fff">Le Gouléo</text>
+          <path d="M0 230h400v20H0z" fill="#8b8680"/>
+          <circle cx="40" cy="200" r="16" fill="#4a7c3e"/><circle cx="360" cy="196" r="18" fill="#4a7c3e"/><circle cx="52" cy="188" r="6" fill="#c84c2a"/><circle cx="350" cy="184" r="6" fill="#c84c2a"/>
+        </svg>
+        <p class="leg">Illustration : la façade rose et ses lambrequins, rue du Général de Gaulle</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>30</b><span>couverts</span></div>
+        <div class="stat"><b>6/7</b><span>jours le midi</span></div>
+        <div class="stat"><b>4,7</b><span>sur Google*</span></div>
+      </div>
+      <p style="font-size:.76rem;color:var(--doux);margin-top:.6rem">* Note moyenne sur 313 avis Google, novembre 2026.</p>
+    </div>
+  </div>
+</section>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">À la carte</p>
+    <h2 class="rv">Le créole d'un côté, le feu de bois de l'autre</h2>
+    <p class="rv" style="color:#e7f0e2;max-width:36rem">Des plats généreux et faits maison, avec des produits frais, souvent locaux.</p>
+    <div class="menu" id="menu">
+      <div class="cols">
+        <div>
+          <h3>Côté marmite</h3>
+          <ul>
+            <li>Rougail saucisse</li>
+            <li>Carry d'espadon au miel</li>
+            <li>Poulet letchi</li>
+            <li>Gratin de chouchou</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Côté four</h3>
+          <ul>
+            <li>Pizzas au feu de bois<small>sur place ou à emporter</small></li>
+            <li>Jus de fruits pressés<small>une touche vitaminée</small></li>
+            <li>Café torréfié sur place<small>pour finir le repas avec caractère</small></li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">La carte du jour vous attend au comptoir · repas sur place ou à emporter</p>
+    </div>
+  </div>
+</section>
+
+<section class="assiettes" id="lieu">
+  <div class="wrap">
+    <p class="eyebrow rv">Chez nous</p>
+    <h2 class="rv">Pierre, bois et nappes à coquelicots</h2>
+    <p class="glisse rv">Faites glisser →</p>
+    <div class="galerie rv">
+      <figure><img src="img/salle-pierre.jpg" alt="Salle aux murs de pierre, poutres bleues et chaises orange" loading="lazy"><figcaption><b>La salle de pierre</b>Murs de pierre, poutres bleues et chaises en bois paillées.</figcaption></figure>
+      <figure><img src="img/comptoir.jpg" alt="Le comptoir en bois et briques du Gouléo, tabourets et murs ocre" loading="lazy"><figcaption><b>Le comptoir</b>Bois, briques et murs ocre, au cœur de la maison.</figcaption></figure>
+      <figure><img src="img/salle-nappes.jpg" alt="Salle lumineuse, tables rondes aux nappes vertes fleuries et tableaux aux murs" loading="lazy"><figcaption><b>La salle lumineuse</b>Tables rondes, nappes fleuries et la lumière du cirque.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cafe" id="cafe">
+  <div class="wrap grid">
+    <div class="tasse rv">
+      <svg viewBox="0 0 300 260" aria-hidden="true">
+        <path class="vap" d="M120 70c-14-18 14-26 0-46" fill="none" stroke="#cc6633" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+        <path class="vap v2" d="M150 74c-14-20 14-28 0-50" fill="none" stroke="#cc6633" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+        <path class="vap v3" d="M180 70c-14-18 14-26 0-46" fill="none" stroke="#cc6633" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+        <ellipse cx="150" cy="226" rx="120" ry="20" fill="#4a7c3e" opacity=".25"/>
+        <path d="M70 96h160l-14 104a26 26 0 0 1-26 22h-80a26 26 0 0 1-26-22z" fill="#c84c2a"/>
+        <path d="M228 116c34 0 38 52 0 56" fill="none" stroke="#c84c2a" stroke-width="12"/>
+        <ellipse cx="150" cy="96" rx="80" ry="12" fill="#4b2a1d"/>
+        <g fill="#fff" opacity=".9"><circle cx="110" cy="150" r="7"/><circle cx="150" cy="168" r="7"/><circle cx="190" cy="150" r="7"/></g>
+        <g fill="#6b3a24"><ellipse cx="40" cy="214" rx="9" ry="6" transform="rotate(-25 40 214)"/><ellipse cx="262" cy="210" rx="9" ry="6" transform="rotate(20 262 210)"/><ellipse cx="248" cy="226" rx="9" ry="6"/></g>
+      </svg>
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Le petit plus</p>
+      <h2>Un café torréfié sur place</h2>
+      <p class="citation">« Mention spéciale au café torréfié sur place, qui clôture le repas avec caractère. »</p>
+      <p class="src">Présentation du Gouléo, office de tourisme de l'Est</p>
+      <p style="margin-top:1.2rem">Après la marmite ou la pizza, la tasse qui fait la différence : un café grillé ici même, à Hell-Bourg, à savourer en terrasse avant de repartir sur les sentiers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils en parlent</p>
+    <h2 class="rv">Un vrai bon goût des hauts</h2>
+    <div class="note-g rv"><b>4,7</b><div><div class="etoiles">★★★★★</div><span style="font-size:.85rem;color:#b9c8b5">313 avis Google</span></div></div>
+    <div class="grid">
+      <blockquote class="rv">« Les plats étaient généreux et très bon ! Un vrai bon goût des hauts même ! »<span>Avis Google, novembre 2026</span></blockquote>
+      <blockquote class="rv">« Très bon restaurant avec des plats succulents. Le service est rapide. »<span>Avis Google, novembre 2026</span></blockquote>
+      <blockquote class="rv">« Jolie découverte que ce resto à hellbourg… sympatique accueil des propriétaires. »<span>Avis Google, septembre 2026</span></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offrez une escale gourmande à Hell-Bourg</h2>
+    <div class="bon rv">
+      <svg class="noeud" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 19c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#4a7c3e"/><path d="M21 19l-6 25 9-6 9 6-6-25" fill="#2f5a2a"/><circle cx="24" cy="19" r="3.6" fill="#f0a04b"/></svg>
+      <span class="main">Un repas à offrir</span>
+      <b>Le Gouléo</b>
+      <span class="sm">Restaurant · Pizzéria · Hell-Bourg</span>
+    </div>
+    <p class="rv">Un déjeuner créole au cœur du cirque, des pizzas au feu de bois à emporter pour la tablée des fêtes : écrivez-nous pour organiser votre moment gourmand ou faire plaisir à un proche.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692623624?text=Bonjour%20Le%20Goul%C3%A9o%2C%20je%20voudrais%20offrir%20un%20repas%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Offrir un repas</a>
+      <a class="btn btn-line" href="https://wa.me/262692623624?text=Bonjour%20Le%20Goul%C3%A9o%2C%20je%20voudrais%20commander%20des%20pizzas%20%C3%A0%20emporter%20pour%20les%20f%C3%AAtes">Pizzas pour les fêtes</a>
+    </div>
+    <p class="leg">Illustration : carte à offrir</p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Venir nous voir</p>
+      <h2>Au centre de Hell-Bourg</h2>
+      <p>Garez-vous au parking public du village, et suivez la rue du Général de Gaulle jusqu'à la façade rose aux lambrequins blancs. On vous installe en salle ou en terrasse.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-dark" href="tel:+262692623624">Appeler le 0692 62 36 24</a>
+        <a class="btn btn-main" href="https://www.google.com/maps/search/?api=1&amp;query=-21.0655421%2C55.5192279">Itinéraire</a>
+      </div>
+    </div>
+    <div class="carte-info rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=-21.0655421%2C55.5192279">46 rue du Général de Gaulle, Hell-Bourg<br>97433 Salazie, La Réunion</a></dd></div>
+        <div><dt>Horaires</dt><dd>
+          <table class="horaires">
+            <tr><td>Lundi</td><td>11h30 – 15h30</td></tr>
+            <tr><td>Mardi</td><td>11h30 – 15h30</td></tr>
+            <tr class="ferme"><td>Mercredi</td><td>jour de repos</td></tr>
+            <tr><td>Jeudi</td><td>11h30 – 15h30</td></tr>
+            <tr><td>Vendredi</td><td>11h30 – 15h30</td></tr>
+            <tr><td>Samedi</td><td>11h30 – 15h30</td></tr>
+            <tr><td>Dimanche</td><td>11h30 – 15h30</td></tr>
+          </table></dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+262692623624">0692 62 36 24</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:legouleosalazie@gmail.com">legouleosalazie@gmail.com</a></dd></div>
+        <div><dt>Paiement</dt><dd>Cartes bancaires</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Le Gouléo</b> · Restaurant-pizzéria · Hell-Bourg, Salazie, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des informations et photos publiées par Le Gouléo.</footer>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv,#menu').forEach(function(el){io.observe(el)});
+document.querySelectorAll('#menu li').forEach(function(li,i){li.style.transitionDelay=(i*.15)+'s'});
+if(reduce)return;
+/* braises du feu de bois qui montent + brume légère du cirque de Salazie */
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(init){var b=Math.random()<.3;return b?{b:1,x:Math.random()*W,y:init?Math.random()*H:Math.random()*H,r:40+Math.random()*50,vx:.12+Math.random()*.18,vy:0,a:0,m:.05,ph:Math.random()*6.28}:{b:0,x:Math.random()*W,y:init?Math.random()*H:H+10,r:1+Math.random()*1.8,vx:(Math.random()-.5)*.25,vy:-(.25+Math.random()*.5),a:0,m:.35+Math.random()*.35,ph:Math.random()*6.28}}
+for(var i=0;i<26;i++)P.push(mk(true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.x+=p.vx+(p.b?0:Math.sin(t/900+p.ph)*.3);p.y+=p.vy;if(p.a<p.m)p.a+=.004;
+if(p.y<-20||p.x>W+120){P[i]=mk(false);if(P[i].b)P[i].x=-100;continue}
+var R=p.b?p.r:p.r*4,g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,R);
+if(p.b){g.addColorStop(0,'rgba(240,244,236,'+p.a+')');g.addColorStop(1,'rgba(240,244,236,0)')}
+else{var fl=p.a*(.7+.3*Math.sin(t/200+p.ph));g.addColorStop(0,'rgba(255,214,150,'+fl+')');g.addColorStop(.25,'rgba(204,102,51,'+fl*.55+')');g.addColorStop(1,'rgba(200,76,42,0)')}
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,R,0,6.283);x.fill()}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Gouléo" defer></script>
+</body>
+</html>

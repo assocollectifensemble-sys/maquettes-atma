@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Luciolle Head Spa · Rituels head spa et soins naturels du cuir chevelu à Saint-Denis</title>
+<meta name="description" content="Luciolle Head Spa, 65 rue Sainte-Marie à Saint-Denis : rituels head spa sur mesure, diagnostic du cuir chevelu, soins aux poudres de plantes, argiles et hydrolats, massages et coupe énergétique, par Lucille, coiffeuse depuis près de 20 ans.">
+<meta property="og:title" content="Luciolle Head Spa · Saint-Denis">
+<meta property="og:description" content="Un espace intimiste, pensé pour ralentir : rituels head spa sur mesure et soins naturels du cuir chevelu, rue Sainte-Marie.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/luciolle-head-spa-saint-denis/img/og-luciolle.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/luciolle-head-spa-saint-denis/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Allura&display=swap" rel="stylesheet">
+<style>
+:root{--sauge:#707459;--sauge2:#5d6149;--nuit:#33362a;--nuit2:#272a20;--lin:#d8c0a8;--lin2:#ead9c4;--creme:#f8f2e9;--bois:#b98a5e;--or:#f2c14e;--or2:#ffe39a;--txt:#3a3a2f;--doux:#76705f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08;color:var(--nuit)}
+h2{font-size:clamp(2.1rem,6.4vw,3.3rem);margin:.35rem 0 1.1rem}
+h3{font-size:1.5rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--sauge2);font-weight:500}
+.script{font-family:Allura,cursive;font-weight:400}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit2);color:var(--lin2);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(242,193,78,.3)}
+.ribbon b{color:var(--or);font-weight:500}
+canvas#lucioles{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.92rem;transition:.35s;text-align:center}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--or);color:var(--nuit2);box-shadow:0 14px 34px -14px rgba(242,193,78,.9);animation:souffle 4.8s ease-in-out infinite}
+.btn-main:hover{background:var(--or2)}
+@keyframes souffle{50%{box-shadow:0 16px 46px -6px rgba(242,193,78,.7);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(234,217,196,.6);color:var(--creme);background:rgba(255,255,255,.07)}
+.btn-line:hover{background:rgba(255,255,255,.16)}
+.btn-dark{background:var(--sauge2);color:var(--creme)}
+.btn-dark:hover{background:var(--nuit)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--sauge2);color:var(--creme);padding:0 0 3.6rem}
+.hero .photo{position:relative;height:clamp(340px,95vw,470px);overflow:hidden;margin-top:2rem}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:42% 62%;animation:kenburns 28s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.05)}to{transform:scale(1.17) translate(1.5%,-2%)}}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(51,54,42,.35) 0%,rgba(93,97,73,0) 25%,rgba(93,97,73,0) 58%,var(--sauge2) 100%)}
+.hero-in{position:relative;z-index:3;margin-top:-3.2rem}
+.hero .logo{width:min(330px,78vw);height:auto;filter:drop-shadow(0 6px 18px rgba(39,42,32,.35));margin:0 0 .4rem -2%}
+.hero h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero .eyebrow{color:var(--lin2)}
+.hero .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.35rem,4.6vw,1.85rem);line-height:1.35;margin:1rem 0 1.8rem;max-width:33rem;color:#fff;text-shadow:0 1px 12px rgba(39,42,32,.35)}
+.hero .adr{margin-top:1.4rem;font-size:.92rem;color:#f6eee0}
+.note-etoiles{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.86rem;color:#f4ead9;background:rgba(39,42,32,.25);border:1px solid rgba(234,217,196,.3);border-radius:999px;padding:.35rem .9rem}
+.note-etoiles i{font-style:normal;color:var(--or);letter-spacing:.1em}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.3s .25s forwards}
+.d2{animation-delay:.6s}.d3{animation-delay:1s}.d4{animation-delay:1.35s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau */
+.bande{background:var(--nuit);color:var(--lin2);overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Allura,cursive;font-size:1.75rem;border-top:1px solid rgba(242,193,78,.2);border-bottom:1px solid rgba(242,193,78,.2)}
+.track{display:inline-block;animation:defile 46s linear infinite}
+.track span{margin:0 1.2rem}
+.track span::after{content:"✦";margin-left:2.4rem;font-size:.8rem;color:var(--or);font-family:Jost,sans-serif}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* esprit */
+.esprit .grid{display:grid;grid-template-columns:1fr;gap:2.6rem;align-items:center}
+.esprit p{margin-bottom:1rem}
+.big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,4.2vw,1.7rem);line-height:1.4;color:var(--sauge2)}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.4rem}
+.chip{border:1px solid #d9c7ab;border-radius:999px;padding:.35rem .9rem;font-size:.85rem;background:#fffaf2}
+.arche{position:relative;border-radius:220px 220px 26px 26px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(51,54,42,.75);max-width:420px;margin:auto;width:100%}
+.arche img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:kenburns 24s ease-in-out infinite alternate}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.4rem}
+.stat{background:#fffaf2;border:1px solid #e6d8c2;border-radius:16px;padding:.9rem .4rem;text-align:center}
+.stat b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.85rem;font-weight:600;color:var(--sauge2);line-height:1}
+.stat span{font-size:.72rem;letter-spacing:.05em;color:var(--doux)}
+
+/* feuille de séparation */
+.feuilles{height:60px;background:var(--creme);position:relative}
+.feuilles svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* déroulé */
+.deroule{background:linear-gradient(180deg,var(--lin2) 0%,var(--creme) 100%)}
+.etapes{display:grid;gap:1rem;margin-top:1.8rem;counter-reset:e}
+.etape{position:relative;background:#fffaf2;border:1px solid #e6d8c2;border-radius:20px;padding:1.3rem 1.3rem 1.2rem 4.2rem;transition:transform .4s,box-shadow .4s}
+.etape:hover{transform:translateY(-4px);box-shadow:0 24px 40px -28px rgba(51,54,42,.6)}
+.etape::before{counter-increment:e;content:counter(e);position:absolute;left:1.1rem;top:1.15rem;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--sauge);color:var(--creme);display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.25rem;box-shadow:0 0 0 5px rgba(242,193,78,.18)}
+.etape b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--nuit);line-height:1.2;margin-bottom:.2rem}
+.etape span{font-size:.95rem}
+.pluie{margin-top:2rem;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,4.2vw,1.6rem);color:var(--sauge2);text-align:center}
+
+/* rituels */
+.rituels{background:var(--nuit);color:var(--lin2);overflow:hidden}
+.rituels h2{color:var(--creme)}
+.rituels .eyebrow{color:var(--or)}
+.rituels .intro{max-width:36rem;color:#ddd2bf}
+.cartes{display:grid;gap:1rem;margin-top:2rem}
+.carte{position:relative;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(216,192,168,.25);border-radius:22px;padding:1.4rem 1.3rem 1.3rem;transition:transform .45s,border-color .45s}
+.carte:hover{transform:translateY(-5px);border-color:rgba(242,193,78,.6)}
+.carte .duree{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--or)}
+.carte h3{color:var(--creme);font-size:1.75rem;margin:.25rem 0 .4rem}
+.carte p{font-size:.95rem;color:#d9cfbe}
+.carte .prix{position:absolute;top:1.2rem;right:1.2rem;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or2)}
+.carte.reco{border-color:rgba(242,193,78,.65);background:linear-gradient(160deg,rgba(242,193,78,.14),rgba(255,255,255,.03))}
+.carte .badge{display:inline-block;margin-top:.7rem;font-size:.75rem;letter-spacing:.06em;background:var(--or);color:var(--nuit2);border-radius:999px;padding:.2rem .7rem;font-weight:500}
+.sous-carte{display:grid;gap:1.4rem;margin-top:2.6rem}
+.liste{background:rgba(255,255,255,.04);border:1px solid rgba(216,192,168,.2);border-radius:20px;padding:1.3rem}
+.liste h3{color:var(--creme);font-size:1.45rem;margin-bottom:.2rem}
+.liste .accroche{font-family:Allura,cursive;font-size:1.6rem;color:var(--or2);line-height:1.2;margin-bottom:.6rem}
+.liste ul{list-style:none;display:grid;gap:.55rem}
+.liste li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed rgba(216,192,168,.22);padding-bottom:.5rem;font-size:.95rem}
+.liste li em{font-style:normal;color:var(--or2);white-space:nowrap;font-family:'Cormorant Garamond',serif;font-size:1.15rem}
+.liste li small{display:block;color:#b9b09f;font-size:.8rem}
+.tarifs-note{font-size:.8rem;color:#b9b09f;margin-top:1.6rem}
+
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 5vw 1.4rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 82%;scroll-snap-align:center;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 26px 50px -32px rgba(51,54,42,.8);transition:transform .45s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.4deg)}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.galerie figcaption{padding:.9rem 1.1rem 1.1rem;font-size:.9rem;color:var(--doux)}
+.galerie figcaption b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--nuit)}
+.glisse{font-family:Allura,cursive;font-size:1.6rem;color:var(--sauge2)}
+
+/* coupe énergétique */
+.coupe .grid{display:grid;gap:2.2rem;align-items:center}
+.citation{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,4.3vw,1.75rem);line-height:1.38;color:var(--sauge2);border-left:3px solid var(--or);padding-left:1.1rem;margin:1rem 0 1.1rem}
+.citation + small{color:var(--doux);font-size:.85rem}
+.coupe .photo-c{border-radius:26px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(51,54,42,.7)}
+.coupe .photo-c img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* avis */
+.avis{background:var(--sauge2);color:var(--creme);text-align:center;overflow:hidden}
+.avis h2{color:var(--creme)}
+.avis .eyebrow{color:var(--lin2)}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;max-width:520px;margin:1.4rem auto 2.2rem}
+.notes div{background:rgba(39,42,32,.22);border:1px solid rgba(234,217,196,.25);border-radius:14px;padding:.7rem .4rem;font-size:.82rem;color:#efe5d4}
+.notes b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--or2);font-weight:500;line-height:1}
+.temoins{display:grid;gap:1.2rem;max-width:880px;margin:auto}
+blockquote{background:var(--creme);color:var(--txt);border-radius:22px;padding:1.5rem 1.4rem 1.2rem;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.3rem;line-height:1.4;font-style:italic;box-shadow:0 30px 60px -36px rgba(39,42,32,.9);position:relative}
+blockquote::before{content:"“";position:absolute;top:-.6rem;left:1rem;font-size:4rem;color:var(--or);line-height:1;font-style:normal}
+blockquote cite{display:block;margin-top:.8rem;font-family:Jost,sans-serif;font-style:normal;font-size:.8rem;color:var(--doux);letter-spacing:.04em}
+
+/* bon à savoir */
+.savoir .grid{display:grid;gap:1rem;margin-top:1.6rem}
+.savoir .item{display:flex;gap:1rem;align-items:flex-start;background:#fffaf2;border:1px solid #e6d8c2;border-radius:18px;padding:1.1rem 1.2rem}
+.savoir .item svg{width:30px;height:30px;flex:none;color:var(--sauge2);margin-top:.15rem}
+.savoir .item b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;color:var(--nuit);line-height:1.2}
+.savoir .item span{font-size:.95rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}
+.rv.vu{opacity:1;transform:none}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#454a37 0%,var(--nuit2) 72%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--or)}
+.noel p{max-width:35rem;margin:0 auto 1.6rem;color:#e6dccb}
+.bon{position:relative;max-width:440px;margin:.6rem auto 2rem;background:linear-gradient(135deg,#7a7e62,#5d6149);color:var(--lin2);border-radius:18px;padding:1.6rem 1.4rem 1.5rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.85);transform:rotate(-1.5deg)}
+.bon::before{content:"";position:absolute;inset:8px;border:1px solid rgba(234,217,196,.45);border-radius:12px;pointer-events:none}
+.bon img{width:min(250px,70%);margin:0 auto .4rem}
+.bon .sm{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--lin2);display:block}
+.bon .pour{font-family:Allura,cursive;font-size:1.9rem;color:var(--or2);display:block;margin-top:.4rem}
+.bon .noeud{position:absolute;top:-14px;right:24px;width:48px;height:48px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.75rem;color:#a9a48f;margin-top:.9rem}
+
+/* contact */
+.contact .grid{display:grid;gap:2rem}
+.carte-info{background:#fffaf2;border:1px solid #e6d8c2;border-radius:22px;padding:1.6rem 1.4rem}
+.carte-info dl{display:grid;gap:1rem}
+.carte-info dt{font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge2);font-weight:500}
+.carte-info dd{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-info dd a{text-decoration:none;border-bottom:1px solid #cdb895}
+.horaires{display:grid;grid-template-columns:auto 1fr;gap:.15rem 1.2rem;font-size:.97rem}
+.horaires .ferme{color:var(--doux)}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#cfc5b1;background:var(--nuit2)}
+footer b{color:var(--or);font-weight:500}
+
+@media(min-width:860px){
+ .esprit .grid{grid-template-columns:1.1fr .9fr;gap:4rem}
+ .coupe .grid{grid-template-columns:1.05fr .95fr;gap:4rem}
+ .contact .grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+ .galerie figure{flex:0 0 31%}
+ .hero .photo{height:min(64vh,580px)}
+ .hero .photo img{object-position:45% 64%}
+ .etapes{grid-template-columns:1fr 1fr}
+ .cartes{grid-template-columns:1fr 1fr}
+ .sous-carte{grid-template-columns:1fr 1fr}
+ .temoins{grid-template-columns:1fr 1fr}
+ .savoir .grid{grid-template-columns:1fr 1fr}
+ .notes{grid-template-columns:repeat(4,1fr);max-width:720px}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1!important;transform:none!important}
+ canvas#lucioles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Luciolle Head Spa</div>
+<canvas id="lucioles" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="photo"><img src="img/table-head-spa.webp" srcset="img/table-head-spa-m.webp 800w, img/table-head-spa.webp 1400w" sizes="100vw" alt="La table de head spa de Luciolle : bac en bois et arche d'eau, étagères de soins, plantes suspendues et lumière dorée" fetchpriority="high"></div>
+  <div class="wrap hero-in">
+    <img class="logo apparait" src="img/logo-luciolle.png" alt="Luciolle Head Spa" width="900" height="325">
+    <h1>Luciolle Head Spa, Saint-Denis</h1>
+    <p class="eyebrow apparait d2">Head spa · soins du cuir chevelu · rue Sainte-Marie, Saint-Denis</p>
+    <p class="lead apparait d3">Ici, tu entres dans un espace intimiste, pensé pour ralentir : un lieu où on prend le temps, vraiment.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://www.planity.com/luciolle-head-spa-97400-saint-denis"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>Réserver mon rituel</a>
+      <a class="btn btn-line" href="tel:+262693440492">Appeler le 0693 44 04 92</a>
+    </div>
+    <p class="note-etoiles apparait d4"><i>★★★★★</i> 5,0 sur Planity · 63 avis</p>
+    <p class="adr apparait d4">65 rue Sainte-Marie, 97400 Saint-Denis · du mardi au samedi</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Rituels head spa</span><span>Poudres de plantes</span><span>Argiles</span><span>Hydrolats</span><span>Arche de pluie</span><span>Coupe énergétique</span><span>Renaissance Capillaire</span><span>Access Bars</span>
+  <span>Rituels head spa</span><span>Poudres de plantes</span><span>Argiles</span><span>Hydrolats</span><span>Arche de pluie</span><span>Coupe énergétique</span><span>Renaissance Capillaire</span><span>Access Bars</span>
+</div></div>
+
+<section class="esprit" id="esprit">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Bienvenue chez Luciolle</p>
+      <h2>Tes cheveux racontent une histoire. On l'écoute ensemble ?</h2>
+      <p class="big">Coiffeuse depuis près de 20 ans, Lucille s'est spécialisée dans l'analyse et la compréhension du cheveu et du cuir chevelu.</p>
+      <p>Au-delà du « faire beau », son objectif : t'aider à trouver ou retrouver un cuir chevelu confortable et des cheveux sains. Elle travaille au maximum avec des produits naturels, poudres de plantes, argiles et hydrolats, choisis pour leur puissance et leur respect du vivant.</p>
+      <p>Cliente ou client, cheveux courts, longs, lisses, texturés, en transition ou en questionnement : chacun·e est accueilli·e avec la même attention et la même écoute. Ici, tu peux parler, ou simplement venir respirer.</p>
+      <div class="chips"><span class="chip">Soin entièrement sur mesure</span><span class="chip">Produits naturels</span><span class="chip">Caméra d'analyse du cuir chevelu</span><span class="chip">Espace privé</span></div>
+      <div class="stats">
+        <div class="stat"><b>~20</b><span>ans de métier</span></div>
+        <div class="stat"><b>5,0</b><span>note Planity</span></div>
+        <div class="stat"><b>63</b><span>avis clients</span></div>
+      </div>
+    </div>
+    <div class="arche rv"><img src="img/coin-miroir.webp" srcset="img/coin-miroir-m.webp 800w, img/coin-miroir.webp 1400w" sizes="(min-width:860px) 420px, 90vw" alt="Le coin miroir de Luciolle : grand miroir aux bords ondulés encadré de plantes, coiffeuse en bois et fauteuil en rotin au coussin jaune" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="deroule" id="deroule">
+  <div class="wrap">
+    <p class="eyebrow rv">Le déroulé d'un rituel</p>
+    <h2 class="rv">Tu choisis le temps que tu t'accordes, Lucille s'occupe du reste</h2>
+    <div class="etapes">
+      <div class="etape rv"><b>L'échange et le diagnostic</b><span>Un moment d'écoute et un diagnostic approfondi avec une caméra d'analyse du cuir chevelu, pour imaginer ensemble le soin qui te correspond. Une trentaine de minutes lors d'une première visite.</span></div>
+      <div class="etape rv"><b>Les soins du cuir chevelu</b><span>Argiles, poudres de plantes et huiles essentielles pour purifier, apaiser, rééquilibrer ou stimuler la pousse.</span></div>
+      <div class="etape rv"><b>Les cheveux, le visage, les massages</b><span>Soins végétaux profonds pour gainer la fibre, exfoliation douce et masque du visage, massages relaxants ou stimulants.</span></div>
+      <div class="etape rv"><b>L'arche de pluie, puis la mise en beauté</b><span>Chaque rituel comprend un shampooing, un soin des longueurs, un moment de détente sous l'arche de pluie et une mise en beauté légère pour repartir en douceur.</span></div>
+    </div>
+    <p class="pluie rv">« Parce que tes cheveux ont leur propre histoire, prenons le temps de les écouter. »</p>
+  </div>
+</section>
+
+<section class="rituels" id="rituels">
+  <div class="wrap">
+    <p class="eyebrow rv">La carte</p>
+    <h2 class="rv">Les rituels Head-Spa</h2>
+    <p class="intro rv">Chaque personne est unique : chaque rituel est entièrement personnalisé. Plus tu choisis de temps, plus les soins peuvent s'approfondir, se combiner, ou laisser place à l'échange.</p>
+    <div class="cartes">
+      <article class="carte rv"><span class="prix">95 €</span><span class="duree">1 heure</span><h3>L'échappée</h3><p>Une parenthèse de bien-être pour découvrir l'univers Luciolle ou profiter d'un soin ciblé.</p></article>
+      <article class="carte reco rv"><span class="prix">135 €</span><span class="duree">1 h 30</span><h3>L'évasion</h3><p>L'équilibre idéal entre diagnostic, soins et détente.</p><span class="badge">Recommandée pour une première expérience</span></article>
+      <article class="carte rv"><span class="prix">160 €</span><span class="duree">2 heures</span><h3>Le Voyage</h3><p>Une immersion complète dans l'univers du Head Spa : cuir chevelu, cheveux et visage, ou un massage en plus.</p></article>
+      <article class="carte rv"><span class="prix">240 €</span><span class="duree">3 heures</span><h3>L'envolée</h3><p>Bien plus qu'un Head Spa, une expérience profondément personnelle. Ici, rien ne presse : le temps t'appartient.</p></article>
+    </div>
+    <div class="sous-carte">
+      <div class="liste rv">
+        <h3>Les massages cuir chevelu &amp; visage</h3>
+        <p class="accroche">des mains, de l'huile végétale et du temps</p>
+        <ul>
+          <li><span>Le relaxant<small>un massage pour ralentir</small></span><em>30 min · 50 €</em></li>
+          <li><span>L'énergisant<small>inspiré du massage ayurvédique</small></span><em>30 min · 50 €</em></li>
+          <li><span>Le sensoriel<small>pour les addicts des papouilles</small></span><em>30 min · 50 €</em></li>
+          <li><span>Le visage<small>pour un éclat naturel</small></span><em>30 min · 50 €</em></li>
+          <li><span>Le profond<small>deux massages de la carte</small></span><em>1 h · 80 €</em></li>
+        </ul>
+      </div>
+      <div class="liste rv">
+        <h3>Les options</h3>
+        <p class="accroche">à vivre seules ou en complément</p>
+        <ul>
+          <li><span>Diagnostic capillaire<small>avec caméra d'observation</small></span><em>30 min · 30 €</em></li>
+          <li><span>Haute fréquence<small>oxygénation et microcirculation</small></span><em>15 min · 20 €</em></li>
+          <li><span>Luminothérapie LED<small>stimulation lumineuse du cuir chevelu</small></span><em>20 min · 20 €</em></li>
+          <li><span>Access Bars®<small>32 points sur la tête, pour apaiser le mental</small></span><em>1 h · 60 €</em></li>
+        </ul>
+      </div>
+      <div class="liste rv">
+        <h3>Renaissance Capillaire</h3>
+        <p class="accroche">un accompagnement sur la durée</p>
+        <ul>
+          <li><span>Appel diagnostic<small>le premier échange, pour bien démarrer</small></span><em>30 min</em></li>
+          <li><span>Cure de 6 séances<small>haute fréquence, micro-needling, LED</small></span><em>dès 650 €</em></li>
+          <li><span>1 séance demi-tête<small>cheveux propres et secs</small></span><em>1 h 30 · 120 €</em></li>
+          <li><span>1 séance tête entière<small>cheveux propres et secs</small></span><em>2 h · 150 €</em></li>
+        </ul>
+      </div>
+      <div class="liste rv">
+        <h3>La touche coiffure</h3>
+        <p class="accroche">toujours avec la touche Luciolle</p>
+        <ul>
+          <li><span>Coupe + coiffage, après un rituel<small>courts, mi-longs, longs</small></span><em>35 à 45 €</em></li>
+          <li><span>Coiffage, après un rituel<small>courts, mi-longs</small></span><em>20 à 25 €</em></li>
+          <li><span>Coupe + coiffage, seule<small>shampooing et soin des longueurs</small></span><em>44 à 54 €</em></li>
+          <li><span>Coiffage, seul<small>courts, mi-longs</small></span><em>29 à 34 €</em></li>
+        </ul>
+      </div>
+    </div>
+    <p class="tarifs-note rv">Tarifs et descriptions publiés par Luciolle Head Spa sur sa page Planity (novembre 2026).</p>
+  </div>
+</section>
+
+<section class="lieu" id="lieu">
+  <div class="wrap">
+    <p class="eyebrow rv">Le lieu</p>
+    <h2 class="rv">Un cocon de bois, de plantes et de lumière dorée</h2>
+    <p class="glisse rv">fais glisser →</p>
+    <div class="galerie rv">
+      <figure><img src="img/table-head-spa-m.webp" alt="La table de head spa avec son bac en bois et l'arche d'eau, sous un luminaire en rotin" loading="lazy"><figcaption><b>La table de head spa</b>Le bac en bois et l'arche de pluie.</figcaption></figure>
+      <figure><img src="img/cabine-soin-m.webp" alt="La cabine de soin : table au drap vert, étagères de pots et flacons, guirlande lumineuse" loading="lazy"><figcaption><b>La cabine</b>Un espace privé pour s'installer, sous un plaid tout doux.</figcaption></figure>
+      <figure><img src="img/comptoir-plantes-m.webp" alt="Comptoir en bois avec flacons ambrés, bougies, panier tressé et plante suspendue" loading="lazy"><figcaption><b>Le coin des soins</b>Flacons ambrés, bougies et plantes.</figcaption></figure>
+      <figure><img src="img/espace-produits-m.webp" alt="L'espace d'accueil : étagères en bois de produits capillaires, chaises en rotin et lierre suspendu" loading="lazy"><figcaption><b>L'accueil</b>Les produits et le rotin, dans la lumière du soir.</figcaption></figure>
+      <figure><img src="img/coin-miroir-m.webp" alt="Grand miroir ondulé encadré de plantes, coiffeuse en bois et fauteuil en rotin" loading="lazy"><figcaption><b>Le coin miroir</b>Pour la mise en beauté, avant de repartir en douceur.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="coupe" id="coupe">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Un rituel à part · 2 h · 120 €</p>
+      <h2>La coupe énergétique</h2>
+      <p class="citation">« Tu ressens le besoin de te délester de quelque chose, de couper avec ce qui ne te correspond plus ? Et si tes cheveux t'accompagnaient dans cette démarche ? »</p>
+      <small>Lucille, sur la page Planity de Luciolle</small>
+      <p style="margin-top:1.2rem">Un temps d'écoute pour poser une intention, un tirage de cartes si tu le souhaites, puis shampooing, masque et massage du cuir chevelu. Vient ensuite la coupe au rasoir, mèche par mèche, en pleine conscience, et une harmonisation pour apporter de la brillance. Tout ce qui se partage reste entre vous.</p>
+    </div>
+    <div class="photo-c rv"><img src="img/cabine-soin.webp" srcset="img/cabine-soin-m.webp 800w, img/cabine-soin.webp 1400w" sizes="(min-width:860px) 500px, 90vw" alt="La cabine de soin de Luciolle, lumière chaude et plantes" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils et elles en parlent</p>
+    <h2 class="rv">5,0 sur 63 avis</h2>
+    <div class="notes rv">
+      <div><b>5,0</b>Accueil</div><div><b>5,0</b>Propreté</div><div><b>4,9</b>Cadre &amp; ambiance</div><div><b>5,0</b>Qualité</div>
+    </div>
+    <div class="temoins">
+      <blockquote class="rv">Lucille est d’une douceur incomparable ! Le soin a été un pur moment de détente et de relaxation. Je reviendrais sans hésiter pour un autre moment de zenitude<cite>Avis client sur Planity, 04/11/2026</cite></blockquote>
+      <blockquote class="rv">Une expérience Head Spa trop trop trop bien ! Adepte de ces soins je suis ravie d'avoir croisé le chemin de Lucille. J'y retournerai avec grand plaisir et je recommande sans modération !<cite>Avis client sur Planity, avril 2025</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="savoir" id="savoir">
+  <div class="wrap">
+    <p class="eyebrow rv">Avant ton rendez-vous</p>
+    <h2 class="rv">Pour savourer chaque minute</h2>
+    <div class="grid">
+      <div class="item rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 3c3 4 5 6.5 5 9.5a5 5 0 0 1-10 0C7 9.5 9 7 12 3z"/></svg><div><b>Le shampooing, c'est pour Lucille</b><span>Viens tel·le que tu es : elle s'occupe de tout.</span></div></div>
+      <div class="item rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 18c2-6 14-6 16 0M6 13c0-4 2.5-7 6-7s6 3 6 7"/></svg><div><b>Viens comme tu es</b><span>Un espace privé t'attend pour t'installer en toute intimité, sous un plaid tout doux.</span></div></div>
+      <div class="item rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l2.5 2M9 3h6"/></svg><div><b>Arrive à l'heure</b><span>Pour profiter pleinement de chaque minute de ton expérience.</span></div></div>
+      <div class="item rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><div><b>Bijoux légers</b><span>Ils se retirent avant le soin : viens-en avec le moins possible pour gagner du temps.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offre un moment chez Luciolle</h2>
+    <div class="bon rv">
+      <svg class="noeud" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 19c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#f2c14e"/><path d="M21 19l-6 24 9-6 9 6-6-24" fill="#d9a93a"/><circle cx="24" cy="19" r="3.5" fill="#ffe39a"/></svg>
+      <span class="sm">Un moment à offrir</span>
+      <img src="img/logo-luciolle.png" alt="" width="900" height="325" loading="lazy">
+      <span class="pour">un temps tout à soi</span>
+    </div>
+    <p class="rv">Un rituel pour ralentir, un massage du cuir chevelu, une parenthèse tout à soi : écris à Lucille pour offrir un moment chez Luciolle à quelqu'un que tu aimes.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262693440492?text=Bonjour%20Lucille%2C%20je%20voudrais%20offrir%20un%20moment%20chez%20Luciolle%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Offrir un moment Luciolle</a>
+      <a class="btn btn-line" href="tel:+262693440492">Appeler Lucille</a>
+    </div>
+    <p class="leg">Illustration : carte à offrir</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Venir chez Luciolle</p>
+      <h2>Prends le temps, vraiment</h2>
+      <p>Réservation en ligne 24 h/24 sur Planity, avec confirmation immédiate. Pour la cure Renaissance Capillaire ou une question, Lucille répond au téléphone.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="https://www.planity.com/luciolle-head-spa-97400-saint-denis">Réserver sur Planity</a>
+        <a class="btn btn-dark" href="tel:+262693440492">0693 44 04 92</a>
+      </div>
+    </div>
+    <div class="carte-info rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Luciolle%20Head%20Spa%2065%20rue%20Sainte-Marie%2097400%20Saint-Denis">65 rue Sainte-Marie<br>97400 Saint-Denis, La Réunion</a></dd></div>
+        <div><dt>Téléphone</dt><dd><a href="tel:+262693440492">0693 44 04 92</a></dd></div>
+        <div><dt>Horaires</dt><dd><div class="horaires">
+          <span>Mardi → vendredi</span><span>9 h – 19 h</span>
+          <span>Samedi</span><span>9 h – 16 h</span>
+          <span class="ferme">Dimanche, lundi</span><span class="ferme">repos</span>
+        </div></dd></div>
+        <div><dt>Réservation</dt><dd><a href="https://www.planity.com/luciolle-head-spa-97400-saint-denis">planity.com · Luciolle Head Spa</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Luciolle Head Spa</b> · Rituels head spa et soins naturels du cuir chevelu · Saint-Denis, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Luciolle Head Spa.</footer>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(reduce)return;
+/* lucioles : de petites lueurs dorées qui flottent et clignotent doucement */
+var c=document.getElementById('lucioles'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(){return{x:Math.random()*W,y:Math.random()*H,r:1.1+Math.random()*1.8,a:Math.random()*6.28,v:.12+Math.random()*.28,ph:Math.random()*6.28,f:.6+Math.random()*1.2}}
+var n=W<600?18:28;for(var i=0;i<n;i++)P.push(mk());
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.a+=(Math.random()-.5)*.08;p.x+=Math.cos(p.a)*p.v;p.y+=Math.sin(p.a)*p.v-.05;
+if(p.x<-20)p.x=W+20;if(p.x>W+20)p.x=-20;if(p.y<-20)p.y=H+20;if(p.y>H+20)p.y=-20;
+var g=Math.pow((Math.sin(t/1000*p.f+p.ph)+1)/2,3)*.55+.04,R=p.r*7;
+var gr=x.createRadialGradient(p.x,p.y,0,p.x,p.y,R);
+gr.addColorStop(0,'rgba(255,236,160,'+g+')');gr.addColorStop(.18,'rgba(242,193,78,'+g*.6+')');gr.addColorStop(1,'rgba(242,193,78,0)');
+x.fillStyle=gr;x.beginPath();x.arc(p.x,p.y,R,0,6.283);x.fill()}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Luciolle Head Spa" defer></script>
+</body>
+</html>

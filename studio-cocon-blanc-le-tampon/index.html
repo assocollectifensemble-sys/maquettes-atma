@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Studio Cocon Blanc · Photographe famille, grossesse et naissance au Tampon</title>
+<meta name="description" content="Studio Cocon Blanc, photographe au Tampon (La Réunion) pour vos plus beaux moments en famille : grossesse, naissance, famille, baptême, communion, Smash the Cake, Splash Milk. Infos et réservations au 06 92 46 03 87.">
+<meta property="og:title" content="Studio Cocon Blanc · Vos plus beaux moments en famille">
+<meta property="og:description" content="Grossesse, naissance, famille, Smash the Cake, séances de Noël : des souvenirs précieux à garder pour toujours, au studio du Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/studio-cocon-blanc-le-tampon/img/og-cocon-blanc.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/studio-cocon-blanc-le-tampon/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f7f3ee;--lin:#efe7de;--blanc:#fffdfa;
+  --or:#b8956a;--or-clair:#d9c3a2;--taupe:#a89080;--rose:#c4a5a0;--rose-pale:#ecdcd7;
+  --terre:#a0644e;--encre:#4a3a33;--doux:#7a6a61;--nuit:#2f2723;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;font-weight:300;color:var(--encre);background:var(--creme);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.12;color:var(--encre)}
+h2{font-size:clamp(2rem,6vw,3rem)}
+.eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or);font-weight:500;margin-bottom:.8rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.3rem}
+.wrap>*,.grille>*,.posts>*,.choix>*,.mosaique>*{min-width:0}
+body{overflow-x:clip}
+section{position:relative;padding:5rem 0}
+.script{font-family:'Pinyon Script',cursive;font-weight:400}
+
+/* ruban */
+.ribbon{background:var(--encre);color:#efe4d8;font-size:.8rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em;position:relative;z-index:5}
+.ribbon b{color:var(--or-clair);font-weight:500}
+
+/* plumes */
+#duvet{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+
+/* nav */
+nav{position:sticky;top:0;z-index:4;background:rgba(247,243,238,.86);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid rgba(184,149,106,.22)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+nav .mini{display:flex;align-items:baseline;gap:.4rem;text-decoration:none}
+nav .mini .script{font-size:1.5rem;color:var(--rose);line-height:1}
+nav .mini b{font-weight:500;letter-spacing:.24em;font-size:.78rem;color:var(--taupe)}
+nav .liens{display:flex;gap:1.3rem;font-size:.85rem}
+nav .liens a{text-decoration:none;color:var(--doux)}
+nav .liens a:hover{color:var(--terre)}
+nav .call{font-size:.82rem;text-decoration:none;border:1px solid var(--or);color:var(--terre);padding:.4rem .9rem;border-radius:99px;white-space:nowrap}
+@media(max-width:760px){nav .liens{display:none}}
+
+/* hero */
+.hero{padding:3.5rem 0 4.5rem;overflow:hidden;background:radial-gradient(70% 60% at 85% 20%,var(--rose-pale) 0%,transparent 70%),radial-gradient(60% 60% at 0% 100%,#efe3d3 0%,transparent 70%),var(--creme)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.logo-cb{width:118px;height:118px;margin-bottom:1.2rem;opacity:0;animation:monte 1.2s .1s ease forwards}
+.hero h1{font-size:clamp(2.6rem,9vw,4.6rem);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);opacity:0;animation:monte 1.2s .35s ease forwards}
+.hero h1 .script{display:block;text-transform:none;letter-spacing:0;color:var(--rose);font-size:.82em;margin-bottom:-.35em;margin-left:.1em}
+.hero .accroche{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.3rem,4.4vw,1.75rem);color:var(--encre);margin:1.2rem 0 .6rem;max-width:30rem;opacity:0;animation:monte 1.2s .6s ease forwards}
+.hero .lieu{font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;color:var(--doux);opacity:0;animation:monte 1.2s .8s ease forwards}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem;opacity:0;animation:monte 1.2s 1s ease forwards}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.5rem;border-radius:99px;text-decoration:none;font-weight:400;font-size:.95rem;transition:transform .3s,box-shadow .3s,background .3s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--terre);color:#fff;box-shadow:0 10px 26px -12px rgba(160,100,78,.8);animation:respire 3.6s ease-in-out infinite}
+.btn-main:hover{transform:translateY(-2px);background:#8f5643}
+.btn-line{border:1px solid var(--or);color:var(--encre);background:rgba(255,253,250,.6)}
+.btn-line:hover{background:var(--blanc)}
+@keyframes respire{0%,100%{box-shadow:0 10px 26px -12px rgba(160,100,78,.8)}50%{box-shadow:0 14px 34px -10px rgba(160,100,78,.95),0 0 0 6px rgba(184,149,106,.12)}}
+@keyframes monte{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.arche{position:relative;justify-self:center;width:min(100%,400px);opacity:0;animation:monte 1.4s .5s ease forwards}
+.arche .cadre{border-radius:220px 220px 22px 22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 70px -40px rgba(74,58,51,.55);border:8px solid var(--blanc);outline:1px solid var(--or-clair);outline-offset:8px}
+.arche .cadre img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-2%)}}
+.arche .badge{position:absolute;left:-18px;bottom:34px;background:var(--blanc);border-radius:16px;padding:.8rem 1.1rem;box-shadow:0 20px 40px -24px rgba(74,58,51,.6);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;color:var(--terre);max-width:230px;line-height:1.25}
+.arche .badge small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-top:.3rem}
+@media(max-width:820px){
+  .hero{padding-top:2.4rem}
+  .hero .wrap{grid-template-columns:minmax(0,1fr);gap:2.6rem;text-align:center}
+  .logo-cb{margin:0 auto 1rem}
+  .hero .accroche{margin-left:auto;margin-right:auto}
+  .ctas{justify-content:center}
+  .arche{width:min(86%,360px)}
+  .arche .badge{left:-6px}
+}
+
+/* bandeau */
+.bandeau{background:var(--encre);color:var(--or-clair);overflow:hidden;padding:.95rem 0;position:relative;z-index:2}
+.bandeau .piste{display:flex;width:max-content;animation:defile 38s linear infinite}
+.bandeau span{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;padding:0 1.4rem;white-space:nowrap}
+.bandeau span::after{content:"✦";font-style:normal;font-size:.7rem;margin-left:2.8rem;color:var(--rose)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* esprit */
+.esprit{background:var(--blanc);z-index:2}
+.esprit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.esprit blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.25;color:var(--terre);margin:1rem 0 1.4rem}
+.esprit p{color:var(--doux);margin-bottom:1rem;max-width:32rem}
+.esprit figure{position:relative}
+.esprit figure img{border-radius:18px;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 40%;filter:contrast(1.02)}
+.esprit figure::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--or-clair);border-radius:22px;z-index:-1}
+figcaption{font-size:.76rem;color:var(--taupe);margin-top:.7rem;letter-spacing:.04em}
+@media(max-width:820px){.esprit .wrap{grid-template-columns:minmax(0,1fr);gap:2.4rem}.esprit figure::before{inset:-10px 10px 10px -10px}}
+
+/* vague */
+.vague{display:block;width:100%;height:60px;position:relative;z-index:2}
+
+/* séances */
+.seances{background:var(--creme);z-index:2}
+.seances .tete{text-align:center;max-width:38rem;margin:0 auto 3rem}
+.seances .tete p{color:var(--doux)}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.3rem}
+.carte{background:var(--blanc);border-radius:22px;padding:2rem 1.5rem 1.7rem;text-align:center;border:1px solid rgba(184,149,106,.2);transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(74,58,51,.5)}
+.pastille{width:86px;height:86px;margin:0 auto 1.1rem;border-radius:50%;background:var(--creme);display:grid;place-items:center;position:relative;box-shadow:inset 0 0 0 2px var(--or-clair)}
+.pastille::after{content:"";position:absolute;inset:5px;border-radius:50%;border:1px solid var(--or)}
+.pastille svg{width:40px;height:40px;color:var(--terre)}
+.carte h3{font-size:1.55rem;margin-bottom:.15rem}
+.carte .age{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:.7rem}
+.carte p{font-size:.93rem;color:var(--doux)}
+
+/* galerie noël + publications */
+.journal{background:var(--blanc);z-index:2}
+.journal .tete{text-align:center;max-width:36rem;margin:0 auto 2.6rem}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.post{background:var(--creme);border-radius:20px;padding:1.6rem 1.4rem;position:relative;border:1px solid rgba(184,149,106,.18)}
+.post time{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:.6rem}
+.post q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;line-height:1.3;color:var(--encre);display:block;margin-bottom:.7rem;quotes:"« " " »"}
+.post p{font-size:.88rem;color:var(--doux)}
+@media(max-width:860px){.posts{grid-template-columns:minmax(0,1fr)}}
+
+/* noël */
+.noel{background:radial-gradient(110% 80% at 50% 0%,#4a3b33 0%,var(--nuit) 72%);color:#efe4d8;z-index:2;overflow:hidden}
+.noel h2{color:#fbf3e8}
+.noel .eyebrow{color:var(--or-clair)}
+.noel .intro{max-width:36rem;margin:0 auto 2.6rem;text-align:center}
+.noel .intro p{color:#d9cbbd}
+.flocons{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 20% 30%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 70% 20%,rgba(255,255,255,.45),transparent),radial-gradient(2px 2px at 40% 80%,rgba(255,255,255,.35),transparent),radial-gradient(1.5px 1.5px at 85% 65%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 10% 70%,rgba(255,255,255,.5),transparent);background-size:340px 340px;animation:neige 26s linear infinite;opacity:.8}
+@keyframes neige{to{background-position:0 340px,40px 340px,-30px 340px,20px 340px,0 340px}}
+.mosaique{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:auto;gap:1rem;margin-bottom:2.8rem;position:relative}
+.mosaique figure{margin:0}
+.mosaique img{width:100%;height:300px;object-fit:cover;border-radius:16px;box-shadow:0 26px 50px -30px #000}
+.mosaique figcaption{color:#bfae9d}
+@media(max-width:820px){.mosaique{grid-template-columns:1fr 1fr}.mosaique figure:first-child{grid-column:1/-1}.mosaique img{height:220px}.mosaique figure:first-child img{height:200px}}
+.choix{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;max-width:860px;margin:0 auto;position:relative}
+.choix .bloc{background:rgba(255,253,250,.06);border:1px solid rgba(217,195,162,.3);border-radius:22px;padding:1.8rem 1.5rem;text-align:center}
+.choix h3{color:#fbf3e8;font-size:1.65rem;margin-bottom:.5rem}
+.choix p{color:#d9cbbd;font-size:.95rem;margin-bottom:1.3rem}
+.choix .bon{background:linear-gradient(140deg,#f8f1e6,#ead9c2);color:var(--encre);transform:rotate(-1.2deg);position:relative}
+.choix .bon::before{content:"";position:absolute;inset:8px;border:1px dashed rgba(160,100,78,.45);border-radius:15px;pointer-events:none}
+.choix .bon h3{color:var(--encre)}
+.choix .bon p{color:var(--doux)}
+.choix .bon .script{font-size:2.1rem;color:var(--rose);display:block;line-height:1}
+.choix .btn{justify-content:center}
+.noel .citation{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.3rem;color:var(--or-clair);max-width:34rem;margin:2.6rem auto 0}
+.noel .leg{font-size:.74rem;color:#a89586;text-align:center;margin-top:.7rem}
+@media(max-width:760px){.choix{grid-template-columns:minmax(0,1fr)}}
+
+/* contact */
+.contact{background:var(--creme);z-index:2}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.contact ul{list-style:none;margin:1.4rem 0 1.8rem}
+.contact li{display:flex;gap:.9rem;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid rgba(184,149,106,.25)}
+.contact li svg{width:20px;height:20px;color:var(--or);flex:none;margin-top:.2rem}
+.contact li a{text-decoration:none;border-bottom:1px solid transparent}
+.contact li a:hover{border-color:var(--or)}
+.contact li span{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--taupe)}
+.contact .photo{position:relative}
+.contact .photo img{border-radius:200px 200px 20px 20px;aspect-ratio:3/4;object-fit:cover;width:min(100%,340px);margin:0 auto;border:7px solid var(--blanc);box-shadow:0 30px 60px -36px rgba(74,58,51,.6)}
+.contact .photo figcaption{text-align:center}
+@media(max-width:820px){.contact .wrap{grid-template-columns:minmax(0,1fr);gap:2.4rem}}
+
+footer{background:var(--encre);color:#d8cabd;text-align:center;font-size:.85rem;padding:2.2rem 1.3rem;position:relative;z-index:2}
+footer b{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--or-clair);letter-spacing:.08em}
+
+/* apparition */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv,.logo-cb,.hero h1,.hero .accroche,.hero .lieu,.ctas,.arche{opacity:1!important;transform:none!important}
+  #duvet{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Studio Cocon Blanc</div>
+<canvas id="duvet" aria-hidden="true"></canvas>
+
+<nav>
+  <div class="wrap">
+    <a class="mini" href="#haut"><span class="script">Studio</span><b>COCON BLANC</b></a>
+    <div class="liens"><a href="#seances">Séances</a><a href="#journal">Nouvelles</a><a href="#noel">Noël</a><a href="#contact">Contact</a></div>
+    <a class="call" href="tel:+262692460387">06 92 46 03 87</a>
+  </div>
+</nav>
+
+<header class="hero" id="haut">
+  <div class="wrap">
+    <div>
+      <svg class="logo-cb" viewBox="0 0 120 120" aria-label="Monogramme Cocon Blanc">
+        <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#d9c3a2"/><stop offset=".5" stop-color="#b8956a"/><stop offset="1" stop-color="#9c7b55"/></linearGradient></defs>
+        <circle cx="60" cy="60" r="56" fill="#fffdfa" stroke="url(#g)" stroke-width="2"/>
+        <circle cx="60" cy="60" r="50" fill="none" stroke="url(#g)" stroke-width=".8"/>
+        <text x="60" y="73" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="40" font-weight="500" fill="url(#g)" letter-spacing="-2">CB</text>
+        <path d="M30 86 Q60 98 90 86" fill="none" stroke="#c4a5a0" stroke-width="1"/>
+      </svg>
+      <h1><span class="script">Studio</span>Cocon Blanc</h1>
+      <p class="accroche">Photographe à la Réunion pour vos plus beaux moments en famille.</p>
+      <p class="lieu">Grossesse · Naissance · Famille · Le Tampon</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692460387?text=Bonjour%20Studio%20Cocon%20Blanc%2C%20je%20voudrais%20des%20infos%20pour%20une%20s%C3%A9ance%20photo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver ma séance</a>
+        <a class="btn btn-line" href="#seances">Découvrir les séances</a>
+      </div>
+    </div>
+    <figure class="arche">
+      <div class="cadre"><img src="img/petites-mains-nb.jpg" alt="Petites mains de bébé, photo en noir et blanc du Studio Cocon Blanc" width="621" height="621"></div>
+      <div class="badge">La douceur des premiers instants…<small>Séance naissance au studio</small></div>
+    </figure>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Grossesse</span><span>Naissance</span><span>Bébé « Sitter »</span><span>Smash the Cake</span><span>Splash Milk</span><span>Famille</span><span>Baptême</span><span>Communion</span><span>Séances de Noël</span>
+  <span>Grossesse</span><span>Naissance</span><span>Bébé « Sitter »</span><span>Smash the Cake</span><span>Splash Milk</span><span>Famille</span><span>Baptême</span><span>Communion</span><span>Séances de Noël</span>
+</div></div>
+
+<section class="esprit">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Le cocon</p>
+      <h2>Des souvenirs précieux, à garder pour toujours</h2>
+      <blockquote>« Le plus doux des câlins… »</blockquote>
+      <p>Au studio du Tampon, chaque séance se vit tout en douceur et en amour : un ventre qui s'arrondit, les premiers jours de bébé, une famille qui s'agrandit, un premier anniversaire qui finit dans le gâteau.</p>
+      <p>Des tendresses, des éclats de rire et de jolies complicités, immortalisés pour les garder à jamais.</p>
+    </div>
+    <figure class="rv">
+      <img src="img/mains-naissance-nb.jpg" alt="Main d'un parent et petite main de bébé, en noir et blanc" width="1080" height="340" loading="lazy">
+      <figcaption>Séance naissance au studio · photo Studio Cocon Blanc</figcaption>
+    </figure>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="background:var(--blanc)"><path d="M0 30 C 240 70 480 0 720 26 S 1200 60 1440 22 V60 H0z" fill="#f7f3ee"/></svg>
+
+<section class="seances" id="seances">
+  <div class="wrap">
+    <div class="tete rv">
+      <p class="eyebrow">Les séances</p>
+      <h2>Chaque étape de votre histoire</h2>
+      <p>De l'attente aux premiers pas, et toutes les belles occasions en famille.</p>
+    </div>
+    <div class="grille">
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="24" cy="9" r="4"/><path d="M22 14c-3 3-4 8-3 13m6-13c4 2 9 7 9 13 0 5-5 7-9 6m-6-6c0 5 0 10-2 16m10-10 1 10"/></svg></div>
+        <h3>Babybump</h3><span class="age">Grossesse</span>
+        <p>Le joli temps de l'attente, pour garder en souvenir ce ventre qui s'arrondit, en solo ou en couple.</p>
+      </article>
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22h28a12 10 0 0 1-28 0z"/><path d="M10 22c0-8 6-13 14-13v13"/><circle cx="16" cy="38" r="3"/><circle cx="32" cy="38" r="3"/><path d="M38 22l4-6"/></svg></div>
+        <h3>Naissance</h3><span class="age">0 – 1 mois</span>
+        <p>Une séance naissance au studio, tout en douceur et en amour, pour la douceur des premiers instants.</p>
+      </article>
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="24" cy="15" r="6"/><path d="M14 40c0-8 4-14 10-14s10 6 10 14z"/><path d="M18 33h12"/></svg></div>
+        <h3>Bébé « Sitter »</h3><span class="age">6 – 12 mois</span>
+        <p>Entre 6 et 12 mois, bébé prend la pose et vous offre ses plus beaux sourires.</p>
+      </article>
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 26h28v14H10z"/><path d="M10 31c4 3 8-3 12 0s8-3 12 0 4 0 4 0"/><path d="M24 26v-8m-6 8v-6m12 6v-6"/><path d="M24 14c-1.5-2 0-4 0-4s1.5 2 0 4z"/></svg></div>
+        <h3>Smash the Cake</h3><span class="age">Premier anniversaire</span>
+        <p>Un gâteau rien que pour bébé, et toute la gourmandise d'une première bougie.</p>
+      </article>
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M24 8c6 9 10 14 10 20a10 10 0 0 1-20 0c0-6 4-11 10-20z"/><path d="M19 30a5 5 0 0 0 5 5"/><circle cx="38" cy="12" r="2"/><circle cx="10" cy="16" r="1.5"/></svg></div>
+        <h3>Splash Milk</h3><span class="age">Bain de lait</span>
+        <p>Une séance tout en blancheur et en éclaboussures, fidèle à l'esprit du cocon.</p>
+      </article>
+      <article class="carte rv">
+        <div class="pastille"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="15" cy="13" r="4"/><circle cx="33" cy="13" r="4"/><circle cx="24" cy="24" r="3"/><path d="M8 40c0-9 3-15 7-15s6 4 7 7m18 8c0-9-3-15-7-15s-6 4-7 7M19 40c0-5 2-9 5-9s5 4 5 9"/></svg></div>
+        <h3>Famille</h3><span class="age">Baptême · Communion</span>
+        <p>Vos plus beaux moments en famille, et les grandes occasions qui rassemblent tout le monde.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="journal" id="journal">
+  <div class="wrap">
+    <div class="tete rv">
+      <p class="eyebrow">Les dernières nouvelles du studio</p>
+      <h2>Vu sur notre page</h2>
+    </div>
+    <div class="posts">
+      <article class="post rv">
+        <time datetime="2026-11-05">5 novembre 2026</time>
+        <q>Le plus doux des câlins…</q>
+        <p>Blotti dans les bras de maman, bébé profite de toute sa tendresse. Une séance naissance au studio, tout en douceur et en amour.</p>
+      </article>
+      <article class="post rv">
+        <time datetime="2026-11-05">5 novembre 2026</time>
+        <q>La douceur des premiers instants…</q>
+        <p>Bébé blotti dans les bras de ses parents, un joli moment capturé en noir et blanc pour en révéler toute l'émotion.</p>
+      </article>
+      <article class="post rv">
+        <time datetime="2026-11-15">15 novembre 2026</time>
+        <q>Un petit lutin plein de malice !</q>
+        <p>Dans le décor enneigé « Boule de neige » de l'an dernier, un petit garçon se transforme en adorable renne puis en petit lutin.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="flocons" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="eyebrow">Offrir pour Noël</p>
+      <h2>Les séances de Noël 2026 sont ouvertes</h2>
+      <p>Cette année, deux univers de Noël totalement différents, pour vivre une jolie parenthèse en famille et créer de précieux souvenirs. Votre décor préféré, ou les deux pour profiter de deux ambiances.</p>
+    </div>
+    <div class="mosaique rv">
+      <figure><img src="img/lanternes-decor-neige.jpg" alt="Lanternes dorées et sapins givrés du décor de Noël du studio" width="1080" height="570" loading="lazy"><figcaption>Décor « Boule de neige », Noël dernier</figcaption></figure>
+      <figure><img src="img/cadeau-sapin-givre.jpg" alt="Paquet cadeau et branches de sapin givrées" width="660" height="660" loading="lazy"><figcaption>Les détails du décor</figcaption></figure>
+      <figure><img src="img/lanterne-givree.jpg" alt="Lanterne suspendue et lumières de Noël" width="510" height="1050" loading="lazy"><figcaption>Lumières du studio</figcaption></figure>
+    </div>
+    <div class="choix">
+      <div class="bloc rv">
+        <h3>Votre séance de Noël</h3>
+        <p>Un décor, ou les deux. Découvrez les thèmes de cette année et les formules en nous écrivant.</p>
+        <a class="btn btn-main" href="https://wa.me/262692460387?text=Bonjour%20Studio%20Cocon%20Blanc%2C%20je%20voudrais%20d%C3%A9couvrir%20vos%20th%C3%A8mes%20de%20No%C3%ABl%202026"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver ma séance de Noël</a>
+      </div>
+      <div class="bloc bon rv">
+        <span class="script">Un moment à offrir</span>
+        <h3>Offrez une séance</h3>
+        <p>Une séance grossesse, naissance ou famille au Studio Cocon Blanc, glissée sous le sapin.</p>
+        <a class="btn btn-line" href="https://wa.me/262692460387?text=Bonjour%20Studio%20Cocon%20Blanc%2C%20je%20voudrais%20offrir%20une%20s%C3%A9ance%20photo%20pour%20No%C3%ABl">Offrir une séance</a>
+      </div>
+    </div>
+    <p class="citation rv">« Parce que les plus beaux cadeaux de Noël sont parfois simplement les souvenirs que l'on crée ensemble. »</p>
+    <p class="leg">Réservations ouvertes, places limitées : par message privé ou au 06 92 46 03 87.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Infos &amp; réservations</p>
+      <h2>Écrivez-nous, on vous répond avec plaisir</h2>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><div><span>Téléphone &amp; WhatsApp</span><a href="tel:+262692460387">06 92 46 03 87</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><span>E-mail</span><a href="mailto:contact.coconblanc.run@gmail.com">contact.coconblanc.run@gmail.com</a></div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><span>Le studio</span>Le Tampon, La Réunion · séances sur réservation</div></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><div><span>Réseaux</span><a href="https://www.instagram.com/studio.coconblanc/">Instagram @studio.coconblanc</a> · <a href="https://www.facebook.com/StudioCoconBlanc">Facebook</a></div></li>
+      </ul>
+      <div class="ctas" style="opacity:1;animation:none">
+        <a class="btn btn-main" href="https://wa.me/262692460387?text=Bonjour%20Studio%20Cocon%20Blanc%2C%20je%20voudrais%20r%C3%A9server%20une%20s%C3%A9ance"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp</a>
+        <a class="btn btn-line" href="tel:+262692460387">Appeler</a>
+      </div>
+    </div>
+    <figure class="photo rv">
+      <img src="img/lanterne-givree.jpg" alt="Lanterne dorée du décor de Noël du studio" width="510" height="1050" loading="lazy">
+      <figcaption>Au studio, au Tampon</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer><b>Studio Cocon Blanc</b><br>Photographe famille, grossesse et naissance · Le Tampon, La Réunion<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Studio Cocon Blanc.</footer>
+
+<script>
+(()=>{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.getElementById('duvet'),x=c.getContext('2d');let W,H,dpr,run=true;
+  function size(){dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  const N=innerWidth<600?16:26,P=[];
+  for(let i=0;i<N;i++)P.push(nouv(true));
+  function nouv(d){return{x:Math.random()*W,y:d?Math.random()*H:-30,r:5+Math.random()*9,s:.18+Math.random()*.35,a:Math.random()*6.28,v:.004+Math.random()*.01,o:.18+Math.random()*.3,g:Math.random()<.35}}
+  function plume(p){x.save();x.translate(p.x,p.y);x.rotate(Math.sin(p.a)*.6);x.globalAlpha=p.o;
+    x.fillStyle=p.g?'#d9c3a2':'#ffffff';x.beginPath();x.ellipse(0,0,p.r*.42,p.r,0,0,6.283);x.fill();
+    x.strokeStyle=p.g?'#b8956a':'#e6d6c4';x.lineWidth=.7;x.beginPath();x.moveTo(0,-p.r);x.lineTo(0,p.r*1.25);x.stroke();x.restore()}
+  function tick(){if(run){x.clearRect(0,0,W,H);for(const p of P){p.a+=p.v;p.y+=p.s;p.x+=Math.sin(p.a)*.45;if(p.y>H+30)Object.assign(p,nouv(false));plume(p)}}requestAnimationFrame(tick)}
+  document.addEventListener('visibilitychange',()=>{run=!document.hidden});
+  tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Studio Cocon Blanc" defer></script>
+</body>
+</html>
