@@ -1,0 +1,25 @@
+{
+  "name": "Votre Restaurant · Appli test, avant de la développer à vos couleurs",
+  "short_name": "Votre Restaurant",
+  "description": "Appli test de commande : commandez votre plat et retirez-le à l'heure choisie.",
+  "lang": "fr",
+  "start_url": "./#/client",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F4EF",
+  "theme_color": "#2F5D62",
+  "icons": [
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

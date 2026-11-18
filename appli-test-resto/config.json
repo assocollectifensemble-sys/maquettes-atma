@@ -1,0 +1,560 @@
+{
+  "_commentaire": "Appli test, restaurant fictif « Votre Restaurant ». Fichier unique de thème et de contenu : remplacer ce fichier (et img/) puis lancer python data/generer.py pour produire l'appli d'un vrai restaurant. Tous les prix sont des estimations [E] (champ \"estime\": true), à remplacer par ceux du restaurant. Vignettes illustrées : champ \"icone\" (emoji), en attendant les photos du restaurant.",
+  "id": "votre-restaurant",
+  "nom": "Votre Restaurant",
+  "sousTitre": "Appli test, avant de la développer à vos couleurs",
+  "accroche": "Bonjour !",
+  "remerciement": "Merci et à tout à l'heure !",
+  "logo": "img/logo.png",
+  "ville": "La Réunion",
+  "adresse": "Votre adresse ici, La Réunion",
+  "cheffe": "le chef",
+  "gerant": "l'équipe",
+  "couleurs": {
+    "primaire": "#2F5D62",
+    "accent": "#E9A23B",
+    "fond": "#F6F4EF",
+    "encre": "#1F2D2E",
+    "doux": "#5F6B6C",
+    "succes": "#2F7D4F"
+  },
+  "horaires": {
+    "mar": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "mer": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "jeu": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "ven": [
+      [
+        "11:30",
+        "14:00"
+      ],
+      [
+        "18:00",
+        "20:00"
+      ]
+    ],
+    "sam": [
+      [
+        "11:30",
+        "14:00"
+      ]
+    ]
+  },
+  "heuresLimites": {
+    "midi": "11:00",
+    "soir": "17:30"
+  },
+  "creneaux": {
+    "pasMinutes": 15,
+    "capaciteParCreneau": 4,
+    "midi": [
+      "11:45",
+      "12:00",
+      "12:15",
+      "12:30",
+      "12:45",
+      "13:00",
+      "13:15",
+      "13:30"
+    ],
+    "soir": [
+      "18:15",
+      "18:30",
+      "18:45",
+      "19:00",
+      "19:15",
+      "19:30",
+      "19:45"
+    ]
+  },
+  "atouts": [
+    {
+      "icone": "🌿",
+      "titre": "Barquettes écologiques",
+      "texte": "Vos plats voyagent dans des barquettes compostables, choisies avec soin."
+    },
+    {
+      "icone": "🧑‍🍳",
+      "titre": "Cuisiné maison",
+      "texte": "Des recettes du pays et un menu qui suit le marché."
+    }
+  ],
+  "fidelite": {
+    "objectif": 10,
+    "recompense": "le 10e plat offert"
+  },
+  "remarquesRapides": [
+    "Plus de sauce",
+    "Rougail à part",
+    "Moins de riz",
+    "Bien pimenté",
+    "Couverts en plus"
+  ],
+  "publication": {
+    "menuVeille": "20:00",
+    "platSpecial": "05:00",
+    "canaux": [
+      "Site",
+      "Facebook",
+      "Instagram",
+      "Google",
+      "Assistant"
+    ]
+  },
+  "categories": {
+    "plat": "Plats",
+    "entree": "À picorer",
+    "dessert": "Desserts",
+    "boisson": "Boissons"
+  },
+  "plats": [
+    {
+      "id": "carri-poulet",
+      "nom": "Carri poulet",
+      "desc": "Riz blanc, grains, rougail tomate",
+      "prix": 9.5,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🍛",
+      "mots": [
+        "carri poulet",
+        "cari poulet"
+      ],
+      "court": "carri poulet"
+    },
+    {
+      "id": "rougail-saucisse",
+      "nom": "Rougail saucisses",
+      "desc": "Saucisses fumées, tomate, riz et grains",
+      "prix": 9.5,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🌭",
+      "mots": [
+        "rougail saucisse",
+        "rougail saucisses",
+        "saucisse",
+        "saucisses"
+      ],
+      "court": "rougail saucisses"
+    },
+    {
+      "id": "cari-thon",
+      "nom": "Cari thon",
+      "desc": "Thon frais, curcuma, riz blanc, grains",
+      "prix": 11,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🐟",
+      "mots": [
+        "cari thon",
+        "carri thon",
+        "thon"
+      ],
+      "court": "cari thon"
+    },
+    {
+      "id": "civet-zourite",
+      "nom": "Civet de zourite",
+      "desc": "Poulpe mijoté au vin, riz blanc, grains",
+      "prix": 13,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🐙",
+      "mots": [
+        "civet",
+        "zourite"
+      ],
+      "court": "civet zourite"
+    },
+    {
+      "id": "cari-cabri",
+      "nom": "Cari cabri massalé",
+      "desc": "Cabri mijoté au massalé, riz blanc, grains",
+      "prix": 12.5,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🥘",
+      "mots": [
+        "cabri",
+        "massale"
+      ],
+      "court": "cari cabri"
+    },
+    {
+      "id": "rougail-boucane",
+      "nom": "Rougail boucané",
+      "desc": "Porc fumé, tomate, riz blanc, grains",
+      "prix": 10.5,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🥓",
+      "mots": [
+        "boucane",
+        "rougail boucane"
+      ],
+      "court": "rougail boucané"
+    },
+    {
+      "id": "bol-poulet",
+      "nom": "Bol poulet grillé",
+      "desc": "Poulet mariné, riz, crudités, sauce maison",
+      "prix": 10,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🍗",
+      "mots": [
+        "bol poulet",
+        "poulet grille"
+      ],
+      "court": "bol poulet"
+    },
+    {
+      "id": "cari-legumes",
+      "nom": "Cari de légumes lontan",
+      "desc": "Légumes du marché, curcuma, riz blanc, grains",
+      "prix": 8.5,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🥕",
+      "mots": [
+        "cari legume",
+        "cari legumes",
+        "cari de legume",
+        "cari de legumes"
+      ],
+      "court": "cari légumes"
+    },
+    {
+      "id": "salade",
+      "nom": "Salade composée",
+      "desc": "Crudités du marché, œuf, palmiste, vinaigrette maison",
+      "prix": 8,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🥗",
+      "mots": [
+        "salade"
+      ],
+      "court": "salade"
+    },
+    {
+      "id": "americain",
+      "nom": "Américain poulet",
+      "desc": "Pain, poulet, frites, crudités, sauce au choix",
+      "prix": 7,
+      "estime": true,
+      "cat": "plat",
+      "icone": "🥖",
+      "mots": [
+        "americain",
+        "sandwich"
+      ],
+      "court": "américain"
+    },
+    {
+      "id": "samoussas",
+      "nom": "Samoussas",
+      "desc": "À l'unité, poulet, fromage ou légumes",
+      "prix": 1,
+      "estime": true,
+      "cat": "entree",
+      "icone": "🥟",
+      "mots": [
+        "samoussa",
+        "samoussas"
+      ],
+      "court": "samoussas"
+    },
+    {
+      "id": "bouchons",
+      "nom": "Bouchons",
+      "desc": "À l'unité, à la vapeur, sauce soja",
+      "prix": 0.8,
+      "estime": true,
+      "cat": "entree",
+      "icone": "🍙",
+      "mots": [
+        "bouchon",
+        "bouchons"
+      ],
+      "court": "bouchons"
+    },
+    {
+      "id": "bonbons-piment",
+      "nom": "Bonbons piment",
+      "desc": "Les 5, croustillants",
+      "prix": 2,
+      "estime": true,
+      "cat": "entree",
+      "icone": "🌶️",
+      "mots": [
+        "bonbon piment",
+        "bonbons piment",
+        "bonbon"
+      ],
+      "court": "bonbons piment"
+    },
+    {
+      "id": "gateau-patate",
+      "nom": "Gâteau patate",
+      "desc": "Patate douce, vanille, cannelle",
+      "prix": 3,
+      "estime": true,
+      "cat": "dessert",
+      "icone": "🍠",
+      "mots": [
+        "gateau patate",
+        "gateau"
+      ],
+      "court": "gâteau patate"
+    },
+    {
+      "id": "flan-coco",
+      "nom": "Flan coco",
+      "desc": "Lait de coco, caramel maison",
+      "prix": 3,
+      "estime": true,
+      "cat": "dessert",
+      "icone": "🥥",
+      "mots": [
+        "flan",
+        "flan coco"
+      ],
+      "court": "flan coco"
+    },
+    {
+      "id": "jus-maison",
+      "nom": "Jus maison du jour",
+      "desc": "Fruits de saison, 33 cl",
+      "prix": 3.5,
+      "estime": true,
+      "cat": "boisson",
+      "icone": "🧃",
+      "mots": [
+        "jus"
+      ],
+      "court": "jus maison"
+    },
+    {
+      "id": "eau",
+      "nom": "Eau minérale",
+      "desc": "50 cl",
+      "prix": 1.5,
+      "estime": true,
+      "cat": "boisson",
+      "icone": "💧",
+      "mots": [
+        "eau"
+      ],
+      "court": "eau"
+    }
+  ],
+  "rotation": {
+    "_commentaire": "Exemple de rotation sur 3 semaines (S1/S2/S3), à remplacer par celle du restaurant.",
+    "lundiReferenceS1": "2026-11-02",
+    "special": {
+      "mar": "rougail-boucane",
+      "mer": "cari-cabri",
+      "jeu": "cari-thon",
+      "ven": "civet-zourite",
+      "sam": "bol-poulet"
+    },
+    "base": [
+      "carri-poulet",
+      "rougail-saucisse",
+      "samoussas",
+      "bouchons",
+      "jus-maison",
+      "eau"
+    ],
+    "semaines": {
+      "S1": {
+        "mar": [
+          "cari-legumes",
+          "salade",
+          "gateau-patate"
+        ],
+        "mer": [
+          "americain",
+          "cari-legumes",
+          "flan-coco"
+        ],
+        "jeu": [
+          "salade",
+          "bonbons-piment",
+          "gateau-patate"
+        ],
+        "ven": [
+          "cari-legumes",
+          "americain",
+          "bonbons-piment",
+          "flan-coco"
+        ],
+        "sam": [
+          "salade",
+          "gateau-patate"
+        ]
+      },
+      "S2": {
+        "mar": [
+          "americain",
+          "salade",
+          "flan-coco"
+        ],
+        "mer": [
+          "cari-legumes",
+          "bonbons-piment",
+          "gateau-patate"
+        ],
+        "jeu": [
+          "cari-legumes",
+          "americain",
+          "flan-coco"
+        ],
+        "ven": [
+          "salade",
+          "cari-legumes",
+          "gateau-patate"
+        ],
+        "sam": [
+          "americain",
+          "flan-coco"
+        ]
+      },
+      "S3": {
+        "mar": [
+          "cari-legumes",
+          "bonbons-piment",
+          "flan-coco"
+        ],
+        "mer": [
+          "salade",
+          "americain",
+          "gateau-patate"
+        ],
+        "jeu": [
+          "cari-legumes",
+          "salade",
+          "flan-coco"
+        ],
+        "ven": [
+          "americain",
+          "bonbons-piment",
+          "cari-legumes",
+          "gateau-patate"
+        ],
+        "sam": [
+          "cari-legumes",
+          "flan-coco"
+        ]
+      }
+    }
+  },
+  "demo": {
+    "heureDepart": "10:20",
+    "intervalleNouvelleCommandeSec": 20,
+    "clientDemo": {
+      "nom": "Julie M.",
+      "tel": "06 92 00 00 01",
+      "tampons": 7,
+      "habitude": [
+        [
+          "carri-poulet",
+          1
+        ],
+        [
+          "samoussas",
+          3
+        ]
+      ],
+      "remarque": "Plus de sauce"
+    },
+    "clientMessenger": "Kevin L."
+  },
+  "faq": [
+    {
+      "q": [
+        "horaire",
+        "ouvert",
+        "ouvre",
+        "heure"
+      ],
+      "r": "Nous vous accueillons du mardi au vendredi, 11 h 30 à 14 h et 18 h à 20 h, et le samedi midi, 11 h 30 à 14 h. Commandes jusqu'à 11 h pour le midi et 17 h 30 pour le soir 😉"
+    },
+    {
+      "q": [
+        "adresse",
+        "ou etes",
+        "trouver",
+        "parking",
+        "venir"
+      ],
+      "r": "Ici s'affiche l'adresse de votre restaurant, avec le lien vers l'itinéraire. À tout à l'heure !"
+    },
+    {
+      "q": [
+        "vegetarien",
+        "vege",
+        "vegan"
+      ],
+      "r": "Le cari de légumes lontan et la salade composée vous attendent selon les jours, avec les samoussas légumes. Le chef adapte aussi volontiers un plat : précisez-le dans votre message."
+    },
+    {
+      "q": [
+        "payer",
+        "paiement",
+        "carte",
+        "cb",
+        "especes"
+      ],
+      "r": "Vous réglez en ligne dans l'appli, ou sur place au retrait, comme vous préférez."
+    },
+    {
+      "q": [
+        "livraison",
+        "livrer",
+        "livrez"
+      ],
+      "r": "Ici, c'est à emporter : votre plat vous attend au comptoir à l'heure choisie."
+    },
+    {
+      "q": [
+        "piment",
+        "epice",
+        "allergie"
+      ],
+      "r": "Le rougail piment est servi à part : vous dosez à votre goût. Pour une allergie, indiquez-la dans votre message, le chef en tient compte."
+    }
+  ],
+  "manifeste": {
+    "nomCourt": "Votre Restaurant",
+    "description": "Appli test de commande : commandez votre plat et retirez-le à l'heure choisie."
+  }
+}
