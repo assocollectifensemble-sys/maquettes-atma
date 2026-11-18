@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Il Était Une Fois dans l'Est · Snack-restaurant créole à Sainte-Anne</title>
+<meta name="description" content="Cuisine créole faite maison à deux pas de l'église de Sainte-Anne : poulet sucré-salé, civet de cerf, terrasse avec vue sur l'océan et objets lontan.">
+<meta property="og:title" content="Il Était Une Fois dans l'Est · Sainte-Anne">
+<meta property="og:description" content="Un voyage gourmand au cœur de Sainte-Anne : cuisine créole faite maison et terrasse face à l'océan.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/il-etait-une-fois-dans-lest-sainte-anne/img/og-table-baie-vitree.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/il-etait-une-fois-dans-lest-sainte-anne/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papier:#fbf4e4;--papier2:#f4e7cc;--encre:#2c2018;--encre2:#5b4a3c;
+  --ocre:#e0ab3a;--miel:#9a5a2c;--fuchsia:#c23a78;--ocean:#1d5c78;--ocean2:#103e52;--vert:#2f6a3f;
+  --r:18px;--ombre:0 18px 40px -18px rgba(44,32,24,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito Sans",system-ui,sans-serif;color:var(--encre);background:var(--papier);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.12}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.ribbon{background:var(--ocean2);color:#f6e9cc;font-size:13.5px;text-align:center;padding:8px 14px;letter-spacing:.01em}
+.ribbon b{color:var(--ocre)}
+
+/* NAV */
+nav.top{position:sticky;top:0;z-index:30;background:rgba(251,244,228,.9);backdrop-filter:blur(8px);border-bottom:1px solid rgba(154,90,44,.18)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+.marque{font-family:Fraunces,serif;font-style:italic;font-size:19px;font-weight:600;text-decoration:none;white-space:nowrap}
+.marque span{color:var(--fuchsia)}
+nav.top ul{display:flex;gap:22px;list-style:none;font-size:15px;font-weight:600}
+nav.top ul a{text-decoration:none;opacity:.85}
+nav.top ul a:hover{color:var(--fuchsia)}
+.btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:13px 22px;font-weight:700;text-decoration:none;font-size:16px;transition:transform .25s,box-shadow .25s,background .25s;border:0;cursor:pointer}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-p{background:var(--fuchsia);color:#fff;box-shadow:0 10px 22px -10px rgba(194,58,120,.8)}
+.btn-p:hover{transform:translateY(-2px);background:#a92e66}
+.btn-o{background:transparent;color:var(--encre);border:2px solid rgba(44,32,24,.25)}
+.btn-o:hover{border-color:var(--ocean);color:var(--ocean)}
+.btn-s{padding:9px 16px;font-size:14.5px}
+.respire{animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 10px 30px -6px rgba(194,58,120,.65)}}
+
+/* HERO */
+.hero{position:relative;padding:54px 0 120px;overflow:hidden;background:
+  radial-gradient(800px 420px at 85% 10%,rgba(224,171,58,.28),transparent 60%),
+  radial-gradient(600px 400px at 0% 100%,rgba(29,92,120,.14),transparent 60%),var(--papier)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative;z-index:2}
+.surtitre{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--miel)}
+.surtitre::before{content:"";width:34px;height:2px;background:var(--ocre)}
+.hero h1{font-size:clamp(42px,6.4vw,78px);margin:18px 0 18px;letter-spacing:-.01em}
+.hero h1 em{display:block;font-weight:400;color:var(--encre2);font-size:.52em;letter-spacing:.01em;margin-bottom:6px}
+.hero h1 .est{color:var(--fuchsia);font-style:italic}
+.hero p.lead{font-size:19px;max-width:34ch;color:var(--encre2)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:14.5px;color:var(--encre2)}
+.hero .meta span{display:inline-flex;align-items:center;gap:7px}
+.hero .meta svg{width:16px;height:16px;color:var(--miel)}
+.arche{position:relative;justify-self:center;width:min(440px,100%)}
+.arche .cadre{border-radius:240px 240px 26px 26px;overflow:hidden;aspect-ratio:3/4;box-shadow:var(--ombre);border:8px solid #fff;outline:1px solid rgba(154,90,44,.25)}
+.arche .cadre img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,1.5%)}}
+.arche .tampon{position:absolute;left:-26px;bottom:42px;background:var(--ocre);color:var(--encre);border-radius:50%;width:118px;height:118px;display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;font-style:italic;font-size:15px;line-height:1.15;box-shadow:var(--ombre);transform:rotate(-10deg);padding:10px}
+.arche .tampon b{display:block;font-size:30px;font-style:normal}
+.vagues{position:absolute;left:0;right:0;bottom:-2px;height:110px;z-index:1;pointer-events:none}
+.vagues svg{position:absolute;bottom:0;width:200%;height:100%}
+.vagues .v1{animation:houle 16s linear infinite;opacity:.35}
+.vagues .v2{animation:houle 11s linear infinite reverse;opacity:.6}
+@keyframes houle{to{transform:translateX(-50%)}}
+#vapeur{position:absolute;inset:0;z-index:1;pointer-events:none}
+
+/* SECTIONS */
+section{position:relative}
+.chap{font-family:Fraunces,serif;font-style:italic;color:var(--miel);font-size:17px;margin-bottom:8px}
+h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:18px}
+.ocean{background:var(--ocean2);color:#f3e8d0}
+.ocean .chap{color:var(--ocre)}
+.lieu{padding:90px 0 80px;background:linear-gradient(var(--papier),var(--papier2))}
+.lieu .grille{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.lettrine::first-letter{font-family:Fraunces,serif;float:left;font-size:72px;line-height:.85;padding:6px 10px 0 0;color:var(--fuchsia);font-weight:600}
+.lieu p+p{margin-top:14px}
+.duo{position:relative;height:520px}
+.duo figure{position:absolute;border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);border:6px solid #fff;background:#fff}
+.duo figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.duo figure:hover img{transform:scale(1.05)}
+.duo .a{left:0;top:0;width:68%;height:62%;transform:rotate(-2deg)}
+.duo .b{right:0;bottom:0;width:58%;height:60%;transform:rotate(2.5deg)}
+.atouts{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.atouts span{background:#fff;border:1px solid rgba(154,90,44,.22);border-radius:999px;padding:7px 14px;font-size:14.5px;font-weight:600}
+
+.cuisine{padding:96px 0 100px;overflow:hidden}
+.cuisine .intro{max-width:640px}
+.cuisine .intro p{color:#e8dcc2}
+.plats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.plat{background:rgba(255,255,255,.06);border:1px solid rgba(224,171,58,.35);border-radius:var(--r);padding:30px 26px;transition:transform .35s,background .35s;position:relative;overflow:hidden}
+.plat:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}
+.plat .num{font-family:Fraunces,serif;font-style:italic;color:var(--ocre);font-size:15px}
+.plat h3{font-size:27px;margin:10px 0 10px;color:#fff}
+.plat p{font-size:16px;color:#e2d5ba}
+.plat svg.deco{position:absolute;right:-18px;bottom:-18px;width:120px;height:120px;opacity:.13;color:var(--ocre)}
+.note-carte{margin-top:28px;font-size:15px;color:#cdbf9f;font-style:italic}
+
+.galerie{padding:90px 0 70px}
+.galerie .tete{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+.piste{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 20px 24px;margin-top:6px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.piste figure{flex:0 0 clamp(250px,34vw,380px);align-self:flex-start;scroll-snap-align:center;border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);background:#fff;transition:transform .4s}
+.piste figure:nth-child(odd){transform:rotate(-1.2deg)}
+.piste figure:nth-child(even){transform:rotate(1.2deg) translateY(10px)}
+.piste figure:hover{transform:rotate(0) scale(1.02)}
+.piste img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.piste figcaption{padding:12px 16px 14px;font-size:14.5px;color:var(--encre2);font-style:italic;font-family:Fraunces,serif}
+.indice{font-size:14px;color:var(--encre2)}
+
+.pratique{padding:90px 0;background:var(--papier2)}
+.pratique .grille{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.carte{background:#fff;border-radius:var(--r);padding:32px 30px;box-shadow:0 10px 30px -20px rgba(44,32,24,.5)}
+.carte h3{font-size:25px;margin-bottom:16px}
+.horaires{list-style:none}
+.horaires li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed rgba(154,90,44,.3);font-size:16.5px}
+.horaires li:last-child{border:0}
+.horaires li.ferme span:last-child{color:#9b8a78;font-style:italic}
+.horaires li.auj{color:var(--fuchsia);font-weight:700}
+.infos{list-style:none;display:grid;gap:12px;font-size:16px}
+.infos li{display:flex;gap:12px;align-items:flex-start}
+.infos svg{width:20px;height:20px;flex:none;color:var(--miel);margin-top:3px}
+.acces{margin-top:20px;font-size:15px;color:var(--encre2);background:var(--papier);border-radius:12px;padding:14px 16px}
+.carte .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+
+.fetes{padding:96px 0;background:
+  radial-gradient(500px 300px at 90% 0%,rgba(224,171,58,.35),transparent 60%),
+  linear-gradient(135deg,#7d1f4a,#a52d63 55%,#c23a78);color:#fff;overflow:hidden}
+.fetes .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center;position:relative;z-index:2}
+.fetes .chap{color:#ffd88a}
+.fetes p{color:#fde7f0;max-width:52ch}
+.fetes .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.fetes .btn-p{background:#fff;color:#7d1f4a;box-shadow:0 12px 26px -12px rgba(0,0,0,.5)}
+.fetes .btn-o{color:#fff;border-color:rgba(255,255,255,.55)}
+.bon{background:var(--papier);color:var(--encre);border-radius:20px;padding:30px 26px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55);transform:rotate(3deg);position:relative;border:2px dashed rgba(154,90,44,.45);outline:8px solid var(--papier);outline-offset:-2px}
+.bon .t{font-family:Fraunces,serif;font-style:italic;font-size:15px;color:var(--miel)}
+.bon .n{font-family:Fraunces,serif;font-size:28px;font-weight:600;margin:6px 0 12px;line-height:1.1}
+.bon .n span{color:var(--fuchsia)}
+.bon p{font-size:15px;color:var(--encre2)}
+.bon .leg{margin-top:14px;font-size:12.5px;color:#9b8a78}
+.etoiles{position:absolute;inset:0;pointer-events:none;z-index:1}
+.etoiles i{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffe3a3;opacity:.0;animation:scint 4s ease-in-out infinite}
+@keyframes scint{50%{opacity:.85;transform:scale(1.6)}}
+
+.contact{padding:90px 0 80px;text-align:center}
+.contact h2{max-width:20ch;margin-inline:auto}
+.contact p{max-width:52ch;margin:0 auto;color:var(--encre2)}
+.contact .tel{font-family:Fraunces,serif;font-size:clamp(34px,6vw,54px);color:var(--fuchsia);text-decoration:none;display:inline-block;margin:22px 0 10px}
+.contact .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:16px}
+footer{background:var(--encre);color:#d9ccb3;text-align:center;font-size:14px;padding:30px 20px 96px;line-height:1.7}
+footer b{color:#fff;font-family:Fraunces,serif;font-style:italic;font-weight:600}
+
+.barre{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:none;gap:10px}
+.barre a{flex:1;justify-content:center}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+
+@media (max-width:900px){
+  nav.top ul{display:none}
+  .hero{padding:34px 0 110px}
+  .hero .wrap,.lieu .grille,.pratique .grille,.fetes .wrap{grid-template-columns:1fr}
+  .hero .wrap{gap:34px}
+  .arche{width:min(340px,86%)}
+  .arche .tampon{left:-14px;width:100px;height:100px;font-size:13.5px}
+  .arche .tampon b{font-size:25px}
+  .duo{height:430px}
+  .plats{grid-template-columns:1fr}
+  .bon{transform:rotate(1.5deg);max-width:420px}
+  .barre{display:flex}
+}
+@media (max-width:420px){
+  body{font-size:16.5px}
+  .wrap{width:calc(100% - 32px)}
+  .hero h1{font-size:44px}
+  .hero p.lead{font-size:17.5px}
+  .duo{height:360px}
+  .carte{padding:26px 20px}
+  .lettrine::first-letter{font-size:60px}
+  .marque{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  #vapeur{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Aurélie &amp; Jonathan</b> — créée avec plaisir pour Il Était Une Fois dans l'Est</div>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="marque" href="#accueil">Il Était Une Fois <span>dans l'Est</span></a>
+    <ul>
+      <li><a href="#lieu">Le lieu</a></li>
+      <li><a href="#cuisine">La cuisine</a></li>
+      <li><a href="#galerie">En images</a></li>
+      <li><a href="#pratique">Infos pratiques</a></li>
+      <li><a href="#fetes">Les fêtes</a></li>
+    </ul>
+    <a class="btn btn-p btn-s" href="tel:+262692646011"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Réserver</a>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <canvas id="vapeur" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="rv">
+      <span class="surtitre">Snack-restaurant créole · Sainte-Anne</span>
+      <h1><em>Il était une fois…</em>une table créole <span class="est">dans l'Est</span></h1>
+      <p class="lead">Un voyage gourmand au cœur de Sainte-Anne, à deux pas de la célèbre église, sur une terrasse tournée vers l'océan.</p>
+      <div class="ctas">
+        <a class="btn btn-p respire" href="tel:+262692646011"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Réserver une table</a>
+        <a class="btn btn-o" href="#cuisine">Découvrir la cuisine</a>
+      </div>
+      <div class="meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Le midi, sur réservation</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>133, RN 2 · Sainte-Anne</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7a8 8 0 0 1 16 0v7"/><path d="M4 21h16"/></svg>30 couverts</span>
+      </div>
+    </div>
+    <div class="arche rv">
+      <div class="cadre"><img src="img/terrasse-vue-ocean.jpg" alt="Une table dressée face aux baies vitrées, l'océan et les palmiers en contrebas" width="1024" height="1364" fetchpriority="high"></div>
+      <div class="tampon"><span><b>Vue</b>sur l'océan</span></div>
+    </div>
+  </div>
+  <div class="vagues" aria-hidden="true">
+    <svg class="v1" viewBox="0 0 2880 110" preserveAspectRatio="none"><path fill="#1d5c78" d="M0 60 C240 20 480 100 720 60 S1200 20 1440 60 1920 100 2160 60 2640 20 2880 60 V110 H0Z"/></svg>
+    <svg class="v2" viewBox="0 0 2880 110" preserveAspectRatio="none"><path fill="#f4e7cc" d="M0 74 C240 44 480 104 720 74 S1200 44 1440 74 1920 104 2160 74 2640 44 2880 74 V110 H0Z"/></svg>
+  </div>
+</header>
+
+<section class="lieu" id="lieu">
+  <div class="wrap grille">
+    <div class="rv">
+      <p class="chap">Chapitre premier</p>
+      <h2>Une façade discrète, une terrasse face à l'océan</h2>
+      <p class="lettrine">Derrière sa façade discrète, Il Était Une Fois dans l'Est dévoile une terrasse avec une vue imprenable sur l'océan, décorée d'objets lontan et de photos locales qui racontent l'histoire réunionnaise.</p>
+      <p>Un cadre authentique et apaisant, une ambiance chaleureuse et conviviale, portée par l'accueil attentionné de la propriétaire. On s'y retrouve pour un déjeuner en famille, un repas entre amis ou une escapade gourmande en couple.</p>
+      <div class="atouts">
+        <span>Objets lontan</span><span>Parking privé</span><span>Accès facilité pour tous</span><span>Français · Créole · Anglais</span>
+      </div>
+    </div>
+    <div class="duo rv" aria-label="Deux vues de la salle">
+      <figure class="a"><img src="img/salle-nappes-fleuries.jpg" alt="Salle sous le plafond en bois, nappes fleuries et bouquets colorés" loading="lazy" width="1024" height="768"></figure>
+      <figure class="b"><img src="img/veranda-buffet-lontan.jpg" alt="Véranda avec buffet en bois ancien et cadres au mur" loading="lazy" width="1024" height="768"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="cuisine ocean" id="cuisine">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="chap">Chapitre deux</p>
+      <h2>Une cuisine créole pleine de caractère</h2>
+      <p>Des plats faits maison, préparés avec des produits frais et locaux. Chaque assiette est une ode aux saveurs de l'île, servie avec simplicité et passion.</p>
+    </div>
+    <div class="plats">
+      <article class="plat rv">
+        <span class="num">La spécialité</span>
+        <h3>Poulet sucré-salé</h3>
+        <p>Le grand classique de la maison, fait maison et généreux.</p>
+        <svg class="deco" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="42"/><circle cx="50" cy="50" r="30"/><path d="M30 50c8-10 32-10 40 0"/></svg>
+      </article>
+      <article class="plat rv">
+        <span class="num">La spécialité</span>
+        <h3>Civet de cerf</h3>
+        <p>Un plat de caractère, mijoté à la créole comme on l'aime dans l'Est.</p>
+        <svg class="deco" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 55h60l-6 26H26z"/><path d="M14 55h72"/><path d="M38 44c-4-8 4-12 0-20M52 44c-4-8 4-12 0-20M66 44c-4-8 4-12 0-20"/></svg>
+      </article>
+      <article class="plat rv">
+        <span class="num">L'esprit</span>
+        <h3>Fait maison, produits d'ici</h3>
+        <p>Des produits frais et locaux, une cuisine simple et passionnée, sur place le midi.</p>
+        <svg class="deco" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3"><path d="M50 88V40"/><path d="M50 60c-18 0-26-14-26-26 14 0 26 10 26 26zM50 52c16 0 24-12 24-24-12 0-24 8-24 24z"/></svg>
+      </article>
+    </div>
+    <p class="note-carte rv">Le restaurant reçoit uniquement sur réservation : un coup de fil au 06 92 64 60 11 et votre table vous attend.</p>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap tete rv">
+    <div>
+      <p class="chap">Chapitre trois</p>
+      <h2>Entrez, installez-vous</h2>
+    </div>
+    <p class="indice">Faites glisser pour parcourir →</p>
+  </div>
+  <div class="piste" tabindex="0" aria-label="Galerie photos">
+    <figure><img src="img/table-baie-vitree.jpg" alt="Table dressée devant la baie vitrée et la verdure" loading="lazy" width="1024" height="768"><figcaption>Une table près des baies vitrées</figcaption></figure>
+    <figure><img src="img/salle-tables-bois.jpg" alt="Salle aux murs ocre, tables en bois et chaises paillées" loading="lazy" width="1024" height="768"><figcaption>Murs ocre et chaises paillées</figcaption></figure>
+    <figure><img src="img/bar-plafond-bois.jpg" alt="Le bar en bois sous le plafond à poutres" loading="lazy" width="1024" height="1364"><figcaption>Le bar sous les poutres en bois</figcaption></figure>
+    <figure><img src="img/salle-nappes-fleuries.jpg" alt="Nappes fleuries et bouquets colorés" loading="lazy" width="1024" height="768"><figcaption>Nappes fleuries, bouquets du jour</figcaption></figure>
+    <figure><img src="img/veranda-buffet-lontan.jpg" alt="Buffet en bois ancien et cadres au mur" loading="lazy" width="1024" height="768"><figcaption>Le buffet lontan et ses souvenirs</figcaption></figure>
+    <figure><img src="img/terrasse-vue-ocean.jpg" alt="Petite table face à l'océan" loading="lazy" width="1024" height="1364"><figcaption>Le coin préféré : face à l'océan</figcaption></figure>
+  </div>
+</section>
+
+<section class="pratique" id="pratique">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:34px">
+      <p class="chap">Chapitre quatre</p>
+      <h2>Venir à Sainte-Anne</h2>
+    </div>
+    <div class="grille">
+      <div class="carte rv">
+        <h3>Horaires du midi</h3>
+        <ul class="horaires" id="horaires">
+          <li data-j="1"><span>Lundi</span><span>12h00 – 15h00</span></li>
+          <li data-j="2" class="ferme"><span>Mardi</span><span>Fermé</span></li>
+          <li data-j="3"><span>Mercredi</span><span>12h00 – 15h00</span></li>
+          <li data-j="4"><span>Jeudi</span><span>12h00 – 15h00</span></li>
+          <li data-j="5" class="ferme"><span>Vendredi</span><span>Fermé</span></li>
+          <li data-j="6"><span>Samedi</span><span>12h00 – 15h00</span></li>
+          <li data-j="0"><span>Dimanche</span><span>12h00 – 15h00</span></li>
+        </ul>
+      </div>
+      <div class="carte rv">
+        <h3>Bon à savoir</h3>
+        <ul class="infos">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>133, RN 2, Sainte-Anne<br>97437 Saint-Benoît</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+262692646011">06 92 64 60 11</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><strong>Uniquement sur réservation</strong> · 30 couverts</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg><span>Cartes bancaires et espèces</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg><span>Parking privé · accueil des personnes à mobilité réduite</span></li>
+        </ul>
+        <p class="acces">Depuis l'aéroport Roland Garros : 2×2 voies jusqu'à Saint-Benoît, puis au rond-point des Plaines, direction Sainte-Rose. Suivez la nationale jusqu'à l'église de Sainte-Anne : le restaurant est juste à côté.</p>
+        <div class="ctas">
+          <a class="btn btn-o btn-s" href="https://www.google.com/maps/search/?api=1&query=Il+%C3%A9tait+une+fois+dans+l%27Est+133+RN2+Sainte-Anne+Saint-Beno%C3%AEt" target="_blank" rel="noopener">Itinéraire</a>
+          <a class="btn btn-p btn-s" href="tel:+262692646011">Appeler</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="etoiles" id="etoiles" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <p class="chap">Un chapitre de fête</p>
+      <h2>Et si le repas des fêtes avait lieu face à l'océan ?</h2>
+      <p>Un déjeuner de fin d'année en famille ou entre collègues, autour d'une cuisine créole faite maison, sur la terrasse de Sainte-Anne. Avec 30 couverts, mieux vaut réserver tôt : un message suffit pour en parler.</p>
+      <div class="ctas">
+        <a class="btn btn-p" href="https://wa.me/262692646011?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20table%20pour%20un%20repas%20des%20f%C3%AAtes%20%C3%A0%20Il%20%C3%89tait%20Une%20Fois%20dans%20l%27Est." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Réserver par WhatsApp</a>
+        <a class="btn btn-o" href="tel:+262692646011">06 92 64 60 11</a>
+      </div>
+    </div>
+    <div class="bon rv">
+      <p class="t">Il était une fois…</p>
+      <p class="n">un repas des fêtes <span>dans l'Est</span></p>
+      <p>Une tablée réunie, l'océan en face, et les saveurs de l'île dans l'assiette.</p>
+      <p class="leg">Illustration · idée à imaginer ensemble avec le restaurant</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <p class="chap">Et la suite de l'histoire…</p>
+    <h2>Votre table vous attend à Sainte-Anne</h2>
+    <p>Le midi de 12h à 15h, sur réservation, à deux pas de l'église (repos le mardi et le vendredi).</p>
+    <a class="tel" href="tel:+262692646011">06 92 64 60 11</a>
+    <div class="ctas">
+      <a class="btn btn-p" href="tel:+262692646011">Appeler pour réserver</a>
+      <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&query=Il+%C3%A9tait+une+fois+dans+l%27Est+133+RN2+Sainte-Anne+Saint-Beno%C3%AEt" target="_blank" rel="noopener">Voir sur la carte</a>
+    </div>
+  </div>
+</section>
+
+<footer><b>Il Était Une Fois dans l'Est</b> · Snack-restaurant créole · 133, RN 2, Sainte-Anne, Saint-Benoît, La Réunion<br>Maquette privée imaginée par Aurélie &amp; Jonathan, ATMA Digital, à partir des informations et photos publiées par Il Était Une Fois dans l'Est.</footer>
+
+<div class="barre">
+  <a class="btn btn-p" href="tel:+262692646011">Réserver</a>
+  <a class="btn btn-o" style="background:var(--papier)" href="#pratique">Horaires</a>
+</div>
+
+<script>
+(()=>{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  const j=new Date().getDay();const li=document.querySelector('#horaires li[data-j="'+j+'"]');if(li)li.classList.add('auj');
+  const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const et=document.getElementById('etoiles');
+  for(let i=0;i<22;i++){const s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*4)+'s';et.appendChild(s)}
+  if(reduit)return;
+  const c=document.getElementById('vapeur'),x=c.getContext('2d');let W,H,P=[],run=true;
+  function taille(){const r=c.parentElement.getBoundingClientRect();W=c.width=r.width;H=c.height=r.height}
+  taille();addEventListener('resize',taille);
+  const n=innerWidth<700?14:26;
+  function neuf(p,init){p.x=Math.random()*W;p.y=init?Math.random()*H:H+20;p.r=8+Math.random()*26;p.v=.25+Math.random()*.45;p.o=.05+Math.random()*.09;p.d=Math.random()*6.28;p.c=Math.random()<.5?'224,171,58':'255,255,255';return p}
+  for(let i=0;i<n;i++)P.push(neuf({},true));
+  function f(){if(!run)return;x.clearRect(0,0,W,H);for(const p of P){p.y-=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.4;p.r+=.03;const g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);g.addColorStop(0,'rgba('+p.c+','+p.o+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fill();if(p.y<-p.r)neuf(p)}requestAnimationFrame(f)}
+  f();
+  document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Il Était Une Fois dans l'Est" defer></script>
+</body>
+</html>

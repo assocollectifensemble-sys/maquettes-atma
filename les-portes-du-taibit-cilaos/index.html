@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Portes du Taïbit · Gîte de randonnée à Cilaos</title>
+<meta name="description" content="Les Portes du Taïbit, gîte de randonnée à 1 200 m dans le cirque de Cilaos : 15 places, deux dortoirs et deux chambres avec terrasse privative, dîner créole et petit-déjeuner. Sophie et François vous accueillent au 7 RD 242. Réservation au 0692 65 75 00.">
+<meta property="og:title" content="Les Portes du Taïbit · Gîte de randonnée à Cilaos">
+<meta property="og:description" content="En pleine nature, face au Piton des Neiges, aux Trois Salazes et au Grand Bénare : dortoirs, chambres avec terrasse et table créole chez Sophie et François.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/les-portes-du-taibit-cilaos/img/og-terrasse.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/les-portes-du-taibit-cilaos/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1c2621">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Karla:wght@400;500;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#1c2621;--foret:#2f5a45;--mousse:#4a7c59;--bois:#8b6f47;--bois-cl:#c9a77a;
+  --soleil:#f2b632;--tuile:#c2562e;--creme:#f7f1e6;--papier:#fbf8f2;--ciel:#9cc9e0;--texte:#2a2a26;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;color:var(--texte);background:var(--papier);line-height:1.6;font-size:17px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:500;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,6vw,3rem);color:var(--nuit);margin-bottom:1rem}
+.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--tuile);font-weight:700;margin-bottom:.7rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+section{padding:4.5rem 0;position:relative}
+
+/* Ruban */
+.ribbon{background:var(--nuit);color:#e9e2d2;font-size:.8rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ribbon b{color:var(--soleil);font-weight:700}
+
+/* Hero */
+.hero{position:relative;min-height:min(92vh,880px);min-height:min(92svh,880px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+.hero .bg{position:absolute;inset:0;background:url(img/terrasse-parasol-cirque.jpg) center 60%/cover;transform:scale(1.08);animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.08) translate(0,0)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,38,33,.15) 0%,rgba(28,38,33,.05) 35%,rgba(28,38,33,.82) 100%)}
+#brume{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero .inner{position:relative;z-index:2;padding:0 1.25rem 3.2rem;max-width:1100px;margin:0 auto;width:100%}
+.hero .lieu{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--soleil);font-weight:700;opacity:0;animation:up 1s .3s forwards}
+.hero h1{font-size:clamp(2.7rem,11vw,5.6rem);font-weight:300;margin:.4rem 0 .7rem;opacity:0;animation:up 1.2s .5s forwards}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--soleil)}
+.hero p.lead{font-size:1.12rem;max-width:34rem;color:#f1ece1;opacity:0;animation:up 1.2s .8s forwards}
+.hero .ctas{margin-top:1.6rem;opacity:0;animation:up 1.2s 1.1s forwards}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:var(--soleil);color:var(--nuit);box-shadow:0 10px 30px -10px rgba(242,182,50,.8);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 10px 30px -12px rgba(242,182,50,.7)}50%{box-shadow:0 10px 38px -6px rgba(242,182,50,.95)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--nuit);color:var(--creme)}
+.btn-tuile{background:var(--tuile);color:#fff}
+
+/* Bandeau défilant */
+.defile{background:var(--foret);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Fraunces,serif;font-size:1.15rem;font-style:italic}
+.defile .piste{display:inline-block;animation:defile 38s linear infinite}
+.defile span{margin:0 1.1rem}
+.defile i{color:var(--soleil);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* Intro */
+.intro .grid{display:grid;gap:2rem;align-items:center}
+.intro p{margin-bottom:1rem;font-size:1.05rem}
+.citation-hote{font-family:Caveat,cursive;font-size:1.65rem;color:var(--bois);line-height:1.25;margin:1.2rem 0 .3rem}
+.signe{font-size:.85rem;color:#6b6457}
+.chiffres{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:1.6rem}
+.chiffres div{background:var(--creme);border-radius:16px;padding:1rem .9rem;border:1px solid #eadfcb}
+.chiffres b{font-family:Fraunces,serif;font-size:1.9rem;font-weight:500;color:var(--foret);display:block;line-height:1}
+.chiffres span{font-size:.88rem;color:#5a5346}
+.intro figure{border-radius:22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(28,38,33,.55);transform:rotate(1.2deg)}
+.intro figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+/* Panorama */
+.panorama{background:var(--nuit);color:var(--creme);overflow:hidden}
+.panorama h2{color:var(--creme)}
+.panorama .eyebrow{color:var(--soleil)}
+.panorama p.sous{max-width:40rem;color:#d5ccba}
+.sommets{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 2rem}
+.sommets li{list-style:none;border:1px solid rgba(242,182,50,.45);color:var(--soleil);border-radius:999px;padding:.35rem .9rem;font-size:.9rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.25rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 82%;max-width:560px;scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s}
+.galerie figure:hover img{transform:scale(1.04)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.65));font-size:.9rem}
+.glisse{font-size:.8rem;color:#a99f8b;padding:0 1.25rem;letter-spacing:.08em}
+
+/* Vague */
+.vague{display:block;width:100%;height:60px}
+
+/* Dormir */
+.cartes{display:grid;gap:1.2rem;margin-top:2rem}
+.carte{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(28,38,33,.5);transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-5px);box-shadow:0 28px 50px -26px rgba(28,38,33,.6)}
+.carte img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.carte .txt{padding:1.1rem 1.2rem 1.3rem}
+.carte h3{font-size:1.4rem;color:var(--nuit);margin-bottom:.35rem}
+.carte p{font-size:.96rem;color:#4f493f}
+.pastille{display:inline-block;background:var(--creme);color:var(--bois);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .6rem;border-radius:6px;margin-bottom:.6rem}
+.note-linge{margin-top:1.4rem;font-size:.92rem;color:#5a5346;background:var(--creme);border-left:4px solid var(--soleil);padding:.8rem 1rem;border-radius:0 12px 12px 0}
+
+/* Table */
+.table{background:linear-gradient(180deg,var(--creme),#f3e6cf)}
+.table .grid{display:grid;gap:2rem;align-items:center}
+.table figure{border-radius:22px;overflow:hidden;position:relative}
+.table figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.prix{display:flex;align-items:baseline;gap:.6rem;margin:1.2rem 0 .4rem;flex-wrap:wrap}
+.prix b{font-family:Fraunces,serif;font-size:3rem;color:var(--tuile);font-weight:500;line-height:1}
+.prix span{color:#5a5346}
+.mots{display:grid;gap:.8rem;margin-top:1.4rem}
+.mots blockquote{background:#fff;border-radius:14px;padding:.9rem 1rem;font-family:Fraunces,serif;font-style:italic;font-size:1.08rem;color:var(--nuit);position:relative}
+.mots blockquote::before{content:"“";position:absolute;top:-.6rem;left:.6rem;font-size:2.6rem;color:var(--soleil);font-style:normal}
+.mots cite{display:block;font-family:Karla,sans-serif;font-style:normal;font-size:.78rem;color:#7a7263;margin-top:.3rem}
+
+/* Rando */
+.rando .grid{display:grid;gap:1.4rem}
+.etape{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:16px;padding:1rem 1.1rem;border:1px solid #eadfcb}
+.etape .num{flex:none;width:42px;height:42px;border-radius:50%;background:var(--foret);color:var(--creme);display:grid;place-items:center;font-family:Fraunces,serif;font-size:1.1rem}
+.etape h3{font-size:1.15rem;color:var(--nuit);margin-bottom:.2rem}
+.etape p{font-size:.94rem;color:#4f493f}
+.trace{width:100%;height:auto;margin-top:.5rem}
+.trace path.ligne{stroke-dasharray:6 8;animation:marche 18s linear infinite}
+@keyframes marche{to{stroke-dashoffset:-280}}
+
+/* Avis */
+.avis{background:var(--foret);color:var(--creme)}
+.avis h2{color:var(--creme)}
+.avis .eyebrow{color:var(--soleil)}
+.notes{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.notes div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:.9rem 1.2rem}
+.notes b{font-family:Fraunces,serif;font-size:2.2rem;color:var(--soleil);font-weight:500;display:block;line-height:1}
+.notes span{font-size:.85rem;color:#d7e3da}
+.avis-liste{display:grid;gap:1rem}
+.avis-liste blockquote{background:rgba(0,0,0,.18);border-radius:16px;padding:1.1rem 1.2rem;font-family:Fraunces,serif;font-size:1.08rem;font-style:italic;line-height:1.45}
+.avis-liste cite{display:block;font-family:Karla,sans-serif;font-style:normal;font-size:.78rem;color:#bcd0c2;margin-top:.5rem}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#2c3d33 0%,var(--nuit) 70%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--soleil)}
+.noel p.sous{max-width:34rem;margin:0 auto 1.8rem;color:#d8d0bf}
+.bon{position:relative;max-width:440px;margin:0 auto 2rem;background:linear-gradient(135deg,#fbf6ea,#efe0c2);color:var(--nuit);border-radius:18px;padding:1.9rem 1.4rem 1.6rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.85);transform:rotate(-1.5deg)}
+.bon::before{content:"";position:absolute;inset:8px;border:1px dashed rgba(139,111,71,.6);border-radius:12px;pointer-events:none}
+.bon .main{font-family:Caveat,cursive;font-size:1.7rem;color:var(--tuile);display:block}
+.bon b{font-family:Fraunces,serif;font-size:2rem;font-weight:500;display:block;line-height:1.1;margin:.2rem 0 .4rem}
+.bon .sm{font-size:.75rem;letter-spacing:.28em;text-transform:uppercase;color:var(--bois)}
+.bon svg{position:absolute;top:-14px;right:24px;width:48px;height:48px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.76rem;color:#a99f8b;margin-top:1rem}
+.etoile{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff6d8;animation:scint 3s ease-in-out infinite}
+@keyframes scint{0%,100%{opacity:.15}50%{opacity:.9}}
+
+/* Infos */
+.infos .grid{display:grid;gap:1rem;margin-top:1.6rem}
+.info{background:#fff;border-radius:16px;padding:1.1rem 1.2rem;border:1px solid #eadfcb}
+.info h3{font-size:1.05rem;font-family:Karla,sans-serif;font-weight:700;color:var(--foret);letter-spacing:.04em;margin-bottom:.35rem}
+.info p{font-size:.95rem;color:#4f493f}
+
+/* Contact */
+.contact{background:var(--nuit);color:var(--creme);text-align:center}
+.contact h2{color:var(--creme)}
+.contact .eyebrow{color:var(--soleil)}
+.contact .tel{font-family:Fraunces,serif;font-size:clamp(2rem,9vw,3.2rem);color:var(--soleil);text-decoration:none;display:inline-block;margin:.6rem 0 1.4rem}
+.contact p{color:#d5ccba;max-width:34rem;margin:0 auto 1rem}
+.contact .ctas{justify-content:center}
+footer{text-align:center;padding:2.2rem 1.2rem 2.8rem;font-size:.82rem;color:#a99f8b;background:#141c18}
+footer b{color:var(--soleil);font-weight:500}
+
+/* Apparitions */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  section{padding:6rem 0}
+  .intro .grid,.table .grid{grid-template-columns:1.1fr .9fr}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .avis-liste{grid-template-columns:repeat(2,1fr)}
+  .infos .grid{grid-template-columns:repeat(3,1fr)}
+  .rando .grid{grid-template-columns:1fr 1fr;align-items:center}
+  .galerie{padding-left:max(1.25rem,calc((100vw - 1100px)/2 + 1.25rem))}
+  .galerie figure{flex-basis:46%}
+  .chiffres{grid-template-columns:repeat(4,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  .hero .lieu,.hero h1,.hero p.lead,.hero .ctas{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les Portes du Taïbit</div>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Terrasse du gîte, parasol et chaises jaunes face aux remparts du cirque de Cilaos"></div>
+  <canvas id="brume" aria-hidden="true"></canvas>
+  <div class="inner">
+    <p class="lieu">Cilaos · Cirque de Cilaos · 1 200 m</p>
+    <h1>Les Portes<br>du <em>Taïbit</em></h1>
+    <p class="lead">Un gîte de randonnée en pleine nature, avec une vue incroyable sur les montagnes. Sophie et François vous y accueillent, avec le dîner créole et le petit-déjeuner compris.</p>
+    <div class="ctas">
+      <a class="btn btn-main" href="tel:+262692657500"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>Réserver : 0692 65 75 00</a>
+      <a class="btn btn-line" href="#dormir">Découvrir le gîte</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Piton des Neiges</span><i>✦</i><span>Les Trois Salazes</span><i>✦</i><span>Le Grand Bénare</span><i>✦</i><span>Les Makes</span><i>✦</i><span>Cirque de Cilaos</span><i>✦</i><span>Route de l'Îlet à Cordes</span><i>✦</i>
+  <span>Piton des Neiges</span><i>✦</i><span>Les Trois Salazes</span><i>✦</i><span>Le Grand Bénare</span><i>✦</i><span>Les Makes</span><i>✦</i><span>Cirque de Cilaos</span><i>✦</i><span>Route de l'Îlet à Cordes</span><i>✦</i>
+</div></div>
+
+<section class="intro" id="gite">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Le gîte</p>
+      <h2 class="rv">Une halte au calme, au cœur du cirque</h2>
+      <p class="rv">À 10 minutes en voiture du centre de Cilaos, sur la route de l'Îlet à Cordes, Les Portes du Taïbit accueillent les marcheurs face aux grands sommets de l'île. Un vrai gîte de randonnée, avec son jardin, sa terrasse panoramique et une table créole partagée le soir.</p>
+      <p class="citation-hote rv">« Entourés par ces montagnes, vous vous sentirez bercés par le doux chant des oiseaux et un calme surprenant. »</p>
+      <p class="signe rv">Sophie et François, vos hôtes</p>
+      <div class="chiffres rv">
+        <div><b>15</b><span>places</span></div>
+        <div><b>1 200 m</b><span>d'altitude</span></div>
+        <div><b>10 min</b><span>en voiture du centre de Cilaos</span></div>
+        <div><b>2</b><span>chambres avec terrasse privative</span></div>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/gite-jardin-palmiers.jpg" alt="Le gîte aux façades colorées, son jardin de palmiers et les montagnes du cirque" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="panorama" id="panorama">
+  <div class="wrap">
+    <p class="eyebrow rv">Le panorama</p>
+    <h2 class="rv">Au réveil, les géants de l'île</h2>
+    <p class="sous rv">Depuis la terrasse, le regard file sur les remparts du cirque et ses sommets mythiques.</p>
+    <ul class="sommets rv"><li>Piton des Neiges</li><li>Les Trois Salazes</li><li>Le Grand Bénare</li><li>Les Makes</li></ul>
+  </div>
+  <div class="galerie" tabindex="0" aria-label="Galerie des vues du gîte">
+    <figure><img src="img/vue-remparts.jpg" alt="Les remparts du cirque de Cilaos sous un ciel bleu" loading="lazy"><figcaption>Les remparts, depuis le gîte</figcaption></figure>
+    <figure><img src="img/vue-cirque-verdure.jpg" alt="Sommets du cirque et végétation au premier plan" loading="lazy"><figcaption>Le cirque, tout en verdure</figcaption></figure>
+    <figure><img src="img/vue-balcon.jpg" alt="Vue sur la vallée de Cilaos depuis le balcon" loading="lazy"><figcaption>La vallée, depuis le balcon</figcaption></figure>
+  </div>
+  <p class="glisse">Glissez pour voir la suite →</p>
+</section>
+
+<section id="dormir">
+  <div class="wrap">
+    <p class="eyebrow rv">Dormir</p>
+    <h2 class="rv">Dortoirs ou chambre avec terrasse</h2>
+    <p class="rv">Quinze places en tout, en dortoir ou en chambre.</p>
+    <div class="cartes">
+      <article class="carte rv">
+        <img src="img/dortoir-bois.jpg" alt="Dortoir aux lits en bois" loading="lazy">
+        <div class="txt"><span class="pastille">11 places</span><h3>Les deux dortoirs</h3><p>Un dortoir de 6 (deux lits doubles et deux lits simples) et un dortoir de 5 lits simples, pour une famille, une bande d'amis ou des marcheurs de passage.</p></div>
+      </article>
+      <article class="carte rv">
+        <img src="img/chambre-terrasse.jpg" alt="Chambre avec lit double et porte-fenêtre ouverte sur la terrasse" loading="lazy">
+        <div class="txt"><span class="pastille">2 chambres</span><h3>Les chambres avec terrasse</h3><p>Chacune avec sa douche, ses toilettes et sa terrasse privative, face aux montagnes.</p></div>
+      </article>
+      <article class="carte rv">
+        <img src="img/terrasse-transats.jpg" alt="Transats et parasol sur la terrasse en bois face aux montagnes" loading="lazy">
+        <div class="txt"><span class="pastille">Pour tous</span><h3>Le jardin et la terrasse</h3><p>Après la marche, on s'installe face au cirque, au calme, avant le dîner.</p></div>
+      </article>
+    </div>
+    <p class="note-linge rv">Linge de maison inclus, jardin et parking privé sur place. Pensez simplement à glisser votre serviette de bain dans le sac.</p>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30c180-30 360-30 540 0s360 30 540 0 270-22 360-8v38z" fill="#f7f1e6"/></svg>
+<section class="table" id="table" style="padding-top:2.5rem">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">À table</p>
+      <h2 class="rv">Le dîner « tradition créole », puis le petit-déjeuner</h2>
+      <p class="rv">Le soir, place à la table de la salle commune. La nuitée comprend le repas du soir tradition créole et le petit-déjeuner, pour repartir du bon pied le lendemain.</p>
+      <div class="prix rv"><b>61 €</b><span>par personne · nuit, dîner et petit-déjeuner (à partir de 4 personnes)</span></div>
+      <div class="mots">
+        <blockquote class="rv">Les repas du soir excellents et locaux.<cite>Commentaire Booking</cite></blockquote>
+        <blockquote class="rv">Petit-déjeuner prêt la veille, ce qui permet de partir sereinement le ventre plein tôt.<cite>Commentaire Booking</cite></blockquote>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/salle-commune.jpg" alt="La salle commune, longue table et plafond en bois, fenêtres ouvertes sur la montagne" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="rando" id="rando">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Randonner</p>
+      <h2 class="rv">Entre Cilaos et Mafate</h2>
+      <p class="rv" style="margin-bottom:1.2rem">Une adresse pensée pour les randonneurs qui explorent les sentiers emblématiques reliant Cilaos à Mafate.</p>
+      <div class="etape rv"><span class="num">1</span><div><h3>Les sentiers à proximité</h3><p>Sentier de grande randonnée et sentiers de randonnée autour du gîte.</p></div></div>
+      <div class="etape rv" style="margin-top:.8rem"><span class="num">2</span><div><h3>Un départ serein</h3><p>Le petit-déjeuner est prêt la veille : vous partez tôt, le ventre plein.</p></div></div>
+      <div class="etape rv" style="margin-top:.8rem"><span class="num">3</span><div><h3>Le retour au calme</h3><p>La terrasse, la vue sur le cirque, puis le dîner créole.</p></div></div>
+    </div>
+    <svg class="trace rv" viewBox="0 0 400 260" aria-hidden="true">
+      <path d="M0 220 L60 140 L95 175 L150 70 L190 125 L235 40 L275 110 L320 80 L400 190 L400 260 L0 260Z" fill="#2f5a45" opacity=".9"/>
+      <path d="M0 240 L70 190 L120 215 L180 150 L240 200 L300 160 L400 230 L400 260 L0 260Z" fill="#4a7c59"/>
+      <path d="M150 70 L162 92 L141 88Z M235 40 L248 66 L225 60Z" fill="#f7f1e6" opacity=".85"/>
+      <path class="ligne" d="M40 245 C90 225 120 230 160 205 S230 170 250 140 S270 95 300 90" fill="none" stroke="#f2b632" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="40" cy="245" r="7" fill="#c2562e"/><text x="52" y="250" font-family="Karla" font-size="13" fill="#fff">Le gîte</text>
+      <circle cx="300" cy="90" r="6" fill="#f2b632"/><text x="262" y="78" font-family="Karla" font-size="13" fill="#fff">Vers Mafate</text>
+    </svg>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils sont passés par là</p>
+    <h2 class="rv">Un accueil qu'on raconte</h2>
+    <div class="notes rv">
+      <div><b>9,2/10</b><span>Booking, « Fabuleux »</span></div>
+      <div><b>9,6/10</b><span>Booking, situation géographique</span></div>
+    </div>
+    <div class="avis-liste">
+      <blockquote class="rv">Gîte exceptionnel, avec une vue à couper le souffle. Sophie et François sont aux petits soins avec leurs hôtes.<cite>Commentaire Booking</cite></blockquote>
+      <blockquote class="rv">Des hôtes très accueillants, qui partagent avec leurs invités un vrai plaisir, une cuisine délicieuse. Un point de vue magnifique.<cite>Commentaire Booking</cite></blockquote>
+      <blockquote class="rv">Ne parlons pas de sa cuisine qui est exceptionnelle.<cite>Commentaire Booking</cite></blockquote>
+      <blockquote class="rv">Le cadre et la vue au réveil.<cite>Commentaire Booking</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offrez une nuit face aux montagnes</h2>
+    <p class="sous rv">Une étape de rando, un dîner créole partagé et le lever du jour sur le cirque : un cadeau qui se vit. Sophie et François vous aident à l'organiser.</p>
+    <div class="bon rv">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 19c-6-10-17-8-15-2 2 5 11 3 15 2zm0 0c6-10 17-8 15-2-2 5-11 3-15 2z" fill="#c2562e"/><path d="M21 19l-6 25 9-6 9 6-6-25" fill="#a5441f"/><circle cx="24" cy="19" r="3.6" fill="#f2b632"/></svg>
+      <span class="main">Un séjour à offrir</span>
+      <b>Les Portes du Taïbit</b>
+      <span class="sm">Nuit · dîner créole · petit-déjeuner</span>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://wa.me/262692657500?text=Bonjour%20Sophie%20et%20Fran%C3%A7ois%2C%20je%20voudrais%20offrir%20un%20s%C3%A9jour%20aux%20Portes%20du%20Ta%C3%AFbit%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Offrir un séjour</a>
+      <a class="btn btn-line" href="https://wa.me/262692657500?text=Bonjour%20Sophie%20et%20Fran%C3%A7ois%2C%20je%20voudrais%20r%C3%A9server%20une%20nuit%20au%20g%C3%AEte%20pendant%20les%20f%C3%AAtes">Réserver pendant les fêtes</a>
+    </div>
+    <p class="leg rv">Dates et formule à convenir directement avec vos hôtes.</p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Infos pratiques</p>
+    <h2 class="rv">Pour préparer votre venue</h2>
+    <div class="grid">
+      <div class="info rv"><h3>Adresse</h3><p>7 RD 242, 97413 Cilaos. Sur la route de l'Îlet à Cordes, à 10 minutes en voiture du centre de Cilaos.</p><p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=Les%20Portes%20du%20Ta%C3%AFbit%2C%207%20RD242%2C%2097413%20Cilaos" style="color:var(--tuile);font-weight:700">Itinéraire →</a></p></div>
+      <div class="info rv"><h3>Arrivée et départ</h3><p>Arrivée de 15 h à 19 h, départ jusqu'à 9 h : le bon rythme pour une journée de marche.</p></div>
+      <div class="info rv"><h3>Réservation</h3><p>Par téléphone, en direct avec Sophie et François, au 0692 65 75 00. Règlement en espèces.</p></div>
+      <div class="info rv"><h3>Sur place</h3><p>Jardin, terrasse panoramique, parking privé et parking public à proximité.</p></div>
+      <div class="info rv"><h3>Repas</h3><p>Dîner tradition créole et petit-déjeuner servis au gîte.</p></div>
+      <div class="info rv"><h3>Bon à savoir</h3><p>Animaux non acceptés. Gîte non accessible aux personnes à mobilité réduite.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Réserver</p>
+    <h2 class="rv">Votre prochaine étape, c'est ici</h2>
+    <a class="tel rv" href="tel:+262692657500">0692 65 75 00</a>
+    <p class="rv">Un appel suffit pour poser vos dates, choisir dortoir ou chambre et prévoir le dîner.</p>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="tel:+262692657500">Appeler</a>
+      <a class="btn btn-line" href="https://wa.me/262692657500?text=Bonjour%20Sophie%20et%20Fran%C3%A7ois%2C%20je%20voudrais%20r%C3%A9server%20au%20g%C3%AEte%20Les%20Portes%20du%20Ta%C3%AFbit">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer><b>Les Portes du Taïbit</b> · Gîte de randonnée · Cilaos, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les Portes du Taïbit.</footer>
+
+<script>
+(()=>{
+const reduit=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Apparitions au scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// Étoiles du bloc Noël
+const n=document.querySelector('.noel');
+for(let i=0;i<22;i++){const s=document.createElement('span');s.className='etoile';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=(Math.random()*3)+'s';n.appendChild(s)}
+// Brume qui glisse sur le cirque + paille-en-queue
+const c=document.getElementById('brume');if(!c||reduit)return;
+const x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2);
+function taille(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+taille();addEventListener('resize',taille);
+const nappes=Array.from({length:14},()=>({x:Math.random()*1.4-.2,y:.25+Math.random()*.5,r:120+Math.random()*220,v:.00006+Math.random()*.00012,a:.05+Math.random()*.08}));
+const oiseaux=Array.from({length:3},(_,i)=>({x:-.1-i*.35,y:.12+i*.07,v:.00028+i*.00006,p:Math.random()*6,t:.6+i*.15}));
+let run=true;document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(boucle)});
+let last=performance.now();
+function oiseau(o,dt){
+  o.x+=o.v*dt;o.p+=dt*.006;if(o.x>1.15){o.x=-.15;o.y=.08+Math.random()*.2}
+  const px=o.x*W,py=o.y*H+Math.sin(o.p*.5)*6,s=10*o.t,b=Math.sin(o.p)*s*.5;
+  x.strokeStyle='rgba(255,255,255,.85)';x.lineWidth=1.6;x.beginPath();
+  x.moveTo(px-s,py-b);x.quadraticCurveTo(px-s*.4,py-b*.2-2,px,py);x.quadraticCurveTo(px+s*.4,py-b*.2-2,px+s,py-b);x.stroke();
+  x.beginPath();x.moveTo(px,py);x.lineTo(px-s*1.9,py+s*.25);x.lineWidth=1;x.stroke();
+}
+function boucle(t){
+  if(!run)return;const dt=Math.min(t-last,60);last=t;x.clearRect(0,0,W,H);
+  for(const m of nappes){m.x+=m.v*dt;if(m.x-m.r/W>1.1)m.x=-m.r/W;
+    const g=x.createRadialGradient(m.x*W,m.y*H,0,m.x*W,m.y*H,m.r);g.addColorStop(0,`rgba(255,255,255,${m.a})`);g.addColorStop(1,'rgba(255,255,255,0)');
+    x.fillStyle=g;x.beginPath();x.ellipse(m.x*W,m.y*H,m.r*1.6,m.r*.55,0,0,Math.PI*2);x.fill()}
+  oiseaux.forEach(o=>oiseau(o,dt));
+  requestAnimationFrame(boucle)}
+requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les Portes du Taïbit" defer></script>
+</body>
+</html>

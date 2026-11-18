@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Snack · Kebab, assiette, tacos à Sainte-Clotilde (Saint-Denis)</title>
+<meta name="description" content="Le Snack, kebab, assiette, tacos, salade et sandwich au 67 rue du Karting, parking Carrefour Grand Nord, Sainte-Clotilde. Agneau tous les jours, sur place, à emporter et sur Uber Eats. Commandes au 0693 450 240.">
+<meta property="og:title" content="Le Snack · Le goût avant tout, à Sainte-Clotilde">
+<meta property="og:description" content="Kebab, assiette, tacos, salade, sandwich. Agneau tous les jours. 67 rue du Karting, parking Carrefour Grand Nord.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-snack-officiel-sainte-clotilde/img/enseigne-le-snack.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-snack-officiel-sainte-clotilde/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#0f0e0d;--charbon:#1b1918;--auvent:#4f4c4a;--gris:#8d8884;--blanc:#f7f4ef;--creme:#efe7dc;--braise:#ff5a1f;--flamme:#ffa630;--tomate:#d8362b;--salade:#7bb661;--txt:#2a2522;--doux:#6e6660}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--blanc);line-height:1.65;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.01em;text-transform:uppercase;color:var(--nuit)}
+h2{font-size:clamp(2.3rem,9vw,4rem);margin:.35rem 0 1rem}
+h3{font-size:1.5rem}
+.script{font-family:'Kaushan Script',cursive;text-transform:none;font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--braise);font-weight:600}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,11vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:#d9d3cb;text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(255,166,48,.35)}
+.ribbon b{color:var(--flamme);font-weight:500}
+canvas#braises{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:.95rem;transition:.3s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-feu{background:linear-gradient(135deg,var(--flamme),var(--braise));color:#1a0f08;box-shadow:0 14px 34px -12px rgba(255,90,31,.85);animation:souffle 4.2s ease-in-out infinite}
+.btn-feu:hover{filter:brightness(1.08)}
+@keyframes souffle{50%{box-shadow:0 18px 46px -6px rgba(255,90,31,.7);transform:scale(1.03)}}
+.btn-line{border:1.5px solid rgba(247,244,239,.55);color:var(--blanc);background:rgba(255,255,255,.06)}
+.btn-line:hover{background:rgba(255,255,255,.16)}
+.btn-noir{background:var(--nuit);color:var(--blanc)}
+.btn-noir:hover{background:var(--auvent)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--nuit);color:var(--blanc);padding:0 0 3.2rem}
+.hero .photo{position:relative;height:clamp(360px,100vw,520px);overflow:hidden;margin-top:2rem}
+.hero .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;animation:kenburns 24s ease-in-out infinite alternate}
+@keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.15) translate(1.5%,-2%)}}
+.hero .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,.25) 0%,rgba(15,14,13,0) 30%,rgba(15,14,13,.15) 60%,var(--nuit) 100%)}
+.hero .lueur{position:absolute;left:-10%;right:-10%;bottom:-40px;height:220px;background:radial-gradient(60% 70% at 50% 100%,rgba(255,90,31,.45),rgba(255,90,31,0) 70%);z-index:1;animation:respire 5s ease-in-out infinite}
+@keyframes respire{50%{opacity:.55}}
+.hero-in{position:relative;z-index:3;margin-top:-4.6rem}
+.hero .eyebrow{color:var(--flamme)}
+.hero h1{color:var(--blanc);font-size:clamp(4.2rem,22vw,9rem);letter-spacing:.02em;margin:.3rem 0 0;line-height:.9}
+.hero h1 .script{display:block;font-size:.42em;color:var(--flamme);margin-bottom:-.12em;transform:rotate(-6deg);transform-origin:left;width:max-content}
+.hero .menu-l{font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(.74rem,3.1vw,.95rem);color:#d6cfc6;margin-top:.7rem}
+.hero .lead{font-size:clamp(1.15rem,4.4vw,1.45rem);margin:1.2rem 0 1.7rem;max-width:32rem;color:#efe8de}
+.hero .lead b{color:var(--flamme);font-weight:500}
+.hero .adr{margin-top:1.4rem;font-size:.9rem;color:#bfb7ad;display:flex;gap:.5rem;align-items:flex-start}
+.hero .adr svg{width:18px;height:18px;flex:none;margin-top:.2rem;color:var(--braise)}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.2s .2s forwards}
+.d2{animation-delay:.55s}.d3{animation-delay:.9s}.d4{animation-delay:1.25s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau */
+.bande{background:linear-gradient(90deg,var(--braise),var(--flamme));color:#1a0f08;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:Anton,sans-serif;font-size:1.35rem;text-transform:uppercase;letter-spacing:.04em}
+.track{display:inline-block;animation:defile 34s linear infinite}
+.track span{margin:0 1.1rem}
+.track span::after{content:"🔥";margin-left:2.2rem;font-size:.9rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* carte */
+.carte-sec{background:var(--blanc)}
+.intro{max-width:38rem;font-size:1.08rem;color:var(--doux)}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:2rem}
+.plat{position:relative;background:var(--charbon);color:var(--blanc);border-radius:20px;padding:1.2rem 1rem 1.1rem;overflow:hidden;transition:transform .35s,box-shadow .35s;box-shadow:0 20px 40px -28px rgba(15,14,13,.9)}
+.plat:hover{transform:translateY(-5px);box-shadow:0 26px 48px -24px rgba(255,90,31,.55)}
+.plat::after{content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.35),rgba(255,90,31,0) 70%)}
+.plat svg{width:38px;height:38px;color:var(--flamme);margin-bottom:.6rem}
+.plat h3{color:var(--blanc);font-size:1.5rem}
+.plat p{font-size:.86rem;color:#cbc3b8;margin-top:.25rem;line-height:1.45}
+.plat.large{grid-column:1/-1;background:linear-gradient(135deg,#2a1a12,#1b1918)}
+.plat.large h3{color:var(--flamme)}
+.agneau{margin-top:1.8rem;display:flex;gap:1rem;align-items:center;background:var(--creme);border-radius:20px;padding:1.2rem 1.3rem;border-left:5px solid var(--braise)}
+.agneau b{font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:1.35rem;color:var(--nuit);display:block;line-height:1.1}
+.agneau span{font-size:.9rem;color:var(--doux)}
+.agneau svg{width:46px;height:46px;flex:none;color:var(--braise)}
+
+/* galerie */
+.galerie-sec{background:var(--nuit);color:var(--blanc);overflow:hidden}
+.galerie-sec h2{color:var(--blanc)}
+.galerie-sec .eyebrow{color:var(--flamme)}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.6rem 5vw 1.4rem;margin:0 -5vw;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 76%;scroll-snap-align:center;background:var(--charbon);border-radius:22px;overflow:hidden;box-shadow:0 26px 50px -30px rgba(0,0,0,.9);transition:transform .4s}
+.galerie figure:hover{transform:translateY(-6px) rotate(-.5deg)}
+.galerie img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.galerie figcaption{padding:.85rem 1.1rem 1.1rem;font-size:.88rem;color:#bdb5aa}
+.galerie figcaption b{display:block;font-family:Anton,sans-serif;font-weight:400;text-transform:uppercase;font-size:1.2rem;color:var(--blanc);letter-spacing:.02em}
+.glisse{font-family:'Kaushan Script',cursive;font-size:1.25rem;color:var(--flamme)}
+
+/* suggestion */
+.sugg .grid{display:grid;gap:2.2rem;align-items:center}
+.assiette{position:relative;border-radius:50%;overflow:hidden;aspect-ratio:1;max-width:400px;width:100%;margin:auto;box-shadow:0 0 0 10px #fff,0 0 0 11px #e6ddd0,0 40px 70px -30px rgba(15,14,13,.6)}
+.assiette img{width:100%;height:100%;object-fit:cover;animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg) scale(1.08)}}
+.sugg .tag{display:inline-block;background:var(--salade);color:#fff;font-weight:600;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;padding:.35rem .9rem;border-radius:999px}
+.citation{font-size:clamp(1.15rem,4.2vw,1.4rem);line-height:1.45;color:var(--charbon);border-left:4px solid var(--salade);padding-left:1rem;margin:1rem 0 .7rem;font-weight:400}
+.citation + small{color:var(--doux);font-size:.84rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.3rem}
+.chip{border:1px solid #d9cfc2;border-radius:999px;padding:.35rem .9rem;font-size:.86rem;background:#fff}
+
+/* vagues de séparation */
+.vague{display:block;width:100%;height:46px}
+
+/* lieu */
+.lieu{background:var(--creme)}
+.lieu .grid{display:grid;gap:2rem;align-items:center}
+.lieu .duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.lieu .duo img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:0 24px 44px -28px rgba(15,14,13,.7)}
+.lieu .duo img:nth-child(2){margin-top:2rem}
+.points{list-style:none;display:grid;gap:.75rem;margin-top:1.2rem}
+.points li{display:flex;gap:.7rem;align-items:flex-start}
+.points svg{width:22px;height:22px;flex:none;color:var(--braise);margin-top:.15rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s,transform .9s}
+.rv.vu{opacity:1;transform:none}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#3a1d12 0%,var(--nuit) 70%);color:var(--blanc);text-align:center;overflow:hidden}
+.noel h2{color:var(--blanc)}
+.noel .eyebrow{color:var(--flamme)}
+.noel p{max-width:34rem;margin:0 auto 1.6rem;color:#ddd5ca}
+.noel .ticket{position:relative;max-width:420px;margin:0 auto 2rem;background:var(--blanc);color:var(--nuit);border-radius:16px;padding:1.7rem 1.3rem 1.4rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.9);transform:rotate(-1.8deg)}
+.noel .ticket::before,.noel .ticket::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:#1d1310;transform:translateY(-50%)}
+.noel .ticket::before{left:-13px}.noel .ticket::after{right:-13px}
+.noel .ticket .script{font-size:1.6rem;color:var(--tomate);display:block}
+.noel .ticket b{font-family:Anton,sans-serif;font-weight:400;font-size:2.3rem;text-transform:uppercase;display:block;line-height:1;margin:.2rem 0}
+.noel .ticket .sm{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--doux);border-top:1.5px dashed #cfc5b8;display:block;padding-top:.7rem;margin-top:.7rem}
+.noel .noeud{position:absolute;top:-16px;right:24px;width:48px;height:48px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.74rem;color:#a99e91;margin-top:.9rem}
+
+/* contact */
+.contact .grid{display:grid;gap:2rem}
+.carte-info{background:#fff;border:1px solid #e3d9cc;border-radius:22px;padding:1.6rem 1.4rem;box-shadow:0 26px 50px -38px rgba(15,14,13,.6)}
+.carte-info dl{display:grid;gap:1rem}
+.carte-info dt{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--braise);font-weight:600}
+.carte-info dd{font-size:1.02rem;overflow-wrap:anywhere}
+.carte-info dd a{text-decoration:none;border-bottom:1.5px solid rgba(255,90,31,.45)}
+.reseaux{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem}
+.reseaux a{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1rem;border-radius:999px;border:1px solid #ddd2c4;text-decoration:none;font-size:.88rem;background:var(--blanc)}
+.reseaux svg{width:16px;height:16px}
+.slogan{font-family:'Kaushan Script',cursive;font-size:clamp(1.6rem,6vw,2.2rem);color:var(--braise);margin-top:1.4rem;line-height:1.2}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#a9a097;background:var(--nuit)}
+footer b{color:var(--flamme);font-weight:500}
+
+@media(min-width:860px){
+ .hero .photo{height:min(70vh,620px)}
+ .hero-in{margin-top:-6rem}
+ .menu{grid-template-columns:repeat(4,1fr)}
+ .plat.large{grid-column:span 2}
+ .galerie figure{flex:0 0 30%}
+ .sugg .grid{grid-template-columns:.9fr 1.1fr;gap:4rem}
+ .lieu .grid{grid-template-columns:1fr 1fr;gap:4rem}
+ .contact .grid{grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .apparait,.rv{opacity:1!important;transform:none!important}
+ canvas#braises{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Snack</div>
+<canvas id="braises" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="photo"><img src="img/enseigne-le-snack.jpg" alt="L'enseigne du Snack sur son auvent gris : « Le Snack, kebab, tacos, sandwich »" fetchpriority="high"></div>
+  <div class="lueur" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow apparait">Sainte-Clotilde · Saint-Denis · La Réunion</p>
+    <h1 class="apparait d2"><span class="script">le</span>Snack</h1>
+    <p class="menu-l apparait d2">Kebab · Assiette · Tacos · Salade · Sandwich</p>
+    <p class="lead apparait d3">Votre adresse kebab sur le parking du Carrefour Grand Nord, avec <b>de l'agneau tous les jours</b>. Le goût avant tout&nbsp;!</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-feu" href="tel:+262693450240"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Commander au 0693 450 240</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+    <p class="adr apparait d4"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>67 rue du Karting, parking Carrefour Grand Nord, 97490 Sainte-Clotilde</p>
+  </div>
+</header>
+
+<div class="bande" aria-hidden="true"><div class="track">
+  <span>Kebab</span><span>Assiette</span><span>Tacos</span><span>Galette</span><span>Salade</span><span>Sandwich</span><span>Agneau tous les jours</span><span>Uber Eats</span>
+  <span>Kebab</span><span>Assiette</span><span>Tacos</span><span>Galette</span><span>Salade</span><span>Sandwich</span><span>Agneau tous les jours</span><span>Uber Eats</span>
+</div></div>
+
+<section class="carte-sec" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">La carte</p>
+    <h2 class="rv">Une petite faim&nbsp;? <span class="script" style="color:var(--braise)">On vous attend</span></h2>
+    <p class="intro rv">Kebab, tacos, sandwichs et bien plus encore&nbsp;: au Snack, on choisit sa viande, sa sauce, et on se régale sur place ou à emporter.</p>
+    <div class="menu">
+      <div class="plat large rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8c6-3 14-3 20 0v4c-6-2-14-2-20 0zM15 12l-1 26c0 2 4 3 10 3s10-1 10-3l-1-26"/><path d="M24 4v40M16 20h16M16 28h16"/></svg>
+        <h3>Kebab</h3>
+        <p>Notre spécialité, en kebab ou en galette, avec de l'agneau chaque jour et d'autres viandes de qualité.</p>
+      </div>
+      <div class="plat rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="24" cy="28" rx="19" ry="11"/><ellipse cx="24" cy="26" rx="12" ry="6"/><path d="M18 24c2-3 5-4 9-3M20 28h6"/></svg>
+        <h3>Assiette</h3>
+        <p>Votre viande et ses crudités, servies à l'assiette.</p>
+      </div>
+      <div class="plat rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14h32l-4 22H12z"/><path d="M14 22h20M15 29h18"/></svg>
+        <h3>Tacos</h3>
+        <p>Le menu tacos, à partager en famille ou entre amis.</p>
+      </div>
+      <div class="plat rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 26a16 16 0 0 0 32 0z"/><path d="M14 22c1-5 5-7 8-5 2-4 8-4 10 1 3-1 6 1 6 4"/></svg>
+        <h3>Salade</h3>
+        <p>La salade burrata, la salade gourmande, fraîcheur et gourmandise.</p>
+      </div>
+      <div class="plat rv">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c0-5 8-8 18-8s18 3 18 8z"/><path d="M6 25h36M8 30h32c0 4-6 6-16 6S8 34 8 30z"/></svg>
+        <h3>Sandwich</h3>
+        <p>Le classique du snack, à emporter partout.</p>
+      </div>
+    </div>
+    <div class="agneau rv">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4c4 6 10 9 10 18a10 10 0 0 1-20 0c0-5 3-7 4-11 2 3 3 5 3 8 2-4 3-9 3-15z"/><path d="M14 40h20"/></svg>
+      <div><b>Agneau tous les jours</b><span>Chez Le Snack, l'agneau est à la carte chaque jour, avec d'autres viandes de qualité pour vos kebabs, tacos et galettes.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie-sec" id="photos">
+  <div class="wrap">
+    <p class="eyebrow rv">Sortis de notre cuisine</p>
+    <h2 class="rv">Ça se passe au Snack</h2>
+    <p class="glisse rv">Faites glisser →</p>
+    <div class="galerie rv">
+      <figure><img src="img/broche-kebab.jpg" alt="La broche de viande kebab dorée devant les résistances" loading="lazy" width="800" height="1000"><figcaption><b>La broche</b>Dorée devant le feu, comme il se doit.</figcaption></figure>
+      <figure><img src="img/viande-grillee.jpg" alt="Gros plan sur la viande kebab grillée et tranchée" loading="lazy" width="800" height="1000"><figcaption><b>La viande</b>Bien grillée, bien assaisonnée.</figcaption></figure>
+      <figure><img src="img/assiette-kebab.jpg" alt="Assiette kebab sur salade avec tomates, maïs et oignons, dans une assiette bleue" loading="lazy" width="800" height="1000"><figcaption><b>L'assiette</b>Viande et crudités fraîches.</figcaption></figure>
+      <figure><img src="img/pizza-gratinee.jpg" alt="Gratiné pizza coupé en parts, fromage fondu et garniture, sur papier journal" loading="lazy" width="800" height="1000"><figcaption><b>Le gratiné pizza</b>La suggestion de la semaine, en septembre.</figcaption></figure>
+      <figure><img src="img/pizza-gratinee-entiere.jpg" alt="Gratiné pizza entier sortant du four" loading="lazy" width="800" height="1000"><figcaption><b>Tout juste gratiné</b>Le fromage encore fondant.</figcaption></figure>
+      <figure><img src="img/salade-burrata.jpg" alt="Salade burrata avec tomates, roquette et pesto dans un bol blanc" loading="lazy" width="800" height="815"><figcaption><b>La salade burrata</b>Ultra-crémeuse, tomates juteuses et pesto parfumé.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sugg" id="suggestion">
+  <div class="wrap grid">
+    <div class="assiette rv"><img src="img/salade-burrata.jpg" alt="La salade burrata du Snack" loading="lazy"></div>
+    <div class="rv">
+      <span class="tag">Suggestion de la semaine</span>
+      <h2>La salade burrata</h2>
+      <p class="citation">« Un peu de fraîcheur, beaucoup de gourmandise&nbsp;! Craquez pour notre salade burrata ultra-crémeuse, tomates juteuses &amp; pesto parfumé… Un mélange fondant et savoureux à chaque bouchée&nbsp;! »</p>
+      <small>Publication Instagram du Snack, 23 octobre 2026</small>
+      <div class="chips"><span class="chip">Avec ou sans jambon Serrano</span><span class="chip">Porc ou poulet</span><span class="chip">Sur place ou à emporter</span><span class="chip">Uber Eats</span></div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="background:var(--blanc)"><path d="M0 46V20c150 18 300 26 450 14S750 0 900 6s240 22 300 24v16z" fill="#efe7dc"/></svg>
+<section class="lieu" id="lieu" style="padding-top:2.4rem">
+  <div class="wrap grid">
+    <div class="duo rv">
+      <img src="img/comptoir-le-snack.jpg" alt="L'intérieur du Snack : enseigne noire « le Snack, kebab, tacos, sandwich, salade » et vitrine réfrigérée de boissons" loading="lazy">
+      <img src="img/enseigne-le-snack.jpg" alt="L'enseigne extérieure du Snack" loading="lazy">
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Le lieu</p>
+      <h2>Sur le parking du Carrefour</h2>
+      <p>On ne va pas tous chez Carrefour pour les mêmes raisons… Le Snack vous accueille au 67 rue du Karting, sur le parking du Carrefour Grand Nord à Sainte-Clotilde, du lundi au dimanche.</p>
+      <ul class="points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Sur place ou à emporter</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>En livraison, également sur Uber Eats</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Ouvert du lundi au dimanche</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>Des jeux concours réguliers sur notre Instagram</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Les fêtes, version Snack</h2>
+    <div class="ticket rv">
+      <svg class="noeud" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#d8362b"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#a8261e"/><circle cx="23" cy="18" r="3.5" fill="#ffa630"/></svg>
+      <span class="script">Un repas à partager</span>
+      <b>Le Snack</b>
+      <span class="sm">Kebab · Tacos · Sainte-Clotilde</span>
+    </div>
+    <p class="rv">Une soirée entre amis, une tablée en famille, un collègue à remercier&nbsp;: écrivez-nous pour préparer votre commande des fêtes ou offrir un bon repas chez Le Snack.</p>
+    <div class="ctas rv">
+      <a class="btn btn-feu" href="https://wa.me/262693450240?text=Bonjour%20Le%20Snack%2C%20je%20voudrais%20pr%C3%A9parer%20une%20commande%20pour%20les%20f%C3%AAtes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Ma commande des fêtes</a>
+      <a class="btn btn-line" href="https://wa.me/262693450240?text=Bonjour%20Le%20Snack%2C%20je%20voudrais%20offrir%20un%20repas%20pour%20No%C3%ABl">Offrir un repas</a>
+    </div>
+    <p class="leg">Illustration : ticket à offrir</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyebrow">Commander</p>
+      <h2>À très vite au Snack&nbsp;!</h2>
+      <p>Un coup de fil et votre commande est lancée&nbsp;: sur place, à emporter, ou livrée via Uber Eats. Les nouveautés, suggestions de la semaine et jeux concours sont annoncés sur notre Instagram.</p>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-noir" href="tel:+262693450240">Appeler le 0693 450 240</a>
+        <a class="btn btn-feu" href="https://wa.me/262693450240?text=Bonjour%20Le%20Snack%2C%20je%20voudrais%20passer%20commande">WhatsApp</a>
+      </div>
+      <p class="slogan">Le goût avant tout&nbsp;!</p>
+    </div>
+    <div class="carte-info rv">
+      <dl>
+        <div><dt>Adresse</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=67%20rue%20du%20Karting%2097490%20Sainte-Clotilde">67 rue du Karting, parking Carrefour Grand Nord<br>97490 Sainte-Clotilde, Saint-Denis</a></dd></div>
+        <div><dt>Commandes</dt><dd><a href="tel:+262693450240">0693 450 240</a></dd></div>
+        <div><dt>Ouverture</dt><dd>Du lundi au dimanche</dd></div>
+        <div><dt>Formules</dt><dd>Sur place · À emporter · Uber Eats</dd></div>
+      </dl>
+      <div class="reseaux">
+        <a href="https://www.instagram.com/le_snack974/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@le_snack974</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer><b>Le Snack</b> · Kebab, assiette, tacos · Sainte-Clotilde, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Snack.</footer>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+document.querySelectorAll('.menu .plat').forEach(function(p,i){p.style.transitionDelay=(i*.1)+'s'});
+if(reduce)return;
+/* braises qui montent + fumée légère : l'ambiance de la broche */
+var c=document.getElementById('braises'),x=c.getContext('2d'),W,H,P=[],run=true,dpr=Math.min(devicePixelRatio||1,2);
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+function mk(init){var fum=Math.random()<.25;return{x:Math.random()*W,y:init?Math.random()*H:H+20,r:fum?16+Math.random()*24:1+Math.random()*1.8,vy:-(fum?.2+Math.random()*.25:.35+Math.random()*.7),vx:(Math.random()-.5)*.3,a:0,m:fum?.04:.35+Math.random()*.35,f:fum,ph:Math.random()*6.28}}
+for(var i=0;i<30;i++)P.push(mk(true));
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];p.y+=p.vy;p.x+=p.vx+Math.sin(t/900+p.ph)*.25;if(p.a<p.m)p.a+=.005;
+if(p.y<-50){P[i]=mk(false);continue}
+var R=p.r*(p.f?1:3.5),g=x.createRadialGradient(p.x,p.y,0,p.x,p.y,R);
+if(p.f){g.addColorStop(0,'rgba(200,190,180,'+p.a+')');g.addColorStop(1,'rgba(200,190,180,0)')}
+else{var fl=p.a*(.75+.25*Math.sin(t/180+p.ph));g.addColorStop(0,'rgba(255,214,140,'+fl+')');g.addColorStop(.3,'rgba(255,90,31,'+fl*.55+')');g.addColorStop(1,'rgba(255,90,31,0)')}
+x.fillStyle=g;x.beginPath();x.arc(p.x,p.y,R,0,6.283);x.fill()}
+requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Snack" defer></script>
+</body>
+</html>

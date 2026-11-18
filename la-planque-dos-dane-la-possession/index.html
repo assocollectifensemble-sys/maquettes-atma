@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La Planque · Snack Bar à Dos d'Âne, La Possession</title>
+<meta name="description" content="Américain XL créole, pizza créole, tacos gratinés et burgers du week-end, préparés à la commande au cœur de Dos d'Âne.">
+<meta property="og:title" content="La Planque · Snack Bar à Dos d'Âne">
+<meta property="og:description" content="Sa lé bon, sa lé gourmand, sa c'est La Planque. Américain XL créole, pizza créole, tacos gratinés, préparés à la commande.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-planque-dos-dane-la-possession/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-planque-dos-dane-la-possession/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#0d0b10;--nuit2:#17141c;--ardoise:#221e27;
+  --or:#d6b26e;--or2:#f1d9a4;--neon:#ff3d8f;--neon2:#ff8cc0;
+  --creme:#f6efe4;--gris:#b9b0a6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--nuit);color:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.ribbon{position:relative;z-index:30;background:linear-gradient(90deg,#2a1420,#3a1a2a,#2a1420);color:var(--or2);text-align:center;font-size:.8rem;padding:.55rem 1rem;letter-spacing:.02em}
+.ribbon b{color:#fff;font-weight:600}
+#sparks{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+main,header,footer,section{position:relative;z-index:2}
+
+/* HERO */
+.hero{min-height:min(100svh,880px);display:grid;place-items:center;text-align:center;overflow:hidden;padding:5rem 1.2rem 4rem;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:url(img/pizza-creole-neon.webp) center 30%/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 30%,rgba(13,11,16,.25),rgba(13,11,16,.78) 60%,var(--nuit) 100%)}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.logo{width:min(250px,64vw);aspect-ratio:1;border-radius:50%;margin:0 auto 1.4rem;display:grid;place-content:center;border:3px solid var(--or);
+  background:radial-gradient(circle,rgba(13,11,16,.75),rgba(13,11,16,.92));box-shadow:0 0 0 6px rgba(214,178,110,.14),0 0 40px rgba(255,61,143,.35);animation:glow 4s ease-in-out infinite}
+.logo .script{font-family:'Great Vibes',cursive;font-size:clamp(3.1rem,15vw,4.3rem);line-height:.9;color:#fff;text-shadow:0 0 6px var(--neon),0 0 18px var(--neon),0 0 36px rgba(255,61,143,.7);animation:flick 7s infinite}
+.logo .caps{font-family:'Bebas Neue',sans-serif;letter-spacing:.35em;font-size:1.05rem;color:var(--or2);margin-top:.35rem;padding-left:.35em}
+@keyframes glow{50%{box-shadow:0 0 0 6px rgba(214,178,110,.2),0 0 60px rgba(255,61,143,.55)}}
+@keyframes flick{0%,18%,22%,25%,53%,57%,100%{opacity:1}20%,24%,55%{opacity:.55}}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(2.1rem,8vw,3.6rem);letter-spacing:.04em;line-height:1.05;max-width:16ch;margin:0 auto .8rem}
+.hero h1 em{font-style:normal;color:var(--neon2)}
+.hero p.lead{max-width:34rem;margin:0 auto 1.8rem;color:#e9dfd2;font-size:1.05rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:1rem;transition:transform .25s,box-shadow .25s}
+.btn svg{width:20px;height:20px}
+.btn-main{background:var(--neon);color:#fff;box-shadow:0 0 22px rgba(255,61,143,.5);animation:breathe 3.2s ease-in-out infinite}
+.btn-line{border:1.5px solid var(--or);color:var(--or2)}
+.btn:hover{transform:translateY(-2px)}
+@keyframes breathe{50%{box-shadow:0 0 34px rgba(255,61,143,.75)}}
+.scroll-hint{position:absolute;bottom:1.4rem;left:50%;transform:translateX(-50%);font-size:.75rem;letter-spacing:.2em;color:var(--gris);text-transform:uppercase}
+
+/* MARQUEE */
+.marquee{background:var(--or);color:var(--nuit);overflow:hidden;white-space:nowrap;padding:.7rem 0;font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:.08em}
+.marquee .track{display:inline-block;animation:mq 28s linear infinite}
+.marquee span{margin:0 1.2rem}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+section{padding:4.5rem 1.2rem}
+.wrap{max-width:1080px;margin:0 auto}
+.eyebrow{font-family:'Bebas Neue',sans-serif;letter-spacing:.25em;color:var(--neon2);font-size:1rem;margin-bottom:.4rem}
+h2{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:clamp(2rem,7vw,3rem);letter-spacing:.03em;line-height:1.05;margin-bottom:1rem}
+h2 .s{font-family:'Great Vibes',cursive;color:var(--or2);font-size:1.15em;letter-spacing:0}
+.intro p{color:#ddd3c6;max-width:40rem}
+.quote{margin-top:1.6rem;padding:1.2rem 1.4rem;border-left:3px solid var(--neon);background:rgba(255,61,143,.07);border-radius:0 14px 14px 0;font-size:1.15rem;max-width:40rem}
+.quote small{display:block;color:var(--gris);font-size:.8rem;margin-top:.4rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.badge{border:1px solid rgba(214,178,110,.5);border-radius:999px;padding:.45rem .95rem;font-size:.88rem;color:var(--or2)}
+
+/* SPECIALITES */
+.specs{background:linear-gradient(180deg,var(--nuit),var(--nuit2))}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.8rem}
+.card{background:var(--ardoise);border-radius:18px;overflow:hidden;border:1px solid rgba(214,178,110,.18);transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 34px rgba(0,0,0,.5),0 0 22px rgba(255,61,143,.18)}
+.card figure{aspect-ratio:4/4.4;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card:hover img{transform:scale(1.06)}
+.card .tx{padding:1rem 1.15rem 1.25rem}
+.card h3{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.55rem;letter-spacing:.04em;color:var(--or2)}
+.card p{font-size:.95rem;color:#d4cabd}
+.card .tag{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--neon2);margin-bottom:.2rem}
+
+/* CARTE */
+.carte{background:var(--nuit2)}
+.board{margin-top:1.6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.col{background:radial-gradient(circle at 20% 0,rgba(214,178,110,.08),transparent 60%),#121016;border:1px solid rgba(214,178,110,.3);border-radius:16px;padding:1.3rem 1.3rem 1.1rem}
+.col h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.12em;color:var(--or);font-size:1.3rem;border-bottom:1px dashed rgba(214,178,110,.35);padding-bottom:.4rem;margin-bottom:.6rem}
+.col li{list-style:none;padding:.28rem 0;color:#e8dfd3}
+.col li::before{content:"✦";color:var(--neon);font-size:.7rem;margin-right:.55rem;vertical-align:middle}
+.note{margin-top:1.4rem;text-align:center;font-family:'Great Vibes',cursive;font-size:1.7rem;color:var(--or2)}
+.note small{display:block;font-family:'Outfit',sans-serif;font-size:.9rem;color:var(--gris);margin-top:.3rem}
+
+/* GALERIE */
+.galerie{padding-left:0;padding-right:0}
+.galerie .wrap{padding:0 1.2rem}
+.strip{display:flex;gap:.9rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.4rem 1.2rem .8rem;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:0 0 min(72vw,300px);scroll-snap-align:center;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:3/4;border:1px solid rgba(214,178,110,.2)}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;background:linear-gradient(transparent,rgba(13,11,16,.9));font-size:.85rem;color:var(--or2)}
+.swipe{text-align:center;color:var(--gris);font-size:.8rem}
+
+/* FIDELITE */
+.fid .box{display:grid;gap:1.4rem;align-items:center;background:linear-gradient(135deg,#1d1520,#2b1624);border:1px solid rgba(255,61,143,.35);border-radius:22px;padding:1.8rem 1.4rem}
+.stamps{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem;max-width:300px}
+.stamps i{aspect-ratio:1;border-radius:50%;border:1.5px dashed var(--or);display:grid;place-items:center;font-style:normal;font-size:.75rem;color:var(--or2)}
+.stamps i.on{background:var(--neon);border:none;color:#fff;box-shadow:0 0 12px rgba(255,61,143,.6)}
+.fid ul{list-style:none;margin:.6rem 0 0}
+.fid li{padding:.2rem 0}
+.fid li::before{content:"→ ";color:var(--neon2)}
+
+/* FETES */
+.fetes{background:radial-gradient(ellipse at 50% 0,rgba(214,178,110,.16),transparent 65%),var(--nuit)}
+.garland{display:flex;justify-content:center;gap:1.1rem;margin-bottom:1.2rem}
+.garland b{width:11px;height:11px;border-radius:50%;background:var(--or);box-shadow:0 0 10px var(--or);animation:tw 2.4s infinite}
+.garland b:nth-child(even){background:#e2474f;box-shadow:0 0 10px #e2474f;animation-delay:1.2s}
+@keyframes tw{50%{opacity:.35}}
+.events{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.1rem;margin:1.6rem 0}
+.ev{border:1px solid rgba(214,178,110,.45);border-radius:18px;padding:1.3rem;background:rgba(23,20,28,.85);position:relative}
+.ev .d{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;border:2px solid var(--or);font-family:'Bebas Neue',sans-serif;line-height:1;text-align:center;color:var(--or2);float:right;margin:0 0 .5rem .8rem}
+.ev .d span{display:block;font-size:.85rem;letter-spacing:.1em}
+.ev .d strong{font-size:1.6rem;font-weight:400}
+.ev h3{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.04em;color:#fff}
+.ev .h{color:var(--neon2);font-size:.9rem;margin-bottom:.4rem}
+.ev p{color:#d6ccbf;font-size:.94rem}
+.gift{display:grid;gap:1rem;background:linear-gradient(135deg,rgba(214,178,110,.14),rgba(255,61,143,.1));border-radius:20px;padding:1.5rem 1.3rem;border:1px solid rgba(214,178,110,.35)}
+.gift p{color:#e8dfd3}
+
+/* INFOS */
+.infos{background:var(--nuit2)}
+.info-grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:1.4rem}
+.panel{background:var(--ardoise);border-radius:18px;padding:1.4rem;border:1px solid rgba(214,178,110,.2)}
+.panel h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.1em;color:var(--or);font-size:1.35rem;margin-bottom:.6rem}
+.hours div{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.hours span:last-child{color:var(--or2);white-space:nowrap}
+.panel a.lnk{color:var(--neon2);font-weight:600;text-decoration:none}
+.panel .btns{justify-content:flex-start;margin-top:1rem}
+
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:var(--gris);background:#08070a}
+footer b{color:var(--or2);font-weight:600}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(min-width:760px){
+  .fid .box{grid-template-columns:1.2fr 1fr;padding:2.4rem}
+  .gift{grid-template-columns:1.4fr 1fr;align-items:center}
+}
+@media(min-width:1600px){.strip{justify-content:center}}
+@media(min-width:900px){.strip figure{flex-basis:250px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  #sparks{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La Planque</div>
+<canvas id="sparks" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="Pizza créole devant l'enseigne néon de La Planque"></div>
+  <div>
+    <div class="logo" aria-label="La Planque Snack Bar"><div class="script">La planque</div><div class="caps">Snack bar</div></div>
+    <h1>Le snack gourmand de <em>Dos d'Âne</em></h1>
+    <p class="lead">Américain XL créole, pizza créole, tacos gratinés et burgers du week-end : toutes les recettes sont préparées à la commande, au 32 rue du Père Lucien Courteaud.</p>
+    <div class="btns">
+      <a class="btn btn-main" href="tel:+262693124941"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>Commander au 0693 12 49 41</a>
+      <a class="btn btn-line" href="#carte">Voir la carte</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Entrez dans La Planque</div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track">
+  <span>Américain XL créole</span>✦<span>Pizza créole</span>✦<span>Pizza kebab</span>✦<span>Tacos gratiné mozza</span>✦<span>Burger tenders ou bœuf</span>✦<span>Préparé à la commande</span>✦
+  <span>Américain XL créole</span>✦<span>Pizza créole</span>✦<span>Pizza kebab</span>✦<span>Tacos gratiné mozza</span>✦<span>Burger tenders ou bœuf</span>✦<span>Préparé à la commande</span>✦
+</div></div>
+
+<main>
+<section class="intro">
+  <div class="wrap">
+    <p class="eyebrow rv">Bienvenue à La Planque</p>
+    <h2 class="rv">Une adresse <span class="s">gourmande</span> au cœur des hauts</h2>
+    <p class="rv">À Dos d'Âne, La Planque régale les gourmands avec des sandwichs généreux, des pizzas, des tacos, des burgers, et une carte qui s'invite à la créole. Chaque recette est préparée à la commande, pour la savourer bien chaude.</p>
+    <blockquote class="quote rv">« Sa lé bon, sa lé gourmand, sa c'est La Planque »<small>Publication de La Planque, 30 octobre 2026</small></blockquote>
+    <div class="badges rv">
+      <span class="badge">Préparé à la commande</span>
+      <span class="badge">Ouvert 7 jours sur 7</span>
+      <span class="badge">4,9/5 sur Google</span>
+      <span class="badge">Carte de fidélité</span>
+    </div>
+  </div>
+</section>
+
+<section class="specs" id="specialites">
+  <div class="wrap">
+    <p class="eyebrow rv">Les incontournables</p>
+    <h2 class="rv">Les <span class="s">spécialités</span> de la maison</h2>
+    <div class="grid">
+      <article class="card rv"><figure><img src="img/americain-xl-creole.webp" alt="Américain XL créole de La Planque" loading="lazy"></figure>
+        <div class="tx"><span class="tag">La star</span><h3>Américain XL créole</h3><p>« A essayer ou réessayer » : le grand Américain version créole, et dans sa formule plus petite, « un pti Américain créole y passe toujours bien ».</p></div></article>
+      <article class="card rv"><figure><img src="img/pizza-creole-neon.webp" alt="Pizza créole sous l'enseigne néon" loading="lazy"></figure>
+        <div class="tx"><span class="tag">Saveur péi</span><h3>Pizza créole</h3><p>Servie à la Fête de Dos d'Âne, garnie et gratinée, avec sa touche d'oignons croustillants.</p></div></article>
+      <article class="card rv"><figure><img src="img/pizza-kebab.webp" alt="Pizza kebab de La Planque" loading="lazy"></figure>
+        <div class="tx"><span class="tag">Gourmande</span><h3>Pizza kebab</h3><p>« Otééé, pizza kebab lé paré… » La rencontre de deux classiques, généreuse à souhait.</p></div></article>
+      <article class="card rv"><figure><img src="img/tacos-gratine.webp" alt="Tacos gratinés à la mozzarella" loading="lazy"></figure>
+        <div class="tx"><span class="tag">À composer</span><h3>Tacos gratiné mozza</h3><p>Zot peut choisir : oignon crispy, persillade, jambon… ou les trois.</p></div></article>
+      <article class="card rv"><figure><img src="img/burger-tenders.webp" alt="Burger et frites de La Planque" loading="lazy"></figure>
+        <div class="tx"><span class="tag">Le week-end</span><h3>Burger tenders ou bœuf</h3><p>Du vendredi au dimanche, en quantité limitée : pensez à réserver au 0693 12 49 41.</p></div></article>
+      <article class="card rv"><figure><img src="img/frites-crispy.webp" alt="Frites gratinées aux oignons crispy" loading="lazy"></figure>
+        <div class="tx"><span class="tag">À partager</span><h3>Frites gratinées</h3><p>Fromage fondu et oignons crispy : les suppléments qui font toute la différence.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <p class="eyebrow rv">La carte</p>
+    <h2 class="rv">De quoi <span class="s">se régaler</span></h2>
+    <div class="board">
+      <div class="col rv"><h3>Sandwichs</h3><ul><li>Panini</li><li>American</li><li>American XL</li><li>American XL spécial</li><li>Big Sheboom</li></ul></div>
+      <div class="col rv"><h3>Kebabs &amp; pizzas</h3><ul><li>Kebab</li><li>Kebab géant</li><li>Pizza kebab</li><li>Pizza créole</li></ul></div>
+      <div class="col rv"><h3>Tacos &amp; wraps</h3><ul><li>Tacos</li><li>Tacos XL</li><li>Wrap</li><li>Wrap XL</li></ul></div>
+      <div class="col rv"><h3>Menus burgers</h3><ul><li>Menu burger tenders</li><li>Menu burger bœuf</li></ul><h3 style="margin-top:1rem">Suppléments</h3><ul><li>Gratinée</li><li>Salade en plus</li><li>Oignons crispy</li><li>Fromage</li></ul></div>
+    </div>
+    <p class="note rv">Toutes nos recettes sont préparées à la commande<small>Carte et tarifs du moment affichés au snack et sur la page Facebook de La Planque.</small></p>
+  </div>
+</section>
+
+<section class="galerie">
+  <div class="wrap"><p class="eyebrow rv">En images</p><h2 class="rv">Sous la <span class="s">lumière</span> du néon</h2></div>
+  <div class="strip">
+    <figure><img src="img/neon-gratine.webp" alt="Spécialité gratinée sous le néon rose" loading="lazy"><figcaption>Sous le néon rose</figcaption></figure>
+    <figure><img src="img/americain-creole-devanture.webp" alt="Américain créole devant la devanture" loading="lazy"><figcaption>Un pti Américain créole</figcaption></figure>
+    <figure><img src="img/pizzas-comptoir.webp" alt="Pizzas sur le comptoir" loading="lazy"><figcaption>Tout juste sorties du four</figcaption></figure>
+    <figure><img src="img/gratine-oignons.webp" alt="Recette gratinée aux oignons" loading="lazy"><figcaption>Gratiné, croustillant, généreux</figcaption></figure>
+    <figure><img src="img/americain-xl-creole-2.webp" alt="Américain XL créole" loading="lazy"><figcaption>Américain XL créole, de nouveau disponible</figcaption></figure>
+  </div>
+  <p class="swipe">Faites glisser pour découvrir</p>
+</section>
+
+<section class="fid">
+  <div class="wrap">
+    <div class="box rv">
+      <div>
+        <p class="eyebrow">Nouveau</p>
+        <h2>La carte de <span class="s">fidélité</span></h2>
+        <p>Scannez le QR code au comptoir et activez votre carte de fidélité La Planque. Avec elle, profitez de :</p>
+        <ul><li>remises FLASH exclusives</li><li>un cadeau pour votre anniversaire</li><li>10 tampons = un Américain XL ou une gaufre offerte</li></ul>
+      </div>
+      <div class="stamps" aria-label="Carte de dix tampons"><i class="on">✦</i><i class="on">✦</i><i class="on">✦</i><i class="on">✦</i><i class="on">✦</i><i class="on">✦</i><i class="on">✦</i><i>8</i><i>9</i><i>10</i></div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap">
+    <div class="garland" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+    <p class="eyebrow rv" style="text-align:center">Programme de fin d'année</p>
+    <h2 class="rv" style="text-align:center">Décembre <span class="s">à La Planque</span></h2>
+    <div class="events">
+      <article class="ev rv"><div class="d"><span>SAM</span><strong>5</strong></div><h3>Soirée karaoké</h3><p class="h">De 19h à 23h30</p><p>Karaoké professionnel, grillade, boisson soft, assiette apéritif à déguster à plusieurs.</p></article>
+      <article class="ev rv"><div class="d"><span>SAM</span><strong>12</strong></div><h3>Après-midi marmaille</h3><p class="h">De 12h à 18h</p><p>Jeux gonflables à 5 € par enfant, jeux vidéo à 0,50 €, maquillage enfant offert et gaufre !</p></article>
+      <article class="ev rv"><div class="d"><span>VEN</span><strong>18</strong></div><h3>Tournoi UFC 5 &amp; FIFA 26</h3><p class="h">2 € par joueur</p><p>Manettes en main, avec grillade et samoussa pour tenir le rythme.</p></article>
+    </div>
+    <div class="gift rv">
+      <div>
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.7rem;letter-spacing:.04em;color:var(--or2)">Les fêtes se préparent ensemble</h3>
+        <p>Une tablée d'amis, un repas de famille ou un goûter marmaille : un message suffit pour réserver votre place aux soirées de décembre ou préparer votre commande des fêtes.</p>
+      </div>
+      <div class="btns">
+        <a class="btn btn-main" href="https://wa.me/262693124941?text=Bonjour%20La%20Planque%2C%20je%20voudrais%20r%C3%A9server%20pour%20une%20soir%C3%A9e%20de%20d%C3%A9cembre"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver ma soirée</a>
+        <a class="btn btn-line" href="https://wa.me/262693124941?text=Bonjour%20La%20Planque%2C%20je%20voudrais%20passer%20une%20commande%20pour%20les%20f%C3%AAtes">Commande des fêtes</a>
+      </div>
+    </div>
+    <p class="note rv">Joyeuses fêtes à La Planque</p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv">Venir à La Planque</p>
+    <h2 class="rv">On vous <span class="s">attend</span></h2>
+    <div class="info-grid">
+      <div class="panel rv"><h3>Horaires</h3>
+        <div class="hours"><div><span>Lundi et mardi</span><span>17h – 21h</span></div><div><span>Mercredi au dimanche</span><span>11h – 21h</span></div></div>
+        <p style="margin-top:.8rem;color:var(--gris);font-size:.9rem">Commande conseillée par téléphone, pour une recette prête à votre arrivée.</p></div>
+      <div class="panel rv"><h3>Adresse</h3>
+        <p>32, rue du Père Lucien Courteaud<br>97419 Dos d'Âne · La Possession</p>
+        <p style="margin-top:.6rem"><a class="lnk" href="https://www.google.com/maps/search/?api=1&amp;query=La%20Planque%2032%20rue%20du%20P%C3%A8re%20Lucien%20Courteaud%20Dos%20d%27%C3%82ne">Itinéraire Google Maps →</a></p></div>
+      <div class="panel rv"><h3>Commander</h3>
+        <p>Par téléphone ou WhatsApp :<br><a class="lnk" href="tel:+262693124941">0693 12 49 41</a></p>
+        <div class="btns">
+          <a class="btn btn-main" href="https://wa.me/262693124941?text=Bonjour%20La%20Planque%2C%20je%20voudrais%20passer%20commande">WhatsApp</a>
+          <a class="btn btn-line" href="https://www.facebook.com/138317052707636/">Facebook</a>
+        </div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><b>La Planque</b> · Snack bar · Dos d'Âne, La Possession, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de La Planque.</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('sparks'),x=c.getContext('2d');let W,H,P=[],run=true;
+function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+const N=innerWidth<600?18:30;
+function mk(y){return{x:Math.random()*W,y:y??H+10,r:Math.random()*1.8+.6,v:Math.random()*.5+.25,d:Math.random()*.6-.3,a:Math.random()*.5+.25,h:Math.random()<.5?'255,61,143':'241,217,164',p:Math.random()*6}}
+for(let i=0;i<N;i++)P.push(mk(Math.random()*H));
+function f(){if(!run)return;x.clearRect(0,0,W,H);
+for(const s of P){s.y-=s.v;s.p+=.03;s.x+=s.d+Math.sin(s.p)*.3;if(s.y<-10)Object.assign(s,mk());
+const g=x.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*4);g.addColorStop(0,`rgba(${s.h},${s.a})`);g.addColorStop(1,`rgba(${s.h},0)`);
+x.fillStyle=g;x.beginPath();x.arc(s.x,s.y,s.r*4,0,7);x.fill()}
+requestAnimationFrame(f)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La Planque" defer></script>
+</body>
+</html>
