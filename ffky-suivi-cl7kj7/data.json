@@ -212,12 +212,12 @@
     },
     {
      "titre": "Nouvelle sauvegarde de référence et essai de remise en route",
-     "statut": "en_cours",
-     "date": "",
-     "detail": "Une copie de référence toute neuve, prise sur le site nettoyé, puis un nouvel essai complet de remise en route.",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Une sauvegarde propre de la base du 19 novembre est rangée hors du serveur, et l'essai de remise en route sur un site de test fonctionne. Les anciennes copies sont étiquetées et mises de côté.",
      "preuve": "Rapport d'essai.",
      "qui": "Jonathan",
-     "source": "vérification 19/11"
+     "source": "cloture-1119/prod/RAPPORT.md écart 3"
     },
     {
      "titre": "Espace adhérent réparé",
@@ -259,10 +259,10 @@
      "titre": "Dernières petites mises à jour d'extensions",
      "statut": "en_cours",
      "date": "",
-     "detail": "Jupiter X Core, Elementor, Events Manager et GiveWP, testées d'abord sur la copie de travail.",
+     "detail": "Elementor 4.4.1, Events Manager 7.5 et GiveWP 4.19.2.1 sont à jour depuis le 19 novembre, testés sur le site de test puis en ligne. Jupiter X Core suit avec la licence Artbees.",
      "preuve": "Journal d'interventions.",
      "qui": "Jonathan",
-     "source": "vérification 19/11"
+     "source": "cloture-1119/prod/RAPPORT.md écart 7"
     },
     {
      "titre": "Validation écrite de l'étape 2",
@@ -542,6 +542,10 @@
   }
  ],
  "historique": [
+  {
+   "date": "2026-11-19",
+   "texte": "Sauvegarde propre et essai de remise en route réussis ; Elementor, Events Manager et GiveWP à jour."
+  },
   {
    "date": "2026-11-07",
    "texte": "ffky.fr retrouve sa page d'accueil le jour même ; contrôle automatique toutes les 30 minutes.",
