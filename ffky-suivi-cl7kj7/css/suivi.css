@@ -2,7 +2,7 @@
 @font-face{font-family:"Jost";src:url(../fonts/jost.woff2) format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Inter";src:url(../fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
 :root{
-  --or:#b69249; --or-clair:#f4e37b; --bleu:#3d5aa2; --bleu-clair:#7fb1e2; --gris:#868686;
+  --or:#b69249; --or-clair:#f4e37b; --bleu:#3d5aa2; --bleu-clair:#7fb1e2; --gris:#868686; --gris-texte:#5e5e5e;
   --encre:#26324f; --fond:#f7f6f1; --carte:#fff; --ligne:#e6e2d6;
   --fait:#2f8a5b; --fait-bg:#e3f3ea; --cours:#3d5aa2; --cours-bg:#e4ecfa;
   --venir:#6f6f6f; --venir-bg:#efefec; --attend:#9a6b14; --attend-bg:#fbf0d2;
@@ -36,7 +36,7 @@ h2::after{content:"";display:block;width:48px;height:3px;margin-top:.4rem;backgr
 
 main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
 .intro{font-size:1rem;color:#3c4766;margin:1.2rem 0 0}
-.note{color:var(--gris);margin:.2rem 0 1rem}
+.note{color:var(--gris-texte);margin:.2rem 0 1rem}
 
 .filtres{display:flex;flex-wrap:wrap;gap:8px;margin:.6rem 0}
 .chip{border:1px solid var(--ligne);background:#fff;color:var(--encre);font:inherit;font-size:.88rem;padding:7px 13px;border-radius:99px;cursor:pointer;min-height:38px}
@@ -50,7 +50,7 @@ main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
 .etape__id{font-family:"Jost";font-weight:600;color:#fff;background:var(--or);border-radius:8px;padding:2px 8px;font-size:.9rem}
 .etape__nom{font-family:"Jost";font-size:1.2rem;font-weight:500;flex:1 1 auto}
 .etape__resume{margin:.5rem 0 .6rem;color:#4a5370;font-size:.95rem}
-.etape__jauge{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--gris)}
+.etape__jauge{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--gris-texte)}
 .etape__jauge .bar{flex:1}
 .etape__next{margin:.7rem 0 0;font-size:.9rem;background:var(--fond);border-left:3px solid var(--or);padding:8px 10px;border-radius:6px}
 .etape__next b{color:var(--bleu)}
@@ -61,7 +61,7 @@ main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
 .tache{border-top:1px solid var(--ligne);padding:12px 0}
 .tache__l1{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
 .tache__titre{font-weight:600;font-size:.97rem}
-.tache__meta{font-size:.8rem;color:var(--gris);margin-top:2px}
+.tache__meta{font-size:.8rem;color:var(--gris-texte);margin-top:2px}
 .tache p{margin:.35rem 0 0;font-size:.92rem;color:#3c4766}
 .tache .preuve{font-size:.85rem;color:#55607e}
 .tache .preuve::before{content:"✓ À regarder : ";color:var(--or);font-weight:600}
@@ -77,13 +77,13 @@ main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
 .attentes li::before{content:counter(a);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--attend-bg);color:var(--attend);font-family:"Jost";font-weight:600;display:grid;place-items:center}
 .attentes b{display:block}
 .attentes span{font-size:.9rem;color:#4a5370}
-.attentes small{display:block;color:var(--gris);margin-top:4px}
+.attentes small{display:block;color:var(--gris-texte);margin-top:4px}
 
 .timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--bleu-clair)}
 .timeline li{position:relative;padding:0 0 14px 14px}
 .timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--or)}
 .timeline time{font-family:"Jost";font-weight:600;color:var(--bleu);font-size:.9rem}
-.timeline .et{font-size:.75rem;color:var(--gris);margin-left:6px}
+.timeline .et{font-size:.75rem;color:var(--gris-texte);margin-left:6px}
 .timeline p{margin:.1rem 0 0;font-size:.93rem}
 
 .cartes{display:grid;gap:10px}
@@ -94,8 +94,8 @@ main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
 .surveillance li{background:#fff;border-radius:10px;padding:10px 12px;border:1px solid var(--ligne);font-size:.92rem}
 .surveillance b{color:var(--or);font-family:"Jost";font-weight:600;display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
 
-.vide{color:var(--gris);font-style:italic}
-.pied{text-align:center;font-size:.85rem;color:var(--gris);padding:24px 16px 40px;border-top:1px solid var(--ligne)}
+.vide{color:var(--gris-texte);font-style:italic}
+.pied{text-align:center;font-size:.85rem;color:var(--gris-texte);padding:24px 16px 40px;border-top:1px solid var(--ligne)}
 
 @media (min-width:720px){
   .hero{padding:34px 24px 26px}

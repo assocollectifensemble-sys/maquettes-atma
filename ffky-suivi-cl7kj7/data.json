@@ -152,7 +152,7 @@
    "debut": "2026-11-09",
    "resume": "Le site tourne sur des bases neuves et légères, sauvegardé chaque jour.",
    "prochaine": {
-    "action": "Signature des e-mails Brevo, dernières mises à jour, puis votre validation écrite",
+    "action": "Dernières mises à jour d'extensions, nouvelle sauvegarde de référence, puis votre validation écrite",
     "qui": "Jonathan"
    },
    "taches": [
@@ -247,13 +247,13 @@
      "source": "fiche projet 18/11"
     },
     {
-     "titre": "Signature des e-mails Brevo et e-mail de test",
-     "statut": "en_cours",
-     "date": "",
-     "detail": "Les newsletters signées arrivent en boîte de réception ; un e-mail de test le confirme.",
-     "preuve": "Résultat du test d'envoi.",
+     "titre": "Signature des e-mails et e-mails de test",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Les e-mails de la fédération portent leur signature ffky.fr : newsletters Brevo et e-mails du site. Les e-mails de test arrivent en boîte de réception, signature validée.",
+     "preuve": "E-mails de test du 19 novembre, arrivés en boîte de réception.",
      "qui": "Jonathan",
-     "source": "compte rendu 19/11"
+     "source": "prod/ETAT.md 19/11 16:20"
     },
     {
      "titre": "Dernières petites mises à jour d'extensions",
@@ -594,7 +594,7 @@
   },
   {
    "date": "2026-11-19",
-   "texte": "Derniers fichiers pirates mis à l'écart, 68 faux comptes supprimés, mots de passe renouvelés une seconde fois. Compte rendu des étapes 1 et 2 rédigé.",
+   "texte": "Derniers fichiers pirates mis à l'écart, 68 faux comptes supprimés, mots de passe renouvelés une seconde fois. Compte rendu des étapes 1 et 2 rédigé. E-mails signés ffky.fr, arrivés en boîte de réception aux tests.",
    "etape": "A1"
   }
  ],
