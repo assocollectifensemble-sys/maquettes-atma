@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Poudre de Fée · Nail art à Saint-Joseph, La Réunion</title>
+<meta name="description" content="Poudre de Fée, styliste ongulaire à Saint-Joseph : rallongement gel, nail art fait main, manucure japonaise. Ici chaque détail compte.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Poudre de Fée · Sublimons vos ongles 🦋">
+<meta property="og:description" content="Nail art raffiné et détails fins, sur rendez-vous, 10 rue Maréchal Leclerc à Saint-Joseph.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/poudre-de-fee-saint-joseph/img/og-poudre-de-fee.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/poudre-de-fee-saint-joseph/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#fbf2ea; --poudre:#f7e1d4; --rose:#deb8ab; --nude:#d8a490;
+  --moka:#a47057; --choco:#563a30; --or:#c9a15b; --or-clair:#e8cf98;
+  --texte:#4a332b; --blanc:#fffaf6;
+  --serif:'Cormorant Garamond',Georgia,serif; --script:'Great Vibes',cursive; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--texte);background:var(--creme);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+#poudre{position:fixed;inset:0;pointer-events:none;z-index:5}
+.ruban{position:relative;z-index:20;background:var(--choco);color:var(--poudre);font-size:.8rem;text-align:center;padding:.55rem 1rem;letter-spacing:.02em}
+.ruban b{color:var(--or-clair);font-weight:500}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;min-height:min(92vh,820px);display:flex;align-items:flex-end;overflow:hidden;color:var(--blanc)}
+.hero__img{position:absolute;inset:0;background:url(img/nude-noeuds-dores.jpg) center 30%/cover;animation:kb 22s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(86,58,48,.15) 0%,rgba(86,58,48,.25) 45%,rgba(60,38,30,.88) 100%)}
+.hero__txt{position:relative;z-index:2;padding:0 1.4rem 4.5rem;max-width:760px;margin:0 auto;width:100%}
+.hero__sur{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--or-clair)}
+.hero h1{font-family:var(--script);font-weight:400;font-size:clamp(3.6rem,15vw,7rem);line-height:1;margin:.35rem 0 .4rem;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero p.slogan{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,5vw,1.7rem);line-height:1.3}
+.hero .lieu{margin-top:.8rem;font-size:.92rem;opacity:.92}
+.apparait{opacity:0;transform:translateY(18px);animation:ap 1.4s .3s forwards}
+.apparait.d2{animation-delay:.7s}.apparait.d3{animation-delay:1.1s}
+@keyframes ap{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:99px;text-decoration:none;font-weight:500;font-size:.95rem;letter-spacing:.02em;transition:transform .3s,box-shadow .3s}
+.btn--or{background:linear-gradient(135deg,var(--or-clair),var(--or));color:var(--choco);box-shadow:0 6px 22px rgba(201,161,91,.45);animation:respire 3.2s ease-in-out infinite}
+.btn--clair{background:rgba(255,250,246,.16);border:1px solid rgba(255,250,246,.6);color:var(--blanc);backdrop-filter:blur(4px)}
+.btn--choco{background:var(--choco);color:var(--poudre)}
+.btn:hover{transform:translateY(-3px)}
+@keyframes respire{50%{box-shadow:0 6px 34px rgba(201,161,91,.75)}}
+
+/* SECTIONS */
+section{position:relative;padding:4.5rem 1.4rem}
+.wrap{max-width:1080px;margin:0 auto}
+.titre{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,7vw,2.9rem);line-height:1.15;color:var(--choco)}
+.titre em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--moka);font-size:1.15em}
+.chapeau{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--moka);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+.chapeau::before{content:"";width:28px;height:1px;background:var(--or)}
+.revele{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.revele.vu{opacity:1;transform:none}
+.vague{display:block;width:100%;height:60px}
+
+/* HISTOIRE */
+.histoire{background:var(--creme)}
+.histoire .grille{display:grid;gap:2.4rem;align-items:center}
+.histoire p{margin-top:1rem;font-size:1.04rem}
+.citation{font-family:var(--serif);font-style:italic;font-size:1.35rem;color:var(--moka);border-left:2px solid var(--or);padding-left:1rem;margin-top:1.4rem}
+.cadre{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(86,58,48,.2);aspect-ratio:4/5}
+.cadre img{width:100%;height:100%;object-fit:cover}
+.cadre__leg{position:absolute;bottom:.8rem;left:.8rem;background:rgba(255,250,246,.88);padding:.3rem .8rem;border-radius:99px;font-size:.78rem;color:var(--choco)}
+.reperes{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.8rem}
+.repere{background:var(--blanc);border-radius:14px;padding:.9rem .6rem;text-align:center;box-shadow:0 4px 16px rgba(86,58,48,.06)}
+.repere b{display:block;font-family:var(--serif);font-size:1.45rem;color:var(--choco);font-weight:600;line-height:1.1}
+.repere span{font-size:.78rem}
+
+/* PRESTATIONS */
+.presta{background:var(--poudre)}
+.cartes{display:grid;gap:1.1rem;margin-top:2rem}
+.carte{background:var(--blanc);border-radius:20px;padding:1.6rem 1.4rem;box-shadow:0 8px 26px rgba(86,58,48,.08);transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(86,58,48,.14)}
+.carte svg{width:38px;height:38px;color:var(--or)}
+.carte h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--choco);margin:.6rem 0 .3rem}
+.carte p{font-size:.96rem}
+.badge{position:absolute;top:1.1rem;right:1.1rem;background:var(--choco);color:var(--or-clair);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:.25rem .65rem;border-radius:99px}
+
+/* MODELES */
+.modeles{background:linear-gradient(180deg,var(--poudre),var(--creme))}
+.liste-mod{list-style:none;margin-top:2rem;display:grid;gap:.8rem}
+.liste-mod li{display:flex;align-items:baseline;gap:.6rem;background:var(--blanc);border-radius:14px;padding:1rem 1.2rem;font-family:var(--serif);font-size:1.3rem;color:var(--choco)}
+.liste-mod .num{font-family:var(--sans);font-size:.72rem;letter-spacing:.15em;color:var(--moka);text-transform:uppercase;min-width:4.6rem}
+.liste-mod .pts{flex:1;border-bottom:1px dotted var(--rose);transform:translateY(-.3rem)}
+.liste-mod .prix{font-family:var(--sans);font-weight:500;font-size:1rem;color:var(--moka)}
+.note{font-size:.88rem;margin-top:1rem;color:var(--moka)}
+
+/* GALERIE */
+.galerie{background:var(--choco);color:var(--poudre);padding-left:0;padding-right:0}
+.galerie .titre{color:var(--blanc)}
+.galerie .titre em{color:var(--or-clair)}
+.galerie .chapeau{color:var(--or-clair)}
+.galerie .entete{padding:0 1.4rem}
+.defile{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 1.4rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.defile::-webkit-scrollbar{display:none}
+.defile figure{flex:0 0 72%;max-width:340px;scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative;background:#3f2a22}
+.defile img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .8s}
+.defile figure:hover img{transform:scale(1.05)}
+.defile figcaption{position:absolute;bottom:0;left:0;right:0;padding:1.6rem .9rem .8rem;font-size:.85rem;background:linear-gradient(transparent,rgba(40,25,20,.82));color:var(--blanc)}
+.indice{text-align:center;font-size:.8rem;opacity:.75;padding:0 1.4rem}
+
+/* JAPONAISE */
+.japon{background:var(--creme)}
+.japon .boite{background:var(--blanc);border-radius:26px;padding:2rem 1.5rem;display:grid;gap:1.6rem;align-items:center;box-shadow:0 14px 40px rgba(86,58,48,.1)}
+.japon .boite img{border-radius:18px;aspect-ratio:1;object-fit:cover;width:100%}
+.japon ul{list-style:none;margin-top:1rem}
+.japon li{padding-left:1.6rem;position:relative;margin:.45rem 0}
+.japon li::before{content:"✦";position:absolute;left:0;color:var(--or)}
+
+/* NOEL */
+.noel{background:radial-gradient(ellipse at top,#6b4638,var(--choco) 70%);color:var(--poudre);overflow:hidden}
+.noel .titre{color:var(--blanc)}.noel .titre em{color:var(--or-clair)}.noel .chapeau{color:var(--or-clair)}
+.noel .grille{display:grid;gap:2.2rem;align-items:center}
+.noel p{margin-top:1rem}
+.carte-cadeau{position:relative;aspect-ratio:1.6;border-radius:18px;background:linear-gradient(135deg,var(--poudre) 0%,#f3d3c4 45%,var(--or-clair) 100%);box-shadow:0 24px 60px rgba(0,0,0,.35);color:var(--choco);padding:1.4rem;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-3deg);animation:flotte 6s ease-in-out infinite;max-width:420px;margin:0 auto;width:100%;overflow:hidden}
+.carte-cadeau::after{content:"";position:absolute;top:-50%;left:-60%;width:40%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);transform:rotate(20deg);animation:brille 5s ease-in-out infinite}
+@keyframes brille{0%,60%{left:-60%}100%{left:130%}}
+@keyframes flotte{50%{transform:rotate(-1deg) translateY(-8px)}}
+.carte-cadeau .cc-haut{display:flex;justify-content:space-between;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase}
+.carte-cadeau .cc-nom{font-family:var(--script);font-size:clamp(2.2rem,10vw,3.2rem);line-height:1}
+.carte-cadeau .cc-bas{font-family:var(--serif);font-style:italic;font-size:1rem}
+.illu{text-align:center;font-size:.72rem;opacity:.7;margin-top:.9rem}
+.ruban-noeud{position:absolute;right:1.2rem;top:0;bottom:0;width:14px;background:var(--choco);opacity:.85}
+
+/* CONTACT */
+.contact{background:var(--poudre)}
+.contact .grille{display:grid;gap:1.4rem;margin-top:2rem}
+.info{background:var(--blanc);border-radius:18px;padding:1.4rem}
+.info h3{font-family:var(--serif);font-size:1.35rem;color:var(--choco);font-weight:600;margin-bottom:.4rem}
+.info a{color:var(--moka);font-weight:500;word-break:break-word}
+.reseaux{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.9rem}
+.reseaux a{text-decoration:none;border:1px solid var(--rose);border-radius:99px;padding:.45rem 1rem;font-size:.9rem;color:var(--choco);transition:background .3s}
+.reseaux a:hover{background:var(--poudre)}
+footer{background:var(--choco);color:var(--rose);text-align:center;padding:2.2rem 1.4rem 2.6rem;font-size:.85rem}
+footer .sig{font-family:var(--script);font-size:2.2rem;color:var(--or-clair);display:block;margin-bottom:.4rem}
+
+@media(min-width:760px){
+  .histoire .grille{grid-template-columns:1.1fr .9fr}
+  .cartes{grid-template-columns:repeat(2,1fr)}
+  .liste-mod{grid-template-columns:repeat(2,1fr)}
+  .defile{padding-left:max(1.4rem,calc((100vw - 1080px)/2))}
+  .defile figure{flex-basis:300px}
+  .japon .boite{grid-template-columns:.8fr 1.2fr;padding:2.6rem}
+  .noel .grille{grid-template-columns:1fr 1fr}
+  .contact .grille{grid-template-columns:repeat(3,1fr)}
+  .hero__txt{padding-bottom:6rem}
+}
+@media(min-width:1000px){.cartes{grid-template-columns:repeat(4,1fr)}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .revele,.apparait{opacity:1;transform:none}
+  #poudre{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="poudre" aria-hidden="true"></canvas>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Poudre de Fée</div>
+
+<header class="hero">
+  <div class="hero__img" role="img" aria-label="Pose nude aux petits nœuds dorés, réalisée par Poudre de Fée"></div>
+  <div class="hero__txt">
+    <div class="hero__sur apparait">Styliste ongulaire · Nail art</div>
+    <h1 class="apparait d2">Poudre de Fée</h1>
+    <p class="slogan apparait d2">Ici chaque détail compte… Sublimons vos ongles 🦋</p>
+    <p class="lieu apparait d3">10 rue Maréchal Leclerc · Saint-Joseph, La Réunion · sur rendez-vous</p>
+    <div class="btns apparait d3">
+      <a class="btn btn--or" href="https://www.instagram.com/poudresdefees/" target="_blank" rel="noopener">Réserver par message</a>
+      <a class="btn btn--clair" href="#creations">Voir les créations</a>
+    </div>
+  </div>
+</header>
+
+<section class="histoire" id="cocon">
+  <div class="wrap grille">
+    <div class="revele">
+      <div class="chapeau">Un nouveau cocon</div>
+      <h2 class="titre">Une nouvelle page, <em>toujours la même fée</em></h2>
+      <p>Après une première année au Tampon, Poudre de Fée a posé ses pinceaux à Saint-Joseph : depuis octobre 2026, c'est au 10 rue Maréchal Leclerc que l'on vient prendre soin de ses jolies mains.</p>
+      <p>Rallongements au gel, fleurs réalisées entièrement à la main, détails dorés, french revisitée : chaque pose est pensée comme une petite œuvre, avec de la douceur, de la lumière et beaucoup de patience.</p>
+      <p class="citation">« Merci de faire grandir Poudre de Fée, une cliente, un partage et un sourire à la fois. »</p>
+      <div class="reperes">
+        <div class="repere"><b>1 an</b><span>d'aventure fêté en 2026</span></div>
+        <div class="repere"><b>100 %</b><span>sur rendez-vous</span></div>
+        <div class="repere"><b>Fait main</b><span>fleurs &amp; nail art</span></div>
+      </div>
+    </div>
+    <figure class="cadre revele">
+      <img src="img/nude-feuilles-or.jpg" alt="Pose amande nude ornée de feuilles dorées" loading="lazy">
+      <figcaption class="cadre__leg">Feuilles dorées sur base nude</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="presta" id="prestations">
+  <div class="wrap">
+    <div class="chapeau revele">Les prestations</div>
+    <h2 class="titre revele">Pour sublimer <em>vos mains</em></h2>
+    <div class="cartes">
+      <article class="carte revele">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4c5 0 8 6 8 14v14a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V18c0-8 3-14 8-14z"/><path d="M15 14c2-3 8-3 10 0"/></svg>
+        <h3>Rallongement au gel</h3>
+        <p>Des ongles allongés et sculptés, en amande, stiletto ou carrés, pour une pose aussi douce qu'élégante.</p>
+      </article>
+      <article class="carte revele">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="3.5"/><path d="M20 16.5c-2-6 4-9 4-3s-2 3.5-4 3.5zm3.4 2.4c5-3.6 9 1.8 3.3 3.6s-3.3-1.5-3.3-3.6zm-1.3 4c3.4 5-2.3 8.2-3.6 2.4s1.3-2.4 3.6-2.4zm-4.1.7c-5.6 2.2-7.6-4.2-1.7-4s2 2.5 1.7 4zm-.6-4.2c-5-3.4-.7-8.4 1.4-3"/></svg>
+        <h3>Nail art fait main</h3>
+        <p>Fleurs en relief, papillons, léopard, touches d'or : le nail art raffiné et les détails fins, c'est la spécialité de la maison.</p>
+      </article>
+      <article class="carte revele">
+        <span class="badge">Nouveauté</span>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 5l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"/><path d="M31 27l1.2 3 3 1.2-3 1.2-1.2 3-1.2-3-3-1.2 3-1.2z"/></svg>
+        <h3>Manucure japonaise</h3>
+        <p>Un rituel de beauté pour vos ongles naturels : une brillance naturelle, tout en soin.</p>
+      </article>
+      <article class="carte revele">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="9" width="26" height="24" rx="3"/><path d="M7 16h26M14 5v7M26 5v7"/><path d="M15 24l3 3 7-7"/></svg>
+        <h3>Le modèle du mois</h3>
+        <p>Chaque mois, des poses originales et travaillées proposées à prix doux, sur rendez-vous.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="modeles">
+  <div class="wrap">
+    <div class="chapeau revele">Collection de novembre</div>
+    <h2 class="titre revele">4 modèles <em>exclusifs</em></h2>
+    <p class="revele" style="margin-top:1rem">Des poses originales, travaillées et pleines de détails. Le tarif comprend le rallongement au gel et le nail art présenté.</p>
+    <ul class="liste-mod">
+      <li class="revele"><span class="num">Modèle 1</span>Purple Stiletto<span class="pts"></span><span class="prix">55 €</span></li>
+      <li class="revele"><span class="num">Modèle 2</span>Chocolate Flower<span class="pts"></span><span class="prix">65 €</span></li>
+      <li class="revele"><span class="num">Modèle 3</span>Blue Butterfly<span class="pts"></span><span class="prix">75 €</span></li>
+      <li class="revele"><span class="num">Modèle 4</span>Wild French<span class="pts"></span><span class="prix">60 €</span></li>
+    </ul>
+    <p class="note revele">Du 1er au 30 novembre 2026, sur rendez-vous. Pour réserver, un message privé en précisant le numéro du modèle.</p>
+  </div>
+</section>
+
+<section class="galerie" id="creations">
+  <div class="wrap entete">
+    <div class="chapeau revele">Les créations</div>
+    <h2 class="titre revele">Un peu de mystère, <em>beaucoup de détails</em></h2>
+  </div>
+  <div class="defile" tabindex="0" aria-label="Galerie des poses Poudre de Fée">
+    <figure><img src="img/fleurs-hibiscus.jpg" alt="Pose aux fleurs en relief près d'un hibiscus" loading="lazy"><figcaption>Fleurs en relief &amp; hibiscus</figcaption></figure>
+    <figure><img src="img/degrade-noir-or.jpg" alt="Dégradé nude, noir et paillettes dorées" loading="lazy"><figcaption>Dégradé nude, noir &amp; or</figcaption></figure>
+    <figure><img src="img/nude-chocolat.jpg" alt="Stiletto nude aux arabesques chocolat" loading="lazy"><figcaption>Arabesques chocolat</figcaption></figure>
+    <figure><img src="img/fleurs-dorees.jpg" alt="Fleurs faites main et accents dorés" loading="lazy"><figcaption>Fleurs faites main &amp; or</figcaption></figure>
+    <figure><img src="img/leopard-canard.jpg" alt="Stilettos léopard rose, canard et rouille" loading="lazy"><figcaption>Léopard rose &amp; canard</figcaption></figure>
+    <figure><img src="img/degrade-rose-or.jpg" alt="Pose rose pêche, bordeaux et or" loading="lazy"><figcaption>Rose pêche, bordeaux &amp; or</figcaption></figure>
+    <figure><img src="img/marine-etoiles.jpg" alt="Pose bleu marine et rose aux petites étoiles" loading="lazy"><figcaption>Bleu marine &amp; étoiles</figcaption></figure>
+    <figure><img src="img/leopard-rouille.jpg" alt="Stilettos rouille et rose, touche léopard" loading="lazy"><figcaption>Rouille &amp; touche léopard</figcaption></figure>
+    <figure><img src="img/amande-filets-dores.jpg" alt="Amandes nude aux filets dorés" loading="lazy"><figcaption>Filets dorés</figcaption></figure>
+  </div>
+  <p class="indice">Faites glisser pour découvrir les poses →</p>
+</section>
+
+<section class="japon">
+  <div class="wrap boite revele">
+    <img src="img/nude-noeuds-dores.jpg" alt="Mains aux ongles nude et nœuds dorés" loading="lazy">
+    <div>
+      <div class="chapeau">Nouveauté chez Poudre de Fée</div>
+      <h2 class="titre">La manucure <em>japonaise</em></h2>
+      <p style="margin-top:.8rem">Un véritable rituel de beauté pour vos ongles naturels.</p>
+      <ul>
+        <li>Une brillance naturelle, tout en douceur</li>
+        <li>Un soin qui sublime l'apparence de vos ongles</li>
+        <li>Un joli moment pour prendre soin de vous</li>
+      </ul>
+      <div class="btns"><a class="btn btn--choco" href="https://www.facebook.com/people/Poudre-de-F%C3%A9e/61579891157513/" target="_blank" rel="noopener">Réserver en message privé</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="wrap grille">
+    <div class="revele">
+      <div class="chapeau">Offrir pour Noël</div>
+      <h2 class="titre">Un moment <em>de fée</em> à offrir</h2>
+      <p>Pour une sœur, une maman, une amie qui adore les jolies mains : offrez-lui une pose chez Poudre de Fée, à Saint-Joseph. Elle choisira son style, nude et doré, fleuri ou audacieux.</p>
+      <p>Un petit message suffit pour préparer votre carte cadeau ensemble.</p>
+      <div class="btns">
+        <a class="btn btn--or" href="mailto:Poudresdefees@gmail.com?subject=Carte%20cadeau%20pour%20No%C3%ABl&amp;body=Bonjour%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20Poudre%20de%20F%C3%A9e%20pour%20No%C3%ABl.">Offrir une carte cadeau</a>
+        <a class="btn btn--clair" href="https://www.instagram.com/poudresdefees/" target="_blank" rel="noopener">Écrire sur Instagram</a>
+      </div>
+    </div>
+    <div class="revele">
+      <div class="carte-cadeau">
+        <span class="ruban-noeud"></span>
+        <div class="cc-haut"><span>Carte cadeau</span><span>🦋</span></div>
+        <div class="cc-nom">Poudre de Fée</div>
+        <div class="cc-bas">Un moment pour sublimer vos mains</div>
+      </div>
+      <p class="illu">Illustration</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="chapeau revele">Prendre rendez-vous</div>
+    <h2 class="titre revele">Au plaisir de <em>sublimer vos mains</em></h2>
+    <div class="grille">
+      <div class="info revele">
+        <h3>Le cocon</h3>
+        <p>10 rue Maréchal Leclerc<br>97480 Saint-Joseph, La Réunion</p>
+        <p style="margin-top:.6rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=10+rue+Mar%C3%A9chal+Leclerc+97480+Saint-Joseph" target="_blank" rel="noopener">Ouvrir l'itinéraire →</a></p>
+      </div>
+      <div class="info revele">
+        <h3>Réservation</h3>
+        <p>Uniquement sur rendez-vous, par message privé sur Facebook ou Instagram.</p>
+        <div class="reseaux">
+          <a href="https://www.facebook.com/people/Poudre-de-F%C3%A9e/61579891157513/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/poudresdefees/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="info revele">
+        <h3>E-mail</h3>
+        <p><a href="mailto:Poudresdefees@gmail.com">Poudresdefees@gmail.com</a></p>
+        <p style="margin-top:.6rem;font-size:.9rem">Les nouveautés et modèles du mois sont publiés sur la page.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="sig">Poudre de Fée</span>
+  Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Poudre de Fée.
+</footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.revele').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('poudre'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+const cols=['232,207,152','201,161,91','255,240,225','222,184,171'];
+const P=Array.from({length:30},()=>nouv(true));
+function nouv(init){return{x:Math.random()*W,y:init?Math.random()*H:-10,r:Math.random()*1.8+.6,v:Math.random()*.35+.12,d:Math.random()*Math.PI*2,c:cols[Math.random()*cols.length|0],t:Math.random()*6}}
+function tick(){
+  if(!run)return;x.clearRect(0,0,W,H);
+  for(const p of P){
+    p.y+=p.v;p.d+=.01;p.x+=Math.sin(p.d)*.3;p.t+=.05;
+    const a=.35+.35*Math.sin(p.t);
+    x.beginPath();x.fillStyle=`rgba(${p.c},${a})`;x.arc(p.x,p.y,p.r,0,7);x.fill();
+    if(p.r>2){x.fillRect(p.x-p.r*2,p.y-.25,p.r*4,.5);x.fillRect(p.x-.25,p.y-p.r*2,.5,p.r*4)}
+    if(p.y>H+10)Object.assign(p,nouv(false));
+  }
+  requestAnimationFrame(tick);
+}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tick()});
+tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Poudre de Fée" defer></script>
+</body>
+</html>

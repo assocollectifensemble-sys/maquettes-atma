@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nature Coiffure · Salon de coiffure à La Saline, Saint-Paul</title>
+<meta name="description" content="Nature Coiffure, votre salon de coiffure au 44 rue Longuet, La Saline (Saint-Paul, La Réunion) : couleurs, balayages, coupes, fauteuil massant et massage crânien. Du mardi au samedi, 9h-18h. 0693 11 79 95.">
+<meta property="og:title" content="Nature Coiffure · La Saline, Saint-Paul">
+<meta property="og:description" content="Couleurs lumineuses, balayages, coupes et une petite bulle de bien-être à La Saline. Noté 5,0 sur Google.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/nature-coiffure-saint-paul/img/og-nature-coiffure.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/nature-coiffure-saint-paul/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--olive:#3c4733;--olive2:#2c3526;--sauge:#8a9a73;--sauge2:#c9d2b5;--creme:#f6f1e7;--sable:#ebe1d0;--bois:#b5875a;--miel:#d9a65e;--prune:#6e3f6c;--txt:#2d2b26;--doux:#6f6a5f;--blanc:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.05;color:var(--olive2)}
+h2{font-size:clamp(2.3rem,7.5vw,3.6rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.6rem}
+em.it{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--bois);font-weight:600}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--olive2);color:#dfe3d4;text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.02em;line-height:1.4}
+.ribbon b{color:var(--miel);font-weight:500}
+#feuilles{position:fixed;inset:0;pointer-events:none;z-index:1}
+main,footer{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:1.15em;height:1.15em;flex:none}
+.btn-p{background:var(--olive);color:var(--creme);box-shadow:0 10px 26px -12px rgba(44,53,38,.7)}
+.btn-p:hover{background:var(--olive2)}
+.btn-w{background:#25a35a;color:#fff;box-shadow:0 10px 26px -12px rgba(37,163,90,.7)}
+.btn-l{border:1px solid rgba(60,71,51,.35);color:var(--olive2)}
+.respire{animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 0 0 9px rgba(37,163,90,0),0 10px 26px -12px rgba(37,163,90,.7)}0%,100%{box-shadow:0 0 0 0 rgba(37,163,90,.35),0 10px 26px -12px rgba(37,163,90,.7)}}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+/* hero */
+.hero{padding:clamp(6.5rem,14vw,8.5rem) 0 4rem;background:radial-gradient(90% 70% at 85% 10%,#e4ead6 0%,transparent 60%),radial-gradient(70% 60% at 0% 100%,#efe2cc 0%,transparent 60%),var(--creme);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero h1{font-size:clamp(3.4rem,13vw,6.4rem);letter-spacing:-.01em;margin:.5rem 0 .2rem}
+.hero h1 span{display:block;font-style:italic;font-weight:500;color:var(--sauge);font-size:.55em;letter-spacing:.01em;margin-top:.15em}
+.hero p.lead{font-size:1.12rem;max-width:33rem;margin:1.1rem 0 1.6rem;color:#4a463e}
+.note{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.5rem;font-size:.9rem;color:var(--doux)}
+.note .etoiles{color:var(--miel);letter-spacing:.12em;font-size:1rem}
+.duo{position:relative;height:clamp(420px,62vw,560px)}
+.duo figure{position:absolute;border-radius:200px 200px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(44,53,38,.55)}
+.duo .f1{width:62%;height:88%;right:0;top:0}
+.duo .f2{width:46%;height:58%;left:0;bottom:0;border-radius:22px;border:6px solid var(--creme)}
+.duo img{width:100%;height:100%;object-fit:cover}
+.duo .f1 img{animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-2%,-2%)}}
+.duo .badge{position:absolute;left:8%;top:6%;background:var(--blanc);border-radius:16px;padding:.7rem 1rem;font-size:.82rem;line-height:1.35;box-shadow:0 14px 30px -18px rgba(0,0,0,.4);max-width:13rem}
+.duo .badge b{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--olive2);display:block}
+.t-in{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.2,.7,.2,1) .15s,transform 1s cubic-bezier(.2,.7,.2,1) .15s}
+.t-in.d2{transition-delay:.35s}.t-in.d3{transition-delay:.55s}
+.pret .t-in{opacity:1;transform:none}
+/* bandeau */
+.bandeau{background:var(--olive);color:var(--sauge2);overflow:hidden;white-space:nowrap;padding:.95rem 0;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic}
+.bandeau .piste{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 1.1rem}.bandeau i{color:var(--miel);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* bulle */
+.bulle .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:3.5rem;align-items:center}
+.hero .wrap>*,.bulle .wrap>*,.infos .wrap>*,.grille>*{min-width:0}
+.bulle .photos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem}
+.bulle .photos img{border-radius:18px;aspect-ratio:3/4;object-fit:cover;width:100%}
+.bulle .photos img:nth-child(2){margin-top:2.5rem}
+.bulle p{margin-bottom:1rem;max-width:36rem}
+.points{list-style:none;margin-top:1.4rem;display:grid;gap:.7rem}
+.points li{display:flex;gap:.8rem;align-items:flex-start}
+.points li svg{flex:none;width:1.4rem;height:1.4rem;color:var(--sauge);margin-top:.2rem}
+/* prestations */
+.presta{background:var(--sable)}
+.presta .grille{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2rem}
+.carte{background:var(--creme);border-radius:22px;padding:1.7rem 1.4rem;transition:transform .35s,box-shadow .35s;border:1px solid rgba(60,71,51,.08)}
+.carte:hover{transform:translateY(-6px);box-shadow:0 22px 40px -26px rgba(44,53,38,.5)}
+.carte .ico{width:3rem;height:3rem;border-radius:50%;background:var(--sauge2);display:grid;place-items:center;margin-bottom:1rem;color:var(--olive)}
+.carte .ico svg{width:1.5rem;height:1.5rem}
+.carte h3{margin-bottom:.5rem}
+.carte p{font-size:.95rem;color:#55504a}
+.marques{margin-top:2.6rem;text-align:center}
+.marques p{font-size:.85rem;color:var(--doux);margin-bottom:.8rem}
+.marques ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem}
+.marques li{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;color:var(--olive);padding:.35rem 1.2rem;border:1px solid rgba(60,71,51,.25);border-radius:999px;background:rgba(255,255,255,.4)}
+/* galerie */
+.galerie .tete{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.galerie .tete p{max-width:30rem;color:#55504a}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5vw 1.2rem;margin:0 -5vw;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.rail figure{flex:0 0 clamp(210px,27vw,290px);scroll-snap-align:center;position:relative;border-radius:20px;overflow:hidden;background:var(--sable)}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;transition:transform .6s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{position:absolute;left:.8rem;bottom:.8rem;background:rgba(246,241,231,.92);border-radius:999px;padding:.25rem .85rem;font-size:.8rem;font-weight:500;color:var(--olive2)}
+.glisse{font-size:.82rem;color:var(--doux);display:flex;align-items:center;gap:.5rem}
+.glisse svg{width:1.1rem;animation:glisse 1.8s ease-in-out infinite}
+@keyframes glisse{50%{transform:translateX(6px)}}
+/* avis */
+.avis{background:var(--olive2);color:#e6e9dc;overflow:hidden}
+.avis h2{color:var(--creme)}.avis .eyebrow{color:var(--miel)}
+.avis .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.avis blockquote{background:rgba(255,255,255,.06);border:1px solid rgba(201,210,181,.18);border-radius:22px;padding:1.6rem 1.5rem;font-size:.98rem;transition:transform .35s,background .35s}
+.avis blockquote:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
+.avis blockquote::before{content:"“";display:block;font-family:'Cormorant Garamond',serif;font-size:3.4rem;line-height:.6;color:var(--miel);margin-bottom:.4rem}
+.avis cite{display:block;margin-top:1rem;font-style:normal;font-size:.8rem;color:var(--sauge2);letter-spacing:.04em}
+.avis .total{margin-top:2rem;text-align:center;font-size:.9rem;color:var(--sauge2)}
+.avis .total b{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--creme);margin-right:.4rem}
+/* noël */
+.noel{background:radial-gradient(110% 90% at 50% 0%,#4a2c49 0%,#2a1f2a 72%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}.noel .eyebrow{color:#e7c27d}
+.noel p{max-width:36rem;margin:0 auto 1.6rem;color:#e7dde6}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.78rem;color:#bfaebd;margin-top:1rem}
+.noel .branche{width:min(260px,60vw);margin:0 auto 1rem;color:#9bb08a}
+.noel .scintille{position:absolute;width:6px;height:6px;border-radius:50%;background:#f3d79a;opacity:.0;animation:sc 4s ease-in-out infinite}
+@keyframes sc{50%{opacity:.85;transform:scale(1.4)}}
+.noel .idees{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:0 auto 1.8rem;max-width:40rem;list-style:none}
+.noel .idees li{border:1px solid rgba(231,194,125,.4);border-radius:999px;padding:.35rem 1rem;font-size:.88rem;color:#f1e6c9}
+/* contact */
+.infos .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.bloc{background:var(--blanc);border-radius:24px;padding:2rem 1.8rem;box-shadow:0 24px 50px -36px rgba(44,53,38,.6)}
+.bloc h3{margin-bottom:1rem}
+.horaires{width:100%;border-collapse:collapse;font-size:.97rem}
+.horaires td{padding:.5rem 0;border-bottom:1px dashed rgba(60,71,51,.18)}
+.horaires td:last-child{text-align:right;font-weight:500}
+.horaires tr.ferme td:last-child{color:var(--doux);font-weight:300}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1rem}
+.ligne svg{flex:none;width:1.35rem;height:1.35rem;color:var(--sauge);margin-top:.25rem}
+.ligne a{text-decoration:none;border-bottom:1px solid rgba(60,71,51,.3)}
+.infos .ctas{margin-top:1.4rem}
+footer{background:var(--olive2);color:#b9c0aa;text-align:center;font-size:.82rem;padding:2rem 1rem 2.4rem}
+footer b{color:var(--creme);font-weight:500}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.vu{opacity:1;transform:none}
+@media (max-width:900px){
+ .hero .wrap,.bulle .wrap,.infos .wrap{grid-template-columns:1fr}
+ .presta .grille{grid-template-columns:1fr 1fr}
+ .avis .grille{grid-template-columns:1fr}
+ .duo{height:clamp(380px,105vw,520px);max-width:480px;width:100%;margin:0 auto}
+}
+@media (max-width:560px){
+ body{font-size:16px}
+ .presta .grille{grid-template-columns:1fr}
+ .ctas .btn{flex:1 1 100%;justify-content:center}
+ .duo .badge{left:2%;top:3%;max-width:11.5rem;font-size:.76rem}
+ .bulle .photos img:nth-child(2){margin-top:1.6rem}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv,.t-in{opacity:1;transform:none}
+ #feuilles{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Nature Coiffure</div>
+<canvas id="feuilles" aria-hidden="true"></canvas>
+<main>
+<header class="hero">
+ <div class="wrap">
+  <div>
+   <p class="eyebrow t-in">Salon de coiffure · La Saline, Saint-Paul</p>
+   <h1 class="t-in d2">Nature Coiffure<span>votre salon de coiffure</span></h1>
+   <p class="lead t-in d3">Des couleurs lumineuses, des balayages tout en douceur, des coupes qui vous ressemblent… et une petite bulle de bien-être, avec fauteuil massant et massage crânien, au 44 rue Longuet.</p>
+   <div class="ctas t-in d3">
+    <a class="btn btn-p" href="tel:+262693117995"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Prendre rendez-vous</a>
+    <a class="btn btn-w respire" href="https://wa.me/262693117995?text=Bonjour%20Nature%20Coiffure%2C%20je%20voudrais%20prendre%20rendez-vous" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8m-3.4 4.4c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4l-.5-.3-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.5-1.8-.1-.3 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-2c-.2-.5-.4-.5-.6-.5z"/></svg>WhatsApp</a>
+   </div>
+   <p class="note t-in d3"><span class="etoiles">★★★★★</span> 5,0 sur Google · 22 avis</p>
+  </div>
+  <div class="duo t-in d2">
+   <figure class="f1"><img src="img/ombre-blond.jpg" alt="Long balayage blond ombré réalisé au salon, vu de dos" fetchpriority="high"></figure>
+   <figure class="f2"><img src="img/salon-lumineux.jpg" alt="Le salon Nature Coiffure, lumineux, avec ses plantes et son parquet clair"></figure>
+   <div class="badge"><b>Une petite bulle</b>de bien-être à La Saline</div>
+  </div>
+ </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+ <span>Belle blonde</span><i>✿</i><span>Coloration cuivrée</span><i>✿</i><span>Balayages</span><i>✿</i><span>Coupe &amp; couleur</span><i>✿</i><span>Fauteuil massant</span><i>✿</i><span>Massage crânien</span><i>✿</i><span>Avant et après</span><i>✿</i>
+ <span>Belle blonde</span><i>✿</i><span>Coloration cuivrée</span><i>✿</i><span>Balayages</span><i>✿</i><span>Coupe &amp; couleur</span><i>✿</i><span>Fauteuil massant</span><i>✿</i><span>Massage crânien</span><i>✿</i><span>Avant et après</span><i>✿</i>
+</div></div>
+
+<section class="bulle" id="salon">
+ <div class="wrap">
+  <div class="photos rv">
+   <img src="img/salon-coupe.jpg" alt="Coupe en cours dans le salon, parquet clair et baies vitrées" loading="lazy">
+   <img src="img/chatain-dore.jpg" alt="Châtain aux reflets dorés, vue de dos" loading="lazy">
+  </div>
+  <div class="rv">
+   <p class="eyebrow">Le salon</p>
+   <h2>Un cadre paisible, <em class="it">des mains attentives</em></h2>
+   <p>Chez Nature Coiffure, chaque rendez-vous est une parenthèse dédiée à la beauté naturelle de vos cheveux. On prend le temps : un accueil souriant, des coiffeuses à votre écoute, des conseils sur mesure, et des produits choisis avec soin pour vos cheveux.</p>
+   <p>Ici, le rendez-vous devient un vrai moment pour soi. On s'installe dans le fauteuil massant, on profite d'un massage crânien, et on repart avec une couleur et une coupe qui donnent le sourire.</p>
+   <ul class="points">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19c7 0 13-6 14-15C10 5 5 10 5 19zm0 0c2-4 5-7 9-9"/></svg><span>Des produits choisis avec soin : Subtil, Davines, Or et Argan, Natura</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19c7 0 13-6 14-15C10 5 5 10 5 19zm0 0c2-4 5-7 9-9"/></svg><span>Fauteuil massant et massage crânien pour une vraie pause détente</span></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19c7 0 13-6 14-15C10 5 5 10 5 19zm0 0c2-4 5-7 9-9"/></svg><span>Des conseils personnalisés et une carte de fidélité pour prendre soin de vous sur le long terme</span></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="presta" id="prestations">
+ <div class="wrap">
+  <p class="eyebrow rv">Au salon</p>
+  <h2 class="rv">Ce qu'on vient y chercher</h2>
+  <div class="grille">
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16"/></svg></div><h3>Couleur</h3><p>Colorations riches et brillantes, des reflets cuivrés aux bruns profonds.</p></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 3c0 6 10 6 10 12s-5 6-5 6M12 3c0 5 6 5 6 9"/></svg></div><h3>Balayage &amp; blonds</h3><p>Ombrés, blonds lumineux et cendrés, travaillés tout en nuances.</p></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M8.5 7.5 20 18M8.5 16.5 20 6"/></svg></div><h3>Coupe &amp; brushing</h3><p>Hommes et femmes : une coupe pensée avec vous, jusqu'au brushing impeccable.</p></article>
+   <article class="carte rv"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4-3-7-6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4-3 7-7 10z"/></svg></div><h3>Détente</h3><p>Fauteuil massant et massage crânien : le moment que tout le monde attend.</p></article>
+  </div>
+  <div class="marques rv">
+   <p>Les marques du salon</p>
+   <ul><li>Subtil</li><li>Davines</li><li>Or et Argan</li><li>Natura</li></ul>
+  </div>
+ </div>
+</section>
+
+<section class="galerie" id="realisations">
+ <div class="wrap">
+  <div class="tete rv">
+   <div><p class="eyebrow">Réalisations</p><h2>Avant et après… <em class="it">surtout après</em></h2></div>
+   <p>Quelques résultats publiés par le salon sur sa page Facebook : blonds, cuivrés, bruns lumineux.</p>
+  </div>
+  <div class="rail rv" tabindex="0" aria-label="Galerie des réalisations">
+   <figure><img src="img/balayage-blond.jpg" alt="Balayage blond doré ondulé" loading="lazy"><figcaption>Balayage blond</figcaption></figure>
+   <figure><img src="img/cuivre-ondule.jpg" alt="Brun aux mèches cuivrées, ondulé" loading="lazy"><figcaption>Reflets cuivrés</figcaption></figure>
+   <figure><img src="img/blond-polaire.jpg" alt="Blond cendré lumineux, cheveux longs" loading="lazy"><figcaption>Belle blonde</figcaption></figure>
+   <figure><img src="img/brun-reflets-miel.jpg" alt="Brun très long aux reflets miel" loading="lazy"><figcaption>Reflets miel</figcaption></figure>
+   <figure><img src="img/blond-cendre.jpg" alt="Blond cendré lisse, très long" loading="lazy"><figcaption>Blond cendré</figcaption></figure>
+   <figure><img src="img/brun-lisse.jpg" alt="Brun profond, lisse et brillant" loading="lazy"><figcaption>Brun brillant</figcaption></figure>
+   <figure><img src="img/ombre-blond.jpg" alt="Ombré blond sur cheveux longs" loading="lazy"><figcaption>Ombré</figcaption></figure>
+  </div>
+  <p class="glisse rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>Faites glisser pour voir la suite</p>
+ </div>
+</section>
+
+<section class="avis" id="avis">
+ <div class="wrap">
+  <p class="eyebrow rv">Ils en parlent</p>
+  <h2 class="rv">Une petite bulle de bien-être</h2>
+  <div class="grille">
+   <blockquote class="rv">Un cadre propre, paisible. Un accueil souriant et attentionné. Des coiffeuses à votre écoute et professionnelles. Et pour un moment de détente et de zénitude, le fauteuil massant et le massage crânien d'Émilie vous offrirons un moment de profonde détente.<cite>Ginesa A. · avis Google, octobre 2026</cite></blockquote>
+   <blockquote class="rv">Une coiffeuse à l'écoute et qui cherche vraiment la satisfaction de ses clients. (…) J'ai adorée ce moment, j'adore ma coupe, j'adore ma couleur.<cite>Marilyne M. · avis Google, avril 2026</cite></blockquote>
+   <blockquote class="rv">Très bon accueil, petite bulle de bien être, siège massant, des produits choisis avec soin, c'est à chaque fois un moment très agréable et je suis toujours satisfaite de la couleur et de la coupe !<cite>RM D. · avis Google, mai 2023</cite></blockquote>
+  </div>
+  <p class="total rv"><b>5,0</b> ★★★★★ · 22 avis sur Google</p>
+ </div>
+</section>
+
+<section class="noel" id="offrir">
+ <span class="scintille" style="left:12%;top:22%"></span><span class="scintille" style="left:84%;top:18%;animation-delay:1.2s"></span><span class="scintille" style="left:72%;top:70%;animation-delay:2.1s"></span><span class="scintille" style="left:20%;top:76%;animation-delay:.6s"></span>
+ <div class="wrap">
+  <svg class="branche rv" viewBox="0 0 260 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 30C70 8 190 8 250 30"/><path d="M60 19c-6-9-2-14 6-15-1 8-2 12-6 15zm40-7c-4-9 1-13 9-13-2 8-4 11-9 13zm60 0c4-9-1-13-9-13 2 8 4 11 9 13zm40 7c6-9 2-14-6-15 1 8 2 12 6 15z"/><circle cx="130" cy="13" r="4" fill="#e7c27d" stroke="none"/></svg>
+  <p class="eyebrow rv">Offrir pour Noël</p>
+  <h2 class="rv">Offrez un moment chez Nature Coiffure</h2>
+  <p class="rv">Une couleur qui illumine, une coupe toute neuve, une pause dans le fauteuil massant… Pour une maman, une amie, une sœur : un cadeau qui fait du bien. Le salon vous aide à choisir la formule qui fera plaisir.</p>
+  <ul class="idees rv"><li>Un moment couleur</li><li>Une coupe</li><li>Massage crânien</li><li>Votre rendez-vous des fêtes</li></ul>
+  <div class="ctas rv">
+   <a class="btn btn-w respire" href="https://wa.me/262693117995?text=Bonjour%20Nature%20Coiffure%2C%20je%20voudrais%20offrir%20un%20moment%20au%20salon%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 1.8a8.2 8.2 0 1 1-4.2 15.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8"/></svg>Offrir un moment au salon</a>
+   <a class="btn btn-l" style="color:var(--creme);border-color:rgba(231,194,125,.5)" href="tel:+262693117995">0693 11 79 95</a>
+  </div>
+  <p class="leg rv">Pensez aussi à réserver votre rendez-vous des fêtes : du mardi au samedi, de 9h à 18h.</p>
+ </div>
+</section>
+
+<section class="infos" id="contact">
+ <div class="wrap">
+  <div class="rv">
+   <p class="eyebrow">Venir au salon</p>
+   <h2>On vous attend à La Saline</h2>
+   <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>44 rue Longuet, La Saline<br>97422 Saint-Paul, La Réunion<br><a href="https://www.google.com/maps/place?q=place_id:ChIJF6fYRTeRgiERBdX_I3LymHM" target="_blank" rel="noopener">Voir l'itinéraire</a></span></div>
+   <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><a href="tel:+262693117995">0693 11 79 95</a></span></div>
+   <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15 8h-1.5A1.5 1.5 0 0 0 12 9.5V21m-2-8h5"/></svg><span><a href="https://www.facebook.com/profile.php?id=100057413621777" target="_blank" rel="noopener">Nature Coiffure sur Facebook</a></span></div>
+   <div class="ctas">
+    <a class="btn btn-p" href="tel:+262693117995">Appeler le salon</a>
+    <a class="btn btn-w" href="https://wa.me/262693117995?text=Bonjour%20Nature%20Coiffure%2C%20je%20voudrais%20prendre%20rendez-vous" target="_blank" rel="noopener">WhatsApp</a>
+   </div>
+  </div>
+  <div class="bloc rv">
+   <h3>Horaires</h3>
+   <table class="horaires">
+    <tr class="ferme"><td>Lundi</td><td>Fermé</td></tr>
+    <tr><td>Mardi</td><td>9h – 18h</td></tr>
+    <tr><td>Mercredi</td><td>9h – 18h</td></tr>
+    <tr><td>Jeudi</td><td>9h – 18h</td></tr>
+    <tr><td>Vendredi</td><td>9h – 18h</td></tr>
+    <tr><td>Samedi</td><td>9h – 18h</td></tr>
+    <tr class="ferme"><td>Dimanche</td><td>Fermé</td></tr>
+   </table>
+  </div>
+ </div>
+</section>
+</main>
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Nature Coiffure.</footer>
+<script>
+(function(){
+requestAnimationFrame(function(){document.body.classList.add('pret')});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.getElementById('feuilles'),x=c.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2),F=[],run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener('resize',size);
+var cols=['138,154,115','181,135,90','201,210,181','217,166,94'];
+var n=W<600?14:24;
+for(var i=0;i<n;i++)F.push(mk(true));
+function mk(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,s:5+Math.random()*7,v:.25+Math.random()*.45,a:Math.random()*6.28,va:(Math.random()-.5)*.02,o:.12+Math.random()*.2,ph:Math.random()*6.28,c:cols[i%cols.length]}}
+function leaf(f){x.save();x.translate(f.x,f.y);x.rotate(f.a);x.fillStyle='rgba('+f.c+','+f.o+')';x.beginPath();x.moveTo(0,-f.s);x.quadraticCurveTo(f.s*.8,0,0,f.s);x.quadraticCurveTo(-f.s*.8,0,0,-f.s);x.fill();x.strokeStyle='rgba(60,71,51,'+f.o*.6+')';x.lineWidth=.6;x.beginPath();x.moveTo(0,-f.s);x.lineTo(0,f.s);x.stroke();x.restore()}
+function tick(t){if(!run)return;x.clearRect(0,0,W,H);for(var k=0;k<F.length;k++){var f=F[k];f.y+=f.v;f.x+=Math.sin(t/1600+f.ph)*.35;f.a+=f.va;if(f.y>H+20){F[k]=mk(false)}leaf(f)}requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)requestAnimationFrame(tick)});
+requestAnimationFrame(tick);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Nature Coiffure" defer></script>
+</body>
+</html>

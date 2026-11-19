@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Croq Wich · Sandwicherie et café au cœur de Saint-Pierre</title>
+<meta name="description" content="Américains, lords, pitas, galettes, paninis, burgers, bowls et bouchons artisanaux : Croq Wich, sandwicherie et café en centre-ville de Saint-Pierre, du lundi au samedi.">
+<meta property="og:title" content="Croq Wich · Sandwicherie et café à Saint-Pierre">
+<meta property="og:description" content="Américains, lords, galettes, burgers, bowls et bouchons artisanaux, du lundi au samedi au 58 B rue Victor le Vigoureux.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/croq-wich-saint-pierre/img/og-croqwich.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/croq-wich-saint-pierre/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rouge:#c11326;--rouge-f:#9c0f1f;--lime:#b5c44a;--olive:#8f8a3e;--creme:#f7f0e6;--sable:#efe3d2;--bois:#9a6a50;--encre:#24170f;--gris:#6b5d52}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.05;text-transform:uppercase}
+.ribbon{background:var(--encre);color:#f3e9dc;font-size:.82rem;text-align:center;padding:8px 14px}
+.ribbon b{color:var(--lime)}
+header{position:sticky;top:0;z-index:20;background:rgba(247,240,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e6d8c4}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:52px;height:52px;border-radius:50%;object-fit:cover;background:#fff;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.brand span{font-family:Anton,sans-serif;font-size:1.45rem;color:var(--rouge);letter-spacing:1px}
+.brand small{display:block;font-family:Poppins;font-size:.7rem;color:var(--gris);letter-spacing:.5px;margin-top:-4px}
+.links{display:flex;gap:22px;font-weight:600;font-size:.92rem}
+.links a{text-decoration:none}
+.links a:hover{color:var(--rouge)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:700;text-decoration:none;font-size:.95rem;transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn-r{background:var(--rouge);color:#fff;box-shadow:0 6px 18px rgba(193,19,38,.3)}
+.btn-l{background:var(--lime);color:var(--encre)}
+.btn-o{border:2px solid var(--encre);color:var(--encre)}
+.nav .btn{padding:9px 16px;font-size:.85rem}
+/* HERO */
+.hero{position:relative;padding:56px 0 70px;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-180px;top:-160px;width:560px;height:560px;border-radius:50%;background:var(--rouge);opacity:.08}
+.hero-g{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;position:relative}
+.kick{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:600;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 4px rgba(181,196,74,.25)}
+.hero h1{font-size:clamp(2.6rem,6.4vw,4.9rem);margin:18px 0 14px;color:var(--encre)}
+.hero h1 em{font-style:normal;color:var(--rouge)}
+.hero p.lead{font-size:1.08rem;color:var(--gris);max-width:520px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 22px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;font-size:.85rem}
+.chip{background:var(--sable);padding:6px 12px;border-radius:10px;font-weight:500}
+.chip b{color:var(--rouge)}
+.stack{position:relative;height:440px}
+.card-p{position:absolute;background:#fff;border-radius:18px;padding:10px;box-shadow:0 18px 40px rgba(60,30,10,.18);transition:transform .4s}
+.card-p img{border-radius:12px;width:100%}
+.card-p figcaption{font-family:Anton;text-transform:uppercase;font-size:1rem;padding:8px 6px 2px;display:flex;justify-content:space-between}
+.card-p figcaption span{color:var(--rouge)}
+.p1{width:74%;left:0;top:0;transform:rotate(-3deg)}
+.p2{width:66%;right:0;top:150px;transform:rotate(3deg);z-index:2}
+.p3{width:58%;left:6%;top:300px;transform:rotate(-1.5deg);z-index:3}
+.card-p:hover{transform:rotate(0) scale(1.02)}
+.lines{position:absolute;pointer-events:none}
+.lines i{display:block;height:5px;border-radius:4px;background:var(--rouge);margin:6px 0;animation:slide 2.6s ease-in-out infinite}
+.lines i:nth-child(2){width:70%;animation-delay:.3s}
+.lines i:nth-child(3){width:45%;animation-delay:.6s}
+@keyframes slide{0%,100%{transform:translateX(0);opacity:.9}50%{transform:translateX(10px);opacity:.5}}
+/* bandeau */
+.band{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-family:Anton;text-transform:uppercase;font-size:1.35rem;letter-spacing:1px}
+.band-in{display:inline-block;animation:defile 30s linear infinite}
+.band-in span{margin:0 18px}
+.band-in span.l{color:var(--lime)}
+@keyframes defile{to{transform:translateX(-50%)}}
+section{padding:80px 0}
+.sec-t{text-align:center;max-width:680px;margin:0 auto 44px}
+.sec-t .over{font-weight:700;color:var(--rouge);font-size:.85rem;letter-spacing:2px;text-transform:uppercase}
+.sec-t h2{font-size:clamp(2rem,4.5vw,3.1rem);margin:6px 0 12px}
+.sec-t p{color:var(--gris)}
+/* familles */
+.fam{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.f{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(60,30,10,.08);display:flex;flex-direction:column;transition:transform .25s}
+.f:hover{transform:translateY(-4px)}
+.f .ph{background:#fbf8f3;aspect-ratio:16/6.4;overflow:hidden}
+.f .ph img{width:100%;height:100%;object-fit:cover}
+.f .bd{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
+.f h3{font-size:1.45rem}
+.f p{color:var(--gris);font-size:.92rem;margin:6px 0 12px;flex:1}
+.f .px{font-weight:700;color:var(--rouge)}
+/* carte */
+.carte{background:var(--encre);color:#f3e9dc}
+.carte .sec-t p{color:#cbbdaf}
+.carte .sec-t .over{color:var(--lime)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
+.tab{background:transparent;color:#f3e9dc;border:1.5px solid #5a4a3e;border-radius:999px;padding:9px 16px;font:600 .88rem Poppins;cursor:pointer}
+.tab.on{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.panel{display:none;background:#2f2118;border-radius:22px;padding:28px;max-width:860px;margin:0 auto}
+.panel.on{display:block;animation:fade .35s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}}
+table{width:100%;border-collapse:collapse}
+th{font-family:Anton;font-weight:400;text-transform:uppercase;color:var(--lime);text-align:right;padding:6px 8px;font-size:1rem}
+th:first-child{text-align:left}
+td{padding:10px 8px;border-top:1px dashed #5a4a3e;text-align:right;font-weight:700;color:#fff}
+td:first-child{text-align:left;font-weight:500;color:#f3e9dc}
+td small{display:block;color:#b9a898;font-weight:400;font-size:.8rem}
+.note{margin-top:16px;background:rgba(181,196,74,.14);border-left:4px solid var(--lime);padding:10px 14px;border-radius:8px;font-size:.9rem}
+.carte-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.carte-imgs a{border-radius:14px;overflow:hidden;display:block;border:2px solid #4a3a2f}
+.carte-imgs img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .3s}
+.carte-imgs a:hover img{transform:scale(1.04)}
+.carte .legend{text-align:center;color:#b9a898;font-size:.85rem;margin-top:12px}
+/* bouchons */
+.bouch-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.bouch-img{background:#fff;border-radius:50%;padding:26px;box-shadow:0 18px 40px rgba(60,30,10,.15);max-width:380px;margin:auto;position:relative}
+.bouch-img img{border-radius:50%;aspect-ratio:1;object-fit:cover}
+.badge{position:absolute;right:-6px;top:20px;background:var(--lime);font-family:Anton;text-transform:uppercase;padding:10px 14px;border-radius:14px;transform:rotate(6deg);font-size:1.1rem;line-height:1.1;text-align:center}
+.bouch h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+.bouch h2 em{font-style:normal;color:var(--rouge)}
+.bouch ul{list-style:none;margin:20px 0 26px;display:grid;gap:10px}
+.bouch li{background:#fff;border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between;gap:12px;font-weight:500;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.bouch li b{color:var(--rouge);white-space:nowrap}
+/* box + menus */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.box{border-radius:22px;padding:30px;position:relative;overflow:hidden}
+.box h3{font-size:1.8rem;margin-bottom:8px}
+.box.r{background:var(--rouge);color:#fff}
+.box.l{background:var(--lime);color:var(--encre)}
+.box .big{font-family:Anton;font-size:3rem;line-height:1}
+.box p{margin-top:8px}
+.box:after{content:"";position:absolute;right:-50px;bottom:-50px;width:160px;height:160px;border-radius:50%;border:22px solid rgba(255,255,255,.18)}
+/* noel */
+.noel{background:linear-gradient(135deg,#7c0d19,#c11326);color:#fff;position:relative;overflow:hidden}
+.noel .wrap{position:relative;z-index:1}
+.noel-g{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.noel h2{font-size:clamp(2rem,4.8vw,3.2rem);margin:8px 0 14px}
+.noel .over{color:var(--lime);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+.noel p{color:#fbe3e5;max-width:560px}
+.noel .ideas{display:grid;gap:10px;margin:22px 0 26px}
+.noel .ideas div{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:12px 16px}
+.noel .ideas b{color:var(--lime)}
+.ticket{background:var(--creme);color:var(--encre);border-radius:20px;padding:26px;text-align:center;transform:rotate(2deg);box-shadow:0 20px 40px rgba(0,0,0,.25);position:relative}
+.ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:28px;height:28px;border-radius:50%;background:#a3111f;transform:translateY(-50%)}
+.ticket:before{left:-14px}.ticket:after{right:-14px}
+.ticket img{width:110px;margin:0 auto 6px;border-radius:50%}
+.ticket h3{font-size:1.7rem;color:var(--rouge)}
+.ticket .dash{border-top:2px dashed #d8c6b0;margin:14px 0}
+.ticket small{color:var(--gris)}
+.flake{position:absolute;color:rgba(255,255,255,.35);font-size:20px;animation:fall linear infinite;top:-30px}
+@keyframes fall{to{transform:translateY(700px) rotate(360deg)}}
+/* avis */
+.avis-g{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}
+.score{background:#fff;border-radius:22px;padding:30px;text-align:center;box-shadow:0 10px 30px rgba(60,30,10,.08)}
+.score .n{font-family:Anton;font-size:4.4rem;color:var(--rouge);line-height:1}
+.stars{color:#f2b01e;font-size:1.5rem;letter-spacing:3px}
+.quotes{display:grid;gap:16px}
+blockquote{background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 6px 18px rgba(60,30,10,.06);border-left:5px solid var(--lime);font-size:1.02rem}
+blockquote cite{display:block;font-style:normal;font-size:.82rem;color:var(--gris);margin-top:6px}
+/* infos */
+.infos{background:var(--sable)}
+.inf-g{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.inf{background:#fff;border-radius:22px;padding:30px}
+.inf h3{font-size:1.6rem;margin-bottom:14px}
+.hrs{display:grid;gap:8px}
+.hrs div{display:flex;justify-content:space-between;border-bottom:1px dashed #e4d6c3;padding-bottom:8px}
+.hrs b{color:var(--rouge)}
+.contact-l{display:grid;gap:12px;margin:8px 0 20px}
+.contact-l a,.contact-l div{display:flex;gap:12px;align-items:flex-start;text-decoration:none;font-weight:500;overflow-wrap:anywhere}
+.ico{flex:0 0 38px;height:38px;border-radius:12px;background:var(--creme);display:grid;place-items:center;font-size:1.1rem}
+.map{border-radius:22px;overflow:hidden;margin-top:26px;border:3px solid #fff;box-shadow:0 10px 30px rgba(60,30,10,.1)}
+.map iframe{width:100%;height:320px;border:0;display:block}
+footer{background:var(--encre);color:#cbbdaf;padding:40px 0 90px;text-align:center;font-size:.88rem}
+footer img{width:70px;border-radius:50%;margin:0 auto 12px}
+footer .sig{margin-top:14px;color:#8f8073;font-size:.8rem}
+.float{position:fixed;right:16px;bottom:16px;z-index:30;display:flex;gap:10px}
+.float a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.5rem;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.float .wa{background:#25d366}.float .tel{background:var(--rouge)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.vu{opacity:1;transform:none}
+@media(max-width:900px){
+ .links{display:none}
+ .hero-g,.bouch-g,.noel-g,.avis-g,.inf-g{grid-template-columns:1fr}
+ .fam{grid-template-columns:1fr 1fr}
+ .stack{height:400px;max-width:520px;margin:10px auto 0;width:100%}
+}
+@media(max-width:600px){
+ section{padding:58px 0}
+ .hero{padding:34px 0 50px}
+ .fam,.duo,.carte-imgs{grid-template-columns:1fr}
+ .stack{height:330px}
+ .p2{top:110px}.p3{top:220px}
+ .panel{padding:18px 12px}
+ th,td{padding:8px 4px;font-size:.88rem}
+ .nav .btn{display:none}
+ .brand span{font-size:1.25rem}
+ .band{font-size:1.1rem}
+ .ticket{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Croq Wich</div>
+
+<header>
+ <div class="wrap nav">
+  <a class="brand" href="#top"><img src="img/logo.jpg" alt="Logo Croq Wich"><div><span>CROQ WICH</span><small>sandwicherie · café</small></div></a>
+  <nav class="links"><a href="#carte">La carte</a><a href="#bouchons">Bouchons</a><a href="#fetes">Les fêtes</a><a href="#infos">Infos</a></nav>
+  <a class="btn btn-r" href="tel:+262693902773">📞 0693 90 27 73</a>
+ </div>
+</header>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap hero-g">
+  <div>
+   <span class="kick"><span class="dot"></span>Du lundi au samedi · centre-ville de Saint-Pierre</span>
+   <h1>Le bon sandwich<br>au <em>cœur</em> de<br>Saint-Pierre</h1>
+   <p class="lead">Américains, lords, pitas, galettes, paninis, burgers, bowls et bouchons artisanaux : la sandwicherie et café de la rue Victor le Vigoureux vous régale midi et fin d'après-midi, sur place ou à emporter.</p>
+   <div class="cta">
+    <a class="btn btn-r" href="#carte">Voir la carte</a>
+    <a class="btn btn-o" href="https://wa.me/262693902773?text=Bonjour%20Croq%20Wich%20!%20Je%20souhaite%20passer%20une%20commande%20%3A%20" target="_blank" rel="noopener">💬 Commander sur WhatsApp</a>
+   </div>
+   <div class="chips">
+    <span class="chip"><b>★ 4,7</b> sur Google (62 avis)</span>
+    <span class="chip">🕘 9h–14h · 16h–19h30</span>
+    <span class="chip">🌿 Terrasse</span>
+   </div>
+  </div>
+  <div class="stack">
+   <figure class="card-p p1"><img src="img/lords.jpg" alt="Lord garni de Croq Wich"><figcaption>Les lords <span>dès 7,50 €</span></figcaption></figure>
+   <figure class="card-p p2"><img src="img/galette.jpg" alt="Galette roulée de Croq Wich"><figcaption>Galettes <span>dès 7,50 €</span></figcaption></figure>
+   <figure class="card-p p3"><img src="img/americain.jpg" alt="Américain de Croq Wich"><figcaption>Américains <span>dès 3,50 €</span></figcaption></figure>
+   <div class="lines" style="right:6%;top:4%;width:90px"><i></i><i></i><i></i></div>
+  </div>
+ </div>
+</section>
+
+<div class="band" aria-hidden="true"><div class="band-in">
+ <span>Américains</span><span class="l">★</span><span>Lords</span><span class="l">★</span><span>Pain pita</span><span class="l">★</span><span>Galettes</span><span class="l">★</span><span>Paninis</span><span class="l">★</span><span>Burgers</span><span class="l">★</span><span>Bowls</span><span class="l">★</span><span>Bouchons artisanaux</span><span class="l">★</span>
+ <span>Américains</span><span class="l">★</span><span>Lords</span><span class="l">★</span><span>Pain pita</span><span class="l">★</span><span>Galettes</span><span class="l">★</span><span>Paninis</span><span class="l">★</span><span>Burgers</span><span class="l">★</span><span>Bowls</span><span class="l">★</span><span>Bouchons artisanaux</span><span class="l">★</span>
+</div></div>
+
+<section id="familles">
+ <div class="wrap">
+  <div class="sec-t reveal"><span class="over">Ce qu'on prépare</span><h2>Une envie, un sandwich</h2><p>Oriental, tandoori, créole, merguez, bouchon artisanal, saumon, crispy chicken ou kofta bœuf : choisissez votre garniture, puis votre pain.</p></div>
+  <div class="fam">
+   <article class="f reveal"><div class="ph"><img src="img/americain.jpg" alt="Américain"></div><div class="bd"><h3>Américains</h3><p>Le classique réunionnais, généreux et garni de frites, avec le pain frites gratiné pour les petites faims.</p><span class="px">de 3,50 € à 7,50 €</span></div></article>
+   <article class="f reveal"><div class="ph"><img src="img/lords.jpg" alt="Lord"></div><div class="bd"><h3>Lords</h3><p>La version XL de l'américain, pour les grosses journées en ville.</p><span class="px">dès 7,50 €</span></div></article>
+   <article class="f reveal"><div class="ph"><img src="img/pain-pita.jpg" alt="Pain pita garni"></div><div class="bd"><h3>Pain pita</h3><p>Moelleux et bien garni, de l'oriental au kofta bœuf.</p><span class="px">de 6,50 € à 8,50 €</span></div></article>
+   <article class="f reveal"><div class="ph"><img src="img/galette.jpg" alt="Galette roulée"></div><div class="bd"><h3>Galettes</h3><p>Roulées et dorées, faciles à emporter pour un déjeuner sur le pouce.</p><span class="px">dès 7,50 €</span></div></article>
+   <article class="f reveal"><div class="ph"><img src="img/panini.jpg" alt="Panini"></div><div class="bd"><h3>Paninis &amp; baguettes</h3><p>Croustillants et fondants, du jambon au tandoori.</p><span class="px">paninis dès 5,90 € · baguettes dès 4,90 €</span></div></article>
+   <article class="f reveal"><div class="ph"><img src="img/double-croq-beef.jpg" alt="Burger Double Croq Beef" style="object-position:center 40%"></div><div class="bd"><h3>Burgers</h3><p>Croq Chicken, Croq Beef au steak 100 % bœuf péi, et leurs versions doubles.</p><span class="px">de 7,50 € à 9,50 €</span></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="carte" id="carte">
+ <div class="wrap">
+  <div class="sec-t reveal"><span class="over">La carte</span><h2>Tous les prix, d'un coup d'œil</h2><p>Votre nouvelle carte, lisible sur téléphone : vos clients choisissent avant d'arriver et commandent plus vite.</p></div>
+  <div class="tabs" role="tablist">
+   <button class="tab on" data-p="am">Américains &amp; lords</button>
+   <button class="tab" data-p="pi">Pita &amp; galettes</button>
+   <button class="tab" data-p="pa">Paninis &amp; baguettes</button>
+   <button class="tab" data-p="bu">Burgers</button>
+   <button class="tab" data-p="bo">Bowls</button>
+   <button class="tab" data-p="sn">Snacking</button>
+  </div>
+
+  <div class="panel on" id="am"><table>
+   <tr><th></th><th>Américain</th><th>Lords</th></tr>
+   <tr><td>L'Oriental</td><td>5,90 €</td><td>7,50 €</td></tr>
+   <tr><td>Tandoori</td><td>5,90 €</td><td>7,50 €</td></tr>
+   <tr><td>La Créole</td><td>5,90 €</td><td>7,50 €</td></tr>
+   <tr><td>Merguez</td><td>5,90 €</td><td>7,50 €</td></tr>
+   <tr><td>Bouchon artisanal</td><td>5,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Saumon</td><td>6,50 €</td><td>8,50 €</td></tr>
+   <tr><td>Crispy chicken</td><td>6,90 €</td><td>8,90 €</td></tr>
+   <tr><td>Jambon</td><td>4,50 €</td><td>–</td></tr>
+   <tr><td>Gratiné bouchon <small>sans frites</small></td><td>4,90 €</td><td>–</td></tr>
+   <tr><td>Pain frites gratiné</td><td>3,50 €</td><td>–</td></tr>
+  </table><div class="note"><b>Menu +3 €</b> : frites + boisson 33 cl ou bouteille d'eau 50 cl (+1 € pour une boisson 50 cl). Sauce cheddar en supplément : +1 €.</div></div>
+
+  <div class="panel" id="pi"><table>
+   <tr><th></th><th>Pain pita</th><th>Galette</th></tr>
+   <tr><td>L'Oriental</td><td>6,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Tandoori</td><td>6,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Créole</td><td>6,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Merguez</td><td>6,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Bouchon artisanal</td><td>6,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Saumon</td><td>7,50 €</td><td>8,50 €</td></tr>
+   <tr><td>Crispy chicken</td><td>8,50 €</td><td>8,90 €</td></tr>
+   <tr><td>Kofta bœuf</td><td>8,50 €</td><td>8,90 €</td></tr>
+  </table><div class="note"><b>Menu +3 €</b> : frites + boisson 33 cl ou bouteille d'eau 50 cl. Sauce cheddar en supplément : +1 €.</div></div>
+
+  <div class="panel" id="pa"><table>
+   <tr><th></th><th>Panini</th><th>Baguette</th></tr>
+   <tr><td>L'Oriental</td><td>5,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Tandoori</td><td>5,90 €</td><td>4,90 €</td></tr>
+   <tr><td>La Créole</td><td>5,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Merguez</td><td>5,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Bouchon artisanal</td><td>5,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Jambon, végétarien, saumon, crispy chicken, kofta bœuf <small>selon la garniture</small></td><td colspan="2">voir la carte ci-dessous</td></tr>
+  </table><div class="note"><b>Suppléments</b> : merguez 1,50 € · poulet mariné 2,50 € · crispy chicken 2,50 € · kofta de bœuf 3,50 € · bacon ou jambon de volaille 1,50 € · frites, emmental, mozzarella, cheddar ou crudités 0,50 €.</div></div>
+
+  <div class="panel" id="bu"><table>
+   <tr><th></th><th>Prix</th></tr>
+   <tr><td>Croq Chicken <small>salade, tomates, oignons frits, cheddar, poulet pané, galette de pomme de terre</small></td><td>7,50 €</td></tr>
+   <tr><td>Croq Beef <small>salade, tomates, oignons blancs, cornichons, cheddar, steak 100 % bœuf péi, galette de pomme de terre</small></td><td>7,50 €</td></tr>
+   <tr><td>Croq Beef &amp; Chicken <small>double cheddar, steak 100 % bœuf péi et poulet pané</small></td><td>9,50 €</td></tr>
+   <tr><td>Double Croq Chicken <small>salade, tomates, oignons frits, double cheddar, double poulet pané</small></td><td>9,50 €</td></tr>
+   <tr><td>Double Croq Beef <small>salade, tomates, oignons blancs, cornichons, double cheddar, double steak 100 % bœuf péi</small></td><td>9,50 €</td></tr>
+  </table><div class="note"><b>Menu +3 €</b> avec frites et boisson. Supplément bacon de volaille 1,50 € · sauce cheddar +1 €.</div></div>
+
+  <div class="panel" id="bo"><table>
+   <tr><th>Viandes, crudités et sauces au choix</th><th>Prix</th></tr>
+   <tr><td>Végétarien</td><td>6,50 €</td></tr>
+   <tr><td>Créole · Oriental · Tandoori · Merguez · Bouchon artisanal</td><td>7,50 €</td></tr>
+   <tr><td>Saumon · Crispy chicken · Kofta bœuf</td><td>8,50 €</td></tr>
+  </table></div>
+
+  <div class="panel" id="sn"><table>
+   <tr><th></th><th>Petite</th><th>Grande</th></tr>
+   <tr><td>Tenders <small>x2 / x4</small></td><td>4,90 €</td><td>7,90 €</td></tr>
+   <tr><td>Nuggets <small>x5 / x10</small></td><td>3,90 €</td><td>6,90 €</td></tr>
+   <tr><td>Wings <small>x3 / x5</small></td><td>4,50 €</td><td>7,50 €</td></tr>
+   <tr><td>Mozzarella sticks <small>x4 / x6</small></td><td>3,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Chili cheese <small>x4 / x6</small></td><td>3,90 €</td><td>4,90 €</td></tr>
+   <tr><td>Frites</td><td>2 €</td><td>3 €</td></tr>
+   <tr><td>Bouchons poulet <small>à l'unité</small></td><td colspan="2">0,50 €</td></tr>
+  </table><div class="note"><b>Menu enfant 5,90 €</b> : 5 nuggets, frites et une Capri-Sun ou une bouteille d'eau 50 cl.</div></div>
+
+  <div class="carte-imgs reveal">
+   <a href="img/carte-americains-lords.jpg" target="_blank"><img src="img/carte-americains-lords.jpg" alt="Carte Américains et Lords" loading="lazy"></a>
+   <a href="img/carte-pita-galettes.jpg" target="_blank"><img src="img/carte-pita-galettes.jpg" alt="Carte Pain pita et Galettes" loading="lazy"></a>
+   <a href="img/carte-burgers.jpg" target="_blank"><img src="img/carte-burgers.jpg" alt="Carte Burgers" loading="lazy"></a>
+   <a href="img/carte-paninis-baguettes.jpg" target="_blank"><img src="img/carte-paninis-baguettes.jpg" alt="Carte Paninis et Baguettes" loading="lazy"></a>
+   <a href="img/carte-bowls.jpg" target="_blank"><img src="img/carte-bowls.jpg" alt="Carte Bowls" loading="lazy"></a>
+   <a href="img/carte-snacking.jpg" target="_blank"><img src="img/carte-snacking.jpg" alt="Carte Snacking" loading="lazy"></a>
+  </div>
+  <p class="legend">Vos panneaux de carte, publiés le 21 septembre 2026, à agrandir d'un clic.</p>
+ </div>
+</section>
+
+<section id="bouchons">
+ <div class="wrap bouch-g">
+  <div class="bouch-img reveal"><img src="img/bouchons-poulet.jpg" alt="Bouchons poulet de Croq Wich"><span class="badge">Bouchons<br>artisanaux</span></div>
+  <div class="bouch reveal">
+   <span class="sec-t over" style="display:block;text-align:left;margin:0 0 6px;font-weight:700;color:var(--rouge);letter-spacing:2px;font-size:.85rem">La spécialité de la maison</span>
+   <h2>Les <em>bouchons</em><br>qui font revenir</h2>
+   <p>Le bouchon artisanal se glisse partout chez Croq Wich : en américain, en lord, en pita, en galette, en panini ou en bowl. Et pour la maison, il se prend aussi à l'unité ou en sachet de 50 à cuire chez soi.</p>
+   <ul>
+    <li>Bouchon poulet, à l'unité <b>0,50 €</b></li>
+    <li>Sachet de 50 bouchons surgelés <b>20 €</b></li>
+    <li>Gratiné bouchon (sans frites) <b>4,90 €</b></li>
+   </ul>
+   <a class="btn btn-r" href="https://wa.me/262693902773?text=Bonjour%20Croq%20Wich%20!%20Je%20voudrais%20r%C3%A9server%20des%20bouchons%20%3A%20" target="_blank" rel="noopener">Réserver mes bouchons</a>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap duo">
+  <div class="box r reveal"><h3>Le menu, version complète</h3><div class="big">+3 €</div><p>Ajoutez frites et boisson 33 cl (ou bouteille d'eau 50 cl) à votre sandwich, burger, pita ou galette.</p></div>
+  <div class="box l reveal"><h3>Menu enfant</h3><div class="big">5,90 €</div><p>5 nuggets, des frites et une boisson : le repas des petits gourmands, prêt en un clin d'œil.</p></div>
+ </div>
+</section>
+
+<section class="noel" id="fetes">
+ <span class="flake" style="left:8%;animation-duration:11s">✦</span><span class="flake" style="left:28%;animation-duration:14s;animation-delay:3s">✦</span><span class="flake" style="left:55%;animation-duration:12s;animation-delay:6s">✦</span><span class="flake" style="left:80%;animation-duration:15s;animation-delay:1s">✦</span>
+ <div class="wrap noel-g">
+  <div class="reveal">
+   <span class="over">Pour les fêtes</span>
+   <h2>Un apéro des fêtes<br>signé Croq Wich</h2>
+   <p>Repas de famille, pot de fin d'année au bureau, petit cadeau gourmand : un message à Croq Wich, et on organise ensemble votre commande des fêtes.</p>
+   <div class="ideas">
+    <div><b>Les bouchons de l'apéro</b> · sachet de 50 bouchons surgelés à 20 €, prêts à cuire pour toute la tablée.</div>
+    <div><b>Les plateaux du bureau</b> · sandwichs, wings, tenders et mozzarella sticks pour le pot de fin d'année, à composer ensemble.</div>
+    <div><b>Le bon cadeau</b> · une idée gourmande à glisser sous le sapin, à imaginer ensemble.</div>
+   </div>
+   <a class="btn btn-l" href="https://wa.me/262693902773?text=Bonjour%20Croq%20Wich%20!%20Je%20souhaite%20pr%C3%A9parer%20une%20commande%20pour%20les%20f%C3%AAtes%20%3A%20" target="_blank" rel="noopener">💬 Préparer ma commande des fêtes</a>
+  </div>
+  <div class="ticket reveal">
+   <img src="img/logo.jpg" alt="Croq Wich">
+   <h3>Commande des fêtes</h3>
+   <div class="dash"></div>
+   <p>Bouchons · plateaux · sandwichs</p>
+   <p><b>0693 90 27 73</b></p>
+   <div class="dash"></div>
+   <small>58 B rue Victor le Vigoureux · Saint-Pierre</small>
+  </div>
+ </div>
+</section>
+
+<section id="avis">
+ <div class="wrap avis-g">
+  <div class="score reveal"><div class="n">4,7</div><div class="stars">★★★★★</div><p><b>62 avis Google</b></p><p style="color:var(--gris);font-size:.9rem">et 9 400 abonnés sur Facebook</p></div>
+  <div class="quotes">
+   <blockquote class="reveal">« Très bons les paninis bouchon et poulet rôti. »<cite>Avis Google · août 2026</cite></blockquote>
+   <blockquote class="reveal">« Pains bouchons halal très bons, je recommande l'adresse. »<cite>Avis Google · décembre 2025</cite></blockquote>
+   <blockquote class="reveal">« Petit snack sympathique, excellents burgers fins et gourmands. Ça change et c'est bien ! »<cite>Avis Google · juin 2022</cite></blockquote>
+  </div>
+ </div>
+</section>
+
+<section class="infos" id="infos">
+ <div class="wrap">
+  <div class="sec-t reveal"><span class="over">Venir chez Croq Wich</span><h2>En plein centre-ville</h2><p>Une pause gourmande entre deux courses, sur place en terrasse ou à emporter.</p></div>
+  <div class="inf-g">
+   <div class="inf reveal"><h3>Horaires</h3>
+    <div class="hrs">
+     <div><span>Lundi → samedi</span><b>9h – 14h</b></div>
+     <div><span>et l'après-midi</span><b>16h – 19h30</b></div>
+     <div><span>Dimanche</span><span>repos</span></div>
+    </div>
+    <p style="margin-top:14px;color:var(--gris);font-size:.9rem">Les ouvertures exceptionnelles sont annoncées sur la page Facebook.</p>
+   </div>
+   <div class="inf reveal"><h3>Contact</h3>
+    <div class="contact-l">
+     <div><span class="ico">📍</span><span>Local n° 6, 58 B rue Victor le Vigoureux<br>97410 Saint-Pierre</span></div>
+     <a href="tel:+262693902773"><span class="ico">📞</span><span>0693 90 27 73</span></a>
+     <a href="mailto:croqwich974@gmail.com"><span class="ico">✉️</span><span>croqwich974@gmail.com</span></a>
+     <a href="https://www.facebook.com/croqwich974" target="_blank" rel="noopener"><span class="ico">👍</span><span>facebook.com/croqwich974</span></a>
+    </div>
+    <a class="btn btn-r" href="https://www.google.com/maps/search/?api=1&query=CROQ%20WICH%2058b%20Rue%20Victor%20le%20Vigoureux%20Saint-Pierre" target="_blank" rel="noopener">🧭 Itinéraire</a>
+   </div>
+  </div>
+  <div class="map reveal"><iframe loading="lazy" title="Plan d'accès Croq Wich" src="https://maps.google.com/maps?q=CROQ%20WICH%2C%2058b%20Rue%20Victor%20le%20Vigoureux%2C%2097410%20Saint-Pierre&z=17&output=embed"></iframe></div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <img src="img/logo.jpg" alt="Croq Wich">
+ <p><b style="color:#fff">CROQ WICH</b> · Sandwicherie et café au cœur de la ville de Saint-Pierre</p>
+ <p>58 B rue Victor le Vigoureux, 97410 Saint-Pierre · 0693 90 27 73</p>
+ <p class="sig">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Croq Wich.</p>
+</footer>
+
+<div class="float">
+ <a class="wa" href="https://wa.me/262693902773" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+ <a class="tel" href="tel:+262693902773" aria-label="Appeler">📞</a>
+</div>
+
+<script>
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+ document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+ t.classList.add('on');document.getElementById(t.dataset.p).classList.add('on');
+}));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('vu')),2500);
+</script>
+<script src="/outils/cta.js" data-nom="Croq Wich" defer></script>
+</body>
+</html>
