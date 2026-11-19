@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#3d5aa2">
+<title>Suivi du site ffky.fr — FFKY</title>
+<link rel="icon" href="img/logo-ffky.png">
+<link rel="preload" href="fonts/jost.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/suivi.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero__in">
+    <img class="hero__logo" src="img/logo-ffky.png" alt="Logo FFKY" width="72" height="76">
+    <div>
+      <p class="hero__kicker">Fédération Française de Kundalini Yoga</p>
+      <h1 id="titre">Suivi du site ffky.fr</h1>
+      <p class="hero__sub" id="sous-titre"></p>
+    </div>
+  </div>
+  <div class="global">
+    <div class="global__head"><span>Avancement global</span><strong id="global-pct">…</strong></div>
+    <div class="bar bar--big"><span id="global-bar"></span></div>
+    <p class="global__maj">Mise à jour du <span id="maj"></span></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Sections">
+  <a href="#etapes">Étapes</a>
+  <a href="#attentes">De votre côté</a>
+  <a href="#historique">Historique</a>
+  <a href="#plus">En plus</a>
+</nav>
+
+<main>
+  <p class="intro" id="intro"></p>
+
+  <section id="etapes" aria-labelledby="h-etapes">
+    <h2 id="h-etapes">Les étapes du contrat</h2>
+    <div class="filtres" role="group" aria-label="Filtrer par statut" id="filtres"></div>
+    <div class="filtres filtres--qui" role="group" aria-label="Filtrer par personne" id="filtres-qui"></div>
+    <div id="liste-etapes" class="etapes"></div>
+  </section>
+
+  <section id="attentes" aria-labelledby="h-attentes">
+    <h2 id="h-attentes">Ce que j'attends de vous</h2>
+    <p class="note">Ces quelques gestes me permettent de boucler les étapes en cours.</p>
+    <ol id="liste-attentes" class="attentes"></ol>
+  </section>
+
+  <section id="historique" aria-labelledby="h-historique">
+    <h2 id="h-historique">Historique</h2>
+    <ol id="liste-historique" class="timeline"></ol>
+  </section>
+
+  <section id="plus" aria-labelledby="h-plus">
+    <h2 id="h-plus">En plus, offert</h2>
+    <div id="liste-offert" class="cartes"></div>
+    <h2>Surveillance en place</h2>
+    <ul id="liste-surveillance" class="surveillance"></ul>
+  </section>
+</main>
+
+<footer class="pied">
+  <p id="auteur"></p>
+</footer>
+<script src="js/suivi.js" defer></script>
+</body>
+</html>

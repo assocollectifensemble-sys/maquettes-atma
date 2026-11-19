@@ -1,0 +1,108 @@
+/* Suivi FFKY — couleurs de la charte graphique FFKY 2021 */
+@font-face{font-family:"Jost";src:url(../fonts/jost.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Inter";src:url(../fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{
+  --or:#b69249; --or-clair:#f4e37b; --bleu:#3d5aa2; --bleu-clair:#7fb1e2; --gris:#868686;
+  --encre:#26324f; --fond:#f7f6f1; --carte:#fff; --ligne:#e6e2d6;
+  --fait:#2f8a5b; --fait-bg:#e3f3ea; --cours:#3d5aa2; --cours-bg:#e4ecfa;
+  --venir:#6f6f6f; --venir-bg:#efefec; --attend:#9a6b14; --attend-bg:#fbf0d2;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;font:16px/1.55 "Inter",Helvetica,Arial,sans-serif;color:var(--encre);background:var(--fond);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Jost","Helvetica Neue",sans-serif;font-weight:500;letter-spacing:.01em;line-height:1.2}
+h2{font-size:1.45rem;margin:2.2rem 0 .6rem;color:var(--bleu)}
+h2::after{content:"";display:block;width:48px;height:3px;margin-top:.4rem;background:linear-gradient(90deg,var(--or),var(--or-clair));border-radius:2px}
+
+.hero{background:linear-gradient(135deg,var(--bleu) 0%,#4d6db5 55%,var(--bleu-clair) 130%);color:#fff;padding:22px 18px 20px}
+.hero__in{display:flex;gap:14px;align-items:center;max-width:920px;margin:0 auto}
+.hero__logo{width:64px;height:auto;background:#fff;border-radius:12px;padding:6px;flex:none}
+.hero__kicker{margin:0;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;color:var(--or-clair)}
+.hero h1{margin:.15rem 0;font-size:1.6rem;font-weight:400}
+.hero__sub{margin:0;opacity:.9;font-size:.95rem}
+.global{max-width:920px;margin:18px auto 0;background:rgba(255,255,255,.12);border-radius:var(--r);padding:12px 14px}
+.global__head{display:flex;justify-content:space-between;font-size:.9rem}
+.global__head strong{font-family:"Jost";font-size:1.3rem;font-weight:500}
+.global__maj{margin:.4rem 0 0;font-size:.8rem;opacity:.85}
+
+.bar{height:8px;background:var(--ligne);border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--or-clair));border-radius:99px;transition:width .8s ease}
+.bar--big{height:12px;background:rgba(255,255,255,.25);margin-top:6px}
+
+.tabs{position:sticky;top:0;z-index:5;display:flex;gap:4px;overflow-x:auto;background:#fff;border-bottom:1px solid var(--ligne);padding:8px 12px;justify-content:center}
+.tabs a{flex:none;text-decoration:none;color:var(--bleu);font-family:"Jost";font-weight:500;padding:8px 12px;border-radius:99px;font-size:.95rem}
+.tabs a:hover,.tabs a:focus-visible{background:var(--cours-bg)}
+
+main{max-width:920px;margin:0 auto;padding:6px 16px 40px}
+.intro{font-size:1rem;color:#3c4766;margin:1.2rem 0 0}
+.note{color:var(--gris);margin:.2rem 0 1rem}
+
+.filtres{display:flex;flex-wrap:wrap;gap:8px;margin:.6rem 0}
+.chip{border:1px solid var(--ligne);background:#fff;color:var(--encre);font:inherit;font-size:.88rem;padding:7px 13px;border-radius:99px;cursor:pointer;min-height:38px}
+.chip[aria-pressed="true"]{background:var(--bleu);border-color:var(--bleu);color:#fff}
+.chip .n{opacity:.7;margin-left:4px}
+
+.etapes{display:grid;gap:14px;margin-top:14px}
+.etape{background:var(--carte);border:1px solid var(--ligne);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 2px rgba(38,50,79,.05)}
+.etape__head{display:block;width:100%;text-align:left;border:0;background:none;font:inherit;color:inherit;padding:14px 16px;cursor:pointer}
+.etape__top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.etape__id{font-family:"Jost";font-weight:600;color:#fff;background:var(--or);border-radius:8px;padding:2px 8px;font-size:.9rem}
+.etape__nom{font-family:"Jost";font-size:1.2rem;font-weight:500;flex:1 1 auto}
+.etape__resume{margin:.5rem 0 .6rem;color:#4a5370;font-size:.95rem}
+.etape__jauge{display:flex;align-items:center;gap:10px;font-size:.82rem;color:var(--gris)}
+.etape__jauge .bar{flex:1}
+.etape__next{margin:.7rem 0 0;font-size:.9rem;background:var(--fond);border-left:3px solid var(--or);padding:8px 10px;border-radius:6px}
+.etape__next b{color:var(--bleu)}
+.chev{transition:transform .2s;color:var(--gris)}
+.etape[open-state="1"] .chev{transform:rotate(180deg)}
+.taches{list-style:none;margin:0;padding:0 16px 10px;display:none}
+.etape[open-state="1"] .taches{display:block}
+.tache{border-top:1px solid var(--ligne);padding:12px 0}
+.tache__l1{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.tache__titre{font-weight:600;font-size:.97rem}
+.tache__meta{font-size:.8rem;color:var(--gris);margin-top:2px}
+.tache p{margin:.35rem 0 0;font-size:.92rem;color:#3c4766}
+.tache .preuve{font-size:.85rem;color:#55607e}
+.tache .preuve::before{content:"✓ À regarder : ";color:var(--or);font-weight:600}
+
+.badge{flex:none;font-size:.75rem;font-weight:600;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.b-fait{color:var(--fait);background:var(--fait-bg)}
+.b-en_cours{color:var(--cours);background:var(--cours-bg)}
+.b-a_venir{color:var(--venir);background:var(--venir-bg)}
+.b-attend_ffky{color:var(--attend);background:var(--attend-bg)}
+
+.attentes{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:a}
+.attentes li{counter-increment:a;background:#fff;border:1px solid var(--ligne);border-radius:var(--r);padding:12px 14px 12px 52px;position:relative}
+.attentes li::before{content:counter(a);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--attend-bg);color:var(--attend);font-family:"Jost";font-weight:600;display:grid;place-items:center}
+.attentes b{display:block}
+.attentes span{font-size:.9rem;color:#4a5370}
+.attentes small{display:block;color:var(--gris);margin-top:4px}
+
+.timeline{list-style:none;margin:0;padding:0 0 0 18px;border-left:2px solid var(--bleu-clair)}
+.timeline li{position:relative;padding:0 0 14px 14px}
+.timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--or)}
+.timeline time{font-family:"Jost";font-weight:600;color:var(--bleu);font-size:.9rem}
+.timeline .et{font-size:.75rem;color:var(--gris);margin-left:6px}
+.timeline p{margin:.1rem 0 0;font-size:.93rem}
+
+.cartes{display:grid;gap:10px}
+.carte{background:#fff;border:1px solid var(--ligne);border-top:3px solid var(--or-clair);border-radius:var(--r);padding:12px 14px}
+.carte b{font-family:"Jost";font-weight:500;font-size:1.05rem;color:var(--bleu)}
+.carte p{margin:.3rem 0 0;font-size:.92rem}
+.surveillance{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.surveillance li{background:#fff;border-radius:10px;padding:10px 12px;border:1px solid var(--ligne);font-size:.92rem}
+.surveillance b{color:var(--or);font-family:"Jost";font-weight:600;display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+
+.vide{color:var(--gris);font-style:italic}
+.pied{text-align:center;font-size:.85rem;color:var(--gris);padding:24px 16px 40px;border-top:1px solid var(--ligne)}
+
+@media (min-width:720px){
+  .hero{padding:34px 24px 26px}
+  .hero__logo{width:84px}
+  .hero h1{font-size:2.1rem}
+  .cartes{grid-template-columns:1fr 1fr}
+  .surveillance{grid-template-columns:1fr 1fr}
+  .tache__l1{align-items:center}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

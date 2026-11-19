@@ -1,0 +1,633 @@
+{
+ "meta": {
+  "titre": "Suivi du site ffky.fr",
+  "sous_titre": "L'avancée de notre contrat, étape par étape",
+  "maj": "2026-11-19",
+  "auteur": "Jonathan — Atma Digital (Aurélie & Jonathan Bou)",
+  "intro": "Voici où en est chaque étape du contrat signé le 17 novembre 2026. Chaque ligne indique ce qui est fait, la preuve que vous pouvez regarder, la prochaine action et la personne qui la porte. Je mets cette page à jour au fil du chantier."
+ },
+ "statuts": {
+  "fait": "Fait",
+  "en_cours": "En cours",
+  "a_venir": "À venir",
+  "attend_ffky": "Attend la FFKY"
+ },
+ "etapes": [
+  {
+   "id": "A1",
+   "nom": "Sécurité",
+   "phase": "B1",
+   "statut": "en_cours",
+   "debut": "2026-11-07",
+   "resume": "Le site est revenu à la fédération : sain, contrôlé et surveillé jour et nuit.",
+   "prochaine": {
+    "action": "Recevoir votre « OK pour les étapes 1 et 2 » par écrit",
+    "qui": "Ongkar ou Christine"
+   },
+   "taches": [
+    {
+     "titre": "Redirection pirate supprimée",
+     "statut": "fait",
+     "date": "2026-11-07",
+     "detail": "Le 5 novembre, des pirates renvoyaient les visiteurs vers un site de casino. Le 7 novembre, ffky.fr s'affiche de nouveau normalement.",
+     "preuve": "Ouvrez https://ffky.fr : la page d'accueil de la fédération s'affiche.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Fichiers pirates mis à l'écart",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Les fichiers déposés par les pirates sont retrouvés et rangés hors du site, pour preuve. Une analyse complète le 18 novembre puis le 19 novembre au matin a traité les derniers.",
+     "preuve": "Analyse quotidienne des fichiers, en place.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Comptes du site remis en ordre",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Un seul administrateur : le compte du bureau (8 novembre). Les 68 faux comptes créés fin août et début septembre sont supprimés (19 novembre).",
+     "preuve": "Liste des comptes administrateurs du site.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Mots de passe renouvelés",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Base de données, accès au serveur, compte administrateur et les 8 clés internes de WordPress : renouvelés les 10 et 11 novembre, puis de nouveau le 19 novembre par précaution.",
+     "preuve": "Journal d'interventions.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Mêmes pages pour les visiteurs et pour Google",
+     "statut": "fait",
+     "date": "2026-11-07",
+     "detail": "Le site présente exactement les mêmes pages aux visiteurs et au robot de Google, contrôlé toutes les 30 minutes. Le plan officiel du site est publié.",
+     "preuve": "Cherchez ffky.fr dans Google : les vraies pages de la fédération apparaissent.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Portes d'entrée des robots malveillants fermées",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Connexion à distance et recherche des comptes par numéro : fermées, contrôlé en direct le 19 novembre.",
+     "preuve": "Contrôle technique en ligne du 19 novembre.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Google Search Console et réindexation",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Reprendre la main sur l'espace Google du site et demander à Google de revisiter toutes les pages.",
+     "preuve": "Espace Search Console de ffky.fr.",
+     "qui": "Jonathan",
+     "source": "vérification 19/11"
+    },
+    {
+     "titre": "Nouvelles clés de paiement Monetico",
+     "statut": "attend_ffky",
+     "date": "",
+     "detail": "La banque fournit de nouvelles clés de paiement ; je les installe ensuite sur le site.",
+     "preuve": "Paiement d'adhésion testé après installation.",
+     "qui": "Bureau FFKY",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Nouveau mot de passe du Gmail du secrétariat",
+     "statut": "attend_ffky",
+     "date": "",
+     "detail": "Un nouveau mot de passe choisi par le bureau protège la boîte du secrétariat.",
+     "preuve": "Confirmation du bureau.",
+     "qui": "Bureau FFKY",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Double vérification à la connexion administrateur",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Un code en plus du mot de passe protège le compte du bureau.",
+     "preuve": "Écran de connexion administrateur.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Discrétion des noms de comptes",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Les identifiants des membres restent confidentiels : le plan public du site présente uniquement les pages.",
+     "preuve": "Plan du site public ffky.fr/wp-sitemap.xml.",
+     "qui": "Jonathan",
+     "source": "prod/ETAT.md 19/11 16:15"
+    },
+    {
+     "titre": "Compte rendu des étapes 1 et 2",
+     "statut": "fait",
+     "date": "2026-11-19",
+     "detail": "Compte rendu clair de tout ce qui a été fait, avec les chiffres du journal d'interventions.",
+     "preuve": "Compte rendu envoyé à part.",
+     "qui": "Jonathan",
+     "source": "compte-rendu-A1-A2-client.md"
+    },
+    {
+     "titre": "Validation écrite de l'étape 1",
+     "statut": "attend_ffky",
+     "date": "",
+     "detail": "Le contrat prévoit qu'un référent confirme par écrit la fin de l'étape. Une simple réponse « OK pour les étapes 1 et 2 » suffit.",
+     "preuve": "Votre message écrit.",
+     "qui": "Ongkar ou Christine",
+     "source": "contrat annexe B1"
+    }
+   ]
+  },
+  {
+   "id": "A2",
+   "nom": "Stabilisation",
+   "phase": "B2",
+   "statut": "en_cours",
+   "debut": "2026-11-09",
+   "resume": "Le site tourne sur des bases neuves et légères, sauvegardé chaque jour.",
+   "prochaine": {
+    "action": "Signature des e-mails Brevo, dernières mises à jour, puis votre validation écrite",
+    "qui": "Jonathan"
+   },
+   "taches": [
+    {
+     "titre": "PHP 8.3, version actuelle d'OVH",
+     "statut": "fait",
+     "date": "2026-11-13",
+     "detail": "Passage à PHP 8.3 les 12 et 13 novembre, pour ffky.fr et les autres sites de l'hébergement.",
+     "preuve": "Pages du site ouvertes et contrôlées après le passage.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "WordPress et 22 extensions à jour",
+     "statut": "fait",
+     "date": "2026-11-14",
+     "detail": "Mises à jour en 4 étapes, chacune testée d'abord sur une copie de travail, puis contrôlée en ligne.",
+     "preuve": "Journal d'interventions.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Extensions triées",
+     "statut": "fait",
+     "date": "2026-11-15",
+     "detail": "6 extensions inutilisées mises à l'écart, 9 dossiers vides retirés, 24 extensions actives revues une à une.",
+     "preuve": "Liste des extensions du site.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Base de données allégée",
+     "statut": "fait",
+     "date": "2026-11-15",
+     "detail": "De 304 Mo à 74 Mo, après copie vérifiée de chaque élément retiré. L'hébergement a retrouvé 18 Go d'espace.",
+     "preuve": "Taille de la base dans l'espace OVH.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Site plus rapide",
+     "statut": "fait",
+     "date": "2026-11-15",
+     "detail": "La page d'accueil répond en 0,06 seconde, contre 0,69 seconde auparavant. Les pages d'adhésion, de paiement et de compte restent calculées en direct.",
+     "preuve": "Ouvrez Adhérer, Cours et Agenda : les pages s'ouvrent en un instant.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Sauvegarde quotidienne hors hébergement",
+     "statut": "fait",
+     "date": "2026-11-13",
+     "detail": "Une copie du site et de sa base part chaque jour sur un disque séparé. La remise en route complète a réussi les 13, 14 et 15 novembre.",
+     "preuve": "Sauvegarde du jour présente.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Nouvelle sauvegarde de référence et essai de remise en route",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Une copie de référence toute neuve, prise sur le site nettoyé, puis un nouvel essai complet de remise en route.",
+     "preuve": "Rapport d'essai.",
+     "qui": "Jonathan",
+     "source": "vérification 19/11"
+    },
+    {
+     "titre": "Espace adhérent réparé",
+     "statut": "fait",
+     "date": "2026-11-09",
+     "detail": "Les e-mails d'activation de compte partent de nouveau ; les 24 adhérents en attente depuis septembre ont reçu leur lien. Tableau de bord clair avec 7 accès directs.",
+     "preuve": "Connectez-vous à votre compte adhérent : le tableau de bord vous accueille.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Code élève YOGA2026",
+     "statut": "fait",
+     "date": "2026-11-09",
+     "detail": "Sur le formulaire d'adhésion élève, le code YOGA2026 couvre l'adhésion de 5 € déjà réglée par l'enseignant.",
+     "preuve": "Formulaire d'adhésion, formule Élève.",
+     "qui": "Jonathan",
+     "source": "fiche projet 09/11"
+    },
+    {
+     "titre": "Site et Brevo reliés",
+     "statut": "fait",
+     "date": "2026-11-18",
+     "detail": "La liste des adhérents se met à jour chaque nuit dans votre compte Brevo.",
+     "preuve": "Listes Brevo à jour chaque matin.",
+     "qui": "Jonathan",
+     "source": "fiche projet 18/11"
+    },
+    {
+     "titre": "Signature des e-mails Brevo et e-mail de test",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Les newsletters signées arrivent en boîte de réception ; un e-mail de test le confirme.",
+     "preuve": "Résultat du test d'envoi.",
+     "qui": "Jonathan",
+     "source": "compte rendu 19/11"
+    },
+    {
+     "titre": "Dernières petites mises à jour d'extensions",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Jupiter X Core, Elementor, Events Manager et GiveWP, testées d'abord sur la copie de travail.",
+     "preuve": "Journal d'interventions.",
+     "qui": "Jonathan",
+     "source": "vérification 19/11"
+    },
+    {
+     "titre": "Validation écrite de l'étape 2",
+     "statut": "attend_ffky",
+     "date": "",
+     "detail": "Une simple réponse « OK pour les étapes 1 et 2 » suffit.",
+     "preuve": "Votre message écrit.",
+     "qui": "Ongkar ou Christine",
+     "source": "contrat annexe B2"
+    }
+   ]
+  },
+  {
+   "id": "A3",
+   "nom": "Parcours publics et design",
+   "phase": "B3",
+   "statut": "a_venir",
+   "debut": "",
+   "resume": "La refonte du site : menus, pages, design aux couleurs de la charte, version mobile.",
+   "prochaine": {
+    "action": "Lancer la refonte avec le groupe, puis vous envoyer la maquette dès qu'elle est prête",
+    "qui": "Jonathan"
+   },
+   "taches": [
+    {
+     "titre": "Charte graphique reçue",
+     "statut": "fait",
+     "date": "2026-11-16",
+     "detail": "Logo, couleurs, polices et pictos de la FFKY : tout est là pour le design.",
+     "preuve": "Dossier « Charte graphique - FFKY » partagé sur Drive.",
+     "qui": "Bureau FFKY",
+     "source": "Gmail 16/11"
+    },
+    {
+     "titre": "Tableau des demandes et nouvelle arborescence reçus",
+     "statut": "fait",
+     "date": "2026-11-17",
+     "detail": "Le bureau a rassemblé ses demandes et sa deuxième proposition d'arborescence dans le tableau partagé.",
+     "preuve": "Tableau « Suivi des demandes » sur Drive.",
+     "qui": "Bureau FFKY",
+     "source": "Gmail 17/11"
+    },
+    {
+     "titre": "Message de lancement de la refonte",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "Un message court au groupe, avec les seules questions utiles.",
+     "preuve": "Message au groupe.",
+     "qui": "Jonathan",
+     "source": "refonte/brouillon-A3"
+    },
+    {
+     "titre": "Maquette du nouveau site",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Une maquette aux couleurs de la charte, à regarder sur ordinateur et téléphone.",
+     "preuve": "Lien de la maquette.",
+     "qui": "Jonathan",
+     "source": "contrat A3"
+    },
+    {
+     "titre": "Menus et pages selon la nouvelle arborescence",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Accueil, La fédération, Le kundalini yoga, Pratiquer, Se former, Adhérer, Le festival, Contact.",
+     "preuve": "Menu du site.",
+     "qui": "Jonathan",
+     "source": "tableau du bureau"
+    },
+    {
+     "titre": "Rubrique Printemps du Yoga sur ffky.fr",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Le festival trouve sa place dans ffky.fr ; printempsduyoga.fr y mènera à la mise en ligne.",
+     "preuve": "Page du festival.",
+     "qui": "Jonathan",
+     "source": "contrat A3"
+    },
+    {
+     "titre": "Confort sur mobile et accessibilité de base",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Lecture agréable sur téléphone, liens et formulaires testés.",
+     "preuve": "Essai sur ordinateur et mobile.",
+     "qui": "Jonathan",
+     "source": "contrat A3"
+    },
+    {
+     "titre": "Validation écrite de l'étape 3",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Votre accord écrit sur le design et les pages.",
+     "preuve": "Votre message écrit.",
+     "qui": "Ongkar ou Christine",
+     "source": "contrat annexe B3"
+    }
+   ]
+  },
+  {
+   "id": "A4",
+   "nom": "Adhésions et espace adhérent (Captel)",
+   "phase": "B4",
+   "statut": "a_venir",
+   "debut": "",
+   "resume": "Moderniser tout le parcours d'adhésion : formulaires, paiements, comptes, attestations, newsletters, cours, agenda et événements.",
+   "prochaine": {
+    "action": "Présenter au bureau les options de paiement (HelloAsso, Monetico, PayAsso) pour une décision écrite",
+    "qui": "Jonathan"
+   },
+   "taches": [
+    {
+     "titre": "Formateurs validés : repère dans Brevo",
+     "statut": "en_cours",
+     "date": "2026-11-18",
+     "detail": "Deux repères créés dans Brevo : « formateur validé FFKY » (coché par le bureau) et la date du diplôme.",
+     "preuve": "Fiches contacts Brevo.",
+     "qui": "Jonathan",
+     "source": "fiche projet 18/11"
+    },
+    {
+     "titre": "Choix du moyen de paiement",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "HelloAsso, Monetico ou PayAsso : je présente les conséquences de chaque option, le bureau décide par écrit.",
+     "preuve": "Décision écrite du bureau.",
+     "qui": "Bureau FFKY",
+     "source": "contrat annexe A"
+    },
+    {
+     "titre": "Formulaires d'adhésion et paiements",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A4"
+    },
+    {
+     "titre": "Comptes adhérents et attestations d'assurance",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A4"
+    },
+    {
+     "titre": "Renouvellements, relances et newsletters",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A4"
+    },
+    {
+     "titre": "Cours, agenda et événements dans l'espace adhérent",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A4"
+    },
+    {
+     "titre": "Automatisations (Make ou n8n)",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Choix validé par écrit par la FFKY avant déploiement.",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat annexe A"
+    }
+   ]
+  },
+  {
+   "id": "A5",
+   "nom": "Documentation",
+   "phase": "",
+   "statut": "en_cours",
+   "debut": "2026-11-15",
+   "resume": "Tout ce qu'il faut pour que la FFKY garde la main : accès, composants, sauvegardes, guide d'administration.",
+   "prochaine": {
+    "action": "Compléter le dossier au fil des étapes, puis le remettre à la FFKY",
+    "qui": "Jonathan"
+   },
+   "taches": [
+    {
+     "titre": "Dossier de documentation rédigé",
+     "statut": "fait",
+     "date": "2026-11-15",
+     "detail": "Première version du dossier : accès, composants, sauvegardes, instructions de maintenance.",
+     "preuve": "Dossier PDF du 15 novembre.",
+     "qui": "Jonathan",
+     "source": "livrables/FFKY-dossier-A5-documentation.pdf"
+    },
+    {
+     "titre": "Mise à jour après les étapes 1 et 2",
+     "statut": "en_cours",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A5"
+    },
+    {
+     "titre": "Remise du dossier final à la FFKY",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "Documents accessibles à la FFKY et reprise possible par un tiers.",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat A5"
+    }
+   ]
+  },
+  {
+   "id": "B5",
+   "nom": "Recette finale",
+   "phase": "B5",
+   "statut": "a_venir",
+   "debut": "",
+   "resume": "Dix jours ouvrés pour tout vérifier ensemble après la livraison finale.",
+   "prochaine": {
+    "action": "Après la livraison des étapes 3 et 4",
+    "qui": "Jonathan"
+   },
+   "taches": [
+    {
+     "titre": "Livraison finale annoncée",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Jonathan",
+     "source": "contrat annexe B5"
+    },
+    {
+     "titre": "Dix jours ouvrés de vérification",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Bureau FFKY",
+     "source": "contrat annexe B5"
+    },
+    {
+     "titre": "Réception écrite de la FFKY",
+     "statut": "a_venir",
+     "date": "",
+     "detail": "",
+     "preuve": "",
+     "qui": "Ongkar ou Christine",
+     "source": "contrat article 7"
+    }
+   ]
+  }
+ ],
+ "attentes": [
+  {
+   "titre": "Répondre « OK pour les étapes 1 et 2 »",
+   "detail": "Un simple message écrit d'Ongkar ou de Christine, après lecture du compte rendu.",
+   "qui": "Ongkar ou Christine",
+   "etape": "A1"
+  },
+  {
+   "titre": "Demander à la banque de nouvelles clés Monetico",
+   "detail": "Je les installe ensuite sur le site et je teste un paiement d'adhésion.",
+   "qui": "Bureau FFKY",
+   "etape": "A1"
+  },
+  {
+   "titre": "Choisir un nouveau mot de passe pour le Gmail du secrétariat",
+   "detail": "La boîte du secrétariat reste ainsi bien protégée.",
+   "qui": "Bureau FFKY",
+   "etape": "A1"
+  }
+ ],
+ "historique": [
+  {
+   "date": "2026-11-07",
+   "texte": "ffky.fr retrouve sa page d'accueil le jour même ; contrôle automatique toutes les 30 minutes.",
+   "etape": "A1"
+  },
+  {
+   "date": "2026-11-08",
+   "texte": "Un seul administrateur : le compte du bureau. Les contenus des 5 anciens administrateurs lui sont confiés.",
+   "etape": "A1"
+  },
+  {
+   "date": "2026-11-09",
+   "texte": "Les e-mails d'activation repartent ; les 24 adhérents en attente reçoivent leur lien. Code élève YOGA2026 en ligne.",
+   "etape": "A2"
+  },
+  {
+   "date": "2026-11-11",
+   "texte": "Mots de passe renouvelés (10 et 11 novembre). printempsduyoga.fr nettoyé, en cadeau.",
+   "etape": "A1"
+  },
+  {
+   "date": "2026-11-13",
+   "texte": "PHP 8.3 en place (12 et 13 novembre). Première remise en route complète réussie depuis la sauvegarde.",
+   "etape": "A2"
+  },
+  {
+   "date": "2026-11-14",
+   "texte": "WordPress et 22 extensions à jour, en 4 étapes testées. 6 extensions inutilisées mises à l'écart.",
+   "etape": "A2"
+  },
+  {
+   "date": "2026-11-15",
+   "texte": "Base de données allégée de 304 Mo à 74 Mo ; 18 Go d'espace retrouvés. Dossier de documentation rédigé.",
+   "etape": "A2"
+  },
+  {
+   "date": "2026-11-16",
+   "texte": "Charte graphique de la FFKY reçue sur Drive.",
+   "etape": "A3"
+  },
+  {
+   "date": "2026-11-17",
+   "texte": "Contrat signé par les deux parties. Tableau « Suivi des demandes » partagé par Ongkar.",
+   "etape": "A3"
+  },
+  {
+   "date": "2026-11-18",
+   "texte": "Site et Brevo reliés, liste des adhérents mise à jour chaque nuit. kundalini.fr mène vers ffky.fr en connexion sécurisée.",
+   "etape": "A2"
+  },
+  {
+   "date": "2026-11-19",
+   "texte": "Derniers fichiers pirates mis à l'écart, 68 faux comptes supprimés, mots de passe renouvelés une seconde fois. Compte rendu des étapes 1 et 2 rédigé.",
+   "etape": "A1"
+  }
+ ],
+ "offert": [
+  {
+   "titre": "printempsduyoga.fr sécurisé",
+   "detail": "Nettoyé les 11 et 18 novembre ; le 19 novembre, WordPress et 13 extensions à jour, un seul administrateur."
+  },
+  {
+   "titre": "kundalini.fr mène vers ffky.fr",
+   "detail": "Depuis le 18 novembre, en connexion sécurisée (le petit cadenas), y compris avec « www »."
+  }
+ ],
+ "surveillance": [
+  {
+   "rythme": "Toutes les 30 minutes",
+   "texte": "ffky.fr affiche les bonnes pages, aux visiteurs comme à Google."
+  },
+  {
+   "rythme": "Toutes les heures",
+   "texte": "Intégrité des fichiers du site."
+  },
+  {
+   "rythme": "Chaque jour",
+   "texte": "Sauvegarde hors hébergement et analyse anti-malware."
+  },
+  {
+   "rythme": "Chaque nuit",
+   "texte": "Liste des adhérents mise à jour dans Brevo."
+  },
+  {
+   "rythme": "En continu",
+   "texte": "Certificat de sécurité de kundalini.fr."
+  }
+ ]
+}
