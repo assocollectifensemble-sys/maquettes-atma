@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Villa Azalée &amp; Au Chant du Coq · Gîte et studio à Bois de Pomme, Salazie</title>
+<meta name="description" content="Une villa pour 6 et un studio pour 2 à Bois de Pomme, au cœur du cirque de Salazie : grand jardin, climatisation réversible, linge fourni, parking privé et départ des sentiers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Villa Azalée &amp; Au Chant du Coq · Salazie">
+<meta property="og:description" content="Se réveiller au cœur d'un écrin de verdure, bercé par le chant des oiseaux et l'air frais des Hauts.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/villa-azalee-au-chant-du-coq-salazie/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/villa-azalee-au-chant-du-coq-salazie/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canard:#1d5a5e; --canard-d:#123c3f; --jungle:#2f5d3a; --mousse:#7fa35a;
+  --azalee:#d6608a; --azalee-l:#f6d3e0; --moutarde:#e2ae3a; --creme:#f7f2e8; --sable:#ece3d2;
+  --encre:#1d2724; --gris:#5b6662;
+  --r:18px; --ombre:0 18px 40px -18px rgba(18,60,63,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+#petales{position:fixed;inset:0;pointer-events:none;z-index:3}
+
+/* ruban */
+.ruban{background:var(--canard-d);color:#f2ece0;font-size:.82rem;text-align:center;padding:8px 14px;position:relative;z-index:5}
+.ruban b{color:var(--moutarde);font-weight:600}
+
+/* nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(247,242,232,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(29,90,94,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:Fraunces,serif;font-weight:600;font-size:1.05rem;color:var(--canard-d)}
+.logo svg{flex:none}
+.logo small{display:block;font-family:Outfit,sans-serif;font-weight:400;font-size:.72rem;color:var(--gris);letter-spacing:.08em;text-transform:uppercase}
+.menu{display:flex;gap:22px;font-size:.92rem}
+.menu a{text-decoration:none;color:var(--gris)}
+.menu a:hover{color:var(--canard)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:0;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;font-size:.98rem}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--canard);color:#fff;box-shadow:0 10px 24px -10px rgba(29,90,94,.7)}
+.btn-wa:hover{background:var(--canard-d)}
+.btn-clair{background:#fff;color:var(--canard-d);border:1px solid rgba(29,90,94,.25)}
+.btn-petit{padding:9px 16px;font-size:.88rem}
+.respire{animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 10px 24px -10px rgba(29,90,94,.7)}50%{box-shadow:0 10px 30px -6px rgba(214,96,138,.55)}}
+
+/* hero */
+.hero{position:relative;padding:46px 0 70px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 10%,rgba(214,96,138,.16),transparent 45%),radial-gradient(circle at 5% 90%,rgba(127,163,90,.2),transparent 45%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.sur{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--canard);font-weight:600}
+.sur::before{content:"";width:26px;height:2px;background:var(--azalee)}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4rem);margin:16px 0 18px;color:var(--canard-d)}
+.hero h1 em{font-style:italic;color:var(--azalee);font-weight:400}
+.hero .chapo{font-size:1.14rem;color:var(--gris);max-width:520px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .chiffres{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px}
+.hero .chiffres div{font-size:.85rem;color:var(--gris)}
+.hero .chiffres b{display:block;font-family:Fraunces,serif;font-size:1.7rem;color:var(--canard);font-weight:600}
+.cadre{position:relative;border-radius:200px 200px var(--r) var(--r);overflow:hidden;aspect-ratio:768/885;box-shadow:var(--ombre);max-height:600px;justify-self:center;width:100%;max-width:480px}
+.cadre img{width:100%;height:100%;object-fit:cover;animation:kb 22s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.13) translateY(-1.5%)}}
+.cadre figcaption{position:absolute;left:14px;bottom:14px;background:rgba(18,60,63,.78);color:#fff;font-size:.78rem;padding:6px 12px;border-radius:999px}
+.vignette{position:absolute;right:-6px;top:30px;width:116px;border-radius:14px;overflow:hidden;border:5px solid var(--creme);box-shadow:var(--ombre);transform:rotate(4deg)}
+.apparait{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.apparait.vu{opacity:1;transform:none}
+
+/* bandeau */
+.bandeau{background:var(--canard);color:#f4efe4;overflow:hidden;padding:14px 0;white-space:nowrap}
+.bandeau .piste{display:inline-flex;gap:38px;animation:defile 38s linear infinite;padding-left:38px}
+.bandeau span{display:inline-flex;align-items:center;gap:38px;font-size:.95rem}
+.bandeau span::after{content:"✿";color:var(--azalee-l)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:84px 0;position:relative}
+.titre{max-width:680px;margin-bottom:40px}
+.titre h2{font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--canard-d);margin-top:10px}
+.titre p{color:var(--gris);margin-top:12px;font-size:1.05rem}
+
+/* logements */
+.logements{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.carte{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 0 rgba(29,90,94,.06),var(--ombre);transition:transform .35s}
+.carte:hover{transform:translateY(-5px)}
+.carte .ph{aspect-ratio:4/3;overflow:hidden}
+.carte .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.carte:hover .ph img{transform:scale(1.05)}
+.carte .corps{padding:24px 24px 26px}
+.etiquette{display:inline-block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--azalee-l);color:#8e2f55}
+.etiquette.coq{background:#fbeccb;color:#7a5410}
+.carte h3{font-size:1.55rem;margin:12px 0 8px;color:var(--canard-d)}
+.carte ul{list-style:none;display:grid;gap:7px;margin:14px 0 18px;color:var(--gris);font-size:.96rem}
+.carte li{display:flex;gap:10px;align-items:flex-start}
+.carte li::before{content:"";flex:none;width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--mousse)}
+.tarifs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px dashed rgba(29,90,94,.25);padding-top:16px}
+.tarifs div{text-align:center;background:var(--creme);border-radius:12px;padding:10px 4px}
+.tarifs small{display:block;font-size:.72rem;color:var(--gris);line-height:1.3}
+.tarifs b{font-family:Fraunces,serif;font-size:1.35rem;color:var(--canard)}
+.note{font-size:.82rem;color:var(--gris);margin-top:12px}
+
+/* galerie */
+.fond-sable{background:var(--sable)}
+.galerie{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 18px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.galerie figure{flex:0 0 clamp(230px,28vw,320px);scroll-snap-align:center;border-radius:var(--r);overflow:hidden;position:relative;background:#ddd;aspect-ratio:768/885}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;color:#fff;font-size:.88rem;background:linear-gradient(transparent,rgba(10,30,30,.88));text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.aide{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:6px;color:var(--gris);font-size:.86rem}
+.fleches{display:flex;gap:8px}
+.fleches button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(29,90,94,.3);background:#fff;color:var(--canard);font-size:1.1rem;cursor:pointer}
+
+/* équipements */
+.equip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.equip div{background:#fff;border-radius:14px;padding:18px 16px;display:flex;gap:12px;align-items:center;font-size:.95rem;transition:background .3s}
+.equip div:hover{background:var(--azalee-l)}
+.equip svg{flex:none;width:30px;height:30px;color:var(--canard)}
+
+/* cadre / Salazie */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.split .photo{border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);aspect-ratio:768/885;max-height:560px}
+.split .photo img{width:100%;height:100%;object-fit:cover}
+.citation-pro{font-family:Fraunces,serif;font-style:italic;font-size:1.3rem;color:var(--canard-d);border-left:3px solid var(--azalee);padding-left:18px;margin:22px 0}
+.pastilles{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pastilles span{background:#fff;border:1px solid rgba(47,93,58,.25);color:var(--jungle);border-radius:999px;padding:6px 13px;font-size:.86rem}
+.acces{margin-top:22px;background:#fff;border-radius:14px;padding:18px 20px;font-size:.93rem;color:var(--gris)}
+.acces b{color:var(--canard-d)}
+
+/* avis */
+.avis{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.avis blockquote{background:#fff;border-radius:var(--r);padding:26px 24px;position:relative;box-shadow:var(--ombre)}
+.avis blockquote::before{content:"“";position:absolute;top:-6px;left:18px;font-family:Fraunces,serif;font-size:4.2rem;color:var(--azalee);line-height:1}
+.avis p{font-family:Fraunces,serif;font-size:1.08rem;color:var(--canard-d);margin-top:16px}
+.avis cite{display:block;margin-top:14px;font-style:normal;font-size:.84rem;color:var(--gris)}
+
+/* noël */
+.noel{background:linear-gradient(140deg,var(--canard-d),var(--canard) 60%,#25706f);color:#f4efe4;border-radius:28px;padding:56px 48px;position:relative;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.noel::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.5px);background-size:46px 46px;opacity:.18;pointer-events:none}
+.noel h2{font-size:clamp(1.8rem,3.6vw,2.5rem);color:#fff;margin:10px 0 14px}
+.noel .sur{color:var(--moutarde)}
+.noel p{color:#dfe9e4;max-width:520px}
+.noel .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;position:relative;z-index:1}
+.noel .btn-wa{background:var(--moutarde);color:var(--canard-d)}
+.noel .btn-clair{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.carte-cadeau{position:relative;z-index:1;background:var(--creme);color:var(--canard-d);border-radius:18px;padding:24px;transform:rotate(-3deg);box-shadow:0 30px 50px -20px rgba(0,0,0,.5);animation:flotte 6s ease-in-out infinite}
+@keyframes flotte{50%{transform:rotate(-1deg) translateY(-8px)}}
+.carte-cadeau .ruban-c{height:10px;background:repeating-linear-gradient(90deg,var(--azalee) 0 14px,var(--moutarde) 14px 28px);border-radius:6px;margin-bottom:16px}
+.carte-cadeau h3{font-size:1.35rem}
+.carte-cadeau p{color:var(--gris);font-size:.9rem;margin-top:8px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.bloc{background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--ombre)}
+.bloc h3{font-size:1.3rem;color:var(--canard-d);margin-bottom:14px}
+.ligne{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--sable);font-size:.97rem}
+.ligne:last-child{border:0}
+.ligne span:first-child{flex:none;width:96px;color:var(--gris);font-size:.86rem;padding-top:2px}
+.ligne a{color:var(--canard);font-weight:500;text-decoration:none;word-break:break-all}
+.contact .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+
+footer{background:var(--canard-d);color:#c9d6d2;text-align:center;padding:34px 20px 90px;font-size:.86rem;margin-top:40px}
+footer b{color:#fff}
+
+.vague{display:block;width:100%;height:46px}
+.wa-flottant{position:fixed;right:16px;bottom:16px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 26px -8px rgba(0,0,0,.4)}
+
+@media (max-width:900px){
+  .menu{display:none}
+  .hero .wrap,.split,.noel,.contact,.logements{grid-template-columns:1fr}
+  .hero{padding-top:30px}
+  .cadre{max-width:420px}
+  .equip{grid-template-columns:1fr 1fr}
+  .avis{grid-template-columns:1fr}
+  .noel{padding:40px 24px}
+  .carte-cadeau{max-width:320px;justify-self:center}
+}
+@media (max-width:420px){
+  .logo .nom-long{display:none}
+  .equip div{font-size:.88rem;padding:14px 12px}
+  .vignette{width:92px;right:0}
+  .tarifs b{font-size:1.15rem}
+  .ligne span:first-child{width:78px}
+  .bloc{padding:22px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .apparait{opacity:1;transform:none}
+  #petales{display:none}
+}
+</style>
+</head>
+<body>
+<canvas id="petales" aria-hidden="true"></canvas>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Villa Azalée &amp; Au Chant du Coq</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#accueil" aria-label="Villa Azalée et Au Chant du Coq">
+      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1d5a5e"/><g fill="#f6d3e0"><ellipse cx="20" cy="12" rx="4.2" ry="7"/><ellipse cx="20" cy="12" rx="4.2" ry="7" transform="rotate(72 20 20)"/><ellipse cx="20" cy="12" rx="4.2" ry="7" transform="rotate(144 20 20)"/><ellipse cx="20" cy="12" rx="4.2" ry="7" transform="rotate(216 20 20)"/><ellipse cx="20" cy="12" rx="4.2" ry="7" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="3.4" fill="#e2ae3a"/></svg>
+      <span><span class="nom-long">Villa Azalée &amp; Au Chant du Coq</span><span class="nom-court"></span><small>Bois de Pomme · Salazie</small></span>
+    </a>
+    <div class="menu">
+      <a href="#logements">Logements</a><a href="#galerie">Photos</a><a href="#salazie">Le cadre</a><a href="#avis">Avis</a><a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-wa btn-petit" href="https://wa.me/262692641288?text=Bonjour%2C%20je%20souhaite%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20Salazie." target="_blank" rel="noopener">Réserver</a>
+  </div>
+</nav>
+
+<header class="hero" id="accueil">
+  <div class="wrap">
+    <div>
+      <span class="sur apparait">Gîte &amp; studio classés 4 étoiles · Cirque de Salazie</span>
+      <h1 class="apparait">Villa Azalée <em>&amp;</em><br>Au Chant du Coq</h1>
+      <p class="chapo apparait">Envie de vous réveiller au cœur d’un écrin de verdure, bercé par le chant des oiseaux et l’air frais des Hauts&nbsp;? À Bois de Pomme, la nature est reine.</p>
+      <div class="ctas apparait">
+        <a class="btn btn-wa respire" href="https://wa.me/262692641288?text=Bonjour%2C%20je%20souhaite%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20Salazie." target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Demander mes dates
+        </a>
+        <a class="btn btn-clair" href="#logements">Découvrir les logements</a>
+      </div>
+      <div class="chiffres apparait">
+        <div><b>6</b>voyageurs à la villa</div>
+        <div><b>2</b>adultes au studio</div>
+        <div><b>4 ★</b>Gîtes de France</div>
+      </div>
+    </div>
+    <figure class="cadre apparait">
+      <img src="img/jardin-remparts.jpg" alt="Le jardin, son salon de jardin et les remparts verts du cirque de Salazie en arrière-plan" fetchpriority="high">
+      <figcaption>Le jardin, face aux remparts de Salazie</figcaption>
+    </figure>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Climatisation réversible</span><span>Wifi offert</span><span>Linge de maison fourni</span><span>Grand jardin</span><span>Parking privé</span><span>Barbecue</span><span>Sentiers de randonnée à proximité</span><span>Cuisine entièrement équipée</span>
+  <span>Climatisation réversible</span><span>Wifi offert</span><span>Linge de maison fourni</span><span>Grand jardin</span><span>Parking privé</span><span>Barbecue</span><span>Sentiers de randonnée à proximité</span><span>Cuisine entièrement équipée</span>
+</div></div>
+
+<section id="logements">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="sur">Deux façons de séjourner</span>
+      <h2>Une villa pour la tribu, un studio pour deux</h2>
+      <p>En couple, en famille ou entre amis, chacun trouve sa place : des espaces lumineux et fonctionnels, une literie confortable et une climatisation réversible dans chaque pièce.</p>
+    </div>
+    <div class="logements">
+      <article class="carte apparait">
+        <div class="ph"><img src="img/sejour-baies.jpg" alt="Le séjour ouvert sur le jardin par de grandes baies vitrées" loading="lazy"></div>
+        <div class="corps">
+          <span class="etiquette">La villa</span>
+          <h3>Villa Azalée</h3>
+          <ul>
+            <li>Maison entière, 3 chambres, jusqu’à 6 personnes</li>
+            <li>Cuisine entièrement équipée, lave-vaisselle, lave-linge</li>
+            <li>Terrasse, salon de jardin et barbecue</li>
+            <li>Lit bébé à disposition</li>
+          </ul>
+          <div class="tarifs" aria-label="Tarifs 2026 de la villa, par nuit">
+            <div><small>Basse saison<br>10/01 → 31/03</small><b>110 €</b></div>
+            <div><small>Moyenne saison<br>01/04 → 30/06</small><b>120 €</b></div>
+            <div><small>Haute saison<br>01/07 → 31/12</small><b>140 €</b></div>
+          </div>
+          <p class="note">Tarifs 2026, par nuit, pour la maison entière.</p>
+        </div>
+      </article>
+      <article class="carte apparait">
+        <div class="ph"><img src="img/terrasse-jardin.jpg" alt="Terrasse en bois entourée de bananiers et de verdure" loading="lazy"></div>
+        <div class="corps">
+          <span class="etiquette coq">Le studio</span>
+          <h3>Au Chant du Coq</h3>
+          <ul>
+            <li>Studio indépendant pensé pour 2 adultes</li>
+            <li>Coin cuisine, linge de toilette inclus</li>
+            <li>Terrasse au calme, vue sur le jardin</li>
+            <li>Parking privé sur place</li>
+          </ul>
+          <div class="tarifs" aria-label="Tarifs 2026 du studio, par nuit">
+            <div><small>Basse saison<br>10/01 → 31/03</small><b>70 €</b></div>
+            <div><small>Moyenne saison<br>01/04 → 30/06</small><b>75 €</b></div>
+            <div><small>Haute saison<br>01/07 → 31/12</small><b>80 €</b></div>
+          </div>
+          <p class="note">Tarifs 2026, par nuit. Arrivée dès 16 h, départ avant 11 h.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20c180 22 360 26 540 12S900 0 1080 8s270 26 360 22v16Z" fill="#ece3d2"/></svg>
+<section id="galerie" class="fond-sable" style="padding-top:50px">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="sur">Visite en images</span>
+      <h2>Des couleurs gaies, des baies ouvertes sur le vert</h2>
+      <p>Bleu canard, jaune soleil, rose azalée : chaque pièce a son caractère.</p>
+    </div>
+  </div>
+  <div class="galerie" id="defile">
+    <figure><img src="img/salon-papier-peint.jpg" alt="Pièce de vie aux murs bleu canard et papier peint graphique" loading="lazy"><figcaption>Murs bleu canard et papier peint graphique</figcaption></figure>
+    <figure><img src="img/chambre-rose.jpg" alt="Chambre au mur rose et dessus-de-lit coloré" loading="lazy"><figcaption>La chambre rose</figcaption></figure>
+    <figure><img src="img/salle-a-manger.jpg" alt="Salle à manger aux chaises jaunes, salon au fond" loading="lazy"><figcaption>Grande tablée aux chaises jaunes</figcaption></figure>
+    <figure><img src="img/chambre-jaune.jpg" alt="Chambre aux coussins jaunes et rideaux turquoise" loading="lazy"><figcaption>Coussins jaunes et rideaux turquoise</figcaption></figure>
+    <figure><img src="img/cuisine-ardoise.jpg" alt="Cuisine équipée aux meubles gris ardoise" loading="lazy"><figcaption>Cuisine entièrement équipée</figcaption></figure>
+    <figure><img src="img/terrasse-jardin.jpg" alt="Terrasse en bois au milieu des bananiers" loading="lazy"><figcaption>Terrasse sous les bananiers</figcaption></figure>
+    <figure><img src="img/cuisine-blanche.jpg" alt="Cuisine blanche avec four et micro-ondes" loading="lazy"><figcaption>Four, micro-ondes, tout est là</figcaption></figure>
+    <figure><img src="img/sejour-baies.jpg" alt="Séjour lumineux ouvert sur le jardin" loading="lazy"><figcaption>Le séjour, grand ouvert sur le jardin</figcaption></figure>
+    <figure><img src="img/jardin-remparts.jpg" alt="Jardin et salon de jardin face aux montagnes" loading="lazy"><figcaption>Le jardin face aux montagnes</figcaption></figure>
+  </div>
+  <div class="wrap aide"><span>Faites glisser pour visiter →</span><div class="fleches"><button type="button" data-dir="-1" aria-label="Photo précédente">←</button><button type="button" data-dir="1" aria-label="Photo suivante">→</button></div></div>
+</section>
+<svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1)"><path d="M0 46V20c180 22 360 26 540 12S900 0 1080 8s270 26 360 22v16Z" fill="#ece3d2"/></svg>
+
+<section id="equipements" style="padding-top:50px">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="sur">Tout le confort</span>
+      <h2>Posez les sacs, tout est prêt</h2>
+    </div>
+    <div class="equip apparait">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M5 7l14 10M19 7 5 17"/></svg>Climatisation réversible</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg>Wifi offert</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 14h2"/></svg>Cuisine équipée, four</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><path d="M7 6h2"/></svg>Lave-linge &amp; lave-vaisselle</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18h18M5 18V9l7-4 7 4v9M9 18v-5h6v5"/></svg>Linge de maison inclus</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c-4-3-7-6-7-10a7 7 0 0 1 14 0c0 4-3 7-7 10Z"/><path d="M12 8v6M9 11h6"/></svg>Grand jardin &amp; terrasse</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11h16l-2 4H6l-2-4ZM8 15l-2 6M16 15l2 6M12 3c-1 2 1 3 0 5"/></svg>Barbecue &amp; salon de jardin</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3"/></svg>Parking privé</div>
+    </div>
+  </div>
+</section>
+
+<section id="salazie" class="fond-sable">
+  <div class="wrap split">
+    <div class="photo apparait"><img src="img/terrasse-jardin.jpg" alt="Terrasse en bois au cœur d'une végétation luxuriante" loading="lazy"></div>
+    <div class="apparait">
+      <span class="sur">Bois de Pomme, cirque de Salazie</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem);color:var(--canard-d);margin-top:10px">Une parenthèse nature, au rythme des Hauts</h2>
+      <p class="citation-pro">« Maison de mon enfance, entièrement rénovée… Je vous accueillerai comme un ami et serai disponible pour vous renseigner selon vos besoins. »<br><span style="font-family:Outfit,sans-serif;font-style:normal;font-size:.9rem;color:var(--gris)">— Chantal, votre hôtesse</span></p>
+      <p style="color:var(--gris)">Après une journée à explorer les sentiers de Salazie, partagez un repas, respirez l’air pur et savourez le calme environnant.</p>
+      <p style="color:var(--gris)">Végétation luxuriante, atmosphère apaisante, cadre authentique : un point de départ idéal vers les sentiers et les sites incontournables du cirque, avant de retrouver le calme du jardin.</p>
+      <div class="pastilles">
+        <span>Sentiers de randonnée</span><span>Rivière</span><span>Boulangerie</span><span>Commerce alimentaire</span><span>Pharmacie</span><span>Poste</span><span>Arrêt de bus</span>
+      </div>
+      <div class="acces"><b>Pour venir :</b> depuis l’aéroport Roland Garros, direction l’Est par la RN2, puis sortie Salazie par la RD48. Au village, après la Poste, au virage suivant, direction Bois de Pomme : le logement est à 200 mètres après l’école primaire, à côté du PMU.</div>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="sur">Ils y ont séjourné</span>
+      <h2>Ce que disent les voyageurs</h2>
+      <p>Sur Booking, la villa est notée « Superbe » et le studio « Très bien », avec plus de 130 séjours commentés.</p>
+    </div>
+    <div class="avis">
+      <blockquote class="apparait"><p>Le calme, le cadre magnifique, l’attention de la personne, bouteille d’eau et pain au chocolat, merci&nbsp;!</p><cite>Isabelle, France · avis Booking, Au Chant du Coq</cite></blockquote>
+      <blockquote class="apparait"><p>Logement très joli et fonctionnel et Chantal a été très à l’écoute.</p><cite>Jean-Yves, France · avis Booking, Au Chant du Coq</cite></blockquote>
+      <blockquote class="apparait"><p>Une grande maison, avec tout l’équipement et plus encore… trois chambres, avec clim réversible, grande table, salon TV.</p><cite>Laurent, France · avis Booking, Villa Azalée</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="noel" style="padding-top:20px">
+  <div class="wrap">
+    <div class="noel apparait">
+      <div>
+        <span class="sur">Offrir pour Noël</span>
+        <h2>Glissez un séjour à Salazie sous le sapin</h2>
+        <p>Une escapade ressourçante dans les Hauts, à offrir à vos parents, à vos amis ou à votre moitié : la villa pour se retrouver en famille, le studio pour une parenthèse à deux. Écrivez-nous, on prépare ensemble le cadeau qui vous ressemble.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" href="https://wa.me/262692641288?text=Bonjour%2C%20je%20souhaiterais%20offrir%20un%20s%C3%A9jour%20%C3%A0%20Salazie%20pour%20No%C3%ABl." target="_blank" rel="noopener">Offrir un séjour</a>
+          <a class="btn btn-clair" href="tel:+262692641288">06 92 64 12 88</a>
+        </div>
+      </div>
+      <div class="carte-cadeau">
+        <div class="ruban-c"></div>
+        <h3>Un séjour au vert</h3>
+        <p>Villa Azalée ou Au Chant du Coq · Bois de Pomme, Salazie</p>
+        <p style="margin-top:14px;font-family:Fraunces,serif;font-style:italic;color:var(--azalee)">Le chant des oiseaux en prime</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="sur">Réserver en direct</span>
+      <h2>Parlons de vos dates</h2>
+      <p>Un message, et on vous répond avec les disponibilités de la villa ou du studio.</p>
+    </div>
+    <div class="contact">
+      <div class="bloc apparait">
+        <h3>Coordonnées</h3>
+        <div class="ligne"><span>Téléphone</span><a href="tel:+262692641288">06 92 64 12 88</a></div>
+        <div class="ligne"><span>E-mail</span><a href="mailto:ccadet366@gmail.com">ccadet366@gmail.com</a></div>
+        <div class="ligne"><span>Adresse</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.0158833,55.5488844" target="_blank" rel="noopener">65 chemin Jean Albany, Bois de Pomme<br>97433 Salazie</a></div>
+        <div class="ctas">
+          <a class="btn btn-wa" href="https://wa.me/262692641288?text=Bonjour%2C%20je%20souhaite%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20Salazie." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          <a class="btn btn-clair" href="https://www.google.com/maps/dir/?api=1&amp;destination=-21.0158833,55.5488844" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <div class="bloc apparait">
+        <h3>Bon à savoir</h3>
+        <div class="ligne"><span>Arrivée</span>à partir de 16 h</div>
+        <div class="ligne"><span>Départ</span>avant 11 h</div>
+        <div class="ligne"><span>Paiement</span>espèces, paiement en ligne, virement bancaire</div>
+        <div class="ligne"><span>On parle</span>français et créole</div>
+        <div class="ligne"><span>Animaux</span>nos amis à quatre pattes restent à la maison</div>
+        <div class="ligne"><span>Capacité</span>8 personnes au total, 4 chambres, 120 m²</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Villa Azalée &amp; Au Chant du Coq.</footer>
+
+<a class="wa-flottant" href="https://wa.me/262692641288?text=Bonjour%2C%20je%20souhaite%20conna%C3%AEtre%20vos%20disponibilit%C3%A9s%20%C3%A0%20Salazie." target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 .9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
+
+<script>
+(()=>{
+const calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// apparitions
+const els=document.querySelectorAll('.apparait');
+if(calme||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('vu'))}
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>io.observe(e))}
+// galerie
+const g=document.getElementById('defile');
+document.querySelectorAll('.fleches button').forEach(b=>b.addEventListener('click',()=>{g.scrollBy({left:+b.dataset.dir*(g.querySelector('figure').offsetWidth+16),behavior:'smooth'})}));
+if(calme)return;
+// pétales d'azalée et feuilles
+const c=document.getElementById('petales'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),run=true;
+function taille(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+taille();addEventListener('resize',taille);
+const coul=['#e98bb0','#d6608a','#f3bcd0','#7fa35a','#9cbf6e'];
+const N=W<600?16:28,P=[];
+function neuf(p,haut){p.x=Math.random()*W;p.y=haut?-20:Math.random()*H;p.s=5+Math.random()*7;p.v=.35+Math.random()*.6;p.a=Math.random()*6.28;p.va=(Math.random()-.5)*.03;p.o=Math.random()*6.28;p.c=coul[Math.random()*coul.length|0];p.f=p.c[1]=='7'||p.c[1]=='9';return p}
+for(let i=0;i<N;i++)P.push(neuf({},false));
+function dessine(){
+  if(!run)return;
+  x.clearRect(0,0,W,H);
+  for(const p of P){
+    p.o+=.012;p.y+=p.v;p.x+=Math.sin(p.o)*.55;p.a+=p.va;
+    if(p.y>H+20)neuf(p,true);
+    x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=.55;x.fillStyle=p.c;x.beginPath();
+    if(p.f){x.ellipse(0,0,p.s*.45,p.s,0,0,6.28)}else{x.moveTo(0,-p.s);x.bezierCurveTo(p.s,-p.s*.4,p.s*.6,p.s*.8,0,p.s*.5);x.bezierCurveTo(-p.s*.6,p.s*.8,-p.s,-p.s*.4,0,-p.s)}
+    x.fill();x.restore();
+  }
+  requestAnimationFrame(dessine);
+}
+dessine();
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)dessine()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Villa Azalée &amp; Au Chant du Coq" defer></script>
+</body>
+</html>

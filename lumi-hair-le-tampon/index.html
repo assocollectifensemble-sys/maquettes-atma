@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lumi'hair · Salon de coiffure à la Plaine des Cafres</title>
+<meta name="description" content="Lumi'hair, salon de coiffure et massage du cuir chevelu au 27e km, Plaine des Cafres (Le Tampon) : traitements profonds, soins, coloration végétale Organic Care, lissage. Avec ou sans rendez-vous, 0693 03 32 13.">
+<meta property="og:title" content="Lumi'hair · Quand le cuir chevelu respire, les boucles reprennent vie">
+<meta property="og:description" content="Salon de coiffure et massage du cuir chevelu à la Plaine des Cafres : traitements profonds, soins, coloration végétale.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/lumi-hair-le-tampon/img/og-lumihair.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/lumi-hair-le-tampon/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --foret:#1f3a2d; --foret-2:#2c4d3c; --sauge:#6f8f7c; --sauge-pale:#dfe8e0;
+  --rose:#c4a294; --taupe:#b39a86; --creme:#f7f1ea; --lin:#efe5d9;
+  --or:#c19a5b; --or-clair:#e6cf9f; --encre:#24302a;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ribbon{background:var(--foret);color:var(--or-clair);font-size:.78rem;text-align:center;padding:.5rem 1rem;letter-spacing:.02em}
+.ribbon b{color:#fff;font-weight:500}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+h2{font-size:clamp(2rem,6vw,3rem);color:var(--foret)}
+.eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);font-weight:500;margin-bottom:.6rem;display:block}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,820px);min-height:min(92svh,820px);display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:var(--foret)}
+.hero-img{position:absolute;inset:0;background:url(img/balayage-miroir.webp) center 30%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(31,58,45,.15) 0%,rgba(31,58,45,.25) 40%,rgba(22,40,31,.88) 100%)}
+#fils{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.hero-txt{position:relative;z-index:2;padding:2rem 1.25rem 3.2rem;max-width:1080px;margin:0 auto;width:100%}
+.logo{display:flex;align-items:center;gap:.7rem;margin-bottom:1rem;opacity:0;animation:up 1.2s .2s forwards}
+.logo svg{width:52px;height:52px;flex:none}
+.logo span{font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--or-clair)}
+.hero h1{font-size:clamp(3.4rem,15vw,6.5rem);font-style:italic;font-weight:500;letter-spacing:-.01em;opacity:0;animation:up 1.4s .45s forwards}
+.hero h1 i{color:var(--or-clair);font-style:italic}
+.hero .sous{text-shadow:0 2px 14px rgba(0,0,0,.55);font-family:var(--serif);font-size:clamp(1.25rem,4.6vw,1.7rem);font-style:italic;max-width:30rem;margin:.6rem 0 1.4rem;opacity:0;animation:up 1.4s .75s forwards}
+.lieu{font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#e9e1d6;opacity:0;animation:up 1.4s .95s forwards}
+.ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem;opacity:0;animation:up 1.4s 1.1s forwards}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;transition:transform .3s,box-shadow .3s,background .3s}
+.btn svg{width:18px;height:18px}
+.btn-or{background:var(--or);color:#1b2b22;animation:souffle 3.6s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(193,154,91,.4)}
+.btn-ligne{border:1px solid rgba(255,255,255,.6);color:#fff}
+.btn-ligne:hover{background:rgba(255,255,255,.12)}
+@keyframes souffle{0%,100%{box-shadow:0 0 0 0 rgba(230,207,159,.45)}50%{box-shadow:0 0 0 10px rgba(230,207,159,0)}}
+.note{position:absolute;z-index:2;top:1.1rem;right:1rem;background:rgba(247,241,234,.92);color:var(--foret);border-radius:14px;padding:.45rem .8rem;font-size:.8rem;line-height:1.25;text-align:center}
+.note b{font-family:var(--serif);font-size:1.35rem;display:block}
+.note .etoiles{color:var(--or);letter-spacing:.1em}
+
+/* MARQUEE */
+.defile{background:var(--foret);color:var(--or-clair);overflow:hidden;white-space:nowrap;padding:.85rem 0;border-top:1px solid rgba(230,207,159,.25)}
+.defile-in{display:inline-block;animation:defil 32s linear infinite;font-family:var(--serif);font-style:italic;font-size:1.25rem}
+.defile-in span{margin:0 1.3rem}
+.defile-in span::after{content:"✦";margin-left:2.6rem;font-style:normal;font-size:.75rem;color:var(--sauge);vertical-align:middle}
+@keyframes defil{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 0}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.reveal.vu{opacity:1;transform:none}
+
+/* PHILO */
+.philo{background:var(--creme);position:relative}
+.philo-grid{display:grid;gap:2rem;align-items:center}
+.citation{font-family:var(--serif);font-style:italic;font-size:clamp(1.7rem,6vw,2.5rem);color:var(--foret);line-height:1.2}
+.citation::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--or)}
+.src{font-size:.82rem;color:#6d7a72;margin-top:.8rem}
+.philo p.txt{margin-top:1.1rem;max-width:34rem}
+.philo figure{position:relative;border-radius:200px 200px 18px 18px;overflow:hidden;box-shadow:0 20px 50px rgba(31,58,45,.18);max-width:420px;justify-self:center;width:100%}
+.philo figure img{aspect-ratio:4/5;object-fit:cover;width:100%}
+figcaption{font-size:.78rem;color:#6d7a72;padding:.5rem .2rem 0}
+
+/* PRESTATIONS */
+.presta{background:linear-gradient(180deg,var(--lin),var(--creme))}
+.cartes{display:grid;gap:1rem;margin-top:2rem}
+.carte{background:#fffaf4;border:1px solid #eadccb;border-radius:20px;padding:1.4rem 1.3rem;transition:transform .4s,box-shadow .4s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(31,58,45,.12)}
+.carte::after{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(193,154,91,.22),transparent 70%)}
+.carte h3{font-size:1.55rem;color:var(--foret);margin-bottom:.35rem}
+.carte p{font-size:.95rem}
+.carte .leurs{font-family:var(--serif);font-style:italic;color:var(--foret-2);font-size:1.1rem;display:block;margin-top:.55rem;border-left:2px solid var(--or);padding-left:.7rem}
+.tag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sauge);margin-bottom:.5rem;font-weight:500}
+
+/* GALERIE */
+.galerie{background:var(--foret);color:#f3ece2;overflow:hidden}
+.galerie h2{color:#fff}
+.galerie .intro{max-width:36rem;margin-top:.8rem;color:#d8d1c5}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 1.25rem 1rem;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{flex:0 0 72%;max-width:330px;scroll-snap-align:center}
+.rail img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;transition:transform .6s}
+.rail figure:hover img{transform:scale(1.025)}
+.rail figcaption{color:#cfc6b8;font-family:var(--serif);font-style:italic;font-size:1rem}
+.astuce{text-align:center;font-size:.8rem;color:var(--or-clair);letter-spacing:.1em}
+
+/* SOINS / PRODUITS */
+.produits-grid{display:grid;gap:1.6rem;align-items:center}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.duo img{border-radius:16px;aspect-ratio:1;object-fit:cover;width:100%}
+.liste{list-style:none;margin-top:1.2rem}
+.liste li{padding:.6rem 0 .6rem 1.8rem;border-bottom:1px dashed #dccdbb;position:relative}
+.liste li::before{content:"";position:absolute;left:0;top:1.05rem;width:12px;height:12px;border-radius:50% 0 50% 0;background:var(--sauge)}
+
+/* AVIS */
+.avis{background:var(--sauge-pale)}
+.avis-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:.6rem 1.2rem}
+.score{font-family:var(--serif);font-size:3.4rem;color:var(--foret);line-height:1}
+.score small{font-size:1.1rem;color:var(--or)}
+.avis-grid{display:grid;gap:1rem;margin-top:1.8rem}
+blockquote{background:#fff;border-radius:18px;padding:1.3rem 1.3rem 1rem;box-shadow:0 8px 24px rgba(31,58,45,.07)}
+blockquote p{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--foret);line-height:1.3}
+blockquote cite{display:block;font-style:normal;font-size:.78rem;color:#6d7a72;margin-top:.6rem}
+blockquote .etoiles{color:var(--or);font-size:.85rem;letter-spacing:.12em}
+
+/* NOEL */
+.noel{background:radial-gradient(ellipse at top,#2c4d3c,#172b21 75%);color:#f3ece2;position:relative;overflow:hidden}
+.noel h2{color:#fff}
+.noel-grid{display:grid;gap:2rem;align-items:center}
+.carte-cadeau{position:relative;aspect-ratio:1.6;max-width:400px;width:100%;justify-self:center;border-radius:20px;background:linear-gradient(135deg,#f7efe3,#e8d6bd);color:var(--foret);padding:1.4rem;box-shadow:0 24px 50px rgba(0,0,0,.35);transform:rotate(-3deg);transition:transform .6s;overflow:hidden}
+.carte-cadeau:hover{transform:rotate(0) scale(1.02)}
+.carte-cadeau .cc-nom{font-family:var(--serif);font-style:italic;font-size:2.4rem;line-height:1}
+.carte-cadeau .cc-txt{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-top:.4rem}
+.carte-cadeau .cc-bas{position:absolute;left:1.4rem;bottom:1.2rem;font-family:var(--serif);font-size:1.15rem}
+.carte-cadeau .ruban-v{position:absolute;right:22%;top:0;bottom:0;width:16px;background:linear-gradient(90deg,#9a7840,#d8b878,#9a7840)}
+.carte-cadeau .ruban-h{position:absolute;left:0;right:0;top:58%;height:16px;background:linear-gradient(180deg,#9a7840,#d8b878,#9a7840)}
+.carte-cadeau svg.noeud{position:absolute;right:calc(22% - 26px);top:calc(58% - 22px);width:68px}
+.illus{font-size:.72rem;color:#b9b2a5;text-align:center;margin-top:.6rem}
+.noel ul{list-style:none;margin:1.2rem 0 1.6rem}
+.noel li{padding:.4rem 0 .4rem 1.6rem;position:relative}
+.noel li::before{content:"✦";position:absolute;left:0;color:var(--or)}
+
+/* INFOS */
+.infos-grid{display:grid;gap:1.4rem;margin-top:1.8rem}
+.bloc{background:#fffaf4;border:1px solid #eadccb;border-radius:20px;padding:1.4rem}
+.bloc h3{font-size:1.5rem;color:var(--foret);margin-bottom:.7rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td{padding:.42rem 0;border-bottom:1px solid #efe4d6}
+td:last-child{text-align:right;font-weight:400}
+tr.ferme td:last-child{color:#9a8f84;font-style:italic}
+tr.auj td{color:var(--foret);font-weight:500}
+.devanture{border-radius:20px;overflow:hidden;margin-top:1rem}
+.devanture img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.liens{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.btn-foret{background:var(--foret);color:#fff}
+.btn-foret:hover{background:var(--foret-2)}
+.btn-clair{border:1px solid var(--foret);color:var(--foret)}
+
+footer{background:#16281f;color:#bdb5a8;text-align:center;font-size:.85rem;padding:2.2rem 1.25rem}
+footer b{color:var(--or-clair);font-family:var(--serif);font-size:1.3rem;font-weight:500}
+
+.vague{display:block;width:100%;height:46px}
+
+@media(min-width:760px){
+  .philo-grid,.produits-grid,.noel-grid{grid-template-columns:1.1fr .9fr}
+  .cartes{grid-template-columns:repeat(3,1fr)}
+  .avis-grid{grid-template-columns:repeat(3,1fr)}
+  .infos-grid{grid-template-columns:1fr 1fr}
+  .rail figure{flex-basis:300px}
+  .rail{padding-left:max(1.25rem,calc((100vw - 1080px)/2 + 1.25rem))}
+  .hero-txt{padding-bottom:4.5rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .logo,.hero h1,.hero .sous,.lieu,.ctas{opacity:1}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Lumi'hair</div>
+
+<header class="hero">
+  <div class="hero-img" role="img" aria-label="Long balayage blond ondulé, de dos, devant le miroir rond du salon"></div>
+  <canvas id="fils" aria-hidden="true"></canvas>
+  <div class="note"><b>5,0</b><span class="etoiles">★★★★★</span><br>6 avis Google</div>
+  <div class="hero-txt">
+    <div class="logo">
+      <svg viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="none" stroke="#e6cf9f" stroke-width="1.2"/><circle cx="30" cy="30" r="22.5" fill="none" stroke="#e6cf9f" stroke-width=".6" stroke-dasharray="1.5 3"/><path d="M30 46c0-10 0-18 0-26M30 30c-6-2-9-7-9-13 6 1 9 6 9 13zM30 26c5-2 8-6 8-12-5 1-8 5-8 12zM30 38c-5-1-8-5-9-10 5 0 8 4 9 10zM30 36c4-1 7-4 8-9-4 0-7 3-8 9z" fill="#e6cf9f"/></svg>
+      <span>Salon de coiffure<br>& massage du cuir chevelu</span>
+    </div>
+    <h1>Lumi'<i>hair</i></h1>
+    <p class="sous">Quand le cuir chevelu respire, les boucles reprennent vie.</p>
+    <p class="lieu">27<sup>e</sup> km · La Plaine des Cafres · Le Tampon</p>
+    <div class="ctas">
+      <a class="btn btn-or" href="https://wa.me/262693033213?text=Bonjour%20Lumi%27hair%2C%20je%20voudrais%20prendre%20rendez-vous"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Écrire sur WhatsApp</a>
+      <a class="btn btn-ligne" href="tel:+262693033213"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></svg>0693 03 32 13</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="defile-in">
+  <span>#traitements profond</span><span>#soins</span><span>#massages du cuir chevelu</span><span>#coloration végétale</span><span>avec ou sans rdv</span>
+  <span>#traitements profond</span><span>#soins</span><span>#massages du cuir chevelu</span><span>#coloration végétale</span><span>avec ou sans rdv</span>
+</div></div>
+
+<section class="philo">
+  <div class="wrap philo-grid">
+    <div class="reveal">
+      <span class="eyebrow">La philosophie du salon</span>
+      <p class="citation">Quand le cuir chevelu respire, les boucles reprennent vie&nbsp;!</p>
+      <p class="src">Publication Facebook de Lumi'hair, 11 novembre 2026</p>
+      <p class="txt">Chez Lumi'hair, la beauté du cheveu commence à la racine&nbsp;: «&nbsp;en traitant directement la racine pour rééquilibrer et hydrater en profondeur le cuir chevelu, toute la fibre capillaire est transformée&nbsp;». Un salon cocooning au 27<sup>e</sup> km, où l'on prend le temps d'un massage, d'un soin profond et d'une couleur aux actifs naturels.</p>
+    </div>
+    <figure class="reveal">
+      <img src="img/boucles-brunes.webp" alt="Boucles brunes volumineuses, vues de dos" loading="lazy" width="864" height="1080">
+    </figure>
+  </div>
+</section>
+
+<section class="presta">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Les prestations</span>
+      <h2>Prendre soin, de la racine aux pointes</h2>
+    </div>
+    <div class="cartes">
+      <article class="carte reveal">
+        <span class="tag">Cuir chevelu</span>
+        <h3>Massage & traitement trichology</h3>
+        <p>Le massage du cuir chevelu est inscrit sur l'enseigne. Le traitement trichology signé Tahe rééquilibre et hydrate en profondeur.</p>
+        <span class="leurs">« Regardez ce résultat après un traitement trichology du cuir chevelu »</span>
+      </article>
+      <article class="carte reveal">
+        <span class="tag">Réparation</span>
+        <h3>Traitements profonds & Dual Plex</h3>
+        <p>Des molécules reconstructrices qui agissent à deux niveaux&nbsp;: au cœur de la fibre et à sa surface.</p>
+        <span class="leurs">« Cheveux fatigués, cassants ou ternes, ce traitement est l'idéal pour toi. »</span>
+      </article>
+      <article class="carte reveal">
+        <span class="tag">Couleur</span>
+        <h3>Coloration Organic Care</h3>
+        <p>La coloration végétale du salon&nbsp;: 95&nbsp;% d'actifs naturels, une couleur douce pour le cheveu et le cuir chevelu.</p>
+        <span class="leurs">« Coloration organic care 95% origine naturelle. »</span>
+      </article>
+      <article class="carte reveal">
+        <span class="tag">Matière</span>
+        <h3>Lissage sur mesure</h3>
+        <p>Une raideur parfaite, ou une matière simplement détendue pour réduire le volume et dire adieu aux frisottis.</p>
+        <span class="leurs">« Lisses ou simplement assouplis, c'est vous qui choisissez&nbsp;! »</span>
+      </article>
+      <article class="carte reveal">
+        <span class="tag">Style</span>
+        <h3>Coupe, brushing, balayage</h3>
+        <p>Coupes courtes ou longues, brushings, colorations et balayages lumineux, réalisés avec douceur et précision.</p>
+        <span class="leurs">#restructurationcoupe</span>
+      </article>
+      <article class="carte reveal">
+        <span class="tag">À la maison</span>
+        <h3>Styling lab & routine maison</h3>
+        <p>Le soin idéal pour reconstruire la fibre avant de créer vos plus beaux looks, au salon ou chez vous.</p>
+        <span class="leurs">« Tes cheveux te diront merci&nbsp;! »</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="galerie">
+  <svg class="vague" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-4.5rem;margin-bottom:2.5rem"><path d="M0 46V20C200 0 400 40 600 22S1000 0 1200 18V46z" fill="#1f3a2d"/></svg>
+  <div class="wrap reveal">
+    <span class="eyebrow">Les réalisations</span>
+    <h2>Des cheveux pleins de lumière</h2>
+    <p class="intro">Ondulations blondes, cuivres profonds, gris lumineux, boucles redessinées&nbsp;: quelques réalisations publiées par le salon.</p>
+  </div>
+  <div class="rail">
+    <figure><img src="img/blond-ondule.webp" alt="Blond miel ondulé, de dos" loading="lazy" width="900" height="1125"><figcaption>Blond miel, ondulations souples</figcaption></figure>
+    <figure><img src="img/cuivre-ondule.webp" alt="Cheveux longs couleur cuivre profond, ondulés" loading="lazy" width="900" height="1169"><figcaption>Cuivre profond</figcaption></figure>
+    <figure><img src="img/gris-lumineux.webp" alt="Longs cheveux gris lisses" loading="lazy" width="896" height="1200"><figcaption>Gris lumineux, coupe nette</figcaption></figure>
+    <figure><img src="img/balayage-caramel.webp" alt="Balayage caramel ondulé" loading="lazy" width="900" height="900"><figcaption>Balayage caramel</figcaption></figure>
+    <figure><img src="img/boucles-courtes.webp" alt="Boucles courtes et denses, deux vues de dos" loading="lazy" width="900" height="783"><figcaption>Boucles courtes redessinées</figcaption></figure>
+    <figure><img src="img/blond-polaire.webp" alt="Blond très clair, long et lisse" loading="lazy" width="900" height="1125"><figcaption>Blond polaire</figcaption></figure>
+    <figure><img src="img/brune-reflets.webp" alt="Brune aux reflets, cheveux longs" loading="lazy" width="900" height="900"><figcaption>Brune aux reflets</figcaption></figure>
+    <figure><img src="img/blond-lisse.webp" alt="Blond long et lisse" loading="lazy" width="900" height="1200"><figcaption>Blond lisse et soyeux</figcaption></figure>
+    <figure><img src="img/chocolat-lisse.webp" alt="Brun chocolat lisse" loading="lazy" width="900" height="900"><figcaption>Chocolat, lissé brillant</figcaption></figure>
+  </div>
+  <p class="astuce">← faites défiler →</p>
+</section>
+
+<section class="produits">
+  <div class="wrap produits-grid">
+    <div class="reveal">
+      <span class="eyebrow">Les soins du salon</span>
+      <h2>Organic Care, la nature au service du cheveu</h2>
+      <ul class="liste">
+        <li>Coloration Organic Care, 95&nbsp;% d'actifs naturels, texture gel, avec plex</li>
+        <li>Shampooings et soins de la gamme Organic Care de Tahe</li>
+        <li>Soins styling lab, disponibles en salon ou pour ta routine maison</li>
+      </ul>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/organic-care.webp" alt="Flacons et pot de la gamme Organic Care sur rondins de bois, avec une fleur d'hibiscus" loading="lazy" width="900" height="900"></figure>
+      <figure><img src="img/soin-en-main.webp" alt="Une main présente un soin Organic Care" loading="lazy" width="900" height="900"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Elles et ils en parlent</span>
+      <div class="avis-top"><h2>Accueil chaleureux</h2><span class="score">5,0 <small>★★★★★</small></span></div>
+      <p class="src">Note et avis publiés sur la fiche Google de Lumi'hair (6 avis)</p>
+    </div>
+    <div class="avis-grid">
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Une très bonne coiffeuse, douce, à l'écoute, qui manie très bien les ciseaux&nbsp;! »</p><cite>Avis Google · visite d'octobre 2024</cite></blockquote>
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Accueil chaleureux. Beaucoup de professionnalisme. Travail de qualité. »</p><cite>Avis Google · mots choisis par une cliente, visite d'avril 2026</cite></blockquote>
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Ambiance super cocooning et prestations au top&nbsp;!! »</p><cite>Avis Google · visite de juillet 2024</cite></blockquote>
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Accueil très chaleureux, coiffure impeccable »</p><cite>Avis Google · visite de janvier 2025</cite></blockquote>
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Très professionnelle, très douce et efficace »</p><cite>Avis Google · visite de juin 2025</cite></blockquote>
+      <blockquote class="reveal"><span class="etoiles">★★★★★</span><p>« Super expérience je recommande »</p><cite>Avis Google · visite de novembre 2025</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <canvas id="neige" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></canvas>
+  <div class="wrap noel-grid" style="position:relative">
+    <div class="reveal">
+      <span class="eyebrow">Offrir pour Noël</span>
+      <h2>Offrez un moment chez Lumi'hair</h2>
+      <p style="margin-top:.9rem;color:#ddd5c8">Une parenthèse cocooning à glisser sous le sapin&nbsp;: une carte cadeau pour un soin, une couleur ou un moment pour soi, à composer avec le salon.</p>
+      <ul>
+        <li>Un massage du cuir chevelu</li>
+        <li>Un traitement profond pour des cheveux pleins de vie</li>
+        <li>Une coloration Organic Care ou un balayage lumineux</li>
+        <li>Un soin styling lab à emporter pour la routine maison</li>
+      </ul>
+      <a class="btn btn-or" href="https://wa.me/262693033213?text=Bonjour%20Lumi%27hair%2C%20je%20voudrais%20offrir%20une%20carte%20cadeau%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>Demander une carte cadeau</a>
+    </div>
+    <div class="reveal">
+      <div class="carte-cadeau" aria-label="Illustration d'une carte cadeau Lumi'hair">
+        <div class="ruban-v"></div><div class="ruban-h"></div>
+        <svg class="noeud" viewBox="0 0 68 44" aria-hidden="true"><path d="M34 22C24 4 6 6 8 18s18 6 26 4zm0 0c10-18 28-16 26-4s-18 6-26 4z" fill="#c19a5b" stroke="#8f6e3a"/><circle cx="34" cy="22" r="6" fill="#d8b878" stroke="#8f6e3a"/></svg>
+        <div class="cc-nom">Lumi'hair</div>
+        <div class="cc-txt">Carte cadeau</div>
+        <div class="cc-bas">Un moment pour vous</div>
+      </div>
+      <p class="illus">Illustration</p>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Venir au salon</span>
+      <h2>Au 27<sup>e</sup> km, Plaine des Cafres</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="bloc reveal">
+        <h3>Horaires</h3>
+        <table id="horaires">
+          <tr data-j="1"><td>Lundi</td><td>9 h – 17 h</td></tr>
+          <tr data-j="2"><td>Mardi</td><td>10 h – 17 h</td></tr>
+          <tr data-j="3" class="ferme"><td>Mercredi</td><td>Jour de repos</td></tr>
+          <tr data-j="4"><td>Jeudi</td><td>9 h – 17 h</td></tr>
+          <tr data-j="5"><td>Vendredi</td><td>9 h – 17 h</td></tr>
+          <tr data-j="6"><td>Samedi</td><td>9 h – 17 h</td></tr>
+          <tr data-j="0" class="ferme"><td>Dimanche</td><td>Jour de repos</td></tr>
+        </table>
+        <p class="src">Avec ou sans rendez-vous · horaires de la fiche Google</p>
+      </div>
+      <div class="bloc reveal">
+        <h3>Adresse & contact</h3>
+        <p>198 rue Maurice et Katia Krafft, 27<sup>e</sup> km<br>La Plaine des Cafres, 97418 Le Tampon</p>
+        <p style="margin-top:.5rem">Téléphone & WhatsApp&nbsp;: <a href="tel:+262693033213"><b style="font-weight:500">0693 03 32 13</b></a></p>
+        <div class="liens">
+          <a class="btn btn-foret" href="https://www.google.com/maps/search/?api=1&amp;query=Lumi%27hair%20198%20rue%20Maurice%20et%20Katia%20Krafft%20Le%20Tampon&amp;query_place_id=ChIJp17wVQB3eCERK10icKhO4pU">Itinéraire</a>
+          <a class="btn btn-clair" href="https://www.facebook.com/Lumi.hair">Facebook</a>
+          <a class="btn btn-clair" href="https://www.instagram.com/lumi.hair_coiffure/">Instagram</a>
+        </div>
+        <figure class="devanture"><img src="img/devanture.webp" alt="Devanture du salon Lumi'hair, enseigne verte « Salon de coiffure et massage du cuir chevelu »" loading="lazy" width="900" height="613"></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Lumi'hair</b><br>Salon de coiffure et massage du cuir chevelu · La Plaine des Cafres, La Réunion<br><br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Lumi'hair.</footer>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // apparitions
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduit) {
+    var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  } else { els.forEach(function(el){el.classList.add('vu')}); }
+  // jour du jour
+  var j = new Date().getDay(); var tr = document.querySelector('#horaires tr[data-j="'+j+'"]'); if (tr) tr.classList.add('auj');
+  if (reduit) return;
+
+  // Univers : fils de lumière qui ondulent + poussière dorée
+  function anim(cv, mode){
+    var ctx = cv.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio||1, 2), t = 0, run = true, parts = [];
+    function size(){ W = cv.clientWidth; H = cv.clientHeight; cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+    size(); window.addEventListener('resize', size);
+    var n = mode === 'fils' ? 22 : 28;
+    for (var i=0;i<n;i++) parts.push({x:Math.random(), y:Math.random(), r:.8+Math.random()*2.2, v:.15+Math.random()*.35, p:Math.random()*6.28});
+    function frame(){
+      if (!run) return;
+      t += .006; ctx.clearRect(0,0,W,H);
+      if (mode === 'fils') {
+        for (var k=0;k<7;k++){
+          ctx.beginPath();
+          var y0 = H*(.18 + k*.1), amp = 18 + k*4;
+          for (var x=0;x<=W+20;x+=20){
+            var y = y0 + Math.sin(x*.006 + t*1.6 + k*.7)*amp + Math.sin(x*.013 - t + k)*amp*.35;
+            x===0 ? ctx.moveTo(x,y) : ctx.lineTo(x,y);
+          }
+          ctx.strokeStyle = 'rgba(230,207,159,'+(.07 + (k%3)*.035)+')'; ctx.lineWidth = 1 + (k%2)*.6; ctx.stroke();
+        }
+      }
+      parts.forEach(function(p){
+        p.y -= p.v/ H * (mode==='fils'?1:-1) * 1.2; p.p += .02;
+        if (mode==='fils' && p.y < -0.02) { p.y = 1.02; p.x = Math.random(); }
+        if (mode!=='fils' && p.y > 1.02) { p.y = -0.02; p.x = Math.random(); }
+        var x = p.x*W + Math.sin(p.p)*12, y = p.y*H, a = .35 + Math.sin(p.p*1.3)*.25;
+        var g = ctx.createRadialGradient(x,y,0,x,y,p.r*3);
+        g.addColorStop(0,'rgba(240,220,170,'+a+')'); g.addColorStop(1,'rgba(240,220,170,0)');
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x,y,p.r*3,0,6.28); ctx.fill();
+      });
+      requestAnimationFrame(frame);
+    }
+    document.addEventListener('visibilitychange', function(){ var was = run; run = !document.hidden; if (run && !was) requestAnimationFrame(frame); });
+    requestAnimationFrame(frame);
+  }
+  anim(document.getElementById('fils'), 'fils');
+  anim(document.getElementById('neige'), 'neige');
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Lumi&#x27;hair" defer></script>
+</body>
+</html>
