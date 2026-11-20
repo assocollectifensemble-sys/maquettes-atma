@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maison Bohème · Artisan fleuriste & wedding planner au Tampon</title>
+<meta name="description" content="Bohème Artisan Fleuriste, la maison d'Elodie Clain au Tampon : design floral, wedding planning, coordination, décoration de salle et vitrines à thème.">
+<meta property="og:title" content="Maison Bohème · Artisan fleuriste au Tampon">
+<meta property="og:description" content="« C'est dans le détail que l'on fait le raffinement » : fleurs, mariages et événements, par Elodie Clain.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/boheme-artisan-fleuriste-le-tampon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/boheme-artisan-fleuriste-le-tampon/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sauge:#8f9a86; --sauge-f:#5f6b58; --sauge-cl:#c9cfbf;
+  --creme:#f4efe6; --lin:#e9e1d4; --taupe:#8a7b6b;
+  --corail:#e07a5f; --blush:#efb8a5; --bordeaux:#6e1f2b;
+  --encre:#2f2a26; --blanc:#fffdf9;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--encre);background:var(--creme);line-height:1.65;overflow-x:hidden;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+.ruban{background:var(--sauge-f);color:var(--creme);text-align:center;font-size:.8rem;padding:.55rem 1rem;letter-spacing:.02em;position:relative;z-index:5}
+.ruban b{font-weight:500}
+#petales{position:fixed;inset:0;pointer-events:none;z-index:3}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:flex-end;overflow:hidden;color:var(--blanc)}
+.hero .fond{position:absolute;inset:0;background:url(img/composition-rose-corail.webp) center 35%/cover;animation:kb 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(47,42,38,.15) 0%,rgba(47,42,38,.05) 35%,rgba(60,58,48,.78) 100%)}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero-in{position:relative;z-index:2;padding:0 1.4rem 3.2rem;max-width:1100px;margin:0 auto;width:100%}
+.mono{display:inline-flex;flex-direction:column;align-items:center;border:1px solid rgba(255,253,249,.7);padding:.7rem 1.1rem .5rem;margin-bottom:1.4rem;backdrop-filter:blur(3px);background:rgba(143,154,134,.25)}
+.mono span{font-family:var(--serif);font-size:2.1rem;line-height:1;letter-spacing:.08em}
+.mono small{font-family:var(--serif);font-style:italic;font-size:1rem}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,9vw,4.8rem);line-height:1.02;opacity:0;transform:translateY(18px);animation:monte 1.2s .3s ease forwards}
+.hero h1 em{font-weight:400;display:block;font-size:.55em;margin-top:.4rem;color:var(--blush)}
+.hero .sous{font-size:1.02rem;max-width:34rem;margin-top:1rem;opacity:0;animation:monte 1.2s .8s ease forwards}
+@keyframes monte{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem;opacity:0;animation:monte 1s 1.2s ease forwards}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.4rem;border-radius:40px;text-decoration:none;font-weight:400;font-size:.95rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.btn.plein{background:var(--corail);color:#fff;animation:respire 3.2s ease-in-out infinite}
+.btn.ligne{border:1px solid currentColor}
+@keyframes respire{50%{box-shadow:0 0 0 8px rgba(224,122,95,.18)}}
+.btn svg{width:18px;height:18px;fill:currentColor}
+
+/* BANDEAU */
+.bandeau{background:var(--sauge);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.9rem 0;font-family:var(--serif);font-style:italic;font-size:1.25rem}
+.bandeau div{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 1.4rem}
+.bandeau span::after{content:"✿";margin-left:2.8rem;font-style:normal;color:var(--blush)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 1.4rem;position:relative}
+.wrap{max-width:1100px;margin:0 auto}
+.sur{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);margin-bottom:.6rem}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,6.5vw,3.1rem);line-height:1.1;margin-bottom:1.2rem}
+h2 em{color:var(--sauge-f)}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rev.vu{opacity:1;transform:none}
+
+/* POURQUOI */
+.pourquoi{display:grid;gap:2.2rem;align-items:center}
+.pourquoi .photo{position:relative}
+.pourquoi .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:200px 200px 6px 6px}
+.pourquoi .photo figcaption{font-size:.8rem;color:var(--taupe);margin-top:.5rem;font-style:italic}
+blockquote{font-family:var(--serif);font-size:1.3rem;line-height:1.5}
+blockquote p+p{margin-top:.9rem}
+.signe{margin-top:1.2rem;font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--sauge-f)}
+
+/* SERVICES */
+.services{background:var(--sauge);color:var(--creme)}
+.services h2 em{color:var(--blush)}
+.services .sur{color:var(--lin)}
+.grille{display:grid;gap:1.1rem;margin-top:1.8rem}
+.carte{background:rgba(255,253,249,.08);border:1px solid rgba(244,239,230,.35);padding:1.6rem 1.4rem;border-radius:4px;transition:transform .35s,background .35s}
+.carte:hover{transform:translateY(-4px);background:rgba(255,253,249,.14)}
+.carte h3{font-family:var(--serif);font-weight:500;font-size:1.55rem;margin-bottom:.4rem}
+.carte p{font-size:.95rem}
+.carte .prix{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:#fff;margin-top:.6rem}
+.carte ul{list-style:none;font-size:.93rem;margin-top:.5rem}
+.carte li{padding:.25rem 0;border-top:1px dashed rgba(244,239,230,.3)}
+.cle{margin-top:1.4rem;background:var(--creme);color:var(--encre);padding:2rem 1.5rem;text-align:center;border-radius:4px}
+.cle h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:2rem;color:var(--sauge-f)}
+.cle .ligne4{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--taupe);margin:.3rem 0 .9rem}
+.cle .gros{font-family:var(--serif);font-size:1.5rem}
+.note{font-size:.85rem;opacity:.85;margin-top:1.2rem;font-style:italic}
+
+/* BAR A BOUQUETS */
+.bar{display:grid;gap:2rem;align-items:center}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
+.trio img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:90px 90px 4px 4px;transition:transform .5s}
+.trio img:nth-child(2){transform:translateY(-1.2rem)}
+.trio img:hover{transform:scale(1.03)}
+
+/* GALERIE */
+.galerie{background:var(--lin)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 1.4rem 1.2rem;margin:1.4rem -1.4rem 0;scrollbar-width:thin}
+.rail figure{flex:0 0 72%;scroll-snap-align:center;max-width:340px}
+.rail img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px;box-shadow:0 10px 24px rgba(47,42,38,.12)}
+.rail figcaption{font-size:.85rem;color:var(--taupe);margin-top:.5rem;font-style:italic}
+.astuce{font-size:.8rem;color:var(--taupe)}
+
+/* VITRINES & FETES */
+.fetes{background:linear-gradient(180deg,var(--creme),#f3e4dc);overflow:hidden}
+.fetes .grid2{display:grid;gap:2rem;align-items:center}
+.fetes .img-f{position:relative}
+.fetes .img-f img{width:100%;max-height:560px;aspect-ratio:3/4;object-fit:cover;border-radius:6px;box-shadow:0 18px 40px rgba(110,31,43,.18)}
+.etoile{position:absolute;color:#c9a24a;font-size:1.3rem;animation:scint 2.6s ease-in-out infinite}
+@keyframes scint{50%{opacity:.25;transform:scale(.7)}}
+.citation-post{border-left:3px solid var(--corail);padding:.4rem 0 .4rem 1rem;font-family:var(--serif);font-style:italic;font-size:1.2rem;margin:1.2rem 0}
+.citation-post small{display:block;font-family:var(--sans);font-style:normal;font-size:.78rem;color:var(--taupe);margin-top:.3rem}
+.idees{list-style:none;margin:1rem 0 1.4rem}
+.idees li{padding:.55rem 0 .55rem 1.8rem;position:relative;border-bottom:1px solid rgba(138,123,107,.2)}
+.idees li::before{content:"❀";position:absolute;left:0;color:var(--corail)}
+.fetes .btn.ligne{color:var(--bordeaux)}
+
+/* RESERVATION + AVIS */
+.resa{display:grid;gap:1.2rem;margin-top:1.4rem;counter-reset:e}
+.etape{background:var(--blanc);padding:1.4rem 1.3rem 1.3rem 4rem;border-radius:4px;position:relative;box-shadow:0 4px 14px rgba(47,42,38,.06)}
+.etape::before{counter-increment:e;content:counter(e);position:absolute;left:1.2rem;top:1.1rem;font-family:var(--serif);font-size:2.2rem;color:var(--corail);line-height:1}
+.avis{display:grid;gap:1rem;margin-top:2.6rem}
+.avis figure{background:var(--sauge-cl);padding:1.4rem;border-radius:4px}
+.avis blockquote{font-size:1.4rem;font-style:italic}
+.avis figcaption{font-size:.82rem;color:var(--sauge-f);margin-top:.4rem}
+
+/* CONTACT */
+.contact{background:var(--sauge-f);color:var(--creme);text-align:center}
+.contact h2 em{color:var(--blush)}
+.contact .sur{color:var(--sauge-cl)}
+.coord{display:grid;gap:.9rem;margin:1.8rem auto 0;max-width:520px}
+.coord a,.coord div{display:block;padding:1rem;border:1px solid rgba(244,239,230,.35);border-radius:4px;text-decoration:none;transition:background .3s}
+.coord a:hover{background:rgba(255,253,249,.1)}
+.coord b{display:block;font-weight:400;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sauge-cl)}
+.coord span{font-family:var(--serif);font-size:1.3rem;word-break:break-word}
+.contact .btns{justify-content:center;opacity:1;animation:none}
+.pied{background:var(--encre);color:#cfc6b8;text-align:center;font-size:.8rem;padding:1.6rem 1.4rem}
+
+.vague{display:block;width:100%;height:40px}
+
+@media(min-width:820px){
+  section{padding:6rem 2rem}
+  .hero-in{padding:0 2rem 5rem}
+  .pourquoi{grid-template-columns:.9fr 1.1fr;gap:4rem}
+  .grille{grid-template-columns:repeat(2,1fr)}
+  .bar{grid-template-columns:1fr 1fr;gap:4rem}
+  .rail{margin:1.4rem 0 0;padding:.4rem 0 1.2rem}
+  .rail figure{flex-basis:30%}
+  .fetes .grid2{grid-template-columns:.9fr 1.1fr;gap:4rem}
+  .resa{grid-template-columns:repeat(3,1fr)}
+  .avis{grid-template-columns:1fr 1fr}
+  .coord{grid-template-columns:1fr 1fr;max-width:760px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero h1,.hero .sous,.btns,.rev{opacity:1;transform:none}
+  #petales{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Maison Bohème</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Composition florale de roses corail et blanches signée Maison Bohème"></div>
+  <div class="hero-in">
+    <div class="mono" aria-hidden="true"><span>MB</span><small>Maison Bohème</small></div>
+    <h1>Bohème Artisan Fleuriste<em>« C'est dans le détail que l'on fait le raffinement »</em></h1>
+    <p class="sous">Fleuriste, wedding planner et designer au Tampon : Elodie Clain imagine vos bouquets, vos mariages et vos événements, de la première fleur au dernier détail.</p>
+    <div class="btns">
+      <a class="btn plein" href="https://wa.me/262692380494?text=Bonjour%20Elodie%2C%20je%20viens%20de%20votre%20site%20et%20j%27aimerais%20vous%20parler%20d%27un%20projet%20fleuri%20%F0%9F%8C%B7"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9 0-1.4.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1.9 2 1.2 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Écrire sur WhatsApp</a>
+      <a class="btn ligne" href="tel:+262692380494">06 92 38 04 94</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Design floral</span><span>Bar à bouquets</span><span>Wedding planning</span><span>Coordination</span><span>Wedding design</span><span>Décoration de salle</span><span>Vitrines à thème</span>
+  <span>Design floral</span><span>Bar à bouquets</span><span>Wedding planning</span><span>Coordination</span><span>Wedding design</span><span>Décoration de salle</span><span>Vitrines à thème</span>
+</div></div>
+
+<section id="maison">
+  <div class="wrap pourquoi">
+    <figure class="photo rev">
+      <img src="img/roses-anthuriums.webp" alt="Roses rouges et anthuriums bordeaux sur fond vert sauge" loading="lazy">
+      <figcaption>Roses rouges et anthuriums, publiés par Maison Bohème le 20 octobre 2026</figcaption>
+    </figure>
+    <div class="rev">
+      <p class="sur">La maison</p>
+      <h2>Pourquoi <em>Maison Bohème</em> ?</h2>
+      <blockquote>
+        <p>« J'ai créé Maison Bohème car j'avais l'envie profonde d'offrir aux mariés une expérience plus fluide, plus harmonieuse et cohérente.</p>
+        <p>En rassemblant l'organisation, la scénographie et le design floral au sein d'une même agence, je souhaite limiter le nombre d'interlocuteurs pour simplifier les échanges, éviter les ruptures de style, et garantir un déroulement sans accroc.</p>
+        <p>Mon objectif : que chaque détail s'accorde naturellement, pour un rendu aussi beau que serein. »</p>
+      </blockquote>
+      <p class="signe">Elodie Clain</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="prestations">
+  <div class="wrap">
+    <p class="sur rev">Prestations</p>
+    <h2 class="rev">Une agence, un interlocuteur : <em>simplicité, efficacité et résultat.</em></h2>
+    <div class="grille">
+      <article class="carte rev"><h3>Design floral</h3><p>Prestation pour 100 personnes, fleurs de cortège incluses.</p><p class="prix">à partir de 1 890 €</p></article>
+      <article class="carte rev"><h3>Wedding planning</h3><p>L'organisation de votre mariage, conception de la papeterie en option.</p><p class="prix">à partir de 2 500 €</p></article>
+      <article class="carte rev"><h3>Coordination</h3><p>Le jour J orchestré pour que vous profitiez de chaque instant.</p><p class="prix">à partir de 1 250 €</p></article>
+      <article class="carte rev"><h3>Intérieur design</h3>
+        <ul>
+          <li>Décoration de salle pour 150 personnes, à partir de 2 500 €</li>
+          <li>Décoration de cérémonie, à partir de 400 € (incluse dans la formule)</li>
+          <li>Drapés de plafond, à partir de 700 €</li>
+        </ul>
+      </article>
+    </div>
+    <div class="cle rev">
+      <h3>Formule clés en main</h3>
+      <p class="ligne4">Wedding planning · Coordination · Design floral · Wedding design</p>
+      <p class="gros">À partir de 7 650 € pour 100 personnes</p>
+      <p style="margin-top:.6rem">Notre but : que votre jour soit parfait !</p>
+    </div>
+    <p class="note rev">Tarifs à la carte publiés par Maison Bohème, à ajuster selon les demandes et envies de chacun.</p>
+  </div>
+</section>
+
+<section id="bouquets">
+  <div class="wrap bar">
+    <div class="rev">
+      <p class="sur">Au quotidien</p>
+      <h2>Le <em>bar à bouquets</em></h2>
+      <p>Entre deux mariages, l'atelier fleurit aussi pour toutes les envies : gerberas, œillets, roses ou fleurs blanches nouées d'un ruban, composés à la main au Tampon.</p>
+      <p style="margin-top:.8rem">Un anniversaire, un merci, une jolie table à fleurir : Elodie vous prépare un bouquet qui vous ressemble.</p>
+      <div class="btns" style="opacity:1;animation:none"><a class="btn plein" href="https://wa.me/262692380494?text=Bonjour%20Elodie%2C%20je%20voudrais%20commander%20un%20bouquet%20%F0%9F%92%90">Commander un bouquet</a></div>
+    </div>
+    <div class="trio rev">
+      <img src="img/gerberas.webp" alt="Gerberas roses et bordeaux" loading="lazy">
+      <img src="img/oeillets-vase.webp" alt="Œillets dans un vase en verre" loading="lazy">
+      <img src="img/bouquet-blanc-ruban.webp" alt="Bouquet de fleurs blanches noué d'un ruban" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="realisations">
+  <div class="wrap">
+    <p class="sur rev">Nos réalisations</p>
+    <h2 class="rev">Mariages <em>& événements</em></h2>
+    <p class="astuce">Faites défiler les photos du bout du doigt →</p>
+    <div class="rail">
+      <figure><img src="img/pergola-gerberas.webp" alt="Pergola en bois habillée de gerberas suspendues" loading="lazy"><figcaption>Pergola fleurie de gerberas</figcaption></figure>
+      <figure><img src="img/roses-corail-vue-haut.webp" alt="Installation de roses corail et pêche" loading="lazy"><figcaption>Roses corail et pêche</figcaption></figure>
+      <figure><img src="img/fauteuils-paon.webp" alt="Deux fauteuils paon en rotin fleuris sous les palmiers" loading="lazy"><figcaption>Fauteuils paon sous les palmiers</figcaption></figure>
+      <figure><img src="img/reception-tables.webp" alt="Salle de réception aux centres de table colorés" loading="lazy"><figcaption>Décoration de salle</figcaption></figure>
+      <figure><img src="img/roses-suspendues.webp" alt="Bouquet de roses roses suspendu" loading="lazy"><figcaption>Fleurs suspendues</figcaption></figure>
+      <figure><img src="img/arche-jardin.webp" alt="Arche de jardin décorée de fleurs" loading="lazy"><figcaption>Cérémonie au jardin</figcaption></figure>
+      <figure><img src="img/roses-orange.webp" alt="Roses orange et corail en pleine floraison" loading="lazy"><figcaption>Roses en pleine floraison</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap grid2">
+    <div class="img-f rev">
+      <img src="img/decor-fetes.webp" alt="Décoration dorée et branches de sapin, mise en scène de fêtes par Maison Bohème" loading="lazy">
+      <span class="etoile" style="top:6%;left:-4px">✦</span><span class="etoile" style="top:40%;right:-6px;animation-delay:.8s">✧</span><span class="etoile" style="bottom:8%;left:10%;animation-delay:1.5s">✦</span>
+    </div>
+    <div class="rev">
+      <p class="sur">Offrir pour Noël</p>
+      <h2>Des fêtes <em>tout en fleurs</em></h2>
+      <p class="citation-post">Une mise en scène à thème pour votre vitrine professionnelle : Maison Bohème l'imagine et la met en place avec vous.<small>D'après la publication de Maison Bohème du 14 novembre 2026</small></p>
+      <ul class="idees">
+        <li>Un bouquet ou une composition à offrir, créé sur mesure</li>
+        <li>Une vitrine de fêtes mise en scène pour votre commerce</li>
+        <li>Une table de réveillon fleurie, dans vos couleurs</li>
+      </ul>
+      <div class="btns" style="opacity:1;animation:none">
+        <a class="btn plein" href="https://wa.me/262692380494?text=Bonjour%20Elodie%2C%20je%20voudrais%20offrir%20une%20cr%C3%A9ation%20florale%20pour%20No%C3%ABl%20%F0%9F%8E%81">Offrir des fleurs</a>
+        <a class="btn ligne" href="https://wa.me/262692380494?text=Bonjour%20Elodie%2C%20j%27aimerais%20une%20mise%20en%20sc%C3%A8ne%20de%20vitrine%20pour%20les%20f%C3%AAtes">Ma vitrine de fêtes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reserver">
+  <div class="wrap">
+    <p class="sur rev">Réserver votre date</p>
+    <h2 class="rev">Trois étapes <em>sereines</em></h2>
+    <div class="resa">
+      <div class="etape rev">Votre date est réservée avec un acompte de 40 % du montant du devis.</div>
+      <div class="etape rev">Le solde se règle 3 semaines avant l'événement : les fleurs et la décoration sont commandées à temps pour un résultat optimal.</div>
+      <div class="etape rev">Vous confirmez le nombre d'invités 15 jours avant le grand jour.</div>
+    </div>
+    <div class="avis">
+      <figure class="rev"><blockquote>« Tellement glamour chic »</blockquote><figcaption>Christelle, sur la page Facebook, octobre 2026</figcaption></figure>
+      <figure class="rev"><blockquote>« Très très beau ! »</blockquote><figcaption>Commentaire sur la page Facebook, novembre 2026</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="sur rev">Contact</p>
+    <h2 class="rev">Parlons de <em>votre projet</em></h2>
+    <p class="rev">Elodie Clain · Créer l'émotion et l'harmonie</p>
+    <div class="coord rev">
+      <a href="tel:+262692380494"><b>Téléphone & WhatsApp</b><span>06 92 38 04 94</span></a>
+      <a href="mailto:maison-boheme974@hotmail.com"><b>E-mail</b><span>maison-boheme974@hotmail.com</span></a>
+      <a href="https://www.google.com/maps/search/?api=1&query=116%20rue%20Jules%20Bertaut%2C%2097430%20Le%20Tampon" target="_blank" rel="noopener"><b>L'atelier</b><span>116 rue Jules Bertaut, Le Tampon</span></a>
+      <a href="https://www.instagram.com/_maison_boheme" target="_blank" rel="noopener"><b>Instagram</b><span>@_maison_boheme</span></a>
+    </div>
+    <div class="btns rev" style="margin-top:1.6rem">
+      <a class="btn plein" href="https://wa.me/262692380494?text=Bonjour%20Elodie%2C%20j%27aimerais%20vous%20parler%20de%20mon%20%C3%A9v%C3%A9nement">Demander un devis</a>
+      <a class="btn ligne" href="https://www.facebook.com/p/Boh%C3%A8me-Artisan-Fleuriste-100063695977179" target="_blank" rel="noopener">Page Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Maison Bohème.</footer>
+
+<script>
+(()=>{
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.getElementById('petales'),x=c.getContext('2d');let W,H,P=[],run=true;
+  const cols=['#efb8a5','#e07a5f','#f6d5c8','#c9cfbf','#e9a08a'];
+  function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+  const N=innerWidth<600?16:28;
+  function np(y){return{x:Math.random()*W,y:y??Math.random()*H,s:5+Math.random()*7,vy:.35+Math.random()*.6,vx:-.2+Math.random()*.4,a:Math.random()*6.28,va:-.02+Math.random()*.04,o:.25+Math.random()*.35,c:cols[Math.random()*cols.length|0],w:Math.random()*6.28}}
+  for(let i=0;i<N;i++)P.push(np());
+  function f(){if(!run)return;x.clearRect(0,0,W,H);
+    for(const p of P){p.w+=.02;p.y+=p.vy;p.x+=p.vx+Math.sin(p.w)*.5;p.a+=p.va;
+      if(p.y>H+20)Object.assign(p,np(-20));
+      x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;
+      x.beginPath();x.moveTo(0,-p.s);x.bezierCurveTo(p.s*.9,-p.s*.6,p.s*.7,p.s*.6,0,p.s);x.bezierCurveTo(-p.s*.7,p.s*.6,-p.s*.9,-p.s*.6,0,-p.s);x.fill();x.restore()}
+    requestAnimationFrame(f)}
+  f();
+  document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)f()});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Maison Bohème" defer></script>
+</body>
+</html>
