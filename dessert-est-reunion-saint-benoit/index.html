@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dessert Est Réunion · Pâtisserie sur commande à Saint-Benoît</title>
+<meta name="description" content="Gâteaux crème, pièces montées traditionnelles, Layer Cakes, Number Cakes et petits fours, réalisés sur commande à Saint-Benoît.">
+<meta property="og:title" content="Dessert Est Réunion · Pâtisserie sur commande à Saint-Benoît">
+<meta property="og:description" content="Gâteaux crème, pièces montées traditionnelles, Layer Cakes et Number Cakes, réalisés sur commande et en toute confiance.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/dessert-est-reunion-saint-benoit/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/dessert-est-reunion-saint-benoit/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#130d22; --nuit2:#1e1533; --rose:#ff3d9a; --orange:#ff7a45; --cyan:#3fd8ff;
+  --or:#f2c46d; --creme:#fff6ee; --poudre:#fbe3e8; --menthe:#bfe9dc; --texte:#2a2235; --doux:#6d6178;
+  --rad:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;line-height:1.15;font-weight:700}
+.script{font-family:"Yellowtail",cursive;font-weight:400}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+.ruban{position:relative;z-index:20;background:#0b0716;color:#f6dfea;font-size:.82rem;text-align:center;padding:.55rem 1rem;border-bottom:2px solid var(--rose)}
+.ruban b{color:#fff}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:15;background:rgba(19,13,34,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,61,154,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 0}
+.logo{font-family:"Yellowtail",cursive;font-size:1.7rem;color:#fff;text-decoration:none;line-height:1;white-space:nowrap}
+.logo span{color:var(--cyan);text-shadow:0 0 12px rgba(63,216,255,.7)}
+.logo{ text-shadow:0 0 14px rgba(255,61,154,.75)}
+.nav ul{display:flex;gap:1.3rem;list-style:none}
+.nav ul a{color:#e9dff3;text-decoration:none;font-size:.95rem}
+.nav ul a:hover{color:var(--cyan)}
+@media (max-width:820px){.nav ul{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.4rem;transition:transform .2s,box-shadow .2s;font-size:1rem}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-main{background:linear-gradient(120deg,var(--rose),var(--orange));color:#fff;box-shadow:0 8px 24px rgba(255,61,154,.35)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,61,154,.5)}
+.btn-ghost{border:2px solid var(--cyan);color:#fff}
+.btn-ghost:hover{background:rgba(63,216,255,.12)}
+.btn-sm{padding:.5rem 1rem;font-size:.9rem}
+.btn-dark{background:var(--nuit);color:#fff}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(120% 90% at 80% 10%,#3a1745 0%,var(--nuit) 55%,#0b0716 100%);color:#fff;overflow:hidden}
+#sucre{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center;padding:4.5rem 0 4rem}
+.hero .kicker{display:inline-block;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(63,216,255,.45);padding:.3rem .8rem;border-radius:999px;margin-bottom:1.1rem}
+.neon{font-family:"Yellowtail",cursive;font-weight:400;font-size:clamp(3.2rem,9vw,6rem);line-height:.95;color:#fff;
+  text-shadow:0 0 6px #fff,0 0 18px var(--rose),0 0 38px var(--rose),0 0 70px rgba(255,61,154,.6)}
+.neon .b{display:block;color:#eaffff;text-shadow:0 0 6px #fff,0 0 18px var(--cyan),0 0 40px var(--cyan),0 0 70px rgba(63,216,255,.55)}
+.flick{animation:flick 7s infinite}
+@keyframes flick{0%,92%,100%{opacity:1}93%{opacity:.55}94%{opacity:1}96%{opacity:.7}97%{opacity:1}}
+.hero p.lead{font-size:1.12rem;color:#efe6f7;margin:1.4rem 0 1.8rem;max-width:34rem}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.hero .stats{display:flex;flex-wrap:wrap;gap:1.4rem;margin-top:2rem;font-size:.9rem;color:#cfc3dc}
+.hero .stats b{display:block;font-family:"Fraunces",serif;font-size:1.5rem;color:var(--or)}
+.hero-visu{position:relative;justify-self:center;width:min(420px,100%)}
+.hero-visu .main{border-radius:200px 200px var(--rad) var(--rad);overflow:hidden;border:3px solid rgba(255,255,255,.15);box-shadow:0 0 0 8px rgba(255,61,154,.12),0 30px 60px rgba(0,0,0,.5);aspect-ratio:4/5}
+.hero-visu .main img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-visu .mini{position:absolute;left:-12%;bottom:-6%;width:44%;border-radius:18px;overflow:hidden;border:3px solid var(--creme);box-shadow:0 18px 40px rgba(0,0,0,.45);transform:rotate(-6deg);animation:flotte 6s ease-in-out infinite}
+.hero-visu .mini img{width:100%;aspect-ratio:1;object-fit:cover}
+.hero-visu .badge{position:absolute;right:-4%;top:8%;background:var(--creme);color:var(--texte);border-radius:999px;padding:.55rem 1rem;font-size:.85rem;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.35);transform:rotate(5deg);animation:flotte 7s ease-in-out infinite reverse}
+@keyframes flotte{0%,100%{translate:0 0}50%{translate:0 -10px}}
+
+/* bandeau */
+.bandeau{background:linear-gradient(90deg,var(--rose),var(--orange));color:#fff;overflow:hidden;white-space:nowrap;padding:.8rem 0;font-family:"Fraunces",serif;font-size:1.15rem}
+.bandeau .piste{display:inline-flex;gap:2.2rem;animation:defile 32s linear infinite;padding-left:2.2rem}
+.bandeau span::after{content:"✦";margin-left:2.2rem;color:#fff7c9}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:5rem 0}
+.titre{text-align:center;max-width:44rem;margin:0 auto 2.8rem}
+.titre .script{font-size:2rem;color:var(--rose);display:block;margin-bottom:.2rem}
+.titre h2{font-size:clamp(1.9rem,4.5vw,2.8rem)}
+.titre p{color:var(--doux);margin-top:.8rem}
+
+/* histoire */
+.histoire .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.histoire .photo{border-radius:var(--rad);overflow:hidden;box-shadow:0 24px 50px rgba(42,34,53,.18)}
+.histoire .photo img{width:100%;aspect-ratio:1;object-fit:cover}
+.histoire h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:1rem}
+.histoire p{margin-bottom:1rem}
+.citation{border-left:4px solid var(--rose);background:#fff;padding:1rem 1.2rem;border-radius:0 14px 14px 0;font-style:italic;color:#4a3d58;margin:1.4rem 0}
+.citation small{display:block;font-style:normal;color:var(--doux);margin-top:.4rem;font-size:.82rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.pastilles span{background:var(--poudre);color:#8a2a57;border-radius:999px;padding:.35rem .85rem;font-size:.88rem;font-weight:500}
+
+/* offres */
+.offres{background:linear-gradient(180deg,#fff 0%,var(--poudre) 100%)}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.carte{background:#fff;border-radius:var(--rad);overflow:hidden;box-shadow:0 16px 40px rgba(42,34,53,.1);display:flex;flex-direction:column;transition:transform .3s}
+.carte:hover{transform:translateY(-6px)}
+.carte .im{aspect-ratio:4/4.4;overflow:hidden;position:relative}
+.carte .im img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.carte:hover .im img{transform:scale(1.05)}
+.carte .prix{position:absolute;left:1rem;bottom:1rem;background:var(--nuit);color:#fff;border-radius:999px;padding:.4rem .9rem;font-weight:700;font-size:.92rem;box-shadow:0 0 0 2px var(--rose),0 0 18px rgba(255,61,154,.55)}
+.carte .txt{padding:1.4rem 1.4rem 1.6rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.carte h3{font-size:1.35rem}
+.carte p{color:var(--doux);font-size:.97rem}
+.carte ul{list-style:none;font-size:.93rem;display:grid;gap:.3rem}
+.carte li::before{content:"✦ ";color:var(--rose)}
+.leger{margin-top:2.2rem;text-align:center;background:var(--nuit);color:#fff;border-radius:var(--rad);padding:1.5rem 1.2rem}
+.leger .script{font-size:1.9rem;color:var(--cyan);text-shadow:0 0 14px rgba(63,216,255,.6)}
+.leger p{color:#e2d7ee;margin-top:.3rem}
+
+/* galerie */
+.galerie{background:var(--nuit);color:#fff;position:relative;overflow:hidden}
+.galerie .titre p{color:#cbbfd9}
+.galerie .titre .script{color:var(--cyan);text-shadow:0 0 14px rgba(63,216,255,.55)}
+.grille{columns:3 260px;column-gap:1.1rem}
+.grille figure{break-inside:avoid;margin-bottom:1.1rem;border-radius:18px;overflow:hidden;position:relative;background:#241a38}
+.grille img{width:100%;transition:transform .6s,filter .6s}
+.grille figure:hover img{transform:scale(1.04);filter:saturate(1.1)}
+.grille figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;font-size:.88rem;background:linear-gradient(transparent,rgba(11,7,22,.85))}
+
+/* avis */
+.avis .liste{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.avis blockquote{background:#fff;border-radius:var(--rad);padding:1.5rem;box-shadow:0 12px 30px rgba(42,34,53,.08);position:relative}
+.avis blockquote::before{content:"“";position:absolute;top:-.6rem;left:1rem;font-family:"Fraunces",serif;font-size:4rem;color:var(--rose);line-height:1}
+.avis blockquote p{margin-top:.8rem;font-size:1.02rem}
+.avis cite{display:block;margin-top:.8rem;font-style:normal;font-size:.85rem;color:var(--doux)}
+.reco{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:2rem;flex-wrap:wrap;text-align:center}
+.reco b{font-family:"Fraunces",serif;font-size:2.4rem;color:var(--rose)}
+.reponse{margin:2rem auto 0;max-width:40rem;text-align:center;color:var(--doux)}
+.reponse q{font-family:"Yellowtail",cursive;font-size:1.7rem;color:var(--texte);quotes:"« " " »"}
+
+/* noel */
+.noel{background:radial-gradient(100% 80% at 20% 0%,#7a1020 0%,#4a0a14 60%,#2a0610 100%);color:#fff;position:relative;overflow:hidden}
+.noel .titre .script{color:var(--or)}
+.noel .titre p{color:#f3d9c9}
+.noel .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2.5rem;align-items:start}
+.noel .affiche{border-radius:18px;overflow:hidden;border:3px solid var(--or);box-shadow:0 25px 50px rgba(0,0,0,.4)}
+.menu-noel{display:grid;gap:1.3rem}
+.bloc{background:rgba(255,255,255,.07);border:1px solid rgba(242,196,109,.4);border-radius:var(--rad);padding:1.4rem 1.5rem}
+.bloc h3{color:var(--or);font-size:1.45rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:baseline}
+.bloc h3 small{font-family:"DM Sans",sans-serif;font-size:1rem;color:#fff;font-weight:700}
+.parfums{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.9rem}
+.parfums span{border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.3rem .8rem;font-size:.9rem}
+.noel .idee{color:#f3d9c9;font-size:.98rem}
+.noel .btn-main{background:linear-gradient(120deg,var(--or),#ffde9a);color:#4a0a14;box-shadow:0 8px 24px rgba(242,196,109,.35)}
+
+/* contact */
+.contact{background:linear-gradient(180deg,var(--creme),#fff)}
+.contact .boite{display:grid;grid-template-columns:1.1fr .9fr;gap:0;background:var(--nuit);color:#fff;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(19,13,34,.3)}
+.contact .g{padding:2.6rem 2.4rem}
+.contact h2{font-size:clamp(1.8rem,4vw,2.4rem)}
+.contact h2 .script{color:var(--rose);font-size:1.2em;text-shadow:0 0 14px rgba(255,61,154,.6)}
+.contact p{color:#d8cde5;margin:.9rem 0 1.4rem}
+.contact .infos{list-style:none;display:grid;gap:.7rem;margin-bottom:1.6rem}
+.contact .infos li{display:flex;gap:.7rem;align-items:flex-start}
+.contact .infos li span{color:var(--cyan);flex:none}
+.contact .infos a{color:#fff}
+.contact .ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.contact .d{position:relative;min-height:320px}
+.contact .d img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+footer{background:#0b0716;color:#bfb2cf;text-align:center;padding:2rem 1rem 2.4rem;font-size:.88rem;line-height:1.8}
+footer b{color:#fff}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.vu{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero .wrap,.histoire .wrap,.noel .grid,.contact .boite{grid-template-columns:1fr}
+  .cartes,.avis .liste{grid-template-columns:1fr}
+  .hero .wrap{padding:3rem 0 4.5rem}
+  .hero-visu{width:min(340px,86%)}
+  .contact .d{min-height:260px;order:-1}
+  .noel .affiche{max-width:420px;margin:0 auto}
+}
+@media (max-width:480px){
+  section{padding:3.8rem 0}
+  .contact .g{padding:2rem 1.4rem}
+  .hero-visu .mini{left:-6%}
+  .hero-visu .badge{right:-2%}
+  .btn{width:100%;justify-content:center}
+  .grille{columns:2;column-gap:.7rem}
+  .grille figure{margin-bottom:.7rem;border-radius:14px}
+  .grille figcaption{font-size:.78rem;padding:1.2rem .6rem .5rem}
+  .nav .btn-sm{width:auto}
+  .contact .d{min-height:200px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  #sucre{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Dessert Est Réunion</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">Dessert <span>Est Réunion</span></a>
+    <ul>
+      <li><a href="#histoire">La maison</a></li>
+      <li><a href="#creations">Créations</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#noel">Noël 2026</a></li>
+      <li><a href="#contact">Commander</a></li>
+    </ul>
+    <a class="btn btn-main btn-sm" href="tel:+262692524787">Appeler</a>
+  </div>
+</header>
+
+<section class="hero" style="padding:0">
+  <canvas id="sucre" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <span class="kicker">Pâtisserie artisanale · Saint-Benoît</span>
+      <h1 class="neon flick">Dessert<span class="b">Est Réunion</span></h1>
+      <p class="lead">Vos gâteaux crème, pièces montées traditionnelles, Layer Cakes, Number Cakes et petits fours, réalisés sur commande et en toute confiance.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="https://wa.me/262692524787?text=Bonjour%20Dessert%20Est%20R%C3%A9union%2C%20je%20voudrais%20commander%20un%20g%C3%A2teau"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Commander sur WhatsApp</a>
+        <a class="btn btn-ghost" href="#creations">Voir les créations</a>
+      </div>
+      <div class="stats">
+        <div><b>100 %</b>recommandé (avis Facebook)</div>
+        <div><b>3,8 K</b>gourmands abonnés</div>
+        <div><b>2022</b>la maison est née</div>
+      </div>
+    </div>
+    <div class="hero-visu">
+      <div class="main"><img src="img/layer-fleur-rouge.webp" alt="Layer cake deux étages rose poudré et orange, orné d'une grande fleur rouge" width="1100" height="1578"></div>
+      <div class="mini"><img src="img/gateau-volutes-creme.webp" alt="Gâteau rond crème aux volutes" loading="lazy" width="1100" height="1089"></div>
+      <div class="badge">Photo offerte sur le Layer Cake ✦</div>
+    </div>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Gâteaux crème</span><span>Pièces montées traditionnelles</span><span>Layer Cakes</span><span>Number Cakes</span><span>Petits fours</span><span>Photo comestible</span><span>100 % personnalisé</span>
+  <span>Gâteaux crème</span><span>Pièces montées traditionnelles</span><span>Layer Cakes</span><span>Number Cakes</span><span>Petits fours</span><span>Photo comestible</span><span>100 % personnalisé</span>
+</div></div>
+
+<section class="histoire" id="histoire">
+  <div class="wrap">
+    <div class="photo reveal"><img src="img/gateau-saint-expedit.webp" alt="Gâteau rond rouge vif aux volutes de crème et fleurs blanches" loading="lazy" width="1100" height="978"></div>
+    <div class="reveal">
+      <span class="script" style="font-size:1.9rem;color:var(--rose)">Fait main, dans l'Est</span>
+      <h2>Chaque fête de famille mérite son gâteau</h2>
+      <p>Depuis novembre 2022, Dessert Est Réunion imagine à Saint-Benoît des gâteaux pour toutes les grandes dates : anniversaires, mariages, fêtes de famille, héros préférés des enfants (One Piece, PSG…), avec des pièces montées, des Layer Cakes, des Number Cakes et des petits fours.</p>
+      <p>Tout se fait sur commande, à votre goût : le prénom, les couleurs, le thème préféré, et même une photo comestible pour une touche qui vous ressemble.</p>
+      <div class="citation">« Toujours été un plaisir réalise zot gâteau »<small>Dessert Est Réunion, en réponse à une fidèle gourmande sur Facebook</small></div>
+      <div class="pastilles"><span>Anniversaires</span><span>Mariages</span><span>Thèmes enfants</span><span>Photo comestible</span><span>Pièces montées</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="offres" id="creations">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="script">Les créations</span>
+      <h2>Trois façons de régaler vos invités</h2>
+      <p>Les formules et les tarifs publiés par Dessert Est Réunion.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte reveal">
+        <div class="im"><img src="img/layer-degrade-pastel.webp" alt="Layer cake en dégradé pastel rose, bleu et blanc" loading="lazy" width="1000" height="1240"><span class="prix">50 € · 10 à 12 parts</span></div>
+        <div class="txt">
+          <h3>Layer Cake gourmand</h3>
+          <p>Un gâteau moelleux, élégant et plein de saveurs, idéal pour célébrer vos plus beaux moments.</p>
+          <ul><li>Photo offerte pour une touche qui vous ressemble</li><li>Plusieurs étages, décor au choix</li></ul>
+        </div>
+      </article>
+      <article class="carte reveal">
+        <div class="im"><img src="img/pieces-montees-trio.webp" alt="Trois pièces montées traditionnelles blanches aux décors sucrés colorés" loading="lazy" width="1200" height="790" style="object-position:50% 50%"><span class="prix">dès 3 € la part</span></div>
+        <div class="txt">
+          <h3>Pièce montée traditionnelle</h3>
+          <p>Élégante, savoureuse et 100 % personnalisée : la pièce montée de nos fêtes réunionnaises, en version légère et gourmande.</p>
+          <ul><li>Photo en option (+7 €)</li><li>Le grand classique des mariages</li></ul>
+        </div>
+      </article>
+      <article class="carte reveal">
+        <div class="im"><img src="img/gateau-volutes-creme.webp" alt="Entremets rond crème aux volutes et fleurs orangées" loading="lazy" width="1100" height="1089"><span class="prix">dès 2,50 € la part</span></div>
+        <div class="txt">
+          <h3>Délices sur mesure</h3>
+          <p>Des entremets gourmands et raffinés, idéals pour toutes vos occasions spéciales.</p>
+          <ul><li>Photo comestible (+7 €, montage possible)</li><li>Number Cakes et petits fours aussi</li></ul>
+        </div>
+      </article>
+    </div>
+    <div class="leger reveal">
+      <span class="script">Plus légère, plus gourmande !</span>
+      <p>Le choix de la maison : une crème plus légère que la crème au beurre, pour des gâteaux qui se savourent jusqu'à la dernière part.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="script">La vitrine</span>
+      <h2>Quelques gâteaux sortis de l'atelier</h2>
+      <p>Toutes ces photos viennent de la page Facebook de Dessert Est Réunion.</p>
+    </div>
+    <div class="grille">
+      <figure class="reveal"><img src="img/duo-macarons-papillons.webp" alt="Deux gâteaux blancs pailletés d'or, couronnés de macarons et de papillons dorés" loading="lazy" width="1100" height="686"><figcaption>Macarons et papillons dorés</figcaption></figure>
+      <figure class="reveal"><img src="img/pieces-montees-fleuries.webp" alt="Trois pièces montées blanches aux fleurs roses et bleues" loading="lazy" width="1200" height="790"><figcaption>Pièces montées fleuries</figcaption></figure>
+      <figure class="reveal"><img src="img/layer-one-piece.webp" alt="Layer cake rose et or au thème One Piece" loading="lazy" width="1000" height="1455"><figcaption>Thème One Piece</figcaption></figure>
+      <figure class="reveal"><img src="img/piece-montee-menthe.webp" alt="Pièce montée blanche à étages aux fleurs vert menthe" loading="lazy" width="861" height="1880"><figcaption>Pièce montée vert menthe</figcaption></figure>
+      <figure class="reveal"><img src="img/layer-turquoise-psg.webp" alt="Layer cake turquoise et blanc aux couleurs du PSG" loading="lazy" width="1000" height="1829"><figcaption>Pour les fans du PSG</figcaption></figure>
+      <figure class="reveal"><img src="img/layer-blanc-or.webp" alt="Layer cake blanc et or à la fleur jaune" loading="lazy" width="1000" height="1539"><figcaption>Blanc et or</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="script">Ils se sont régalés</span>
+      <h2>La parole aux gourmands</h2>
+    </div>
+    <div class="reco reveal"><b>100 %</b><span>des avis Facebook recommandent Dessert Est Réunion (8 avis)</span></div>
+    <div class="liste">
+      <blockquote class="reveal"><p>Enfin un layer cake apprécié par les enfants qui sont souvent délicat sur le goût, l'aspect. le visuel est déjà au top.</p><cite>Avis Facebook, été 2026</cite></blockquote>
+      <blockquote class="reveal"><p>Merci encore à vous pour les gâteaux... Très bon comme d habitude..et trop beau oci</p><cite>Agnes P., commentaire Facebook, octobre 2026</cite></blockquote>
+      <blockquote class="reveal"><p>Layer cake super bon 🎊 merci</p><cite>Carole B., avis Facebook, octobre 2026</cite></blockquote>
+    </div>
+    <p class="reponse reveal"><q>Tjr o top Dessert Est Réunion</q><br>Nanik A., sous la publication des pièces montées</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="script">Noël 2026</span>
+      <h2>La carte des fêtes est arrivée</h2>
+      <p>Bûches et pâtés créoles à réserver dès maintenant, pour un réveillon qui sent bon la maison.</p>
+    </div>
+    <div class="grid">
+      <div class="affiche reveal"><img src="img/affiche-noel-2026.webp" alt="Affiche Noël 2026 de Dessert Est Réunion : bûches et pâtés créoles" loading="lazy" width="1000" height="1413"></div>
+      <div class="menu-noel">
+        <div class="bloc reveal">
+          <h3>Les bûches <small>30 € · 10 parts</small></h3>
+          <div class="parfums"><span>Mangue</span><span>Letchis</span><span>Crème de marron</span><span>Pistache</span><span>Vanille</span><span>Crème praliné</span><span>Chocolat</span><span>Patate douce</span></div>
+        </div>
+        <div class="bloc reveal">
+          <h3>Les pâtés créoles <small>20 € petit · 40 € gros</small></h3>
+          <div class="parfums"><span>Nature</span><span>Papaye</span><span>Crème de marron</span><span>Poulet</span></div>
+        </div>
+        <div class="bloc reveal">
+          <h3>Une idée cadeau gourmande</h3>
+          <p class="idee">Une bûche letchis pour la famille, un pâté créole pour les voisins, un gâteau personnalisé pour la marraine : demandez, on en parle ensemble.</p>
+        </div>
+        <a class="btn btn-main reveal" href="https://wa.me/262692524787?text=Bonjour%20Dessert%20Est%20R%C3%A9union%2C%20je%20voudrais%20r%C3%A9server%20pour%20No%C3%ABl"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Réserver ma bûche</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="boite reveal">
+      <div class="g">
+        <h2>Un gâteau en tête ? <span class="script">Parlons-en</span></h2>
+        <p>Racontez l'occasion, le nombre de parts, le thème ou la photo à mettre dessus : la commande se prépare ensemble, simplement.</p>
+        <ul class="infos">
+          <li><span>☎</span><a href="tel:+262692524787">0692 52 47 87</a></li>
+          <li><span>✦</span>Saint-Benoît, La Réunion · sur commande</li>
+          <li><span>f</span><a href="https://www.facebook.com/dessertestreunion" target="_blank" rel="noopener">facebook.com/dessertestreunion</a></li>
+        </ul>
+        <div class="ctas">
+          <a class="btn btn-main" href="https://wa.me/262692524787?text=Bonjour%20Dessert%20Est%20R%C3%A9union%2C%20je%20voudrais%20commander%20un%20g%C3%A2teau">Écrire sur WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:+262692524787">Appeler</a>
+        </div>
+      </div>
+      <div class="d"><img src="img/enseigne-neon.webp" alt="Visuel néon Dessert Est Réunion" loading="lazy" width="1400" height="583"></div>
+    </div>
+  </div>
+</section>
+
+<footer><b>Dessert Est Réunion</b> · Pâtisserie sur commande · Saint-Benoît, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Dessert Est Réunion.</footer>
+
+<script>
+// apparition au scroll
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+// étincelles de sucre néon
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var c=document.getElementById('sucre'),x=c.getContext('2d'),W,H,P=[],cols=['#ff3d9a','#3fd8ff','#f2c46d','#ffffff','#ff7a45'];
+  function size(){var r=c.getBoundingClientRect();W=c.width=r.width*devicePixelRatio;H=c.height=r.height*devicePixelRatio}
+  size();addEventListener('resize',size);
+  var n=Math.min(90,Math.round(innerWidth/12));
+  for(var i=0;i<n;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.5,v:Math.random()*.00035+.00012,t:Math.random()*6.28,c:cols[i%cols.length]});
+  function f(){
+    x.clearRect(0,0,W,H);
+    P.forEach(function(p){
+      p.y+=p.v;p.t+=.035;if(p.y>1.02){p.y=-.02;p.x=Math.random()}
+      var a=.35+.65*Math.abs(Math.sin(p.t)),px=(p.x+Math.sin(p.t*.4)*.004)*W,py=p.y*H,r=p.r*devicePixelRatio;
+      x.globalAlpha=a;x.fillStyle=p.c;x.shadowColor=p.c;x.shadowBlur=10*devicePixelRatio;
+      x.beginPath();x.moveTo(px,py-r*2.2);x.lineTo(px+r*.6,py);x.lineTo(px,py+r*2.2);x.lineTo(px-r*.6,py);x.closePath();x.fill();
+      x.beginPath();x.arc(px,py,r*.7,0,6.28);x.fill();
+    });
+    requestAnimationFrame(f);
+  }
+  f();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Dessert Est Réunion" defer></script>
+</body>
+</html>

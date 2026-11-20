@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Catherine Mainville · Coach sportif & professeur de yoga au Port</title>
+<meta name="description" content="Matinées Bien-être & Yoga au Parc Boisé du Port, coaching Belle&Fit en petit groupe de femmes, séances adaptées. Catherine Mainville, coach sportif et professeur de yoga, Le Port, La Réunion.">
+<meta property="og:title" content="Catherine Mainville · Coach & Yoga au Port">
+<meta property="og:description" content="Matinées Bien-être & Yoga au Parc Boisé du Port, Belle&Fit, coaching adapté. Respirer, bouger, s'aimer, s'honorer.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/catherine-mainville-coach-yoga-le-port/img/og-parc-boise.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/catherine-mainville-coach-yoga-le-port/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Caveat:wght@500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --prune:#4a2c4a;     /* violet des affiches « Matinée Bien-être & Yoga » */
+  --prune2:#6b4468;
+  --soleil:#f2c230;    /* pastille jaune des affiches */
+  --creme:#f4efe4;     /* fond beige des affiches */
+  --sable:#e8e0cf;
+  --feuille:#4f7a45;   /* le Parc Boisé */
+  --lagon:#2f9aa0;     /* la mer du front de mer */
+  --lime:#c8d93a;      /* tenue Belle&Fit */
+  --encre:#2b1d2b;
+  --texte:#4a4048;
+  --rad:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--encre);line-height:1.12;font-weight:600}
+.main{font-family:'Caveat',cursive;font-weight:500}
+.wrap{width:min(1120px,92%);margin:0 auto}
+
+.ruban{background:var(--encre);color:#efe6ef;font-size:.82rem;text-align:center;padding:.5rem 1rem;position:relative;z-index:30}
+.ruban b{color:var(--soleil);font-weight:500}
+
+.nav{position:sticky;top:0;z-index:20;background:rgba(244,239,228,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(74,44,74,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+.marque{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.marque svg{width:36px;height:36px;flex:none}
+.marque span{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--prune);line-height:1.05}
+.marque small{display:block;font-family:'Jost',sans-serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--feuille);font-weight:500}
+.liens{display:flex;gap:1.4rem;font-size:.92rem}
+.liens a{text-decoration:none;color:var(--prune)}
+.liens a:hover{color:var(--feuille)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s}
+.btn svg{width:18px;height:18px}
+.btn-wa{background:var(--prune);color:#fff;box-shadow:0 8px 22px rgba(74,44,74,.28)}
+.btn-wa:hover{transform:translateY(-2px);background:var(--prune2)}
+.btn-clair{background:rgba(255,255,255,.88);color:var(--prune)}
+.btn-clair:hover{transform:translateY(-2px)}
+.nav .btn{padding:.55rem 1rem;font-size:.88rem}
+.respire{animation:respire 4.5s ease-in-out infinite}
+@keyframes respire{0%,100%{box-shadow:0 8px 22px rgba(74,44,74,.28)}50%{box-shadow:0 8px 34px rgba(242,194,48,.55)}}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,780px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero-img{position:absolute;inset:0;background:url(img/parc-boise-savasana.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate;transform-origin:50% 40%}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translateY(-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,29,43,.15) 0%,rgba(43,29,43,.2) 40%,rgba(43,29,43,.82) 100%)}
+#feuilles{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero .wrap{position:relative;z-index:3;padding:0 0 4.5rem}
+.surtitre{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:.35rem .8rem;border-radius:999px;margin-bottom:1rem}
+.hero h1{color:#fff;font-size:clamp(2.6rem,8vw,5.2rem);font-weight:600;letter-spacing:.01em}
+.hero h1 .main{display:block;font-size:.5em;color:var(--soleil);margin-top:.2rem}
+.hero p.bio{max-width:36rem;font-size:1.08rem;margin:1.1rem 0 1.6rem;color:#f6eef6}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.8rem}
+.apparait{opacity:0;transform:translateY(18px);animation:monte 1.2s ease forwards}
+.d1{animation-delay:.2s}.d2{animation-delay:.5s}.d3{animation-delay:.8s}.d4{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau */
+.bandeau{background:var(--prune);color:var(--creme);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-style:italic}
+.bandeau div{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau i{color:var(--soleil);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:5.5rem 0}
+.titre{max-width:44rem;margin-bottom:2.6rem}
+.titre .main{font-size:1.6rem;color:var(--feuille);display:block;margin-bottom:.1rem}
+.titre h2{font-size:clamp(2rem,5vw,3.1rem)}
+.titre p{margin-top:.9rem;font-size:1.05rem}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+
+/* temps pour soi */
+.soi{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.citation{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3.6vw,2.15rem);color:var(--prune);line-height:1.3;font-style:italic}
+.citation::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--soleil);font-style:normal}
+.signature{margin-top:1rem;font-family:'Caveat',cursive;font-size:1.5rem;color:var(--feuille)}
+.souffle{position:relative;aspect-ratio:1;max-width:330px;margin:0 auto;display:grid;place-items:center}
+.souffle .cercle{position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff7d6,var(--soleil) 55%,#e3a91c);opacity:.85;animation:souffle 10s ease-in-out infinite}
+.souffle .halo{position:absolute;inset:0;border-radius:50%;border:2px dashed rgba(74,44,74,.25);animation:tourne 60s linear infinite}
+.souffle p{position:relative;font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--encre);font-weight:600;text-align:center}
+.souffle small{display:block;font-family:'Jost',sans-serif;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--prune)}
+@keyframes souffle{0%,100%{transform:scale(.78)}50%{transform:scale(1)}}
+@keyframes tourne{to{transform:rotate(360deg)}}
+
+/* matinées */
+.matinees{background:linear-gradient(180deg,var(--creme),#efe7d6)}
+.affiche{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:stretch}
+.carte-info{background:#fff;border-radius:var(--rad);padding:2.2rem;box-shadow:0 18px 40px rgba(74,44,74,.1);position:relative;overflow:hidden}
+.carte-info h3{font-size:2rem;color:var(--prune);text-transform:uppercase;letter-spacing:.02em}
+.pastille{position:absolute;top:1.3rem;right:1.3rem;width:92px;height:92px;display:grid;place-items:center;text-align:center;background:var(--soleil);color:var(--encre);clip-path:polygon(50% 0,61% 12%,76% 6%,79% 22%,95% 25%,89% 40%,100% 50%,89% 60%,95% 75%,79% 78%,76% 94%,61% 88%,50% 100%,39% 88%,24% 94%,21% 78%,5% 75%,11% 60%,0 50%,11% 40%,5% 25%,21% 22%,24% 6%,39% 12%);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.6rem;line-height:1;animation:balance 6s ease-in-out infinite}
+.pastille small{display:block;font-family:'Jost',sans-serif;font-size:.6rem;font-weight:500;letter-spacing:.06em}
+@keyframes balance{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+.infos{list-style:none;margin:1.4rem 0 1.6rem;display:grid;gap:.8rem}
+.infos li{display:flex;gap:.8rem;align-items:flex-start}
+.infos svg{width:22px;height:22px;flex:none;color:var(--feuille);margin-top:.15rem}
+.infos b{color:var(--encre);font-weight:600}
+.note{font-size:.85rem;color:#7a6f78}
+.photo-arrondie{border-radius:var(--rad);overflow:hidden;position:relative;min-height:340px}
+.photo-arrondie img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.photo-arrondie:hover img{transform:scale(1.05)}
+.legende{position:absolute;left:1rem;bottom:1rem;background:rgba(244,239,228,.92);color:var(--prune);padding:.35rem .8rem;border-radius:999px;font-size:.8rem}
+.programme{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.6rem}
+.etape{background:#fff;border-radius:16px;padding:1.3rem 1rem;text-align:center;transition:transform .3s,box-shadow .3s;border-top:4px solid var(--soleil)}
+.etape:nth-child(2){border-color:var(--feuille)}.etape:nth-child(3){border-color:var(--lagon)}.etape:nth-child(4){border-color:var(--prune2)}.etape:nth-child(5){border-color:var(--lime)}
+.etape:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(74,44,74,.12)}
+.etape .ic{font-size:1.7rem;line-height:1;margin-bottom:.5rem}
+.etape h3{font-size:1.3rem;color:var(--prune)}
+.etape p{font-size:.86rem;margin-top:.3rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem}
+.duo .photo-arrondie{min-height:0;aspect-ratio:3/4;min-width:0}
+
+/* belle&fit */
+.bf{background:var(--encre);color:#eadfea;position:relative;overflow:hidden}
+.bf::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(200,217,58,.22),transparent 65%);top:-160px;right:-160px}
+.bf .titre h2{color:#fff}
+.bf .titre .main{color:var(--lime)}
+.bf-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center;position:relative}
+.bf .photo-arrondie{aspect-ratio:1;min-height:0}
+.points{list-style:none;display:grid;gap:1rem;margin:1.4rem 0}
+.points li{display:flex;gap:.9rem;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1rem 1.1rem}
+.points li span{color:var(--lime);font-size:1.3rem;line-height:1.2}
+.slogan{font-family:'Caveat',cursive;font-size:clamp(1.7rem,4vw,2.3rem);color:var(--soleil);line-height:1.2;margin-top:1.2rem}
+.slogan small{display:block;font-family:'Jost',sans-serif;font-size:.85rem;color:#cbbccb;margin-top:.3rem}
+.bf .btn-wa{background:var(--lime);color:var(--encre)}
+.bf .btn-wa:hover{background:#d7e65a}
+
+/* coaching */
+.cartes3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.c3{background:#fff;border-radius:var(--rad);padding:2rem 1.6rem;box-shadow:0 12px 30px rgba(74,44,74,.08);transition:transform .3s}
+.c3:hover{transform:translateY(-6px)}
+.c3 .num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--soleil);line-height:1;font-weight:700}
+.c3 h3{font-size:1.5rem;color:var(--prune);margin:.4rem 0 .5rem}
+.parcours{margin-top:2.6rem;display:flex;flex-wrap:wrap;gap:.7rem}
+.parcours span{background:var(--sable);color:var(--prune);border-radius:999px;padding:.45rem 1rem;font-size:.9rem}
+
+/* avis */
+.avis{background:var(--sable);text-align:center;padding:4.5rem 0}
+.avis blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1.8rem,5vw,2.8rem);color:var(--prune)}
+.avis p{margin-top:.8rem;font-size:.95rem}
+.etoiles{color:var(--soleil);letter-spacing:.2em;font-size:1.2rem}
+
+/* galerie */
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 4vw 1rem;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 min(300px,72vw);scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--sable)}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:.7rem;right:.7rem;bottom:.7rem;background:rgba(43,29,43,.72);color:#fff;font-size:.8rem;padding:.4rem .7rem;border-radius:10px}
+.glisse{text-align:center;font-size:.85rem;color:#8a7f88;margin-top:.4rem}
+
+/* noël */
+.noel{background:radial-gradient(circle at 20% 10%,#6b4468,var(--prune) 55%,#3a2139);color:#f3e9f2;position:relative;overflow:hidden}
+.noel .wrap{position:relative;z-index:2}
+.noel-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.noel h2{color:#fff;font-size:clamp(2rem,5vw,3rem)}
+.noel .main{color:var(--soleil);font-size:1.6rem}
+.noel p{margin:1rem 0 1.6rem;max-width:34rem}
+.bon{background:var(--creme);color:var(--encre);border-radius:22px;padding:2rem;position:relative;transform:rotate(-2.5deg);box-shadow:0 26px 50px rgba(0,0,0,.3);border:2px dashed var(--prune2);animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{0%,100%{transform:rotate(-2.5deg) translateY(0)}50%{transform:rotate(-1deg) translateY(-8px)}}
+.bon .ruban-bon{position:absolute;top:-14px;right:22px;background:var(--soleil);color:var(--encre);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .8rem;border-radius:6px;font-weight:600}
+.bon h3{font-size:1.9rem;color:var(--prune)}
+.bon .pour{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--feuille);margin:.6rem 0}
+.bon .ligne{border-bottom:1px dotted #b9a9b6;height:1.6rem;margin-bottom:.4rem}
+.bon small{display:block;margin-top:1rem;color:#7a6f78;font-size:.8rem}
+.illus{font-size:.75rem;opacity:.75;margin-top:1rem;text-align:right}
+.etincelle{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--soleil);opacity:.5;animation:brille 4s ease-in-out infinite}
+@keyframes brille{0%,100%{opacity:.15;transform:scale(.6)}50%{opacity:.8;transform:scale(1.2)}}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:start}
+.coord{list-style:none;display:grid;gap:1rem}
+.coord a,.coord div{display:flex;gap:1rem;align-items:center;background:#fff;border-radius:16px;padding:1rem 1.2rem;text-decoration:none;box-shadow:0 8px 22px rgba(74,44,74,.07);transition:transform .25s}
+.coord a:hover{transform:translateX(4px)}
+.coord svg{width:26px;height:26px;color:var(--prune);flex:none}
+.coord b{display:block;color:var(--encre);font-weight:600}
+.coord span{font-size:.9rem;word-break:break-word}
+.lieu{background:var(--prune);color:#efe4ee;border-radius:var(--rad);padding:2.2rem;position:relative;overflow:hidden}
+.lieu h3{color:#fff;font-size:1.8rem}
+.lieu p{margin-top:.8rem}
+.lieu .vague{position:absolute;left:0;bottom:0;width:100%;height:70px;opacity:.35}
+
+footer{background:var(--encre);color:#cbbccb;text-align:center;padding:2.4rem 1rem 6rem;font-size:.85rem}
+footer b{color:var(--soleil);font-weight:500}
+
+.wa-flottant{position:fixed;right:16px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.25);animation:respire 4.5s ease-in-out infinite}
+.wa-flottant svg{width:30px;height:30px;color:#fff}
+
+@media (max-width:900px){
+  .liens{display:none}
+  .soi,.affiche,.bf-grid,.noel-grid,.contact-grid{grid-template-columns:1fr}
+  .programme{grid-template-columns:repeat(2,1fr)}
+  .programme .etape:last-child{grid-column:1/-1}
+  .cartes3{grid-template-columns:1fr}
+  section{padding:4rem 0}
+}
+@media (max-width:420px){
+  .nav .btn span{display:none}
+  .marque span{font-size:1.05rem}
+  .carte-info{padding:1.6rem 1.3rem}
+  .carte-info h3{font-size:1.6rem;padding-right:92px}
+  .pastille{width:80px;height:80px;font-size:1.4rem;top:1rem;right:1rem}
+  .hero{min-height:min(84vh,700px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.apparait{opacity:1;transform:none}
+  #feuilles{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Catherine Mainville</div>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="marque" href="#haut" aria-label="Accueil">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#f2c230"/><path d="M20 9c-3 5-3 9 0 13 3-4 3-8 0-13zM9 21c4-1 8 1 11 5-4 1-8-1-11-5zm22 0c-4-1-8 1-11 5 4 1 8-1 11-5z" fill="#4a2c4a"/><path d="M11 29h18" stroke="#4a2c4a" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Catherine Mainville<small>Coach · Yoga · Le Port</small></span>
+    </a>
+    <div class="liens">
+      <a href="#matinees">Matinées yoga</a>
+      <a href="#bellefit">Belle&amp;Fit</a>
+      <a href="#coaching">Coaching</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn btn-wa respire" href="https://wa.me/262692428899?text=Bonjour%20Catherine%2C%20je%20voudrais%20r%C3%A9server%20ma%20place%20%F0%9F%99%8F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+      <span>Réserver</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="haut">
+  <div class="hero-img" role="img" aria-label="Matinée Bien-être et Yoga sous les grands arbres du Parc Boisé du Port"></div>
+  <canvas id="feuilles" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="surtitre apparait d1">Le Port · La Réunion</span>
+    <h1 class="apparait d2">Catherine Mainville<span class="main">coach sportif &amp; professeur de yoga</span></h1>
+    <p class="bio apparait d3">Vous motiver et vous accompagner activement dans des séances adaptées, éduquer votre corps et votre mental à évoluer vers votre objectif de vie et d'envie&nbsp;!</p>
+    <div class="actions apparait d4">
+      <a class="btn btn-wa" href="https://wa.me/262692428899?text=Bonjour%20Catherine%2C%20je%20voudrais%20r%C3%A9server%20ma%20place%20%F0%9F%99%8F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+        Réserver ma place
+      </a>
+      <a class="btn btn-clair" href="#matinees">Les Matinées Bien-être &amp; Yoga</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div>
+  <span>Respirer</span><i>✦</i><span>bouger</span><i>✦</i><span>s'aimer</span><i>✦</i><span>s'honorer</span><i>✦</i><span>Pranayama</span><i>✦</i><span>Asana</span><i>✦</i><span>relaxation</span><i>✦</i><span>méditation</span><i>✦</i><span>créativité</span><i>✦</i><span>Namaste</span><i>✦</i>
+  <span>Respirer</span><i>✦</i><span>bouger</span><i>✦</i><span>s'aimer</span><i>✦</i><span>s'honorer</span><i>✦</i><span>Pranayama</span><i>✦</i><span>Asana</span><i>✦</i><span>relaxation</span><i>✦</i><span>méditation</span><i>✦</i><span>créativité</span><i>✦</i><span>Namaste</span><i>✦</i>
+</div></div>
+
+<section id="soi">
+  <div class="wrap soi">
+    <div class="reveal">
+      <div class="titre" style="margin-bottom:1.6rem"><span class="main">un temps pour soi</span></div>
+      <p class="citation">Un temps pour Soi, une fois par mois&nbsp;: respirer, bouger, s'aimer, s'honorer.</p>
+      <p class="signature">— Catherine</p>
+      <p style="margin-top:1.4rem;max-width:34rem">Coach sportif et professeur de yoga au Port, Catherine accompagne chacun à son rythme&nbsp;: des matinées de yoga en plein air sous les arbres du Parc Boisé, un coaching énergique en petit groupe de femmes avec Belle&amp;Fit, et des séances adaptées à vos objectifs.</p>
+    </div>
+    <div class="souffle reveal" aria-label="Petit exercice de respiration">
+      <div class="halo"></div><div class="cercle"></div>
+      <p id="souffle-texte">Inspire…<small>suivez le cercle</small></p>
+    </div>
+  </div>
+</section>
+
+<section class="matinees" id="matinees">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="main">le dimanche matin, sous les arbres</span>
+      <h2>Matinée Bien-être &amp; Yoga</h2>
+      <p>Une matinée par mois, de 9&nbsp;h à 11&nbsp;h, au Parc Boisé du Port. Ouvert à tout le monde, chaque dimanche a son thème. Réservation obligatoire.</p>
+    </div>
+    <div class="affiche">
+      <div class="carte-info reveal">
+        <div class="pastille">25&nbsp;€<small>la matinée</small></div>
+        <h3>Matinée<br>Bien-être<br>&amp; Yoga</h3>
+        <ul class="infos">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Le dimanche, 9&nbsp;h – 11&nbsp;h</b><br>une fois par mois</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>Parc Boisé du Port</b><br>yoga en plein air, à l'ombre des grands arbres</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 9h16M9 3v4M15 3v4"/></svg><span><b>Sur réservation</b><br>par WhatsApp ou au 06&nbsp;92&nbsp;42&nbsp;88&nbsp;99</span></li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/262692428899?text=Bonjour%20Catherine%2C%20je%20voudrais%20r%C3%A9server%20ma%20place%20pour%20la%20prochaine%20Matin%C3%A9e%20Bien-%C3%AAtre%20%26%20Yoga" target="_blank" rel="noopener">Réserver la prochaine matinée</a>
+        <p class="note" style="margin-top:1rem">Tarif affiché pour la matinée du dimanche 25 janvier 2026.</p>
+      </div>
+      <figure class="photo-arrondie reveal">
+        <img src="img/canopee.webp" alt="La canopée du Parc Boisé du Port, vue depuis les tapis" loading="lazy">
+        <figcaption class="legende">Regard vers la canopée, pendant la relaxation</figcaption>
+      </figure>
+    </div>
+
+    <div class="programme">
+      <div class="etape reveal"><div class="ic">🌬️</div><h3>Pranayama</h3><p>respirations</p></div>
+      <div class="etape reveal"><div class="ic">🧘‍♀️</div><h3>Asana</h3><p>postures</p></div>
+      <div class="etape reveal"><div class="ic">🍃</div><h3>Relaxation</h3><p>lâcher prise</p></div>
+      <div class="etape reveal"><div class="ic">🕉️</div><h3>Méditation</h3><p>mantras et silence</p></div>
+      <div class="etape reveal"><div class="ic">🌹</div><h3>Créativité</h3><p>dessin, cartes, écriture</p></div>
+    </div>
+
+    <div class="duo">
+      <figure class="photo-arrondie reveal"><img src="img/cartes-une-porte-s-ouvre.webp" alt="Cartes illustrées « Une porte s'ouvre » utilisées pendant la matinée" loading="lazy"><figcaption class="legende">« Une porte s'ouvre… »</figcaption></figure>
+      <figure class="photo-arrondie reveal"><img src="img/creativite-tapis.webp" alt="Temps de créativité sur le tapis, dessin d'une rose" loading="lazy"><figcaption class="legende">Le temps de la créativité</figcaption></figure>
+    </div>
+    <p class="reveal" style="margin-top:1.6rem;font-style:italic;color:var(--prune)">Matinée du 1<sup>er</sup> juin 2025, au programme&nbsp;: Paix &amp; Amour, et un mantra puissant, Om Namo Narayanaya.</p>
+  </div>
+</section>
+
+<section class="bf" id="bellefit">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="main">ton rendez-vous énergie, confiance &amp; dépassement</span>
+      <h2>Belle&amp;Fit</h2>
+      <p>Belle&amp;Fit, c'est bien plus qu'un entraînement… C'est un espace où chaque femme se découvre, se dépasse, se révèle.</p>
+    </div>
+    <div class="bf-grid">
+      <figure class="photo-arrondie reveal"><img src="img/equilibre-plage.webp" alt="Équilibre sur les mains sur la plage" loading="lazy"><figcaption class="legende">Le bien-être commence par nous…</figcaption></figure>
+      <div class="reveal">
+        <ul class="points">
+          <li><span>✦</span><div><b style="color:#fff">Un petit groupe de femmes</b><br>prêtes à se dépasser, ensemble.</div></li>
+          <li><span>✦</span><div><b style="color:#fff">Un coaching bienveillant et motivant</b><br>avec Catherine et Bertrand Daunes, coach sportif.</div></li>
+          <li><span>✦</span><div><b style="color:#fff">Des séances en extérieur</b><br>pour respirer, lâcher prise et avancer ensemble.</div></li>
+          <li><span>✦</span><div><b style="color:#fff">Des sessions de 7 semaines</b><br>par exemple du 3 novembre au 19 décembre 2025.</div></li>
+        </ul>
+        <p class="slogan">Il est temps de prendre son bonheur en urgence&nbsp;!!!<small>« Seule on va plus vite, ensemble on va plus loin » : l'esprit Belle&amp;Fit.</small></p>
+        <a class="btn btn-wa" style="margin-top:1.6rem" href="https://wa.me/262692428899?text=Bonjour%20Catherine%2C%20je%20voudrais%20rejoindre%20la%20prochaine%20session%20Belle%26Fit" target="_blank" rel="noopener">Rejoindre la prochaine session</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coaching">
+  <div class="wrap">
+    <div class="titre reveal">
+      <span class="main">à chacun son chemin</span>
+      <h2>Des séances qui vous ressemblent</h2>
+      <p>Coaching sportif, yoga, bien-être&nbsp;: Catherine adapte chaque séance à votre corps, à votre énergie du moment et à votre objectif.</p>
+    </div>
+    <div class="cartes3">
+      <div class="c3 reveal"><div class="num">01</div><h3>Coaching personnel</h3><p>Des séances adaptées pour vous motiver et vous accompagner activement vers votre objectif de vie et d'envie.</p></div>
+      <div class="c3 reveal"><div class="num">02</div><h3>Yoga &amp; bien-être</h3><p>Respiration, postures, relaxation et méditation, en plein air au Parc Boisé du Port.</p></div>
+      <div class="c3 reveal"><div class="num">03</div><h3>Yoga solidaire</h3><p>Une belle collaboration avec France Alzheimer Réunion&nbsp;: accompagner les malades comme les aidants à relâcher, respirer, se concentrer et vivre l'instant présent.</p></div>
+    </div>
+    <div class="parcours reveal">
+      <span>Coach sportif &amp; professeur de yoga diplômée</span>
+      <span>Sivananda Yoga Vedanta (Inde)</span>
+      <span>Plus de 1&nbsp;100 abonnés sur Facebook</span>
+    </div>
+  </div>
+</section>
+
+<div class="avis">
+  <div class="wrap reveal">
+    <div class="etoiles">♥ recommande ♥</div>
+    <blockquote>« Elle est géniale… et super pro »</blockquote>
+    <p>Valérie C., avis publié sur Facebook</p>
+  </div>
+</div>
+
+<section style="padding-bottom:3rem">
+  <div class="wrap titre reveal"><span class="main">en images</span><h2>Au fil des matinées</h2></div>
+  <div class="galerie">
+    <figure><img src="img/parc-boise-savasana.webp" alt="Relaxation sous les arbres du Parc Boisé" loading="lazy"><figcaption>Relaxation au Parc Boisé</figcaption></figure>
+    <figure><img src="img/tronc-the.webp" alt="Une tasse au pied d'un grand arbre, avant la séance" loading="lazy"><figcaption>Un instant pour soi</figcaption></figure>
+    <figure><img src="img/canopee.webp" alt="La canopée du parc" loading="lazy"><figcaption>Lever les yeux</figcaption></figure>
+    <figure><img src="img/cartes-une-porte-s-ouvre.webp" alt="Cartes illustrées" loading="lazy"><figcaption>« Une porte s'ouvre »</figcaption></figure>
+    <figure><img src="img/creativite-tapis.webp" alt="Dessin sur le tapis" loading="lazy"><figcaption>Créativité</figcaption></figure>
+    <figure><img src="img/equilibre-plage.webp" alt="Équilibre sur la plage" loading="lazy"><figcaption>Belle&amp;Fit, en extérieur</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section class="noel" id="offrir">
+  <div class="etincelle" style="top:12%;left:8%"></div><div class="etincelle" style="top:30%;left:88%;animation-delay:1s"></div><div class="etincelle" style="top:78%;left:14%;animation-delay:2s"></div><div class="etincelle" style="top:65%;left:70%;animation-delay:1.5s"></div><div class="etincelle" style="top:20%;left:52%;animation-delay:3s"></div>
+  <div class="wrap noel-grid">
+    <div class="reveal">
+      <span class="main">pour Noël</span>
+      <h2>Offrez un temps pour soi</h2>
+      <p>Une Matinée Bien-être &amp; Yoga au Parc Boisé, une session Belle&amp;Fit ou une séance de coaching&nbsp;: un cadeau qui fait du bien au corps et au mental. Écrivez à Catherine, elle prépare le bon cadeau avec vous.</p>
+      <a class="btn btn-wa respire" style="background:var(--soleil);color:var(--encre)" href="https://wa.me/262692428899?text=Bonjour%20Catherine%2C%20je%20voudrais%20offrir%20une%20Matin%C3%A9e%20Bien-%C3%AAtre%20%26%20Yoga%20pour%20No%C3%ABl%20%F0%9F%8E%81" target="_blank" rel="noopener">Offrir une matinée yoga</a>
+    </div>
+    <div class="reveal">
+      <div class="bon">
+        <span class="ruban-bon">Bon cadeau</span>
+        <h3>Matinée Bien-être &amp; Yoga</h3>
+        <p class="pour">pour&nbsp;:</p>
+        <div class="ligne"></div><div class="ligne"></div>
+        <small>Respirer · bouger · s'aimer · s'honorer — Parc Boisé du Port</small>
+      </div>
+      <p class="illus">Illustration</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="titre reveal"><span class="main">on se retrouve au Port&nbsp;?</span><h2>Contact &amp; réservations</h2></div>
+    <div class="contact-grid">
+      <ul class="coord reveal">
+        <li><a href="https://wa.me/262692428899?text=Bonjour%20Catherine%20%F0%9F%99%8F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg><span><b>WhatsApp</b>06 92 42 88 99</span></a></li>
+        <li><a href="tel:+262692428899"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><b>Téléphone</b>+262 692 42 88 99</span></a></li>
+        <li><a href="mailto:catherinembcoach@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><b>E-mail</b>catherinembcoach@gmail.com</span></a></li>
+        <li><a href="https://www.facebook.com/CatherineMainvilleCoachyoga" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6.5c0-.8.2-1.5 1.5-1.5H17V2h-2.6C11.6 2 11 3.9 11 5.9V8H9v3h2v11h3V11h2.6l.4-3z"/></svg><span><b>Facebook</b>Catherine Mainville Coach Sportif &amp; Professeur de Yoga</span></a></li>
+      </ul>
+      <div class="lieu reveal">
+        <h3>Le Port, en plein air</h3>
+        <p><b style="color:var(--soleil)">Parc Boisé du Port</b> pour les Matinées Bien-être &amp; Yoga, et le <b style="color:var(--soleil)">Fond de mer du Port</b> (97407), l'adresse de Catherine.</p>
+        <p>Chaque séance se réserve à l'avance&nbsp;: un message suffit, Catherine vous répond avec plaisir.</p>
+        <svg class="vague" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C60 10 120 70 200 40 S340 10 400 40 V70 H0z" fill="#2f9aa0"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Maquette privée imaginée par <b>Jonathan, ATMA Digital</b>, à partir des publications de Catherine Mainville.<br>
+  Photos&nbsp;: page Facebook de Catherine Mainville Coach Sportif &amp; Professeur de Yoga.
+</footer>
+
+<a class="wa-flottant" href="https://wa.me/262692428899?text=Bonjour%20Catherine%20%F0%9F%99%8F" target="_blank" rel="noopener" aria-label="Écrire à Catherine sur WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // apparitions au scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduit) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('vu'); io.unobserve(e.target); } }); }, {threshold:.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('vu'); }); }
+
+  // respiration : texte synchronisé avec le cercle (10 s)
+  var st = document.getElementById('souffle-texte');
+  if (st && !reduit) {
+    var inspire = true;
+    setInterval(function(){ inspire = !inspire; st.innerHTML = (inspire ? 'Inspire…' : 'Expire…') + '<small>suivez le cercle</small>'; }, 5000);
+  }
+
+  // feuilles et lumière filtrée du Parc Boisé
+  var c = document.getElementById('feuilles');
+  if (!c || reduit) return;
+  var x = c.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio || 1, 2), parts = [], actif = true;
+  var couleurs = ['rgba(200,217,58,.75)','rgba(122,160,84,.7)','rgba(242,194,48,.7)','rgba(255,255,255,.55)'];
+  function taille(){ W = c.clientWidth; H = c.clientHeight; c.width = W*dpr; c.height = H*dpr; x.setTransform(dpr,0,0,dpr,0,0); }
+  function nouvelle(haut){ return {x:Math.random()*W, y: haut ? -20 : Math.random()*H, r:4+Math.random()*7, vy:.25+Math.random()*.55, vx:-.2+Math.random()*.4, a:Math.random()*6.28, va:-.015+Math.random()*.03, ph:Math.random()*6.28, c:couleurs[Math.floor(Math.random()*couleurs.length)], lum:Math.random()<.3}; }
+  taille(); window.addEventListener('resize', taille);
+  var n = W < 600 ? 16 : 26;
+  for (var i=0;i<n;i++) parts.push(nouvelle(false));
+  function dessine(p){
+    x.save(); x.translate(p.x,p.y); x.rotate(p.a);
+    if (p.lum) { var g = x.createRadialGradient(0,0,0,0,0,p.r*2.4); g.addColorStop(0,'rgba(255,240,190,.5)'); g.addColorStop(1,'rgba(255,240,190,0)'); x.fillStyle=g; x.beginPath(); x.arc(0,0,p.r*2.4,0,6.28); x.fill(); }
+    else { x.fillStyle = p.c; x.beginPath(); x.moveTo(0,-p.r); x.quadraticCurveTo(p.r*.9,0,0,p.r); x.quadraticCurveTo(-p.r*.9,0,0,-p.r); x.fill(); }
+    x.restore();
+  }
+  function boucle(t){
+    if (!actif) return;
+    x.clearRect(0,0,W,H);
+    parts.forEach(function(p,i){
+      p.y += p.vy; p.x += p.vx + Math.sin(t/1400 + p.ph)*.35; p.a += p.va;
+      if (p.y > H+20 || p.x < -30 || p.x > W+30) parts[i] = nouvelle(true);
+      dessine(p);
+    });
+    requestAnimationFrame(boucle);
+  }
+  document.addEventListener('visibilitychange', function(){ actif = !document.hidden; if (actif) requestAnimationFrame(boucle); });
+  requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Catherine Mainville" defer></script>
+</body>
+</html>
