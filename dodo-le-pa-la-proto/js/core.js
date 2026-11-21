@@ -112,6 +112,8 @@
     setTick(() => { const c = $('#chrono'); if (c) c.textContent = fmt(now() - st.started); });
     const ctx = makeCtx(team, step);
     window.PUZZLES[step.type](ctx, $('#puzzle'));
+    // énigme déjà réussie (retour arrière, rechargement) : le bouton pour continuer revient tout de suite
+    if (ctx.scratch._gagne && !ctx.won) ctx.showNext(ctx.scratch._gagne);
   }
   function makeCtx(team, step) {
     const st = S.teams[team];
@@ -132,10 +134,17 @@
         const dur = now() - (st.stepStart || now());
         st.durations[step.id] = dur;
         log(team, step.id, 'réussi', (detail || '') + ` (${fmt(dur)})`);
-        ctx.fb(msg || 'Bravo !', 'good');
+        ctx.scratch._gagne = msg || 'Bravo !'; // pour retrouver « Continuer l'aventure » après un retour arrière
+        ctx.showNext(msg || 'Bravo !');
+      },
+      showNext(msg) {
+        ctx.won = true;
+        ctx.fb(msg, 'good');
         const after = $('#after');
         after.innerHTML = `<button class="btn pop" data-testid="next">Continuer l'aventure</button>`;
         after.querySelector('button').onclick = () => nextStep(team);
+        document.querySelectorAll('#puzzle .stage').forEach(x => x.classList.add('libre'));
+        setTimeout(() => { try { after.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) { } }, 350);
         save();
       }
     };

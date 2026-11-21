@@ -228,7 +228,7 @@
   P.differences = function (ctx, el) {
     const sc = ctx.scratch; sc.found = sc.found || [];
     el.innerHTML = `<p class="center">Sur le couvercle, deux oiseaux presque jumeaux. Visez chaque différence de l'oiseau de <b>droite</b> avec la loupe aimantée.</p>
-      <div class="stage" style="max-width:640px"><svg viewBox="0 0 440 220" data-testid="oiseaux" style="background:#efe2c6;border-radius:8px;border:3px solid #6b4426">
+      <div class="stage" style="max-width:640px"><svg viewBox="0 0 440 220" data-testid="oiseaux" style="touch-action:pan-y;background:#efe2c6;border-radius:8px;border:3px solid #6b4426">
         <g>${bird(false)}</g><line x1="220" y1="6" x2="220" y2="214" stroke="#6b4426" stroke-width="2" stroke-dasharray="4 4"/>
         <g transform="translate(220 0)" id="right">${bird(true)}<rect x="0" y="0" width="220" height="220" fill="transparent" id="hit"/>
           <g id="marks" style="pointer-events:none"></g><circle id="loupe" style="pointer-events:none" r="18" fill="rgba(255,255,255,.18)" stroke="#b23a2e" stroke-width="2.5" cx="-60" cy="-60"/></g>
@@ -237,7 +237,9 @@
     const drawMarks = () => { marks.innerHTML = sc.found.map(i => `<circle cx="${P.DIFFS[i][0]}" cy="${P.DIFFS[i][1]}" r="17" fill="none" stroke="#b23a2e" stroke-width="3" class="pop"/>`).join(''); el.querySelector('#cnt').textContent = sc.found.length + ' / 7'; };
     drawMarks();
     const toLocal = e => { const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; const p = pt.matrixTransform(svg.getScreenCTM().inverse()); return [p.x - 220, p.y]; };
-    svg.addEventListener('pointermove', e => { const [x, y] = toLocal(e); loupe.setAttribute('cx', x); loupe.setAttribute('cy', y); });
+    // la loupe suit le doigt (glissé horizontal) ou se pose là où l'on touche ; un glissé vertical fait défiler la page
+    const moveLoupe = e => { const [x, y] = toLocal(e); loupe.setAttribute('cx', x); loupe.setAttribute('cy', y); };
+    svg.addEventListener('pointermove', moveLoupe); svg.addEventListener('pointerdown', moveLoupe);
     el.querySelector('#hit').addEventListener('click', e => {
       const [x, y] = toLocal(e);
       const i = P.DIFFS.findIndex(d => Math.hypot(d[0] - x, d[1] - y) < 20);

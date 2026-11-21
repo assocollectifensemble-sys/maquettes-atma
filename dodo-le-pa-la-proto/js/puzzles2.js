@@ -43,13 +43,13 @@
     let done = false;
     const looked = new Set(N.map(a => a[1]).filter(x => x != null));
     el.innerHTML = `<p class="center">Quatorze animaux peints sur les flancs. Chacun a des yeux-boutons. Suivez les regards : seuls les animaux <b>ni regardés, ni regardant un autre</b> ouvrent la trappe, si on appuie sur leurs yeux <b>tous ensemble</b>.</p>
-      <div class="stage"><svg viewBox="0 0 400 380" data-testid="animaux" style="background:#7a5130;border-radius:10px;touch-action:none">
+      <div class="stage"><svg viewBox="0 0 400 380" data-testid="animaux" style="background:#7a5130;border-radius:10px;touch-action:pan-y">
         <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffe9a8"/></marker></defs>
         ${N.map((a, i) => a[1] == null ? '' : (() => { const [x1, y1] = pos[i], [x2, y2] = pos[a[1]]; const d = Math.hypot(x2 - x1, y2 - y1); const ux = (x2 - x1) / d, uy = (y2 - y1) / d;
           return `<line x1="${x1 + ux * 30}" y1="${y1 + uy * 30}" x2="${x2 - ux * 32}" y2="${y2 - uy * 32}" stroke="#ffe9a8" stroke-width="2.6" stroke-dasharray="6 4" marker-end="url(#ar)"/>`; })()).join('')}
         ${N.map((a, i) => { const [x, y] = pos[i]; let dx = 0, dy = -4;
           if (a[1] != null) { const [x2, y2] = pos[a[1]]; const d = Math.hypot(x2 - x, y2 - y); dx = (x2 - x) / d * 4; dy = (y2 - y) / d * 4; }
-          return `<g class="eye-btn" data-i="${i}" data-testid="animal-${i}" style="cursor:pointer">
+          return `<g class="eye-btn" data-i="${i}" data-testid="animal-${i}" style="cursor:pointer;touch-action:none">
             <circle cx="${x}" cy="${y}" r="28" fill="#efe2c6" stroke="${INK}" stroke-width="2"/>
             <circle class="eyeball" cx="${x}" cy="${y - 4}" r="11" fill="#fff" stroke="${INK}" stroke-width="2"/>
             <circle cx="${x + dx}" cy="${y - 4 + dy}" r="5" fill="${INK}"/>
@@ -253,13 +253,15 @@
   P.fil = function (ctx, el) {
     const sc = ctx.scratch;
     el.innerHTML = stepIntro(ctx, 'Cilaos et sa route aux 400 virages : un fil de cuivre tordu. Glissez la boucle du départ à l\'arrivée en restant autour du fil. Au moindre contact, retour au départ.') + `
-      <div class="stage"><svg viewBox="0 0 320 210" data-testid="fil" style="background:#2c3b2a;border-radius:10px;touch-action:none">
+      <div class="stage"><div class="fil-cadre"><svg viewBox="0 0 320 210" data-testid="fil" style="background:#2c3b2a;border-radius:10px;touch-action:pan-y">
         <path id="wire" d="${P.FIL_D}" stroke="#d68a3c" stroke-width="4" fill="none"/>
         <circle cx="20" cy="150" r="8" fill="#3f7d3a"/><text x="20" y="176" fill="#e9d4a8" font-size="11" text-anchor="middle">départ</text>
         <circle cx="300" cy="60" r="8" fill="#c0392b"/><text x="300" y="44" fill="#e9d4a8" font-size="11" text-anchor="middle">arrivée</text>
         <g id="leds"></g>
         <circle id="loop" cx="20" cy="150" r="13" fill="rgba(255,255,255,.06)" stroke="#e2c47a" stroke-width="3" style="cursor:grab"/>
-      </svg></div><p class="center" id="st">Saisissez la boucle au départ.</p><div id="dirs"></div>`;
+      </svg><div class="fil-prise" aria-hidden="true"></div></div></div><p class="center" id="st">Saisissez la boucle au départ.</p><div id="dirs"></div>`;
+    // poignée HTML posée sur le départ : là, le doigt saisit la boucle ; partout ailleurs sur le dessin, il fait défiler la page
+    el.querySelector('.fil-prise').addEventListener('pointerdown', e => { el.querySelector('[data-testid="fil"]').dispatchEvent(new PointerEvent('pointerdown', e)); });
     const svg = el.querySelector('[data-testid="fil"]'), wire = el.querySelector('#wire'), loop = el.querySelector('#loop'), leds = el.querySelector('#leds');
     const len = wire.getTotalLength();
     const samples = Array.from({ length: 400 }, (_, i) => wire.getPointAtLength(len * i / 399));
