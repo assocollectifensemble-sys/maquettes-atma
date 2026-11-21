@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les Fleurs de Manzelle Marguerite · Fleuriste au Tampon</title>
+<meta name="description" content="Bouquets, paniers et créations florales faits avec le cœur au Tampon : mariage, deuil, anniversaire, naissance, évènements, livraison à domicile.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les Fleurs de Manzelle Marguerite · Fleuriste au Tampon">
+<meta property="og:description" content="Chaque bouquet est unique et préparé avec passion. Mariage, deuil, anniversaire, naissance, évènements, livraison au Tampon et à Saint-Pierre.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/fleurs-manzelle-marguerite-le-tampon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/fleurs-manzelle-marguerite-le-tampon/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Dancing+Script:wght@600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#f7e6ea; --rose2:#f0cfd8; --bordeaux:#8b1538; --bordeaux2:#6d0f2b;
+  --sauge:#6e8b5e; --sauge2:#e7eee1; --marguerite:#f2c14e; --creme:#fffaf5;
+  --encre:#3d2a30; --doux:#7a6268;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;line-height:1.15;color:var(--bordeaux2)}
+.script{font-family:'Dancing Script',cursive;color:var(--bordeaux)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* ruban */
+.ruban{background:var(--bordeaux2);color:#fff;font-size:.82rem;text-align:center;padding:8px 14px;position:relative;z-index:5}
+.ruban b{color:var(--marguerite)}
+
+/* petales */
+#petales{position:fixed;inset:0;pointer-events:none;z-index:3}
+
+/* hero */
+.hero{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+.hero .fond{position:absolute;inset:0;background:url(img/bouquet-roses-delphinium.jpg) center 40%/cover;animation:kb 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,20,32,.15) 0%,rgba(61,20,32,.25) 40%,rgba(61,20,32,.82) 100%)}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12) translate(-2%,-1%)}}
+.hero .contenu{position:relative;z-index:2;padding:0 20px 64px;max-width:1100px;margin:0 auto;width:100%}
+.hero .pre{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--marguerite);opacity:0;animation:monte 1s .3s forwards}
+.hero h1{color:#fff;font-size:clamp(2.4rem,8vw,4.6rem);font-weight:700;opacity:0;animation:monte 1.1s .6s forwards}
+.hero .slogan{font-size:1.12rem;max-width:560px;margin-top:12px;opacity:0;animation:monte 1s 1s forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;opacity:0;animation:monte 1s 1.3s forwards}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:40px;font-weight:700;text-decoration:none;font-size:1rem;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.btn-wa{background:#25a35a;color:#fff;animation:respire 3.2s ease-in-out infinite}
+.btn-clair{background:rgba(255,255,255,.92);color:var(--bordeaux2)}
+.btn-bdx{background:var(--bordeaux);color:#fff}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(37,163,90,.45)}50%{box-shadow:0 0 0 10px rgba(37,163,90,0)}}
+
+/* bandeau */
+.bandeau{background:var(--rose2);overflow:hidden;white-space:nowrap;padding:12px 0;border-top:1px solid #e9bfcb;border-bottom:1px solid #e9bfcb}
+.bandeau .piste{display:inline-block;animation:defile 32s linear infinite;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--bordeaux2);font-weight:600}
+.bandeau span{margin:0 18px}
+.bandeau i{font-style:normal;color:var(--sauge)}
+@keyframes defile{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{padding:76px 0;position:relative}
+.titre{text-align:center;margin-bottom:38px}
+.titre .script{font-size:1.5rem;display:block}
+.titre h2{font-size:clamp(2rem,6vw,2.9rem)}
+.titre p{color:var(--doux);max-width:620px;margin:10px auto 0}
+
+/* histoire */
+.histoire{display:grid;gap:36px;align-items:center}
+.histoire .photo{border-radius:180px 180px 18px 18px;overflow:hidden;box-shadow:0 18px 40px rgba(139,21,56,.18);max-width:420px;margin:0 auto}
+.histoire .photo img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.histoire h2{font-size:clamp(2rem,6vw,2.7rem);margin-bottom:14px}
+.histoire p{margin-bottom:14px}
+.creole{background:var(--sauge2);border-left:4px solid var(--sauge);padding:14px 18px;border-radius:0 14px 14px 0;font-style:italic;color:#3e5135}
+.creole small{display:block;font-style:normal;color:var(--doux);margin-top:6px;font-size:.82rem}
+.pastilles{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.pastilles span{background:#fff;border:1px solid var(--rose2);color:var(--bordeaux2);padding:6px 12px;border-radius:20px;font-size:.86rem;font-weight:600}
+
+/* vague */
+.vague{display:block;width:100%;height:60px}
+
+/* collection */
+.col{background:var(--rose)}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px}
+.carte{background:#fff;border-radius:18px;padding:22px 10px;text-align:center;box-shadow:0 6px 18px rgba(139,21,56,.08);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-5px) rotate(-.5deg);box-shadow:0 14px 30px rgba(139,21,56,.16)}
+.carte .type{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sauge);font-weight:700}
+.carte h3{font-size:clamp(1.3rem,5.2vw,1.7rem);margin:4px 0;line-height:1.1;position:relative;z-index:1}
+.carte .prix{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--bordeaux);font-weight:700}
+.carte::before{content:"";position:absolute;width:56px;height:56px;border-radius:50%;background:var(--rose);top:-30px;right:-30px}
+.duo{display:grid;gap:22px;margin-top:34px;align-items:center}
+.duo img{border-radius:18px;box-shadow:0 10px 28px rgba(0,0,0,.12);aspect-ratio:4/5;object-fit:cover;width:100%}
+.note{font-size:.88rem;color:var(--doux);text-align:center;margin-top:18px}
+.livraison{background:#fff;border-radius:16px;padding:18px 20px;border:1px dashed var(--bordeaux);margin-top:8px}
+.livraison strong{color:var(--bordeaux)}
+
+/* mariage */
+.mariage .grid3{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.mariage .grid3 figure{border-radius:16px;overflow:hidden;position:relative}
+.mariage .grid3 figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;transition:transform .6s}
+.mariage .grid3 figure:hover img{transform:scale(1.05)}
+.mariage .grid3 figure.large{grid-column:1/-1}
+.mariage .grid3 figure.large img{aspect-ratio:4/3}
+figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(61,20,32,.75));color:#fff;font-size:.86rem}
+.pack{background:linear-gradient(135deg,var(--bordeaux),var(--bordeaux2));color:#fff;border-radius:22px;padding:26px 22px;margin-top:26px}
+.pack h3{color:#fff;font-size:1.9rem}
+.pack .prix{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--marguerite);font-weight:700}
+.pack ul{list-style:none;margin:10px 0 16px}
+.pack li{padding-left:24px;position:relative;margin:5px 0}
+.pack li::before{content:"✿";position:absolute;left:0;color:var(--marguerite)}
+.citation{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-style:italic;text-align:center;color:var(--bordeaux2);max-width:680px;margin:30px auto 0}
+.citation small{display:block;font-family:'Nunito',sans-serif;font-style:normal;font-size:.82rem;color:var(--doux);margin-top:6px}
+
+/* deuil */
+.deuil{background:#f4f1ee;text-align:center}
+.deuil p.grand{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;max-width:640px;margin:0 auto;color:#4b3b3f}
+.deuil .colombe{font-size:2rem;opacity:.7}
+
+/* galerie */
+.galerie{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 72%;max-width:320px;scroll-snap-align:center;border-radius:18px;overflow:hidden;position:relative;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+.galerie img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.glisse{text-align:center;color:var(--doux);font-size:.85rem}
+
+/* commander */
+.etapes{display:grid;gap:18px}
+.etape{background:#fff;border-radius:18px;padding:22px;box-shadow:0 6px 18px rgba(0,0,0,.06);border-top:4px solid var(--sauge)}
+.etape .num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--sauge);color:#fff;font-weight:700;margin-bottom:8px}
+.etape h3{font-size:1.5rem;margin-bottom:6px}
+.etape ul{list-style:none}
+.etape li{margin:6px 0;padding-left:20px;position:relative}
+.etape li::before{content:"•";position:absolute;left:4px;color:var(--bordeaux)}
+
+/* noel */
+.noel{background:radial-gradient(circle at 20% 10%,#a32049 0,var(--bordeaux2) 55%,#4a0a1e 100%);color:#fff;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .script{color:var(--marguerite)}
+.noel p{max-width:600px;margin:0 auto 14px;color:#fbe9ee}
+.noel .idees{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px 0 26px}
+.noel .idees span{border:1px solid rgba(242,193,78,.6);padding:8px 14px;border-radius:24px;font-size:.92rem}
+.noel .etoile{position:absolute;color:var(--marguerite);opacity:.35;animation:scintille 3s ease-in-out infinite}
+@keyframes scintille{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.6;transform:scale(1.1)}}
+
+/* contact */
+.contact .bloc{display:grid;gap:20px}
+.infos{background:#fff;border-radius:20px;padding:24px;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.infos h3{font-size:1.6rem;margin-bottom:10px}
+.ligne{display:flex;gap:12px;margin:10px 0;align-items:flex-start}
+.ligne .ic{flex:0 0 34px;height:34px;border-radius:50%;background:var(--rose);display:grid;place-items:center}
+.ligne a{color:var(--bordeaux);font-weight:700;text-decoration:none;word-break:break-word}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td{padding:6px 0;border-bottom:1px solid #f1e3e7;vertical-align:top}
+td:first-child{font-weight:700;color:var(--bordeaux2);width:95px}
+.reseaux{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+footer{background:var(--encre);color:#e9dade;text-align:center;padding:28px 20px;font-size:.85rem}
+footer .script{color:var(--marguerite);font-size:1.4rem}
+
+.apparait{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.apparait.vu{opacity:1;transform:none}
+
+@media(min-width:760px){
+  .histoire{grid-template-columns:1fr 1.1fr}
+  .duo{grid-template-columns:1fr 1fr}
+  .mariage .grid3{grid-template-columns:1.3fr 1fr 1fr}
+  .mariage .grid3 figure.large{grid-column:auto;grid-row:span 2}
+  .mariage .grid3 figure.large img{aspect-ratio:auto;height:100%}
+  .etapes{grid-template-columns:repeat(3,1fr)}
+  .contact .bloc{grid-template-columns:1fr 1fr}
+  .galerie figure{flex-basis:300px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero .pre,.hero h1,.hero .slogan,.hero .ctas,.apparait{opacity:1;transform:none}
+  #petales{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Les Fleurs de Manzelle Marguerite</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Bouquet de roses crème, delphiniums bleus et touches jaunes"></div>
+  <div class="contenu">
+    <p class="pre">Fleuriste au Tampon</p>
+    <h1>Les Fleurs de<br>Manzelle Marguerite</h1>
+    <p class="slogan">Des compositions réalisées avec beaucoup de soin, de créativité et surtout avec le cœur. Chaque bouquet est unique et préparé avec passion.</p>
+    <div class="ctas">
+      <a class="btn btn-wa" href="https://wa.me/262692532874?text=Bonjour%20Manzelle%20Marguerite%2C%20je%20voudrais%20r%C3%A9server%20un%20bouquet" target="_blank" rel="noopener">💬 Réserver sur WhatsApp</a>
+      <a class="btn btn-clair" href="tel:+262692532874">📞 0692 53 28 74</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Mariage</span><i>✿</i><span>Communion</span><i>✿</i><span>Baptême</span><i>✿</i><span>Deuil</span><i>✿</i><span>Anniversaire</span><i>✿</i><span>Naissance</span><i>✿</i><span>Évènement</span><i>✿</i><span>Plaisir d'offrir</span><i>✿</i><span>Livraison à domicile</span><i>✿</i>
+  <span>Mariage</span><i>✿</i><span>Communion</span><i>✿</i><span>Baptême</span><i>✿</i><span>Deuil</span><i>✿</i><span>Anniversaire</span><i>✿</i><span>Naissance</span><i>✿</i><span>Évènement</span><i>✿</i><span>Plaisir d'offrir</span><i>✿</i><span>Livraison à domicile</span><i>✿</i>
+</div></div>
+
+<section id="histoire">
+  <div class="wrap histoire">
+    <div class="photo apparait"><img src="img/hortensias-producteur.jpg" alt="Hortensias bleus et blancs choisis chez le producteur" loading="lazy"></div>
+    <div class="apparait">
+      <span class="script" style="font-size:1.5rem">L'atelier de Manzelle Marguerite</span>
+      <h2>Des fleurs choisies à la source, arrangées avec le cœur</h2>
+      <p>Avant d'être fleuriste, Manzelle Marguerite était agricultrice. Elle garde ce lien précieux avec la terre : elle sélectionne avec soin vos fleurs directement chez le producteur, puis les compose dans son atelier du Tampon pour tous les moments importants de votre vie.</p>
+      <p>Après une petite pause, elle revient avec une formation de perfectionnement en technique florale : de nouvelles techniques, de nouvelles idées et surtout… toujours plus de fleurs !</p>
+      <p class="creole">« Un jolie p'ti Manzelle li aime partage son lamour dans fleurs, bouquets ek compositions florales pou embellir tout les p'ti moment important dans zot vie. »<small>Manzelle Marguerite, sur sa page Facebook</small></p>
+      <div class="pastilles"><span>🌼 Entrepreneuse de la CAE Possible</span><span>🚚 Livraison Tampon &amp; Saint-Pierre</span><span>💐 Créations sur mesure</span></div>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0,30 C240,60 480,0 720,28 C960,56 1200,8 1440,30 L1440,60 L0,60 Z" fill="#f7e6ea"/></svg>
+<section class="col" id="bouquets" style="padding-top:40px">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="script">Pour le plaisir d'offrir</span>
+      <h2>Bouquets &amp; paniers</h2>
+      <p>Faites-les livrer à domicile ou au travail : une belle surprise pour un anniversaire, un évènement spécial ou simplement le plaisir d'offrir.</p>
+    </div>
+    <div class="grille">
+      <div class="carte apparait"><div class="type">Bouquet</div><h3>Douceur</h3><div class="prix">15 €</div></div>
+      <div class="carte apparait"><div class="type">Bouquet</div><h3>Tendresse</h3><div class="prix">25 €</div></div>
+      <div class="carte apparait"><div class="type">Bouquet</div><h3>Folie</h3><div class="prix">35 €</div></div>
+      <div class="carte apparait"><div class="type">Panier</div><h3>Coup Cœur</h3><div class="prix">10 €</div></div>
+      <div class="carte apparait"><div class="type">Panier</div><h3>D'Amour</h3><div class="prix">20 €</div></div>
+      <div class="carte apparait"><div class="type">Panier</div><h3>Passion</h3><div class="prix">30 €</div></div>
+    </div>
+    <p class="note">Tarifs publiés par Manzelle Marguerite sur sa page Facebook (mars 2026).</p>
+    <div class="duo">
+      <img class="apparait" src="img/bouquet-folie.jpg" alt="Bouquet Folie : gerberas roses, roses crème et bordeaux" loading="lazy">
+      <div class="apparait">
+        <h3 style="font-size:1.9rem">« Livraison de cette belle nuance de rose »</h3>
+        <p style="margin:10px 0 16px">Le bouquet Folie, gerberas et roses dans toutes les nuances de rose, livré au Tampon. Chaque création part avec votre petit mot glissé dans le bouquet.</p>
+        <div class="livraison"><strong>Livraison à domicile ou au bureau</strong><br>Au Tampon et à Saint-Pierre, frais selon le secteur.</div>
+        <p style="margin-top:16px"><a class="btn btn-bdx" href="https://wa.me/262692532874?text=Bonjour%2C%20je%20voudrais%20commander%20un%20bouquet%20%C3%A0%20livrer" target="_blank" rel="noopener">Commander un bouquet</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" style="transform:rotate(180deg)"><path d="M0,30 C240,60 480,0 720,28 C960,56 1200,8 1440,30 L1440,60 L0,60 Z" fill="#f7e6ea"/></svg>
+
+<section class="mariage" id="mariage">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="script">Le plus beau jour</span>
+      <h2>Mariages &amp; évènements</h2>
+      <p>Bouquet de mariée, centres de table, table du gâteau, boutonnières, bracelets et couronnes de fleurs : des créations florales adaptées à chaque célébration.</p>
+    </div>
+    <div class="grid3">
+      <figure class="large apparait"><img src="img/bouquet-mariee-arums.jpg" alt="Bouquet de mariée bleu, blanc et arums jaunes" loading="lazy"><figcaption>Bouquet de mariée tout en couleurs</figcaption></figure>
+      <figure class="apparait"><img src="img/composition-table-gateau.jpg" alt="Composition florale de la table du gâteau" loading="lazy"><figcaption>Composition table gâteau</figcaption></figure>
+      <figure class="apparait"><img src="img/petits-bouquets-roses-creme.jpg" alt="Petits bouquets de roses crème et gypsophile" loading="lazy"><figcaption>Accessoires de mariage</figcaption></figure>
+    </div>
+    <div class="pack apparait">
+      <span class="script" style="color:var(--marguerite);font-size:1.3rem">Formule publiée sur la page</span>
+      <h3>Pack Belle réception</h3>
+      <ul>
+        <li>7 centres de table</li>
+        <li>1 composition pour la table du gâteau</li>
+        <li>1 boutonnière offerte</li>
+      </ul>
+      <div class="prix">100 €</div>
+      <p style="margin:6px 0 16px">Réservez votre date et demandez votre devis pour vos accessoires (boutonnière, bracelet, couronne de fleurs).</p>
+      <a class="btn btn-clair" href="https://wa.me/262692532874?text=Bonjour%2C%20je%20voudrais%20un%20devis%20pour%20mon%20mariage" target="_blank" rel="noopener">Demander un devis</a>
+    </div>
+    <p class="citation apparait">« Pourquoi choisir uniquement du blanc quand les fleurs offrent une infinité de couleurs et de textures ? »<small>Manzelle Marguerite, juillet 2026</small></p>
+  </div>
+</section>
+
+<section class="deuil" id="deuil">
+  <div class="wrap apparait">
+    <div class="colombe">🕊️</div>
+    <h2 style="font-size:2.2rem;margin:6px 0 14px">Hommages</h2>
+    <p class="grand">« Parce que chaque hommage mérite d'être unique, je réalise des couronnes florales avec soin et délicatesse pour accompagner vos proches dans un dernier au revoir. »</p>
+    <p style="margin-top:14px">Couronne, gerbe de fleurs <b>à partir de 20 €</b> · livraison possible selon le secteur</p>
+    <p style="margin-top:18px"><a class="btn btn-bdx" href="tel:+262692532874">Appeler Manzelle Marguerite</a></p>
+  </div>
+</section>
+
+<section id="galerie" style="padding-bottom:50px">
+  <div class="titre apparait wrap">
+    <span class="script">Dans l'atelier</span>
+    <h2>Quelques créations</h2>
+  </div>
+  <div class="galerie">
+    <figure><img src="img/composition-lys-proteas.jpg" alt="Grande composition de lys et proteas" loading="lazy"><figcaption>Grande composition aux lys</figcaption></figure>
+    <figure><img src="img/bouquet-amoureux-du-rose.jpg" alt="Bouquet du jour pour les amoureux du rose" loading="lazy"><figcaption>Le bouquet du jour, pour les amoureux du rose</figcaption></figure>
+    <figure><img src="img/tasse-fleurie.jpg" alt="Composition florale dans une tasse" loading="lazy"><figcaption>Composition en tasse</figcaption></figure>
+    <figure><img src="img/sac-tournesols-paques.jpg" alt="Tournesols et marguerites dans un sac kraft" loading="lazy"><figcaption>Tournesols de Pâques</figcaption></figure>
+    <figure><img src="img/panier-paques.jpg" alt="Panier fleuri d'œillets roses et marguerites" loading="lazy"><figcaption>Panier fleuri</figcaption></figure>
+    <figure><img src="img/panier-fleuri.jpg" alt="Panier de roses et fleurs jaunes" loading="lazy"><figcaption>Panier de roses</figcaption></figure>
+    <figure><img src="img/bouquet-roses-delphinium.jpg" alt="Bouquet de roses crème et delphiniums" loading="lazy"><figcaption>Roses et delphiniums</figcaption></figure>
+  </div>
+  <p class="glisse">← faites glisser →</p>
+</section>
+
+<section id="commander" style="background:var(--sauge2)">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="script">Simple comme un bouquet</span>
+      <h2>Comment passer commande</h2>
+    </div>
+    <div class="etapes">
+      <div class="etape apparait"><div class="num">1</div><h3>Vos informations</h3><ul><li>Nom et prénom</li><li>Numéro de téléphone</li><li>Bouquet choisi</li><li>Petit mot à joindre au bouquet</li></ul></div>
+      <div class="etape apparait"><div class="num">2</div><h3>Le retrait ou la livraison, le samedi</h3><ul><li><b>Marché forain du Tampon</b>, de 6 h à 12 h</li><li><b>Points relais</b> de 14 h à 16 h : Parc des Palmiers, Théâtre Luc Donat, site de Miel Vert (Tampon), E.Leclerc Caserne (Saint-Pierre)</li><li><b>Livraison à domicile</b>, tarif selon le secteur</li></ul></div>
+      <div class="etape apparait"><div class="num">3</div><h3>Pour commander</h3><ul><li>Par téléphone ou WhatsApp : <a href="tel:+262692532874"><b>0692 53 28 74</b></a></li><li>Par mail : <a href="mailto:manzellemarguerite@gmail.com">manzellemarguerite@gmail.com</a></li><li>En message privé sur Facebook</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <span class="etoile" style="top:12%;left:8%;font-size:1.4rem">✦</span>
+  <span class="etoile" style="top:24%;right:10%;font-size:1rem;animation-delay:1s">✦</span>
+  <span class="etoile" style="bottom:18%;left:16%;font-size:1.1rem;animation-delay:2s">✦</span>
+  <span class="etoile" style="bottom:12%;right:18%;font-size:1.5rem;animation-delay:.5s">✦</span>
+  <div class="wrap apparait">
+    <span class="script" style="font-size:1.6rem">Offrir pour Noël</span>
+    <h2 style="font-size:clamp(2rem,6vw,2.8rem);margin:4px 0 14px">Des fleurs sous le sapin</h2>
+    <p>Un bouquet pour dire merci, un panier fleuri pour une maman, une composition pour la table du réveillon : réservez vos créations des fêtes et Manzelle Marguerite les prépare avec soin.</p>
+    <div class="idees"><span>💐 Bouquet à offrir</span><span>🧺 Panier fleuri</span><span>🕯️ Composition de table</span><span>🚚 Livraison Tampon &amp; Saint-Pierre</span></div>
+    <a class="btn btn-wa" href="https://wa.me/262692532874?text=Bonjour%20Manzelle%20Marguerite%2C%20je%20voudrais%20r%C3%A9server%20des%20fleurs%20pour%20No%C3%ABl" target="_blank" rel="noopener">💬 Réserver mes fleurs de Noël</a>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="titre apparait">
+      <span class="script">À très bientôt</span>
+      <h2>Contact &amp; horaires</h2>
+    </div>
+    <div class="bloc">
+      <div class="infos apparait">
+        <h3>Les Fleurs de Manzelle Marguerite</h3>
+        <div class="ligne"><span class="ic">📍</span><div>274 chemin Farjeau<br>97430 Le Tampon<br><a href="https://www.google.com/maps/place?q=place_id:ChIJBxYC9511eCERwSNs-Nm-0fI" target="_blank" rel="noopener">Voir sur Google Maps</a></div></div>
+        <div class="ligne"><span class="ic">📞</span><a href="tel:+262692532874">0692 53 28 74</a></div>
+        <div class="ligne"><span class="ic">✉️</span><a href="mailto:manzellemarguerite@gmail.com">manzellemarguerite@gmail.com</a></div>
+        <div class="reseaux">
+          <a class="btn btn-wa" href="https://wa.me/262692532874" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn-bdx" href="https://www.facebook.com/profile.php?id=61588517404048" target="_blank" rel="noopener">Facebook</a>
+          <a class="btn btn-bdx" href="https://www.instagram.com/manzellemarguerite97430/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="infos apparait">
+        <h3>Horaires de l'atelier</h3>
+        <table>
+          <tr><td>Mardi</td><td>8 h 30 – 12 h 30 · 13 h 30 – 16 h</td></tr>
+          <tr><td>Jeudi</td><td>8 h 30 – 12 h 30 · 13 h 30 – 16 h</td></tr>
+          <tr><td>Vendredi</td><td>8 h 30 – 12 h 30 · 13 h 30 – 16 h</td></tr>
+          <tr><td>Samedi</td><td>6 h – 11 h · 13 h 30 – 16 h</td></tr>
+          <tr><td>Dimanche</td><td>8 h 30 – 11 h</td></tr>
+          <tr><td>Lundi</td><td>Repos</td></tr>
+          <tr><td>Mercredi</td><td>Repos</td></tr>
+        </table>
+        <p class="note" style="text-align:left">Le samedi matin, retrouvez aussi Manzelle Marguerite au marché forain du Tampon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">Les Fleurs de Manzelle Marguerite</div>
+  <p>Créations florales · Mariage · Deuil · Anniversaire · Naissance · Évènement · Livraison à domicile</p>
+  <p style="margin-top:12px;opacity:.75">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Les Fleurs de Manzelle Marguerite.</p>
+</footer>
+
+<script>
+(function(){
+  var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12}):null;
+  document.querySelectorAll('.apparait').forEach(function(el){io?io.observe(el):el.classList.add('vu')});
+  var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var c=document.getElementById('petales');if(reduit||!c.getContext)return;
+  var x=c.getContext('2d'),W,H,P=[],run=true,N=window.innerWidth<600?16:26;
+  var cols=['#f0cfd8','#f7b6c6','#ffffff','#f2c14e','#e89bb0'];
+  function taille(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  taille();window.addEventListener('resize',taille);
+  for(var i=0;i<N;i++)P.push(neuf(true));
+  function neuf(debut){return{x:Math.random()*W,y:debut?Math.random()*H:-20,r:4+Math.random()*6,v:.35+Math.random()*.7,a:Math.random()*6.28,va:(Math.random()-.5)*.03,o:Math.random()*.5+.25,c:cols[Math.floor(Math.random()*cols.length)],m:Math.random()<.18}}
+  function marguerite(p){x.fillStyle='#fff';for(var k=0;k<6;k++){x.save();x.rotate(k*1.047);x.beginPath();x.ellipse(0,-p.r*.8,p.r*.32,p.r*.7,0,0,6.28);x.fill();x.restore()}x.fillStyle='#f2c14e';x.beginPath();x.arc(0,0,p.r*.35,0,6.28);x.fill()}
+  function boucle(){if(!run)return;x.clearRect(0,0,W,H);
+    P.forEach(function(p,i){p.y+=p.v;p.x+=Math.sin(p.a)*.6;p.a+=p.va;
+      x.save();x.globalAlpha=p.o;x.translate(p.x,p.y);x.rotate(p.a);
+      if(p.m){marguerite(p)}else{x.fillStyle=p.c;x.beginPath();x.ellipse(0,0,p.r,p.r*.55,0,0,6.28);x.fill()}
+      x.restore();if(p.y>H+20)P[i]=neuf(false)});
+    requestAnimationFrame(boucle)}
+  document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run)boucle()});
+  boucle();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Les Fleurs de Manzelle Marguerite" defer></script>
+</body>
+</html>

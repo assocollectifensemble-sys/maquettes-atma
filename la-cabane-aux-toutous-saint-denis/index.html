@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>La cabane aux toutous · Toilettage à Saint-Denis</title>
+<meta name="description" content="Salon de toilettage à Saint-Denis, boulevard de la Trinité : mises en beauté sur rendez-vous, 20 ans d'expérience, beaucoup de douceur.">
+<meta property="og:title" content="La cabane aux toutous · Toilettage à Saint-Denis">
+<meta property="og:description" content="Mises en beauté sur rendez-vous, 20 ans d'expérience et beaucoup de douceur, boulevard de la Trinité.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/la-cabane-aux-toutous-saint-denis/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/la-cabane-aux-toutous-saint-denis/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--jaune:#fae017;--jaune-doux:#fff6b8;--encre:#1d1b16;--creme:#fffdf4;--bulle:#8fd0e8;--bleu:#2f7fa3;--rose:#e8679a;--gris:#5c584c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1100px,100% - 2.5rem);margin:0 auto}
+h1,h2,h3{font-family:Fredoka,sans-serif;line-height:1.1;font-weight:600}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1rem}
+.eyebrow{font-family:Caveat,cursive;font-size:1.5rem;color:var(--bleu);margin-bottom:.2rem}
+section{padding:4.5rem 0;position:relative}
+
+/* ruban */
+.ruban{background:var(--encre);color:#f3efe0;font-size:.82rem;text-align:center;padding:.55rem 1rem;position:relative;z-index:5}
+.ruban b{color:var(--jaune);font-weight:700}
+
+/* bulles */
+#bulles{position:fixed;inset:0;pointer-events:none;z-index:3}
+
+/* hero */
+.hero{min-height:min(92vh,780px);min-height:min(92svh,780px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;padding:0}
+.hero .fond{position:absolute;inset:0;background:url(img/corgi-table.webp) 50% 40%/cover;animation:kb 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,12,.15) 0%,rgba(20,18,12,.25) 40%,rgba(20,18,12,.88) 100%)}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.12) translate(-1.5%,-1%)}}
+.hero .wrap{position:relative;z-index:2;padding:0 0 3.5rem}
+.logo{width:96px;height:96px;border-radius:50%;border:3px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.35);margin-bottom:1.2rem;animation:flotte 5s ease-in-out infinite}
+@keyframes flotte{50%{transform:translateY(-6px) rotate(-3deg)}}
+.hero h1{font-size:clamp(2.6rem,10vw,5rem);font-weight:700;letter-spacing:-.01em;text-shadow:0 4px 24px rgba(0,0,0,.35)}
+.hero h1 span{color:var(--jaune)}
+.hero .sous{font-size:1.12rem;max-width:34rem;margin:.9rem 0 1.6rem;color:#f4f1e6}
+.badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--jaune);color:var(--encre);font-weight:700;font-size:.85rem;padding:.35rem .85rem;border-radius:99px;margin-bottom:1rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;text-decoration:none;padding:.9rem 1.4rem;border-radius:99px;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn-j{background:var(--jaune);color:var(--encre);box-shadow:0 10px 26px -8px rgba(250,224,23,.8);animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 10px 36px -4px rgba(250,224,23,.95)}}
+.btn-b{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.7);backdrop-filter:blur(4px)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* vague */
+.vague{display:block;width:100%;height:46px}
+
+/* esprit */
+.esprit{background:var(--jaune-doux)}
+.esprit .grid{display:grid;gap:2.5rem;align-items:center}
+.esprit p{font-size:1.08rem;margin-bottom:1rem;max-width:36rem}
+.esprit .photo{position:relative;max-width:420px;justify-self:center}
+.esprit .photo img{border-radius:28px;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);aspect-ratio:3/4;object-fit:cover}
+.esprit .photo .pastille{position:absolute;bottom:-18px;left:-10px;background:var(--encre);color:var(--jaune);font-family:Fredoka;font-weight:600;padding:.8rem 1.1rem;border-radius:20px;transform:rotate(-4deg);box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
+.esprit .photo .pastille b{display:block;font-size:2rem;line-height:1}
+.chiffres{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.2rem}
+.chiffres span{background:#fff;border:2px solid var(--encre);border-radius:14px;padding:.45rem .9rem;font-weight:700;font-size:.92rem}
+
+/* soins */
+.soins .cartes{display:grid;gap:1.2rem;margin-top:2rem}
+.carte{background:#fff;border-radius:24px;padding:1.6rem 1.4rem;border:2px solid #f0ead2;transition:transform .3s,box-shadow .3s,border-color .3s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 22px 40px -24px rgba(0,0,0,.35);border-color:var(--jaune)}
+.carte .ico{width:54px;height:54px;border-radius:16px;background:var(--jaune);display:grid;place-items:center;margin-bottom:1rem}
+.carte .ico svg{width:30px;height:30px}
+.carte h3{font-size:1.3rem;margin-bottom:.4rem}
+.carte q{display:block;font-style:italic;color:var(--gris);margin-top:.7rem;font-size:.95rem}
+.carte small{display:block;color:var(--bleu);font-weight:700;font-size:.78rem;margin-top:.4rem}
+
+/* galerie */
+.galerie{background:var(--encre);color:#f6f2e4;overflow:hidden}
+.galerie h2 span{color:var(--jaune)}
+.galerie .intro{max-width:36rem;color:#d8d2bd}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:2rem 1.25rem 1.2rem;margin:0 auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--jaune) transparent}
+.rail figure{flex:0 0 min(72vw,300px);scroll-snap-align:center;position:relative}
+.rail img{border-radius:22px;aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .4s}
+.rail figure:hover img{transform:scale(1.03) rotate(-.6deg)}
+.rail figcaption{font-family:Caveat,cursive;font-size:1.3rem;color:var(--jaune);margin-top:.4rem;text-align:center}
+.indice{text-align:center;font-size:.85rem;color:#a9a28b}
+
+/* avis */
+.avis{background:var(--creme)}
+.avis .liste{display:grid;gap:1.1rem;margin-top:2rem}
+.avis blockquote{background:#fff;border-radius:22px;padding:1.5rem 1.4rem 1.3rem;position:relative;border-left:6px solid var(--jaune);box-shadow:0 18px 40px -30px rgba(0,0,0,.4)}
+.avis blockquote p{font-size:1.05rem}
+.avis cite{display:block;margin-top:.7rem;font-style:normal;font-size:.82rem;color:var(--gris);font-weight:700}
+.etoiles{color:#f2b705;letter-spacing:.15em;font-size:1.05rem}
+.note{display:inline-flex;align-items:center;gap:.6rem;background:var(--encre);color:#fff;border-radius:99px;padding:.45rem 1rem;font-weight:700}
+.note .etoiles{color:var(--jaune)}
+
+/* noel */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#24476a 0%,#16283c 75%);color:#f6f2e4;text-align:center;overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:var(--jaune)}
+.noel p{max-width:34rem;margin:0 auto 1.6rem;color:#d7e3ee}
+.bon{position:relative;max-width:440px;margin:1.5rem auto 2rem;background:var(--jaune);color:var(--encre);border-radius:22px;padding:1.8rem 1.4rem 1.6rem;box-shadow:0 30px 70px -30px rgba(0,0,0,.9);transform:rotate(-1.5deg)}
+.bon::before{content:"";position:absolute;inset:9px;border:2px dashed rgba(29,27,22,.45);border-radius:15px;pointer-events:none}
+.bon img{width:64px;height:64px;border-radius:50%;margin:0 auto .6rem;border:2px solid var(--encre)}
+.bon .craie{font-family:Caveat,cursive;font-size:1.6rem;display:block}
+.bon b{font-family:Fredoka;font-size:1.9rem;display:block;line-height:1.1}
+.bon .sm{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;font-weight:700}
+.bon .noeud{position:absolute;top:-16px;right:26px;width:48px;height:48px}
+.noel .ctas{justify-content:center}
+.noel .leg{font-size:.78rem;color:#9fb4c8;margin-top:1rem}
+
+/* contact */
+.contact .grid{display:grid;gap:2rem}
+.fiche{background:#fff;border:2px solid var(--encre);border-radius:26px;padding:1.6rem 1.4rem;box-shadow:8px 8px 0 var(--jaune)}
+.fiche dl{display:grid;gap:1.1rem}
+.fiche dt{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bleu);font-weight:700}
+.fiche dd{font-size:1.05rem;overflow-wrap:anywhere}
+.fiche dd a{text-decoration:none;border-bottom:2px solid var(--jaune)}
+.horaires{display:grid;grid-template-columns:auto 1fr;gap:.15rem 1rem}
+.contact .ctas{margin-top:1.6rem}
+.contact .btn-b{color:var(--encre);border-color:var(--encre);background:transparent}
+.carte-map{border-radius:26px;overflow:hidden;min-height:300px;border:2px solid var(--encre)}
+.carte-map iframe{width:100%;height:100%;min-height:300px;border:0;display:block}
+
+footer{background:var(--encre);color:#bdb7a2;text-align:center;font-size:.85rem;padding:2rem 1.25rem 2.4rem}
+footer a{color:var(--jaune)}
+
+/* apparition */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+.hero .rv{transition-duration:1.1s}
+
+@media (min-width:820px){
+  .esprit .grid{grid-template-columns:1.1fr .9fr}
+  .soins .cartes{grid-template-columns:repeat(3,1fr)}
+  .avis .liste{grid-template-columns:repeat(3,1fr)}
+  .contact .grid{grid-template-columns:1fr 1fr}
+  .rail{padding-left:max(1.25rem,calc((100vw - 1100px)/2))}
+  .logo{width:116px;height:116px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  #bulles{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour La cabane aux toutous</div>
+<canvas id="bulles" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="fond" role="img" aria-label="Un corgi tout juste toiletté sur la table de La cabane aux toutous"></div>
+  <div class="wrap">
+    <img class="logo rv" src="img/logo.webp" alt="Logo de La cabane aux toutous" width="116" height="116">
+    <p class="badge rv">★ 5,0 sur Google · 20 ans d'expérience</p>
+    <h1 class="rv">La cabane<br>aux <span>toutous</span></h1>
+    <p class="sous rv">Salon de toilettage à Saint-Denis, boulevard de la Trinité. Vos loulous repartent beaux, propres et tout doux, sur rendez-vous.</p>
+    <div class="ctas rv">
+      <a class="btn btn-j" href="tel:+262692372644"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Prendre rendez-vous</a>
+      <a class="btn btn-b" href="#soins">Découvrir la cabane</a>
+    </div>
+  </div>
+</header>
+
+<section class="esprit" id="esprit">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow rv">Bienvenue à la cabane</p>
+      <h2 class="rv">Des mains douces, un œil de pro</h2>
+      <p class="rv">À La cabane aux toutous, Marie-Christine accueille vos compagnons avec 20 ans d'expérience du toilettage et une bonne dose de câlins. Chaque chien a son moment à lui : un bain, un brossage, une coupe, et il repart fier comme un prince.</p>
+      <p class="rv">Les familles qui reviennent le disent toutes avec les mêmes mots : gentillesse, douceur, confiance. Ici, votre loulou est entre de bonnes mains.</p>
+      <div class="chiffres rv"><span>20 ans d'expérience</span><span>Sur rendez-vous</span><span>Saint-Denis · La Trinité</span></div>
+    </div>
+    <div class="photo rv">
+      <img src="img/sourire-creme.webp" alt="Un petit chien crème tout sourire après son toilettage" width="720" height="960" loading="lazy">
+      <div class="pastille"><b>5,0</b>sur Google</div>
+    </div>
+  </div>
+</section>
+
+<section class="soins" id="soins">
+  <div class="wrap">
+    <p class="eyebrow rv">À la cabane</p>
+    <h2 class="rv">Une mise en beauté pour chaque toutou</h2>
+    <div class="cartes">
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#1d1b16" stroke-width="2.2" stroke-linecap="round"><path d="M5 16h22v3a7 7 0 0 1-7 7h-8a7 7 0 0 1-7-7z"/><path d="M8 16V8a3 3 0 0 1 6 0"/><circle cx="20" cy="9" r="1.6"/><circle cx="24" cy="6" r="1.2"/><circle cx="25" cy="11" r="1"/></svg></div>
+        <h3>Bain &amp; mise en beauté</h3>
+        <p>Un pelage propre et soyeux, et un toutou qui sent bon le frais.</p>
+        <q>Il fait très chaud alors vos loulous seront ravis de venir à la cabane aux toutous.</q>
+        <small>La cabane aux toutous, 12 janvier 2024</small>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="none" stroke="#1d1b16" stroke-width="2.2" stroke-linecap="round"><circle cx="9" cy="23" r="4"/><circle cx="23" cy="23" r="4"/><path d="M11.5 20 24 5M20.5 20 8 5"/></svg></div>
+        <h3>Remise en ordre du pelage</h3>
+        <p>Un pelage remis à neuf, net et léger, pour un toutou tout confortable sous la chaleur.</p>
+        <q>Remise en ordre du pelage avec une petite mise en beauté supplémentaire !</q>
+        <small>La cabane aux toutous, 12 janvier 2024</small>
+      </article>
+      <article class="carte rv">
+        <div class="ico"><svg viewBox="0 0 32 32" fill="#1d1b16"><ellipse cx="16" cy="21" rx="6" ry="5"/><ellipse cx="8" cy="13" rx="2.6" ry="3.4"/><ellipse cx="13" cy="8.5" rx="2.6" ry="3.4"/><ellipse cx="19" cy="8.5" rx="2.6" ry="3.4"/><ellipse cx="24" cy="13" rx="2.6" ry="3.4"/></svg></div>
+        <h3>Toutes les races, toutes les tailles</h3>
+        <p>Caniches, corgis, terriers, croisés… chaque pelage reçoit le soin qui lui va.</p>
+        <q>Quand une jolie croisée, York et spitz, passe à la cabane aux toutous pour sa mise en beauté, voilà le résultat.</q>
+        <small>La cabane aux toutous, 15 décembre 2023</small>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <svg class="vague" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;top:-45px;left:0"><path d="M0 46V20C180 0 360 40 540 26S900 0 1080 18s270 20 360 8v20z" fill="#1d1b16"/></svg>
+  <div class="wrap">
+    <p class="eyebrow rv" style="color:var(--jaune)">Tout beaux, tout propres</p>
+    <h2 class="rv">Ils sont passés à <span>la cabane</span></h2>
+    <p class="intro rv">Quelques-uns des loulous chouchoutés à la cabane, photographiés juste après leur mise en beauté.</p>
+  </div>
+  <div class="rail" tabindex="0" aria-label="Galerie de chiens toilettés">
+    <figure><img src="img/caniche-blanc.webp" alt="Caniche blanc après son toilettage" width="900" height="1200" loading="lazy"><figcaption>Tout en boucles</figcaption></figure>
+    <figure><img src="img/sourire-table.webp" alt="Petit chien souriant sur la table de toilettage" width="900" height="1200" loading="lazy"><figcaption>Le sourire d'après</figcaption></figure>
+    <figure><img src="img/caniche-abricot.webp" alt="Caniche abricot toiletté" width="900" height="1200" loading="lazy"><figcaption>Abricot tout doux</figcaption></figure>
+    <figure><img src="img/petit-noir.webp" alt="Petit chien noir après sa mise en beauté" width="900" height="1200" loading="lazy"><figcaption>Fier comme tout</figcaption></figure>
+    <figure><img src="img/fauve-oreilles.webp" alt="Chien fauve aux oreilles dressées" width="900" height="1200" loading="lazy"><figcaption>Oreilles au vent</figcaption></figure>
+    <figure><img src="img/gris-poil-long.webp" alt="Chien gris à poil long toiletté" width="900" height="1200" loading="lazy"><figcaption>Poil long, poil net</figcaption></figure>
+    <figure><img src="img/petit-blanc.webp" alt="Petit chien blanc sur la table de toilettage" width="900" height="1200" loading="lazy"><figcaption>Blanc comme neige</figcaption></figure>
+    <figure><img src="img/gris-alerte.webp" alt="Chien gris attentif après son toilettage" width="900" height="1200" loading="lazy"><figcaption>Prêt pour la promenade</figcaption></figure>
+    <figure><img src="img/terrier-fauve.webp" alt="Terrier fauve toiletté" width="960" height="720" loading="lazy"><figcaption>Petit terrier, grand charme</figcaption></figure>
+    <figure><img src="img/brun-noeud-rose.webp" alt="Chien brun avec un nœud rose" width="960" height="720" loading="lazy"><figcaption>Le nœud en plus</figcaption></figure>
+  </div>
+  <p class="indice">Faites glisser pour voir tous les toutous →</p>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils en parlent</p>
+    <h2 class="rv">Douceur et gentillesse, à chaque visite</h2>
+    <p class="note rv"><span class="etoiles">★★★★★</span> 5,0 · 6 avis Google</p>
+    <div class="liste">
+      <blockquote class="rv"><span class="etoiles">★★★★★</span><p>« Marie Christine est douce et très professionnelle. »</p><cite>Avis Google · octobre 2026</cite></blockquote>
+      <blockquote class="rv"><span class="etoiles">★★★★★</span><p>« Toujours un plaisir de ramener ma chienne chez cette dame d’une gentillesse et d’une bienveillance envers nos animaux fort remarquables. »</p><cite>Avis Google · visite en août 2025</cite></blockquote>
+      <blockquote class="rv"><span class="etoiles">★★★★★</span><p>« Que ça fait plaisir de laisser son chien entre les mains de quelqu'un qui pense à son bien être. »</p><cite>Avis Google · visite en novembre 2024</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Un toutou tout beau pour les fêtes</h2>
+    <div class="bon rv">
+      <svg class="noeud" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#d23b4a"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#a92c39"/><circle cx="23" cy="18" r="3.5" fill="#1d1b16"/></svg>
+      <img src="img/logo.webp" alt="" width="64" height="64">
+      <span class="craie">Une mise en beauté à offrir</span>
+      <b>La cabane aux toutous</b>
+      <span class="sm">Toilettage · Saint-Denis</span>
+    </div>
+    <p class="rv">Offrez à un proche (et à son loulou) un moment de douceur à la cabane, ou réservez dès maintenant la mise en beauté des fêtes de votre compagnon.</p>
+    <div class="ctas rv">
+      <a class="btn btn-j" href="https://wa.me/262692372644?text=Bonjour%20Marie-Christine%2C%20je%20voudrais%20r%C3%A9server%20une%20mise%20en%20beaut%C3%A9%20pour%20les%20f%C3%AAtes%20%3A)">Réserver sur WhatsApp</a>
+      <a class="btn btn-b" href="tel:+262692372644">Appeler la cabane</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">Venir à la cabane</p>
+    <h2 class="rv">On vous attend, vous et votre loulou</h2>
+    <div class="grid">
+      <div class="fiche rv">
+        <dl>
+          <div><dt>Adresse</dt><dd>65 boulevard Notre-Dame de la Trinité<br>97400 Saint-Denis, La Réunion</dd></div>
+          <div><dt>Rendez-vous</dt><dd><a href="tel:+262692372644">0692 37 26 44</a></dd></div>
+          <div><dt>Horaires</dt><dd class="horaires"><span>Mardi → vendredi</span><span>9 h – 18 h</span><span>Samedi</span><span>9 h – 17 h</span></dd></div>
+          <div><dt>Sur Facebook</dt><dd><a href="https://www.facebook.com/100075173449974" target="_blank" rel="noopener">La cabane aux toutous</a></dd></div>
+        </dl>
+        <div class="ctas">
+          <a class="btn btn-j" href="tel:+262692372644">Appeler</a>
+          <a class="btn btn-b" href="https://www.google.com/maps/place/?q=place_id:ChIJUYY-VEt_giER3Hzoirx9new" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <div class="carte-map rv">
+        <iframe title="Plan d'accès à La cabane aux toutous" loading="lazy" src="https://www.google.com/maps?q=65+Boulevard+Notre+Dame+de+la+Trinit%C3%A9,+97400+Saint-Denis&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Maquette privée imaginée par Jonathan, <a href="https://atma-digital.re" target="_blank" rel="noopener">ATMA Digital</a>, à partir des publications de La cabane aux toutous.</footer>
+
+<script>
+(()=>{
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(el.closest('.hero')?i*0.12:0)+'s';io.observe(el)});
+if(rm)return;
+const c=document.getElementById('bulles'),x=c.getContext('2d');let W,H,dpr=Math.min(devicePixelRatio||1,2),B=[],run=true;
+function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+function nb(init){const r=4+Math.random()*14;return{x:Math.random()*W,y:init?Math.random()*H:H+r+Math.random()*60,r,v:.25+Math.random()*.55,a:Math.random()*6.28,s:.006+Math.random()*.012}}
+size();addEventListener('resize',size);
+const N=W<600?16:28;for(let i=0;i<N;i++)B.push(nb(true));
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+for(const b of B){b.y-=b.v;b.a+=b.s;const px=b.x+Math.sin(b.a)*10;
+const g=x.createRadialGradient(px-b.r*.35,b.y-b.r*.35,b.r*.1,px,b.y,b.r);
+g.addColorStop(0,'rgba(255,255,255,.55)');g.addColorStop(.7,'rgba(143,208,232,.10)');g.addColorStop(1,'rgba(143,208,232,.32)');
+x.beginPath();x.arc(px,b.y,b.r,0,6.283);x.fillStyle=g;x.fill();x.lineWidth=1;x.strokeStyle='rgba(120,190,220,.35)';x.stroke();
+if(b.y<-b.r-10)Object.assign(b,nb(false))}
+requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="La cabane aux toutous" defer></script>
+</body>
+</html>

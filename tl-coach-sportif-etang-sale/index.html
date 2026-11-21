@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TL Coach Sportif · Coaching sportif à L'Étang-Salé</title>
+<meta name="description" content="Tony, TL Coach Sportif : coaching particulier, duo, groupe et entreprise, sur la plage de l'Étang-Salé et alentours. Dépasse tes limites, deviens la meilleure version de toi-même.">
+<meta property="og:title" content="TL Coach Sportif · Transforme ton corps & ton esprit">
+<meta property="og:description" content="Coaching particulier, duo, groupe et entreprise à L'Étang-Salé. Sessions Grand Large face à l'océan, The Hybrid Ritual chaque mercredi.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/tl-coach-sportif-etang-sale/img/og-tl-coach.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/tl-coach-sportif-etang-sale/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#0f0e0c;--noir2:#1a1815;--or:#c9a961;--or-clair:#e6cf95;--creme:#f5f1e8;
+  --sable:#d4a574;--ocean:#1a2d4d;--rose:#e0457b;--texte:#2a2620;--gris:#8c8578;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--creme);color:var(--texte);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,.titre{font-family:Oswald,Impact,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.1}
+.ruban{background:#000;color:#d9d2c4;font-size:.8rem;text-align:center;padding:.5rem 1rem;position:relative;z-index:30}
+.ruban b{color:var(--or);font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,860px);background:var(--noir);color:var(--creme);overflow:hidden;display:flex;align-items:center}
+.hero-photo{position:absolute;inset:0;background:url(img/gainage-nuit.jpg) center/cover;opacity:.42;transform:scale(1.08);animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.22) translate(-3%,2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,12,.55) 0%,rgba(15,14,12,.35) 40%,rgba(15,14,12,.95) 100%)}
+#energie{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero-in{position:relative;z-index:3;padding:5rem 0 4rem;width:100%}
+.monogramme{display:inline-flex;align-items:center;gap:.7rem;border:1px solid rgba(201,169,97,.5);border-radius:999px;padding:.35rem .95rem .35rem .4rem;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--or-clair)}
+.monogramme span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--or);color:var(--noir);font-family:Oswald;font-weight:700;font-size:.85rem;letter-spacing:0}
+.hero h1{font-size:clamp(2.7rem,11vw,6.2rem);margin:1.2rem 0 .4rem;font-weight:700}
+.hero h1 em{font-style:normal;color:var(--or);display:block}
+.hero .slogan{font-family:Oswald;font-size:clamp(1.2rem,4.6vw,1.9rem);text-transform:uppercase;color:var(--creme);letter-spacing:.03em}
+.hero p.sous{max-width:34rem;margin:.9rem 0 1.8rem;color:#d8d0c1}
+.apparait{opacity:0;transform:translateY(18px);animation:monte 1s .2s forwards}
+.apparait.d2{animation-delay:.45s}.apparait.d3{animation-delay:.7s}.apparait.d4{animation-delay:.95s}
+@keyframes monte{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.98rem;transition:transform .25s,box-shadow .25s,background .25s}
+.btn-or{background:var(--or);color:var(--noir);animation:respire 3.2s ease-in-out infinite}
+.btn-or:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(201,169,97,.4)}
+.btn-ligne{border:1.5px solid rgba(245,241,232,.6);color:var(--creme)}
+.btn-ligne:hover{background:rgba(245,241,232,.1)}
+@keyframes respire{0%,100%{box-shadow:0 0 0 0 rgba(201,169,97,.45)}50%{box-shadow:0 0 0 12px rgba(201,169,97,0)}}
+.btn svg{width:20px;height:20px}
+.note{margin-top:1.8rem;display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:#d8d0c1}
+.etoiles{color:var(--or);letter-spacing:.12em;font-size:1.05rem}
+
+/* BANDEAU */
+.bandeau{background:var(--or);color:var(--noir);overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Oswald;font-weight:600;font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase}
+.bandeau .piste{display:inline-block;animation:defile 28s linear infinite}
+.bandeau span{margin:0 1.1rem}
+.bandeau i{font-style:normal;opacity:.55}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:4.5rem 0}
+.surtitre{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--or);font-weight:600;margin-bottom:.6rem;display:block}
+h2{font-size:clamp(2rem,7.5vw,3.3rem);margin-bottom:1rem;font-weight:700}
+.lead{font-size:1.06rem;max-width:40rem}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+
+/* FORMULES */
+.formules{display:grid;gap:1rem;margin-top:2.2rem;grid-template-columns:1fr}
+.carte{background:#fff;border-radius:var(--r);padding:1.6rem;box-shadow:0 2px 0 rgba(0,0,0,.04),0 12px 30px -18px rgba(0,0,0,.25);transition:transform .35s,box-shadow .35s;position:relative;overflow:hidden}
+.carte:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(0,0,0,.35)}
+.carte::before{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:linear-gradient(90deg,var(--or),var(--sable))}
+.carte .num{font-family:Oswald;font-size:2.6rem;color:var(--or);line-height:1;font-weight:700}
+.carte h3{font-size:1.35rem;margin:.5rem 0 .4rem}
+.lieux{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+.lieux span{background:var(--noir);color:var(--or-clair);font-size:.82rem;padding:.4rem .85rem;border-radius:999px}
+
+/* GRAND LARGE */
+.large{background:linear-gradient(180deg,var(--ocean) 0%,#12223b 100%);color:var(--creme);position:relative;overflow:hidden}
+.large .vague{position:absolute;left:0;width:200%;height:90px;bottom:0;opacity:.18}
+.large .vague path{fill:var(--sable)}
+.large .vague.v1{animation:houle 14s linear infinite}
+.large .vague.v2{animation:houle 22s linear infinite reverse;opacity:.1;bottom:10px}
+@keyframes houle{to{transform:translateX(-50%)}}
+.large blockquote{font-family:Oswald;font-size:clamp(1.3rem,5vw,1.9rem);text-transform:uppercase;color:var(--or-clair);border-left:4px solid var(--or);padding-left:1rem;margin:1.6rem 0;line-height:1.25}
+.etapes{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2rem 0 1rem;position:relative;z-index:2}
+.etape{border:1px solid rgba(230,207,149,.35);border-radius:14px;padding:1.1rem;background:rgba(255,255,255,.04);transition:background .3s}
+.etape:hover{background:rgba(255,255,255,.09)}
+.etape b{font-family:Oswald;font-size:1.3rem;color:var(--or);letter-spacing:.06em;display:block}
+.etape small{display:block;text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;color:#c8c2b6;margin-bottom:.4rem}
+.etape p{font-size:.9rem;color:#e7e1d4}
+.large .meta{position:relative;z-index:2;font-size:.92rem;color:#d7d1c4;margin-bottom:4rem}
+
+/* HYBRID RITUAL */
+.ritual{background:var(--noir);color:var(--creme)}
+.ritual h2 span{color:var(--rose)}
+.ritual .infos{display:grid;gap:.7rem;margin:1.6rem 0;grid-template-columns:1fr}
+.ritual .info{display:flex;gap:.8rem;align-items:center;background:var(--noir2);border-radius:12px;padding:.85rem 1rem}
+.ritual .info b{font-family:Oswald;color:var(--or);font-size:1.15rem;min-width:5.5rem;letter-spacing:.04em}
+.puces{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0}
+.puces span{border:1px solid rgba(224,69,123,.55);color:#f6c9d8;padding:.4rem .85rem;border-radius:999px;font-size:.85rem}
+.galerie{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1rem 1.25rem 1.4rem;margin:0 -1.25rem;scrollbar-width:none}
+.galerie::-webkit-scrollbar{display:none}
+.galerie figure{flex:0 0 82%;scroll-snap-align:center;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:4/3;background:#222}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.06)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;font-size:.8rem;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#eee}
+.glisse{font-size:.8rem;color:var(--gris);text-align:center}
+.rose{margin-top:2rem;border-radius:var(--r);padding:1.4rem;background:linear-gradient(135deg,rgba(224,69,123,.22),rgba(224,69,123,.05));border:1px solid rgba(224,69,123,.4)}
+.rose b{color:#f6c9d8;font-family:Oswald;text-transform:uppercase;letter-spacing:.05em;font-size:1.1rem;display:block;margin-bottom:.3rem}
+
+/* ENTREPRISE */
+.entreprise .grille{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin:2rem 0}
+.pilier{background:var(--noir);color:var(--creme);border-radius:14px;padding:1.2rem 1rem;text-align:center;transition:transform .3s}
+.pilier:hover{transform:translateY(-4px) rotate(-1deg)}
+.pilier svg{width:34px;height:34px;margin:0 auto .5rem;stroke:var(--or);fill:none;stroke-width:1.8}
+.pilier h3{font-size:.95rem;letter-spacing:.05em}
+.deuxcol{display:grid;gap:1rem;grid-template-columns:1fr}
+.bloc{border-radius:var(--r);padding:1.5rem}
+.bloc.clair{background:#fff;border:1px solid #e7dfcd}
+.bloc.sombre{background:var(--noir2);color:var(--creme)}
+.bloc h3{font-size:1.15rem;margin-bottom:.8rem;color:var(--or)}
+.bloc.clair h3{color:var(--texte)}
+.bloc ul{list-style:none}
+.bloc li{padding:.35rem 0 .35rem 1.6rem;position:relative}
+.bloc li::before{content:"";position:absolute;left:0;top:.82rem;width:.9rem;height:2px;background:var(--or)}
+.phrase{font-family:Oswald;text-transform:uppercase;text-align:center;font-size:clamp(1.15rem,4.5vw,1.6rem);margin-top:2rem;color:var(--texte)}
+
+/* ASCENSION */
+.ascension{background:linear-gradient(180deg,var(--creme),#ece3cf);position:relative;overflow:hidden}
+.ascension svg.montagne{position:absolute;right:-40px;bottom:0;width:520px;max-width:120%;opacity:.13}
+.ascension .citation{font-family:Oswald;font-size:clamp(1.35rem,5.4vw,2.1rem);text-transform:uppercase;line-height:1.25;max-width:44rem;margin:1rem 0}
+.ascension .citation::before{content:"« ";color:var(--or)}.ascension .citation::after{content:" »";color:var(--or)}
+.source{font-size:.82rem;color:var(--gris)}
+.source a{color:var(--gris)}
+
+/* AVIS */
+.avis{background:var(--noir);color:var(--creme)}
+.avis .note-grosse{display:flex;align-items:baseline;gap:.8rem;margin-bottom:1.6rem}
+.avis .note-grosse b{font-family:Oswald;font-size:3.6rem;color:var(--or);line-height:1}
+.temoignages{display:grid;gap:1rem;grid-template-columns:1fr}
+.temoin{background:var(--noir2);border-radius:var(--r);padding:1.5rem;border-top:3px solid var(--or)}
+.temoin p{font-size:.96rem;color:#e9e3d6}
+.temoin .qui{margin-top:.8rem;font-size:.8rem;color:var(--gris)}
+
+/* NOEL */
+.noel{background:radial-gradient(ellipse at top,#2a2418 0%,var(--noir) 70%);color:var(--creme);position:relative;overflow:hidden;text-align:center}
+.noel .flocon{position:absolute;color:var(--or);opacity:.35;font-size:1rem;animation:tombe linear infinite;top:-20px}
+@keyframes tombe{to{transform:translateY(640px) rotate(240deg)}}
+.bon{position:relative;z-index:2;max-width:560px;margin:2rem auto 0;border:1.5px dashed var(--or);border-radius:22px;padding:2rem 1.4rem;background:rgba(201,169,97,.07)}
+.bon .etiquette{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--or);color:var(--noir);font-family:Oswald;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .9rem;border-radius:6px;white-space:nowrap}
+.bon h3{font-size:clamp(1.5rem,6vw,2.2rem);color:var(--or-clair);margin:.4rem 0 .8rem}
+.bon p{color:#ddd5c5;margin-bottom:1.4rem}
+.bon .idees{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem;margin-bottom:1.6rem}
+.bon .idees span{background:rgba(255,255,255,.06);border-radius:999px;padding:.4rem .85rem;font-size:.85rem}
+
+/* CONTACT */
+.contact .cartes{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:2rem}
+.contact a.lien{display:flex;gap:.9rem;align-items:center;background:#fff;border-radius:16px;padding:1.1rem 1.2rem;text-decoration:none;border:1px solid #e7dfcd;transition:transform .25s,border-color .25s;word-break:break-word}
+.contact a.lien:hover{transform:translateY(-3px);border-color:var(--or)}
+.contact .ico{flex:0 0 46px;height:46px;border-radius:50%;background:var(--noir);display:grid;place-items:center}
+.contact .ico svg{width:22px;height:22px;stroke:var(--or);fill:none;stroke-width:1.8}
+.contact small{display:block;color:var(--gris);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.horaires{margin-top:1.4rem;background:var(--noir);color:var(--creme);border-radius:16px;padding:1.3rem 1.4rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;align-items:center}
+.horaires b{font-family:Oswald;color:var(--or);letter-spacing:.05em;text-transform:uppercase}
+
+footer{background:#000;color:#9c958a;font-size:.82rem;text-align:center;padding:2rem 1.25rem 2.6rem}
+footer .marque{font-family:Oswald;color:var(--or);font-size:1.3rem;letter-spacing:.08em;margin-bottom:.4rem}
+.wa-flottant{position:fixed;right:16px;bottom:16px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.3);animation:respire 3s infinite}
+.wa-flottant svg{width:30px;height:30px;fill:#fff}
+
+@media(min-width:760px){
+  .formules{grid-template-columns:repeat(3,1fr)}
+  .etapes{grid-template-columns:repeat(4,1fr)}
+  .ritual .infos{grid-template-columns:repeat(3,1fr)}
+  .galerie figure{flex-basis:44%}
+  .entreprise .grille{grid-template-columns:repeat(4,1fr)}
+  .deuxcol,.temoignages{grid-template-columns:1fr 1fr}
+  .contact .cartes{grid-template-columns:repeat(2,1fr)}
+  section{padding:6rem 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.apparait{opacity:1;transform:none}
+  #energie{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour TL Coach Sportif</div>
+
+<header class="hero">
+  <div class="hero-photo" role="img" aria-label="Séance de gainage de nuit, The Hybrid Ritual"></div>
+  <canvas id="energie" aria-hidden="true"></canvas>
+  <div class="wrap hero-in">
+    <div class="monogramme apparait"><span>TL</span> Tony · Coach sportif · L'Étang-Salé</div>
+    <h1 class="apparait d2">TL Coach <em>Sportif</em></h1>
+    <p class="slogan apparait d3">Transforme ton corps &amp; ton esprit</p>
+    <p class="sous apparait d3">Dépasse tes limites, deviens la meilleure version de toi-même. Coach sportif &amp; coach développement personnel : particulier, duo, groupe et entreprise, à domicile ou en extérieur, à l'Étang-Salé et alentours.</p>
+    <div class="btns apparait d4">
+      <a class="btn btn-or" href="https://wa.me/262692075505?text=Bonjour%20Tony%2C%20j%27aimerais%20d%C3%A9marrer%20un%20coaching%20sportif" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+        Premier échange sur WhatsApp</a>
+      <a class="btn btn-ligne" href="tel:+262692075505">06 92 07 55 05</a>
+    </div>
+    <div class="note apparait d4"><span class="etoiles">★★★★★</span> 5/5 sur Google · 7 avis</div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Sport</span><i>●</i><span>Discipline</span><i>●</i><span>Progrès</span><i>●</i><span>Confiance</span><i>●</i><span>Performance</span><i>●</i><span>Résultats</span><i>●</i>
+  <span>Sport</span><i>●</i><span>Discipline</span><i>●</i><span>Progrès</span><i>●</i><span>Confiance</span><i>●</i><span>Performance</span><i>●</i><span>Résultats</span><i>●</i>
+</div></div>
+
+<section id="coaching">
+  <div class="wrap">
+    <span class="surtitre reveal">Gardez la forme avec votre coach sportif</span>
+    <h2 class="reveal">Un coaching à votre rythme</h2>
+    <p class="lead reveal">Vous avez un objectif et l'envie de passer à l'action ? Tony vous accompagne pour retrouver votre énergie, renforcer votre corps, développer votre confiance et atteindre vos objectifs, avec une approche humaine, bienveillante et motivante, adaptée à tous les niveaux.</p>
+    <div class="formules">
+      <article class="carte reveal"><div class="num">01</div><h3>Particulier</h3><p>Un suivi individuel 100 % personnalisé : bilan de départ, conseils sur mesure et une progression pensée pour vous.</p></article>
+      <article class="carte reveal"><div class="num">02</div><h3>Duo</h3><p>À deux, la motivation se partage : on s'entraîne ensemble, on progresse ensemble.</p></article>
+      <article class="carte reveal"><div class="num">03</div><h3>Groupe</h3><p>L'énergie du collectif, en extérieur, au grand air de l'Étang-Salé et de ses alentours.</p></article>
+    </div>
+    <div class="lieux reveal"><span>À domicile</span><span>En extérieur</span><span>Plage de l'Étang-Salé</span><span>Saint-Pierre</span><span>Le Tampon</span></div>
+  </div>
+</section>
+
+<section class="large" id="grand-large">
+  <div class="wrap" style="position:relative;z-index:2">
+    <span class="surtitre reveal">Sessions Grand Large · édition 2026</span>
+    <h2 class="reveal">Face à l'océan</h2>
+    <p class="lead reveal">Votre terrain, votre rythme, vos résultats. Pour les vacances 2026, Tony a proposé du coaching sportif particulier sur la plage de l'Étang-Salé-les-Bains, en quatre formules au nom de grand large.</p>
+    <blockquote class="reveal">Imaginez-vous vous entraîner face à l'océan, dans un cadre exceptionnel, loin du stress du quotidien.</blockquote>
+    <div class="etapes">
+      <div class="etape reveal"><small>Séance découverte</small><b>Escale</b><p>Une séance individuelle d'une heure, un bilan de départ, des conseils personnalisés.</p></div>
+      <div class="etape reveal"><small>Rythme douceur</small><b>Traversée</b><p>Une séance par semaine, une progression adaptée à votre niveau.</p></div>
+      <div class="etape reveal"><small>Rythme progression</small><b>Horizon</b><p>Deux séances par semaine, avec des conseils d'activité physique et d'habitudes de vie.</p></div>
+      <div class="etape reveal"><small>Objectif rentrée</small><b>Cap</b><p>L'accompagnement premium : conseils nutrition, suivi WhatsApp, motivation et résultats.</p></div>
+    </div>
+    <p class="meta reveal">Édition 2026 : du 4 juillet au 18 août, places limitées. « Faites de vos vacances votre meilleure décision. »</p>
+  </div>
+  <svg class="vague v1" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 Q90 10 180 50 T360 50 T540 50 T720 50 T900 50 T1080 50 T1260 50 T1440 50 V90 H0Z"/></svg>
+  <svg class="vague v2" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 Q120 0 240 40 T480 40 T720 40 T960 40 T1200 40 T1440 40 V90 H0Z"/></svg>
+</section>
+
+<section class="ritual" id="hybrid-ritual">
+  <div class="wrap">
+    <span class="surtitre reveal">Une séance. Une communauté. Une cause.</span>
+    <h2 class="reveal">The Hybrid <span>Ritual</span></h2>
+    <p class="lead reveal" style="color:#d8d0c1">Les séances collectives de Tony au Tennis Club de La Possession : on bouge, on progresse et surtout… on prend du plaisir !</p>
+    <div class="infos">
+      <div class="info reveal"><b>Format</b><span>Séance collective</span></div>
+      <div class="info reveal"><b>Où</b><span>Tennis Club de La Possession</span></div>
+      <div class="info reveal"><b>Esprit</b><span>Partage, énergie, solidarité</span></div>
+    </div>
+    <div class="puces reveal"><span>Renforcement</span><span>Cardio</span><span>Circuit training</span><span>Challenges</span><span>Confiance en soi</span></div>
+  </div>
+  <div class="wrap">
+    <div class="galerie reveal" tabindex="0" aria-label="Photos de The Hybrid Ritual">
+      <figure><img src="img/foulee.jpg" alt="Foulée sur le court, The Hybrid Ritual" loading="lazy"><figcaption>Foulée sur le court · The Hybrid Ritual</figcaption></figure>
+      <figure><img src="img/gainage-lumiere.jpg" alt="Gainage sous les projecteurs" loading="lazy"><figcaption>Gainage sous les projecteurs</figcaption></figure>
+      <figure><img src="img/groupe-appuis.jpg" alt="Travail d'appuis en groupe" loading="lazy"><figcaption>Travail d'appuis en groupe</figcaption></figure>
+      <figure><img src="img/elan-court.jpg" alt="Élan sur le court du TC Possession" loading="lazy"><figcaption>L'élan, au TC Possession</figcaption></figure>
+      <figure><img src="img/duo-terrain.jpg" alt="Duo à l'entraînement" loading="lazy"><figcaption>À deux, on va plus loin</figcaption></figure>
+      <figure><img src="img/groupe-soir.jpg" alt="Séance du soir en groupe" loading="lazy"><figcaption>La séance du mercredi soir</figcaption></figure>
+      <figure><img src="img/circuit-plots.jpg" alt="Circuit training et plots" loading="lazy"><figcaption>Circuit training</figcaption></figure>
+    </div>
+    <p class="glisse">Faites glisser pour voir la suite →</p>
+    <div class="rose reveal"><b>Édition Octobre Rose · Ensemble contre le cancer</b>Le mercredi 7 octobre à 18h, une édition spéciale de The Hybrid Ritual placée sous le signe du partage, de l'énergie et de la solidarité : une séance de sport conviviale pour soutenir la lutte contre le cancer. Tous en rose !</div>
+  </div>
+</section>
+
+<section class="entreprise" id="entreprise">
+  <div class="wrap">
+    <span class="surtitre reveal">Entreprise &amp; association</span>
+    <h2 class="reveal">Une équipe plus soudée</h2>
+    <p class="lead reveal">Coach sportif en entreprise et en association : chaque intervention est pensée selon vos besoins et vos envies, sur site, en extérieur ou en salle.</p>
+    <div class="grille">
+      <div class="pilier reveal"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M10 20c0-3 3-5 6-5s6 2 6 5"/></svg><h3>Cohésion d'équipe</h3></div>
+      <div class="pilier reveal"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5-8-11a4.5 4.5 0 0 1 8-3 4.5 4.5 0 0 1 8 3c0 6-8 11-8 11z"/></svg><h3>Bien-être &amp; santé</h3></div>
+      <div class="pilier reveal"><svg viewBox="0 0 24 24"><path d="M3 20h18M6 16v4M11 11v9M16 6v14M21 3l-5 3-5 5-5 5"/></svg><h3>Performance collective</h3></div>
+      <div class="pilier reveal"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Convivialité &amp; motivation</h3></div>
+    </div>
+    <div class="deuxcol">
+      <div class="bloc clair reveal"><h3>Des prestations adaptées à vos objectifs</h3><ul><li>Cours collectifs : renforcement, cardio, circuit training</li><li>Challenges &amp; événements sportifs</li><li>Ateliers santé &amp; prévention</li><li>Team building sportif</li></ul></div>
+      <div class="bloc sombre reveal"><h3>Pourquoi Tony ?</h3><ul><li>Diplômé &amp; expérimenté</li><li>Approche humaine, bienveillante &amp; motivante</li><li>Adaptation à tous les niveaux</li><li>Flexibilité : sur site, en extérieur ou en salle</li><li>Résultats concrets &amp; durables</li></ul></div>
+    </div>
+    <p class="phrase reveal">Ensemble, faisons du sport un vrai levier de bien-être et de performance !</p>
+  </div>
+</section>
+
+<section class="ascension">
+  <svg class="montagne" viewBox="0 0 520 260" aria-hidden="true"><path d="M0 260 L150 90 L210 150 L300 20 L400 140 L450 100 L520 170 V260Z" fill="#1a1815"/></svg>
+  <div class="wrap" style="position:relative">
+    <span class="surtitre reveal">Octobre 2026 · Piton des Neiges</span>
+    <h2 class="reveal">Une ascension, une cause</h2>
+    <p class="citation reveal">Une ascension, une cause, un message d'espoir.</p>
+    <p class="lead reveal">Le 25 octobre 2026, Tony a accompagné une sportive jusqu'au sommet du Piton des Neiges. Un défi relevé pas à pas, ensemble.</p>
+    <p class="source reveal">D'après la publication du 25 octobre 2026 sur la <a href="https://www.facebook.com/tlcoachsportif" target="_blank" rel="noopener">page Facebook TL Coach Sportif</a>.</p>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <span class="surtitre reveal">Ils en parlent</span>
+    <div class="note-grosse reveal"><b>5/5</b><span><span class="etoiles">★★★★★</span><br>7 avis sur Google</span></div>
+    <div class="temoignages">
+      <div class="temoin reveal"><p>« Je suis ravie de mes séances avec Tony. Dès le premier contact, j'ai senti un grand professionnalisme de sa part. »</p><div class="qui">Avis Google · juin 2025</div></div>
+      <div class="temoin reveal"><p>« Merci pour ce souvenir, d'avoir cru en moi et de m'avoir aidée à me dépasser. »</p><div class="qui">Commentaire Facebook · ascension du Piton des Neiges, octobre 2026</div></div>
+    </div>
+    <p class="reveal" style="margin-top:1.6rem;font-family:Oswald;text-transform:uppercase;letter-spacing:.06em;color:var(--or-clair)">Remise en forme · Perte de poids · Prise de muscle · Raffermissement · Gestion du stress · Confiance en soi</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <span class="surtitre reveal">Offrir pour Noël</span>
+    <h2 class="reveal">Offrez de l'énergie</h2>
+    <p class="lead reveal" style="margin:0 auto;color:#d8d0c1">Le plus beau cadeau pour un proche : du temps pour soi, un coach motivant et l'envie de démarrer l'année en pleine forme.</p>
+    <div class="bon reveal">
+      <span class="etiquette">Bon cadeau coaching</span>
+      <h3>Une séance avec Tony</h3>
+      <p>Offrez une séance de coaching sportif, en solo ou en duo, sur la plage de l'Étang-Salé ou à domicile. Tony vous aide à composer le cadeau idéal.</p>
+      <div class="idees"><span>Séance découverte</span><span>Coaching en duo</span><span>Bonne résolution 2027</span></div>
+      <a class="btn btn-or" href="https://wa.me/262692075505?text=Bonjour%20Tony%2C%20je%20voudrais%20offrir%20une%20s%C3%A9ance%20de%20coaching%20pour%20No%C3%ABl" target="_blank" rel="noopener">Offrir une séance</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="surtitre reveal">Contactez-moi</span>
+    <h2 class="reveal">On démarre quand ?</h2>
+    <p class="lead reveal">Un message suffit pour un premier échange : on parle de votre objectif, de votre rythme, et on construit ensemble votre programme.</p>
+    <div class="cartes">
+      <a class="lien reveal" href="tel:+262692075505"><span class="ico"><svg viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></span><span><small>Téléphone &amp; WhatsApp</small>06 92 07 55 05</span></a>
+      <a class="lien reveal" href="mailto:tl.coachsportif@hotmail.com"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-mail</small>tl.coachsportif@hotmail.com</span></a>
+      <a class="lien reveal" href="https://www.facebook.com/tlcoachsportif" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg></span><span><small>Facebook</small>TL Coach Sportif</span></a>
+      <a class="lien reveal" href="https://www.instagram.com/tlcoachsportif/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8"/></svg></span><span><small>Instagram</small>@tlcoachsportif</span></a>
+    </div>
+    <div class="horaires reveal"><b>Horaires</b><span>Du lundi au vendredi · 7h – 20h</span><b>Base</b><span>Plage de l'Étang-Salé · 97427</span></div>
+  </div>
+</section>
+
+<footer>
+  <div class="marque">TL COACH SPORTIF</div>
+  <p>Dépasse tes limites, deviens la meilleure version de toi-même.</p>
+  <p style="margin-top:1rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de TL Coach Sportif.</p>
+</footer>
+
+<a class="wa-flottant" href="https://wa.me/262692075505?text=Bonjour%20Tony%2C%20j%27aimerais%20des%20infos%20sur%20le%20coaching" target="_blank" rel="noopener" aria-label="Écrire à Tony sur WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg></a>
+
+<script>
+(function(){
+  var reduit=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // apparitions au scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window&&!reduit){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('vu')})}
+  // flocons dorés (bloc Noël)
+  var n=document.getElementById('noel');
+  if(n&&!reduit){for(var i=0;i<14;i++){var f=document.createElement('span');f.className='flocon';f.textContent='✦';f.style.left=(Math.random()*100)+'%';f.style.animationDuration=(9+Math.random()*10)+'s';f.style.animationDelay=(-Math.random()*15)+'s';f.style.fontSize=(.6+Math.random()*.9)+'rem';f.setAttribute('aria-hidden','true');n.appendChild(f)}}
+  // univers : étincelles d'effort + ligne de pouls
+  var c=document.getElementById('energie');if(!c||reduit)return;
+  var x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),P=[],t=0,actif=true;
+  function taille(){W=c.offsetWidth;H=c.offsetHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  function part(init){return{x:Math.random()*W,y:init?Math.random()*H:H+10,r:.6+Math.random()*2,v:.25+Math.random()*.7,a:.15+Math.random()*.45,o:Math.random()*6.28}}
+  taille();for(var k=0;k<32;k++)P.push(part(true));
+  window.addEventListener('resize',taille);
+  document.addEventListener('visibilitychange',function(){actif=!document.hidden;if(actif)requestAnimationFrame(boucle)});
+  function pouls(){
+    var y0=H*.86,amp=Math.min(38,H*.05),per=W*.55,off=(t*1.6)%per;
+    x.beginPath();
+    for(var px=0;px<=W;px+=3){
+      var ph=((px+off)%per)/per,y=y0;
+      if(ph>.42&&ph<.46)y=y0-amp*(ph-.42)/.04;else if(ph>=.46&&ph<.5)y=y0-amp+amp*1.6*(ph-.46)/.04;else if(ph>=.5&&ph<.53)y=y0+amp*.6-amp*.6*(ph-.5)/.03;
+      px?x.lineTo(px,y):x.moveTo(px,y);
+    }
+    var g=x.createLinearGradient(0,0,W,0);g.addColorStop(0,'rgba(201,169,97,0)');g.addColorStop(.5,'rgba(201,169,97,.55)');g.addColorStop(1,'rgba(201,169,97,0)');
+    x.strokeStyle=g;x.lineWidth=1.6;x.stroke();
+  }
+  function boucle(){
+    if(!actif)return;t++;x.clearRect(0,0,W,H);
+    for(var i=0;i<P.length;i++){var p=P[i];p.y-=p.v;p.x+=Math.sin(t/60+p.o)*.3;
+      if(p.y<-10)P[i]=part(false);
+      x.beginPath();x.arc(p.x,p.y,p.r,0,6.28);x.fillStyle='rgba(230,207,149,'+p.a+')';x.fill()}
+    pouls();requestAnimationFrame(boucle);
+  }
+  requestAnimationFrame(boucle);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="TL Coach Sportif" defer></script>
+</body>
+</html>

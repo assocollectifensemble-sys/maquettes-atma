@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MV Animation 974 · DJ, animation, sonorisation et éclairage à Bras-Panon</title>
+<meta name="description" content="MV Animation 974 : DJ, animation, sonorisation et éclairage pour vos mariages, baptêmes, anniversaires et dîners dansants, depuis Bras-Panon.">
+<meta property="og:title" content="MV Animation 974 · DJ • Animation • Sonorisation • Éclairage">
+<meta property="og:description" content="« Votre événement, notre passion, votre ambiance. » Mariages, baptêmes, anniversaires, dîners dansants : l'équipe de Mathieu met le son et la lumière, depuis Bras-Panon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/mv-animation-974-bras-panon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/mv-animation-974-bras-panon/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#07071a; --nuit2:#0e0e2c; --nuit3:#17173f;
+  --bleu:#2f6bff; --bleu-clair:#7fa6ff;
+  --or:#ffc94a; --magenta:#d83cff; --rose:#ff5fb3;
+  --blanc:#f4f3ff; --gris:#b9b8d6;
+  --rayon:18px;
+  --titre:'Unbounded',system-ui,sans-serif; --texte:'Outfit',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{background:var(--nuit);color:var(--blanc);font-family:var(--texte);font-size:17px;line-height:1.6;overflow-x:clip}
+img{max-width:100%;display:block}
+.grille>*,.cartes>*{min-width:0}
+a{color:inherit}
+.ruban{background:linear-gradient(90deg,var(--bleu),var(--magenta));color:#fff;text-align:center;font-size:13px;padding:7px 12px;line-height:1.4}
+.ruban b{font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,7,26,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+nav .in{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px;gap:12px}
+.logo{font-family:var(--titre);font-weight:900;font-size:17px;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--or)}
+nav ul{list-style:none;display:flex;gap:20px;font-size:15px}
+nav ul a{text-decoration:none;color:var(--gris);transition:color .2s}
+nav ul a:hover{color:var(--or)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;border-radius:999px;padding:12px 22px;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer;font-family:var(--texte);font-size:16px}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:var(--or);color:#1b1300;box-shadow:0 8px 30px rgba(255,201,74,.35)}
+.btn-wa{background:#25d366;color:#05230f}
+.btn-ligne{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-petit{padding:8px 16px;font-size:14px}
+@media(max-width:860px){nav ul{display:none}}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero .photo{position:absolute;inset:0;background:url(img/faisceaux-lumiere.webp) center 35%/cover;z-index:-3;filter:saturate(1.15)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(7,7,26,.25) 0%,rgba(7,7,26,.35) 45%,var(--nuit) 100%)}
+#scene{position:absolute;inset:0;z-index:-1;width:100%;height:100%;mix-blend-mode:screen}
+.hero .contenu{max-width:1180px;margin:0 auto;width:100%;padding:0 20px 64px}
+.etiquette{display:inline-block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--or);border:1px solid rgba(255,201,74,.45);border-radius:999px;padding:5px 14px;margin-bottom:18px;background:rgba(7,7,26,.45)}
+.hero h1{font-family:var(--titre);font-weight:900;font-size:clamp(40px,9vw,96px);line-height:.98;letter-spacing:-.01em;text-shadow:0 4px 40px rgba(47,107,255,.55)}
+.hero h1 .num{color:var(--or)}
+.hero .metiers{font-family:var(--titre);font-weight:500;font-size:clamp(13px,2.6vw,20px);letter-spacing:.06em;margin:16px 0 10px;color:var(--bleu-clair)}
+.hero .devise{font-size:clamp(19px,3.4vw,26px);font-weight:300;font-style:italic;max-width:640px;margin-bottom:28px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.eq{display:flex;gap:4px;align-items:flex-end;height:26px;margin-bottom:16px}
+.eq i{display:block;width:5px;background:linear-gradient(var(--or),var(--magenta));border-radius:2px;animation:eq 1s ease-in-out infinite alternate}
+.eq i:nth-child(2){animation-delay:-.3s}.eq i:nth-child(3){animation-delay:-.6s}.eq i:nth-child(4){animation-delay:-.15s}.eq i:nth-child(5){animation-delay:-.45s}.eq i:nth-child(6){animation-delay:-.8s}.eq i:nth-child(7){animation-delay:-.2s}
+@keyframes eq{from{height:4px}to{height:26px}}
+
+/* MARQUEE */
+.defile{background:var(--or);color:#1b1300;overflow:hidden;white-space:nowrap;font-family:var(--titre);font-weight:700;font-size:15px;letter-spacing:.06em;padding:12px 0;transform:rotate(-1.2deg);margin:-6px -10px 0;position:relative;z-index:2}
+.defile .piste{display:inline-block;animation:defile 38s linear infinite}
+.defile span{margin:0 18px}
+.defile b{color:var(--magenta)}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:96px 20px;position:relative}
+.cadre{max-width:1180px;margin:auto}
+.surtitre{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--or);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.surtitre::before{content:"";width:28px;height:2px;background:var(--or)}
+h2{font-family:var(--titre);font-weight:700;font-size:clamp(28px,5.4vw,50px);line-height:1.08;margin-bottom:22px}
+h2 em{font-style:normal;background:linear-gradient(90deg,var(--bleu-clair),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+.intro{color:var(--gris);font-size:18px;max-width:720px}
+
+/* HISTOIRE */
+.histoire .grille{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.histoire p{margin-bottom:16px;color:#dedcf5}
+.histoire .chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.chiffre{background:var(--nuit2);border:1px solid rgba(127,166,255,.2);border-radius:var(--rayon);padding:16px 12px;text-align:center}
+.chiffre strong{display:block;font-family:var(--titre);font-size:clamp(22px,4vw,32px);color:var(--or);line-height:1.1}
+.chiffre span{font-size:13px;color:var(--gris)}
+.devise-bloc{margin-top:24px;padding:18px 22px;border-left:3px solid var(--magenta);background:linear-gradient(90deg,rgba(216,60,255,.12),transparent);border-radius:0 12px 12px 0;font-size:18px}
+.devise-bloc small{display:block;color:var(--gris);font-size:13px;margin-top:6px}
+.histoire .visuel{position:relative}
+.histoire .visuel img{border-radius:24px;aspect-ratio:3/4;object-fit:cover;width:100%;box-shadow:0 30px 80px rgba(47,107,255,.35)}
+.histoire .visuel .pastille{position:absolute;left:-18px;bottom:28px;background:var(--or);color:#1b1300;font-family:var(--titre);font-weight:700;font-size:14px;padding:12px 16px;border-radius:14px;transform:rotate(-4deg);max-width:220px;line-height:1.3}
+.equipe{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.equipe span{font-size:14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px 12px;color:#e8e6ff}
+@media(max-width:860px){.histoire .grille{grid-template-columns:1fr;gap:40px}.histoire .visuel .pastille{left:10px}}
+
+/* PRESTATIONS */
+.prestations{background:radial-gradient(ellipse at 20% 0%,rgba(47,107,255,.22),transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(216,60,255,.18),transparent 55%),var(--nuit2)}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:40px}
+.carte{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:var(--rayon);padding:26px 22px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.carte:hover{transform:translateY(-4px);border-color:rgba(255,201,74,.5)}
+.carte .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;margin-bottom:16px;background:linear-gradient(135deg,var(--bleu),var(--magenta))}
+.carte .ico svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.carte h3{font-family:var(--titre);font-size:18px;font-weight:700;margin-bottom:8px}
+.carte p{color:var(--gris);font-size:16px}
+.carte .cite{display:block;margin-top:10px;font-size:14px;color:var(--or);font-style:italic}
+.evenements{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+.evenements span{background:var(--nuit3);border-radius:999px;padding:8px 16px;font-size:15px;border:1px solid rgba(127,166,255,.25)}
+
+/* CARNET */
+.carnet .ligne{position:relative;margin-top:48px;padding-left:34px}
+.carnet .ligne::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--or),var(--magenta),var(--bleu))}
+.date{position:relative;margin-bottom:30px;display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:start}
+.date::before{content:"";position:absolute;left:-31px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--nuit);border:3px solid var(--or);box-shadow:0 0 14px var(--or)}
+.date .quand{font-family:var(--titre);font-size:14px;color:var(--or);font-weight:500;padding-top:2px}
+.date h3{font-size:19px;font-weight:700;margin-bottom:4px}
+.date p{color:var(--gris);font-size:16px}
+.date .lieu{display:inline-block;font-size:13px;color:var(--bleu-clair);margin-top:4px}
+@media(max-width:700px){.date{grid-template-columns:1fr;gap:4px}}
+
+/* GALERIE */
+.galerie{background:var(--nuit2)}
+.mosaique{columns:3 280px;column-gap:14px;margin-top:40px}
+.mosaique figure{break-inside:avoid;margin-bottom:14px;position:relative;border-radius:16px;overflow:hidden;background:var(--nuit3)}
+.mosaique img{width:100%;height:auto;transition:transform .6s}
+.mosaique figure:hover img{transform:scale(1.04)}
+.mosaique figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;font-size:14px;background:linear-gradient(transparent,rgba(7,7,26,.92))}
+
+/* AVIS */
+.avis .bulle{max-width:820px;margin:36px auto 0;background:linear-gradient(135deg,rgba(47,107,255,.16),rgba(216,60,255,.14));border:1px solid rgba(255,255,255,.12);border-radius:26px;padding:36px 32px;position:relative}
+.avis .bulle::before{content:"“";position:absolute;top:-34px;left:24px;font-family:Georgia,serif;font-size:120px;color:var(--or);line-height:1}
+.avis blockquote{font-size:clamp(18px,2.6vw,22px);font-weight:300;font-style:italic}
+.avis cite{display:block;margin-top:16px;font-style:normal;color:var(--gris);font-size:15px}
+.avis .autres{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;max-width:820px;margin:22px auto 0}
+.avis .petite{background:var(--nuit2);border-radius:18px;padding:20px;border:1px solid rgba(255,255,255,.08)}
+.avis .petite p{font-style:italic}
+.avis .petite small{display:block;color:var(--gris);margin-top:8px;font-size:14px}
+
+/* FÊTES */
+.fetes{background:radial-gradient(ellipse at 50% 0%,rgba(255,201,74,.18),transparent 60%),var(--nuit2);overflow:hidden}
+.fetes .grille{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.fetes .visuel img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.fetes ul{list-style:none;margin:20px 0 28px}
+.fetes li{padding:12px 0 12px 36px;position:relative;border-bottom:1px dashed rgba(255,255,255,.12)}
+.fetes li::before{content:"✦";position:absolute;left:6px;top:11px;color:var(--or)}
+.fetes .note{font-size:14px;color:var(--gris);margin-top:14px}
+@media(max-width:860px){.fetes .grille{grid-template-columns:1fr}}
+#etincelles{position:absolute;inset:0;pointer-events:none;width:100%;height:100%}
+
+/* DEMANDE */
+.demande .boite{max-width:760px;margin:36px auto 0;background:var(--nuit2);border:1px solid rgba(127,166,255,.25);border-radius:26px;padding:30px 26px}
+.demande label{display:block;font-weight:600;margin:16px 0 8px;font-size:15px}
+.choix{display:flex;flex-wrap:wrap;gap:8px}
+.choix button{background:var(--nuit3);color:#fff;border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:9px 16px;font-family:var(--texte);font-size:15px;cursor:pointer;transition:all .2s}
+.choix button[aria-pressed="true"]{background:var(--or);color:#1b1300;border-color:var(--or)}
+.demande input{width:100%;background:var(--nuit3);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:12px 14px;color:#fff;font-family:var(--texte);font-size:16px}
+.demande .deux{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.demande .deux{grid-template-columns:1fr}}
+.demande .apercu{margin-top:22px;background:rgba(37,211,102,.08);border:1px dashed rgba(37,211,102,.5);border-radius:14px;padding:14px 16px;font-size:15px;color:#d6ffe4;white-space:pre-line}
+.demande .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+
+/* CONTACT */
+.contact .grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:36px}
+.contact .tuile{background:var(--nuit2);border-radius:18px;padding:22px;border:1px solid rgba(255,255,255,.08);text-decoration:none;display:block;transition:border-color .2s}
+.contact a.tuile:hover{border-color:var(--or)}
+.contact .tuile small{display:block;color:var(--or);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+.contact .tuile strong{font-size:18px;word-break:break-word}
+.zone{margin-top:26px;color:var(--gris)}
+footer{text-align:center;padding:40px 20px 110px;color:var(--gris);font-size:14px;border-top:1px solid rgba(255,255,255,.07)}
+footer b{color:#fff}
+.flottant{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:10px}
+.flottant a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.flottant .t{background:var(--or)}
+.flottant .w{background:#25d366}
+.flottant svg{width:26px;height:26px}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .defile .piste,.eq i{animation:none}
+  .eq i{height:16px}
+  .mosaique img,.carte,.btn{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour MV Animation 974</div>
+<nav>
+  <div class="in">
+    <a class="logo" href="#haut">MV Animation <span>974</span></a>
+    <ul>
+      <li><a href="#histoire">L'équipe</a></li>
+      <li><a href="#prestations">Prestations</a></li>
+      <li><a href="#carnet">Carnet de fêtes</a></li>
+      <li><a href="#galerie">Galerie</a></li>
+      <li><a href="#fetes">Fêtes de fin d'année</a></li>
+    </ul>
+    <a class="btn btn-or btn-petit" href="#demande">Demander une date</a>
+  </div>
+</nav>
+
+<header class="hero" id="haut">
+  <div class="photo" role="img" aria-label="Faisceaux de lumière bleus et dorés d'un jeu d'éclairage MV Animation 974"></div>
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="contenu">
+    <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <span class="etiquette">Bras-Panon · La Réunion</span>
+    <h1>MV Animation <span class="num">974</span></h1>
+    <p class="metiers">DJ • ANIMATION • SONORISATION • ÉCLAIRAGE</p>
+    <p class="devise">« Votre événement, notre passion, votre ambiance. »</p>
+    <div class="actions">
+      <a class="btn btn-or" href="#demande">Réserver votre date</a>
+      <a class="btn btn-ligne" href="tel:+262692357587">Appeler le 0692 357 587</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div class="piste">
+  <span>Mariage</span><b>✦</b><span>Baptême</span><b>✦</b><span>Communion</span><b>✦</b><span>Confirmation</span><b>✦</b><span>Anniversaire</span><b>✦</b><span>Dîner dansant</span><b>✦</b><span>Soirée de fin de vacances</span><b>✦</b><span>Mode DJ activé</span><b>✦</b>
+  <span>Mariage</span><b>✦</b><span>Baptême</span><b>✦</b><span>Communion</span><b>✦</b><span>Confirmation</span><b>✦</b><span>Anniversaire</span><b>✦</b><span>Dîner dansant</span><b>✦</b><span>Soirée de fin de vacances</span><b>✦</b><span>Mode DJ activé</span><b>✦</b>
+</div></div>
+
+<section class="histoire" id="histoire">
+  <div class="cadre grille">
+    <div class="reveal">
+      <p class="surtitre">Bonjour zot toute</p>
+      <h2>Une équipe qui fait <em>danser l'Est</em>, de la salle des fêtes au plein air</h2>
+      <p>MV Animation 974, c'est l'entreprise de Mathieu, à Bras-Panon : DJ, animateur et prestataire son et lumière, qui la fait vivre « avec passion, motivation et détermination ».</p>
+      <p>Plus de 10 ans d'expérience derrière les platines, pour des baptêmes, communions, mariages, anniversaires et dîners dansants, avec des styles de musique adaptés à toutes les générations. Une ambiance assurée pour vous faire plaisir, et faire plaisir à vos invités.</p>
+      <div class="devise-bloc">Notre devise : <b>satisfaire notre clientèle.</b><small>Les mots de MV Animation 974</small></div>
+      <div class="equipe" aria-label="L'équipe citée dans leurs publications">
+        <span>Mathieu, gérant</span><span>Dj Ryan</span><span>Dj Ken's</span><span>Jul-Mix</span>
+      </div>
+      <div class="chiffres">
+        <div class="chiffre"><strong>10 ans +</strong><span>d'expérience</span></div>
+        <div class="chiffre"><strong>150</strong><span>convives à Cambuston</span></div>
+        <div class="chiffre"><strong>1,2 K</strong><span>abonnés Facebook</span></div>
+      </div>
+    </div>
+    <div class="visuel reveal">
+      <img src="img/platine-cambuston.webp" alt="Platine, ordinateur de mix et contrôleur de MV Animation 974 au baptême de Ravindra, salle des fêtes de Cambuston" width="1200" height="1600" loading="lazy">
+      <div class="pastille">« 150 convives à faire danser »<br><small style="font-weight:500">Cambuston, 2 août 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="prestations" id="prestations">
+  <div class="cadre">
+    <p class="surtitre reveal">Prestations</p>
+    <h2 class="reveal">Le son, la lumière <em>et l'ambiance</em>, réunis en une seule équipe</h2>
+    <p class="intro reveal">Une seule équipe qui s'occupe de tout : la musique, la sono, la mise en lumière et l'animation, pour que vous profitiez pleinement de votre fête.</p>
+    <div class="cartes">
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M12 3v3M21 12h-3"/></svg></div>
+        <h3>DJ & animation</h3>
+        <p>Des platines et un micro pour lancer la piste, avec des styles de musique adaptés à toutes les générations.</p>
+        <span class="cite">« mode dj activé »</span>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><circle cx="12" cy="14" r="3.5"/><circle cx="12" cy="7" r="1.3"/></svg></div>
+        <h3>Sonorisation</h3>
+        <p>Une sono installée et réglée pour la salle des fêtes comme pour le plein air, sous les arbres.</p>
+        <span class="cite">« Sonorisation & animation »</span>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 3h6l-1 6h-4z"/><path d="M10 9 5 21M14 9l5 12M12 9v12"/></svg></div>
+        <h3>Mise en lumière</h3>
+        <p>Jeux de lumière, faisceaux et couleurs pour transformer une salle en piste de danse dès la tombée de la nuit.</p>
+        <span class="cite">« Mise en lumière »</span>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 16c2-1 3-3 5-3s3 2 5 2 3-2 6-2"/><path d="M4 20c2-1 3-3 5-3s3 2 5 2 3-2 6-2"/><path d="M8 9a3 3 0 0 1 6-1 2.5 2.5 0 0 1 3 3"/></svg></div>
+        <h3>Danse sur les nuages</h3>
+        <p>L'effet qui a fait la magie du mariage de Laurent & Lœtitia : danser comme sur un nuage, sous les lumières.</p>
+        <span class="cite">« Son, lumières et effet 'danse sur les nuages' »</span>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 11 9 3M12 11l3-8M12 11 6 6M12 11l6-5"/><path d="M8 21h8"/></svg></div>
+        <h3>Étincelles froides</h3>
+        <p>Une option choisie pour fêter 20 ans de mariage : de quoi créer de magnifiques photos de famille et des souvenirs inoubliables.</p>
+        <span class="cite">« l'option étincelles froides »</span>
+      </article>
+      <article class="carte reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3 4 7v6c0 4 3.5 7 8 8 4.5-1 8-4 8-8V7z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Ambiance et accompagnement</h3>
+        <p>Accompagner les familles et leurs invités tout au long de la fête : votre seul travail, c'est de profiter.</p>
+        <span class="cite">« Ambiance et accompagnement »</span>
+      </article>
+    </div>
+    <div class="evenements reveal" aria-label="Événements animés">
+      <span>Mariages</span><span>Baptêmes</span><span>Communions</span><span>Confirmations</span><span>Anniversaires</span><span>Anniversaires de mariage</span><span>Dîners dansants</span><span>Fêtes en plein air</span>
+    </div>
+  </div>
+</section>
+
+<section class="carnet" id="carnet">
+  <div class="cadre">
+    <p class="surtitre reveal">Carnet de fêtes 2026</p>
+    <h2 class="reveal">Quelques belles soirées <em>partagées avec vous</em></h2>
+    <p class="intro reveal">Bras-Panon, Saint-André, Saint-Benoît, Sainte-Anne, la Plaine-des-Palmistes : un aperçu des fêtes racontées sur la page de MV Animation 974.</p>
+    <div class="ligne">
+      <div class="date reveal"><div class="quand">Octobre 2026</div><div><h3>Mariage de Laurent & Lœtitia</h3><p>« Ambiance magique » : son, lumières et effet « danse sur les nuages » pour leur plus beau jour.</p></div></div>
+      <div class="date reveal"><div class="quand">Fin août 2026</div><div><h3>Les 60 ans d'Armand</h3><p>Une après-midi « placée sous le signe de la convivialité, de la musique et de la bonne humeur », jusqu'à 19h.</p><span class="lieu">La Plaine-des-Palmistes</span></div></div>
+      <div class="date reveal"><div class="quand">22 août 2026</div><div><h3>Baptême de Lyannah</h3><p>Sonorisation, animation, mise en lumière, ambiance et accompagnement, avec La Ka'z Animation.</p><span class="lieu">Champ de Foire de Bras-Panon</span></div></div>
+      <div class="date reveal"><div class="quand">15 août 2026</div><div><h3>Soirée de fin de vacances</h3><p>Pendant que les enfants profitaient de leurs derniers moments de vacances, les parents ont pu se détendre et faire la fête, avec Dj Ryan.</p><span class="lieu">Saint-André</span></div></div>
+      <div class="date reveal"><div class="quand">15 août 2026</div><div><h3>Joyeux 40 ans, Arielle !</h3><p>Un anniversaire en plein air, « sous le signe de la fête, de la convivialité et des bons moments en famille et entre amis ».</p><span class="lieu">Saint-Benoît</span></div></div>
+      <div class="date reveal"><div class="quand">14 août 2026</div><div><h3>20 ans de mariage & 60 ans</h3><p>« Une magnifique soirée placée sous le signe de l'amour, du partage et de la fête », Dj Ryan sur les platines.</p><span class="lieu">Ferme Auberge Anibal, Bras-Panon</span></div></div>
+      <div class="date reveal"><div class="quand">2 août 2026</div><div><h3>Baptême de Ravindra</h3><p>150 convives à faire danser, Dj Ken's et Dj Ryan sur les platines.</p><span class="lieu">Salle des fêtes de Cambuston</span></div></div>
+      <div class="date reveal"><div class="quand">Juin 2026</div><div><h3>Dîner dansant de la Fête des Pères</h3><p>Une ambiance conviviale et chaleureuse, avec Jul-Mix et Dj Ryan à l'animation.</p><span class="lieu">Le Prestige</span></div></div>
+      <div class="date reveal"><div class="quand">13 juin 2026</div><div><h3>Confirmation d'Enzo</h3><p>Prestation sono, lumière et DJ, pour une belle journée en famille.</p><span class="lieu">Sainte-Anne</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="cadre">
+    <p class="surtitre reveal">En images</p>
+    <h2 class="reveal">Avant la fête, <em>pendant la fête</em></h2>
+    <p class="intro reveal">Toutes les photos viennent de la page Facebook de MV Animation 974.</p>
+    <div class="mosaique">
+      <figure class="reveal"><img src="img/piste-fete-des-peres.webp" alt="Piste de danse baignée de lumière violette au dîner dansant de la Fête des Pères" width="1600" height="1200" loading="lazy"><figcaption>Dîner dansant de la Fête des Pères</figcaption></figure>
+      <figure class="reveal"><img src="img/bapteme-lyannah-deco.webp" alt="Salle décorée de ballons roses pour le baptême de Lyannah" width="1200" height="1600" loading="lazy"><figcaption>Baptême de Lyannah, Bras-Panon</figcaption></figure>
+      <figure class="reveal"><img src="img/sono-plein-air.webp" alt="Sonorisation MV Animation 974 installée en plein air sous les arbres" width="750" height="1000" loading="lazy"><figcaption>La sono s'installe en plein air, Saint-Benoît</figcaption></figure>
+      <figure class="reveal"><img src="img/salle-cambuston-lumieres.webp" alt="Salle des fêtes de Cambuston éclairée par les jeux de lumière, avant l'arrivée des invités" width="1200" height="1600" loading="lazy"><figcaption>Cambuston, avant l'arrivée des 150 convives</figcaption></figure>
+      <figure class="reveal"><img src="img/quarante-ans-arielle.webp" alt="Décoration du 40e anniversaire d'Arielle en plein air" width="750" height="1000" loading="lazy"><figcaption>Les 40 ans d'Arielle</figcaption></figure>
+      <figure class="reveal"><img src="img/salle-cambuston-deco.webp" alt="Salle décorée de tables vertes et de végétaux au baptême de Ravindra" width="1600" height="1200" loading="lazy"><figcaption>Baptême de Ravindra, Cambuston</figcaption></figure>
+      <figure class="reveal"><img src="img/fin-de-vacances-saint-andre.webp" alt="Soirée de fin de vacances à Saint-André sous les lumières colorées" width="1200" height="1600" loading="lazy"><figcaption>Soirée de fin de vacances, Saint-André</figcaption></figure>
+      <figure class="reveal"><img src="img/drapes-plein-air.webp" alt="Décoration drapée et fleurie en plein air" width="1600" height="1200" loading="lazy"><figcaption>Une fête en plein air, Saint-Benoît</figcaption></figure>
+      <figure class="reveal"><img src="img/confirmation-enzo.webp" alt="Table de confirmation drapée de rouge et blanc avec gâteaux" width="1200" height="1600" loading="lazy"><figcaption>Confirmation d'Enzo, Sainte-Anne</figcaption></figure>
+      <figure class="reveal"><img src="img/salle-lyannah.webp" alt="Salle de réception aux lumières roses pour le baptême de Lyannah" width="1200" height="1600" loading="lazy"><figcaption>Champ de Foire de Bras-Panon</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="cadre">
+    <p class="surtitre reveal">Ils en parlent</p>
+    <h2 class="reveal">Des mariés <em>qui recommencent les yeux fermés</em></h2>
+    <div class="bulle reveal">
+      <blockquote>Et oui une personne qui est à ton écoute nmmok mari t a choisi pour notre mariage et très sincèrement si à refaire yeux fermés on tr croit pour mettre l' ambiance dans nos moments très importante dans notre vie</blockquote>
+      <cite>Marie Loetitia Boyer, en commentaire sur la page Facebook de MV Animation 974 (novembre 2026)</cite>
+    </div>
+    <div class="autres">
+      <div class="petite reveal"><p>« Merci à tous pour votre confiance et votre fidélité ! »</p><small>L'équipe MV Animation 974</small></div>
+      <div class="petite reveal"><p>« Une belle fête, de beaux souvenirs ! »</p><small>MV Animation 974, après les 60 ans d'Armand</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <canvas id="etincelles" aria-hidden="true"></canvas>
+  <div class="cadre grille">
+    <div class="reveal">
+      <p class="surtitre">Noël & Nouvel An</p>
+      <h2>Les fêtes de fin d'année, <em>en musique</em></h2>
+      <p class="intro">Repas de famille, arbre de Noël, réveillon de la Saint-Sylvestre : c'est le moment de réserver votre DJ et vos lumières pour décembre.</p>
+      <ul>
+        <li><b>Réservez vos dates de décembre</b> pour un repas de Noël ou un réveillon qui danse jusqu'au bout de la nuit.</li>
+        <li><b>Offrez une soirée en cadeau</b> : une animation pour un anniversaire ou des noces à venir, à imaginer ensemble.</li>
+        <li><b>Ajoutez la petite touche magique</b> : effet « danse sur les nuages » ou étincelles froides pour les photos de famille.</li>
+      </ul>
+      <div class="actions" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a class="btn btn-wa" href="https://wa.me/262692357587?text=Bonjour%20MV%20Animation%20974%2C%20je%20souhaite%20r%C3%A9server%20une%20date%20pour%20les%20f%C3%AAtes%20de%20fin%20d%27ann%C3%A9e." target="_blank" rel="noopener">Réserver sur WhatsApp</a>
+        <a class="btn btn-ligne" href="tel:+262692357587">0692 357 587</a>
+      </div>
+    </div>
+    <div class="visuel reveal"><img src="img/faisceaux-lumiere.webp" alt="Faisceaux de lumière bleus et dorés, jeu de lumière MV Animation 974" width="1600" height="1200" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="demande" id="demande">
+  <div class="cadre">
+    <p class="surtitre reveal">Votre date</p>
+    <h2 class="reveal">Préparez votre demande <em>en 30 secondes</em></h2>
+    <p class="intro reveal">Choisissez votre événement, ajoutez la date et le nombre d'invités : votre message part tout prêt sur WhatsApp ou par e-mail.</p>
+    <div class="boite reveal">
+      <label>Votre événement</label>
+      <div class="choix" id="choixEv">
+        <button type="button" aria-pressed="true">Mariage</button><button type="button" aria-pressed="false">Baptême</button><button type="button" aria-pressed="false">Communion / Confirmation</button><button type="button" aria-pressed="false">Anniversaire</button><button type="button" aria-pressed="false">Dîner dansant</button><button type="button" aria-pressed="false">Fête de fin d'année</button>
+      </div>
+      <label>Ce qui vous ferait plaisir</label>
+      <div class="choix" id="choixOpt">
+        <button type="button" aria-pressed="true">DJ & animation</button><button type="button" aria-pressed="true">Sonorisation</button><button type="button" aria-pressed="false">Mise en lumière</button><button type="button" aria-pressed="false">Danse sur les nuages</button><button type="button" aria-pressed="false">Étincelles froides</button>
+      </div>
+      <div class="deux">
+        <div><label for="d">Date</label><input id="d" type="date"></div>
+        <div><label for="n">Nombre d'invités</label><input id="n" type="number" min="1" placeholder="ex. 80"></div>
+      </div>
+      <label for="l">Lieu</label><input id="l" type="text" placeholder="ex. salle des fêtes, Bras-Panon">
+      <div class="apercu" id="apercu" aria-live="polite"></div>
+      <div class="actions">
+        <a class="btn btn-wa" id="envoiWa" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+        <a class="btn btn-ligne" id="envoiMail" href="#">Envoyer par e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="cadre">
+    <p class="surtitre reveal">Contact</p>
+    <h2 class="reveal">On en parle <em>autour d'un bon son</em></h2>
+    <div class="grille">
+      <a class="tuile reveal" href="tel:+262692357587"><small>Téléphone</small><strong>0692 357 587</strong></a>
+      <a class="tuile reveal" href="https://wa.me/262692357587" target="_blank" rel="noopener"><small>WhatsApp</small><strong>Écrire à Mathieu</strong></a>
+      <a class="tuile reveal" href="mailto:mv.annimation@gmail.com"><small>E-mail</small><strong>mv.annimation@gmail.com</strong></a>
+      <a class="tuile reveal" href="https://www.facebook.com/Djmathieuofficiel/" target="_blank" rel="noopener"><small>Facebook</small><strong>MV Animation 974</strong></a>
+    </div>
+    <p class="zone reveal">Basé à Bras-Panon (97412), MV Animation 974 anime vos fêtes dans tout l'Est : Saint-André, Saint-Benoît, Sainte-Anne, la Plaine-des-Palmistes…</p>
+  </div>
+</section>
+
+<footer><b>MV Animation 974</b> · DJ • Animation • Sonorisation • Éclairage · Bras-Panon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de MV Animation 974.</footer>
+
+<div class="flottant">
+  <a class="t" href="tel:+262692357587" aria-label="Appeler MV Animation 974"><svg viewBox="0 0 24 24" fill="#1b1300"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></a>
+  <a class="w" href="https://wa.me/262692357587" target="_blank" rel="noopener" aria-label="WhatsApp MV Animation 974"><svg viewBox="0 0 24 24" fill="#05230f"><path d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.6-.1 1.1z"/></svg></a>
+</div>
+
+<script>
+(function(){
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Apparition au scroll */
+  var els = document.querySelectorAll('.reveal');
+  if (reduit || !('IntersectionObserver' in window)) { els.forEach(function(e){e.classList.add('vu')}); }
+  else {
+    var io = new IntersectionObserver(function(en){ en.forEach(function(x){ if(x.isIntersecting){ x.target.classList.add('vu'); io.unobserve(x.target);} }); },{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }
+
+  /* Univers : faisceaux de lyres, fumée et poussière de lumière */
+  var c = document.getElementById('scene'), ctx = c.getContext('2d'), W, H, dpr = Math.min(window.devicePixelRatio||1, 2);
+  var couleurs = ['47,107,255','255,201,74','216,60,255','127,166,255'];
+  var faisceaux = [], grains = [];
+  function taille(){ W = c.clientWidth; H = c.clientHeight; c.width = W*dpr; c.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0); }
+  function init(){
+    taille(); faisceaux = [];
+    var n = W < 600 ? 4 : 6;
+    for (var i=0;i<n;i++) faisceaux.push({x:(i+.5)*W/n, a:Math.random()*6, v:.35+Math.random()*.35, amp:.35+Math.random()*.3, col:couleurs[i%couleurs.length], larg:W<600?.09:.07});
+    grains = [];
+    for (var j=0;j<(W<600?40:80);j++) grains.push({x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.6+.3, vy:-(Math.random()*.25+.05), p:Math.random()*6});
+  }
+  function dessine(t){
+    ctx.clearRect(0,0,W,H);
+    var temps = t/1000;
+    faisceaux.forEach(function(f,i){
+      var ang = Math.sin(temps*f.v + f.a)*f.amp;
+      var L = H*1.3;
+      var x2 = f.x + Math.sin(ang)*L, y2 = Math.cos(ang)*L;
+      var g = ctx.createLinearGradient(f.x,0,x2,y2);
+      g.addColorStop(0,'rgba('+f.col+',.55)'); g.addColorStop(.6,'rgba('+f.col+',.10)'); g.addColorStop(1,'rgba('+f.col+',0)');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.moveTo(f.x-4,0); ctx.lineTo(f.x+4,0);
+      var dx = Math.cos(ang)*L*f.larg, dy = -Math.sin(ang)*L*f.larg;
+      ctx.lineTo(x2+dx,y2+dy); ctx.lineTo(x2-dx,y2-dy); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = 'rgba('+f.col+',.9)'; ctx.beginPath(); ctx.arc(f.x,2,5,0,7); ctx.fill();
+    });
+    grains.forEach(function(g){
+      g.y += g.vy; g.x += Math.sin(temps+g.p)*.15; if (g.y < -5) { g.y = H+5; g.x = Math.random()*W; }
+      ctx.fillStyle = 'rgba(255,240,210,'+(.25+.35*Math.abs(Math.sin(temps*1.5+g.p)))+')';
+      ctx.beginPath(); ctx.arc(g.x,g.y,g.r,0,7); ctx.fill();
+    });
+  }
+  init(); window.addEventListener('resize', init);
+  var visible = true;
+  new IntersectionObserver(function(e){ visible = e[0].isIntersecting; }).observe(c);
+  if (reduit) dessine(4000);
+  else (function boucle(t){ if (visible) dessine(t); requestAnimationFrame(boucle); })(0);
+
+  /* Étincelles froides sur le bloc des fêtes */
+  var e = document.getElementById('etincelles'), ex = e.getContext('2d'), EW, EH, parts = [], actif = false;
+  function tailleE(){ EW = e.clientWidth; EH = e.clientHeight; e.width = EW*dpr; e.height = EH*dpr; ex.setTransform(dpr,0,0,dpr,0,0); }
+  tailleE(); window.addEventListener('resize', tailleE);
+  function jaillir(){
+    var x = EW*(.1+Math.random()*.8);
+    for (var i=0;i<6;i++) parts.push({x:x, y:EH, vx:(Math.random()-.5)*1.4, vy:-(Math.random()*5+4), vie:1});
+  }
+  function boucleE(){
+    if (actif){
+      if (Math.random() < .25) jaillir();
+      ex.clearRect(0,0,EW,EH);
+      parts = parts.filter(function(p){ return p.vie > 0; });
+      parts.forEach(function(p){
+        p.x += p.vx; p.y += p.vy; p.vy += .06; p.vie -= .012;
+        ex.fillStyle = 'rgba(255,214,120,'+(p.vie*.8)+')';
+        ex.beginPath(); ex.arc(p.x,p.y,1.6,0,7); ex.fill();
+      });
+    }
+    requestAnimationFrame(boucleE);
+  }
+  if (!reduit){
+    new IntersectionObserver(function(en){ actif = en[0].isIntersecting; if(!actif) ex.clearRect(0,0,EW,EH); }).observe(e);
+    boucleE();
+  }
+
+  /* Demande de date : message prêt à envoyer */
+  function lie(id, multi){
+    document.querySelectorAll('#'+id+' button').forEach(function(b){
+      b.addEventListener('click', function(){
+        if (!multi) document.querySelectorAll('#'+id+' button').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
+        b.setAttribute('aria-pressed', multi ? String(b.getAttribute('aria-pressed') !== 'true') : 'true');
+        maj();
+      });
+    });
+  }
+  function choisis(id){ return Array.prototype.map.call(document.querySelectorAll('#'+id+' button[aria-pressed="true"]'), function(b){ return b.textContent; }); }
+  function maj(){
+    var ev = choisis('choixEv')[0] || 'une fête', opt = choisis('choixOpt');
+    var d = document.getElementById('d').value, n = document.getElementById('n').value, l = document.getElementById('l').value.trim();
+    var dateTxt = d ? new Date(d+'T12:00').toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}) : 'date à définir';
+    var msg = 'Bonjour MV Animation 974,\nJe prépare : ' + ev + '\nDate : ' + dateTxt + (n ? '\nInvités : environ ' + n : '') + (l ? '\nLieu : ' + l : '') + (opt.length ? '\nJ\'aimerais : ' + opt.join(', ') : '') + '\nPouvez-vous me dire si vous êtes disponibles ? Merci !';
+    document.getElementById('apercu').textContent = msg;
+    document.getElementById('envoiWa').href = 'https://wa.me/262692357587?text=' + encodeURIComponent(msg);
+    document.getElementById('envoiMail').href = 'mailto:mv.annimation@gmail.com?subject=' + encodeURIComponent('Demande de date : ' + ev) + '&body=' + encodeURIComponent(msg);
+  }
+  lie('choixEv', false); lie('choixOpt', true);
+  ['d','n','l'].forEach(function(id){ document.getElementById(id).addEventListener('input', maj); });
+  maj();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="MV Animation 974" defer></script>
+</body>
+</html>
