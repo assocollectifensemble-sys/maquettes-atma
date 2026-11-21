@@ -176,3 +176,5 @@ table.mj .btn{min-height:32px;padding:3px 8px;font-size:.85em;margin:1px}
 .uvtray{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;background:#1b1430;border-radius:10px;padding:10px;min-height:44px}
 .uvp{width:30px;height:38px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 35% 30%,#fff3,transparent 45%),var(--tc);display:grid;place-items:center;font-family:'Fell';font-size:17px;color:#c9f6ff;text-shadow:0 0 5px #5ee7ff,0 0 2px #5ee7ff;position:relative;border:1px solid #0006}
 .uvp small{position:absolute;top:-2px;right:-4px;font-size:9px;color:#f6e9cf;text-shadow:none;font-family:'Garamond'}
+
+@media (max-width:480px){table.mj{font-size:.78em;display:block;overflow-x:auto}table.mj td,table.mj th{padding:3px}table.mj .btn{min-height:40px;display:block;width:100%;margin:2px 0}}
