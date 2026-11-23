@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Régal Tartes · Traiteur au Tampon · tourtes, quiches, tartes et box apéritives</title>
+<meta name="description" content="Le Régal Tartes, traiteur au Tampon : tourtes, quiches, tartes sucrées, mini burgers, feuilletés et box apéritives faites maison. Commande au 0692 62 42 07.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le Régal Tartes · Traiteur au Tampon">
+<meta property="og:description" content="Tourtes, quiches, tartes sucrées et box apéritives maison, au Tampon.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-regal-tartes-le-tampon/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-regal-tartes-le-tampon/">
+<link rel="icon" href="img/logo-toque.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#ab1011; --rouge-vif:#c8181c; --charbon:#1f1f22; --charbon-2:#2a2a2e;
+  --creme:#f8f2e9; --creme-2:#efe5d6; --dore:#e0ad4c; --texte:#2b2522; --doux:#6d625b;
+  --rayon:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Outfit,system-ui,sans-serif;color:var(--texte);background:var(--creme);line-height:1.6;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:700}
+.ruban{background:var(--charbon);color:#f3e9dc;font-size:.82rem;text-align:center;padding:.55rem 1rem}
+.ruban b{color:var(--dore);font-weight:600}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:rgba(31,31,34,.94);backdrop-filter:blur(8px);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem 0}
+.marque{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.marque img{width:40px;height:40px;object-fit:contain}
+.marque span{font-family:Fraunces,serif;font-weight:700;font-size:1.12rem;letter-spacing:.01em}
+.marque small{display:block;font-family:Outfit;font-weight:400;font-size:.72rem;opacity:.75;letter-spacing:.08em;text-transform:uppercase}
+.liens{display:flex;gap:1.3rem;font-size:.92rem}
+.liens a{text-decoration:none;opacity:.85}.liens a:hover{opacity:1;color:var(--dore)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;padding:.8rem 1.35rem;font-weight:600;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s;font-size:.98rem}
+.btn:hover{transform:translateY(-2px)}
+.btn-rouge{background:var(--rouge-vif);color:#fff;box-shadow:0 8px 22px rgba(171,16,17,.35)}
+.btn-rouge:hover{background:var(--rouge)}
+.btn-clair{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.4)}
+.btn-wa{background:#1f9d55;color:#fff;box-shadow:0 8px 22px rgba(31,157,85,.3)}
+nav .btn{padding:.55rem 1rem;font-size:.88rem}
+.respire{animation:respire 3.2s ease-in-out infinite}
+@keyframes respire{50%{box-shadow:0 8px 30px rgba(200,24,28,.55)}}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:grid;align-items:end;color:#fff;overflow:hidden;background:var(--charbon)}
+.hero-img{position:absolute;inset:0;background:url(img/box-burgers-douceurs.webp) center/cover;animation:ken 22s ease-in-out infinite alternate;transform-origin:60% 50%}
+@keyframes ken{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,22,.25) 0%,rgba(20,20,22,.35) 40%,rgba(20,20,22,.92) 100%),linear-gradient(105deg,rgba(171,16,17,.55) 0%,rgba(171,16,17,0) 45%)}
+#poudre{position:absolute;inset:0;z-index:2;pointer-events:none}
+.hero .wrap{position:relative;z-index:3;padding:6rem 0 3.4rem}
+.surtitre{font-family:Caveat,cursive;font-size:1.7rem;color:var(--dore);display:block;margin-bottom:.2rem}
+.hero h1{font-size:clamp(2.6rem,8vw,5.2rem);max-width:13ch;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero p.lead{font-size:clamp(1.05rem,2.6vw,1.3rem);max-width:36rem;margin:1rem 0 1.7rem;opacity:.95}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.1s .2s cubic-bezier(.2,.7,.2,1) forwards}
+.apparait.d2{animation-delay:.45s}.apparait.d3{animation-delay:.7s}
+@keyframes monte{to{opacity:1;transform:none}}
+
+/* bandeau défilant */
+.defile{background:var(--rouge);color:#fff;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-family:Fraunces,serif;font-size:1.15rem}
+.defile div{display:inline-block;animation:defile 38s linear infinite}
+.defile span{margin:0 1.1rem}.defile i{color:var(--dore);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+section{padding:5rem 0}
+.titre-sec{margin-bottom:2.4rem;max-width:42rem}
+.titre-sec .surtitre{color:var(--rouge);font-size:1.55rem}
+.titre-sec h2{font-size:clamp(2rem,5vw,2.9rem)}
+.titre-sec p{color:var(--doux);margin-top:.7rem;font-size:1.05rem}
+
+/* MAISON */
+.maison{display:grid;grid-template-columns:1.05fr 1fr;gap:3rem;align-items:center}
+.maison blockquote{font-family:Fraunces,serif;font-size:1.28rem;line-height:1.5;border-left:4px solid var(--rouge);padding:.2rem 0 .2rem 1.2rem;margin:1.4rem 0;color:var(--charbon)}
+.maison blockquote cite{display:block;font-family:Outfit;font-style:normal;font-size:.85rem;color:var(--doux);margin-top:.6rem}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.badges span{background:#fff;border:1px solid var(--creme-2);border-radius:999px;padding:.45rem .95rem;font-size:.9rem}
+.duo{position:relative;height:520px}
+.duo figure{position:absolute;border-radius:var(--rayon);overflow:hidden;box-shadow:0 20px 50px rgba(40,20,10,.2)}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+.duo .f1{width:66%;height:78%;left:0;top:0}
+.duo .f2{width:52%;height:58%;right:0;bottom:0;border:6px solid var(--creme)}
+.duo .tampon{position:absolute;left:52%;top:62%;transform:translate(-50%,-50%) rotate(-8deg);background:var(--charbon);color:#fff;border-radius:50%;width:118px;height:118px;display:grid;place-items:center;text-align:center;font-family:Caveat,cursive;font-size:1.35rem;line-height:1.05;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:2;border:2px dashed var(--dore);padding:.5rem}
+
+/* CARTE */
+.carte{background:var(--charbon);color:#f5ece1;position:relative;overflow:hidden}
+.carte::before{content:"";position:absolute;left:-12%;top:0;bottom:0;width:38%;background:var(--rouge);transform:skewX(-12deg);opacity:.9}
+.carte .wrap{position:relative}
+.carte .titre-sec .surtitre{color:var(--dore)}
+.carte .titre-sec p{color:#fff6ec;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.onglets{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.onglets button{font:inherit;font-weight:600;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:.55rem 1.15rem;cursor:pointer;transition:.25s}
+.onglets button[aria-selected=true]{background:var(--dore);color:var(--charbon);border-color:var(--dore)}
+.ardoise{background:rgba(20,20,22,.78);border:1px solid rgba(255,255,255,.12);border-radius:var(--rayon);padding:1.6rem 1.8rem;backdrop-filter:blur(4px);max-width:760px}
+.ardoise h3{font-size:1.6rem;margin-bottom:.3rem}
+.ardoise .note{font-size:.88rem;color:#c9bdb0;margin-bottom:1rem}
+.ardoise ul{list-style:none;columns:2;column-gap:2.4rem}
+.ardoise li{display:flex;justify-content:space-between;gap:.8rem;padding:.55rem 0;border-bottom:1px dotted rgba(255,255,255,.22);break-inside:avoid}
+.ardoise li b{color:var(--dore);font-weight:600;white-space:nowrap}
+.panneau[hidden]{display:none}
+
+/* APERO */
+.boxes{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.box{background:#fff;border-radius:var(--rayon);padding:1.5rem;box-shadow:0 6px 24px rgba(60,30,10,.07);border-top:5px solid var(--rouge);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.box:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(60,30,10,.14)}
+.box h3{font-size:1.3rem}
+.box .qte{font-size:.86rem;color:var(--doux);margin:.15rem 0 .7rem}
+.box ul{list-style:none;font-size:.95rem;flex:1}
+.box li{padding:.18rem 0}.box li::before{content:"·";color:var(--rouge);font-weight:700;margin-right:.45rem}
+.box .prix{font-family:Fraunces,serif;font-size:1.55rem;color:var(--rouge);margin-top:.8rem}
+.burgers{margin-top:1.6rem;display:grid;grid-template-columns:1.2fr 1fr;gap:1.3rem;align-items:stretch}
+.burgers .box{border-top-color:var(--dore)}
+.burgers figure{border-radius:var(--rayon);overflow:hidden;min-height:260px}
+.burgers figure img{width:100%;height:100%;object-fit:cover}
+
+/* GALERIE */
+.galerie{background:var(--creme-2)}
+.rail{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.3rem .2rem 1.2rem;scrollbar-width:thin}
+.rail figure{flex:0 0 auto;width:min(340px,78vw);scroll-snap-align:start;border-radius:var(--rayon);overflow:hidden;background:#fff;box-shadow:0 8px 26px rgba(60,30,10,.1)}
+.rail img{width:100%;height:300px;object-fit:cover;transition:transform .6s}
+.rail figure:hover img{transform:scale(1.05)}
+.rail figcaption{padding:.75rem 1rem;font-size:.92rem;color:var(--doux)}
+.astuce{font-size:.85rem;color:var(--doux)}
+
+/* FETES */
+.fetes{position:relative;background:radial-gradient(ellipse at 20% 0%,#3a1214 0%,var(--charbon) 60%);color:#f7eee3;overflow:hidden}
+.fetes::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(224,173,76,.5) 1px,transparent 1.6px);background-size:34px 34px;opacity:.25}
+.fetes .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.fetes .titre-sec .surtitre{color:var(--dore)}
+.fetes .titre-sec p{color:#e2d6c8}
+.fetes ul{list-style:none;margin:0 0 1.8rem}
+.fetes li{padding:.5rem 0 .5rem 2rem;position:relative}
+.fetes li::before{content:"✦";position:absolute;left:0;color:var(--dore)}
+.fetes figure{border-radius:var(--rayon);overflow:hidden;border:6px solid rgba(224,173,76,.35);transform:rotate(1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.fetes figure img{width:100%;height:520px;object-fit:cover}
+.guirlande{position:absolute;top:0;left:0;right:0;height:14px;background:repeating-linear-gradient(90deg,var(--rouge-vif) 0 22px,var(--dore) 22px 44px);opacity:.85}
+
+/* AVIS */
+.avis{text-align:center}
+.avis blockquote{font-family:Fraunces,serif;font-size:clamp(1.4rem,3.6vw,2rem);max-width:40rem;margin:0 auto;color:var(--charbon)}
+.avis blockquote::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--rouge)}
+.avis cite{display:block;margin-top:1rem;font-style:normal;color:var(--doux);font-size:.95rem}
+
+/* CONTACT */
+.contact{background:#fff}
+.infos{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.carte-info{background:var(--creme);border-radius:var(--rayon);padding:1.6rem}
+.carte-info h3{font-size:1.2rem;margin-bottom:.5rem;color:var(--rouge)}
+.carte-info p{margin-bottom:.4rem}
+.carte-info a{font-weight:600}
+.carte-info .petit{font-size:.88rem;color:var(--doux)}
+.contact .cta{margin-top:2rem}
+.contact .btn-clair{background:var(--charbon);border:0}
+
+footer{background:var(--charbon);color:#cbbfb2;text-align:center;padding:2.4rem 1rem;font-size:.9rem}
+footer img{width:54px;margin:0 auto .7rem}
+footer strong{color:#fff}
+
+.revele{opacity:0;transform:translateY(30px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.revele.vu{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .liens{display:none}
+  .maison,.fetes .wrap,.burgers{grid-template-columns:1fr}
+  .duo{height:420px}
+  .boxes,.infos{grid-template-columns:1fr}
+  .ardoise ul{columns:1}
+  .fetes figure img{height:380px}
+}
+@media (max-width:480px){
+  .wrap{width:calc(100% - 2rem)}
+  section{padding:3.8rem 0}
+  .hero{min-height:84vh}
+  .hero .wrap{padding:5rem 0 2.6rem}
+  .marque small{display:none}
+  nav .btn span{display:none}
+  .ardoise{padding:1.2rem 1.1rem}
+  .duo{height:360px}
+  .duo .tampon{width:100px;height:100px;font-size:1.15rem}
+  .btn{padding:.75rem 1.1rem;font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .apparait,.revele{opacity:1;transform:none}
+  #poudre{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Régal Tartes</div>
+
+<nav>
+  <div class="wrap">
+    <a class="marque" href="#haut"><img src="img/logo-toque.png" alt="Logo toque du Régal Tartes"><span>Le Régal Tartes<small>Traiteur · Le Tampon</small></span></a>
+    <div class="liens"><a href="#maison">La maison</a><a href="#carte">La carte</a><a href="#apero">Apéritifs</a><a href="#fetes">Les fêtes</a><a href="#contact">Contact</a></div>
+    <a class="btn btn-rouge" href="tel:+262692624207">☎ <span>0692 62 42 07</span></a>
+  </div>
+</nav>
+
+<header class="hero" id="haut">
+  <div class="hero-img" role="img" aria-label="Box de mini burgers et de douceurs préparées par Le Régal Tartes"></div>
+  <canvas id="poudre" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <span class="surtitre apparait">Traiteur au Tampon</span>
+    <h1 class="apparait d2">Le Régal Tartes</h1>
+    <p class="lead apparait d3">Tourtes, quiches, tartes sucrées, mini burgers et box apéritives : une cuisine maison pour régaler vos tablées et vos soirées.</p>
+    <div class="cta apparait d3">
+      <a class="btn btn-rouge respire" href="https://wa.me/262692624207?text=Bonjour%20Le%20R%C3%A9gal%20Tartes%2C%20je%20voudrais%20passer%20une%20commande" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+      <a class="btn btn-clair" href="#carte">Voir la carte</a>
+    </div>
+  </div>
+</header>
+
+<div class="defile" aria-hidden="true"><div>
+  <span>Tourtes</span><i>✦</i><span>Quiches</span><i>✦</i><span>Tartes sucrées</span><i>✦</i><span>Mini burgers</span><i>✦</i><span>Feuilletés</span><i>✦</i><span>Mignardises salées</span><i>✦</i><span>Lasagnes</span><i>✦</i><span>Gratin dauphinois</span><i>✦</i><span>Plateaux de charcuterie</span><i>✦</i><span>Salades composées</span><i>✦</i>
+  <span>Tourtes</span><i>✦</i><span>Quiches</span><i>✦</i><span>Tartes sucrées</span><i>✦</i><span>Mini burgers</span><i>✦</i><span>Feuilletés</span><i>✦</i><span>Mignardises salées</span><i>✦</i><span>Lasagnes</span><i>✦</i><span>Gratin dauphinois</span><i>✦</i><span>Plateaux de charcuterie</span><i>✦</i><span>Salades composées</span><i>✦</i>
+</div></div>
+
+<section id="maison">
+  <div class="wrap maison">
+    <div class="revele">
+      <div class="titre-sec">
+        <span class="surtitre">La maison</span>
+        <h2>Le goût du fait maison, de la tourte au petit four</h2>
+      </div>
+      <p>Au 88 rue de la Plaine des Cafres, Le Régal Tartes prépare toute une gamme de tourtes, de quiches et de tartes, et aussi des lasagnes, du gratin dauphinois, des plats de viande et des sautés, des petits plateaux de charcuterie pour vos soirées et des salades composées.</p>
+      <blockquote>« Toutes nos pâtes sont maison. »<cite>La promesse imprimée sur les flyers du Régal</cite></blockquote>
+      <p>Le Régal Tartes, <em>by Le Régal Pizza</em> : des pâtes maison, déclinées en tartes, tourtes et bouchées à partager.</p>
+      <div class="badges"><span>🥧 Tourtes &amp; quiches</span><span>🍰 Tartes sucrées</span><span>🍔 Mini burgers</span><span>🧺 Box apéritives</span><span>🚚 Livraison de repas</span></div>
+    </div>
+    <div class="duo revele">
+      <figure class="f1"><img src="img/feuilletes-tartelettes.webp" alt="Plateau de feuilletés et tartelettes dorés" loading="lazy"></figure>
+      <figure class="f2"><img src="img/pains-graines.webp" alt="Petits pains dorés aux graines, tout juste sortis du four" loading="lazy"></figure>
+      <div class="tampon">Toutes nos pâtes sont maison</div>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div class="titre-sec revele">
+      <span class="surtitre">La carte</span>
+      <h2>Tartes, quiches &amp; tourtes</h2>
+      <p>Des tartes entières à partager, à commander pour le repas de famille, le bureau ou la soirée entre amis.</p>
+    </div>
+    <div class="onglets" role="tablist">
+      <button role="tab" aria-selected="true" data-p="salees">Tartes salées</button>
+      <button role="tab" aria-selected="false" data-p="tourtes">Tourtes</button>
+      <button role="tab" aria-selected="false" data-p="sucrees">Tartes sucrées</button>
+    </div>
+    <div class="ardoise revele">
+      <div class="panneau" id="salees">
+        <h3>Nos tartes salées</h3><p class="note">Quiches entières</p>
+        <ul>
+          <li>Quiche lorraine <b>25 €</b></li>
+          <li>Quiche façon tartiflette <b>26,50 €</b></li>
+          <li>Quiche poireaux saumon <b>27,50 €</b></li>
+          <li>Quiche basquaise poulet <b>25 €</b></li>
+          <li>Quiche basquaise thon <b>25 €</b></li>
+          <li>Quiche 4 fromages <b>32 €</b></li>
+          <li>Quiche poireaux chèvre <b>25 €</b></li>
+        </ul>
+      </div>
+      <div class="panneau" id="tourtes" hidden>
+        <h3>Nos tourtes</h3><p class="note">Tourtes entières</p>
+        <ul>
+          <li>La savoyarde <b>35 €</b></li>
+          <li>La saumon <b>39 €</b></li>
+          <li>La forestière <b>39 €</b></li>
+          <li>La créole <b>35 €</b></li>
+          <li>La gourmande <b>42 €</b></li>
+        </ul>
+      </div>
+      <div class="panneau" id="sucrees" hidden>
+        <h3>Nos tartes sucrées</h3><p class="note">Tartes entières</p>
+        <ul>
+          <li>Pomme banane coco <b>25 €</b></li>
+          <li>Quetsches crème d'amande <b>27,50 €</b></li>
+          <li>Tatin aux pommes <b>29 €</b></li>
+          <li>Normande crumble <b>27 €</b></li>
+          <li>Pomme frangipane <b>25 €</b></li>
+          <li>Pomme alsacienne <b>25 €</b></li>
+          <li>Pêche crème d'amandes <b>25 €</b></li>
+          <li>Poire frangipane <b>25 €</b></li>
+          <li>Flan pâtissier vanille <b>24 €</b></li>
+          <li>La multifruits <b>25 €</b></li>
+          <li>La banane <b>20 €</b></li>
+          <li>L'ananas <b>20 €</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="apero">
+  <div class="wrap">
+    <div class="titre-sec revele">
+      <span class="surtitre">Pour vos soirées</span>
+      <h2>La gamme apéritive</h2>
+      <p>Des box toutes prêtes à poser sur la table : on ouvre, on partage, on se régale.</p>
+    </div>
+    <div class="boxes">
+      <article class="box revele"><h3>Le Box Régal</h3><p class="qte">50 pièces</p><ul><li>10 burgers poulet</li><li>10 navettes magret fumé</li><li>10 mini hot-dogs</li><li>10 navettes crudités</li><li>10 feuilletés porc, pimentés ou nature</li></ul><p class="prix">70 €</p></article>
+      <article class="box revele"><h3>Le Box Gourmand</h3><p class="qte">70 pièces</p><ul><li>20 mini pizzas</li><li>20 feuilletés saucisse poulet</li><li>10 burgers poulet</li><li>10 burgers au poulet pané</li><li>10 roulés au fromage</li></ul><p class="prix">89 €</p></article>
+      <article class="box revele"><h3>Le Box de l'Île</h3><p class="qte">Verrines de poisson · 36 pièces</p><ul><li>12 marlin fumé</li><li>12 thon fumé</li><li>12 espadon fumé</li></ul><p class="prix">65 €</p></article>
+      <article class="box revele"><h3>Le Box Fraîcheur</h3><p class="qte">Mini quiches variées · 48 pièces</p><ul><li>12 saumon</li><li>12 fromage</li><li>12 poisson</li><li>12 poireau chèvre</li></ul><p class="prix">56 €</p></article>
+      <article class="box revele"><h3>Nos feuilletés</h3><p class="qte">Les 50 pièces</p><ul><li>Saucisse (poulet ou porc)</li><li>Jambon</li><li>Fromage</li></ul><p class="prix">44 €</p></article>
+      <article class="box revele"><h3>Mignardises salées</h3><p class="qte">Les 60 pièces</p><ul><li>Quiche</li><li>Pizza</li><li>Poireaux</li><li>Oignons</li><li>Thon</li></ul><p class="prix">42 €</p></article>
+    </div>
+    <div class="burgers">
+      <figure class="revele"><img src="img/mini-burgers-plateau.webp" alt="Plateau de mini burgers piqués d'une tomate cerise" loading="lazy"></figure>
+      <article class="box revele"><h3>Nos mini burgers</h3><p class="qte">Par 25 pièces, prix à la pièce</p><ul><li>Poulet · 1,95 €</li><li>Bœuf · 2,20 €</li><li>Poisson · 2,20 €</li><li>Poulet pané · 2,25 €</li><li>Créole (viande de porc) · 1,95 €</li></ul><p class="qte" style="margin-top:.8rem">Et aussi : chouquettes salées, à partir de 1,95 € la pièce.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="galerie" id="galerie">
+  <div class="wrap">
+    <div class="titre-sec revele">
+      <span class="surtitre">En cuisine</span>
+      <h2>Quelques réalisations</h2>
+      <p>Des photos publiées par Le Régal Tartes sur sa page.</p>
+    </div>
+    <div class="rail">
+      <figure><img src="img/coffret-etage.webp" alt="Coffrets étagés garnis de petites bouchées" loading="lazy"><figcaption>Des coffrets montés en étages</figcaption></figure>
+      <figure><img src="img/burgers-alignes.webp" alt="Mini burgers alignés, tomate cerise sur le dessus" loading="lazy"><figcaption>Mini burgers, tomate cerise en couronne</figcaption></figure>
+      <figure><img src="img/douceurs-framboise.webp" alt="Douceurs chocolat à la framboise et menthe" loading="lazy"><figcaption>Douceurs framboise et menthe</figcaption></figure>
+      <figure><img src="img/burgers-poulet-pane.webp" alt="Mini burgers au poulet pané" loading="lazy"><figcaption>Mini burgers au poulet pané</figcaption></figure>
+      <figure><img src="img/box-douceurs.webp" alt="Box de petites douceurs dorées" loading="lazy"><figcaption>Une box de petites douceurs</figcaption></figure>
+      <figure><img src="img/mignardises-alignees.webp" alt="Mignardises alignées sur une planche" loading="lazy"><figcaption>Mignardises en ligne</figcaption></figure>
+      <figure><img src="img/box-viennoiseries.webp" alt="Box de bouchées dorées" loading="lazy"><figcaption>Bouchées dorées, prêtes à partager</figcaption></figure>
+      <figure><img src="img/box-fenetres.webp" alt="Boîte à fenêtres remplie de douceurs" loading="lazy"><figcaption>À emporter, bien emballé</figcaption></figure>
+    </div>
+    <p class="astuce">Faites glisser pour voir la suite →</p>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="guirlande" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="revele">
+      <div class="titre-sec">
+        <span class="surtitre">Offrir pour Noël</span>
+        <h2>Vos tables de fêtes, signées Le Régal</h2>
+        <p>Pour le réveillon, le repas de famille ou le pot de fin d'année, réservez vos tartes et vos box à l'avance : il reste juste à mettre la table.</p>
+      </div>
+      <ul>
+        <li>Les tourtes à partager : savoyarde, forestière, créole, saumon, gourmande</li>
+        <li>Les box apéritives pour l'apéro des fêtes</li>
+        <li>Les tartes sucrées pour finir le repas en douceur</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/262692624207?text=Bonjour%20Le%20R%C3%A9gal%20Tartes%2C%20je%20voudrais%20r%C3%A9server%20une%20commande%20pour%20les%20f%C3%AAtes" target="_blank" rel="noopener">Réserver pour les fêtes</a>
+        <a class="btn btn-clair" href="tel:+262692624207">Appeler le 0692 62 42 07</a>
+      </div>
+    </div>
+    <figure class="revele"><img src="img/coffret-etage.webp" alt="Coffrets étagés du Régal Tartes, idéals pour une table de fêtes" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap revele">
+    <blockquote>Top, très sympathique et accueillant, surtout très bon !</blockquote>
+    <cite>Kévin L., recommandation sur la page Facebook du Régal Tartes</cite>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="titre-sec revele">
+      <span class="surtitre">Commander</span>
+      <h2>On passe commande ?</h2>
+      <p>Un appel ou un message WhatsApp, et Le Régal Tartes prépare votre commande.</p>
+    </div>
+    <div class="infos">
+      <div class="carte-info revele"><h3>Adresse</h3><p>88 rue de la Plaine des Cafres<br>97418 Le Tampon</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=88%20rue%20de%20la%20Plaine%20des%20Cafres%20Le%20Tampon" target="_blank" rel="noopener">Voir sur la carte →</a></p></div>
+      <div class="carte-info revele"><h3>Horaires</h3><p>Tous les jours<br>de 17h30 à 21h00</p><p class="petit">Le mardi, jour de repos · d'après les flyers du Régal</p></div>
+      <div class="carte-info revele"><h3>Téléphone</h3><p><a href="tel:+262692624207">0692 62 42 07</a></p><p><a href="tel:+262693601683">0693 60 16 83</a></p><p class="petit"><a href="https://www.facebook.com/104367324639223" target="_blank" rel="noopener">Page Facebook →</a></p></div>
+    </div>
+    <div class="cta revele">
+      <a class="btn btn-wa" href="https://wa.me/262692624207?text=Bonjour%20Le%20R%C3%A9gal%20Tartes%2C%20je%20voudrais%20passer%20une%20commande" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      <a class="btn btn-clair" href="tel:+262692624207">Appeler</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo-toque.png" alt="">
+  <p><strong>Le Régal Tartes</strong> · Traiteur · Le Tampon</p>
+  <p style="margin-top:.6rem">Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Régal Tartes.</p>
+</footer>
+
+<script>
+(()=>{
+  // onglets de la carte
+  const tabs=document.querySelectorAll('.onglets button');
+  tabs.forEach(b=>b.addEventListener('click',()=>{
+    tabs.forEach(x=>x.setAttribute('aria-selected',x===b));
+    document.querySelectorAll('.panneau').forEach(p=>p.hidden=p.id!==b.dataset.p);
+  }));
+  // apparitions au scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.revele').forEach(el=>io.observe(el));
+  // poudre de sucre / farine
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const c=document.getElementById('poudre'),x=c.getContext('2d');let W,H,P=[],run=true;
+  const size=()=>{W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio};
+  size();addEventListener('resize',size);
+  const n=innerWidth<600?18:32;
+  for(let i=0;i<n;i++)P.push({x:Math.random(),y:Math.random(),r:.6+Math.random()*2,v:.0004+Math.random()*.0009,d:Math.random()*6,o:.25+Math.random()*.5,g:Math.random()<.3});
+  document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)requestAnimationFrame(f)});
+  let t=0;
+  function f(){if(!run)return;t+=.01;x.clearRect(0,0,W,H);
+    for(const p of P){p.y+=p.v;if(p.y>1.02){p.y=-.02;p.x=Math.random()}
+      const px=(p.x+Math.sin(t+p.d)*.012)*W,py=p.y*H,r=p.r*devicePixelRatio;
+      x.beginPath();x.arc(px,py,r,0,7);x.fillStyle=p.g?`rgba(224,173,76,${p.o})`:`rgba(255,248,238,${p.o})`;x.fill();}
+    requestAnimationFrame(f)}
+  requestAnimationFrame(f);
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Régal Tartes" defer></script>
+</body>
+</html>

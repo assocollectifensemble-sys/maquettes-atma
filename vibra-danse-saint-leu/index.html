@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Vibra Danse · Danse & Yoga Danse Émotion avec Miléna · Saint-Leu</title>
+<meta name="description" content="Vibra Danse, le QG des émotifs créatifs : Danse Lunatique, danse contemporaine, YDÉ – Yoga Danse Émotion et préparation à la scène avec Miléna Costedoat, au Domaine M'ON TOO, 21 avenue des Artisans, Saint-Leu.">
+<meta property="og:title" content="Vibra Danse · Laisse ton corps parler et ton cœur danser">
+<meta property="og:description" content="Danse Lunatique, danse contemporaine, Yoga Danse Émotion et stages enfants avec Miléna, à Saint-Leu.">
+<meta property="og:image" content="https://une2cvmillehistoires.re/maquettes/vibra-danse-saint-leu/img/og-vibra-danse.jpg">
+<meta property="og:url" content="https://une2cvmillehistoires.re/maquettes/vibra-danse-saint-leu/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--terre:#a85c2e;--rouille:#7e3f1c;--sable:#d4a574;--creme:#f7eee3;--lin:#efe2d0;--rose:#c85a54;--olive:#6b7f3a;--soleil:#f2b84b;--nuit:#2f1c13;--txt:#3b2a20;--doux:#7d6555}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08;color:var(--nuit)}
+h2{font-size:clamp(2.1rem,6.4vw,3.3rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.6rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;color:var(--terre);font-weight:500}
+.script{font-family:'Dancing Script',cursive;font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--nuit);color:var(--lin);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4;border-bottom:1px solid rgba(212,165,116,.4)}
+.ribbon b{color:var(--soleil);font-weight:500}
+canvas#soie{position:fixed;inset:0;pointer-events:none;z-index:1}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.92rem;transition:.35s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--terre);color:#fff;box-shadow:0 14px 34px -14px rgba(168,92,46,.9);animation:souffle 4.6s ease-in-out infinite}
+.btn-main:hover{background:var(--rouille)}
+@keyframes souffle{50%{box-shadow:0 16px 44px -6px rgba(168,92,46,.6);transform:scale(1.025)}}
+.btn-line{border:1px solid rgba(126,63,28,.45);color:var(--rouille);background:rgba(255,255,255,.5)}
+.btn-line:hover{background:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+/* Hero */
+.hero{padding:5.2rem 0 3.5rem;background:radial-gradient(120% 70% at 50% 0%,#fbf4ea 0%,var(--creme) 60%)}
+.banniere{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(126,63,28,.75);position:relative}
+.banniere img{width:100%;height:auto;animation:respire 14s ease-in-out infinite}
+@keyframes respire{50%{transform:scale(1.035)}}
+.hero-txt{text-align:center;margin-top:2.2rem}
+.hero h1{font-size:clamp(2.9rem,11vw,5.4rem);letter-spacing:.06em;font-weight:500;color:var(--terre)}
+.hero .qg{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,3.6vw,1.35rem);letter-spacing:.22em;text-transform:uppercase;color:var(--rouille);margin:.3rem 0 1.4rem}
+.hero .qg span{color:var(--rose)}
+.bio{font-size:1.08rem;max-width:34rem;margin:0 auto 1.8rem}
+.bio .script{font-size:1.9rem;color:var(--rose);display:block;line-height:1.2;margin-top:.5rem}
+.hero .ctas{justify-content:center}
+.lieu{margin-top:1.3rem;font-size:.85rem;color:var(--doux)}
+/* bandeau */
+.bandeau{background:var(--terre);color:var(--creme);overflow:hidden;padding:.95rem 0;position:relative;z-index:2}
+.bandeau .piste{display:flex;gap:2.6rem;width:max-content;animation:defile 34s linear infinite;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;white-space:nowrap}
+.bandeau .piste span::after{content:"♡";margin-left:2.6rem;font-style:normal;color:var(--soleil);font-size:1rem}
+@keyframes defile{to{transform:translateX(-50%)}}
+/* Miléna */
+.milena{display:grid;gap:2.6rem;align-items:center}
+.logo-rond{width:min(300px,70vw);margin:auto;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px #fff,0 0 0 11px var(--sable),0 30px 60px -30px rgba(126,63,28,.6);animation:tourne 60s linear infinite}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.citation{font-family:'Cormorant Garamond',serif;font-size:clamp(1.45rem,4.6vw,1.9rem);font-style:italic;line-height:1.3;color:var(--rouille);border-left:3px solid var(--sable);padding-left:1.1rem;margin:1.3rem 0}
+.src{font-size:.78rem;color:var(--doux);font-style:normal;font-family:Jost,sans-serif;display:block;margin-top:.4rem}
+/* disciplines */
+.disciplines{background:linear-gradient(180deg,var(--creme),var(--lin))}
+.cartes{display:grid;gap:1.3rem;margin-top:2rem}
+.carte{background:#fffaf4;border-radius:20px;padding:1.7rem 1.5rem;box-shadow:0 24px 50px -36px rgba(126,63,28,.7);position:relative;overflow:hidden;border:1px solid rgba(212,165,116,.35)}
+.carte::before{content:"";position:absolute;right:-40px;top:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(242,184,75,.35),transparent 70%)}
+.carte .ico{width:46px;height:46px;margin-bottom:.8rem;color:var(--terre)}
+.carte h3{margin-bottom:.5rem}
+.carte p{font-size:.97rem}
+.carte .tag{display:inline-block;margin-top:.9rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;background:var(--lin);color:var(--rouille);padding:.3rem .75rem;border-radius:999px}
+.ydes{display:grid;gap:.9rem;margin-top:.9rem}
+.yde{border-radius:14px;padding:.9rem 1rem;font-size:.93rem}
+.yde b{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;display:block}
+.levant{background:linear-gradient(135deg,#fde9c4,#f7d59a)}
+.couchant{background:linear-gradient(135deg,#e7c2b4,#c98f7c);color:#2f1c13}
+/* journée */
+.journee{background:var(--nuit);color:var(--lin);overflow:hidden}
+.journee h2{color:var(--creme)}
+.journee .eyebrow{color:var(--soleil)}
+.lune{position:absolute;right:6%;top:3.2rem;width:90px;height:90px;border-radius:50%;box-shadow:inset -18px 6px 0 0 #f4dcb0;transform:rotate(-20deg);opacity:.85;animation:flotte 7s ease-in-out infinite}
+@keyframes flotte{50%{transform:rotate(-20deg) translateY(-10px)}}
+.prog{list-style:none;margin:1.8rem 0;border-left:1px solid rgba(212,165,116,.5);padding-left:1.3rem}
+.prog li{position:relative;margin-bottom:1.15rem}
+.prog li::before{content:"";position:absolute;left:-1.72rem;top:.55rem;width:11px;height:11px;border-radius:50%;background:var(--soleil);box-shadow:0 0 0 4px rgba(242,184,75,.2)}
+.prog time{font-weight:500;color:var(--soleil);display:block;font-size:.85rem;letter-spacing:.08em}
+.tarifs{display:flex;flex-wrap:wrap;gap:.7rem;margin:1.4rem 0 1.8rem}
+.tarifs span{border:1px solid rgba(212,165,116,.5);border-radius:999px;padding:.45rem 1rem;font-size:.9rem}
+.tarifs b{color:var(--soleil);font-weight:500}
+.journee .btn-line{color:var(--creme);border-color:rgba(242,184,75,.6);background:rgba(255,255,255,.05)}
+.journee .pense{font-size:.92rem;color:#d8c3a8;margin-top:1.4rem}
+/* agenda */
+.agenda-l{display:grid;gap:.9rem;margin-top:1.8rem}
+.rdv{display:grid;grid-template-columns:84px 1fr;gap:1rem;align-items:center;background:#fffaf4;border-radius:16px;padding:1rem;border:1px solid rgba(212,165,116,.35)}
+.rdv .d{background:var(--terre);color:#fff;border-radius:12px;text-align:center;padding:.55rem .3rem;font-family:'Cormorant Garamond',serif;line-height:1.05}
+.rdv .d b{display:block;font-size:1.55rem;font-weight:600}
+.rdv .d small{font-family:Jost,sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+.rdv h3{font-size:1.25rem}
+.rdv p{font-size:.88rem;color:var(--doux)}
+.adresse{margin-top:1.5rem;font-size:.95rem}
+/* stages */
+.stages-g{display:grid;gap:2rem;align-items:center}
+.affiches{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.affiches figure{border-radius:16px;overflow:hidden;box-shadow:0 24px 44px -30px rgba(47,28,19,.8);transition:transform .5s}
+.affiches figure:nth-child(1){transform:rotate(-2deg)}
+.affiches figure:nth-child(2){transform:rotate(2deg) translateY(1.2rem)}
+.affiches figure:hover{transform:rotate(0) scale(1.03)}
+.conte{background:#fffaf4;border-radius:18px;padding:1.4rem 1.3rem;margin-top:1.4rem;border:1px dashed var(--sable);font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;line-height:1.45;color:var(--rouille)}
+.mots{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.mots span{background:var(--lin);border-radius:999px;padding:.3rem .8rem;font-size:.85rem;color:var(--rouille)}
+/* lieux */
+.lieux{background:linear-gradient(180deg,var(--lin),var(--creme))}
+.galerie{display:grid;gap:1rem;margin-top:1.6rem}
+.galerie figure{border-radius:18px;overflow:hidden;position:relative;background:#e8d6c0}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.galerie figure:hover img{transform:scale(1.05)}
+.galerie figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem 1rem .8rem;background:linear-gradient(transparent,rgba(47,28,19,.78));color:#fff;font-size:.85rem}
+.galerie .yourte{aspect-ratio:1080/440}
+.galerie .pav{aspect-ratio:4/3}
+.galerie .convic{aspect-ratio:4/5}
+/* avis */
+.avis{text-align:center}
+.avis blockquote{max-width:42rem;margin:1.2rem auto 0;font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,4.6vw,1.95rem);font-style:italic;line-height:1.35;color:var(--nuit)}
+.avis blockquote::before{content:"“";display:block;font-size:4.5rem;line-height:.6;color:var(--sable);font-style:normal}
+.avis cite{display:block;margin-top:1.2rem;font-style:normal;font-size:.85rem;color:var(--doux)}
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#8d4a25 0%,var(--rouille) 45%,var(--nuit) 100%);color:var(--creme);text-align:center;overflow:hidden}
+.noel h2{color:var(--creme)}
+.noel .eyebrow{color:var(--soleil)}
+.noel>.wrap>p{max-width:36rem;margin:0 auto 1.8rem;color:#f0dcc4}
+.bons{display:grid;gap:1.4rem;max-width:900px;margin:0 auto 2rem}
+.bon{position:relative;background:linear-gradient(135deg,#fbf3e6,#eed9bb);color:var(--nuit);border-radius:18px;padding:1.7rem 1.3rem 1.4rem;box-shadow:0 30px 60px -30px rgba(0,0,0,.8);text-align:center}
+.bon::before{content:"";position:absolute;inset:8px;border:1px solid rgba(168,92,46,.45);border-radius:12px;pointer-events:none}
+.bon .script{font-size:1.6rem;color:var(--rose);display:block}
+.bon b{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;display:block;line-height:1.15;margin:.2rem 0 .4rem}
+.bon p{font-size:.9rem;color:var(--txt)}
+.bon .prix{display:inline-block;margin-top:.7rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terre)}
+.bon svg{position:absolute;top:-14px;right:22px;width:44px;height:44px}
+.bon:nth-child(1){transform:rotate(-1.5deg)}
+.bon:nth-child(3){transform:rotate(1.5deg)}
+.noel .ctas{justify-content:center}
+.noel .btn-main{background:var(--soleil);color:var(--nuit)}
+.noel .btn-line{color:var(--creme);border-color:rgba(242,184,75,.6);background:rgba(255,255,255,.06)}
+.noel .leg{font-size:.75rem;color:#d9bd9c;margin-top:1rem}
+/* contact */
+.contact{text-align:center}
+.coord{display:grid;gap:1rem;margin:2rem auto;max-width:760px}
+.coord a,.coord div{display:flex;flex-direction:column;align-items:center;gap:.3rem;background:#fffaf4;border-radius:16px;padding:1.2rem;text-decoration:none;border:1px solid rgba(212,165,116,.4);transition:.3s}
+.coord a:hover{transform:translateY(-3px);box-shadow:0 20px 40px -28px rgba(126,63,28,.8)}
+.coord small{text-transform:uppercase;letter-spacing:.2em;font-size:.68rem;color:var(--terre)}
+.coord span{font-size:1.02rem;word-break:break-word}
+footer{text-align:center;padding:2.4rem 1.2rem 3rem;font-size:.82rem;color:#d9c3a7;background:var(--nuit)}
+footer b{color:var(--soleil);font-weight:500}
+/* apparition */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.vu{opacity:1;transform:none}
+@media(min-width:760px){
+ .milena{grid-template-columns:.8fr 1.2fr}
+ .cartes{grid-template-columns:repeat(2,1fr)}
+ .stages-g{grid-template-columns:1fr 1fr}
+ .galerie{grid-template-columns:1.4fr 1fr}
+ .galerie .yourte{grid-column:1/-1}
+ .bons{grid-template-columns:repeat(3,1fr)}
+ .coord{grid-template-columns:repeat(3,1fr)}
+ .agenda-l{grid-template-columns:1fr 1fr}
+ .ydes{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv{opacity:1;transform:none}
+ canvas#soie{display:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Vibra Danse</div>
+<canvas id="soie" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="banniere rv"><img src="img/banniere.webp" alt="Bannière Vibra Danse : deux danseuses en mouvement sur fond terre cuite, « Laisse ton corps parler et ton cœur danser »" width="1600" height="711"></div>
+    <div class="hero-txt">
+      <p class="eyebrow rv">Saint-Leu &amp; Étang-Salé · La Réunion</p>
+      <h1 class="rv">VIBRA DANSE</h1>
+      <p class="qg rv"><span>♡</span> Le QG des émotifs créatifs <span>♡</span></p>
+      <p class="bio rv">Tu ressens TOUT très FORT ? La danse m'a appris à en faire une force.<span class="script">Libère, crée et brille !</span></p>
+      <div class="ctas rv">
+        <a class="btn btn-main" href="tel:+33673191139"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Réserver ma séance</a>
+        <a class="btn btn-line" href="#journee">La journée du 12 décembre</a>
+      </div>
+      <p class="lieu rv">Séances au Domaine M'ON TOO · 21 avenue des Artisans · 97436 Saint-Leu</p>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>Danse Lunatique</span><span>Danse contemporaine</span><span>Yoga Danse Émotion</span><span>Préparation à la scène</span><span>Écriture chorégraphique</span><span>Stages enfants 8-12 ans</span>
+  <span>Danse Lunatique</span><span>Danse contemporaine</span><span>Yoga Danse Émotion</span><span>Préparation à la scène</span><span>Écriture chorégraphique</span><span>Stages enfants 8-12 ans</span>
+</div></div>
+
+<section id="milena">
+  <div class="wrap milena">
+    <div class="rv"><div class="logo-rond"><img src="img/logo.webp" alt="Logo Vibra Danse : mandala avec un arbre et une silhouette en posture de yoga" width="600" height="600"></div></div>
+    <div>
+      <p class="eyebrow rv">Mi présente à ou !</p>
+      <h2 class="rv">Miléna, professeure de danse contemporaine diplômée d'État</h2>
+      <p class="rv">Avec Vibra Danse, Miléna Costedoat ouvre un espace où chacun danse avec ce qu'il ressent : enfants, adultes, écoles de danse et structures. Danse, yoga et émotions s'y mêlent avec tendresse, pour tous les corps et tous les niveaux.</p>
+      <p class="citation rv">« Chacun possède sa sensibilité et sa manière de danser. […] Parce que nos différences sont une richesse à CULTIVER. »<span class="src">« Mes convictions », publication Facebook de Vibra Danse</span></p>
+      <p class="rv">« Je met mon CŒUR à l'ouvrage et ensuite j'ai le trac quand vous êtes devant moi » : derrière chaque cours, une vraie préparation.</p>
+    </div>
+  </div>
+</section>
+
+<section class="disciplines" id="disciplines">
+  <div class="wrap">
+    <p class="eyebrow rv">Les danses de Vibra Danse</p>
+    <h2 class="rv">Laisse ton corps parler et ton cœur danser</h2>
+    <div class="cartes">
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="9" r="4"/><path d="M24 14v13M14 20l10 4 10-4M18 42l6-15 6 15"/><path d="M6 30c6-3 10 3 16 0M26 30c6-3 10 3 16 0" stroke-linecap="round"/></svg>
+        <h3>YDÉ · Yoga Danse Émotion</h3>
+        <p>« Une discipline qui mêle le yoga avec de la danse pour ressentir son corps et lui redonner du mouvement avec tendresse et tolérance. » En séance collective ou individuelle.</p>
+        <div class="ydes">
+          <div class="yde levant"><b>YDÉ Levant</b>Le matin : on active le corps en douceur pour aborder la journée avec clarté et concentration.</div>
+          <div class="yde couchant"><b>YDÉ Couchant</b>Le soir : on évacue la journée pour rentrer chez soi plus légère et passer une meilleure nuit.</div>
+        </div>
+        <span class="tag">15 € par personne</span>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M30 8a16 16 0 1 0 10 26A13 13 0 0 1 30 8z"/><circle cx="36" cy="12" r="1.3" fill="currentColor"/><circle cx="41" cy="20" r="1" fill="currentColor"/></svg>
+        <h3>Danse Lunatique</h3>
+        <p>« Une danse intuitive au féminin pour libérer nos émotions, célébrer notre lune intérieure et être pleinement soi. » La séance commence par un autel de fleurs, composé avec la petite cueillette de chacune.</p>
+        <span class="tag">Danse intuitive au féminin</span>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="8" r="3.5"/><path d="M20 12l3 12-8 6M23 24l8 4 6-8M15 30l-5 12M31 28l2 14" stroke-linecap="round"/></svg>
+        <h3>Danse contemporaine enfants</h3>
+        <p>Tous les mercredis, pour les 6-14 ans, au Domaine M'ON TOO. Ressentir, explorer, créer : la danse comme terrain de jeu des émotions.</p>
+        <span class="tag">Chaque mercredi · 6-14 ans</span>
+      </article>
+      <article class="carte rv">
+        <svg class="ico" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 40h36M10 40V16l14-8 14 8v24"/><path d="M18 40V28a6 6 0 0 1 12 0v12"/><path d="M24 4v4" stroke-linecap="round"/></svg>
+        <h3>Préparation à la scène</h3>
+        <p>Pour les écoles de danse, les structures et leurs élèves : expression corporelle &amp; émotionnelle, préparation mentale et corporelle avec sa « routine de confiance », écriture chorégraphique. Pour des élèves en confiance, justes, présents &amp; alignés.</p>
+        <span class="tag">Écoles · Structures · Élèves</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="journee" id="journee">
+  <div class="lune" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow rv">Samedi 12 décembre 2026 · 10h30 – 17h30</p>
+    <h2 class="rv">Journée bien-être au féminin</h2>
+    <p class="rv">« Une journée bien-être haut en mouvement et en barbotage entre copines, meufs, femmes, mères, sœurs… » Avec Miléna &amp; Marion, Vibra Danse &amp; M'ON TOO, au Domaine M'ON TOO à Saint-Leu.</p>
+    <ul class="prog">
+      <li class="rv"><time>10h30 – 11h</time>Accueil &amp; boissons chaudes</li>
+      <li class="rv"><time>11h – 12h30</time>YDÉ Levant : réveille ton corps en douceur, en clarté &amp; concentration</li>
+      <li class="rv"><time>12h30 – 14h30</time>Pique-nique, coin chill avec piscine et jacuzzi &amp; tirage de cartes</li>
+      <li class="rv"><time>14h30 – 16h</time>Danse LUNATIQUE, la danse intuitive au féminin</li>
+      <li class="rv"><time>16h – 17h30</time>Coin chill, goûter &amp; tirage de cartes</li>
+    </ul>
+    <div class="tarifs rv"><span>Journée complète <b>40 €</b></span><span>YDÉ <b>15 €</b></span><span>Lunatique <b>15 €</b></span><span>Tirage de carte <b>5 €</b></span></div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="https://www.billetweb.fr/journee-bien-etre-au-feminin2" target="_blank" rel="noopener">Réserver ma journée</a>
+      <a class="btn btn-line" href="tel:+33673191139">Une question ? J'appelle</a>
+    </div>
+    <p class="pense rv">À prévoir : ta petite cueillette de fleurs, ton tapis de yoga et un coussin, ta gourde, ton maillot et ton pique-nique. « Alors, ça t'émoustille ? Viens, on t'attend »</p>
+  </div>
+</section>
+
+<section id="agenda">
+  <div class="wrap">
+    <p class="eyebrow rv">Prochains rendez-vous</p>
+    <h2 class="rv">Ton aventure au Domaine M'ON TOO</h2>
+    <div class="agenda-l">
+      <div class="rdv rv"><div class="d"><b>12</b><small>déc. 2026</small></div><div><h3>Journée bien-être au féminin</h3><p>YDÉ Levant, Danse Lunatique, coin chill · 10h30 – 17h30</p></div></div>
+      <div class="rdv rv"><div class="d"><b>19</b><small>déc. 2026</small></div><div><h3>Respire, Papote &amp; P'tit Dej</h3><p>Samedi à 9h15 · L'Étang-Salé</p></div></div>
+      <div class="rdv rv"><div class="d"><b>22</b><small>janv. 2027</small></div><div><h3>YDÉ Couchant</h3><p>17h – 18h30 · le format du soir pour une nuit plus douce</p></div></div>
+      <div class="rdv rv"><div class="d"><b>27</b><small>janv. 2027</small></div><div><h3>Stage de danse enfants 8-12 ans</h3><p>Du 27 au 30 janvier · écriture chorégraphique</p></div></div>
+      <div class="rdv rv"><div class="d"><b>20</b><small>févr. 2027</small></div><div><h3>YDÉ Levant</h3><p>9h – 10h30 · le format du matin, clarté et concentration</p></div></div>
+      <div class="rdv rv"><div class="d"><b>10</b><small>mai 2027</small></div><div><h3>Stage de danse enfants 8-12 ans</h3><p>Du 10 au 14 mai · créer son propre spectacle</p></div></div>
+      <div class="rdv rv"><div class="d"><b>mer.</b><small>chaque semaine</small></div><div><h3>Danse contemporaine enfants</h3><p>Tous les mercredis · de 6 à 14 ans</p></div></div>
+    </div>
+    <p class="adresse rv"><b>Domaine M'ON TOO</b> · 21 avenue des Artisans · 97436 Saint-Leu · réservation par téléphone ou en message privé.</p>
+  </div>
+</section>
+
+<section class="lieux" id="stages">
+  <div class="wrap stages-g">
+    <div>
+      <p class="eyebrow rv">Stages enfants · vacances scolaires</p>
+      <h2 class="rv">En avant la création ! En avant la danse ! En avant les émotions !</h2>
+      <p class="rv">Les stages proposent aux enfants de 8 à 12 ans de CRÉER leur propre spectacle, puis d'INCARNER une histoire et d'oser la partager devant leurs proches.</p>
+      <div class="mots rv"><span>ressentir</span><span>explorer</span><span>créer</span><span>apprivoiser son trac</span><span>sa petite routine de confiance</span></div>
+      <div class="conte rv">« Il était une fois deux enfants qui se réveillèrent dans leur chambre et découvrirent un merveilleux jardin. Ils partirent se promener quand, tout à coup, leurs mains prirent vie et se mirent à exprimer leurs états d'âme… »<span class="src">« Alors le stage, c'était comment ? », publication Facebook de Vibra Danse, octobre 2026</span></div>
+    </div>
+    <div class="affiches rv">
+      <figure><img src="img/stage-contemporain.webp" alt="Affiche Vibra Danse : stage de danse contemporaine vacances scolaires, 8-12 ans" loading="lazy" width="800" height="1000"></figure>
+      <figure><img src="img/planning-stages.webp" alt="Visuel Vibra Danse : planning des stages de danse, cœur et fleurs sur fond jaune" loading="lazy" width="800" height="1000"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils ont dansé avec Miléna</p>
+    <blockquote class="rv">mon fils a passé une super semaine lors du stage vacances avec Milena. Elle a été incroyable, et mon bonhomme, non danseur à la base, a vraiment progressé... mais surtout, il a été merveilleusement pris en charge, compris, accompagné. Merci Milena</blockquote>
+    <cite class="rv">Jacinthe Delors · recommandation Facebook, 26 octobre 2026</cite>
+  </div>
+</section>
+
+<section class="lieux" id="lieux">
+  <div class="wrap">
+    <p class="eyebrow rv">Des lieux qui inspirent</p>
+    <h2 class="rv">Un cocon rond, en bois, baigné de lumière</h2>
+    <p class="rv">Vibra Danse aime les lieux qui respirent : une yourte, un pavillon en pleine nature, un domaine avec piscine. Ici, des ateliers publiés par Miléna en mai 2025.</p>
+    <div class="galerie">
+      <figure class="yourte rv"><img src="img/yourte-sacre-chaos.webp" alt="Charpente rayonnante en bois d'une yourte, lumière douce" loading="lazy" width="1080" height="440"><figcaption>La yourte de l'atelier Vibra Danse « Sacré Chaos » · mai 2025</figcaption></figure>
+      <figure class="pav rv"><img src="img/pavillon-atelier.webp" alt="Pavillon en bois et béton au toit de tôle ocre, au milieu de la verdure" loading="lazy" width="1000" height="815"><figcaption>Le lieu d'un atelier de mouvement libre · mai 2025</figcaption></figure>
+      <figure class="convic rv"><img src="img/mes-convictions.webp" alt="Visuel Vibra Danse « Mi présente à ou ! » avec des fleurs dessinées" loading="lazy" width="800" height="1000"><figcaption>« Mi présente à ou ! » · visuel de Vibra Danse</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <p class="eyebrow rv">Offrir pour Noël</p>
+    <h2 class="rv">Offrir un moment pour soi, en mouvement</h2>
+    <p class="rv">Une séance d'YDÉ, une journée entre femmes ou un stage créatif pour les enfants : un cadeau qui se vit avec le cœur et le corps.</p>
+    <div class="bons">
+      <div class="bon rv"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#c85a54"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#a8473f"/><circle cx="23" cy="18" r="3.5" fill="#f2b84b"/></svg><span class="script">Bon cadeau</span><b>Une séance d'YDÉ</b><p>Levant pour s'éveiller en douceur, ou Couchant pour une nuit plus sereine.</p><span class="prix">15 € la séance</span></div>
+      <div class="bon rv"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#c85a54"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#a8473f"/><circle cx="23" cy="18" r="3.5" fill="#f2b84b"/></svg><span class="script">Le 12 décembre</span><b>La Journée bien-être au féminin</b><p>Un cadeau à s'offrir entre copines, sœurs, mères, juste avant les fêtes.</p><span class="prix">Journée complète 40 €</span></div>
+      <div class="bon rv"><svg viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#c85a54"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#a8473f"/><circle cx="23" cy="18" r="3.5" fill="#f2b84b"/></svg><span class="script">Pour les marmailles</span><b>Le stage de janvier</b><p>Du 27 au 30 janvier, pour les 8-12 ans : inventer sa danse et monter sur scène.</p><span class="prix">Places sur demande</span></div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-main" href="tel:+33673191139">Offrir une séance</a>
+      <a class="btn btn-line" href="https://www.facebook.com/profile.php?id=61574476929408" target="_blank" rel="noopener">Écrire à Miléna</a>
+    </div>
+    <p class="leg rv">Illustration : bons cadeaux imaginés pour Vibra Danse</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv">On danse ensemble ?</p>
+    <h2 class="rv">Alors laisse-le DIRE</h2>
+    <p class="rv">« Mets de la musique sous la douche, chante et danse TA VIE ! » Et pour danser avec Miléna, un message ou un appel suffit.</p>
+    <div class="coord">
+      <a class="rv" href="tel:+33673191139"><small>Téléphone</small><span>06 73 19 11 39</span></a>
+      <a class="rv" href="mailto:contact.vibradanse@gmail.com"><small>E-mail</small><span>contact.vibradanse@gmail.com</span></a>
+      <a class="rv" href="https://www.facebook.com/profile.php?id=61574476929408" target="_blank" rel="noopener"><small>Facebook</small><span>Miléna · Vibra Danse</span></a>
+    </div>
+    <p class="rv" style="font-size:.92rem;color:var(--doux)">Domaine M'ON TOO · 21 avenue des Artisans · 97436 Saint-Leu<br>Instagram : <a href="https://www.instagram.com/milena.danse.tes.emotions" target="_blank" rel="noopener">@milena.danse.tes.emotions</a></p>
+  </div>
+</section>
+
+</main>
+<footer><b>Vibra Danse</b> · Danse &amp; Yoga Danse Émotion · Saint-Leu, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Vibra Danse.</footer>
+
+<script>
+// apparition au scroll
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+// univers : rubans de soie qui ondulent + fleurs de la cueillette qui dérivent
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var c=document.getElementById('soie'),x=c.getContext('2d'),W,H,dpr=Math.min(window.devicePixelRatio||1,2),t=0;
+  function size(){W=innerWidth;H=innerHeight;c.width=W*dpr;c.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();addEventListener('resize',size);
+  var rubans=[{y:.22,a:38,f:.0052,s:.006,c:'rgba(168,92,46,.10)',w:1.6},{y:.48,a:52,f:.0041,s:.0045,c:'rgba(212,165,116,.16)',w:2.2},{y:.74,a:30,f:.0063,s:.007,c:'rgba(200,90,84,.09)',w:1.4},{y:.6,a:44,f:.0036,s:.0035,c:'rgba(242,184,75,.13)',w:1.2}];
+  var cols=['#f2b84b','#c85a54','#fff4df','#d4a574'];
+  var fl=[];for(var i=0;i<(W<600?11:20);i++)fl.push(nf(true));
+  function nf(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,r:3+Math.random()*4.5,v:.18+Math.random()*.35,o:Math.random()*6.28,rot:Math.random()*6.28,vr:(Math.random()-.5)*.01,c:cols[Math.floor(Math.random()*cols.length)]}}
+  function fleur(f){x.save();x.translate(f.x,f.y);x.rotate(f.rot);x.globalAlpha=.55;x.fillStyle=f.c;for(var k=0;k<5;k++){x.rotate(1.2566);x.beginPath();x.ellipse(0,f.r,f.r*.55,f.r,0,0,6.28);x.fill()}x.fillStyle='#a85c2e';x.beginPath();x.arc(0,0,f.r*.4,0,6.28);x.fill();x.restore()}
+  function loop(){
+    t++;x.clearRect(0,0,W,H);
+    rubans.forEach(function(r,j){for(var b=0;b<3;b++){x.beginPath();for(var px=-10;px<=W+10;px+=12){var py=H*r.y+Math.sin(px*r.f+t*r.s+j+b*.35)*r.a+Math.sin(px*r.f*2.3+t*r.s*1.7)*r.a*.3+b*7;px<0?x.moveTo(px,py):x.lineTo(px,py)}x.strokeStyle=r.c;x.lineWidth=r.w;x.stroke()}});
+    fl.forEach(function(f,i){f.y+=f.v;f.o+=.012;f.x+=Math.sin(f.o)*.45;f.rot+=f.vr;fleur(f);if(f.y>H+20)fl[i]=nf(false)});
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Vibra Danse" defer></script>
+</body>
+</html>
