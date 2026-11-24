@@ -7,7 +7,7 @@
     n8n: ["n8n", "Automatisations", "flow"],
     ia: ["IA de contrôle", "Lecture des pièces", "sparkle"],
     msg: ["Mails et WhatsApp", "Relances, alertes", "mail"],
-    qua: ["Logiciel Qualiopi", "Financements, délais", "clipboard"],
+    qua: ["Logiciel de financements", "Financements, délais", "clipboard"],
     fed: ["Site fédéral", "Ouverture des sessions", "award"]
   };
   const LINKS = [["site", "bdd"], ["bdd", "n8n"], ["n8n", "ia"], ["n8n", "msg"], ["n8n", "qua"], ["n8n", "fed"]];
@@ -16,7 +16,7 @@
     [1, "Elle dépose sa photo d'identité : n8n déclenche aussitôt le contrôle."],
     [2, "L'IA lit la pièce en 3 secondes : photo floue, elle prépare un conseil clair."],
     [3, "Un mail et un WhatsApp bienveillants partent vers Léa, avec le lien pour redéposer."],
-    [4, "Le logiciel Qualiopi est mis à jour : prise en charge CPF et délai suivis."]
+    [4, "Le logiciel de financements est mis à jour : prise en charge CPF et délai suivis."]
   ];
   const LAYOUT = {
     h: { vb: "0 0 1000 415", w: 190, h: 72, pos: { site: [20, 205], bdd: [270, 205], n8n: [510, 205], ia: [510, 55], msg: [790, 60], qua: [790, 190], fed: [790, 320] }, zone: [250, 18, 470, 300] },
@@ -37,7 +37,7 @@
       return "M" + p + " C" + bulge + "," + p[1] + " " + bulge + "," + q[1] + " " + q;
     };
     const z = L.zone;
-    return '<svg class="schema schema-' + kind + '" viewBox="' + L.vb + '" role="img" aria-label="Schéma du système : site, base de données, automatisations n8n, IA de contrôle, mails et WhatsApp, logiciel Qualiopi, site fédéral">' +
+    return '<svg class="schema schema-' + kind + '" viewBox="' + L.vb + '" role="img" aria-label="Schéma du système : site, base de données, automatisations n8n, IA de contrôle, mails et WhatsApp, logiciel de financements, site fédéral">' +
       '<rect class="zone" x="' + z[0] + '" y="' + z[1] + '" width="' + z[2] + '" height="' + z[3] + '" rx="18"/><text class="zone-t" x="' + (z[0] + 14) + '" y="' + (z[1] + z[3] - 12) + '">SERVEUR DÉDIÉ · DONNÉES EN FRANCE</text>' +
       LINKS.map(([a, b], i) => '<path class="link" id="' + kind + '-l' + i + '" d="' + path(a, b, i) + '"/>').join("") +
       Object.entries(L.pos).map(([k, [x, y]]) => '<g class="node" id="' + kind + '-n-' + k + '" transform="translate(' + x + ',' + y + ')"><rect width="' + W + '" height="' + H + '" rx="14"/>' +
@@ -57,7 +57,7 @@
        ["flow", "n8n", "Le chef d'orchestre : quand un événement arrive (inscription, pièce, paiement), il déclenche la bonne action."],
        ["sparkle", "IA de contrôle", "Une assistante de lecture : elle repère une pièce floue, expirée ou hors sujet. Le bureau garde la décision."],
        ["mail", "Mails et WhatsApp", "Les messages partent au bon moment, avec un ton chaleureux et un lien direct."],
-       ["clipboard", "Logiciel Qualiopi", "Le registre qualité : prises en charge, délais, émargements et preuves, synchronisés."],
+       ["clipboard", "Logiciel de financements", "Le registre qualité : prises en charge, délais, émargements et preuves, synchronisés."],
        ["award", "Site fédéral", "L'ouverture des sessions est préparée automatiquement, puis validée par le bureau."]].map(([ic, t, d]) => '<div class="legend-item"><span class="l-ico">' + I(ic) + '</span><div><b style="color:var(--navy)">' + t + '</b><p>' + d + '</p></div></div>').join("") +
       '</div></section></div><div class="section-sm"></div></div>';
 

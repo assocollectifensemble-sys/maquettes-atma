@@ -1,5 +1,5 @@
 /* Service worker : mise en cache de la maquette pour un usage hors connexion. */
-const CACHE = "maquette-formations-v2";
+const CACHE = "maquette-formations-v3";
 const FILES = [
   "./", "./index.html", "./manifest.json", "./css/styles.css",
   "./js/config.js", "./js/data.js", "./js/icons.js", "./js/store.js", "./js/ui.js", "./js/router.js", "./js/docai.js", "./js/app.js",
