@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+  <title>Formations secourisme et natation</title>
+  <meta name="description" content="Maquette interactive : formations au secourisme et aux métiers de la natation à La Réunion.">
+  <meta name="theme-color" content="#0B2A4A">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-role="stagiaire">
+  <a class="skip" href="#app">Aller au contenu</a>
+
+  <div class="demo-strip" role="note">
+    <span class="demo-dot" aria-hidden="true"></span>
+    <span>Données de démonstration</span>
+    <button type="button" id="reset-demo" class="demo-reset">Réinitialiser la démo</button>
+  </div>
+
+  <header class="topbar">
+    <div class="topbar-in">
+      <a href="#/" class="brand" id="brand" aria-label="Accueil">
+        <span id="brand-logo"></span>
+        <span class="brand-txt"><strong id="brand-name"></strong><small id="brand-tag"></small></span>
+      </a>
+      <div class="role-switch" role="group" aria-label="Choisir un espace de démonstration">
+        <span class="role-label">Espace</span>
+        <button type="button" class="role-btn" data-role="stagiaire" aria-pressed="true">Stagiaire</button>
+        <button type="button" class="role-btn" data-role="formateur" aria-pressed="false">Formateur</button>
+        <button type="button" class="role-btn" data-role="bureau" aria-pressed="false">Bureau</button>
+      </div>
+    </div>
+    <nav class="nav-top" id="nav-top" aria-label="Navigation principale"></nav>
+  </header>
+
+  <main id="app" class="view" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="container footer-in">
+      <div class="footer-brand"><span id="footer-logo"></span><div><strong id="footer-name"></strong><p>Formations au secourisme et aux métiers de la natation · La Réunion</p></div></div>
+      <nav class="footer-links" aria-label="Liens de pied de page">
+        <a href="#/formations">Toutes les formations</a>
+        <a href="#/planning">Planning</a>
+        <a href="#/aide">Aide aux démarches</a>
+        <a href="#/coulisses">Les coulisses</a>
+      </nav>
+      <p class="signature">Maquette réalisée par <strong>Atma digital</strong></p>
+    </div>
+  </footer>
+
+  <nav class="nav-bottom" id="nav-bottom" aria-label="Navigation mobile"></nav>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/docai.js"></script>
+  <script src="js/views/public.js"></script>
+  <script src="js/views/inscription.js"></script>
+  <script src="js/views/aide.js"></script>
+  <script src="js/views/espace.js"></script>
+  <script src="js/views/formateur.js"></script>
+  <script src="js/views/bureau.js"></script>
+  <script src="js/views/retroplanning.js"></script>
+  <script src="js/views/federal.js"></script>
+  <script src="js/views/coulisses.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

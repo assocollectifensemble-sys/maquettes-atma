@@ -1,0 +1,16 @@
+{
+  "name": "Formations secourisme et natation",
+  "short_name": "Formations",
+  "description": "Maquette interactive : inscriptions, dossiers et sessions de formation au secourisme et aux métiers de la natation.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF8F3",
+  "theme_color": "#0B2A4A",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
