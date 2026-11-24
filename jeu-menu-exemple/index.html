@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chez Exemple · la carte et le jeu</title>
+<meta name="theme-color" content="#1f3d2b">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--nuit:#1d3b2a;--acc:#e0a030;--acc2:#f4d58d;--fond:#fbf6ec;--chaud:#c8473a;--ok:#2f8f5b;--txt:#25302b;--mut:#6b746f;--card:#fff;--titre:'Fraunces',Georgia,serif;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{font:16px/1.45 Nunito,system-ui,sans-serif;color:var(--txt);background:var(--nuit);display:flex;justify-content:center;align-items:center;gap:40px}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+#app{position:relative;width:100%;max-width:480px;height:100dvh;background:var(--fond);display:flex;flex-direction:column;overflow:hidden}
+.hd{display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:var(--nuit);color:#fff}
+.hd .nm{font:600 21px/1.1 var(--titre);letter-spacing:.2px}
+.hd .sub{font-size:12px;opacity:.75}
+.hd .lg{height:34px}
+.hd .sp{flex:1}
+.hd .pill{font-size:12px;font-weight:800;background:var(--acc);color:var(--nuit);border-radius:99px;padding:6px 11px}
+main{flex:1;overflow-y:auto;overscroll-behavior:contain;scroll-behavior:smooth}
+.nav{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-top:1px solid #0001;padding-bottom:env(safe-area-inset-bottom)}
+.nav button{display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 2px 9px;font-size:12px;font-weight:700;color:var(--mut);position:relative}
+.nav button .ic{font-size:21px;line-height:1.2}
+.nav button.on{color:var(--nuit)}
+.nav button.on::before{content:"";position:absolute;top:0;left:22%;right:22%;height:3px;border-radius:0 0 3px 3px;background:var(--acc)}
+.nav button.next::after{content:"";position:absolute;top:7px;right:calc(50% - 20px);width:8px;height:8px;border-radius:50%;background:var(--chaud);animation:pu 1.4s infinite}
+@keyframes pu{50%{transform:scale(1.5);opacity:.5}}
+.scr{animation:in .28s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.pad{padding:16px}
+.t1{font:600 30px/1.1 var(--titre);color:var(--nuit)}
+.t2{font:600 22px/1.15 var(--titre);color:var(--nuit)}
+.k{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--chaud)}
+.m{font-size:14px;color:var(--mut)}
+.btn{display:block;width:100%;text-align:center;padding:14px 18px;border-radius:14px;font-weight:800;font-size:16px;background:var(--nuit);color:#fff;margin-top:12px}
+.btn.a{background:var(--acc);color:var(--nuit)}
+.btn.l{background:#fff;color:var(--nuit);border:2px solid #0001}
+.hero{position:relative;padding:22px 16px 18px;background:linear-gradient(160deg,var(--nuit),color-mix(in srgb,var(--nuit) 70%,var(--chaud)));color:#fff;overflow:hidden}
+.hero .t1{color:#fff}
+.hero p{opacity:.85;font-size:14px;margin-top:6px;max-width:34ch}
+.hero .deco{position:absolute;right:-14px;bottom:-22px;font-size:110px;opacity:.16;transform:rotate(-12deg)}
+.cats{position:sticky;top:0;z-index:3;display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:var(--fond);scrollbar-width:none;border-bottom:1px solid #0000000d}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex:none;padding:8px 14px;border-radius:99px;background:#fff;font-weight:800;font-size:14px;color:var(--nuit);border:1.5px solid #0000001a;white-space:nowrap}
+.cats button.on{background:var(--nuit);color:#fff;border-color:var(--nuit)}
+.filt{display:flex;gap:8px;flex-wrap:wrap;padding:10px 16px 0}
+.filt button{font-size:13px;font-weight:700;padding:6px 11px;border-radius:99px;border:1.5px dashed #0003;color:var(--mut)}
+.filt button.on{border-style:solid;border-color:var(--ok);color:var(--ok);background:#2f8f5b14}
+.cat{padding:6px 16px 4px;scroll-margin-top:62px}
+.cat h2{font:600 24px/1.2 var(--titre);color:var(--nuit);margin:16px 0 2px}
+.cat .ci{font-size:13px;color:var(--mut);margin-bottom:6px}
+.pl{display:flex;gap:12px;background:var(--card);border-radius:var(--r);padding:12px;margin:10px 0;box-shadow:0 1px 0 #0000000a,0 6px 18px -10px #0003}
+.pl .ph{flex:none;width:84px;height:84px;border-radius:14px;background:var(--acc2) center/cover;display:flex;align-items:center;justify-content:center;font-size:38px}
+.pl .bd{flex:1;min-width:0}
+.pl .row{display:flex;gap:8px;align-items:baseline}
+.pl b{font-size:16px;color:var(--nuit);flex:1}
+.pl .px{font-weight:800;color:var(--nuit);white-space:nowrap}
+.pl .ds{font-size:14px;color:var(--mut);margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.tag{font-size:11.5px;font-weight:800;padding:3px 8px;border-radius:99px;background:#0000000b;color:var(--txt)}
+.tag.v{background:#2f8f5b1f;color:var(--ok)}
+.tag.s{background:color-mix(in srgb,var(--chaud) 14%,transparent);color:var(--chaud)}
+.tag.al{background:#fff4d6;color:#8a5a00}
+.pl.dim{opacity:.35}
+.note{margin:18px 16px 8px;padding:12px 14px;border-radius:14px;background:#fff;border:1.5px dashed #0002;font-size:13.5px;color:var(--mut)}
+.cta{position:sticky;bottom:0;padding:10px 16px 14px;background:linear-gradient(to top,var(--fond) 70%,transparent)}
+.card{background:#fff;border-radius:var(--r);padding:16px;margin-top:12px;box-shadow:0 6px 18px -12px #0004}
+.prog{display:flex;gap:6px;margin:14px 0 4px}
+.prog i{flex:1;height:6px;border-radius:9px;background:#0001}
+.prog i.on{background:var(--acc)}
+.prog i.ok{background:var(--ok)}
+.qo{display:block;width:100%;text-align:left;padding:14px 16px;margin:9px 0;border-radius:14px;background:#fff;border:2px solid #0000001a;font-weight:700;color:var(--nuit)}
+.qo.good{border-color:var(--ok);background:#2f8f5b14}
+.qo.bad{border-color:var(--chaud);opacity:.7}
+.fact{margin-top:10px;padding:11px 13px;border-radius:12px;background:var(--acc2);font-size:14px;color:var(--nuit)}
+.scratch{position:relative;margin:16px auto 6px;width:100%;max-width:330px;aspect-ratio:1.55;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 10px 30px -14px #0006}
+.scratch .under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px;background:radial-gradient(circle at 50% 35%,#fff,var(--acc2))}
+.scratch .under .big{font:700 26px/1.1 var(--titre);color:var(--nuit)}
+.scratch canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+.ticket{margin-top:14px;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 12px 30px -16px #0007}
+.ticket .tt{background:var(--nuit);color:#fff;padding:16px}
+.ticket .tt .t2{color:#fff}
+.ticket .tb{padding:16px;border-top:2px dashed #0002}
+.code{font:800 30px/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;color:var(--nuit);margin:6px 0}
+.mini3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.mini3>*{background:var(--fond);border-radius:12px;padding:9px 6px;text-align:center;font-size:12px;color:var(--mut)}
+.mini3 b{display:block;font-size:15px;color:var(--nuit)}
+.prop{display:flex;gap:12px;align-items:flex-start;background:#fff;border-radius:16px;padding:14px;margin-top:10px;border:2px solid transparent}
+.prop.on{border-color:var(--acc)}
+.prop .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--nuit);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.prop b{color:var(--nuit)}
+.prop p{font-size:14px;color:var(--mut);margin-top:2px}
+.steps{counter-reset:s;margin-top:8px}
+.steps li{list-style:none;position:relative;padding:8px 0 8px 40px;font-size:14.5px}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:6px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--nuit);font-weight:800;display:flex;align-items:center;justify-content:center}
+.toast{position:absolute;left:50%;bottom:86px;transform:translate(-50%,20px);background:var(--nuit);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:700;opacity:0;transition:.25s;pointer-events:none;max-width:90%;text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.intro{position:absolute;inset:0;z-index:20;background:var(--nuit);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:28px 22px calc(26px + env(safe-area-inset-bottom));overflow:hidden}
+.intro .t1{color:#fff;font-size:34px}
+.intro p{opacity:.85;margin-top:10px}
+.intro ol{margin:18px 0 6px;list-style:none}
+.intro li{display:flex;gap:12px;align-items:center;margin:9px 0;font-size:15px}
+.intro li b{flex:none;width:40px;height:40px;border-radius:12px;background:#ffffff1f;display:flex;align-items:center;justify-content:center;font-size:21px}
+.intro .deco{position:absolute;top:-30px;right:-40px;font-size:200px;opacity:.12;transform:rotate(14deg)}
+.intro .badge{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--acc);color:var(--nuit);padding:5px 10px;border-radius:99px;margin-bottom:12px;align-self:flex-start}
+.side{display:none;max-width:330px;color:#fff}
+.side .t1{color:#fff;font-size:34px}
+.side p{opacity:.85;margin-top:12px;font-size:15px}
+.side b{color:var(--acc2)}
+@media(min-width:980px){.side{display:block}#app{height:min(880px,calc(100vh - 40px));border-radius:34px;box-shadow:0 30px 80px #0009,0 0 0 10px #ffffff14}}
+@media(min-width:600px) and (max-width:979px){#app{max-width:560px}}
+@media(max-height:640px){.t1{font-size:26px}.intro .t1{font-size:28px}.intro li{margin:5px 0}}
+</style>
+</head>
+<body>
+<aside class="side" id="side"></aside>
+<div id="app">
+ <header class="hd" id="hd"></header>
+ <main id="main"></main>
+ <nav class="nav" id="nav"></nav>
+ <div class="toast" id="toast"></div>
+</div>
+<script>
+const C={"slug": "menu-exemple", "nom": "Chez Exemple", "sous_titre": "Cuisine créole · La Réunion", "commune": "La Réunion", "couleurs": {"nuit": "#1f3d2b", "accent": "#e8a33d", "accent2": "#f6dca0", "fond": "#fbf5ea", "chaud": "#c43d4b"}, "police_titre": "Fraunces", "marque": "Maquette Atma Digital · Aurélie & Jonathan · La Réunion", "intro": {"badge": "Maquette de démonstration", "titre_html": "Votre carte en ligne,<br><i>et un petit jeu à votre image</i>", "texte": "« Chez Exemple » est un restaurant imaginaire : vous nous donnez votre carte papier, nous la saisissons, et vos clients la retrouvent ici en scannant le QR posé sur la table."}, "menu": {"surtitre": "La carte du jour", "titre_html": "Bon appétit,<br><i>la marmite est prête !</i>", "accroche": "Plats, prix et allergènes en un coup d'œil. Touchez une catégorie pour y aller directement.", "emoji": "🍛", "devise": "€", "filtres": [["vege", "🌱 Végétarien"], ["sans:gluten", "🌾 Je fais attention au gluten"], ["sans:lait", "🥛 Je fais attention au lait"]], "note": "Les prix et les plats de cette maquette sont des exemples. Pour toute question d'allergène, l'équipe vous renseigne avec plaisir.", "categories": [{"nom": "Pour commencer", "emoji": "🥟", "plats": [{"nom": "Samoussas maison (x4)", "prix": 4.5, "desc": "Poulet, thon ou légumes, croustillants à souhait.", "emoji": "🥟", "allergenes": ["gluten"], "tags": ["maison"]}, {"nom": "Bouchons vapeur (x6)", "prix": 5, "desc": "Avec leur sauce soja et un peu de piment.", "emoji": "🥢", "allergenes": ["gluten", "soja"]}, {"nom": "Bonbons piment (x6)", "prix": 3.5, "desc": "Pois du Cap, oignon vert, combava.", "emoji": "🌶️", "tags": ["vege", "pimente"]}]}, {"nom": "Les carrys", "emoji": "🍛", "info": "Servis avec riz, grains du jour et rougail.", "plats": [{"nom": "Carry poulet péi", "prix": 13.5, "desc": "Poulet mijoté au safran péi, thym et gingembre.", "emoji": "🍗", "tags": ["peï", "maison"]}, {"nom": "Rougail saucisses", "prix": 13, "desc": "Saucisses fumées, tomates, oignons, une pointe de piment.", "emoji": "🍅", "tags": ["pimente"]}, {"nom": "Civet zourite", "prix": 17, "desc": "Poulpe mijoté au vin rouge et aux épices.", "emoji": "🐙", "allergenes": ["mollusques", "sulfites"]}, {"nom": "Carry légumes du marché", "prix": 12, "desc": "Chouchou, brède et pommes de terre au curcuma.", "emoji": "🥬", "tags": ["vege", "peï"]}]}, {"nom": "Les grillades", "emoji": "🔥", "plats": [{"nom": "Brochettes de thon", "prix": 16, "desc": "Thon frais mariné au citron vert, salade de palmiste.", "emoji": "🐟", "allergenes": ["poisson"]}, {"nom": "Côtes de porc boucanées", "prix": 15, "desc": "Fumées au bois, sauce tamarin.", "emoji": "🍖"}]}, {"nom": "Les douceurs", "emoji": "🍰", "plats": [{"nom": "Gâteau patate", "prix": 5, "desc": "Patate douce, vanille et cannelle, comme chez grand-mère.", "emoji": "🍠", "allergenes": ["oeufs", "lait", "gluten"], "tags": ["maison"]}, {"nom": "Flan coco", "prix": 5, "desc": "Lait de coco et caramel maison.", "emoji": "🥥", "allergenes": ["oeufs", "lait"]}, {"nom": "Salade de fruits péi", "prix": 4.5, "desc": "Mangue, ananas Victoria, fruit de la passion.", "emoji": "🍍", "tags": ["vege", "peï"]}]}, {"nom": "À boire", "emoji": "🥤", "plats": [{"nom": "Jus de fruits pressés", "prix": 4, "desc": "Selon le marché : goyavier, passion, ananas.", "emoji": "🧃", "tags": ["peï"]}, {"nom": "Limonade péi", "prix": 3, "emoji": "🍋"}, {"nom": "Café, thé, tisane", "prix": 2, "emoji": "☕"}]}], "jeu": {"surtitre": "Le jeu de la maison", "titre_html": "3 questions,<br><i>1 cadeau</i>", "accroche": "Le temps que le plat arrive, testez votre culture péi. Chaque joueur repart avec un cadeau, et plus vous trouvez de bonnes réponses, plus il est gourmand.", "cta": "En attendant votre plat : 3 questions, un cadeau", "gratte": "Grattez ici ✨", "validite_jours": 30, "conditions": "Exemple de règles : un bon par table et par visite, à présenter avant l'addition. Le restaurant choisit ses cadeaux et les change quand il le souhaite.", "questions": [["À La Réunion, le « safran péi », c'est…", ["Le curcuma", "La vanille", "Le combava"], "Le safran péi est le curcuma : il donne au carry sa belle couleur dorée."], ["La vanille Bourbon pousse sur…", ["Une liane, de la famille des orchidées", "Un grand arbre", "Un buisson épineux"], "La vanille est une orchidée grimpante. À La Réunion, chaque fleur est pollinisée à la main."], ["Dans un rougail saucisses, on retrouve…", ["Des tomates et des oignons", "Du lait de coco", "Des lentilles"], "Le rougail saucisses mijote avec tomates, oignons, ail et une pointe de piment."]], "lots": ["Un café offert", "Une limonade péi offerte", "Un dessert du jour offert", "Le dessert maison offert et le café avec"]}}, "cote_resto": {"titre_html": "Votre carte en ligne,<br><i>à votre image</i>", "accroche": "Vous nous confiez votre carte (une photo de la carte papier suffit) : nous la saisissons, nous l'habillons à vos couleurs et nous la mettons en ligne. Vos clients l'ouvrent avec le QR posé sur la table.", "etapes": ["Vous nous envoyez une photo de votre carte, votre logo et 3 ou 4 photos de plats.", "Nous saisissons tout : catégories, prix, allergènes, plats du jour.", "Nous préparons le jeu avec vos questions et vos cadeaux.", "Vous changez un prix ou un plat ? Un message suffit, la carte est à jour dans la journée."], "propositions": [{"titre": "① La carte en ligne + le jeu à table", "texte": "Votre carte complète sur téléphone, avec un petit jeu à votre image et un bon cadeau à montrer à l'équipe."}, {"titre": "② Le parcours dehors", "texte": "Des QR chez des voisins partenaires lancent une petite aventure qui se termine chez vous.", "lien": "https://maquettes.atma-digital.re/jeu-boma-beach/", "lien_txt": "Voir un jeu abouti (Böma Beach)"}, {"titre": "③ Le défi du mois", "texte": "Un mini-jeu de course aux couleurs de la maison : le meilleur score du mois gagne un repas."}], "simple": "Cette maquette est volontairement simple : elle montre ce qui est possible. Tout se modifie et se développe avec vous : votre logo, vos couleurs, votre ton, plus de jeux, plus d'écrans.", "ecran_large": "Sur téléphone, le client scanne le QR posé sur la table : la carte s'ouvre, puis un petit jeu lui offre un cadeau à montrer à l'équipe."}};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const KEY='menu_'+C.slug+'_';
+const LS={get(k,d){try{const v=JSON.parse(localStorage.getItem(KEY+k));return v===null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(KEY+k,JSON.stringify(v))}catch(e){}}};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const pad=n=>String(n).padStart(2,'0');
+const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2400)}
+(function theme(){const r=document.documentElement.style,c=C.couleurs||{};
+ [['--nuit',c.nuit],['--acc',c.accent],['--acc2',c.accent2],['--fond',c.fond],['--chaud',c.chaud]].forEach(([k,v])=>v&&r.setProperty(k,v));
+ if(C.police_titre)r.setProperty('--titre',`'${C.police_titre}',Georgia,serif`)})();
+const M=C.menu, DEV=M.devise||'€';
+const ALL=Object.assign({gluten:'Gluten',crustaces:'Crustacés',oeufs:'Œufs',poisson:'Poisson',arachides:'Arachides',soja:'Soja',lait:'Lait',fruits_coque:'Fruits à coque',celeri:'Céleri',moutarde:'Moutarde',sesame:'Sésame',sulfites:'Sulfites',lupin:'Lupin',mollusques:'Mollusques'},M.allergenes_libelles||{});
+const prix=p=>typeof p==='number'?p.toFixed(2).replace('.',',').replace(',00','')+' '+DEV:esc(p);
+const logo=()=>C.logo?`<img class="lg" src="${C.logo}" alt="${esc(C.nom)}">`:'';
+
+/* ---------- navigation ---------- */
+const TABS=[['carte','📖','La carte'],['jeu','🎲','Le jeu'],['bon','🎁','Mon bon'],['resto','👋','Côté resto']];
+let S=location.hash.slice(1)||'carte'; if(!TABS.some(t=>t[0]===S))S='carte';
+const seen=new Set(LS.get('seen',['carte']));
+function go(t){S=t;history.replaceState(null,'','#'+t);render()}
+function render(){seen.add(S);LS.set('seen',[...seen]);
+ const nx=TABS.find(t=>!seen.has(t[0]));
+ $('#nav').innerHTML=TABS.map(([id,ic,lb])=>`<button data-t="${id}" class="${S===id?'on':''} ${nx&&nx[0]===id?'next':''}" aria-label="${lb}"><span class="ic">${ic}</span>${lb}</button>`).join('');
+ $$('#nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+ $('#hd').innerHTML=`${logo()}<div><div class="nm">${esc(C.nom)}</div><div class="sub">${esc(C.sous_titre||C.commune||'')}</div></div><span class="sp"></span>${bon()&&!bon().used?'<button class="pill" id="pb">🎁 Mon bon</button>':''}`;
+ const pb=$('#pb');pb&&(pb.onclick=()=>go('bon'));
+ const el=document.createElement('section');el.className='scr';$('#main').innerHTML='';$('#main').appendChild(el);$('#main').scrollTop=0;
+ V[S](el)}
+function nextBtn(t,lbl){return `<button class="btn a" data-go="${t}">${lbl}</button>`}
+function bind(el){el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go))}
+
+/* ---------- bon ---------- */
+const bon=()=>LS.get('bon',null);
+function makeBon(lot){const r=n=>Array.from({length:n},()=>'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[Math.random()*32|0]).join('');
+ const d=new Date();d.setDate(d.getDate()+(M.jeu.validite_jours||30));
+ LS.set('bon',{code:r(3)+'-'+r(3),lot,exp:+d,used:null})}
+
+const V={
+/* ---------- 1. la carte ---------- */
+carte(el){
+ const F=LS.get('filtre',[]);
+ const flt=M.filtres||[['vege','🌱 Végétarien'],['sans:gluten','Sans gluten'],['sans:lait','Sans lait']];
+ const okP=p=>F.every(f=>f==='vege'?(p.tags||[]).includes('vege'):f.startsWith('sans:')?!(p.allergenes||[]).includes(f.slice(5)):true);
+ el.innerHTML=`<div class="hero"><div class="deco">${esc(M.emoji||'🍛')}</div><div class="k" style="color:var(--acc2)">${esc(M.surtitre||'La carte')}</div><div class="t1" style="margin-top:4px">${M.titre_html||'Bon appétit !'}</div><p>${esc(M.accroche||'')}</p></div>
+ <div class="cats" id="cats">${M.categories.map((c,i)=>`<button data-c="${i}" class="${i?'':'on'}">${esc(c.emoji||'')} ${esc(c.nom)}</button>`).join('')}</div>
+ <div class="filt">${flt.map(([k,l])=>`<button data-f="${k}" class="${F.includes(k)?'on':''}">${esc(l)}</button>`).join('')}</div>
+ ${M.categories.map((c,i)=>`<div class="cat" id="cat${i}"><h2>${esc(c.emoji||'')} ${esc(c.nom)}</h2>${c.info?`<div class="ci">${esc(c.info)}</div>`:''}
+  ${c.plats.map(p=>`<div class="pl ${okP(p)?'':'dim'}">${p.photo||p.emoji?`<div class="ph" style="${p.photo?`background-image:url(${p.photo})`:''}">${p.photo?'':esc(p.emoji)}</div>`:''}
+   <div class="bd"><div class="row"><b>${esc(p.nom)}</b><span class="px">${prix(p.prix)}</span></div>${p.desc?`<div class="ds">${esc(p.desc)}</div>`:''}
+   ${(p.tags||[]).length||(p.allergenes||[]).length?`<div class="tags">${(p.tags||[]).map(t=>`<span class="tag ${t==='vege'?'v':t==='pimente'?'s':''}">${esc((M.tags_libelles||{})[t]||({vege:'🌱 Végétarien',pimente:'🌶️ Pimenté',maison:'Fait maison',peï:'Produit péi',nouveau:'Nouveau'})[t]||t)}</span>`).join('')}${(p.allergenes||[]).map(a=>`<span class="tag al">${esc(ALL[a]||a)}</span>`).join('')}</div>`:''}</div></div>`).join('')}</div>`).join('')}
+ <div class="note">${esc(M.note||'Allergènes : demandez à l\'équipe, elle vous renseigne avec plaisir.')}</div>
+ <div class="cta"><button class="btn a" data-go="jeu">🎲 ${esc(M.jeu.cta||'En attendant votre plat : 3 questions, un cadeau')}</button></div>`;
+ const cats=el.querySelector('#cats');
+ cats.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cats.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));el.querySelector('#cat'+b.dataset.c).scrollIntoView({behavior:'smooth',block:'start'})});
+ el.querySelectorAll('[data-f]').forEach(b=>b.onclick=()=>{const k=b.dataset.f,i=F.indexOf(k);i<0?F.push(k):F.splice(i,1);LS.set('filtre',F);const y=$('#main').scrollTop;render();$('#main').scrollTop=y});
+ const main=$('#main');main.onscroll=()=>{if(S!=='carte')return;let cur=0;M.categories.forEach((c,i)=>{const h=el.querySelector('#cat'+i);if(h&&h.getBoundingClientRect().top<160)cur=i});
+  cats.querySelectorAll('button').forEach((x,i)=>{const on=i===cur;if(on&&!x.classList.contains('on'))x.scrollIntoView({inline:'center',block:'nearest'});x.classList.toggle('on',on)})};
+ bind(el)},
+
+/* ---------- 2. le jeu ---------- */
+jeu(el){const J=M.jeu,b=bon();
+ if(b&&!b.used){el.innerHTML=`<div class="pad"><div class="k">Le jeu</div><div class="t1" style="margin-top:4px">Votre cadeau vous attend 🎉</div><p class="m" style="margin-top:8px">Vous avez déjà joué aujourd'hui : votre bon est prêt, montrez-le au moment de l'addition.</p>${nextBtn('bon','🎁 Voir mon bon')}<button class="btn l" id="rj">Rejouer pour le plaisir</button></div>`;
+  el.querySelector('#rj').onclick=()=>quiz(el,true);bind(el);return}
+ el.innerHTML=`<div class="pad"><div class="k">${esc(J.surtitre||'Le jeu de la maison')}</div><div class="t1" style="margin-top:4px">${J.titre_html||'3 questions, 1 cadeau'}</div>
+  <p class="m" style="margin-top:8px">${esc(J.accroche||'')}</p>
+  <div class="card"><ol class="steps"><li>Répondez à ${J.questions.length} petites questions sur la carte et l'île.</li><li>Grattez la carte : votre cadeau apparaît.</li><li>Montrez le bon à l'équipe : il est valable ${J.validite_jours||30} jours.</li></ol></div>
+  <button class="btn a" id="st">C'est parti !</button></div>`;
+ el.querySelector('#st').onclick=()=>quiz(el,false)},
+/* ---------- 3. le bon ---------- */
+bon(el){const b=bon();
+ if(!b){el.innerHTML=`<div class="pad"><div class="k">Mon bon</div><div class="t1" style="margin-top:4px">Votre bon s'affichera ici</div><p class="m" style="margin-top:8px">Jouez au petit jeu de la maison : 3 questions, puis une carte à gratter.</p>${nextBtn('jeu','🎲 Jouer maintenant')}</div>`;bind(el);return}
+ const d=new Date(b.exp),ds=pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear();
+ el.innerHTML=`<div class="pad"><div class="k">Mon bon</div><div class="ticket"><div class="tt"><div class="k" style="color:var(--acc2)">${esc(C.nom)}</div><div class="t2" style="margin-top:4px">${esc(b.lot)}</div></div>
+  <div class="tb"><div class="m">Code à montrer à l'équipe</div><div class="code">${b.code}</div>
+  <div class="mini3"><div><b>${ds}</b>valable jusqu'au</div><div><b>1 par table</b>par visite</div><div><b>${b.used?'Utilisé ✓':'Prêt'}</b>statut</div></div>
+  ${b.used?`<p class="m" style="margin-top:12px">Utilisé le ${new Date(b.used).toLocaleDateString('fr-FR')}. Merci et à très vite !</p>`:`<button class="btn" id="use">L'équipe valide le bon</button><p class="m" style="margin-top:8px;font-size:12.5px">Ce bouton est réservé à l'équipe, au moment de l'addition.</p>`}</div></div>
+  ${M.jeu.conditions?`<p class="m" style="margin-top:12px;font-size:12.5px">${esc(M.jeu.conditions)}</p>`:''}
+  ${nextBtn('resto','👋 Découvrir le côté resto')}</div>`;
+ const u=el.querySelector('#use');u&&(u.onclick=()=>{b.used=Date.now();LS.set('bon',b);buzz(40);toast('Bon validé ✓ Bonne fin de repas !');render()});bind(el)},
+/* ---------- 4. côté resto ---------- */
+resto(el){const R=C.cote_resto||{};
+ el.innerHTML=`<div class="pad"><div class="k">Côté resto</div><div class="t1" style="margin-top:4px">${R.titre_html||'Votre carte en ligne, <i>à votre image</i>'}</div>
+  <p class="m" style="margin-top:8px">${esc(R.accroche||'')}</p>
+  <div class="card"><b style="color:var(--nuit)">Comment ça marche</b><ol class="steps">${(R.etapes||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ol></div>
+  <div class="t2" style="margin-top:22px">3 propositions</div>
+  ${(R.propositions||[]).map((p,i)=>`<div class="prop ${i?'':'on'}"><span class="n">${i+1}</span><div><b>${esc(p.titre)}</b><p>${esc(p.texte)}</p>${p.lien?`<a href="${p.lien}" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;font-weight:800;color:var(--chaud);font-size:14px">${esc(p.lien_txt||'Voir un exemple')} →</a>`:''}</div></div>`).join('')}
+  <div class="card" style="background:var(--nuit);color:#fff"><b style="color:var(--acc2)">Une maquette volontairement simple</b><p style="font-size:14px;opacity:.9;margin-top:4px">${esc(R.simple||'')}</p></div>
+  <button class="btn l" id="rz">Revoir la maquette depuis le début</button>
+  <p class="m" style="text-align:center;margin:16px 0 6px;font-size:12.5px">${esc(C.marque||'Atma Digital · Aurélie & Jonathan · La Réunion')}</p></div>`;
+ el.querySelector('#rz').onclick=()=>{['bon','seen','filtre','intro'].forEach(k=>localStorage.removeItem(KEY+k));location.hash='';location.reload()}}
+};
+
+/* ---------- quiz + grattage ---------- */
+function quiz(el,replay){const Q=M.jeu.questions;let i=0,score=0;
+ const step=()=>{const q=Q[i],opts=shuffle(q[1].map((t,k)=>[t,k===0]));
+  el.innerHTML=`<div class="pad"><div class="prog">${Q.map((_,k)=>`<i class="${k<i?'ok':k===i?'on':''}"></i>`).join('')}</div><div class="k" style="margin-top:12px">Question ${i+1} sur ${Q.length}</div>
+   <div class="t2" style="margin-top:6px">${esc(q[0])}</div><div id="opts">${opts.map(([t,g])=>`<button class="qo" data-g="${g?1:0}">${esc(t)}</button>`).join('')}</div><div id="fx"></div></div>`;
+  el.querySelectorAll('.qo').forEach(b=>b.onclick=()=>{if(el.querySelector('.qo.good'))return;const g=b.dataset.g==='1';if(g)score++;buzz(g?30:[20,40,20]);
+   el.querySelectorAll('.qo').forEach(x=>{if(x.dataset.g==='1')x.classList.add('good');else if(x===b)x.classList.add('bad')});
+   el.querySelector('#fx').innerHTML=`<div class="fact">${g?'Bravo ! ':'Presque ! '}${esc(q[2]||'')}</div><button class="btn a" id="nx">${i+1<Q.length?'Question suivante':'Gratter ma carte'}</button>`;
+   el.querySelector('#nx').onclick=()=>{i++;i<Q.length?step():gratte(el,score,replay)}})};
+ step()}
+function gratte(el,score,replay){const lots=M.jeu.lots,lot=lots[Math.min(lots.length-1,Math.max(0,lots.length-1-(Q=>Q.length-score)(M.jeu.questions)))];
+ el.innerHTML=`<div class="pad" style="text-align:center"><div class="k">${score} bonne${score>1?'s':''} réponse${score>1?'s':''} sur ${M.jeu.questions.length}</div><div class="t2" style="margin-top:6px">Grattez la carte avec le doigt</div>
+  <div class="scratch"><div class="under"><div class="m">Votre cadeau</div><div class="big">${esc(lot)}</div></div><canvas id="cv"></canvas></div><p class="m" id="hint">Encore un peu…</p><div id="after"></div></div>`;
+ const cv=el.querySelector('#cv'),box=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;cv.width=box.width*dpr;cv.height=box.height*dpr;const x=cv.getContext('2d');x.scale(dpr,dpr);
+ const g=x.createLinearGradient(0,0,box.width,box.height);g.addColorStop(0,getComputedStyle(document.documentElement).getPropertyValue('--acc'));g.addColorStop(1,getComputedStyle(document.documentElement).getPropertyValue('--chaud'));
+ x.fillStyle=g;x.fillRect(0,0,box.width,box.height);x.fillStyle='#fff';x.font='800 20px Nunito,sans-serif';x.textAlign='center';x.fillText(M.jeu.gratte||'Grattez ici ✨',box.width/2,box.height/2+7);
+ x.globalCompositeOperation='destination-out';let down=false,done=false;
+ const pt=e=>{const r=cv.getBoundingClientRect(),t=e.touches?e.touches[0]:e;return[t.clientX-r.left,t.clientY-r.top]};
+ const dig=e=>{if(!down||done)return;e.preventDefault();const[a,b]=pt(e);x.beginPath();x.arc(a,b,22,0,7);x.fill();check()};
+ let n=0;const check=()=>{if(++n%8)return;const d=x.getImageData(0,0,cv.width,cv.height).data;let c=0;for(let k=3;k<d.length;k+=64)if(d[k]===0)c++;if(c/(d.length/64)>.45)finish()};
+ const finish=()=>{if(done)return;done=true;cv.style.transition='opacity .5s';cv.style.opacity=0;buzz([30,60,30]);
+  if(!replay||!bon()||bon().used)makeBon(lot);
+  el.querySelector('#hint').textContent='Bien joué 🎉';el.querySelector('#after').innerHTML=nextBtn('bon','🎁 Voir mon bon');bind(el);render2()};
+ const render2=()=>{const h=$('#hd');if(h&&!$('#pb'))h.insertAdjacentHTML('beforeend','<button class="pill" id="pb">🎁 Mon bon</button>');const pb=$('#pb');pb&&(pb.onclick=()=>go('bon'))};
+ cv.addEventListener('pointerdown',e=>{down=true;cv.setPointerCapture&&cv.setPointerCapture(e.pointerId);dig(e)});cv.addEventListener('pointermove',dig);addEventListener('pointerup',()=>down=false);
+ setTimeout(()=>{if(!done)el.querySelector('#hint').innerHTML='Astuce : <button style="text-decoration:underline;font-weight:800;color:var(--chaud)" id="sk">tout révéler</button>';const s=el.querySelector('#sk');s&&(s.onclick=finish)},7000)}
+
+/* ---------- intro + côté écran large ---------- */
+function intro(){if(LS.get('intro',0))return;const I=C.intro||{};const d=document.createElement('div');d.className='intro';
+ d.innerHTML=`<div class="deco">${esc(M.emoji||'🍛')}</div><span class="badge">${esc(I.badge||'Maquette de démonstration')}</span><div class="t1">${I.titre_html||esc(C.nom)}</div><p>${esc(I.texte||'')}</p>
+ <ol><li><b>📖</b><div><strong>La carte</strong> · catégories, prix, photos, allergènes</div></li><li><b>🎲</b><div><strong>Le jeu</strong> · 3 questions et une carte à gratter</div></li><li><b>🎁</b><div><strong>Le bon</strong> · un cadeau à montrer à l'équipe</div></li></ol>
+ <button class="btn a" id="ok">Découvrir la carte</button>`;$('#app').appendChild(d);d.querySelector('#ok').onclick=()=>{LS.set('intro',1);d.remove()}}
+$('#side').innerHTML=`<div class="k" style="color:var(--acc2)">Maquette · Atma Digital</div><div class="t1" style="margin-top:8px">${esc(C.nom)}</div><p>${esc((C.cote_resto||{}).ecran_large||'Sur téléphone, le client scanne le QR posé sur la table : la carte s\'ouvre, puis un petit jeu lui offre un cadeau.')}</p><p>Ouvrez cette page sur votre téléphone pour la vivre <b>comme vos clients</b>.</p>`;
+if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('sw.js').catch(()=>{});
+render();intro();
+</script>
+</body>
+</html>
