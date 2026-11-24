@@ -244,4 +244,51 @@
     }, { rootMargin: "-40% 0px -55% 0px" });
     liens.forEach(function (a) { var s = document.querySelector(a.getAttribute("href")); if (s) obs.observe(s); });
   }
+
+  /* Menu mobile : flèches et dégradés de défilement, rubrique en cours centrée, astuce affichée une seule fois */
+  (function () {
+    var menu = document.querySelector("nav.menu");
+    var liste = menu && menu.querySelector(".menu__liste");
+    if (!liste) return;
+    var svg = function (d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+    function fleche(cls, d, sens) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "menu__fleche " + cls; b.tabIndex = -1; b.setAttribute("aria-hidden", "true");
+      b.innerHTML = svg(d);
+      b.addEventListener("click", function () { liste.scrollBy({ left: sens * liste.clientWidth * 0.6, behavior: "smooth" }); });
+      menu.appendChild(b);
+    }
+    fleche("menu__fleche--g", "M15 5l-7 7 7 7", -1);
+    fleche("menu__fleche--d", "M9 5l7 7-7 7", 1);
+    var astuce = document.createElement("p");
+    astuce.className = "menu__astuce"; astuce.setAttribute("aria-hidden", "true");
+    astuce.textContent = "Faites glisser le menu pour voir toutes les rubriques";
+    var vu = false;
+    try { vu = sessionStorage.getItem("ffky-menu-vu") === "1"; } catch (e) {}
+    if (vu) astuce.hidden = true;
+    menu.appendChild(astuce);
+    function majBords() {
+      var max = liste.scrollWidth - liste.clientWidth;
+      menu.classList.toggle("menu--a-gauche", liste.scrollLeft > 4);
+      menu.classList.toggle("menu--a-droite", max > 4 && liste.scrollLeft < max - 4);
+    }
+    function masquerAstuce() {
+      if (astuce.hidden) return;
+      astuce.classList.add("est-masquee");
+      setTimeout(function () { astuce.hidden = true; }, 450);
+      try { sessionStorage.setItem("ffky-menu-vu", "1"); } catch (e) {}
+    }
+    var debut = liste.scrollLeft;
+    liste.addEventListener("scroll", function () { majBords(); if (Math.abs(liste.scrollLeft - debut) > 24) masquerAstuce(); }, { passive: true });
+    /* Rubrique en cours : centrée dans le menu, voisines visibles de chaque côté */
+    var actif = liste.querySelector(".menu__item--actif") || liste.querySelector('[aria-current="page"]');
+    if (actif && liste.scrollWidth > liste.clientWidth) {
+      var cible = actif.offsetLeft - (liste.clientWidth - actif.offsetWidth) / 2;
+      liste.scrollLeft = Math.max(0, cible);
+      debut = liste.scrollLeft;
+    }
+    majBords();
+    window.addEventListener("resize", majBords);
+    if (!astuce.hidden) setTimeout(masquerAstuce, 9000);
+  })();
 })();
