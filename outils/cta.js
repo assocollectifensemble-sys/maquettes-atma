@@ -36,6 +36,22 @@
     '<button type="button" aria-label="Masquer">\u00D7</button>';
   bar.querySelector('button').onclick = function () { bar.classList.remove('on'); setTimeout(function () { bar.remove(); }, 600); };
 
+  /* Mention « Site propulsé par Atma Digital » (lien suivi vers atma-digital.re), ajoutée au bas
+     du dernier <footer> quand la page ne la porte pas déjà en dur (classe .atma-credit). 25/11/2026. */
+  function credit() {
+    if (document.querySelector('.atma-credit')) return;
+    var cs = document.createElement('style');
+    cs.textContent = '.atma-credit{display:block;margin:12px auto 0;padding:0 12px;font:400 12px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#8a8a8a;text-align:center;letter-spacing:0;text-transform:none}' +
+      '.atma-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}';
+    document.head.appendChild(cs);
+    var p = document.createElement('p');
+    p.className = 'atma-credit';
+    p.innerHTML = 'Site propuls\u00e9 par <a href="https://atma-digital.re">Atma Digital</a>';
+    var fs = document.querySelectorAll('footer');
+    (fs.length ? fs[fs.length - 1] : document.body).appendChild(p);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', credit); else credit();
+
   function show() { document.body.appendChild(bar); setTimeout(function () { bar.classList.add('on'); }, 50); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(show, 2500); });
   else setTimeout(show, 2500);

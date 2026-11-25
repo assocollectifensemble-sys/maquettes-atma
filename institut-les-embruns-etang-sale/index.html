@@ -122,7 +122,8 @@ footer{padding:2rem 0;font-size:.82rem;color:var(--gris);border-top:1px solid #d
   <div class="ph"><img class="rev" src="img/gamme.webp" alt="Gamme de soins Fleur's à l'institut" loading="lazy"></div>
  </div>
 </section>
-<footer><div class="wrap">Institut Les Embruns · L'Étang-Salé-les-Bains, La Réunion · Maquette imaginée par Jonathan · ATMA Digital à partir de la page Facebook de l'institut</div></footer>
+<footer><div class="wrap">Institut Les Embruns · L'Étang-Salé-les-Bains, La Réunion · Maquette imaginée par Jonathan · ATMA Digital à partir de la page Facebook de l'institut</div><p class="atma-credit" style="margin:.8em 0 0;font-size:12px;line-height:1.5;opacity:.72;text-align:center;text-transform:none;letter-spacing:0">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p>
+</footer>
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.15});
 document.querySelectorAll('.rev').forEach(f=>io.observe(f));
