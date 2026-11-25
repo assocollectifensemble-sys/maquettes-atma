@@ -1,0 +1,20 @@
+{
+  "name": "Ti Papang et les plumes du vent · Papangue",
+  "short_name": "Ti Papang",
+  "description": "Une aventure en famille dans les hauts de l'Étang-Salé, du jardin à ta chambre.",
+  "lang": "fr",
+  "start_url": "./index.html?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#2c2416",
+  "theme_color": "#2c2416",
+  "icons": [
+    {
+      "src": "./assets/icone.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
