@@ -68,7 +68,7 @@
       '<div class="barres">' + P.barres.map(b => '<div class="barre"><span>' + b[0] + '</span><span class="rail"><i style="width:' + b[1] + '%"></i></span><b>' + b[1] + ' %</b></div>').join("") + '</div>' +
       '<p class="note">Aucune donnée personnelle : des compteurs anonymes, utiles pour votre dossier de label et votre bilan.</p></section>' +
       '<section class="signature"><b>Jonathan Bou — aventures sur téléphone</b><p class="small">Déjà en jeu : l\'aventure du Croc Parc, <a href="https://app.croc-parc.re" rel="noopener">app.croc-parc.re</a></p>' +
-      '<button class="btn c1 grand" data-act="go" data-n="accueil">▶ Voir l\'aventure</button><p class="small" style="margin-top:12px">Maquette de démonstration, réalisée pour ' + esc(H.nom) + '. Illustrations originales, sans photo ni logo officiel.</p></section></main>';
+      '<button class="btn c1 grand" data-act="go" data-n="accueil">▶ Voir l\'aventure</button><p class="small" style="margin-top:12px">Maquette de démonstration, réalisée pour ' + esc(H.nom) + '. Illustrations originales, sans photo ni logo officiel.</p><p class="small atma-credit" style="margin-top:8px;opacity:.72">Site propulsé par <a href="https://atma-digital.re">Atma Digital</a></p></section></main>';
   };
 
   /* ---------- 2. Accueil ---------- */

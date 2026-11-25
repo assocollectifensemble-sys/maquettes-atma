@@ -218,7 +218,7 @@ resto(el){const R=C.cote_resto||{};
   ${(R.propositions||[]).map((p,i)=>`<div class="prop ${i?'':'on'}"><span class="n">${i+1}</span><div><b>${esc(p.titre)}</b><p>${esc(p.texte)}</p>${p.lien?`<a href="${p.lien}" target="_blank" rel="noopener" style="display:inline-block;margin-top:6px;font-weight:800;color:var(--chaud);font-size:14px">${esc(p.lien_txt||'Voir un exemple')} →</a>`:''}</div></div>`).join('')}
   <div class="card" style="background:var(--nuit);color:#fff"><b style="color:var(--acc2)">Une maquette volontairement simple</b><p style="font-size:14px;opacity:.9;margin-top:4px">${esc(R.simple||'')}</p></div>
   <button class="btn l" id="rz">Revoir la maquette depuis le début</button>
-  <p class="m" style="text-align:center;margin:16px 0 6px;font-size:12.5px">${esc(C.marque||'Atma Digital · Aurélie & Jonathan · La Réunion')}</p></div>`;
+  <p class="m" style="text-align:center;margin:16px 0 6px;font-size:12.5px">${esc(C.marque||'Atma Digital · Aurélie & Jonathan · La Réunion')}</p><p class="m atma-credit" style="text-align:center;margin:0 0 6px;font-size:12px;opacity:.75">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p></div>`;
  el.querySelector('#rz').onclick=()=>{['bon','seen','filtre','intro'].forEach(k=>localStorage.removeItem(KEY+k));location.hash='';location.reload()}}
 };
 
