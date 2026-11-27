@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Flagrant Délice d'Orient · Restaurant oriental à Saint-Pierre, La Réunion</title>
+<meta name="description" content="Restaurant oriental au cœur de Saint-Pierre : couscous, tajines, harira, cuisine française raffinée, thé à la menthe et cocktails maison, sur une terrasse au bord de la piscine.">
+<meta property="og:title" content="Le Flagrant Délice d'Orient · Saint-Pierre">
+<meta property="og:description" content="L'Orient à votre table, de la première à la dernière bouchée. Terrasse avec piscine, 115 rue François de Mahy (entrée rue de la Charité).">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-flagrant-delice-d-orient-saint-pierre/img/og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-flagrant-delice-d-orient-saint-pierre/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nuit:#14100d;      /* noir du logo */
+  --nuit2:#1f1813;
+  --or:#c9a24a;        /* or du médaillon */
+  --or-cl:#e6c97f;
+  --creme:#f3ead9;     /* crème de leur affiche */
+  --sable:#e8dcc8;
+  --choco:#3d2817;     /* brun de leur affiche */
+  --terre:#b5653a;     /* mur ocre de la salle */
+  --bassin:#1f8f93;    /* eau de la piscine */
+  --encre:#2b211a;
+  --muted:#6f6054;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,sans-serif;color:var(--encre);background:var(--creme);line-height:1.65;overflow-x:hidden;font-size:1.02rem}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.08}
+h2{font-size:clamp(2.1rem,4.6vw,3.3rem)}
+h2 em,h1 em{font-style:italic;color:#9a6c1f}
+.hero h1 em,.the h2 em,.fetes h2 em{color:var(--or-cl)}
+.wrap{width:min(1140px,100% - 2.5rem);margin-inline:auto}
+.kicker{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:var(--terre);margin-bottom:.8rem;display:flex;align-items:center;gap:.7rem}
+.kicker::before{content:"";width:26px;height:1px;background:currentColor}
+.ruban{background:var(--choco);color:var(--sable);font-size:.8rem;text-align:center;padding:.55rem 1rem;line-height:1.35}
+.ruban b{color:var(--or-cl);font-weight:600}
+
+/* motif zellige */
+.zellige{background-color:var(--nuit);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23c9a24a' stroke-opacity='.13' stroke-width='1'%3E%3Cpath d='M32 6l7.6 18.4L58 32l-18.4 7.6L32 58l-7.6-18.4L6 32l18.4-7.6z'/%3E%3Crect x='19' y='19' width='26' height='26' transform='rotate(45 32 32)'/%3E%3Crect x='19' y='19' width='26' height='26'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:30;background:rgba(20,16,13,.93);backdrop-filter:blur(8px);color:var(--sable);border-bottom:1px solid rgba(201,162,74,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,162,74,.5)}
+.brand span{font-family:"Cormorant Garamond",serif;font-size:1.25rem;font-weight:600;color:var(--or-cl);line-height:1.05}
+.brand small{display:block;font-family:Jost,sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(232,220,200,.7)}
+.nav ul{list-style:none;display:flex;gap:1.5rem;font-size:.9rem}
+.nav ul a{text-decoration:none;opacity:.85}
+.nav ul a:hover{color:var(--or-cl);opacity:1}
+.btn{display:inline-flex;align-items:center;gap:.55rem;border-radius:999px;padding:.85rem 1.5rem;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-or{background:linear-gradient(135deg,var(--or-cl),var(--or));color:var(--nuit);box-shadow:0 10px 26px rgba(201,162,74,.3)}
+.btn-ligne{border:1px solid rgba(230,201,127,.6);color:var(--or-cl)}
+.btn-wa{background:#1f9d55;color:#fff}
+.nav .btn{padding:.6rem 1.1rem;font-size:.88rem}
+
+/* HERO */
+.hero{position:relative;color:var(--sable);overflow:hidden;padding:4.5rem 0 5rem}
+.hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3.5rem;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.7rem,6.2vw,4.9rem);color:#fff;margin:.4rem 0 1.3rem}
+.hero .lead{font-size:1.12rem;max-width:34rem;color:rgba(232,220,200,.88)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin:2rem 0 1.8rem}
+.hero .kicker{color:var(--or-cl)}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;font-size:.85rem}
+.badges span{border:1px solid rgba(201,162,74,.35);border-radius:999px;padding:.35rem .9rem;background:rgba(255,255,255,.03)}
+.badges b{color:var(--or-cl)}
+.arche{position:relative;justify-self:center;width:min(440px,100%)}
+.arche .img{border-radius:999px 999px 22px 22px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(201,162,74,.55);box-shadow:0 30px 70px rgba(0,0,0,.5)}
+.arche .img img{width:100%;height:100%;object-fit:cover}
+.arche::before{content:"";position:absolute;inset:-14px;border-radius:999px 999px 30px 30px;border:1px solid rgba(201,162,74,.3)}
+.arche .sceau{position:absolute;left:-34px;bottom:34px;width:112px;height:112px;border-radius:50%;overflow:hidden;border:2px solid var(--or);box-shadow:0 12px 30px rgba(0,0,0,.5);animation:tourne 40s linear infinite}
+.arche .sceau img{width:100%;height:100%;object-fit:cover}
+@keyframes tourne{to{transform:rotate(360deg)}}
+.lueur{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(230,201,127,.9),rgba(230,201,127,0) 70%);pointer-events:none;z-index:1;animation:flotte ease-in-out infinite}
+@keyframes flotte{0%,100%{transform:translateY(0);opacity:.25}50%{transform:translateY(-26px);opacity:.85}}
+
+/* SECTIONS */
+section{padding:5.5rem 0}
+.intro{text-align:center;max-width:46rem;margin:0 auto 3rem}
+.intro .kicker{justify-content:center}
+.intro .kicker::after{content:"";width:26px;height:1px;background:currentColor}
+.intro p{color:var(--muted);margin-top:1rem;font-size:1.06rem}
+.citation{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.35rem;color:var(--choco)}
+
+/* LIEU */
+.lieu .mosa{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:260px 260px;gap:1rem}
+.lieu figure{position:relative;border-radius:var(--r);overflow:hidden}
+.lieu figure img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.lieu figure:hover img{transform:scale(1.04)}
+.lieu figure.grand{grid-row:span 2}
+.lieu figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1rem .9rem;color:#fff;font-size:.92rem;background:linear-gradient(transparent,rgba(20,16,13,.82))}
+.lieu figcaption b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600;color:var(--or-cl)}
+.atouts{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.4rem}
+.atouts div{background:#fff;border-radius:14px;padding:1.2rem 1.1rem;border:1px solid rgba(61,40,23,.08)}
+.atouts strong{display:block;font-family:"Cormorant Garamond",serif;font-size:1.3rem;color:var(--choco)}
+.atouts p{font-size:.9rem;color:var(--muted)}
+
+/* CARTE */
+.carte{background:var(--sable)}
+.plats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.plat{background:var(--creme);border-radius:var(--r);overflow:hidden;box-shadow:0 12px 30px rgba(61,40,23,.08)}
+.plat .ph{aspect-ratio:4/4.3;overflow:hidden;border-radius:999px 999px 0 0;margin:12px 12px 0}
+.plat .ph img{width:100%;height:100%;object-fit:cover}
+.plat .tx{padding:1.1rem 1.3rem 1.4rem}
+.plat h3{font-size:1.55rem;color:var(--choco)}
+.plat p{font-size:.93rem;color:var(--muted);margin-top:.3rem}
+.plat .tag{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terre);font-weight:600}
+.carte .bas{margin-top:2.4rem;text-align:center;color:var(--muted)}
+
+/* THE */
+.the{color:var(--sable);position:relative;overflow:hidden}
+.the .grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.the .duo{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:end}
+.the .duo img{border-radius:999px 999px 16px 16px;aspect-ratio:3/4.2;object-fit:cover;width:100%;border:1px solid rgba(201,162,74,.45)}
+.the .duo img:last-child{margin-bottom:-2.5rem}
+.the h2{color:#fff}
+.the .kicker{color:var(--or-cl)}
+.the blockquote{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.45rem;line-height:1.35;border-left:2px solid var(--or);padding-left:1.2rem;margin:1.6rem 0;color:var(--or-cl)}
+.the p{color:rgba(232,220,200,.85)}
+
+/* COCKTAILS */
+.cocktails .rang{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.cock{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4.3;color:#fff}
+.cock img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cock div{position:absolute;left:0;right:0;bottom:0;padding:3rem 1.1rem 1.1rem;background:linear-gradient(transparent,rgba(20,16,13,.88))}
+.cock h3{font-size:1.5rem;color:var(--or-cl)}
+.cock p{font-size:.86rem;opacity:.9}
+
+/* FETES */
+.fetes{background:linear-gradient(135deg,#2a1c12,#14100d);color:var(--sable);position:relative;overflow:hidden}
+.fetes .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;position:relative;z-index:2}
+.fetes h2{color:#fff}
+.fetes .kicker{color:var(--or-cl)}
+.fetes ul{list-style:none;display:grid;gap:.8rem;margin:1.5rem 0 1.9rem}
+.fetes li{display:flex;gap:.9rem;align-items:flex-start;background:rgba(201,162,74,.08);border:1px solid rgba(201,162,74,.22);border-radius:14px;padding:.9rem 1.1rem}
+.fetes li span{font-size:1.3rem;line-height:1.3}
+.fetes li b{color:var(--or-cl)}
+.fetes figure{border-radius:999px 999px 20px 20px;overflow:hidden;border:1px solid rgba(201,162,74,.5);aspect-ratio:4/5;box-shadow:0 25px 60px rgba(0,0,0,.5)}
+.fetes figure img{width:100%;height:100%;object-fit:cover}
+.fetes .ctas{display:flex;flex-wrap:wrap;gap:.8rem}
+.etoile{position:absolute;color:var(--or-cl);z-index:1;animation:scintille ease-in-out infinite;pointer-events:none}
+@keyframes scintille{0%,100%{opacity:.1;transform:scale(.7)}50%{opacity:.9;transform:scale(1.1)}}
+
+/* AVIS */
+.avis .cartes{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;max-width:900px;margin:0 auto}
+.avis blockquote{background:#fff;border-radius:var(--r);padding:1.6rem 1.7rem;border:1px solid rgba(61,40,23,.08);font-size:1.02rem}
+.avis blockquote::before{content:"“";display:block;font-family:"Cormorant Garamond",serif;font-size:3.4rem;line-height:.6;color:var(--or)}
+.avis footer{margin-top:.8rem;font-size:.85rem;color:var(--muted)}
+.score{text-align:center;margin-top:2rem;font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--choco)}
+.score b{color:var(--terre)}
+
+/* INFOS */
+.infos{background:var(--sable)}
+.infos .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}
+.bloc{background:var(--creme);border-radius:var(--r);padding:2rem;border:1px solid rgba(61,40,23,.08)}
+.bloc h3{font-size:1.8rem;color:var(--choco);margin-bottom:1rem}
+.service{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px dashed rgba(61,40,23,.2)}
+.service:last-of-type{border-bottom:0}
+.service b{color:var(--choco)}
+.service span{text-align:right;color:var(--muted)}
+.bloc .note{font-size:.86rem;color:var(--muted);margin-top:1rem}
+.coord{display:grid;gap:.9rem;margin-bottom:1.5rem}
+.coord a,.coord p{display:flex;gap:.8rem;align-items:flex-start;text-decoration:none}
+.coord i{font-style:normal;width:2rem;height:2rem;flex:none;border-radius:50%;background:var(--nuit);color:var(--or-cl);display:grid;place-items:center;font-size:.95rem}
+.bloc .ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.bloc .btn-ligne{color:var(--choco);border-color:rgba(61,40,23,.35)}
+
+footer.site{color:rgba(232,220,200,.7);font-size:.86rem;padding:2.6rem 0 2.8rem;text-align:center}
+footer.site .logo{width:84px;height:84px;border-radius:50%;margin:0 auto 1rem;border:1px solid rgba(201,162,74,.5)}
+footer.site p{margin:.35rem 0}
+footer.site a{color:var(--or-cl)}
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;width:58px;height:58px;border-radius:50%;background:#1f9d55;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+.fixe .rv{transition:none}
+
+@media(max-width:960px){
+  .nav ul{display:none}
+  .hero .grid,.the .grid,.fetes .grid,.infos .grid{grid-template-columns:1fr}
+  .hero{padding:3rem 0 4rem}
+  .arche{width:min(360px,88%);margin-top:1rem}
+  .lieu .mosa{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:220px}
+  .lieu figure.grand{grid-column:span 2;grid-row:auto}
+  .atouts{grid-template-columns:1fr 1fr}
+  .plats{grid-template-columns:1fr 1fr}
+  .cocktails .rang{grid-template-columns:1fr 1fr}
+  .avis .cartes{grid-template-columns:1fr}
+  .the .duo img:last-child{margin-bottom:0}
+  .fetes figure{max-width:380px;margin:0 auto;width:100%}
+}
+@media(max-width:560px){
+  section{padding:4rem 0}
+  .brand span{font-size:1.05rem}
+  .brand small{display:none}
+  .nav .btn{padding:.55rem .9rem;font-size:.82rem}
+  .arche .sceau{width:84px;height:84px;left:-12px;bottom:20px}
+  .lieu .mosa{grid-template-columns:1fr;grid-auto-rows:240px}
+  .lieu figure.grand{grid-column:auto}
+  .atouts{grid-template-columns:1fr}
+  .plats{grid-template-columns:1fr}
+  .cocktails .rang{gap:.8rem}
+  .cock h3{font-size:1.2rem}
+  .cock p{font-size:.78rem}
+  .service{flex-direction:column;gap:.1rem}
+  .service span{text-align:left}
+  .bloc{padding:1.5rem}
+  .hero .ctas .btn,.fetes .ctas .btn{width:100%;justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.lueur,.etoile,.arche .sceau{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Aurélie et Jonathan · ATMA Digital</b>, créée avec plaisir pour Le Flagrant Délice d'Orient</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#accueil"><img src="img/logo.webp" alt="Logo Le Flagrant Délice d'Orient"><span>Le Flagrant Délice d'Orient<small>Restaurant · Saint-Pierre</small></span></a>
+    <ul>
+      <li><a href="#lieu">Le lieu</a></li>
+      <li><a href="#carte">La carte</a></li>
+      <li><a href="#the">Thé &amp; cocktails</a></li>
+      <li><a href="#fetes">Les fêtes</a></li>
+      <li><a href="#infos">Horaires &amp; accès</a></li>
+    </ul>
+    <a class="btn btn-or" href="tel:+262692058440">Réserver</a>
+  </div>
+</header>
+
+<section class="hero zellige" id="accueil">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="kicker">Restaurant oriental · Saint-Pierre, La Réunion</p>
+      <h1>L'Orient à votre table, <em>de la première à la dernière bouchée.</em></h1>
+      <p class="lead">Entre la finesse de la gastronomie française et la générosité des saveurs marocaines, nous vous recevons dans un cadre unique au cœur de Saint-Pierre : un thé à la menthe au bord de la piscine, un tajine mijoté, un dîner sous les étoiles.</p>
+      <div class="ctas">
+        <a class="btn btn-or" href="tel:+262692058440">☎ Réserver au 0692 05 84 40</a>
+        <a class="btn btn-ligne" href="#carte">Découvrir la carte</a>
+      </div>
+      <div class="badges">
+        <span><b>88 %</b> de recommandations · 292 avis</span>
+        <span>Terrasse avec piscine</span>
+        <span>Midi &amp; soir</span>
+      </div>
+    </div>
+    <div class="arche rv">
+      <div class="img"><img src="img/terrasse-piscine-table.webp" alt="Une table dressée de plats orientaux au bord de la piscine du Flagrant Délice d'Orient"></div>
+      <div class="sceau"><img src="img/logo.webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="lieu" id="lieu">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="kicker">Le lieu</p>
+      <h2>Une parenthèse <em>hors du temps</em></h2>
+      <p>Un havre de paix au cœur de Saint-Pierre, où le temps s'arrête le temps d'un repas. Une terrasse au bord de l'eau, une grande salle sous sa charpente de bois, des tables fleuries : chaque moment a son coin.</p>
+    </div>
+    <div class="mosa rv">
+      <figure class="grand"><img src="img/table-bord-piscine.webp" alt="Table dressée face à la piscine"><figcaption><b>La terrasse et sa piscine</b>Pour un déjeuner ensoleillé ou un dîner sous les étoiles</figcaption></figure>
+      <figure><img src="img/le-lounge.webp" alt="La salle sous charpente en bois et sa grande tablée fleurie"><figcaption><b>Sous la charpente</b>Pour les grandes tablées</figcaption></figure>
+      <figure><img src="img/plats-a-emporter.webp" alt="Assortiment de plats de la maison vus d'en haut"><figcaption><b>Sur place ou à emporter</b>Toute la générosité de la carte</figcaption></figure>
+      <figure><img src="img/salle.webp" alt="La salle et ses fauteuils dressés"><figcaption><b>La salle</b>Une ambiance chaleureuse et apaisante</figcaption></figure>
+      <figure><img src="img/tablee.webp" alt="Une tablée vue d'en haut, plats à partager"><figcaption><b>Les tablées</b>Partage et convivialité</figcaption></figure>
+    </div>
+    <div class="atouts rv">
+      <div><strong>Sur place</strong><p>En salle ou en terrasse, face à la piscine.</p></div>
+      <div><strong>À emporter</strong><p>Tous les plats à récupérer sur place, ou en livraison via Uber Eats.</p></div>
+      <div><strong>Sur réservation</strong><p>Un appel au 0692 05 84 40 et votre table vous attend.</p></div>
+      <div><strong>Plein centre</strong><p>115 rue François de Mahy, entrée rue de la Charité.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="kicker">La carte</p>
+      <h2>Tradition marocaine, <em>élégance française</em></h2>
+      <p class="citation">« L'authenticité à chaque bouchée. »</p>
+    </div>
+    <div class="plats">
+      <article class="plat rv"><div class="ph"><img src="img/couscous-piscine.webp" alt="Couscous aux légumes servi au bord de la piscine"></div><div class="tx"><span class="tag">Tradition</span><h3>Couscous parfumés</h3><p>Généreux, parfumés, à partager : le grand classique de la maison.</p></div></article>
+      <article class="plat rv"><div class="ph"><img src="img/aperitifs-ftour.webp" alt="Apéritifs et tapas orientales sur une table au bord de la piscine"></div><div class="tx"><span class="tag">Pour commencer</span><h3>Tapas orientales &amp; harira</h3><p>Des apéritifs pensés pour le partage, autour d'une harira réconfortante.</p></div></article>
+      <article class="plat rv"><div class="ph"><img src="img/piece-de-boeuf.webp" alt="Pièce de bœuf dressée avec agrumes et fleurs"></div><div class="tx"><span class="tag">Gastronomie</span><h3>Le dressage soigné</h3><p>Une cuisine moderne et raffinée, aux saveurs authentiques.</p></div></article>
+      <article class="plat rv"><div class="ph"><img src="img/poisson-dressage.webp" alt="Poisson dressé sur assiette blanche, verres à vin"></div><div class="tx"><span class="tag">Escale gourmande</span><h3>Tajines &amp; créations</h3><p>Entre l'authenticité d'un tajine mijoté et le raffinement d'une assiette du chef.</p></div></article>
+      <article class="plat rv"><div class="ph"><img src="img/entree-creation.webp" alt="Entrée créative aux couleurs vives"></div><div class="tx"><span class="tag">À la carte</span><h3>Entrées de saison</h3><p>Fraîcheur, couleurs et petites surprises pour ouvrir le repas.</p></div></article>
+      <article class="plat rv"><div class="ph"><img src="img/burger-brioche.webp" alt="Burger au bun brioché et frites au bord de la piscine"></div><div class="tx"><span class="tag">Revisité</span><h3>Le burger de la maison</h3><p>Bun brioché généreux, garniture fraîche et accompagnements croustillants.</p></div></article>
+    </div>
+    <p class="bas rv">La carte évolue au fil des saisons : demandez les suggestions du moment au <a href="tel:+262692058440"><b>0692 05 84 40</b></a>.</p>
+  </div>
+</section>
+
+<section class="the zellige" id="the">
+  <div class="wrap grid">
+    <div class="duo rv">
+      <img src="img/the-a-la-menthe.webp" alt="Service du thé à la menthe, versé de haut">
+      <img src="img/the-patisseries-orientales.webp" alt="Théière, verre de thé et pâtisseries orientales">
+    </div>
+    <div class="rv">
+      <p class="kicker">Le rituel du thé</p>
+      <h2>Le petit plaisir <em>après le repas</em></h2>
+      <blockquote>« Le service du thé à la menthe est bien plus qu'une tradition : c'est un symbole d'accueil, de partage et de convivialité. »</blockquote>
+      <p>Au Flagrant Délice d'Orient, le voyage continue même après l'assiette : un thé à la menthe servi dans les règles de l'art, accompagné de pâtisseries orientales, à savourer au calme de la terrasse.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cocktails" id="cocktails">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="kicker">L'art de l'apéritif</p>
+      <h2>Des cocktails <em>qui font voyager</em></h2>
+      <p>De la fraîcheur de nos cocktails à la douceur de nos plats, chaque détail est une invitation au voyage. L'accord parfait pour vos fins de journée.</p>
+    </div>
+    <div class="rang">
+      <div class="cock rv"><img src="img/mamzel-rose.webp" alt="Le Mamzel Rose versé depuis une théière traditionnelle"><div><h3>Mamzel Rose</h3><p>Cocktail glacé servi dans une théière traditionnelle.</p></div></div>
+      <div class="cock rv"><img src="img/spicy-exotic.webp" alt="Le cocktail Spicy Exotic au bord de la piscine"><div><h3>Spicy Exotic</h3><p>Une création aussi fraîche qu'originale.</p></div></div>
+      <div class="cock rv"><img src="img/cocktails-terrasse.webp" alt="Trois cocktails colorés sur la terrasse"><div><h3>À partager</h3><p>Couleurs, fleurs et agrumes en terrasse.</p></div></div>
+      <div class="cock rv"><img src="img/cocktail-bord-piscine.webp" alt="Cocktail bleu au bord de la piscine"><div><h3>Au bord de l'eau</h3><p>La fraîcheur s'invite face à la piscine.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="fetes" id="fetes">
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="kicker">✦ Les fêtes de fin d'année</p>
+      <h2>Vos repas de fêtes <em>aux couleurs de l'Orient</em></h2>
+      <p>Repas de famille, collègues, amis : décembre est le plus beau moment pour réunir tout le monde autour d'un couscous généreux, d'un tajine et d'un thé à la menthe, avec la piscine illuminée en toile de fond.</p>
+      <ul>
+        <li><span>🏮</span><div><b>Réservez tôt votre table des fêtes</b><br>Pour un dîner à deux ou une grande tablée en famille.</div></li>
+        <li><span>🎁</span><div><b>Une idée cadeau qui fait voyager</b><br>Offrez un repas au Flagrant Délice d'Orient : renseignez-vous directement auprès de l'équipe.</div></li>
+        <li><span>🫖</span><div><b>Le thé et ses douceurs</b><br>Pour terminer l'année sur une note sucrée.</div></li>
+      </ul>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/262692058440?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20table%20pour%20les%20f%C3%AAtes%20au%20Flagrant%20D%C3%A9lice%20d'Orient.">Réserver sur WhatsApp</a>
+        <a class="btn btn-ligne" href="tel:+262692058440">☎ 0692 05 84 40</a>
+      </div>
+    </div>
+    <figure class="rv"><img src="img/lounge-fetes.webp" alt="La salle sous charpente, fleurie et dressée pour une grande tablée"></figure>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="intro rv">
+      <p class="kicker">Ils en parlent</p>
+      <h2>Un accueil <em>chaleureux</em></h2>
+    </div>
+    <div class="cartes">
+      <blockquote class="rv">Très beau cadre, un accueil chaleureux et bienveillant par les serveurs. Choix à la carte. Les couscous et les Tajines…<footer>Lucienne H. · avis Facebook</footer></blockquote>
+      <blockquote class="rv">Très bon moment, accueil sympathique et très bien mangé…<footer>Laura G. · avis Facebook</footer></blockquote>
+    </div>
+    <p class="score rv">Recommandé par <b>88 %</b> de 292 avis sur Facebook</p>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap grid">
+    <div class="bloc rv">
+      <h3>Nos horaires</h3>
+      <div class="service"><b>Service du midi</b><span>11h30 – 14h00</span></div>
+      <div class="service"><b>Service du soir</b><span>18h30 – 23h00</span></div>
+      <p class="note">Nous serons heureux de vous accueillir. Un petit appel au 0692 05 84 40 pour réserver votre table et connaître les jours d'ouverture de la semaine.</p>
+    </div>
+    <div class="bloc rv">
+      <h3>Nous trouver</h3>
+      <div class="coord">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Le%20Flagrant%20D%C3%A9lice%20d'Orient%20115%20rue%20Fran%C3%A7ois%20de%20Mahy%20Saint-Pierre"><i>⌖</i><span>115 rue François de Mahy<br>(entrée rue de la Charité), 97410 Saint-Pierre</span></a>
+        <a href="tel:+262692058440"><i>☎</i><span>0692 05 84 40 · 0263 05 79 60</span></a>
+        <a href="mailto:leflagrantdelicedorient@gmail.com"><i>✉</i><span>leflagrantdelicedorient@gmail.com</span></a>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-or" href="tel:+262692058440">Réserver</a>
+        <a class="btn btn-ligne" href="https://www.facebook.com/leflagrantdelicedorient.fr">Facebook</a>
+        <a class="btn btn-ligne" href="https://www.instagram.com/leflagrantdelicedorient974">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site zellige">
+  <div class="wrap">
+    <img class="logo" src="img/logo.webp" alt="">
+    <p>Le Flagrant Délice d'Orient · Restaurant oriental · 115 rue François de Mahy, 97410 Saint-Pierre</p>
+    <p>Maquette privée imaginée par Aurélie et Jonathan, ATMA Digital, à partir des publications du Flagrant Délice d'Orient.</p>
+    <p class="atma-credit" style="font-size:12px;opacity:.72;text-align:center">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/262692058440" aria-label="Écrire sur WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+(()=>{
+  const els=document.querySelectorAll('.rv');
+  if(location.search.includes('apercu')){document.documentElement.classList.add('fixe');els.forEach(e=>e.classList.add('on'));return;}
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('on'));return;}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.1});
+  els.forEach(e=>io.observe(e));
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const h=document.getElementById('accueil');
+  for(let i=0;i<14;i++){const l=document.createElement('span');l.className='lueur';const s=4+Math.random()*8;l.style.width=l.style.height=s+'px';l.style.left=Math.random()*100+'%';l.style.top=Math.random()*100+'%';l.style.animationDuration=(5+Math.random()*6)+'s';l.style.animationDelay=(-Math.random()*8)+'s';h.appendChild(l);}
+  const f=document.getElementById('fetes');
+  for(let i=0;i<16;i++){const e=document.createElement('span');e.className='etoile';e.textContent='✦';e.style.left=Math.random()*100+'%';e.style.top=Math.random()*100+'%';e.style.fontSize=(8+Math.random()*12)+'px';e.style.animationDuration=(3+Math.random()*4)+'s';e.style.animationDelay=(-Math.random()*5)+'s';f.appendChild(e);}
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Flagrant Délice d&#x27;Orient" defer></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nisoïa coiffure · Coiffeur coloriste végétal à Saint-Leu</title>
+<meta name="description" content="Nisoïa coiffure, salon ouvert en 2021 au 2 rue du Trésor à Saint-Leu (La Réunion) : coloration 100 % végétale, respect du cheveu, conseils et soins. Du mardi au samedi, 9h-18h. 0693 83 30 69.">
+<meta property="og:title" content="Nisoïa coiffure · Coloration végétale à Saint-Leu">
+<meta property="og:description" content="Coloration 100 % végétale aux plantes tinctoriales, conseils et soins, au 2 rue du Trésor à Saint-Leu.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/nisoia-coiffure-saint-leu/img/og-salon.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/nisoia-coiffure-saint-leu/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--sauge:#c3cbb4;--sauge2:#a9b597;--mousse:#5d6b4e;--foret:#2f3a2a;--encre:#1b1c19;--lin:#f5f2ea;--sable:#ebe5d6;--cuivre:#b5653a;--cuivre2:#d88a5a;--txt:#2b2d27;--doux:#6c6f63}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Jost,system-ui,Arial,sans-serif;font-weight:300;color:var(--txt);background:var(--lin);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.08;color:var(--encre)}
+h2{font-size:clamp(2.1rem,6.4vw,3.4rem);margin:.4rem 0 1.1rem}
+h3{font-size:1.5rem}
+em{font-style:italic;color:var(--cuivre)}
+.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;color:var(--mousse);font-weight:500}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,7rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--encre);color:var(--sable);text-align:center;font-size:.76rem;padding:.45rem 1rem;letter-spacing:.03em;line-height:1.4}
+.ribbon b{color:var(--sauge);font-weight:500}
+#leaves{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:3}
+/* HERO */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;padding:7rem 0 3.5rem;overflow:hidden;color:#fff;isolation:isolate}
+.hero .bg{position:absolute;inset:0;z-index:-2;background:url(img/salon-etageres.webp) center 40%/cover;animation:kb 26s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(27,28,25,.25) 0%,rgba(27,28,25,.35) 45%,rgba(27,28,25,.86) 100%)}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero .logo{width:86px;height:auto;background:var(--lin);border-radius:50%;padding:12px 14px;margin-bottom:1.3rem;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hero h1{color:#fff;font-size:clamp(3.1rem,12vw,6.4rem);font-weight:500;letter-spacing:.01em;opacity:0;transform:translateY(18px);animation:up 1.4s .3s forwards}
+.hero h1 span{display:block;font-size:.36em;font-style:italic;font-weight:400;color:var(--sauge);letter-spacing:.04em;margin-top:.35rem}
+.hero p.lead{max-width:34rem;font-size:1.08rem;margin:1rem 0 1.6rem;opacity:0;animation:up 1.4s .8s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.9rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.98rem;transition:transform .3s,box-shadow .3s,background .3s}
+.btn svg{width:19px;height:19px;flex:none}
+.btn.main{background:var(--sauge);color:var(--encre);animation:breathe 3.6s ease-in-out infinite}
+.btn.main:hover{background:#d3dac6}
+.btn.ghost{border:1px solid rgba(255,255,255,.7);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.dark{background:var(--encre);color:var(--lin)}
+.btn.cuivre{background:var(--cuivre);color:#fff}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(195,203,180,.55)}50%{box-shadow:0 0 0 10px rgba(195,203,180,0)}}
+.stars{margin-top:1.5rem;font-size:.92rem;opacity:.92;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.stars i{color:#e9c27a;font-style:normal;letter-spacing:.1em}
+/* MARQUEE */
+.marquee{background:var(--encre);color:var(--sauge);overflow:hidden;white-space:nowrap;padding:.95rem 0;font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-style:italic;position:relative;z-index:4}
+.marquee div{display:inline-block;animation:mq 38s linear infinite}
+.marquee span{margin:0 1.4rem}
+.marquee b{color:var(--cuivre2);font-weight:400}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* SALON */
+.split{display:grid;gap:2.6rem;align-items:center}
+@media(min-width:860px){.split{grid-template-columns:1.05fr 1fr}.split.rev>:first-child{order:2}}
+.quote-them{font-family:'Cormorant Garamond',serif;font-size:1.45rem;font-style:italic;line-height:1.35;color:var(--foret);border-left:2px solid var(--sauge2);padding-left:1.1rem;margin:1.4rem 0}
+.quote-them small{display:block;font-family:Jost,sans-serif;font-style:normal;font-size:.74rem;letter-spacing:.06em;color:var(--doux);margin-top:.5rem}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.duo figure:first-child{grid-column:1/-1}
+figure{position:relative;overflow:hidden;border-radius:18px;background:var(--sable)}
+figure img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+figure:hover img{transform:scale(1.05)}
+figcaption{position:absolute;left:.7rem;bottom:.7rem;right:.7rem;font-size:.72rem;color:#fff;background:rgba(27,28,25,.55);backdrop-filter:blur(4px);padding:.3rem .65rem;border-radius:999px;width:fit-content;max-width:calc(100% - 1.4rem)}
+.duo figure:first-child{aspect-ratio:16/8}
+.duo figure{aspect-ratio:1/1}
+.tag{display:inline-block;margin:.25rem .3rem .25rem 0;padding:.35rem .8rem;border-radius:999px;background:var(--sable);font-size:.85rem}
+/* VEGETAL */
+.veg{background:var(--foret);color:var(--sable);overflow:hidden}
+.veg h2{color:#fff}
+.veg .eyebrow{color:var(--sauge)}
+.veg::before{content:"";position:absolute;top:-1px;left:0;right:0;height:60px;background:var(--lin);clip-path:ellipse(70% 100% at 50% 0)}
+.veg p{color:#dfe3d4}
+.veg .quote-them{color:var(--sauge);border-color:var(--cuivre2)}
+.veg .quote-them small{color:#b9bfae}
+.powder{border-radius:22px;aspect-ratio:1080/581}
+.steps{display:grid;gap:1rem;margin-top:1.8rem}
+@media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:rgba(255,255,255,.06);border:1px solid rgba(195,203,180,.25);border-radius:18px;padding:1.3rem 1.2rem;transition:transform .4s,background .4s}
+.step:hover{transform:translateY(-4px);background:rgba(255,255,255,.1)}
+.step b{display:block;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:#fff;margin-bottom:.3rem}
+.step p{font-size:.95rem}
+/* GALLERY */
+.gal{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:.4rem 5vw 1.4rem;scrollbar-width:thin}
+.gal figure{flex:0 0 min(78vw,360px);aspect-ratio:4/5;scroll-snap-align:center}
+.gal figure.wide{flex-basis:min(86vw,560px);aspect-ratio:16/10}
+.hint{font-size:.8rem;color:var(--doux);text-align:center}
+/* PRESTATIONS */
+.cards{display:grid;gap:1.1rem}
+@media(min-width:760px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:20px;padding:1.6rem 1.4rem;box-shadow:0 1px 0 rgba(0,0,0,.04),0 14px 34px -22px rgba(47,58,42,.35);transition:transform .4s,box-shadow .4s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 40px -22px rgba(47,58,42,.45)}
+.card .ic{width:46px;height:46px;border-radius:50%;background:var(--sauge);display:grid;place-items:center;margin-bottom:1rem}
+.card .ic svg{width:24px;height:24px}
+.card p{font-size:.96rem;color:var(--doux)}
+.card ul{list-style:none;margin-top:.6rem}
+.card li{font-size:.94rem;padding:.25rem 0;border-bottom:1px dashed #e2ddcf}
+.card li:last-child{border:0}
+.barbier{display:grid;gap:1.6rem;align-items:center;margin-top:2.6rem;background:var(--sable);border-radius:24px;padding:1.4rem;overflow:hidden}
+@media(min-width:760px){.barbier{grid-template-columns:240px 1fr;padding:2rem}}
+.barbier figure{aspect-ratio:640/1000;max-height:380px;width:100%}
+@media(max-width:759px){.barbier figure{aspect-ratio:4/3}}
+/* AVIS */
+.avis{background:var(--sable)}
+.score{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.score b{font-family:'Cormorant Garamond',serif;font-size:3.6rem;font-weight:500;color:var(--encre);line-height:1}
+.score i{color:#d4a24c;font-style:normal;font-size:1.2rem;letter-spacing:.12em}
+.revs{display:grid;gap:1rem}
+@media(min-width:760px){.revs{grid-template-columns:repeat(2,1fr)}}
+blockquote{background:#fff;border-radius:18px;padding:1.4rem 1.3rem 1.2rem;position:relative}
+blockquote::before{content:"“";position:absolute;top:-.2rem;left:.9rem;font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--sauge2);line-height:1}
+blockquote p{font-family:'Cormorant Garamond',serif;font-size:1.22rem;line-height:1.4;color:var(--foret);padding-top:.8rem}
+blockquote cite{display:block;margin-top:.7rem;font-style:normal;font-size:.8rem;color:var(--doux)}
+/* NOEL */
+.noel{background:radial-gradient(120% 90% at 80% 0%,#3d4a35 0%,var(--foret) 55%,#232b20 100%);color:var(--sable);overflow:hidden}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#e9c27a}
+.gift{position:relative;background:var(--lin);color:var(--txt);border-radius:22px;padding:2rem 1.6rem 1.7rem;max-width:430px;margin:auto;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);transform:rotate(-2deg);transition:transform .6s}
+.gift:hover{transform:rotate(0) scale(1.02)}
+.gift .bow{position:absolute;top:-24px;right:30px;width:58px}
+.gift img.lg{width:58px;margin-bottom:.8rem}
+.gift h3{font-size:1.9rem}
+.gift p{font-size:.95rem;color:var(--doux);margin-top:.4rem}
+.gift .line{border-top:1px dashed var(--sauge2);margin:1.2rem 0 .8rem}
+.gift small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mousse)}
+.noel p.t{color:#dfe3d4;margin-bottom:1.4rem}
+.noel ul{list-style:none;margin:0 0 1.6rem}
+.noel li{padding:.4rem 0 .4rem 1.6rem;position:relative;color:#eef0e6}
+.noel li::before{content:"";position:absolute;left:0;top:.95rem;width:9px;height:9px;border-radius:50%;background:#e9c27a;box-shadow:0 0 10px #e9c27a}
+.illu{display:block;text-align:center;font-size:.7rem;color:#b9bfae;margin-top:1rem;letter-spacing:.08em}
+/* INFOS */
+.infos{display:grid;gap:1.2rem}
+@media(min-width:820px){.infos{grid-template-columns:1fr 1fr}}
+.box{background:#fff;border-radius:20px;padding:1.6rem 1.5rem}
+.box h3{margin-bottom:.8rem}
+.hours div{display:flex;justify-content:space-between;padding:.45rem 0;border-bottom:1px solid #eee8da;font-size:.97rem}
+.hours div:last-child{border:0}
+.hours .off{color:var(--doux)}
+.hours .today{font-weight:500;color:var(--mousse)}
+.contact-line{display:flex;gap:.8rem;align-items:flex-start;padding:.55rem 0;font-size:.98rem}
+.contact-line svg{width:20px;height:20px;flex:none;margin-top:.25rem;color:var(--mousse)}
+.contact-line a{text-decoration:none;border-bottom:1px solid var(--sauge2)}
+.cta-end{text-align:center;margin-top:2.6rem}
+.cta-end p{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-style:italic;color:var(--foret);margin-bottom:1rem}
+footer{background:var(--encre);color:#bfc3b5;text-align:center;font-size:.84rem;padding:2.4rem 1.2rem 1.6rem;line-height:1.7}
+footer b{color:var(--sauge);font-weight:500}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.hero h1,.hero p.lead{opacity:1;transform:none}#leaves{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Nisoïa coiffure</div>
+<canvas id="leaves" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="L'intérieur du salon Nisoïa : étagères en bois, plantes vertes et illustrations botaniques"></div>
+  <div class="wrap">
+    <img class="logo" src="img/logo.png" alt="Logo Nisoïa : une branche dans un cercle vert sauge">
+    <h1>Nisoïa coiffure<span>coiffeur coloriste végétal · Saint-Leu</span></h1>
+    <p class="lead">Votre salon de coiffure de la rue du Trésor, spécialiste de la coloration végétale et du respect du cheveu. Conseils et soins sont de rigueur.</p>
+    <div class="btns">
+      <a class="btn main" href="tel:+262693833069"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Prendre RDV · 0693 83 30 69</a>
+      <a class="btn ghost" href="https://wa.me/262693833069?text=Bonjour%2C%20je%20voudrais%20prendre%20rendez-vous%20chez%20Niso%C3%AFa%20coiffure" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg>WhatsApp</a>
+    </div>
+    <div class="stars"><i>★★★★★</i> 4,9 / 5 · 19 avis Google · 2 rue du Trésor, Saint-Leu</div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><div>
+<span>Coloration 100 % végétale</span><b>✦</b><span>Le respect du cheveu avant tout</span><b>✦</b><span>Conseils &amp; soins</span><b>✦</b><span>Coiffure mixte</span><b>✦</b><span>Rue du Trésor · Saint-Leu</span><b>✦</b>
+<span>Coloration 100 % végétale</span><b>✦</b><span>Le respect du cheveu avant tout</span><b>✦</b><span>Conseils &amp; soins</span><b>✦</b><span>Coiffure mixte</span><b>✦</b><span>Rue du Trésor · Saint-Leu</span><b>✦</b>
+</div></div>
+
+<section id="salon">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">Le salon</span>
+      <h2>Un salon calme, <em>végétal</em> et plein d'œuvres</h2>
+      <p>Nisoïa coiffure a ouvert ses portes en 2021, rue du Trésor à Saint-Leu. Des étagères de bois, des plantes vertes, des épis séchés et des aquarelles aux murs : on entre dans un petit monde doux, pensé pour prendre soin de soi.</p>
+      <p class="quote-them">« Spécialiste de la coloration végétale et du respect du cheveu. Venez nous découvrir, conseils et soins seront de rigueur. Prenez RDV ! »<small>Nisoïa coiffure, sur sa page Facebook</small></p>
+      <p>Le salon aime aussi accueillir des artistes : l'exposition « Effet miroir » de Julia.Art&amp;Co en mars 2021, puis sa série « Mascarade » en décembre 2021.</p>
+      <p style="margin-top:1rem"><span class="tag">Coiffure mixte</span><span class="tag">Coloration végétale</span><span class="tag">Conseils &amp; soins</span></p>
+    </div>
+    <div class="duo reveal">
+      <figure><img src="img/salon-mur.webp" alt="Mur du salon avec cadres, épis séchés et suspension" loading="lazy"><figcaption>Le salon · avril 2024</figcaption></figure>
+      <figure><img src="img/salon-aquarelles.webp" alt="Aquarelles encadrées près de la porte vitrée du salon" loading="lazy" style="object-position:30% 50%"><figcaption>Aquarelles au mur</figcaption></figure>
+      <figure><img src="img/fleurs.webp" alt="Grappe de petites fleurs blanches" loading="lazy" style="object-position:50% 40%"><figcaption>Publié par le salon</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="veg" id="vegetal">
+  <div class="wrap split rev">
+    <div class="reveal">
+      <span class="eyebrow">La spécialité</span>
+      <h2>La coloration <em style="color:var(--cuivre2)">100 % végétale</em></h2>
+      <p>Chez Nisoïa, la couleur vient des plantes tinctoriales, avec la gamme Marcapar. Un parti pris clair : des cheveux beaux, sains et vivants, et une approche de la couleur qui garde toute sa douceur.</p>
+      <p class="quote-them">« Venez découvrir la coloration 100 % végétale aux plantes tinctoriales #marcapar. Le respect du cheveu avant tout. »<small>Nisoïa coiffure, publication Facebook</small></p>
+    </div>
+    <figure class="powder reveal"><img src="img/poudre-vegetale.webp" alt="Poudre végétale verte dans un bol, sur une table en bois" loading="lazy"><figcaption>Poudre végétale · publiée par le salon, oct. 2024</figcaption></figure>
+  </div>
+  <div class="wrap steps">
+    <div class="step reveal"><b>Les plantes</b><p>Des colorations végétales aux plantes tinctoriales, pour une couleur lumineuse et respectueuse.</p></div>
+    <div class="step reveal"><b>Les conseils</b><p>Un vrai temps d'écoute pour comprendre votre cheveu, sa nature et ses envies.</p></div>
+    <div class="step reveal"><b>Les soins</b><p>« Conseils et soins seront de rigueur » : la promesse du salon, à chaque passage.</p></div>
+  </div>
+</section>
+
+<section id="realisations" style="padding-bottom:4rem">
+  <div class="wrap reveal">
+    <span class="eyebrow">Réalisations</span>
+    <h2>Des reflets <em>cuivrés</em>, tout en nature</h2>
+    <p style="max-width:40rem;margin-bottom:1.6rem">« Transformation couleur 100% végétal #marcapar » : quelques résultats partagés par le salon sur sa page.</p>
+  </div>
+  <div class="gal">
+    <figure><img src="img/cuivre-lumiere.webp" alt="Longs cheveux cuivrés brillants au soleil, vus de dos" loading="lazy"><figcaption>Couleur végétale · oct. 2023</figcaption></figure>
+    <figure><img src="img/cuivre-salon.webp" alt="Cheveux longs cuivrés vus de dos, dans le salon" loading="lazy"><figcaption>Au salon · oct. 2023</figcaption></figure>
+    <figure><img src="img/reflets.webp" alt="Cheveux longs aux reflets dorés et cuivrés, vus de dos" loading="lazy"><figcaption>Reflets dorés · déc. 2021</figcaption></figure>
+    <figure class="wide"><img src="img/salon-etageres.webp" alt="Étagères du salon avec plantes et illustrations botaniques" loading="lazy"><figcaption>Le coin des soins</figcaption></figure>
+  </div>
+  <p class="hint">Faites glisser pour voir la suite →</p>
+</section>
+
+<section id="prestations" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Au salon</span><h2>Ce qui vous attend</h2></div>
+    <div class="cards">
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f3a2a" stroke-width="1.6"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5 20 18M8.5 16.5 20 6"/></svg></div><h3>Coupe &amp; coloration végétale</h3><p>La formule phare du salon : une coupe et une couleur aux plantes, adaptées à votre nature de cheveux.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f3a2a" stroke-width="1.6"><path d="M12 21c-5-3-8-7-8-11a8 8 0 0 1 16 0c0 4-3 8-8 11z"/><path d="M12 7v8M9 10l3-3 3 3"/></svg></div><h3>Conseils &amp; soins</h3><p>Des conseils pour la santé et la vitalité du cheveu, des produits naturels et un moment pour soi.</p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2f3a2a" stroke-width="1.6"><circle cx="9" cy="8" r="4"/><circle cx="17" cy="9" r="3"/><path d="M2 21a7 7 0 0 1 14 0M15 15a5 5 0 0 1 7 5"/></svg></div><h3>Coiffure mixte</h3><p>Femmes et hommes sont les bienvenus au salon, avec une gamme dédiée aux messieurs.</p></div>
+    </div>
+    <div class="barbier reveal">
+      <figure><img src="img/gamme-barbier.webp" alt="Produits de la gamme Marcapar Barbier présentés avec lavande et fleur rose" loading="lazy" style="object-position:50% 45%"><figcaption>Gamme Barbier · juin 2022</figcaption></figure>
+      <div>
+        <span class="eyebrow">Pour les messieurs</span>
+        <h3 style="font-size:1.9rem;margin:.3rem 0 .8rem">La gamme Marcapar Barbier</h3>
+        <p>Au salon, la gamme naturelle pour homme :</p>
+        <p style="margin-top:.7rem"><span class="tag" style="background:#fff">Pommade coiffante</span><span class="tag" style="background:#fff">Huile de barbe</span><span class="tag" style="background:#fff">Gel de rasage</span><span class="tag" style="background:#fff">Crème hydratante</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Ils en parlent</span><h2>Ce que disent les clients</h2>
+      <div class="score"><b>4,9</b><i>★★★★★</i><span>19 avis sur Google</span></div></div>
+    <div class="revs">
+      <blockquote class="reveal"><p>Ambiance feutrée, calme et agréable… Accueil chaleureux, sourire de rigueur (avec option papotage 😉). Travail de professionnelle, coupe impeccable.</p><cite>D. D. · avis Google</cite></blockquote>
+      <blockquote class="reveal"><p>Excellents conseils pour la santé et la vitalité des cheveux ! Je ressors avec de super astuces pour ma transition et une nouvelle coupe.</p><cite>Vík · avis Google, 2026</cite></blockquote>
+      <blockquote class="reveal"><p>Je recherchais un salon capable de s'occuper correctement de mes cheveux légèrement bouclés (…) La patronne et son assistante sont adorables et ont su réaliser une coupe jeune et dynamique qui va très bien à ma nature de cheveux.</p><cite>Nathalie J. · avis Google</cite></blockquote>
+      <blockquote class="reveal"><p>Prestation de qualité. Produits naturels. Ambiance sympathique.</p><cite>Christophe D. · avis Google</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap split">
+    <div class="reveal">
+      <span class="eyebrow">✦ Offrir pour Noël</span>
+      <h2>Offrez un moment chez Nisoïa</h2>
+      <p class="t">Une parenthèse douce à Saint-Leu, à glisser sous le sapin : pour une maman, une amie, un papa ou soi-même.</p>
+      <ul>
+        <li>Un moment au salon, coupe ou coloration végétale</li>
+        <li>Les produits de la gamme Marcapar Barbier, pour les messieurs</li>
+        <li>Une idée à composer ensemble, selon la personne à gâter</li>
+      </ul>
+      <div class="btns">
+        <a class="btn main" href="https://wa.me/262693833069?text=Bonjour%2C%20je%20voudrais%20offrir%20un%20moment%20chez%20Niso%C3%AFa%20pour%20No%C3%ABl" target="_blank" rel="noopener">Demander sur WhatsApp</a>
+        <a class="btn ghost" href="tel:+262693833069">0693 83 30 69</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="gift">
+        <svg class="bow" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 18c-6-10-16-8-14-2 2 5 10 3 14 2zm0 0c6-10 16-8 14-2-2 5-10 3-14 2z" fill="#b5653a"/><path d="M20 18l-6 24 9-6 9 6-6-24" fill="#934f2b"/><circle cx="23" cy="18" r="3.5" fill="#e9c27a"/></svg>
+        <img class="lg" src="img/logo.png" alt="">
+        <small>Carte cadeau</small>
+        <h3>Un moment chez Nisoïa</h3>
+        <p>Pour prendre soin de ses cheveux, au naturel.</p>
+        <div class="line"></div>
+        <small>2 rue du Trésor · Saint-Leu</small>
+      </div>
+      <span class="illu">Illustration</span>
+    </div>
+  </div>
+</section>
+
+<section id="infos">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Infos pratiques</span><h2>Venir au salon</h2></div>
+    <div class="infos">
+      <div class="box reveal">
+        <h3>Horaires</h3>
+        <div class="hours" id="hours">
+          <div data-d="2"><span>Mardi</span><span>9h – 18h</span></div>
+          <div data-d="3"><span>Mercredi</span><span>9h – 18h</span></div>
+          <div data-d="4"><span>Jeudi</span><span>9h – 18h</span></div>
+          <div data-d="5"><span>Vendredi</span><span>9h – 18h</span></div>
+          <div data-d="6"><span>Samedi</span><span>9h – 18h</span></div>
+          <div data-d="0" class="off"><span>Dimanche &amp; lundi</span><span>Repos</span></div>
+        </div>
+      </div>
+      <div class="box reveal">
+        <h3>Contact</h3>
+        <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span>2 rue du Trésor<br>97436 Saint-Leu, La Réunion<br><a href="https://www.google.com/maps/place/?q=place_id:ChIJo7CkIPGXgiERUJgLPZiyZuY" target="_blank" rel="noopener">Voir l'itinéraire</a></span></div>
+        <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg><a href="tel:+262693833069">0693 83 30 69</a></div>
+        <div class="contact-line"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.7.5-1 1-1h2V2h-3a4 4 0 0 0-4 4v2H8v3.5h2V22h4V11.5h2.7l.3-3.5z"/></svg><a href="https://www.facebook.com/Niso%C3%AFa-coiffure-111158424345619" target="_blank" rel="noopener">Nisoïa coiffure sur Facebook</a></div>
+      </div>
+    </div>
+    <div class="cta-end reveal"><p>Prenez RDV, on vous attend au salon.</p><a class="btn dark" href="tel:+262693833069">Appeler le salon</a></div>
+  </div>
+</section>
+
+<footer><b>Nisoïa coiffure</b> · Coiffeur coloriste végétal · Saint-Leu, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Nisoïa coiffure.
+<p class="atma-credit" style="font-size:12px;opacity:.72;text-align:center">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p></footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const d=new Date().getDay();document.querySelectorAll('#hours [data-d]').forEach(r=>{if(+r.dataset.d===d)r.classList.add('today')});
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('leaves'),x=c.getContext('2d');let W,H,run=true;
+const fit=()=>{const r=devicePixelRatio||1;W=document.documentElement.clientWidth;H=innerHeight;c.width=W*r;c.height=H*r;x.setTransform(r,0,0,r,0,0)};fit();addEventListener('resize',fit);
+const cols=['#c3cbb4','#a9b597','#5d6b4e','#d88a5a'];
+const N=W<600?16:26;const L=[];
+const mk=(top)=>({x:Math.random()*W,y:top?-20-Math.random()*H:Math.random()*H,s:5+Math.random()*7,vy:.25+Math.random()*.45,a:Math.random()*6.28,va:(Math.random()-.5)*.02,sw:Math.random()*6.28,c:cols[Math.random()*cols.length|0],o:.25+Math.random()*.35});
+for(let i=0;i<N;i++)L.push(mk(false));
+function leaf(p){x.save();x.translate(p.x+Math.sin(p.sw)*14,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;x.beginPath();x.moveTo(0,-p.s);x.quadraticCurveTo(p.s*.75,0,0,p.s);x.quadraticCurveTo(-p.s*.75,0,0,-p.s);x.fill();x.strokeStyle='rgba(27,28,25,.25)';x.lineWidth=.6;x.beginPath();x.moveTo(0,-p.s*.8);x.lineTo(0,p.s*.8);x.stroke();x.restore()}
+function tick(){if(!run)return;x.clearRect(0,0,W,H);for(const p of L){p.y+=p.vy;p.sw+=.012;p.a+=p.va;if(p.y>H+20)Object.assign(p,mk(true));leaf(p)}requestAnimationFrame(tick)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)tick()});tick();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Nisoïa coiffure" defer></script>
+</body>
+</html>
