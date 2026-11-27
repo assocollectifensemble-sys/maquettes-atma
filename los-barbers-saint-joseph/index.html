@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Los Barbers · Coiffure homme &amp; barbier à Saint-Joseph</title>
+<meta name="description" content="Los Barbers, coiffure homme et barbier à Saint-Joseph (La Réunion) : dégradés, barbe, rasage à l'ancienne, formules coiffure + barbe. Pierre et Julien vous accueillent au 66 route de la Grande Corniche. Rendez-vous au 0693 62 05 09.">
+<meta property="og:title" content="Los Barbers · Soyez un gentlemen soigné">
+<meta property="og:description" content="Coiffure homme et barbier à Saint-Joseph : dégradés, barbe, rasage à l'ancienne. Rendez-vous au 0693 62 05 09.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/los-barbers-saint-joseph/img/outils-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/los-barbers-saint-joseph/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#0a0a0a;
+  --nuit:#141414;
+  --ardoise:#1d1d1d;
+  --jaune:#ffed00;
+  --or:#fcd309;
+  --blanc:#f7f5ef;
+  --gris:#b5b2a8;
+  --rouge:#c8262c;
+  --bleu:#1f4fa3;
+  --ligne:rgba(255,237,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--noir);color:var(--blanc);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:.02em;text-transform:uppercase}
+h2{font-size:clamp(2.2rem,8vw,3.6rem);margin-bottom:1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,11vw,7rem) 0;position:relative}
+.eyebrow{font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--jaune);font-weight:700;margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+.script{font-family:'Pinyon Script',cursive;font-weight:400;text-transform:none;letter-spacing:0}
+.lead{font-size:clamp(1.02rem,3.6vw,1.18rem);color:#e4e1d8;max-width:38rem}
+.jaune{color:var(--jaune)}
+
+/* Ruban */
+.ruban{background:var(--jaune);color:#111;font-size:.8rem;text-align:center;padding:.55rem 1rem;line-height:1.35}
+.ruban b{font-weight:700}
+
+/* En-tête */
+header.top{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.marque{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.marque img{width:44px;height:44px;border-radius:50%;border:1px solid var(--ligne)}
+.marque span{font-family:Anton,sans-serif;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font-weight:700;text-decoration:none;border-radius:999px;padding:.85rem 1.35rem;font-size:.95rem;transition:transform .25s ease,background .25s ease,color .25s ease;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-j{background:var(--jaune);color:#111}
+.btn-j:hover{transform:translateY(-2px);background:#fff35c}
+.btn-o{border:1.5px solid rgba(255,255,255,.35);color:var(--blanc)}
+.btn-o:hover{border-color:var(--jaune);color:var(--jaune)}
+header .btn{padding:.6rem 1rem;font-size:.85rem}
+
+/* Hero */
+.hero{padding:clamp(2.5rem,8vw,5.5rem) 0 clamp(3rem,9vw,6rem);overflow:hidden}
+.hero .wrap{display:grid;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(3.4rem,16vw,7.2rem);line-height:.92}
+.hero h1 .script{display:block;font-size:.5em;color:var(--jaune);margin-top:.35rem;line-height:1.1}
+.hero .lead{margin:1.4rem 0 1.8rem}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem}
+.hero-visuel{position:relative;max-width:460px;justify-self:center;width:100%}
+.hero-visuel img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:24px 24px 200px 200px;filter:saturate(1.05)}
+.hero-visuel::before{content:"";position:absolute;inset:-14px -14px 22px 22px;border:2px solid var(--jaune);border-radius:24px 24px 200px 200px;z-index:-1}
+.poteau{position:absolute;left:-18px;top:30px;width:26px;height:150px;border-radius:14px;overflow:hidden;border:3px solid #ddd;background:repeating-linear-gradient(135deg,var(--rouge) 0 12px,#fff 12px 24px,var(--bleu) 24px 36px,#fff 36px 48px);background-size:100% 68px;animation:poteau 2.4s linear infinite;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+@keyframes poteau{to{background-position:0 68px}}
+.badge{position:absolute;right:-6px;bottom:18px;background:var(--noir);border:1px solid var(--ligne);border-radius:16px;padding:.7rem 1rem;font-size:.85rem;line-height:1.3;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.badge b{display:block;font-family:Anton,sans-serif;font-size:1.6rem;color:var(--jaune);letter-spacing:.04em}
+.legende{font-size:.75rem;color:var(--gris);margin-top:.7rem;text-align:center}
+
+/* Bandeau défilant */
+.bande{background:var(--jaune);color:#111;overflow:hidden;white-space:nowrap;padding:.85rem 0;transform:rotate(-1.2deg);margin:0 -2%;width:104%}
+.bande .piste{display:inline-flex;gap:2.2rem;animation:defile 32s linear infinite;font-family:Anton,sans-serif;font-size:1.25rem;letter-spacing:.06em;text-transform:uppercase}
+.bande .piste span::after{content:"✂";margin-left:2.2rem;font-family:Inter,sans-serif}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* Prestations */
+.grille{display:grid;gap:1rem;margin-top:2.2rem}
+.carte{background:var(--nuit);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.6rem 1.4rem;position:relative;overflow:hidden;transition:border-color .3s ease,transform .3s ease}
+.carte:hover{border-color:var(--ligne);transform:translateY(-3px)}
+.carte .num{font-family:Anton,sans-serif;color:var(--jaune);font-size:.95rem;letter-spacing:.2em}
+.carte h3{font-size:1.75rem;margin:.4rem 0 .6rem}
+.carte p{color:#d9d6cc;font-size:.98rem}
+.carte svg.ic{position:absolute;right:1.1rem;top:1.2rem;width:34px;height:34px;color:var(--jaune);opacity:.85}
+.maj{margin-top:2rem;padding:1.3rem 1.4rem;border-left:4px solid var(--jaune);background:linear-gradient(90deg,rgba(255,237,0,.08),transparent);border-radius:0 14px 14px 0;font-size:1.05rem}
+.maj cite{display:block;font-style:normal;font-size:.78rem;color:var(--gris);margin-top:.4rem}
+
+/* Salon */
+.salon{background:var(--nuit)}
+.salon .wrap{display:grid;gap:2.2rem;align-items:center}
+.photos{display:grid;gap:.9rem}
+.photos figure{position:relative;border-radius:18px;overflow:hidden}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos figcaption{position:absolute;left:.8rem;bottom:.7rem;background:rgba(10,10,10,.75);padding:.3rem .7rem;border-radius:999px;font-size:.75rem;color:#eee}
+.photos .p1 img{aspect-ratio:4/3}
+.photos .p2 img{aspect-ratio:16/9}
+.liste{list-style:none;margin-top:1.4rem;display:grid;gap:.7rem}
+.liste li{display:flex;gap:.75rem;align-items:flex-start}
+.liste li::before{content:"";flex:none;width:10px;height:10px;margin-top:.55rem;border-radius:50%;background:var(--jaune);box-shadow:0 0 0 4px rgba(255,237,0,.15)}
+
+/* Avis */
+.note{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;margin-top:.4rem}
+.note b{font-family:Anton,sans-serif;font-size:3.2rem;color:var(--jaune);line-height:1}
+.etoiles{color:var(--jaune);letter-spacing:.15em;font-size:1.2rem}
+.avis{display:grid;gap:1rem;margin-top:2rem}
+.avis blockquote{background:var(--nuit);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:1.4rem 1.3rem 1.2rem;position:relative}
+.avis blockquote::before{content:"“";position:absolute;top:-.4rem;right:1rem;font-family:Anton,sans-serif;font-size:4.5rem;color:rgba(255,237,0,.25);line-height:1}
+.avis p{font-size:1rem}
+.avis footer{margin-top:.8rem;font-size:.8rem;color:var(--gris)}
+.avis footer b{color:var(--blanc);font-weight:600}
+
+/* Enseigne */
+.enseigne{padding:0}
+.enseigne img{width:100%;max-height:420px;object-fit:cover}
+
+/* Noël */
+.noel{background:radial-gradient(120% 90% at 50% 0%,#3a3300 0%,var(--noir) 68%);text-align:center;overflow:hidden}
+.noel .eyebrow{justify-content:center}
+.noel .lead{margin:0 auto 1.6rem}
+.noel .ctas{justify-content:center}
+.noel h2 .script{display:block;color:var(--jaune);font-size:.62em;margin-top:.2rem}
+.cadeaux{display:grid;gap:.8rem;max-width:760px;margin:0 auto 2rem;text-align:left}
+.cadeaux div{background:rgba(255,255,255,.04);border:1px solid var(--ligne);border-radius:16px;padding:1rem 1.1rem}
+.cadeaux b{display:block;font-family:Anton,sans-serif;text-transform:uppercase;letter-spacing:.04em;font-size:1.15rem;color:var(--jaune)}
+.flocon{position:absolute;color:rgba(255,237,0,.18);font-size:1.4rem;animation:tombe 9s linear infinite}
+@keyframes tombe{from{transform:translateY(-40px) rotate(0)}to{transform:translateY(520px) rotate(200deg)}}
+.noel small{display:block;margin-top:1.2rem;color:var(--gris);font-size:.78rem}
+
+/* Infos */
+.infos .wrap{display:grid;gap:1.2rem}
+.bloc{background:var(--nuit);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:1.5rem 1.4rem}
+.bloc h3{font-size:1.5rem;margin-bottom:.7rem;color:var(--jaune)}
+.bloc p{margin-bottom:.6rem}
+.bloc .petit{font-size:.85rem;color:var(--gris)}
+.horaires{width:100%;border-collapse:collapse;font-size:.98rem}
+.horaires td{padding:.45rem 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+.horaires td:last-child{text-align:right;font-weight:600}
+.horaires tr.off td{color:var(--gris);font-weight:400}
+.reseaux{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}
+
+/* Pied */
+footer.pied{border-top:1px solid rgba(255,255,255,.08);padding:2.5rem 0 2rem;text-align:center;font-size:.85rem;color:var(--gris)}
+footer.pied .script{font-size:2rem;color:var(--jaune);display:block;margin-bottom:.6rem}
+footer.pied p{margin-bottom:.6rem}
+
+/* Barre mobile */
+.barre{position:fixed;left:0;right:0;bottom:0;z-index:30;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.6rem .8rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(10,10,10,.94);border-top:1px solid var(--ligne)}
+.barre .btn{padding:.75rem .5rem;font-size:.9rem}
+body{padding-bottom:76px}
+
+/* Révélation */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.vu{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .hero .wrap{grid-template-columns:1.15fr .85fr}
+  .grille{grid-template-columns:repeat(2,1fr)}
+  .salon .wrap{grid-template-columns:1fr 1fr}
+  .avis{grid-template-columns:repeat(2,1fr)}
+  .cadeaux{grid-template-columns:repeat(3,1fr)}
+  .infos .wrap{grid-template-columns:repeat(3,1fr)}
+  .barre{display:none}
+  body{padding-bottom:0}
+}
+@media (max-width:420px){
+  header .btn span{display:none}
+  .poteau{left:-8px;height:120px;width:22px}
+  .badge{right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4zM12 2c-2.7 0-3 0-4.1.1C4.3 2.3 2.3 4.3 2.1 7.9 2 9 2 9.3 2 12s0 3 .1 4.1c.2 3.6 2.2 5.6 5.8 5.8 1.1.1 1.4.1 4.1.1s3 0 4.1-.1c3.6-.2 5.6-2.2 5.8-5.8.1-1.1.1-1.4.1-4.1s0-3-.1-4.1c-.2-3.6-2.2-5.6-5.8-5.8C15 2 14.7 2 12 2zm0 1.8c2.7 0 3 0 4 .1 2.7.1 3.9 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 3.9-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-3.9-1.4-4.1-4.1-.1-1-.1-1.3-.1-4s0-3 .1-4C4.1 5.3 5.3 4 8 3.9c1-.1 1.3-.1 4-.1z"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V22h3.4z"/></symbol>
+  <symbol id="ciseaux" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8.1 7.9 20 18M8.1 16.1 20 6"/></symbol>
+  <symbol id="rasoir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M3 7h13l4 4H7zM7 11l-2 9h3l2-9"/></symbol>
+  <symbol id="goutte" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></symbol>
+  <symbol id="duo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M4 12h16M12 4v16M5 5l14 14"/></symbol>
+</svg>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Los Barbers</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#accueil"><img src="img/logo.jpg" alt="Logo LB de Los Barbers" width="44" height="44"><span>Los Barbers</span></a>
+    <a class="btn btn-j" href="tel:+262693620509"><svg aria-hidden="true"><use href="#tel"/></svg><span>0693 62 05 09</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow rv">Coiffure homme &amp; barbier · Saint-Joseph</p>
+      <h1 class="rv">Los Barbers<span class="script">Soyez un gentlemen soigné</span></h1>
+      <p class="lead rv">Pierre et Julien vous accueillent avec passion et précision, dans la joie et la bonne humeur. Coupes hommes, dégradés, tailles de barbe, rasage à l'ancienne et formules complètes : offrez-vous une vraie pause style !</p>
+      <div class="ctas rv">
+        <a class="btn btn-j" href="tel:+262693620509"><svg aria-hidden="true"><use href="#tel"/></svg>Réserver ma coupe</a>
+        <a class="btn btn-o" href="https://wa.me/262693620509"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-visuel rv">
+      <div class="poteau" aria-hidden="true"></div>
+      <img src="img/degrade.jpg" alt="Dégradé net réalisé au salon Los Barbers, vu de dos" width="800" height="800">
+      <div class="badge"><b>5,0 ★</b>6 avis Google</div>
+    </div>
+  </div>
+</section>
+
+<div class="bande" aria-hidden="true"><div class="piste">
+  <span>Coiffure homme</span><span>Barbier</span><span>Soin &amp; détente</span><span>Formules combinées</span><span>Dégradés</span><span>Rasage à l'ancienne</span><span>Maître de la coiffure</span>
+  <span>Coiffure homme</span><span>Barbier</span><span>Soin &amp; détente</span><span>Formules combinées</span><span>Dégradés</span><span>Rasage à l'ancienne</span><span>Maître de la coiffure</span>
+</div></div>
+
+<section id="prestations">
+  <div class="wrap">
+    <p class="eyebrow rv">Nos services</p>
+    <h2 class="rv">Le style, <span class="jaune">dans le détail</span></h2>
+    <p class="lead rv">Des prestations soignées et personnalisées, du simple rafraîchissement à la formule complète.</p>
+    <div class="grille">
+      <article class="carte rv"><svg class="ic" aria-hidden="true"><use href="#ciseaux"/></svg><span class="num">01</span><h3>Coiffure homme</h3><p>Coupes hommes et dégradés, « la coupe impeccable à la demande », comme le dit un client.</p></article>
+      <article class="carte rv"><svg class="ic" aria-hidden="true"><use href="#rasoir"/></svg><span class="num">02</span><h3>Barbier</h3><p>Taille de barbe et rasage à l'ancienne, pour une barbe impeccable.</p></article>
+      <article class="carte rv"><svg class="ic" aria-hidden="true"><use href="#goutte"/></svg><span class="num">03</span><h3>Soin &amp; détente</h3><p>Un moment pour vous, le temps de souffler et de prendre soin de soi.</p></article>
+      <article class="carte rv"><svg class="ic" aria-hidden="true"><use href="#duo"/></svg><span class="num">04</span><h3>Formules combinées</h3><p>Coiffure + barbe en une seule séance : la formule complète pour repartir au top.</p></article>
+    </div>
+    <p class="maj rv">Venez faire votre « petite ou grosse » MAJ&nbsp;!<cite>— Los Barbers, sur Facebook</cite></p>
+  </div>
+</section>
+
+<section class="salon" id="salon">
+  <div class="wrap">
+    <div class="photos">
+      <figure class="p1 rv"><img src="img/outils.jpg" alt="Tondeuses, sabots et logo LB sur le poste de travail" loading="lazy" width="1200" height="875"><figcaption>Le poste de travail</figcaption></figure>
+      <figure class="p2 rv"><img src="img/mur.jpg" alt="Mur de briques, étagères blanches et parapluie coloré du salon" loading="lazy" width="1000" height="533"><figcaption>Le salon</figcaption></figure>
+    </div>
+    <div>
+      <p class="eyebrow rv">Le salon</p>
+      <h2 class="rv">Votre <span class="jaune">QG</span> à Saint-Joseph</h2>
+      <p class="lead rv">Mur de briques, néons, tondeuses bien rangées : un salon pensé pour le travail précis et les bons moments.</p>
+      <ul class="liste rv">
+        <li>Un accueil dans la joie et la bonne humeur, du mardi au samedi.</li>
+        <li>Coupes pour les enfants et les ados, avec le même soin.</li>
+        <li>Rendez-vous par téléphone ou en message privé sur Instagram.</li>
+        <li>Toujours à l'heure : vos clients le soulignent dans leurs avis.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="avis">
+  <div class="wrap">
+    <p class="eyebrow rv">Ils en parlent</p>
+    <h2 class="rv">La parole <span class="jaune">aux clients</span></h2>
+    <div class="note rv"><b>5,0</b><span class="etoiles" aria-label="5 étoiles sur 5">★★★★★</span><span>6 avis sur Google</span></div>
+    <div class="avis">
+      <blockquote class="rv"><p>Très bon coiffeur, barber. prix correct, toujours à l'heure et une bonne ambiance. Je recommande les yeux fermés</p><footer><b>renan pengrec'h</b> · avis Google, octobre 2026</footer></blockquote>
+      <blockquote class="rv"><p>Excellent coiffeurs, très sympathique et professionnel. Ambiance agréable dans le salon. Je recommande ce barber !</p><footer><b>Emrich Picard</b> · avis Google, visite d'août 2025</footer></blockquote>
+      <blockquote class="rv"><p>5/5 prenez rdv au moins 1 semaine à l avance la qualité ça se paie</p><footer><b>Profilus Googlus</b> · avis Google, octobre 2026</footer></blockquote>
+      <blockquote class="rv"><p>Super coiffeur, bonne ambiance dans le salon. Je vous conseille Los Barbers</p><footer><b>Anthony Béton</b> · avis Google, visite d'août 2025</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="enseigne" aria-label="Enseigne Los Barbers">
+  <img src="img/enseigne.jpg" alt="Bannière Los Barbers avec monogramme LB et poteau de barbier" loading="lazy" width="1349" height="470">
+</section>
+
+<section class="noel" id="noel">
+  <span class="flocon" style="left:8%;animation-delay:0s" aria-hidden="true">✦</span>
+  <span class="flocon" style="left:30%;animation-delay:3s" aria-hidden="true">✂</span>
+  <span class="flocon" style="left:72%;animation-delay:1.5s" aria-hidden="true">✦</span>
+  <span class="flocon" style="left:90%;animation-delay:5s" aria-hidden="true">✦</span>
+  <div class="wrap">
+    <p class="eyebrow rv">Pour les fêtes</p>
+    <h2 class="rv">Offrez une vraie pause style<span class="script">un cadeau qui fait plaisir</span></h2>
+    <p class="lead rv">Pour un papa, un frère, un ami : une coupe, une barbe ou une formule complète chez Los Barbers, à glisser sous le sapin.</p>
+    <div class="cadeaux">
+      <div class="rv"><b>Bon cadeau coupe</b>Un dégradé tout frais pour attaquer la nouvelle année.</div>
+      <div class="rv"><b>Bon cadeau barbe</b>Taille et rasage à l'ancienne, pour un vrai moment de détente.</div>
+      <div class="rv"><b>Formule complète</b>Coiffure + barbe : le combo parfait pour les fêtes.</div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-j" href="tel:+262693620509"><svg aria-hidden="true"><use href="#tel"/></svg>Demander un bon cadeau</a>
+      <a class="btn btn-o" href="https://wa.me/262693620509"><svg aria-hidden="true"><use href="#wa"/></svg>Par WhatsApp</a>
+    </div>
+    <small class="rv">Pensez aussi à réserver vos créneaux des fêtes en avance : les places partent vite.</small>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <div class="bloc rv">
+      <h3>Nous trouver</h3>
+      <p><b>66 route de la Grande Corniche</b><br>97480 Saint-Joseph, La Réunion</p>
+      <p class="petit">En face du contrôle technique Autovision, près du Cap Méchant Drive.</p>
+      <a class="btn btn-o" href="https://www.google.com/maps/search/?api=1&amp;query=Los+Barbers+66+route+de+la+Grande+Corniche+97480+Saint-Joseph">Itinéraire</a>
+    </div>
+    <div class="bloc rv">
+      <h3>Horaires</h3>
+      <table class="horaires">
+        <tr><td>Mardi – vendredi</td><td>8h – 18h</td></tr>
+        <tr><td>Samedi</td><td>8h – 17h</td></tr>
+        <tr class="off"><td>Dimanche, lundi</td><td>Repos</td></tr>
+      </table>
+      <p class="petit" style="margin-top:.8rem">Rendez-vous conseillé pour éviter l'attente ; clients de passage accueillis selon les disponibilités.</p>
+    </div>
+    <div class="bloc rv">
+      <h3>Réserver</h3>
+      <p><a href="tel:+262693620509" style="font-size:1.35rem;font-weight:700;text-decoration:none">0693 62 05 09</a></p>
+      <p class="petit">Par téléphone, WhatsApp ou en message privé sur Instagram.</p>
+      <div class="reseaux">
+        <a class="btn btn-o" href="https://www.instagram.com/losbarbers974/"><svg aria-hidden="true"><use href="#ig"/></svg>Instagram</a>
+        <a class="btn btn-o" href="https://www.facebook.com/profile.php?id=61564919759821"><svg aria-hidden="true"><use href="#fb"/></svg>Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <span class="script">Los Barbers</span>
+    <p>Coiffure homme &amp; barbier · 66 route de la Grande Corniche, 97480 Saint-Joseph · <a href="tel:+262693620509">0693 62 05 09</a></p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Los Barbers.</p>
+    <p class="atma-credit" style="font-size:12px;opacity:.72;text-align:center">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p>
+  </div>
+</footer>
+
+<nav class="barre" aria-label="Contact rapide">
+  <a class="btn btn-j" href="tel:+262693620509"><svg aria-hidden="true"><use href="#tel"/></svg>Appeler</a>
+  <a class="btn btn-o" href="https://wa.me/262693620509"><svg aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+</nav>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vu')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target);}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Los Barbers" defer></script>
+</body>
+</html>
