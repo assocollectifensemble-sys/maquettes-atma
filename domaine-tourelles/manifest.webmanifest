@@ -1,0 +1,11 @@
+{
+  "name": "Les Légendes de la Plaine — Domaine des Tourelles",
+  "short_name": "Légendes",
+  "start_url": "./?station=accueil",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F4EBD9",
+  "theme_color": "#3E6B48",
+  "lang": "fr",
+  "icons": [{ "src": "assets/icone.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
