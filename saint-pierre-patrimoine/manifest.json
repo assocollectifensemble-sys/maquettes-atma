@@ -1,0 +1,14 @@
+{
+  "id": "./?app=saint-pierre-patrimoine",
+  "name": "Le Secret de la Ville du Sud · Saint-Pierre",
+  "short_name": "Ti Bassoul",
+  "description": "Une aventure patrimoine à jouer sur téléphone dans le centre-ville de Saint-Pierre (maquette)",
+  "lang": "fr",
+  "start_url": "./?station=projet",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7F0",
+  "theme_color": "#B5462F",
+  "icons": [{ "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
