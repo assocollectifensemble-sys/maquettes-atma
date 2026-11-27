@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Le Colibri · Chambres d'hôtes à la Plaine des Cafres, Le Tampon</title>
+<meta name="description" content="Le Colibri, chambres d'hôtes au 79 rue Pierre Rivals, PK 18, à la Plaine des Cafres (Le Tampon) : 3 chambres à l'étage avec entrée indépendante, jusqu'à 8 personnes, petit-déjeuner, randonnées du Volcan et de Grand Bassin à proximité.">
+<meta property="og:title" content="Le Colibri · Chambres d'hôtes à la Plaine des Cafres">
+<meta property="og:description" content="Trois chambres colorées à l'étage, une entrée indépendante et le petit-déjeuner, au PK 18 de la Plaine des Cafres.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/le-colibri-plaine-des-cafres-le-tampon/img/facade-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/le-colibri-plaine-des-cafres-le-tampon/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:wght@300;400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ardoise:#24384a;--ardoise2:#1b2b3a;--volet:#4a7ba7;--ciel:#cfe3f2;--bougain:#c2185b;--bougain2:#e04f8a;--turquoise:#2fa7a0;--citron:#e9d35b;--terre:#d9643a;--miel:#c98a3e;--feuille:#3e7a4c;--creme:#fbf8f3;--brume:#eef3f6;--txt:#2b3540;--doux:#66727e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,Arial,sans-serif;color:var(--txt);background:var(--creme);line-height:1.7;font-size:17px;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;color:var(--ardoise)}
+h2{font-size:clamp(2rem,6vw,3.1rem);margin:.35rem 0 1rem}
+h3{font-size:1.35rem}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font-size:.72rem;font-weight:700;color:var(--bougain)}
+.main{font-family:Caveat,cursive;font-weight:700}
+.wrap{width:min(1100px,90vw);margin:auto}
+section{padding:clamp(4rem,10vw,6.5rem) 0;position:relative}
+.ribbon{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--ardoise2);color:#e6edf3;text-align:center;font-size:.76rem;padding:.45rem 1rem;line-height:1.4}
+.ribbon b{color:#f6a8c8;font-weight:600}
+canvas#petales{position:fixed;inset:0;pointer-events:none;z-index:3}
+main{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.45rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;transition:.3s;border:0}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-main{background:var(--bougain);color:#fff;box-shadow:0 14px 30px -14px rgba(194,24,91,.9);animation:souffle 4.5s ease-in-out infinite}
+.btn-main:hover{background:var(--bougain2)}
+@keyframes souffle{50%{transform:scale(1.03);box-shadow:0 18px 40px -10px rgba(194,24,91,.7)}}
+.btn-line{border:1.5px solid rgba(255,255,255,.75);color:#fff;background:rgba(255,255,255,.08)}
+.btn-line:hover{background:rgba(255,255,255,.2)}
+.btn-dark{background:var(--ardoise);color:#fff}
+.btn-dark:hover{background:var(--volet)}
+.ctas{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* HERO */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;padding:7rem 0 4.5rem;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/facade.jpg) center 40%/cover;animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,43,58,.25) 0%,rgba(27,43,58,.1) 35%,rgba(27,43,58,.78) 78%,rgba(27,43,58,.92) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .tag{display:inline-block;background:rgba(255,255,255,.16);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:.3rem .95rem;font-size:.8rem;font-weight:600;letter-spacing:.06em}
+.hero h1{color:#fff;font-size:clamp(3.2rem,13vw,6.6rem);margin:.7rem 0 .2rem;letter-spacing:-.01em}
+.hero .sous{font-family:Caveat,cursive;font-size:clamp(1.6rem,5.6vw,2.4rem);color:#ffd2e4;line-height:1.15}
+.hero p.lead{max-width:34rem;margin:1rem 0 1.7rem;font-size:1.06rem;color:#eef3f7}
+.apparait{opacity:0;transform:translateY(22px);animation:monte 1.1s .2s ease forwards}
+.apparait.d2{animation-delay:.5s}.apparait.d3{animation-delay:.8s}.apparait.d4{animation-delay:1.1s}
+@keyframes monte{to{opacity:1;transform:none}}
+.colibri{position:absolute;z-index:3;right:8%;top:22%;width:clamp(70px,14vw,120px);animation:vol 7s ease-in-out infinite}
+.colibri .aile{transform-origin:46px 34px;animation:bat .09s linear infinite alternate}
+@keyframes bat{from{transform:rotate(-24deg)}to{transform:rotate(18deg)}}
+@keyframes vol{0%,100%{transform:translate(0,0) rotate(-4deg)}30%{transform:translate(-18px,10px) rotate(2deg)}60%{transform:translate(10px,-12px) rotate(-6deg)}}
+
+/* bandeau */
+.bandeau{background:var(--ardoise);color:#e9f0f5;overflow:hidden;white-space:nowrap;padding:.85rem 0;font-weight:600;letter-spacing:.06em;font-size:.9rem}
+.bandeau .piste{display:inline-block;animation:defile 38s linear infinite}
+.bandeau span{margin:0 1.4rem}
+.bandeau i{color:var(--bougain2);font-style:normal}
+@keyframes defile{to{transform:translateX(-50%)}}
+
+/* accueil */
+.accueil .grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:860px){.accueil .grid{grid-template-columns:1.05fr .95fr}}
+.accueil p{margin-bottom:1rem;color:#3b4652}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.6rem}
+.chiffre{background:#fff;border-radius:18px;padding:1rem .6rem;text-align:center;box-shadow:0 10px 30px -22px rgba(36,56,74,.6)}
+.chiffre b{display:block;font-family:Fraunces,serif;font-size:2rem;color:var(--bougain);line-height:1.1}
+.chiffre small{font-size:.78rem;color:var(--doux);line-height:1.3;display:block}
+.duo{position:relative;padding-bottom:2.5rem}
+.duo img{border-radius:22px;box-shadow:0 24px 50px -28px rgba(36,56,74,.75)}
+.duo .p1{width:82%;aspect-ratio:4/5;object-fit:cover}
+.duo .p2{position:absolute;right:0;bottom:0;width:52%;aspect-ratio:1;object-fit:cover;border:6px solid var(--creme)}
+.legende{font-size:.78rem;color:var(--doux);margin-top:.5rem}
+
+/* vague */
+.vague{display:block;width:100%;height:60px}
+
+/* chambres */
+.chambres{background:var(--brume)}
+.cartes{display:grid;gap:1.2rem;margin-top:2rem}
+@media(min-width:760px){.cartes{grid-template-columns:repeat(3,1fr)}}
+.carte{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 16px 40px -30px rgba(36,56,74,.8);transition:transform .35s,box-shadow .35s}
+.carte:hover{transform:translateY(-6px);box-shadow:0 26px 50px -28px rgba(36,56,74,.8)}
+.carte img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .8s}
+.carte:hover img{transform:scale(1.05)}
+.carte .in{padding:1.2rem 1.3rem 1.4rem}
+.carte .pastille{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .7rem;border-radius:999px;margin-bottom:.5rem}
+.carte p{font-size:.95rem;color:#4a5560;margin-top:.35rem}
+.galerie{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.8rem 5vw 1rem;margin:0 -5vw;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.galerie figure{flex:0 0 min(78vw,360px);scroll-snap-align:center}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}
+.galerie figcaption{font-size:.82rem;color:var(--doux);margin-top:.4rem}
+.glisse{font-family:Caveat,cursive;font-size:1.3rem;color:var(--volet)}
+
+/* espaces */
+.equip{display:grid;gap:1rem;margin-top:2rem}
+@media(min-width:700px){.equip{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.equip{grid-template-columns:repeat(3,1fr)}}
+.eq{display:flex;gap:1rem;align-items:flex-start;background:#fff;border-radius:18px;padding:1.1rem 1.2rem;box-shadow:0 10px 30px -26px rgba(36,56,74,.8)}
+.eq svg{width:38px;height:38px;flex:none;padding:8px;border-radius:12px;background:#fde7f0;color:var(--bougain)}
+.eq:nth-child(3n+2) svg{background:#dff3f1;color:var(--turquoise)}
+.eq:nth-child(3n) svg{background:#fbf3cf;color:#a2861a}
+.eq b{display:block;color:var(--ardoise)}
+.eq span{font-size:.92rem;color:#56616c}
+.mosaique{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:2.2rem}
+@media(min-width:860px){.mosaique{grid-template-columns:repeat(4,1fr)}}
+.mosaique figure{position:relative;overflow:hidden;border-radius:18px}
+.mosaique img{width:100%;height:100%;aspect-ratio:1;object-fit:cover;transition:transform .8s}
+.mosaique figure:hover img{transform:scale(1.06)}
+.mosaique figcaption{position:absolute;left:.6rem;bottom:.6rem;background:rgba(255,255,255,.9);border-radius:999px;font-size:.74rem;font-weight:700;padding:.15rem .65rem;color:var(--ardoise)}
+.horaires{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.7rem}
+.horaires span{background:var(--ardoise);color:#fff;border-radius:999px;padding:.45rem 1.05rem;font-size:.88rem;font-weight:600}
+
+/* autour */
+.autour{background:var(--ardoise);color:#e3ebf1;overflow:hidden}
+.autour h2{color:#fff}
+.autour .eyebrow{color:#f6a8c8}
+.autour .grid{display:grid;gap:2.2rem;align-items:center}
+@media(min-width:860px){.autour .grid{grid-template-columns:1fr 1fr}}
+.autour p{color:#cfdae3;margin-bottom:1rem}
+.lieux{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.3rem 0}
+.lieux span{border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:.35rem .95rem;font-size:.88rem}
+.route{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:1.3rem 1.4rem}
+.route h3{color:#fff;font-size:1.15rem;margin-bottom:.4rem}
+.route p{font-size:.93rem;margin-bottom:.9rem}
+.astuce{font-family:Caveat,cursive;font-size:1.35rem;color:#ffd2e4;line-height:1.3}
+.autour img{border-radius:22px;width:100%;aspect-ratio:3/4;object-fit:cover;box-shadow:0 30px 60px -30px #000}
+
+/* avis */
+.avis .note{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:.4rem}
+.avis .note b{font-family:Fraunces,serif;font-size:3rem;color:var(--bougain);line-height:1}
+.avis .note small{color:var(--doux)}
+.citations{display:grid;gap:1.1rem;margin-top:2rem}
+@media(min-width:860px){.citations{grid-template-columns:repeat(3,1fr)}}
+blockquote{background:#fff;border-radius:22px;padding:1.5rem 1.4rem 1.2rem;position:relative;box-shadow:0 14px 40px -30px rgba(36,56,74,.8);border-top:4px solid var(--turquoise)}
+blockquote:nth-child(2){border-color:var(--bougain)}
+blockquote:nth-child(3){border-color:var(--citron)}
+blockquote p{font-family:Fraunces,serif;font-style:italic;font-size:1.06rem;color:var(--ardoise);line-height:1.5}
+blockquote cite{display:block;margin-top:.8rem;font-style:normal;font-size:.8rem;color:var(--doux)}
+.gentillesse{font-family:Caveat,cursive;font-size:clamp(1.8rem,6vw,2.6rem);color:var(--volet);text-align:center;margin-top:2.4rem;line-height:1.2}
+
+/* noel */
+.noel{background:linear-gradient(160deg,#7d1240,#c2185b 55%,#d9643a);color:#fff;overflow:hidden}
+.noel .boite{position:relative;max-width:760px;margin:auto;text-align:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:28px;padding:2.6rem 1.5rem 2.3rem}
+.noel h2{color:#fff}
+.noel .eyebrow{color:#ffe6a6}
+.noel p{color:#ffe9f1;max-width:34rem;margin:0 auto 1.6rem}
+.noel .btn-main{background:#fff;color:var(--bougain);box-shadow:0 14px 34px -14px rgba(0,0,0,.6)}
+.noel .etoile{position:absolute;color:#ffe6a6;animation:scint 3s ease-in-out infinite}
+@keyframes scint{50%{opacity:.25;transform:scale(.7)}}
+.noel .note-n{font-size:.8rem;opacity:.8;margin-top:1.2rem}
+
+/* contact */
+.contact .grid{display:grid;gap:1.8rem}
+@media(min-width:860px){.contact .grid{grid-template-columns:1fr 1fr}}
+.fiche{background:#fff;border-radius:24px;padding:1.6rem 1.5rem;box-shadow:0 16px 40px -30px rgba(36,56,74,.8)}
+.ligne{display:flex;gap:.9rem;align-items:flex-start;padding:.75rem 0;border-bottom:1px solid #edf0f3}
+.ligne:last-child{border:0}
+.ligne svg{width:22px;height:22px;flex:none;color:var(--bougain);margin-top:.2rem}
+.ligne a{text-decoration:none;font-weight:700;color:var(--ardoise)}
+.ligne small{display:block;color:var(--doux);font-size:.84rem}
+.contact .photo img{border-radius:24px;width:100%;aspect-ratio:4/3;object-fit:cover}
+footer{background:var(--ardoise2);color:#b9c7d3;text-align:center;font-size:.86rem;padding:2.2rem 1.2rem 1.6rem;line-height:1.7}
+footer b{color:#fff}
+.atma-credit{margin-top:.8rem}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.reveal.vu{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}.apparait{opacity:1;transform:none}canvas#petales{display:none}}
+</style>
+</head>
+<body>
+<div class="ribbon">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Le Colibri</div>
+<canvas id="petales" aria-hidden="true"></canvas>
+<main>
+
+<header class="hero">
+  <div class="bg" role="img" aria-label="La maison du Colibri, blanche et fleurie, sous le ciel bleu de la Plaine des Cafres"></div>
+  <svg class="colibri" viewBox="0 0 120 80" aria-hidden="true">
+    <path d="M8 44 L40 38" stroke="#24384a" stroke-width="2.4" stroke-linecap="round"/>
+    <ellipse cx="62" cy="44" rx="20" ry="11" fill="#2fa7a0"/>
+    <circle cx="44" cy="40" r="8" fill="#2fa7a0"/>
+    <circle cx="42" cy="38.5" r="1.6" fill="#fff"/>
+    <path d="M50 46 Q58 54 70 50" fill="#c2185b"/>
+    <path d="M80 44 L104 36 L98 46 L106 54 Z" fill="#24384a"/>
+    <path class="aile" d="M60 38 Q70 6 96 4 Q80 22 66 42 Z" fill="#4a7ba7" opacity=".9"/>
+  </svg>
+  <div class="wrap">
+    <span class="tag apparait">PK 18 · Plaine des Cafres · Le Tampon</span>
+    <h1 class="apparait d2">Le Colibri</h1>
+    <div class="sous apparait d2">Chambres d'hôtes dans les Hauts du Sud</div>
+    <p class="lead apparait d3">Trois chambres à l'étage avec leur entrée indépendante, le petit-déjeuner, et les randonnées du Volcan et de Grand Bassin tout près.</p>
+    <div class="ctas apparait d4">
+      <a class="btn btn-main" href="https://wa.me/262692870357?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20chambre%20au%20Colibri" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>Réserver sur WhatsApp</a>
+      <a class="btn btn-line" href="tel:+262692870357"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg>0692 87 03 57</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>3 chambres à l'étage</span><i>✿</i><span>Entrée indépendante</span><i>✿</i><span>Petit-déjeuner</span><i>✿</i><span>Jusqu'à 8 personnes</span><i>✿</i><span>Région du Volcan</span><i>✿</i><span>Grand Bassin</span><i>✿</i><span>Parking privé</span><i>✿</i>
+  <span>3 chambres à l'étage</span><i>✿</i><span>Entrée indépendante</span><i>✿</i><span>Petit-déjeuner</span><i>✿</i><span>Jusqu'à 8 personnes</span><i>✿</i><span>Région du Volcan</span><i>✿</i><span>Grand Bassin</span><i>✿</i><span>Parking privé</span><i>✿</i>
+</div></div>
+
+<section class="accueil" id="accueil">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow">Bienvenue chez Ginette</span>
+      <h2>Une maison blanche et fleurie, au PK 18</h2>
+      <p>Au 79 rue Pierre Rivals, sur la route de la Plaine des Cafres, Le Colibri vous ouvre l'étage de la maison : trois chambres, une entrée indépendante, et un espace salle à manger-salon pour se poser après la randonnée.</p>
+      <p>On y vient en couple, en famille ou entre amis, au calme du milieu rural, avec toutes les commodités à proximité. Et chaque matin, le petit-déjeuner se partage, avec les bons conseils de la maison pour la journée.</p>
+      <div class="chiffres">
+        <div class="chiffre"><b>3</b><small>chambres à l'étage</small></div>
+        <div class="chiffre"><b>8</b><small>personnes accueillies</small></div>
+        <div class="chiffre"><b>65&nbsp;€</b><small>la chambre double, petit-déjeuner inclus</small></div>
+      </div>
+    </div>
+    <div class="duo reveal">
+      <img class="p1" src="img/escalier.jpg" alt="L'escalier extérieur qui mène à l'étage des chambres" loading="lazy">
+      <img class="p2" src="img/orchidee.jpg" alt="Une orchidée en fleur dans la maison" loading="lazy">
+      <p class="legende">L'escalier vers l'étage des chambres, et une orchidée de la maison.</p>
+    </div>
+  </div>
+</section>
+
+<svg class="vague" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C240 60 480 0 720 26 C960 52 1200 8 1440 30 V60 H0Z" fill="#eef3f6"/></svg>
+<section class="chambres" id="chambres" style="padding-top:2.5rem">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Les chambres</span>
+      <h2>Des couleurs pour bien dormir</h2>
+      <p style="max-width:40rem;color:#4a5560">Draps turquoise, citron ou bois miel : chaque chambre a sa couleur. Linge de maison fourni, et un lit supplémentaire possible sur demande.</p>
+    </div>
+    <div class="cartes">
+      <article class="carte reveal">
+        <img src="img/chambre-bougainvillee.jpg" alt="Lit aux draps bleu ciel décoré d'une fleur de bougainvillier" loading="lazy">
+        <div class="in"><span class="pastille" style="background:#fde7f0;color:#c2185b">Pour 2</span><h3>La chambre double</h3><p>Un lit double, pour un séjour à deux dans les Hauts.</p></div>
+      </article>
+      <article class="carte reveal">
+        <img src="img/chambre-triple.jpg" alt="Chambre triple aux lits en bois clair" loading="lazy">
+        <div class="in"><span class="pastille" style="background:#dff3f1;color:#1f7d77">Pour 3</span><h3>Deux chambres triples</h3><p>Un lit double et un lit simple dans chacune : idéal en famille ou entre amis.</p></div>
+      </article>
+      <article class="carte reveal">
+        <img src="img/serviettes.jpg" alt="Serviettes roulées et fleur rouge préparées pour l'arrivée" loading="lazy">
+        <div class="in"><span class="pastille" style="background:#fbf3cf;color:#8a7214">Le petit plus</span><h3>Préparées avec soin</h3><p>Linge de maison inclus, serviettes roulées et une fleur pour vous accueillir.</p></div>
+      </article>
+    </div>
+    <div class="galerie" aria-label="Galerie des chambres">
+      <figure><img src="img/chambre-citron.jpg" alt="Lit aux draps vert et citron, mur orangé" loading="lazy"><figcaption>Vert d'eau et citron</figcaption></figure>
+      <figure><img src="img/chambre-miel.jpg" alt="Chambre aux lits en bois miel" loading="lazy"><figcaption>Bois miel et lumière douce</figcaption></figure>
+      <figure><img src="img/chambre-rose.jpg" alt="Chambre au linge rose et noir" loading="lazy"><figcaption>Touches de rose</figcaption></figure>
+      <figure><img src="img/chambre-triple.jpg" alt="Chambre triple" loading="lazy"><figcaption>La chambre triple</figcaption></figure>
+    </div>
+    <p class="glisse">← glissez pour voir les chambres →</p>
+  </div>
+</section>
+
+<section class="espaces" id="espaces">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">À partager</span>
+      <h2>Tout l'étage pour vos soirées</h2>
+    </div>
+    <div class="equip">
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16v3a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M8 19l-1 2M16 19l1 2"/></svg><div><b>2 salles d'eau</b><span>avec cabine de douche hydromassante et sanitaires séparés</span></div></div>
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11h18v6H3z"/><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M5 17v2M19 17v2"/></svg><div><b>Salle à manger-salon</b><span>un espace commun pour se retrouver</span></div></div>
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M15 6v12M18 10v.01M18 13v.01"/></svg><div><b>Coin cuisine</b><span>four micro-ondes et réfrigérateur</span></div></div>
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></svg><div><b>Télévision écran plat</b><span>et Wi-Fi offert</span></div></div>
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg><div><b>Parking privé</b><span>dans la cour clôturée</span></div></div>
+      <div class="eq reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c3 4 6 6 6 10a6 6 0 0 1-12 0c0-4 3-6 6-10z"/></svg><div><b>Linge de maison</b><span>draps et serviettes fournis</span></div></div>
+    </div>
+    <div class="mosaique">
+      <figure class="reveal"><img src="img/salon.jpg" alt="Le salon-salle à manger" loading="lazy"><figcaption>Le salon</figcaption></figure>
+      <figure class="reveal"><img src="img/veranda.jpg" alt="Coin repas lumineux avec fleur d'oiseau de paradis" loading="lazy"><figcaption>Le coin repas</figcaption></figure>
+      <figure class="reveal"><img src="img/salle-eau.jpg" alt="Salle d'eau avec douche vitrée" loading="lazy"><figcaption>La salle d'eau</figcaption></figure>
+      <figure class="reveal"><img src="img/coin-cuisine.jpg" alt="Coin cuisine équipé" loading="lazy"><figcaption>Le coin cuisine</figcaption></figure>
+    </div>
+    <div class="horaires reveal">
+      <span>Arrivée 14 h – 18 h</span><span>Départ jusqu'à 12 h</span><span>Paiement : chèques et espèces</span>
+    </div>
+  </div>
+</section>
+
+<section class="autour" id="autour">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow">Autour du Colibri</span>
+      <h2>Le Volcan et Grand Bassin, à portée de rando</h2>
+      <p>La Plaine des Cafres, c'est l'air frais des Hauts, les pâturages et la route du Volcan. Depuis Le Colibri, les randonnées de la région du Volcan et de Grand Bassin se rejoignent facilement.</p>
+      <div class="lieux"><span>Région du Volcan</span><span>Grand Bassin</span><span>Plaine des Cafres</span><span>Le Tampon</span></div>
+      <div class="route">
+        <h3>Venir au Colibri</h3>
+        <p><b>Depuis le Sud :</b> 4 voies vers Le Tampon, puis au rond-point des Azalées la RN3 direction Saint-Benoît. Passez le rond-point du 17ème km : Le Colibri est sur la gauche, au n°79.</p>
+        <p><b>Depuis les Plaines :</b> RN3 direction Le Tampon jusqu'au 19ème km, la maison est sur la droite juste après l'école primaire.</p>
+        <p class="astuce">Le conseil des voyageurs : un petit coup de fil quelques minutes avant d'arriver, et tout roule !</p>
+      </div>
+    </div>
+    <div class="reveal"><img src="img/maison.jpg" alt="La maison du Colibri, ses balcons blancs et ses fleurs" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Ils sont passés par Le Colibri</span>
+      <h2>Un accueil dont on parle</h2>
+      <div class="note"><b>9,3/10</b><small>« Exceptionnel » sur 34 avis vérifiés (Agoda)<br>Propreté 9,7 · Confort 9,6 · Service 9,6</small></div>
+    </div>
+    <div class="citations">
+      <blockquote class="reveal"><p>« L'accueil de Ginette est très sympathique, les chambres et salle de bain sont TRÈS propres et bien équipées. Les petits déjeuners sont bons et copieux et permettent des échanges intéressants. »</p><cite>Avis Google · septembre 2023</cite></blockquote>
+      <blockquote class="reveal"><p>« Accueil très cordial. Merci. Chambre (pour 3) et espace de vie collectif très corrects, vraiment charmants et très propres. »</p><cite>Voyageurs en groupe · Agoda · décembre 2025</cite></blockquote>
+      <blockquote class="reveal"><p>« Bel accueil et échanges agréables avec la propriétaire des lieux »</p><cite>Isabelle · Agoda · décembre 2025</cite></blockquote>
+    </div>
+    <p class="gentillesse reveal">« hôtesse d'une gentillesse infinie »</p><p style="text-align:center;font-size:.8rem;color:var(--doux)">Clarisse · Agoda</p>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="wrap">
+    <div class="boite reveal">
+      <svg class="etoile" style="top:18px;left:22px;width:22px" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+      <svg class="etoile" style="top:40px;right:30px;width:16px;animation-delay:1.2s" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+      <svg class="etoile" style="bottom:26px;left:40px;width:14px;animation-delay:2s" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8 5.8 21.3l2.4-7.4L2 9.4h7.6z"/></svg>
+      <span class="eyebrow">Offrir pour Noël</span>
+      <h2>Offrez une nuit dans les Hauts</h2>
+      <p>Une chambre colorée, l'air frais de la Plaine des Cafres et un petit-déjeuner partagé : un joli cadeau à glisser sous le sapin. Ou réunissez toute la famille, les trois chambres accueillent jusqu'à 8 personnes.</p>
+      <a class="btn btn-main" href="https://wa.me/262692870357?text=Bonjour%2C%20je%20voudrais%20offrir%20une%20nuit%20au%20Colibri%20pour%20No%C3%ABl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1.5S10 8 12 8zm0 0c2-4 6-4 6-1.5S14 8 12 8z"/></svg>Offrir un séjour au Colibri</a>
+      <p class="note-n">Écrivez directement à la maison sur WhatsApp pour en parler.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div class="reveal">
+      <span class="eyebrow">Réserver</span>
+      <h2>À bientôt au Colibri</h2>
+      <div class="fiche">
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><a href="https://www.google.com/maps/search/?api=1&query=Le+Colibri+79+rue+Pierre+Rivals+Plaine+des+Cafres" target="_blank" rel="noopener">79, rue Pierre Rivals – PK 18</a><small>97418 La Plaine des Cafres, Le Tampon</small></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg><div><a href="tel:+262692870357">0692 87 03 57</a><small>mobile et WhatsApp</small></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2z"/></svg><div><a href="tel:+262262354028">0262 35 40 28</a><small>téléphone fixe</small></div></div>
+        <div class="ligne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Arrivée 14 h – 18 h · départ jusqu'à 12 h</b><small>Chambre double avec petit-déjeuner : 65 € la nuit</small></div></div>
+      </div>
+      <div class="ctas" style="margin-top:1.4rem">
+        <a class="btn btn-main" href="https://wa.me/262692870357?text=Bonjour%2C%20je%20voudrais%20r%C3%A9server%20une%20chambre%20au%20Colibri" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a class="btn btn-dark" href="tel:+262692870357">Appeler</a>
+      </div>
+    </div>
+    <div class="photo reveal"><img src="img/chambre-bougainvillee.jpg" alt="Un lit préparé avec une fleur de bougainvillier" loading="lazy"></div>
+  </div>
+</section>
+</main>
+
+<footer><b>Le Colibri</b> · Chambres d'hôtes · La Plaine des Cafres, Le Tampon, La Réunion<br>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications de Le Colibri.
+<p class="atma-credit" style="font-size:12px;opacity:.72;text-align:center">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p></footer>
+
+<script>
+(()=>{
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vu');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+const c=document.getElementById('petales'),x=c.getContext('2d');let W,H,P=[],run=true;
+const cols=['#c2185b','#e04f8a','#f28cb3','#d9643a'];
+function size(){W=c.width=innerWidth;H=c.height=innerHeight}
+size();addEventListener('resize',size);
+const N=innerWidth<600?14:24;
+for(let i=0;i<N;i++)P.push(nv(true));
+function nv(init){return{x:Math.random()*W,y:init?Math.random()*H:-20,r:4+Math.random()*5,vy:.3+Math.random()*.5,vx:-.2+Math.random()*.4,a:Math.random()*6.3,va:-.02+Math.random()*.04,s:Math.random()*6.3,c:cols[Math.random()*cols.length|0],o:.35+Math.random()*.3}}
+function draw(){if(!run)return;x.clearRect(0,0,W,H);
+for(const p of P){p.y+=p.vy;p.s+=.015;p.x+=p.vx+Math.sin(p.s)*.4;p.a+=p.va;
+if(p.y>H+20)Object.assign(p,nv(false));
+x.save();x.translate(p.x,p.y);x.rotate(p.a);x.globalAlpha=p.o;x.fillStyle=p.c;
+x.beginPath();x.moveTo(0,-p.r);x.quadraticCurveTo(p.r,-p.r*.2,0,p.r);x.quadraticCurveTo(-p.r,-p.r*.2,0,-p.r);x.fill();x.restore()}
+requestAnimationFrame(draw)}
+document.addEventListener('visibilitychange',()=>{run=!document.hidden;if(run)draw()});
+draw();
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Le Colibri" defer></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Emeraude · Artisan coiffeur barbier à La Rivière des Pluies, Sainte-Marie</title>
+<meta name="description" content="Emeraude, barbershop au 177 rue Roger Payet, La Rivière des Pluies (Sainte-Marie). Dégradés, coupes classiques, barbe à la serviette chaude. Du lundi au samedi 9h-19h, le dimanche 8h-12h.">
+<meta property="og:title" content="Emeraude · Artisan coiffeur barbier à Sainte-Marie">
+<meta property="og:description" content="La différence est dans le détail : dégradés, barbe, café d'accueil, à La Rivière des Pluies.">
+<meta property="og:image" content="https://maquettes.atma-digital.re/emeraude-barbershop-sainte-marie/img/salon-og.jpg">
+<meta property="og:url" content="https://maquettes.atma-digital.re/emeraude-barbershop-sainte-marie/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noir:#070a08;
+  --nuit:#0d1410;
+  --ardoise:#151d18;
+  --neon:#3fe36a;
+  --lime:#55c455;
+  --emeraude:#109153;
+  --creme:#eef5ec;
+  --gris:#a9b8ad;
+  --ligne:rgba(63,227,106,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--noir);color:var(--creme);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Syne,sans-serif;line-height:1.08;letter-spacing:.01em}
+h2{font-size:clamp(1.9rem,6.5vw,3rem);font-weight:800;margin-bottom:1rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(4rem,11vw,7.5rem) 0;position:relative}
+.eyebrow{font-size:.74rem;letter-spacing:.32em;text-transform:uppercase;color:var(--neon);font-weight:600;margin-bottom:.9rem;display:flex;align-items:center;gap:.6rem}
+.eyebrow svg{width:16px;height:16px;flex:none}
+.serif{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+.lead{font-size:1.08rem;color:#d3ded6;max-width:36rem}
+
+/* Ruban */
+.ruban{background:var(--neon);color:#04170a;font-size:.8rem;text-align:center;padding:.55rem 1rem;line-height:1.35}
+.ruban b{font-weight:700}
+
+/* Boutons */
+.ctas{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.95rem 1.45rem;border-radius:999px;font-weight:600;font-size:.96rem;text-decoration:none;transition:transform .25s,box-shadow .25s,background .25s}
+.btn svg{width:18px;height:18px}
+.btn-neon{background:var(--neon);color:#04170a;box-shadow:0 0 0 0 rgba(63,227,106,.5)}
+.btn-neon:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(63,227,106,.7)}
+.btn-ghost{border:1px solid rgba(238,245,236,.35);color:var(--creme)}
+.btn-ghost:hover{border-color:var(--neon);color:var(--neon)}
+
+/* Hero */
+.hero{position:relative;min-height:min(92svh,860px);display:flex;align-items:flex-end;padding:0 0 clamp(3rem,9vw,6rem);overflow:hidden}
+.hero .bg{position:absolute;inset:0;background:url(img/salon.jpg) center/cover;transform:scale(1.08);animation:lent 22s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,10,8,.55) 0%,rgba(7,10,8,.35) 30%,rgba(7,10,8,.88) 68%,var(--noir) 100%)}
+.hero .wrap{position:relative;z-index:2}
+.marque{display:flex;flex-direction:column;align-items:flex-start;gap:.2rem}
+.diamant{width:64px;height:auto;filter:drop-shadow(0 0 10px rgba(63,227,106,.75));animation:lueur 3.2s ease-in-out infinite}
+.hero h1{font-size:clamp(1.9rem,8.4vw,6.6rem);font-weight:800;letter-spacing:.03em;white-space:nowrap;margin-top:.6rem;text-shadow:0 0 34px rgba(63,227,106,.35)}
+.hero .sous{font-size:.9rem;letter-spacing:.42em;text-transform:uppercase;color:var(--neon);font-weight:600;padding-bottom:.3rem;border-bottom:2px solid var(--neon)}
+.hero .devise{font-size:clamp(1.5rem,5.5vw,2.3rem);margin-top:1.4rem;color:#fff}
+.hero .lieu{color:#cfdad2;margin-top:.5rem;max-width:32rem}
+.note{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;background:rgba(13,20,16,.75);border:1px solid var(--ligne);padding:.45rem .9rem;border-radius:999px;font-size:.86rem;backdrop-filter:blur(6px)}
+.note .etoiles{color:var(--neon);letter-spacing:.1em}
+
+/* Bandeau défilant */
+.bandeau{background:var(--emeraude);color:#eafff0;overflow:hidden;white-space:nowrap;border-block:1px solid rgba(255,255,255,.08)}
+.bandeau .piste{display:inline-flex;gap:2.2rem;padding:.95rem 0;animation:defile 34s linear infinite;font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.16em;font-size:.88rem}
+.bandeau span{display:inline-flex;align-items:center;gap:2.2rem}
+.bandeau span::after{content:"◆";color:#9dffbd;font-size:.7rem}
+
+/* Le salon */
+.salon .grille{display:grid;gap:2.5rem;align-items:center}
+.salon .photos{position:relative;padding-bottom:3rem}
+.salon .photos .p1{border-radius:18px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.9);border:1px solid var(--ligne);max-width:420px}
+.salon .photos .p2{position:absolute;right:0;bottom:0;width:58%;border-radius:14px;overflow:hidden;border:1px solid var(--ligne);box-shadow:0 20px 50px -20px rgba(0,0,0,.95);transform:rotate(2deg)}
+.salon .photos figcaption{font-size:.72rem;color:var(--gris);padding:.45rem .7rem;background:var(--nuit)}
+.points{list-style:none;margin-top:1.6rem;display:grid;gap:.85rem}
+.points li{display:flex;gap:.8rem;align-items:flex-start;color:#d3ded6}
+.points li svg{width:20px;height:20px;flex:none;margin-top:.2rem;color:var(--neon)}
+.citation-mur{margin-top:1.8rem;padding:1.1rem 1.3rem;border-left:3px solid var(--neon);background:linear-gradient(90deg,rgba(16,145,83,.18),transparent);font-size:1.35rem;color:#fff}
+.citation-mur small{display:block;font-family:Inter,sans-serif;font-style:normal;font-size:.75rem;color:var(--gris);margin-top:.35rem}
+
+/* Barber */
+.barber{background:radial-gradient(90% 70% at 85% 10%,rgba(16,145,83,.28),transparent 60%),var(--nuit)}
+.barber .grille{display:grid;gap:2.4rem;align-items:center}
+.barber .chiffre{font-family:Syne,sans-serif;font-weight:800;font-size:clamp(4.5rem,20vw,8rem);line-height:.9;color:transparent;-webkit-text-stroke:2px var(--neon);text-shadow:0 0 30px rgba(63,227,106,.25)}
+.barber .chiffre small{display:block;font-size:.9rem;-webkit-text-stroke:0;color:var(--neon);letter-spacing:.3em;text-transform:uppercase;margin-top:.6rem}
+.barber blockquote{font-size:clamp(1.5rem,5.5vw,2.2rem);color:#fff;margin:1rem 0}
+.affiche{border-radius:16px;overflow:hidden;border:1px solid var(--ligne);box-shadow:0 0 0 1px rgba(0,0,0,.4),0 30px 70px -30px rgba(0,0,0,.9)}
+.affiche figcaption{font-size:.72rem;color:var(--gris);padding:.5rem .8rem;background:var(--noir)}
+
+/* Prestations */
+.carte{display:grid;gap:1rem;margin-top:2.2rem}
+.presta{display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;padding:1.25rem 1.3rem;border:1px solid var(--ligne);border-radius:16px;background:linear-gradient(160deg,rgba(21,29,24,.9),rgba(7,10,8,.9));transition:border-color .3s,transform .3s}
+.presta:hover{border-color:var(--neon);transform:translateY(-3px)}
+.presta h3{font-size:1.08rem;font-weight:700}
+.presta .prix{font-family:Syne,sans-serif;font-weight:800;color:var(--neon);font-size:1.3rem;white-space:nowrap}
+.presta p{grid-column:1/-1;font-size:.9rem;color:var(--gris)}
+.presta .duree{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#cfe9d6;border:1px solid var(--ligne);border-radius:999px;padding:.12rem .6rem;margin-right:.4rem}
+.petit{font-size:.8rem;color:var(--gris);margin-top:1.2rem}
+.cat{font-family:Syne,sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:.78rem;color:var(--neon);margin-top:1.6rem}
+
+/* Avis */
+.avis{background:var(--noir)}
+.avis .tete{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1rem}
+.score{font-family:Syne,sans-serif;font-weight:800;font-size:3.2rem;color:var(--neon);line-height:1}
+.score small{display:block;font-family:Inter;font-weight:500;font-size:.8rem;color:var(--gris);letter-spacing:.05em}
+.liste-avis{display:grid;gap:1rem;margin-top:2rem}
+.un-avis{padding:1.4rem 1.35rem 1.2rem;border-radius:16px;background:var(--ardoise);border:1px solid rgba(255,255,255,.05);position:relative}
+.un-avis::before{content:"“";position:absolute;top:-.6rem;left:1rem;font-family:'Cormorant Garamond',serif;font-size:4rem;color:var(--neon);line-height:1}
+.un-avis p{color:#e3ece5;font-size:.97rem}
+.un-avis footer{margin-top:.8rem;font-size:.78rem;color:var(--gris)}
+.un-avis footer b{color:var(--creme);font-weight:600}
+
+/* Noël */
+.noel{background:radial-gradient(110% 80% at 50% 0%,#0f3a24 0%,var(--nuit) 70%);text-align:center;overflow:hidden}
+.noel .eyebrow{justify-content:center}
+.noel p.lead{margin:0 auto}
+.bon{position:relative;max-width:430px;margin:2.4rem auto 0;padding:2rem 1.5rem 1.7rem;border-radius:18px;background:linear-gradient(140deg,#0b130e,#13251a);border:1px solid rgba(63,227,106,.45);box-shadow:0 0 40px -10px rgba(63,227,106,.45),0 30px 70px -30px #000;transform:rotate(-1.5deg)}
+.bon::before{content:"";position:absolute;inset:9px;border:1px dashed rgba(63,227,106,.35);border-radius:12px;pointer-events:none}
+.bon .diamant{width:42px;margin:0 auto .6rem}
+.bon .t1{font-size:.72rem;letter-spacing:.4em;text-transform:uppercase;color:var(--neon)}
+.bon .t2{font-family:Syne,sans-serif;font-weight:800;font-size:2rem;letter-spacing:.08em;margin:.25rem 0}
+.bon .t3{font-size:1.25rem;color:#d6e9db}
+.noel .ctas{justify-content:center}
+.flocons{position:absolute;inset:0;pointer-events:none}
+.flocons i{position:absolute;top:-10px;width:5px;height:5px;background:#bfffd2;transform:rotate(45deg);opacity:.5;animation:chute linear infinite}
+
+/* Infos */
+.infos .grille{display:grid;gap:1.2rem;margin-top:2rem}
+.bloc{padding:1.5rem 1.4rem;border:1px solid var(--ligne);border-radius:16px;background:var(--nuit)}
+.bloc h3{font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--neon);margin-bottom:.8rem}
+.horaires{list-style:none;display:grid;gap:.45rem}
+.horaires li{display:flex;justify-content:space-between;gap:1rem;border-bottom:1px dashed rgba(255,255,255,.08);padding-bottom:.4rem}
+.horaires li span:last-child{font-weight:600}
+.bloc a{text-decoration:none;border-bottom:1px solid var(--ligne)}
+.bloc a:hover{color:var(--neon)}
+.carte-map{border-radius:16px;overflow:hidden;border:1px solid var(--ligne);min-height:280px}
+.carte-map iframe{width:100%;height:100%;min-height:280px;border:0;filter:grayscale(.6) invert(.9) hue-rotate(180deg) contrast(.9)}
+.enseigne{border-radius:16px;overflow:hidden;border:1px solid var(--ligne)}
+.enseigne figcaption{font-size:.72rem;color:var(--gris);padding:.5rem .8rem;background:var(--noir)}
+
+/* Final */
+.final{padding:0;background:var(--noir)}
+.final .visuel{position:relative}
+.final .visuel img{width:100%;max-height:520px;object-fit:cover}
+.final .contenu{text-align:center;padding:2.5rem 0 4.5rem}
+.final .ctas{justify-content:center}
+
+footer.pied{border-top:1px solid var(--ligne);padding:2.4rem 0 6.5rem;text-align:center;font-size:.86rem;color:var(--gris)}
+footer.pied .reseaux{display:flex;justify-content:center;gap:1rem;margin-bottom:1.2rem}
+footer.pied .reseaux a{width:44px;height:44px;border-radius:50%;border:1px solid var(--ligne);display:grid;place-items:center;transition:border-color .3s,color .3s}
+footer.pied .reseaux a:hover{border-color:var(--neon);color:var(--neon)}
+footer.pied .reseaux svg{width:19px;height:19px}
+footer.pied p{margin-top:.5rem}
+
+/* Bouton flottant mobile */
+.flottant{position:fixed;left:1rem;right:1rem;bottom:1rem;z-index:50;display:flex;gap:.6rem}
+.flottant a{flex:1;justify-content:center;padding:.85rem 1rem;font-size:.92rem}
+
+/* Apparition */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.rv.on{opacity:1;transform:none}
+
+@keyframes lent{from{transform:scale(1.08) translateY(0)}to{transform:scale(1.15) translateY(-12px)}}
+@keyframes lueur{0%,100%{filter:drop-shadow(0 0 6px rgba(63,227,106,.55))}50%{filter:drop-shadow(0 0 16px rgba(63,227,106,.95))}}
+@keyframes defile{to{transform:translateX(-50%)}}
+@keyframes chute{to{transform:translateY(110vh) rotate(225deg)}}
+
+@media (min-width:760px){
+  .salon .grille{grid-template-columns:1fr 1fr;gap:4rem}
+  .barber .grille{grid-template-columns:1.1fr .9fr;gap:4rem}
+  .carte{grid-template-columns:1fr 1fr}
+  .liste-avis{grid-template-columns:repeat(3,1fr)}
+  .infos .grille{grid-template-columns:1fr 1fr}
+  .flottant{display:none}
+  footer.pied{padding-bottom:2.6rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<div class="ruban">Maquette offerte par <b>Jonathan · ATMA Digital</b> — créée avec plaisir pour Emeraude Barbershop</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="diam" viewBox="0 0 64 52"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M14 2h36l12 15L32 50 2 17z"/><path d="M2 17h60M14 2l8 15 10-15 10 15 8-15M22 17l10 33 10-33"/></g></symbol>
+</svg>
+
+<header class="hero" id="haut">
+  <div class="bg" role="img" aria-label="L'intérieur du salon Emeraude, murs vert néon et fauteuils noirs"></div>
+  <div class="wrap">
+    <div class="marque rv">
+      <svg class="diamant" style="color:var(--neon)" aria-hidden="true"><use href="#diam"/></svg>
+      <h1>EMERAUDE</h1>
+      <span class="sous">Artisan coiffeur barbier</span>
+    </div>
+    <p class="devise serif rv">Au service de l'élégance au masculin.</p>
+    <p class="lieu rv">Votre barber à La Rivière des Pluies, 177 rue Roger Payet à Sainte-Marie. Du lundi au samedi en journée continue, et le dimanche matin.</p>
+    <div class="note rv"><span class="etoiles">★★★★★</span> 5,0 sur Google · 35 avis</div>
+    <div class="ctas rv">
+      <a class="btn btn-neon" href="tel:+262693630163"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>0693 63 01 63</a>
+      <a class="btn btn-ghost" href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Réserver en ligne</a>
+    </div>
+  </div>
+</header>
+
+<div class="bandeau" aria-hidden="true"><div class="piste">
+  <span>La différence est dans le détail</span><span>Précision</span><span>Maîtrise</span><span>Exigence</span><span>Dégradés</span><span>Barbe à la serviette chaude</span><span>Café d'accueil</span><span>La Rivière des Pluies</span>
+  <span>La différence est dans le détail</span><span>Précision</span><span>Maîtrise</span><span>Exigence</span><span>Dégradés</span><span>Barbe à la serviette chaude</span><span>Café d'accueil</span><span>La Rivière des Pluies</span>
+</div></div>
+
+<section class="salon" id="salon">
+  <div class="wrap grille">
+    <div class="rv">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#diam"/></svg>Le salon</p>
+      <h2>Un écrin vert émeraude, un vrai moment pour soi.</h2>
+      <p class="lead">« Venez profiter d'un moment de détente et de convivialité chez Emeraude. » Murs vert néon, fauteuils capitonnés noirs, miroirs alignés : le salon a été pensé comme une pierre précieuse, nette et lumineuse.</p>
+      <ul class="points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg><span>Le petit café d'accueil, que les habitués saluent dans leurs avis.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg><span>Adultes, étudiants et enfants : chacun repart avec la coupe qu'il a demandée.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg><span>Parking facile d'accès, paiement par carte bancaire.</span></li>
+      </ul>
+      <p class="citation-mur serif">« Chez nous votre bien-être est aussi important que votre style ! »<small>Emeraude, sur sa page Facebook</small></p>
+    </div>
+    <div class="photos rv">
+      <figure class="p1"><img src="img/fauteuil.jpg" alt="Un fauteuil de barbier capitonné noir face aux miroirs, murs vert néon" width="720" height="960" loading="lazy"><figcaption>Le poste de coupe, photo publiée par Emeraude</figcaption></figure>
+      <figure class="p2"><img src="img/logo.jpg" alt="Logo Emeraude : un diamant vert néon et la mention artisan coiffeur barbier" width="320" height="220" loading="lazy"><figcaption>Le diamant Emeraude</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="barber" id="barber">
+  <div class="wrap grille">
+    <div class="rv">
+      <p class="eyebrow"><svg aria-hidden="true"><use href="#diam"/></svg>Le barber</p>
+      <div class="chiffre">20<small>années d'expérience</small></div>
+      <blockquote class="serif">« L'exigence du détail. »</blockquote>
+      <p class="lead">Dimss, le barber d'Emeraude : « Fort de ses 20 années d'expérience, il accompagne les gentleman en quête d'excellence. » Des habitués suivent le gérant depuis plus de cinq ans, pour un dégradé net, une barbe tracée au millimètre et une playlist que l'on remarque.</p>
+    </div>
+    <figure class="affiche rv"><img src="img/detail.jpg" alt="Affiche Emeraude : la différence est dans le détail, précision, maîtrise, exigence" width="750" height="380" loading="lazy"><figcaption>« La différence est dans le détail », affiche d'Emeraude</figcaption></figure>
+  </div>
+</section>
+
+<section class="prestations" id="prestations">
+  <div class="wrap">
+    <p class="eyebrow rv"><svg aria-hidden="true"><use href="#diam"/></svg>Prestations</p>
+    <h2 class="rv">La carte du barber</h2>
+    <p class="lead rv">Tout type de dégradés, coupes classiques ou à blanc, barbe soignée à la serviette chaude, finitions à l'huile de barbe.</p>
+    <p class="cat rv">Mon barber</p>
+    <div class="carte">
+      <article class="presta rv"><h3>Coupe adulte</h3><span class="prix">20 €</span><p><span class="duree">30 min</span>Tout type de dégradés, coupes classiques ou à blanc.</p></article>
+      <article class="presta rv"><h3>Coupe enfant</h3><span class="prix">20 €</span><p><span class="duree">30 min</span>Pour les plus jeunes, avec la même attention.</p></article>
+      <article class="presta rv"><h3>Coupe + barbe (traçage)</h3><span class="prix">35 €</span><p><span class="duree">1 h</span>Application d'huile de barbe et crème d'après-rasage.</p></article>
+      <article class="presta rv"><h3>Coupe + barbe complète</h3><span class="prix">40 €</span><p><span class="duree">1 h</span>Dégradé de barbe, mise en forme et traçage, huile de barbe et crème d'après-rasage.</p></article>
+      <article class="presta rv"><h3>Barbe · traçage</h3><span class="prix">15 €</span><p><span class="duree">20 min</span>Contour de barbe à la serviette chaude, huile de barbe et crème d'après-rasage.</p></article>
+      <article class="presta rv"><h3>Barbe · dégradé complet</h3><span class="prix">20 €</span><p><span class="duree">30 min</span>Dégradé de barbe, mise en forme et traçage, serviette chaude, huile de barbe et crème d'après-rasage.</p></article>
+      <article class="presta rv"><h3>Contours</h3><span class="prix">10 €</span><p><span class="duree">10 min</span>Pour garder une coupe nette entre deux visites.</p></article>
+      <article class="presta rv"><h3>Traçage sourcils</h3><span class="prix">5 €</span><p><span class="duree">5 min</span>Le détail qui structure le regard.</p></article>
+      <article class="presta rv"><h3>Dessin</h3><span class="prix">dès 10 €</span><p><span class="duree">10 min</span>Motif tracé à la tondeuse, sur réservation par téléphone au <a href="tel:+262693630163">0693 63 01 63</a>.</p></article>
+    </div>
+    <p class="cat rv">Bien-être</p>
+    <div class="carte">
+      <article class="presta rv"><h3>Épilation nez / oreilles</h3><span class="prix">10 €</span><p><span class="duree">5 min</span>La touche finale d'une allure soignée.</p></article>
+    </div>
+    <p class="petit rv">Tarifs affichés par Emeraude sur sa page de réservation Planity.</p>
+    <div class="ctas rv"><a class="btn btn-neon" href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Choisir ma prestation</a></div>
+  </div>
+</section>
+
+<section class="avis" id="avis">
+  <div class="wrap">
+    <div class="tete rv">
+      <div>
+        <p class="eyebrow"><svg aria-hidden="true"><use href="#diam"/></svg>Ils sont venus, ils ont vu</p>
+        <h2>Ils sont repartis convaincus.</h2>
+      </div>
+      <div class="score">5,0<small>35 avis Google</small></div>
+    </div>
+    <div class="liste-avis">
+      <blockquote class="un-avis rv"><p>L'accueil de Dim's est au top, l'ambiance est vraiment agréable et surtout, le travail est impeccable. Le barber est à l'écoute, minutieux et prend le temps de faire les choses correctement.</p><footer><b>JuJu</b> · avis Google</footer></blockquote>
+      <blockquote class="un-avis rv"><p>Ça fait plus de 5 ans que je me fais coiffer par le gérant. Son travail est toujours très propre et soigné. Je recommande à 100 % !</p><footer><b>Jérémy L.</b> · avis Google</footer></blockquote>
+      <blockquote class="un-avis rv"><p>Au top comme d'habitude ! … Et toujours avec un petit café proposé 👌🏼</p><footer><b>Romain S.</b> · avis Google</footer></blockquote>
+      <blockquote class="un-avis rv"><p>Super accueil ! Agréable avec les enfants ! Coiffeur à l'écoute, je recommande. Merci !</p><footer><b>Graziella M.</b> · avis Google</footer></blockquote>
+      <blockquote class="un-avis rv"><p>Barber au top, la coiffe de qualité … la nouvelle référence de la rivière les pluies 👌🏾</p><footer><b>Mael Z.</b> · avis Google</footer></blockquote>
+      <blockquote class="un-avis rv"><p>Excellente expérience du début à la fin. Meilleure coupe que j'aie eue depuis longtemps.</p><footer><b>Lionel B.</b> · avis Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="noel" id="noel">
+  <div class="flocons" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="eyebrow rv"><svg aria-hidden="true"><use href="#diam"/></svg>Offrir pour Noël</p>
+    <h2 class="rv">Un moment chez Emeraude, sous le sapin.</h2>
+    <p class="lead rv">Une coupe, une barbe tracée à la serviette chaude, ou les deux : le cadeau idéal pour un papa, un frère, un ami qui aime prendre soin de lui. Et pour être impeccable aux repas de fêtes, réservez votre créneau dès maintenant.</p>
+    <div class="bon rv">
+      <svg class="diamant" style="color:var(--neon)" aria-hidden="true"><use href="#diam"/></svg>
+      <div class="t1">Bon cadeau</div>
+      <div class="t2">EMERAUDE</div>
+      <div class="t3 serif">Un moment rien que pour lui</div>
+    </div>
+    <div class="ctas rv">
+      <a class="btn btn-neon" href="tel:+262693630163">Appeler pour un bon cadeau</a>
+      <a class="btn btn-ghost" href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Réserver ma coupe des fêtes</a>
+    </div>
+  </div>
+</section>
+
+<section class="infos" id="infos">
+  <div class="wrap">
+    <p class="eyebrow rv"><svg aria-hidden="true"><use href="#diam"/></svg>Infos pratiques</p>
+    <h2 class="rv">Rendez-vous rue Roger Payet</h2>
+    <div class="grille">
+      <div class="bloc rv">
+        <h3>Horaires</h3>
+        <ul class="horaires">
+          <li><span>Lundi → samedi</span><span>9h – 19h</span></li>
+          <li><span></span><span style="font-weight:400;color:var(--gris);font-size:.85rem">en journée continue</span></li>
+          <li><span>Dimanche</span><span>8h – 12h</span></li>
+        </ul>
+        <h3 style="margin-top:1.5rem">Adresse</h3>
+        <p>177 rue Roger Payet<br>La Rivière des Pluies · 97438 Sainte-Marie</p>
+        <h3 style="margin-top:1.5rem">Contact</h3>
+        <p><a href="tel:+262693630163">0693 63 01 63</a><br><a href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Réservation en ligne sur Planity</a></p>
+      </div>
+      <div class="carte-map rv"><iframe title="Emeraude Barbershop sur la carte" loading="lazy" src="https://www.google.com/maps?q=Emeraude%20Barbershop%2C%20177%20Rue%20Roger%20Payet%2C%2097438%20Sainte-Marie%2C%20La%20R%C3%A9union&output=embed"></iframe></div>
+    </div>
+    <figure class="enseigne rv" style="margin-top:1.2rem"><img src="img/enseigne.jpg" alt="L'enseigne lumineuse Emeraude Barber Shop, en lettres vert néon" width="840" height="405" loading="lazy"><figcaption>L'enseigne néon, repère du salon</figcaption></figure>
+  </div>
+</section>
+
+<section class="final">
+  <div class="visuel rv"><img src="img/ouvert.jpg" alt="On est ouvert : réservez votre moment chez Emeraude" width="1024" height="456" loading="lazy"></div>
+  <div class="wrap contenu rv">
+    <h2>Réservez votre moment.</h2>
+    <p class="lead" style="margin:0 auto">Un appel, ou quelques clics sur Planity.</p>
+    <div class="ctas">
+      <a class="btn btn-neon" href="tel:+262693630163">Appeler le salon</a>
+      <a class="btn btn-ghost" href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Réserver en ligne</a>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="reseaux">
+      <a href="https://www.facebook.com/profile.php?id=61574335694835" target="_blank" rel="noopener" aria-label="Facebook d'Emeraude"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.3c0-.8.2-1.3 1.4-1.3H17V2h-2.6C11.5 2 10.6 3.6 10.6 6v2H8v3h2.6v11H14V11h2.7l.4-3z"/></svg></a>
+      <a href="https://www.instagram.com/emeraude.barbershop/" target="_blank" rel="noopener" aria-label="Instagram d'Emeraude"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+    </div>
+    <p><b style="color:var(--creme)">EMERAUDE</b> · Artisan coiffeur barbier · 177 rue Roger Payet, 97438 Sainte-Marie</p>
+    <p>Maquette privée imaginée par Jonathan, ATMA Digital, à partir des publications d'Emeraude Barbershop.</p>
+    <p class="atma-credit" style="font-size:12px;opacity:.72;text-align:center">Site propulsé par <a href="https://atma-digital.re" style="color:inherit;text-decoration:underline">Atma Digital</a></p>
+  </div>
+</footer>
+
+<div class="flottant">
+  <a class="btn btn-neon" href="tel:+262693630163">Appeler</a>
+  <a class="btn btn-ghost" style="background:rgba(7,10,8,.88)" href="https://www.planity.com/emeraud-97438-sainte-marie" target="_blank" rel="noopener">Réserver</a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var f=document.querySelector('.flocons');
+    for(var i=0;i<22;i++){var s=document.createElement('i');s.style.left=Math.random()*100+'%';s.style.animationDuration=(9+Math.random()*10)+'s';s.style.animationDelay=(-Math.random()*15)+'s';var z=3+Math.random()*4;s.style.width=s.style.height=z+'px';f.appendChild(s);}
+  }
+})();
+</script>
+<script src="/outils/cta.js" data-nom="Emeraude" defer></script>
+</body>
+</html>
