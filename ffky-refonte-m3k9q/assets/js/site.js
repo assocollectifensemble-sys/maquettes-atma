@@ -292,3 +292,135 @@
     if (!astuce.hidden) setTimeout(masquerAstuce, 9000);
   })();
 })();
+
+/* M5 : confort téléphone et ordinateur, animations douces (sans bibliothèque) */
+(function () {
+  "use strict";
+  var doc = document.documentElement;
+  var mouvement = doc.classList.contains("anim");
+  var svg = function (d) { return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+
+  /* 1. En-tête compact au défilement */
+  var entete = document.querySelector(".entete");
+  var hautDePage = null;
+  function majDefilement() {
+    var y = window.scrollY || window.pageYOffset;
+    if (entete) entete.classList.toggle("entete--compacte", y > 40);
+    if (hautDePage) hautDePage.classList.toggle("est-visible", y > window.innerHeight * 1.2);
+  }
+
+  /* 2. Retour en haut, sur les pages longues */
+  if (document.body.scrollHeight > window.innerHeight * 2.5) {
+    hautDePage = document.createElement("button");
+    hautDePage.type = "button"; hautDePage.className = "haut-de-page";
+    hautDePage.setAttribute("aria-label", "Revenir en haut de la page");
+    hautDePage.innerHTML = svg("M6 15l6-6 6 6");
+    hautDePage.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: mouvement ? "smooth" : "auto" });
+      var marque = document.querySelector(".marque");
+      if (marque) marque.focus({ preventScroll: true });
+    });
+    document.body.appendChild(hautDePage);
+  }
+  var attente = false;
+  window.addEventListener("scroll", function () {
+    if (attente) return; attente = true;
+    window.requestAnimationFrame(function () { majDefilement(); attente = false; });
+  }, { passive: true });
+  majDefilement();
+
+  /* 3. Panneau « Toutes les rubriques » : glisse depuis la droite, Échap pour fermer, focus gardé dans le panneau */
+  var bouton = document.querySelector(".bouton-menu");
+  var liste = document.querySelector("nav.menu .menu__liste");
+  if (bouton && liste) {
+    var panneau = document.createElement("div");
+    panneau.className = "panneau-menu"; panneau.id = "panneau-menu";
+    panneau.setAttribute("role", "dialog"); panneau.setAttribute("aria-modal", "true");
+    panneau.setAttribute("aria-labelledby", "panneau-menu-titre");
+    var html = '<div class="panneau-menu__voile" data-fermer></div><div class="panneau-menu__boite">' +
+      '<div class="panneau-menu__tete"><p class="panneau-menu__titre" id="panneau-menu-titre">Toutes les rubriques</p>' +
+      '<button type="button" class="panneau-menu__fermer" data-fermer aria-label="Fermer le menu">' + svg("M6 6l12 12M18 6L6 18") + '</button></div>' +
+      '<nav aria-label="Menu complet"><ul>';
+    Array.prototype.forEach.call(liste.children, function (li, i) {
+      var a = li.querySelector(".menu__lien");
+      var sous = li.querySelector(".sous-menu");
+      var actif = li.classList.contains("menu__item--actif");
+      var cur = a.getAttribute("aria-current") ? ' aria-current="page"' : "";
+      html += '<li class="panneau-menu__rubrique' + (actif ? " panneau-menu__rubrique--actif" : "") + '"><div class="panneau-menu__ligne">' +
+        '<a href="' + a.getAttribute("href") + '"' + cur + '>' + a.innerHTML + '</a>';
+      if (sous) {
+        html += '<button type="button" class="panneau-menu__deplier" aria-expanded="' + actif + '" aria-controls="pm-sous-' + i + '" aria-label="Sous-rubriques : ' + a.textContent + '">' + svg("M6 9l6 6 6-6") + '</button></div>' +
+          '<ul class="panneau-menu__sous" id="pm-sous-' + i + '"' + (actif ? "" : " hidden") + '>' + sous.innerHTML + '</ul>';
+      } else { html += '</div>'; }
+      html += '</li>';
+    });
+    html += '</ul></nav><div class="panneau-menu__actions"><a class="bouton bouton--or" href="trouver-un-cours.html">Trouver un cours</a>' +
+      '<a class="bouton bouton--contour" href="ressources.html#acces">Mon espace adhérent·e</a></div></div>';
+    panneau.innerHTML = html;
+    document.body.appendChild(panneau);
+    var boite = panneau.querySelector(".panneau-menu__boite");
+    var autour = [document.querySelector("main"), document.querySelector(".pied"), document.querySelector(".bandeau-maquette"), document.querySelector(".lien-evitement")];
+
+    panneau.addEventListener("click", function (e) {
+      var dep = e.target.closest(".panneau-menu__deplier");
+      if (dep) {
+        var ouvert = dep.getAttribute("aria-expanded") === "true";
+        dep.setAttribute("aria-expanded", String(!ouvert));
+        document.getElementById(dep.getAttribute("aria-controls")).hidden = ouvert;
+        return;
+      }
+      if (e.target.closest("[data-fermer]")) { fermer(); return; }
+      var lien = e.target.closest("a");
+      if (lien) fermer(true);
+    });
+    function focusables() {
+      return Array.prototype.filter.call(boite.querySelectorAll("a[href], button"), function (el) { return el.offsetParent !== null; });
+    }
+    function surTouche(e) {
+      if (e.key === "Escape") { e.preventDefault(); fermer(); return; }
+      if (e.key !== "Tab") return;
+      var f = focusables(); if (!f.length) return;
+      var premier = f[0], dernier = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
+      else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
+      else if (!boite.contains(document.activeElement)) { e.preventDefault(); premier.focus(); }
+    }
+    function ouvrir() {
+      panneau.classList.add("est-ouvert"); doc.classList.add("menu-ouvert");
+      bouton.setAttribute("aria-expanded", "true");
+      autour.forEach(function (el) { if (el) el.setAttribute("inert", ""); });
+      document.addEventListener("keydown", surTouche);
+      var cible = boite.querySelector(".panneau-menu__fermer");
+      window.setTimeout(function () { cible.focus(); }, 30);
+    }
+    function fermer(parLien) {
+      if (!panneau.classList.contains("est-ouvert")) return;
+      panneau.classList.remove("est-ouvert"); doc.classList.remove("menu-ouvert");
+      bouton.setAttribute("aria-expanded", "false");
+      autour.forEach(function (el) { if (el) el.removeAttribute("inert"); });
+      document.removeEventListener("keydown", surTouche);
+      if (!parLien) bouton.focus();
+    }
+    bouton.addEventListener("click", function () { if (panneau.classList.contains("est-ouvert")) fermer(); else ouvrir(); });
+    window.addEventListener("resize", function () { if (window.innerWidth >= 1000) fermer(true); });
+  }
+
+  /* 4. Apparition douce des sections au défilement (une seule fois) ; contenu visible sans JavaScript */
+  if (mouvement && "IntersectionObserver" in window) {
+    var blocs = document.querySelectorAll("main > section:not(.heros) > .conteneur, main > .bande-photos");
+    var obs = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add("est-visible");
+        obs.unobserve(en.target);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+    Array.prototype.forEach.call(blocs, function (b) {
+      if (b.getBoundingClientRect().top < window.innerHeight * 0.9) return; /* déjà à l'écran : rien à animer */
+      b.classList.add("revele");
+      obs.observe(b);
+    });
+    /* Ancre ou impression : tout s'affiche */
+    window.addEventListener("beforeprint", function () { Array.prototype.forEach.call(document.querySelectorAll(".revele"), function (b) { b.classList.add("est-visible"); }); });
+  }
+})();
