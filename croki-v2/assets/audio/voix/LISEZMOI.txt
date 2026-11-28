@@ -1,0 +1,1 @@
+Déposez ici les voix enregistrées <clé>.mp3 (voir TEXTES.md), puis ajoutez la clé dans CONFIG.voix et dans sw.js.
