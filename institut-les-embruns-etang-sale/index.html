@@ -18,7 +18,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:"Karla",system-ui,sans-serif;background:var(--ecume);color:var(--encre);line-height:1.65;overflow-x:hidden}
-img,video{display:block;max-width:100%}
+img,video{display:block;max-width:100%;height:auto}
 a{color:inherit}
 .wrap{width:min(1080px,92vw);margin:auto}
 h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:400;line-height:1.1}
@@ -27,8 +27,6 @@ em{font-style:italic;color:var(--lagon)}
 .sur{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:var(--lagon);margin-bottom:.7rem}
 .lead{color:var(--gris);font-size:1.08rem;max-width:58ch;margin-top:1rem}
 section{padding:clamp(3.5rem,9vh,5.5rem) 0}
-.ruban{background:var(--lagon-f);color:var(--ecume);font-size:.8rem;text-align:center;padding:.5rem 1rem}
-.ruban b{color:var(--rose);font-weight:600}
 .infos{background:var(--rose);font-size:.88rem;text-align:center;padding:.55rem 1rem}
 .infos a{font-weight:600;color:var(--lagon-f);display:inline-block;padding:.3rem 0}
 .barre{position:sticky;top:0;z-index:20;background:rgba(244,241,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--trait)}
@@ -48,7 +46,17 @@ section{padding:clamp(3.5rem,9vh,5.5rem) 0}
 .hero .g{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center;padding:clamp(3rem,8vh,5.5rem) 0 clamp(5rem,12vh,7rem)}
 .hero h1{font-size:clamp(2.5rem,6vw,4.4rem)}
 .badge{display:inline-block;margin-top:1.2rem;padding:.45rem 1rem;border-radius:999px;background:#fff;border:1px solid var(--trait);font-size:.88rem;color:var(--lagon-f)}
-.hero .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:46% 54% 50% 50%/40% 40% 60% 60%}
+.hero .g{grid-template-columns:1fr 1.05fr}
+.hero .video{position:relative}
+.hero .video video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:26px;background:#0d2224;box-shadow:0 18px 40px -22px rgba(31,76,80,.55)}
+.voir{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;margin-top:.8rem;padding:.4rem 1rem;border-radius:999px;border:1px solid var(--trait);background:#fff;color:var(--lagon-f);font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
+.voir:hover{border-color:var(--lagon)}
+.voir span{display:inline-grid;place-items:center;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--lagon-f);color:#fff;font-size:.7rem}
+.legende{font-size:.85rem;color:var(--gris);margin-top:.3rem}
+dialog.film{border:0;padding:0;background:transparent;width:min(960px,94vw);max-width:none}
+dialog.film::backdrop{background:rgba(13,34,36,.86)}
+dialog.film video{display:block;width:100%;aspect-ratio:16/9;border-radius:16px;background:#000}
+dialog.film .fermer{display:block;margin:0 0 .6rem auto;min-height:44px;padding:.4rem 1.1rem;border-radius:999px;border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font:inherit;cursor:pointer}
 .wa{font-size:.88rem;color:var(--gris);margin-top:.6rem}
 .wa a{display:inline-block;padding:.6rem 0;color:var(--lagon-f);font-weight:600}
 .vagues{position:absolute;left:0;right:0;bottom:-1px;height:90px;pointer-events:none}
@@ -58,11 +66,11 @@ section{padding:clamp(3.5rem,9vh,5.5rem) 0}
 .kobido .sur{color:var(--rose)}
 .kobido h2 em,.kobido h3 em{color:var(--rose)}
 .kobido .lead{color:#cfdedc}
-.kob-g{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,4vw,3rem);align-items:center;margin-top:2.2rem}
-.kob-g video{width:100%;border-radius:18px;aspect-ratio:16/9;background:#0d2224;object-fit:cover}
-.cert{display:flex;flex-direction:column;gap:1rem}
-.cert img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;max-height:380px;width:100%}
-.cert p{font-size:.95rem;color:#cfdedc}
+.kob-g{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.cert{margin:0}
+.cert img{border-radius:18px;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%;max-height:440px;width:100%;height:auto}
+.cert-txt{margin-top:1.2rem;padding-left:1rem;border-left:3px solid var(--rose);color:#e6efee}
+.voir.sombre{background:transparent;color:var(--ecume);border-color:rgba(244,241,236,.45);text-decoration:none;margin-top:1.2rem}
 .fiches{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem}
 .fiche{border:1px solid rgba(233,201,196,.35);border-radius:20px;padding:1.8rem;position:relative}
 .fiche.sig{background:rgba(255,255,255,.06);border-color:var(--rose)}
@@ -120,17 +128,32 @@ input,select{font:inherit;font-weight:400;padding:.75rem .9rem;border:1px solid 
 form .btns{grid-column:1/-1;margin-top:.4rem}
 .etapes{margin-top:1.2rem;color:var(--gris);font-size:.93rem;display:grid;gap:.3rem}
 .boutique{background:#fff}
-.noel{margin-top:2rem;background:var(--ecume);border-radius:20px;padding:1.6rem 1.8rem;border-left:4px solid var(--rose)}
-.noel h3{font-size:1.45rem}
-.noel ul{margin:.8rem 0 0 1.1rem;display:grid;gap:.4rem}
-.noel .petit{font-size:.88rem;color:var(--gris);margin-top:.8rem}
-.marques{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.2rem}
-.marque{border:1px solid var(--trait);border-radius:18px;padding:1.4rem}
-.marque h3{font-size:1.3rem}
-.marque p{color:var(--gris);font-size:.94rem;margin-top:.4rem}
-.marque.large{grid-column:span 3;display:grid;grid-template-columns:.8fr 1.2fr;gap:1.5rem;align-items:start;background:var(--ecume);border:0}
-.marque.large ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.2rem;font-size:.93rem;color:var(--gris)}
-.marque.large li b{display:block;color:var(--encre)}
+.gamme{margin-top:2.2rem}
+.gamme h3{font-size:1.6rem}
+.phyto{background:var(--ecume);border-radius:24px;padding:clamp(1.3rem,3vw,2.2rem)}
+.gtete{display:grid;grid-template-columns:.9fr 1.1fr;gap:1.6rem;align-items:start}
+.gtete p{color:var(--gris);margin-top:.5rem}
+.gtete p b{color:var(--lagon-f)}
+.engag{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.8rem 1.2rem;font-size:.92rem;color:var(--gris)}
+.engag li b{display:block;color:var(--encre)}
+.noel{margin-top:1.6rem;background:#fff;border-radius:18px;padding:1.2rem 1.4rem;border-left:4px solid var(--rose)}
+.noel h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.3rem}
+.noel ul{margin:.6rem 0 0 1.1rem;display:grid;gap:.35rem}
+.produits{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:1.4rem}
+.produit{background:#fff;border-radius:16px;padding:.7rem .7rem 1rem;display:flex;flex-direction:column}
+
+.produit img{display:block;width:100%;height:auto;aspect-ratio:1;border-radius:12px;background:#fcf3ee}
+.pastille{align-self:flex-start;margin-top:.7rem;background:var(--rose);color:var(--lagon-f);font-size:.72rem;font-weight:700;padding:.2rem .65rem;border-radius:999px}
+.produit h4{font-family:'Karla',sans-serif;font-size:.95rem;font-weight:600;line-height:1.3;margin-top:.5rem}
+.gm{font-size:.82rem;color:var(--lagon);margin-top:.2rem}
+.px{display:flex;justify-content:space-between;align-items:baseline;gap:.5rem;margin-top:auto;padding-top:.6rem;font-size:.85rem;color:var(--gris)}
+.px b{font-family:'Fraunces',serif;font-weight:500;font-size:1.1rem;color:var(--lagon-f)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.mini-g{display:grid;grid-template-columns:150px 1fr;gap:1.2rem;align-items:center;border:1px solid var(--trait);border-radius:20px;padding:1.2rem}
+.mini-g img{width:100%;height:auto;aspect-ratio:1;border-radius:14px}
+.mini-g p{color:var(--gris);font-size:.94rem;margin-top:.4rem}
+.mini-g p.gm{color:var(--lagon);font-weight:600;font-size:.88rem}
+.partenaires{margin-top:1.6rem;text-align:center;color:var(--gris);font-size:.94rem}
 .note5{display:flex;align-items:baseline;gap:.8rem;margin-top:.4rem;flex-wrap:wrap}
 .note5 b{font-family:"Fraunces",serif;font-size:3rem;color:var(--lagon-f);font-weight:400}
 .etoiles{color:#9c6f2a;letter-spacing:.15em}
@@ -150,14 +173,17 @@ blockquote cite{display:block;margin-top:.8rem;font-style:normal;font-size:.85re
 .pratique .btn.ligne:hover{background:rgba(255,255,255,.08)}
 .pratique iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:20px}
 footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
+footer .credit{font-size:.74rem;opacity:.75;margin-top:.3rem}
 .rev{opacity:0;transform:translateY(20px);transition:opacity .9s,transform .9s}.rev.vu{opacity:1;transform:none}
 @media (max-width:860px){
  .barre nav{display:none}
  .hero .g,.kob-g,.fiches,.moment .cartes,.cadeau .g,.pratique .g,.bienfaits{grid-template-columns:1fr}
- .hero .photo{max-width:360px}
- .avant ol,.marques,.avis .g{grid-template-columns:1fr}
- .marque.large{grid-column:auto;grid-template-columns:1fr}
- .marque.large ul,.deux{grid-template-columns:1fr}
+ .hero .g{padding-top:2rem}
+ .avant ol,.avis .g,.gtete,.duo,.engag,.deux{grid-template-columns:1fr}
+ .produits{grid-template-columns:1fr 1fr;gap:.8rem}
+ .produit:last-child{grid-column:span 2;display:grid;grid-template-columns:44% 1fr;column-gap:.9rem;align-items:center}
+ .produit:last-child img{grid-row:span 5}
+ .mini-g{grid-template-columns:110px 1fr;gap:1rem}
  form{grid-template-columns:1fr}
  .cert img{max-height:320px}
 }
@@ -165,7 +191,6 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
 </style>
 </head>
 <body>
-<div class="ruban">Maquette v2 préparée par <b>Atma Digital</b> · page privée, visible seulement par vous</div>
 <div class="infos">Sur rendez-vous · Pause des fêtes du 23 décembre au 9 janvier : <a href="#cadeau">pensez au bon cadeau</a></div>
 
 <div class="barre">
@@ -189,26 +214,30 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
    </div>
    <p class="wa">Plutôt WhatsApp ? <a href="https://wa.me/262693464351">Écrire à Léa sur WhatsApp</a></p>
   </div>
-  <div class="photo"><img src="img/fleur.webp" alt="Fleur délicate, l'univers doux de l'institut"></div>
+  <div class="video">
+   <video id="vhero" autoplay muted loop playsinline preload="metadata" poster="img/kobido-poster.webp" width="720" height="406" aria-label="Extrait : Léa pratique le Kobido à l'institut"><source src="video/kobido-boucle.mp4" type="video/mp4"></video>
+   <script>if(matchMedia('(prefers-reduced-motion: reduce)').matches){const v=document.getElementById('vhero');v.removeAttribute('autoplay');v.pause()}</script>
+   <button class="voir" type="button" id="voir"><span aria-hidden="true">▶</span>Voir le soin en entier (avec le son)</button>
+   <p class="legende">Léa pratique le Kobido à l'institut.</p>
+  </div>
  </div>
  <svg class="vagues" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C240 15 480 85 720 50 S1200 15 1500 50 V90 H0Z" fill="rgba(47,111,115,.12)"/><path d="M0 68 C260 45 520 95 760 68 S1220 45 1500 68 V90 H0Z" fill="#1f4c50"/></svg>
 </header>
 
 <section class="kobido" id="kobido">
  <div class="wrap">
-  <div class="rev">
-   <p class="sur">Le soin signature</p>
-   <h2>Le <em>Kobido</em>, l'art japonais du geste</h2>
-   <p class="lead">Né au Japon il y a plus de cinq siècles, le Kobido est un massage du visage d'une grande précision. Lissages, pressions, pétrissages, drainages et percussions s'enchaînent comme une chorégraphie, du front jusqu'à la mâchoire. On entretient les muscles du corps : ici, ce sont ceux du visage qui reçoivent toute l'attention.</p>
-  </div>
-  <div class="kob-g rev">
-   <video controls preload="none" playsinline poster="img/kobido-poster.webp" aria-label="Vidéo : Léa pratique le Kobido à l'institut"><source src="video/kobido.mp4" type="video/mp4"></video>
-   <div class="cert">
-    <img src="img/certificat.webp" alt="Remise du certificat de praticienne en Authentique Kobido" loading="lazy">
-    <p>Léa est <b>praticienne certifiée en Authentique Kobido</b>, formée à l'École du Kobido.</p>
+  <div class="kob-g">
+   <div class="rev">
+    <p class="sur">Le soin signature</p>
+    <h2>Le <em>Kobido</em>, l'art japonais du geste</h2>
+    <p class="lead">Né au Japon il y a plus de cinq siècles, le Kobido est un massage du visage d'une grande précision. Lissages, pressions, pétrissages, drainages et percussions s'enchaînent comme une chorégraphie, du front jusqu'à la mâchoire. On entretient les muscles du corps : ici, ce sont ceux du visage qui reçoivent toute l'attention.</p>
+    <p class="cert-txt">Léa est <b>praticienne certifiée en Authentique Kobido</b>, formée à l'École du Kobido.</p>
+    <a class="voir sombre" href="#haut">Revoir le soin en vidéo</a>
    </div>
+   <figure class="cert rev">
+    <img src="img/certificat.webp" alt="Remise du certificat de praticienne en Authentique Kobido" loading="lazy" width="900" height="1200">
+   </figure>
   </div>
-
   <div class="fiches">
    <article class="fiche rev">
     <div class="t"><div><p class="duree">1 heure</p><h3>Kobido <em>essentiel</em></h3></div><span class="prix">95 €</span></div>
@@ -256,7 +285,7 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
   <div class="rev"><p class="sur">Les soins du moment</p><h2>Deux parenthèses <em>de saison</em></h2></div>
   <div class="cartes">
    <article class="carte rev">
-    <div class="imgs"><img src="img/jambes.webp" alt="Jambes légères au bord de l'océan" loading="lazy"><img src="img/menthe.webp" alt="Menthe fraîche, la fraîcheur du soin" loading="lazy"></div>
+    <div class="imgs"><img src="img/jambes.webp" alt="Jambes légères au bord de l'océan" loading="lazy" width="864" height="1080"><img src="img/menthe.webp" alt="Menthe fraîche, la fraîcheur du soin" loading="lazy" width="700" height="875"></div>
     <div class="c">
      <p class="sur">Cet été</p>
      <h3>Jambes légères</h3>
@@ -266,7 +295,7 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
     </div>
    </article>
    <article class="carte rev">
-    <div class="imgs"><img src="img/rituel.webp" alt="Rituel de soin Fleur's" loading="lazy"><img src="img/floralove.webp" alt="Soin Floralove de Fleur's" loading="lazy"></div>
+    <div class="imgs"><img src="img/rituel.webp" alt="Rituel de soin Fleur's" loading="lazy" width="880" height="1100"><img src="img/floralove.webp" alt="Soin Floralove de Fleur's" loading="lazy" width="568" height="568"></div>
     <div class="c">
      <p class="sur">Soin visage Fleur's</p>
      <h3>Floralove</h3>
@@ -361,7 +390,7 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
 
 <section class="cadeau" id="cadeau">
  <div class="wrap g">
-  <img class="vis rev" src="img/bon-cadeau.webp" alt="Bon cadeau de l'Institut Les Embruns" loading="lazy">
+  <img class="vis rev" src="img/bon-cadeau.webp" alt="Bon cadeau de l'Institut Les Embruns" loading="lazy" width="1000" height="710">
   <div class="rev">
    <p class="sur">Bons cadeaux</p>
    <h2>Offrez un moment <em>de douceur</em></h2>
@@ -397,30 +426,91 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
 
 <section class="boutique" id="boutique">
  <div class="wrap">
-  <div class="rev"><p class="sur">La boutique de l'institut</p><h2>Vos soins, <em>à la maison</em></h2><p class="lead">Les produits Phytocéane vous attendent à l'institut, au prix métropole, en coffrets ou à l'unité. Léa vous aide à choisir la routine faite pour votre peau.</p></div>
-  <div class="noel rev">
-   <p class="sur">Les offres des fêtes</p>
-   <h3>Un cadeau glissé dans votre sac</h3>
-   <ul>
-    <li>Pour l'achat d'une brume ou d'un nectar corps : <b>un savon offert</b>.</li>
-    <li>Pour l'achat d'une brume ou d'une crème lactée : <b>une gelée de douche fondante offerte</b>.</li>
-   </ul>
-   <p class="petit">Brumes hydratantes corps Costa Rica (goyave) et Zanzibar (eau de coco bio) : 39 € les 100 ml · Crème lactée hydratante corps : 34 € les 150 ml.</p>
-  </div>
-  <div class="marques">
-   <div class="marque large rev">
-    <div><h3>Phytocéane</h3><p>La marque bretonne de l'institut : des soins inspirés de la nature, d'une destination à l'autre. Son site de production est certifié EcoVadis Gold.</p></div>
-    <ul>
-     <li><b>Ingrédients naturels et bio</b>cultivés durablement et sourcés de façon éthique.</li>
-     <li><b>Formules efficaces</b>90 % de références vegan, testées sous contrôle dermatologique.</li>
-     <li><b>Production responsable</b>énergies renouvelables et eaux épurées par des jardins filtrants.</li>
+  <div class="rev"><p class="sur">Nos gammes · la boutique</p><h2>Vos soins, <em>à la maison</em></h2><p class="lead">Léa a choisi trois maisons pour leur qualité : Phytocéane, Fleur's et Midi12. Ce sont les produits qu'elle utilise en cabine, et vous les retrouvez à l'institut pour prolonger chaque soin chez vous. Léa vous aide à choisir la routine faite pour votre peau.</p></div>
+
+  <div class="gamme phyto rev">
+   <div class="gtete">
+    <div>
+     <p class="sur">Gamme corps et visage</p>
+     <h3>Phytocéane</h3>
+     <p>Une marque bretonne de soins inspirés de la nature, pensée comme un voyage : chaque « Destination » (Océan, Dunes, Jaïpur, Costa Rica, Zanzibar…) a ses textures et ses parfums. <b>À l'institut, au prix métropole</b>.</p>
+    </div>
+    <ul class="engag">
+     <li><b>Ingrédients naturels et bio</b>cultivés durablement, sourcés de façon éthique, récoltés à la main.</li>
+     <li><b>Formules soignées</b>une haute naturalité, 90 % de références vegan, testées sous contrôle dermatologique.</li>
+     <li><b>Production responsable</b>énergies renouvelables, eaux épurées par des jardins filtrants, site certifié EcoVadis Gold.</li>
      <li><b>Emballages éco-conçus</b>verre recyclable, bois et papiers certifiés FSC.</li>
     </ul>
    </div>
-   <div class="marque rev"><h3>Fleur's</h3><p>Les soins visage aux fleurs, dont le rituel Floralove.</p></div>
-   <div class="marque rev"><h3>Bloomea</h3><p>La technologie Néolift des soins anti-âge.</p></div>
-   <div class="marque rev"><h3>Midi12 &amp; Oxalia</h3><p>Le solaire réservé aux instituts, et les soins naturels du rituel Jambes légères.</p></div>
+   <div class="noel">
+    <p class="sur">Les offres des fêtes</p>
+    <h4>Un cadeau glissé dans votre sac</h4>
+    <ul>
+     <li>Pour l'achat d'une brume ou d'un nectar corps : <b>un savon offert</b>.</li>
+     <li>Pour l'achat d'une brume ou d'une crème lactée : <b>une gelée de douche fondante offerte</b>.</li>
+    </ul>
+   </div>
+   <div class="produits">
+    <article class="produit">
+     <img src="img/produits/brume-goyave.webp" alt="Brume hydratante corps à la goyave Phytocéane" loading="lazy" width="600" height="600">
+     <span class="pastille">Offre des fêtes</span>
+     <h4>Brume hydratante corps à la goyave</h4>
+     <p class="gm">Destination Costa Rica</p>
+     <p class="px"><span>100 ml</span><b>39 €</b></p>
+    </article>
+    <article class="produit">
+     <img src="img/produits/brume-coco.webp" alt="Brume hydratante corps à l'eau de coco bio Phytocéane" loading="lazy" width="600" height="600">
+     <span class="pastille">Offre des fêtes</span>
+     <h4>Brume hydratante corps à l'eau de coco bio</h4>
+     <p class="gm">Destination Zanzibar</p>
+     <p class="px"><span>100 ml</span><b>39 €</b></p>
+    </article>
+    <article class="produit">
+     <img src="img/produits/creme-lactee.webp" alt="Crème lactée hydratante corps Phytocéane" loading="lazy" width="600" height="600">
+     <span class="pastille">Offre des fêtes</span>
+     <h4>Crème lactée hydratante corps</h4>
+     <p class="gm">Destination Zanzibar</p>
+     <p class="px"><span>150 ml</span><b>34 €</b></p>
+    </article>
+    <article class="produit">
+     <img src="img/produits/gelee-douche.webp" alt="Gelée de douche fondante Zanzibar Phytocéane" loading="lazy" width="600" height="600">
+     <span class="pastille">Offerte à Noël</span>
+     <h4>Gelée de douche fondante</h4>
+     <p class="gm">Destination Zanzibar</p>
+     <p class="px"><span>150 ml</span><b>22,60 €</b></p>
+    </article>
+    <article class="produit">
+     <img src="img/produits/savon-goyave.webp" alt="Savon mains et corps Phytocéane" loading="lazy" width="600" height="600">
+     <span class="pastille">Offert à Noël</span>
+     <h4>Savon mains et corps</h4>
+     <p class="gm">Destination Costa Rica</p>
+     <p class="px"><span>100 g</span><b>Offert</b></p>
+    </article>
+   </div>
   </div>
+
+  <div class="duo">
+   <article class="gamme mini-g rev">
+    <img src="img/produits/floralove-creme.webp" alt="Crème florale vitaminée Floralove de Fleur's" loading="lazy" width="600" height="600">
+    <div>
+     <p class="sur">Soins visage aux fleurs</p>
+     <h3>Fleur's</h3>
+     <p>Une marque professionnelle qui puise dans les fleurs une beauté à la fois scientifique, poétique et sensorielle. Sa ligne Floralove, parfumée de mimosa, de pivoine et de nectar de poire, apporte fraîcheur et bonne mine.</p>
+     <p class="gm">À l'institut : le soin visage Floralove, 1 h 10 · 99 €.</p>
+    </div>
+   </article>
+   <article class="gamme mini-g rev">
+    <img src="img/produits/midi12-creme-visage.webp" alt="Crème solaire visage SPF50+ Midi12" loading="lazy" width="600" height="600">
+    <div>
+     <p class="sur">Soins solaires</p>
+     <h3>Midi12</h3>
+     <p>Une gamme solaire née dans la baie de La Baule et fabriquée en France : des formules vegan, biodégradables à 95 %, pensées pour protéger la peau et respecter l'océan. Une belle alliée sous le soleil de La Réunion.</p>
+     <p class="gm">Disponible uniquement en institut : demandez conseil à Léa.</p>
+    </div>
+   </article>
+  </div>
+
+  <p class="partenaires rev">Léa travaille aussi avec <b>Bloomea</b>, pour la technologie Néolift des soins anti-âge, et <b>Oxalia</b>, pour le rituel Jambes légères.</p>
  </div>
 </section>
 
@@ -457,9 +547,21 @@ footer{padding:1.8rem 0;font-size:.82rem;color:var(--gris);text-align:center}
  </div>
 </section>
 
-<footer><div class="wrap">Institut Les Embruns · L'Étang-Salé-les-Bains, La Réunion · Site imaginé par Atma Digital</div></footer>
+<footer><div class="wrap"><p>© 2026 Institut Les Embruns · 8 rue du Four à Chaux, 97427 L'Étang-Salé-les-Bains</p><p class="credit">Site réalisé par Atma Digital</p></div></footer>
 
+<dialog class="film" id="film" aria-label="Le soin Kobido en vidéo">
+ <button class="fermer" type="button" id="fermer">Fermer ✕</button>
+ <video id="vfilm" controls playsinline preload="none" poster="img/kobido-poster.webp"></video>
+</dialog>
 <script>
+(()=>{const v=document.getElementById('vhero'),d=document.getElementById('film'),vf=document.getElementById('vfilm');
+const calme=matchMedia('(prefers-reduced-motion: reduce)');
+const regle=()=>{if(calme.matches){v.removeAttribute('autoplay');v.pause()}else{v.play().catch(()=>{})}};regle();calme.addEventListener('change',regle);
+document.getElementById('voir').addEventListener('click',()=>{if(!vf.src)vf.src='video/kobido.mp4';v.pause();if(d.showModal)d.showModal();else d.setAttribute('open','');vf.play().catch(()=>{})});
+const ferme=()=>{vf.pause();d.close?d.close():d.removeAttribute('open')};
+document.getElementById('fermer').addEventListener('click',ferme);
+d.addEventListener('click',e=>{if(e.target===d)ferme()});
+d.addEventListener('close',()=>{vf.pause();if(!calme.matches)v.play().catch(()=>{})});})();
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vu');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.rev').forEach(f=>io.observe(f));
 const f=document.getElementById('fcadeau');let canal='sms';
