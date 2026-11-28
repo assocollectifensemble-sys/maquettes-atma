@@ -293,7 +293,7 @@
   })();
 })();
 
-/* M5 : confort téléphone et ordinateur, animations douces (sans bibliothèque) */
+/* M5 : confort téléphone et ordinateur, animations douces (JavaScript maison, léger) */
 (function () {
   "use strict";
   var doc = document.documentElement;
@@ -405,7 +405,7 @@
     window.addEventListener("resize", function () { if (window.innerWidth >= 1000) fermer(true); });
   }
 
-  /* 4. Apparition douce des sections au défilement (une seule fois) ; contenu visible sans JavaScript */
+  /* 4. Apparition douce des sections au défilement (une seule fois) ; contenu toujours visible si le script est désactivé */
   if (mouvement && "IntersectionObserver" in window) {
     var blocs = document.querySelectorAll("main > section:not(.heros) > .conteneur, main > .bande-photos");
     var obs = new IntersectionObserver(function (entrees) {
@@ -416,7 +416,7 @@
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
     Array.prototype.forEach.call(blocs, function (b) {
-      if (b.getBoundingClientRect().top < window.innerHeight * 0.9) return; /* déjà à l'écran : rien à animer */
+      if (b.getBoundingClientRect().top < window.innerHeight * 0.9) return; /* déjà à l'écran : affiché directement */
       b.classList.add("revele");
       obs.observe(b);
     });

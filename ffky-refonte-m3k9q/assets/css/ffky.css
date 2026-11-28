@@ -658,7 +658,7 @@ details.question > div { padding-bottom: 1rem; }
 @media (max-width: 699px) { body { font-size: 1rem; } .lead { font-size: 1.06rem; } }
 html, body { overflow-x: clip; }
 
-/* En-tête qui se compacte au défilement, sans décaler la page (la marge compense la hauteur) */
+/* En-tête qui se compacte au défilement ; la marge compense la hauteur, la page reste immobile */
 .entete { transition: box-shadow .3s, margin-bottom .3s; }
 .entete__haut, .entete__bloc { transition: min-height .3s; }
 .marque img { transition: width .3s; }
